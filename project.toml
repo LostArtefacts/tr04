@@ -1,0 +1,38 @@
+# Steam's tomb4.exe; toolchain evidence and limitations are in README.md.
+[game]
+name = "tomb4"
+title = "Tomb Raider IV: The Last Revelation"
+window_title = "Tomb Raider"
+progress_exclude = ["jpt_*"]
+dir = "orig/tomb4"
+exe = "tomb4.exe"
+checksums = "orig/tomb4.sha1"
+original = "build/orig/tomb4.exe"
+game_end = 0x49c880
+
+[ghidra]
+project = "tomb4"
+search = ["~/data.local/work/ghidra_*", "~/opt/ghidra_*"]
+functions = "build/functions_tomb4.csv"
+
+[build]
+cflags = ["/G5", "/Zp1", "/W3", "/O2", "/DNDEBUG", "/DWIN32", "/D_WINDOWS"]
+crlf = true
+ml = 'C:\masm613\bin\ml.exe'
+bin = 'C:\msvc6sp3\bin'
+include = ['C:\msvc6sp3\include']
+lib = ['C:\msvc6sp3\lib']
+
+[symbols]
+manifest = "refs/trx/docs/symbols/tr4.txt"
+import_libs = [".wine/drive_c/msvc6sp3/lib"]
+
+[reference]
+source = "refs/tomb4-legacy/TOMB4"
+layout = { game = "", specific = "specific" }
+
+[hooks]
+progress = false
+compare = false
+one_function = false
+no_comments = false

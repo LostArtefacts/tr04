@@ -1,0 +1,12 @@
+d1b25d84da1d3d0d460996ea298488cb183b857e1b90628147983114ac4ab55f  .wine/drive_c/msvc6sp3/bin/c1.dll
+28c355499c2f8090910624734faff31fe719a69a8aac7dd44b2ce64addf96ee2  .wine/drive_c/msvc6sp3/bin/c1xx.dll
+45187b0b6288240f73272a7c61e6329c50048a76e57db3bb87b6f0229e09e27d  .wine/drive_c/msvc6sp3/bin/c2.dll
+d9220fdfaf355c81f26e7b03c5dc628ec72ff81c99dc38ed98b1ad4bdbbb309c  .wine/drive_c/msvc6sp3/bin/cl.exe
+83b602ed8e69e979fc9557f482a4a4c6c9a97b4ad67b879aedeacd2b09e5b20b  .wine/drive_c/msvc6sp3/bin/cvtres.exe
+35aa049482a40f3ce04028200151cd6f1d417dc50de6bc7951e310654f167df9  .wine/drive_c/msvc6sp3/bin/lib.exe
+9672e578fdfaa43bdb8e9c16071682988665cb90bba2904bf02f6a5576d8ffbc  .wine/drive_c/msvc6sp3/bin/link.exe
+7c90b80d42914562332e28c253415e72a80c6651003d08a9ffdc4ba6e27fc37c  .wine/drive_c/msvc6sp3/bin/mspdb60.dll
+cd4a546f71481319aeee455aa0fb51698a094f9d3e6d8339acf445489a263c68  .wine/drive_c/msvc6sp3/lib/kernel32.lib
+76d536155a582d2cc9dafded92cfc1122aa4234a8f1afba252232ff492b2e13b  .wine/drive_c/msvc6sp3/lib/libc.lib
+0a3c34c4daec09c1b9fd163d5d0b2ee9a6cbe0b3e863ae81a1fae3b9f936fd19  .wine/drive_c/msvc6sp3/lib/user32.lib
+bb098679a802afdbc6fdaac03dfe1ea81453a36f6d4768b1c1cd092b1dbe9342  .wine/drive_c/msvc6sp3/lib/winmm.lib
