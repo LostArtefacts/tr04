@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="105.86" height="12" x="0" y="0" class="named"><title>470 · 30.42%</title></rect>
-<rect width="0.45" height="12" x="105.86" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="106.31" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="238.76" height="12" x="109.24" y="0" class="todo"><title>1060 · 68.61%</title></rect>
+<rect width="106.09" height="12" x="0" y="0" class="named"><title>471 · 30.49%</title></rect>
+<rect width="0.45" height="12" x="106.09" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="106.54" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="238.53" height="12" x="109.47" y="0" class="todo"><title>1059 · 68.54%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">30.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">470</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1060</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">471</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1059</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="45.31" height="12" x="0" y="0" class="named"><title>81 KB · 13.02%</title></rect>
-<rect width="0.12" height="12" x="45.31" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="45.44" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="296.95" height="12" x="51.05" y="0" class="todo"><title>529 KB · 85.33%</title></rect>
+<rect width="45.35" height="12" x="0" y="0" class="named"><title>81 KB · 13.03%</title></rect>
+<rect width="0.12" height="12" x="45.35" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="45.47" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="296.91" height="12" x="51.09" y="0" class="todo"><title>529 KB · 85.32%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">81 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">529 KB</tspan></text>
@@ -194,7 +194,7 @@
 <rect width="12" height="12" x="375" y="30" class="todo"><title>0x00413b80 FallingBlockCollision (145 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="30" class="todo"><title>0x00413c20 FallingBlock (118 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="30" class="named"><title>0x00413ca0 FallingBlockFloor (76 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="30" class="todo"><title>0x00413cf0 FallingBlockCeiling (61 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="30" class="named"><title>0x00413cf0 FallingBlockCeiling (61 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="30" class="todo"><title>0x00413d30 ControlFallingBlock2 (140 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="30" class="todo"><title>0x00413dc0 ControlSmashableBikeWall (189 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="30" class="named"><title>0x00413e80 FallingCeiling (257 bytes)</title></rect>
@@ -2827,7 +2827,7 @@
 <rect width="5.06" height="4.73" x="624.66" y="449.54" class="named"><title>0x004506e0 phd_RotYXZ_I (62 bytes)</title></rect>
 <rect width="5.06" height="4.73" x="624.66" y="457.27" class="todo"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
 <rect width="5.02" height="4.78" x="632.72" y="347.25" class="todo"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
-<rect width="4.94" height="4.78" x="640.74" y="347.25" class="todo"><title>0x00413cf0 FallingBlockCeiling (61 bytes)</title></rect>
+<rect width="4.94" height="4.78" x="640.74" y="347.25" class="named"><title>0x00413cf0 FallingBlockCeiling (61 bytes)</title></rect>
 <rect width="4.94" height="4.78" x="648.67" y="347.25" class="todo"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
 <rect width="4.94" height="4.78" x="656.61" y="347.25" class="todo"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
 <rect width="4.86" height="4.78" x="664.55" y="347.25" class="named"><title>0x00427480 lara_as_switchon (60 bytes)</title></rect>

@@ -41,6 +41,18 @@ void FallingBlockFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *he
     }
 }
 
+void FallingBlockCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
+{
+    sint32 tx, tz;
+
+    tx = x ^ item->pos.x_pos;
+    tz = z ^ item->pos.z_pos;
+    if (tx & ~1023 || tz & ~1023)
+        return;
+    if (y > item->pos.y_pos)
+        *height = item->pos.y_pos + 256;
+}
+
 void FallingCeiling(sint16 item_number)
 {
     ITEM_INFO *item;
