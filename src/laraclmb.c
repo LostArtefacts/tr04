@@ -156,3 +156,14 @@ void lara_as_climbleft(ITEM_INFO *item, COLL_INFO *coll)
     if (!(input & (IN_LEFT | IN_LSTEP)))
         item->goal_anim_state = AS_CLIMBSTNC;
 }
+
+void lara_col_climbleft(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 shift, res;
+
+    if (!LaraCheckForLetGo(item, coll)) {
+        lara.move_angle = item->pos.y_rot - 16384;
+        res = LaraTestClimbPos(item, coll->radius, -(coll->radius + 120), -512, 512, &shift);
+        LaraDoClimbLeftRight(item, coll, res, shift);
+    }
+}
