@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="32.57" height="12" x="0" y="0" class="named"><title>136 · 8.80%</title></rect>
-<rect width="0.24" height="12" x="32.57" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.20" height="12" x="32.81" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
-<rect width="335.99" height="12" x="34.01" y="0" class="todo"><title>1403 · 90.81%</title></rect>
+<rect width="32.81" height="12" x="0" y="0" class="named"><title>137 · 8.87%</title></rect>
+<rect width="0.24" height="12" x="32.81" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.20" height="12" x="33.05" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
+<rect width="335.75" height="12" x="34.25" y="0" class="todo"><title>1402 · 90.74%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">8.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">136</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1403</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">137</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1402</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="14.57" height="12" x="0" y="0" class="named"><title>24 KB · 3.94%</title></rect>
-<rect width="0.10" height="12" x="14.57" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="1.61" height="12" x="14.60" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
-<rect width="353.79" height="12" x="16.21" y="0" class="todo"><title>593 KB · 95.62%</title></rect>
+<rect width="14.61" height="12" x="0" y="0" class="named"><title>24 KB · 3.95%</title></rect>
+<rect width="0.10" height="12" x="14.61" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="1.61" height="12" x="14.64" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
+<rect width="353.75" height="12" x="16.25" y="0" class="todo"><title>593 KB · 95.61%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">3.9%</text>
+<text text-anchor="end" x="540" y="24.50">4.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">24 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">3 KB</tspan> · <tspan class="todo">593 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1275,7 +1275,7 @@
 <rect width="12" height="12" x="90" y="360" class="todo"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="360" class="todo"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="360" class="named"><title>0x00476990 _NVisible (57 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="360" class="todo"><title>0x004769d0 _Visible (57 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="360" class="named"><title>0x004769d0 _Visible (57 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="360" class="todo"><title>0x00476a10 SetCullCW (11 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="360" class="todo"><title>0x00476a20 SetCullCCW (11 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="360" class="todo"><title>0x00476a30 InitialiseFunctionTable (133 bytes)</title></rect>
@@ -2850,7 +2850,7 @@
 <rect width="4.52" height="4.88" x="632.71" y="402.25" class="todo"><title>0x0046b6d0 third_cutseq_control (57 bytes)</title></rect>
 <rect width="4.52" height="4.88" x="632.71" y="410.13" class="todo"><title>0x0046c9b0 twentytwo_end (57 bytes)</title></rect>
 <rect width="4.52" height="4.88" x="632.71" y="418" class="named"><title>0x00476990 _NVisible (57 bytes)</title></rect>
-<rect width="4.52" height="4.88" x="632.71" y="425.88" class="todo"><title>0x004769d0 _Visible (57 bytes)</title></rect>
+<rect width="4.52" height="4.88" x="632.71" y="425.88" class="named"><title>0x004769d0 _Visible (57 bytes)</title></rect>
 <rect width="4.52" height="4.88" x="632.71" y="433.75" class="todo"><title>0x0047d3e0 S_DrawDashBar (57 bytes)</title></rect>
 <rect width="4.52" height="4.79" x="632.71" y="441.63" class="todo"><title>0x00409460 InitialiseMovingBlock (56 bytes)</title></rect>
 <rect width="4.52" height="4.79" x="632.71" y="449.42" class="todo"><title>0x00459410 DrawRopeList (56 bytes)</title></rect>
