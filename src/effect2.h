@@ -101,6 +101,7 @@ RIPPLE_STRUCT *SetupRipple(sint32 x, sint32 y, sint32 z, sint32 size, sint32 fla
 void ControlColouredLights(sint16 item_number);
 void TriggerDartSmoke(sint32 x, sint32 y, sint32 z, sint32 xv, sint32 zv, sint32 hit);
 void TriggerRocketSmoke(sint32 x, sint32 y, sint32 z, sint32 col);
+void TriggerExplosionSmoke(sint32 x, sint32 y, sint32 z, sint32 uw);
 
 extern sint32 KillEverythingFlag;
 extern DYNAMIC dynamics[MAX_DYNAMICS * 2];
