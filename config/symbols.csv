@@ -2011,6 +2011,9 @@ address,size,name,symbol
 0x004b4674,4,FogEnd,_FogEnd
 0x004b4678,4,one,_one
 0x004b467c,4,mone,_mone
+0x004b4680,32,phdtan2,_phdtan2
+0x004b46a0,4100,phdtantab,_phdtantab
+0x004b56a4,16384,rcossin_tbl,_rcossin_tbl
 0x004b96a4,4,rand_1,_rand_1
 0x004b96a8,4,rand_2,_rand_2
 0x004bf2e0,4,next_locust,_next_locust
