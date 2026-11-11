@@ -2,6 +2,7 @@
 
 #include "cmdline.h"
 #include "function_stubs.h"
+#include "winmain.h"
 
 void CLSetup(char *cmd)
 {
@@ -19,6 +20,21 @@ void CLNoFMV(char *cmd)
         fmvs_disabled = 0;
     else
         fmvs_disabled = 1;
+}
+
+uint8 DXSetupDialog(void)
+{
+    INT_PTR ret;
+
+    ShowCursor(1);
+    ret = DialogBoxParam(App.hInstance, MAKEINTRESOURCE(109), 0, DXSetupDlgProc, 0);
+    ShowCursor(0);
+    if (ret == -1) {
+        MessageBox(0, "Unable To Initialise Dialog", "", 0);
+        return 0;
+    }
+    ret = ret != 0;
+    return ret;
 }
 
 char *MapASCIIToANSI(char *s, char *d)
