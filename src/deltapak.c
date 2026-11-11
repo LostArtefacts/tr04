@@ -166,6 +166,14 @@ void twentythree_end(void)
     lara.questitems &= 1;
 }
 
+void twentyfour_init(void)
+{
+    cutseq_kill_item(ANIMATING13);
+    old_lara_holster = lara.holster;
+    lara.holster = LARA_HOLSTERS;
+    draw_pistol_meshes(1);
+}
+
 void twentyfour_end(void)
 {
     cutseq_restore_item(ANIMATING13);

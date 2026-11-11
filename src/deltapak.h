@@ -11,6 +11,22 @@ extern sint16 old_lara_holster;
 extern ITEM_INFO *horus_item_thing;
 extern char lara_chat_cnt;
 extern char actor_chat_cnt;
+extern uint32 cutseq_meshbits[10];
+extern char old_status_flags[16];
+extern sint32 numnailed;
+extern sint16 lara_chat_ranges6[4];
+extern sint16 voncroy_chat_ranges6[4];
+extern sint16 lara_chat_ranges7[4];
+extern sint16 voncroy_chat_ranges7[4];
+extern sint16 lara_chat_ranges8[4];
+extern sint16 voncroy_chat_ranges8[6];
+extern sint16 jeanyves_chat_ranges17[24];
+extern sint16 jeanyves_chat_ranges18[14];
+extern sint16 jeanyves_chat_ranges19[20];
+extern sint16 jeanyves_chat_ranges20[28];
+extern sint16 lara_chat_ranges25[14];
+extern sint16 troop_chat_ranges25[26];
+extern sint16 troop_chat_ranges26[4];
 
 void frigup_lara(void);
 void do_key_meshswap(void);
@@ -54,5 +70,6 @@ void twentyfour_end(void);
 void twentyseven_end(void);
 void twentytwo_init(void);
 void twentytwo_end(void);
+void twentyfour_init(void);
 
 #endif
