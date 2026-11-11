@@ -58,3 +58,20 @@ void init_game_malloc(void)
     malloc_free = MALLOC_SIZE;
     malloc_used = 0;
 }
+
+void *game_malloc(int size)
+{
+    char *ptr;
+
+    size = (size + 3) & -4;
+    if (size <= malloc_free) {
+        ptr = malloc_ptr;
+        malloc_free -= size;
+        malloc_used += size;
+        malloc_ptr += size;
+        memset(ptr, 0, size);
+        return ptr;
+    }
+    Log(0, "OUT OF MEMORY");
+    return NULL;
+}
