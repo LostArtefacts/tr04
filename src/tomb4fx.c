@@ -11,6 +11,8 @@
 #include "delstuff.h"
 #include "text.h"
 #include "specific/specificfx.h"
+#include "anim.h"
+#include "objnums.h"
 
 sint32 GetFreeFireSpark(void)
 {
@@ -715,6 +717,40 @@ void TriggerShockwave(PHD_VECTOR *pos, sint32 InnerOuterRads, sint32 speed, sint
         *(sint32 *)&sw->r = rgb;
         SoundEffect(SFX_DEMI_SIREN_SWAVE, (PHD_3DPOS *)pos, SFX_DEFAULT);
     }
+}
+
+void TriggerLightningGlow(sint32 x, sint32 y, sint32 z, sint32 rgb)
+{
+    sint32 dx, dz, size;
+    SPARKS *sptr;
+
+    dx = lara_item->pos.x_pos - x;
+    dz = lara_item->pos.z_pos - z;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sG = sptr->dG = (uint8)(rgb >> 8);
+    sptr->sB = sptr->dB = (uint8)rgb;
+    sptr->ColFadeSpeed = 2;
+    sptr->Life = 4;
+    sptr->sR = sptr->dR = (uint8)(rgb >> 16);
+    sptr->FadeToBlack = 0;
+    sptr->TransType = 2;
+    sptr->x = x;
+    sptr->sLife = 4;
+    sptr->y = y;
+    sptr->z = z;
+    sptr->Zvel = 0;
+    sptr->Yvel = 0;
+    sptr->Xvel = 0;
+    sptr->Flags = 10;
+    sptr->Def = objects[DEFAULT_SPRITES].mesh_index + 11;
+    sptr->Scalar = 3;
+    sptr->MaxYvel = 0;
+    sptr->Gravity = 0;
+    size = (rgb >> 24) + (GetRandomControl() & 3);
+    sptr->Size = sptr->sSize = sptr->dSize = size;
 }
 
 void DrawLensFlares(ITEM_INFO *item)

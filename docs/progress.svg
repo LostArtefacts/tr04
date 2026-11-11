@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="118.03" height="12" x="0" y="0" class="named"><title>524 · 33.92%</title></rect>
-<rect width="0.45" height="12" x="118.03" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="118.48" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="225.47" height="12" x="122.53" y="0" class="todo"><title>1001 · 64.79%</title></rect>
+<rect width="118.25" height="12" x="0" y="0" class="named"><title>525 · 33.98%</title></rect>
+<rect width="0.45" height="12" x="118.25" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="118.70" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="225.24" height="12" x="122.76" y="0" class="todo"><title>1000 · 64.72%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">34.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">524</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1001</tspan></text>
+<text text-anchor="end" x="528" y="7.50">34.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">525</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1000</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="50.97" height="12" x="0" y="0" class="named"><title>91 KB · 14.65%</title></rect>
-<rect width="0.12" height="12" x="50.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="51.09" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="290.64" height="12" x="57.36" y="0" class="todo"><title>518 KB · 83.52%</title></rect>
+<rect width="51.10" height="12" x="0" y="0" class="named"><title>91 KB · 14.68%</title></rect>
+<rect width="0.12" height="12" x="51.10" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="51.22" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="290.51" height="12" x="57.49" y="0" class="todo"><title>518 KB · 83.48%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">91 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">518 KB</tspan></text>
@@ -660,7 +660,7 @@
 <rect width="12" height="12" x="615" y="165" class="todo"><title>0x0043af80 UpdateLightning (80 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="165" class="todo"><title>0x0043afd0 LSpline (254 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="165" class="todo"><title>0x0043b0d0 CalcLightningSpline (597 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="165" class="todo"><title>0x0043b330 TriggerLightningGlow (229 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="165" class="named"><title>0x0043b330 TriggerLightningGlow (229 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="165" class="todo"><title>0x0043b420 TriggerFlashSmoke (461 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="165" class="named"><title>0x0043b5f0 DrawLensFlares (57 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="165" class="todo"><title>0x0043b630 DrawWeaponMissile (222 bytes)</title></rect>
@@ -2281,7 +2281,7 @@
 <rect width="9.33" height="9.57" x="557.27" y="198.11" class="named"><title>0x0044c8d0 CheckNoColCeilingTriangle (231 bytes)</title></rect>
 <rect width="9.29" height="9.57" x="569.60" y="198.11" class="todo"><title>0x00420db0 lara_col_ducklr (230 bytes)</title></rect>
 <rect width="9.29" height="9.57" x="581.89" y="198.11" class="todo"><title>0x00452b80 DoCredits (230 bytes)</title></rect>
-<rect width="9.25" height="9.57" x="594.18" y="198.11" class="todo"><title>0x0043b330 TriggerLightningGlow (229 bytes)</title></rect>
+<rect width="9.25" height="9.57" x="594.18" y="198.11" class="named"><title>0x0043b330 TriggerLightningGlow (229 bytes)</title></rect>
 <rect width="9.25" height="9.57" x="606.43" y="198.11" class="todo"><title>0x0048e8d0 ClearSurfaces (229 bytes)</title></rect>
 <rect width="9.21" height="9.57" x="618.68" y="198.11" class="named"><title>0x004706b0 InitDDDevice (228 bytes)</title></rect>
 <rect width="9.17" height="9.57" x="630.89" y="198.11" class="todo"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
