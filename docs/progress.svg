@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="106.09" height="12" x="0" y="0" class="named"><title>471 · 30.49%</title></rect>
-<rect width="0.45" height="12" x="106.09" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="106.54" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="238.53" height="12" x="109.47" y="0" class="todo"><title>1059 · 68.54%</title></rect>
+<rect width="106.31" height="12" x="0" y="0" class="named"><title>472 · 30.55%</title></rect>
+<rect width="0.45" height="12" x="106.31" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="106.77" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="238.31" height="12" x="109.69" y="0" class="todo"><title>1058 · 68.48%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">30.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">471</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1059</tspan></text>
+<text text-anchor="end" x="528" y="7.50">30.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">472</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1058</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="45.35" height="12" x="0" y="0" class="named"><title>81 KB · 13.03%</title></rect>
-<rect width="0.12" height="12" x="45.35" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="45.47" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="296.91" height="12" x="51.09" y="0" class="todo"><title>529 KB · 85.32%</title></rect>
+<rect width="45.41" height="12" x="0" y="0" class="named"><title>81 KB · 13.05%</title></rect>
+<rect width="0.12" height="12" x="45.41" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="45.54" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="296.85" height="12" x="51.15" y="0" class="todo"><title>529 KB · 85.30%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">81 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">529 KB</tspan></text>
@@ -192,7 +192,7 @@
 <rect width="12" height="12" x="345" y="30" class="todo"><title>0x00413840 FloorTrapDoorCollision (431 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="30" class="todo"><title>0x004139f0 CeilingTrapDoorCollision (389 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="30" class="todo"><title>0x00413b80 FallingBlockCollision (145 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="30" class="todo"><title>0x00413c20 FallingBlock (118 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="30" class="named"><title>0x00413c20 FallingBlock (118 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="30" class="named"><title>0x00413ca0 FallingBlockFloor (76 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="30" class="named"><title>0x00413cf0 FallingBlockCeiling (61 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="30" class="todo"><title>0x00413d30 ControlFallingBlock2 (140 bytes)</title></rect>
@@ -2579,7 +2579,7 @@
 <rect width="7.13" height="6.51" x="591.20" y="276.43" class="todo"><title>0x0042f480 get_current_ammo_pointer (120 bytes)</title></rect>
 <rect width="7.07" height="6.51" x="601.33" y="276.43" class="named"><title>0x0044c670 RemoveRoomFlipItems (119 bytes)</title></rect>
 <rect width="7.01" height="6.51" x="611.40" y="276.43" class="todo"><title>0x00401000 InitialiseAhmet (118 bytes)</title></rect>
-<rect width="7.01" height="6.51" x="621.41" y="276.43" class="todo"><title>0x00413c20 FallingBlock (118 bytes)</title></rect>
+<rect width="7.01" height="6.51" x="621.41" y="276.43" class="named"><title>0x00413c20 FallingBlock (118 bytes)</title></rect>
 <rect width="7.01" height="6.51" x="631.42" y="276.43" class="named"><title>0x00432720 lara_as_glide (118 bytes)</title></rect>
 <rect width="7.01" height="6.51" x="641.43" y="276.43" class="todo"><title>0x00458690 PuzzleDone (118 bytes)</title></rect>
 <rect width="7.01" height="6.51" x="651.44" y="276.43" class="named"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>

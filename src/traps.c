@@ -26,6 +26,22 @@ void TrapDoorControl(sint16 item_number)
         CloseTrapDoor(item);
 }
 
+void FallingBlock(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (item->item_flags[0] > 1) {
+        item->pos.z_rot = (GetRandomControl() & 0x3FF) - 512;
+        item->pos.x_rot = (GetRandomControl() & 0x3FF) - 512;
+        item->item_flags[0]--;
+    } else {
+        item->mesh_bits = -2;
+        ExplodingDeath2(item_number, -1, 2465);
+        KillItem(item_number);
+    }
+}
+
 void FallingBlockFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
 {
     sint32 tx, tz;
