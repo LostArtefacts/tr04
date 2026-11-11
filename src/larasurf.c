@@ -1,5 +1,6 @@
 #include "larasurf.h"
 #include "lara_states.h"
+#include "anim.h"
 #include "specific/input.h"
 
 void lara_as_surfswim(ITEM_INFO *item, COLL_INFO *coll)
@@ -125,5 +126,19 @@ void lara_col_surfleft(ITEM_INFO *item, COLL_INFO *coll)
 void lara_col_surfright(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot + 16384;
+    LaraSurfaceCollision(item, coll);
+}
+
+void lara_col_surftread(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->goal_anim_state == AS_SWIM) {
+        item->current_anim_state = AS_DIVE;
+        item->anim_number = ANIM_SURFDIVE;
+        item->frame_number = anims[ANIM_SURFDIVE].frame_base;
+        item->pos.x_rot = -45 * ONE_DEGREE;
+        item->fallspeed = 20 * 4;
+        lara.water_status = LW_UNDERWATER;
+    }
+    lara.move_angle = item->pos.y_rot;
     LaraSurfaceCollision(item, coll);
 }
