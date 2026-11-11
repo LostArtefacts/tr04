@@ -13,6 +13,7 @@ void lara_col_climbleft(ITEM_INFO *item, COLL_INFO *coll);
 void LaraDoClimbLeftRight(ITEM_INFO *item, COLL_INFO *coll, sint32 result, sint32 shift);
 sint32 LaraClimbLeftCornerTest(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraClimbRightCornerTest(ITEM_INFO *item, COLL_INFO *coll);
+sint16 GetClimbTrigger(sint32 x, sint32 y, sint32 z, sint16 room_number);
 void lara_as_climbright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_climbright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_climbing(ITEM_INFO *item, COLL_INFO *coll);

@@ -362,3 +362,23 @@ void lara_as_climbend(ITEM_INFO *item, COLL_INFO *coll)
     camera.flags = 1;
     camera.target_angle = -8190;
 }
+
+sint16 GetClimbTrigger(sint32 x, sint32 y, sint32 z, sint16 room_number)
+{
+    FLOOR_INFO *floor;
+    sint16 *data;
+
+    floor = GetFloor(x, y, z, &room_number);
+    GetHeight(floor, x, y, z);
+    if (!trigger_index)
+        return 0;
+    data = trigger_index;
+    if ((*data & 0x1F) == LAVA_TYPE) {
+        if (*data & 0x8000)
+            return 0;
+        data++;
+    }
+    if ((*data & 0x1F) == CLIMB_TYPE)
+        return *data;
+    return 0;
+}
