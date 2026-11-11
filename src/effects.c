@@ -112,6 +112,11 @@ void PoseidonSFX(ITEM_INFO *item)
     flipeffect = -1;
 }
 
+void ActivateCamera(ITEM_INFO *item)
+{
+    KeyTriggerActive = 2;
+}
+
 void ExplosionFX(ITEM_INFO *item)
 {
     SoundEffect(105, NULL, 0);
