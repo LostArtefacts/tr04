@@ -216,6 +216,7 @@ void lara_col_backjump(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_rightjump(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_leftjump(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_slideback(ITEM_INFO *item, COLL_INFO *coll);
+void lara_default_col(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

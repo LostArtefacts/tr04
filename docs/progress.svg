@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="48.23" height="12" x="0" y="0" class="named"><title>207 · 13.40%</title></rect>
-<rect width="0.23" height="12" x="48.23" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="48.47" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="309.67" height="12" x="50.33" y="0" class="todo"><title>1329 · 86.02%</title></rect>
+<rect width="48.47" height="12" x="0" y="0" class="named"><title>208 · 13.46%</title></rect>
+<rect width="0.23" height="12" x="48.47" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.86" height="12" x="48.70" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="309.44" height="12" x="50.56" y="0" class="todo"><title>1328 · 85.95%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">13.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">207</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1329</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">208</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1328</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="18.98" height="12" x="0" y="0" class="named"><title>33 KB · 5.27%</title></rect>
-<rect width="0.10" height="12" x="18.98" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="2.99" height="12" x="19.01" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="338" height="12" x="22" y="0" class="todo"><title>582 KB · 93.89%</title></rect>
+<rect width="19.02" height="12" x="0" y="0" class="named"><title>33 KB · 5.28%</title></rect>
+<rect width="0.10" height="12" x="19.02" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="2.99" height="12" x="19.05" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="337.96" height="12" x="22.04" y="0" class="todo"><title>582 KB · 93.88%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">5.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">33 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">582 KB</tspan></text>
@@ -429,7 +429,7 @@
 <rect width="12" height="12" x="150" y="105" class="todo"><title>0x00428850 lara_col_swandive (114 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="105" class="todo"><title>0x004288d0 lara_col_fastdive (130 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="105" class="todo"><title>0x00428960 lara_col_wade (353 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="105" class="todo"><title>0x00428ad0 lara_default_col (73 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="105" class="named"><title>0x00428ad0 lara_default_col (73 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="105" class="todo"><title>0x00428b20 lara_col_jumper (125 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="105" class="todo"><title>0x00428ba0 ResetLook (151 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="105" class="todo"><title>0x00428c40 LookUpDown (252 bytes)</title></rect>
@@ -2779,7 +2779,7 @@
 <rect width="5.36" height="5.34" x="616.29" y="423.44" class="todo"><title>0x00476ac0 HWBeginScene (74 bytes)</title></rect>
 <rect width="5.36" height="5.34" x="616.29" y="431.78" class="todo"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
 <rect width="5.36" height="5.34" x="616.29" y="440.12" class="todo"><title>0x004944d0 DXReadKeyboard (74 bytes)</title></rect>
-<rect width="5.36" height="5.27" x="616.29" y="448.46" class="todo"><title>0x00428ad0 lara_default_col (73 bytes)</title></rect>
+<rect width="5.36" height="5.27" x="616.29" y="448.46" class="named"><title>0x00428ad0 lara_default_col (73 bytes)</title></rect>
 <rect width="5.36" height="5.27" x="616.29" y="456.73" class="todo"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
 <rect width="5.58" height="5.05" x="624.65" y="331.33" class="todo"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
 <rect width="5.51" height="5.05" x="633.23" y="331.33" class="todo"><title>0x00439d60 UpdateFadeClip (72 bytes)</title></rect>
