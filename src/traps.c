@@ -240,3 +240,17 @@ void ControlPlough(sint16 item_number)
     } else
         *(sint32 *)&item->item_flags[0] = 0;
 }
+
+void ControlStargate(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->item_flags[3] = 50;
+    if (TriggerActive(item)) {
+        SoundEffect(SFX_STARGATE_SWIRL, &item->pos, SFX_DEFAULT);
+        *(sint32 *)&item->item_flags[0] = 0x36DB600;
+        AnimateItem(item);
+    } else
+        *(sint32 *)&item->item_flags[0] = 0;
+}
