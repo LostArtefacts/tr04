@@ -225,3 +225,35 @@ void GetADPCMData(void)
     if ((sint32)audio_fp_write_ptr >= (sint32)(wav_file_buffer + 0x37000))
         audio_fp_write_ptr = wav_file_buffer;
 }
+
+void ACMEmulateCDPlay(sint32 track, sint32 mode)
+{
+    char name[256];
+
+    __try {
+        EnterCriticalSection(&audio_cs);
+    } __finally {
+        LeaveCriticalSection(&audio_cs);
+    }
+    wsprintf(name, "audio\\%s", TrackFileNames[track]);
+    Log(8, "Playing %s %s %d", name, mode ? "Looped" : "", track);
+    XATrack = track;
+    XAReqTrack = track;
+    XAFlag = 6;
+    auido_play_mode = mode;
+    OpenStreamFile(name);
+    if (!audio_stream_fp)
+        return;
+    memcpy(ADPCMBuffer, audio_fp_write_ptr, 0x5800);
+    GetADPCMData();
+    DXAttempt(IDirectSoundBuffer_Lock(G_DSBuffer, 0, audio_buffer_size, (LPVOID *)&pAudioWrite, &AudioBytes, 0, 0, 0));
+    acmStreamConvert(hACMStream, &StreamHeaders[0], ACM_STREAMCONVERTF_BLOCKALIGN | ACM_STREAMCONVERTF_START);
+    memcpy(ADPCMBuffer, audio_fp_write_ptr, 0x5800);
+    GetADPCMData();
+    acmStreamConvert(hACMStream, &StreamHeaders[1], ACM_STREAMCONVERTF_BLOCKALIGN);
+    DXAttempt(IDirectSoundBuffer_Unlock(G_DSBuffer, pAudioWrite, audio_buffer_size, 0, 0));
+    CurrentNotify = 2;
+    NextWriteOffset = 2 * NotifySize;
+    ACMSetVolume();
+    IDirectSoundBuffer_Play(G_DSBuffer, 0, 0, DSBPLAY_LOOPING);
+}

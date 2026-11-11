@@ -1135,8 +1135,7 @@ address,size,name,symbol
 0x0046de50,254,OpenStreamFile,_OpenStreamFile
 0x0046df50,405,FillADPCMBuffer,_FillADPCMBuffer
 0x0046e0f0,143,GetADPCMData,_GetADPCMData
-0x0046e180,428,ACMEmulateCDPlay,_ACMEmulateCDPlay
-0x0046e32c,12,Func46e32c,
+0x0046e180,440,ACMEmulateCDPlay,_ACMEmulateCDPlay
 0x0046e340,389,ACMHandleNotifications,_ACMHandleNotifications
 0x0046e4d0,1009,ZClipper,_ZClipper
 0x0046e8d0,5386,XYUVGClipper,_XYUVGClipper
@@ -2000,6 +1999,7 @@ address,size,name,symbol
 0x004afeec,92,AccentTable,_AccentTable
 0x004aff48,80,ShadeFromTo,_ShadeFromTo
 0x004aff98,4,font_init,_font_init
+0x004b06c0,7168,TrackFileNames,_TrackFileNames
 0x004b22c0,4,source_wav_format,_source_wav_format
 0x004b22f4,4,XATrack,_XATrack
 0x004b22f8,4,XAFlag,_XAFlag

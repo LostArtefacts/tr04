@@ -10,6 +10,7 @@
 #include "../types.h"
 #include "function_stubs.h"
 #include "file.h"
+#include "dxshell.h"
 
 void S_CDPlay(sint32 track, sint32 mode);
 void S_CDStop(void);
@@ -43,6 +44,14 @@ extern char *wav_file_buffer;
 extern char *audio_fp_write_ptr;
 extern sint32 auido_play_mode;
 extern sint32 XATrack;
+extern sint32 XAReqTrack;
+extern char TrackFileNames[112][64];
+extern char *ADPCMBuffer;
+extern char *pAudioWrite;
+extern DWORD AudioBytes;
+extern sint32 audio_buffer_size;
+extern sint32 CurrentNotify;
+extern sint32 NextWriteOffset;
 extern sint32 XAFlag;
 extern uint8 CurrentAtmosphere;
 extern sint32 MusicVolume;
