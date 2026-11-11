@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="72" height="12" x="0" y="0" class="named"><title>309 · 20%</title></rect>
-<rect width="0.23" height="12" x="72" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="72.23" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="285.20" height="12" x="74.80" y="0" class="todo"><title>1224 · 79.22%</title></rect>
+<rect width="72.23" height="12" x="0" y="0" class="named"><title>310 · 20.06%</title></rect>
+<rect width="0.23" height="12" x="72.23" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="72.47" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="284.97" height="12" x="75.03" y="0" class="todo"><title>1223 · 79.16%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">20.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">309</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1224</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">310</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1223</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="26.16" height="12" x="0" y="0" class="named"><title>45 KB · 7.27%</title></rect>
-<rect width="0.10" height="12" x="26.16" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="26.19" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="328.80" height="12" x="31.20" y="0" class="todo"><title>566 KB · 91.33%</title></rect>
+<rect width="26.17" height="12" x="0" y="0" class="named"><title>45 KB · 7.27%</title></rect>
+<rect width="0.10" height="12" x="26.17" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="26.20" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="328.78" height="12" x="31.22" y="0" class="todo"><title>566 KB · 91.33%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">7.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">45 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">566 KB</tspan></text>
@@ -497,7 +497,7 @@
 <rect width="12" height="12" x="420" y="120" class="named"><title>0x0042fb00 set_flare_arm (75 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="120" class="todo"><title>0x0042fb50 draw_flare (270 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="120" class="todo"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="120" class="todo"><title>0x0042ff10 draw_flare_meshes (24 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="120" class="named"><title>0x0042ff10 draw_flare_meshes (24 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="120" class="todo"><title>0x0042ff30 undraw_flare_meshes (24 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="120" class="named"><title>0x0042ff50 ready_flare (62 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="120" class="todo"><title>0x0042ff90 FlareControl (429 bytes)</title></rect>
@@ -3027,7 +3027,7 @@
 <rect width="2.95" height="3.15" x="738.10" y="397.32" class="named"><title>0x00423d20 lara_as_monkey180 (24 bytes)</title></rect>
 <rect width="2.95" height="3.15" x="744.05" y="397.32" class="named"><title>0x00427310 lara_as_slideback (24 bytes)</title></rect>
 <rect width="2.89" height="3.21" x="688.40" y="403.47" class="named"><title>0x00427640 lara_as_waterout (24 bytes)</title></rect>
-<rect width="2.89" height="3.21" x="688.40" y="409.67" class="todo"><title>0x0042ff10 draw_flare_meshes (24 bytes)</title></rect>
+<rect width="2.89" height="3.21" x="688.40" y="409.67" class="named"><title>0x0042ff10 draw_flare_meshes (24 bytes)</title></rect>
 <rect width="2.89" height="3.21" x="688.40" y="415.88" class="todo"><title>0x0042ff30 undraw_flare_meshes (24 bytes)</title></rect>
 <rect width="2.89" height="3.21" x="688.40" y="422.08" class="todo"><title>0x00437d30 MeshSwapFromPour (24 bytes)</title></rect>
 <rect width="2.89" height="3.21" x="688.40" y="428.29" class="todo"><title>0x00439d40 SetFadeClip (24 bytes)</title></rect>

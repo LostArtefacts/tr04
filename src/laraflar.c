@@ -2,6 +2,7 @@
 #include "lara.h"
 #include "anim.h"
 #include "objnums.h"
+#include "delstuff.h"
 
 void set_flare_arm(sint32 frame)
 {
@@ -20,6 +21,11 @@ void set_flare_arm(sint32 frame)
     }
     lara.left_arm.anim_number = anim_base;
     lara.left_arm.frame_base = anims[lara.left_arm.anim_number].frame_ptr;
+}
+
+void draw_flare_meshes(void)
+{
+    lara.mesh_ptrs[LM_LHAND] = meshes[objects[FLARE_ANIM].mesh_index + LM_LHAND * 2];
 }
 
 void ready_flare(void)
