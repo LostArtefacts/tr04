@@ -13,6 +13,7 @@
 #include "draw.h"
 #include "room.h"
 #include "tomb4fx.h"
+#include "gameflow.h"
 
 sint32 ItemNearLara(PHD_3DPOS *pos, sint32 distance)
 {
@@ -81,6 +82,11 @@ void Splash(ITEM_INFO *item)
         splash_setup.OuterRad = 544;
         SetupSplash(&splash_setup);
     }
+}
+
+void finish_level_effect(ITEM_INFO *item)
+{
+    gfLevelComplete = gfCurrentLevel + 1;
 }
 
 void turn180_effect(ITEM_INFO *item)

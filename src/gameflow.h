@@ -416,6 +416,8 @@ enum gf_strings {
 
 extern uint16 gfLevelFlags;
 extern char gfGameMode;
+extern uint8 gfCurrentLevel;
+extern uint8 gfLevelComplete;
 extern GAMEFLOW *Gameflow;
 extern uint16 *gfStringOffset;
 extern char *gfStringWad;
