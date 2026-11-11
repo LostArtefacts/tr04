@@ -188,3 +188,8 @@ void lara_col_turn_l(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara_col_turn_r(item, coll);
 }
+
+void lara_col_stepleft(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara_col_stepright(item, coll);
+}
