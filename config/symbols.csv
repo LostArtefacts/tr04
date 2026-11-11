@@ -2023,6 +2023,9 @@ address,size,name,symbol
 0x004af452,,gfInitialiseGame,_gfInitialiseGame
 0x004af454,4,nFrames,_nFrames
 0x004afab8,4,old_hitpoints,_old_hitpoints
+0x004afae8,12,PolePos,_PolePos
+0x004afaf4,24,PoleBounds,_PoleBounds
+0x004afb0c,24,StatuePlinthBounds,_StatuePlinthBounds
 0x004afcd0,24,Switch2Bounds,_Switch2Bounds
 0x004afce8,12,Switch2Pos,_Switch2Pos
 0x004afcf4,24,TurnSwitchBoundsA,_TurnSwitchBoundsA
@@ -2179,6 +2182,7 @@ address,size,name,symbol
 0x004bf688,4,flash_count,_flash_count
 0x004bf68c,4,level_items,_level_items
 0x004bf690,4,slots_used,_slots_used
+0x004bf698,12,PolePosR,_PolePosR
 0x004bf6a8,4,nRope,_nRope
 0x004bf6d4,4,SGpoint,_SGpoint
 0x004bf6d8,4,SGcount,_SGcount

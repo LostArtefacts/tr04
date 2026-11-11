@@ -4,6 +4,11 @@
 #include "items.h"
 #include "collide.h"
 
+extern PHD_VECTOR PolePos;
+extern sint16 PoleBounds[12];
+extern PHD_VECTOR PolePosR;
+extern sint16 StatuePlinthBounds[12];
+
 void BridgeFlatCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height);
 sint32 GetOffset(ITEM_INFO *item, sint32 x, sint32 z);
 void BridgeTilt1Ceiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height);
@@ -20,5 +25,6 @@ void ControlMapper(sint16 item_number);
 void TriggerRopeFlame(PHD_VECTOR *pos);
 void BurningRopeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void ControlBurningRope(sint16 item_number);
+void PoleCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif

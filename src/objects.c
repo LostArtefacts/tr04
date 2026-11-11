@@ -147,6 +147,59 @@ void ControlAnimatingSlots(sint16 item_number)
         item->status = ITEM_INVISIBLE;
 }
 
+void PoleCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint16 roty;
+
+    item = &items[item_num];
+    if (input & IN_ACTION && lara.gun_status == LG_NO_ARMS && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH ||
+        lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+        roty = item->pos.y_rot;
+        item->pos.y_rot = l->pos.y_rot;
+        if (TestLaraPosition(PoleBounds, item, l)) {
+            if (MoveLaraPosition(&PolePos, item, l)) {
+                l->anim_number = ANIM_STAT2POLE;
+                l->frame_number = anims[ANIM_STAT2POLE].frame_base;
+                l->current_anim_state = AS_POLESTAT;
+                lara.IsMoving = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+            } else
+                lara.GeneralPtr = (void *)item_num;
+        } else {
+            if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+                lara.IsMoving = 0;
+                lara.gun_status = LG_NO_ARMS;
+            }
+        }
+        item->pos.y_rot = roty;
+    } else if (input & IN_ACTION && lara.gun_status == LG_NO_ARMS && l->gravity_status && l->fallspeed > 0 && (l->current_anim_state == AS_REACH || l->current_anim_state == AS_UPJUMP)) {
+        if (TestBoundsCollide(item, l, 100) && TestCollision(item, l)) {
+            roty = item->pos.y_rot;
+            item->pos.y_rot = l->pos.y_rot;
+            if (l->current_anim_state == AS_REACH) {
+                PolePosR.y = l->pos.y_pos - item->pos.y_pos + 10;
+                AlignLaraPosition(&PolePosR, item, l);
+                l->anim_number = ANIM_REACH2POLE;
+                l->frame_number = anims[ANIM_REACH2POLE].frame_base;
+            } else {
+                PolePosR.y = l->pos.y_pos - item->pos.y_pos + 66;
+                AlignLaraPosition(&PolePosR, item, l);
+                l->anim_number = ANIM_JUMP2POLE;
+                l->frame_number = anims[ANIM_JUMP2POLE].frame_base;
+            }
+            l->gravity_status = 0;
+            l->fallspeed = 0;
+            l->current_anim_state = AS_POLESTAT;
+            lara.gun_status = LG_HANDS_BUSY;
+            item->pos.y_rot = roty;
+        }
+    } else {
+        if ((l->current_anim_state < AS_POLESTAT || l->current_anim_state > AS_POLERIGHT) && l->current_anim_state != AS_BACKJUMP)
+            ObjectCollision(item_num, l, coll);
+    }
+}
+
 void ControlTriggerTriggerer(sint16 item_number)
 {
     ITEM_INFO *item;
