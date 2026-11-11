@@ -78,11 +78,16 @@ void RefreshCamera(sint16 type, sint16 *data);
 sint32 ExplodeItemNode(ITEM_INFO *item, sint32 Node, sint32 NoXZVel, sint32 bits);
 sint32 IsRoomOutside(sint32 x, sint32 y, sint32 z);
 void FireCrossBowFromLaserSight(GAME_VECTOR *start, GAME_VECTOR *target);
+void KillMoveItems(void);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;
 extern uint32 CutSceneTriggered;
 extern uint16 GlobalCounter;
 extern sint16 IsRoomOutsideNo;
+extern sint16 ItemNewRoomNo;
+extern sint16 ItemNewRooms[256][2];
+extern sint16 SkyPos;
+extern sint16 SkyPos2;
 
 #endif

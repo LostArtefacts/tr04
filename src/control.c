@@ -5,6 +5,22 @@
 #include "box.h"
 #include "anim.h"
 #include "camera.h"
+#include "gameflow.h"
+#include "specific/3dmath.h"
+#include "specific/audio.h"
+
+void KillMoveItems(void)
+{
+    sint16 i;
+
+    for (i = 0; i < ItemNewRoomNo; i++) {
+        if (ItemNewRooms[i][0] & 0x8000)
+            KillItem(ItemNewRooms[i][0] & 0x7FFF);
+        else
+            ItemNewRoom(ItemNewRooms[i][0], ItemNewRooms[i][1]);
+    }
+    ItemNewRoomNo = 0;
+}
 
 sint32 GetChange(ITEM_INFO *item, ANIM_STRUCT *anim)
 {
