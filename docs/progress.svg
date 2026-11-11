@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="10.24" height="12" x="0" y="0" class="named"><title>38 · 2.45%</title></rect>
-<rect width="0.27" height="12" x="10.24" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="407.49" height="12" x="10.51" y="0" class="todo"><title>1512 · 97.49%</title></rect>
+<rect width="10.51" height="12" x="0" y="0" class="named"><title>39 · 2.51%</title></rect>
+<rect width="0.27" height="12" x="10.51" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="407.22" height="12" x="10.78" y="0" class="todo"><title>1511 · 97.42%</title></rect>
 </g>
-<text text-anchor="end" x="588" y="7.50">2.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="7"><tspan class="named">38</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="todo">1512</tspan></text>
+<text text-anchor="end" x="588" y="7.50">2.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="7"><tspan class="named">39</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="todo">1511</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="4.22" height="12" x="0" y="0" class="named"><title>6 KB · 1.01%</title></rect>
-<rect width="0.10" height="12" x="4.22" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="413.75" height="12" x="4.25" y="0" class="todo"><title>613 KB · 98.98%</title></rect>
+<rect width="4.25" height="12" x="0" y="0" class="named"><title>6 KB · 1.02%</title></rect>
+<rect width="0.10" height="12" x="4.25" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="413.71" height="12" x="4.29" y="0" class="todo"><title>613 KB · 98.97%</title></rect>
 </g>
 <text text-anchor="end" x="588" y="24.50">1.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="24"><tspan class="named">6 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="todo">613 KB</tspan></text>
@@ -508,7 +508,7 @@
 <rect width="12" height="12" x="615" y="120" class="todo"><title>0x00430eb0 InitialiseLaraLoad (45 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="120" class="todo"><title>0x00430ee0 InitialiseLaraAnims (133 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="120" class="todo"><title>0x00430f70 CreateSkinningData (2027 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="120" class="todo"><title>0x00431760 PushXYZ (46 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="120" class="named"><title>0x00431760 PushXYZ (46 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="120" class="todo"><title>0x00431790 PopXYZ (8 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="120" class="todo"><title>0x004317a0 OptomiseSkinningData (760 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="120" class="todo"><title>0x00431aa0 LaraSurface (367 bytes)</title></rect>
@@ -2912,7 +2912,7 @@
 <rect width="4.14" height="4.56" x="679.40" y="380.68" class="todo"><title>0x00473b10 S_SoundPlaySampleLooped (47 bytes)</title></rect>
 <rect width="4.05" height="4.56" x="686.54" y="380.68" class="todo"><title>0x00424620 lara_as_ropel (46 bytes)</title></rect>
 <rect width="4.05" height="4.56" x="693.59" y="380.68" class="todo"><title>0x00424650 lara_as_roper (46 bytes)</title></rect>
-<rect width="4.05" height="4.56" x="700.64" y="380.68" class="todo"><title>0x00431760 PushXYZ (46 bytes)</title></rect>
+<rect width="4.05" height="4.56" x="700.64" y="380.68" class="named"><title>0x00431760 PushXYZ (46 bytes)</title></rect>
 <rect width="4.05" height="4.56" x="707.69" y="380.68" class="todo"><title>0x004505c0 phd_RotY_I (46 bytes)</title></rect>
 <rect width="4.05" height="4.56" x="714.74" y="380.68" class="todo"><title>0x004505f0 phd_RotX_I (46 bytes)</title></rect>
 <rect width="4.05" height="4.56" x="721.80" y="380.68" class="todo"><title>0x00450620 phd_RotZ_I (46 bytes)</title></rect>
