@@ -50,3 +50,15 @@ void UpdateFadeClip(void)
             FadeScreenHeight = DestFadeScreenHeight;
     }
 }
+
+void SetScreenFadeOut(sint16 speed, sint16 back)
+{
+    if (!ScreenFading) {
+        ScreenFading = 1;
+        ScreenFade = 0;
+        dScreenFade = 255;
+        ScreenFadeSpeed = speed;
+        ScreenFadeBack = back;
+        ScreenFadedOut = 0;
+    }
+}

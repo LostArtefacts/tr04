@@ -38,6 +38,7 @@ void TriggerShockwave(PHD_VECTOR *pos, sint32 InnerOuterRads, sint32 speed, sint
 void ClearFires(void);
 void SetFadeClip(sint16 height, sint16 speed);
 void UpdateFadeClip(void);
+void SetScreenFadeOut(sint16 speed, sint16 back);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
