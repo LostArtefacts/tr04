@@ -182,3 +182,8 @@ void twentyseven_end(void)
     FlipMap(8);
     nail_intelligent_object(SETHA);
 }
+
+void twentytwo_init(void)
+{
+    cutseq_kill_item(DOOR_TYPE6);
+}
