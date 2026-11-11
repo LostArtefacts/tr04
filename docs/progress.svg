@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="107.44" height="12" x="0" y="0" class="named"><title>477 · 30.87%</title></rect>
-<rect width="0.45" height="12" x="107.44" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="107.89" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="237.18" height="12" x="110.82" y="0" class="todo"><title>1053 · 68.16%</title></rect>
+<rect width="107.67" height="12" x="0" y="0" class="named"><title>478 · 30.94%</title></rect>
+<rect width="0.45" height="12" x="107.67" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="108.12" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="236.96" height="12" x="111.04" y="0" class="todo"><title>1052 · 68.09%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">31.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">477</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1053</tspan></text>
+<text text-anchor="end" x="528" y="7.50">31.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">478</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1052</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="45.69" height="12" x="0" y="0" class="named"><title>81 KB · 13.13%</title></rect>
-<rect width="0.12" height="12" x="45.69" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="45.81" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="296.57" height="12" x="51.43" y="0" class="todo"><title>529 KB · 85.22%</title></rect>
+<rect width="45.80" height="12" x="0" y="0" class="named"><title>82 KB · 13.16%</title></rect>
+<rect width="0.12" height="12" x="45.80" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="45.93" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="296.46" height="12" x="51.54" y="0" class="todo"><title>528 KB · 85.19%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">81 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">529 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">82 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">528 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -212,7 +212,7 @@
 <rect width="12" height="12" x="645" y="30" class="todo"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="30" class="named"><title>0x00415ad0 TwoBlockPlatformFloor (74 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="30" class="named"><title>0x00415b20 TwoBlockPlatformCeiling (59 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="30" class="todo"><title>0x00415b60 OnTwoBlockPlatform (200 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="30" class="named"><title>0x00415b60 OnTwoBlockPlatform (200 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="30" class="todo"><title>0x00415c30 ControlTwoBlockPlatform (380 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="30" class="todo"><title>0x00415db0 ControlSlicerDicer (269 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="30" class="todo"><title>0x00415ec0 TestBoundsCollideTeethSpikes (270 bytes)</title></rect>
@@ -2337,7 +2337,7 @@
 <rect width="8.98" height="8.65" x="726.03" y="210.23" class="todo"><title>0x00493f60 DXShowFrame (201 bytes)</title></rect>
 <rect width="8.98" height="8.65" x="738.02" y="210.23" class="todo"><title>0x00494400 Func494400 (201 bytes)</title></rect>
 <rect width="8.92" height="8.67" x="495.70" y="221.87" class="named"><title>0x004090b0 JeanYvesControl (200 bytes)</title></rect>
-<rect width="8.92" height="8.67" x="495.70" y="233.55" class="todo"><title>0x00415b60 OnTwoBlockPlatform (200 bytes)</title></rect>
+<rect width="8.92" height="8.67" x="495.70" y="233.55" class="named"><title>0x00415b60 OnTwoBlockPlatform (200 bytes)</title></rect>
 <rect width="8.92" height="8.67" x="495.70" y="245.22" class="todo"><title>0x00442e70 InitialiseCamera (200 bytes)</title></rect>
 <rect width="8.92" height="8.67" x="495.70" y="256.89" class="named"><title>0x0048fa90 SetupZRange (200 bytes)</title></rect>
 <rect width="8.92" height="8.63" x="495.70" y="268.56" class="todo"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>

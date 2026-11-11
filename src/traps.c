@@ -183,6 +183,27 @@ void TwoBlockPlatformCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint
     }
 }
 
+sint32 OnTwoBlockPlatform(ITEM_INFO *item, sint32 x, sint32 z)
+{
+    sint32 tx, tz;
+
+    if (!item->mesh_bits)
+        return 0;
+    x >>= 10;
+    z >>= 10;
+    tx = item->pos.x_pos >> 10;
+    tz = item->pos.z_pos >> 10;
+    if (!item->pos.y_rot && (x == tx || x == tx - 1) && (z == tz || z == tz + 1))
+        return 1;
+    if (item->pos.y_rot == -0x8000 && (x == tx || x == tx + 1) && (z == tz || z == tz - 1))
+        return 1;
+    if (item->pos.y_rot == 0x4000 && (z == tz || z == tz - 1) && (x == tx || x == tx + 1))
+        return 1;
+    if (item->pos.y_rot == -0x4000 && (z == tz || z == tz - 1) && (x == tx || x == tx - 1))
+        return 1;
+    return 0;
+}
+
 void ControlPlough(sint16 item_number)
 {
     ITEM_INFO *item;
