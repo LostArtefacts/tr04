@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="137.95" height="12" x="0" y="0" class="named"><title>624 · 40.34%</title></rect>
-<rect width="0.44" height="12" x="137.95" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="138.39" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="198.97" height="12" x="143.03" y="0" class="todo"><title>900 · 58.18%</title></rect>
+<rect width="138.17" height="12" x="0" y="0" class="named"><title>625 · 40.40%</title></rect>
+<rect width="0.44" height="12" x="138.17" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="138.61" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="198.74" height="12" x="143.26" y="0" class="todo"><title>899 · 58.11%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">40.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">624</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">900</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">625</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">899</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="56.72" height="12" x="0" y="0" class="named"><title>103 KB · 16.59%</title></rect>
-<rect width="0.12" height="12" x="56.72" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="56.84" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="277.91" height="12" x="64.09" y="0" class="todo"><title>504 KB · 81.26%</title></rect>
+<rect width="56.73" height="12" x="0" y="0" class="named"><title>103 KB · 16.59%</title></rect>
+<rect width="0.12" height="12" x="56.73" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="56.85" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="277.90" height="12" x="64.10" y="0" class="todo"><title>504 KB · 81.26%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">103 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">504 KB</tspan></text>
@@ -1175,7 +1175,7 @@
 <rect width="12" height="12" x="90" y="330" class="named"><title>0x0046ccb0 cutseq_restore_item (109 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="330" class="todo"><title>0x0046cd20 Load_and_Init_Cutseq (260 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="330" class="todo"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="330" class="todo"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="330" class="named"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="330" class="todo"><title>0x0046d040 DelsHandyTeleportLara (279 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="330" class="named"><title>0x0046d160 nail_intelligent_object (82 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="330" class="named"><title>0x0046d1c0 force_sky_lightning (39 bytes)</title></rect>
@@ -3095,7 +3095,7 @@
 <rect width="2.47" height="2.66" x="739.06" y="421.04" class="todo"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
 <rect width="2.47" height="2.66" x="744.53" y="421.04" class="todo"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
 <rect width="2.48" height="2.49" x="706.24" y="426.70" class="named"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
-<rect width="2.48" height="2.49" x="706.24" y="432.19" class="todo"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
+<rect width="2.48" height="2.49" x="706.24" y="432.19" class="named"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
 <rect width="2.48" height="2.49" x="706.24" y="437.68" class="todo"><title>0x004761e0 LoadCinematic (16 bytes)</title></rect>
 <rect width="2.48" height="2.49" x="706.24" y="443.18" class="todo"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
 <rect width="2.48" height="2.49" x="706.24" y="448.67" class="todo"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>

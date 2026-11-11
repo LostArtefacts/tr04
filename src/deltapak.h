@@ -12,6 +12,7 @@ extern ITEM_INFO *horus_item_thing;
 extern char lara_chat_cnt;
 extern char actor_chat_cnt;
 extern uint32 cutseq_meshbits[10];
+extern uint32 cutseq_meshswapbits[10];
 extern char old_status_flags[16];
 extern sint32 numnailed;
 extern sint16 lara_chat_ranges6[4];

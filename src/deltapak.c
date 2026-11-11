@@ -389,6 +389,11 @@ void cutseq_restore_item(sint32 num)
     }
 }
 
+void init_voncroy_meshbits(sint32 num)
+{
+    cutseq_meshswapbits[num] = 0x240080;
+}
+
 void nail_intelligent_object(sint16 num)
 {
     ITEM_INFO *item;

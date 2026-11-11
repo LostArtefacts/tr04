@@ -2447,6 +2447,7 @@ address,size,name,symbol
 0x007f4f1c,4,cutseqpakPtr,_cutseqpakPtr
 0x007f4f20,4,camera_pnodes,_camera_pnodes
 0x007f4f40,40,cutseq_meshbits,_cutseq_meshbits
+0x007f4f80,40,cutseq_meshswapbits,_cutseq_meshswapbits
 0x007f4fa8,4,horus_item_thing,_horus_item_thing
 0x007f4fac,4,GLOBAL_resident_depack_buffers,_GLOBAL_resident_depack_buffers
 0x007f4fb0,2,old_lara_holster,_old_lara_holster
