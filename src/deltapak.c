@@ -81,6 +81,17 @@ void fourteen_end(void)
     lara.questitems |= 1;
 }
 
+void fourteen_control(void)
+{
+    ITEM_INFO *item;
+
+    if (GLOBAL_cutseq_frame == 393) {
+        item = find_a_fucking_item(SARCOPHAGUS_CUT);
+        item->flags |= IFL_TRIGGERED;
+        item->mesh_bits = 3;
+    }
+}
+
 void fifteen_end(void)
 {
     lara.questitems |= 1;

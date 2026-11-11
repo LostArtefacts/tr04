@@ -39,5 +39,6 @@ void thirteen_end(void);
 void fourteen_end(void);
 void fifteen_end(void);
 void sixteen_end(void);
+void fourteen_control(void);
 
 #endif
