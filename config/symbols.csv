@@ -2009,6 +2009,10 @@ address,size,name,symbol
 0x004afce8,12,Switch2Pos,_Switch2Pos
 0x004afdbc,24,JumpSwitchBounds,_JumpSwitchBounds
 0x004afdd8,12,JumpSwitchPos,_JumpSwitchPos
+0x004afe84,24,UnderwaterSwitchBounds,_UnderwaterSwitchBounds
+0x004afe9c,24,UnderwaterSwitchBounds2,_UnderwaterSwitchBounds2
+0x004afeb8,12,UnderwaterSwitchPos,_UnderwaterSwitchPos
+0x004afec8,12,UnderwaterSwitchPos2,_UnderwaterSwitchPos2
 0x004afeec,92,AccentTable,_AccentTable
 0x004aff48,80,ShadeFromTo,_ShadeFromTo
 0x004aff98,4,font_init,_font_init
@@ -2510,7 +2514,7 @@ address,size,name,symbol
 0x007fe7e2,2,IsRoomOutsideNo,_IsRoomOutsideNo
 0x007fe7e4,4,CutSceneTriggered,_CutSceneTriggered
 0x007fe820,4,camera,_camera
-0x007fe890,4,ForcedFixedCamera,_ForcedFixedCamera
+0x007fe890,16,ForcedFixedCamera,_ForcedFixedCamera
 0x007fe8a0,4,last_target,_last_target
 0x007fe8b0,4,last_ideal,_last_ideal
 0x007fe8c0,1,UseForcedFixedCamera,_UseForcedFixedCamera
