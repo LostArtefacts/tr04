@@ -3,6 +3,7 @@
 #include "control.h"
 #include "draw.h"
 #include "anim.h"
+#include "objnums.h"
 #include "lara.h"
 #include "lara_states.h"
 #include "specific/input.h"
@@ -125,6 +126,66 @@ void PushPullKickDoorControl(sint16 item_number)
         door->Opened = 1;
     }
     AnimateItem(item);
+}
+
+void PushPullKickDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint32 pull;
+    sint32 goin;
+
+    item = &items[item_num];
+    if (((input & IN_ACTION) && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && item->status != ITEM_ACTIVE && !l->gravity_status && lara.gun_status == LG_NO_ARMS) || (lara.IsMoving && lara.GeneralPtr == (void *)item_num)) {
+        pull = 0;
+        if (l->room_number == item->room_number) {
+            item->pos.y_rot ^= 0x8000;
+            pull = 1;
+        }
+        if (TestLaraPosition(PushPullKickDoorBounds, item, l)) {
+            goin = 0;
+            if (pull) {
+                if (MoveLaraPosition(&PullDoorPos, item, l)) {
+                    l->anim_number = ANIM_PULLDOOR;
+                    l->frame_number = anims[ANIM_PULLDOOR].frame_base;
+                    item->goal_anim_state = 3;
+                    goin = 1;
+                } else
+                    lara.GeneralPtr = (void *)item_num;
+            } else {
+                if (item->object_number < KICK_DOOR1) {
+                    if (MoveLaraPosition(&PushDoorPos, item, l)) {
+                        l->anim_number = ANIM_PUSHDOOR;
+                        l->frame_number = anims[ANIM_PUSHDOOR].frame_base;
+                        item->goal_anim_state = 2;
+                        goin = 1;
+                    } else
+                        lara.GeneralPtr = (void *)item_num;
+                } else {
+                    if (MoveLaraPosition(&KickDoorPos, item, l)) {
+                        l->anim_number = ANIM_KICKDOOR;
+                        l->frame_number = anims[ANIM_KICKDOOR].frame_base;
+                        item->goal_anim_state = 2;
+                        goin = 1;
+                    } else
+                        lara.GeneralPtr = (void *)item_num;
+                }
+            }
+            if (goin) {
+                AddActiveItem(item_num);
+                item->status = ITEM_ACTIVE;
+                l->current_anim_state = AS_CONTROLLED;
+                l->goal_anim_state = AS_STOP;
+                lara.IsMoving = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+            }
+        } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+            lara.IsMoving = 0;
+            lara.gun_status = LG_NO_ARMS;
+        }
+        if (pull)
+            item->pos.y_rot ^= 0x8000;
+    } else if (!item->current_anim_state)
+        DoorCollision(item_num, l, coll);
 }
 
 void DoubleDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)

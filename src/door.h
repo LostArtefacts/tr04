@@ -31,9 +31,11 @@ extern sint16 CrowbarDoorBounds[12];
 
 void ShutThatDoor(DOORPOS_DATA *d);
 void OpenThatDoor(DOORPOS_DATA *d);
+void DoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
 void PushPullKickDoorControl(sint16 item_number);
 void DoorControl(sint16 item_number);
 void DoubleDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
 void UnderwaterDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
+void PushPullKickDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif
