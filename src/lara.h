@@ -233,6 +233,7 @@ void lara_as_back(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraDeflectEdgeDuck(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_forwardjump(ITEM_INFO *item, COLL_INFO *coll);
+void MonkeySwingSnap(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

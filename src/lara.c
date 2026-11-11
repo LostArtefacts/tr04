@@ -42,6 +42,16 @@ void lara_as_dashdive(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void MonkeySwingSnap(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint16 room_num;
+    FLOOR_INFO *floor;
+
+    room_num = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_num);
+    item->pos.y_pos = GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos) + (768 - 64);
+}
+
 void lara_as_monkeyl(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
