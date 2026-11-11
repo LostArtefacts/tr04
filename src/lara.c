@@ -183,3 +183,8 @@ void lara_as_special(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_angle = 170 * ONE_DEGREE;
     camera.target_elevation = -25 * ONE_DEGREE;
 }
+
+void lara_col_turn_l(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara_col_turn_r(item, coll);
+}
