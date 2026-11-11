@@ -254,6 +254,7 @@ void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_splat(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_pickup(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_usekey(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_forwardjump(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
