@@ -387,6 +387,21 @@ void cutseq_restore_item(sint32 num)
     }
 }
 
+void nail_intelligent_object(sint16 num)
+{
+    ITEM_INFO *item;
+    sint32 i;
+
+    item = items;
+    for (i = 0; i < level_items; i++, item++) {
+        if (item->object_number == num) {
+            item->status = ITEM_INVISIBLE;
+            RemoveActiveItem(i);
+            DisableBaddieAI(i);
+        }
+    }
+}
+
 void force_sky_lightning(void)
 {
     LightningCount = (GetRandomDraw() & 0x1F) + 64;
