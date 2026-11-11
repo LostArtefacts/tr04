@@ -5,6 +5,8 @@
 
 #define NUM_SLOTS 5
 #define NO_BOX 0x7FF
+#define BOX_NUMBER 0x7FF
+#define NO_FLYING 0
 #define BLOCKABLE 0x8000
 #define BLOCKED 0x4000
 
@@ -115,6 +117,7 @@ void CreatureJoint(ITEM_INFO *item, sint16 joint, sint16 required);
 sint16 CreatureEffectT(ITEM_INFO *item, BITE_INFO *bite, sint16 damage, sint16 angle, sint16 (*generate)(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 room_number));
 sint16 AIGuard(CREATURE_INFO *creature);
 sint32 EscapeBox(ITEM_INFO *item, ITEM_INFO *enemy, sint16 box_number);
+void TargetBox(LOT_INFO *LOT, sint16 box_number);
 
 extern CREATURE_INFO *baddie_slots;
 
