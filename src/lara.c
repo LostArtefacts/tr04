@@ -946,6 +946,26 @@ void lara_col_leftjump(ITEM_INFO *item, COLL_INFO *coll)
     lara_col_jumper(item, coll);
 }
 
+void lara_col_fallback(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot - 32768;
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 192;
+    GetLaraCollisionInfo(item, coll);
+    LaraDeflectEdgeJump(item, coll);
+    if (coll->mid_floor <= 0 && item->fallspeed > 0) {
+        if (LaraLandedBad(item, coll))
+            item->goal_anim_state = AS_DEATH;
+        else
+            item->goal_anim_state = AS_STOP;
+        item->fallspeed = 0;
+        item->gravity_status = 0;
+        if (coll->mid_floor != NO_HEIGHT)
+            item->pos.y_pos += coll->mid_floor;
+    }
+}
+
 void lara_col_slideback(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot - 32768;
