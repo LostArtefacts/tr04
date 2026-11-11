@@ -22,6 +22,19 @@ void KillMoveItems(void)
     ItemNewRoomNo = 0;
 }
 
+void KillMoveEffects(void)
+{
+    sint16 i;
+
+    for (i = 0; i < ItemNewRoomNo; i++) {
+        if (ItemNewRooms[i][0] & 0x8000)
+            KillEffect(ItemNewRooms[i][0] & 0x7FFF);
+        else
+            EffectNewRoom(ItemNewRooms[i][0], ItemNewRooms[i][1]);
+    }
+    ItemNewRoomNo = 0;
+}
+
 sint32 GetChange(ITEM_INFO *item, ANIM_STRUCT *anim)
 {
     sint32 i, j;
