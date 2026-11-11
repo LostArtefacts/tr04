@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="112.85" height="12" x="0" y="0" class="named"><title>501 · 32.43%</title></rect>
-<rect width="0.45" height="12" x="112.85" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="113.30" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="230.65" height="12" x="117.35" y="0" class="todo"><title>1024 · 66.28%</title></rect>
+<rect width="113.07" height="12" x="0" y="0" class="named"><title>502 · 32.49%</title></rect>
+<rect width="0.45" height="12" x="113.07" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="113.52" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="230.42" height="12" x="117.58" y="0" class="todo"><title>1023 · 66.21%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">32.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">501</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1024</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">502</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1023</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="48.60" height="12" x="0" y="0" class="named"><title>87 KB · 13.96%</title></rect>
-<rect width="0.12" height="12" x="48.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="48.72" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="293.01" height="12" x="54.99" y="0" class="todo"><title>522 KB · 84.20%</title></rect>
+<rect width="48.63" height="12" x="0" y="0" class="named"><title>87 KB · 13.97%</title></rect>
+<rect width="0.12" height="12" x="48.63" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="48.75" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="292.98" height="12" x="55.02" y="0" class="todo"><title>522 KB · 84.19%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">87 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">522 KB</tspan></text>
@@ -645,7 +645,7 @@
 <rect width="12" height="12" x="390" y="165" class="named"><title>0x00439d40 SetFadeClip (24 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="165" class="named"><title>0x00439d60 UpdateFadeClip (72 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="165" class="named"><title>0x00439db0 SetScreenFadeOut (66 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="165" class="todo"><title>0x00439e00 SetScreenFadeIn (54 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="165" class="named"><title>0x00439e00 SetScreenFadeIn (54 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="165" class="todo"><title>0x00439e40 Fade (198 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="165" class="todo"><title>0x00439f10 GetFreeDrip (104 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="165" class="todo"><title>0x00439f80 UpdateDrips (254 bytes)</title></rect>
@@ -2864,7 +2864,7 @@
 <rect width="4.82" height="4.32" x="687.60" y="355.02" class="named"><title>0x00426bd0 lara_as_hangright (54 bytes)</title></rect>
 <rect width="4.82" height="4.32" x="695.42" y="355.02" class="named"><title>0x0042cc80 lara_as_climbleft (54 bytes)</title></rect>
 <rect width="4.82" height="4.32" x="703.25" y="355.02" class="named"><title>0x0042d3d0 lara_as_climbright (54 bytes)</title></rect>
-<rect width="4.82" height="4.32" x="711.07" y="355.02" class="todo"><title>0x00439e00 SetScreenFadeIn (54 bytes)</title></rect>
+<rect width="4.82" height="4.32" x="711.07" y="355.02" class="named"><title>0x00439e00 SetScreenFadeIn (54 bytes)</title></rect>
 <rect width="4.82" height="4.32" x="718.89" y="355.02" class="todo"><title>0x00442d30 CreatureYRot (54 bytes)</title></rect>
 <rect width="4.82" height="4.32" x="726.71" y="355.02" class="named"><title>0x00490f40 init_game_malloc (54 bytes)</title></rect>
 <rect width="4.73" height="4.32" x="734.53" y="355.02" class="named"><title>0x004275a0 lara_as_swandive (53 bytes)</title></rect>

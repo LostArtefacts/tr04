@@ -62,3 +62,14 @@ void SetScreenFadeOut(sint16 speed, sint16 back)
         ScreenFadedOut = 0;
     }
 }
+
+void SetScreenFadeIn(sint16 speed)
+{
+    if (!ScreenFading) {
+        ScreenFading = 1;
+        ScreenFade = 255;
+        dScreenFade = 0;
+        ScreenFadeSpeed = speed;
+        ScreenFadedOut = 0;
+    }
+}
