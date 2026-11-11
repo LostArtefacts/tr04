@@ -198,3 +198,11 @@ sint32 S_SoundSampleIsPlaying(sint32 num)
         return 0;
     return DSIsChannelPlaying(num);
 }
+
+void S_SoundSetPanAndVolume(sint32 num, sint16 pan, uint16 volume)
+{
+    if (sound_active) {
+        DSChangeVolume(num, CalcVolume(volume));
+        DSAdjustPan(num, pan);
+    }
+}
