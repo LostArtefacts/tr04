@@ -5,4 +5,6 @@
 
 extern sint32 bDisableLaraControl;
 
+void InitialiseSpotCam(sint16 Sequence);
+
 #endif

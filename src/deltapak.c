@@ -8,6 +8,8 @@
 #include "specific/function_stubs.h"
 #include "draw.h"
 #include "delstuff.h"
+#include "gameflow.h"
+#include "spotcam.h"
 
 void *cutseq_malloc(sint32 size)
 {
@@ -479,6 +481,12 @@ ITEM_INFO *find_a_fucking_item(sint32 object_number)
             return item;
     }
     return 0;
+}
+
+void special2_init(void)
+{
+    lara_item->mesh_bits = -1;
+    Chris_Menu = 0;
 }
 
 void special3_control(void)

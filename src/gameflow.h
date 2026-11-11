@@ -427,5 +427,8 @@ extern uint8 gfLevelComplete;
 extern GAMEFLOW *Gameflow;
 extern uint16 *gfStringOffset;
 extern char *gfStringWad;
+extern uint8 bDoCredits;
+extern char Chris_Menu;
+extern char title_controls_locked_out;
 
 #endif
