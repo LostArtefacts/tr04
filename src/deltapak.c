@@ -67,6 +67,13 @@ void seventh_control(void)
     actor_chat_cnt = (actor_chat_cnt - 1) & 1;
 }
 
+void eighth_control(void)
+{
+    handle_lara_chatting(lara_chat_ranges8);
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 21, 1, VON_CROY, voncroy_chat_ranges8);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void tenth_cutseq_end(void)
 {
     cutseq_restore_item(DOOR_TYPE5);
