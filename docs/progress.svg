@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="31.85" height="12" x="0" y="0" class="named"><title>133 · 8.61%</title></rect>
-<rect width="0.24" height="12" x="31.85" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.20" height="12" x="32.09" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
-<rect width="336.71" height="12" x="33.29" y="0" class="todo"><title>1406 · 91%</title></rect>
+<rect width="32.09" height="12" x="0" y="0" class="named"><title>134 · 8.67%</title></rect>
+<rect width="0.24" height="12" x="32.09" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.20" height="12" x="32.33" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
+<rect width="336.47" height="12" x="33.53" y="0" class="todo"><title>1405 · 90.94%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">8.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">133</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1406</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">134</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1405</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="14.44" height="12" x="0" y="0" class="named"><title>24 KB · 3.90%</title></rect>
-<rect width="0.10" height="12" x="14.44" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="1.61" height="12" x="14.47" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
-<rect width="353.92" height="12" x="16.08" y="0" class="todo"><title>593 KB · 95.65%</title></rect>
+<rect width="14.46" height="12" x="0" y="0" class="named"><title>24 KB · 3.91%</title></rect>
+<rect width="0.10" height="12" x="14.46" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="1.61" height="12" x="14.49" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
+<rect width="353.90" height="12" x="16.10" y="0" class="todo"><title>593 KB · 95.65%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">3.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">24 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">3 KB</tspan> · <tspan class="todo">593 KB</tspan></text>
@@ -1205,7 +1205,7 @@
 <rect width="12" height="12" x="540" y="330" class="todo"><title>0x0046e8d0 XYUVGClipper (5386 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="330" class="todo"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="330" class="named"><title>0x0046fe40 CLSetup (30 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="330" class="todo"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="330" class="named"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="330" class="todo"><title>0x0046fe80 DXSetupDialog (79 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="330" class="todo"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="330" class="todo"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
@@ -3002,7 +3002,7 @@
 <rect width="3.17" height="3.66" x="713.01" y="390.66" class="todo"><title>0x0044c770 TriggerCDTrack (30 bytes)</title></rect>
 <rect width="3.17" height="3.66" x="719.17" y="390.66" class="todo"><title>0x0046b6f0 fourth_cutseq_init (30 bytes)</title></rect>
 <rect width="3.17" height="3.66" x="725.34" y="390.66" class="named"><title>0x0046fe40 CLSetup (30 bytes)</title></rect>
-<rect width="3.17" height="3.66" x="731.50" y="390.66" class="todo"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
+<rect width="3.17" height="3.66" x="731.50" y="390.66" class="named"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
 <rect width="3.17" height="3.66" x="737.67" y="390.66" class="todo"><title>0x004728b0 InitBuckets (30 bytes)</title></rect>
 <rect width="3.17" height="3.66" x="743.83" y="390.66" class="named"><title>0x00473390 DSChangeVolume (30 bytes)</title></rect>
 <rect width="3.54" height="3.27" x="681.86" y="397.32" class="named"><title>0x00484b40 REG_WriteLong (30 bytes)</title></rect>
