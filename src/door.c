@@ -156,3 +156,33 @@ void DoubleDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
         item->pos.y_rot ^= 0x8000;
     }
 }
+
+void UnderwaterDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (((input & IN_ACTION) && item->status != ITEM_ACTIVE && l->current_anim_state == AS_TREAD && lara.water_status == LW_UNDERWATER && lara.gun_status == LG_NO_ARMS) || (lara.IsMoving && lara.GeneralPtr == (void *)item_num)) {
+        l->pos.y_rot ^= 0x8000;
+        if (TestLaraPosition(UnderwaterDoorBounds, item, l)) {
+            if (MoveLaraPosition(&UnderwaterDoorPos, item, l)) {
+                l->anim_number = ANIM_WATERDOOR;
+                l->frame_number = anims[ANIM_WATERDOOR].frame_base;
+                l->current_anim_state = AS_CONTROLLED;
+                l->fallspeed = 0;
+                item->status = ITEM_ACTIVE;
+                AddActiveItem(item_num);
+                item->goal_anim_state = 1;
+                AnimateItem(item);
+                lara.IsMoving = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+            } else
+                lara.GeneralPtr = (void *)item_num;
+        } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+            lara.IsMoving = 0;
+            lara.gun_status = LG_NO_ARMS;
+        }
+        l->pos.y_rot ^= 0x8000;
+    } else if (item->status == ITEM_ACTIVE)
+        ObjectCollision(item_num, l, coll);
+}

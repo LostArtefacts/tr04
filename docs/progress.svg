@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="104.74" height="12" x="0" y="0" class="named"><title>465 · 30.10%</title></rect>
-<rect width="0.45" height="12" x="104.74" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="105.19" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="239.88" height="12" x="108.12" y="0" class="todo"><title>1065 · 68.93%</title></rect>
+<rect width="104.96" height="12" x="0" y="0" class="named"><title>466 · 30.16%</title></rect>
+<rect width="0.45" height="12" x="104.96" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="105.41" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="239.66" height="12" x="108.34" y="0" class="todo"><title>1064 · 68.87%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">30.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">465</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1065</tspan></text>
+<text text-anchor="end" x="528" y="7.50">30.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">466</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1064</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="44.11" height="12" x="0" y="0" class="named"><title>79 KB · 12.68%</title></rect>
-<rect width="0.12" height="12" x="44.11" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="44.23" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="298.15" height="12" x="49.85" y="0" class="todo"><title>531 KB · 85.68%</title></rect>
+<rect width="44.32" height="12" x="0" y="0" class="named"><title>79 KB · 12.73%</title></rect>
+<rect width="0.12" height="12" x="44.32" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="44.44" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="297.95" height="12" x="50.05" y="0" class="todo"><title>531 KB · 85.62%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="24.50">12.7%</text>
+<text text-anchor="end" x="528" y="24.50">12.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">79 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">531 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -839,7 +839,7 @@
 <rect width="12" height="12" x="300" y="225" class="named"><title>0x0044e420 PushPullKickDoorControl (96 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="225" class="todo"><title>0x0044e480 PushPullKickDoorCollision (479 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="225" class="named"><title>0x0044e660 DoubleDoorCollision (341 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="225" class="todo"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="225" class="named"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="225" class="todo"><title>0x0044e930 SequenceDoorControl (622 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="225" class="named"><title>0x0044eba0 DrawPhaseGame (105 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="225" class="todo"><title>0x0044ec10 DrawRooms (1724 bytes)</title></rect>
@@ -2099,7 +2099,7 @@
 <rect width="11.98" height="11.78" x="705.22" y="128.72" class="todo"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
 <rect width="11.91" height="11.78" x="720.20" y="128.72" class="named"><title>0x00463180 FullBlockSwitchCollision (363 bytes)</title></rect>
 <rect width="11.88" height="11.78" x="735.12" y="128.72" class="todo"><title>0x00438d90 UpdateBlood (362 bytes)</title></rect>
-<rect width="11.87" height="11.79" x="429.10" y="143.50" class="todo"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
+<rect width="11.87" height="11.79" x="429.10" y="143.50" class="named"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
 <rect width="11.87" height="11.79" x="443.97" y="143.50" class="todo"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
 <rect width="11.84" height="11.79" x="458.84" y="143.50" class="todo"><title>0x00499c10 Func499c10 (361 bytes)</title></rect>
 <rect width="11.77" height="11.79" x="473.68" y="143.50" class="todo"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>

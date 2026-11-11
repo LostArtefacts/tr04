@@ -34,5 +34,6 @@ void OpenThatDoor(DOORPOS_DATA *d);
 void PushPullKickDoorControl(sint16 item_number);
 void DoorControl(sint16 item_number);
 void DoubleDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
+void UnderwaterDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif
