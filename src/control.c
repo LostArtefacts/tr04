@@ -147,6 +147,29 @@ sint32 GetWaterHeight(sint32 x, sint32 y, sint32 z, sint16 room_number)
     return NO_HEIGHT;
 }
 
+sint32 TriggerActive(ITEM_INFO *item)
+{
+    sint32 ok;
+
+    ok = (item->flags & IFL_REVERSE) ? 0 : 1;
+    if ((item->flags & IFL_CODEBITS) != IFL_CODEBITS)
+        return !ok;
+    if (!item->timer)
+        return ok;
+    if (item->timer > 0) {
+        item->timer--;
+        if (!item->timer)
+            item->timer = -1;
+    } else if (item->timer < -1) {
+        item->timer++;
+        if (item->timer == -1)
+            item->timer = 0;
+    }
+    if (item->timer <= -1)
+        return !ok;
+    return ok;
+}
+
 sint16 GetDoor(FLOOR_INFO *floor)
 {
     sint16 *data;
