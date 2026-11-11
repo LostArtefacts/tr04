@@ -31,9 +31,16 @@ typedef struct debris_struct {
 } DEBRIS_STRUCT;
 
 sint32 GetFreeDebris(void);
+void TriggerDebris(GAME_VECTOR *pos, void *TextInfo, sint16 *Offsets, sint32 *Vels, sint16 rgb);
 
 extern DEBRIS_STRUCT debris[256];
 extern sint32 next_debris;
 extern sint16 DebrisFlags;
+extern MESH_DATA *DebrisMesh;
+extern sint32 DebrisMeshC1;
+extern sint32 DebrisMeshC2;
+extern sint32 DebrisMeshC3;
+extern sint32 DebrisMeshAmbient;
+extern sint32 DebrisMeshFlags;
 
 #endif

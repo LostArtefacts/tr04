@@ -45,4 +45,21 @@ typedef struct object_vector {
     sint16 flags;
 } OBJECT_VECTOR;
 
+typedef struct mesh_data {
+    sint16 x;
+    sint16 y;
+    sint16 z;
+    sint16 r;
+    sint16 flags;
+    sint16 nVerts;
+    sint16 nNorms;
+    sint16 ngt4;
+    sint16 *gt4;
+    sint16 ngt3;
+    sint16 *gt3;
+    sint32 *prelight;
+    void *SourceVB;
+    void *Normals;
+} MESH_DATA;
+
 #endif
