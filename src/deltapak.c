@@ -20,6 +20,12 @@ void finish_cutseq(void)
     InitialiseHair();
 }
 
+void third_cutseq_control(void)
+{
+    if (GLOBAL_cutseq_frame == 1890)
+        force_sky_lightning();
+}
+
 void fourth_cutseq_init(void)
 {
     old_lara_holster = lara.holster;
