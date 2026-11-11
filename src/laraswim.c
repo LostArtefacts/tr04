@@ -43,6 +43,28 @@ void SwimTurn(ITEM_INFO *item)
     }
 }
 
+void lara_as_glide(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_UWDEATH;
+        return;
+    }
+    if (input & IN_ROLL) {
+        item->current_anim_state = AS_WATERROLL;
+        item->anim_number = ANIM_WATERROLL;
+        item->frame_number = anims[ANIM_WATERROLL].frame_base;
+        return;
+    }
+    SwimTurn(item);
+    if (input & IN_JUMP)
+        item->goal_anim_state = AS_SWIM;
+    item->fallspeed -= WATER_FRICTION;
+    if (item->fallspeed < 0)
+        item->fallspeed = 0;
+    if (item->fallspeed <= (UW_MAXSPEED * 2) / 3)
+        item->goal_anim_state = AS_TREAD;
+}
+
 void lara_as_dive(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (input & IN_FORWARD)
