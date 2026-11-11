@@ -131,6 +131,47 @@ uint8 FreeSampleDecompress(void)
     return 1;
 }
 
+uint8 DXCreateSampleADPCM(char *data, sint32 comp_size, sint32 uncomp_size, sint32 num)
+{
+    LPWAVEFORMATEX format;
+    LPDIRECTSOUNDBUFFER buffer;
+    LPVOID dest;
+    DSBUFFERDESC desc;
+    uint32 bytes;
+    sint32 size;
+
+    Log(8, "DXCreateSampleADPCM");
+    if (!App.dx.lpDS)
+        return 0;
+    format = (LPWAVEFORMATEX)(data + 20);
+    if (format->nSamplesPerSec != 22050)
+        Log(1, "Incorrect SamplesPerSec");
+    ACMStreamHeader.cbSrcLength = comp_size - (sizeof(WAVEFORMATEX) + format->cbSize + 40);
+    DS_mmresult = acmStreamConvert(DS_hACMStream, &ACMStreamHeader, ACM_STREAMCONVERTF_BLOCKALIGN | ACM_STREAMCONVERTF_START);
+    if (DS_mmresult != DS_OK)
+        Log(1, "Stream Convert %d", DS_mmresult);
+    size = uncomp_size - 32;
+    memset(&desc, 0, sizeof(desc));
+    desc.dwSize = 20;
+    desc.dwFlags = DSBCAPS_STATIC | DSBCAPS_CTRLFREQUENCY | DSBCAPS_CTRLPAN | DSBCAPS_CTRLVOLUME;
+    desc.dwReserved = 0;
+    desc.dwBufferBytes = size;
+    desc.lpwfxFormat = &pcm_format;
+    if (DXAttempt(IDirectSound_CreateSoundBuffer(App.dx.lpDS, &desc, &buffer, 0)) != DS_OK) {
+        Log(1, "Unable To Create Sound Buffer");
+        return 0;
+    }
+    if (DXAttempt(IDirectSoundBuffer_Lock(buffer, 0, size, &dest, &bytes, 0, 0, 0)) != DS_OK) {
+        Log(1, "Unable To Lock Sound Buffer");
+        return 0;
+    }
+    memcpy(dest, decompressed_samples_buffer, size);
+    DXAttempt(IDirectSoundBuffer_Unlock(buffer, dest, bytes, 0, 0));
+    DS_Buffers[num].frequency = pcm_format.nSamplesPerSec;
+    DS_Buffers[num].buffer = buffer;
+    return 1;
+}
+
 void DXStopSample(sint32 num)
 {
     LPDIRECTSOUNDBUFFER buffer;

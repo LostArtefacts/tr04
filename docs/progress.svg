@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="36.12" height="12" x="0" y="0" class="named"><title>155 · 10.03%</title></rect>
-<rect width="0.23" height="12" x="36.12" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="36.35" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="321.79" height="12" x="38.21" y="0" class="todo"><title>1381 · 89.39%</title></rect>
+<rect width="36.35" height="12" x="0" y="0" class="named"><title>156 · 10.10%</title></rect>
+<rect width="0.23" height="12" x="36.35" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.86" height="12" x="36.58" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="321.55" height="12" x="38.45" y="0" class="todo"><title>1380 · 89.32%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">10.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">155</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1381</tspan></text>
+<text text-anchor="end" x="540" y="7.50">10.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">156</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1380</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="16.93" height="12" x="0" y="0" class="named"><title>29 KB · 4.70%</title></rect>
-<rect width="0.10" height="12" x="16.93" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="2.99" height="12" x="16.95" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="340.06" height="12" x="19.94" y="0" class="todo"><title>586 KB · 94.46%</title></rect>
+<rect width="17.16" height="12" x="0" y="0" class="named"><title>30 KB · 4.77%</title></rect>
+<rect width="0.10" height="12" x="17.16" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="2.99" height="12" x="17.19" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="339.82" height="12" x="20.18" y="0" class="todo"><title>585 KB · 94.39%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">4.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">29 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">586 KB</tspan></text>
+<text text-anchor="end" x="540" y="24.50">4.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">30 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">585 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1236,7 +1236,7 @@
 <rect width="12" height="12" x="255" y="345" class="named"><title>0x00473500 DXDSCreate (105 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="345" class="named"><title>0x00473570 InitSampleDecompress (273 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="345" class="named"><title>0x00473690 FreeSampleDecompress (121 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="345" class="todo"><title>0x00473710 DXCreateSampleADPCM (410 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="345" class="named"><title>0x00473710 DXCreateSampleADPCM (410 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="345" class="named"><title>0x004738b0 DXStopSample (79 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="345" class="named"><title>0x00473900 DSIsChannelPlaying (66 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="345" class="named"><title>0x00473950 DSGetFreeChannel (31 bytes)</title></rect>
@@ -2055,7 +2055,7 @@
 <rect width="12.50" height="12.81" x="398.31" y="401.96" class="todo"><title>0x00414150 DartsControl (414 bytes)</title></rect>
 <rect width="12.50" height="12.81" x="398.31" y="417.77" class="todo"><title>0x0042df30 LaraTargetInfo (414 bytes)</title></rect>
 <rect width="12.50" height="12.74" x="398.31" y="433.57" class="todo"><title>0x00447010 GetTiltType (412 bytes)</title></rect>
-<rect width="12.50" height="12.68" x="398.31" y="449.32" class="todo"><title>0x00473710 DXCreateSampleADPCM (410 bytes)</title></rect>
+<rect width="12.50" height="12.68" x="398.31" y="449.32" class="named"><title>0x00473710 DXCreateSampleADPCM (410 bytes)</title></rect>
 <rect width="12.68" height="12.48" x="413.81" y="128.77" class="named"><title>0x0042d600 lara_col_climbdown (409 bytes)</title></rect>
 <rect width="12.68" height="12.48" x="429.49" y="128.77" class="todo"><title>0x00437390 WadeSplash (409 bytes)</title></rect>
 <rect width="12.62" height="12.48" x="445.17" y="128.77" class="todo"><title>0x00467920 TriggerExhaustSmoke_jeep (407 bytes)</title></rect>

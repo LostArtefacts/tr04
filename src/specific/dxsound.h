@@ -22,6 +22,7 @@ uint8 DXSetOutputFormat(void);
 uint8 DXDSCreate(void);
 uint8 InitSampleDecompress(void);
 uint8 FreeSampleDecompress(void);
+uint8 DXCreateSampleADPCM(char *data, sint32 comp_size, sint32 uncomp_size, sint32 num);
 void DXStopSample(sint32 num);
 uint8 DSIsChannelPlaying(sint32 num);
 sint32 DSGetFreeChannel(void);
