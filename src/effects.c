@@ -128,6 +128,17 @@ void ActivateKey(ITEM_INFO *item)
     KeyTriggerActive = 1;
 }
 
+void SwapCrowbar(ITEM_INFO *item)
+{
+    sint16 *tmp;
+
+    tmp = meshes[objects[LARA].mesh_index + 2 * LM_RHAND];
+    if (lara.mesh_ptrs[LM_RHAND] == tmp)
+        lara.mesh_ptrs[LM_RHAND] = meshes[objects[CROWBAR_ANIM].mesh_index + 2 * LM_RHAND];
+    else
+        lara.mesh_ptrs[LM_RHAND] = tmp;
+}
+
 void ExplosionFX(ITEM_INFO *item)
 {
     SoundEffect(105, NULL, 0);
