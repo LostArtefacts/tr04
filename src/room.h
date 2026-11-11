@@ -4,6 +4,8 @@
 #include "types.h"
 
 #define WALL_SHIFT 10
+#define WALL_L 1024
+#define STEP_L (WALL_L / 4)
 
 enum room_flags {
     ROOM_UNDERWATER = 1

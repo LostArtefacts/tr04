@@ -55,5 +55,6 @@ typedef struct coll_info {
 } COLL_INFO;
 
 void GetCollisionInfo(COLL_INFO *coll, sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 hite);
+sint32 FindGridShift(sint32 src, sint32 dst);
 
 #endif
