@@ -78,5 +78,6 @@ void ninth_cutseq_init(void);
 void tenth_cutseq_init(void);
 void seventeen_control(void);
 void eighteen_control(void);
+void nineteen_control(void);
 
 #endif
