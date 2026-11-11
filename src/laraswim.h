@@ -10,5 +10,6 @@ void lara_as_dive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_waterroll(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_swim(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_glide(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_tread(ITEM_INFO *item, COLL_INFO *coll);
 
 #endif
