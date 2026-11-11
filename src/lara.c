@@ -178,6 +178,19 @@ void lara_col_dashdive(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_pos += coll->mid_floor;
 }
 
+void MonkeySwingFall(ITEM_INFO *item)
+{
+    item->goal_anim_state = AS_UPJUMP;
+    item->current_anim_state = AS_UPJUMP;
+    item->anim_number = ANIM_STOPHANG;
+    item->frame_number = anims[ANIM_STOPHANG].frame_base + 9;
+    item->gravity_status = 1;
+    item->speed = 2;
+    item->fallspeed = 1;
+    item->pos.y_pos += 256;
+    lara.gun_status = LG_NO_ARMS;
+}
+
 void MonkeySwingSnap(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint16 room_num;
