@@ -233,6 +233,37 @@ void SetScreenFadeIn(sint16 speed)
     }
 }
 
+sint32 GetFreeDrip(void)
+{
+    DRIP_STRUCT *drip;
+    sint32 min_life, min_life_num, free, i;
+    
+    free = next_drip;
+    drip = &Drips[next_drip];
+    min_life = 4095;
+    min_life_num = 0;
+    for (i = 0; i < 32; i++) {
+        if (drip->On) {
+            if (drip->Life < min_life) {
+                min_life_num = free;
+                min_life = drip->Life;
+            }
+            if (free == 31) {
+                drip = &Drips[0];
+                free = 0;
+            } else {
+                free++;
+                drip++;
+            }
+        } else {
+            next_drip = (free + 1) & 0x1F;
+            return free;
+        }
+    }
+    next_drip = (min_life_num + 1) & 0x1F;
+    return min_life_num;
+}
+
 sint32 GetFreeShockwave(void)
 {
     SHOCKWAVE_STRUCT *sw;
