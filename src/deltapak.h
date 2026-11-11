@@ -128,5 +128,6 @@ void sixteen_control(void);
 void tenth_cutseq_control(void);
 void eleventh_cutseq_control(void);
 void GetJointAbsPositionCutSeq(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot, PHD_VECTOR *pos);
+void CalcActorLighting(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot);
 
 #endif

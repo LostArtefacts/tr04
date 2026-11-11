@@ -28,6 +28,27 @@ void finish_cutseq(void)
     InitialiseHair();
 }
 
+void CalcActorLighting(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot)
+{
+    PHD_VECTOR pos;
+    sint16 room_number;
+
+    GetJointAbsPositionCutSeq(item, obj, rot, &pos);
+    room_number = item->room_number;
+    IsRoomOutsideNo = -1;
+    IsRoomOutside(pos.x, pos.y, pos.z);
+    if (IsRoomOutsideNo != -1)
+        room_number = IsRoomOutsideNo;
+    item->room_number = room_number;
+    current_item = item;
+    item->il.fcnt = -1;
+    item->il.item_pos.x = pos.x;
+    item->il.item_pos.y = pos.y;
+    item->il.item_pos.z = pos.z;
+    CalcAmbientLight(item);
+    CreateLightList(item);
+}
+
 void GetJointAbsPositionCutSeq(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot, PHD_VECTOR *pos)
 {
     sint16 *rot2;
