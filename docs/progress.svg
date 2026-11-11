@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="130.60" height="12" x="0" y="0" class="named"><title>590 · 38.19%</title></rect>
-<rect width="0.44" height="12" x="130.60" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="131.04" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="206.31" height="12" x="135.69" y="0" class="todo"><title>932 · 60.32%</title></rect>
+<rect width="130.82" height="12" x="0" y="0" class="named"><title>591 · 38.25%</title></rect>
+<rect width="0.44" height="12" x="130.82" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="131.27" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="206.09" height="12" x="135.91" y="0" class="todo"><title>931 · 60.26%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">38.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">590</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">932</tspan></text>
+<text text-anchor="end" x="522" y="7.50">38.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">591</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">931</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.63" height="12" x="0" y="0" class="named"><title>101 KB · 16.27%</title></rect>
-<rect width="0.12" height="12" x="55.63" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="55.75" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="279.01" height="12" x="62.99" y="0" class="todo"><title>506 KB · 81.58%</title></rect>
+<rect width="55.65" height="12" x="0" y="0" class="named"><title>101 KB · 16.27%</title></rect>
+<rect width="0.12" height="12" x="55.65" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="55.77" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="278.98" height="12" x="63.02" y="0" class="todo"><title>506 KB · 81.57%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">101 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">506 KB</tspan></text>
@@ -1115,7 +1115,7 @@
 <rect width="12" height="12" x="690" y="300" class="todo"><title>0x0046b800 fifth_cutseq_control (52 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="300" class="named"><title>0x0046b820 fifth_cutseq_end (29 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="300" class="named"><title>0x0046b840 sixth_cutseq_init (9 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="300" class="todo"><title>0x0046b850 sixth_cutseq_control (46 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="300" class="named"><title>0x0046b850 sixth_cutseq_control (46 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="315" class="named"><title>0x0046b880 sixth_cutseq_end (29 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="315" class="named"><title>0x0046b8a0 seventh_cutseq_init (28 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="315" class="todo"><title>0x0046b8c0 seventh_control (46 bytes)</title></rect>
@@ -2912,7 +2912,7 @@
 <rect width="4.24" height="4.19" x="742.76" y="362.89" class="named"><title>0x004505c0 phd_RotY_I (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="370.08" class="named"><title>0x004505f0 phd_RotX_I (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="377.41" class="named"><title>0x00450620 phd_RotZ_I (46 bytes)</title></rect>
-<rect width="4.11" height="4.33" x="654.86" y="384.74" class="todo"><title>0x0046b850 sixth_cutseq_control (46 bytes)</title></rect>
+<rect width="4.11" height="4.33" x="654.86" y="384.74" class="named"><title>0x0046b850 sixth_cutseq_control (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="392.07" class="todo"><title>0x0046b8c0 seventh_control (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="399.40" class="todo"><title>0x0046b8f0 eighth_control (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="406.73" class="named"><title>0x0046c440 seventeen_end (46 bytes)</title></rect>

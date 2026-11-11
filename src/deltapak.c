@@ -41,6 +41,13 @@ void sixth_cutseq_init(void)
     init_voncroy_meshbits(1);
 }
 
+void sixth_cutseq_control(void)
+{
+    handle_lara_chatting(lara_chat_ranges6);
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 21, 1, VON_CROY, voncroy_chat_ranges6);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void sixth_cutseq_end(void)
 {
     DelsHandyTeleportLara(5632, 1280, 86528, 28987);
