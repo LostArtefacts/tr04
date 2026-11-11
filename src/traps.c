@@ -503,6 +503,41 @@ void ControlSlicerDicer(sint16 item_number)
     AnimateItem(item);
 }
 
+void ControlRaisingBlock(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        if (!item->item_flags[2]) {
+            AlterFloorHeight(item, -1024 << (item->object_number == RAISING_BLOCK2));
+            item->item_flags[2] = 1;
+        }
+        if (item->item_flags[1] < 4096) {
+            SoundEffect(SFX_RUMBLE_NEXTDOOR, &item->pos, SFX_DEFAULT);
+            item->item_flags[1] += 64;
+            if (item->trigger_flags && abs(item->pos.x_pos - lara_item->pos.x_pos) < 10240 && abs(item->pos.y_pos - lara_item->pos.y_pos) < 10240 && abs(item->pos.z_pos - lara_item->pos.z_pos) < 10240) {
+                if (item->item_flags[1] == 64 || item->item_flags[1] == 4096)
+                    camera.bounce = -32;
+                else
+                    camera.bounce = -16;
+            }
+        }
+    } else if (item->item_flags[1] > 0) {
+        SoundEffect(SFX_RUMBLE_NEXTDOOR, &item->pos, SFX_DEFAULT);
+        if (item->trigger_flags && abs(item->pos.x_pos - lara_item->pos.x_pos) < 10240 && abs(item->pos.y_pos - lara_item->pos.y_pos) < 10240 && abs(item->pos.z_pos - lara_item->pos.z_pos) < 10240) {
+            if (item->item_flags[1] == 64 || item->item_flags[1] == 4096)
+                camera.bounce = -32;
+            else
+                camera.bounce = -16;
+        }
+        item->item_flags[1] -= 64;
+    } else if (item->item_flags[2]) {
+        AlterFloorHeight(item, 1024 << (item->object_number == RAISING_BLOCK2));
+        item->item_flags[2] = 0;
+    }
+}
+
 void ControlChain(sint16 item_number)
 {
     ITEM_INFO *item;

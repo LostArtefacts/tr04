@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="111.04" height="12" x="0" y="0" class="named"><title>493 · 31.91%</title></rect>
-<rect width="0.45" height="12" x="111.04" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="111.50" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="232.45" height="12" x="115.55" y="0" class="todo"><title>1032 · 66.80%</title></rect>
+<rect width="111.27" height="12" x="0" y="0" class="named"><title>494 · 31.97%</title></rect>
+<rect width="0.45" height="12" x="111.27" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="111.72" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="232.23" height="12" x="115.77" y="0" class="todo"><title>1031 · 66.73%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">32.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">493</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1032</tspan></text>
+<text text-anchor="end" x="528" y="7.50">32.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">494</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1031</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="47.91" height="12" x="0" y="0" class="named"><title>85 KB · 13.77%</title></rect>
-<rect width="0.12" height="12" x="47.91" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="48.03" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="293.70" height="12" x="54.30" y="0" class="todo"><title>523 KB · 84.40%</title></rect>
+<rect width="48.16" height="12" x="0" y="0" class="named"><title>86 KB · 13.84%</title></rect>
+<rect width="0.12" height="12" x="48.16" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="48.28" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="293.45" height="12" x="54.55" y="0" class="todo"><title>523 KB · 84.32%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="24.50">13.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">85 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">523 KB</tspan></text>
+<text text-anchor="end" x="528" y="24.50">13.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">86 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">523 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -217,7 +217,7 @@
 <rect width="12" height="12" x="720" y="30" class="named"><title>0x00415db0 ControlSlicerDicer (269 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="30" class="todo"><title>0x00415ec0 TestBoundsCollideTeethSpikes (270 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="45" class="todo"><title>0x00415fd0 ControlScaledSpike (953 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="45" class="todo"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="45" class="named"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="45" class="todo"><title>0x00416550 ControlBurningFloor (891 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="45" class="named"><title>0x004168d0 ControlChain (127 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="45" class="named"><title>0x00416950 ControlPlough (76 bytes)</title></rect>
@@ -2018,7 +2018,7 @@
 <rect width="13.25" height="13.13" x="430.92" y="112.59" class="todo"><title>0x00442380 CreatureKill (450 bytes)</title></rect>
 <rect width="13.22" height="13.13" x="447.17" y="112.59" class="todo"><title>0x0042b430 TriggerUnderwaterExplosion (449 bytes)</title></rect>
 <rect width="13.19" height="13.13" x="463.39" y="112.59" class="named"><title>0x0044f5d0 GetRoomBounds (448 bytes)</title></rect>
-<rect width="13.16" height="13.13" x="479.58" y="112.59" class="todo"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
+<rect width="13.16" height="13.13" x="479.58" y="112.59" class="named"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
 <rect width="13.16" height="13.13" x="495.74" y="112.59" class="named"><title>0x004552b0 EnableBaddieAI (447 bytes)</title></rect>
 <rect width="13.13" height="13.13" x="511.89" y="112.59" class="named"><title>0x0042cd20 LaraDoClimbLeftRight (446 bytes)</title></rect>
 <rect width="13.07" height="13.13" x="528.02" y="112.59" class="todo"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
