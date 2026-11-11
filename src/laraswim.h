@@ -7,6 +7,7 @@
 #define UW_MAXSPEED 200
 #define WATER_FRICTION 6
 
+void LaraUnderWater(ITEM_INFO *item, COLL_INFO *coll);
 void LaraSwimCollision(ITEM_INFO *item, COLL_INFO *coll);
 void SwimTurn(ITEM_INFO *item);
 void lara_as_dive(ITEM_INFO *item, COLL_INFO *coll);
