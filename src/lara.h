@@ -289,6 +289,7 @@ void lara_col_back(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_splat(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_null(ITEM_INFO *item, COLL_INFO *coll);
 sint16 GetDirOctant(sint32 rot);
+void lara_col_hangleft(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
