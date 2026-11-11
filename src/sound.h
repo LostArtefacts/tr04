@@ -23,6 +23,12 @@ typedef struct sound_slot {
 } SoundSlot;
 
 void GetPanVolume(SoundSlot *slot);
+void StopSoundEffect(sint32 sfx);
+void SOUND_Stop(void);
+void SOUND_Init(void);
+void SayNo(void);
+sint32 SoundEffect(sint32 sfx, PHD_3DPOS *pos, sint32 flags);
+void nullsub_1(sint32 n);
 
 extern SAMPLE_INFO *sample_infos;
 extern SoundSlot LaSlot[32];

@@ -1,6 +1,7 @@
 #include "sound.h"
 #include "camera.h"
 #include "specific/3dmath.h"
+#include "specific/dxsound.h"
 #include "specific/function_stubs.h"
 
 void GetPanVolume(SoundSlot *slot)
@@ -45,6 +46,23 @@ void GetPanVolume(SoundSlot *slot)
                     slot->nPan = (uint16)nPan;
                     slot->distance = distance;
                 }
+            }
+        }
+    }
+}
+
+void StopSoundEffect(sint32 sfx)
+{
+    sint32 lut, end;
+    int i;
+
+    if (sound_active) {
+        lut = sample_lut[sfx];
+        end = lut + ((sample_infos[lut].flags >> 2) & 0xF);
+        for (i = 0; i < 32; i++) {
+            if (LaSlot[i].nSampleInfo >= lut && LaSlot[i].nSampleInfo < end) {
+                S_SoundStopSample(i);
+                LaSlot[i].nSampleInfo = -1;
             }
         }
     }
