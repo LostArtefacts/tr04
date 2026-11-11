@@ -4,6 +4,7 @@
 #include "specific/function_stubs.h"
 
 #define ESCAPE_DIST (WALL_L * 5)
+#define MAX_TILT (ONE_DEGREE * 3)
 #define MAX_JOINT_CHANGE (ONE_DEGREE * 3)
 #define JOINT_ARC 0x3000
 
@@ -55,6 +56,16 @@ sint32 EscapeBox(ITEM_INFO *item, ITEM_INFO *enemy, sint16 box_number)
     if (((z > 0) ^ (item->pos.z_pos > enemy->pos.z_pos)) && ((x > 0) ^ (item->pos.x_pos > enemy->pos.x_pos)))
         return 0;
     return 1;
+}
+
+void CreatureTilt(ITEM_INFO *item, sint16 angle)
+{
+    angle = (angle << 2) - item->pos.z_rot;
+    if (angle < -MAX_TILT)
+        angle = -MAX_TILT;
+    else if (angle > MAX_TILT)
+        angle = MAX_TILT;
+    item->pos.z_rot += angle;
 }
 
 void CreatureJoint(ITEM_INFO *item, sint16 joint, sint16 required)
