@@ -21,8 +21,6 @@ typedef struct fx_info {
 extern sint32 GlobalFogOff;
 extern sint32 FogTableColor[28];
 
-void nullsub_1();
-
 extern OBJECT_VECTOR *sound_effects;
 extern sint32 number_sound_effects;
 extern void (*effect_routines[47])(ITEM_INFO *item);
@@ -65,6 +63,7 @@ void GhostTrap(ITEM_INFO *item);
 void SetFog(ITEM_INFO *item);
 void WaterFall(sint16 item_number);
 void SoundEffects(void);
+void WadeSplash(ITEM_INFO *item, sint32 water, sint32 depth);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;

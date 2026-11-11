@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="102.71" height="12" x="0" y="0" class="named"><title>456 · 29.51%</title></rect>
-<rect width="0.45" height="12" x="102.71" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="103.16" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="241.91" height="12" x="106.09" y="0" class="todo"><title>1074 · 69.51%</title></rect>
+<rect width="102.94" height="12" x="0" y="0" class="named"><title>457 · 29.58%</title></rect>
+<rect width="0.45" height="12" x="102.94" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="103.39" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="241.69" height="12" x="106.31" y="0" class="todo"><title>1073 · 69.45%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">29.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">456</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1074</tspan></text>
+<text text-anchor="end" x="528" y="7.50">29.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">457</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1073</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="42.84" height="12" x="0" y="0" class="named"><title>76 KB · 12.31%</title></rect>
-<rect width="0.12" height="12" x="42.84" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="42.96" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="299.42" height="12" x="48.58" y="0" class="todo"><title>534 KB · 86.04%</title></rect>
+<rect width="43.07" height="12" x="0" y="0" class="named"><title>77 KB · 12.38%</title></rect>
+<rect width="0.12" height="12" x="43.07" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="43.19" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="299.19" height="12" x="48.81" y="0" class="todo"><title>533 KB · 85.97%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="24.50">12.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">76 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">534 KB</tspan></text>
+<text text-anchor="end" x="528" y="24.50">12.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">77 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">533 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -582,7 +582,7 @@
 <rect width="12" height="12" x="195" y="150" class="named"><title>0x00437180 DoBloodSplat (100 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="150" class="named"><title>0x004371f0 DoLotsOfBlood (164 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="150" class="named"><title>0x004372a0 Splash (231 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="150" class="todo"><title>0x00437390 WadeSplash (409 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="150" class="named"><title>0x00437390 WadeSplash (409 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="150" class="named"><title>0x00437530 WaterFall (285 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="150" class="named"><title>0x00437650 finish_level_effect (13 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="150" class="named"><title>0x00437660 turn180_effect (22 bytes)</title></rect>
@@ -2057,7 +2057,7 @@
 <rect width="12.50" height="12.75" x="398.14" y="433.57" class="todo"><title>0x00447010 GetTiltType (412 bytes)</title></rect>
 <rect width="12.50" height="12.68" x="398.14" y="449.32" class="named"><title>0x00473710 DXCreateSampleADPCM (410 bytes)</title></rect>
 <rect width="12.47" height="12.68" x="413.63" y="128.72" class="named"><title>0x0042d600 lara_col_climbdown (409 bytes)</title></rect>
-<rect width="12.47" height="12.68" x="413.63" y="144.41" class="todo"><title>0x00437390 WadeSplash (409 bytes)</title></rect>
+<rect width="12.47" height="12.68" x="413.63" y="144.41" class="named"><title>0x00437390 WadeSplash (409 bytes)</title></rect>
 <rect width="12.47" height="12.62" x="413.63" y="160.09" class="todo"><title>0x00467920 TriggerExhaustSmoke_jeep (407 bytes)</title></rect>
 <rect width="12.47" height="12.56" x="413.63" y="175.71" class="todo"><title>0x00403d30 TriggerCrocgodMissileFlame (405 bytes)</title></rect>
 <rect width="12.47" height="12.56" x="413.63" y="191.27" class="named"><title>0x0046df50 FillADPCMBuffer (405 bytes)</title></rect>

@@ -113,6 +113,7 @@ extern DYNAMIC dynamics[MAX_DYNAMICS * 2];
 extern sint32 number_dynamics;
 extern RIPPLE_STRUCT ripples[16];
 extern SPLASH_SETUP splash_setup;
+extern sint32 SplashCount;
 extern SPARKS spark[256];
 
 #endif

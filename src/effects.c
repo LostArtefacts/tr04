@@ -17,6 +17,7 @@
 #include "scarab.h"
 #include "deltapak.h"
 #include "lot.h"
+#include "lara_states.h"
 #include "text.h"
 #include "savegame.h"
 #include "specific/polyinsert.h"
@@ -106,6 +107,43 @@ void Splash(ITEM_INFO *item)
         splash_setup.pad2 = 128;
         splash_setup.OuterRad = 544;
         SetupSplash(&splash_setup);
+    }
+}
+
+void WadeSplash(ITEM_INFO *item, sint32 water, sint32 depth)
+{
+    sint16 *bounds;
+    sint16 room_number;
+
+    room_number = item->room_number;
+    GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (!(room[room_number].flags & ROOM_UNDERWATER))
+        return;
+    bounds = GetBestFrame(item);
+    if (item->pos.y_pos + bounds[2] > water || item->pos.y_pos + bounds[3] < water)
+        return;
+    if (item->fallspeed > 0 && depth < 474 && !SplashCount) {
+        splash_setup.x = item->pos.x_pos;
+        splash_setup.y = water;
+        splash_setup.z = item->pos.z_pos;
+        splash_setup.InnerRad = 16;
+        splash_setup.InnerSize = 12;
+        splash_setup.InnerRadVel = 160;
+        splash_setup.InnerYVel = -72 * item->fallspeed;
+        splash_setup.pad1 = 24;
+        splash_setup.MiddleRad = 24;
+        splash_setup.MiddleSize = 224;
+        splash_setup.MiddleRadVel = -36 * item->fallspeed;
+        splash_setup.MiddleYVel = 32;
+        splash_setup.pad2 = 32;
+        splash_setup.OuterRad = 272;
+        SetupSplash(&splash_setup);
+        SplashCount = 16;
+    } else if (!(wibble & 0xF) && (!(GetRandomControl() & 0xF) || item->current_anim_state != AS_STOP)) {
+        if (item->current_anim_state != AS_STOP)
+            SetupRipple(item->pos.x_pos, water, item->pos.z_pos, (GetRandomControl() & 0xF) + 112, 18);
+        else
+            SetupRipple(item->pos.x_pos, water, item->pos.z_pos, (GetRandomControl() & 0xF) + 112, 16);
     }
 }
 
