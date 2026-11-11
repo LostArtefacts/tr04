@@ -1141,6 +1141,23 @@ void lara_col_roll2(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_pos += coll->mid_floor;
 }
 
+void lara_col_swandive(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 192;
+    GetLaraCollisionInfo(item, coll);
+    LaraDeflectEdgeJump(item, coll);
+    if (coll->mid_floor <= 0 && item->fallspeed > 0) {
+        item->goal_anim_state = AS_STOP;
+        item->fallspeed = 0;
+        item->gravity_status = 0;
+        if (coll->mid_floor != NO_HEIGHT)
+            item->pos.y_pos += coll->mid_floor;
+    }
+}
+
 void lara_col_fastdive(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
