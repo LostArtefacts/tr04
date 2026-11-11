@@ -217,6 +217,57 @@ void PulleyCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
         ObjectCollision(item_number, l, coll);
 }
 
+void TurnSwitchControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *l;
+
+    item = &items[item_number];
+    l = lara_item;
+    if (item->item_flags[0] == 2) {
+        if (item->anim_number == objects[TURN_SWITCH].anim_index + 2) {
+            item->pos.y_rot += 0x4000;
+            if (input & IN_ACTION) {
+                l->anim_number = ANIM_TURNSWITCHCB;
+                l->frame_number = anims[ANIM_TURNSWITCHCB].frame_base;
+                item->anim_number = objects[item->object_number].anim_index + 1;
+                item->frame_number = anims[item->anim_number].frame_base;
+            }
+        }
+        if (l->anim_number == ANIM_TURNSWITCHCD && l->frame_number == anims[ANIM_TURNSWITCHCD].frame_end && !item->item_flags[1])
+            item->item_flags[1] = 1;
+        if ((l->frame_number >= anims[ANIM_TURNSWITCHCB].frame_base && l->frame_number <= anims[ANIM_TURNSWITCHCB].frame_base + 43) || (l->frame_number >= anims[ANIM_TURNSWITCHCB].frame_base + 58 && l->frame_number <= anims[ANIM_TURNSWITCHCB].frame_base + 115))
+            SoundEffect(63, &item->pos, SFX_ALWAYS);
+    } else {
+        if (item->anim_number == objects[TURN_SWITCH].anim_index + 6) {
+            item->pos.y_rot -= 0x4000;
+            if (input & IN_ACTION) {
+                l->anim_number = ANIM_TURNSWITCHAB;
+                l->frame_number = anims[ANIM_TURNSWITCHAB].frame_base;
+                item->anim_number = objects[item->object_number].anim_index + 5;
+                item->frame_number = anims[item->anim_number].frame_base;
+            }
+        }
+        if (l->anim_number == ANIM_TURNSWITCHAD && l->frame_number == anims[ANIM_TURNSWITCHAD].frame_end && !item->item_flags[1])
+            item->item_flags[1] = 1;
+        if ((l->frame_number >= anims[ANIM_TURNSWITCHAB].frame_base && l->frame_number <= anims[ANIM_TURNSWITCHAB].frame_base + 43) || (l->frame_number >= anims[ANIM_TURNSWITCHAB].frame_base + 58 && l->frame_number <= anims[ANIM_TURNSWITCHAB].frame_base + 115))
+            SoundEffect(63, &item->pos, SFX_ALWAYS);
+    }
+    AnimateItem(item);
+    if (item->item_flags[1] == 1) {
+        l->anim_number = ANIM_BREATH;
+        l->frame_number = anims[ANIM_BREATH].frame_base;
+        l->current_anim_state = AS_STOP;
+        item->anim_number = objects[item->object_number].anim_index;
+        item->frame_number = anims[item->anim_number].frame_base;
+        item->status = ITEM_INACTIVE;
+        RemoveActiveItem(item_number);
+        lara.gun_status = LG_NO_ARMS;
+        UseForcedFixedCamera = 0;
+        item->item_flags[1] = 2;
+    }
+}
+
 void RailSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
 {
     ITEM_INFO *item;
