@@ -68,3 +68,8 @@ void twelth_cutseq_end(void)
 {
     cutseq_restore_item(ANIMATING6);
 }
+
+void thirteen_end(void)
+{
+    DelsHandyTeleportLara(79194, 0, 40951, -20741);
+}
