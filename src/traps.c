@@ -280,6 +280,22 @@ void LavaBurn(ITEM_INFO *item)
     }
 }
 
+void RollingBallCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (!TestBoundsCollide(item, l, coll->radius) || !TestCollision(item, l))
+        return;
+    if (TriggerActive(item) && (item->item_flags[0] || item->fallspeed)) {
+        lara_item->anim_number = ANIM_RBALL_DEATH;
+        lara_item->frame_number = anims[ANIM_RBALL_DEATH].frame_base;
+        lara_item->current_anim_state = lara_item->goal_anim_state = AS_DEATH;
+        lara_item->gravity_status = 0;
+    } else
+        ObjectCollision(item_number, l, coll);
+}
+
 void TwoBlockPlatformFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
 {
     if (OnTwoBlockPlatform(item, x, z)) {

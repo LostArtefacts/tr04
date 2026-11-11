@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="110.14" height="12" x="0" y="0" class="named"><title>489 · 31.65%</title></rect>
-<rect width="0.45" height="12" x="110.14" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="110.59" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="234.48" height="12" x="113.52" y="0" class="todo"><title>1041 · 67.38%</title></rect>
+<rect width="110.37" height="12" x="0" y="0" class="named"><title>490 · 31.72%</title></rect>
+<rect width="0.45" height="12" x="110.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="110.82" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="234.25" height="12" x="113.75" y="0" class="todo"><title>1040 · 67.31%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">31.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">489</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1041</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">490</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1040</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="47.04" height="12" x="0" y="0" class="named"><title>84 KB · 13.52%</title></rect>
-<rect width="0.12" height="12" x="47.04" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="47.16" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="295.22" height="12" x="52.78" y="0" class="todo"><title>526 KB · 84.83%</title></rect>
+<rect width="47.15" height="12" x="0" y="0" class="named"><title>84 KB · 13.55%</title></rect>
+<rect width="0.12" height="12" x="47.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="47.27" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="295.11" height="12" x="52.89" y="0" class="todo"><title>526 KB · 84.80%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">84 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">526 KB</tspan></text>
@@ -207,7 +207,7 @@
 <rect width="12" height="12" x="570" y="30" class="named"><title>0x00414ee0 LaraBurn (69 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="30" class="named"><title>0x00414f30 LavaBurn (108 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="30" class="todo"><title>0x00414fa0 ControlRollingBall (1753 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="30" class="todo"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="30" class="named"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="30" class="todo"><title>0x00415750 ControlJobySpike (389 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="30" class="todo"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="30" class="named"><title>0x00415ad0 TwoBlockPlatformFloor (74 bytes)</title></rect>
@@ -2361,7 +2361,7 @@
 <rect width="8.67" height="8.65" x="519.33" y="221.87" class="todo"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>
 <rect width="8.67" height="8.65" x="531" y="221.87" class="todo"><title>0x0048c5f0 DrawFlash (194 bytes)</title></rect>
 <rect width="8.63" height="8.65" x="542.67" y="221.87" class="named"><title>0x0040aeb0 TargetVisible (193 bytes)</title></rect>
-<rect width="8.63" height="8.65" x="554.30" y="221.87" class="todo"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
+<rect width="8.63" height="8.65" x="554.30" y="221.87" class="named"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
 <rect width="8.63" height="8.65" x="565.92" y="221.87" class="named"><title>0x0044a0d0 AlterFloorHeight (193 bytes)</title></rect>
 <rect width="8.63" height="8.65" x="577.55" y="221.87" class="todo"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
 <rect width="8.58" height="8.65" x="589.17" y="221.87" class="todo"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>

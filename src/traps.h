@@ -34,5 +34,6 @@ void ControlFallingSquishyBlock(sint16 item_number);
 void FloorTrapDoorCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void CeilingTrapDoorCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void ControlSlicerDicer(sint16 item_number);
+void RollingBallCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif
