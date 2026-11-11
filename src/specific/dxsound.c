@@ -168,3 +168,8 @@ void S_SoundStopSample(sint32 num)
 {
     DXStopSample(num);
 }
+
+sint32 S_SoundPlaySample(sint32 num, uint16 volume, sint32 pitch, sint16 pan)
+{
+    return DXStartSample(num, CalcVolume(volume), pitch, pan, 0);
+}
