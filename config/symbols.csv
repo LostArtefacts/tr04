@@ -2012,6 +2012,7 @@ address,size,name,symbol
 0x004b263c,50,source_pcm_format,_source_pcm_format
 0x004b27a5,,load_roomnum,_load_roomnum
 0x004b2bac,72,layout,_layout
+0x004b3474,4,joy_unavailable,_joy_unavailable
 0x004b38ac,4,MusicVolume,_MusicVolume
 0x004b38b0,4,SFXVolume,_SFXVolume
 0x004b38b4,4,SoundQuality,_SoundQuality
@@ -2222,6 +2223,7 @@ address,size,name,symbol
 0x005355b8,72,conflict,_conflict
 0x00535600,4,inputBusy,_inputBusy
 0x00535704,4,input,_input
+0x00535708,404,joy_caps,_joy_caps
 0x0053589c,4,joy_fire,_joy_fire
 0x005358a0,4,joy_x,_joy_x
 0x005358a4,4,joy_y,_joy_y

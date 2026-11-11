@@ -47,3 +47,29 @@ sint32 Key(sint32 number)
         return keymap[DIK_RMENU];
     return 0;
 }
+
+sint32 ReadJoystick(sint32 *x, sint32 *y)
+{
+    JOYINFOEX joystick;
+
+    joystick.dwSize = sizeof(JOYINFOEX);
+    joystick.dwFlags = JOY_RETURNX | JOY_RETURNY | JOY_RETURNBUTTONS;
+    if (joyGetPosEx(0, &joystick) != JOYERR_NOERROR) {
+        joy_unavailable = 1;
+        *x = 0;
+        *y = 0;
+        return 0;
+    }
+    if (joy_unavailable) {
+        if (joyGetDevCaps(JOYSTICKID1, &joy_caps, sizeof(joy_caps)) == JOYERR_NOERROR) {
+            joy_unavailable = 0;
+        } else {
+            *y = 0;
+            *x = 0;
+            return 0;
+        }
+    }
+    *x = (joystick.dwXpos << 5) / (joy_caps.wXmax - joy_caps.wXmin) - 16;
+    *y = (joystick.dwYpos << 5) / (joy_caps.wYmax - joy_caps.wYmin) - 16;
+    return joystick.dwButtons;
+}
