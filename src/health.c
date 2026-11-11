@@ -42,3 +42,30 @@ void DrawGameInfo(sint32 timed)
         }
     }
 }
+
+void DrawHealthBar(sint32 flash_state)
+{
+    sint32 hitpoints;
+
+    hitpoints = lara_item->hit_points;
+    if (hitpoints < 0)
+        hitpoints = 0;
+    else if (hitpoints > 1000)
+        hitpoints = 1000;
+    if (old_hitpoints != hitpoints) {
+        old_hitpoints = hitpoints;
+        health_bar_timer = 40;
+    }
+    if (health_bar_timer < 0)
+        health_bar_timer = 0;
+    if (hitpoints <= 250) {
+        if (flash_state)
+            S_DrawHealthBar(hitpoints / 10);
+        else
+            S_DrawHealthBar(0);
+    } else if (health_bar_timer > 0 || hitpoints <= 0 || lara.gun_status == LG_READY && lara.gun_type != 8 || lara.poisoned >= 256) {
+        S_DrawHealthBar(hitpoints / 10);
+    }
+    if (PoisonFlag)
+        PoisonFlag--;
+}
