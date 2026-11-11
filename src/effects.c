@@ -129,6 +129,14 @@ void ExplosionFX(ITEM_INFO *item)
     flipeffect = -1;
 }
 
+void LaraLocation(ITEM_INFO *item)
+{
+    lara.location = TriggerTimer;
+    if (TriggerTimer > lara.highest_location)
+        lara.highest_location = TriggerTimer;
+    flipeffect = -1;
+}
+
 void lara_hands_free(ITEM_INFO *item)
 {
     lara.gun_status = LG_NO_ARMS;
