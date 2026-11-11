@@ -38,3 +38,19 @@ uint8 REG_ReadLong(char *SubKeyName, uint32 *value, uint32 defaultValue)
     *value = defaultValue;
     return 0;
 }
+
+uint8 REG_ReadBool(char *SubKeyName, uint8 *value, uint8 defaultValue)
+{
+    uint32 type;
+    uint32 cbData;
+    uint32 data;
+
+    cbData = 4;
+    if (RegQueryValueEx(phkResult, SubKeyName, 0, &type, (LPBYTE)&data, &cbData) == ERROR_SUCCESS && type == REG_DWORD && cbData == 4) {
+        *value = data != 0;
+        return 1;
+    }
+    REG_WriteBool(SubKeyName, defaultValue);
+    *value = defaultValue;
+    return 0;
+}
