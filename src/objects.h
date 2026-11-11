@@ -26,5 +26,6 @@ void TriggerRopeFlame(PHD_VECTOR *pos);
 void BurningRopeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void ControlBurningRope(sint16 item_number);
 void PoleCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
+void StatuePlinthCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif

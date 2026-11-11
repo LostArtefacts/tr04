@@ -15,6 +15,7 @@
 #include "lara_states.h"
 #include "specific/input.h"
 #include "switch.h"
+#include "newinv.h"
 
 void SmashObject(sint16 item_number)
 {
@@ -453,4 +454,43 @@ void ControlBurningRope(sint16 item_number)
         }
     }
     DebrisFlags = 0;
+}
+
+void StatuePlinthCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint16 *bounds;
+    sint16 room_number, y_rot;
+
+    item = &items[item_number];
+    if (input & IN_ACTION && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && !l->gravity_status && lara.gun_status == LG_NO_ARMS && !item->trigger_flags && !item->item_flags[0] && !item->item_flags[1]) {
+        bounds = GetBoundsAccurate(item);
+        StatuePlinthBounds[0] = bounds[0];
+        StatuePlinthBounds[1] = bounds[1];
+        StatuePlinthBounds[4] = bounds[4] - 200;
+        StatuePlinthBounds[5] = bounds[4] + 200;
+        y_rot = item->pos.y_rot;
+        item->pos.y_rot = l->pos.y_rot;
+        if (TestLaraPosition(StatuePlinthBounds, item, l) && have_i_got_object(PUZZLE_ITEM5)) {
+            GLOBAL_enterinventory = PUZZLE_ITEM5;
+            item->item_flags[1] = 1;
+        }
+        item->pos.y_rot = y_rot;
+    } else if (item->item_flags[1] && GLOBAL_inventoryitemchosen == PUZZLE_ITEM5) {
+        l->anim_number = ANIM_PLINTHHI;
+        l->frame_number = anims[ANIM_PLINTHHI].frame_base;
+        l->current_anim_state = AS_CONTROLLED;
+    } else if (l->anim_number == ANIM_PLINTHHI && l->frame_number == anims[ANIM_PLINTHHI].frame_base + 45) {
+        room_number = item->room_number;
+        floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+        GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+        TestTriggers(trigger_index, 1, item->flags & 0x3E00);
+        item->mesh_bits = 255;
+        item->item_flags[0] = 1;
+        lara.puzzleitems[4]--;
+    } else {
+        item->item_flags[1] = 0;
+        ObjectCollision(item_number, l, coll);
+    }
 }
