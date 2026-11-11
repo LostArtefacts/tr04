@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="103.69" height="12" x="0" y="0" class="named"><title>445 · 28.80%</title></rect>
-<rect width="0.23" height="12" x="103.69" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.80" height="12" x="103.92" y="0" class="nonmatching"><title>12 · 0.78%</title></rect>
-<rect width="253.28" height="12" x="106.72" y="0" class="todo"><title>1087 · 70.36%</title></rect>
+<rect width="103.92" height="12" x="0" y="0" class="named"><title>446 · 28.87%</title></rect>
+<rect width="0.23" height="12" x="103.92" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.80" height="12" x="104.16" y="0" class="nonmatching"><title>12 · 0.78%</title></rect>
+<rect width="253.05" height="12" x="106.95" y="0" class="todo"><title>1086 · 70.29%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">28.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">445</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">12</tspan> · <tspan class="todo">1087</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">446</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">12</tspan> · <tspan class="todo">1086</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="43.64" height="12" x="0" y="0" class="named"><title>75 KB · 12.12%</title></rect>
-<rect width="0.10" height="12" x="43.64" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.18" height="12" x="43.67" y="0" class="nonmatching"><title>9 KB · 1.44%</title></rect>
-<rect width="311.15" height="12" x="48.85" y="0" class="todo"><title>536 KB · 86.43%</title></rect>
+<rect width="43.66" height="12" x="0" y="0" class="named"><title>75 KB · 12.13%</title></rect>
+<rect width="0.10" height="12" x="43.66" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.18" height="12" x="43.69" y="0" class="nonmatching"><title>9 KB · 1.44%</title></rect>
+<rect width="311.13" height="12" x="48.87" y="0" class="todo"><title>536 KB · 86.42%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">12.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">75 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">536 KB</tspan></text>
@@ -611,7 +611,7 @@
 <rect width="12" height="12" x="630" y="150" class="named"><title>0x00437cc0 invisibility_off (23 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="150" class="named"><title>0x00437ce0 reset_hair (5 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="150" class="todo"><title>0x00437cf0 ClearScarabsPatch (5 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="150" class="todo"><title>0x00437d00 MeshSwapToPour (34 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="150" class="named"><title>0x00437d00 MeshSwapToPour (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="150" class="todo"><title>0x00437d30 MeshSwapFromPour (24 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="150" class="named"><title>0x00437d50 AddFootPrint (270 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="150" class="todo"><title>0x00437e60 GetFreeFireSpark (131 bytes)</title></rect>
@@ -2978,7 +2978,7 @@
 <rect width="3.54" height="3.82" x="669.14" y="410.96" class="todo"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
 <rect width="3.54" height="3.82" x="669.14" y="417.78" class="todo"><title>0x0045a340 CreateCheckSum (35 bytes)</title></rect>
 <rect width="3.54" height="3.82" x="669.14" y="424.61" class="named"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
-<rect width="3.54" height="3.71" x="669.14" y="431.43" class="todo"><title>0x00437d00 MeshSwapToPour (34 bytes)</title></rect>
+<rect width="3.54" height="3.71" x="669.14" y="431.43" class="named"><title>0x00437d00 MeshSwapToPour (34 bytes)</title></rect>
 <rect width="3.54" height="3.71" x="669.14" y="438.14" class="todo"><title>0x00437ef0 keep_those_fires_burning (34 bytes)</title></rect>
 <rect width="3.54" height="3.71" x="669.14" y="444.86" class="named"><title>0x00450560 phd_PopMatrix_I (34 bytes)</title></rect>
 <rect width="3.54" height="3.71" x="669.14" y="451.57" class="todo"><title>0x004535c0 InitialiseBurningFloor (34 bytes)</title></rect>

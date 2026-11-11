@@ -214,3 +214,8 @@ void reset_hair(ITEM_INFO *item)
 {
     InitialiseHair();
 }
+
+void MeshSwapToPour(ITEM_INFO *item)
+{
+    lara.mesh_ptrs[LM_LHAND] = meshes[objects[item->item_flags[2]].mesh_index + 2 * LM_LHAND];
+}
