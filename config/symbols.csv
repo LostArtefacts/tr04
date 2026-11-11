@@ -1999,6 +1999,7 @@ address,size,name,symbol
 0x004af452,,gfInitialiseGame,_gfInitialiseGame
 0x004af454,4,nFrames,_nFrames
 0x004afab8,4,old_hitpoints,_old_hitpoints
+0x004afeec,92,AccentTable,_AccentTable
 0x004aff48,80,ShadeFromTo,_ShadeFromTo
 0x004aff98,4,font_init,_font_init
 0x004b22c0,4,source_wav_format,_source_wav_format

@@ -95,3 +95,56 @@ void UpdatePulseColour(void)
         FontShades[1][(i << 1) + 1].b = b;
     }
 }
+
+sint32 GetStringLength(const char *string, sint16 *top, sint16 *bottom)
+{
+    sint32 s, accent, length, lowest, highest, y;
+    CHARDEF *def;
+
+    accent = 0;
+    length = 0;
+    lowest = -1024;
+    highest = 1024;
+    s = (uint8)*string++;
+    while (s) {
+        if (s == '\n')
+            break;
+        if (s == ' ') {
+            length += (sint32)(8.0F * ((float)(phd_winxmax + 1) * (1.0F / 640.0F)));
+        } else if (s == '\t') {
+            length += 40;
+            if (top && highest > -12)
+                highest = -12;
+            if (bottom && lowest < 2)
+                lowest = 2;
+        } else if (s >= 20) {
+            if (s < ' ') {
+                def = &CharDef[s + 74];
+            } else {
+                if (s >= 128 && s <= 173) {
+                    accent = 1;
+                    s = (uint8)AccentTable[s - 128][0];
+                }
+                def = &CharDef[s - '!'];
+            }
+            if (ScaleFlag)
+                length += def->w - def->w / 4;
+            else
+                length += def->w;
+            y = def->YOffset;
+            if (top && y < highest)
+                highest = y;
+            if (bottom && def->h + y > lowest)
+                lowest = def->h + y;
+        }
+        s = (uint8)*string++;
+    }
+    if (top) {
+        if (accent)
+            highest -= 4;
+        *top = (sint16)highest;
+    }
+    if (bottom)
+        *bottom = (sint16)lowest;
+    return length;
+}
