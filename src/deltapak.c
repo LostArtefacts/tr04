@@ -374,6 +374,17 @@ void do_key_meshswap(void)
     meshes[objects[MESHSWAP1].mesh_index + LM_RHAND * 2] = temp;
 }
 
+void trigger_weapon_dynamics(sint32 left_or_right)
+{
+    PHD_VECTOR pos;
+
+    pos.x = (GetRandomControl() & 0xFF) - 128;
+    pos.y = (GetRandomControl() & 0x7F) - 63;
+    pos.z = (GetRandomControl() & 0xFF) - 128;
+    GetLaraJointPos(&pos, left_or_right);
+    TriggerDynamic(pos.x, pos.y, pos.z, 10, (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 128, (GetRandomControl() & 0x3F));
+}
+
 void cutseq_kill_item(sint32 num)
 {
     ITEM_INFO *item;
