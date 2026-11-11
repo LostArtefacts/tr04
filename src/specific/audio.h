@@ -51,7 +51,7 @@ extern char *pAudioWrite;
 extern DWORD AudioBytes;
 extern sint32 audio_buffer_size;
 extern sint32 CurrentNotify;
-extern sint32 NextWriteOffset;
+extern uint32 NextWriteOffset;
 extern sint32 XAFlag;
 extern uint8 CurrentAtmosphere;
 extern sint32 MusicVolume;

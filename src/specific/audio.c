@@ -257,3 +257,36 @@ void ACMEmulateCDPlay(sint32 track, sint32 mode)
     ACMSetVolume();
     IDirectSoundBuffer_Play(G_DSBuffer, 0, 0, DSBPLAY_LOOPING);
 }
+
+sint32 ACMHandleNotifications(void)
+{
+    char *write;
+    DWORD wait, bytes;
+
+    while ((wait = WaitForMultipleObjects(2, NotifyEventHandles, 0, INFINITE)) != WAIT_FAILED) {
+        EnterCriticalSection(&audio_cs);
+        if (!wait && G_DSBuffer) {
+            memcpy(ADPCMBuffer, audio_fp_write_ptr, 0x5800);
+            if (XATrack == -1)
+                memset(ADPCMBuffer, 0, 0x5800);
+            else
+                FillADPCMBuffer(audio_fp_write_ptr, XATrack);
+            if (continue_reading_audio_file) {
+                audio_fp_write_ptr += 0x5800;
+                if ((sint32)audio_fp_write_ptr >= (sint32)(wav_file_buffer + 0x37000))
+                    audio_fp_write_ptr = wav_file_buffer;
+                IDirectSoundBuffer_Lock(G_DSBuffer, NextWriteOffset, NotifySize, (LPVOID *)&write, &bytes, 0, 0, 0);
+                acmStreamConvert(hACMStream, &StreamHeaders[CurrentNotify], ACM_STREAMCONVERTF_BLOCKALIGN);
+                IDirectSoundBuffer_Unlock(G_DSBuffer, write, bytes, 0, 0);
+                NextWriteOffset += bytes;
+                if (NextWriteOffset >= audio_buffer_size)
+                    NextWriteOffset -= audio_buffer_size;
+                CurrentNotify = (CurrentNotify + 1) & 3;
+            }
+        }
+        LeaveCriticalSection(&audio_cs);
+        if (!G_DSBuffer)
+            break;
+    }
+    return DS_OK;
+}
