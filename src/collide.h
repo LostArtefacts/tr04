@@ -68,5 +68,6 @@ void GetCollisionInfo(COLL_INFO *coll, sint32 x, sint32 y, sint32 z, sint16 room
 sint32 FindGridShift(sint32 src, sint32 dst);
 void ShiftItem(ITEM_INFO *item, COLL_INFO *coll);
 void UpdateLaraRoom(ITEM_INFO *item, sint32 height);
+sint32 TestLaraPosition(sint16 *bounds, ITEM_INFO *item, ITEM_INFO *laraitem);
 
 #endif
