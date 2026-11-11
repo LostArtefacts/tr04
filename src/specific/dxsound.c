@@ -163,3 +163,8 @@ void S_SoundStopAllSamples(void)
     for (i = 0; i < 32; i++)
         DXStopSample(i);
 }
+
+void S_SoundStopSample(sint32 num)
+{
+    DXStopSample(num);
+}
