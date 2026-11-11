@@ -44,6 +44,8 @@ sint32 DrawPhaseGame(void);
 void GetRoomBounds(void);
 
 extern STATIC_INFO static_objects[60];
+extern sint16 LightningCount;
+extern sint16 dLightningRand;
 extern sint32 *IMptr;
 extern sint16 interpolated_bounds[6];
 extern sint32 IM_rate;

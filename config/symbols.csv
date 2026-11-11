@@ -1102,6 +1102,7 @@ address,size,name,symbol
 0x0046c9a0,12,twentytwo_init,_twentytwo_init
 0x0046c9b0,57,twentytwo_end,_twentytwo_end
 0x0046c9f0,34,do_spade_meshswap,_do_spade_meshswap
+0x0046ca20,34,do_backpack_meshswap,_do_backpack_meshswap
 0x0046ca50,34,do_key_meshswap,_do_key_meshswap
 0x0046ca80,47,cutseq_shoot_pistols,_cutseq_shoot_pistols
 0x0046cab0,137,trigger_weapon_dynamics,_trigger_weapon_dynamics
@@ -1113,6 +1114,7 @@ address,size,name,symbol
 0x0046d030,16,init_voncroy_meshbits,_init_voncroy_meshbits
 0x0046d040,279,DelsHandyTeleportLara,_DelsHandyTeleportLara
 0x0046d160,82,nail_intelligent_object,_nail_intelligent_object
+0x0046d1c0,39,force_sky_lightning,_force_sky_lightning
 0x0046d1f0,116,handle_lara_chatting,_handle_lara_chatting
 0x0046d270,213,handle_actor_chatting,_handle_actor_chatting
 0x0046d350,121,trigger_item_in_room,_trigger_item_in_room

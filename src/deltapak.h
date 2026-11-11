@@ -86,5 +86,6 @@ void twentysix_control(void);
 void twentyseven_init(void);
 void twentyseven_control(void);
 void twentyfive_init(void);
+void force_sky_lightning(void);
 
 #endif

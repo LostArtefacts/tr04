@@ -6,6 +6,8 @@
 #include "lara2gun.h"
 #include "hair.h"
 #include "specific/function_stubs.h"
+#include "draw.h"
+#include "delstuff.h"
 
 void *cutseq_malloc(sint32 size)
 {
@@ -317,4 +319,10 @@ void twentytwo_end(void)
     cutseq_restore_item(DOOR_TYPE6);
     trigger_item_in_room(39, DOOR_TYPE6);
     trigger_item_in_room(39, DEMIGOD3);
+}
+
+void force_sky_lightning(void)
+{
+    LightningCount = (GetRandomDraw() & 0x1F) + 64;
+    dLightningRand = (GetRandomDraw() & 0xFF) + 256;
 }
