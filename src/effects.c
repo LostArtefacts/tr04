@@ -106,6 +106,12 @@ void floor_shake_effect(ITEM_INFO *item)
         camera.bounce = 66 * ((x * x + y * y + z * z) / 256 - WALL_L * WALL_L) / (WALL_L * WALL_L);
 }
 
+void SoundFlipEffect(ITEM_INFO *item)
+{
+    SoundEffect(TriggerTimer, NULL, 0);
+    flipeffect = -1;
+}
+
 void PoseidonSFX(ITEM_INFO *item)
 {
     SoundEffect(238, NULL, 0);

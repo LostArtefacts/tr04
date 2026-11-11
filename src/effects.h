@@ -40,6 +40,7 @@ void ActivateCamera(ITEM_INFO *item);
 void ActivateKey(ITEM_INFO *item);
 void LaraLocation(ITEM_INFO *item);
 void LaraLocationPad(ITEM_INFO *item);
+void SoundFlipEffect(ITEM_INFO *item);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;
