@@ -34,7 +34,9 @@ void KillAllCurrentItems(sint16 item_number);
 void TriggerRicochetSpark(GAME_VECTOR *pos, sint32 ang, sint32 num, sint32 smoke_only);
 void ClearDynamics(void);
 void TriggerUnderwaterBlood(sint32 x, sint32 y, sint32 z, sint32 size);
+void TriggerDynamic(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint32 g, sint32 b);
 RIPPLE_STRUCT *SetupRipple(sint32 x, sint32 y, sint32 z, sint32 size, sint32 flags);
+void ControlColouredLights(sint16 item_number);
 
 extern sint32 KillEverythingFlag;
 extern DYNAMIC dynamics[MAX_DYNAMICS * 2];

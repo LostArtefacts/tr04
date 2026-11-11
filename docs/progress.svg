@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="88.31" height="12" x="0" y="0" class="named"><title>379 · 24.53%</title></rect>
-<rect width="0.23" height="12" x="88.31" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="88.54" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="268.89" height="12" x="91.11" y="0" class="todo"><title>1154 · 74.69%</title></rect>
+<rect width="88.54" height="12" x="0" y="0" class="named"><title>380 · 24.60%</title></rect>
+<rect width="0.23" height="12" x="88.54" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="88.78" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="268.66" height="12" x="91.34" y="0" class="todo"><title>1153 · 74.63%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">24.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">379</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1154</tspan></text>
+<text text-anchor="end" x="540" y="7.50">24.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">380</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1153</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="31.64" height="12" x="0" y="0" class="named"><title>54 KB · 8.79%</title></rect>
-<rect width="0.10" height="12" x="31.64" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="31.67" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="323.32" height="12" x="36.68" y="0" class="todo"><title>557 KB · 89.81%</title></rect>
+<rect width="31.74" height="12" x="0" y="0" class="named"><title>55 KB · 8.82%</title></rect>
+<rect width="0.10" height="12" x="31.74" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="31.77" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="323.22" height="12" x="36.78" y="0" class="todo"><title>557 KB · 89.78%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">8.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">54 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">557 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">55 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">557 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -574,7 +574,7 @@
 <rect width="12" height="12" x="75" y="150" class="todo"><title>0x00436250 TriggerDynamic_MIRROR (198 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="150" class="named"><title>0x00436320 ClearDynamics (29 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="150" class="todo"><title>0x00436340 ControlSmokeEmitter (1462 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="150" class="todo"><title>0x00436900 ControlColouredLights (173 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="150" class="named"><title>0x00436900 ControlColouredLights (173 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="150" class="todo"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="150" class="named"><title>0x00437050 ItemNearLara (140 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="150" class="todo"><title>0x004370e0 SoundEffects (92 bytes)</title></rect>
@@ -2414,7 +2414,7 @@
 <rect width="8.47" height="7.99" x="518.50" y="377.81" class="named"><title>0x00421040 lara_as_duck (175 bytes)</title></rect>
 <rect width="8.47" height="7.94" x="518.50" y="388.80" class="named"><title>0x00490400 phd_RotX (174 bytes)</title></rect>
 <rect width="8.47" height="7.90" x="518.50" y="399.75" class="named"><title>0x00428040 lara_col_fastfall (173 bytes)</title></rect>
-<rect width="8.47" height="7.90" x="518.50" y="410.65" class="todo"><title>0x00436900 ControlColouredLights (173 bytes)</title></rect>
+<rect width="8.47" height="7.90" x="518.50" y="410.65" class="named"><title>0x00436900 ControlColouredLights (173 bytes)</title></rect>
 <rect width="8.47" height="7.90" x="518.50" y="421.54" class="named"><title>0x004732e0 DXChangeOutputFormat (173 bytes)</title></rect>
 <rect width="8.47" height="7.85" x="518.50" y="432.44" class="todo"><title>0x004235b0 SnapLaraToEdgeOfBlock (172 bytes)</title></rect>
 <rect width="8.47" height="7.85" x="518.50" y="443.30" class="todo"><title>0x00437ab0 SetFog (172 bytes)</title></rect>

@@ -1,4 +1,6 @@
 #include "effect2.h"
+#include "control.h"
+#include "objnums.h"
 
 RIPPLE_STRUCT *SetupRipple(sint32 x, sint32 y, sint32 z, sint32 size, sint32 flags)
 {
@@ -59,4 +61,23 @@ void ClearDynamics(void)
     number_dynamics = 0;
     for (lp = 0; lp < MAX_DYNAMICS; lp++)
         dynamics[lp].on = 0;
+}
+
+void ControlColouredLights(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint32 objnum;
+    uint8 colours[5][3] = {
+        { 255, 0, 0 },
+        { 0, 255, 0 },
+        { 0, 0, 255 },
+        { 255, 192, 0 },
+        { 224, 224, 255 }
+    };
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        objnum = item->object_number - RED_LIGHT;
+        TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 24, colours[objnum][0], colours[objnum][1], colours[objnum][2]);
+    }
 }
