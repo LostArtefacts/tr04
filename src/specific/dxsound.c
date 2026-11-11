@@ -155,3 +155,11 @@ sint32 CalcVolume(sint32 volume)
         result = -10000;
     return result;
 }
+
+void S_SoundStopAllSamples(void)
+{
+    int i;
+
+    for (i = 0; i < 32; i++)
+        DXStopSample(i);
+}
