@@ -14,5 +14,6 @@ void SmashObject(sint16 item_number);
 void SmashObjectControl(sint16 item_number);
 void ControlAnimatingSlots(sint16 item_number);
 void ControlWaterfall(sint16 item_number);
+void ControlTriggerTriggerer(sint16 item_number);
 
 #endif

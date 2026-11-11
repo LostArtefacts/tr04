@@ -141,6 +141,41 @@ void ControlAnimatingSlots(sint16 item_number)
         item->status = ITEM_INVISIBLE;
 }
 
+void ControlTriggerTriggerer(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint16 *data;
+
+    item = &items[item_number];
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &item->room_number);
+    GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    data = trigger_index;
+    if (data) {
+        if ((*data & 0x1F) == LAVA_TYPE) {
+            if (*data & 0x8000)
+                return;
+            data++;
+        }
+        if ((*data & 0x1F) == CLIMB_TYPE) {
+            if (*data & 0x8000)
+                return;
+            data++;
+        }
+        if ((*data & 0x1F) == MONKEY_TYPE) {
+            if (*data & 0x8000)
+                return;
+            data++;
+        }
+        if ((*data & 0x1F) == TRIGTRIGGER_TYPE) {
+            if (TriggerActive(item))
+                *data |= IFL_TRIGGERED;
+            else
+                *data &= ~IFL_TRIGGERED;
+        }
+    }
+}
+
 void ControlWaterfall(sint16 item_number)
 {
     ITEM_INFO *item;
