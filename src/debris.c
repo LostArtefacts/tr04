@@ -1,7 +1,42 @@
 #include "debris.h"
+#include "control.h"
+#include "room.h"
 #include "tomb4fx.h"
 #include "specific/3dmath.h"
 #include "specific/function_stubs.h"
+
+void UpdateDebris(void)
+{
+    DEBRIS_STRUCT *dptr;
+    FLOOR_INFO *floor;
+    sint32 height, ceiling;
+    int i;
+
+    dptr = debris;
+    for (i = 256; i > 0; i--, dptr++) {
+        if (dptr->On) {
+            dptr->Yvel += dptr->Gravity;
+            if (dptr->Yvel > 4096)
+                dptr->Yvel = 4096;
+            dptr->Speed -= dptr->Speed >> 4;
+            dptr->x += phd_sin(dptr->Dir) * dptr->Speed >> W2V_SHIFT;
+            dptr->y += dptr->Yvel >> 4;
+            dptr->z += phd_cos(dptr->Dir) * dptr->Speed >> W2V_SHIFT;
+            floor = GetFloor(dptr->x, dptr->y, dptr->z, &dptr->RoomNumber);
+            height = GetHeight(floor, dptr->x, dptr->y, dptr->z);
+            ceiling = GetCeiling(floor, dptr->x, dptr->y, dptr->z);
+            if (dptr->y >= height || dptr->y < ceiling) {
+                dptr->On = 0;
+            } else {
+                dptr->XRot += dptr->Yvel >> 6;
+                if (dptr->Yvel)
+                    dptr->YRot += dptr->Speed >> 5;
+                if (room[dptr->RoomNumber].flags & ROOM_UNDERWATER)
+                    dptr->Yvel -= dptr->Yvel >> 2;
+            }
+        }
+    }
+}
 
 sint32 GetFreeDebris(void)
 {

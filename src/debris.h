@@ -31,6 +31,7 @@ typedef struct debris_struct {
 } DEBRIS_STRUCT;
 
 sint32 GetFreeDebris(void);
+void UpdateDebris(void);
 void TriggerDebris(GAME_VECTOR *pos, void *TextInfo, sint16 *Offsets, sint32 *Vels, sint16 rgb);
 
 extern DEBRIS_STRUCT debris[256];
