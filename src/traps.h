@@ -42,5 +42,6 @@ void ControlBirdBlade(sint16 item_number);
 void ControlSethBlade(sint16 item_number);
 void DartsControl(sint16 item_number);
 void DartEmitterControl(sint16 item_number);
+void MineCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif

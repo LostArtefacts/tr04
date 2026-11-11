@@ -75,6 +75,7 @@ void RemoveRoomFlipItems(ROOM_INFO *r);
 void AddRoomFlipItems(ROOM_INFO *r);
 void FlipMap(sint32 FlipNumber);
 void RefreshCamera(sint16 type, sint16 *data);
+sint32 ExplodeItemNode(ITEM_INFO *item, sint32 Node, sint32 NoXZVel, sint32 bits);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;

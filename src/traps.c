@@ -711,3 +711,43 @@ void ControlFallingSquishyBlock(sint16 item_number)
         }
     }
 }
+
+void MineCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *mines;
+    sint32 j;
+    sint16 i;
+
+    item = &items[item_number];
+    if (item->trigger_flags || item->item_flags[3])
+        return;
+    if (l->anim_number == ANIM_MINEDETECT && l->frame_number >= anims[ANIM_MINEDETECT].frame_base + 57) {
+        mines = items;
+        for (i = 0; i < level_items; i++, mines++) {
+            if (mines->object_number != MINE || mines->status == ITEM_INVISIBLE || mines->trigger_flags)
+                continue;
+            TriggerExplosionSparks(mines->pos.x_pos, mines->pos.y_pos, mines->pos.z_pos, 3, -2, 0, mines->room_number);
+            for (j = 0; j < 2; j++)
+                TriggerExplosionSparks(mines->pos.x_pos, mines->pos.y_pos, mines->pos.z_pos, 3, -1, 0, mines->room_number);
+            mines->mesh_bits = 1;
+            ExplodeItemNode(mines, 0, 0, -32);
+            KillItem(i);
+            if (!(GetRandomControl() & 3))
+                SoundEffect(SFX_MINE_EXP_OVERLAY, &mines->pos, SFX_DEFAULT);
+            mines->status = ITEM_INVISIBLE;
+        }
+    } else if (TestBoundsCollide(item, l, 512)) {
+        TriggerExplosionSparks(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 3, -2, 0, item->room_number);
+        for (i = 0; i < 2; i++)
+            TriggerExplosionSparks(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 3, -1, 0, item->room_number);
+        item->mesh_bits = 1;
+        ExplodeItemNode(item, 0, 0, 128);
+        KillItem(item_number);
+        l->anim_number = ANIM_MINEDEATH;
+        l->frame_number = anims[ANIM_MINEDEATH].frame_base;
+        l->current_anim_state = AS_DEATH;
+        l->speed = 0;
+        SoundEffect(SFX_MINE_EXP_OVERLAY, &item->pos, SFX_DEFAULT);
+    }
+}

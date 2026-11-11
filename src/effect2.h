@@ -130,6 +130,7 @@ void TriggerFireFlame(sint32 x, sint32 y, sint32 z, sint32 body_part, sint32 typ
 void KillEverything(void);
 void TriggerDynamic_MIRROR(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint32 g, sint32 b);
 void UpdateSplashes(void);
+void TriggerExplosionSparks(sint32 x, sint32 y, sint32 z, sint32 extras, sint32 dynamic, sint32 uw, sint16 room_number);
 
 extern sint32 wibble;
 extern sint32 KillEverythingFlag;
