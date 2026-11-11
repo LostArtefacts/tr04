@@ -33,6 +33,26 @@ sint32 LaraFallen(ITEM_INFO *item, COLL_INFO *coll)
     return 0;
 }
 
+void lara_as_duck(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_spaz = 1;
+    coll->enable_baddie_push = 1;
+    lara.IsDucked = 1;
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_ALL4S;
+        return;
+    }
+    if (input & IN_LOOK)
+        LookUpDown();
+    if (input & (IN_FORWARD | IN_BACK) && (input & IN_DUCK || lara.keep_ducked) && lara.gun_status == LG_NO_ARMS &&
+        lara.water_status != LW_WADE && (item->anim_number == ANIM_DUCKBREATHE || item->anim_number == 245) &&
+        !(input & (IN_FLARE | IN_DRAW)) && (lara.gun_type != WEAPON_FLARE || lara.flare_age < 900 && lara.flare_age)) {
+        lara.torso_y_rot = 0;
+        lara.torso_x_rot = 0;
+        item->goal_anim_state = AS_ALL4S;
+    }
+}
+
 void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
