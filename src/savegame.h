@@ -40,5 +40,6 @@ extern char *SGpoint;
 extern sint32 SGcount;
 
 void ReadSG(void *pointer, sint32 size);
+void WriteSG(void *pointer, sint32 size);
 
 #endif
