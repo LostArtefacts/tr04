@@ -4,6 +4,9 @@
 #include "camera.h"
 #include "control.h"
 #include "hair.h"
+#include "anim.h"
+#include "delstuff.h"
+#include "objnums.h"
 
 void turn180_effect(ITEM_INFO *item)
 {
@@ -21,6 +24,18 @@ void ExplosionFX(ITEM_INFO *item)
 void lara_hands_free(ITEM_INFO *item)
 {
     lara.gun_status = LG_NO_ARMS;
+}
+
+void draw_right_gun(ITEM_INFO *item)
+{
+    sint16 *tmp;
+
+    tmp = lara.mesh_ptrs[LM_RTHIGH];
+    lara.mesh_ptrs[LM_RTHIGH] = meshes[objects[PISTOLS_ANIM].mesh_index + LM_RTHIGH * 2];
+    meshes[objects[PISTOLS_ANIM].mesh_index + LM_RTHIGH * 2] = tmp;
+    tmp = lara.mesh_ptrs[LM_RHAND];
+    lara.mesh_ptrs[LM_RHAND] = meshes[objects[PISTOLS_ANIM].mesh_index + LM_RHAND * 2];
+    meshes[objects[PISTOLS_ANIM].mesh_index + LM_RHAND * 2] = tmp;
 }
 
 void shoot_right_gun(ITEM_INFO *item)

@@ -26,6 +26,7 @@ sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 direction
 void shoot_right_gun(ITEM_INFO *item);
 void shoot_left_gun(ITEM_INFO *item);
 void reset_hair(ITEM_INFO *item);
+void draw_right_gun(ITEM_INFO *item);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;
