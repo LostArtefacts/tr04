@@ -967,3 +967,50 @@ void MineCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
         SoundEffect(SFX_MINE_EXP_OVERLAY, &item->pos, SFX_DEFAULT);
     }
 }
+
+void ControlMineHelicopter(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *sentry;
+    SPHERE *sphere;
+    sint16 nSpheres, i, sentries, fade;
+
+    item = &items[item_number];
+    nSpheres = GetSpheres(item, Slist, 1);
+    if (item->item_flags[0] < 150) {
+        item->item_flags[0]++;
+        fade = item->item_flags[0] * 4;
+        if (fade > 255)
+            fade = 0;
+        for (i = 0; i < nSpheres; i++) {
+            sphere = &Slist[i];
+            if (!i || i > 5)
+                AddFire(sphere->x, sphere->y, sphere->z, 2, item->room_number, fade);
+        }
+        SoundEffect(SFX_LOOP_FOR_SMALL_FIRES, &item->pos, SFX_DEFAULT);
+    } else {
+        SoundEffect(SFX_EXPLOSION1, &item->pos, SFX_DEFAULT);
+        SoundEffect(SFX_EXPLOSION2, &item->pos, SFX_DEFAULT);
+        SoundEffect(SFX_EXPLOSION1, &item->pos, 0x1800000 | SFX_SETPITCH);
+        for (i = 0; i < nSpheres; i++) {
+            sphere = &Slist[i];
+            if (i >= 7 && i != 9) {
+                TriggerExplosionSparks(sphere->x, sphere->y, sphere->y, 3, -2, 0, -item->room_number);
+                TriggerExplosionSparks(sphere->x, sphere->y, sphere->y, 3, -1, 0, -item->room_number);
+                TriggerShockwave((PHD_VECTOR *)&sphere->x, 0x1300030, (GetRandomControl() & 0x1F) + 112, 0x20806000, 0x800);
+            }
+        }
+        for (i = 0; i < nSpheres; i++)
+            ExplodeItemNode(item, i, 0, -128);
+        FlashFadeR = 255;
+        FlashFadeG = 192;
+        FlashFadeB = 64;
+        FlashFader = 32;
+        for (sentries = room[item->room_number].item_number; sentries != NO_ITEM; sentries = sentry->next_item) {
+            sentry = &items[sentries];
+            if (sentry->object_number == SENTRY_GUN)
+                sentry->mesh_bits &= ~0x40;
+        }
+        KillItem(item_number);
+    }
+}

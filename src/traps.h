@@ -51,5 +51,6 @@ void FallingSquishyBlockCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *c
 sint32 TestBoundsCollideTeethSpikes(ITEM_INFO *item);
 void FlameEmitter2Control(sint16 item_number);
 void ControlHammer(sint16 item_number);
+void ControlMineHelicopter(sint16 item_number);
 
 #endif
