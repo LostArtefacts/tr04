@@ -73,3 +73,16 @@ void SetScreenFadeIn(sint16 speed)
         ScreenFadedOut = 0;
     }
 }
+
+sint32 GetFreeShockwave(void)
+{
+    SHOCKWAVE_STRUCT *sw;
+    sint32 i;
+
+    sw = ShockWaves;
+    for (i = 0; i < 16; i++, sw++) {
+        if (!sw->life)
+            return i;
+    }
+    return -1;
+}

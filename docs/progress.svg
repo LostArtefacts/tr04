@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="113.07" height="12" x="0" y="0" class="named"><title>502 · 32.49%</title></rect>
-<rect width="0.45" height="12" x="113.07" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="113.52" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="230.42" height="12" x="117.58" y="0" class="todo"><title>1023 · 66.21%</title></rect>
+<rect width="113.30" height="12" x="0" y="0" class="named"><title>503 · 32.56%</title></rect>
+<rect width="0.45" height="12" x="113.30" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="113.75" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="230.20" height="12" x="117.80" y="0" class="todo"><title>1022 · 66.15%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">32.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">502</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1023</tspan></text>
+<text text-anchor="end" x="528" y="7.50">32.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">503</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1022</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="48.63" height="12" x="0" y="0" class="named"><title>87 KB · 13.97%</title></rect>
-<rect width="0.12" height="12" x="48.63" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="48.75" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="292.98" height="12" x="55.02" y="0" class="todo"><title>522 KB · 84.19%</title></rect>
+<rect width="48.64" height="12" x="0" y="0" class="named"><title>87 KB · 13.98%</title></rect>
+<rect width="0.12" height="12" x="48.64" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="48.76" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="292.97" height="12" x="55.03" y="0" class="todo"><title>522 KB · 84.19%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">87 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">522 KB</tspan></text>
@@ -652,7 +652,7 @@
 <rect width="12" height="12" x="495" y="165" class="todo"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x0043a1b0 S_DrawSparks (1240 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="165" class="todo"><title>0x0043aa70 GetFreeShockwave (25 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="165" class="named"><title>0x0043aa70 GetFreeShockwave (25 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="165" class="todo"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="165" class="todo"><title>0x0043ab00 TriggerShockwaveHitEffect (520 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="165" class="todo"><title>0x0043ad10 UpdateShockwaves (312 bytes)</title></rect>
@@ -3023,7 +3023,7 @@
 <rect width="3.14" height="3.20" x="682.33" y="428.44" class="todo"><title>0x0046c7c0 twentyfour_end (26 bytes)</title></rect>
 <rect width="3.14" height="3.20" x="682.33" y="434.63" class="todo"><title>0x0046c930 twentyseven_control (26 bytes)</title></rect>
 <rect width="3.14" height="3.20" x="682.33" y="440.83" class="todo"><title>0x00473d80 FileClose (26 bytes)</title></rect>
-<rect width="3.14" height="3.07" x="682.33" y="447.03" class="todo"><title>0x0043aa70 GetFreeShockwave (25 bytes)</title></rect>
+<rect width="3.14" height="3.07" x="682.33" y="447.03" class="named"><title>0x0043aa70 GetFreeShockwave (25 bytes)</title></rect>
 <rect width="3.14" height="2.95" x="682.33" y="453.10" class="named"><title>0x00423d20 lara_as_monkey180 (24 bytes)</title></rect>
 <rect width="3.14" height="2.95" x="682.33" y="459.05" class="named"><title>0x00427310 lara_as_slideback (24 bytes)</title></rect>
 <rect width="3.20" height="2.89" x="688.48" y="403.41" class="named"><title>0x00427640 lara_as_waterout (24 bytes)</title></rect>
