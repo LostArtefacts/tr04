@@ -1,5 +1,9 @@
+#include <string.h>
+
 #include "sphere.h"
+#include "draw.h"
 #include "lara.h"
+#include "specific/3dmath.h"
 
 sint32 TestCollision(ITEM_INFO *item, ITEM_INFO *l)
 {
@@ -45,4 +49,12 @@ sint32 TestCollision(ITEM_INFO *item, ITEM_INFO *l)
     }
     item->touch_bits = touch_bits;
     return touch_bits;
+}
+
+void InitInterpolate2(sint32 frac, sint32 rate)
+{
+    IM_frac = frac;
+    IM_rate = rate;
+    IMptr = &IMstack[384];
+    memcpy(IMptr, phd_mxptr, 48);
 }
