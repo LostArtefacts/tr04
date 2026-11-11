@@ -193,3 +193,9 @@ void lara_col_stepleft(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara_col_stepright(item, coll);
 }
+
+void lara_col_slide(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot;
+    lara_slide_slope(item, coll);
+}
