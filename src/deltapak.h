@@ -24,6 +24,15 @@ extern sint16 lara_chat_ranges8[4];
 extern sint16 voncroy_chat_ranges8[6];
 extern sint16 lara_chat_ranges9[18];
 extern sint16 voncroy_chat_ranges9[22];
+extern sint16 lara_chat_ranges10[18];
+extern sint16 voncroy_chat_ranges10[16];
+extern sint16 lara_chat_ranges11[12];
+extern sint16 captain_chat_ranges11[12];
+extern sint16 lara_chat_ranges15[10];
+extern sint16 voncroy_chat_ranges15[10];
+extern sint16 lara_chat_ranges16[10];
+extern sint16 jeanyves_chat_ranges16[18];
+extern sint16 voncroy_chat_ranges16[10];
 extern sint16 jeanyves_chat_ranges17[24];
 extern sint16 jeanyves_chat_ranges18[14];
 extern sint16 jeanyves_chat_ranges19[20];
@@ -113,5 +122,6 @@ void fourth_cutseq_control(void);
 void eleventh_cutseq_init(void);
 void twentythree_control(void);
 void ninth_control(void);
+void fifteen_control(void);
 
 #endif

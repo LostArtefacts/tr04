@@ -227,6 +227,39 @@ void fifteen_init(void)
     cutseq_meshbits[8] &= ~0x80000000;
 }
 
+void fifteen_control(void)
+{
+    sint32 frame;
+
+    frame = GLOBAL_cutseq_frame;
+    if (frame == 201 || frame == 781 || frame == 1691)
+        cutseq_meshbits[1] |= 0x80000000;
+    if (frame == 681 || frame == 1306 || frame == 1750)
+        cutseq_meshbits[1] &= ~0x80000000;
+    if (frame == 360 || frame == 781 || frame == 1402 || frame == 1691) {
+        cutseq_meshbits[2] |= 0x80000000;
+        cutseq_meshbits[3] |= 0x80000000;
+        cutseq_meshbits[4] |= 0x80000000;
+        cutseq_meshbits[5] |= 0x80000000;
+    }
+    if (frame == 681 || frame == 1306 || frame == 1552 || frame == 1750) {
+        cutseq_meshbits[2] &= ~0x80000000;
+        cutseq_meshbits[3] &= ~0x80000000;
+        cutseq_meshbits[4] &= ~0x80000000;
+        cutseq_meshbits[5] &= ~0x80000000;
+    }
+    if (frame == 1601) {
+        cutseq_meshbits[6] |= 0x80000000;
+        cutseq_meshbits[7] |= 0x80000000;
+    } else if (frame == 1691) {
+        cutseq_meshbits[8] |= 0x80000000;
+        cutseq_meshbits[6] &= ~0x80000000;
+    }
+    handle_lara_chatting(lara_chat_ranges15);
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 21, 1, ANIMATING9_MIP, voncroy_chat_ranges15);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void fifteen_end(void)
 {
     lara.questitems |= 1;
