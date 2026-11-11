@@ -197,3 +197,20 @@ void RemoveDrawnItem(sint16 item_num)
         }
     }
 }
+
+void AddActiveItem(sint16 item_num)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    item->flags |= IFL_TRIGGERED;
+    if (objects[item->object_number].control == NULL) {
+        item->status = ITEM_INACTIVE;
+        return;
+    }
+    if (item->active == 1)
+        return;
+    item->active = 1;
+    item->next_active = next_item_active;
+    next_item_active = item_num;
+}
