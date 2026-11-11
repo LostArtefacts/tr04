@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="123.88" height="12" x="0" y="0" class="named"><title>550 · 35.60%</title></rect>
-<rect width="0.45" height="12" x="123.88" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="124.33" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="218.94" height="12" x="129.06" y="0" class="todo"><title>972 · 62.91%</title></rect>
+<rect width="124.11" height="12" x="0" y="0" class="named"><title>551 · 35.66%</title></rect>
+<rect width="0.45" height="12" x="124.11" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="124.56" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="218.71" height="12" x="129.29" y="0" class="todo"><title>971 · 62.85%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">35.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">550</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">972</tspan></text>
+<text text-anchor="end" x="528" y="7.50">35.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">551</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">971</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.09" height="12" x="0" y="0" class="named"><title>98 KB · 15.83%</title></rect>
-<rect width="0.12" height="12" x="55.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="55.21" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="285.41" height="12" x="62.59" y="0" class="todo"><title>509 KB · 82.02%</title></rect>
+<rect width="55.12" height="12" x="0" y="0" class="named"><title>98 KB · 15.84%</title></rect>
+<rect width="0.12" height="12" x="55.12" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="55.24" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="285.38" height="12" x="62.62" y="0" class="todo"><title>509 KB · 82.01%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">15.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">98 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">509 KB</tspan></text>
@@ -990,7 +990,7 @@
 <rect width="12" height="12" x="315" y="270" class="named"><title>0x0045a2e0 sgSaveGame (81 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="270" class="todo"><title>0x0045a340 CreateCheckSum (35 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="270" class="todo"><title>0x0045a370 OpenSaveGame (256 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="270" class="todo"><title>0x0045a470 SaveHubData (51 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="270" class="named"><title>0x0045a470 SaveHubData (51 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="270" class="todo"><title>0x0045a4b0 SaveLevelData (2884 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="270" class="named"><title>0x0045b000 WriteSG (56 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="270" class="todo"><title>0x0045b040 sgRestoreGame (60 bytes)</title></rect>
@@ -2888,7 +2888,7 @@
 <rect width="4.50" height="4.38" x="647.36" y="377.65" class="todo"><title>0x00427370 lara_as_pullblock (51 bytes)</title></rect>
 <rect width="4.50" height="4.38" x="647.36" y="385.03" class="named"><title>0x004273e0 lara_as_pickup (51 bytes)</title></rect>
 <rect width="4.50" height="4.38" x="647.36" y="392.41" class="named"><title>0x004274c0 lara_as_usekey (51 bytes)</title></rect>
-<rect width="4.50" height="4.38" x="647.36" y="399.79" class="todo"><title>0x0045a470 SaveHubData (51 bytes)</title></rect>
+<rect width="4.50" height="4.38" x="647.36" y="399.79" class="named"><title>0x0045a470 SaveHubData (51 bytes)</title></rect>
 <rect width="4.50" height="4.38" x="647.36" y="407.17" class="todo"><title>0x00476e80 SetFogColor (51 bytes)</title></rect>
 <rect width="4.50" height="4.29" x="647.36" y="414.55" class="named"><title>0x00422350 GetLaraCollisionInfo (50 bytes)</title></rect>
 <rect width="4.50" height="4.29" x="647.36" y="421.85" class="todo"><title>0x0046d4d0 special3_end (50 bytes)</title></rect>

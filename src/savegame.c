@@ -27,6 +27,13 @@ void sgSaveGame(void)
     CreateCheckSum();
 }
 
+void SaveHubData(sint32 index)
+{
+    savegame.HubSizes[index] = (uint16)(SGcount - savegame.HubOffsets[index]);
+    if (index < 10)
+        savegame.HubSizes[index - 9] = savegame.HubSizes[index] + savegame.HubOffsets[index];
+}
+
 void WriteSG(void *pointer, sint32 size)
 {
     char *data;
