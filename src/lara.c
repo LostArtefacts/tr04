@@ -106,3 +106,10 @@ void lara_as_turn_l(ITEM_INFO *item, COLL_INFO *coll)
     } else if (!(input & IN_LEFT))
         item->goal_anim_state = AS_STOP;
 }
+
+void lara_as_fastfall(ITEM_INFO *item, COLL_INFO *coll)
+{
+    FASTFALL_FRICTION;
+    if (item->fallspeed == DAMAGE_START + DAMAGE_LENGTH)
+        SoundEffect(30, &item->pos, 0);
+}
