@@ -267,6 +267,7 @@ void lara_as_hangright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_fallback(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_hangturnlr(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_fastback(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_fastdive(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
