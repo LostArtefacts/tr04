@@ -9,5 +9,6 @@ extern PHD_VECTOR DeathSlidePosition;
 
 void InitialiseDeathSlide(sint16 item_number);
 void DeathSlideCollision(sint16 item_number, ITEM_INFO *laraitem, COLL_INFO *coll);
+void ControlDeathSlide(sint16 item_number);
 
 #endif
