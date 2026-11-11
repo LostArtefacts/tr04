@@ -1,6 +1,40 @@
 #include "tomb4fx.h"
 #include "sound.h"
 
+sint32 GetFreeFireSpark(void)
+{
+    FIRE_SPARKS *sptr;
+    sint32 min_life, min_life_num, free, i;
+
+    sptr = &fire_spark[next_fire_spark];
+    min_life = 4095;
+    min_life_num = 0;
+    for (free = next_fire_spark, i = 0; i < 20; i++) {
+        if (sptr->On) {
+            if (sptr->Life < min_life) {
+                min_life_num = free;
+                min_life = sptr->Life;
+            }
+            if (free == 19) {
+                sptr = &fire_spark[1];
+                free = 1;
+            } else {
+                free++;
+                sptr++;
+            }
+        } else {
+            next_fire_spark = free + 1;
+            if (next_fire_spark >= 20)
+                next_fire_spark = 1;
+            return free;
+        }
+    }
+    next_fire_spark = min_life_num + 1;
+    if (next_fire_spark >= 20)
+        next_fire_spark = 1;
+    return min_life_num;
+}
+
 void ClearFires(void)
 {
     FIRE_LIST *fire;

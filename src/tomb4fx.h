@@ -61,6 +61,102 @@ typedef struct smoke_sparks {
     uint8 mirror;
 } SMOKE_SPARKS;
 
+typedef struct fire_sparks {
+    sint16 x;
+    sint16 y;
+    sint16 z;
+    sint16 Xvel;
+    sint16 Yvel;
+    sint16 Zvel;
+    sint16 Gravity;
+    sint16 RotAng;
+    sint16 Flags;
+    uint8 sSize;
+    uint8 dSize;
+    uint8 Size;
+    uint8 Friction;
+    uint8 Scalar;
+    uint8 Def;
+    sint8 RotAdd;
+    sint8 MaxYvel;
+    uint8 On;
+    uint8 sR;
+    uint8 sG;
+    uint8 sB;
+    uint8 dR;
+    uint8 dG;
+    uint8 dB;
+    uint8 R;
+    uint8 G;
+    uint8 B;
+    uint8 ColFadeSpeed;
+    uint8 FadeToBlack;
+    uint8 sLife;
+    uint8 Life;
+} FIRE_SPARKS;
+
+typedef struct blood_struct {
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 Xvel;
+    sint16 Yvel;
+    sint16 Zvel;
+    sint16 Gravity;
+    sint16 RotAng;
+    uint8 sSize;
+    uint8 dSize;
+    uint8 Size;
+    uint8 Friction;
+    sint8 RotAdd;
+    uint8 On;
+    uint8 sShade;
+    uint8 dShade;
+    uint8 Shade;
+    uint8 ColFadeSpeed;
+    uint8 FadeToBlack;
+    sint8 sLife;
+    sint8 Life;
+    sint8 Pad;
+} BLOOD_STRUCT;
+
+typedef struct gunshell_struct {
+    PHD_3DPOS pos;
+    sint16 fallspeed;
+    sint16 room_number;
+    sint16 speed;
+    sint16 counter;
+    sint16 DirXrot;
+    sint16 object_number;
+} GUNSHELL_STRUCT;
+
+typedef struct bubble_struct {
+    PHD_VECTOR pos;
+    sint16 room_number;
+    sint16 speed;
+    sint16 size;
+    sint16 dsize;
+    uint8 shade;
+    uint8 vel;
+    sint16 pad;
+} BUBBLE_STRUCT;
+
+typedef struct drip_struct {
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    uint8 On;
+    uint8 R;
+    uint8 G;
+    uint8 B;
+    sint16 Yvel;
+    uint8 Gravity;
+    uint8 Life;
+    sint16 RoomNumber;
+    uint8 Outside;
+    uint8 Pad;
+} DRIP_STRUCT;
+
 void TriggerShatterSmoke(sint32 x, sint32 y, sint32 z);
 void TriggerBlood(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 num);
 void CreateBubble(PHD_3DPOS *pos, sint16 room_number, sint32 size, sint32 biggest);
@@ -74,6 +170,7 @@ void SetScreenFadeOut(sint16 speed, sint16 back);
 void SetScreenFadeIn(sint16 speed);
 sint32 GetFreeShockwave(void);
 sint32 GetFreeSmokeSpark(void);
+sint32 GetFreeFireSpark(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
@@ -91,6 +188,16 @@ extern sint16 ScreenFadeSpeed;
 extern FIRE_LIST fires[32];
 extern SMOKE_SPARKS smoke_spark[32];
 extern sint32 next_smoke_spark;
+extern FIRE_SPARKS fire_spark[20];
+extern sint32 next_fire_spark;
+extern BLOOD_STRUCT blood[32];
+extern sint32 next_blood;
+extern GUNSHELL_STRUCT Gunshells[24];
+extern sint32 next_gunshell;
+extern BUBBLE_STRUCT Bubbles[40];
+extern sint32 next_bubble;
+extern DRIP_STRUCT Drips[32];
+extern sint32 next_drip;
 extern SHOCKWAVE_STRUCT ShockWaves[16];
 
 #endif

@@ -2608,11 +2608,16 @@ address,size,name,symbol
 0x007ff021,,left_repeat,_left_repeat
 0x007ff022,,go_select,_go_select
 0x007ff100,1408,smoke_spark,_smoke_spark
+0x007ff680,720,Gunshells,_Gunshells
 0x007ff960,448,ShockWaves,_ShockWaves
 0x007fff60,512,fires,_fires
 0x00800160,4,LaserSightY,_LaserSightY
 0x00800164,4,LaserSightZ,_LaserSightZ
 0x00800168,4,LaserSightX,_LaserSightX
+0x00800180,1152,blood,_blood
+0x00800600,800,fire_spark,_fire_spark
+0x00800920,960,Bubbles,_Bubbles
+0x00800dc0,768,Drips,_Drips
 0x008010c0,4,FootPrintNum,_FootPrintNum
 0x008010e0,512,FootPrint,_FootPrint
 0x008012e0,4,effects,_effects
