@@ -43,6 +43,7 @@ void LaraLocationPad(ITEM_INFO *item);
 void SoundFlipEffect(ITEM_INFO *item);
 void SwapCrowbar(ITEM_INFO *item);
 void MeshSwapToPour(ITEM_INFO *item);
+void MeshSwapFromPour(ITEM_INFO *item);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;

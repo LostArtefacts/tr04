@@ -219,3 +219,8 @@ void MeshSwapToPour(ITEM_INFO *item)
 {
     lara.mesh_ptrs[LM_LHAND] = meshes[objects[item->item_flags[2]].mesh_index + 2 * LM_LHAND];
 }
+
+void MeshSwapFromPour(ITEM_INFO *item)
+{
+    lara.mesh_ptrs[LM_LHAND] = meshes[objects[LARA_SKIN].mesh_index + 2 * LM_LHAND];
+}
