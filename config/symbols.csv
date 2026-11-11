@@ -1125,8 +1125,7 @@ address,size,name,symbol
 0x0046d560,125,special1_init,_special1_init
 0x0046d5e0,44,special1_end,_special1_end
 0x0046d610,152,S_CDPlay,_S_CDPlay
-0x0046d6b0,200,S_CDStop,_S_CDStop
-0x0046d77a,12,Func46d77a,
+0x0046d6b0,214,S_CDStop,_S_CDStop
 0x0046d790,21,S_StartSyncedAudio,_S_StartSyncedAudio
 0x0046d7b0,77,ACMSetVolume,_ACMSetVolume
 0x0046d800,144,ACMEnumCallBack,_ACMEnumCallBack@12

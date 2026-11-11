@@ -18,7 +18,7 @@ extern CRITICAL_SECTION audio_cs;
 extern uint8 acm_ready;
 extern FILE *audio_stream_fp;
 extern sint32 audio_counter;
-extern uint8 reading_audio_file;
+extern volatile uint8 reading_audio_file;
 extern LPDIRECTSOUNDBUFFER G_DSBuffer;
 extern char *wav_file_buffer;
 extern sint32 XATrack;
