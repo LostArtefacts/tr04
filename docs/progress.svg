@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="68.74" height="12" x="0" y="0" class="named"><title>295 · 19.09%</title></rect>
-<rect width="0.23" height="12" x="68.74" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="68.97" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="288.47" height="12" x="71.53" y="0" class="todo"><title>1238 · 80.13%</title></rect>
+<rect width="68.97" height="12" x="0" y="0" class="named"><title>296 · 19.16%</title></rect>
+<rect width="0.23" height="12" x="68.97" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="69.20" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="288.23" height="12" x="71.77" y="0" class="todo"><title>1237 · 80.06%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">19.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">295</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1238</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">296</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1237</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="25.14" height="12" x="0" y="0" class="named"><title>43 KB · 6.98%</title></rect>
-<rect width="0.10" height="12" x="25.14" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="25.16" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="329.82" height="12" x="30.18" y="0" class="todo"><title>568 KB · 91.62%</title></rect>
+<rect width="25.25" height="12" x="0" y="0" class="named"><title>43 KB · 7.01%</title></rect>
+<rect width="0.10" height="12" x="25.25" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="25.28" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="329.71" height="12" x="30.29" y="0" class="todo"><title>568 KB · 91.59%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">7.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">43 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">568 KB</tspan></text>
@@ -135,7 +135,7 @@
 <rect width="12" height="12" x="240" y="15" class="todo"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="15" class="named"><title>0x0040a930 InitialiseMummy (147 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="15" class="nonmatching"><title>0x0040a9d0 MummyControl (1244 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="15" class="todo"><title>0x0040aeb0 TargetVisible (193 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="15" class="named"><title>0x0040aeb0 TargetVisible (193 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="15" class="todo"><title>0x0040af80 Targetable (207 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="15" class="named"><title>0x0040b050 GunShot (5 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="15" class="todo"><title>0x0040b060 GunHit (182 bytes)</title></rect>
@@ -2360,7 +2360,7 @@
 <rect width="8.71" height="8.66" x="507.69" y="221.94" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
 <rect width="8.67" height="8.66" x="519.40" y="221.94" class="todo"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>
 <rect width="8.67" height="8.66" x="531.07" y="221.94" class="todo"><title>0x0048c5f0 DrawFlash (194 bytes)</title></rect>
-<rect width="8.62" height="8.66" x="542.74" y="221.94" class="todo"><title>0x0040aeb0 TargetVisible (193 bytes)</title></rect>
+<rect width="8.62" height="8.66" x="542.74" y="221.94" class="named"><title>0x0040aeb0 TargetVisible (193 bytes)</title></rect>
 <rect width="8.62" height="8.66" x="554.36" y="221.94" class="todo"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
 <rect width="8.62" height="8.66" x="565.98" y="221.94" class="todo"><title>0x0044a0d0 AlterFloorHeight (193 bytes)</title></rect>
 <rect width="8.62" height="8.66" x="577.60" y="221.94" class="todo"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
