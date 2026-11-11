@@ -12,6 +12,22 @@
 #define FASTFALL_FRICTION item->speed = (item->speed * 95) / 100
 #define HEAD_TURN (2 * ONE_DEGREE)
 
+void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_DEATH;
+        return;
+    }
+    if (input & IN_LOOK)
+        LookUpDown();
+    lara.torso_x_rot = lara.torso_y_rot = 0;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 1;
+    if (item->anim_number == ANIM_DUCK_TO_ALL4S)
+        lara.gun_status = LG_HANDS_BUSY;
+    camera.target_elevation = -23 * ONE_DEGREE;
+}
+
 sint32 LaraDeflectEdgeDuck(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (coll->coll_type == COLL_FRONT || coll->coll_type == COLL_TOPFRONT) {
