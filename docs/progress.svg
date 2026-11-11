@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="43.11" height="12" x="0" y="0" class="named"><title>185 · 11.97%</title></rect>
-<rect width="0.23" height="12" x="43.11" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="43.34" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="314.80" height="12" x="45.20" y="0" class="todo"><title>1351 · 87.44%</title></rect>
+<rect width="43.34" height="12" x="0" y="0" class="named"><title>186 · 12.04%</title></rect>
+<rect width="0.23" height="12" x="43.34" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.86" height="12" x="43.57" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="314.56" height="12" x="45.44" y="0" class="todo"><title>1350 · 87.38%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">12.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">185</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1351</tspan></text>
+<text text-anchor="end" x="540" y="7.50">12.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">186</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1350</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="18.25" height="12" x="0" y="0" class="named"><title>31 KB · 5.07%</title></rect>
-<rect width="0.10" height="12" x="18.25" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="2.99" height="12" x="18.28" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="338.73" height="12" x="21.27" y="0" class="todo"><title>583 KB · 94.09%</title></rect>
+<rect width="18.28" height="12" x="0" y="0" class="named"><title>31 KB · 5.08%</title></rect>
+<rect width="0.10" height="12" x="18.28" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="2.99" height="12" x="18.30" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="338.70" height="12" x="21.30" y="0" class="todo"><title>583 KB · 94.08%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">5.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">31 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">583 KB</tspan></text>
@@ -300,7 +300,7 @@
 <rect width="12" height="12" x="465" y="60" class="todo"><title>0x00422810 LaraTestClimbStance (190 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="60" class="todo"><title>0x004228d0 TestWall (219 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="60" class="todo"><title>0x004229d0 LaraCollideStop (155 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="60" class="todo"><title>0x00422a90 lara_as_dashdive (41 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="60" class="named"><title>0x00422a90 lara_as_dashdive (41 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="60" class="todo"><title>0x00422ac0 lara_col_dashdive (280 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="60" class="todo"><title>0x00422be0 LaraLandedBad (98 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="60" class="todo"><title>0x00422c50 LaraDeflectEdgeJump (337 bytes)</title></rect>
@@ -2942,7 +2942,7 @@
 <rect width="3.87" height="4.19" x="689.45" y="376.94" class="named"><title>0x00484b60 REG_WriteBool (42 bytes)</title></rect>
 <rect width="3.78" height="4.19" x="696.32" y="376.94" class="todo"><title>0x00420d50 lara_as_duckl (41 bytes)</title></rect>
 <rect width="3.78" height="4.19" x="703.10" y="376.94" class="todo"><title>0x00420d80 lara_as_duckr (41 bytes)</title></rect>
-<rect width="3.78" height="4.19" x="709.88" y="376.94" class="todo"><title>0x00422a90 lara_as_dashdive (41 bytes)</title></rect>
+<rect width="3.78" height="4.19" x="709.88" y="376.94" class="named"><title>0x00422a90 lara_as_dashdive (41 bytes)</title></rect>
 <rect width="3.69" height="4.19" x="716.66" y="376.94" class="todo"><title>0x0040e2a0 ClearScarabs (40 bytes)</title></rect>
 <rect width="3.69" height="4.19" x="723.35" y="376.94" class="todo"><title>0x0046bf10 fourteen_end (40 bytes)</title></rect>
 <rect width="3.69" height="4.19" x="730.04" y="376.94" class="todo"><title>0x0046c900 twentyseven_init (40 bytes)</title></rect>
