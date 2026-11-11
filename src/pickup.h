@@ -17,5 +17,6 @@ sint32 KeyTrigger(sint16 item_num);
 sint32 PickupTrigger(sint16 item_num);
 void RegeneratePickups(void);
 sint16 *FindPlinth(ITEM_INFO *item);
+void KeyHoleCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif

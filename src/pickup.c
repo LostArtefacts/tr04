@@ -82,6 +82,50 @@ sint16 *FindPlinth(ITEM_INFO *item)
     return 0;
 }
 
+void KeyHoleCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint32 key, hole;
+
+    item = &items[item_number];
+    if ((input & IN_ACTION || GLOBAL_inventoryitemchosen != NO_ITEM) && !BinocularRange && lara.gun_status == LG_NO_ARMS && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH || lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+        key = GLOBAL_inventoryitemchosen - KEY_ITEM1;
+        hole = item->object_number - KEY_HOLE1;
+        if (TestLaraPosition(KeyHoleBounds, item, l)) {
+            if (!lara.IsMoving) {
+                if (item->status != ITEM_INACTIVE)
+                    return;
+                if (GLOBAL_inventoryitemchosen == NO_ITEM) {
+                    if (have_i_got_object(hole + KEY_ITEM1))
+                        GLOBAL_enterinventory = hole + KEY_ITEM1;
+                    return;
+                }
+                if (key != hole)
+                    return;
+            }
+            if (MoveLaraPosition(&KeyHolePosition, item, l)) {
+                remove_inventory_item(hole + KEY_ITEM1);
+                l->anim_number = ANIM_USEKEY;
+                l->frame_number = anims[ANIM_USEKEY].frame_base;
+                l->current_anim_state = AS_USEKEY;
+                lara.IsMoving = 0;
+                lara.head_y_rot = 0;
+                lara.head_x_rot = 0;
+                lara.torso_y_rot = 0;
+                lara.torso_x_rot = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+                item->status = ITEM_ACTIVE;
+            } else
+                lara.GeneralPtr = (void *)item_number;
+            GLOBAL_inventoryitemchosen = NO_ITEM;
+        } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+            lara.IsMoving = 0;
+            lara.gun_status = LG_NO_ARMS;
+        }
+    } else if (item->object_number <= KEY_HOLE6)
+        ObjectCollision(item_number, l, coll);
+}
+
 void PuzzleDoneCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
 {
     if (items[item_num].trigger_flags != 999)
