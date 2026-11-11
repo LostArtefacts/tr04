@@ -107,6 +107,7 @@ void CreatureAIInfo(ITEM_INFO *item, AI_INFO *info);
 void GetCreatureMood(ITEM_INFO *item, AI_INFO *info, sint32 violent);
 void CreatureMood(ITEM_INFO *item, AI_INFO *info, sint32 violent);
 sint32 CreatureAnimation(sint16 item_number, sint16 angle, sint16 tilt);
+sint32 SearchLOT(LOT_INFO *LOT, sint32 expansion);
 sint16 CreatureTurn(ITEM_INFO *item, sint16 maximum_turn);
 sint16 CreatureEffect(ITEM_INFO *item, BITE_INFO *bite, sint16 (*generate)(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 room_number));
 void GetAITarget(CREATURE_INFO *creature);
@@ -118,6 +119,7 @@ sint16 CreatureEffectT(ITEM_INFO *item, BITE_INFO *bite, sint16 damage, sint16 a
 sint16 AIGuard(CREATURE_INFO *creature);
 sint32 EscapeBox(ITEM_INFO *item, ITEM_INFO *enemy, sint16 box_number);
 void TargetBox(LOT_INFO *LOT, sint16 box_number);
+sint32 UpdateLOT(LOT_INFO *LOT, sint32 expansion);
 
 extern CREATURE_INFO *baddie_slots;
 

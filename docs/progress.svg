@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="70.60" height="12" x="0" y="0" class="named"><title>303 · 19.61%</title></rect>
-<rect width="0.23" height="12" x="70.60" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="70.83" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="286.60" height="12" x="73.40" y="0" class="todo"><title>1230 · 79.61%</title></rect>
+<rect width="70.83" height="12" x="0" y="0" class="named"><title>304 · 19.68%</title></rect>
+<rect width="0.23" height="12" x="70.83" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="71.07" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="286.37" height="12" x="73.63" y="0" class="todo"><title>1229 · 79.55%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">19.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">303</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1230</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">304</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1229</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="25.71" height="12" x="0" y="0" class="named"><title>44 KB · 7.14%</title></rect>
-<rect width="0.10" height="12" x="25.71" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="25.74" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="329.25" height="12" x="30.75" y="0" class="todo"><title>567 KB · 91.46%</title></rect>
+<rect width="25.78" height="12" x="0" y="0" class="named"><title>44 KB · 7.16%</title></rect>
+<rect width="0.10" height="12" x="25.78" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="25.81" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="329.18" height="12" x="30.82" y="0" class="todo"><title>567 KB · 91.44%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">7.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">44 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">567 KB</tspan></text>
@@ -730,7 +730,7 @@
 <rect width="12" height="12" x="165" y="195" class="todo"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="todo"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="todo"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="195" class="todo"><title>0x0043ff70 UpdateLOT (114 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="195" class="named"><title>0x0043ff70 UpdateLOT (114 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="todo"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="195" class="named"><title>0x004401f0 TargetBox (149 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="195" class="named"><title>0x00440290 EscapeBox (164 bytes)</title></rect>
@@ -2588,7 +2588,7 @@
 <rect width="6.91" height="6.49" x="681.39" y="276.48" class="todo"><title>0x0046d1f0 handle_lara_chatting (116 bytes)</title></rect>
 <rect width="6.85" height="6.49" x="691.30" y="276.48" class="named"><title>0x00484bf0 REG_ReadBool (115 bytes)</title></rect>
 <rect width="6.79" height="6.49" x="701.15" y="276.48" class="todo"><title>0x00428850 lara_col_swandive (114 bytes)</title></rect>
-<rect width="6.79" height="6.49" x="710.94" y="276.48" class="todo"><title>0x0043ff70 UpdateLOT (114 bytes)</title></rect>
+<rect width="6.79" height="6.49" x="710.94" y="276.48" class="named"><title>0x0043ff70 UpdateLOT (114 bytes)</title></rect>
 <rect width="6.79" height="6.49" x="720.74" y="276.48" class="named"><title>0x00490d50 D3DNormalise (114 bytes)</title></rect>
 <rect width="6.73" height="6.49" x="730.53" y="276.48" class="named"><title>0x00433020 GetFreeDebris (113 bytes)</title></rect>
 <rect width="6.73" height="6.49" x="740.27" y="276.48" class="todo"><title>0x0046d3d0 untrigger_item_in_room (113 bytes)</title></rect>

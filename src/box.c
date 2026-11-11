@@ -7,6 +7,26 @@
 #define MAX_JOINT_CHANGE (ONE_DEGREE * 3)
 #define JOINT_ARC 0x3000
 
+sint32 UpdateLOT(LOT_INFO *LOT, sint32 expansion)
+{
+    BOX_NODE *expand;
+
+    if (LOT->required_box != NO_BOX && LOT->required_box != LOT->target_box) {
+        LOT->target_box = LOT->required_box;
+        expand = &LOT->node[LOT->required_box];
+        if (expand->next_expansion == NO_BOX && LOT->tail != LOT->required_box) {
+            expand->next_expansion = LOT->head;
+            if (LOT->head == NO_BOX)
+                LOT->tail = LOT->target_box;
+            LOT->head = LOT->target_box;
+        }
+        LOT->search_number++;
+        expand->search_number = LOT->search_number;
+        expand->exit_box = NO_BOX;
+    }
+    return SearchLOT(LOT, expansion);
+}
+
 void TargetBox(LOT_INFO *LOT, sint16 box_number)
 {
     BOX_INFO *box;
