@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="54.52" height="12" x="0" y="0" class="named"><title>234 · 15.15%</title></rect>
-<rect width="0.23" height="12" x="54.52" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="54.76" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="303.38" height="12" x="56.62" y="0" class="todo"><title>1302 · 84.27%</title></rect>
+<rect width="54.76" height="12" x="0" y="0" class="named"><title>235 · 15.21%</title></rect>
+<rect width="0.23" height="12" x="54.76" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.86" height="12" x="54.99" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="303.15" height="12" x="56.85" y="0" class="todo"><title>1301 · 84.21%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">15.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">234</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1302</tspan></text>
+<text text-anchor="end" x="540" y="7.50">15.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">235</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1301</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="20.09" height="12" x="0" y="0" class="named"><title>35 KB · 5.58%</title></rect>
-<rect width="0.10" height="12" x="20.09" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="2.99" height="12" x="20.12" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="336.89" height="12" x="23.11" y="0" class="todo"><title>580 KB · 93.58%</title></rect>
+<rect width="20.12" height="12" x="0" y="0" class="named"><title>35 KB · 5.59%</title></rect>
+<rect width="0.10" height="12" x="20.12" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="2.99" height="12" x="20.15" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="336.86" height="12" x="23.14" y="0" class="todo"><title>580 KB · 93.57%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">5.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">35 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">580 KB</tspan></text>
@@ -381,7 +381,7 @@
 <rect width="12" height="12" x="180" y="90" class="todo"><title>0x00427150 lara_as_stepleft (133 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="90" class="todo"><title>0x004271e0 lara_as_slide (33 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="90" class="named"><title>0x00427210 lara_as_backjump (74 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="90" class="todo"><title>0x00427260 lara_as_rightjump (51 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="90" class="named"><title>0x00427260 lara_as_rightjump (51 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="90" class="todo"><title>0x004272a0 lara_as_leftjump (51 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="90" class="named"><title>0x004272e0 lara_as_fallback (44 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="90" class="named"><title>0x00427310 lara_as_slideback (24 bytes)</title></rect>
@@ -2882,7 +2882,7 @@
 <rect width="4.66" height="4.31" x="640.23" y="435.84" class="todo"><title>0x0046b800 fifth_cutseq_control (52 bytes)</title></rect>
 <rect width="4.66" height="4.31" x="640.23" y="443.15" class="todo"><title>0x00492240 DXBitMask2ShiftCnt (52 bytes)</title></rect>
 <rect width="4.66" height="4.31" x="640.23" y="450.46" class="todo"><title>0x004945a0 SW_D3D_Release (52 bytes)</title></rect>
-<rect width="4.66" height="4.23" x="640.23" y="457.77" class="todo"><title>0x00427260 lara_as_rightjump (51 bytes)</title></rect>
+<rect width="4.66" height="4.23" x="640.23" y="457.77" class="named"><title>0x00427260 lara_as_rightjump (51 bytes)</title></rect>
 <rect width="4.38" height="4.50" x="647.90" y="362.33" class="todo"><title>0x004272a0 lara_as_leftjump (51 bytes)</title></rect>
 <rect width="4.38" height="4.50" x="655.28" y="362.33" class="todo"><title>0x00427330 lara_as_pushblock (51 bytes)</title></rect>
 <rect width="4.38" height="4.50" x="662.66" y="362.33" class="todo"><title>0x00427370 lara_as_pullblock (51 bytes)</title></rect>
