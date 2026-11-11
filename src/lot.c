@@ -191,3 +191,21 @@ void InitialiseSlot(sint16 item_number, int slot)
         CreateZone(item);
     slots_used++;
 }
+
+void ClearLOT(LOT_INFO *lot)
+{
+    int i;
+    BOX_NODE *node;
+
+    lot->tail = 2047;
+    lot->head = 2047;
+    lot->search_number = 0;
+    lot->target_box = 2047;
+    lot->required_box = 2047;
+    node = lot->node;
+    for (i = 0; i < num_boxes; i++, node++) {
+        node->next_expansion = 2047;
+        node->exit_box = 2047;
+        node->search_number = 0;
+    }
+}
