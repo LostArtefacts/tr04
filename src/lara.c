@@ -2,6 +2,7 @@
 #include "lara_states.h"
 #include "anim.h"
 #include "room.h"
+#include "control.h"
 #include "camera.h"
 #include "sound.h"
 #include "specific/input.h"
@@ -500,6 +501,40 @@ void lara_col_slide(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
     lara_slide_slope(item, coll);
+}
+
+void lara_slide_slope(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -512;
+    coll->bad_ceiling = 0;
+    GetLaraCollisionInfo(item, coll);
+    if (LaraHitCeiling(item, coll))
+        return;
+    LaraDeflectEdge(item, coll);
+    if (coll->mid_floor > 200) {
+        if (item->current_anim_state == AS_SLIDE) {
+            item->anim_number = ANIM_FALLDOWN;
+            item->frame_number = anims[ANIM_FALLDOWN].frame_base;
+            item->current_anim_state = AS_FORWARDJUMP;
+            item->goal_anim_state = AS_FORWARDJUMP;
+        } else {
+            item->anim_number = ANIM_FALLBACK;
+            item->frame_number = anims[ANIM_FALLBACK].frame_base;
+            item->current_anim_state = AS_FALLBACK;
+            item->goal_anim_state = AS_FALLBACK;
+        }
+        StopSoundEffect(3);
+        item->gravity_status = 1;
+        item->fallspeed = 0;
+        return;
+    }
+    TestLaraSlide(item, coll);
+    item->pos.y_pos += coll->mid_floor;
+    if (ABS(coll->tilt_x) <= 2 && ABS(coll->tilt_z) <= 2) {
+        item->goal_anim_state = AS_STOP;
+        StopSoundEffect(3);
+    }
 }
 
 void lara_col_backjump(ITEM_INFO *item, COLL_INFO *coll)
