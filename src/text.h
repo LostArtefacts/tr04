@@ -27,6 +27,7 @@ typedef struct chardef {
 
 void InitFont(void);
 void UpdatePulseColour(void);
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def);
 void PrintString(uint16 x, uint16 y, uint8 col, const char *string, uint16 flags);
 sint32 GetStringLength(const char *string, sint16 *top, sint16 *bottom);
 
@@ -37,7 +38,7 @@ extern CHARDEF CharDefCopy[106];
 extern sint32 font_init;
 extern uint8 ScaleFlag;
 extern uint8 PulseCnt;
-extern char AccentTable[46][2];
+extern uint8 AccentTable[46][2];
 extern sint32 small_font;
 extern sint32 font_height;
 extern sint32 GnFrameCounter;

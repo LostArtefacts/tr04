@@ -148,3 +148,73 @@ sint32 GetStringLength(const char *string, sint16 *top, sint16 *bottom)
         *bottom = (sint16)lowest;
     return length;
 }
+
+void PrintString(uint16 x, uint16 y, uint8 col, const char *string, uint16 flags)
+{
+    CHARDEF *def;
+    CHARDEF *accent;
+    sint32 l;
+    sint16 bottom, top, bottom2;
+    uint16 x2;
+    uint8 s, n;
+
+    if (flags & FF_BLINK && GnFrameCounter & 0x10)
+        return;
+    ScaleFlag = (flags & FF_SMALL) != 0;
+    x2 = (uint16)GetStringLength(string, 0, &bottom);
+    if (flags & FF_CENTER)
+        x2 = x - (x2 >> 1);
+    else if (flags & FF_RJUSTIFY)
+        x2 = x - x2;
+    else
+        x2 = x;
+    s = *string++;
+    while (s) {
+        if (s == '\n') {
+            if (*string == '\n') {
+                bottom = 0;
+                y += 16;
+            } else {
+                l = GetStringLength(string, &top, &bottom2);
+                if (flags & FF_CENTER)
+                    x2 = x - l / 2;
+                else if (flags & FF_RJUSTIFY)
+                    x2 = x - l;
+                else
+                    x2 = x;
+                y += bottom - top + 2;
+                bottom = bottom2;
+            }
+        } else if (s == ' ') {
+            if (ScaleFlag)
+                x2 += 6;
+            else
+                x2 += (sint16)(8.0F * ((float)(phd_winxmax + 1) * (1.0F / 640.0F)));
+        } else if (s == '\t') {
+            x2 += 40;
+        } else if (s < 20) {
+            col = s - 1;
+        } else {
+            if (s >= 128 && s <= 173) {
+                n = s - 128;
+                def = &CharDef[AccentTable[n][0] - '!'];
+                accent = &CharDef[AccentTable[n][1] - '!'];
+                DrawChar(x2, y, col, def);
+                if (AccentTable[n][1] != ' ')
+                    DrawChar(def->w / 2 + x2 - 3, y + def->YOffset, col, accent);
+            } else if (s < ' ') {
+                def = &CharDef[s + 74];
+                DrawChar(x2, y, col, def);
+            } else {
+                def = &CharDef[s - '!'];
+                DrawChar(x2, y, col, def);
+            }
+            if (ScaleFlag)
+                x2 += def->w - def->w / 4;
+            else
+                x2 += def->w;
+        }
+        s = *string++;
+    }
+    ScaleFlag = 0;
+}
