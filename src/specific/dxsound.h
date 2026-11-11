@@ -14,6 +14,9 @@ typedef struct ds_sample {
 } DS_SAMPLE;
 
 uint8 DXChangeOutputFormat(sint32 nSamplesPerSec, uint8 force);
+void DSChangeVolume(sint32 num, sint32 volume);
+void DSAdjustPitch(sint32 num, sint32 pitch);
+void DSAdjustPan(sint32 num, sint32 pan);
 void S_SoundStopAllSamples(void);
 
 extern LPDIRECTSOUNDBUFFER G_DSPrimary;

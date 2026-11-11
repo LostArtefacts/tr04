@@ -2184,7 +2184,7 @@ address,size,name,symbol
 0x0052aabc,4,DS_hACMStream,_DS_hACMStream
 0x0052aac0,3072,DS_Buffers,_DS_Buffers
 0x0052b6c0,4,G_DSPrimary,_G_DSPrimary
-0x0052b6c4,384,DS_Samples,_DS_Samples
+0x0052b6c8,384,DS_Samples,_DS_Samples
 0x0052b848,4,decompressed_samples_buffer,_decompressed_samples_buffer
 0x0052b84c,4,lastSPC,_lastSPC
 0x0052b850,29696,objects,_objects

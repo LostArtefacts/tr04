@@ -26,3 +26,9 @@ uint8 DXChangeOutputFormat(sint32 nSamplesPerSec, uint8 force)
     }
     return 1;
 }
+
+void DSChangeVolume(sint32 num, sint32 volume)
+{
+    if (DS_Samples[num].buffer)
+        IDirectSoundBuffer_SetVolume(DS_Samples[num].buffer, volume);
+}
