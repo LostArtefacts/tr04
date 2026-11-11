@@ -189,6 +189,7 @@ void keep_those_fires_burning(void);
 void TriggerSmallSplash(sint32 x, sint32 y, sint32 z, sint32 num);
 void LaraBubbles(ITEM_INFO *item);
 void TriggerGunflash(SVECTOR *pos);
+void SetGunFlash(sint32 weapon);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;

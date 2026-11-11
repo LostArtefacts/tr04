@@ -576,7 +576,7 @@ address,size,name,symbol
 0x004398b0,191,LaraBubbles,_LaraBubbles
 0x00439970,359,UpdateBubbles,_UpdateBubbles
 0x00439ae0,145,TriggerGunflash,_TriggerGunflash
-0x00439b80,92,SetGunFlash,_SetGunFlash
+0x00439b80,116,SetGunFlash,_SetGunFlash
 0x00439c00,315,DrawGunflashes,_DrawGunflashes
 0x00439d40,24,SetFadeClip,_SetFadeClip
 0x00439d60,72,UpdateFadeClip,_UpdateFadeClip

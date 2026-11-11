@@ -553,6 +553,33 @@ void TriggerGunflash(SVECTOR *pos)
     }
 }
 
+void SetGunFlash(sint32 weapon)
+{
+    SVECTOR pos;
+
+    switch (weapon) {
+    case WEAPON_REVOLVER:
+        pos.y = 215;
+        pos.z = 65;
+        break;
+    case WEAPON_UZI:
+        pos.y = 190;
+        pos.z = 50;
+        break;
+    case WEAPON_SHOTGUN:
+    case WEAPON_GRENADE:
+    case WEAPON_CROSSBOW:
+    case WEAPON_FLARE:
+        return;
+    default:
+        pos.y = 180;
+        pos.z = 40;
+        break;
+    }
+    pos.x = 0;
+    TriggerGunflash(&pos);
+}
+
 void SetFadeClip(sint16 height, sint16 speed)
 {
     DestFadeScreenHeight = height;
