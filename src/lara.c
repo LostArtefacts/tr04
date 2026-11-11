@@ -741,6 +741,34 @@ void lara_as_reach(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_FASTFALL;
 }
 
+void LaraSlideEdgeJump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    ShiftItem(item, coll);
+    switch (coll->coll_type) {
+    case COLL_LEFT:
+        item->pos.y_rot += LARA_DEF_ADD_EDGE;
+        break;
+    case COLL_RIGHT:
+        item->pos.y_rot -= LARA_DEF_ADD_EDGE;
+        break;
+    case COLL_TOP:
+    case COLL_TOPFRONT:
+        if (item->fallspeed <= 0)
+            item->fallspeed = 1;
+        break;
+    case COLL_CLAMP:
+        item->pos.z_pos -= (phd_cos(coll->facing) * 100) >> W2V_SHIFT;
+        item->pos.x_pos -= (phd_sin(coll->facing) * 100) >> W2V_SHIFT;
+        item->speed = 0;
+        coll->mid_floor = 0;
+        if (item->fallspeed <= 0)
+            item->fallspeed = 16;
+        break;
+    default:
+        break;
+    }
+}
+
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
