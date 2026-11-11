@@ -17,6 +17,7 @@
 #include "switch.h"
 #include "newinv.h"
 #include "camera.h"
+#include "specific/file.h"
 
 void EarthQuake(sint16 item_number)
 {
@@ -292,6 +293,34 @@ void ControlTriggerTriggerer(sint16 item_number)
                 *data |= IFL_TRIGGERED;
             else
                 *data &= ~IFL_TRIGGERED;
+        }
+    }
+}
+
+void AnimateWaterfalls(void)
+{
+    TEXTURESTRUCT *tex;
+    OBJECT_INFO *obj;
+    float off;
+    sint32 i;
+    static sint32 vOff = 0;
+
+    vOff -= 7;
+    vOff &= 0x3F;
+    off = (float)vOff * (1.0F / 256.0F);
+    for (i = 0; i < 3; i++) {
+        obj = &objects[WATERFALL1 + i];
+        if (obj->loaded) {
+            tex = AnimatingWaterfalls[i];
+            tex->v1 = AnimatingWaterfallsV[i] + off;
+            tex->v2 = AnimatingWaterfallsV[i] + off;
+            tex->v3 = AnimatingWaterfallsV[i] + off + 0.25F;
+            tex->v4 = AnimatingWaterfallsV[i] + off + 0.25F;
+            tex++;
+            tex->v1 = AnimatingWaterfallsV[i] + off;
+            tex->v2 = AnimatingWaterfallsV[i] + off;
+            tex->v3 = AnimatingWaterfallsV[i] + off + 0.25F;
+            tex->v4 = AnimatingWaterfallsV[i] + off + 0.25F;
         }
     }
 }

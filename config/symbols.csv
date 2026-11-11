@@ -2469,6 +2469,8 @@ address,size,name,symbol
 0x007fd1a0,4,CurrentPendulum,_CurrentPendulum
 0x007fd1d0,12,OldPickupPos,_OldPickupPos
 0x007fd1dc,,NumRPickups,_NumRPickups
+0x007fd1e0,12,AnimatingWaterfalls,_AnimatingWaterfalls
+0x007fd1f0,12,AnimatingWaterfallsV,_AnimatingWaterfallsV
 0x007fd1fc,4,baddie_slots,_baddie_slots
 0x007fd200,2,nAIObjects,_nAIObjects
 0x007fd204,4,AIObjects,_AIObjects

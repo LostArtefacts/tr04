@@ -70,4 +70,18 @@ typedef struct mesh_data {
     void *Normals;
 } MESH_DATA;
 
+typedef struct texture_struct {
+    uint16 drawtype;
+    uint16 tpage;
+    uint16 flag;
+    float u1;
+    float v1;
+    float u2;
+    float v2;
+    float u3;
+    float v3;
+    float u4;
+    float v4;
+} TEXTURESTRUCT;
+
 #endif
