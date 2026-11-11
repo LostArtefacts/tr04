@@ -95,6 +95,94 @@ void InitTFormats(HWND dlg, HWND hwnd)
     }
 }
 
+
+void InitResolution(HWND dlg, HWND hwnd, uint8 resetvms)
+{
+    DXDISPLAYMODE *dm;
+    sint32 i;
+    sint32 bpp;
+    sint32 w;
+    sint32 h;
+    sint32 n;
+    char buffer[40];
+    uint8 software;
+
+    n = 0;
+    if (nD3DDevice) {
+        SendMessage(GetDlgItem(dlg, 1010), BM_SETCHECK, 1, 0);
+        SendMessage(GetDlgItem(dlg, 1011), BM_SETCHECK, 0, 0);
+    } else {
+        SendMessage(GetDlgItem(dlg, 1010), BM_SETCHECK, 0, 0);
+        SendMessage(GetDlgItem(dlg, 1011), BM_SETCHECK, 1, 0);
+    }
+    software = SendMessage(GetDlgItem(dlg, 1011), BM_GETCHECK, 0, 0) != 0;
+    if (resetvms) {
+        SendMessage(hwnd, CB_RESETCONTENT, 0, 0);
+        for (i = 0; i < App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].nDisplayModes; i++) {
+            dm = &App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].DisplayModes[i];
+            w = dm->w;
+            h = dm->h;
+            bpp = dm->bpp;
+            if (bpp > 8) {
+                wsprintf(buffer, "%dx%d %d %s", w, h, bpp, SCRIPT_TEXT(TXT_Bit));
+                SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)buffer);
+                SendMessage(hwnd, CB_SETITEMDATA, n, i);
+                if (software) {
+                    if (w == 320 && h == 240 && bpp == 16) {
+                        SendMessage(hwnd, CB_SETCURSEL, n, 0);
+                        nVMode = n;
+                    }
+                } else if (w == 640 && h == 480 && bpp == 16) {
+                    SendMessage(hwnd, CB_SETCURSEL, n, 0);
+                    nVMode = n;
+                }
+                n++;
+            }
+        }
+    }
+    if (!(App.DXInfo.DDInfo[nDDDevice].DDCaps.dwCaps2 & DDCAPS2_CANRENDERWINDOWED)) {
+        EnableWindow(GetDlgItem(dlg, 1025), 0);
+        SendMessage(GetDlgItem(dlg, 1025), BM_SETCHECK, 0, 0);
+    } else {
+        EnableWindow(GetDlgItem(dlg, 1025), 1);
+    }
+    SendMessage(GetDlgItem(dlg, 1012), BM_SETCHECK, Filter, 0);
+    if (software) {
+        EnableWindow(GetDlgItem(dlg, 1029), 0);
+        volumetric_fx = 0;
+    } else {
+        EnableWindow(GetDlgItem(dlg, 1029), 1);
+    }
+    SendMessage(GetDlgItem(dlg, 1029), BM_SETCHECK, volumetric_fx, 0);
+    if (software) {
+        EnableWindow(GetDlgItem(dlg, 1016), 0);
+        BumpMap = 0;
+    } else {
+        EnableWindow(GetDlgItem(dlg, 1016), 1);
+    }
+    SendMessage(GetDlgItem(dlg, 1016), BM_SETCHECK, BumpMap, 0);
+    if (software) {
+        EnableWindow(GetDlgItem(dlg, 1014), 0);
+        TextLow = 0;
+    } else {
+        EnableWindow(GetDlgItem(dlg, 1014), 1);
+    }
+    SendMessage(GetDlgItem(dlg, 1014), BM_SETCHECK, TextLow, 0);
+    if (TextLow) {
+        SendMessage(GetDlgItem(dlg, 1015), BM_SETCHECK, 1, 0);
+        EnableWindow(GetDlgItem(dlg, 1015), 0);
+    } else {
+        EnableWindow(GetDlgItem(dlg, 1015), 1);
+        SendMessage(GetDlgItem(dlg, 1015), BM_SETCHECK, 0, 0);
+    }
+    if (!BumpMap) {
+        SendMessage(GetDlgItem(dlg, 1015), BM_SETCHECK, 0, 0);
+        EnableWindow(GetDlgItem(dlg, 1015), 0);
+    }
+    if (resetvms)
+        InitTFormats(dlg, GetDlgItem(dlg, 1006));
+}
+
 void InitD3DDevice(HWND dlg, HWND hwnd)
 {
     sint32 i;
