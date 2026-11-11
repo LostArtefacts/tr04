@@ -176,6 +176,29 @@ void lara_as_compress(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_FASTFALL;
 }
 
+void lara_as_back(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_STOP;
+        return;
+    }
+    if (lara.IsMoving)
+        return;
+    if (input & IN_BACK && (input & IN_WALK || lara.water_status == LW_WADE))
+        item->goal_anim_state = AS_BACK;
+    else
+        item->goal_anim_state = AS_STOP;
+    if (input & IN_LEFT) {
+        lara.turn_rate -= LARA_TURN_RATE;
+        if (lara.turn_rate < -LARA_SLOW_TURN)
+            lara.turn_rate = -LARA_SLOW_TURN;
+    } else if (input & IN_RIGHT) {
+        lara.turn_rate += LARA_TURN_RATE;
+        if (lara.turn_rate > LARA_SLOW_TURN)
+            lara.turn_rate = LARA_SLOW_TURN;
+    }
+}
+
 void lara_as_fastturn(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
