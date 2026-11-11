@@ -380,3 +380,16 @@ void force_sky_lightning(void)
     LightningCount = (GetRandomDraw() & 0x1F) + 64;
     dLightningRand = (GetRandomDraw() & 0xFF) + 256;
 }
+
+ITEM_INFO *find_a_fucking_item(sint32 object_number)
+{
+    ITEM_INFO *item;
+    sint32 i;
+
+    for (i = 0; i < level_items; i++) {
+        item = &items[i];
+        if (item->object_number == object_number)
+            return item;
+    }
+    return 0;
+}

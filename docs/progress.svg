@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="135.30" height="12" x="0" y="0" class="named"><title>612 · 39.56%</title></rect>
-<rect width="0.44" height="12" x="135.30" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="135.74" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="201.62" height="12" x="140.38" y="0" class="todo"><title>912 · 58.95%</title></rect>
+<rect width="135.52" height="12" x="0" y="0" class="named"><title>613 · 39.63%</title></rect>
+<rect width="0.44" height="12" x="135.52" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="135.96" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="201.40" height="12" x="140.60" y="0" class="todo"><title>911 · 58.89%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">39.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">612</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">912</tspan></text>
+<text text-anchor="end" x="522" y="7.50">39.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">613</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">911</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="56.20" height="12" x="0" y="0" class="named"><title>102 KB · 16.43%</title></rect>
-<rect width="0.12" height="12" x="56.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="56.32" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="278.43" height="12" x="63.57" y="0" class="todo"><title>505 KB · 81.41%</title></rect>
+<rect width="56.23" height="12" x="0" y="0" class="named"><title>102 KB · 16.44%</title></rect>
+<rect width="0.12" height="12" x="56.23" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="56.35" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="278.41" height="12" x="63.59" y="0" class="todo"><title>505 KB · 81.41%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">102 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">505 KB</tspan></text>
@@ -1183,7 +1183,7 @@
 <rect width="12" height="12" x="210" y="330" class="todo"><title>0x0046d270 handle_actor_chatting (213 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="330" class="todo"><title>0x0046d350 trigger_item_in_room (121 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="330" class="todo"><title>0x0046d3d0 untrigger_item_in_room (113 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="330" class="todo"><title>0x0046d450 find_a_fucking_item (46 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="330" class="named"><title>0x0046d450 find_a_fucking_item (46 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="330" class="todo"><title>0x0046d480 special2_end (44 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="330" class="todo"><title>0x0046d4b0 special2_init (20 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="330" class="todo"><title>0x0046d4d0 special3_end (50 bytes)</title></rect>
@@ -2918,7 +2918,7 @@
 <rect width="4.36" height="4.08" x="662.72" y="370.15" class="named"><title>0x0046c440 seventeen_end (46 bytes)</title></rect>
 <rect width="4.36" height="4.08" x="670.08" y="370.15" class="named"><title>0x0046c530 nineteen_end (46 bytes)</title></rect>
 <rect width="4.36" height="4.08" x="677.44" y="370.15" class="named"><title>0x0046c590 twenty_end (46 bytes)</title></rect>
-<rect width="4.36" height="4.08" x="684.80" y="370.15" class="todo"><title>0x0046d450 find_a_fucking_item (46 bytes)</title></rect>
+<rect width="4.36" height="4.08" x="684.80" y="370.15" class="named"><title>0x0046d450 find_a_fucking_item (46 bytes)</title></rect>
 <rect width="4.27" height="4.08" x="692.16" y="370.15" class="todo"><title>0x00430eb0 InitialiseLaraLoad (45 bytes)</title></rect>
 <rect width="4.27" height="4.08" x="699.42" y="370.15" class="named"><title>0x00452c70 FlashIt (45 bytes)</title></rect>
 <rect width="4.27" height="4.08" x="706.69" y="370.15" class="todo"><title>0x00453340 InitialiseTwoBlockPlatform (45 bytes)</title></rect>
