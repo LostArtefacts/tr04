@@ -89,6 +89,27 @@ typedef struct splash_setup {
     sint16 pad3;
 } SPLASH_SETUP;
 
+typedef struct splash_struct {
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 InnerRad;
+    sint16 InnerSize;
+    sint16 InnerRadVel;
+    sint16 InnerYVel;
+    sint16 InnerY;
+    sint16 MiddleRad;
+    sint16 MiddleSize;
+    sint16 MiddleRadVel;
+    sint16 MiddleYVel;
+    sint16 MiddleY;
+    sint16 OuterRad;
+    sint16 OuterSize;
+    sint16 OuterRadVel;
+    char flags;
+    uint8 life;
+} SPLASH_STRUCT;
+
 void DetatchSpark(sint32 num, sint32 type);
 sint32 GetFreeSpark(void);
 void KillAllCurrentItems(sint16 item_number);
@@ -108,6 +129,7 @@ void TriggerWaterfallMist(sint32 x, sint32 y, sint32 z, sint32 angle);
 void TriggerFireFlame(sint32 x, sint32 y, sint32 z, sint32 body_part, sint32 type);
 void KillEverything(void);
 void TriggerDynamic_MIRROR(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint32 g, sint32 b);
+void UpdateSplashes(void);
 
 extern sint32 wibble;
 extern sint32 KillEverythingFlag;
@@ -116,6 +138,7 @@ extern sint32 number_dynamics;
 extern RIPPLE_STRUCT ripples[16];
 extern SPLASH_SETUP splash_setup;
 extern sint32 SplashCount;
+extern SPLASH_STRUCT splashes[4];
 extern sint32 next_spark;
 extern SPARKS spark[256];
 

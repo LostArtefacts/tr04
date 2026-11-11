@@ -362,6 +362,74 @@ void TriggerRocketSmoke(sint32 x, sint32 y, sint32 z, sint32 col)
     sptr->dSize = size;
 }
 
+void UpdateSplashes(void)
+{
+    SPLASH_STRUCT *splash;
+    RIPPLE_STRUCT *ripple;
+    sint32 i;
+
+    splash = splashes;
+    for (i = 4; i > 0; i--, splash++) {
+        if (!(splash->flags & 1))
+            continue;
+        splash->InnerRad += splash->InnerRadVel >> 5;
+        splash->InnerSize += splash->InnerRadVel >> 6;
+        splash->InnerRadVel -= splash->InnerRadVel >> 6;
+        splash->MiddleRad += splash->MiddleRadVel >> 5;
+        splash->MiddleSize += splash->MiddleRadVel >> 6;
+        splash->MiddleRadVel -= splash->MiddleRadVel >> 6;
+        splash->OuterRad += splash->OuterRadVel >> 5;
+        splash->OuterSize += splash->OuterRadVel >> 6;
+        splash->OuterRadVel -= splash->OuterRadVel >> 6;
+        splash->InnerY += splash->InnerYVel >> 4;
+        splash->InnerYVel += 0x400;
+        if (splash->InnerYVel > 0x4000)
+            splash->InnerYVel = 0x4000;
+        if (splash->InnerY >= 0) {
+            splash->InnerY = 0;
+            splash->flags |= 4;
+            splash->life -= 2;
+            if (!splash->life)
+                splash->flags = 0;
+        } else if (splash->InnerY < -0x7000) {
+            splash->InnerY = -0x7000;
+        }
+        splash->MiddleY += splash->MiddleYVel >> 4;
+        splash->MiddleYVel += 0x380;
+        if (splash->MiddleYVel > 0x4000)
+            splash->MiddleYVel = 0x4000;
+        if (splash->MiddleY >= 0) {
+            splash->MiddleY = 0;
+            splash->flags |= 8;
+        } else if (splash->MiddleY < -0x7000) {
+            splash->MiddleY = -0x7000;
+        }
+    }
+    ripple = ripples;
+    for (i = 16; i > 0; i--, ripple++) {
+        if (!(ripple->flags & 1))
+            continue;
+        if (ripple->size < 252) {
+            if (ripple->flags & 2)
+                ripple->size += 2;
+            else
+                ripple->size += 4;
+        }
+        if (!ripple->init) {
+            ripple->life -= 3;
+            if (ripple->life > 250)
+                ripple->flags = 0;
+        } else if (ripple->init < ripple->life) {
+            if (ripple->flags & 2)
+                ripple->init += 8;
+            else
+                ripple->init += 4;
+            if (ripple->init >= ripple->life)
+                ripple->init = 0;
+        }
+    }
+}
+
 RIPPLE_STRUCT *SetupRipple(sint32 x, sint32 y, sint32 z, sint32 size, sint32 flags)
 {
     RIPPLE_STRUCT *ripple;
