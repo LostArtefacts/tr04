@@ -2183,6 +2183,7 @@ address,size,name,symbol
 0x004bfe94,1,TextLow,_TextLow
 0x004bfe95,1,BumpMap,_BumpMap
 0x004bfe96,1,volumetric_fx,_volumetric_fx
+0x004bfea0,435360,Bucket,_Bucket
 0x0052a340,4,mesh_vtxbuf,_mesh_vtxbuf
 0x0052a344,4,num_level_meshes,_num_level_meshes
 0x0052a348,4,NumLevelFogBulbs,_NumLevelFogBulbs
