@@ -32,3 +32,17 @@ void DSChangeVolume(sint32 num, sint32 volume)
     if (DS_Samples[num].buffer)
         IDirectSoundBuffer_SetVolume(DS_Samples[num].buffer, volume);
 }
+
+void DSAdjustPitch(sint32 num, sint32 pitch)
+{
+    uint32 frequency;
+
+    if (DS_Samples[num].buffer) {
+        frequency = (uint32)(22050.0F * ((float)pitch / 65536.0F));
+        if (frequency < 100)
+            frequency = 100;
+        else if (frequency > 100000)
+            frequency = 100000;
+        IDirectSoundBuffer_SetFrequency(DS_Samples[num].buffer, frequency);
+    }
+}

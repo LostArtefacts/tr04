@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="16.94" height="12" x="0" y="0" class="named"><title>71 · 4.58%</title></rect>
-<rect width="0.24" height="12" x="16.94" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="0.72" height="12" x="17.18" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
-<rect width="352.11" height="12" x="17.89" y="0" class="todo"><title>1476 · 95.16%</title></rect>
+<rect width="17.18" height="12" x="0" y="0" class="named"><title>72 · 4.64%</title></rect>
+<rect width="0.24" height="12" x="17.18" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="0.72" height="12" x="17.41" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
+<rect width="351.87" height="12" x="18.13" y="0" class="todo"><title>1475 · 95.10%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">4.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">71</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1476</tspan></text>
+<text text-anchor="end" x="540" y="7.50">4.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">72</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1475</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="6.68" height="12" x="0" y="0" class="named"><title>11 KB · 1.81%</title></rect>
-<rect width="0.10" height="12" x="6.68" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="0.73" height="12" x="6.71" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
-<rect width="362.56" height="12" x="7.44" y="0" class="todo"><title>607 KB · 97.99%</title></rect>
+<rect width="6.73" height="12" x="0" y="0" class="named"><title>11 KB · 1.82%</title></rect>
+<rect width="0.10" height="12" x="6.73" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="0.73" height="12" x="6.76" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
+<rect width="362.51" height="12" x="7.49" y="0" class="todo"><title>607 KB · 97.98%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">1.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">11 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">607 KB</tspan></text>
@@ -1236,7 +1236,7 @@
 <rect width="12" height="12" x="255" y="345" class="todo"><title>0x00472f50 CreateVertexNormals (911 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="345" class="named"><title>0x004732e0 DXChangeOutputFormat (173 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="345" class="named"><title>0x00473390 DSChangeVolume (30 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="345" class="todo"><title>0x004733b0 DSAdjustPitch (80 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="345" class="named"><title>0x004733b0 DSAdjustPitch (80 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="345" class="todo"><title>0x00473400 DSAdjustPan (82 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="345" class="todo"><title>0x00473460 DXSetOutputFormat (159 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="345" class="todo"><title>0x00473500 DXDSCreate (105 bytes)</title></rect>
@@ -2753,7 +2753,7 @@
 <rect width="5.69" height="5.65" x="671.98" y="332.75" class="todo"><title>0x0043af80 UpdateLightning (80 bytes)</title></rect>
 <rect width="5.69" height="5.65" x="680.67" y="332.75" class="todo"><title>0x0043ca90 insert_object_into_list (80 bytes)</title></rect>
 <rect width="5.69" height="5.65" x="689.36" y="332.75" class="todo"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
-<rect width="5.69" height="5.65" x="698.05" y="332.75" class="todo"><title>0x004733b0 DSAdjustPitch (80 bytes)</title></rect>
+<rect width="5.69" height="5.65" x="698.05" y="332.75" class="named"><title>0x004733b0 DSAdjustPitch (80 bytes)</title></rect>
 <rect width="5.69" height="5.65" x="706.75" y="332.75" class="named"><title>0x0048e810 TIME_Init (80 bytes)</title></rect>
 <rect width="5.69" height="5.65" x="715.44" y="332.75" class="todo"><title>0x00492b90 DXSetVideoMode (80 bytes)</title></rect>
 <rect width="5.62" height="5.65" x="724.13" y="332.75" class="todo"><title>0x00409010 InitialiseHorse (79 bytes)</title></rect>
