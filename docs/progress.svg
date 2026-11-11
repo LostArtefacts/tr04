@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="2.50" height="12" x="0" y="0" class="named"><title>8 · 0.52%</title></rect>
-<rect width="481.50" height="12" x="2.50" y="0" class="todo"><title>1543 · 99.48%</title></rect>
+<rect width="2.81" height="12" x="0" y="0" class="named"><title>9 · 0.58%</title></rect>
+<rect width="481.19" height="12" x="2.81" y="0" class="todo"><title>1542 · 99.42%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">0.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">8</tspan> · <tspan class="todo">1543</tspan></text>
+<text text-anchor="end" x="654" y="7.50">0.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">9</tspan> · <tspan class="todo">1542</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="1.05" height="12" x="0" y="0" class="named"><title>1 KB · 0.22%</title></rect>
-<rect width="482.95" height="12" x="1.05" y="0" class="todo"><title>618 KB · 99.78%</title></rect>
+<rect width="1.13" height="12" x="0" y="0" class="named"><title>1 KB · 0.23%</title></rect>
+<rect width="482.87" height="12" x="1.13" y="0" class="todo"><title>618 KB · 99.77%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">1 KB</tspan> · <tspan class="todo">618 KB</tspan></text>
@@ -1440,7 +1440,7 @@
 <rect width="12" height="12" x="375" y="405" class="todo"><title>0x0048e6e0 FreeTextures (283 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="405" class="named"><title>0x0048e800 TIME_Reset (12 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="405" class="named"><title>0x0048e810 TIME_Init (80 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="405" class="todo"><title>0x0048e860 Sync (105 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="405" class="named"><title>0x0048e860 Sync (105 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="405" class="todo"><title>0x0048e8d0 ClearSurfaces (229 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="405" class="todo"><title>0x0048e9c0 WinMain (1117 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="405" class="todo"><title>0x0048ee50 CheckMMXTechnology (136 bytes)</title></rect>
@@ -2642,7 +2642,7 @@
 <rect width="6.33" height="6.67" x="620.84" y="304.83" class="todo"><title>0x00473500 DXDSCreate (105 bytes)</title></rect>
 <rect width="6.33" height="6.67" x="630.17" y="304.83" class="todo"><title>0x00478440 ApplyMatrix (105 bytes)</title></rect>
 <rect width="6.33" height="6.67" x="639.49" y="304.83" class="todo"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
-<rect width="6.33" height="6.67" x="648.82" y="304.83" class="todo"><title>0x0048e860 Sync (105 bytes)</title></rect>
+<rect width="6.33" height="6.67" x="648.82" y="304.83" class="named"><title>0x0048e860 Sync (105 bytes)</title></rect>
 <rect width="6.27" height="6.67" x="658.14" y="304.83" class="todo"><title>0x00405eb0 LaraDoubleControl (104 bytes)</title></rect>
 <rect width="6.27" height="6.67" x="667.41" y="304.83" class="todo"><title>0x0042d7d0 GetClimbTrigger (104 bytes)</title></rect>
 <rect width="6.27" height="6.67" x="676.67" y="304.83" class="todo"><title>0x00439f10 GetFreeDrip (104 bytes)</title></rect>

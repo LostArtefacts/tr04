@@ -22,3 +22,13 @@ uint8 TIME_Init(void)
     TIME_Reset();
     return 1;
 }
+
+int Sync(void)
+{
+    __int64 PerformanceCount, f;
+
+    QueryPerformanceCounter((LARGE_INTEGER *)&PerformanceCount);
+    f = (PerformanceCount - counter) / frequency;
+    counter += frequency * f;
+    return (int)f;
+}
