@@ -234,3 +234,21 @@ void lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
     coll->slopes_are_walls = 1;
     GetLaraCollisionInfo(item, coll);
 }
+
+void ResetLook(void)
+{
+    if (camera.type == LOOK_CAMERA)
+        return;
+    if (lara.head_x_rot > -HEAD_TURN && lara.head_x_rot < HEAD_TURN)
+        lara.head_x_rot = 0;
+    else
+        lara.head_x_rot -= lara.head_x_rot / 8;
+    if (lara.head_y_rot > -HEAD_TURN && lara.head_y_rot < HEAD_TURN)
+        lara.head_y_rot = 0;
+    else
+        lara.head_y_rot -= lara.head_y_rot / 8;
+    if (lara.gun_status != LG_HANDS_BUSY && lara.vehicle == NO_ITEM) {
+        lara.torso_x_rot = lara.head_x_rot;
+        lara.torso_y_rot = lara.head_y_rot;
+    }
+}
