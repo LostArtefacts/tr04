@@ -20,4 +20,20 @@ typedef struct phd_3dpos {
     PHD_ANGLE z_rot;
 } PHD_3DPOS;
 
+typedef struct game_vector {
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 room_number;
+    sint16 box_number;
+} GAME_VECTOR;
+
+typedef struct object_vector {
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 data;
+    sint16 flags;
+} OBJECT_VECTOR;
+
 #endif
