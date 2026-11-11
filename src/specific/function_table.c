@@ -13,3 +13,8 @@ uint8 _Visible(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2)
         return 1;
     return 0;
 }
+
+void SetCullCW(void)
+{
+    IsVisible = _Visible;
+}
