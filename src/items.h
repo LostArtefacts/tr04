@@ -121,6 +121,7 @@ void InitialiseItem(sint16 item_num);
 void RemoveActiveItem(sint16 item_num);
 void RemoveDrawnItem(sint16 item_num);
 void AddActiveItem(sint16 item_num);
+void ItemNewRoom(sint16 item_num, sint16 room_number);
 
 extern ITEM_INFO *items;
 extern sint16 next_item_active;
