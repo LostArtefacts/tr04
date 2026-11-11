@@ -11,6 +11,8 @@ sint32 LaraCheckForLetGo(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_climbleft(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_climbleft(ITEM_INFO *item, COLL_INFO *coll);
 void LaraDoClimbLeftRight(ITEM_INFO *item, COLL_INFO *coll, sint32 result, sint32 shift);
+sint32 LaraClimbLeftCornerTest(ITEM_INFO *item, COLL_INFO *coll);
+sint32 LaraClimbRightCornerTest(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_climbright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_climbright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_climbing(ITEM_INFO *item, COLL_INFO *coll);

@@ -159,6 +159,7 @@ typedef struct lara_info {
 } LARA_INFO;
 
 void LookUpDown(void);
+void AnimateLara(ITEM_INFO *item);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
