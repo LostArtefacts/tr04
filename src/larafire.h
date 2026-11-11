@@ -5,6 +5,7 @@
 
 sint32 WeaponObject(sint32 weapon_type);
 sint32 CheckForHoldingState(sint32 state);
+void InitialiseNewWeapon(void);
 
 extern sint16 HoldStates[18];
 
