@@ -11,3 +11,8 @@ void PushXYZ(void)
     SkinXYZPtr->y = ptr->y;
     SkinXYZPtr->z = ptr->z;
 }
+
+void PopXYZ(void)
+{
+    SkinXYZPtr--;
+}
