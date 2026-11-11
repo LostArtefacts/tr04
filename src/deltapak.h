@@ -28,5 +28,6 @@ void *cutseq_malloc(sint32 size);
 void finish_cutseq(void);
 void fourth_cutseq_init(void);
 void fourth_cutseq_end(void);
+void fifth_cutseq_end(void);
 
 #endif

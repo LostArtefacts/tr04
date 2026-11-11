@@ -30,3 +30,8 @@ void fourth_cutseq_end(void)
     trigger_item_in_room(101, ANIMATING9);
     lara.keyitems |= 0xC00;
 }
+
+void fifth_cutseq_end(void)
+{
+    DelsHandyTeleportLara(100938, 768, 58040, -32552);
+}
