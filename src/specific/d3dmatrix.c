@@ -2,6 +2,29 @@
 
 #include "d3dmatrix.h"
 #include "3dmath.h"
+#include "dxshell.h"
+#include "winmain.h"
+
+void SetD3DViewMatrix(void)
+{
+    sint32 *mptr;
+
+    mptr = phd_mxptr;
+    D3DIdentityMatrix(&D3DMView);
+    D3DMView._11 = (float)mptr[M00] / 16384;
+    D3DMView._12 = (float)mptr[M10] / 16384;
+    D3DMView._13 = (float)mptr[M20] / 16384;
+    D3DMView._21 = (float)mptr[M01] / 16384;
+    D3DMView._22 = (float)mptr[M11] / 16384;
+    D3DMView._23 = (float)mptr[M21] / 16384;
+    D3DMView._31 = (float)mptr[M02] / 16384;
+    D3DMView._32 = (float)mptr[M12] / 16384;
+    D3DMView._33 = (float)mptr[M22] / 16384;
+    D3DMView._41 = (float)(mptr[M03] >> W2V_SHIFT);
+    D3DMView._42 = (float)(mptr[M13] >> W2V_SHIFT);
+    D3DMView._43 = (float)(mptr[M23] >> W2V_SHIFT);
+    DXAttempt(IDirect3DDevice3_SetTransform(App.dx.lpD3DDevice, D3DTRANSFORMSTATE_VIEW, &D3DMView));
+}
 
 void SetD3DMatrix(D3DMATRIX *mx, sint32 *imx)
 {
