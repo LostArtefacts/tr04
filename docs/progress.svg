@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="16.46" height="12" x="0" y="0" class="named"><title>69 · 4.45%</title></rect>
-<rect width="0.24" height="12" x="16.46" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="0.72" height="12" x="16.70" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
-<rect width="352.59" height="12" x="17.41" y="0" class="todo"><title>1478 · 95.29%</title></rect>
+<rect width="16.70" height="12" x="0" y="0" class="named"><title>70 · 4.51%</title></rect>
+<rect width="0.24" height="12" x="16.70" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="0.72" height="12" x="16.94" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
+<rect width="352.35" height="12" x="17.65" y="0" class="todo"><title>1477 · 95.23%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">4.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">69</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1478</tspan></text>
+<text text-anchor="end" x="540" y="7.50">4.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">70</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1477</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="6.56" height="12" x="0" y="0" class="named"><title>11 KB · 1.77%</title></rect>
-<rect width="0.10" height="12" x="6.56" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="0.73" height="12" x="6.59" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
-<rect width="362.68" height="12" x="7.32" y="0" class="todo"><title>608 KB · 98.02%</title></rect>
+<rect width="6.67" height="12" x="0" y="0" class="named"><title>11 KB · 1.80%</title></rect>
+<rect width="0.10" height="12" x="6.67" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="0.73" height="12" x="6.69" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
+<rect width="362.58" height="12" x="7.42" y="0" class="todo"><title>607 KB · 97.99%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">1.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">11 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">608 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">11 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">607 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1234,7 +1234,7 @@
 <rect width="12" height="12" x="225" y="345" class="todo"><title>0x00472c10 DrawBuckets (710 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="345" class="todo"><title>0x00472ee0 CalcTriFaceNormal (109 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="345" class="todo"><title>0x00472f50 CreateVertexNormals (911 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="345" class="todo"><title>0x004732e0 DXChangeOutputFormat (173 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="345" class="named"><title>0x004732e0 DXChangeOutputFormat (173 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="345" class="todo"><title>0x00473390 DSChangeVolume (30 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="345" class="todo"><title>0x004733b0 DSAdjustPitch (80 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="345" class="todo"><title>0x00473400 DSAdjustPan (82 bytes)</title></rect>
@@ -2420,7 +2420,7 @@
 <rect width="8.43" height="8.29" x="625.29" y="241.73" class="named"><title>0x00490400 phd_RotX (174 bytes)</title></rect>
 <rect width="8.39" height="8.29" x="636.73" y="241.73" class="todo"><title>0x00428040 lara_col_fastfall (173 bytes)</title></rect>
 <rect width="8.39" height="8.29" x="648.11" y="241.73" class="todo"><title>0x00436900 ControlColouredLights (173 bytes)</title></rect>
-<rect width="8.39" height="8.29" x="659.50" y="241.73" class="todo"><title>0x004732e0 DXChangeOutputFormat (173 bytes)</title></rect>
+<rect width="8.39" height="8.29" x="659.50" y="241.73" class="named"><title>0x004732e0 DXChangeOutputFormat (173 bytes)</title></rect>
 <rect width="8.34" height="8.29" x="670.88" y="241.73" class="todo"><title>0x004235b0 SnapLaraToEdgeOfBlock (172 bytes)</title></rect>
 <rect width="8.34" height="8.29" x="682.22" y="241.73" class="todo"><title>0x00437ab0 SetFog (172 bytes)</title></rect>
 <rect width="8.34" height="8.29" x="693.56" y="241.73" class="named"><title>0x004904b0 phd_RotY (172 bytes)</title></rect>
