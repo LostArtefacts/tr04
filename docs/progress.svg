@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="5.93" height="12" x="0" y="0" class="named"><title>19 · 1.23%</title></rect>
-<rect width="478.07" height="12" x="5.93" y="0" class="todo"><title>1532 · 98.77%</title></rect>
+<rect width="6.24" height="12" x="0" y="0" class="named"><title>20 · 1.29%</title></rect>
+<rect width="477.76" height="12" x="6.24" y="0" class="todo"><title>1531 · 98.71%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">1.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">19</tspan> · <tspan class="todo">1532</tspan></text>
+<text text-anchor="end" x="654" y="7.50">1.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">20</tspan> · <tspan class="todo">1531</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="1.73" height="12" x="0" y="0" class="named"><title>2 KB · 0.36%</title></rect>
-<rect width="482.27" height="12" x="1.73" y="0" class="todo"><title>618 KB · 99.64%</title></rect>
+<rect width="1.74" height="12" x="0" y="0" class="named"><title>2 KB · 0.36%</title></rect>
+<rect width="482.26" height="12" x="1.74" y="0" class="todo"><title>618 KB · 99.64%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">2 KB</tspan> · <tspan class="todo">618 KB</tspan></text>
@@ -1392,7 +1392,7 @@
 <rect width="12" height="12" x="405" y="390" class="named"><title>0x00484b90 REG_ReadLong (94 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="390" class="named"><title>0x00484bf0 REG_ReadBool (115 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="390" class="named"><title>0x00484c70 OpenRegistry (75 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="390" class="todo"><title>0x00484cc0 CloseRegistry (5 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="390" class="named"><title>0x00484cc0 CloseRegistry (5 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="390" class="todo"><title>0x00484cd0 LoadSettings (1201 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="390" class="todo"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="390" class="todo"><title>0x004853f0 SaveSettings (527 bytes)</title></rect>
@@ -3156,7 +3156,7 @@
 <rect width="1.17" height="1.69" x="737.50" y="462.74" class="todo"><title>0x0043c410 go_and_save_game (5 bytes)</title></rect>
 <rect width="1.17" height="1.69" x="741.67" y="462.74" class="todo"><title>0x0047d690 j_nullsub_9 (5 bytes)</title></rect>
 <rect width="1.17" height="1.69" x="745.83" y="462.74" class="todo"><title>0x00481880 j_nullsub_10 (5 bytes)</title></rect>
-<rect width="1.66" height="1.19" x="733.34" y="467.42" class="todo"><title>0x00484cc0 CloseRegistry (5 bytes)</title></rect>
+<rect width="1.66" height="1.19" x="733.34" y="467.42" class="named"><title>0x00484cc0 CloseRegistry (5 bytes)</title></rect>
 <rect width="1.66" height="1.19" x="733.34" y="471.62" class="todo"><title>0x0048f970 j_nullsub_11 (5 bytes)</title></rect>
 <rect width="1.66" height="1.19" x="733.34" y="475.81" class="todo"><title>0x0048f990 j_nullsub_12 (5 bytes)</title></rect>
 <rect width="1" height="1.88" x="737.99" y="467.42" class="todo"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>

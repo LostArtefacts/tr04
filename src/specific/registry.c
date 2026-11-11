@@ -67,3 +67,8 @@ uint8 OpenRegistry(LPCSTR SubKeyName)
     }
     return REG_OpenKey("Software\\Core Design\\Tomb Raider IV");
 }
+
+void CloseRegistry(void)
+{
+    REG_CloseKey();
+}
