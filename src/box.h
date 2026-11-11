@@ -83,6 +83,14 @@ typedef struct creature_info {
     LOT_INFO LOT;
 } CREATURE_INFO;
 
+enum ai_bits_types {
+    GUARD = 1 << 0,
+    AMBUSH = 1 << 1,
+    PATROL1 = 1 << 2,
+    MODIFY = 1 << 3,
+    FOLLOW = 1 << 4
+};
+
 typedef struct ai_info {
     sint16 zone_number;
     sint16 enemy_zone;
