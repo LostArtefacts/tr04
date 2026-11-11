@@ -272,6 +272,21 @@ void lara_as_hangturnl(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_HANG2;
 }
 
+void lara_col_hangturnlr(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if ((input & IN_ACTION) && lara.CanMonkeySwing) {
+        coll->bad_pos = -NO_HEIGHT;
+        coll->bad_neg = -STEPUP_HEIGHT;
+        coll->bad_ceiling = 0;
+        coll->facing = lara.move_angle = item->pos.y_rot;
+        coll->radius = LARA_RAD;
+        coll->slopes_are_walls = 1;
+        GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 600);
+        MonkeySwingSnap(item, coll);
+    } else
+        MonkeySwingFall(item);
+}
+
 void lara_as_hangturnr(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
