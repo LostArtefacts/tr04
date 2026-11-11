@@ -4,6 +4,10 @@
 #include "lara.h"
 #include "objnums.h"
 #include "control.h"
+#include "sound.h"
+#include "tomb4fx.h"
+#include "collide.h"
+#include "specific/function_stubs.h"
 
 void TrapDoorControl(sint16 item_number)
 {
@@ -20,6 +24,21 @@ void TrapDoorControl(sint16 item_number)
         OpenTrapDoor(item);
     else if (!item->current_anim_state && !item->item_flags[2])
         CloseTrapDoor(item);
+}
+
+void FallingBlockFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
+{
+    sint32 tx, tz;
+
+    tx = x ^ item->pos.x_pos;
+    tz = z ^ item->pos.z_pos;
+    if (tx & ~1023 || tz & ~1023)
+        return;
+    if (y <= item->pos.y_pos) {
+        *height = item->pos.y_pos;
+        height_type = WALL;
+        OnObject = 1;
+    }
 }
 
 void FallingCeiling(sint16 item_number)
