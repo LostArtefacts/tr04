@@ -10,6 +10,9 @@
 #define ITEM_DEACTIVATED 2
 #define ITEM_INVISIBLE 3
 
+#define IFL_INVISIBLE 0x100
+#define IFL_CODEBITS 0x3E00
+#define IFL_REVERSE 0x4000
 #define IFL_CLEARBODY 0x8000
 
 typedef struct pclight {
@@ -113,6 +116,10 @@ typedef struct item_info {
 void InitialiseItemArray(int num);
 void KillItem(sint16 item_num);
 sint16 CreateItem(void);
+void InitialiseItem(sint16 item_num);
+void RemoveActiveItem(sint16 item_num);
+void RemoveDrawnItem(sint16 item_num);
+void AddActiveItem(sint16 item_num);
 
 extern ITEM_INFO *items;
 extern sint16 next_item_active;
