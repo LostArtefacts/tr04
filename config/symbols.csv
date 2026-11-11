@@ -1985,6 +1985,7 @@ address,size,name,symbol
 0x004ad820,24,PistolTable,_PistolTable
 0x004ad838,8,LeftIntRightExtTab,_LeftIntRightExtTab
 0x004ad840,8,LeftExtRightIntTab,_LeftExtRightIntTab
+0x004ad9a0,36,HoldStates,_HoldStates
 0x004ad9c4,4,lara_coll,_lara_coll
 0x004add78,56,SkinJoints,_SkinJoints
 0x004adf48,14,footsounds,_footsounds
