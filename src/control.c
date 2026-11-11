@@ -395,3 +395,18 @@ sint32 CheckNoColCeilingTriangle(FLOOR_INFO *floor, sint32 x, sint32 z)
     }
     return 0;
 }
+
+void FireCrossBowFromLaserSight(GAME_VECTOR *start, GAME_VECTOR *target)
+{
+    PHD_3DPOS pos;
+    sint16 angles[2];
+
+    phd_GetVectorAngles(target->x - start->x, target->y - start->y, target->z - start->z, angles);
+    pos.x_pos = start->x;
+    pos.y_pos = start->y;
+    pos.z_pos = start->z;
+    pos.x_rot = angles[1];
+    pos.y_rot = angles[0];
+    pos.z_rot = 0;
+    FireCrossbow(&pos);
+}
