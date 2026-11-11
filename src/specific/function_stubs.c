@@ -26,3 +26,9 @@ sint32 GetRandomControl(void)
     rand_1 = 0x41C64E6D * rand_1 + 12345;
     return (rand_1 >> 10) & 0x7FFF;
 }
+
+sint32 GetRandomDraw(void)
+{
+    rand_2 = 0x41C64E6D * rand_2 + 12345;
+    return (rand_2 >> 10) & 0x7FFF;
+}
