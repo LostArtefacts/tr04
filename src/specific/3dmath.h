@@ -29,6 +29,7 @@ __inline sint32 phd_cos(sint32 angle)
 void AlterFOV(sint16 fov);
 void SetupZRange(sint32 znear, sint32 zfar);
 void ScaleCurrentMatrix(PHD_VECTOR *vec);
+void InitWindow(sint32 x, sint32 y, sint32 w, sint32 h, sint32 znear, sint32 zfar, sint32 fov, sint32 a, sint32 b);
 
 extern sint32 phdtan2[8];
 extern sint16 phdtantab[2050];
@@ -39,6 +40,7 @@ extern float FogStart;
 extern float FogEnd;
 
 extern sint32 *phd_mxptr;
+extern sint32 matrix_stack[20 * indices_count];
 
 extern float f_centerx;
 extern float f_centery;

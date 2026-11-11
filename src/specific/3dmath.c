@@ -29,3 +29,30 @@ void ScaleCurrentMatrix(PHD_VECTOR *vec)
     phd_mxptr[M12] = (phd_mxptr[M12] * vec->z) >> W2V_SHIFT;
     phd_mxptr[M22] = (phd_mxptr[M22] * vec->z) >> W2V_SHIFT;
 }
+
+void InitWindow(sint32 x, sint32 y, sint32 w, sint32 h, sint32 znear, sint32 zfar, sint32 fov, sint32 a, sint32 b)
+{
+    phd_winxmin = (sint16)x;
+    phd_winwidth = w;
+    phd_winxmax = (sint16)(w - 1);
+    phd_winheight = h;
+    phd_winymax = (sint16)(h - 1);
+    phd_winymin = (sint16)y;
+    phd_centerx = w / 2;
+    phd_centery = h / 2;
+    phd_znear = znear << W2V_SHIFT;
+    phd_zfar = zfar << W2V_SHIFT;
+    f_centerx = (float)phd_centerx;
+    f_centery = (float)phd_centery;
+    AlterFOV((sint16)(182 * fov));
+    SetupZRange(phd_znear, phd_zfar);
+    phd_right = phd_winxmax;
+    phd_bottom = phd_winymax;
+    phd_left = x;
+    phd_top = y;
+    f_left = (float)phd_winxmin;
+    f_top = (float)phd_winymin;
+    f_right = (float)(1 + phd_winxmax);
+    f_bottom = (float)(1 + phd_winymax);
+    phd_mxptr = matrix_stack;
+}

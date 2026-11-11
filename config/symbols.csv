@@ -2295,6 +2295,7 @@ address,size,name,symbol
 0x00753cf8,4,phd_winwidth,_phd_winwidth
 0x00753cfc,4,f_top,_f_top
 0x00753d00,4,f_mperspoznear,_f_mperspoznear
+0x00753d04,960,matrix_stack,_matrix_stack
 0x007540c4,4,LfAspectCorrection,_LfAspectCorrection
 0x007540c8,4,f_bottom,_f_bottom
 0x007540cc,4,f_mzfar,_f_mzfar

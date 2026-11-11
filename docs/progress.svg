@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="6.87" height="12" x="0" y="0" class="named"><title>22 · 1.42%</title></rect>
-<rect width="477.13" height="12" x="6.87" y="0" class="todo"><title>1529 · 98.58%</title></rect>
+<rect width="7.18" height="12" x="0" y="0" class="named"><title>23 · 1.48%</title></rect>
+<rect width="476.82" height="12" x="7.18" y="0" class="todo"><title>1528 · 98.52%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">1.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">22</tspan> · <tspan class="todo">1529</tspan></text>
+<text text-anchor="end" x="654" y="7.50">1.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">23</tspan> · <tspan class="todo">1528</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="2.03" height="12" x="0" y="0" class="named"><title>3 KB · 0.42%</title></rect>
-<rect width="481.97" height="12" x="2.03" y="0" class="todo"><title>617 KB · 99.58%</title></rect>
+<rect width="2.26" height="12" x="0" y="0" class="named"><title>3 KB · 0.47%</title></rect>
+<rect width="481.74" height="12" x="2.26" y="0" class="todo"><title>617 KB · 99.53%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="24.50">0.4%</text>
+<text text-anchor="end" x="654" y="24.50">0.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">3 KB</tspan> · <tspan class="todo">617 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1466,7 +1466,7 @@
 <rect width="12" height="12" x="15" y="420" class="todo"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="420" class="named"><title>0x0048fa90 SetupZRange (200 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="420" class="named"><title>0x0048fb60 ScaleCurrentMatrix (171 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="420" class="todo"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="420" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="420" class="todo"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="420" class="todo"><title>0x0048fdc0 phd_GenerateW2V (840 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="420" class="todo"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
@@ -2169,7 +2169,7 @@
 <rect width="10.62" height="11.39" x="695.74" y="165" class="todo"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
 <rect width="10.55" height="11.39" x="709.36" y="165" class="todo"><title>0x0040ff40 GameStixCollision (299 bytes)</title></rect>
 <rect width="10.55" height="11.39" x="722.91" y="165" class="todo"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
-<rect width="10.55" height="11.39" x="736.45" y="165" class="todo"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
+<rect width="10.55" height="11.39" x="736.45" y="165" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
 <rect width="10.86" height="10.95" x="445.65" y="179.38" class="todo"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
 <rect width="10.86" height="10.91" x="445.65" y="193.33" class="todo"><title>0x0044aa20 RefreshCamera (295 bytes)</title></rect>
 <rect width="10.86" height="10.91" x="445.65" y="207.25" class="todo"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
