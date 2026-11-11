@@ -1606,7 +1606,7 @@ address,size,name,symbol
 0x004a03b0,33,__allshr,___allshr
 0x004a03e0,31,__allshl,___allshl
 0x004a0400,47,__alloca_probe,___alloca_probe
-0x004a042f,82,_sprintf,__sprintf
+0x004a042f,82,_sprintf,_sprintf
 0x004a0481,139,_atol,__atol
 0x004a050c,11,_atoi,__atoi
 0x004a0517,65,_printf,__printf

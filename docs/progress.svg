@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="5.62" height="12" x="0" y="0" class="named"><title>18 · 1.16%</title></rect>
-<rect width="478.38" height="12" x="5.62" y="0" class="todo"><title>1533 · 98.84%</title></rect>
+<rect width="5.93" height="12" x="0" y="0" class="named"><title>19 · 1.23%</title></rect>
+<rect width="478.07" height="12" x="5.93" y="0" class="todo"><title>1532 · 98.77%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="7.50">1.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">18</tspan> · <tspan class="todo">1533</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">19</tspan> · <tspan class="todo">1532</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="1.67" height="12" x="0" y="0" class="named"><title>2 KB · 0.35%</title></rect>
-<rect width="482.33" height="12" x="1.67" y="0" class="todo"><title>618 KB · 99.65%</title></rect>
+<rect width="1.73" height="12" x="0" y="0" class="named"><title>2 KB · 0.36%</title></rect>
+<rect width="482.27" height="12" x="1.73" y="0" class="todo"><title>618 KB · 99.64%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="24.50">0.3%</text>
+<text text-anchor="end" x="654" y="24.50">0.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">2 KB</tspan> · <tspan class="todo">618 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1391,7 +1391,7 @@
 <rect width="12" height="12" x="390" y="390" class="named"><title>0x00484b60 REG_WriteBool (42 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="390" class="named"><title>0x00484b90 REG_ReadLong (94 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="390" class="named"><title>0x00484bf0 REG_ReadBool (115 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="390" class="todo"><title>0x00484c70 OpenRegistry (75 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="390" class="named"><title>0x00484c70 OpenRegistry (75 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="390" class="todo"><title>0x00484cc0 CloseRegistry (5 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="390" class="todo"><title>0x00484cd0 LoadSettings (1201 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="390" class="todo"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
@@ -2771,7 +2771,7 @@
 <rect width="5.42" height="5.56" x="610.77" y="454.32" class="todo"><title>0x0042fb00 set_flare_arm (75 bytes)</title></rect>
 <rect width="5.42" height="5.56" x="610.77" y="462.88" class="named"><title>0x004557b0 ClearLOT (75 bytes)</title></rect>
 <rect width="5.42" height="5.56" x="610.77" y="471.44" class="todo"><title>0x0046ba40 tenth_cutseq_init (75 bytes)</title></rect>
-<rect width="5.83" height="5.16" x="619.19" y="341.40" class="todo"><title>0x00484c70 OpenRegistry (75 bytes)</title></rect>
+<rect width="5.83" height="5.16" x="619.19" y="341.40" class="named"><title>0x00484c70 OpenRegistry (75 bytes)</title></rect>
 <rect width="5.76" height="5.16" x="628.02" y="341.40" class="todo"><title>0x0040e250 GetFreeScarab (74 bytes)</title></rect>
 <rect width="5.76" height="5.16" x="636.78" y="341.40" class="todo"><title>0x00415ad0 TwoBlockPlatformFloor (74 bytes)</title></rect>
 <rect width="5.76" height="5.16" x="645.53" y="341.40" class="todo"><title>0x00421960 lara_col_all4turnlr (74 bytes)</title></rect>

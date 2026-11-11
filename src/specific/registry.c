@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include "registry.h"
 
 extern HKEY phkResult;
@@ -53,4 +55,15 @@ uint8 REG_ReadBool(char *SubKeyName, uint8 *value, uint8 defaultValue)
     REG_WriteBool(SubKeyName, defaultValue);
     *value = defaultValue;
     return 0;
+}
+
+uint8 OpenRegistry(LPCSTR SubKeyName)
+{
+    char buffer[256];
+
+    if (SubKeyName) {
+        sprintf(buffer, "%s\\%s", "Software\\Core Design\\Tomb Raider IV", SubKeyName);
+        return REG_OpenKey(buffer);
+    }
+    return REG_OpenKey("Software\\Core Design\\Tomb Raider IV");
 }
