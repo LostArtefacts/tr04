@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="41.94" height="12" x="0" y="0" class="named"><title>180 · 11.65%</title></rect>
-<rect width="0.23" height="12" x="41.94" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="42.17" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="315.96" height="12" x="44.04" y="0" class="todo"><title>1356 · 87.77%</title></rect>
+<rect width="42.17" height="12" x="0" y="0" class="named"><title>181 · 11.72%</title></rect>
+<rect width="0.23" height="12" x="42.17" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.86" height="12" x="42.41" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="315.73" height="12" x="44.27" y="0" class="todo"><title>1355 · 87.70%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">11.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">180</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1356</tspan></text>
+<text text-anchor="end" x="540" y="7.50">11.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">181</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1355</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="18.05" height="12" x="0" y="0" class="named"><title>31 KB · 5.02%</title></rect>
-<rect width="0.10" height="12" x="18.05" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="2.99" height="12" x="18.08" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="338.93" height="12" x="21.07" y="0" class="todo"><title>584 KB · 94.15%</title></rect>
+<rect width="18.16" height="12" x="0" y="0" class="named"><title>31 KB · 5.05%</title></rect>
+<rect width="0.10" height="12" x="18.16" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="2.99" height="12" x="18.19" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="338.82" height="12" x="21.18" y="0" class="todo"><title>583 KB · 94.12%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">5.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">31 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">584 KB</tspan></text>
+<text text-anchor="end" x="540" y="24.50">5.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">31 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">583 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -518,7 +518,7 @@
 <rect width="12" height="12" x="735" y="120" class="named"><title>0x00431c80 lara_as_surfback (94 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="135" class="named"><title>0x00431ce0 lara_as_surfleft (96 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="135" class="named"><title>0x00431d40 lara_as_surfright (96 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="135" class="todo"><title>0x00431da0 lara_as_surftread (185 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="135" class="named"><title>0x00431da0 lara_as_surftread (185 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="135" class="todo"><title>0x00431e60 lara_col_surfswim (47 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="135" class="todo"><title>0x00431e90 LaraTestWaterClimbOut (539 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="135" class="todo"><title>0x004320b0 LaraSurfaceCollision (247 bytes)</title></rect>
@@ -2384,7 +2384,7 @@
 <rect width="8.27" height="8.70" x="507.69" y="268.83" class="todo"><title>0x0046b980 ninth_control (186 bytes)</title></rect>
 <rect width="8.27" height="8.70" x="507.69" y="280.53" class="named"><title>0x004705f0 InitD3DDevice (186 bytes)</title></rect>
 <rect width="8.27" height="8.70" x="507.69" y="292.23" class="todo"><title>0x00472400 PrelightVertsMMX (186 bytes)</title></rect>
-<rect width="8.27" height="8.65" x="507.69" y="303.93" class="todo"><title>0x00431da0 lara_as_surftread (185 bytes)</title></rect>
+<rect width="8.27" height="8.65" x="507.69" y="303.93" class="named"><title>0x00431da0 lara_as_surftread (185 bytes)</title></rect>
 <rect width="8.27" height="8.65" x="507.69" y="315.58" class="todo"><title>0x00491ea0 DXDDCreate (185 bytes)</title></rect>
 <rect width="8.27" height="8.61" x="507.69" y="327.23" class="todo"><title>0x00477600 S_LoadGame (184 bytes)</title></rect>
 <rect width="8.27" height="8.61" x="507.69" y="338.83" class="todo"><title>0x00489480 OutputSky (184 bytes)</title></rect>
