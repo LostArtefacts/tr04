@@ -377,3 +377,34 @@ void FullBlockSwitchControl(sint16 item_number)
     }
     AnimateItem(item);
 }
+
+void FullBlockSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (((input & IN_ACTION) && item->status == ITEM_INACTIVE && !(item->flags & IFL_INVISIBLE) && CurrentSequence < 3 && lara.gun_status == LG_NO_ARMS && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH) || (lara.IsMoving && lara.GeneralPtr == (void *)item_number)) {
+        if (TestLaraPosition(FullBlockSwitchBounds, item, l)) {
+            if (MoveLaraPosition(&FullBlockSwitchPos, item, l)) {
+                if (item->current_anim_state == 1) {
+                    l->current_anim_state = AS_SWITCHON;
+                    l->anim_number = ANIM_BLOCKSWITCH;
+                    item->goal_anim_state = 0;
+                }
+                l->frame_number = anims[l->anim_number].frame_base;
+                l->goal_anim_state = AS_STOP;
+                item->status = ITEM_ACTIVE;
+                AddActiveItem(item_number);
+                AnimateItem(item);
+                lara.IsMoving = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+                lara.head_x_rot = lara.head_y_rot = 0;
+                lara.torso_x_rot = lara.torso_y_rot = 0;
+            } else
+                lara.GeneralPtr = (void *)item_number;
+        } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+            lara.IsMoving = 0;
+            lara.gun_status = LG_NO_ARMS;
+        }
+    }
+}

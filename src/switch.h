@@ -20,6 +20,7 @@ void RailSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void PulleyCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void SwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void CrowbarSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
+void FullBlockSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 extern sint16 Switch2Bounds[12];
 extern PHD_VECTOR Switch2Pos;
@@ -42,5 +43,7 @@ extern PHD_VECTOR CrowbarPos;
 extern sint16 CrowbarBounds[12];
 extern PHD_VECTOR CrowbarPos2;
 extern sint16 CrowbarBounds2[12];
+extern sint16 FullBlockSwitchBounds[12];
+extern PHD_VECTOR FullBlockSwitchPos;
 
 #endif

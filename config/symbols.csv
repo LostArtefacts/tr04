@@ -2017,6 +2017,8 @@ address,size,name,symbol
 0x004afdf4,24,CrowbarBounds,_CrowbarBounds
 0x004afe10,12,CrowbarPos2,_CrowbarPos2
 0x004afe1c,24,CrowbarBounds2,_CrowbarBounds2
+0x004afe34,24,FullBlockSwitchBounds,_FullBlockSwitchBounds
+0x004afe50,12,FullBlockSwitchPos,_FullBlockSwitchPos
 0x004afe5c,24,PulleyBounds,_PulleyBounds
 0x004afe78,12,PulleyPos,_PulleyPos
 0x004afe84,24,UnderwaterSwitchBounds,_UnderwaterSwitchBounds
