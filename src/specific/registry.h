@@ -13,5 +13,8 @@ uint8 REG_ReadLong(char *SubKeyName, uint32 *value, uint32 defaultValue);
 uint8 REG_ReadBool(char *SubKeyName, uint8 *value, uint8 defaultValue);
 uint8 OpenRegistry(LPCSTR SubKeyName);
 void CloseRegistry(void);
+uint8 LoadSettings(void);
+
+extern uint8 REG_Setup;
 
 #endif
