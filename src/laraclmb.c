@@ -146,3 +146,13 @@ sint32 LaraCheckForLetGo(ITEM_INFO *item, COLL_INFO *coll)
     }
     return 0;
 }
+
+void lara_as_climbleft(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    camera.target_angle = -5460;
+    camera.target_elevation = -2730;
+    if (!(input & (IN_LEFT | IN_LSTEP)))
+        item->goal_anim_state = AS_CLIMBSTNC;
+}
