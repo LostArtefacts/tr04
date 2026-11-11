@@ -231,3 +231,23 @@ sint32 phd_sqrt(sint32 num)
     } while (base);
     return result;
 }
+
+void phd_PushMatrix(void)
+{
+    sint32 *mx;
+
+    mx = phd_mxptr;
+    mx[indices_count + M00] = mx[M00];
+    mx[indices_count + M01] = mx[M01];
+    mx[indices_count + M02] = mx[M02];
+    mx[indices_count + M03] = mx[M03];
+    mx[indices_count + M10] = mx[M10];
+    mx[indices_count + M11] = mx[M11];
+    mx[indices_count + M12] = mx[M12];
+    mx[indices_count + M13] = mx[M13];
+    mx[indices_count + M20] = mx[M20];
+    mx[indices_count + M21] = mx[M21];
+    mx[indices_count + M22] = mx[M22];
+    mx[indices_count + M23] = mx[M23];
+    phd_mxptr += indices_count;
+}

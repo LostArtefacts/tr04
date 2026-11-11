@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="8.74" height="12" x="0" y="0" class="named"><title>28 · 1.81%</title></rect>
-<rect width="475.26" height="12" x="8.74" y="0" class="todo"><title>1523 · 98.19%</title></rect>
+<rect width="9.05" height="12" x="0" y="0" class="named"><title>29 · 1.87%</title></rect>
+<rect width="474.95" height="12" x="9.05" y="0" class="todo"><title>1522 · 98.13%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">1.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">28</tspan> · <tspan class="todo">1523</tspan></text>
+<text text-anchor="end" x="654" y="7.50">1.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">29</tspan> · <tspan class="todo">1522</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="3.30" height="12" x="0" y="0" class="named"><title>4 KB · 0.68%</title></rect>
-<rect width="480.70" height="12" x="3.30" y="0" class="todo"><title>616 KB · 99.32%</title></rect>
+<rect width="3.37" height="12" x="0" y="0" class="named"><title>4 KB · 0.70%</title></rect>
+<rect width="480.63" height="12" x="3.37" y="0" class="todo"><title>615 KB · 99.30%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">4 KB</tspan> · <tspan class="todo">616 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">4 KB</tspan> · <tspan class="todo">615 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1472,7 +1472,7 @@
 <rect width="12" height="12" x="105" y="420" class="named"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="420" class="named"><title>0x00490210 phd_atan (98 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="420" class="named"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="420" class="todo"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="420" class="named"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="420" class="todo"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="420" class="todo"><title>0x00490320 Func490320 (48 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="420" class="todo"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
@@ -2732,7 +2732,7 @@
 <rect width="5.99" height="5.70" x="601.77" y="394.24" class="todo"><title>0x004492d0 KillMoveItems (85 bytes)</title></rect>
 <rect width="5.99" height="5.70" x="601.77" y="402.94" class="todo"><title>0x00449330 KillMoveEffects (85 bytes)</title></rect>
 <rect width="5.99" height="5.63" x="601.77" y="411.64" class="todo"><title>0x004301f0 LaraCheatGetStuff (84 bytes)</title></rect>
-<rect width="5.99" height="5.63" x="601.77" y="420.27" class="todo"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
+<rect width="5.99" height="5.63" x="601.77" y="420.27" class="named"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
 <rect width="5.99" height="5.56" x="601.77" y="428.90" class="todo"><title>0x00417020 ControlMovingBlade (83 bytes)</title></rect>
 <rect width="5.99" height="5.56" x="601.77" y="437.46" class="todo"><title>0x00432850 lara_as_uwdeath (83 bytes)</title></rect>
 <rect width="5.99" height="5.49" x="601.77" y="446.02" class="todo"><title>0x0043f180 draw_compass (82 bytes)</title></rect>

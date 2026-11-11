@@ -38,6 +38,7 @@ void phd_GenerateW2V(PHD_3DPOS *viewPos);
 void phd_LookAt(sint32 sx, sint32 sy, sint32 sz, sint32 tx, sint32 ty, sint32 tz, sint16 roll);
 sint32 phd_atan(sint32 x, sint32 y);
 sint32 phd_sqrt(sint32 num);
+void phd_PushMatrix(void);
 void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, sint16 *angles);
 
 extern sint32 phdtan2[8];
