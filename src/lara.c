@@ -1072,6 +1072,22 @@ void lara_col_turn_l(ITEM_INFO *item, COLL_INFO *coll)
     lara_col_turn_r(item, coll);
 }
 
+void lara_col_death(ITEM_INFO *item, COLL_INFO *coll)
+{
+    StopSoundEffect(30);
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = STEPUP_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 0;
+    coll->radius = LARA_RAD * 4;
+    GetLaraCollisionInfo(item, coll);
+    ShiftItem(item, coll);
+    item->hit_points = -1;
+    lara.air = -1;
+    if (coll->mid_floor != NO_HEIGHT)
+        item->pos.y_pos += coll->mid_floor;
+}
+
 void lara_col_fastfall(ITEM_INFO *item, COLL_INFO *coll)
 {
     item->gravity_status = 1;
