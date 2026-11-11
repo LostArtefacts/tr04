@@ -52,3 +52,9 @@ void seventh_cutseq_init(void)
     cutseq_kill_item(ANIMATING3);
     nail_intelligent_object(VON_CROY);
 }
+
+void tenth_cutseq_end(void)
+{
+    cutseq_restore_item(DOOR_TYPE5);
+    DelsHandyTeleportLara(68756, 512, 56493, 983);
+}

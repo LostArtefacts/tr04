@@ -32,5 +32,6 @@ void fifth_cutseq_end(void);
 void sixth_cutseq_init(void);
 void sixth_cutseq_end(void);
 void seventh_cutseq_init(void);
+void tenth_cutseq_end(void);
 
 #endif
