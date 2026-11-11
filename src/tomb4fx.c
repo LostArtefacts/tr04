@@ -37,3 +37,16 @@ void SetFadeClip(sint16 height, sint16 speed)
     DestFadeScreenHeight = height;
     FadeClipSpeed = speed;
 }
+
+void UpdateFadeClip(void)
+{
+    if (DestFadeScreenHeight < FadeScreenHeight) {
+        FadeScreenHeight -= FadeClipSpeed;
+        if (DestFadeScreenHeight > FadeScreenHeight)
+            FadeScreenHeight = DestFadeScreenHeight;
+    } else if (DestFadeScreenHeight > FadeScreenHeight) {
+        FadeScreenHeight += FadeClipSpeed;
+        if (DestFadeScreenHeight < FadeScreenHeight)
+            FadeScreenHeight = DestFadeScreenHeight;
+    }
+}

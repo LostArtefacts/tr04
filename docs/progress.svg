@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="112.40" height="12" x="0" y="0" class="named"><title>499 · 32.30%</title></rect>
-<rect width="0.45" height="12" x="112.40" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="112.85" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="231.10" height="12" x="116.90" y="0" class="todo"><title>1026 · 66.41%</title></rect>
+<rect width="112.62" height="12" x="0" y="0" class="named"><title>500 · 32.36%</title></rect>
+<rect width="0.45" height="12" x="112.62" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="113.07" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="230.87" height="12" x="117.13" y="0" class="todo"><title>1025 · 66.34%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">32.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">499</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1026</tspan></text>
+<text text-anchor="end" x="528" y="7.50">32.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">500</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1025</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="48.52" height="12" x="0" y="0" class="named"><title>86 KB · 13.94%</title></rect>
-<rect width="0.12" height="12" x="48.52" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="48.64" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="293.09" height="12" x="54.91" y="0" class="todo"><title>522 KB · 84.22%</title></rect>
+<rect width="48.56" height="12" x="0" y="0" class="named"><title>87 KB · 13.95%</title></rect>
+<rect width="0.12" height="12" x="48.56" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="48.68" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="293.05" height="12" x="54.95" y="0" class="todo"><title>522 KB · 84.21%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">86 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">522 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">87 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">522 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -643,7 +643,7 @@
 <rect width="12" height="12" x="360" y="165" class="todo"><title>0x00439b80 SetGunFlash (92 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="165" class="todo"><title>0x00439c00 DrawGunflashes (315 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="165" class="named"><title>0x00439d40 SetFadeClip (24 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="165" class="todo"><title>0x00439d60 UpdateFadeClip (72 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="165" class="named"><title>0x00439d60 UpdateFadeClip (72 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="165" class="todo"><title>0x00439db0 SetScreenFadeOut (66 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="165" class="todo"><title>0x00439e00 SetScreenFadeIn (54 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="165" class="todo"><title>0x00439e40 Fade (198 bytes)</title></rect>
@@ -2783,7 +2783,7 @@
 <rect width="5.37" height="5.26" x="616.29" y="456.74" class="named"><title>0x00428ad0 lara_default_col (73 bytes)</title></rect>
 <rect width="5.57" height="5.06" x="624.66" y="331.34" class="todo"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
 <rect width="5.57" height="5.06" x="633.22" y="331.34" class="todo"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
-<rect width="5.49" height="5.06" x="641.79" y="331.34" class="todo"><title>0x00439d60 UpdateFadeClip (72 bytes)</title></rect>
+<rect width="5.49" height="5.06" x="641.79" y="331.34" class="named"><title>0x00439d60 UpdateFadeClip (72 bytes)</title></rect>
 <rect width="5.42" height="5.06" x="650.28" y="331.34" class="todo"><title>0x004035d0 GetFreeLocust (71 bytes)</title></rect>
 <rect width="5.42" height="5.06" x="658.70" y="331.34" class="named"><title>0x0045f050 InitialiseGameFlags (71 bytes)</title></rect>
 <rect width="5.42" height="5.06" x="667.12" y="331.34" class="todo"><title>0x0046c3c0 sixteen_end (71 bytes)</title></rect>
