@@ -69,6 +69,21 @@ void FallingBlockCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *
         *height = item->pos.y_pos + 256;
 }
 
+void ControlFallingBlock2(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (!TriggerActive(item))
+        return;
+    if (lara_item->pos.y_pos == item->pos.y_pos && OnTwoBlockPlatform(item, lara_item->pos.x_pos, lara_item->pos.z_pos) && lara.vehicle != NO_ITEM) {
+        SoundEffect(SFX_BIKE_HIT_OBJECTS, &item->pos, SFX_DEFAULT);
+        item->mesh_bits = -2;
+        ExplodingDeath2(item_number, -1, 417);
+        KillItem(item_number);
+    }
+}
+
 void FallingCeiling(sint16 item_number)
 {
     ITEM_INFO *item;
