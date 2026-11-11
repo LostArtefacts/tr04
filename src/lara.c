@@ -176,3 +176,10 @@ void lara_as_slideback(ITEM_INFO *item, COLL_INFO *coll)
     if ((input & IN_JUMP) && !(input & IN_FORWARD))
         item->goal_anim_state = AS_BACKJUMP;
 }
+
+void lara_as_special(ITEM_INFO *item, COLL_INFO *coll)
+{
+    camera.flags = FOLLOW_CENTRE;
+    camera.target_angle = 170 * ONE_DEGREE;
+    camera.target_elevation = -25 * ONE_DEGREE;
+}
