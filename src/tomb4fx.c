@@ -40,6 +40,45 @@ sint32 GetFreeFireSpark(void)
     return min_life_num;
 }
 
+void TriggerGlobalFireFlame(void)
+{
+    FIRE_SPARKS *sptr;
+    sint32 size;
+
+    sptr = &fire_spark[GetFreeFireSpark()];
+    sptr->On = 1;
+    sptr->sR = 255;
+    sptr->sG = (GetRandomControl() & 0x1F) + 48;
+    sptr->sB = 48;
+    sptr->dR = (GetRandomControl() & 0x3F) + 192;
+    sptr->dG = (GetRandomControl() & 0x3F) + 128;
+    sptr->dB = 32;
+    sptr->ColFadeSpeed = (GetRandomControl() & 3) + 8;
+    sptr->FadeToBlack = 8;
+    sptr->sLife = sptr->Life = (GetRandomControl() & 7) + 32;
+    sptr->x = 4 * (GetRandomControl() & 0x1F) - 64;
+    sptr->y = 0;
+    sptr->z = 4 * (GetRandomControl() & 0x1F) - 64;
+    sptr->Xvel = 2 * (GetRandomControl() & 0xFF) - 256;
+    sptr->Yvel = -16 - (GetRandomControl() & 0xF);
+    sptr->Zvel = 2 * (GetRandomControl() & 0xFF) - 256;
+    sptr->Friction = 5;
+    sptr->Gravity = -32 - (GetRandomControl() & 0x1F);
+    sptr->MaxYvel = -16 - (GetRandomControl() & 7);
+    if (GetRandomControl() & 1) {
+        sptr->Flags = 16;
+        sptr->RotAng = GetRandomControl() & 0xFFF;
+        if (GetRandomControl() & 1)
+            sptr->RotAdd = -16 - (GetRandomControl() & 0xF);
+        else
+            sptr->RotAdd = (GetRandomControl() & 0xF) + 16;
+    } else
+        sptr->Flags = 0;
+    size = (GetRandomControl() & 0x1F) + 128;
+    sptr->Size = sptr->sSize = size;
+    sptr->dSize = size >> 4;
+}
+
 void TriggerGlobalStaticFlame(void)
 {
     FIRE_SPARKS *sptr;

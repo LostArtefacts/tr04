@@ -177,6 +177,7 @@ sint32 GetFreeBubble(void);
 sint32 GetFreeDrip(void);
 void TriggerGunSmoke(sint32 x, sint32 y, sint32 z, sint32 xVel, sint32 yVel, sint32 zVel, sint32 notLara, sint32 weaponType, sint32 shade);
 void TriggerGlobalStaticFlame(void);
+void TriggerGlobalFireFlame(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;

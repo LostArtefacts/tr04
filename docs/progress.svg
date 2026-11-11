@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="115.32" height="12" x="0" y="0" class="named"><title>512 · 33.14%</title></rect>
-<rect width="0.45" height="12" x="115.32" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="115.77" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="228.17" height="12" x="119.83" y="0" class="todo"><title>1013 · 65.57%</title></rect>
+<rect width="115.55" height="12" x="0" y="0" class="named"><title>513 · 33.20%</title></rect>
+<rect width="0.45" height="12" x="115.55" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="116" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="227.95" height="12" x="120.05" y="0" class="todo"><title>1012 · 65.50%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">33.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">512</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1013</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">513</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1012</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="49.53" height="12" x="0" y="0" class="named"><title>88 KB · 14.23%</title></rect>
-<rect width="0.12" height="12" x="49.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="49.65" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="292.08" height="12" x="55.92" y="0" class="todo"><title>521 KB · 83.93%</title></rect>
+<rect width="49.72" height="12" x="0" y="0" class="named"><title>89 KB · 14.29%</title></rect>
+<rect width="0.12" height="12" x="49.72" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="49.84" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="291.89" height="12" x="56.11" y="0" class="todo"><title>520 KB · 83.88%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">88 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">521 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">89 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">520 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -618,7 +618,7 @@
 <rect width="12" height="12" x="735" y="150" class="todo"><title>0x00437ef0 keep_those_fires_burning (34 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="165" class="todo"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="165" class="todo"><title>0x00438180 TriggerGlobalFireSmoke (319 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="165" class="todo"><title>0x004382c0 TriggerGlobalFireFlame (341 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="165" class="named"><title>0x004382c0 TriggerGlobalFireFlame (341 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="165" class="named"><title>0x00438420 TriggerGlobalStaticFlame (201 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="165" class="named"><title>0x004384f0 ClearFires (20 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="165" class="named"><title>0x00438510 AddFire (80 bytes)</title></rect>
@@ -2120,7 +2120,7 @@
 <rect width="11.38" height="11.79" x="692.81" y="143.50" class="todo"><title>0x00499670 Func499670 (347 bytes)</title></rect>
 <rect width="11.35" height="11.79" x="707.19" y="143.50" class="todo"><title>0x004952b0 SW_SetRenderStateFlags (346 bytes)</title></rect>
 <rect width="11.28" height="11.79" x="721.54" y="143.50" class="todo"><title>0x00457f30 FindPlinth (344 bytes)</title></rect>
-<rect width="11.18" height="11.79" x="735.82" y="143.50" class="todo"><title>0x004382c0 TriggerGlobalFireFlame (341 bytes)</title></rect>
+<rect width="11.18" height="11.79" x="735.82" y="143.50" class="named"><title>0x004382c0 TriggerGlobalFireFlame (341 bytes)</title></rect>
 <rect width="11.14" height="11.84" x="429.10" y="158.29" class="named"><title>0x0044e660 DoubleDoorCollision (341 bytes)</title></rect>
 <rect width="11.14" height="11.80" x="429.10" y="173.12" class="todo"><title>0x00414d80 FlameControl (340 bytes)</title></rect>
 <rect width="11.14" height="11.80" x="429.10" y="187.93" class="named"><title>0x00421e90 LaraTestHangOnClimbWall (340 bytes)</title></rect>
