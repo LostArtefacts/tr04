@@ -15,6 +15,8 @@
 #include "tomb4fx.h"
 #include "gameflow.h"
 #include "scarab.h"
+#include "deltapak.h"
+#include "lot.h"
 
 sint32 ItemNearLara(PHD_3DPOS *pos, sint32 distance)
 {
@@ -110,6 +112,21 @@ void floor_shake_effect(ITEM_INFO *item)
 void SoundFlipEffect(ITEM_INFO *item)
 {
     SoundEffect(TriggerTimer, NULL, 0);
+    flipeffect = -1;
+}
+
+void RubbleFX(ITEM_INFO *item)
+{
+    ITEM_INFO *eq;
+
+    eq = find_a_fucking_item(EARTHQUAKE);
+    if (eq) {
+        AddActiveItem(eq - items);
+        eq->status = ITEM_ACTIVE;
+        eq->flags |= IFL_CODEBITS;
+    } else {
+        camera.bounce = -150;
+    }
     flipeffect = -1;
 }
 
