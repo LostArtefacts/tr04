@@ -1,6 +1,7 @@
 #include "box.h"
 #include "room.h"
 #include "lara.h"
+#include "control.h"
 #include "specific/function_stubs.h"
 
 #define ESCAPE_DIST (WALL_L * 5)
@@ -54,6 +55,23 @@ sint32 EscapeBox(ITEM_INFO *item, ITEM_INFO *enemy, sint16 box_number)
     if (x > -ESCAPE_DIST && x < ESCAPE_DIST && z > -ESCAPE_DIST && z < ESCAPE_DIST)
         return 0;
     if (((z > 0) ^ (item->pos.z_pos > enemy->pos.z_pos)) && ((x > 0) ^ (item->pos.x_pos > enemy->pos.x_pos)))
+        return 0;
+    return 1;
+}
+
+sint32 ValidBox(ITEM_INFO *item, sint16 zone_number, sint16 box_number)
+{
+    CREATURE_INFO *creature;
+    BOX_INFO *box;
+
+    creature = (CREATURE_INFO *)item->data;
+    if (!creature->LOT.fly && ground_zone[creature->LOT.zone][flip_status][box_number] != zone_number)
+        return 0;
+    box = &boxes[box_number];
+    if (creature->LOT.block_mask & box->overlap_index)
+        return 0;
+    if (item->pos.z_pos > box->left << 10 && item->pos.z_pos < box->right << 10 &&
+        item->pos.x_pos > box->top << 10 && item->pos.x_pos < box->bottom << 10)
         return 0;
     return 1;
 }
