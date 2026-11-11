@@ -11,3 +11,9 @@ void *cutseq_malloc(sint32 size)
 {
     return game_malloc(size, 0);
 }
+
+void finish_cutseq(void)
+{
+    GLOBAL_playing_cutseq = 0;
+    InitialiseHair();
+}

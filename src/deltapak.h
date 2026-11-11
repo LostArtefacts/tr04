@@ -25,5 +25,6 @@ void trigger_item_in_room(sint32 room_number, sint32 object_number);
 void untrigger_item_in_room(sint32 room_number, sint32 object_number);
 ITEM_INFO *find_a_fucking_item(sint32 object_number);
 void *cutseq_malloc(sint32 size);
+void finish_cutseq(void);
 
 #endif
