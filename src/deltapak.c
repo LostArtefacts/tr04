@@ -429,6 +429,26 @@ void handle_lara_chatting(sint16 *_ranges)
     lara.mesh_ptrs[LM_HEAD] = meshes[objects[LARA_SKIN].mesh_index + 2 * LM_HEAD];
 }
 
+void trigger_item_in_room(sint32 room_number, sint32 object_number)
+{
+    ITEM_INFO *item;
+    sint16 item_number;
+    sint16 next;
+
+    item_number = room[room_number].item_number;
+    while (item_number != NO_ITEM) {
+        item = &items[item_number];
+        next = item->next_item;
+        if (item->object_number == object_number) {
+            AddActiveItem(item_number);
+            if (object_number != DEMIGOD3)
+                item->status = ITEM_ACTIVE;
+            item->flags |= IFL_CODEBITS;
+        }
+        item_number = next;
+    }
+}
+
 ITEM_INFO *find_a_fucking_item(sint32 object_number)
 {
     ITEM_INFO *item;
