@@ -586,6 +586,13 @@ void lara_as_stepleft(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void lara_as_slide(ITEM_INFO *item, COLL_INFO *coll)
+{
+    camera.target_elevation = -45 * ONE_DEGREE;
+    if ((input & IN_JUMP) && !(input & IN_BACK))
+        item->goal_anim_state = AS_FORWARDJUMP;
+}
+
 void lara_as_backjump(ITEM_INFO *item, COLL_INFO *coll)
 {
     camera.target_angle = ONE_DEGREE * 135;

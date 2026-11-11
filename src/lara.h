@@ -260,6 +260,7 @@ void lara_col_forwardjump(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_roll(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_run(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_slide(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
