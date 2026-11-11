@@ -19,6 +19,46 @@ typedef struct dynamic {
     sint32 FalloffScale;
 } DYNAMIC;
 
+typedef struct sparks {
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 Xvel;
+    sint16 Yvel;
+    sint16 Zvel;
+    sint16 Gravity;
+    sint16 RotAng;
+    sint16 Flags;
+    uint8 sSize;
+    uint8 dSize;
+    uint8 Size;
+    uint8 Friction;
+    uint8 Scalar;
+    uint8 Def;
+    char RotAdd;
+    char MaxYvel;
+    uint8 On;
+    uint8 sR;
+    uint8 sG;
+    uint8 sB;
+    uint8 dR;
+    uint8 dG;
+    uint8 dB;
+    uint8 R;
+    uint8 G;
+    uint8 B;
+    uint8 ColFadeSpeed;
+    uint8 FadeToBlack;
+    uint8 sLife;
+    uint8 Life;
+    uint8 TransType;
+    uint8 extras;
+    char Dynamic;
+    uint8 FxObj;
+    uint8 RoomNumber;
+    uint8 NodeNumber;
+} SPARKS;
+
 typedef struct ripple_struct {
     sint32 x;
     sint32 y;
@@ -50,6 +90,7 @@ typedef struct splash_setup {
 } SPLASH_SETUP;
 
 void DetatchSpark(sint32 num, sint32 type);
+sint32 GetFreeSpark(void);
 void KillAllCurrentItems(sint16 item_number);
 void TriggerRicochetSpark(GAME_VECTOR *pos, sint32 ang, sint32 num, sint32 smoke_only);
 void ClearDynamics(void);
@@ -58,11 +99,14 @@ void TriggerUnderwaterBlood(sint32 x, sint32 y, sint32 z, sint32 size);
 void TriggerDynamic(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint32 g, sint32 b);
 RIPPLE_STRUCT *SetupRipple(sint32 x, sint32 y, sint32 z, sint32 size, sint32 flags);
 void ControlColouredLights(sint16 item_number);
+void TriggerDartSmoke(sint32 x, sint32 y, sint32 z, sint32 xv, sint32 zv, sint32 hit);
+void TriggerRocketSmoke(sint32 x, sint32 y, sint32 z, sint32 col);
 
 extern sint32 KillEverythingFlag;
 extern DYNAMIC dynamics[MAX_DYNAMICS * 2];
 extern sint32 number_dynamics;
 extern RIPPLE_STRUCT ripples[16];
 extern SPLASH_SETUP splash_setup;
+extern SPARKS spark[256];
 
 #endif
