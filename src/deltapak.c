@@ -187,3 +187,11 @@ void twentytwo_init(void)
 {
     cutseq_kill_item(DOOR_TYPE6);
 }
+
+void twentytwo_end(void)
+{
+    DelsHandyTeleportLara(72770, -11776, 54077, 0);
+    cutseq_restore_item(DOOR_TYPE6);
+    trigger_item_in_room(39, DOOR_TYPE6);
+    trigger_item_in_room(39, DEMIGOD3);
+}

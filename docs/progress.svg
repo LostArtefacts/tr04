@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="130.16" height="12" x="0" y="0" class="named"><title>588 · 38.06%</title></rect>
-<rect width="0.44" height="12" x="130.16" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="130.60" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="206.75" height="12" x="135.25" y="0" class="todo"><title>934 · 60.45%</title></rect>
+<rect width="130.38" height="12" x="0" y="0" class="named"><title>589 · 38.12%</title></rect>
+<rect width="0.44" height="12" x="130.38" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="130.82" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="206.53" height="12" x="135.47" y="0" class="todo"><title>933 · 60.39%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">38.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">588</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">934</tspan></text>
+<text text-anchor="end" x="522" y="7.50">38.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">589</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">933</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.57" height="12" x="0" y="0" class="named"><title>101 KB · 16.25%</title></rect>
-<rect width="0.12" height="12" x="55.57" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="55.69" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="279.06" height="12" x="62.94" y="0" class="todo"><title>506 KB · 81.60%</title></rect>
+<rect width="55.60" height="12" x="0" y="0" class="named"><title>101 KB · 16.26%</title></rect>
+<rect width="0.12" height="12" x="55.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="55.72" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="279.03" height="12" x="62.97" y="0" class="todo"><title>506 KB · 81.59%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">101 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">506 KB</tspan></text>
@@ -1164,7 +1164,7 @@
 <rect width="12" height="12" x="675" y="315" class="todo"><title>0x0046c930 twentyseven_control (26 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="315" class="named"><title>0x0046c950 twentyseven_end (71 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="315" class="named"><title>0x0046c9a0 twentytwo_init (12 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="315" class="todo"><title>0x0046c9b0 twentytwo_end (57 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="315" class="named"><title>0x0046c9b0 twentytwo_end (57 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="315" class="todo"><title>0x0046c9f0 do_spade_meshswap (34 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="330" class="todo"><title>0x0046ca50 do_key_meshswap (34 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="330" class="todo"><title>0x0046ca80 cutseq_shoot_pistols (47 bytes)</title></rect>
@@ -2848,7 +2848,7 @@
 <rect width="4.87" height="4.52" x="671.53" y="347.71" class="named"><title>0x0043b5f0 DrawLensFlares (57 bytes)</title></rect>
 <rect width="4.87" height="4.52" x="679.40" y="347.71" class="named"><title>0x00458260 PuzzleDoneCollision (57 bytes)</title></rect>
 <rect width="4.87" height="4.52" x="687.27" y="347.71" class="todo"><title>0x0046b6d0 third_cutseq_control (57 bytes)</title></rect>
-<rect width="4.87" height="4.52" x="695.15" y="347.71" class="todo"><title>0x0046c9b0 twentytwo_end (57 bytes)</title></rect>
+<rect width="4.87" height="4.52" x="695.15" y="347.71" class="named"><title>0x0046c9b0 twentytwo_end (57 bytes)</title></rect>
 <rect width="4.87" height="4.52" x="703.02" y="347.71" class="named"><title>0x00476990 _NVisible (57 bytes)</title></rect>
 <rect width="4.87" height="4.52" x="710.89" y="347.71" class="named"><title>0x004769d0 _Visible (57 bytes)</title></rect>
 <rect width="4.87" height="4.52" x="718.76" y="347.71" class="todo"><title>0x0047d3e0 S_DrawDashBar (57 bytes)</title></rect>
