@@ -162,6 +162,35 @@ sint32 GetFreeGunshell(void)
     return min_life_num;
 }
 
+sint32 GetFreeBubble(void)
+{
+    BUBBLE_STRUCT *bubble;
+    sint32 free, i;
+
+    free = next_bubble;
+    bubble = &Bubbles[next_bubble];
+    for (i = 0; i < 40; i++) {
+        if (bubble->size) {
+            if (free == 39) {
+                bubble = &Bubbles[0];
+                free = 0;
+            } else {
+                free++;
+                bubble++;
+            }
+        } else {
+            next_bubble = free + 1;
+            if (next_bubble >= 40)
+                next_bubble = 0;
+            return free;
+        }
+    }
+    next_bubble = free + 1;
+    if (next_bubble >= 40)
+        next_bubble = 0;
+    return free;
+}
+
 void SetFadeClip(sint16 height, sint16 speed)
 {
     DestFadeScreenHeight = height;

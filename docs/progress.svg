@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="114.42" height="12" x="0" y="0" class="named"><title>508 · 32.88%</title></rect>
-<rect width="0.45" height="12" x="114.42" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="114.87" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="229.07" height="12" x="118.93" y="0" class="todo"><title>1017 · 65.83%</title></rect>
+<rect width="114.65" height="12" x="0" y="0" class="named"><title>509 · 32.94%</title></rect>
+<rect width="0.45" height="12" x="114.65" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="115.10" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="228.85" height="12" x="119.15" y="0" class="todo"><title>1016 · 65.76%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">33.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">508</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1017</tspan></text>
+<text text-anchor="end" x="528" y="7.50">33.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">509</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1016</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="48.97" height="12" x="0" y="0" class="named"><title>87 KB · 14.07%</title></rect>
-<rect width="0.12" height="12" x="48.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="49.09" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="292.64" height="12" x="55.36" y="0" class="todo"><title>522 KB · 84.09%</title></rect>
+<rect width="49.02" height="12" x="0" y="0" class="named"><title>87 KB · 14.09%</title></rect>
+<rect width="0.12" height="12" x="49.02" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="49.15" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="292.59" height="12" x="55.41" y="0" class="todo"><title>521 KB · 84.08%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">87 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">522 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">87 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">521 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -635,7 +635,7 @@
 <rect width="12" height="12" x="240" y="165" class="todo"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="165" class="todo"><title>0x004395b0 DrawGunshells (162 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="165" class="todo"><title>0x00439660 TriggerSmallSplash (274 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="165" class="todo"><title>0x00439780 GetFreeBubble (98 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="165" class="named"><title>0x00439780 GetFreeBubble (98 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="165" class="todo"><title>0x004397f0 CreateBubble (177 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="165" class="todo"><title>0x004398b0 LaraBubbles (191 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="165" class="todo"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>
@@ -2661,7 +2661,7 @@
 <rect width="6.38" height="6" x="694.05" y="295.63" class="todo"><title>0x00494830 SW_D3D_BeginScene (99 bytes)</title></rect>
 <rect width="6.31" height="6" x="703.43" y="295.63" class="named"><title>0x00422be0 LaraLandedBad (98 bytes)</title></rect>
 <rect width="6.31" height="6" x="712.75" y="295.63" class="named"><title>0x00435bf0 TriggerUnderwaterBlood (98 bytes)</title></rect>
-<rect width="6.31" height="6" x="722.06" y="295.63" class="todo"><title>0x00439780 GetFreeBubble (98 bytes)</title></rect>
+<rect width="6.31" height="6" x="722.06" y="295.63" class="named"><title>0x00439780 GetFreeBubble (98 bytes)</title></rect>
 <rect width="6.31" height="6" x="731.37" y="295.63" class="todo"><title>0x0043e360 combine_these_two_objects (98 bytes)</title></rect>
 <rect width="6.31" height="6" x="740.69" y="295.63" class="named"><title>0x00490210 phd_atan (98 bytes)</title></rect>
 <rect width="6.02" height="6.23" x="589.82" y="304.63" class="todo"><title>0x00464030 DrawTrainFloor (97 bytes)</title></rect>
