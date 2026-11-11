@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="141.71" height="12" x="0" y="0" class="named"><title>641 · 41.44%</title></rect>
-<rect width="0.44" height="12" x="141.71" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="142.15" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="195.21" height="12" x="146.79" y="0" class="todo"><title>883 · 57.08%</title></rect>
+<rect width="141.93" height="12" x="0" y="0" class="named"><title>642 · 41.50%</title></rect>
+<rect width="0.44" height="12" x="141.93" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="142.37" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="194.99" height="12" x="147.01" y="0" class="todo"><title>882 · 57.01%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">41.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">641</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">883</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">642</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">882</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="58.74" height="12" x="0" y="0" class="named"><title>107 KB · 17.18%</title></rect>
-<rect width="0.12" height="12" x="58.74" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="58.86" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="275.89" height="12" x="66.11" y="0" class="todo"><title>500 KB · 80.67%</title></rect>
+<rect width="58.83" height="12" x="0" y="0" class="named"><title>107 KB · 17.20%</title></rect>
+<rect width="0.12" height="12" x="58.83" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="58.95" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="275.81" height="12" x="66.19" y="0" class="todo"><title>500 KB · 80.64%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">107 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">500 KB</tspan></text>
@@ -1106,7 +1106,7 @@
 <rect width="12" height="12" x="555" y="300" class="named"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="300" class="todo"><title>0x0046b2b0 DrawCutSeqActors (525 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="300" class="todo"><title>0x0046b4c0 CalcActorLighting (153 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="300" class="todo"><title>0x0046b560 GetJointAbsPositionCutSeq (152 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="300" class="named"><title>0x0046b560 GetJointAbsPositionCutSeq (152 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="300" class="todo"><title>0x0046b600 CalculateObjectLightingLaraCutSeq (198 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="300" class="named"><title>0x0046b6d0 third_cutseq_control (18 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="300" class="named"><title>0x0046b6f0 fourth_cutseq_init (30 bytes)</title></rect>
@@ -2484,7 +2484,7 @@
 <rect width="7.74" height="7.59" x="540.39" y="266.28" class="todo"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.39" y="276.86" class="named"><title>0x0044bbe0 LOS (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.39" y="287.45" class="todo"><title>0x004530d0 InitialiseFlameEmitter (152 bytes)</title></rect>
-<rect width="7.74" height="7.59" x="540.39" y="298.04" class="todo"><title>0x0046b560 GetJointAbsPositionCutSeq (152 bytes)</title></rect>
+<rect width="7.74" height="7.59" x="540.39" y="298.04" class="named"><title>0x0046b560 GetJointAbsPositionCutSeq (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.39" y="308.62" class="named"><title>0x0046d610 S_CDPlay (152 bytes)</title></rect>
 <rect width="7.74" height="7.54" x="540.39" y="319.21" class="todo"><title>0x00404e00 InitialiseDemigod (151 bytes)</title></rect>
 <rect width="7.74" height="7.54" x="540.39" y="329.74" class="named"><title>0x00428ba0 ResetLook (151 bytes)</title></rect>

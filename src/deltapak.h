@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "items.h"
+#include "anim.h"
 
 extern sint32 GLOBAL_playing_cutseq;
 extern sint32 cutseq_num;
@@ -126,5 +127,6 @@ void fifteen_control(void);
 void sixteen_control(void);
 void tenth_cutseq_control(void);
 void eleventh_cutseq_control(void);
+void GetJointAbsPositionCutSeq(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot, PHD_VECTOR *pos);
 
 #endif

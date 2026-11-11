@@ -14,6 +14,8 @@
 #include "tomb4fx.h"
 #include "lara_states.h"
 #include "camera.h"
+#include "specific/3dmath.h"
+#include "specific/lighting.h"
 
 void *cutseq_malloc(sint32 size)
 {
@@ -24,6 +26,23 @@ void finish_cutseq(void)
 {
     GLOBAL_playing_cutseq = 0;
     InitialiseHair();
+}
+
+void GetJointAbsPositionCutSeq(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot, PHD_VECTOR *pos)
+{
+    sint16 *rot2;
+
+    phd_PushUnitMatrix();
+    phd_TranslateRel(rot[6], rot[7], rot[8]);
+    rot2 = rot + 9;
+    gar_RotYXZsuperpack(&rot2, 0);
+    pos->x = phd_mxptr[M03] >> W2V_SHIFT;
+    pos->y = phd_mxptr[M13] >> W2V_SHIFT;
+    pos->z = phd_mxptr[M23] >> W2V_SHIFT;
+    pos->x += item->pos.x_pos;
+    pos->y += item->pos.y_pos;
+    pos->z += item->pos.z_pos;
+    phd_PopMatrix();
 }
 
 void third_cutseq_control(void)
