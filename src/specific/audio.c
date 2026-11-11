@@ -132,3 +132,27 @@ void ACMClose(void)
     }
     LeaveCriticalSection(&audio_cs);
 }
+
+void OpenStreamFile(char *name)
+{
+    sint32 n;
+
+    __try {
+        EnterCriticalSection(&audio_cs);
+    } __finally {
+        LeaveCriticalSection(&audio_cs);
+    }
+    audio_stream_fp = FileOpen(name);
+    if (!audio_stream_fp) {
+        Log(1, "%s - Not Found", name);
+        return;
+    }
+    fseek(audio_stream_fp, 90, SEEK_SET);
+    audio_fp_write_ptr = wav_file_buffer;
+    memset(wav_file_buffer, 0, 0x37000);
+    n = fread(wav_file_buffer, 1, 0x37000, audio_stream_fp);
+    if (n < 0x37000 && auido_play_mode == 1) {
+        fseek(audio_stream_fp, 90, SEEK_SET);
+        Log(0, "FileReset In OpenStreamFile");
+    }
+}

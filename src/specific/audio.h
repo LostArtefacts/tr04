@@ -9,6 +9,7 @@
 
 #include "../types.h"
 #include "function_stubs.h"
+#include "file.h"
 
 void S_CDPlay(sint32 track, sint32 mode);
 void S_CDStop(void);
@@ -18,6 +19,7 @@ BOOL __stdcall ACMEnumCallBack(HACMDRIVERID hadid, DWORD dwInstance, DWORD fdwSu
 sint32 ACMSetupNotifications(void);
 sint32 ACMHandleNotifications(void);
 void ACMClose(void);
+void OpenStreamFile(char *name);
 void ACMEmulateCDPlay(sint32 track, sint32 mode);
 
 extern CRITICAL_SECTION audio_cs;
@@ -35,6 +37,8 @@ extern HANDLE NotifyEventHandles[2];
 extern HANDLE NotificationThreadHandle;
 extern sint32 NotifySize;
 extern char *wav_file_buffer;
+extern char *audio_fp_write_ptr;
+extern sint32 auido_play_mode;
 extern sint32 XATrack;
 extern sint32 XAFlag;
 extern uint8 CurrentAtmosphere;

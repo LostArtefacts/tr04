@@ -1132,8 +1132,7 @@ address,size,name,symbol
 0x0046d890,301,ACMSetupNotifications,_ACMSetupNotifications
 0x0046d9c0,818,ACMInit,_ACMInit
 0x0046dd00,327,ACMClose,_ACMClose
-0x0046de50,242,OpenStreamFile,_OpenStreamFile
-0x0046dec7,12,Func46dec7,
+0x0046de50,254,OpenStreamFile,_OpenStreamFile
 0x0046df50,391,FillADPCMBuffer,_FillADPCMBuffer
 0x0046e02c,12,Func46e02c,
 0x0046e0f0,143,GetADPCMData,_GetADPCMData
@@ -1621,8 +1620,8 @@ address,size,name,symbol
 0x004a0799,27,__seh_longjmp_unwind@4,__seh_longjmp_unwind@4
 0x004a07b4,49,_fclose,_fclose
 0x004a07e5,76,__fclose_lk,__fclose_lk
-0x004a0831,47,Func4a0831,
-0x004a0860,232,_fread,_fread
+0x004a0831,47,_fread,_fread
+0x004a0860,232,__fread_lk,__fread_lk
 0x004a0948,44,_fseek,_fseek
 0x004a0974,141,__fseek_lk,__fseek_lk
 0x004a0a01,72,_free,_free
