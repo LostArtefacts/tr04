@@ -24,6 +24,19 @@ typedef struct anim_struct {
     sint16 command_index;
 } ANIM_STRUCT;
 
+typedef struct change_struct {
+    sint16 goal_anim_state;
+    sint16 number_ranges;
+    sint16 range_index;
+} CHANGE_STRUCT;
+
+typedef struct range_struct {
+    sint16 start_frame;
+    sint16 end_frame;
+    sint16 link_anim_num;
+    sint16 link_frame_num;
+} RANGE_STRUCT;
+
 typedef struct object_info {
     sint16 nmeshes;
     sint16 mesh_index;
@@ -62,7 +75,11 @@ typedef struct object_info {
 
 extern OBJECT_INFO objects[NUMBER_OBJECTS];
 extern ANIM_STRUCT *anims;
+extern CHANGE_STRUCT *changes;
+extern RANGE_STRUCT *ranges;
 extern sint16 **meshes;
 extern sint32 *bones;
+
+sint32 GetChange(ITEM_INFO *item, ANIM_STRUCT *anim);
 
 #endif

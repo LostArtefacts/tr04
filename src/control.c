@@ -1,6 +1,31 @@
 #include "control.h"
 #include "objnums.h"
 #include "box.h"
+#include "anim.h"
+
+sint32 GetChange(ITEM_INFO *item, ANIM_STRUCT *anim)
+{
+    sint32 i, j;
+    CHANGE_STRUCT *change;
+    RANGE_STRUCT *range;
+
+    if (item->current_anim_state == item->goal_anim_state)
+        return 0;
+    change = &changes[anim->change_index];
+    for (i = 0; i < anim->number_changes; i++, change++) {
+        if (change->goal_anim_state == item->goal_anim_state) {
+            range = &ranges[change->range_index];
+            for (j = 0; j < change->number_ranges; j++, range++) {
+                if (item->frame_number >= range->start_frame && item->frame_number <= range->end_frame) {
+                    item->anim_number = range->link_anim_num;
+                    item->frame_number = range->link_frame_num;
+                    return 1;
+                }
+            }
+        }
+    }
+    return 0;
+}
 
 void AlterFloorHeight(ITEM_INFO *item, sint32 height)
 {
