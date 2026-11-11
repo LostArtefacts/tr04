@@ -23,7 +23,12 @@ uint8 FreeSampleDecompress(void);
 void DXStopSample(sint32 num);
 uint8 DSIsChannelPlaying(sint32 num);
 sint32 DSGetFreeChannel(void);
+sint32 CalcVolume(sint32 volume);
 void S_SoundStopAllSamples(void);
+void S_SoundStopSample(sint32 num);
+sint32 S_SoundPlaySample(sint32 num, uint16 volume, sint32 pitch, sint16 pan);
+sint32 S_SoundPlaySampleLooped(sint32 num, uint16 volume, sint32 pitch, sint16 pan);
+sint32 DXStartSample(sint32 num, sint32 volume, sint32 pitch, sint32 pan, uint32 flags);
 
 extern LPDIRECTSOUNDBUFFER G_DSPrimary;
 extern DS_SAMPLE DS_Samples[32];
@@ -37,5 +42,6 @@ extern WAVEFORMATEX pcm_format;
 extern HACMSTREAM DS_hACMStream;
 extern ACMSTREAMHEADER ACMStreamHeader;
 extern HACMDRIVER hACMDriver;
+extern sint32 SFXVolume;
 
 #endif

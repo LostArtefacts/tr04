@@ -138,3 +138,20 @@ sint32 DSGetFreeChannel(void)
     }
     return -1;
 }
+
+sint32 CalcVolume(sint32 volume)
+{
+    sint32 result;
+
+    result = 8000 - (sint32)((float)(0x7FFF - volume) * 0.30518511F);
+    if (result > 0)
+        result = 0;
+    else if (result < -10000)
+        result = -10000;
+    result -= (100 - SFXVolume) * 50;
+    if (result > 0)
+        result = 0;
+    if (result < -10000)
+        result = -10000;
+    return result;
+}
