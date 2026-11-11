@@ -76,5 +76,6 @@ void seventh_control(void);
 void eighth_control(void);
 void ninth_cutseq_init(void);
 void tenth_cutseq_init(void);
+void seventeen_control(void);
 
 #endif

@@ -145,6 +145,12 @@ void sixteen_end(void)
     DelsHandyTeleportLara(61868, 0, 44994, -16060);
 }
 
+void seventeen_control(void)
+{
+    handle_actor_chatting(ACTOR2_SPEECH_HEAD1, 18, 1, JEAN_YVES, jeanyves_chat_ranges17);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void seventeen_end(void)
 {
     cutseq_restore_item(ANIMATING4);
