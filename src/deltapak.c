@@ -278,6 +278,12 @@ void twentyseven_init(void)
     lara.questitems = 0;
 }
 
+void twentyseven_control(void)
+{
+    if (GLOBAL_cutseq_frame == 283)
+        cutseq_meshbits[1] |= 0x200;
+}
+
 void twentyseven_end(void)
 {
     ITEM_INFO *item;
