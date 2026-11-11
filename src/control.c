@@ -285,3 +285,33 @@ sint32 CheckNoColFloorTriangle(FLOOR_INFO *floor, sint32 x, sint32 z)
     }
     return 0;
 }
+
+sint32 CheckNoColCeilingTriangle(FLOOR_INFO *floor, sint32 x, sint32 z)
+{
+    sint16 *data, type, dx, dz;
+
+    if (!floor->index)
+        return 0;
+    data = &floor_data[floor->index];
+    type = *data & DATA_TYPE;
+    if (type == TILT_TYPE || type == SPLIT1 || type == SPLIT2 || type == NOCOLF1T || type == NOCOLF1B
+        || type == NOCOLF2T || type == NOCOLF2B) {
+        if (*data & END_BIT)
+            return 0;
+        type = *(data + 2) & DATA_TYPE;
+    }
+    if (type == NOCOLC1T || type == NOCOLC1B || type == NOCOLC2T || type == NOCOLC2B) {
+        dx = x & 1023;
+        dz = z & 1023;
+        if (type == NOCOLC1T && dx <= 1024 - dz)
+            return -1;
+        else if (type == NOCOLC1B && dx > 1024 - dz)
+            return -1;
+        else if (type == NOCOLC2T && dx <= dz)
+            return -1;
+        else if (type == NOCOLC2B && dx > dz)
+            return -1;
+        return 1;
+    }
+    return 0;
+}
