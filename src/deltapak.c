@@ -154,3 +154,8 @@ void twentyone_end(void)
     do_key_meshswap();
     DelsHandyTeleportLara(33279, -4352, 40697, 21847);
 }
+
+void twentythree_init(void)
+{
+    horus_item_thing = find_a_fucking_item(HORUS_STATUE);
+}
