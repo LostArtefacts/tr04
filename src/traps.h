@@ -36,5 +36,6 @@ void CeilingTrapDoorCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
 void ControlSlicerDicer(sint16 item_number);
 void RollingBallCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void ControlTwoBlockPlatform(sint16 item_number);
+void ControlSpikeball(sint16 item_number);
 
 #endif

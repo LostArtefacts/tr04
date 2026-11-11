@@ -452,6 +452,30 @@ void ControlStargate(sint16 item_number)
         *(sint32 *)&item->item_flags[0] = 0;
 }
 
+void ControlSpikeball(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint32 frame;
+
+    item = &items[item_number];
+    frame = item->frame_number - anims[item->anim_number].frame_base;
+    if (TriggerActive(item)) {
+        if ((frame > 14 && frame < 24) || (frame >= 138 && frame <= 140)) {
+            item->item_flags[3] = 150;
+            *(sint32 *)&item->item_flags[0] = 0x7FF800;
+        } else if (frame >= 141) {
+            item->item_flags[3] = 50;
+            *(sint32 *)&item->item_flags[0] = 0x7FF800;
+        } else {
+            *(sint32 *)&item->item_flags[0] = 0;
+        }
+        AnimateItem(item);
+    } else {
+        item->frame_number = anims[item->anim_number].frame_base;
+        *(sint32 *)&item->item_flags[0] = 0;
+    }
+}
+
 void ControlCatwalkBlade(sint16 item_number)
 {
     ITEM_INFO *item;
