@@ -92,6 +92,70 @@ void TriggerUnderwaterBlood(sint32 x, sint32 y, sint32 z, sint32 size)
     }
 }
 
+void TriggerDartSmoke(sint32 x, sint32 y, sint32 z, sint32 xv, sint32 zv, sint32 hit)
+{
+    sint32 size;
+    SPARKS *sptr;
+    sint32 dx, dz;
+
+    dx = lara_item->pos.x_pos - x;
+    dz = lara_item->pos.z_pos - z;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sR = 16;
+    sptr->sG = 8;
+    sptr->sB = 4;
+    sptr->dR = 64;
+    sptr->dG = 48;
+    sptr->dB = 32;
+    sptr->ColFadeSpeed = 8;
+    sptr->FadeToBlack = 4;
+    sptr->sLife = sptr->Life = (GetRandomControl() & 3) + 32;
+    sptr->TransType = 2;
+    sptr->x = x + ((GetRandomControl() & 31) - 16);
+    sptr->y = y + ((GetRandomControl() & 31) - 16);
+    sptr->z = z + ((GetRandomControl() & 31) - 16);
+    if (hit) {
+        sptr->Xvel = -xv + ((GetRandomControl() & 255) - 128);
+        sptr->Yvel = -(GetRandomControl() & 3) - 4;
+        sptr->Zvel = -zv + ((GetRandomControl() & 255) - 128);
+    } else {
+        if (xv)
+            sptr->Xvel = -xv;
+        else
+            sptr->Xvel = (GetRandomControl() & 255) - 128;
+        sptr->Yvel = -(GetRandomControl() & 3) - 4;
+        if (zv)
+            sptr->Zvel = -zv;
+        else
+            sptr->Zvel = (GetRandomControl() & 255) - 128;
+    }
+    sptr->Friction = 3;
+    if (GetRandomControl() & 1) {
+        sptr->Flags = 2 | 8 | 16 | 512;
+        sptr->RotAng = GetRandomControl() & 4095;
+        if (GetRandomControl() & 1)
+            sptr->RotAdd = -(GetRandomControl() & 15) - 16;
+        else
+            sptr->RotAdd = (GetRandomControl() & 15) + 16;
+    } else
+        sptr->Flags = 2 | 8 | 512;
+    sptr->Scalar = 1;
+    size = (GetRandomControl() & 63) + 72;
+    if (hit) {
+        size >>= 1;
+        sptr->Size = sptr->sSize = size >> 2;
+        sptr->Gravity = sptr->MaxYvel = 0;
+    } else {
+        sptr->Size = sptr->sSize = size >> 4;
+        sptr->Gravity = -(GetRandomControl() & 3) - 4;
+        sptr->MaxYvel = -(GetRandomControl() & 3) - 4;
+    }
+    sptr->dSize = size;
+}
+
 void KillAllCurrentItems(sint16 item_number)
 {
     KillEverythingFlag = 1;
