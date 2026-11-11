@@ -39,6 +39,22 @@ void lara_as_monkeyl(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_elevation = 10 * ONE_DEGREE;
 }
 
+void lara_as_monkeyr(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_HANG2;
+        return;
+    }
+    lara.torso_x_rot = lara.torso_y_rot = 0;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    if (input & IN_RSTEP)
+        item->goal_anim_state = AS_MONKEYR;
+    else
+        item->goal_anim_state = AS_HANG2;
+    camera.target_elevation = 10 * ONE_DEGREE;
+}
+
 void lara_as_hangturnl(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
