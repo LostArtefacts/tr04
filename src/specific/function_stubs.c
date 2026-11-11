@@ -32,3 +32,8 @@ sint32 GetRandomDraw(void)
     rand_2 = 0x41C64E6D * rand_2 + 12345;
     return (rand_2 >> 10) & 0x7FFF;
 }
+
+void SeedRandomControl(sint32 seed)
+{
+    rand_1 = seed;
+}

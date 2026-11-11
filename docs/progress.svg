@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="15.09" height="12" x="0" y="0" class="named"><title>56 · 3.61%</title></rect>
-<rect width="0.27" height="12" x="15.09" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="402.64" height="12" x="15.36" y="0" class="todo"><title>1494 · 96.32%</title></rect>
+<rect width="15.36" height="12" x="0" y="0" class="named"><title>57 · 3.68%</title></rect>
+<rect width="0.27" height="12" x="15.36" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="402.37" height="12" x="15.63" y="0" class="todo"><title>1493 · 96.26%</title></rect>
 </g>
 <text text-anchor="end" x="588" y="7.50">3.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="7"><tspan class="named">56</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="todo">1494</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="7"><tspan class="named">57</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="todo">1493</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="6.04" height="12" x="0" y="0" class="named"><title>9 KB · 1.44%</title></rect>
+<rect width="6.04" height="12" x="0" y="0" class="named"><title>9 KB · 1.45%</title></rect>
 <rect width="0.10" height="12" x="6.04" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="411.93" height="12" x="6.07" y="0" class="todo"><title>611 KB · 98.55%</title></rect>
+<rect width="411.92" height="12" x="6.08" y="0" class="todo"><title>611 KB · 98.55%</title></rect>
 </g>
 <text text-anchor="end" x="588" y="24.50">1.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="24"><tspan class="named">9 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="todo">611 KB</tspan></text>
@@ -1499,7 +1499,7 @@
 <rect width="12" height="12" x="480" y="420" class="named"><title>0x00490ec0 S_ExitSystem (21 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="420" class="named"><title>0x00490ee0 GetRandomControl (30 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="420" class="named"><title>0x00490f00 GetRandomDraw (30 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="420" class="todo"><title>0x00490f20 SeedRandomControl (10 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="420" class="named"><title>0x00490f20 SeedRandomControl (10 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="420" class="todo"><title>0x00490f30 SeedRandomDraw (10 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="420" class="todo"><title>0x00490f40 init_game_malloc (54 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="420" class="todo"><title>0x00490f80 game_malloc (104 bytes)</title></rect>
@@ -3137,7 +3137,7 @@
 <rect width="2.15" height="1.87" x="734.56" y="449.28" class="named"><title>0x004379e0 lara_hands_free (10 bytes)</title></rect>
 <rect width="2.15" height="1.87" x="739.71" y="449.28" class="todo"><title>0x00437a90 shoot_right_gun (10 bytes)</title></rect>
 <rect width="2.15" height="1.87" x="744.85" y="449.28" class="todo"><title>0x00437aa0 shoot_left_gun (10 bytes)</title></rect>
-<rect width="1.68" height="2.35" x="724.06" y="454.14" class="todo"><title>0x00490f20 SeedRandomControl (10 bytes)</title></rect>
+<rect width="1.68" height="2.35" x="724.06" y="454.14" class="named"><title>0x00490f20 SeedRandomControl (10 bytes)</title></rect>
 <rect width="1.68" height="2.35" x="724.06" y="459.49" class="todo"><title>0x00490f30 SeedRandomDraw (10 bytes)</title></rect>
 <rect width="1.68" height="2.13" x="724.06" y="464.84" class="todo"><title>0x0046b840 sixth_cutseq_init (9 bytes)</title></rect>
 <rect width="1.68" height="2.13" x="724.06" y="469.97" class="todo"><title>0x0046c470 eighteen_init (9 bytes)</title></rect>
