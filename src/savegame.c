@@ -105,6 +105,40 @@ void CreateCheckSum(void)
     savegame.Checksum = -checksum;
 }
 
+sint32 OpenSaveGame(uint8 current_level, sint32 saving)
+{
+    sint32 index, i, j;
+
+    for (index = 0; index < 10; index++) {
+        if (savegame.HubLevels[index] == current_level)
+            break;
+    }
+    if (saving == 1) {
+        if (index < 10) {
+            i = index;
+            for (j = index + 1; j < 10; j++) {
+                if (!savegame.HubLevels[j])
+                    break;
+                memcpy(&savegame.buffer[savegame.HubOffsets[i]], &savegame.buffer[savegame.HubOffsets[j]], savegame.HubSizes[j]);
+                savegame.HubSizes[i] = savegame.HubSizes[j];
+                savegame.HubOffsets[j] = savegame.HubOffsets[i] + savegame.HubSizes[i];
+                savegame.HubLevels[i] = savegame.HubLevels[j];
+                i++;
+            }
+            savegame.HubLevels[i] = 0;
+        }
+        for (index = 0; index < 10; index++) {
+            if (!savegame.HubLevels[index])
+                break;
+        }
+        savegame.HubLevels[index] = current_level;
+    } else if (index >= 10)
+        return -1;
+    SGcount = savegame.HubOffsets[index];
+    SGpoint = &savegame.buffer[SGcount];
+    return index;
+}
+
 void SaveHubData(sint32 index)
 {
     savegame.HubSizes[index] = (uint16)(SGcount - savegame.HubOffsets[index]);
