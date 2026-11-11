@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="37.51" height="12" x="0" y="0" class="named"><title>161 · 10.42%</title></rect>
-<rect width="0.23" height="12" x="37.51" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="37.75" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="320.39" height="12" x="39.61" y="0" class="todo"><title>1375 · 89%</title></rect>
+<rect width="37.75" height="12" x="0" y="0" class="named"><title>162 · 10.49%</title></rect>
+<rect width="0.23" height="12" x="37.75" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.86" height="12" x="37.98" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="320.16" height="12" x="39.84" y="0" class="todo"><title>1374 · 88.93%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">10.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">161</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1375</tspan></text>
+<text text-anchor="end" x="540" y="7.50">10.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">162</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1374</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="17.58" height="12" x="0" y="0" class="named"><title>30 KB · 4.88%</title></rect>
-<rect width="0.10" height="12" x="17.58" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="2.99" height="12" x="17.60" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="339.41" height="12" x="20.59" y="0" class="todo"><title>584 KB · 94.28%</title></rect>
+<rect width="17.60" height="12" x="0" y="0" class="named"><title>30 KB · 4.89%</title></rect>
+<rect width="0.10" height="12" x="17.60" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="2.99" height="12" x="17.62" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="339.38" height="12" x="20.62" y="0" class="todo"><title>584 KB · 94.27%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">4.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">30 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">584 KB</tspan></text>
@@ -593,7 +593,7 @@
 <rect width="12" height="12" x="360" y="150" class="todo"><title>0x004377d0 ActivateCamera (8 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="150" class="todo"><title>0x004377e0 ActivateKey (8 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="150" class="todo"><title>0x004377f0 SwapCrowbar (44 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="150" class="todo"><title>0x00437820 ExplosionFX (35 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="150" class="named"><title>0x00437820 ExplosionFX (35 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="150" class="todo"><title>0x00437850 LaraLocation (36 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="150" class="todo"><title>0x00437880 LaraLocationPad (26 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="150" class="todo"><title>0x004378a0 GhostTrap (130 bytes)</title></rect>
@@ -2972,7 +2972,7 @@
 <rect width="3.66" height="3.70" x="668.82" y="444.91" class="todo"><title>0x004322b0 lara_col_surfback (35 bytes)</title></rect>
 <rect width="3.66" height="3.70" x="668.82" y="451.61" class="todo"><title>0x004322e0 lara_col_surfleft (35 bytes)</title></rect>
 <rect width="3.66" height="3.70" x="668.82" y="458.30" class="todo"><title>0x00432310 lara_col_surfright (35 bytes)</title></rect>
-<rect width="3.82" height="3.54" x="675.49" y="384.13" class="todo"><title>0x00437820 ExplosionFX (35 bytes)</title></rect>
+<rect width="3.82" height="3.54" x="675.49" y="384.13" class="named"><title>0x00437820 ExplosionFX (35 bytes)</title></rect>
 <rect width="3.82" height="3.54" x="682.31" y="384.13" class="todo"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
 <rect width="3.82" height="3.54" x="689.13" y="384.13" class="todo"><title>0x004530a0 InitialiseFallingBlock2 (35 bytes)</title></rect>
 <rect width="3.82" height="3.54" x="695.96" y="384.13" class="todo"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
