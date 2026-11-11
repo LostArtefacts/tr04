@@ -58,3 +58,8 @@ void tenth_cutseq_end(void)
     cutseq_restore_item(DOOR_TYPE5);
     DelsHandyTeleportLara(68756, 512, 56493, 983);
 }
+
+void twelth_cutseq_init(void)
+{
+    cutseq_kill_item(ANIMATING6);
+}
