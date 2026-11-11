@@ -360,6 +360,21 @@ void do_key_meshswap(void)
     meshes[objects[MESHSWAP1].mesh_index + LM_RHAND * 2] = temp;
 }
 
+void cutseq_kill_item(sint32 num)
+{
+    ITEM_INFO *item;
+    sint32 i;
+
+    for (i = 0; i < level_items; i++) {
+        item = &items[i];
+        if (item->object_number == num) {
+            old_status_flags[numnailed] = item->status;
+            item->status = ITEM_INVISIBLE;
+            numnailed++;
+        }
+    }
+}
+
 void force_sky_lightning(void)
 {
     LightningCount = (GetRandomDraw() & 0x1F) + 64;
