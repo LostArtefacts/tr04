@@ -1,8 +1,11 @@
 #include "box.h"
 #include "room.h"
+#include "lara.h"
 #include "specific/function_stubs.h"
 
 #define ESCAPE_DIST (WALL_L * 5)
+#define MAX_JOINT_CHANGE (ONE_DEGREE * 3)
+#define JOINT_ARC 0x3000
 
 void TargetBox(LOT_INFO *LOT, sint16 box_number)
 {
@@ -32,4 +35,24 @@ sint32 EscapeBox(ITEM_INFO *item, ITEM_INFO *enemy, sint16 box_number)
     if (((z > 0) ^ (item->pos.z_pos > enemy->pos.z_pos)) && ((x > 0) ^ (item->pos.x_pos > enemy->pos.x_pos)))
         return 0;
     return 1;
+}
+
+void CreatureJoint(ITEM_INFO *item, sint16 joint, sint16 required)
+{
+    CREATURE_INFO *creature;
+    sint16 change;
+
+    creature = (CREATURE_INFO *)item->data;
+    if (!creature)
+        return;
+    change = required - creature->joint_rotation[joint];
+    if (change > MAX_JOINT_CHANGE)
+        change = MAX_JOINT_CHANGE;
+    else if (change < -MAX_JOINT_CHANGE)
+        change = -MAX_JOINT_CHANGE;
+    creature->joint_rotation[joint] += change;
+    if (creature->joint_rotation[joint] > JOINT_ARC)
+        creature->joint_rotation[joint] = JOINT_ARC;
+    else if (creature->joint_rotation[joint] < -JOINT_ARC)
+        creature->joint_rotation[joint] = -JOINT_ARC;
 }

@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="62.91" height="12" x="0" y="0" class="named"><title>270 · 17.48%</title></rect>
-<rect width="0.23" height="12" x="62.91" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="63.15" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="294.29" height="12" x="65.71" y="0" class="todo"><title>1263 · 81.75%</title></rect>
+<rect width="63.15" height="12" x="0" y="0" class="named"><title>271 · 17.54%</title></rect>
+<rect width="0.23" height="12" x="63.15" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="63.38" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="294.06" height="12" x="65.94" y="0" class="todo"><title>1262 · 81.68%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">17.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">270</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1263</tspan></text>
+<text text-anchor="end" x="540" y="7.50">17.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">271</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1262</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="23.08" height="12" x="0" y="0" class="named"><title>40 KB · 6.41%</title></rect>
-<rect width="0.10" height="12" x="23.08" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="23.10" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="331.88" height="12" x="28.12" y="0" class="todo"><title>571 KB · 92.19%</title></rect>
+<rect width="23.12" height="12" x="0" y="0" class="named"><title>40 KB · 6.42%</title></rect>
+<rect width="0.10" height="12" x="23.12" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="23.15" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="331.83" height="12" x="28.17" y="0" class="todo"><title>571 KB · 92.18%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">6.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">40 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">571 KB</tspan></text>
@@ -745,7 +745,7 @@
 <rect width="12" height="12" x="390" y="195" class="todo"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="195" class="todo"><title>0x00441c60 CreatureTurn (628 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="todo"><title>0x00441ee0 CreatureTilt (53 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="195" class="todo"><title>0x00441f20 CreatureJoint (81 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="195" class="named"><title>0x00441f20 CreatureJoint (81 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="195" class="todo"><title>0x00441f80 CreatureFloat (247 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="195" class="todo"><title>0x00442080 CreatureUnderwater (139 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="195" class="todo"><title>0x00442110 CreatureEffect (89 bytes)</title></rect>
@@ -2740,7 +2740,7 @@
 <rect width="5.37" height="5.83" x="649.98" y="322.50" class="todo"><title>0x00403810 ControlLocustEmitter (81 bytes)</title></rect>
 <rect width="5.37" height="5.83" x="658.35" y="322.50" class="todo"><title>0x0043e420 combine_revolver_lasersight (81 bytes)</title></rect>
 <rect width="5.37" height="5.83" x="666.73" y="322.50" class="todo"><title>0x0043e480 combine_crossbow_lasersight (81 bytes)</title></rect>
-<rect width="5.37" height="5.83" x="675.10" y="322.50" class="todo"><title>0x00441f20 CreatureJoint (81 bytes)</title></rect>
+<rect width="5.37" height="5.83" x="675.10" y="322.50" class="named"><title>0x00441f20 CreatureJoint (81 bytes)</title></rect>
 <rect width="5.37" height="5.83" x="683.47" y="322.50" class="todo"><title>0x0045a2e0 sgSaveGame (81 bytes)</title></rect>
 <rect width="5.31" height="5.83" x="691.85" y="322.50" class="todo"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
 <rect width="5.31" height="5.83" x="700.16" y="322.50" class="todo"><title>0x00438510 AddFire (80 bytes)</title></rect>
