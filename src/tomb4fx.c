@@ -378,6 +378,40 @@ sint32 GetFreeGunshell(void)
     return min_life_num;
 }
 
+void TriggerSmallSplash(sint32 x, sint32 y, sint32 z, sint32 num)
+{
+    SPARKS *sptr;
+    sint32 ang;
+
+    while (num > 0) {
+        sptr = &spark[GetFreeSpark()];
+        sptr->On = 1;
+        sptr->sR = 112;
+        sptr->sG = (GetRandomControl() & 0x1F) + 128;
+        sptr->sB = (GetRandomControl() & 0x1F) + 128;
+        sptr->dR = sptr->sR >> 1;
+        sptr->dG = sptr->sG >> 1;
+        sptr->dB = sptr->sB >> 1;
+        sptr->ColFadeSpeed = 4;
+        sptr->FadeToBlack = 8;
+        sptr->Life = 24;
+        sptr->sLife = 24;
+        sptr->TransType = 2;
+        ang = GetRandomControl() & 0xFFF;
+        sptr->Zvel = rcossin_tbl[(ang << 1) + 1] >> 5;
+        sptr->Yvel = -640 - (GetRandomControl() & 0xFF);
+        sptr->Xvel = -rcossin_tbl[ang << 1] >> 5;
+        sptr->x = x + (sptr->Xvel >> 3);
+        sptr->Friction = 5;
+        sptr->Flags = 0;
+        sptr->y = y - (sptr->Yvel >> 5);
+        sptr->z = z + (sptr->Zvel >> 3);
+        sptr->Gravity = (GetRandomControl() & 0xF) + 64;
+        sptr->MaxYvel = 0;
+        num--;
+    }
+}
+
 sint32 GetFreeBubble(void)
 {
     BUBBLE_STRUCT *bubble;
