@@ -36,5 +36,6 @@ void tenth_cutseq_end(void);
 void twelth_cutseq_init(void);
 void twelth_cutseq_end(void);
 void thirteen_end(void);
+void fourteen_end(void);
 
 #endif

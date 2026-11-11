@@ -73,3 +73,10 @@ void thirteen_end(void)
 {
     DelsHandyTeleportLara(79194, 0, 40951, -20741);
 }
+
+void fourteen_end(void)
+{
+    DelsHandyTeleportLara(27282, 256, 65654, 0);
+    FlipMap(1);
+    lara.questitems |= 1;
+}
