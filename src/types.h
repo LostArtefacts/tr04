@@ -1,6 +1,8 @@
 #ifndef TYPES_H
 #define TYPES_H
 
+#include <stddef.h>
+
 typedef unsigned char uint8;
 typedef signed char sint8;
 typedef unsigned short uint16;

@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="0.59" height="12" x="0" y="0" class="named"><title>2 · 0.13%</title></rect>
-<rect width="453.41" height="12" x="0.59" y="0" class="todo"><title>1549 · 99.87%</title></rect>
+<rect width="0.88" height="12" x="0" y="0" class="named"><title>3 · 0.19%</title></rect>
+<rect width="453.12" height="12" x="0.88" y="0" class="todo"><title>1548 · 99.81%</title></rect>
 </g>
-<text text-anchor="end" x="624" y="7.50">0.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="639" y="7"><tspan class="named">2</tspan> · <tspan class="todo">1549</tspan></text>
+<text text-anchor="end" x="624" y="7.50">0.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="639" y="7"><tspan class="named">3</tspan> · <tspan class="todo">1548</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="0.10" height="12" x="0" y="0" class="named"><title>112 bytes · 0.02%</title></rect>
-<rect width="453.92" height="12" x="0.08" y="0" class="todo"><title>620 KB · 99.98%</title></rect>
+<rect width="0.13" height="12" x="0" y="0" class="named"><title>176 bytes · 0.03%</title></rect>
+<rect width="453.87" height="12" x="0.13" y="0" class="todo"><title>620 KB · 99.97%</title></rect>
 </g>
 <text text-anchor="end" x="624" y="24.50">0.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="639" y="24"><tspan class="named">112 bytes</tspan> · <tspan class="todo">620 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="639" y="24"><tspan class="named">176 bytes</tspan> · <tspan class="todo">620 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -922,7 +922,7 @@
 <rect width="12" height="12" x="105" y="255" class="todo"><title>0x00454ef0 InitialiseElementPuzzle (82 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="255" class="todo"><title>0x00454f50 ControlElementPuzzle (685 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="255" class="named"><title>0x00455200 InitialiseLOTarray (102 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="255" class="todo"><title>0x00455270 DisableBaddieAI (64 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="255" class="named"><title>0x00455270 DisableBaddieAI (64 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="255" class="todo"><title>0x004552b0 EnableBaddieAI (447 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="255" class="todo"><title>0x00455470 InitialiseSlot (465 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="255" class="todo"><title>0x004556a0 CreateZone (267 bytes)</title></rect>
@@ -2819,7 +2819,7 @@
 <rect width="5.03" height="5.12" x="725.91" y="350.79" class="todo"><title>0x00425f10 lara_as_fastfall (64 bytes)</title></rect>
 <rect width="5.03" height="5.12" x="733.94" y="350.79" class="todo"><title>0x00437140 Richochet (64 bytes)</title></rect>
 <rect width="5.03" height="5.12" x="741.97" y="350.79" class="todo"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>
-<rect width="4.91" height="5.24" x="627.45" y="358.91" class="todo"><title>0x00455270 DisableBaddieAI (64 bytes)</title></rect>
+<rect width="4.91" height="5.24" x="627.45" y="358.91" class="named"><title>0x00455270 DisableBaddieAI (64 bytes)</title></rect>
 <rect width="4.91" height="5.24" x="627.45" y="367.14" class="todo"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
 <rect width="4.91" height="5.15" x="627.45" y="375.38" class="todo"><title>0x0045fad0 SayNo (63 bytes)</title></rect>
 <rect width="4.91" height="5.15" x="627.45" y="383.53" class="todo"><title>0x0047d420 S_DrawAirBar (63 bytes)</title></rect>
