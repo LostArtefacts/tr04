@@ -296,6 +296,7 @@ void lara_as_pickupflare(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_stop(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_duck(ITEM_INFO *item, COLL_INFO *coll);
 void LookLeftRight(void);
+void lara_col_monkeyl(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
