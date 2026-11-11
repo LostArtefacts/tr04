@@ -4,6 +4,23 @@
 #include "lara_states.h"
 #include "specific/input.h"
 #include "gameflow.h"
+#include "objnums.h"
+
+void LaraCheatGetStuff(void)
+{
+    lara.num_flares = -1;
+    lara.num_small_medipack = -1;
+    lara.num_large_medipack = -1;
+    if (objects[CROWBAR_ITEM].loaded)
+        lara.crowbar = 1;
+    lara.uzis_type_carried = 9;
+    lara.lasersight = 1;
+    lara.shotgun_type_carried = 9;
+    lara.sixshooter_type_carried = 9;
+    lara.num_uzi_ammo = -1;
+    lara.num_revolver_ammo = -1;
+    lara.num_shotgun_ammo1 = -1;
+}
 
 void LaraCheat(ITEM_INFO *item, COLL_INFO *coll)
 {
