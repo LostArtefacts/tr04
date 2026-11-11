@@ -8,5 +8,6 @@ void LaraSwimCollision(ITEM_INFO *item, COLL_INFO *coll);
 void SwimTurn(ITEM_INFO *item);
 void lara_as_dive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_waterroll(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_swim(ITEM_INFO *item, COLL_INFO *coll);
 
 #endif
