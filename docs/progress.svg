@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="2.81" height="12" x="0" y="0" class="named"><title>9 · 0.58%</title></rect>
-<rect width="481.19" height="12" x="2.81" y="0" class="todo"><title>1542 · 99.42%</title></rect>
+<rect width="3.12" height="12" x="0" y="0" class="named"><title>10 · 0.64%</title></rect>
+<rect width="480.88" height="12" x="3.12" y="0" class="todo"><title>1541 · 99.36%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="7.50">0.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">9</tspan> · <tspan class="todo">1542</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">10</tspan> · <tspan class="todo">1541</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="1.13" height="12" x="0" y="0" class="named"><title>1 KB · 0.23%</title></rect>
-<rect width="482.87" height="12" x="1.13" y="0" class="todo"><title>618 KB · 99.77%</title></rect>
+<rect width="1.27" height="12" x="0" y="0" class="named"><title>2 KB · 0.26%</title></rect>
+<rect width="482.73" height="12" x="1.27" y="0" class="todo"><title>618 KB · 99.74%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="24.50">0.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">1 KB</tspan> · <tspan class="todo">618 KB</tspan></text>
+<text text-anchor="end" x="654" y="24.50">0.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">2 KB</tspan> · <tspan class="todo">618 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1487,7 +1487,7 @@
 <rect width="12" height="12" x="330" y="420" class="todo"><title>0x00490b20 nullsub_14 (1 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="420" class="todo"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="420" class="todo"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="420" class="todo"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="420" class="named"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="420" class="todo"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="420" class="todo"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="420" class="todo"><title>0x00490d50 D3DNormalise (114 bytes)</title></rect>
@@ -2404,7 +2404,7 @@
 <rect width="8.74" height="8.18" x="509.78" y="446.56" class="todo"><title>0x0047cc60 S_PauseMenu (178 bytes)</title></rect>
 <rect width="8.74" height="8.13" x="509.78" y="457.73" class="todo"><title>0x004397f0 CreateBubble (177 bytes)</title></rect>
 <rect width="8.74" height="8.13" x="509.78" y="468.87" class="todo"><title>0x00458ad0 phd_GetMatrixAngles (177 bytes)</title></rect>
-<rect width="8.58" height="8.29" x="521.52" y="241.73" class="todo"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
+<rect width="8.58" height="8.29" x="521.52" y="241.73" class="named"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
 <rect width="8.53" height="8.29" x="533.10" y="241.73" class="todo"><title>0x00420870 GetCorrectStashPoints (176 bytes)</title></rect>
 <rect width="8.53" height="8.29" x="544.63" y="241.73" class="todo"><title>0x00428160 lara_col_compress (176 bytes)</title></rect>
 <rect width="8.53" height="8.29" x="556.16" y="241.73" class="todo"><title>0x0042c3c0 LaraTestClimbPos (176 bytes)</title></rect>
