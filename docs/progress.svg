@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="66.64" height="12" x="0" y="0" class="named"><title>286 · 18.51%</title></rect>
-<rect width="0.23" height="12" x="66.64" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="66.87" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="290.56" height="12" x="69.44" y="0" class="todo"><title>1247 · 80.71%</title></rect>
+<rect width="66.87" height="12" x="0" y="0" class="named"><title>287 · 18.58%</title></rect>
+<rect width="0.23" height="12" x="66.87" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="67.11" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="290.33" height="12" x="69.67" y="0" class="todo"><title>1246 · 80.65%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">18.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">286</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1247</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">287</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1246</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="24.38" height="12" x="0" y="0" class="named"><title>42 KB · 6.77%</title></rect>
-<rect width="0.10" height="12" x="24.38" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="24.41" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="330.58" height="12" x="29.42" y="0" class="todo"><title>569 KB · 91.83%</title></rect>
+<rect width="24.43" height="12" x="0" y="0" class="named"><title>42 KB · 6.78%</title></rect>
+<rect width="0.10" height="12" x="24.43" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="24.45" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="330.53" height="12" x="29.47" y="0" class="todo"><title>569 KB · 91.81%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">6.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">42 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">569 KB</tspan></text>
@@ -833,7 +833,7 @@
 <rect width="12" height="12" x="210" y="225" class="todo"><title>0x0044d890 GetTargetOnLOS (1464 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="225" class="todo"><title>0x0044de50 ExplodeItemNode (259 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="225" class="named"><title>0x0044df60 ShutThatDoor (94 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="225" class="todo"><title>0x0044dfc0 OpenThatDoor (78 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="225" class="named"><title>0x0044dfc0 OpenThatDoor (78 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="225" class="todo"><title>0x0044e010 DoorControl (432 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="225" class="todo"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="225" class="todo"><title>0x0044e420 PushPullKickDoorControl (96 bytes)</title></rect>
@@ -2755,7 +2755,7 @@
 <rect width="5.59" height="5.46" x="607.70" y="356.78" class="todo"><title>0x0042eac0 WeaponObjectMesh (79 bytes)</title></rect>
 <rect width="5.59" height="5.46" x="607.70" y="365.25" class="named"><title>0x0046fe80 DXSetupDialog (79 bytes)</title></rect>
 <rect width="5.59" height="5.46" x="607.70" y="373.71" class="named"><title>0x004738b0 DXStopSample (79 bytes)</title></rect>
-<rect width="5.59" height="5.39" x="607.70" y="382.18" class="todo"><title>0x0044dfc0 OpenThatDoor (78 bytes)</title></rect>
+<rect width="5.59" height="5.39" x="607.70" y="382.18" class="named"><title>0x0044dfc0 OpenThatDoor (78 bytes)</title></rect>
 <rect width="5.59" height="5.32" x="607.70" y="390.57" class="todo"><title>0x0046d510 special3_control (77 bytes)</title></rect>
 <rect width="5.59" height="5.32" x="607.70" y="398.89" class="named"><title>0x0046d7b0 ACMSetVolume (77 bytes)</title></rect>
 <rect width="5.59" height="5.32" x="607.70" y="407.22" class="todo"><title>0x00491e50 AddStruct (77 bytes)</title></rect>

@@ -22,3 +22,19 @@ void ShutThatDoor(DOORPOS_DATA *d)
         }
     }
 }
+
+void OpenThatDoor(DOORPOS_DATA *d)
+{
+    CREATURE_INFO *cinfo;
+    sint16 slot;
+
+    if (d->floor) {
+        *d->floor = d->data;
+        if (d->block != NO_BOX) {
+            boxes[d->block].overlap_index &= ~BLOCKED;
+            cinfo = baddie_slots;
+            for (slot = 0; slot < NUM_SLOTS; slot++, cinfo++)
+                cinfo->LOT.target_box = NO_BOX;
+        }
+    }
+}

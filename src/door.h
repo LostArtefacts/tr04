@@ -10,5 +10,6 @@ typedef struct doorpos_data {
 } DOORPOS_DATA;
 
 void ShutThatDoor(DOORPOS_DATA *d);
+void OpenThatDoor(DOORPOS_DATA *d);
 
 #endif
