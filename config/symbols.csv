@@ -2617,6 +2617,7 @@ address,size,name,symbol
 0x00800180,1152,blood,_blood
 0x00800600,800,fire_spark,_fire_spark
 0x00800920,960,Bubbles,_Bubbles
+0x00800ce0,200,Gunflashes,_Gunflashes
 0x00800dc0,768,Drips,_Drips
 0x008010c0,4,FootPrintNum,_FootPrintNum
 0x008010e0,512,FootPrint,_FootPrint

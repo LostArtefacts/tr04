@@ -525,6 +525,34 @@ void LaraBubbles(ITEM_INFO *item)
     }
 }
 
+void TriggerGunflash(SVECTOR *pos)
+{
+    GUNFLASH_STRUCT *flash;
+    sint32 num;
+
+    flash = Gunflashes;
+    for (num = 0; num < 4; flash++, num++) {
+        if (!flash->on) {
+            phd_TranslateRel(pos->x, pos->y, pos->z);
+            phd_RotX(-0x3FFC);
+            flash->mx[M00] = phd_mxptr[M00];
+            flash->mx[M01] = phd_mxptr[M01];
+            flash->mx[M02] = phd_mxptr[M02];
+            flash->mx[M03] = phd_mxptr[M03];
+            flash->mx[M10] = phd_mxptr[M10];
+            flash->mx[M11] = phd_mxptr[M11];
+            flash->mx[M12] = phd_mxptr[M12];
+            flash->mx[M13] = phd_mxptr[M13];
+            flash->mx[M20] = phd_mxptr[M20];
+            flash->mx[M21] = phd_mxptr[M21];
+            flash->mx[M22] = phd_mxptr[M22];
+            flash->mx[M23] = phd_mxptr[M23];
+            flash->on = 1;
+            return;
+        }
+    }
+}
+
 void SetFadeClip(sint16 height, sint16 speed)
 {
     DestFadeScreenHeight = height;

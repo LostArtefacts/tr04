@@ -158,6 +158,11 @@ typedef struct drip_struct {
     uint8 Pad;
 } DRIP_STRUCT;
 
+typedef struct gunflash_struct {
+    sint32 mx[12];
+    sint16 on;
+} GUNFLASH_STRUCT;
+
 void TriggerShatterSmoke(sint32 x, sint32 y, sint32 z);
 void TriggerBlood(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 num);
 void CreateBubble(PHD_3DPOS *pos, sint16 room_number, sint32 size, sint32 biggest);
@@ -183,6 +188,7 @@ void TriggerGlobalFireFlame(void);
 void keep_those_fires_burning(void);
 void TriggerSmallSplash(sint32 x, sint32 y, sint32 z, sint32 num);
 void LaraBubbles(ITEM_INFO *item);
+void TriggerGunflash(SVECTOR *pos);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
@@ -210,6 +216,7 @@ extern BUBBLE_STRUCT Bubbles[40];
 extern sint32 next_bubble;
 extern DRIP_STRUCT Drips[32];
 extern sint32 next_drip;
+extern GUNFLASH_STRUCT Gunflashes[4];
 extern SHOCKWAVE_STRUCT ShockWaves[16];
 
 #endif

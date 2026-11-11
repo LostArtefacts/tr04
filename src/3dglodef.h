@@ -9,6 +9,13 @@ typedef struct phd_vector {
     sint32 z;
 } PHD_VECTOR;
 
+typedef struct svector {
+    sint16 x;
+    sint16 y;
+    sint16 z;
+    sint16 pad;
+} SVECTOR;
+
 typedef sint16 PHD_ANGLE;
 
 typedef struct cvector {
