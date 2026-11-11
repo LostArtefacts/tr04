@@ -20,6 +20,9 @@ void DSAdjustPitch(sint32 num, sint32 pitch);
 void DSAdjustPan(sint32 num, sint32 pan);
 uint8 InitSampleDecompress(void);
 uint8 FreeSampleDecompress(void);
+void DXStopSample(sint32 num);
+uint8 DSIsChannelPlaying(sint32 num);
+sint32 DSGetFreeChannel(void);
 void S_SoundStopAllSamples(void);
 
 extern LPDIRECTSOUNDBUFFER G_DSPrimary;

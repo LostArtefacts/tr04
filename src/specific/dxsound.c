@@ -101,3 +101,15 @@ uint8 FreeSampleDecompress(void)
     free(samples_buffer);
     return 1;
 }
+
+void DXStopSample(sint32 num)
+{
+    LPDIRECTSOUNDBUFFER buffer;
+
+    if (num >= 0 && (buffer = DS_Samples[num].buffer) != 0) {
+        DXAttempt(IDirectSoundBuffer_Stop(buffer));
+        DXAttempt(IDirectSoundBuffer_Release(buffer));
+        DS_Samples[num].playing = 0;
+        DS_Samples[num].buffer = 0;
+    }
+}
