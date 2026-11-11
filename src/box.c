@@ -76,6 +76,28 @@ sint32 ValidBox(ITEM_INFO *item, sint16 zone_number, sint16 box_number)
     return 1;
 }
 
+sint32 BadFloor(sint32 x, sint32 y, sint32 z, sint32 box_height, sint32 next_height, sint16 room_number, LOT_INFO *LOT)
+{
+    FLOOR_INFO *floor;
+    BOX_INFO *box;
+
+    floor = GetFloor(x, y, z, &room_number);
+    if (floor->box == NO_BOX)
+        return 1;
+    if (LOT->is_jumping)
+        return 0;
+    box = &boxes[floor->box];
+    if (box->overlap_index & LOT->block_mask)
+        return 1;
+    if (box_height - box->height > LOT->step || box_height - box->height < LOT->drop)
+        return 1;
+    if (box_height - box->height < -LOT->step && box->height > next_height)
+        return 1;
+    if (LOT->fly && y > box->height + LOT->fly)
+        return 1;
+    return 0;
+}
+
 void CreatureTilt(ITEM_INFO *item, sint16 angle)
 {
     angle = (angle << 2) - item->pos.z_rot;
