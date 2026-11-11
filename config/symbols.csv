@@ -2241,6 +2241,8 @@ address,size,name,symbol
 0x00672e60,4,DoFade,_DoFade
 0x007538f0,4,nTextures,_nTextures
 0x007538f4,4,Textures,_Textures
+0x00753900,8,frequency,_frequency
+0x00753908,8,counter,_counter
 0x00753910,4,DestVB,_DestVB
 0x00753918,4,D3DMProjection,_D3DMProjection
 0x00753958,4,nClippedPolys,_nClippedPolys
