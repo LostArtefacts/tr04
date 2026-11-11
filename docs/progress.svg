@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="116" height="12" x="0" y="0" class="named"><title>515 · 33.33%</title></rect>
-<rect width="0.45" height="12" x="116" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="116.45" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="227.50" height="12" x="120.50" y="0" class="todo"><title>1010 · 65.37%</title></rect>
+<rect width="116.23" height="12" x="0" y="0" class="named"><title>516 · 33.40%</title></rect>
+<rect width="0.45" height="12" x="116.23" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="116.68" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="227.27" height="12" x="120.73" y="0" class="todo"><title>1009 · 65.31%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">33.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">515</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1010</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">516</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1009</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="49.92" height="12" x="0" y="0" class="named"><title>89 KB · 14.34%</title></rect>
-<rect width="0.12" height="12" x="49.92" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="50.04" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="291.69" height="12" x="56.31" y="0" class="todo"><title>520 KB · 83.82%</title></rect>
+<rect width="50.12" height="12" x="0" y="0" class="named"><title>89 KB · 14.40%</title></rect>
+<rect width="0.12" height="12" x="50.12" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="50.24" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="291.50" height="12" x="56.50" y="0" class="todo"><title>519 KB · 83.76%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">89 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">520 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">89 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">519 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -629,7 +629,7 @@
 <rect width="12" height="12" x="150" y="165" class="todo"><title>0x00438ba0 TriggerShatterSmoke (369 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="165" class="named"><title>0x00438d20 GetFreeBlood (103 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="165" class="todo"><title>0x00438d90 UpdateBlood (362 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="165" class="todo"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="165" class="named"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="165" class="named"><title>0x00439060 GetFreeGunshell (131 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="165" class="todo"><title>0x004390f0 TriggerGunShell (588 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="165" class="todo"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
@@ -2116,7 +2116,7 @@
 <rect width="11.54" height="11.79" x="634.74" y="143.50" class="todo"><title>0x00423ff0 lara_col_poledown (352 bytes)</title></rect>
 <rect width="11.54" height="11.79" x="649.28" y="143.50" class="todo"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="11.51" height="11.79" x="663.83" y="143.50" class="todo"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
-<rect width="11.48" height="11.79" x="678.34" y="143.50" class="todo"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
+<rect width="11.48" height="11.79" x="678.34" y="143.50" class="named"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
 <rect width="11.38" height="11.79" x="692.81" y="143.50" class="todo"><title>0x00499670 Func499670 (347 bytes)</title></rect>
 <rect width="11.35" height="11.79" x="707.19" y="143.50" class="todo"><title>0x004952b0 SW_SetRenderStateFlags (346 bytes)</title></rect>
 <rect width="11.28" height="11.79" x="721.54" y="143.50" class="todo"><title>0x00457f30 FindPlinth (344 bytes)</title></rect>

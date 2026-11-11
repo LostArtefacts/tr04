@@ -305,6 +305,45 @@ sint32 GetFreeBlood(void)
     return min_life_num;
 }
 
+void TriggerBlood(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 num)
+{
+    BLOOD_STRUCT *bptr;
+    sint32 i, ang, speed, size;
+
+    for (i = 0; i < num; i++) {
+        bptr = &blood[GetFreeBlood()];
+        bptr->On = 1;
+        bptr->sShade = 0;
+        bptr->dShade = (GetRandomControl() & 0x3F) + 48;
+        bptr->ColFadeSpeed = 4;
+        bptr->FadeToBlack = 8;
+        bptr->Life = (GetRandomControl() & 7) + 24;
+        bptr->sLife = bptr->Life;
+        bptr->x = (GetRandomControl() & 0x1F) + x - 16;
+        bptr->y = (GetRandomControl() & 0x1F) + y - 16;
+        bptr->z = (GetRandomControl() & 0x1F) + z - 16;
+        if (angle == -1)
+            ang = GetRandomControl();
+        else
+            ang = (GetRandomControl() & 0x1F) + angle - 16;
+        ang &= 0xFFF;
+        speed = GetRandomControl() & 0xF;
+        bptr->Zvel = speed * rcossin_tbl[(ang << 1) + 1] >> 7;
+        bptr->Xvel = -(speed * rcossin_tbl[ang << 1]) >> 7;
+        bptr->Yvel = -128 - (GetRandomControl() & 0xFF);
+        bptr->Friction = 4;
+        bptr->RotAng = GetRandomControl() & 0xFFF;
+        if (GetRandomControl() & 1)
+            bptr->RotAdd = -64 - (GetRandomControl() & 0x3F);
+        else
+            bptr->RotAdd = (GetRandomControl() & 0x3F) + 64;
+        bptr->Gravity = (GetRandomControl() & 0x1F) + 31;
+        size = (GetRandomControl() & 7) + 8;
+        bptr->Size = bptr->sSize = size;
+        bptr->dSize = size >> 2;
+    }
+}
+
 sint32 GetFreeGunshell(void)
 {
     GUNSHELL_STRUCT *shell;
