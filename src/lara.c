@@ -124,6 +124,32 @@ sint32 LaraDeflectEdgeDuck(ITEM_INFO *item, COLL_INFO *coll)
     return 0;
 }
 
+void lara_as_crawlb(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0 || lara.water_status == LW_WADE) {
+        item->goal_anim_state = AS_ALL4S;
+        return;
+    }
+    if (input & IN_LOOK)
+        LookUpDown();
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 1;
+    lara.torso_x_rot = lara.torso_y_rot = 0;
+    camera.target_elevation = -23 * ONE_DEGREE;
+    if (input & IN_BACK) {
+        if (input & IN_RIGHT) {
+            lara.turn_rate -= LARA_TURN_RATE;
+            if (lara.turn_rate < -LARA_JUMP_TURN)
+                lara.turn_rate = -LARA_JUMP_TURN;
+        } else if (input & IN_LEFT) {
+            lara.turn_rate += LARA_TURN_RATE;
+            if (lara.turn_rate > LARA_JUMP_TURN)
+                lara.turn_rate = LARA_JUMP_TURN;
+        }
+    } else
+        item->goal_anim_state = AS_ALL4S;
+}
+
 sint32 LaraTestEdgeCatch(ITEM_INFO *item, COLL_INFO *coll, sint32 *edge)
 {
     sint32 hdif;
