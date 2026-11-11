@@ -39,5 +39,6 @@ void ControlTwoBlockPlatform(sint16 item_number);
 void ControlSpikeball(sint16 item_number);
 void Control4xFloorRoofBlade(sint16 item_number);
 void ControlBirdBlade(sint16 item_number);
+void ControlSethBlade(sint16 item_number);
 
 #endif
