@@ -21,6 +21,7 @@ void PulleyCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void SwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void CrowbarSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void FullBlockSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
+void CogSwitchControl(sint16 item_number);
 
 extern sint16 Switch2Bounds[12];
 extern PHD_VECTOR Switch2Pos;

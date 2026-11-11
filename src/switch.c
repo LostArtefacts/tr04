@@ -408,3 +408,29 @@ void FullBlockSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
         }
     }
 }
+
+void CogSwitchControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    AnimateItem(item);
+    if (item->current_anim_state == 1) {
+        if (item->goal_anim_state == 1 && !(input & IN_ACTION)) {
+            lara_item->goal_anim_state = AS_STOP;
+            item->goal_anim_state = 0;
+        }
+        if (lara_item->anim_number == ANIM_COGSWITCHL && lara_item->frame_number == anims[ANIM_COGSWITCHL].frame_base + 10) {
+            item = (ITEM_INFO *)lara.GeneralPtr;
+            item->item_flags[0] = 40;
+        }
+    } else if (item->frame_number == anims[item->anim_number].frame_end) {
+        item->current_anim_state = 0;
+        item->status = ITEM_INACTIVE;
+        RemoveActiveItem(item_number);
+        lara_item->anim_number = ANIM_STOP;
+        lara_item->frame_number = anims[ANIM_STOP].frame_base;
+        lara_item->current_anim_state = lara_item->goal_anim_state = AS_STOP;
+        lara.gun_status = LG_NO_ARMS;
+    }
+}
