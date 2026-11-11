@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="84.35" height="12" x="0" y="0" class="named"><title>362 · 23.43%</title></rect>
-<rect width="0.23" height="12" x="84.35" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="84.58" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="272.85" height="12" x="87.15" y="0" class="todo"><title>1171 · 75.79%</title></rect>
+<rect width="84.58" height="12" x="0" y="0" class="named"><title>363 · 23.50%</title></rect>
+<rect width="0.23" height="12" x="84.58" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="84.82" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="272.62" height="12" x="87.38" y="0" class="todo"><title>1170 · 75.73%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">23.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">362</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1171</tspan></text>
+<text text-anchor="end" x="540" y="7.50">23.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">363</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1170</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="30.21" height="12" x="0" y="0" class="named"><title>52 KB · 8.39%</title></rect>
-<rect width="0.10" height="12" x="30.21" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="30.23" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="324.75" height="12" x="35.25" y="0" class="todo"><title>559 KB · 90.21%</title></rect>
+<rect width="30.28" height="12" x="0" y="0" class="named"><title>52 KB · 8.41%</title></rect>
+<rect width="0.10" height="12" x="30.28" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="30.30" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="324.68" height="12" x="35.32" y="0" class="todo"><title>559 KB · 90.19%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">8.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">52 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">559 KB</tspan></text>
@@ -820,7 +820,7 @@
 <rect width="12" height="12" x="15" y="225" class="todo"><title>0x0044c320 ClipTarget (588 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="225" class="todo"><title>0x0044c570 FlipMap (248 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="225" class="todo"><title>0x0044c670 RemoveRoomFlipItems (119 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="225" class="todo"><title>0x0044c6f0 AddRoomFlipItems (123 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="225" class="named"><title>0x0044c6f0 AddRoomFlipItems (123 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="225" class="named"><title>0x0044c770 TriggerCDTrack (30 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="225" class="todo"><title>0x0044c790 TriggerNormalCDTrack (134 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="225" class="todo"><title>0x0044c820 CheckNoColFloorTriangle (169 bytes)</title></rect>
@@ -2561,7 +2561,7 @@
 <rect width="7.07" height="6.84" x="591.70" y="276.16" class="todo"><title>0x0046d560 special1_init (125 bytes)</title></rect>
 <rect width="7.01" height="6.84" x="601.77" y="276.16" class="named"><title>0x00450e60 GetBoundsAccurate (124 bytes)</title></rect>
 <rect width="6.96" height="6.84" x="611.79" y="276.16" class="named"><title>0x0042b7c0 set_arm_info (123 bytes)</title></rect>
-<rect width="6.96" height="6.84" x="621.74" y="276.16" class="todo"><title>0x0044c6f0 AddRoomFlipItems (123 bytes)</title></rect>
+<rect width="6.96" height="6.84" x="621.74" y="276.16" class="named"><title>0x0044c6f0 AddRoomFlipItems (123 bytes)</title></rect>
 <rect width="6.90" height="6.84" x="631.70" y="276.16" class="named"><title>0x00421880 LaraDeflectEdgeDuck (122 bytes)</title></rect>
 <rect width="6.90" height="6.84" x="641.60" y="276.16" class="todo"><title>0x00442550 AlertAllGuards (122 bytes)</title></rect>
 <rect width="6.90" height="6.84" x="651.50" y="276.16" class="todo"><title>0x00449390 UpdateSky (122 bytes)</title></rect>

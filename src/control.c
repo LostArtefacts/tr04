@@ -1,4 +1,5 @@
 #include "control.h"
+#include "objnums.h"
 #include "box.h"
 
 void AlterFloorHeight(ITEM_INFO *item, sint32 height)
@@ -214,6 +215,20 @@ sint32 LOS(GAME_VECTOR *start, GAME_VECTOR *target)
     if (!ClipTarget(start, target) || los1 != 1 || los2 != 1)
         return 0;
     return 1;
+}
+
+void AddRoomFlipItems(ROOM_INFO *r)
+{
+    ITEM_INFO *item;
+    sint16 item_num;
+
+    for (item_num = r->item_number; item_num != NO_ITEM; item_num = items[item_num].next_item) {
+        item = &items[item_num];
+        if (item->object_number == RAISING_BLOCK1 && item->item_flags[1])
+            AlterFloorHeight(item, -1024);
+        if (item->object_number == RAISING_BLOCK2 && item->item_flags[1])
+            AlterFloorHeight(item, -2048);
+    }
 }
 
 void TriggerCDTrack(sint16 value, sint16 flags, sint16 type)

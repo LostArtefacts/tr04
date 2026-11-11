@@ -68,6 +68,7 @@ sint16 GetDoor(FLOOR_INFO *floor);
 void TriggerCDTrack(sint16 value, sint16 flags, sint16 type);
 void AlterFloorHeight(ITEM_INFO *item, sint32 height);
 sint32 TriggerActive(ITEM_INFO *item);
+void AddRoomFlipItems(ROOM_INFO *r);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;
