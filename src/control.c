@@ -24,6 +24,63 @@ void AlterFloorHeight(ITEM_INFO *item, sint32 height)
     }
 }
 
+sint32 GetWaterHeight(sint32 x, sint32 y, sint32 z, sint16 room_number)
+{
+    sint32 x_floor, y_floor;
+    ROOM_INFO *r;
+    FLOOR_INFO *floor;
+    sint16 data;
+
+    r = &room[room_number];
+    do {
+        x_floor = (z - r->z) >> WALL_SHIFT;
+        y_floor = (x - r->x) >> WALL_SHIFT;
+        if (x_floor <= 0) {
+            x_floor = 0;
+            if (y_floor < 1)
+                y_floor = 1;
+            else if (y_floor > r->y_size - 2)
+                y_floor = r->y_size - 2;
+        } else if (x_floor >= r->x_size - 1) {
+            x_floor = r->x_size - 1;
+            if (y_floor < 1)
+                y_floor = 1;
+            else if (y_floor > r->y_size - 2)
+                y_floor = r->y_size - 2;
+        } else if (y_floor < 0)
+            y_floor = 0;
+        else if (y_floor >= r->y_size)
+            y_floor = r->y_size - 1;
+        floor = &r->floor[x_floor + y_floor * r->x_size];
+        data = GetDoor(floor);
+        if (data != NO_ROOM) {
+            room_number = data;
+            r = &room[data];
+        }
+    } while (data != NO_ROOM);
+    if (r->flags & ROOM_UNDERWATER) {
+        while (floor->sky_room != NO_ROOM) {
+            if (CheckNoColCeilingTriangle(floor, x, z) == 1)
+                break;
+            r = &room[floor->sky_room];
+            if (!(r->flags & ROOM_UNDERWATER))
+                return r->minfloor;
+            floor = &r->floor[((z - r->z) >> WALL_SHIFT) + ((x - r->x) >> WALL_SHIFT) * r->x_size];
+        }
+        return r->maxceiling;
+    } else {
+        while (floor->pit_room != NO_ROOM) {
+            if (CheckNoColFloorTriangle(floor, x, z) == 1)
+                break;
+            r = &room[floor->pit_room];
+            if (r->flags & ROOM_UNDERWATER)
+                return r->maxceiling;
+            floor = &r->floor[((z - r->z) >> WALL_SHIFT) + ((x - r->x) >> WALL_SHIFT) * r->x_size];
+        }
+    }
+    return NO_HEIGHT;
+}
+
 sint16 GetDoor(FLOOR_INFO *floor)
 {
     sint16 *data;
