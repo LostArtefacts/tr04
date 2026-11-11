@@ -44,5 +44,6 @@ void DartsControl(sint16 item_number);
 void DartEmitterControl(sint16 item_number);
 void MineCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void ControlRaisingBlock(sint16 item_number);
+void FallingSquishyBlockCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif

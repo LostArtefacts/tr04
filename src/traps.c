@@ -747,6 +747,31 @@ void ControlFallingSquishyBlock(sint16 item_number)
     }
 }
 
+void FallingSquishyBlockCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint32 i;
+
+    item = &items[item_number];
+    if (TestBoundsCollide(item, l, coll->radius) && TestCollision(item, l)) {
+        if (item->frame_number - anims[item->anim_number].frame_base > 8) {
+            if (l->hit_points > 0)
+                ItemPushLara(item, l, coll, 0, 1);
+        } else {
+            item->frame_number += 2;
+            l->hit_points = 0;
+            l->current_anim_state = AS_DEATH;
+            l->goal_anim_state = AS_DEATH;
+            l->anim_number = ANIM_FBLOCK_DEATH;
+            l->frame_number = anims[ANIM_FBLOCK_DEATH].frame_base + 50;
+            l->fallspeed = 0;
+            l->speed = 0;
+            for (i = 0; i < 12; i++)
+                TriggerBlood(l->pos.x_pos, l->pos.y_pos - 128, l->pos.z_pos, GetRandomControl() << 1, 3);
+        }
+    }
+}
+
 void MineCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
 {
     ITEM_INFO *item;

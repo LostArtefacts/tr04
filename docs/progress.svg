@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="111.27" height="12" x="0" y="0" class="named"><title>494 · 31.97%</title></rect>
-<rect width="0.45" height="12" x="111.27" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="111.72" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="232.23" height="12" x="115.77" y="0" class="todo"><title>1031 · 66.73%</title></rect>
+<rect width="111.50" height="12" x="0" y="0" class="named"><title>495 · 32.04%</title></rect>
+<rect width="0.45" height="12" x="111.50" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="111.95" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="232" height="12" x="116" y="0" class="todo"><title>1030 · 66.67%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">32.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">494</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1031</tspan></text>
+<text text-anchor="end" x="528" y="7.50">32.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">495</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1030</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="48.16" height="12" x="0" y="0" class="named"><title>86 KB · 13.84%</title></rect>
-<rect width="0.12" height="12" x="48.16" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="48.28" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="293.45" height="12" x="54.55" y="0" class="todo"><title>523 KB · 84.32%</title></rect>
+<rect width="48.30" height="12" x="0" y="0" class="named"><title>86 KB · 13.88%</title></rect>
+<rect width="0.12" height="12" x="48.30" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="48.42" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="293.31" height="12" x="54.69" y="0" class="todo"><title>523 KB · 84.29%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">86 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">523 KB</tspan></text>
@@ -232,7 +232,7 @@
 <rect width="12" height="12" x="195" y="45" class="nonmatching"><title>0x00417100 ControlSethBlade (253 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="45" class="todo"><title>0x00417200 ControlLRSquishyBlock (266 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="45" class="named"><title>0x00417310 ControlFallingSquishyBlock (136 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="45" class="todo"><title>0x004173a0 FallingSquishyBlockCollision (246 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="45" class="named"><title>0x004173a0 FallingSquishyBlockCollision (246 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="45" class="todo"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="45" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="45" class="todo"><title>0x00417db0 ControlMineHelicopter (524 bytes)</title></rect>
@@ -2251,7 +2251,7 @@
 <rect width="10" height="9.55" x="470.13" y="427.36" class="named"><title>0x004259c0 LaraSlideEdgeJump (247 bytes)</title></rect>
 <rect width="10" height="9.55" x="470.13" y="439.91" class="named"><title>0x004320b0 LaraSurfaceCollision (247 bytes)</title></rect>
 <rect width="10" height="9.55" x="470.13" y="452.45" class="todo"><title>0x00441f80 CreatureFloat (247 bytes)</title></rect>
-<rect width="9.94" height="9.57" x="483.13" y="185.62" class="todo"><title>0x004173a0 FallingSquishyBlockCollision (246 bytes)</title></rect>
+<rect width="9.94" height="9.57" x="483.13" y="185.62" class="named"><title>0x004173a0 FallingSquishyBlockCollision (246 bytes)</title></rect>
 <rect width="9.94" height="9.57" x="496.07" y="185.62" class="todo"><title>0x00459640 ModelRigidRope (246 bytes)</title></rect>
 <rect width="9.90" height="9.57" x="509.01" y="185.62" class="named"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
 <rect width="9.86" height="9.57" x="521.91" y="185.62" class="todo"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
