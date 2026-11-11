@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="71.07" height="12" x="0" y="0" class="named"><title>305 · 19.74%</title></rect>
-<rect width="0.23" height="12" x="71.07" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="71.30" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="286.14" height="12" x="73.86" y="0" class="todo"><title>1228 · 79.48%</title></rect>
+<rect width="71.30" height="12" x="0" y="0" class="named"><title>306 · 19.81%</title></rect>
+<rect width="0.23" height="12" x="71.30" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="71.53" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="285.90" height="12" x="74.10" y="0" class="todo"><title>1227 · 79.42%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">19.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">305</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1228</tspan></text>
+<text text-anchor="end" x="540" y="7.50">19.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">306</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1227</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="25.86" height="12" x="0" y="0" class="named"><title>45 KB · 7.18%</title></rect>
-<rect width="0.10" height="12" x="25.86" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="25.89" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="329.10" height="12" x="30.90" y="0" class="todo"><title>567 KB · 91.42%</title></rect>
+<rect width="25.91" height="12" x="0" y="0" class="named"><title>45 KB · 7.20%</title></rect>
+<rect width="0.10" height="12" x="25.91" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="25.94" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="329.04" height="12" x="30.96" y="0" class="todo"><title>567 KB · 91.40%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">7.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">45 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">567 KB</tspan></text>
@@ -777,7 +777,7 @@
 <rect width="12" height="12" x="120" y="210" class="named"><title>0x00446cf0 FindGridShift (47 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="210" class="todo"><title>0x00446d20 CollideStaticObjects (585 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="210" class="named"><title>0x00446f70 ShiftItem (55 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="210" class="todo"><title>0x00446fb0 UpdateLaraRoom (94 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="210" class="named"><title>0x00446fb0 UpdateLaraRoom (94 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="210" class="todo"><title>0x00447010 GetTiltType (412 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="210" class="todo"><title>0x004471b0 LaraBaddieCollision (689 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="210" class="todo"><title>0x00447470 CreatureCollision (377 bytes)</title></rect>
@@ -2674,7 +2674,7 @@
 <rect width="5.91" height="6.22" x="652.71" y="304.64" class="todo"><title>0x004037b0 InitialiseLocustEmitter (95 bytes)</title></rect>
 <rect width="5.91" height="6.22" x="661.62" y="304.64" class="todo"><title>0x00476410 S_GetUVRotateTextures (95 bytes)</title></rect>
 <rect width="5.84" height="6.22" x="670.53" y="304.64" class="named"><title>0x00431c80 lara_as_surfback (94 bytes)</title></rect>
-<rect width="5.84" height="6.22" x="679.37" y="304.64" class="todo"><title>0x00446fb0 UpdateLaraRoom (94 bytes)</title></rect>
+<rect width="5.84" height="6.22" x="679.37" y="304.64" class="named"><title>0x00446fb0 UpdateLaraRoom (94 bytes)</title></rect>
 <rect width="5.84" height="6.22" x="688.22" y="304.64" class="named"><title>0x0044df60 ShutThatDoor (94 bytes)</title></rect>
 <rect width="5.84" height="6.22" x="697.06" y="304.64" class="todo"><title>0x00466f40 InitialiseJeep (94 bytes)</title></rect>
 <rect width="5.84" height="6.22" x="705.90" y="304.64" class="named"><title>0x00484b90 REG_ReadLong (94 bytes)</title></rect>

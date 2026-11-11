@@ -1344,7 +1344,7 @@ address,size,name,symbol
 0x00487c30,197,InitBinoculars,_InitBinoculars
 0x00487d00,1074,DrawBinoculars,_DrawBinoculars
 0x00488140,1292,S_DrawDrawSparks,_S_DrawDrawSparks
-0x00488650,63,Func488650,
+0x00488650,63,Func488650,_Func488650
 0x00488690,689,ClipLine,_ClipLine
 0x00488950,2568,DrawFlatSky,_DrawFlatSky
 0x00489360,278,ClipCheckPoint,_ClipCheckPoint
