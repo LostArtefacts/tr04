@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="142.59" height="12" x="0" y="0" class="named"><title>645 · 41.69%</title></rect>
-<rect width="0.44" height="12" x="142.59" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="143.03" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="194.32" height="12" x="147.68" y="0" class="todo"><title>879 · 56.82%</title></rect>
+<rect width="142.81" height="12" x="0" y="0" class="named"><title>646 · 41.76%</title></rect>
+<rect width="0.44" height="12" x="142.81" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="143.26" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="194.10" height="12" x="147.90" y="0" class="todo"><title>878 · 56.76%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">41.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">645</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">879</tspan></text>
+<text text-anchor="end" x="522" y="7.50">41.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">646</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">878</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="59" height="12" x="0" y="0" class="named"><title>107 KB · 17.25%</title></rect>
-<rect width="0.12" height="12" x="59" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="59.12" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="275.63" height="12" x="66.37" y="0" class="todo"><title>500 KB · 80.59%</title></rect>
+<rect width="59.03" height="12" x="0" y="0" class="named"><title>107 KB · 17.26%</title></rect>
+<rect width="0.12" height="12" x="59.03" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="59.15" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="275.60" height="12" x="66.40" y="0" class="todo"><title>500 KB · 80.58%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">107 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">500 KB</tspan></text>
@@ -758,7 +758,7 @@
 <rect width="12" height="12" x="585" y="195" class="todo"><title>0x00442720 GetAITarget (831 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="195" class="todo"><title>0x00442a60 FindAITargetObject (469 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="195" class="named"><title>0x00442c40 SameZone (240 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="195" class="todo"><title>0x00442d30 CreatureYRot (54 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="195" class="named"><title>0x00442d30 CreatureYRot (54 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="195" class="todo"><title>0x00442d70 MoveCreature3DPos (249 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="195" class="todo"><title>0x00442e70 InitialiseCamera (200 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="195" class="todo"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
@@ -2866,7 +2866,7 @@
 <rect width="4.82" height="4.32" x="640.12" y="392.17" class="named"><title>0x0042cc80 lara_as_climbleft (54 bytes)</title></rect>
 <rect width="4.82" height="4.32" x="640.12" y="399.49" class="named"><title>0x0042d3d0 lara_as_climbright (54 bytes)</title></rect>
 <rect width="4.82" height="4.32" x="640.12" y="406.82" class="named"><title>0x00439e00 SetScreenFadeIn (54 bytes)</title></rect>
-<rect width="4.82" height="4.32" x="640.12" y="414.14" class="todo"><title>0x00442d30 CreatureYRot (54 bytes)</title></rect>
+<rect width="4.82" height="4.32" x="640.12" y="414.14" class="named"><title>0x00442d30 CreatureYRot (54 bytes)</title></rect>
 <rect width="4.82" height="4.32" x="640.12" y="421.46" class="named"><title>0x00490f40 init_game_malloc (54 bytes)</title></rect>
 <rect width="4.82" height="4.24" x="640.12" y="428.79" class="named"><title>0x004275a0 lara_as_swandive (53 bytes)</title></rect>
 <rect width="4.82" height="4.24" x="640.12" y="436.03" class="todo"><title>0x0042bbb0 undraw_pistol_mesh_right (53 bytes)</title></rect>

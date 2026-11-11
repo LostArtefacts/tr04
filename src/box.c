@@ -440,3 +440,13 @@ sint16 SameZone(CREATURE_INFO *creature, ITEM_INFO *target_item)
     target_zone = zone[target_item->box_number];
     return zone_number == target_zone;
 }
+
+void CreatureYRot(PHD_3DPOS *srcpos, sint16 angle, sint16 angadd)
+{
+    if (angle > angadd)
+        srcpos->y_rot += angadd;
+    else if (angle < -angadd)
+        srcpos->y_rot -= angadd;
+    else
+        srcpos->y_rot += angle;
+}
