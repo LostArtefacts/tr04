@@ -1140,8 +1140,7 @@ address,size,name,symbol
 0x0046e4d0,1009,ZClipper,_ZClipper
 0x0046e8d0,5386,XYUVGClipper,_XYUVGClipper
 0x0046fde0,89,visible_zclip,_visible_zclip
-0x0046fe39,7,CLSetup,_CLSetup
-0x0046fe40,30,Func46fe40,
+0x0046fe40,30,CLSetup,_CLSetup
 0x0046fe60,30,CLNoFMV,_CLNoFMV
 0x0046fe80,79,DXSetupDialog,_DXSetupDialog
 0x0046fed0,195,InitDSDevice,_InitDSDevice
