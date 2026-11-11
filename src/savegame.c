@@ -43,6 +43,15 @@ void WriteSG(void *pointer, sint32 size)
         *SGpoint++ = *data++;
 }
 
+void sgRestoreGame(void)
+{
+    OpenSaveGame(savegame.CurrentLevel & 0x7F, 0);
+    GameTimer = savegame.Game.Timer;
+    gfCurrentLevel = savegame.CurrentLevel & 0x7F;
+    RestoreLevelData(1);
+    RestoreLaraData(1);
+}
+
 void ReadSG(void *pointer, sint32 size)
 {
     char *data;
