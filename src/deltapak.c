@@ -375,6 +375,18 @@ void cutseq_kill_item(sint32 num)
     }
 }
 
+void cutseq_restore_item(sint32 num)
+{
+    sint32 i;
+
+    for (i = 0; i < level_items; i++) {
+        if (items[i].object_number == num) {
+            items[i].status = old_status_flags[numnailed];
+            numnailed++;
+        }
+    }
+}
+
 void force_sky_lightning(void)
 {
     LightningCount = (GetRandomDraw() & 0x1F) + 64;

@@ -31,7 +31,7 @@ extern sint16 troop_chat_ranges26[4];
 void frigup_lara(void);
 void do_key_meshswap(void);
 void cutseq_kill_item(sint32 num);
-ITEM_INFO *cutseq_restore_item(sint32 num);
+void cutseq_restore_item(sint32 num);
 void init_voncroy_meshbits(sint32 num);
 void DelsHandyTeleportLara(sint32 x, sint32 y, sint32 z, sint32 yrot);
 void nail_intelligent_object(sint16 num);
