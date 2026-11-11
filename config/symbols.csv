@@ -1124,8 +1124,7 @@ address,size,name,symbol
 0x0046d510,77,special3_control,_special3_control
 0x0046d560,125,special1_init,_special1_init
 0x0046d5e0,44,special1_end,_special1_end
-0x0046d610,140,S_CDPlay,_S_CDPlay
-0x0046d69c,12,Func46d69c,
+0x0046d610,152,S_CDPlay,_S_CDPlay
 0x0046d6b0,200,S_CDStop,_S_CDStop
 0x0046d77a,12,Func46d77a,
 0x0046d790,21,S_StartSyncedAudio,_S_StartSyncedAudio
@@ -2148,7 +2147,7 @@ address,size,name,symbol
 0x004bfc90,4,wav_format,_wav_format
 0x004bfca4,4,CurrentNotify,_CurrentNotify
 0x004bfe00,4,NotificationThreadHandle,_NotificationThreadHandle
-0x004bfe08,4,audio_cs,_audio_cs
+0x004bfe08,24,audio_cs,_audio_cs
 0x004bfe20,4,StreamSize,_StreamSize
 0x004bfe24,4,hACMDriverID,_hACMDriverID
 0x004bfe28,4,NotifySize,_NotifySize
@@ -2456,13 +2455,13 @@ address,size,name,symbol
 0x007fe210,4,FmvSceneTriggered,_FmvSceneTriggered
 0x007fe214,4,tiltyoff,_tiltyoff
 0x007fe218,4,flip_status,_flip_status
-0x007fe21c,,CurrentAtmosphere,_CurrentAtmosphere
+0x007fe21c,1,CurrentAtmosphere,_CurrentAtmosphere
 0x007fe248,4,trigger_index,_trigger_index
 0x007fe288,1,bVoncroyCutScene,_bVoncroyCutScene
 0x007fe28c,4,items,_items
 0x007fe290,4,height_type,_height_type
 0x007fe2e0,4,ClosestItem,_ClosestItem
-0x007fe2e4,,IsAtmospherePlaying,_IsAtmospherePlaying
+0x007fe2e4,1,IsAtmospherePlaying,_IsAtmospherePlaying
 0x007fe2e8,4,OutsideRoomOffsets,_OutsideRoomOffsets
 0x007fe330,,ClosestCoord,_ClosestCoord
 0x007fe380,4,ClosestDist,_ClosestDist
