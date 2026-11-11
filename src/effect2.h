@@ -115,6 +115,7 @@ extern sint32 number_dynamics;
 extern RIPPLE_STRUCT ripples[16];
 extern SPLASH_SETUP splash_setup;
 extern sint32 SplashCount;
+extern sint32 next_spark;
 extern SPARKS spark[256];
 
 #endif

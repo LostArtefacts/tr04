@@ -36,6 +36,46 @@ void DetatchSpark(sint32 num, sint32 type)
     }
 }
 
+sint32 GetFreeSpark(void)
+{
+    SPARKS *sptr;
+    sint32 i, free, min_life;
+
+    free = next_spark;
+    sptr = &spark[next_spark];
+    for (i = 0; i < 256; i++) {
+        if (sptr->On) {
+            if (free == 255) {
+                sptr = &spark[0];
+                free = 0;
+            } else {
+                free++;
+                sptr++;
+            }
+        } else {
+            next_spark = (free + 1) & 0xFF;
+            spark[free].extras = 0;
+            spark[free].Dynamic = -1;
+            spark[free].Def = (uint8)objects[DEFAULT_SPRITES].mesh_index;
+            return free;
+        }
+    }
+    free = 0;
+    min_life = 4095;
+    sptr = &spark[0];
+    for (i = 0; i < 256; sptr++, i++) {
+        if (sptr->Life < min_life && sptr->Dynamic == -1 && !(sptr->Flags & 0x20)) {
+            free = i;
+            min_life = sptr->Life;
+        }
+    }
+    next_spark = (free + 1) & 0xFF;
+    spark[free].extras = 0;
+    spark[free].Dynamic = -1;
+    spark[free].Def = (uint8)objects[DEFAULT_SPRITES].mesh_index;
+    return free;
+}
+
 void TriggerExplosionSmokeEnd(sint32 x, sint32 y, sint32 z, sint32 uw)
 {
     sint32 size;

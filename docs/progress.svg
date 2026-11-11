@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="103.39" height="12" x="0" y="0" class="named"><title>459 · 29.71%</title></rect>
-<rect width="0.45" height="12" x="103.39" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="103.84" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="241.23" height="12" x="106.77" y="0" class="todo"><title>1071 · 69.32%</title></rect>
+<rect width="103.61" height="12" x="0" y="0" class="named"><title>460 · 29.77%</title></rect>
+<rect width="0.45" height="12" x="103.61" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="104.06" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="241.01" height="12" x="106.99" y="0" class="todo"><title>1070 · 69.26%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">29.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">459</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1071</tspan></text>
+<text text-anchor="end" x="528" y="7.50">29.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">460</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1070</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="43.17" height="12" x="0" y="0" class="named"><title>77 KB · 12.40%</title></rect>
-<rect width="0.12" height="12" x="43.17" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="43.29" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="299.10" height="12" x="48.90" y="0" class="todo"><title>533 KB · 85.95%</title></rect>
+<rect width="43.29" height="12" x="0" y="0" class="named"><title>77 KB · 12.44%</title></rect>
+<rect width="0.12" height="12" x="43.29" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="43.41" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="298.97" height="12" x="49.03" y="0" class="todo"><title>533 KB · 85.91%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="24.50">12.4%</text>
+<text text-anchor="end" x="528" y="24.50">12.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">77 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">533 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -550,7 +550,7 @@
 <rect width="12" height="12" x="465" y="135" class="nonmatching"><title>0x004332c0 UpdateDebris (323 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="135" class="todo"><title>0x00433410 ShatterObject (2143 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="135" class="named"><title>0x00433c70 DetatchSpark (180 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="135" class="todo"><title>0x00433d30 GetFreeSpark (219 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="135" class="named"><title>0x00433d30 GetFreeSpark (219 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="135" class="todo"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="135" class="todo"><title>0x00434440 TriggerRicochetSpark (812 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="135" class="todo"><title>0x00434770 TriggerFlareSparks (627 bytes)</title></rect>
@@ -2290,7 +2290,7 @@
 <rect width="9.57" height="8.96" x="483.13" y="382.07" class="todo"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>
 <rect width="9.57" height="8.88" x="483.13" y="394.03" class="todo"><title>0x00473970 DXStartSample (220 bytes)</title></rect>
 <rect width="9.57" height="8.84" x="483.13" y="405.92" class="todo"><title>0x0040fcf0 ControlGodHead (219 bytes)</title></rect>
-<rect width="9.57" height="8.84" x="483.13" y="417.76" class="todo"><title>0x00433d30 GetFreeSpark (219 bytes)</title></rect>
+<rect width="9.57" height="8.84" x="483.13" y="417.76" class="named"><title>0x00433d30 GetFreeSpark (219 bytes)</title></rect>
 <rect width="9.57" height="8.80" x="483.13" y="429.60" class="named"><title>0x00428350 lara_col_stepright (218 bytes)</title></rect>
 <rect width="9.57" height="8.80" x="483.13" y="441.40" class="todo"><title>0x004538a0 InitialiseEffects (218 bytes)</title></rect>
 <rect width="9.57" height="8.80" x="483.13" y="453.20" class="todo"><title>0x0046b140 frigup_lara (218 bytes)</title></rect>
