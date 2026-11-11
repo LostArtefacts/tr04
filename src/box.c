@@ -3,6 +3,7 @@
 #include "lara.h"
 #include "control.h"
 #include "draw.h"
+#include "objnums.h"
 #include "specific/function_stubs.h"
 
 #define ESCAPE_DIST (WALL_L * 5)
@@ -306,6 +307,61 @@ void CreatureUnderwater(ITEM_INFO *item, sint32 depth)
         else if (item->pos.x_rot > 0)
             item->pos.x_rot = 0;
     }
+}
+
+sint32 CreatureVault(sint16 item_number, sint16 angle, sint32 vault, sint32 shift)
+{
+    ITEM_INFO *item;
+    sint32 y, xx, yy, x_floor, y_floor;
+    sint16 room_number;
+
+    item = &items[item_number];
+    xx = item->pos.z_pos >> WALL_SHIFT;
+    yy = item->pos.x_pos >> WALL_SHIFT;
+    y = item->pos.y_pos;
+    room_number = item->room_number;
+    CreatureAnimation(item_number, angle, 0);
+    if (item->floor > y + 1152)
+        vault = 0;
+    else if (item->floor > y + 896)
+        vault = -4;
+    else if (item->floor > y + 640 && item->object_number == VON_CROY)
+        vault = -3;
+    else if (item->floor > y + 384 && item->object_number == VON_CROY)
+        vault = -2;
+    else if (item->pos.y_pos > y - 384)
+        return 0;
+    else if (item->pos.y_pos > y - 640)
+        vault = 2;
+    else if (item->pos.y_pos > y - 896)
+        vault = 3;
+    else if (item->pos.y_pos > y - 1152)
+        vault = 4;
+    x_floor = item->pos.z_pos >> WALL_SHIFT;
+    y_floor = item->pos.x_pos >> WALL_SHIFT;
+    if (xx == x_floor) {
+        if (yy == y_floor)
+            return 0;
+        if (yy < y_floor) {
+            item->pos.y_rot = 0x4000;
+            item->pos.x_pos = (y_floor << WALL_SHIFT) - shift;
+        } else {
+            item->pos.y_rot = -0x4000;
+            item->pos.x_pos = (yy << WALL_SHIFT) + shift;
+        }
+    } else if (yy == y_floor) {
+        if (xx < x_floor) {
+            item->pos.y_rot = 0;
+            item->pos.z_pos = (x_floor << WALL_SHIFT) - shift;
+        } else {
+            item->pos.y_rot = -0x8000;
+            item->pos.z_pos = (xx << WALL_SHIFT) + shift;
+        }
+    }
+    item->pos.y_pos = item->floor = y;
+    if (vault)
+        ItemNewRoom(item_number, room_number);
+    return vault;
 }
 
 void AlertNearbyGuards(ITEM_INFO *item)
