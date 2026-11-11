@@ -51,5 +51,6 @@ void sgSaveGame(void);
 void SaveHubData(sint32 index);
 void sgRestoreGame(void);
 void sgSaveLevel(void);
+void CreateCheckSum(void);
 
 #endif

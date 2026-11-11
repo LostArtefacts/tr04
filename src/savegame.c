@@ -27,6 +27,20 @@ void sgSaveGame(void)
     CreateCheckSum();
 }
 
+void CreateCheckSum(void)
+{
+    sint8 *ptr;
+    sint8 checksum;
+    sint32 i;
+
+    ptr = (sint8 *)&savegame;
+    savegame.Checksum = 0;
+    checksum = 0;
+    for (i = 0; i < sizeof(SAVEGAME_INFO); i++)
+        checksum += *ptr++;
+    savegame.Checksum = -checksum;
+}
+
 void SaveHubData(sint32 index)
 {
     savegame.HubSizes[index] = (uint16)(SGcount - savegame.HubOffsets[index]);
