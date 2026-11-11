@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="108.79" height="12" x="0" y="0" class="named"><title>483 · 31.26%</title></rect>
-<rect width="0.45" height="12" x="108.79" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="109.24" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="235.83" height="12" x="112.17" y="0" class="todo"><title>1047 · 67.77%</title></rect>
+<rect width="109.02" height="12" x="0" y="0" class="named"><title>484 · 31.33%</title></rect>
+<rect width="0.45" height="12" x="109.02" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="109.47" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="235.60" height="12" x="112.40" y="0" class="todo"><title>1046 · 67.70%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">31.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">483</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1047</tspan></text>
+<text text-anchor="end" x="528" y="7.50">31.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">484</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1046</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="46.15" height="12" x="0" y="0" class="named"><title>82 KB · 13.26%</title></rect>
-<rect width="0.12" height="12" x="46.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="46.28" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="296.11" height="12" x="51.89" y="0" class="todo"><title>528 KB · 85.09%</title></rect>
+<rect width="46.22" height="12" x="0" y="0" class="named"><title>82 KB · 13.28%</title></rect>
+<rect width="0.12" height="12" x="46.22" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="46.34" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="296.04" height="12" x="51.96" y="0" class="todo"><title>528 KB · 85.07%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">82 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">528 KB</tspan></text>
@@ -228,7 +228,7 @@
 <rect width="12" height="12" x="135" y="45" class="todo"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="45" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="45" class="named"><title>0x00417020 ControlMovingBlade (83 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="45" class="todo"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="45" class="named"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="45" class="todo"><title>0x00417100 ControlSethBlade (253 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="45" class="todo"><title>0x00417200 ControlLRSquishyBlock (266 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="45" class="todo"><title>0x00417310 ControlFallingSquishyBlock (136 bytes)</title></rect>
@@ -2583,7 +2583,7 @@
 <rect width="7.01" height="6.51" x="631.42" y="276.43" class="named"><title>0x00432720 lara_as_glide (118 bytes)</title></rect>
 <rect width="7.01" height="6.51" x="641.43" y="276.43" class="todo"><title>0x00458690 PuzzleDone (118 bytes)</title></rect>
 <rect width="7.01" height="6.51" x="651.44" y="276.43" class="named"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>
-<rect width="6.95" height="6.51" x="661.44" y="276.43" class="todo"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
+<rect width="6.95" height="6.51" x="661.44" y="276.43" class="named"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
 <rect width="6.95" height="6.51" x="671.40" y="276.43" class="named"><title>0x004476d0 TrapCollision (117 bytes)</title></rect>
 <rect width="6.89" height="6.51" x="681.35" y="276.43" class="todo"><title>0x00419560 InitialiseVoncroy (116 bytes)</title></rect>
 <rect width="6.89" height="6.51" x="691.24" y="276.43" class="todo"><title>0x0046d1f0 handle_lara_chatting (116 bytes)</title></rect>

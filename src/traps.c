@@ -303,3 +303,18 @@ void ControlMovingBlade(sint16 item_number)
     } else
         item->frame_number = anims[item->anim_number].frame_base;
 }
+
+void ControlPlinthBlade(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        if (item->frame_number == anims[item->anim_number].frame_end)
+            item->item_flags[3] = 0;
+        else
+            item->item_flags[3] = 200;
+        AnimateItem(item);
+    } else
+        item->frame_number = anims[item->anim_number].frame_base;
+}

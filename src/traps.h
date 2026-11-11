@@ -24,5 +24,6 @@ void ControlStargate(sint16 item_number);
 void ControlSmashableBikeWall(sint16 item_number);
 void ControlCatwalkBlade(sint16 item_number);
 void ControlMovingBlade(sint16 item_number);
+void ControlPlinthBlade(sint16 item_number);
 
 #endif
