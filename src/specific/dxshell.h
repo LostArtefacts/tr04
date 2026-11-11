@@ -7,4 +7,6 @@
 
 sint32 DXAttempt(HRESULT r);
 
+extern uint8 keymap[256];
+
 #endif
