@@ -113,3 +113,17 @@ void DXStopSample(sint32 num)
         DS_Samples[num].buffer = 0;
     }
 }
+
+uint8 DSIsChannelPlaying(sint32 num)
+{
+    uint32 status;
+
+    if (DS_Samples[num].buffer) {
+        if (DXAttempt(IDirectSoundBuffer_GetStatus(DS_Samples[num].buffer, &status)) == DS_OK) {
+            if (status & DSBSTATUS_PLAYING)
+                return 1;
+            DXStopSample(num);
+        }
+    }
+    return 0;
+}
