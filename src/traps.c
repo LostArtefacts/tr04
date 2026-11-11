@@ -163,3 +163,14 @@ void LavaBurn(ITEM_INFO *item)
         }
     }
 }
+
+void TwoBlockPlatformFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
+{
+    if (OnTwoBlockPlatform(item, x, z)) {
+        if (y <= item->pos.y_pos + 32 && item->pos.y_pos < *height) {
+            *height = item->pos.y_pos;
+            OnObject = 1;
+            height_type = 0;
+        }
+    }
+}

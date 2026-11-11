@@ -16,5 +16,6 @@ void FallingBlockCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *
 void FallingBlock(sint16 item_number);
 void ControlFallingBlock2(sint16 item_number);
 void FallingBlockCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
+void TwoBlockPlatformFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height);
 
 #endif
