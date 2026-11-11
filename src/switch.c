@@ -4,6 +4,7 @@
 #include "objnums.h"
 #include "anim.h"
 #include "camera.h"
+#include "draw.h"
 #include "sound.h"
 #include "specific/3dmath.h"
 #include "lara.h"
@@ -33,6 +34,73 @@ void SwitchControl(sint16 item_number)
         item->timer = 0;
     }
     AnimateItem(item);
+}
+
+void SwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint16 *bounds;
+
+    item = &items[item_number];
+    if (((input & IN_ACTION) && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && lara.gun_status == LG_NO_ARMS && item->status == ITEM_INACTIVE && !(item->flags & IFL_INVISIBLE) && item->trigger_flags >= 0) || (lara.IsMoving && lara.GeneralPtr == (void *)item_number)) {
+        bounds = GetBoundsAccurate(item);
+        if (item->trigger_flags == 3 && item->current_anim_state == 1)
+            return;
+        SwitchBounds[0] = bounds[0] - 256;
+        SwitchBounds[1] = bounds[1] + 256;
+        if (item->trigger_flags) {
+            SwitchBounds[4] = bounds[4] - 512;
+            SwitchBounds[5] = bounds[5] + 512;
+            if (item->trigger_flags == 3)
+                SwitchPos.z = bounds[4] - 256;
+            else
+                SwitchPos.z = bounds[4] - 128;
+        } else {
+            SwitchBounds[4] = bounds[4] - 200;
+            SwitchBounds[5] = bounds[5] + 200;
+            SwitchPos.z = bounds[4] - 64;
+        }
+        if (TestLaraPosition(SwitchBounds, item, l)) {
+            if (MoveLaraPosition(&SwitchPos, item, l)) {
+                if (item->current_anim_state == 1) {
+                    if (item->trigger_flags) {
+                        l->anim_number = ANIM_HIDDENPICKUP;
+                        l->current_anim_state = AS_HIDDENPICKUP;
+                    } else {
+                        l->current_anim_state = AS_SWITCHOFF;
+                        l->anim_number = ANIM_SWITCHOFF;
+                    }
+                    item->goal_anim_state = 0;
+                } else {
+                    if (item->trigger_flags) {
+                        if (item->trigger_flags == 3)
+                            l->anim_number = ANIM_SMALLSWITCH;
+                        else {
+                            l->anim_number = ANIM_HIDDENPICKUP;
+                            l->current_anim_state = AS_HIDDENPICKUP;
+                        }
+                    } else {
+                        l->current_anim_state = AS_SWITCHON;
+                        l->anim_number = ANIM_SWITCHON;
+                    }
+                    item->goal_anim_state = 1;
+                }
+                l->frame_number = anims[l->anim_number].frame_base;
+                lara.IsMoving = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+                lara.head_x_rot = lara.head_y_rot = 0;
+                lara.torso_x_rot = lara.torso_y_rot = 0;
+                AddActiveItem(item_number);
+                item->status = ITEM_ACTIVE;
+                AnimateItem(item);
+            } else
+                lara.GeneralPtr = (void *)item_number;
+        } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+            lara.IsMoving = 0;
+            lara.gun_status = LG_NO_ARMS;
+        }
+    } else if (l->current_anim_state != AS_SWITCHON && l->current_anim_state != AS_SWITCHOFF)
+        ObjectCollision(item_number, l, coll);
 }
 
 void SwitchCollision2(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)

@@ -18,6 +18,7 @@ void FullBlockSwitchControl(sint16 item_number);
 void UnderwaterSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void RailSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void PulleyCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
+void SwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 extern sint16 Switch2Bounds[12];
 extern PHD_VECTOR Switch2Pos;
@@ -34,5 +35,7 @@ extern sint16 RailSwitchBounds2[12];
 extern sint16 PulleyBounds[12];
 extern PHD_VECTOR PulleyPos;
 extern PHD_VECTOR OldPickupPos;
+extern sint16 SwitchBounds[12];
+extern PHD_VECTOR SwitchPos;
 
 #endif

@@ -2019,6 +2019,7 @@ address,size,name,symbol
 0x004afe9c,24,UnderwaterSwitchBounds2,_UnderwaterSwitchBounds2
 0x004afeb8,12,UnderwaterSwitchPos,_UnderwaterSwitchPos
 0x004afec8,12,UnderwaterSwitchPos2,_UnderwaterSwitchPos2
+0x004afed4,24,SwitchBounds,_SwitchBounds
 0x004afeec,92,AccentTable,_AccentTable
 0x004aff48,80,ShadeFromTo,_ShadeFromTo
 0x004aff98,4,font_init,_font_init
@@ -2157,6 +2158,7 @@ address,size,name,symbol
 0x004bf6e8,4,bCheckTrigger,_bCheckTrigger
 0x004bf6ec,4,bUseSpotCam,_bUseSpotCam
 0x004bf6f0,4,bDisableLaraControl,_bDisableLaraControl
+0x004bf6f8,12,SwitchPos,_SwitchPos
 0x004bf704,1280,FontShades,_FontShades
 0x004bfc04,1,ScaleFlag,_ScaleFlag
 0x004bfc05,1,PulseCnt,_PulseCnt
