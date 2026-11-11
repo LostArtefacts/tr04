@@ -208,6 +208,43 @@ void eleventh_cutseq_init(void)
     cutseq_meshbits[6] &= ~0x80000000;
 }
 
+void eleventh_cutseq_control(void)
+{
+    sint32 frame;
+
+    frame = GLOBAL_cutseq_frame;
+    if (frame == 581 || frame == 1423 || frame == 1950)
+        cutseq_meshbits[3] |= 0x80000000;
+    if (frame == 694 || frame == 1460 || frame == 2251)
+        cutseq_meshbits[3] &= ~0x80000000;
+    if (frame == 671)
+        cutseq_meshbits[5] |= 0x80000000;
+    else {
+        if (frame == 763 || frame == 1201 || frame == 1668 || frame == 2383)
+            cutseq_meshbits[1] |= 0x80000000;
+        if (frame == 581 || frame == 1030 || frame == 1394 || frame == 1708)
+            cutseq_meshbits[1] &= ~0x80000000;
+        if (frame == 2280)
+            cutseq_meshbits[2] &= ~0x80000000;
+        else if (frame == 2790) {
+            cutseq_meshbits[4] |= 0x80000000;
+            cutseq_meshbits[6] |= 0x80000000;
+        } else {
+            if (frame >= 2536 && frame <= 2710) {
+                if (GetRandomControl() & 1) {
+                    TriggerDynamic(58672 - (GetRandomControl() & 0xFFF), -2816, 57865, 24, (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 128, GetRandomControl() & 0x3F);
+                }
+                TriggerDynamic(60672 - (GetRandomControl() & 0xFFF), -2816, 56865, 31, (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 128, GetRandomControl() & 0x3F);
+            }
+            if (frame == 2772)
+                SetScreenFadeOut(16, 1);
+        }
+    }
+    handle_lara_chatting(lara_chat_ranges11);
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 14, 2, ANIMATING8, captain_chat_ranges11);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void twelth_cutseq_init(void)
 {
     cutseq_kill_item(ANIMATING6);

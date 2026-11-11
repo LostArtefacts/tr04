@@ -125,5 +125,6 @@ void ninth_control(void);
 void fifteen_control(void);
 void sixteen_control(void);
 void tenth_cutseq_control(void);
+void eleventh_cutseq_control(void);
 
 #endif
