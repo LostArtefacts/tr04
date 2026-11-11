@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="41.24" height="12" x="0" y="0" class="named"><title>177 · 11.46%</title></rect>
-<rect width="0.23" height="12" x="41.24" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="41.48" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="316.66" height="12" x="43.34" y="0" class="todo"><title>1359 · 87.96%</title></rect>
+<rect width="41.48" height="12" x="0" y="0" class="named"><title>178 · 11.52%</title></rect>
+<rect width="0.23" height="12" x="41.48" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.86" height="12" x="41.71" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="316.43" height="12" x="43.57" y="0" class="todo"><title>1358 · 87.90%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">11.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">177</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1359</tspan></text>
+<text text-anchor="end" x="540" y="7.50">11.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">178</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1358</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="17.89" height="12" x="0" y="0" class="named"><title>31 KB · 4.97%</title></rect>
-<rect width="0.10" height="12" x="17.89" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="2.99" height="12" x="17.92" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="339.09" height="12" x="20.91" y="0" class="todo"><title>584 KB · 94.19%</title></rect>
+<rect width="17.94" height="12" x="0" y="0" class="named"><title>31 KB · 4.98%</title></rect>
+<rect width="0.10" height="12" x="17.94" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="2.99" height="12" x="17.97" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="339.04" height="12" x="20.96" y="0" class="todo"><title>584 KB · 94.18%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">5.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">31 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">584 KB</tspan></text>
@@ -515,7 +515,7 @@
 <rect width="12" height="12" x="690" y="120" class="nonmatching"><title>0x004317a0 OptomiseSkinningData (760 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="120" class="todo"><title>0x00431aa0 LaraSurface (367 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="120" class="named"><title>0x00431c10 lara_as_surfswim (112 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="120" class="todo"><title>0x00431c80 lara_as_surfback (94 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="120" class="named"><title>0x00431c80 lara_as_surfback (94 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="135" class="todo"><title>0x00431ce0 lara_as_surfleft (96 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="135" class="todo"><title>0x00431d40 lara_as_surfright (96 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="135" class="todo"><title>0x00431da0 lara_as_surftread (185 bytes)</title></rect>
@@ -2673,7 +2673,7 @@
 <rect width="5.97" height="6.22" x="643.74" y="304.64" class="named"><title>0x00473a50 CalcVolume (96 bytes)</title></rect>
 <rect width="5.91" height="6.22" x="652.71" y="304.64" class="todo"><title>0x004037b0 InitialiseLocustEmitter (95 bytes)</title></rect>
 <rect width="5.91" height="6.22" x="661.62" y="304.64" class="todo"><title>0x00476410 S_GetUVRotateTextures (95 bytes)</title></rect>
-<rect width="5.84" height="6.22" x="670.52" y="304.64" class="todo"><title>0x00431c80 lara_as_surfback (94 bytes)</title></rect>
+<rect width="5.84" height="6.22" x="670.52" y="304.64" class="named"><title>0x00431c80 lara_as_surfback (94 bytes)</title></rect>
 <rect width="5.84" height="6.22" x="679.37" y="304.64" class="todo"><title>0x00446fb0 UpdateLaraRoom (94 bytes)</title></rect>
 <rect width="5.84" height="6.22" x="688.21" y="304.64" class="todo"><title>0x0044df60 ShutThatDoor (94 bytes)</title></rect>
 <rect width="5.84" height="6.22" x="697.06" y="304.64" class="todo"><title>0x00466f40 InitialiseJeep (94 bytes)</title></rect>
