@@ -122,6 +122,10 @@ void RemoveActiveItem(sint16 item_num);
 void RemoveDrawnItem(sint16 item_num);
 void AddActiveItem(sint16 item_num);
 void ItemNewRoom(sint16 item_num, sint16 room_number);
+void InitialiseFXArray(int allocmem);
+sint16 CreateEffect(sint16 room_num);
+void KillEffect(sint16 fx_num);
+void EffectNewRoom(sint16 fx_num, sint16 room_num);
 
 extern ITEM_INFO *items;
 extern sint16 next_item_active;

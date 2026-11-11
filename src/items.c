@@ -1,10 +1,13 @@
 #include "items.h"
 #include "anim.h"
 #include "effect2.h"
+#include "effects.h"
 #include "lara.h"
 #include "room.h"
+#include "specific/function_stubs.h"
 
 extern sint16 next_item_free;
+extern sint16 next_fx_free;
 extern uint8 InItemControlLoop;
 extern sint16 ItemNewRooms[256][2];
 extern sint16 ItemNewRoomNo;
@@ -247,4 +250,19 @@ void ItemNewRoom(sint16 item_num, sint16 room_number)
     r = &room[room_number];
     item->next_item = r->item_number;
     r->item_number = item_num;
+}
+
+void InitialiseFXArray(int allocmem)
+{
+    int i;
+    FX_INFO *fx;
+
+    if (allocmem)
+        effects = (FX_INFO *)game_malloc(24 * sizeof(FX_INFO));
+    next_fx_active = NO_ITEM;
+    next_fx_free = 0;
+    fx = effects;
+    for (i = 1; i < 24; i++, fx++)
+        fx->next_fx = i;
+    fx->next_fx = NO_ITEM;
 }
