@@ -1978,6 +1978,10 @@ address,size,name,symbol
 0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition
 0x004ad1e8,16,left_hand,_left_hand
 0x004ad1f8,16,right_hand,_right_hand
+0x004ad328,12,FloorTrapDoorPos,_FloorTrapDoorPos
+0x004ad334,24,FloorTrapDoorBounds,_FloorTrapDoorBounds
+0x004ad350,12,CeilingTrapDoorPos,_CeilingTrapDoorPos
+0x004ad35c,24,CeilingTrapDoorBounds,_CeilingTrapDoorBounds
 0x004ad6c0,16,wildboar_bite,_wildboar_bite
 0x004ad6d0,2,WraithSpeed,_WraithSpeed
 0x004ad7d4,4,GlobalAlpha,_GlobalAlpha

@@ -4,6 +4,11 @@
 #include "items.h"
 #include "collide.h"
 
+extern PHD_VECTOR FloorTrapDoorPos;
+extern sint16 FloorTrapDoorBounds[12];
+extern PHD_VECTOR CeilingTrapDoorPos;
+extern sint16 CeilingTrapDoorBounds[12];
+
 void LaraBurn(void);
 void LavaBurn(ITEM_INFO *item);
 void CloseTrapDoor(ITEM_INFO *item);

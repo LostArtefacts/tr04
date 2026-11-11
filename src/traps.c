@@ -11,6 +11,10 @@
 #include "sphere.h"
 #include "anim.h"
 #include "camera.h"
+#include "effect2.h"
+#include "draw.h"
+#include "delstuff.h"
+#include "lara_states.h"
 #include "specific/3dmath.h"
 #include "specific/function_stubs.h"
 
@@ -29,6 +33,29 @@ void TrapDoorControl(sint16 item_number)
         OpenTrapDoor(item);
     else if (!item->current_anim_state && !item->item_flags[2])
         CloseTrapDoor(item);
+}
+
+void OpenTrapDoor(ITEM_INFO *item)
+{
+    ROOM_INFO *r;
+    FLOOR_INFO *floor;
+    uint16 pitsky;
+
+    pitsky = item->item_flags[3];
+    r = &room[item->room_number];
+    floor = &r->floor[((item->pos.z_pos - r->z) >> 10) + r->x_size * ((item->pos.x_pos - r->x) >> 10)];
+    if (item->pos.y_pos == r->minfloor) {
+        floor->pit_room = pitsky & 0xFF;
+        r = &room[floor->pit_room];
+        floor = &r->floor[((item->pos.z_pos - r->z) >> 10) + r->x_size * ((item->pos.x_pos - r->x) >> 10)];
+        floor->sky_room = pitsky >> 8;
+    } else {
+        floor->sky_room = pitsky >> 8;
+        r = &room[floor->sky_room];
+        floor = &r->floor[((item->pos.z_pos - r->z) >> 10) + r->x_size * ((item->pos.x_pos - r->x) >> 10)];
+        floor->pit_room = pitsky & 0xFF;
+    }
+    item->item_flags[2] = 0;
 }
 
 void FallingBlockCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
