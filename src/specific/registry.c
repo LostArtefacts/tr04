@@ -12,3 +12,8 @@ void REG_CloseKey(void)
 {
     RegCloseKey(phkResult);
 }
+
+void REG_WriteLong(char *SubKeyName, uint32 value)
+{
+    RegSetValueEx(phkResult, SubKeyName, 0, REG_DWORD, (CONST BYTE *)&value, sizeof(uint32));
+}

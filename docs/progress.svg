@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="4.37" height="12" x="0" y="0" class="named"><title>14 · 0.90%</title></rect>
-<rect width="479.63" height="12" x="4.37" y="0" class="todo"><title>1537 · 99.10%</title></rect>
+<rect width="4.68" height="12" x="0" y="0" class="named"><title>15 · 0.97%</title></rect>
+<rect width="479.32" height="12" x="4.68" y="0" class="todo"><title>1536 · 99.03%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">0.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">14</tspan> · <tspan class="todo">1537</tspan></text>
+<text text-anchor="end" x="654" y="7.50">1.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">15</tspan> · <tspan class="todo">1536</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="1.45" height="12" x="0" y="0" class="named"><title>2 KB · 0.30%</title></rect>
-<rect width="482.55" height="12" x="1.45" y="0" class="todo"><title>618 KB · 99.70%</title></rect>
+<rect width="1.48" height="12" x="0" y="0" class="named"><title>2 KB · 0.31%</title></rect>
+<rect width="482.52" height="12" x="1.48" y="0" class="todo"><title>618 KB · 99.69%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">2 KB</tspan> · <tspan class="todo">618 KB</tspan></text>
@@ -1387,7 +1387,7 @@
 <rect width="12" height="12" x="330" y="390" class="todo"><title>0x00484a20 CalcColorSplit (217 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="390" class="named"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="390" class="named"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="390" class="todo"><title>0x00484b40 REG_WriteLong (30 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="390" class="named"><title>0x00484b40 REG_WriteLong (30 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="390" class="todo"><title>0x00484b60 REG_WriteBool (42 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="390" class="todo"><title>0x00484b90 REG_ReadLong (94 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="390" class="todo"><title>0x00484bf0 REG_ReadBool (115 bytes)</title></rect>
@@ -3007,7 +3007,7 @@
 <rect width="3.46" height="3.49" x="678.75" y="421.97" class="todo"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
 <rect width="3.46" height="3.49" x="678.75" y="428.46" class="todo"><title>0x004728b0 InitBuckets (30 bytes)</title></rect>
 <rect width="3.46" height="3.49" x="678.75" y="434.95" class="todo"><title>0x00473390 DSChangeVolume (30 bytes)</title></rect>
-<rect width="3.46" height="3.49" x="678.75" y="441.43" class="todo"><title>0x00484b40 REG_WriteLong (30 bytes)</title></rect>
+<rect width="3.46" height="3.49" x="678.75" y="441.43" class="named"><title>0x00484b40 REG_WriteLong (30 bytes)</title></rect>
 <rect width="3.46" height="3.49" x="678.75" y="447.92" class="todo"><title>0x00490ee0 GetRandomControl (30 bytes)</title></rect>
 <rect width="3.46" height="3.49" x="678.75" y="454.40" class="todo"><title>0x00490f00 GetRandomDraw (30 bytes)</title></rect>
 <rect width="3.46" height="3.37" x="678.75" y="460.89" class="todo"><title>0x00427580 lara_as_special (29 bytes)</title></rect>
