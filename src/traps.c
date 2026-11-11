@@ -5,6 +5,23 @@
 #include "objnums.h"
 #include "control.h"
 
+void TrapDoorControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        if (!item->current_anim_state && item->trigger_flags >= 0)
+            item->goal_anim_state = 1;
+    } else if (item->current_anim_state == 1)
+        item->goal_anim_state = 0;
+    AnimateItem(item);
+    if (item->current_anim_state == 1 && item->item_flags[2])
+        OpenTrapDoor(item);
+    else if (!item->current_anim_state && !item->item_flags[2])
+        CloseTrapDoor(item);
+}
+
 void LaraBurn(void)
 {
     sint16 fx_number;

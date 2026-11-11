@@ -5,5 +5,8 @@
 
 void LaraBurn(void);
 void LavaBurn(ITEM_INFO *item);
+void CloseTrapDoor(ITEM_INFO *item);
+void OpenTrapDoor(ITEM_INFO *item);
+void TrapDoorControl(sint16 item_number);
 
 #endif
