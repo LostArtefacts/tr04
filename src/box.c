@@ -106,6 +106,31 @@ void CreatureJoint(ITEM_INFO *item, sint16 joint, sint16 required)
         creature->joint_rotation[joint] = -JOINT_ARC;
 }
 
+void AlertNearbyGuards(ITEM_INFO *item)
+{
+    sint32 slot;
+    CREATURE_INFO *cinfo;
+    ITEM_INFO *target;
+    sint32 x, y, z, distance;
+
+    cinfo = baddie_slots;
+    for (slot = 0; slot < NUM_SLOTS; slot++, cinfo++) {
+        if (cinfo->item_num == NO_ITEM)
+            continue;
+        target = &items[cinfo->item_num];
+        if (target->room_number == item->room_number) {
+            cinfo->alerted = 1;
+            continue;
+        }
+        x = (target->pos.x_pos - item->pos.x_pos) >> 6;
+        y = (target->pos.y_pos - item->pos.y_pos) >> 6;
+        z = (target->pos.z_pos - item->pos.z_pos) >> 6;
+        distance = x * x + y * y + z * z;
+        if (distance < 8000)
+            cinfo->alerted = 1;
+    }
+}
+
 sint16 AIGuard(CREATURE_INFO *creature)
 {
     sint32 random;

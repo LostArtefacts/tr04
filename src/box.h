@@ -129,6 +129,7 @@ sint32 EscapeBox(ITEM_INFO *item, ITEM_INFO *enemy, sint16 box_number);
 void TargetBox(LOT_INFO *LOT, sint16 box_number);
 sint32 UpdateLOT(LOT_INFO *LOT, sint32 expansion);
 sint32 ValidBox(ITEM_INFO *item, sint16 zone_number, sint16 box_number);
+void AlertNearbyGuards(ITEM_INFO *item);
 
 extern CREATURE_INFO *baddie_slots;
 
