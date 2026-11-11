@@ -266,3 +266,24 @@ void InitialiseFXArray(int allocmem)
         fx->next_fx = i;
     fx->next_fx = NO_ITEM;
 }
+
+sint16 CreateEffect(sint16 room_num)
+{
+    FX_INFO *fx;
+    ROOM_INFO *r;
+    sint16 fx_num;
+
+    fx_num = next_fx_free;
+    if (fx_num == NO_ITEM)
+        return fx_num;
+    fx = &effects[fx_num];
+    next_fx_free = fx->next_fx;
+    r = &room[room_num];
+    fx->room_number = room_num;
+    fx->next_fx = r->fx_number;
+    r->fx_number = fx_num;
+    fx->next_active = next_fx_active;
+    next_fx_active = fx_num;
+    fx->shade = 0x4210;
+    return fx_num;
+}
