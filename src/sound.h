@@ -3,6 +3,14 @@
 
 #include "3dglodef.h"
 
+enum sfx_options {
+    SFX_ALWAYS = 2
+};
+
+#define SFX_LARA_NO 2
+#define SFX_LARA_NO_FRENCH 348
+#define SFX_LARA_NO_JAPAN 349
+
 typedef struct sample_info {
     sint16 number;
     uint8 volume;

@@ -1,5 +1,6 @@
 #include "sound.h"
 #include "camera.h"
+#include "gameflow.h"
 #include "specific/3dmath.h"
 #include "specific/dxsound.h"
 #include "specific/function_stubs.h"
@@ -87,4 +88,16 @@ void SOUND_Init(void)
     for (i = 0; i < 32; i++)
         LaSlot[i].nSampleInfo = -1;
     sound_active = 1;
+}
+
+void SayNo(void)
+{
+    sint32 fx;
+
+    fx = SFX_LARA_NO;
+    if (Gameflow->Language == FRENCH)
+        fx = SFX_LARA_NO_FRENCH;
+    else if (Gameflow->Language == JAPAN)
+        fx = SFX_LARA_NO_JAPAN;
+    SoundEffect(fx, 0, SFX_ALWAYS);
 }
