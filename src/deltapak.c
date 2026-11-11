@@ -321,6 +321,15 @@ void twentytwo_end(void)
     trigger_item_in_room(39, DEMIGOD3);
 }
 
+void do_backpack_meshswap(void)
+{
+    sint16 *temp;
+
+    temp = lara.mesh_ptrs[LM_TORSO];
+    lara.mesh_ptrs[LM_TORSO] = meshes[objects[PISTOLS_ANIM].mesh_index + LM_TORSO * 2];
+    meshes[objects[PISTOLS_ANIM].mesh_index + LM_TORSO * 2] = temp;
+}
+
 void force_sky_lightning(void)
 {
     LightningCount = (GetRandomDraw() & 0x1F) + 64;
