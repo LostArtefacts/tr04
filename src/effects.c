@@ -137,6 +137,13 @@ void LaraLocation(ITEM_INFO *item)
     flipeffect = -1;
 }
 
+void LaraLocationPad(ITEM_INFO *item)
+{
+    flipeffect = -1;
+    lara.locationPad = TriggerTimer;
+    lara.location = TriggerTimer;
+}
+
 void lara_hands_free(ITEM_INFO *item)
 {
     lara.gun_status = LG_NO_ARMS;
