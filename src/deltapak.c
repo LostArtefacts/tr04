@@ -63,3 +63,8 @@ void twelth_cutseq_init(void)
 {
     cutseq_kill_item(ANIMATING6);
 }
+
+void twelth_cutseq_end(void)
+{
+    cutseq_restore_item(ANIMATING6);
+}
