@@ -198,6 +198,7 @@ void lara_as_dashdive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_hangturnl(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_hangturnr(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_monkey180(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_upjump(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
