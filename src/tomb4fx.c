@@ -33,6 +33,36 @@ void AddFire(sint32 x, sint32 y, sint32 z, sint32 size, sint16 room_number, sint
     }
 }
 
+sint32 GetFreeSmokeSpark(void)
+{
+    SMOKE_SPARKS *sptr;
+    sint32 min_life, min_life_num, free, i;
+
+    sptr = &smoke_spark[next_smoke_spark];
+    min_life = 4095;
+    min_life_num = 0;
+    for (free = next_smoke_spark, i = 0; i < 32; i++) {
+        if (sptr->On) {
+            if (sptr->Life < min_life) {
+                min_life_num = free;
+                min_life = sptr->Life;
+            }
+            if (free == 31) {
+                sptr = &smoke_spark[0];
+                free = 0;
+            } else {
+                free++;
+                sptr++;
+            }
+        } else {
+            next_smoke_spark = (free + 1) & 0x1F;
+            return free;
+        }
+    }
+    next_smoke_spark = (min_life_num + 1) & 0x1F;
+    return min_life_num;
+}
+
 void SetFadeClip(sint16 height, sint16 speed)
 {
     DestFadeScreenHeight = height;
