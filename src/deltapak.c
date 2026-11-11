@@ -24,3 +24,9 @@ void fourth_cutseq_init(void)
     lara.holster = LARA_HOLSTERS;
     draw_pistol_meshes(1);
 }
+
+void fourth_cutseq_end(void)
+{
+    trigger_item_in_room(101, ANIMATING9);
+    lara.keyitems |= 0xC00;
+}

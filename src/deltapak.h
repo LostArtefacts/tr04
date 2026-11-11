@@ -27,5 +27,6 @@ ITEM_INFO *find_a_fucking_item(sint32 object_number);
 void *cutseq_malloc(sint32 size);
 void finish_cutseq(void);
 void fourth_cutseq_init(void);
+void fourth_cutseq_end(void);
 
 #endif
