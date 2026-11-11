@@ -48,3 +48,8 @@ void lara_as_hangturnr(ITEM_INFO *item, COLL_INFO *coll)
     if (!(input & IN_RIGHT))
         item->goal_anim_state = AS_HANG2;
 }
+
+void lara_col_monkey180(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara_col_monkeyswing(item, coll);
+}
