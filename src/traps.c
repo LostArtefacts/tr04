@@ -204,6 +204,30 @@ sint32 OnTwoBlockPlatform(ITEM_INFO *item, sint32 x, sint32 z)
     return 0;
 }
 
+void ControlChain(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (item->trigger_flags) {
+        item->item_flags[2] = 1;
+        item->item_flags[3] = 75;
+        if (TriggerActive(item)) {
+            *(sint32 *)&item->item_flags[0] = 0x787E;
+            AnimateItem(item);
+            return;
+        }
+    } else {
+        item->item_flags[3] = 25;
+        if (TriggerActive(item)) {
+            *(sint32 *)&item->item_flags[0] = 0x780;
+            AnimateItem(item);
+            return;
+        }
+    }
+    *(sint32 *)&item->item_flags[0] = 0;
+}
+
 void ControlPlough(sint16 item_number)
 {
     ITEM_INFO *item;
