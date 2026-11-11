@@ -25,6 +25,8 @@ extern sint16 jeanyves_chat_ranges17[24];
 extern sint16 jeanyves_chat_ranges18[14];
 extern sint16 jeanyves_chat_ranges19[20];
 extern sint16 jeanyves_chat_ranges20[28];
+extern sint16 lara_chat_ranges24[16];
+extern sint16 troop_chat_ranges24[16];
 extern sint16 lara_chat_ranges25[14];
 extern sint16 troop_chat_ranges25[26];
 extern sint16 troop_chat_ranges26[4];
@@ -98,5 +100,6 @@ void special2_end(void);
 void special3_end(void);
 void special1_init(void);
 void special1_end(void);
+void twentyfour_control(void);
 
 #endif

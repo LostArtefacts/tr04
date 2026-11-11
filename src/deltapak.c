@@ -254,6 +254,18 @@ void twentyfour_init(void)
     draw_pistol_meshes(1);
 }
 
+void twentyfour_control(void)
+{
+    if (GLOBAL_cutseq_frame == 552) {
+        undraw_pistol_mesh_left(1);
+        undraw_pistol_mesh_right(1);
+        lara.holster = old_lara_holster;
+    }
+    handle_lara_chatting(lara_chat_ranges24);
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 14, 1, ANIMATING13, troop_chat_ranges24);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void twentyfour_end(void)
 {
     cutseq_restore_item(ANIMATING13);

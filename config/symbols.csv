@@ -2073,6 +2073,8 @@ address,size,name,symbol
 0x004b04dc,28,jeanyves_chat_ranges18,_jeanyves_chat_ranges18
 0x004b04f8,40,jeanyves_chat_ranges19,_jeanyves_chat_ranges19
 0x004b0520,56,jeanyves_chat_ranges20,_jeanyves_chat_ranges20
+0x004b0558,32,lara_chat_ranges24,_lara_chat_ranges24
+0x004b0578,32,troop_chat_ranges24,_troop_chat_ranges24
 0x004b0598,28,lara_chat_ranges25,_lara_chat_ranges25
 0x004b05b4,52,troop_chat_ranges25,_troop_chat_ranges25
 0x004b05e8,8,troop_chat_ranges26,_troop_chat_ranges26
