@@ -178,3 +178,16 @@ sint32 S_SoundPlaySampleLooped(sint32 num, uint16 volume, sint32 pitch, sint16 p
 {
     return DXStartSample(num, CalcVolume(volume), pitch, pan, DSBPLAY_LOOPING);
 }
+
+void DXFreeSounds(void)
+{
+    int i;
+
+    S_SoundStopAllSamples();
+    for (i = 0; i < 256; i++) {
+        if (DS_Buffers[i].buffer) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "SoundBuffer", DS_Buffers[i].buffer, IDirectSoundBuffer_Release(DS_Buffers[i].buffer));
+            DS_Buffers[i].buffer = 0;
+        }
+    }
+}
