@@ -1447,7 +1447,7 @@ address,size,name,symbol
 0x00491fc0,633,DXEnumDirectDraw,_DXEnumDirectDraw@16
 0x00492240,52,DXBitMask2ShiftCnt,_DXBitMask2ShiftCnt
 0x00492280,281,DXEnumDisplayModes,_DXEnumDisplayModes@8
-0x004923a0,70,BPPToDDBD,_BPPToDDBD
+0x004923a0,136,BPPToDDBD,_BPPToDDBD
 0x00492430,1262,DXEnumDirect3D,_DXEnumDirect3D@24
 0x00492920,426,DXEnumTextureFormats,_DXEnumTextureFormats@8
 0x00492ad0,101,DXEnumZBufferFormats,_DXEnumZBufferFormats@8
