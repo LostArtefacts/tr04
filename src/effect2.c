@@ -485,6 +485,11 @@ void KillAllCurrentItems(sint16 item_number)
     KillEverythingFlag = 1;
 }
 
+void KillEverything(void)
+{
+    KillEverythingFlag = 0;
+}
+
 void TriggerExplosionBubble(sint32 x, sint32 y, sint32 z, sint16 roomnum)
 {
     SPARKS *sptr;

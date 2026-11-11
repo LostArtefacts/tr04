@@ -106,6 +106,7 @@ void TriggerExplosionSmokeEnd(sint32 x, sint32 y, sint32 z, sint32 uw);
 void TriggerExplosionBubble(sint32 x, sint32 y, sint32 z, sint16 roomnum);
 void TriggerWaterfallMist(sint32 x, sint32 y, sint32 z, sint32 angle);
 void TriggerFireFlame(sint32 x, sint32 y, sint32 z, sint32 body_part, sint32 type);
+void KillEverything(void);
 
 extern sint32 wibble;
 extern sint32 KillEverythingFlag;

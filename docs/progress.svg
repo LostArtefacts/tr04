@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="102.94" height="12" x="0" y="0" class="named"><title>457 · 29.58%</title></rect>
-<rect width="0.45" height="12" x="102.94" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="103.39" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="241.69" height="12" x="106.31" y="0" class="todo"><title>1073 · 69.45%</title></rect>
+<rect width="103.16" height="12" x="0" y="0" class="named"><title>458 · 29.64%</title></rect>
+<rect width="0.45" height="12" x="103.16" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="103.61" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="241.46" height="12" x="106.54" y="0" class="todo"><title>1072 · 69.39%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">29.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">457</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1073</tspan></text>
+<text text-anchor="end" x="528" y="7.50">29.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">458</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1072</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="43.07" height="12" x="0" y="0" class="named"><title>77 KB · 12.38%</title></rect>
-<rect width="0.12" height="12" x="43.07" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="43.19" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="43.08" height="12" x="0" y="0" class="named"><title>77 KB · 12.38%</title></rect>
+<rect width="0.12" height="12" x="43.08" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="43.20" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
 <rect width="299.19" height="12" x="48.81" y="0" class="todo"><title>533 KB · 85.97%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">12.4%</text>
@@ -568,7 +568,7 @@
 <rect width="12" height="12" x="735" y="135" class="named"><title>0x00435c60 TriggerWaterfallMist (459 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="150" class="named"><title>0x00435e30 TriggerDartSmoke (528 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="150" class="named"><title>0x00436040 KillAllCurrentItems (11 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="150" class="todo"><title>0x00436050 KillEverything (11 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="150" class="named"><title>0x00436050 KillEverything (11 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="150" class="named"><title>0x00436060 TriggerExplosionBubble (320 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="150" class="todo"><title>0x004361a0 TriggerDynamic (163 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="150" class="todo"><title>0x00436250 TriggerDynamic_MIRROR (198 bytes)</title></rect>
@@ -3121,7 +3121,7 @@
 <rect width="2.55" height="1.78" x="716.41" y="446.37" class="todo"><title>0x004952a0 Func4952a0 (12 bytes)</title></rect>
 <rect width="2.55" height="1.62" x="716.41" y="451.15" class="named"><title>0x004328b0 lara_as_waterroll (11 bytes)</title></rect>
 <rect width="2.55" height="1.62" x="716.41" y="455.77" class="named"><title>0x00436040 KillAllCurrentItems (11 bytes)</title></rect>
-<rect width="2.55" height="1.62" x="716.41" y="460.38" class="todo"><title>0x00436050 KillEverything (11 bytes)</title></rect>
+<rect width="2.55" height="1.62" x="716.41" y="460.38" class="named"><title>0x00436050 KillEverything (11 bytes)</title></rect>
 <rect width="1.79" height="2.35" x="721.97" y="436.80" class="named"><title>0x00476a10 SetCullCW (11 bytes)</title></rect>
 <rect width="1.79" height="2.35" x="726.76" y="436.80" class="named"><title>0x00476a20 SetCullCCW (11 bytes)</title></rect>
 <rect width="1.61" height="2.35" x="731.55" y="436.80" class="named"><title>0x00426eb0 lara_as_splat (10 bytes)</title></rect>
