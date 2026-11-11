@@ -14,6 +14,7 @@
 #include "room.h"
 #include "tomb4fx.h"
 #include "gameflow.h"
+#include "scarab.h"
 
 sint32 ItemNearLara(PHD_3DPOS *pos, sint32 distance)
 {
@@ -213,6 +214,11 @@ void invisibility_off(ITEM_INFO *item)
 void reset_hair(ITEM_INFO *item)
 {
     InitialiseHair();
+}
+
+void ClearScarabsPatch(ITEM_INFO *item)
+{
+    ClearScarabs();
 }
 
 void MeshSwapToPour(ITEM_INFO *item)
