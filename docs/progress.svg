@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="128.83" height="12" x="0" y="0" class="named"><title>582 · 37.67%</title></rect>
-<rect width="0.44" height="12" x="128.83" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="129.27" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="208.08" height="12" x="133.92" y="0" class="todo"><title>940 · 60.84%</title></rect>
+<rect width="129.05" height="12" x="0" y="0" class="named"><title>583 · 37.73%</title></rect>
+<rect width="0.44" height="12" x="129.05" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="129.50" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="207.86" height="12" x="134.14" y="0" class="todo"><title>939 · 60.78%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">37.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">582</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">940</tspan></text>
+<text text-anchor="end" x="522" y="7.50">37.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">583</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">939</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.46" height="12" x="0" y="0" class="named"><title>101 KB · 16.22%</title></rect>
-<rect width="0.12" height="12" x="55.46" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="55.58" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="279.17" height="12" x="62.83" y="0" class="todo"><title>506 KB · 81.63%</title></rect>
+<rect width="55.48" height="12" x="0" y="0" class="named"><title>101 KB · 16.22%</title></rect>
+<rect width="0.12" height="12" x="55.48" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="55.60" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="279.15" height="12" x="62.85" y="0" class="todo"><title>506 KB · 81.62%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">101 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">506 KB</tspan></text>
@@ -1149,7 +1149,7 @@
 <rect width="12" height="12" x="450" y="315" class="todo"><title>0x0046c560 twenty_control (36 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="315" class="named"><title>0x0046c590 twenty_end (46 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="315" class="named"><title>0x0046c5c0 twentyone_init (18 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="315" class="todo"><title>0x0046c5e0 twentyone_end (34 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="315" class="named"><title>0x0046c5e0 twentyone_end (34 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="315" class="todo"><title>0x0046c610 twentythree_init (19 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="315" class="todo"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="315" class="todo"><title>0x0046c700 twentythree_end (37 bytes)</title></rect>
@@ -2984,7 +2984,7 @@
 <rect width="3.71" height="3.54" x="736.57" y="384.13" class="todo"><title>0x004535c0 InitialiseBurningFloor (34 bytes)</title></rect>
 <rect width="3.71" height="3.54" x="743.29" y="384.13" class="todo"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
 <rect width="3.37" height="3.89" x="675.50" y="390.67" class="todo"><title>0x0045f1c0 reset_cutseq_vars (34 bytes)</title></rect>
-<rect width="3.37" height="3.89" x="675.50" y="397.56" class="todo"><title>0x0046c5e0 twentyone_end (34 bytes)</title></rect>
+<rect width="3.37" height="3.89" x="675.50" y="397.56" class="named"><title>0x0046c5e0 twentyone_end (34 bytes)</title></rect>
 <rect width="3.37" height="3.89" x="675.50" y="404.45" class="todo"><title>0x0046c9f0 do_spade_meshswap (34 bytes)</title></rect>
 <rect width="3.37" height="3.89" x="675.50" y="411.34" class="todo"><title>0x0046ca50 do_key_meshswap (34 bytes)</title></rect>
 <rect width="3.37" height="3.89" x="675.50" y="418.23" class="todo"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>

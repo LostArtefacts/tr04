@@ -148,3 +148,9 @@ void twentyone_init(void)
     cutseq_kill_item(ANIMATING10);
     do_key_meshswap();
 }
+
+void twentyone_end(void)
+{
+    do_key_meshswap();
+    DelsHandyTeleportLara(33279, -4352, 40697, 21847);
+}
