@@ -320,6 +320,27 @@ sint32 OnTwoBlockPlatform(ITEM_INFO *item, sint32 x, sint32 z)
     return 0;
 }
 
+void ControlSlicerDicer(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint32 distance;
+    sint16 room_number;
+
+    item = &items[item_number];
+    SoundEffect(SFX_METAL_SCRAPE_LOOP, &item->pos, SFX_DEFAULT);
+    SoundEffect(SFX_METAL_SCRAPE_LOOP1, &item->pos, SFX_DEFAULT);
+    distance = 4608 * phd_cos(item->trigger_flags) >> 14;
+    item->pos.x_pos = 256 * item->item_flags[0] + (((rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * distance) >> 14);
+    item->pos.y_pos = 256 * item->item_flags[1] - (4608 * phd_sin(item->trigger_flags) >> 14);
+    item->pos.z_pos = 256 * item->item_flags[2] + (((rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * distance) >> 14);
+    item->trigger_flags += 170;
+    room_number = item->room_number;
+    GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (item->room_number != room_number)
+        ItemNewRoom(item_number, room_number);
+    AnimateItem(item);
+}
+
 void ControlChain(sint16 item_number)
 {
     ITEM_INFO *item;
