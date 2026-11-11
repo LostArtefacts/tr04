@@ -2,6 +2,7 @@
 #define DRAW_H
 
 #include "items.h"
+#include "room.h"
 
 void phd_PopMatrix_I(void);
 void phd_PushMatrix_I(void);
@@ -21,8 +22,9 @@ void phd_PutPolygons_I(sint16 *ptr, sint32 clip);
 void phd_RotYXZ_I(sint16 y, sint16 x, sint16 z);
 sint16 *GetBoundsAccurate(ITEM_INFO *item);
 void DrawRooms(sint16 CurrentRoom);
+void SetRoomBounds(sint16 *door, sint32 rn, ROOM_INFO *actualRoom);
 sint32 DrawPhaseGame(void);
-sint32 GetFrames(ITEM_INFO *item, sint16 *frmptr[], sint32 *rate);
+void GetRoomBounds(void);
 
 extern sint32 *IMptr;
 extern sint16 interpolated_bounds[6];
@@ -30,5 +32,15 @@ extern sint32 IM_rate;
 extern sint32 IM_frac;
 extern sint32 IMstack[768];
 extern sint16 no_rotation[12];
+extern sint32 draw_room_list[128];
+extern sint32 room_list_start;
+extern sint32 room_list_end;
+extern sint32 number_draw_rooms;
+extern sint16 draw_rooms[200];
+extern sint32 outside;
+extern sint32 outside_left;
+extern sint32 outside_right;
+extern sint32 outside_top;
+extern sint32 outside_bottom;
 
 #endif

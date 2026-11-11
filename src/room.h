@@ -8,7 +8,12 @@
 #define STEP_L (WALL_L / 4)
 
 enum room_flags {
-    ROOM_UNDERWATER = 1
+    ROOM_UNDERWATER = 0x1,
+    ROOM_OUTSIDE = 0x8,
+    ROOM_DYNAMIC_LIT = 0x10,
+    ROOM_NOT_INSIDE = 0x20,
+    ROOM_INSIDE = 0x40,
+    ROOM_NO_LENSFLARE = 0x80
 };
 
 typedef struct floor_info {

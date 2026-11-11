@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="95.77" height="12" x="0" y="0" class="named"><title>411 · 26.60%</title></rect>
-<rect width="0.23" height="12" x="95.77" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.80" height="12" x="96" y="0" class="nonmatching"><title>12 · 0.78%</title></rect>
-<rect width="261.20" height="12" x="98.80" y="0" class="todo"><title>1121 · 72.56%</title></rect>
+<rect width="96" height="12" x="0" y="0" class="named"><title>412 · 26.67%</title></rect>
+<rect width="0.23" height="12" x="96" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.80" height="12" x="96.23" y="0" class="nonmatching"><title>12 · 0.78%</title></rect>
+<rect width="260.97" height="12" x="99.03" y="0" class="todo"><title>1120 · 72.49%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">26.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">411</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">12</tspan> · <tspan class="todo">1121</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">412</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">12</tspan> · <tspan class="todo">1120</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="36.81" height="12" x="0" y="0" class="named"><title>63 KB · 10.22%</title></rect>
-<rect width="0.10" height="12" x="36.81" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.18" height="12" x="36.83" y="0" class="nonmatching"><title>9 KB · 1.44%</title></rect>
-<rect width="317.98" height="12" x="42.02" y="0" class="todo"><title>548 KB · 88.33%</title></rect>
+<rect width="37.07" height="12" x="0" y="0" class="named"><title>64 KB · 10.30%</title></rect>
+<rect width="0.10" height="12" x="37.07" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.18" height="12" x="37.09" y="0" class="nonmatching"><title>9 KB · 1.44%</title></rect>
+<rect width="317.72" height="12" x="42.28" y="0" class="todo"><title>547 KB · 88.26%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">10.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">63 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">548 KB</tspan></text>
+<text text-anchor="end" x="540" y="24.50">10.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">64 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">547 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -845,7 +845,7 @@
 <rect width="12" height="12" x="390" y="225" class="todo"><title>0x0044ec10 DrawRooms (1724 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="225" class="todo"><title>0x0044f2d0 S_InsertRoom (88 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="225" class="todo"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="225" class="todo"><title>0x0044f5d0 GetRoomBounds (448 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="225" class="named"><title>0x0044f5d0 GetRoomBounds (448 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="225" class="todo"><title>0x0044f790 SetRoomBounds (886 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="225" class="todo"><title>0x0044fb10 DrawEffect (232 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="225" class="todo"><title>0x0044fc00 calc_animating_item_clip_window (861 bytes)</title></rect>
@@ -2017,7 +2017,7 @@
 <rect width="13.31" height="13.13" x="414.62" y="112.59" class="todo"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
 <rect width="13.25" height="13.13" x="430.92" y="112.59" class="todo"><title>0x00442380 CreatureKill (450 bytes)</title></rect>
 <rect width="13.22" height="13.13" x="447.17" y="112.59" class="todo"><title>0x0042b430 TriggerUnderwaterExplosion (449 bytes)</title></rect>
-<rect width="13.19" height="13.13" x="463.39" y="112.59" class="todo"><title>0x0044f5d0 GetRoomBounds (448 bytes)</title></rect>
+<rect width="13.19" height="13.13" x="463.39" y="112.59" class="named"><title>0x0044f5d0 GetRoomBounds (448 bytes)</title></rect>
 <rect width="13.16" height="13.13" x="479.58" y="112.59" class="todo"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
 <rect width="13.16" height="13.13" x="495.74" y="112.59" class="named"><title>0x004552b0 EnableBaddieAI (447 bytes)</title></rect>
 <rect width="13.13" height="13.13" x="511.89" y="112.59" class="named"><title>0x0042cd20 LaraDoClimbLeftRight (446 bytes)</title></rect>

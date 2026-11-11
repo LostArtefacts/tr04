@@ -2109,6 +2109,7 @@ address,size,name,symbol
 0x004bf414,4,reset_flag,_reset_flag
 0x004bf418,4,number_los_rooms,_number_los_rooms
 0x004bf420,4,framecount,_framecount
+0x004bf424,512,draw_room_list,_draw_room_list
 0x004bf624,2,LightningSFXDelay,_LightningSFXDelay
 0x004bf628,4,room_list_start,_room_list_start
 0x004bf62c,4,room_list_end,_room_list_end
@@ -2456,6 +2457,7 @@ address,size,name,symbol
 0x007fdf64,4,gfMirrorZPlane,_gfMirrorZPlane
 0x007fdf68,2,LightningCount,_LightningCount
 0x007fdf6c,4,current_room,_current_room
+0x007fdf80,400,draw_rooms,_draw_rooms
 0x007fe110,4,number_dynamics,_number_dynamics
 0x007fe118,4,outside_left,_outside_left
 0x007fe11c,4,targetMeshP,_targetMeshP
