@@ -27,6 +27,7 @@ void shoot_right_gun(ITEM_INFO *item);
 void shoot_left_gun(ITEM_INFO *item);
 void reset_hair(ITEM_INFO *item);
 void draw_right_gun(ITEM_INFO *item);
+void draw_left_gun(ITEM_INFO *item);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;

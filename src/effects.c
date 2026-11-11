@@ -38,6 +38,18 @@ void draw_right_gun(ITEM_INFO *item)
     meshes[objects[PISTOLS_ANIM].mesh_index + LM_RHAND * 2] = tmp;
 }
 
+void draw_left_gun(ITEM_INFO *item)
+{
+    sint16 *tmp;
+
+    tmp = lara.mesh_ptrs[LM_LTHIGH];
+    lara.mesh_ptrs[LM_LTHIGH] = meshes[objects[PISTOLS_ANIM].mesh_index + LM_LTHIGH * 2];
+    meshes[objects[PISTOLS_ANIM].mesh_index + LM_LTHIGH * 2] = tmp;
+    tmp = lara.mesh_ptrs[LM_LHAND];
+    lara.mesh_ptrs[LM_LHAND] = meshes[objects[PISTOLS_ANIM].mesh_index + LM_LHAND * 2];
+    meshes[objects[PISTOLS_ANIM].mesh_index + LM_LHAND * 2] = tmp;
+}
+
 void shoot_right_gun(ITEM_INFO *item)
 {
     lara.right_arm.flash_gun = 3;
