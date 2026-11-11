@@ -231,3 +231,13 @@ void LaraDoClimbLeftRight(ITEM_INFO *item, COLL_INFO *coll, sint32 result, sint3
         item->pos.z_pos = coll->old.z;
     }
 }
+
+void lara_as_climbright(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    camera.target_angle = 5460;
+    camera.target_elevation = -2730;
+    if (!(input & (IN_RIGHT | IN_RSTEP)))
+        item->goal_anim_state = AS_CLIMBSTNC;
+}
