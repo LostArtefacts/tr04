@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="17.65" height="12" x="0" y="0" class="named"><title>74 · 4.77%</title></rect>
-<rect width="0.24" height="12" x="17.65" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="0.72" height="12" x="17.89" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
-<rect width="351.39" height="12" x="18.61" y="0" class="todo"><title>1473 · 94.97%</title></rect>
+<rect width="17.89" height="12" x="0" y="0" class="named"><title>75 · 4.84%</title></rect>
+<rect width="0.24" height="12" x="17.89" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="0.72" height="12" x="18.13" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
+<rect width="351.15" height="12" x="18.85" y="0" class="todo"><title>1472 · 94.91%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">4.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">74</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1473</tspan></text>
+<text text-anchor="end" x="540" y="7.50">4.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">75</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1472</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="6.94" height="12" x="0" y="0" class="named"><title>12 KB · 1.88%</title></rect>
-<rect width="0.10" height="12" x="6.94" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="0.73" height="12" x="6.97" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
-<rect width="362.30" height="12" x="7.70" y="0" class="todo"><title>607 KB · 97.92%</title></rect>
+<rect width="7.17" height="12" x="0" y="0" class="named"><title>12 KB · 1.94%</title></rect>
+<rect width="0.10" height="12" x="7.17" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="0.73" height="12" x="7.20" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
+<rect width="362.07" height="12" x="7.93" y="0" class="todo"><title>607 KB · 97.86%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">1.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">12 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">607 KB</tspan></text>
@@ -1019,7 +1019,7 @@
 <rect width="12" height="12" x="0" y="285" class="todo"><title>0x0045fa70 SOUND_Stop (36 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="285" class="todo"><title>0x0045faa0 SOUND_Init (42 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="285" class="todo"><title>0x0045fad0 SayNo (63 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="285" class="todo"><title>0x0045fb10 TestCollision (382 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="285" class="named"><title>0x0045fb10 TestCollision (382 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="285" class="todo"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="285" class="todo"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="285" class="todo"><title>0x00460270 InitInterpolate2 (52 bytes)</title></rect>
@@ -2085,7 +2085,7 @@
 <rect width="12.08" height="12.91" x="675.09" y="134.56" class="todo"><title>0x00480570 RenderLoadPic (388 bytes)</title></rect>
 <rect width="12.04" height="12.91" x="690.17" y="134.56" class="todo"><title>0x004078a0 TriggerHarpyFlame (387 bytes)</title></rect>
 <rect width="12.04" height="12.91" x="705.21" y="134.56" class="todo"><title>0x00494270 DXInitKeyboard (387 bytes)</title></rect>
-<rect width="11.89" height="12.91" x="720.26" y="134.56" class="todo"><title>0x0045fb10 TestCollision (382 bytes)</title></rect>
+<rect width="11.89" height="12.91" x="720.26" y="134.56" class="named"><title>0x0045fb10 TestCollision (382 bytes)</title></rect>
 <rect width="11.86" height="12.91" x="735.14" y="134.56" class="todo"><title>0x0041f390 TriggerTorchFlame (381 bytes)</title></rect>
 <rect width="12.43" height="12.32" x="415.48" y="150.46" class="todo"><title>0x004671b0 GetOnJeep (381 bytes)</title></rect>
 <rect width="12.43" height="12.32" x="415.48" y="165.78" class="todo"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
