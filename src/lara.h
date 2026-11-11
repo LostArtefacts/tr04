@@ -158,6 +158,8 @@ typedef struct lara_info {
     sint8 locationPad;
 } LARA_INFO;
 
+void LookUpDown(void);
+
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
 extern uint16 DashTimer;
