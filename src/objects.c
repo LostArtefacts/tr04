@@ -9,6 +9,11 @@
 #include "tomb4fx.h"
 #include "sphere.h"
 #include "specific/3dmath.h"
+#include "effect2.h"
+#include "debris.h"
+#include "gameflow.h"
+#include "lara_states.h"
+#include "specific/input.h"
 
 void SmashObject(sint16 item_number)
 {
@@ -191,4 +196,58 @@ void ControlWaterfall(sint16 item_number)
         else if (item->trigger_flags == 777)
             SoundEffect(SFX_WATERFALL_LOOP, &item->pos, SFX_DEFAULT);
     }
+}
+
+void ControlMapper(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    SPARKS *sptr;
+    PHD_VECTOR pos;
+    sint32 rg, h, i;
+    sint16 room_number;
+
+    item = &items[item_number];
+    if (!TriggerActive(item))
+        return;
+    if (item->frame_number - anims[item->anim_number].frame_base >= 200) {
+        SoundEffect(SFX_MAPPER_LAZER, &item->pos, SFX_DEFAULT);
+        item->mesh_bits |= 2;
+        pos.x = pos.y = pos.z = 0;
+        GetJointAbsPosition(item, &pos, 1);
+        rg = (GetRandomControl() & 0x1F) + 192;
+        TriggerDynamic(pos.x, pos.y, pos.z, (GetRandomControl() & 3) + 16, rg, rg, 0);
+        room_number = item->room_number;
+        floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+        h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+        for (i = 0; i < 2; i++) {
+            sptr = &spark[GetFreeSpark()];
+            sptr->On = 1;
+            sptr->sR = (GetRandomControl() & 0x7F) + 64;
+            sptr->sG = sptr->sR - (GetRandomControl() & 0x1F);
+            sptr->sB = 0;
+            sptr->dR = (GetRandomControl() & 0x7F) + 64;
+            sptr->dG = sptr->dR - (GetRandomControl() & 0x1F);
+            sptr->dB = 0;
+            sptr->ColFadeSpeed = 4;
+            sptr->FadeToBlack = 4;
+            sptr->TransType = 2;
+            sptr->Life = 12;
+            sptr->sLife = 12;
+            sptr->x = pos.x;
+            sptr->y = h;
+            sptr->z = pos.z;
+            sptr->Xvel = (GetRandomControl() & 0x3FF) - 512;
+            sptr->Yvel = -256 - (GetRandomControl() & 0x7F);
+            sptr->Zvel = (GetRandomControl() & 0x3FF) - 512;
+            sptr->Friction = 4;
+            sptr->Scalar = 2;
+            sptr->Size = sptr->sSize = (GetRandomControl() & 0xF) + 16;
+            sptr->dSize = (GetRandomControl() & 1) + 3;
+            sptr->Gravity = (GetRandomControl() & 0x1F) + 32;
+            sptr->MaxYvel = 0;
+            sptr->Flags = 10;
+        }
+    }
+    AnimateItem(item);
 }
