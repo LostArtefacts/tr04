@@ -490,3 +490,19 @@ void phd_TranslateAbs(sint32 x, sint32 y, sint32 z)
     mptr[M13] = mptr[M10] * x + mptr[M11] * y + mptr[M12] * z;
     mptr[M23] = mptr[M20] * x + mptr[M21] * y + mptr[M22] * z;
 }
+
+void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest)
+{
+    PHD_ANGLE pitch;
+
+    dest[0] = phd_atan(z, x);
+    while ((sint16)x != x || (sint16)y != y || (sint16)z != z) {
+        x >>= 2;
+        y >>= 2;
+        z >>= 2;
+    }
+    pitch = phd_atan(phd_sqrt(x * x + z * z), y);
+    if ((y > 0 && pitch > 0) || (y < 0 && pitch < 0))
+        pitch = -pitch;
+    dest[1] = pitch;
+}
