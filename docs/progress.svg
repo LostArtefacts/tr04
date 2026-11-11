@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="141.04" height="12" x="0" y="0" class="named"><title>638 · 41.24%</title></rect>
-<rect width="0.44" height="12" x="141.04" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="141.49" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="195.87" height="12" x="146.13" y="0" class="todo"><title>886 · 57.27%</title></rect>
+<rect width="141.27" height="12" x="0" y="0" class="named"><title>639 · 41.31%</title></rect>
+<rect width="0.44" height="12" x="141.27" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="141.71" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="195.65" height="12" x="146.35" y="0" class="todo"><title>885 · 57.21%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">41.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">638</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">886</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">639</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">885</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="58.13" height="12" x="0" y="0" class="named"><title>105 KB · 17%</title></rect>
-<rect width="0.12" height="12" x="58.13" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="58.25" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="276.51" height="12" x="65.49" y="0" class="todo"><title>501 KB · 80.85%</title></rect>
+<rect width="58.32" height="12" x="0" y="0" class="named"><title>106 KB · 17.05%</title></rect>
+<rect width="0.12" height="12" x="58.32" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="58.44" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="276.31" height="12" x="65.69" y="0" class="todo"><title>501 KB · 80.79%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">17.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">105 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">501 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">17.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">106 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">501 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1123,7 +1123,7 @@
 <rect width="12" height="12" x="60" y="315" class="named"><title>0x0046b920 ninth_cutseq_init (86 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="315" class="named"><title>0x0046b980 ninth_control (186 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="315" class="named"><title>0x0046ba40 tenth_cutseq_init (75 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="315" class="todo"><title>0x0046ba90 tenth_cutseq_control (357 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="315" class="named"><title>0x0046ba90 tenth_cutseq_control (357 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="315" class="named"><title>0x0046bc00 tenth_cutseq_end (39 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="315" class="named"><title>0x0046bc30 eleventh_cutseq_init (164 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="315" class="todo"><title>0x0046bce0 eleventh_cutseq_control (483 bytes)</title></rect>
@@ -2106,7 +2106,7 @@
 <rect width="11.84" height="11.78" x="458.77" y="143.45" class="todo"><title>0x00499c10 Func499c10 (361 bytes)</title></rect>
 <rect width="11.78" height="11.78" x="473.61" y="143.45" class="todo"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>
 <rect width="11.74" height="11.78" x="488.39" y="143.45" class="todo"><title>0x00499d80 Func499d80 (358 bytes)</title></rect>
-<rect width="11.71" height="11.78" x="503.13" y="143.45" class="todo"><title>0x0046ba90 tenth_cutseq_control (357 bytes)</title></rect>
+<rect width="11.71" height="11.78" x="503.13" y="143.45" class="named"><title>0x0046ba90 tenth_cutseq_control (357 bytes)</title></rect>
 <rect width="11.68" height="11.78" x="517.84" y="143.45" class="named"><title>0x0046c020 fifteen_control (356 bytes)</title></rect>
 <rect width="11.65" height="11.78" x="532.52" y="143.45" class="todo"><title>0x004997d0 Func4997d0 (355 bytes)</title></rect>
 <rect width="11.61" height="11.78" x="547.17" y="143.45" class="todo"><title>0x0040fdd0 DrawGodHead (354 bytes)</title></rect>

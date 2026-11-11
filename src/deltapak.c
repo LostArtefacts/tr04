@@ -154,6 +154,35 @@ void tenth_cutseq_init(void)
     cutseq_meshbits[4] &= ~0x80000000;
 }
 
+void tenth_cutseq_control(void)
+{
+    sint32 frame, z;
+
+    frame = GLOBAL_cutseq_frame;
+    if (frame >= 2360 && frame <= 2450 && (GetRandomControl() & 7) >= 4) {
+        z = (GetRandomControl() & 0x3FF) + 59714;
+        TriggerDynamic(68646, -2304, z, 15, (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 128, GetRandomControl() & 0x3F);
+    }
+    if (frame >= 1203 && frame <= 1205)
+        InitialiseHair();
+    if (frame == 1205 || frame == 1747 || frame == 2241) {
+        if (frame != 2241)
+            cutseq_meshbits[1] &= ~0x80000000;
+        cutseq_meshbits[2] &= ~0x80000000;
+        cutseq_meshbits[3] &= ~0x80000000;
+        cutseq_meshbits[4] &= ~0x80000000;
+    }
+    if (frame == 906 || frame == 1316 || frame == 2007) {
+        cutseq_meshbits[1] |= 0x80000000;
+        cutseq_meshbits[2] |= 0x80000000;
+        cutseq_meshbits[3] |= 0x80000000;
+        cutseq_meshbits[4] |= 0x80000000;
+    }
+    handle_lara_chatting(lara_chat_ranges10);
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 21, 1, ANIMATING1, voncroy_chat_ranges10);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void tenth_cutseq_end(void)
 {
     cutseq_restore_item(DOOR_TYPE5);
