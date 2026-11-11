@@ -1,5 +1,6 @@
 #include "objects.h"
 #include "room.h"
+#include "control.h"
 
 void BridgeFlatCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
 {
@@ -16,6 +17,18 @@ sint32 GetOffset(ITEM_INFO *item, sint32 x, sint32 z)
     else if (item->pos.y_rot == 0x4000)
         return z & (WALL_L - 1);
     return (WALL_L - z) & (WALL_L - 1);
+}
+
+void BridgeTilt1Floor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
+{
+    sint32 level;
+
+    level = item->pos.y_pos + (GetOffset(item, x, z) >> 2);
+    if (y <= level) {
+        *height = level;
+        height_type = WALL;
+        OnObject = 1;
+    }
 }
 
 void BridgeTilt1Ceiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)

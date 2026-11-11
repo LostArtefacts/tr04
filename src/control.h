@@ -9,6 +9,14 @@
 #define DATA_TYPE 0x1F
 #define END_BIT 0x8000
 
+enum height_types {
+    WALL,
+    SMALL_SLOPE,
+    BIG_SLOPE,
+    DIAGONAL,
+    SPLIT_TRI
+};
+
 enum floor_types {
     FLOOR_TYPE,
     DOOR_TYPE,
@@ -35,6 +43,7 @@ enum floor_types {
 };
 
 extern sint32 OnObject;
+extern sint32 height_type;
 extern sint16 *floor_data;
 extern sint32 flipeffect;
 extern sint32 SetDebounce;
