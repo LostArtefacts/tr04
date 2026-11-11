@@ -87,3 +87,17 @@ uint8 InitSampleDecompress(void)
         Log(1, "Prepare Stream %d", DS_mmresult);
     return 1;
 }
+
+uint8 FreeSampleDecompress(void)
+{
+    ACMStreamHeader.cbSrcLength = 0x40000;
+    DS_mmresult = acmStreamUnprepareHeader(DS_hACMStream, &ACMStreamHeader, 0);
+    if (DS_mmresult != DS_OK)
+        Log(1, "UnPrepare Stream %d", DS_mmresult);
+    DS_mmresult = acmStreamClose(DS_hACMStream, 0);
+    if (DS_mmresult != DS_OK)
+        Log(1, "Stream Close %d", DS_mmresult);
+    free(decompressed_samples_buffer);
+    free(samples_buffer);
+    return 1;
+}
