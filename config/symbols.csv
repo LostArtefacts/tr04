@@ -234,7 +234,7 @@ address,size,name,symbol
 0x00422400,128,LaraDeflectEdge,_LaraDeflectEdge
 0x00422480,882,TestLaraVault,_TestLaraVault
 0x00422810,190,LaraTestClimbStance,_LaraTestClimbStance
-0x004228d0,219,TestWall,_TestWall
+0x004228d0,252,TestWall,_TestWall
 0x004229d0,183,LaraCollideStop,_LaraCollideStop
 0x00422a90,41,lara_as_dashdive,_lara_as_dashdive
 0x00422ac0,280,lara_col_dashdive,_lara_col_dashdive
