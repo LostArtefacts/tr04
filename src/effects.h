@@ -46,6 +46,7 @@ void MeshSwapToPour(ITEM_INFO *item);
 void MeshSwapFromPour(ITEM_INFO *item);
 void ClearScarabsPatch(ITEM_INFO *item);
 void swap_meshes_with_meshswap1(ITEM_INFO *item);
+void swap_meshes_with_meshswap2(ITEM_INFO *item);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;
