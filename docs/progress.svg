@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="8.43" height="12" x="0" y="0" class="named"><title>27 · 1.74%</title></rect>
-<rect width="475.57" height="12" x="8.43" y="0" class="todo"><title>1524 · 98.26%</title></rect>
+<rect width="8.74" height="12" x="0" y="0" class="named"><title>28 · 1.81%</title></rect>
+<rect width="475.26" height="12" x="8.74" y="0" class="todo"><title>1523 · 98.19%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">1.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">27</tspan> · <tspan class="todo">1524</tspan></text>
+<text text-anchor="end" x="654" y="7.50">1.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">28</tspan> · <tspan class="todo">1523</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="3.27" height="12" x="0" y="0" class="named"><title>4 KB · 0.68%</title></rect>
-<rect width="480.73" height="12" x="3.27" y="0" class="todo"><title>616 KB · 99.32%</title></rect>
+<rect width="3.30" height="12" x="0" y="0" class="named"><title>4 KB · 0.68%</title></rect>
+<rect width="480.70" height="12" x="3.30" y="0" class="todo"><title>616 KB · 99.32%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">4 KB</tspan> · <tspan class="todo">616 KB</tspan></text>
@@ -1471,7 +1471,7 @@
 <rect width="12" height="12" x="90" y="420" class="named"><title>0x0048fdc0 phd_GenerateW2V (840 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="420" class="named"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="420" class="named"><title>0x00490210 phd_atan (98 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="420" class="todo"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="420" class="named"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="420" class="todo"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="420" class="todo"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="420" class="todo"><title>0x00490320 Func490320 (48 bytes)</title></rect>
@@ -2979,7 +2979,7 @@
 <rect width="3.52" height="3.99" x="730.45" y="395.42" class="todo"><title>0x004530a0 InitialiseFallingBlock2 (35 bytes)</title></rect>
 <rect width="3.52" height="3.99" x="736.97" y="395.42" class="todo"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
 <rect width="3.52" height="3.99" x="743.48" y="395.42" class="todo"><title>0x0045a340 CreateCheckSum (35 bytes)</title></rect>
-<rect width="3.94" height="3.57" x="671.82" y="402.42" class="todo"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
+<rect width="3.94" height="3.57" x="671.82" y="402.42" class="named"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
 <rect width="3.94" height="3.47" x="671.82" y="408.99" class="todo"><title>0x00437d00 MeshSwapToPour (34 bytes)</title></rect>
 <rect width="3.94" height="3.47" x="671.82" y="415.45" class="todo"><title>0x00437ef0 keep_those_fires_burning (34 bytes)</title></rect>
 <rect width="3.94" height="3.47" x="671.82" y="421.92" class="todo"><title>0x00450560 phd_PopMatrix_I (34 bytes)</title></rect>

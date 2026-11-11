@@ -210,3 +210,24 @@ sint32 phd_atan(sint32 x, sint32 y)
         result = -result;
     return result;
 }
+
+sint32 phd_sqrt(sint32 num)
+{
+    sint32 base, result, tmp;
+
+    base = 0x40000000;
+    result = 0;
+    do {
+        tmp = result;
+        result += base;
+        tmp >>= 1;
+        if (result > num) {
+            result = tmp;
+        } else {
+            num -= result;
+            result = base | tmp;
+        }
+        base >>= 2;
+    } while (base);
+    return result;
+}
