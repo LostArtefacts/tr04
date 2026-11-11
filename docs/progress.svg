@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="137.07" height="12" x="0" y="0" class="named"><title>620 · 40.08%</title></rect>
-<rect width="0.44" height="12" x="137.07" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="137.51" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="199.85" height="12" x="142.15" y="0" class="todo"><title>904 · 58.44%</title></rect>
+<rect width="137.29" height="12" x="0" y="0" class="named"><title>621 · 40.14%</title></rect>
+<rect width="0.44" height="12" x="137.29" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="137.73" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="199.63" height="12" x="142.37" y="0" class="todo"><title>903 · 58.37%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">40.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">620</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">904</tspan></text>
+<text text-anchor="end" x="522" y="7.50">40.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">621</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">903</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="56.58" height="12" x="0" y="0" class="named"><title>103 KB · 16.54%</title></rect>
-<rect width="0.12" height="12" x="56.58" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="56.70" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="278.06" height="12" x="63.94" y="0" class="todo"><title>504 KB · 81.30%</title></rect>
+<rect width="56.60" height="12" x="0" y="0" class="named"><title>103 KB · 16.55%</title></rect>
+<rect width="0.12" height="12" x="56.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="56.72" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="278.03" height="12" x="63.97" y="0" class="todo"><title>504 KB · 81.30%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">103 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">504 KB</tspan></text>
@@ -1184,7 +1184,7 @@
 <rect width="12" height="12" x="225" y="330" class="named"><title>0x0046d350 trigger_item_in_room (121 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="330" class="named"><title>0x0046d3d0 untrigger_item_in_room (113 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="330" class="named"><title>0x0046d450 find_a_fucking_item (46 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="330" class="todo"><title>0x0046d480 special2_end (44 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="330" class="named"><title>0x0046d480 special2_end (44 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="330" class="named"><title>0x0046d4b0 special2_init (20 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="330" class="todo"><title>0x0046d4d0 special3_end (50 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="330" class="named"><title>0x0046d510 special3_control (77 bytes)</title></rect>
@@ -2927,7 +2927,7 @@
 <rect width="4.17" height="4.08" x="728.49" y="370.15" class="named"><title>0x004272e0 lara_as_fallback (44 bytes)</title></rect>
 <rect width="4.17" height="4.08" x="735.66" y="370.15" class="named"><title>0x004377f0 SwapCrowbar (44 bytes)</title></rect>
 <rect width="4.17" height="4.08" x="742.83" y="370.15" class="todo"><title>0x0043b730 SaveGame (44 bytes)</title></rect>
-<rect width="3.81" height="4.45" x="655.36" y="377.23" class="todo"><title>0x0046d480 special2_end (44 bytes)</title></rect>
+<rect width="3.81" height="4.45" x="655.36" y="377.23" class="named"><title>0x0046d480 special2_end (44 bytes)</title></rect>
 <rect width="3.81" height="4.45" x="655.36" y="384.68" class="todo"><title>0x0046d5e0 special1_end (44 bytes)</title></rect>
 <rect width="3.81" height="4.45" x="655.36" y="392.14" class="todo"><title>0x00494620 SW_D3D_SetRenderState (44 bytes)</title></rect>
 <rect width="3.81" height="4.36" x="655.36" y="399.59" class="named"><title>0x00428e70 undraw_shotgun_meshes (43 bytes)</title></rect>

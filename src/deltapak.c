@@ -483,6 +483,16 @@ ITEM_INFO *find_a_fucking_item(sint32 object_number)
     return 0;
 }
 
+void special2_end(void)
+{
+    if (!bDoCredits) {
+        InitialiseSpotCam(3);
+        lara_item->mesh_bits = 0;
+    }
+    Chris_Menu = 0;
+    title_controls_locked_out = 0;
+}
+
 void special2_init(void)
 {
     lara_item->mesh_bits = -1;
