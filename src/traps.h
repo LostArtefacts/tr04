@@ -31,5 +31,6 @@ void ControlCatwalkBlade(sint16 item_number);
 void ControlMovingBlade(sint16 item_number);
 void ControlPlinthBlade(sint16 item_number);
 void ControlFallingSquishyBlock(sint16 item_number);
+void FloorTrapDoorCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif
