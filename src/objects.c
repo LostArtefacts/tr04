@@ -14,6 +14,7 @@
 #include "gameflow.h"
 #include "lara_states.h"
 #include "specific/input.h"
+#include "switch.h"
 
 void SmashObject(sint16 item_number)
 {
@@ -296,4 +297,43 @@ void TriggerRopeFlame(PHD_VECTOR *pos)
     size = (GetRandomControl() & 0xF) + 96;
     sptr->Size = sptr->sSize = size;
     sptr->dSize = size >> 3;
+}
+
+void BurningRopeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    SPHERE *sphere;
+    PHD_VECTOR pos;
+    sint32 nSpheres, dx, dy, dz, i;
+
+    item = &items[item_number];
+    if (item->trigger_flags || !lara.LitTorch)
+        return;
+    nSpheres = GetSpheres(item, Slist, 1);
+    dx = item->pos.x_pos - lara_item->pos.x_pos;
+    dy = item->pos.y_pos - lara_item->pos.y_pos;
+    dz = item->pos.z_pos - lara_item->pos.z_pos;
+    if (dx > 0x1000 || dx < -0x1000 || dy > 0x800 || dy < -0x800 || dz > 0x1000 || dz < -0x1000)
+        return;
+    pos.x = -32;
+    pos.y = 64;
+    pos.z = 256;
+    GetLaraJointPos(&pos, 14);
+    for (i = 0; i < nSpheres; i++) {
+        sphere = &Slist[i];
+        if (abs(sphere->x - pos.x) < sphere->r && abs(sphere->y - pos.y) < sphere->r && abs(sphere->z - pos.z) < sphere->r) {
+            if (gfCurrentLevel == 27) {
+                SoundEffect(SFX_BOULDER_FALL, 0, SFX_DEFAULT);
+                TestTriggersAtXYZ(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 1, 0);
+            }
+            item->trigger_flags = 1;
+            item->item_flags[0] = item->item_flags[1] = i << 1;
+            item->item_flags[2] = i;
+            item->item_flags[3] = 150;
+            AddActiveItem(item_number);
+            item->status = ITEM_ACTIVE;
+            item->flags |= IFL_CODEBITS;
+            return;
+        }
+    }
 }
