@@ -23,4 +23,7 @@ void lara_as_climbdown(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_climbend(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraTestClimbUpPos(ITEM_INFO *item, sint32 front, sint32 right, sint32 *shift, sint32 *ledge);
 
+extern sint16 LeftIntRightExtTab[4];
+extern sint16 LeftExtRightIntTab[4];
+
 #endif

@@ -382,3 +382,84 @@ sint16 GetClimbTrigger(sint32 x, sint32 y, sint32 z, sint16 room_number)
         return *data;
     return 0;
 }
+
+sint32 LaraClimbLeftCornerTest(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 flag, oldZ, x, oldX, z, shift;
+    sint16 oldY, angle;
+
+    flag = 0;
+    if (item->anim_number != 171)
+        return 0;
+    oldX = item->pos.x_pos;
+    oldZ = item->pos.z_pos;
+    oldY = item->pos.y_rot;
+    angle = (uint16)(item->pos.y_rot + 0x2000) / 0x4000;
+    switch (angle) {
+    case NORTH:
+    case SOUTH:
+        x = (oldX & ~0x3FF) - (oldZ & 0x3FF) + 1024;
+        z = (oldZ & ~0x3FF) - (oldX & 0x3FF) + 1024;
+        break;
+    default:
+        x = (oldX & ~0x3FF) | (0x3FF & oldZ);
+        z = (oldZ & ~0x3FF) | (oldX & 0x3FF);
+        break;
+    }
+    if (GetClimbTrigger(x, item->pos.y_pos, z, item->room_number) & LeftIntRightExtTab[angle]) {
+        item->pos.x_pos = x;
+        lara.CornerX = x;
+        item->pos.z_pos = z;
+        lara.CornerZ = z;
+        item->pos.y_rot -= 0x4000;
+        lara.move_angle = item->pos.y_rot;
+        flag = LaraTestClimbPos(item, coll->radius, -120 - coll->radius, -512, 512, &shift);
+        item->item_flags[3] = (sint16)flag;
+        if (flag)
+            flag = -1;
+    }
+    if (!flag) {
+        item->pos.x_pos = oldX;
+        lara.move_angle = oldY;
+        item->pos.y_rot = oldY;
+        item->pos.z_pos = oldZ;
+        switch (angle) {
+        case NORTH:
+            x = (item->pos.x_pos ^ ((item->pos.z_pos ^ item->pos.x_pos) & 0x3FF)) - 1024;
+            z = ((item->pos.z_pos ^ item->pos.x_pos) & 0x3FF) ^ (item->pos.z_pos + 1024);
+            break;
+        case SOUTH:
+            x = ((item->pos.z_pos ^ item->pos.x_pos) & 0x3FF) ^ (item->pos.x_pos + 1024);
+            z = ((item->pos.z_pos ^ item->pos.x_pos) & 0x3FF) ^ (item->pos.z_pos - 1024);
+            break;
+        case WEST:
+            x = (item->pos.x_pos & ~0x3FF) - (item->pos.z_pos & 0x3FF);
+            z = (item->pos.z_pos & ~0x3FF) - (0x3FF & item->pos.x_pos);
+            break;
+        default:
+            x = ((1024 + item->pos.x_pos) & ~0x3FF) - (item->pos.z_pos & 0x3FF) + 1024;
+            z = ((item->pos.z_pos + 1024) & ~0x3FF) - (item->pos.x_pos & 0x3FF) + 1024;
+            break;
+        }
+        if (GetClimbTrigger(x, item->pos.y_pos, z, item->room_number) & LeftExtRightIntTab[angle]) {
+            item->pos.x_pos = x;
+            lara.CornerX = x;
+            item->pos.z_pos = z;
+            lara.CornerZ = z;
+            item->pos.y_rot += 0x4000;
+            lara.move_angle = item->pos.y_rot;
+            flag = LaraTestClimbPos(item, coll->radius, -120 - coll->radius, -512, 512, &shift);
+            item->item_flags[3] = (sint16)flag;
+            if (flag)
+                flag = 1;
+        }
+    }
+    item->pos.x_pos = oldX;
+    lara.move_angle = oldY;
+    item->pos.z_pos = oldZ;
+    item->pos.y_rot = oldY;
+    item = flag;
+    coll = coll;
+    coll = item;
+    return coll;
+}
