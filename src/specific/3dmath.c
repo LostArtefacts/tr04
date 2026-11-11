@@ -478,3 +478,15 @@ void phd_RotYXZ(PHD_ANGLE ry, PHD_ANGLE rx, PHD_ANGLE rz)
         mptr[M21] = r1 >> W2V_SHIFT;
     }
 }
+
+void phd_TranslateAbs(sint32 x, sint32 y, sint32 z)
+{
+    sint32 *mptr = phd_mxptr;
+
+    x -= w2v_matrix[M03];
+    y -= w2v_matrix[M13];
+    z -= w2v_matrix[M23];
+    mptr[M03] = mptr[M00] * x + mptr[M01] * y + mptr[M02] * z;
+    mptr[M13] = mptr[M10] * x + mptr[M11] * y + mptr[M12] * z;
+    mptr[M23] = mptr[M20] * x + mptr[M21] * y + mptr[M22] * z;
+}
