@@ -244,6 +244,13 @@ void twentyfour_end(void)
     trigger_item_in_room(107, PUZZLE_ITEM8_COMBO1);
 }
 
+void twentyfive_control(void)
+{
+    handle_lara_chatting(lara_chat_ranges25);
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 14, 1, ANIMATING8, troop_chat_ranges25);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void twentyseven_end(void)
 {
     ITEM_INFO *item;
