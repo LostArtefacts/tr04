@@ -2,8 +2,30 @@
 
 #include "draw.h"
 #include "specific/3dmath.h"
+#include "specific/output.h"
+#include "camera.h"
+#include "delstuff.h"
+#include "deltapak.h"
+#include "health.h"
 
 #define S_LongMemCpy(d, s, n) memcpy(d, s, (n) * sizeof(sint32))
+
+sint32 DrawPhaseGame(void)
+{
+    CalcLaraMatrices(0);
+    phd_PushUnitMatrix();
+    CalcLaraMatrices(1);
+    phd_PopMatrix();
+    if (GLOBAL_playing_cutseq)
+        frigup_lara();
+    SetLaraUnderwaterNodes();
+    DrawRooms(camera.pos.room_number);
+    DrawGameInfo(1);
+    S_OutputPolyList();
+    camera.number_frames = S_DumpScreen();
+    S_AnimateTextures(camera.number_frames);
+    return camera.number_frames;
+}
 
 void InitInterpolate(sint32 frac, sint32 rate)
 {

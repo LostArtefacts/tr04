@@ -22,5 +22,7 @@ enum lara_mesh {
 };
 
 void GetLaraJointPos(PHD_VECTOR *pos, sint32 node);
+void SetLaraUnderwaterNodes(void);
+void CalcLaraMatrices(sint32 flag);
 
 #endif

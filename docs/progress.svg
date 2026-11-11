@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="84.82" height="12" x="0" y="0" class="named"><title>364 · 23.56%</title></rect>
-<rect width="0.23" height="12" x="84.82" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="85.05" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="272.39" height="12" x="87.61" y="0" class="todo"><title>1169 · 75.66%</title></rect>
+<rect width="85.05" height="12" x="0" y="0" class="named"><title>365 · 23.62%</title></rect>
+<rect width="0.23" height="12" x="85.05" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="85.28" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="272.16" height="12" x="87.84" y="0" class="todo"><title>1168 · 75.60%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">23.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">364</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1169</tspan></text>
+<text text-anchor="end" x="540" y="7.50">23.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">365</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1168</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="30.34" height="12" x="0" y="0" class="named"><title>52 KB · 8.43%</title></rect>
-<rect width="0.10" height="12" x="30.34" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="30.37" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="324.61" height="12" x="35.39" y="0" class="todo"><title>559 KB · 90.17%</title></rect>
+<rect width="30.41" height="12" x="0" y="0" class="named"><title>52 KB · 8.45%</title></rect>
+<rect width="0.10" height="12" x="30.41" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="30.43" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="324.55" height="12" x="35.45" y="0" class="todo"><title>559 KB · 90.15%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">8.4%</text>
+<text text-anchor="end" x="540" y="24.50">8.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">52 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">559 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -841,7 +841,7 @@
 <rect width="12" height="12" x="330" y="225" class="todo"><title>0x0044e660 DoubleDoorCollision (341 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="225" class="todo"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="225" class="todo"><title>0x0044e930 SequenceDoorControl (622 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="225" class="todo"><title>0x0044eba0 DrawPhaseGame (105 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="225" class="named"><title>0x0044eba0 DrawPhaseGame (105 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="225" class="todo"><title>0x0044ec10 DrawRooms (1724 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="225" class="todo"><title>0x0044f2d0 S_InsertRoom (88 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="225" class="todo"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
@@ -2636,7 +2636,7 @@
 <rect width="6.42" height="6.33" x="618.64" y="295.54" class="todo"><title>0x004278d0 lara_col_turnswitch (105 bytes)</title></rect>
 <rect width="6.42" height="6.33" x="628.06" y="295.54" class="named"><title>0x004280f0 lara_col_splat (105 bytes)</title></rect>
 <rect width="6.42" height="6.33" x="637.48" y="295.54" class="todo"><title>0x0043e140 spinback (105 bytes)</title></rect>
-<rect width="6.42" height="6.33" x="646.89" y="295.54" class="todo"><title>0x0044eba0 DrawPhaseGame (105 bytes)</title></rect>
+<rect width="6.42" height="6.33" x="646.89" y="295.54" class="named"><title>0x0044eba0 DrawPhaseGame (105 bytes)</title></rect>
 <rect width="6.42" height="6.33" x="656.31" y="295.54" class="named"><title>0x00473500 DXDSCreate (105 bytes)</title></rect>
 <rect width="6.42" height="6.33" x="665.73" y="295.54" class="todo"><title>0x00478440 ApplyMatrix (105 bytes)</title></rect>
 <rect width="6.42" height="6.33" x="675.15" y="295.54" class="todo"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>

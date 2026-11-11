@@ -5,4 +5,6 @@
 
 extern sint32 GLOBAL_playing_cutseq;
 
+void frigup_lara(void);
+
 #endif
