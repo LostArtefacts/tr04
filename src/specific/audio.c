@@ -35,3 +35,9 @@ void S_CDStop(void)
         XATrack = -1;
     }
 }
+
+void S_StartSyncedAudio(sint32 track)
+{
+    S_CDStop();
+    S_CDPlay(track, 2);
+}

@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="28.66" height="12" x="0" y="0" class="named"><title>120 · 7.75%</title></rect>
-<rect width="0.24" height="12" x="28.66" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.19" height="12" x="28.90" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
-<rect width="339.90" height="12" x="30.10" y="0" class="todo"><title>1423 · 91.87%</title></rect>
+<rect width="28.90" height="12" x="0" y="0" class="named"><title>121 · 7.81%</title></rect>
+<rect width="0.24" height="12" x="28.90" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.19" height="12" x="29.14" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
+<rect width="339.66" height="12" x="30.34" y="0" class="todo"><title>1422 · 91.80%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">7.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">120</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1423</tspan></text>
+<text text-anchor="end" x="540" y="7.50">7.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">121</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1422</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="12.77" height="12" x="0" y="0" class="named"><title>21 KB · 3.45%</title></rect>
-<rect width="0.10" height="12" x="12.77" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="1.61" height="12" x="12.79" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
-<rect width="355.60" height="12" x="14.40" y="0" class="todo"><title>596 KB · 96.11%</title></rect>
+<rect width="12.78" height="12" x="0" y="0" class="named"><title>21 KB · 3.45%</title></rect>
+<rect width="0.10" height="12" x="12.78" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="1.61" height="12" x="12.81" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
+<rect width="355.58" height="12" x="14.42" y="0" class="todo"><title>596 KB · 96.10%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">3.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">21 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">3 KB</tspan> · <tspan class="todo">596 KB</tspan></text>
@@ -1190,7 +1190,7 @@
 <rect width="12" height="12" x="315" y="330" class="todo"><title>0x0046d5e0 special1_end (44 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="330" class="named"><title>0x0046d610 S_CDPlay (152 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="330" class="named"><title>0x0046d6b0 S_CDStop (214 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="330" class="todo"><title>0x0046d790 S_StartSyncedAudio (21 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="330" class="named"><title>0x0046d790 S_StartSyncedAudio (21 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="330" class="todo"><title>0x0046d7b0 ACMSetVolume (77 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="330" class="todo"><title>0x0046d800 ACMEnumCallBack (144 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="330" class="todo"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>
@@ -3047,7 +3047,7 @@
 <rect width="3.14" height="2.70" x="688.23" y="420.56" class="todo"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
 <rect width="3.14" height="2.70" x="688.23" y="426.26" class="todo"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
 <rect width="3.14" height="2.57" x="688.23" y="431.96" class="todo"><title>0x0046c4e0 nineteen_init (21 bytes)</title></rect>
-<rect width="3.14" height="2.57" x="688.23" y="437.53" class="todo"><title>0x0046d790 S_StartSyncedAudio (21 bytes)</title></rect>
+<rect width="3.14" height="2.57" x="688.23" y="437.53" class="named"><title>0x0046d790 S_StartSyncedAudio (21 bytes)</title></rect>
 <rect width="3.14" height="2.57" x="688.23" y="443.10" class="named"><title>0x00490ec0 S_ExitSystem (21 bytes)</title></rect>
 <rect width="3.14" height="2.44" x="688.23" y="448.67" class="todo"><title>0x00403620 Func403620 (20 bytes)</title></rect>
 <rect width="3.14" height="2.44" x="688.23" y="454.12" class="todo"><title>0x00432830 lara_as_dive (20 bytes)</title></rect>
