@@ -126,6 +126,51 @@ void sgRestoreGame(void)
     RestoreLaraData(1);
 }
 
+void RestoreLaraData(sint32 FullSave)
+{
+    ITEM_INFO *item;
+    sint32 i;
+
+    if (!FullSave)
+        savegame.Lara.item_number = lara.item_number;
+    memcpy(&lara, &savegame.Lara, sizeof(lara));
+    lara.target = 0;
+    lara.spaz_effect = 0;
+    lara.left_arm.frame_base = (sint16 *)((sint32)lara.left_arm.frame_base + (sint32)objects[PISTOLS_ANIM].frame_base);
+    lara.right_arm.frame_base = (sint16 *)((sint32)lara.right_arm.frame_base + (sint32)objects[PISTOLS_ANIM].frame_base);
+    lara.GeneralPtr = (void *)((sint32)lara.GeneralPtr + (sint32)malloc_buffer);
+    if (lara.burn) {
+        lara.burn = 0;
+        LaraBurn();
+    }
+    if (lara.weapon_item != NO_ITEM) {
+        lara.weapon_item = CreateItem();
+        item = &items[lara.weapon_item];
+        item->object_number = savegame.WeaponObject;
+        item->anim_number = savegame.WeaponAnim;
+        item->frame_number = savegame.WeaponFrame;
+        item->current_anim_state = savegame.WeaponCurrent;
+        item->goal_anim_state = savegame.WeaponGoal;
+        item->status = ITEM_ACTIVE;
+        item->room_number = 255;
+    }
+    if (savegame.HubSavedLara) {
+        LaraInitialiseMeshes();
+        savegame.HubSavedLara &= ~1;
+        lara.last_gun_type = WEAPON_PISTOLS;
+        lara.gun_type = WEAPON_PISTOLS;
+        lara.request_gun_type = WEAPON_PISTOLS;
+        if (lara.weapon_item != NO_ITEM) {
+            KillItem(lara.weapon_item);
+            lara.weapon_item = NO_ITEM;
+        }
+    } else {
+        for (i = 0; i < 15; i++)
+            lara.mesh_ptrs[i] = (sint16 *)((sint32)lara.mesh_ptrs[i] + (sint32)mesh_base);
+    }
+    CutSceneTriggered = savegame.cutscene_triggered;
+}
+
 void ReadSG(void *pointer, sint32 size)
 {
     char *data;
