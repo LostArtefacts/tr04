@@ -21,5 +21,6 @@ void TwoBlockPlatformCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint
 void ControlPlough(sint16 item_number);
 void ControlChain(sint16 item_number);
 void ControlStargate(sint16 item_number);
+void ControlSmashableBikeWall(sint16 item_number);
 
 #endif

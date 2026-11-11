@@ -7,6 +7,7 @@
 #include "sound.h"
 #include "tomb4fx.h"
 #include "collide.h"
+#include "switch.h"
 #include "specific/function_stubs.h"
 
 void TrapDoorControl(sint16 item_number)
@@ -99,6 +100,23 @@ void ControlFallingBlock2(sint16 item_number)
         SoundEffect(SFX_BIKE_HIT_OBJECTS, &item->pos, SFX_DEFAULT);
         item->mesh_bits = -2;
         ExplodingDeath2(item_number, -1, 417);
+        KillItem(item_number);
+    }
+}
+
+void ControlSmashableBikeWall(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (!TriggerActive(item) || lara.vehicle == NO_ITEM)
+        return;
+    if (TestBoundsCollide(item, &items[lara.vehicle], 1024)) {
+        SoundEffect(SFX_BIKE_HIT_OBJECTS, &item->pos, SFX_DEFAULT);
+        item->mesh_bits = -2;
+        ExplodingDeath2(item_number, -1, 2305);
+        item->mesh_bits = 0;
+        TestTriggersAtXYZ(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 1, 0);
         KillItem(item_number);
     }
 }
