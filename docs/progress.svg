@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="3.43" height="12" x="0" y="0" class="named"><title>11 · 0.71%</title></rect>
-<rect width="480.57" height="12" x="3.43" y="0" class="todo"><title>1540 · 99.29%</title></rect>
+<rect width="3.74" height="12" x="0" y="0" class="named"><title>12 · 0.77%</title></rect>
+<rect width="480.26" height="12" x="3.74" y="0" class="todo"><title>1539 · 99.23%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">0.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">11</tspan> · <tspan class="todo">1540</tspan></text>
+<text text-anchor="end" x="654" y="7.50">0.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">12</tspan> · <tspan class="todo">1539</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="1.36" height="12" x="0" y="0" class="named"><title>2 KB · 0.28%</title></rect>
-<rect width="482.64" height="12" x="1.36" y="0" class="todo"><title>618 KB · 99.72%</title></rect>
+<rect width="1.41" height="12" x="0" y="0" class="named"><title>2 KB · 0.29%</title></rect>
+<rect width="482.59" height="12" x="1.41" y="0" class="todo"><title>618 KB · 99.71%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">2 KB</tspan> · <tspan class="todo">618 KB</tspan></text>
@@ -1491,7 +1491,7 @@
 <rect width="12" height="12" x="390" y="420" class="todo"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="420" class="todo"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="420" class="named"><title>0x00490d50 D3DNormalise (114 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="420" class="todo"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="420" class="named"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="420" class="todo"><title>0x00490e10 D3DTransform (101 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="420" class="todo"><title>0x00490e80 other_log (55 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="420" class="todo"><title>0x00490ec0 S_ExitSystem (21 bytes)</title></rect>
@@ -2838,7 +2838,7 @@
 <rect width="4.68" height="5.06" x="658.75" y="357.73" class="todo"><title>0x00415b20 TwoBlockPlatformCeiling (59 bytes)</title></rect>
 <rect width="4.68" height="5.06" x="666.44" y="357.73" class="todo"><title>0x0043f7a0 InitialiseAutogun (59 bytes)</title></rect>
 <rect width="4.68" height="5.06" x="674.12" y="357.73" class="todo"><title>0x00455ef0 GetOffset (59 bytes)</title></rect>
-<rect width="4.68" height="5.06" x="681.81" y="357.73" class="todo"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
+<rect width="4.68" height="5.06" x="681.81" y="357.73" class="named"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
 <rect width="4.60" height="5.06" x="689.49" y="357.73" class="todo"><title>0x00426b90 lara_col_hangleft (58 bytes)</title></rect>
 <rect width="4.60" height="5.06" x="697.09" y="357.73" class="todo"><title>0x00426c10 lara_col_hangright (58 bytes)</title></rect>
 <rect width="4.60" height="5.06" x="704.70" y="357.73" class="todo"><title>0x0042bb70 undraw_pistol_mesh_left (58 bytes)</title></rect>
