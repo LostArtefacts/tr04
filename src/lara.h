@@ -274,6 +274,7 @@ void lara_col_roll2(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_swandive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_fastfall(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraTestEdgeCatch(ITEM_INFO *item, COLL_INFO *coll, sint32 *edge);
+sint32 LaraTestHangOnClimbWall(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_crawl(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_pushblock(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_death(ITEM_INFO *item, COLL_INFO *coll);
@@ -299,6 +300,7 @@ void LookLeftRight(void);
 void lara_col_monkeyl(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_monkeyr(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_dash(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_crawl2hang(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

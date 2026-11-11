@@ -204,6 +204,67 @@ void lara_as_crawlb(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_ALL4S;
 }
 
+void lara_col_crawl2hang(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint16 *bounds;
+    sint32 edge, edge_catch;
+    sint16 angle;
+
+    camera.target_angle = 0;
+    camera.target_elevation = -10920;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    if (item->anim_number == ANIM_CRAWL_TO_HANG) {
+        item->fallspeed = 512;
+        item->pos.y_pos += 255;
+        coll->bad_pos = -NO_HEIGHT;
+        coll->bad_neg = -STEPUP_HEIGHT;
+        coll->bad_ceiling = 192;
+        coll->facing = lara.move_angle = item->pos.y_rot;
+        GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 870);
+        if (!(edge_catch = LaraTestEdgeCatch(item, coll, &edge)))
+            return;
+        if (edge_catch < 0 && !LaraTestHangOnClimbWall(item, coll))
+            return;
+        angle = item->pos.y_rot;
+        if (angle >= -6370 && angle <= 6370)
+            angle = 0;
+        else if (angle >= 10014 && angle <= 22754)
+            angle = 16384;
+        else if (angle >= 26397 || angle <= -26397)
+            angle = -32768;
+        else if (angle >= -22754 && angle <= -10014)
+            angle = -16384;
+        if (angle & 0x3FFF)
+            return;
+        if (TestHangSwingIn(item, angle)) {
+            lara.head_x_rot = lara.head_y_rot = 0;
+            lara.torso_x_rot = lara.torso_y_rot = 0;
+            item->anim_number = ANIM_HANG2STOP;
+            item->frame_number = anims[ANIM_HANG2STOP].frame_base;
+            item->current_anim_state = AS_HANG2;
+            item->goal_anim_state = AS_HANG2;
+        } else {
+            item->anim_number = ANIM_GRABLEDGE;
+            item->frame_number = anims[ANIM_GRABLEDGE].frame_base;
+            item->current_anim_state = AS_HANG;
+            item->goal_anim_state = AS_HANG;
+        }
+        bounds = GetBoundsAccurate(item);
+        if (edge_catch > 0) {
+            item->pos.y_pos += coll->front_floor - bounds[2];
+            item->pos.x_pos += coll->shift.x;
+            item->pos.z_pos += coll->shift.z;
+        } else
+            item->pos.y_pos = edge - bounds[2];
+        item->pos.y_rot = angle;
+        item->gravity_status = 1;
+        item->speed = 2;
+        item->fallspeed = 1;
+        lara.gun_status = LG_HANDS_BUSY;
+    }
+}
+
 sint32 LaraTestEdgeCatch(ITEM_INFO *item, COLL_INFO *coll, sint32 *edge)
 {
     sint32 hdif;
