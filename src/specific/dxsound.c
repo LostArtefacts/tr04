@@ -191,3 +191,10 @@ void DXFreeSounds(void)
         }
     }
 }
+
+sint32 S_SoundSampleIsPlaying(sint32 num)
+{
+    if (!sound_active)
+        return 0;
+    return DSIsChannelPlaying(num);
+}
