@@ -48,6 +48,17 @@ void phd_RotX_I(sint16 ang)
     phd_mxptr = oldm;
 }
 
+void phd_RotZ_I(sint16 ang)
+{
+    sint32 *oldm;
+
+    phd_RotZ(ang);
+    oldm = phd_mxptr;
+    phd_mxptr = IMptr;
+    phd_RotZ(ang);
+    phd_mxptr = oldm;
+}
+
 void phd_TranslateRel_I(sint32 x, sint32 y, sint32 z)
 {
     sint32 *oldm;
