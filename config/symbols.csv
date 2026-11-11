@@ -2063,12 +2063,15 @@ address,size,name,symbol
 0x004afeec,92,AccentTable,_AccentTable
 0x004aff48,80,ShadeFromTo,_ShadeFromTo
 0x004aff98,4,font_init,_font_init
+0x004b0324,28,troop_chat_ranges4,_troop_chat_ranges4
 0x004b0340,8,lara_chat_ranges6,_lara_chat_ranges6
 0x004b0348,8,voncroy_chat_ranges6,_voncroy_chat_ranges6
 0x004b0350,8,lara_chat_ranges7,_lara_chat_ranges7
 0x004b0358,8,voncroy_chat_ranges7,_voncroy_chat_ranges7
 0x004b0360,8,lara_chat_ranges8,_lara_chat_ranges8
 0x004b0368,12,voncroy_chat_ranges8,_voncroy_chat_ranges8
+0x004b0374,36,lara_chat_ranges9,_lara_chat_ranges9
+0x004b0398,44,voncroy_chat_ranges9,_voncroy_chat_ranges9
 0x004b04ac,48,jeanyves_chat_ranges17,_jeanyves_chat_ranges17
 0x004b04dc,28,jeanyves_chat_ranges18,_jeanyves_chat_ranges18
 0x004b04f8,40,jeanyves_chat_ranges19,_jeanyves_chat_ranges19

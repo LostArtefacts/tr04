@@ -144,5 +144,8 @@ extern sint32 SplashCount;
 extern SPLASH_STRUCT splashes[4];
 extern sint32 next_spark;
 extern SPARKS spark[256];
+extern sint32 SmokeCountL;
+extern sint32 SmokeCountR;
+extern sint32 SmokeWeapon;
 
 #endif

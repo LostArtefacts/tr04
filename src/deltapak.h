@@ -15,12 +15,15 @@ extern uint32 cutseq_meshbits[10];
 extern uint32 cutseq_meshswapbits[10];
 extern char old_status_flags[16];
 extern sint32 numnailed;
+extern sint16 troop_chat_ranges4[14];
 extern sint16 lara_chat_ranges6[4];
 extern sint16 voncroy_chat_ranges6[4];
 extern sint16 lara_chat_ranges7[4];
 extern sint16 voncroy_chat_ranges7[4];
 extern sint16 lara_chat_ranges8[4];
 extern sint16 voncroy_chat_ranges8[6];
+extern sint16 lara_chat_ranges9[18];
+extern sint16 voncroy_chat_ranges9[22];
 extern sint16 jeanyves_chat_ranges17[24];
 extern sint16 jeanyves_chat_ranges18[14];
 extern sint16 jeanyves_chat_ranges19[20];
@@ -104,5 +107,6 @@ void twentyfour_control(void);
 void trigger_weapon_dynamics(sint32 left_or_right);
 void fifteen_init(void);
 void sixteen_init(void);
+void cutseq_shoot_pistols(sint32 left_or_right);
 
 #endif

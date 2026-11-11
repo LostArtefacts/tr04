@@ -10,6 +10,8 @@
 #include "delstuff.h"
 #include "gameflow.h"
 #include "spotcam.h"
+#include "effect2.h"
+#include "tomb4fx.h"
 
 void *cutseq_malloc(sint32 size)
 {
@@ -402,6 +404,17 @@ void do_key_meshswap(void)
     temp = lara.mesh_ptrs[LM_RHAND];
     lara.mesh_ptrs[LM_RHAND] = meshes[objects[MESHSWAP1].mesh_index + LM_RHAND * 2];
     meshes[objects[MESHSWAP1].mesh_index + LM_RHAND * 2] = temp;
+}
+
+void cutseq_shoot_pistols(sint32 left_or_right)
+{
+    if (left_or_right == 14) {
+        lara.left_arm.flash_gun = 4;
+        SmokeCountL = 16;
+    } else {
+        lara.right_arm.flash_gun = 4;
+        SmokeCountR = 16;
+    }
 }
 
 void trigger_weapon_dynamics(sint32 left_or_right)
