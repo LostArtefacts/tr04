@@ -196,6 +196,7 @@ void AnimateLara(ITEM_INFO *item);
 void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_dashdive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_hangturnl(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_hangturnr(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

@@ -35,3 +35,16 @@ void lara_as_hangturnl(ITEM_INFO *item, COLL_INFO *coll)
     if (!(input & IN_LEFT))
         item->goal_anim_state = AS_HANG2;
 }
+
+void lara_as_hangturnr(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_HANG2;
+        return;
+    }
+    lara.torso_x_rot = lara.torso_y_rot = 0;
+    camera.target_elevation = 10 * ONE_DEGREE;
+    item->pos.y_rot += ONE_DEGREE + ONE_DEGREE / 2;
+    if (!(input & IN_RIGHT))
+        item->goal_anim_state = AS_HANG2;
+}
