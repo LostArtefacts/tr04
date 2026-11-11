@@ -1,4 +1,9 @@
 #include "tomb4fx.h"
+#include "items.h"
+#include "lara.h"
+#include "room.h"
+#include "gameflow.h"
+#include "specific/function_stubs.h"
 #include "sound.h"
 
 sint32 GetFreeFireSpark(void)
@@ -95,6 +100,64 @@ sint32 GetFreeSmokeSpark(void)
     }
     next_smoke_spark = (min_life_num + 1) & 0x1F;
     return min_life_num;
+}
+
+void TriggerGunSmoke(sint32 x, sint32 y, sint32 z, sint32 xVel, sint32 yVel, sint32 zVel, sint32 notLara, sint32 weaponType, sint32 shade)
+{
+    SMOKE_SPARKS *sptr;
+    sint32 size;
+
+    sptr = &smoke_spark[GetFreeSmokeSpark()];
+    sptr->On = 1;
+    sptr->sShade = 0;
+    sptr->dShade = (uint8)(4 * shade);
+    sptr->ColFadeSpeed = 4;
+    sptr->FadeToBlack = (uint8)(32 - 16 * notLara);
+    sptr->Life = (GetRandomControl() & 3) + 40;
+    sptr->sLife = sptr->Life;
+    if ((weaponType == WEAPON_PISTOLS || weaponType == WEAPON_REVOLVER || weaponType == WEAPON_UZI) && sptr->dShade > 64u)
+        sptr->dShade = 64;
+    sptr->TransType = 2;
+    sptr->x = (GetRandomControl() & 0x1F) + x - 16;
+    sptr->y = (GetRandomControl() & 0x1F) + y - 16;
+    sptr->z = (GetRandomControl() & 0x1F) + z - 16;
+    if (notLara) {
+        sptr->Xvel = (sint16)((GetRandomControl() & 0x3FF) + xVel - 512);
+        sptr->Yvel = (sint16)((GetRandomControl() & 0x3FF) + yVel - 512);
+        sptr->Zvel = (sint16)((GetRandomControl() & 0x3FF) + zVel - 512);
+    } else {
+        sptr->Xvel = ((GetRandomControl() & 0x1FF) - 256) >> 1;
+        sptr->Yvel = ((GetRandomControl() & 0x1FF) - 256) >> 1;
+        sptr->Zvel = ((GetRandomControl() & 0x1FF) - 256) >> 1;
+    }
+    sptr->Friction = 4;
+    if (GetRandomControl() & 1) {
+        if (room[lara_item->room_number].flags & ROOM_NOT_INSIDE)
+            sptr->Flags = 272;
+        else
+            sptr->Flags = 16;
+        sptr->RotAng = GetRandomControl() & 0xFFF;
+        if (GetRandomControl() & 1)
+            sptr->RotAdd = -16 - (GetRandomControl() & 0xF);
+        else
+            sptr->RotAdd = (GetRandomControl() & 0xF) + 16;
+    } else if (room[lara_item->room_number].flags & ROOM_NOT_INSIDE)
+        sptr->Flags = 256;
+    else
+        sptr->Flags = 0;
+    sptr->Gravity = -2 - (GetRandomControl() & 1);
+    sptr->MaxYvel = -2 - (GetRandomControl() & 1);
+    size = (GetRandomControl() & 0xF) - (weaponType != WEAPON_GRENADE ? 24 : 0) + 48;
+    if (notLara) {
+        sptr->sSize = size >> 1;
+        sptr->Size = size >> 1;
+        sptr->dSize = (size + 4) << 1;
+    } else {
+        sptr->sSize = size >> 2;
+        sptr->Size = size >> 2;
+        sptr->dSize = size;
+    }
+    sptr->mirror = (gfLevelFlags & GF_MIRROR) && lara_item->room_number == gfMirrorRoom;
 }
 
 sint32 GetFreeBlood(void)

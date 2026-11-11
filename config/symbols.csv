@@ -2476,7 +2476,7 @@ address,size,name,symbol
 0x007fd212,2,CurrentPickup,_CurrentPickup
 0x007fd214,1,PoisonFlag,_PoisonFlag
 0x007fd220,32,pickups,_pickups
-0x007fd250,,gfMirrorRoom,_gfMirrorRoom
+0x007fd250,1,gfMirrorRoom,_gfMirrorRoom
 0x007fd251,1,gfLayer2Vel,_gfLayer2Vel
 0x007fd252,1,gfLayer1Vel,_gfLayer1Vel
 0x007fd258,4,GameTimer,_GameTimer
