@@ -3,6 +3,7 @@
 #include "specific/3dmath.h"
 #include "control.h"
 #include "lara.h"
+#include "sphere.h"
 
 void Func488650(void);
 
@@ -45,6 +46,19 @@ void UpdateLaraRoom(ITEM_INFO *item, sint32 height)
     if (item->room_number != room_number)
         ItemNewRoom(lara.item_number, room_number);
     Func488650();
+}
+
+void ObjectCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (!TestBoundsCollide(item, laraitem, coll->radius))
+        return;
+    if (!TestCollision(item, laraitem))
+        return;
+    if (coll->enable_baddie_push)
+        ItemPushLara(item, laraitem, coll, 0, 1);
 }
 
 sint32 TestLaraPosition(sint16 *bounds, ITEM_INFO *item, ITEM_INFO *laraitem)
