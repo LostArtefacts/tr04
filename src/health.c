@@ -90,3 +90,15 @@ void DrawAirBar(sint32 flash_state)
         }
     }
 }
+
+void InitialisePickUpDisplay(void)
+{
+    int i;
+
+    for (i = 0; i < 8; i++)
+        pickups[i].life = -1;
+    PickupY = 128;
+    PickupX = 128;
+    PickupVel = 0;
+    CurrentPickup = 0;
+}
