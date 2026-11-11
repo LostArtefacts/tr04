@@ -1974,6 +1974,7 @@ address,size,name,symbol
 0x004a9248,4,joyGetDevCapsA,__imp__joyGetDevCapsA@12
 0x004a924c,4,joyGetPosEx,__imp__joyGetPosEx@8
 0x004ad0a8,16,bat_bite,_bat_bite
+0x004ad6c0,16,wildboar_bite,_wildboar_bite
 0x004ad6d0,2,WraithSpeed,_WraithSpeed
 0x004ad7d4,4,GlobalAlpha,_GlobalAlpha
 0x004ad7f4,4,hair_wind_angle,_hair_wind_angle
