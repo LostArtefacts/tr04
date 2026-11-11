@@ -1981,6 +1981,7 @@ address,size,name,symbol
 0x004ad7d4,4,GlobalAlpha,_GlobalAlpha
 0x004ad7f4,4,hair_wind_angle,_hair_wind_angle
 0x004ad7f8,4,hair_dwind_angle,_hair_dwind_angle
+0x004ad810,4,jump_ok,_jump_ok
 0x004ad838,8,LeftIntRightExtTab,_LeftIntRightExtTab
 0x004ad840,8,LeftExtRightIntTab,_LeftExtRightIntTab
 0x004ad9c4,4,lara_coll,_lara_coll

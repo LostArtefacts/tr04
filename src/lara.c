@@ -11,6 +11,7 @@
 #define DAMAGE_LENGTH 14
 #define FASTFALL_FRICTION item->speed = (item->speed * 95) / 100
 #define HEAD_TURN (2 * ONE_DEGREE)
+extern sint32 jump_ok;
 
 void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll)
 {
@@ -348,6 +349,61 @@ void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll)
             item->goal_anim_state = AS_RUN;
         else
             item->goal_anim_state = AS_WALK;
+    } else
+        item->goal_anim_state = AS_STOP;
+}
+
+void lara_as_run(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_DEATH;
+        return;
+    }
+    if (input & IN_ROLL) {
+        item->anim_number = ANIM_ROLL;
+        item->frame_number = anims[ANIM_ROLL].frame_base + 2;
+        item->current_anim_state = AS_ROLL;
+        item->goal_anim_state = AS_STOP;
+        return;
+    }
+    if ((input & IN_SPRINT) && DashTimer) {
+        item->goal_anim_state = AS_DASH;
+        return;
+    }
+    if ((input & IN_DUCK) && lara.water_status != LW_WADE
+        && (lara.gun_status == LG_NO_ARMS || lara.gun_type == WEAPON_NONE || lara.gun_type == WEAPON_PISTOLS
+            || lara.gun_type == WEAPON_REVOLVER || lara.gun_type == WEAPON_UZI || lara.gun_type == WEAPON_FLARE)) {
+        item->goal_anim_state = AS_DUCK;
+        return;
+    }
+    if (input & IN_LEFT) {
+        lara.turn_rate -= LARA_TURN_RATE;
+        if (lara.turn_rate < -LARA_FAST_TURN)
+            lara.turn_rate = -LARA_FAST_TURN;
+        item->pos.z_rot -= LARA_LEAN_RATE;
+        if (item->pos.z_rot < -LARA_LEAN_MAX)
+            item->pos.z_rot = -LARA_LEAN_MAX;
+    } else if (input & IN_RIGHT) {
+        lara.turn_rate += LARA_TURN_RATE;
+        if (lara.turn_rate > LARA_FAST_TURN)
+            lara.turn_rate = LARA_FAST_TURN;
+        item->pos.z_rot += LARA_LEAN_RATE;
+        if (item->pos.z_rot > LARA_LEAN_MAX)
+            item->pos.z_rot = LARA_LEAN_MAX;
+    }
+    if (item->anim_number == ANIM_STARTRUN)
+        jump_ok = 0;
+    else if (item->anim_number != ANIM_RUN || item->frame_number == 4)
+        jump_ok = 1;
+    if ((input & IN_JUMP) && jump_ok && !item->gravity_status)
+        item->goal_anim_state = AS_FORWARDJUMP;
+    else if (input & IN_FORWARD) {
+        if (lara.water_status == LW_WADE)
+            item->goal_anim_state = AS_WADE;
+        else if (input & IN_WALK)
+            item->goal_anim_state = AS_WALK;
+        else
+            item->goal_anim_state = AS_RUN;
     } else
         item->goal_anim_state = AS_STOP;
 }

@@ -14,6 +14,7 @@
 #define LARA_DUCK_DEFLECT (2 * ONE_DEGREE)
 #define LARA_LEAN_UNDO ONE_DEGREE
 #define LARA_LEAN_RATE ((ONE_DEGREE / 2) + LARA_LEAN_UNDO)
+#define LARA_LEAN_MAX ((ONE_DEGREE * 10) + LARA_LEAN_UNDO)
 #define FASTFALL_SPEED 128
 #define LARA_FASTFALL_SPEED (FASTFALL_SPEED + 3)
 #define LARA_HITE 762
@@ -255,6 +256,7 @@ void lara_col_splat(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_pickup(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_usekey(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_forwardjump(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_run(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
