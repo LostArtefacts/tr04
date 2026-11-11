@@ -51,5 +51,6 @@ void twentyone_end(void);
 void twentythree_init(void);
 void twentythree_end(void);
 void twentyfour_end(void);
+void twentyseven_end(void);
 
 #endif

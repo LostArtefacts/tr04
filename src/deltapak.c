@@ -171,3 +171,14 @@ void twentyfour_end(void)
     cutseq_restore_item(ANIMATING13);
     trigger_item_in_room(107, PUZZLE_ITEM8_COMBO1);
 }
+
+void twentyseven_end(void)
+{
+    ITEM_INFO *item;
+
+    item = find_a_fucking_item(ANIMATING5);
+    item->status = ITEM_ACTIVE;
+    DelsHandyTeleportLara(18982, 18176, 15841, -16184);
+    FlipMap(8);
+    nail_intelligent_object(SETHA);
+}
