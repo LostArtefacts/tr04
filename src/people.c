@@ -7,6 +7,7 @@
 #include "box.h"
 #include "draw.h"
 #include "control.h"
+#include "objnums.h"
 
 sint32 TargetVisible(ITEM_INFO *item, AI_INFO *info)
 {
@@ -29,6 +30,33 @@ sint32 TargetVisible(ITEM_INFO *item, AI_INFO *info)
         target.x = enemy->pos.x_pos;
         bounds = GetBestFrame(enemy);
         target.y = enemy->pos.y_pos + ((bounds[3] + bounds[2] * 3) >> 2);
+        target.z = enemy->pos.z_pos;
+        return LOS(&start, &target);
+    }
+    return 0;
+}
+
+sint32 Targetable(ITEM_INFO *item, AI_INFO *info)
+{
+    GAME_VECTOR start, target;
+    CREATURE_INFO *creature;
+    ITEM_INFO *enemy;
+    sint16 *bounds;
+
+    creature = (CREATURE_INFO *)item->data;
+    if ((enemy = creature->enemy) == NULL)
+        return 0;
+    if (enemy->hit_points <= 0 || enemy->data == NULL)
+        return 0;
+    if (info->ahead && (info->distance < 0x4000000 || item->object_number == SETHA)) {
+        start.x = item->pos.x_pos;
+        bounds = GetBestFrame(item);
+        start.y = item->pos.y_pos + ((bounds[3] + 3 * bounds[2]) >> 2);
+        start.z = item->pos.z_pos;
+        start.room_number = item->room_number;
+        target.x = enemy->pos.x_pos;
+        bounds = GetBestFrame(enemy);
+        target.y = enemy->pos.y_pos + ((bounds[3] + 3 * bounds[2]) >> 2);
         target.z = enemy->pos.z_pos;
         return LOS(&start, &target);
     }
