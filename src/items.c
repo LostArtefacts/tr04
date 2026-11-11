@@ -326,3 +326,35 @@ void KillEffect(sint16 fx_num)
     fx->next_fx = next_fx_free;
     next_fx_free = fx_num;
 }
+
+void EffectNewRoom(sint16 fx_num, sint16 room_num)
+{
+    sint16 linknum;
+    ROOM_INFO *r;
+    FX_INFO *fx;
+
+    if (InItemControlLoop) {
+        ItemNewRooms[ItemNewRoomNo][0] = fx_num;
+        ItemNewRooms[ItemNewRoomNo][1] = room_num;
+        ItemNewRoomNo++;
+        return;
+    }
+
+    fx = &effects[fx_num];
+    r = &room[fx->room_number];
+    linknum = r->fx_number;
+    if (linknum == fx_num) {
+        r->fx_number = fx->next_fx;
+    } else {
+        for (; linknum != NO_ITEM; linknum = effects[linknum].next_fx) {
+            if (effects[linknum].next_fx == fx_num) {
+                effects[linknum].next_fx = fx->next_fx;
+                break;
+            }
+        }
+    }
+    fx->room_number = room_num;
+    r = &room[room_num];
+    fx->next_fx = r->fx_number;
+    r->fx_number = fx_num;
+}

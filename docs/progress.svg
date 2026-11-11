@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="13.74" height="12" x="0" y="0" class="named"><title>51 · 3.29%</title></rect>
-<rect width="0.27" height="12" x="13.74" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="403.99" height="12" x="14.01" y="0" class="todo"><title>1499 · 96.65%</title></rect>
+<rect width="14.01" height="12" x="0" y="0" class="named"><title>52 · 3.35%</title></rect>
+<rect width="0.27" height="12" x="14.01" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="403.72" height="12" x="14.28" y="0" class="todo"><title>1498 · 96.58%</title></rect>
 </g>
 <text text-anchor="end" x="588" y="7.50">3.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="7"><tspan class="named">51</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="todo">1499</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="7"><tspan class="named">52</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="todo">1498</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="5.81" height="12" x="0" y="0" class="named"><title>9 KB · 1.39%</title></rect>
-<rect width="0.10" height="12" x="5.81" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="412.16" height="12" x="5.84" y="0" class="todo"><title>611 KB · 98.60%</title></rect>
+<rect width="5.95" height="12" x="0" y="0" class="named"><title>9 KB · 1.42%</title></rect>
+<rect width="0.10" height="12" x="5.95" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="412.02" height="12" x="5.98" y="0" class="todo"><title>611 KB · 98.57%</title></rect>
 </g>
 <text text-anchor="end" x="588" y="24.50">1.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="24"><tspan class="named">9 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="todo">611 KB</tspan></text>
@@ -919,7 +919,7 @@
 <rect width="12" height="12" x="30" y="255" class="named"><title>0x004548b0 InitialiseFXArray (74 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="255" class="named"><title>0x00454900 CreateEffect (110 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="255" class="named"><title>0x00454970 KillEffect (273 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="255" class="todo"><title>0x00454a90 EffectNewRoom (206 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="255" class="named"><title>0x00454a90 EffectNewRoom (206 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="255" class="todo"><title>0x00454b60 ElementPuzzleCollision (908 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="255" class="todo"><title>0x00454ef0 InitialiseElementPuzzle (82 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="255" class="todo"><title>0x00454f50 ControlElementPuzzle (685 bytes)</title></rect>
@@ -2322,7 +2322,7 @@
 <rect width="8.93" height="9.31" x="485.97" y="430.79" class="todo"><title>0x0040af80 Targetable (207 bytes)</title></rect>
 <rect width="8.93" height="9.31" x="485.97" y="443.11" class="todo"><title>0x00425480 lara_as_forwardjump (207 bytes)</title></rect>
 <rect width="8.93" height="9.31" x="485.97" y="455.42" class="todo"><title>0x0042f7b0 DrawFlareInAir (207 bytes)</title></rect>
-<rect width="8.93" height="9.27" x="485.97" y="467.73" class="todo"><title>0x00454a90 EffectNewRoom (206 bytes)</title></rect>
+<rect width="8.93" height="9.27" x="485.97" y="467.73" class="named"><title>0x00454a90 EffectNewRoom (206 bytes)</title></rect>
 <rect width="9.20" height="9" x="497.90" y="218.26" class="todo"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
 <rect width="9.11" height="9" x="510.09" y="218.26" class="todo"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="9.06" height="9" x="522.20" y="218.26" class="todo"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
