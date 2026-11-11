@@ -8,6 +8,8 @@
 #include "draw.h"
 #include "control.h"
 #include "objnums.h"
+#include "sphere.h"
+#include "sound.h"
 
 sint32 TargetVisible(ITEM_INFO *item, AI_INFO *info)
 {
@@ -66,6 +68,19 @@ sint32 Targetable(ITEM_INFO *item, AI_INFO *info)
 sint16 GunShot(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 room_number)
 {
     return NO_ITEM;
+}
+
+sint16 GunHit(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 room_number)
+{
+    PHD_VECTOR pos;
+
+    pos.z = 0;
+    pos.y = 0;
+    pos.x = 0;
+    GetJointAbsPosition(lara_item, &pos, (25 * GetRandomControl()) / 0x7FFF);
+    DoBloodSplat(pos.x, pos.y, pos.z, (GetRandomControl() & 3) + 3, lara_item->pos.y_rot, lara_item->room_number);
+    SoundEffect(50, &lara_item->pos, 0);
+    return GunShot(x, y, z, speed, yrot, room_number);
 }
 
 sint16 GunMiss(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 room_number)
