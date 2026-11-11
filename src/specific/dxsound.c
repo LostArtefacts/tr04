@@ -206,3 +206,9 @@ void S_SoundSetPanAndVolume(sint32 num, sint16 pan, uint16 volume)
         DSAdjustPan(num, pan);
     }
 }
+
+void S_SoundSetPitch(sint32 num, sint32 pitch)
+{
+    if (sound_active)
+        DSAdjustPitch(num, pitch);
+}
