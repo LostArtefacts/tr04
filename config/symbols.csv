@@ -1994,9 +1994,12 @@ address,size,name,symbol
 0x004aebf8,1,piece_moving,_piece_moving
 0x004aebfc,4,flipeffect,_flipeffect
 0x004aec00,2,cdtrack,_cdtrack
+0x004aedb0,1696,CharDef,_CharDef
 0x004af451,1,gfGameMode,_gfGameMode
 0x004af452,,gfInitialiseGame,_gfInitialiseGame
 0x004af454,4,nFrames,_nFrames
+0x004aff48,80,ShadeFromTo,_ShadeFromTo
+0x004aff98,4,font_init,_font_init
 0x004b22c0,4,source_wav_format,_source_wav_format
 0x004b22f4,4,XATrack,_XATrack
 0x004b22f8,4,XAFlag,_XAFlag
@@ -2119,7 +2122,9 @@ address,size,name,symbol
 0x004bf6e8,4,bCheckTrigger,_bCheckTrigger
 0x004bf6ec,4,bUseSpotCam,_bUseSpotCam
 0x004bf6f0,4,bDisableLaraControl,_bDisableLaraControl
-0x004bfc04,,ScaleFlag,_ScaleFlag
+0x004bf704,1280,FontShades,_FontShades
+0x004bfc04,1,ScaleFlag,_ScaleFlag
+0x004bfc05,1,PulseCnt,_PulseCnt
 0x004bfc08,4,bikefspeed,_bikefspeed
 0x004bfc24,1,dont_exit_bike,_dont_exit_bike
 0x004bfc68,1,dont_exit_jeep,_dont_exit_jeep
@@ -2336,6 +2341,7 @@ address,size,name,symbol
 0x007f504c,4,GlobalBikeItem,_GlobalBikeItem
 0x007f5050,4,font_height,_font_height
 0x007f5054,4,small_font,_small_font
+0x007f5060,1696,CharDefCopy,_CharDefCopy
 0x007f5700,,CurrentSequence,_CurrentSequence
 0x007f5740,2,current_camera_cnt,_current_camera_cnt
 0x007f5750,,InitialCameraTarget,_InitialCameraTarget
