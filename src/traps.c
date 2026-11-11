@@ -251,6 +251,74 @@ void FallingCeiling(sint16 item_number)
     }
 }
 
+void DartEmitterControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *dart;
+    sint32 x, z, xLimit, zLimit, xv, zv, rand, i;
+    sint16 num;
+
+    item = &items[item_number];
+    if (item->active) {
+        if (item->timer <= 0) {
+            item->timer = 24;
+        } else {
+            item->timer--;
+            return;
+        }
+    }
+    num = CreateItem();
+    if (num != NO_ITEM) {
+        x = 0;
+        z = 0;
+        dart = &items[num];
+        dart->object_number = DARTS;
+        dart->room_number = item->room_number;
+        switch (item->pos.y_rot) {
+        case 0:
+            z = 512;
+            break;
+        case 0x4000:
+            x = 512;
+            break;
+        case -0x4000:
+            x = -512;
+            break;
+        case -0x8000:
+            z = -512;
+            break;
+        }
+        dart->pos.x_pos = x + item->pos.x_pos;
+        dart->pos.y_pos = item->pos.y_pos - 512;
+        dart->pos.z_pos = z + item->pos.z_pos;
+        InitialiseItem(num);
+        dart->pos.x_rot = 0;
+        dart->pos.y_rot = item->pos.y_rot + 0x8000;
+        dart->speed = 256;
+        xLimit = 0;
+        zLimit = 0;
+        if (x)
+            xLimit = abs(x << 1) - 1;
+        else
+            zLimit = abs(z << 1) - 1;
+        for (i = 0; i < 5; i++) {
+            rand = -GetRandomControl();
+            if (z < 0)
+                zv = -(zLimit & rand);
+            else
+                zv = zLimit & rand;
+            if (x < 0)
+                xv = -(xLimit & rand);
+            else
+                xv = xLimit & rand;
+            TriggerDartSmoke(dart->pos.x_pos, dart->pos.y_pos, dart->pos.z_pos, xv, zv, 0);
+        }
+        AddActiveItem(num);
+        dart->status = ITEM_ACTIVE;
+        SoundEffect(SFX_DART_SPITT, &dart->pos, SFX_DEFAULT);
+    }
+}
+
 void DartsControl(sint16 item_number)
 {
     ITEM_INFO *item;
