@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="110.37" height="12" x="0" y="0" class="named"><title>490 · 31.72%</title></rect>
 <rect width="0.45" height="12" x="110.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="3.60" height="12" x="110.82" y="0" class="nonmatching"><title>16 · 1.04%</title></rect>
-<rect width="233.58" height="12" x="114.42" y="0" class="todo"><title>1037 · 67.12%</title></rect>
+<rect width="3.83" height="12" x="110.82" y="0" class="nonmatching"><title>17 · 1.10%</title></rect>
+<rect width="233.35" height="12" x="114.65" y="0" class="todo"><title>1036 · 67.06%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">31.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">490</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">16</tspan> · <tspan class="todo">1037</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">490</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">17</tspan> · <tspan class="todo">1036</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="47.15" height="12" x="0" y="0" class="named"><title>84 KB · 13.55%</title></rect>
 <rect width="0.12" height="12" x="47.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.05" height="12" x="47.27" y="0" class="nonmatching"><title>11 KB · 1.74%</title></rect>
-<rect width="294.68" height="12" x="53.32" y="0" class="todo"><title>525 KB · 84.68%</title></rect>
+<rect width="6.12" height="12" x="47.27" y="0" class="nonmatching"><title>11 KB · 1.76%</title></rect>
+<rect width="294.60" height="12" x="53.40" y="0" class="todo"><title>525 KB · 84.66%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">84 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">525 KB</tspan></text>
@@ -225,7 +225,7 @@
 <rect width="12" height="12" x="90" y="45" class="todo"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="45" class="nonmatching"><title>0x00416d70 ControlSpikeball (201 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="45" class="nonmatching"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="45" class="todo"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="45" class="nonmatching"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="45" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="45" class="named"><title>0x00417020 ControlMovingBlade (83 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="45" class="named"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
@@ -2520,7 +2520,7 @@
 <rect width="6.97" height="7.59" x="551.13" y="266.26" class="named"><title>0x004136c0 TrapDoorControl (137 bytes)</title></rect>
 <rect width="6.97" height="7.59" x="551.13" y="276.86" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="6.97" height="7.59" x="551.13" y="287.45" class="todo"><title>0x0046cab0 trigger_weapon_dynamics (137 bytes)</title></rect>
-<rect width="6.97" height="7.54" x="551.13" y="298.04" class="todo"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
+<rect width="6.97" height="7.54" x="551.13" y="298.04" class="nonmatching"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
 <rect width="6.97" height="7.54" x="551.13" y="308.58" class="named"><title>0x00417310 ControlFallingSquishyBlock (136 bytes)</title></rect>
 <rect width="6.97" height="7.54" x="551.13" y="319.12" class="named"><title>0x004707a0 MapASCIIToANSI (136 bytes)</title></rect>
 <rect width="6.97" height="7.54" x="551.13" y="329.66" class="todo"><title>0x0048ee50 CheckMMXTechnology (136 bytes)</title></rect>

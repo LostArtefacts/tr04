@@ -38,5 +38,6 @@ void RollingBallCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void ControlTwoBlockPlatform(sint16 item_number);
 void ControlSpikeball(sint16 item_number);
 void Control4xFloorRoofBlade(sint16 item_number);
+void ControlBirdBlade(sint16 item_number);
 
 #endif
