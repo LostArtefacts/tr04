@@ -14,6 +14,19 @@ sint32 CheckSumValid(sint8 *buffer)
     return !checksum;
 }
 
+void sgSaveGame(void)
+{
+    sint32 level_index;
+
+    level_index = OpenSaveGame(gfCurrentLevel, 1);
+    savegame.Game.Timer = GameTimer;
+    savegame.CurrentLevel ^= (gfCurrentLevel ^ savegame.CurrentLevel) & 0x7F;
+    SaveLevelData(1);
+    SaveLaraData();
+    SaveHubData(level_index);
+    CreateCheckSum();
+}
+
 void WriteSG(void *pointer, sint32 size)
 {
     char *data;

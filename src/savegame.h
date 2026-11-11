@@ -47,5 +47,6 @@ sint32 OpenSaveGame(uint8 current_level, sint32 saving);
 void SaveLevelData(sint32 FullSave);
 void RestoreLevelData(sint32 FullSave);
 sint32 CheckSumValid(sint8 *buffer);
+void sgSaveGame(void);
 
 #endif
