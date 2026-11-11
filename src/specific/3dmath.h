@@ -41,6 +41,13 @@ sint32 phd_sqrt(sint32 num);
 void phd_PushMatrix(void);
 void phd_PushUnitMatrix(void);
 void Func490320(void);
+sint32 phd_TranslateRel(sint32 x, sint32 y, sint32 z);
+void phd_RotX(sint16 angle);
+void phd_RotY(sint16 angle);
+void phd_RotZ(sint16 angle);
+void phd_RotYXZpack(sint32 angles);
+void phd_RotYXZ(sint16 y, sint16 x, sint16 z);
+void phd_TranslateAbs(sint32 x, sint32 y, sint32 z);
 void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, sint16 *angles);
 
 extern sint32 phdtan2[8];

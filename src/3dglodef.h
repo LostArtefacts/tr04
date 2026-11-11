@@ -11,6 +11,8 @@ typedef struct phd_vector {
 
 typedef sint16 PHD_ANGLE;
 
+#define ABS(x) (((x) < 0) ? (-(x)) : (x))
+
 typedef struct phd_3dpos {
     sint32 x_pos;
     sint32 y_pos;

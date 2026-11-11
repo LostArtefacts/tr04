@@ -268,3 +268,16 @@ void Func490320(void)
     mx[M10] = mx[M12] = mx[M13] = 0;
     mx[M20] = mx[M21] = mx[M23] = 0;
 }
+
+sint32 phd_TranslateRel(sint32 x, sint32 y, sint32 z)
+{
+    sint32 *mptr;
+
+    mptr = phd_mxptr;
+    mptr[M03] += mptr[M00] * x + mptr[M01] * y + mptr[M02] * z;
+    mptr[M13] += mptr[M10] * x + mptr[M11] * y + mptr[M12] * z;
+    mptr[M23] += mptr[M20] * x + mptr[M21] * y + mptr[M22] * z;
+    if ((x = ABS(mptr[M03])) > phd_zfar || (y = ABS(mptr[M13])) > phd_zfar || (z = ABS(mptr[M23])) > phd_zfar)
+        return 0;
+    return 1;
+}
