@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="32.09" height="12" x="0" y="0" class="named"><title>134 · 8.67%</title></rect>
-<rect width="0.24" height="12" x="32.09" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.20" height="12" x="32.33" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
-<rect width="336.47" height="12" x="33.53" y="0" class="todo"><title>1405 · 90.94%</title></rect>
+<rect width="32.33" height="12" x="0" y="0" class="named"><title>135 · 8.74%</title></rect>
+<rect width="0.24" height="12" x="32.33" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.20" height="12" x="32.57" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
+<rect width="336.23" height="12" x="33.77" y="0" class="todo"><title>1404 · 90.87%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">8.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">134</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1405</tspan></text>
+<text text-anchor="end" x="540" y="7.50">8.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">135</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1404</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="14.46" height="12" x="0" y="0" class="named"><title>24 KB · 3.91%</title></rect>
-<rect width="0.10" height="12" x="14.46" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="1.61" height="12" x="14.49" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
-<rect width="353.90" height="12" x="16.10" y="0" class="todo"><title>593 KB · 95.65%</title></rect>
+<rect width="14.54" height="12" x="0" y="0" class="named"><title>24 KB · 3.93%</title></rect>
+<rect width="0.10" height="12" x="14.54" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="1.61" height="12" x="14.57" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
+<rect width="353.82" height="12" x="16.18" y="0" class="todo"><title>593 KB · 95.63%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">3.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">24 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">3 KB</tspan> · <tspan class="todo">593 KB</tspan></text>
@@ -1212,7 +1212,7 @@
 <rect width="12" height="12" x="645" y="330" class="todo"><title>0x004701c0 InitResolution (1057 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="330" class="todo"><title>0x004705f0 InitD3DDevice (186 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="330" class="todo"><title>0x004706b0 InitDDDevice (228 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="330" class="todo"><title>0x004707a0 MapASCIIToANSI (136 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="330" class="named"><title>0x004707a0 MapASCIIToANSI (136 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="330" class="todo"><title>0x00470830 DXSetupDlgProc (1986 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="330" class="todo"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="330" class="todo"><title>0x00471420 ProcessRoomData (2518 bytes)</title></rect>
@@ -2522,7 +2522,7 @@
 <rect width="6.97" height="7.60" x="551.18" y="287.53" class="todo"><title>0x0046cab0 trigger_weapon_dynamics (137 bytes)</title></rect>
 <rect width="6.97" height="7.55" x="551.18" y="298.13" class="todo"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
 <rect width="6.97" height="7.55" x="551.18" y="308.68" class="todo"><title>0x00417310 ControlFallingSquishyBlock (136 bytes)</title></rect>
-<rect width="6.97" height="7.55" x="551.18" y="319.22" class="todo"><title>0x004707a0 MapASCIIToANSI (136 bytes)</title></rect>
+<rect width="6.97" height="7.55" x="551.18" y="319.22" class="named"><title>0x004707a0 MapASCIIToANSI (136 bytes)</title></rect>
 <rect width="6.97" height="7.55" x="551.18" y="329.77" class="todo"><title>0x0048ee50 CheckMMXTechnology (136 bytes)</title></rect>
 <rect width="6.97" height="7.49" x="551.18" y="340.31" class="todo"><title>0x00453370 InitialiseSlicerDicer (135 bytes)</title></rect>
 <rect width="6.97" height="7.44" x="551.18" y="350.81" class="todo"><title>0x00432690 SwimTurn (134 bytes)</title></rect>

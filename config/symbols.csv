@@ -2003,6 +2003,7 @@ address,size,name,symbol
 0x004b22f4,4,XATrack,_XATrack
 0x004b22f8,4,XAFlag,_XAFlag
 0x004b253a,1,Filter,_Filter
+0x004b253c,14,ASCIIToANSITable,_ASCIIToANSITable
 0x004b25d0,4,water_color_R,_water_color_R
 0x004b25d4,4,water_color_G,_water_color_G
 0x004b25d8,4,water_color_B,_water_color_B
