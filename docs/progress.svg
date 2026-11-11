@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="4.06" height="12" x="0" y="0" class="named"><title>13 · 0.84%</title></rect>
-<rect width="479.94" height="12" x="4.06" y="0" class="todo"><title>1538 · 99.16%</title></rect>
+<rect width="4.37" height="12" x="0" y="0" class="named"><title>14 · 0.90%</title></rect>
+<rect width="479.63" height="12" x="4.37" y="0" class="todo"><title>1537 · 99.10%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">0.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">13</tspan> · <tspan class="todo">1538</tspan></text>
+<text text-anchor="end" x="654" y="7.50">0.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">14</tspan> · <tspan class="todo">1537</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="1.44" height="12" x="0" y="0" class="named"><title>2 KB · 0.30%</title></rect>
-<rect width="482.56" height="12" x="1.44" y="0" class="todo"><title>618 KB · 99.70%</title></rect>
+<rect width="1.45" height="12" x="0" y="0" class="named"><title>2 KB · 0.30%</title></rect>
+<rect width="482.55" height="12" x="1.45" y="0" class="todo"><title>618 KB · 99.70%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">2 KB</tspan> · <tspan class="todo">618 KB</tspan></text>
@@ -1386,7 +1386,7 @@
 <rect width="12" height="12" x="315" y="390" class="todo"><title>0x004849a0 AddPrelitMMX (122 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="390" class="todo"><title>0x00484a20 CalcColorSplit (217 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="390" class="named"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="390" class="todo"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="390" class="named"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="390" class="todo"><title>0x00484b40 REG_WriteLong (30 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="390" class="todo"><title>0x00484b60 REG_WriteBool (42 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="390" class="todo"><title>0x00484b90 REG_ReadLong (94 bytes)</title></rect>
@@ -3104,7 +3104,7 @@
 <rect width="2.70" height="2.06" x="707.96" y="464.97" class="todo"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
 <rect width="2.70" height="2.06" x="707.96" y="470.03" class="todo"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="2.70" height="1.90" x="707.96" y="475.10" class="todo"><title>0x00437650 finish_level_effect (13 bytes)</title></rect>
-<rect width="2.22" height="2.36" x="713.66" y="438.71" class="todo"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
+<rect width="2.22" height="2.36" x="713.66" y="438.71" class="named"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
 <rect width="2.22" height="2.36" x="718.87" y="438.71" class="todo"><title>0x0048f981 Func48f981 (13 bytes)</title></rect>
 <rect width="2.22" height="2.36" x="724.09" y="438.71" class="todo"><title>0x0048f9a1 Func48f9a1 (13 bytes)</title></rect>
 <rect width="2.22" height="2.36" x="729.31" y="438.71" class="todo"><title>0x0048f9c1 Func48f9c1 (13 bytes)</title></rect>
