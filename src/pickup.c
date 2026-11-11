@@ -33,3 +33,18 @@ void PuzzleDone(ITEM_INFO *item, sint16 item_number)
     item->flags |= IFL_CODEBITS;
     item->status = ITEM_ACTIVE;
 }
+
+sint32 KeyTrigger(sint16 item_num)
+{
+    ITEM_INFO *item;
+    sint32 oldkey;
+
+    item = &items[item_num];
+    if ((item->status != ITEM_ACTIVE || lara.gun_status == LG_HANDS_BUSY) && (!KeyTriggerActive || lara.gun_status != LG_HANDS_BUSY))
+        return -1;
+    oldkey = KeyTriggerActive;
+    if (!KeyTriggerActive)
+        item->status = ITEM_DEACTIVATED;
+    KeyTriggerActive = 0;
+    return oldkey;
+}
