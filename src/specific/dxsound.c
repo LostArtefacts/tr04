@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <string.h>
 
 #include "dxsound.h"
@@ -59,4 +60,30 @@ void DSAdjustPan(sint32 num, sint32 pan)
         pan >>= 4;
         IDirectSoundBuffer_SetPan(DS_Samples[num].buffer, pan);
     }
+}
+
+uint8 InitSampleDecompress(void)
+{
+    pcm_format.wFormatTag = WAVE_FORMAT_PCM;
+    pcm_format.cbSize = 0;
+    pcm_format.nChannels = 1;
+    pcm_format.nAvgBytesPerSec = 44100;
+    pcm_format.nSamplesPerSec = 22050;
+    pcm_format.nBlockAlign = 2;
+    pcm_format.wBitsPerSample = 16;
+    DS_mmresult = acmStreamOpen(&DS_hACMStream, hACMDriver, (LPWAVEFORMATEX)source_pcm_format, &pcm_format, 0, 0, 0, 0);
+    if (DS_mmresult != DS_OK)
+        Log(1, "Stream Open %d", DS_mmresult);
+    decompressed_samples_buffer = (char *)malloc(0x40000);
+    samples_buffer = (char *)malloc(0x4005A);
+    memset(&ACMStreamHeader, 0, sizeof(ACMStreamHeader));
+    ACMStreamHeader.pbSrc = (LPBYTE)(samples_buffer + 90);
+    ACMStreamHeader.cbStruct = 84;
+    ACMStreamHeader.cbSrcLength = 0x40000;
+    ACMStreamHeader.cbDstLength = 0x40000;
+    ACMStreamHeader.pbDst = (LPBYTE)decompressed_samples_buffer;
+    DS_mmresult = acmStreamPrepareHeader(DS_hACMStream, &ACMStreamHeader, 0);
+    if (DS_mmresult != DS_OK)
+        Log(1, "Prepare Stream %d", DS_mmresult);
+    return 1;
 }

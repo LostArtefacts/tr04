@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <mmreg.h>
 #include <dsound.h>
+#include <msacm.h>
 
 #include "../types.h"
 
@@ -17,11 +18,21 @@ uint8 DXChangeOutputFormat(sint32 nSamplesPerSec, uint8 force);
 void DSChangeVolume(sint32 num, sint32 volume);
 void DSAdjustPitch(sint32 num, sint32 pitch);
 void DSAdjustPan(sint32 num, sint32 pan);
+uint8 InitSampleDecompress(void);
+uint8 FreeSampleDecompress(void);
 void S_SoundStopAllSamples(void);
 
 extern LPDIRECTSOUNDBUFFER G_DSPrimary;
 extern DS_SAMPLE DS_Samples[32];
 extern DS_SAMPLE DS_Buffers[256];
 extern sint32 lastSPC;
+extern char source_pcm_format[50];
+extern char *samples_buffer;
+extern char *decompressed_samples_buffer;
+extern MMRESULT DS_mmresult;
+extern WAVEFORMATEX pcm_format;
+extern HACMSTREAM DS_hACMStream;
+extern ACMSTREAMHEADER ACMStreamHeader;
+extern HACMDRIVER hACMDriver;
 
 #endif
