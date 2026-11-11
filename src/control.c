@@ -1,4 +1,28 @@
 #include "control.h"
+#include "box.h"
+
+void AlterFloorHeight(ITEM_INFO *item, sint32 height)
+{
+    FLOOR_INFO *floor, *ceiling;
+    sint16 room_num;
+
+    room_num = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_num);
+    ceiling = GetFloor(item->pos.x_pos, item->pos.y_pos + height - WALL_L, item->pos.z_pos, &room_num);
+    if (floor->floor == NO_HEIGHT / 256) {
+        floor->floor = ceiling->ceiling + height / 256;
+    } else {
+        floor->floor = height / 256 + floor->floor;
+        if (floor->floor == ceiling->ceiling)
+            floor->floor = NO_HEIGHT / 256;
+    }
+    if (boxes[floor->box].overlap_index & BLOCKABLE) {
+        if (height < 0)
+            boxes[floor->box].overlap_index |= BLOCKED;
+        else
+            boxes[floor->box].overlap_index &= ~BLOCKED;
+    }
+}
 
 sint16 GetDoor(FLOOR_INFO *floor)
 {

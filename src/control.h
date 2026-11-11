@@ -48,6 +48,7 @@ sint32 GetCeiling(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 void AnimateItem(ITEM_INFO *item);
 sint16 GetDoor(FLOOR_INFO *floor);
 void TriggerCDTrack(sint16 value, sint16 flags, sint16 type);
+void AlterFloorHeight(ITEM_INFO *item, sint32 height);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;
