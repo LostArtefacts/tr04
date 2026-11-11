@@ -46,3 +46,17 @@ void DSAdjustPitch(sint32 num, sint32 pitch)
         IDirectSoundBuffer_SetFrequency(DS_Samples[num].buffer, frequency);
     }
 }
+
+void DSAdjustPan(sint32 num, sint32 pan)
+{
+    if (DS_Samples[num].buffer) {
+        if (pan < 0) {
+            if (pan < -0x4000)
+                pan = -0x8000 - pan;
+        } else if (pan > 0 && pan > 0x4000) {
+            pan = 0x8000 - pan;
+        }
+        pan >>= 4;
+        IDirectSoundBuffer_SetPan(DS_Samples[num].buffer, pan);
+    }
+}
