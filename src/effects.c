@@ -12,6 +12,7 @@
 #include "specific/function_stubs.h"
 #include "draw.h"
 #include "room.h"
+#include "tomb4fx.h"
 
 sint32 ItemNearLara(PHD_3DPOS *pos, sint32 distance)
 {
@@ -38,6 +39,15 @@ void Richochet(GAME_VECTOR *pos)
     angle = (mGetAngle(pos->z, pos->x, lara_item->pos.z_pos, lara_item->pos.x_pos) >> 4) & 4095;
     TriggerRicochetSpark(pos, angle, 3, 0);
     SoundEffect(SFX_LARA_RICOCHET, (PHD_3DPOS *)pos, SFX_DEFAULT);
+}
+
+sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 direction, sint16 room_number)
+{
+    if (room[room_number].flags & ROOM_UNDERWATER)
+        TriggerUnderwaterBlood(x, y, z, speed);
+    else
+        TriggerBlood(x, y, z, direction >> 4, speed);
+    return -1;
 }
 
 void DoLotsOfBlood(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 direction, sint16 room_num, sint32 number)

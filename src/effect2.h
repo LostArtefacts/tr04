@@ -23,6 +23,7 @@ void DetatchSpark(sint32 num, sint32 type);
 void KillAllCurrentItems(sint16 item_number);
 void TriggerRicochetSpark(GAME_VECTOR *pos, sint32 ang, sint32 num, sint32 smoke_only);
 void ClearDynamics(void);
+void TriggerUnderwaterBlood(sint32 x, sint32 y, sint32 z, sint32 size);
 
 extern sint32 KillEverythingFlag;
 extern DYNAMIC dynamics[MAX_DYNAMICS * 2];
