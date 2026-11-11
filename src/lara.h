@@ -2,6 +2,7 @@
 #define LARA_H
 
 #include "items.h"
+#include "collide.h"
 
 #define ONE_DEGREE 182
 #define LARA_TURN_UNDO (2 * ONE_DEGREE)
@@ -12,6 +13,10 @@
 #define LARA_FAST_TURN ((ONE_DEGREE * 6) + LARA_TURN_UNDO)
 #define LARA_LEAN_UNDO ONE_DEGREE
 #define LARA_LEAN_RATE ((ONE_DEGREE / 2) + LARA_LEAN_UNDO)
+#define FASTFALL_SPEED 128
+#define LARA_FASTFALL_SPEED (FASTFALL_SPEED + 3)
+#define LARA_HITE 762
+#define STEPUP_HEIGHT ((256 * 3) / 2)
 
 enum lara_gun_states {
     LG_NO_ARMS,
@@ -180,8 +185,15 @@ typedef struct lara_info {
     sint8 locationPad;
 } LARA_INFO;
 
+sint16 LaraFloorFront(ITEM_INFO *item, sint16 ang, sint32 dist);
+void lara_col_monkeyswing(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_stepright(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_turn_r(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_jumper(ITEM_INFO *item, COLL_INFO *coll);
+void lara_slide_slope(ITEM_INFO *item, COLL_INFO *coll);
 void LookUpDown(void);
 void AnimateLara(ITEM_INFO *item);
+void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

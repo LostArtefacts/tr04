@@ -3,6 +3,9 @@
 
 #include "items.h"
 
+#define FOLLOW_CENTRE 1
+#define NO_CHUNKY 2
+
 typedef enum {
     CHASE_CAMERA,
     FIXED_CAMERA,

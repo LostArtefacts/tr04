@@ -54,4 +54,6 @@ typedef struct coll_info {
     uint16 hit_ceiling:1;
 } COLL_INFO;
 
+void GetCollisionInfo(COLL_INFO *coll, sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 hite);
+
 #endif
