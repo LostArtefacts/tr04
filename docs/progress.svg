@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="127.95" height="12" x="0" y="0" class="named"><title>578 · 37.41%</title></rect>
-<rect width="0.44" height="12" x="127.95" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="128.39" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="208.96" height="12" x="133.04" y="0" class="todo"><title>944 · 61.10%</title></rect>
+<rect width="128.17" height="12" x="0" y="0" class="named"><title>579 · 37.48%</title></rect>
+<rect width="0.44" height="12" x="128.17" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="128.61" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="208.74" height="12" x="133.26" y="0" class="todo"><title>943 · 61.04%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">37.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">578</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">944</tspan></text>
+<text text-anchor="end" x="522" y="7.50">37.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">579</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">943</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.39" height="12" x="0" y="0" class="named"><title>100 KB · 16.20%</title></rect>
-<rect width="0.12" height="12" x="55.39" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="55.51" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="279.24" height="12" x="62.76" y="0" class="todo"><title>506 KB · 81.65%</title></rect>
+<rect width="55.40" height="12" x="0" y="0" class="named"><title>100 KB · 16.20%</title></rect>
+<rect width="0.12" height="12" x="55.40" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="55.52" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="279.23" height="12" x="62.77" y="0" class="todo"><title>506 KB · 81.65%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">100 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">506 KB</tspan></text>
@@ -1143,7 +1143,7 @@
 <rect width="12" height="12" x="360" y="315" class="named"><title>0x0046c470 eighteen_init (9 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="315" class="todo"><title>0x0046c480 eighteen_control (36 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="315" class="named"><title>0x0046c4b0 eighteen_end (36 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="315" class="todo"><title>0x0046c4e0 nineteen_init (21 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="315" class="named"><title>0x0046c4e0 nineteen_init (21 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="315" class="todo"><title>0x0046c500 nineteen_control (36 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="315" class="todo"><title>0x0046c530 nineteen_end (46 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="315" class="todo"><title>0x0046c560 twenty_control (36 bytes)</title></rect>
@@ -3042,7 +3042,7 @@
 <rect width="3.19" height="2.66" x="713.29" y="403.47" class="named"><title>0x00437660 turn180_effect (22 bytes)</title></rect>
 <rect width="3.19" height="2.66" x="719.47" y="403.47" class="todo"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
 <rect width="3.19" height="2.66" x="725.66" y="403.47" class="todo"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
-<rect width="3.05" height="2.66" x="731.85" y="403.47" class="todo"><title>0x0046c4e0 nineteen_init (21 bytes)</title></rect>
+<rect width="3.05" height="2.66" x="731.85" y="403.47" class="named"><title>0x0046c4e0 nineteen_init (21 bytes)</title></rect>
 <rect width="3.05" height="2.66" x="737.90" y="403.47" class="named"><title>0x0046d790 S_StartSyncedAudio (21 bytes)</title></rect>
 <rect width="3.05" height="2.66" x="743.95" y="403.47" class="named"><title>0x00490ec0 S_ExitSystem (21 bytes)</title></rect>
 <rect width="2.61" height="2.96" x="694.31" y="409.13" class="todo"><title>0x00403620 Func403620 (20 bytes)</title></rect>

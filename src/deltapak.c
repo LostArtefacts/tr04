@@ -122,3 +122,9 @@ void eighteen_end(void)
     cutseq_restore_item(JEAN_YVES);
     DelsHandyTeleportLara(55311, -8192, 53160, 2304);
 }
+
+void nineteen_init(void)
+{
+    cutseq_kill_item(ANIMATING4);
+    cutseq_kill_item(JEAN_YVES);
+}
