@@ -45,3 +45,10 @@ void sixth_cutseq_end(void)
 {
     DelsHandyTeleportLara(5632, 1280, 86528, 28987);
 }
+
+void seventh_cutseq_init(void)
+{
+    init_voncroy_meshbits(1);
+    cutseq_kill_item(ANIMATING3);
+    nail_intelligent_object(VON_CROY);
+}
