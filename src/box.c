@@ -128,6 +128,27 @@ void CreatureJoint(ITEM_INFO *item, sint16 joint, sint16 required)
         creature->joint_rotation[joint] = -JOINT_ARC;
 }
 
+void CreatureUnderwater(ITEM_INFO *item, sint32 depth)
+{
+    sint32 water_level, floorheight;
+    FLOOR_INFO *floor;
+    sint16 room_number;
+
+    water_level = GetWaterHeight(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number);
+    if (item->pos.y_pos < water_level + depth) {
+        room_number = item->room_number;
+        floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+        floorheight = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+        item->pos.y_pos = water_level + depth;
+        if (item->pos.y_pos > floorheight)
+            item->pos.y_pos = floorheight;
+        if (item->pos.x_rot > 364)
+            item->pos.x_rot -= 364;
+        else if (item->pos.x_rot > 0)
+            item->pos.x_rot = 0;
+    }
+}
+
 void AlertNearbyGuards(ITEM_INFO *item)
 {
     sint32 slot;
