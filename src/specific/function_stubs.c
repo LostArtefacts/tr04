@@ -12,3 +12,8 @@ void other_log(char *format, ...)
     vsprintf(buffer, format, arglist);
     Log(0, buffer);
 }
+
+void S_ExitSystem(const char *string)
+{
+    Log(0, "**** %s ****", string);
+}
