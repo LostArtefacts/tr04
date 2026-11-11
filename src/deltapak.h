@@ -123,5 +123,6 @@ void eleventh_cutseq_init(void);
 void twentythree_control(void);
 void ninth_control(void);
 void fifteen_control(void);
+void sixteen_control(void);
 
 #endif

@@ -280,6 +280,45 @@ void sixteen_init(void)
     cutseq_meshbits[9] &= ~0x80000000;
 }
 
+void sixteen_control(void)
+{
+    sint32 frame;
+
+    frame = GLOBAL_cutseq_frame;
+    if (frame == 1194)
+        cutseq_meshbits[3] &= ~0x80000000;
+    else {
+        if (frame == 1257 || frame == 1740)
+            cutseq_meshbits[2] |= 0x80000000;
+        if (frame == 1374 || frame == 2130)
+            cutseq_meshbits[2] &= ~0x80000000;
+        if (frame == 1300 || frame == 2820)
+            cutseq_meshbits[1] |= 0x80000000;
+        if (frame == 2401)
+            cutseq_meshbits[1] &= ~0x80000000;
+        else if (frame == 1300)
+            cutseq_meshbits[9] |= 0x80000000;
+        else if (frame == 2130)
+            cutseq_meshbits[9] &= ~0x80000000;
+        else if (frame == 2160)
+            cutseq_meshbits[6] |= 0x80000000;
+        else if (frame == 2340)
+            cutseq_meshbits[7] |= 0x80000000;
+        else if (frame == 2501) {
+            cutseq_meshbits[6] &= ~0x80000000;
+            cutseq_meshbits[7] &= ~0x80000000;
+            cutseq_meshbits[4] |= 0x80000000;
+            cutseq_meshbits[5] |= 0x80000000;
+            cutseq_meshbits[8] |= 0x80000000;
+        } else if (frame == 2980)
+            trigger_item_in_room(177, AMBER_LIGHT);
+    }
+    handle_lara_chatting(lara_chat_ranges16);
+    handle_actor_chatting(ACTOR2_SPEECH_HEAD1, 18, 3, ANIMATING14_MIP, jeanyves_chat_ranges16);
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 21, 1, ANIMATING9_MIP, voncroy_chat_ranges16);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void sixteen_end(void)
 {
     untrigger_item_in_room(169, FLAME_EMITTER2);
