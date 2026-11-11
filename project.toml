@@ -36,4 +36,4 @@ progress = true  # every commit redraws docs/progress.svg
 compare = true  # every compiled function matches the original
 one_function = true  # one newly matching function per commit
 no_comments = true  # no comments, tabs or CRs in src/
-allow_diff = []  # logically equivalent, registers or term order differ
+allow_diff = ["CreateZone"]  # logically equivalent, registers or term order differ

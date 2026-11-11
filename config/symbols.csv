@@ -2453,6 +2453,7 @@ address,size,name,symbol
 0x007fe930,4,static_lookcamp,_static_lookcamp
 0x007fe940,4,number_cameras,_number_cameras
 0x007fe960,4,ShatterItem,_ShatterItem
+0x007fe980,40,ground_zone,_ground_zone
 0x007fe9a8,4,overlap,_overlap
 0x007fe9b0,4,boxes,_boxes
 0x007fe9b4,4,num_boxes,_num_boxes

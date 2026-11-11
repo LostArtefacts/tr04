@@ -70,5 +70,6 @@ typedef struct creature_info {
 } CREATURE_INFO;
 
 extern int num_boxes;
+extern sint16 *ground_zone[5][2];
 
 #endif

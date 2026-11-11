@@ -4,6 +4,7 @@
 #include "camera.h"
 #include "lara.h"
 #include "objnums.h"
+#include "room.h"
 #include "specific/function_stubs.h"
 
 extern int slots_used;
@@ -190,6 +191,44 @@ void InitialiseSlot(sint16 item_number, int slot)
     if (item_number != lara.item_number)
         CreateZone(item);
     slots_used++;
+}
+
+void CreateZone(ITEM_INFO *item)
+{
+    int i;
+    sint16 zone_number, flip_number;
+    sint16 *zone, *flip;
+    CREATURE_INFO *creature;
+    ROOM_INFO *r;
+    BOX_NODE *node;
+
+    creature = (CREATURE_INFO *)item->data;
+    r = &room[item->room_number];
+    item->box_number = r->floor[((item->pos.z_pos - r->z) >> WALL_SHIFT) + r->x_size * ((item->pos.x_pos - r->x) >> WALL_SHIFT)].box;
+
+    if (!creature->LOT.fly) {
+        zone = ground_zone[creature->LOT.zone][0];
+        flip = ground_zone[creature->LOT.zone][1];
+        zone_number = zone[item->box_number];
+        flip_number = flip[item->box_number];
+        node = creature->LOT.node;
+        creature->LOT.zone_count = 0;
+        for (i = 0; i < num_boxes; i++, zone++, flip++) {
+            if (*zone == zone_number || *flip == flip_number) {
+                node->box_number = i;
+                node++;
+                creature->LOT.zone_count++;
+            }
+        }
+    } else {
+        creature->LOT.zone_count = 0;
+        node = creature->LOT.node;
+        for (i = 0; i < num_boxes; i++) {
+            node->box_number = i;
+            node++;
+            creature->LOT.zone_count++;
+        }
+    }
 }
 
 void ClearLOT(LOT_INFO *lot)
