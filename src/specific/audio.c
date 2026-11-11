@@ -103,3 +103,32 @@ sint32 ACMSetupNotifications(void)
     }
     return result;
 }
+
+void ACMClose(void)
+{
+    if (!acm_ready)
+        return;
+    EnterCriticalSection(&audio_cs);
+    S_CDStop();
+    CloseHandle(NotifyEventHandles[0]);
+    CloseHandle(NotifyEventHandles[1]);
+    acmStreamUnprepareHeader(hACMStream, &StreamHeaders[0], 0);
+    acmStreamUnprepareHeader(hACMStream, &StreamHeaders[1], 0);
+    acmStreamUnprepareHeader(hACMStream, &StreamHeaders[2], 0);
+    acmStreamUnprepareHeader(hACMStream, &StreamHeaders[3], 0);
+    acmStreamClose(hACMStream, 0);
+    acmDriverClose(hACMDriver, 0);
+    if (G_DSNotify) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Notification", G_DSNotify, IDirectSoundNotify_Release(G_DSNotify));
+        G_DSNotify = 0;
+    } else {
+        Log(1, "%s Attempt To Release NULL Ptr", "Notification");
+    }
+    if (G_DSBuffer) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Stream Buffer", G_DSBuffer, IDirectSoundBuffer_Release(G_DSBuffer));
+        G_DSBuffer = 0;
+    } else {
+        Log(1, "%s Attempt To Release NULL Ptr", "Stream Buffer");
+    }
+    LeaveCriticalSection(&audio_cs);
+}

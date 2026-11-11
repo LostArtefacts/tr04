@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="29.62" height="12" x="0" y="0" class="named"><title>124 · 8.01%</title></rect>
-<rect width="0.24" height="12" x="29.62" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.19" height="12" x="29.86" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
-<rect width="338.95" height="12" x="31.05" y="0" class="todo"><title>1419 · 91.61%</title></rect>
+<rect width="29.86" height="12" x="0" y="0" class="named"><title>125 · 8.07%</title></rect>
+<rect width="0.24" height="12" x="29.86" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.19" height="12" x="30.10" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
+<rect width="338.71" height="12" x="31.29" y="0" class="todo"><title>1418 · 91.54%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">8.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">124</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1419</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">125</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1418</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="13.09" height="12" x="0" y="0" class="named"><title>22 KB · 3.54%</title></rect>
-<rect width="0.10" height="12" x="13.09" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="1.61" height="12" x="13.12" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
-<rect width="355.27" height="12" x="14.73" y="0" class="todo"><title>595 KB · 96.02%</title></rect>
+<rect width="13.29" height="12" x="0" y="0" class="named"><title>22 KB · 3.59%</title></rect>
+<rect width="0.10" height="12" x="13.29" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="1.61" height="12" x="13.31" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
+<rect width="355.08" height="12" x="14.92" y="0" class="todo"><title>595 KB · 95.97%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">3.5%</text>
+<text text-anchor="end" x="540" y="24.50">3.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">22 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">3 KB</tspan> · <tspan class="todo">595 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1195,7 +1195,7 @@
 <rect width="12" height="12" x="390" y="330" class="named"><title>0x0046d800 ACMEnumCallBack (144 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="330" class="named"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="330" class="todo"><title>0x0046d9c0 ACMInit (818 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="330" class="todo"><title>0x0046dd00 ACMClose (327 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="330" class="named"><title>0x0046dd00 ACMClose (327 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="330" class="todo"><title>0x0046de50 OpenStreamFile (242 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="330" class="todo"><title>0x0046dec7 Func46dec7 (12 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="330" class="todo"><title>0x0046df50 FillADPCMBuffer (391 bytes)</title></rect>
@@ -2144,7 +2144,7 @@
 <rect width="11.12" height="11.41" x="429.13" y="393.12" class="todo"><title>0x00482e40 AddClippedPoly (328 bytes)</title></rect>
 <rect width="11.12" height="11.38" x="429.13" y="407.53" class="todo"><title>0x004220b0 lara_as_dash (327 bytes)</title></rect>
 <rect width="11.12" height="11.38" x="429.13" y="421.91" class="todo"><title>0x004451c0 mgLOS (327 bytes)</title></rect>
-<rect width="11.12" height="11.38" x="429.13" y="436.28" class="todo"><title>0x0046dd00 ACMClose (327 bytes)</title></rect>
+<rect width="11.12" height="11.38" x="429.13" y="436.28" class="named"><title>0x0046dd00 ACMClose (327 bytes)</title></rect>
 <rect width="11.12" height="11.34" x="429.13" y="450.66" class="todo"><title>0x00480700 DDCopyBitmap (326 bytes)</title></rect>
 <rect width="11" height="11.39" x="443.24" y="158.26" class="todo"><title>0x0041d9a0 GetLaraJointPos (324 bytes)</title></rect>
 <rect width="11" height="11.39" x="443.24" y="172.65" class="todo"><title>0x00421e90 LaraTestHangOnClimbWall (324 bytes)</title></rect>
