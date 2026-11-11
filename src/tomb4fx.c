@@ -9,6 +9,7 @@
 #include "control.h"
 #include "specific/3dmath.h"
 #include "delstuff.h"
+#include "text.h"
 
 sint32 GetFreeFireSpark(void)
 {
@@ -620,6 +621,34 @@ void SetScreenFadeIn(sint16 speed)
         ScreenFadeSpeed = speed;
         ScreenFadedOut = 0;
     }
+}
+
+void Fade(void)
+{
+    sint32 oldfucker;
+
+    oldfucker = ScreenFade;
+    if (dScreenFade && dScreenFade >= ScreenFade) {
+        ScreenFade += ScreenFadeSpeed;
+        if (ScreenFade > dScreenFade) {
+            ScreenFade = dScreenFade;
+            if (oldfucker >= dScreenFade) {
+                ScreenFadedOut = 1;
+                if (ScreenFadeBack) {
+                    ScreenFadeBack = dScreenFade = 0;
+                } else
+                    ScreenFading = 0;
+            }
+        }
+    } else if (dScreenFade < ScreenFade) {
+        ScreenFade -= ScreenFadeSpeed;
+        if (ScreenFade < dScreenFade) {
+            ScreenFade = dScreenFade;
+            ScreenFading = 0;
+        }
+    }
+    if (dScreenFade || ScreenFade)
+        DrawPsxTile(0, phd_winwidth | (phd_winheight << 16), RGBA(ScreenFade, ScreenFade, ScreenFade, 98), 2, 0);
 }
 
 sint32 GetFreeDrip(void)

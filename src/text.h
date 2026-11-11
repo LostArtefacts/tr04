@@ -4,6 +4,7 @@
 #include "3dglodef.h"
 
 #define RGBONLY(r, g, b) ((b) | (((g) | ((r) << 8)) << 8))
+#define RGBA(r, g, b, a) (RGBONLY(r, g, b) | ((a) << 24))
 #define CLRR(clr) (((clr) >> 16) & 0xFF)
 #define CLRG(clr) (((clr) >> 8) & 0xFF)
 #define CLRB(clr) ((clr) & 0xFF)

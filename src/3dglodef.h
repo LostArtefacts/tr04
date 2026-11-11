@@ -26,6 +26,7 @@ typedef struct cvector {
 } CVECTOR;
 
 #define ABS(x) (((x) < 0) ? (-(x)) : (x))
+#define SQUARE(x) ((x) * (x))
 
 typedef struct phd_3dpos {
     sint32 x_pos;

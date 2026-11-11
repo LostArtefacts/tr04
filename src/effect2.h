@@ -134,6 +134,8 @@ void TriggerExplosionSparks(sint32 x, sint32 y, sint32 z, sint32 extras, sint32 
 
 extern sint32 wibble;
 extern sint32 KillEverythingFlag;
+extern sint32 SmokeWindX;
+extern sint32 SmokeWindZ;
 extern DYNAMIC dynamics[MAX_DYNAMICS * 2];
 extern sint32 number_dynamics;
 extern RIPPLE_STRUCT ripples[16];
