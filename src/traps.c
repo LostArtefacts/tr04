@@ -476,6 +476,30 @@ void ControlSpikeball(sint16 item_number)
     }
 }
 
+void Control4xFloorRoofBlade(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint32 frame;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        frame = item->frame_number - anims[item->anim_number].frame_base;
+        if (frame <= 5 || frame >= 58 || (frame >= 8 && frame <= 54)) {
+            *(sint32 *)&item->item_flags[0] = 0;
+        } else if (frame >= 6 && frame <= 7) {
+            item->item_flags[3] = 20;
+            *(sint32 *)&item->item_flags[0] = 30;
+        } else if (frame >= 55 && frame <= 57) {
+            item->item_flags[3] = 200;
+            *(sint32 *)&item->item_flags[0] = 30;
+        }
+        AnimateItem(item);
+    } else {
+        item->frame_number = anims[item->anim_number].frame_base;
+        *(sint32 *)&item->item_flags[0] = 0;
+    }
+}
+
 void ControlCatwalkBlade(sint16 item_number)
 {
     ITEM_INFO *item;

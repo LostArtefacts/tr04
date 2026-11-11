@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="110.37" height="12" x="0" y="0" class="named"><title>490 · 31.72%</title></rect>
 <rect width="0.45" height="12" x="110.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="3.38" height="12" x="110.82" y="0" class="nonmatching"><title>15 · 0.97%</title></rect>
-<rect width="233.80" height="12" x="114.20" y="0" class="todo"><title>1038 · 67.18%</title></rect>
+<rect width="3.60" height="12" x="110.82" y="0" class="nonmatching"><title>16 · 1.04%</title></rect>
+<rect width="233.58" height="12" x="114.42" y="0" class="todo"><title>1037 · 67.12%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">31.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">490</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">15</tspan> · <tspan class="todo">1038</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">490</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">16</tspan> · <tspan class="todo">1037</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="47.15" height="12" x="0" y="0" class="named"><title>84 KB · 13.55%</title></rect>
 <rect width="0.12" height="12" x="47.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.94" height="12" x="47.27" y="0" class="nonmatching"><title>11 KB · 1.71%</title></rect>
-<rect width="294.79" height="12" x="53.21" y="0" class="todo"><title>525 KB · 84.71%</title></rect>
+<rect width="6.05" height="12" x="47.27" y="0" class="nonmatching"><title>11 KB · 1.74%</title></rect>
+<rect width="294.68" height="12" x="53.32" y="0" class="todo"><title>525 KB · 84.68%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">84 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">525 KB</tspan></text>
@@ -224,7 +224,7 @@
 <rect width="12" height="12" x="75" y="45" class="named"><title>0x004169a0 ControlStargate (89 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="45" class="todo"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="45" class="nonmatching"><title>0x00416d70 ControlSpikeball (201 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="45" class="todo"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="45" class="nonmatching"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="45" class="todo"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="45" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="45" class="named"><title>0x00417020 ControlMovingBlade (83 bytes)</title></rect>
@@ -2367,7 +2367,7 @@
 <rect width="8.58" height="8.65" x="589.17" y="221.87" class="todo"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
 <rect width="8.54" height="8.65" x="600.75" y="221.87" class="named"><title>0x00427ef0 lara_col_turn_r (191 bytes)</title></rect>
 <rect width="8.54" height="8.65" x="612.29" y="221.87" class="todo"><title>0x004398b0 LaraBubbles (191 bytes)</title></rect>
-<rect width="8.49" height="8.65" x="623.83" y="221.87" class="todo"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
+<rect width="8.49" height="8.65" x="623.83" y="221.87" class="nonmatching"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
 <rect width="8.49" height="8.65" x="635.32" y="221.87" class="named"><title>0x00421a10 lara_as_crawlb (190 bytes)</title></rect>
 <rect width="8.49" height="8.65" x="646.81" y="221.87" class="named"><title>0x00422810 LaraTestClimbStance (190 bytes)</title></rect>
 <rect width="8.49" height="8.65" x="658.30" y="221.87" class="todo"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
