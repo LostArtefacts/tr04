@@ -170,3 +170,9 @@ void lara_as_fallback(ITEM_INFO *item, COLL_INFO *coll)
     if ((input & IN_ACTION) && lara.gun_status == LG_NO_ARMS)
         item->goal_anim_state = AS_REACH;
 }
+
+void lara_as_slideback(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if ((input & IN_JUMP) && !(input & IN_FORWARD))
+        item->goal_anim_state = AS_BACKJUMP;
+}
