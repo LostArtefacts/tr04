@@ -2564,7 +2564,7 @@ address,size,name,symbol
 0x00804e68,4,SmokeCountL,_SmokeCountL
 0x00804e6c,4,SmokeCountR,_SmokeCountR
 0x00804f20,4,SmokeWeapon,_SmokeWeapon
-0x00804f40,4,splash_setup,_splash_setup
+0x00804f40,36,splash_setup,_splash_setup
 0x00808f80,4,DebrisMeshAmbient,_DebrisMeshAmbient
 0x00808f84,4,DebrisMesh,_DebrisMesh
 0x00808f88,4,DebrisMeshFlags,_DebrisMeshFlags

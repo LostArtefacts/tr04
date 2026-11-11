@@ -29,10 +29,31 @@ typedef struct ripple_struct {
     uint8 init;
 } RIPPLE_STRUCT;
 
+typedef struct splash_setup {
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 InnerRad;
+    sint16 InnerSize;
+    sint16 InnerRadVel;
+    sint16 InnerYVel;
+    sint16 pad1;
+    sint16 MiddleRad;
+    sint16 MiddleSize;
+    sint16 MiddleRadVel;
+    sint16 MiddleYVel;
+    sint16 pad2;
+    sint16 OuterRad;
+    sint16 OuterSize;
+    sint16 OuterRadVel;
+    sint16 pad3;
+} SPLASH_SETUP;
+
 void DetatchSpark(sint32 num, sint32 type);
 void KillAllCurrentItems(sint16 item_number);
 void TriggerRicochetSpark(GAME_VECTOR *pos, sint32 ang, sint32 num, sint32 smoke_only);
 void ClearDynamics(void);
+void SetupSplash(SPLASH_SETUP *setup);
 void TriggerUnderwaterBlood(sint32 x, sint32 y, sint32 z, sint32 size);
 void TriggerDynamic(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint32 g, sint32 b);
 RIPPLE_STRUCT *SetupRipple(sint32 x, sint32 y, sint32 z, sint32 size, sint32 flags);
@@ -42,5 +63,6 @@ extern sint32 KillEverythingFlag;
 extern DYNAMIC dynamics[MAX_DYNAMICS * 2];
 extern sint32 number_dynamics;
 extern RIPPLE_STRUCT ripples[16];
+extern SPLASH_SETUP splash_setup;
 
 #endif

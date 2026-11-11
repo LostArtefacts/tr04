@@ -56,6 +56,33 @@ void DoLotsOfBlood(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 direction,
         DoBloodSplat(x - (GetRandomControl() << 9) / 0x8000 + 256, y - (GetRandomControl() << 9) / 0x8000 + 256, z - (GetRandomControl() << 9) / 0x8000 + 256, speed, direction, room_num);
 }
 
+void Splash(ITEM_INFO *item)
+{
+    sint32 height;
+    sint16 room_number;
+
+    room_number = item->room_number;
+    GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (room[room_number].flags & ROOM_UNDERWATER) {
+        height = GetWaterHeight(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, room_number);
+        splash_setup.x = item->pos.x_pos;
+        splash_setup.y = height;
+        splash_setup.z = item->pos.z_pos;
+        splash_setup.InnerRad = 32;
+        splash_setup.InnerSize = 8;
+        splash_setup.InnerRadVel = 320;
+        splash_setup.InnerYVel = -40 * item->fallspeed;
+        splash_setup.pad1 = 48;
+        splash_setup.MiddleRad = 32;
+        splash_setup.MiddleSize = 480;
+        splash_setup.MiddleRadVel = -20 * item->fallspeed;
+        splash_setup.MiddleYVel = 32;
+        splash_setup.pad2 = 128;
+        splash_setup.OuterRad = 544;
+        SetupSplash(&splash_setup);
+    }
+}
+
 void turn180_effect(ITEM_INFO *item)
 {
     item->pos.y_rot += -0x8000;
