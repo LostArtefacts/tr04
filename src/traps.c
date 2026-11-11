@@ -503,6 +503,33 @@ void ControlSlicerDicer(sint16 item_number)
     AnimateItem(item);
 }
 
+sint32 TestBoundsCollideTeethSpikes(ITEM_INFO *item)
+{
+    sint16 *bounds;
+    sint32 x, y, z, rad, xMin, xMax, zMin, zMax;
+
+    if (item->trigger_flags & 8) {
+        x = item->pos.x_pos & ~0x3FF | 0x200;
+        z = (item->pos.z_pos + SPxzoffs[item->trigger_flags & 7]) & ~0x3FF | 0x200;
+    } else {
+        z = item->pos.z_pos & ~0x3FF | 0x200;
+        x = (item->pos.x_pos - SPxzoffs[item->trigger_flags & 7]) & ~0x3FF | 0x200;
+    }
+    if (item->trigger_flags & 1)
+        rad = 300;
+    else
+        rad = 480;
+    y = item->pos.y_pos + SPDETyoffs[item->trigger_flags & 7];
+    bounds = GetBestFrame(lara_item);
+    if (lara_item->pos.y_pos + bounds[2] > y || lara_item->pos.y_pos + bounds[3] < y - 900)
+        return 0;
+    xMin = lara_item->pos.x_pos + bounds[0];
+    xMax = lara_item->pos.x_pos + bounds[1];
+    zMin = lara_item->pos.z_pos + bounds[4];
+    zMax = lara_item->pos.z_pos + bounds[5];
+    return xMin <= x + rad && xMax >= x - rad && zMin <= z + rad && zMax >= z - rad;
+}
+
 void ControlRaisingBlock(sint16 item_number)
 {
     ITEM_INFO *item;

@@ -8,6 +8,9 @@ extern PHD_VECTOR FloorTrapDoorPos;
 extern sint16 FloorTrapDoorBounds[12];
 extern PHD_VECTOR CeilingTrapDoorPos;
 extern sint16 CeilingTrapDoorBounds[12];
+extern sint16 SPxzoffs[8];
+extern sint16 SPyoffs[8];
+extern sint16 SPDETyoffs[8];
 
 void LaraBurn(void);
 void LavaBurn(ITEM_INFO *item);
@@ -45,5 +48,6 @@ void DartEmitterControl(sint16 item_number);
 void MineCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void ControlRaisingBlock(sint16 item_number);
 void FallingSquishyBlockCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
+sint32 TestBoundsCollideTeethSpikes(ITEM_INFO *item);
 
 #endif

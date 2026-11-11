@@ -1982,6 +1982,9 @@ address,size,name,symbol
 0x004ad334,24,FloorTrapDoorBounds,_FloorTrapDoorBounds
 0x004ad350,12,CeilingTrapDoorPos,_CeilingTrapDoorPos
 0x004ad35c,24,CeilingTrapDoorBounds,_CeilingTrapDoorBounds
+0x004ad394,16,SPxzoffs,_SPxzoffs
+0x004ad3a4,16,SPyoffs,_SPyoffs
+0x004ad3b4,16,SPDETyoffs,_SPDETyoffs
 0x004ad6c0,16,wildboar_bite,_wildboar_bite
 0x004ad6d0,2,WraithSpeed,_WraithSpeed
 0x004ad7d4,4,GlobalAlpha,_GlobalAlpha

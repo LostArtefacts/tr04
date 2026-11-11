@@ -30,6 +30,8 @@ enum sfx_options {
 #define SFX_EXPLOSION1 105
 #define SFX_EXPLOSION2 106
 #define SFX_DART_SPITT 325
+#define SFX_DOOR_GEN_THUD 255
+#define SFX_TEETH_SPIKES 343
 
 typedef struct sample_info {
     sint16 number;
