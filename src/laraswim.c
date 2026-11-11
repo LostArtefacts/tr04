@@ -46,3 +46,8 @@ void lara_col_tread(ITEM_INFO *item, COLL_INFO *coll)
 {
     LaraSwimCollision(item, coll);
 }
+
+void lara_col_dive(ITEM_INFO *item, COLL_INFO *coll)
+{
+    LaraSwimCollision(item, coll);
+}
