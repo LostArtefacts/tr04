@@ -62,6 +62,17 @@ void turn180_effect(ITEM_INFO *item)
     item->pos.x_rot = -item->pos.x_rot;
 }
 
+void floor_shake_effect(ITEM_INFO *item)
+{
+    sint32 x, y, z;
+
+    x = item->pos.x_pos - camera.pos.x;
+    y = item->pos.y_pos - camera.pos.y;
+    z = item->pos.z_pos - camera.pos.z;
+    if (ABS(x) < 16 * WALL_L && ABS(y) < 16 * WALL_L && ABS(z) < 16 * WALL_L)
+        camera.bounce = 66 * ((x * x + y * y + z * z) / 256 - WALL_L * WALL_L) / (WALL_L * WALL_L);
+}
+
 void ExplosionFX(ITEM_INFO *item)
 {
     SoundEffect(105, NULL, 0);

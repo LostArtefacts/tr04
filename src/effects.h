@@ -32,6 +32,7 @@ void DoLotsOfBlood(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 direction,
 sint32 ItemNearLara(PHD_3DPOS *pos, sint32 distance);
 void invisibility_on(ITEM_INFO *item);
 void invisibility_off(ITEM_INFO *item);
+void floor_shake_effect(ITEM_INFO *item);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;
