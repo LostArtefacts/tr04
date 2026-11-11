@@ -19,5 +19,6 @@ typedef struct door_data {
 
 void ShutThatDoor(DOORPOS_DATA *d);
 void OpenThatDoor(DOORPOS_DATA *d);
+void PushPullKickDoorControl(sint16 item_number);
 
 #endif

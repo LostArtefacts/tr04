@@ -38,3 +38,20 @@ void OpenThatDoor(DOORPOS_DATA *d)
         }
     }
 }
+
+void PushPullKickDoorControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    DOOR_DATA *door;
+
+    item = &items[item_number];
+    door = (DOOR_DATA *)item->data;
+    if (!door->Opened) {
+        OpenThatDoor(&door->d1);
+        OpenThatDoor(&door->d2);
+        OpenThatDoor(&door->d1flip);
+        OpenThatDoor(&door->d2flip);
+        door->Opened = 1;
+    }
+    AnimateItem(item);
+}

@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="104.06" height="12" x="0" y="0" class="named"><title>462 · 29.90%</title></rect>
-<rect width="0.45" height="12" x="104.06" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="104.51" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="240.56" height="12" x="107.44" y="0" class="todo"><title>1068 · 69.13%</title></rect>
+<rect width="104.29" height="12" x="0" y="0" class="named"><title>463 · 29.97%</title></rect>
+<rect width="0.45" height="12" x="104.29" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="104.74" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="240.33" height="12" x="107.67" y="0" class="todo"><title>1067 · 69.06%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">30.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">462</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1068</tspan></text>
+<text text-anchor="end" x="528" y="7.50">30.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">463</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1067</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="43.62" height="12" x="0" y="0" class="named"><title>78 KB · 12.54%</title></rect>
-<rect width="0.12" height="12" x="43.62" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="43.75" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="298.64" height="12" x="49.36" y="0" class="todo"><title>532 KB · 85.82%</title></rect>
+<rect width="43.68" height="12" x="0" y="0" class="named"><title>78 KB · 12.55%</title></rect>
+<rect width="0.12" height="12" x="43.68" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="43.80" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="298.58" height="12" x="49.42" y="0" class="todo"><title>532 KB · 85.80%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">12.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">78 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">532 KB</tspan></text>
@@ -836,7 +836,7 @@
 <rect width="12" height="12" x="255" y="225" class="named"><title>0x0044dfc0 OpenThatDoor (78 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="225" class="todo"><title>0x0044e010 DoorControl (432 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="225" class="todo"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="225" class="todo"><title>0x0044e420 PushPullKickDoorControl (96 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="225" class="named"><title>0x0044e420 PushPullKickDoorControl (96 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="225" class="todo"><title>0x0044e480 PushPullKickDoorCollision (479 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="225" class="todo"><title>0x0044e660 DoubleDoorCollision (341 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="225" class="todo"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
@@ -2669,7 +2669,7 @@
 <rect width="5.96" height="6.23" x="607.86" y="304.63" class="todo"><title>0x00408080 InitialiseHorseman (96 bytes)</title></rect>
 <rect width="5.96" height="6.23" x="616.82" y="304.63" class="named"><title>0x00431ce0 lara_as_surfleft (96 bytes)</title></rect>
 <rect width="5.96" height="6.23" x="625.78" y="304.63" class="named"><title>0x00431d40 lara_as_surfright (96 bytes)</title></rect>
-<rect width="5.96" height="6.23" x="634.74" y="304.63" class="todo"><title>0x0044e420 PushPullKickDoorControl (96 bytes)</title></rect>
+<rect width="5.96" height="6.23" x="634.74" y="304.63" class="named"><title>0x0044e420 PushPullKickDoorControl (96 bytes)</title></rect>
 <rect width="5.96" height="6.23" x="643.69" y="304.63" class="named"><title>0x0045fa10 StopSoundEffect (96 bytes)</title></rect>
 <rect width="5.96" height="6.23" x="652.65" y="304.63" class="named"><title>0x00473a50 CalcVolume (96 bytes)</title></rect>
 <rect width="5.90" height="6.23" x="661.61" y="304.63" class="todo"><title>0x004037b0 InitialiseLocustEmitter (95 bytes)</title></rect>
