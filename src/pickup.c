@@ -15,3 +15,9 @@ void AnimatingPickUp(sint16 item_number)
     if ((items[item_number].trigger_flags & 0x3F) == 2)
         AnimateItem(&items[item_number]);
 }
+
+void PuzzleDoneCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
+{
+    if (items[item_num].trigger_flags != 999)
+        ObjectCollision(item_num, l, coll);
+}
