@@ -41,6 +41,9 @@ extern sint32 SetDebounce;
 
 void TriggerNormalCDTrack(sint16 value, sint16 flags, sint16 type);
 sint32 LOS(GAME_VECTOR *start, GAME_VECTOR *target);
+sint32 xLOS(GAME_VECTOR *start, GAME_VECTOR *target);
+sint32 zLOS(GAME_VECTOR *start, GAME_VECTOR *target);
+sint32 ClipTarget(GAME_VECTOR *start, GAME_VECTOR *target);
 FLOOR_INFO *GetFloor(sint32 x, sint32 y, sint32 z, sint16 *room_number);
 sint32 GetHeight(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 sint32 GetWaterHeight(sint32 x, sint32 y, sint32 z, sint16 room_number);
