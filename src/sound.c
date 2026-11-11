@@ -231,6 +231,37 @@ void GetPanVolume(SoundSlot *slot)
     }
 }
 
+void Func45f960(void)
+{
+    SoundSlot *slot;
+    sint32 i;
+
+    if (!sound_active)
+        return;
+    for (i = 0; i < 32; i++) {
+        slot = &LaSlot[i];
+        if (slot->nSampleInfo < 0)
+            continue;
+        if ((sample_infos[slot->nSampleInfo].flags & 3) == 3) {
+            if (slot->nVolume) {
+                S_SoundSetPanAndVolume(i, (sint16)slot->nPan, (uint16)slot->nVolume, slot->distance);
+                S_SoundSetPitch(i, slot->nPitch);
+                slot->nVolume = 0;
+            } else {
+                S_SoundStopSample(i);
+                slot->nSampleInfo = -1;
+            }
+        } else {
+            if (S_SoundSampleIsPlaying(i)) {
+                GetPanVolume(slot);
+                S_SoundSetPanAndVolume(i, (sint16)slot->nPan, (uint16)slot->nVolume, slot->distance);
+            } else {
+                slot->nSampleInfo = -1;
+            }
+        }
+    }
+}
+
 void StopSoundEffect(sint32 sfx)
 {
     sint32 lut, end;

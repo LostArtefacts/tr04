@@ -33,7 +33,7 @@ sint32 S_SoundPlaySample();
 sint32 S_SoundPlaySampleLooped();
 void DXFreeSounds(void);
 sint32 S_SoundSampleIsPlaying(sint32 num);
-void S_SoundSetPanAndVolume(sint32 num, sint16 pan, uint16 volume);
+void S_SoundSetPanAndVolume();
 void S_SoundSetPitch(sint32 num, sint32 pitch);
 sint32 DXStartSample(sint32 num, sint32 volume, sint32 pitch, sint32 pan, uint32 flags);
 
