@@ -119,6 +119,41 @@ sint32 LaraTestEdgeCatch(ITEM_INFO *item, COLL_INFO *coll, sint32 *edge)
     return 1;
 }
 
+sint32 TestHangSwingIn(ITEM_INFO *item, PHD_ANGLE angle)
+{
+    sint32 x, y, z;
+    sint32 h, c;
+    FLOOR_INFO *floor;
+    sint16 room_num;
+
+    x = item->pos.x_pos;
+    y = item->pos.y_pos;
+    z = item->pos.z_pos;
+    room_num = item->room_number;
+    switch (angle) {
+    case 0:
+        z += 256;
+        break;
+    case 16384:
+        x += 256;
+        break;
+    case -16384:
+        x -= 256;
+        break;
+    case -32768:
+        z -= 256;
+        break;
+    }
+    floor = GetFloor(x, y, z, &room_num);
+    h = GetHeight(floor, x, y, z);
+    c = GetCeiling(floor, x, y, z);
+    if (h != NO_HEIGHT) {
+        if (h - y > 0 && c - y < -400 && y - 819 - c > -72)
+            return 1;
+    }
+    return 0;
+}
+
 void lara_col_dash(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
