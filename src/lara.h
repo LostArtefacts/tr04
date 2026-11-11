@@ -212,6 +212,7 @@ void lara_as_special(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_turn_l(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_stepleft(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_slide(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_backjump(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
