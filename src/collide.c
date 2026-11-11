@@ -61,6 +61,18 @@ void ObjectCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
         ItemPushLara(item, laraitem, coll, 0, 1);
 }
 
+void TrapCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (item->status == ITEM_ACTIVE) {
+        if (TestBoundsCollide(item, l, coll->radius))
+            ObjectCollision(item_number, l, coll);
+    } else if (item->status != ITEM_INVISIBLE)
+        ObjectCollision(item_number, l, coll);
+}
+
 sint32 TestLaraPosition(sint16 *bounds, ITEM_INFO *item, ITEM_INFO *laraitem)
 {
     PHD_ANGLE yrotrel, zrotrel, xrotrel;
