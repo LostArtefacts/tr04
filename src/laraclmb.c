@@ -354,3 +354,11 @@ void lara_col_climbdown(ITEM_INFO *item, COLL_INFO *coll)
             AnimateLara(item);
     }
 }
+
+void lara_as_climbend(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    camera.flags = 1;
+    camera.target_angle = -8190;
+}
