@@ -435,6 +435,20 @@ void lara_col_dashdive(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_pos += coll->mid_floor;
 }
 
+sint32 LaraLandedBad(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 land_speed;
+
+    land_speed = item->fallspeed - 140;
+    if (land_speed <= 0)
+        return 0;
+    if (land_speed > 14)
+        item->hit_points = -1;
+    else
+        item->hit_points += (sint16)(-1000 * (land_speed * land_speed) / 196);
+    return item->hit_points <= 0;
+}
+
 void MonkeySwingFall(ITEM_INFO *item)
 {
     item->goal_anim_state = AS_UPJUMP;
