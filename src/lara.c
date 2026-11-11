@@ -240,6 +240,15 @@ void lara_as_swandive(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_FASTDIVE;
 }
 
+void lara_as_fastdive(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if ((input & IN_ROLL) && item->goal_anim_state == AS_FASTDIVE)
+        item->goal_anim_state = AS_TWIST;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 1;
+    FASTFALL_FRICTION;
+}
+
 void lara_col_turn_l(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara_col_turn_r(item, coll);
