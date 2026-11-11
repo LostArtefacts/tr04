@@ -97,6 +97,37 @@ sint32 GetFreeSmokeSpark(void)
     return min_life_num;
 }
 
+sint32 GetFreeBlood(void)
+{
+    BLOOD_STRUCT *bptr;
+    sint32 min_life, min_life_num, free, i;
+
+    free = next_blood;
+    bptr = &blood[next_blood];
+    min_life = 4095;
+    min_life_num = 0;
+    for (i = 0; i < 32; i++) {
+        if (bptr->On) {
+            if (bptr->Life < min_life) {
+                min_life_num = free;
+                min_life = bptr->Life;
+            }
+            if (free == 31) {
+                bptr = &blood[0];
+                free = 0;
+            } else {
+                free++;
+                bptr++;
+            }
+        } else {
+            next_blood = (free + 1) & 0x1F;
+            return free;
+        }
+    }
+    next_blood = (min_life_num + 1) & 0x1F;
+    return min_life_num;
+}
+
 void SetFadeClip(sint16 height, sint16 speed)
 {
     DestFadeScreenHeight = height;

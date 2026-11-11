@@ -171,6 +171,7 @@ void SetScreenFadeIn(sint16 speed);
 sint32 GetFreeShockwave(void);
 sint32 GetFreeSmokeSpark(void);
 sint32 GetFreeFireSpark(void);
+sint32 GetFreeBlood(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
