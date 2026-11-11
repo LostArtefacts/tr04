@@ -834,6 +834,16 @@ void lara_as_slideback(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_BACKJUMP;
 }
 
+void lara_as_pushblock(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.look = 0;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    camera.flags = FOLLOW_CENTRE;
+    camera.target_angle = 90 * ONE_DEGREE;
+    camera.target_elevation = -25 * ONE_DEGREE;
+}
+
 void lara_as_ppready(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->enable_spaz = 0;
