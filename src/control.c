@@ -1,3 +1,5 @@
+#include <string.h>
+
 #include "control.h"
 #include "objnums.h"
 #include "box.h"
@@ -240,6 +242,33 @@ sint32 LOS(GAME_VECTOR *start, GAME_VECTOR *target)
     if (!ClipTarget(start, target) || los1 != 1 || los2 != 1)
         return 0;
     return 1;
+}
+
+void FlipMap(sint32 FlipNumber)
+{
+    ROOM_INFO *r, *flipped, temp;
+    CREATURE_INFO *cinfo;
+    sint32 i;
+
+    for (i = 0, r = room; i < number_rooms; i++, r++) {
+        if (r->flipped_room >= 0 && r->FlipNumber == FlipNumber) {
+            RemoveRoomFlipItems(r);
+            flipped = &room[r->flipped_room];
+            memcpy(&temp, r, sizeof(ROOM_INFO));
+            memcpy(r, flipped, sizeof(ROOM_INFO));
+            memcpy(flipped, &temp, sizeof(ROOM_INFO));
+            r->flipped_room = flipped->flipped_room;
+            flipped->flipped_room = -1;
+            r->item_number = flipped->item_number;
+            r->fx_number = flipped->fx_number;
+            AddRoomFlipItems(r);
+        }
+    }
+    flip_stats[FlipNumber] = !flip_stats[FlipNumber];
+    flip_status = flip_stats[FlipNumber];
+    cinfo = baddie_slots;
+    for (i = 0; i < NUM_SLOTS; i++, cinfo++)
+        cinfo->LOT.target_box = NO_BOX;
 }
 
 void AddRoomFlipItems(ROOM_INFO *r)

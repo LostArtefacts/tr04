@@ -128,5 +128,6 @@ typedef struct room_info {
 } ROOM_INFO;
 
 extern ROOM_INFO *room;
+extern sint16 number_rooms;
 
 #endif
