@@ -2145,6 +2145,7 @@ address,size,name,symbol
 0x004bfc88,4,auido_play_mode,_auido_play_mode
 0x004bfc90,4,wav_format,_wav_format
 0x004bfca4,4,CurrentNotify,_CurrentNotify
+0x004bfdf8,8,NotifyEventHandles,_NotifyEventHandles
 0x004bfe00,4,NotificationThreadHandle,_NotificationThreadHandle
 0x004bfe08,24,audio_cs,_audio_cs
 0x004bfe20,4,StreamSize,_StreamSize

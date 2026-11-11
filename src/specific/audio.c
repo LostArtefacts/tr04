@@ -67,3 +67,39 @@ BOOL __stdcall ACMEnumCallBack(HACMDRIVERID hadid, DWORD dwInstance, DWORD fdwSu
     hACMDriverID = hadid;
     return 0;
 }
+
+sint32 ACMSetupNotifications(void)
+{
+    DSBPOSITIONNOTIFY posNotif[5];
+    DWORD ThreadId;
+    sint32 result, size;
+    int i;
+
+    size = NotifySize;
+    NotifyEventHandles[0] = CreateEvent(0, 0, 0, 0);
+    NotifyEventHandles[1] = CreateEvent(0, 0, 0, 0);
+    posNotif[0].dwOffset = size;
+    posNotif[0].hEventNotify = NotifyEventHandles[0];
+    Log(8, "Set notifies for position %lu", posNotif[0].dwOffset);
+    for (i = 1; i < 4; i++) {
+        posNotif[i].dwOffset = posNotif[i - 1].dwOffset + size;
+        posNotif[i].hEventNotify = NotifyEventHandles[0];
+        Log(8, "Set notifies for positions %lu", posNotif[i].dwOffset);
+    }
+    posNotif[3].dwOffset--;
+    posNotif[4].dwOffset = -1;
+    posNotif[4].hEventNotify = NotifyEventHandles[1];
+    NotificationThreadHandle = CreateThread(0, 0, (LPTHREAD_START_ROUTINE)ACMHandleNotifications, 0, 0, &ThreadId);
+    if (!NotificationThreadHandle)
+        Log(1, "Create Notification Thread failed");
+    result = IDirectSoundNotify_SetNotificationPositions(G_DSNotify, 5, posNotif);
+    if (result != DS_OK) {
+        CloseHandle(NotifyEventHandles[0]);
+        CloseHandle(NotifyEventHandles[1]);
+        NotifyEventHandles[1] = 0;
+        NotifyEventHandles[0] = 0;
+    } else {
+        Log(8, "Setup Notifications OK");
+    }
+    return result;
+}

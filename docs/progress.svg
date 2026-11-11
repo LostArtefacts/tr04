@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="29.38" height="12" x="0" y="0" class="named"><title>123 · 7.94%</title></rect>
-<rect width="0.24" height="12" x="29.38" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.19" height="12" x="29.62" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
-<rect width="339.19" height="12" x="30.81" y="0" class="todo"><title>1420 · 91.67%</title></rect>
+<rect width="29.62" height="12" x="0" y="0" class="named"><title>124 · 8.01%</title></rect>
+<rect width="0.24" height="12" x="29.62" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.19" height="12" x="29.86" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
+<rect width="338.95" height="12" x="31.05" y="0" class="todo"><title>1419 · 91.61%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">8.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">123</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1420</tspan></text>
+<text text-anchor="end" x="540" y="7.50">8.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">124</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1419</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="12.91" height="12" x="0" y="0" class="named"><title>22 KB · 3.49%</title></rect>
-<rect width="0.10" height="12" x="12.91" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="1.61" height="12" x="12.94" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
-<rect width="355.45" height="12" x="14.55" y="0" class="todo"><title>595 KB · 96.07%</title></rect>
+<rect width="13.09" height="12" x="0" y="0" class="named"><title>22 KB · 3.54%</title></rect>
+<rect width="0.10" height="12" x="13.09" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="1.61" height="12" x="13.12" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
+<rect width="355.27" height="12" x="14.73" y="0" class="todo"><title>595 KB · 96.02%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">3.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">22 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">3 KB</tspan> · <tspan class="todo">595 KB</tspan></text>
@@ -1193,7 +1193,7 @@
 <rect width="12" height="12" x="360" y="330" class="named"><title>0x0046d790 S_StartSyncedAudio (21 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="330" class="named"><title>0x0046d7b0 ACMSetVolume (77 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="330" class="named"><title>0x0046d800 ACMEnumCallBack (144 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="330" class="todo"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="330" class="named"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="330" class="todo"><title>0x0046d9c0 ACMInit (818 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="330" class="todo"><title>0x0046dd00 ACMClose (327 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="330" class="todo"><title>0x0046de50 OpenStreamFile (242 bytes)</title></rect>
@@ -2167,7 +2167,7 @@
 <rect width="11" height="10.61" x="443.24" y="410.61" class="todo"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
 <rect width="11" height="10.61" x="443.24" y="424.23" class="todo"><title>0x00459510 ModelRigid (302 bytes)</title></rect>
 <rect width="11" height="10.58" x="443.24" y="437.84" class="todo"><title>0x00423930 lara_col_monkeyswing (301 bytes)</title></rect>
-<rect width="11" height="10.58" x="443.24" y="451.42" class="todo"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>
+<rect width="11" height="10.58" x="443.24" y="451.42" class="named"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>
 <rect width="10.65" height="10.93" x="457.24" y="158.26" class="todo"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
 <rect width="10.58" height="10.93" x="470.89" y="158.26" class="todo"><title>0x0040ff40 GameStixCollision (299 bytes)</title></rect>
 <rect width="10.58" height="10.93" x="484.47" y="158.26" class="todo"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
