@@ -41,3 +41,16 @@ void S_StartSyncedAudio(sint32 track)
     S_CDStop();
     S_CDPlay(track, 2);
 }
+
+void ACMSetVolume(void)
+{
+    sint32 volume;
+
+    volume = 100 - MusicVolume;
+    if (volume == 100)
+        volume = -10000;
+    else
+        volume = -4000 * volume / 100;
+    if (G_DSBuffer)
+        IDirectSoundBuffer_SetVolume(G_DSBuffer, volume);
+}
