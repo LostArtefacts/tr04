@@ -251,6 +251,17 @@ void twentyfive_control(void)
     actor_chat_cnt = (actor_chat_cnt - 1) & 1;
 }
 
+void twentyfive_end(void)
+{
+    ITEM_INFO *item;
+
+    item = find_a_fucking_item(ANIMATING5);
+    item->flags |= IFL_CODEBITS;
+    item->status = old_status_flags[numnailed];
+    numnailed++;
+    DelsHandyTeleportLara(55396, -1792, 77122, -7105);
+}
+
 void twentyseven_end(void)
 {
     ITEM_INFO *item;
