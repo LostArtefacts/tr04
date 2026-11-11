@@ -17,3 +17,10 @@ void finish_cutseq(void)
     GLOBAL_playing_cutseq = 0;
     InitialiseHair();
 }
+
+void fourth_cutseq_init(void)
+{
+    old_lara_holster = lara.holster;
+    lara.holster = LARA_HOLSTERS;
+    draw_pistol_meshes(1);
+}
