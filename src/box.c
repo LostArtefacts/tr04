@@ -199,3 +199,20 @@ sint16 AIGuard(CREATURE_INFO *creature)
         return 0x4000;
     return 0;
 }
+
+sint16 SameZone(CREATURE_INFO *creature, ITEM_INFO *target_item)
+{
+    ITEM_INFO *item;
+    ROOM_INFO *r;
+    sint16 *zone, zone_number, target_zone;
+
+    zone = ground_zone[creature->LOT.zone][flip_status];
+    item = &items[creature->item_num];
+    r = &room[item->room_number];
+    item->box_number = r->floor[((item->pos.z_pos - r->z) >> 10) + r->x_size * ((item->pos.x_pos - r->x) >> 10)].box;
+    zone_number = zone[item->box_number];
+    r = &room[target_item->room_number];
+    target_item->box_number = r->floor[((target_item->pos.z_pos - r->z) >> 10) + r->x_size * ((target_item->pos.x_pos - r->x) >> 10)].box;
+    target_zone = zone[target_item->box_number];
+    return zone_number == target_zone;
+}

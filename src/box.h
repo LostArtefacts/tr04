@@ -131,6 +131,7 @@ sint32 UpdateLOT(LOT_INFO *LOT, sint32 expansion);
 sint32 ValidBox(ITEM_INFO *item, sint16 zone_number, sint16 box_number);
 void AlertNearbyGuards(ITEM_INFO *item);
 sint32 BadFloor(sint32 x, sint32 y, sint32 z, sint32 box_height, sint32 next_height, sint16 room_number, LOT_INFO *LOT);
+sint16 SameZone(CREATURE_INFO *creature, ITEM_INFO *target_item);
 
 extern CREATURE_INFO *baddie_slots;
 
