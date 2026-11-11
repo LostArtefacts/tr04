@@ -44,5 +44,6 @@ void seventeen_end(void);
 void eighteen_init(void);
 void eighteen_end(void);
 void nineteen_init(void);
+void nineteen_end(void);
 
 #endif

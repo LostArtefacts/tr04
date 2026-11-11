@@ -128,3 +128,10 @@ void nineteen_init(void)
     cutseq_kill_item(ANIMATING4);
     cutseq_kill_item(JEAN_YVES);
 }
+
+void nineteen_end(void)
+{
+    cutseq_restore_item(ANIMATING4);
+    cutseq_restore_item(JEAN_YVES);
+    DelsHandyTeleportLara(53469, -8192, 48687, 23355);
+}
