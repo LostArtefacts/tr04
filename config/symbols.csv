@@ -225,7 +225,7 @@ address,size,name,symbol
 0x00421ad0,273,lara_col_crawlb,_lara_col_crawlb
 0x00421bf0,493,lara_col_crawl2hang,_lara_col_crawl2hang
 0x00421de0,169,LaraTestEdgeCatch,_LaraTestEdgeCatch
-0x00421e90,324,LaraTestHangOnClimbWall,_LaraTestHangOnClimbWall
+0x00421e90,340,LaraTestHangOnClimbWall,_LaraTestHangOnClimbWall
 0x00421ff0,187,TestHangSwingIn,_TestHangSwingIn
 0x004220b0,327,lara_as_dash,_lara_as_dash
 0x00422200,332,lara_col_dash,_lara_col_dash

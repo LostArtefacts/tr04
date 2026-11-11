@@ -288,6 +288,42 @@ sint32 LaraTestEdgeCatch(ITEM_INFO *item, COLL_INFO *coll, sint32 *edge)
     return 1;
 }
 
+sint32 LaraTestHangOnClimbWall(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 shift, result;
+    sint16 *bounds;
+
+    if (!lara.climb_status || item->fallspeed < 0)
+        return 0;
+    switch ((uint16)(item->pos.y_rot + 0x2000) / 0x4000) {
+    case NORTH:
+    case SOUTH:
+        item->pos.z_pos += coll->shift.z;
+        break;
+    case EAST:
+    case WEST:
+        item->pos.x_pos += coll->shift.x;
+        break;
+    }
+    bounds = GetBoundsAccurate(item);
+    if (lara.move_angle != item->pos.y_rot) {
+        sint16 l, r;
+        r = LaraCeilingFront(item, item->pos.y_rot, 0, 0);
+        l = LaraCeilingFront(item, lara.move_angle, 128, 0);
+        if (ABS(r - l) > 60)
+            return 0;
+    }
+    if (!LaraTestClimbPos(item, coll->radius, coll->radius, bounds[2], bounds[3] - bounds[2], &shift) || !LaraTestClimbPos(item, coll->radius, -coll->radius, bounds[2], bounds[3] - bounds[2], &shift))
+        return 0;
+    result = LaraTestClimbPos(item, coll->radius, 0, bounds[2], bounds[3] - bounds[2], &shift);
+    if (!result)
+        return 0;
+    else if (result == 1)
+        return 1;
+    item->pos.y_pos += shift;
+    return 1;
+}
+
 sint32 TestHangSwingIn(ITEM_INFO *item, PHD_ANGLE angle)
 {
     sint32 x, y, z;
