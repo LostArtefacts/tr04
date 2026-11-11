@@ -12,6 +12,8 @@
 #include "spotcam.h"
 #include "effect2.h"
 #include "tomb4fx.h"
+#include "lara_states.h"
+#include "camera.h"
 
 void *cutseq_malloc(sint32 size)
 {
@@ -712,6 +714,34 @@ void cutseq_restore_item(sint32 num)
 void init_voncroy_meshbits(sint32 num)
 {
     cutseq_meshswapbits[num] = 0x240080;
+}
+
+void DelsHandyTeleportLara(sint32 x, sint32 y, sint32 z, sint32 yrot)
+{
+    sint16 room_number;
+
+    room_number = lara_item->room_number;
+    lara_item->pos.x_pos = x;
+    lara_item->pos.y_pos = y;
+    lara_item->pos.z_pos = z;
+    lara.head_x_rot = 0;
+    lara.head_y_rot = 0;
+    lara.torso_x_rot = 0;
+    lara.torso_y_rot = 0;
+    lara_item->pos.x_rot = 0;
+    lara_item->pos.y_rot = (sint16)yrot;
+    lara_item->pos.z_rot = 0;
+    IsRoomOutside(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    if (IsRoomOutsideNo != room_number)
+        ItemNewRoom(lara.item_number, IsRoomOutsideNo);
+    lara_item->current_anim_state = lara_item->goal_anim_state = AS_STOP;
+    lara_item->frame_number = anims[ANIM_STOP].frame_base;
+    lara_item->anim_number = ANIM_STOP;
+    lara_item->speed = 0;
+    lara_item->fallspeed = 0;
+    lara_item->gravity_status = 0;
+    lara.gun_status = LG_NO_ARMS;
+    camera.fixed_camera = 1;
 }
 
 void nail_intelligent_object(sint16 num)

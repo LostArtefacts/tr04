@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="141.49" height="12" x="0" y="0" class="named"><title>640 · 41.37%</title></rect>
-<rect width="0.44" height="12" x="141.49" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="141.93" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="195.43" height="12" x="146.57" y="0" class="todo"><title>884 · 57.14%</title></rect>
+<rect width="141.71" height="12" x="0" y="0" class="named"><title>641 · 41.44%</title></rect>
+<rect width="0.44" height="12" x="141.71" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="142.15" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="195.21" height="12" x="146.79" y="0" class="todo"><title>883 · 57.08%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">41.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">640</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">884</tspan></text>
+<text text-anchor="end" x="522" y="7.50">41.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">641</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">883</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="58.59" height="12" x="0" y="0" class="named"><title>106 KB · 17.13%</title></rect>
-<rect width="0.12" height="12" x="58.59" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="58.71" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="276.04" height="12" x="65.96" y="0" class="todo"><title>501 KB · 80.71%</title></rect>
+<rect width="58.74" height="12" x="0" y="0" class="named"><title>107 KB · 17.18%</title></rect>
+<rect width="0.12" height="12" x="58.74" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="58.86" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="275.89" height="12" x="66.11" y="0" class="todo"><title>500 KB · 80.67%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">106 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">501 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">107 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">500 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1176,7 +1176,7 @@
 <rect width="12" height="12" x="105" y="330" class="todo"><title>0x0046cd20 Load_and_Init_Cutseq (260 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="330" class="todo"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="330" class="named"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="330" class="todo"><title>0x0046d040 DelsHandyTeleportLara (279 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="330" class="named"><title>0x0046d040 DelsHandyTeleportLara (279 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="330" class="named"><title>0x0046d160 nail_intelligent_object (82 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="330" class="named"><title>0x0046d1c0 force_sky_lightning (39 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="330" class="named"><title>0x0046d1f0 handle_lara_chatting (116 bytes)</title></rect>
@@ -2196,7 +2196,7 @@
 <rect width="10.37" height="10.43" x="457.16" y="239.91" class="named"><title>0x00422ac0 lara_col_dashdive (280 bytes)</title></rect>
 <rect width="10.37" height="10.43" x="457.16" y="253.34" class="todo"><title>0x0042b600 DoGrenadeDamageOnBaddie (280 bytes)</title></rect>
 <rect width="10.37" height="10.43" x="457.16" y="266.78" class="todo"><title>0x0048b990 DrawTrainStrips (280 bytes)</title></rect>
-<rect width="10.37" height="10.40" x="457.16" y="280.21" class="todo"><title>0x0046d040 DelsHandyTeleportLara (279 bytes)</title></rect>
+<rect width="10.37" height="10.40" x="457.16" y="280.21" class="named"><title>0x0046d040 DelsHandyTeleportLara (279 bytes)</title></rect>
 <rect width="10.37" height="10.36" x="457.16" y="293.61" class="named"><title>0x00428210 lara_col_back (278 bytes)</title></rect>
 <rect width="10.37" height="10.36" x="457.16" y="306.97" class="todo"><title>0x00489360 ClipCheckPoint (278 bytes)</title></rect>
 <rect width="10.37" height="10.32" x="457.16" y="320.33" class="todo"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
