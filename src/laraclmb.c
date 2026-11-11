@@ -299,3 +299,10 @@ void lara_col_climbing(ITEM_INFO *item, COLL_INFO *coll)
             AnimateLara(item);
     }
 }
+
+void lara_as_climbdown(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    camera.target_elevation = -8190;
+}
