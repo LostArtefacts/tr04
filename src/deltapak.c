@@ -262,6 +262,12 @@ void twentyfive_end(void)
     DelsHandyTeleportLara(55396, -1792, 77122, -7105);
 }
 
+void twentysix_control(void)
+{
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 14, 1, ANIMATING8, troop_chat_ranges26);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void twentyseven_end(void)
 {
     ITEM_INFO *item;

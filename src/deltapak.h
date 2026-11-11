@@ -82,5 +82,6 @@ void nineteen_control(void);
 void twenty_control(void);
 void twentyfive_control(void);
 void twentyfive_end(void);
+void twentysix_control(void);
 
 #endif
