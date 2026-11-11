@@ -91,6 +91,26 @@ void Splash(ITEM_INFO *item)
     }
 }
 
+void WaterFall(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint32 x, y, z, ang;
+
+    item = &items[item_number];
+    x = item->pos.x_pos - lara_item->pos.x_pos;
+    y = item->pos.y_pos - lara_item->pos.y_pos;
+    z = item->pos.z_pos - lara_item->pos.z_pos;
+    if (x < -0x4000 || x > 0x4000 || z < -0x4000 || z > 0x4000 || y < -0x4000 || y > 0x4000)
+        return;
+    nullsub_1(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, &item->il);
+    ang = ((item->pos.y_rot >> 4) & 4095) << 1;
+    z = (rcossin_tbl[ang + 1] * 544) >> 12;
+    x = (rcossin_tbl[ang] * 544) >> 12;
+    if ((wibble & 12) == 0)
+        TriggerWaterfallMist(item->pos.x_pos + x, item->pos.y_pos, item->pos.z_pos + z, item->pos.y_rot >> 4);
+    SoundEffect(79, &item->pos, 0);
+}
+
 void finish_level_effect(ITEM_INFO *item)
 {
     gfLevelComplete = gfCurrentLevel + 1;
