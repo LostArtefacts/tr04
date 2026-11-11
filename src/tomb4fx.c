@@ -10,6 +10,7 @@
 #include "specific/3dmath.h"
 #include "delstuff.h"
 #include "text.h"
+#include "specific/specificfx.h"
 
 sint32 GetFreeFireSpark(void)
 {
@@ -714,4 +715,15 @@ void TriggerShockwave(PHD_VECTOR *pos, sint32 InnerOuterRads, sint32 speed, sint
         *(sint32 *)&sw->r = rgb;
         SoundEffect(SFX_DEMI_SIREN_SWAVE, (PHD_3DPOS *)pos, SFX_DEFAULT);
     }
+}
+
+void DrawLensFlares(ITEM_INFO *item)
+{
+    GAME_VECTOR sun;
+
+    sun.x = item->pos.x_pos;
+    sun.y = item->pos.y_pos;
+    sun.z = item->pos.z_pos;
+    sun.room_number = item->room_number;
+    SetUpLensFlare(0, 0, 0, &sun);
 }

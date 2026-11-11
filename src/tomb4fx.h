@@ -191,6 +191,7 @@ void LaraBubbles(ITEM_INFO *item);
 void TriggerGunflash(SVECTOR *pos);
 void SetGunFlash(sint32 weapon);
 void Fade(void);
+void DrawLensFlares(ITEM_INFO *item);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
