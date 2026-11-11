@@ -144,5 +144,7 @@ typedef struct WINAPP {
 } WINAPP;
 
 extern WINAPP App;
+extern DXINFO *G_dxinfo;
+extern DXPTR *G_dxptr;
 
 #endif

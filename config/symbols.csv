@@ -1577,7 +1577,7 @@ address,size,name,symbol
 0x0049fd90,46,inflate_trees_fixed,_inflate_trees_fixed
 0x0049fdc0,306,inflate_flush,_inflate_flush
 0x0049ff00,911,inflate_fast,_inflate_fast
-0x004a0290,6,DSOUND_1,_DSOUND_1
+0x004a0290,6,DirectSoundCreate,_DirectSoundCreate@12
 0x004a0296,6,DSOUND_2,_DSOUND_2
 0x004a029c,6,acmDriverDetailsA,_acmDriverDetailsA@12
 0x004a02a2,6,acmStreamPrepareHeader,_acmStreamPrepareHeader@12
@@ -2016,6 +2016,7 @@ address,size,name,symbol
 0x004b27a5,,load_roomnum,_load_roomnum
 0x004b2bac,72,layout,_layout
 0x004b3474,4,joy_unavailable,_joy_unavailable
+0x004b38a0,12,sfx_frequencies,_sfx_frequencies
 0x004b38ac,4,MusicVolume,_MusicVolume
 0x004b38b0,4,SFXVolume,_SFXVolume
 0x004b38b4,4,SoundQuality,_SoundQuality

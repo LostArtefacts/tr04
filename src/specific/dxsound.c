@@ -4,6 +4,8 @@
 #include "dxsound.h"
 #include "dxshell.h"
 #include "function_stubs.h"
+#include "winmain.h"
+#include "loadsave.h"
 
 uint8 DXChangeOutputFormat(sint32 nSamplesPerSec, uint8 force)
 {
@@ -60,6 +62,23 @@ void DSAdjustPan(sint32 num, sint32 pan)
         pan >>= 4;
         IDirectSoundBuffer_SetPan(DS_Samples[num].buffer, pan);
     }
+}
+
+uint8 DXSetOutputFormat(void)
+{
+    DSBUFFERDESC desc;
+
+    Log(2, "DXSetOutputFormat");
+    memset(&desc, 0, sizeof(desc));
+    desc.dwSize = sizeof(desc);
+    desc.dwFlags = DSBCAPS_PRIMARYBUFFER;
+    if (DXAttempt(IDirectSound_CreateSoundBuffer(App.dx.lpDS, &desc, &G_DSPrimary, 0)) != DS_OK) {
+        Log(1, "Can't Get Primary Sound Buffer");
+        return 0;
+    }
+    DXChangeOutputFormat(sfx_frequencies[SoundQuality], 0);
+    IDirectSoundBuffer_Play(G_DSPrimary, 0, 0, DSBPLAY_LOOPING);
+    return 1;
 }
 
 uint8 InitSampleDecompress(void)
