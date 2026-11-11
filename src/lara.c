@@ -500,6 +500,32 @@ sint16 TestMonkeyRight(ITEM_INFO *item, COLL_INFO *coll)
     return 1;
 }
 
+void lara_as_monkeyswing(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_HANG2;
+        return;
+    }
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    lara.torso_x_rot = lara.torso_y_rot = 0;
+    if (input & IN_LOOK)
+        LookUpDown();
+    if (input & IN_FORWARD)
+        item->goal_anim_state = AS_MONKEYSWING;
+    else
+        item->goal_anim_state = AS_HANG2;
+    if (input & IN_LEFT) {
+        lara.turn_rate -= LARA_TURN_RATE;
+        if (lara.turn_rate < -LARA_JUMP_TURN)
+            lara.turn_rate = -LARA_JUMP_TURN;
+    } else if (input & IN_RIGHT) {
+        lara.turn_rate += LARA_TURN_RATE;
+        if (lara.turn_rate > LARA_JUMP_TURN)
+            lara.turn_rate = LARA_JUMP_TURN;
+    }
+}
+
 void lara_as_monkeyl(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
