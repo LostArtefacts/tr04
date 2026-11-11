@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="129.50" height="12" x="0" y="0" class="named"><title>585 · 37.86%</title></rect>
-<rect width="0.44" height="12" x="129.50" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="129.94" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="207.41" height="12" x="134.59" y="0" class="todo"><title>937 · 60.65%</title></rect>
+<rect width="129.72" height="12" x="0" y="0" class="named"><title>586 · 37.93%</title></rect>
+<rect width="0.44" height="12" x="129.72" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="130.16" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="207.19" height="12" x="134.81" y="0" class="todo"><title>936 · 60.58%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">38.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">585</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">937</tspan></text>
+<text text-anchor="end" x="522" y="7.50">38.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">586</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">936</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.51" height="12" x="0" y="0" class="named"><title>101 KB · 16.23%</title></rect>
-<rect width="0.12" height="12" x="55.51" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="55.63" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="279.12" height="12" x="62.88" y="0" class="todo"><title>506 KB · 81.61%</title></rect>
+<rect width="55.53" height="12" x="0" y="0" class="named"><title>101 KB · 16.24%</title></rect>
+<rect width="0.12" height="12" x="55.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="55.65" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="279.11" height="12" x="62.89" y="0" class="todo"><title>506 KB · 81.61%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">101 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">506 KB</tspan></text>
@@ -1155,7 +1155,7 @@
 <rect width="12" height="12" x="540" y="315" class="named"><title>0x0046c700 twentythree_end (37 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="315" class="todo"><title>0x0046c730 twentyfour_init (42 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="315" class="todo"><title>0x0046c760 twentyfour_control (93 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="315" class="todo"><title>0x0046c7c0 twentyfour_end (26 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="315" class="named"><title>0x0046c7c0 twentyfour_end (26 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="315" class="todo"><title>0x0046c7e0 twentyfive_control (49 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="315" class="todo"><title>0x0046c820 twentyfive_end (90 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="315" class="todo"><title>0x0046c880 twentyfive_init (67 bytes)</title></rect>
@@ -3020,7 +3020,7 @@
 <rect width="3.32" height="3.14" x="694.73" y="397.32" class="todo"><title>0x00494b0d SW_D3D_SetLightState (27 bytes)</title></rect>
 <rect width="3.20" height="3.14" x="701.05" y="397.32" class="named"><title>0x00437880 LaraLocationPad (26 bytes)</title></rect>
 <rect width="3.20" height="3.14" x="707.25" y="397.32" class="named"><title>0x0046bef0 thirteen_end (26 bytes)</title></rect>
-<rect width="3.20" height="3.14" x="713.44" y="397.32" class="todo"><title>0x0046c7c0 twentyfour_end (26 bytes)</title></rect>
+<rect width="3.20" height="3.14" x="713.44" y="397.32" class="named"><title>0x0046c7c0 twentyfour_end (26 bytes)</title></rect>
 <rect width="3.20" height="3.14" x="719.64" y="397.32" class="todo"><title>0x0046c930 twentyseven_control (26 bytes)</title></rect>
 <rect width="3.20" height="3.14" x="725.83" y="397.32" class="todo"><title>0x00473d80 FileClose (26 bytes)</title></rect>
 <rect width="3.07" height="3.14" x="732.03" y="397.32" class="named"><title>0x0043aa70 GetFreeShockwave (25 bytes)</title></rect>

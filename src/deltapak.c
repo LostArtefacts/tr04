@@ -165,3 +165,9 @@ void twentythree_end(void)
     DelsHandyTeleportLara(17476, 29952, 15872, -16135);
     lara.questitems &= 1;
 }
+
+void twentyfour_end(void)
+{
+    cutseq_restore_item(ANIMATING13);
+    trigger_item_in_room(107, PUZZLE_ITEM8_COMBO1);
+}
