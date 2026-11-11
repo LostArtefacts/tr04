@@ -103,6 +103,11 @@ void invisibility_on(ITEM_INFO *item)
     item->status = ITEM_INVISIBLE;
 }
 
+void invisibility_off(ITEM_INFO *item)
+{
+    item->status = ITEM_ACTIVE;
+}
+
 void reset_hair(ITEM_INFO *item)
 {
     InitialiseHair();
