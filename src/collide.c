@@ -16,3 +16,11 @@ sint32 FindGridShift(sint32 src, sint32 dst)
     else
         return -(src + 1);
 }
+
+void ShiftItem(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->pos.x_pos += coll->shift.x;
+    item->pos.y_pos += coll->shift.y;
+    item->pos.z_pos += coll->shift.z;
+    coll->shift.x = coll->shift.y = coll->shift.z = 0;
+}
