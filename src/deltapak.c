@@ -532,3 +532,13 @@ void special1_init(void)
     lara_item->mesh_bits = -1;
     Chris_Menu = 0;
 }
+
+void special1_end(void)
+{
+    if (!bDoCredits) {
+        lara_item->mesh_bits = 0;
+        InitialiseSpotCam(2);
+    }
+    Chris_Menu = 0;
+    title_controls_locked_out = 0;
+}
