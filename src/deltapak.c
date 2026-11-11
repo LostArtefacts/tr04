@@ -315,6 +315,32 @@ void twentythree_init(void)
     horus_item_thing = find_a_fucking_item(HORUS_STATUE);
 }
 
+void twentythree_control(void)
+{
+    sint32 f;
+
+    f = GLOBAL_cutseq_frame;
+    horus_item_thing->flags |= IFL_TRIGGERED;
+    if (f == 194) {
+        horus_item_thing->mesh_bits &= ~0x200;
+        horus_item_thing->mesh_bits |= 0x20;
+    } else if (f == 251) {
+        horus_item_thing->mesh_bits &= ~0x400;
+        horus_item_thing->mesh_bits |= 0x10;
+    } else if (f == 350) {
+        horus_item_thing->mesh_bits &= ~0x40;
+        horus_item_thing->mesh_bits |= 8;
+    } else if (f == 440) {
+        horus_item_thing->mesh_bits &= ~4;
+        horus_item_thing->mesh_bits |= 0x80;
+    } else if (f == 514) {
+        horus_item_thing->mesh_bits &= ~2;
+        horus_item_thing->mesh_bits |= 0x100;
+    } else if (f == 556) {
+        horus_item_thing->mesh_bits |= 0x800;
+    }
+}
+
 void twentythree_end(void)
 {
     DelsHandyTeleportLara(17476, 29952, 15872, -16135);

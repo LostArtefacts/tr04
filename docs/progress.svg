@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="140.16" height="12" x="0" y="0" class="named"><title>634 · 40.98%</title></rect>
-<rect width="0.44" height="12" x="140.16" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="140.60" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="196.76" height="12" x="145.24" y="0" class="todo"><title>890 · 57.53%</title></rect>
+<rect width="140.38" height="12" x="0" y="0" class="named"><title>635 · 41.05%</title></rect>
+<rect width="0.44" height="12" x="140.38" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="140.82" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="196.53" height="12" x="145.47" y="0" class="todo"><title>889 · 57.47%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">41.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">634</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">890</tspan></text>
+<text text-anchor="end" x="522" y="7.50">41.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">635</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">889</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="57.52" height="12" x="0" y="0" class="named"><title>104 KB · 16.82%</title></rect>
-<rect width="0.12" height="12" x="57.52" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="57.64" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="277.11" height="12" x="64.89" y="0" class="todo"><title>503 KB · 81.03%</title></rect>
+<rect width="57.63" height="12" x="0" y="0" class="named"><title>105 KB · 16.85%</title></rect>
+<rect width="0.12" height="12" x="57.63" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="57.75" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="277" height="12" x="65" y="0" class="todo"><title>502 KB · 80.99%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">104 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">503 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">105 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">502 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1151,7 +1151,7 @@
 <rect width="12" height="12" x="480" y="315" class="named"><title>0x0046c5c0 twentyone_init (18 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="315" class="named"><title>0x0046c5e0 twentyone_end (34 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="315" class="named"><title>0x0046c610 twentythree_init (19 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="315" class="todo"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="315" class="named"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="315" class="named"><title>0x0046c700 twentythree_end (37 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="315" class="named"><title>0x0046c730 twentyfour_init (42 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="315" class="named"><title>0x0046c760 twentyfour_control (93 bytes)</title></rect>
@@ -2323,7 +2323,7 @@
 <rect width="8.64" height="9.25" x="495.13" y="247.47" class="named"><title>0x00425480 lara_as_forwardjump (207 bytes)</title></rect>
 <rect width="8.64" height="9.25" x="495.13" y="259.73" class="todo"><title>0x0042f7b0 DrawFlareInAir (207 bytes)</title></rect>
 <rect width="8.64" height="9.21" x="495.13" y="271.98" class="named"><title>0x00454a90 EffectNewRoom (206 bytes)</title></rect>
-<rect width="8.64" height="9.21" x="495.13" y="284.20" class="todo"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
+<rect width="8.64" height="9.21" x="495.13" y="284.20" class="named"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
 <rect width="8.64" height="9.12" x="495.13" y="296.41" class="todo"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="8.64" height="9.08" x="495.13" y="308.53" class="todo"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
 <rect width="8.64" height="9.08" x="495.13" y="320.60" class="todo"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
