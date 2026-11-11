@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="118.25" height="12" x="0" y="0" class="named"><title>525 · 33.98%</title></rect>
-<rect width="0.45" height="12" x="118.25" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="118.70" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="224.57" height="12" x="123.43" y="0" class="todo"><title>997 · 64.53%</title></rect>
+<rect width="118.48" height="12" x="0" y="0" class="named"><title>526 · 34.05%</title></rect>
+<rect width="0.45" height="12" x="118.48" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="118.93" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="224.34" height="12" x="123.66" y="0" class="todo"><title>996 · 64.47%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">34.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">525</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">997</tspan></text>
+<text text-anchor="end" x="528" y="7.50">34.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">526</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">996</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="51.10" height="12" x="0" y="0" class="named"><title>91 KB · 14.68%</title></rect>
-<rect width="0.12" height="12" x="51.10" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="51.22" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="289.41" height="12" x="58.59" y="0" class="todo"><title>516 KB · 83.16%</title></rect>
+<rect width="51.12" height="12" x="0" y="0" class="named"><title>91 KB · 14.69%</title></rect>
+<rect width="0.12" height="12" x="51.12" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="51.24" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="289.38" height="12" x="58.62" y="0" class="todo"><title>516 KB · 83.16%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">91 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">516 KB</tspan></text>
@@ -935,7 +935,7 @@
 <rect width="12" height="12" x="240" y="255" class="todo"><title>0x00455ae0 EarthQuake (524 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="255" class="todo"><title>0x00455cf0 SmashObject (241 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="255" class="todo"><title>0x00455df0 SmashObjectControl (168 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="255" class="todo"><title>0x00455ea0 BridgeFlatFloor (42 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="255" class="named"><title>0x00455ea0 BridgeFlatFloor (42 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="255" class="named"><title>0x00455ed0 BridgeFlatCeiling (27 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="255" class="named"><title>0x00455ef0 GetOffset (59 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="255" class="named"><title>0x00455f30 BridgeTilt1Floor (68 bytes)</title></rect>
@@ -2935,7 +2935,7 @@
 <rect width="4.21" height="3.86" x="728.38" y="370.08" class="named"><title>0x00423780 GetDirOctant (42 bytes)</title></rect>
 <rect width="4.21" height="3.86" x="735.59" y="370.08" class="named"><title>0x004273b0 lara_as_ppready (42 bytes)</title></rect>
 <rect width="4.21" height="3.86" x="742.79" y="370.08" class="named"><title>0x00450810 phd_PutPolygons_I (42 bytes)</title></rect>
-<rect width="3.87" height="4.19" x="661.97" y="376.94" class="todo"><title>0x00455ea0 BridgeFlatFloor (42 bytes)</title></rect>
+<rect width="3.87" height="4.19" x="661.97" y="376.94" class="named"><title>0x00455ea0 BridgeFlatFloor (42 bytes)</title></rect>
 <rect width="3.87" height="4.19" x="668.84" y="376.94" class="named"><title>0x0045faa0 SOUND_Init (42 bytes)</title></rect>
 <rect width="3.87" height="4.19" x="675.71" y="376.94" class="todo"><title>0x0046c730 twentyfour_init (42 bytes)</title></rect>
 <rect width="3.87" height="4.19" x="682.59" y="376.94" class="todo"><title>0x00473da0 FileSize (42 bytes)</title></rect>

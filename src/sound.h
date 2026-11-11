@@ -34,6 +34,9 @@ enum sfx_options {
 #define SFX_TEETH_SPIKES 343
 #define SFX_DEMI_SIREN_SWAVE 251
 #define SFX_LARA_BUBBLES 37
+#define SFX_HELICOPTER_LOOP 65
+#define SFX_SAND_LOOP 344
+#define SFX_WATERFALL_LOOP 79
 
 typedef struct sample_info {
     sint16 number;

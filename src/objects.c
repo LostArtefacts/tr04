@@ -1,6 +1,23 @@
 #include "objects.h"
 #include "room.h"
 #include "control.h"
+#include "lara.h"
+#include "box.h"
+#include "anim.h"
+#include "sound.h"
+#include "effects.h"
+#include "tomb4fx.h"
+#include "sphere.h"
+#include "specific/3dmath.h"
+
+void BridgeFlatFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
+{
+    if (y <= item->pos.y_pos) {
+        *height = item->pos.y_pos;
+        height_type = WALL;
+        OnObject = 1;
+    }
+}
 
 void BridgeFlatCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
 {
@@ -60,3 +77,4 @@ void BridgeTilt2Ceiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *h
     if (y > level)
         *height = level + STEP_L;
 }
+
