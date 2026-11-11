@@ -8,6 +8,7 @@
 #include "effect2.h"
 #include "control.h"
 #include "specific/3dmath.h"
+#include "delstuff.h"
 
 sint32 GetFreeFireSpark(void)
 {
@@ -462,6 +463,26 @@ void CreateBubble(PHD_3DPOS *pos, sint16 room_number, sint32 size, sint32 bigges
             bubble->size = (sint16)size;
             bubble->dsize = (sint16)(size << 4);
             bubble->vel = (GetRandomControl() & 0x1F) + 32;
+        }
+    }
+}
+
+void LaraBubbles(ITEM_INFO *item)
+{
+    PHD_VECTOR pos;
+    sint32 i;
+
+    SoundEffect(SFX_LARA_BUBBLES, &item->pos, SFX_WATER);
+    pos.x = 0;
+    pos.y = -4;
+    pos.z = 64;
+    GetLaraJointPos(&pos, 8);
+    for (i = (GetRandomControl() & 1) + 2; i > 0; i--) {
+        CreateBubble((PHD_3DPOS *)&pos, item->room_number, 8, 7);
+        if ((gfLevelFlags & GF_MIRROR) && item->room_number == gfMirrorRoom) {
+            pos.z = 2 * gfMirrorZPlane - pos.z;
+            CreateBubble((PHD_3DPOS *)&pos, item->room_number, 8, 7);
+            pos.z = 2 * gfMirrorZPlane - pos.z;
         }
     }
 }
