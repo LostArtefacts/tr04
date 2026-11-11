@@ -19,5 +19,6 @@ void ControlTriggerTriggerer(sint16 item_number);
 void ControlMapper(sint16 item_number);
 void TriggerRopeFlame(PHD_VECTOR *pos);
 void BurningRopeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
+void ControlBurningRope(sint16 item_number);
 
 #endif
