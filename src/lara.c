@@ -81,6 +81,13 @@ void lara_as_hangturnr(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_HANG2;
 }
 
+void lara_as_monkey180(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    item->goal_anim_state = AS_HANG2;
+}
+
 void lara_col_monkey180(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara_col_monkeyswing(item, coll);
