@@ -5,6 +5,9 @@
 #include "gameflow.h"
 #include "specific/function_stubs.h"
 #include "sound.h"
+#include "effect2.h"
+#include "control.h"
+#include "specific/3dmath.h"
 
 sint32 GetFreeFireSpark(void)
 {
@@ -38,6 +41,16 @@ sint32 GetFreeFireSpark(void)
     if (next_fire_spark >= 20)
         next_fire_spark = 1;
     return min_life_num;
+}
+
+void keep_those_fires_burning(void)
+{
+    TriggerGlobalStaticFlame();
+    if (!(wibble & 0xF)) {
+        TriggerGlobalFireFlame();
+        if (!(wibble & 0x1F))
+            TriggerGlobalFireSmoke();
+    }
 }
 
 void TriggerGlobalFireFlame(void)

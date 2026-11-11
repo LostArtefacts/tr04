@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "3dglodef.h"
+#include "items.h"
 
 typedef struct fire_list {
     sint32 x;
@@ -177,7 +178,9 @@ sint32 GetFreeBubble(void);
 sint32 GetFreeDrip(void);
 void TriggerGunSmoke(sint32 x, sint32 y, sint32 z, sint32 xVel, sint32 yVel, sint32 zVel, sint32 notLara, sint32 weaponType, sint32 shade);
 void TriggerGlobalStaticFlame(void);
+void TriggerGlobalFireSmoke(void);
 void TriggerGlobalFireFlame(void);
+void keep_those_fires_burning(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
