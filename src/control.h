@@ -71,6 +71,7 @@ sint32 TriggerActive(ITEM_INFO *item);
 void RemoveRoomFlipItems(ROOM_INFO *r);
 void AddRoomFlipItems(ROOM_INFO *r);
 void FlipMap(sint32 FlipNumber);
+void RefreshCamera(sint16 type, sint16 *data);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;

@@ -4,6 +4,7 @@
 #include "objnums.h"
 #include "box.h"
 #include "anim.h"
+#include "camera.h"
 
 sint32 GetChange(ITEM_INFO *item, ANIM_STRUCT *anim)
 {
@@ -173,6 +174,42 @@ sint32 GetWaterHeight(sint32 x, sint32 y, sint32 z, sint16 room_number)
         }
     }
     return NO_HEIGHT;
+}
+
+void RefreshCamera(sint16 type, sint16 *data)
+{
+    sint16 trigger, value, target_ok;
+
+    target_ok = 2;
+    do {
+        trigger = *data++;
+        value = trigger & 0x3FF;
+        switch ((trigger >> 10) & 0xF) {
+        case 1:
+            data++;
+            if (value == camera.last) {
+                camera.number = value;
+                if (camera.timer >= 0 && (camera.type != LOOK_CAMERA && camera.type != COMBAT_CAMERA || camera.fixed[camera.number].flags & 1)) {
+                    camera.type = FIXED_CAMERA;
+                    target_ok = 1;
+                    break;
+                }
+                camera.timer = -1;
+            }
+            target_ok = 0;
+            break;
+        case 6:
+            if (camera.type != LOOK_CAMERA && camera.type != COMBAT_CAMERA || camera.number == NO_ITEM || camera.fixed[camera.number].flags & 1)
+                camera.item = &items[value];
+            break;
+        }
+    } while (!(trigger & 0x8000));
+    if (camera.item) {
+        if (!target_ok || target_ok == 2 && camera.item->looked_at && camera.item != camera.last_item)
+            camera.item = 0;
+    }
+    if (camera.number == -1 && camera.timer > 0)
+        camera.timer = -1;
 }
 
 sint32 TriggerActive(ITEM_INFO *item)
