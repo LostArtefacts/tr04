@@ -67,3 +67,14 @@ void StopSoundEffect(sint32 sfx)
         }
     }
 }
+
+void SOUND_Stop(void)
+{
+    int i;
+
+    if (sound_active) {
+        S_SoundStopAllSamples();
+        for (i = 0; i < 32; i++)
+            LaSlot[i].nSampleInfo = -1;
+    }
+}
