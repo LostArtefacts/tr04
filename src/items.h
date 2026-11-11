@@ -108,6 +108,12 @@ typedef struct item_info {
     sint16 TOSSPAD;
 } ITEM_INFO;
 
+void InitialiseItemArray(int num);
+void KillItem(sint16 item_num);
+sint16 CreateItem(void);
+
 extern ITEM_INFO *items;
+extern sint16 next_item_active;
+extern int level_items;
 
 #endif
