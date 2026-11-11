@@ -4,6 +4,10 @@
 #include "draw.h"
 #include "anim.h"
 #include "objnums.h"
+#include "sphere.h"
+#include "sound.h"
+#include "switch.h"
+#include "newinv.h"
 #include "lara.h"
 #include "lara_states.h"
 #include "specific/input.h"
@@ -108,6 +112,67 @@ void DoorControl(sint16 item_number)
             }
         }
         AnimateItem(item);
+    }
+}
+
+void DoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (item->trigger_flags == 2 && item->status != ITEM_ACTIVE && ((((input & IN_ACTION) || GLOBAL_inventoryitemchosen == CROWBAR_ITEM) && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && !l->gravity_status && lara.gun_status == LG_NO_ARMS) || (lara.IsMoving && lara.GeneralPtr == (void *)item_num))) {
+        item->pos.y_rot ^= 0x8000;
+        if (TestLaraPosition(CrowbarDoorBounds, item, l)) {
+            if (!lara.IsMoving) {
+                if (GLOBAL_inventoryitemchosen == NO_ITEM) {
+                    if (have_i_got_object(CROWBAR_ITEM))
+                        GLOBAL_enterinventory = CROWBAR_ITEM;
+                    else {
+                        if (OldPickupPos.x != l->pos.x_pos || OldPickupPos.y != l->pos.y_pos || OldPickupPos.z != l->pos.z_pos) {
+                            OldPickupPos.x = l->pos.x_pos;
+                            OldPickupPos.y = l->pos.y_pos;
+                            OldPickupPos.z = l->pos.z_pos;
+                            SayNo();
+                        }
+                    }
+                    item->pos.y_rot ^= 0x8000;
+                    return;
+                }
+                if (GLOBAL_inventoryitemchosen != CROWBAR_ITEM) {
+                    item->pos.y_rot ^= 0x8000;
+                    return;
+                }
+            }
+            GLOBAL_inventoryitemchosen = NO_ITEM;
+            if (MoveLaraPosition(&CrowbarDoorPos, item, l)) {
+                l->anim_number = ANIM_CROWBARDOOR;
+                l->frame_number = anims[ANIM_CROWBARDOOR].frame_base;
+                l->current_anim_state = AS_CONTROLLED;
+                item->pos.y_rot ^= 0x8000;
+                AddActiveItem(item_num);
+                item->flags |= IFL_CODEBITS;
+                item->status = ITEM_ACTIVE;
+                item->goal_anim_state = 1;
+                lara.IsMoving = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+                return;
+            }
+            lara.GeneralPtr = (void *)item_num;
+        } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+            lara.IsMoving = 0;
+            lara.gun_status = LG_NO_ARMS;
+        }
+        item->pos.y_rot ^= 0x8000;
+    }
+    if (TestBoundsCollide(item, l, coll->radius)) {
+        if (TestCollision(item, l)) {
+            if (coll->enable_baddie_push) {
+                if (item->current_anim_state != item->goal_anim_state)
+                    ItemPushLara(item, l, coll, coll->enable_spaz, 1);
+                else
+                    ItemPushLara(item, l, coll, 0, 1);
+            }
+        }
     }
 }
 

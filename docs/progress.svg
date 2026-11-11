@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="105.19" height="12" x="0" y="0" class="named"><title>467 · 30.23%</title></rect>
-<rect width="0.45" height="12" x="105.19" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="105.64" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="239.43" height="12" x="108.57" y="0" class="todo"><title>1063 · 68.80%</title></rect>
+<rect width="105.41" height="12" x="0" y="0" class="named"><title>468 · 30.29%</title></rect>
+<rect width="0.45" height="12" x="105.41" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="105.86" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="239.21" height="12" x="108.79" y="0" class="todo"><title>1062 · 68.74%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">30.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">467</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1063</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">468</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1062</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="44.58" height="12" x="0" y="0" class="named"><title>79 KB · 12.81%</title></rect>
-<rect width="0.12" height="12" x="44.58" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="44.71" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="297.68" height="12" x="50.32" y="0" class="todo"><title>530 KB · 85.54%</title></rect>
+<rect width="44.92" height="12" x="0" y="0" class="named"><title>80 KB · 12.91%</title></rect>
+<rect width="0.12" height="12" x="44.92" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="45.04" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="297.34" height="12" x="50.66" y="0" class="todo"><title>530 KB · 85.44%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="24.50">12.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">79 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">530 KB</tspan></text>
+<text text-anchor="end" x="528" y="24.50">12.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">80 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">530 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -835,7 +835,7 @@
 <rect width="12" height="12" x="240" y="225" class="named"><title>0x0044df60 ShutThatDoor (94 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="225" class="named"><title>0x0044dfc0 OpenThatDoor (78 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="225" class="named"><title>0x0044e010 DoorControl (432 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="225" class="todo"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="225" class="named"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="225" class="named"><title>0x0044e420 PushPullKickDoorControl (96 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="225" class="named"><title>0x0044e480 PushPullKickDoorCollision (479 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="225" class="named"><title>0x0044e660 DoubleDoorCollision (341 bytes)</title></rect>
@@ -1898,7 +1898,7 @@
 <rect width="15.31" height="15.33" x="346.04" y="265.27" class="todo"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
 <rect width="15.31" height="15.31" x="346.04" y="283.60" class="named"><title>0x004624c0 TurnSwitchControl (606 bytes)</title></rect>
 <rect width="15.31" height="15.26" x="346.04" y="301.91" class="todo"><title>0x00493c00 DXClose (604 bytes)</title></rect>
-<rect width="15.31" height="15.21" x="346.04" y="320.17" class="todo"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
+<rect width="15.31" height="15.21" x="346.04" y="320.17" class="named"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
 <rect width="15.31" height="15.15" x="346.04" y="338.37" class="named"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
 <rect width="15.31" height="15.10" x="346.04" y="356.53" class="todo"><title>0x00409200 ControlBodyPart (598 bytes)</title></rect>
 <rect width="15.31" height="15.08" x="346.04" y="374.63" class="todo"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
