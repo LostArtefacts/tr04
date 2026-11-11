@@ -530,6 +530,16 @@ void lara_as_hangleft(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_HANG;
 }
 
+void lara_as_hangright(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    camera.target_angle = CAM_A_HANG;
+    camera.target_elevation = CAM_E_HANG;
+    if (!(input & (IN_RIGHT | IN_RSTEP)))
+        item->goal_anim_state = AS_HANG;
+}
+
 void lara_as_compress(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (lara.water_status != LW_WADE) {
