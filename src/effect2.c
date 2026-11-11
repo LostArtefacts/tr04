@@ -4,7 +4,36 @@
 #include "lara.h"
 #include "anim.h"
 #include "tomb4fx.h"
+#include "effects.h"
 #include "specific/function_stubs.h"
+
+void DetatchSpark(sint32 num, sint32 type)
+{
+    sint32 lp;
+    SPARKS *sptr;
+    FX_INFO *fx;
+    ITEM_INFO *item;
+
+    sptr = &spark[0];
+    for (lp = 0; lp < 256; lp++) {
+        if (sptr->On && (sptr->Flags & type) && sptr->FxObj == num) {
+            if (type == 64) {
+                fx = &effects[num];
+                sptr->x += fx->pos.x_pos;
+                sptr->y += fx->pos.y_pos;
+                sptr->z += fx->pos.z_pos;
+                sptr->Flags &= ~64;
+            } else if (type == 128) {
+                item = &items[num];
+                sptr->x += item->pos.x_pos;
+                sptr->y += item->pos.y_pos;
+                sptr->z += item->pos.z_pos;
+                sptr->Flags &= ~128;
+            }
+        }
+        sptr++;
+    }
+}
 
 void TriggerExplosionSmokeEnd(sint32 x, sint32 y, sint32 z, sint32 uw)
 {
