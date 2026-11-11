@@ -136,6 +136,30 @@ sint32 LaraTestClimbStance(ITEM_INFO *item, COLL_INFO *coll)
     return 1;
 }
 
+void LaraCollideStop(ITEM_INFO *item, COLL_INFO *coll)
+{
+    switch (coll->old_anim_state) {
+    case AS_STOP:
+    case AS_TURN_L:
+    case AS_TURN_R:
+    case AS_FASTTURN:
+        item->current_anim_state = coll->old_anim_state;
+        item->anim_number = coll->old_anim_number;
+        item->frame_number = coll->old_frame_number;
+        if (input & IN_LEFT)
+            item->goal_anim_state = AS_TURN_L;
+        else if (input & IN_RIGHT)
+            item->goal_anim_state = AS_TURN_R;
+        else
+            item->goal_anim_state = AS_STOP;
+        AnimateLara(item);
+        break;
+    default:
+        item->anim_number = ANIM_STOP;
+        item->frame_number = anims[ANIM_STOP].frame_base;
+    }
+}
+
 void lara_as_dashdive(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->goal_anim_state != AS_DEATH && item->goal_anim_state != AS_STOP && item->goal_anim_state != AS_RUN) {
