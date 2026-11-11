@@ -14,5 +14,6 @@ void lara_as_surfleft(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_surfright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_surftread(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_surfback(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_surfleft(ITEM_INFO *item, COLL_INFO *coll);
 
 #endif
