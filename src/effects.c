@@ -3,6 +3,7 @@
 #include "sound.h"
 #include "camera.h"
 #include "control.h"
+#include "hair.h"
 
 void turn180_effect(ITEM_INFO *item)
 {
@@ -30,4 +31,9 @@ void shoot_right_gun(ITEM_INFO *item)
 void shoot_left_gun(ITEM_INFO *item)
 {
     lara.left_arm.flash_gun = 3;
+}
+
+void reset_hair(ITEM_INFO *item)
+{
+    InitialiseHair();
 }

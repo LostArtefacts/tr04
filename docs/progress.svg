@@ -46,13 +46,13 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="38.21" height="12" x="0" y="0" class="named"><title>164 · 10.61%</title></rect>
-<rect width="0.23" height="12" x="38.21" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="38.45" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="319.69" height="12" x="40.31" y="0" class="todo"><title>1372 · 88.80%</title></rect>
+<rect width="38.45" height="12" x="0" y="0" class="named"><title>165 · 10.68%</title></rect>
+<rect width="0.23" height="12" x="38.45" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.86" height="12" x="38.68" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="319.46" height="12" x="40.54" y="0" class="todo"><title>1371 · 88.74%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">10.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">164</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1372</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">165</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1371</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="17.61" height="12" x="0" y="0" class="named"><title>30 KB · 4.89%</title></rect>
@@ -609,7 +609,7 @@
 <rect width="12" height="12" x="600" y="150" class="todo"><title>0x00437c20 swap_meshes_with_meshswap3 (129 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="150" class="todo"><title>0x00437cb0 invisibility_on (12 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="150" class="todo"><title>0x00437cc0 invisibility_off (23 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="150" class="todo"><title>0x00437ce0 reset_hair (5 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="150" class="named"><title>0x00437ce0 reset_hair (5 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="150" class="todo"><title>0x00437cf0 ClearScarabsPatch (5 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="150" class="todo"><title>0x00437d00 MeshSwapToPour (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="150" class="todo"><title>0x00437d30 MeshSwapFromPour (24 bytes)</title></rect>
@@ -3142,7 +3142,7 @@
 <rect width="1.77" height="1.75" x="736.87" y="442.19" class="todo"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
 <rect width="1.31" height="1.75" x="741.64" y="442.19" class="todo"><title>0x00494e90 Func494e90 (6 bytes)</title></rect>
 <rect width="1.06" height="1.75" x="745.94" y="442.19" class="todo"><title>0x0040b050 GunShot (5 bytes)</title></rect>
-<rect width="1.47" height="1.31" x="732.11" y="446.94" class="todo"><title>0x00437ce0 reset_hair (5 bytes)</title></rect>
+<rect width="1.47" height="1.31" x="732.11" y="446.94" class="named"><title>0x00437ce0 reset_hair (5 bytes)</title></rect>
 <rect width="1.47" height="1.31" x="736.58" y="446.94" class="todo"><title>0x00437cf0 ClearScarabsPatch (5 bytes)</title></rect>
 <rect width="1.47" height="1.31" x="741.05" y="446.94" class="todo"><title>0x0043c400 go_and_load_game (5 bytes)</title></rect>
 <rect width="1.47" height="1.31" x="745.53" y="446.94" class="todo"><title>0x0043c410 go_and_save_game (5 bytes)</title></rect>
