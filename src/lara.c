@@ -11,6 +11,8 @@
 #define DAMAGE_LENGTH 14
 #define FASTFALL_FRICTION item->speed = (item->speed * 95) / 100
 #define HEAD_TURN (2 * ONE_DEGREE)
+#define CAM_A_HANG 0
+#define CAM_E_HANG (-60 * ONE_DEGREE)
 extern sint32 jump_ok;
 
 void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll)
@@ -516,6 +518,16 @@ void lara_as_fastfall(ITEM_INFO *item, COLL_INFO *coll)
     FASTFALL_FRICTION;
     if (item->fallspeed == DAMAGE_START + DAMAGE_LENGTH)
         SoundEffect(30, &item->pos, 0);
+}
+
+void lara_as_hangleft(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    camera.target_angle = CAM_A_HANG;
+    camera.target_elevation = CAM_E_HANG;
+    if (!(input & (IN_LEFT | IN_LSTEP)))
+        item->goal_anim_state = AS_HANG;
 }
 
 void lara_as_compress(ITEM_INFO *item, COLL_INFO *coll)
