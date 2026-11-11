@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="113.30" height="12" x="0" y="0" class="named"><title>503 · 32.56%</title></rect>
-<rect width="0.45" height="12" x="113.30" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.05" height="12" x="113.75" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
-<rect width="230.20" height="12" x="117.80" y="0" class="todo"><title>1022 · 66.15%</title></rect>
+<rect width="113.52" height="12" x="0" y="0" class="named"><title>504 · 32.62%</title></rect>
+<rect width="0.45" height="12" x="113.52" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.05" height="12" x="113.97" y="0" class="nonmatching"><title>18 · 1.17%</title></rect>
+<rect width="229.97" height="12" x="118.03" y="0" class="todo"><title>1021 · 66.08%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">32.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">503</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1022</tspan></text>
+<text text-anchor="end" x="528" y="7.50">32.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">504</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">18</tspan> · <tspan class="todo">1021</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="48.64" height="12" x="0" y="0" class="named"><title>87 KB · 13.98%</title></rect>
-<rect width="0.12" height="12" x="48.64" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="6.27" height="12" x="48.76" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
-<rect width="292.97" height="12" x="55.03" y="0" class="todo"><title>522 KB · 84.19%</title></rect>
+<rect width="48.70" height="12" x="0" y="0" class="named"><title>87 KB · 14%</title></rect>
+<rect width="0.12" height="12" x="48.70" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="6.27" height="12" x="48.83" y="0" class="nonmatching"><title>11 KB · 1.80%</title></rect>
+<rect width="292.91" height="12" x="55.09" y="0" class="todo"><title>522 KB · 84.17%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">87 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">11 KB</tspan> · <tspan class="todo">522 KB</tspan></text>
@@ -653,7 +653,7 @@
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x0043a1b0 S_DrawSparks (1240 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="165" class="named"><title>0x0043aa70 GetFreeShockwave (25 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="165" class="todo"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="165" class="named"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="165" class="todo"><title>0x0043ab00 TriggerShockwaveHitEffect (520 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="165" class="todo"><title>0x0043ad10 UpdateShockwaves (312 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="165" class="todo"><title>0x0043ae50 TriggerLightning (292 bytes)</title></rect>
@@ -2612,7 +2612,7 @@
 <rect width="6.35" height="6.69" x="731.35" y="285.93" class="todo"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
 <rect width="6.30" height="6.69" x="740.70" y="285.93" class="named"><title>0x00428ea0 ready_shotgun (109 bytes)</title></rect>
 <rect width="6.54" height="6.45" x="570.95" y="295.63" class="named"><title>0x0042bab0 ready_pistols (109 bytes)</title></rect>
-<rect width="6.54" height="6.45" x="570.95" y="305.07" class="todo"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
+<rect width="6.54" height="6.45" x="570.95" y="305.07" class="named"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
 <rect width="6.54" height="6.45" x="570.95" y="314.52" class="todo"><title>0x004644b0 InitialiseTrainJeep (109 bytes)</title></rect>
 <rect width="6.54" height="6.45" x="570.95" y="323.96" class="todo"><title>0x00465770 DoDynamics_bike (109 bytes)</title></rect>
 <rect width="6.54" height="6.45" x="570.95" y="333.41" class="todo"><title>0x0046cc40 cutseq_kill_item (109 bytes)</title></rect>

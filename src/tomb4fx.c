@@ -1,4 +1,5 @@
 #include "tomb4fx.h"
+#include "sound.h"
 
 void ClearFires(void)
 {
@@ -85,4 +86,25 @@ sint32 GetFreeShockwave(void)
             return i;
     }
     return -1;
+}
+
+void TriggerShockwave(PHD_VECTOR *pos, sint32 InnerOuterRads, sint32 speed, sint32 rgb, sint32 XRotFlags)
+{
+    SHOCKWAVE_STRUCT *sw;
+    sint32 swn;
+
+    swn = GetFreeShockwave();
+    if (swn != -1) {
+        sw = &ShockWaves[swn];
+        sw->x = pos->x;
+        sw->y = pos->y;
+        sw->z = pos->z;
+        sw->InnerRad = (sint16)InnerOuterRads;
+        sw->OuterRad = (sint16)(InnerOuterRads >> 16);
+        sw->XRot = (sint16)XRotFlags;
+        sw->Flags = (sint16)(XRotFlags >> 16);
+        sw->Speed = (sint16)speed;
+        *(sint32 *)&sw->r = rgb;
+        SoundEffect(SFX_DEMI_SIREN_SWAVE, (PHD_3DPOS *)pos, SFX_DEFAULT);
+    }
 }
