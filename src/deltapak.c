@@ -515,3 +515,20 @@ void special3_control(void)
     if (GLOBAL_cutseq_frame >= 348 && GLOBAL_cutseq_frame <= 358 && GLOBAL_cutseq_frame & 1)
         DoBloodSplat(6799 - (GetRandomDraw() & 0xFF), (GetRandomDraw() & 0x1FF) - 768, 76209, 7, -1, 24);
 }
+
+void special1_init(void)
+{
+    ITEM_INFO *item;
+    sint32 i;
+
+    for (i = 0; i < level_items; i++) {
+        item = &items[i];
+        if (item->object_number == ANIMATING6) {
+            item->anim_number = objects[ANIMATING6].anim_index;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->flags &= ~IFL_CODEBITS;
+        }
+    }
+    lara_item->mesh_bits = -1;
+    Chris_Menu = 0;
+}
