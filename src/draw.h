@@ -17,6 +17,7 @@ sint32 GetFrames(ITEM_INFO *item, sint16 *frm[], sint32 *rate);
 sint16 *GetBestFrame(ITEM_INFO *item);
 void phd_PutPolygons(sint16 *objptr, sint32 clip);
 void InitInterpolate(sint32 frac, sint32 rate);
+void phd_PutPolygons_I(sint16 *ptr, sint32 clip);
 
 extern sint32 *IMptr;
 extern sint32 IM_rate;

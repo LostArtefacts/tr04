@@ -25,3 +25,11 @@ void phd_PushMatrix_I(void)
     S_LongMemCpy(IMptr + 12, IMptr, 12);
     IMptr += 12;
 }
+
+void phd_PutPolygons_I(sint16 *ptr, sint32 clip)
+{
+    phd_PushMatrix();
+    InterpolateMatrix();
+    phd_PutPolygons(ptr, clip);
+    phd_PopMatrix();
+}
