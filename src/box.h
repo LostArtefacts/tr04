@@ -4,6 +4,9 @@
 #include "items.h"
 
 #define NUM_SLOTS 5
+#define NO_BOX 0x7FF
+#define BLOCKABLE 0x8000
+#define BLOCKED 0x4000
 
 typedef enum {
     SKELLY_ZONE,
