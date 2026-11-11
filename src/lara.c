@@ -134,3 +134,20 @@ void lara_as_compress(ITEM_INFO *item, COLL_INFO *coll)
     if (item->fallspeed > LARA_FASTFALL_SPEED)
         item->goal_anim_state = AS_FASTFALL;
 }
+
+void lara_as_fastturn(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_STOP;
+        return;
+    }
+    if (lara.turn_rate < 0) {
+        lara.turn_rate = -LARA_FAST_TURN;
+        if (!(input & IN_LEFT))
+            item->goal_anim_state = AS_STOP;
+    } else {
+        lara.turn_rate = LARA_FAST_TURN;
+        if (!(input & IN_RIGHT))
+            item->goal_anim_state = AS_STOP;
+    }
+}
