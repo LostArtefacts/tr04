@@ -2002,6 +2002,15 @@ address,size,name,symbol
 0x004aebf8,1,piece_moving,_piece_moving
 0x004aebfc,4,flipeffect,_flipeffect
 0x004aec00,2,cdtrack,_cdtrack
+0x004aec40,12,DoubleDoorPos,_DoubleDoorPos
+0x004aec50,12,PullDoorPos,_PullDoorPos
+0x004aec60,12,PushDoorPos,_PushDoorPos
+0x004aec70,12,KickDoorPos,_KickDoorPos
+0x004aec80,12,UnderwaterDoorPos,_UnderwaterDoorPos
+0x004aec90,12,CrowbarDoorPos,_CrowbarDoorPos
+0x004aec9c,24,PushPullKickDoorBounds,_PushPullKickDoorBounds
+0x004aecb4,24,UnderwaterDoorBounds,_UnderwaterDoorBounds
+0x004aeccc,24,CrowbarDoorBounds,_CrowbarDoorBounds
 0x004aedb0,1696,CharDef,_CharDef
 0x004af451,1,gfGameMode,_gfGameMode
 0x004af452,,gfInitialiseGame,_gfInitialiseGame

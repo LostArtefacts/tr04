@@ -2,6 +2,10 @@
 #include "box.h"
 #include "control.h"
 #include "draw.h"
+#include "anim.h"
+#include "lara.h"
+#include "lara_states.h"
+#include "specific/input.h"
 
 void ShutThatDoor(DOORPOS_DATA *d)
 {
@@ -121,4 +125,34 @@ void PushPullKickDoorControl(sint16 item_number)
         door->Opened = 1;
     }
     AnimateItem(item);
+}
+
+void DoubleDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if (((input & IN_ACTION) && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && item->status != ITEM_ACTIVE && !l->gravity_status && lara.gun_status == LG_NO_ARMS) || (lara.IsMoving && lara.GeneralPtr == (void *)item_num)) {
+        item->pos.y_rot ^= 0x8000;
+        if (TestLaraPosition(PushPullKickDoorBounds, item, l)) {
+            if (MoveLaraPosition(&DoubleDoorPos, item, l)) {
+                l->anim_number = ANIM_TWODOOR;
+                l->frame_number = anims[ANIM_TWODOOR].frame_base;
+                l->current_anim_state = AS_TWODOOR;
+                AddActiveItem(item_num);
+                item->status = ITEM_ACTIVE;
+                lara.IsMoving = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+                lara.head_y_rot = 0;
+                lara.head_x_rot = 0;
+                lara.torso_y_rot = 0;
+                lara.torso_x_rot = 0;
+            } else
+                lara.GeneralPtr = (void *)item_num;
+        } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+            lara.IsMoving = 0;
+            lara.gun_status = LG_NO_ARMS;
+        }
+        item->pos.y_rot ^= 0x8000;
+    }
 }
