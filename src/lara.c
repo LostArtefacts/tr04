@@ -4,6 +4,7 @@
 #include "room.h"
 #include "control.h"
 #include "draw.h"
+#include "specific/3dmath.h"
 #include "camera.h"
 #include "sound.h"
 #include "specific/input.h"
@@ -15,6 +16,7 @@
 #define CAM_A_HANG 0
 #define CAM_E_HANG (-60 * ONE_DEGREE)
 #define LARA_DEF_ADD_EDGE (5 * ONE_DEGREE)
+#define HANG_HEIGHT 600
 extern sint32 jump_ok;
 
 sint32 LaraFallen(ITEM_INFO *item, COLL_INFO *coll)
@@ -402,6 +404,27 @@ void MonkeySwingSnap(ITEM_INFO *item, COLL_INFO *coll)
     room_num = item->room_number;
     floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_num);
     item->pos.y_pos = GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos) + (768 - 64);
+}
+
+sint16 TestMonkeyLeft(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint16 oct;
+
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = NO_HEIGHT;
+    coll->bad_ceiling = 0;
+    coll->facing = lara.move_angle = item->pos.y_rot - 16384;
+    coll->radius = LARA_RAD;
+    coll->slopes_are_walls = 0;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, HANG_HEIGHT);
+    if (ABS(coll->mid_ceiling - coll->front_ceiling) > 50)
+        return 0;
+    if (coll->coll_type) {
+        oct = GetDirOctant(item->pos.y_rot);
+        if ((oct == 0 && coll->coll_type == COLL_FRONT) || (oct == 0 && coll->coll_type == COLL_LEFT) || (oct == 1 && coll->coll_type == COLL_RIGHT) || (oct == 1 && coll->coll_type == COLL_LEFT))
+            return 0;
+    }
+    return 1;
 }
 
 void lara_as_monkeyl(ITEM_INFO *item, COLL_INFO *coll)

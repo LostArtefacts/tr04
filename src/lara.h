@@ -280,6 +280,10 @@ void lara_col_death(ITEM_INFO *item, COLL_INFO *coll);
 sint16 LaraFloorFront(ITEM_INFO *item, PHD_ANGLE ang, sint32 dist);
 sint16 LaraCeilingFront(ITEM_INFO *item, PHD_ANGLE ang, sint32 dist);
 sint32 TestHangSwingIn(ITEM_INFO *item, PHD_ANGLE angle);
+sint16 TestMonkeyLeft(ITEM_INFO *item, COLL_INFO *coll);
+sint16 TestMonkeyRight(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_crawl(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_crawlb(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
