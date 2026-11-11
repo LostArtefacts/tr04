@@ -39,6 +39,12 @@ void fourth_cutseq_end(void)
     lara.keyitems |= 0xC00;
 }
 
+void fifth_cutseq_control(void)
+{
+    if (GLOBAL_cutseq_frame == 1350)
+        do_backpack_meshswap();
+}
+
 void fifth_cutseq_end(void)
 {
     DelsHandyTeleportLara(100938, 768, 58040, -32552);
