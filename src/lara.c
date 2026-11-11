@@ -92,6 +92,23 @@ void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll)
     GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, LARA_HITE);
 }
 
+sint32 LaraHitCeiling(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (coll->coll_type != COLL_TOP && coll->coll_type != COLL_CLAMP)
+        return 0;
+    item->pos.x_pos = coll->old.x;
+    item->pos.y_pos = coll->old.y;
+    item->pos.z_pos = coll->old.z;
+    item->goal_anim_state = AS_STOP;
+    item->current_anim_state = AS_STOP;
+    item->frame_number = anims[ANIM_STOP].frame_base;
+    item->anim_number = ANIM_STOP;
+    item->speed = 0;
+    item->fallspeed = 0;
+    item->gravity_status = 0;
+    return 1;
+}
+
 sint32 LaraTestClimbStance(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint32 shift_l, result_r, shift_r, result_l;
