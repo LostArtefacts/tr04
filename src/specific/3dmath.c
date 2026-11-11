@@ -1,4 +1,10 @@
+#include <stdlib.h>
+
 #include "3dmath.h"
+#include "d3dmatrix.h"
+#include "../lara.h"
+
+extern D3DMATRIX D3DMW2VMatrix;
 
 void SetupZRange(sint32 znear, sint32 zfar)
 {
@@ -89,4 +95,57 @@ uint32 mGetAngle(sint32 x, sint32 z, sint32 x1, sint32 z1)
     if (angle < 0)
         angle = -angle;
     return -angle & 0xFFFF;
+}
+
+void phd_GenerateW2V(PHD_3DPOS *viewPos)
+{
+    PHD_VECTOR scalar;
+    sint32 sx, cx, sy, cy, sz, cz;
+    sint32 x, y, z;
+
+    phd_mxptr = matrix_stack;
+    sx = phd_sin(viewPos->x_rot);
+    cx = phd_cos(viewPos->x_rot);
+    sy = phd_sin(viewPos->y_rot);
+    cy = phd_cos(viewPos->y_rot);
+    sz = phd_sin(viewPos->z_rot);
+    cz = phd_cos(viewPos->z_rot);
+
+    w2v_matrix[M00] = phd_mxptr[M00] = TRIGMULT3(sx, sy, sz) + TRIGMULT2(cy, cz);
+    w2v_matrix[M01] = phd_mxptr[M01] = TRIGMULT2(cx, sz);
+    w2v_matrix[M02] = phd_mxptr[M02] = TRIGMULT3(sx, cy, sz) - TRIGMULT2(sy, cz);
+
+    w2v_matrix[M10] = phd_mxptr[M10] = TRIGMULT3(sx, sy, cz) - TRIGMULT2(cy, sz);
+    w2v_matrix[M11] = phd_mxptr[M11] = TRIGMULT2(cx, cz);
+    w2v_matrix[M12] = phd_mxptr[M12] = TRIGMULT3(sx, cy, cz) + TRIGMULT2(sy, sz);
+
+    w2v_matrix[M20] = phd_mxptr[M20] = TRIGMULT2(cx, sy);
+    w2v_matrix[M21] = phd_mxptr[M21] = -sx;
+    w2v_matrix[M22] = phd_mxptr[M22] = TRIGMULT2(cx, cy);
+
+    if (lara.dpoisoned != lara.poisoned) {
+        lara.poisoned += (lara.dpoisoned - lara.poisoned) >> 4;
+        if (abs(lara.dpoisoned - lara.poisoned) < 16)
+            lara.poisoned = lara.dpoisoned;
+    }
+
+    if (lara.poisoned >= 256) {
+        x = (lara.poisoned - 256) * ((phd_sin(XSoff1) + phd_sin(XSoff2)) >> 2);
+        y = (lara.poisoned - 256) * ((phd_sin(YSoff1) + phd_sin(YSoff2)) >> 2);
+        z = (lara.poisoned - 256) * ((phd_sin(ZSoff1) + phd_sin(ZSoff2)) >> 2);
+        if (x || y || z) {
+            scalar.x = (x >> 12) + 0x4000;
+            scalar.y = (y >> 12) + 0x4000;
+            scalar.z = (z >> 12) + 0x4000;
+            ScaleCurrentMatrix(&scalar);
+        }
+    }
+
+    w2v_matrix[M03] = matrix_stack[M03] = viewPos->x_pos;
+    w2v_matrix[M13] = matrix_stack[M13] = viewPos->y_pos;
+    w2v_matrix[M23] = matrix_stack[M23] = viewPos->z_pos;
+    w2v_matrix[M10] = matrix_stack[M10] = (sint32)(LfAspectCorrection * (float)matrix_stack[M10]);
+    w2v_matrix[M11] = matrix_stack[M11] = (sint32)(LfAspectCorrection * (float)matrix_stack[M11]);
+    w2v_matrix[M12] = matrix_stack[M12] = (sint32)(LfAspectCorrection * (float)matrix_stack[M12]);
+    SetD3DMatrix(&D3DMW2VMatrix, w2v_matrix);
 }

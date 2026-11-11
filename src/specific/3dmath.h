@@ -5,6 +5,9 @@
 
 #define W2V_SHIFT 14
 
+#define TRIGMULT2(a, b) (((a) * (b)) >> W2V_SHIFT)
+#define TRIGMULT3(a, b, c) (TRIGMULT2((TRIGMULT2(a, b)), c))
+
 enum matrix_indices {
     M00, M01, M02, M03,
     M10, M11, M12, M13,
@@ -31,6 +34,7 @@ void SetupZRange(sint32 znear, sint32 zfar);
 void ScaleCurrentMatrix(PHD_VECTOR *vec);
 void InitWindow(sint32 x, sint32 y, sint32 w, sint32 h, sint32 znear, sint32 zfar, sint32 fov, sint32 a, sint32 b);
 uint32 mGetAngle(sint32 x, sint32 z, sint32 x1, sint32 z1);
+void phd_GenerateW2V(PHD_3DPOS *viewPos);
 
 extern sint32 phdtan2[8];
 extern sint16 phdtantab[2050];
@@ -41,6 +45,7 @@ extern float FogStart;
 extern float FogEnd;
 
 extern sint32 *phd_mxptr;
+extern sint32 w2v_matrix[indices_count];
 extern sint32 matrix_stack[20 * indices_count];
 
 extern float f_centerx;
@@ -81,5 +86,12 @@ extern sint16 phd_winymax;
 extern sint16 phd_winymin;
 
 extern float LfAspectCorrection;
+
+extern sint32 XSoff1;
+extern sint32 XSoff2;
+extern sint32 YSoff1;
+extern sint32 YSoff2;
+extern sint32 ZSoff1;
+extern sint32 ZSoff2;
 
 #endif
