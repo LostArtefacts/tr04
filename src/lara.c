@@ -162,3 +162,11 @@ void lara_as_backjump(ITEM_INFO *item, COLL_INFO *coll)
     else if ((input & IN_FORWARD || input & IN_ROLL) && item->goal_anim_state != AS_STOP)
         item->goal_anim_state = AS_TWIST;
 }
+
+void lara_as_fallback(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->fallspeed > LARA_FASTFALL_SPEED)
+        item->goal_anim_state = AS_FASTFALL;
+    if ((input & IN_ACTION) && lara.gun_status == LG_NO_ARMS)
+        item->goal_anim_state = AS_REACH;
+}
