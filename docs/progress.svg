@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="107.22" height="12" x="0" y="0" class="named"><title>476 · 30.81%</title></rect>
-<rect width="0.45" height="12" x="107.22" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="107.67" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="237.41" height="12" x="110.59" y="0" class="todo"><title>1054 · 68.22%</title></rect>
+<rect width="107.44" height="12" x="0" y="0" class="named"><title>477 · 30.87%</title></rect>
+<rect width="0.45" height="12" x="107.44" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="107.89" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="237.18" height="12" x="110.82" y="0" class="todo"><title>1053 · 68.16%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">30.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">476</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1054</tspan></text>
+<text text-anchor="end" x="528" y="7.50">31.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">477</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1053</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="45.65" height="12" x="0" y="0" class="named"><title>81 KB · 13.12%</title></rect>
-<rect width="0.12" height="12" x="45.65" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="45.77" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="296.61" height="12" x="51.39" y="0" class="todo"><title>529 KB · 85.23%</title></rect>
+<rect width="45.69" height="12" x="0" y="0" class="named"><title>81 KB · 13.13%</title></rect>
+<rect width="0.12" height="12" x="45.69" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="45.81" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="296.57" height="12" x="51.43" y="0" class="todo"><title>529 KB · 85.22%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">81 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">529 KB</tspan></text>
@@ -220,7 +220,7 @@
 <rect width="12" height="12" x="15" y="45" class="todo"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="45" class="todo"><title>0x00416550 ControlBurningFloor (891 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="45" class="todo"><title>0x004168d0 ControlChain (127 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="45" class="todo"><title>0x00416950 ControlPlough (76 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="45" class="named"><title>0x00416950 ControlPlough (76 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="45" class="todo"><title>0x004169a0 ControlStargate (89 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="45" class="todo"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="45" class="todo"><title>0x00416d70 ControlSpikeball (201 bytes)</title></rect>
@@ -2761,7 +2761,7 @@
 <rect width="5.61" height="5.30" x="607.68" y="407.24" class="named"><title>0x0046d7b0 ACMSetVolume (77 bytes)</title></rect>
 <rect width="5.61" height="5.30" x="607.68" y="415.54" class="todo"><title>0x00491e50 AddStruct (77 bytes)</title></rect>
 <rect width="5.61" height="5.23" x="607.68" y="423.84" class="named"><title>0x00413ca0 FallingBlockFloor (76 bytes)</title></rect>
-<rect width="5.61" height="5.23" x="607.68" y="432.07" class="todo"><title>0x00416950 ControlPlough (76 bytes)</title></rect>
+<rect width="5.61" height="5.23" x="607.68" y="432.07" class="named"><title>0x00416950 ControlPlough (76 bytes)</title></rect>
 <rect width="5.61" height="5.23" x="607.68" y="440.30" class="todo"><title>0x00464c20 DrawBikeExtras (76 bytes)</title></rect>
 <rect width="5.61" height="5.23" x="607.68" y="448.54" class="todo"><title>0x00478520 S_CalculateStaticMeshLight (76 bytes)</title></rect>
 <rect width="5.61" height="5.23" x="607.68" y="456.77" class="named"><title>0x0047fca0 S_DumpScreen (76 bytes)</title></rect>

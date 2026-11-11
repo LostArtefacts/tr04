@@ -182,3 +182,16 @@ void TwoBlockPlatformCeiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint
             *height = item->pos.y_pos + 256;
     }
 }
+
+void ControlPlough(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->item_flags[3] = 50;
+    if (TriggerActive(item)) {
+        *(sint32 *)&item->item_flags[0] = 0x3F000;
+        AnimateItem(item);
+    } else
+        *(sint32 *)&item->item_flags[0] = 0;
+}
