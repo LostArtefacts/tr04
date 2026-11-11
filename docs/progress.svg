@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="30.37" height="12" x="0" y="0" class="named"><title>127 · 8.21%</title></rect>
-<rect width="0.24" height="12" x="30.37" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.20" height="12" x="30.61" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
-<rect width="338.19" height="12" x="31.81" y="0" class="todo"><title>1414 · 91.40%</title></rect>
+<rect width="30.61" height="12" x="0" y="0" class="named"><title>128 · 8.27%</title></rect>
+<rect width="0.24" height="12" x="30.61" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.20" height="12" x="30.85" y="0" class="nonmatching"><title>5 · 0.32%</title></rect>
+<rect width="337.95" height="12" x="32.05" y="0" class="todo"><title>1413 · 91.34%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">8.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">127</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1414</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">128</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">5</tspan> · <tspan class="todo">1413</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="13.68" height="12" x="0" y="0" class="named"><title>23 KB · 3.70%</title></rect>
-<rect width="0.10" height="12" x="13.68" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="1.61" height="12" x="13.71" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
-<rect width="354.68" height="12" x="15.32" y="0" class="todo"><title>594 KB · 95.86%</title></rect>
+<rect width="13.76" height="12" x="0" y="0" class="named"><title>23 KB · 3.72%</title></rect>
+<rect width="0.10" height="12" x="13.76" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="1.61" height="12" x="13.79" y="0" class="nonmatching"><title>3 KB · 0.43%</title></rect>
+<rect width="354.60" height="12" x="15.40" y="0" class="todo"><title>594 KB · 95.84%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">3.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">23 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">3 KB</tspan> · <tspan class="todo">594 KB</tspan></text>
@@ -1198,7 +1198,7 @@
 <rect width="12" height="12" x="435" y="330" class="named"><title>0x0046dd00 ACMClose (327 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="330" class="named"><title>0x0046de50 OpenStreamFile (254 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="330" class="named"><title>0x0046df50 FillADPCMBuffer (405 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="330" class="todo"><title>0x0046e0f0 GetADPCMData (143 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="330" class="named"><title>0x0046e0f0 GetADPCMData (143 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="330" class="todo"><title>0x0046e180 ACMEmulateCDPlay (428 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="330" class="todo"><title>0x0046e32c Func46e32c (12 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="330" class="todo"><title>0x0046e340 ACMHandleNotifications (389 bytes)</title></rect>
@@ -2505,7 +2505,7 @@
 <rect width="7.33" height="7.65" x="540.73" y="287.58" class="todo"><title>0x00426ab0 CanLaraHangSideways (145 bytes)</title></rect>
 <rect width="7.33" height="7.65" x="540.73" y="298.23" class="todo"><title>0x00439ae0 TriggerGunflash (145 bytes)</title></rect>
 <rect width="7.33" height="7.60" x="540.73" y="308.89" class="named"><title>0x0046d800 ACMEnumCallBack (144 bytes)</title></rect>
-<rect width="7.33" height="7.55" x="540.73" y="319.49" class="todo"><title>0x0046e0f0 GetADPCMData (143 bytes)</title></rect>
+<rect width="7.33" height="7.55" x="540.73" y="319.49" class="named"><title>0x0046e0f0 GetADPCMData (143 bytes)</title></rect>
 <rect width="7.33" height="7.50" x="540.73" y="330.03" class="todo"><title>0x0040fc60 ThrowSticks (142 bytes)</title></rect>
 <rect width="7.33" height="7.50" x="540.73" y="340.53" class="todo"><title>0x00459740 SetPendulumPoint (142 bytes)</title></rect>
 <rect width="7.33" height="7.44" x="540.73" y="351.03" class="todo"><title>0x00426fd0 lara_as_back (141 bytes)</title></rect>

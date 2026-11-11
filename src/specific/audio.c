@@ -211,3 +211,17 @@ void FillADPCMBuffer(char *p, sint32 track)
     reading_audio_file = 0;
     continue_reading_audio_file = 1;
 }
+
+void GetADPCMData(void)
+{
+    if (!audio_stream_fp)
+        return;
+    memset(audio_fp_write_ptr, 0, 0x5800);
+    if ((sint32)fread(audio_fp_write_ptr, 1, 0x5800, audio_stream_fp) < 0x5800 && auido_play_mode == 1) {
+        Log(0, "FileReset In GetADPCMData");
+        fseek(audio_stream_fp, 90, SEEK_SET);
+    }
+    audio_fp_write_ptr += 0x5800;
+    if ((sint32)audio_fp_write_ptr >= (sint32)(wav_file_buffer + 0x37000))
+        audio_fp_write_ptr = wav_file_buffer;
+}

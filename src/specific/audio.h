@@ -21,6 +21,7 @@ sint32 ACMHandleNotifications(void);
 void ACMClose(void);
 void OpenStreamFile(char *name);
 void FillADPCMBuffer(char *p, sint32 track);
+void GetADPCMData(void);
 void ACMEmulateCDPlay(sint32 track, sint32 mode);
 
 extern CRITICAL_SECTION audio_cs;
