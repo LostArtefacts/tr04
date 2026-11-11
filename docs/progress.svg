@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="93.20" height="12" x="0" y="0" class="named"><title>400 · 25.89%</title></rect>
-<rect width="0.23" height="12" x="93.20" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="93.44" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="264" height="12" x="96" y="0" class="todo"><title>1133 · 73.33%</title></rect>
+<rect width="93.44" height="12" x="0" y="0" class="named"><title>401 · 25.95%</title></rect>
+<rect width="0.23" height="12" x="93.44" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="93.67" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="263.77" height="12" x="96.23" y="0" class="todo"><title>1132 · 73.27%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">26.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">400</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1133</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">401</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1132</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="33.94" height="12" x="0" y="0" class="named"><title>58 KB · 9.43%</title></rect>
-<rect width="0.10" height="12" x="33.94" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="33.97" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="321.02" height="12" x="38.98" y="0" class="todo"><title>553 KB · 89.17%</title></rect>
+<rect width="34.01" height="12" x="0" y="0" class="named"><title>59 KB · 9.45%</title></rect>
+<rect width="0.10" height="12" x="34.01" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="34.04" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="320.95" height="12" x="39.05" y="0" class="todo"><title>553 KB · 89.15%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">9.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">58 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">553 KB</tspan></text>
+<text text-anchor="end" x="540" y="24.50">9.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">59 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">553 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -278,7 +278,7 @@
 <rect width="12" height="12" x="135" y="60" class="todo"><title>0x004210f0 lara_col_duck (287 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="60" class="named"><title>0x00421210 lara_as_all4s (108 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="60" class="todo"><title>0x00421280 lara_col_all4s (899 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="60" class="todo"><title>0x00421620 LaraFloorFront (125 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="60" class="named"><title>0x00421620 LaraFloorFront (125 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="60" class="named"><title>0x004216a0 lara_as_crawl (202 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="60" class="named"><title>0x00421770 lara_col_crawl (267 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="60" class="named"><title>0x00421880 LaraDeflectEdgeDuck (122 bytes)</title></rect>
@@ -2557,7 +2557,7 @@
 <rect width="6.80" height="7.17" x="740.20" y="266.26" class="todo"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="6.85" height="7.11" x="561.08" y="276.43" class="named"><title>0x00490a90 phd_GetVectorAngles (126 bytes)</title></rect>
 <rect width="6.85" height="7.06" x="561.08" y="286.54" class="todo"><title>0x00409180 ExplodeFX (125 bytes)</title></rect>
-<rect width="6.85" height="7.06" x="561.08" y="296.59" class="todo"><title>0x00421620 LaraFloorFront (125 bytes)</title></rect>
+<rect width="6.85" height="7.06" x="561.08" y="296.59" class="named"><title>0x00421620 LaraFloorFront (125 bytes)</title></rect>
 <rect width="6.85" height="7.06" x="561.08" y="306.65" class="named"><title>0x00428b20 lara_col_jumper (125 bytes)</title></rect>
 <rect width="6.85" height="7.06" x="561.08" y="316.71" class="todo"><title>0x0046d560 special1_init (125 bytes)</title></rect>
 <rect width="6.85" height="7" x="561.08" y="326.76" class="named"><title>0x00450e60 GetBoundsAccurate (124 bytes)</title></rect>

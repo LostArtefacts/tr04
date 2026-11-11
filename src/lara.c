@@ -69,6 +69,23 @@ void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_elevation = -23 * ONE_DEGREE;
 }
 
+sint16 LaraFloorFront(ITEM_INFO *item, sint16 ang, sint32 dist)
+{
+    sint16 room_num;
+    FLOOR_INFO *floor;
+    sint32 x, y, z, height;
+
+    x = item->pos.x_pos + (((rcossin_tbl[(ang >> 3) & 0x1FFE] << 2) * dist) >> W2V_SHIFT);
+    y = item->pos.y_pos - LARA_HITE;
+    z = item->pos.z_pos + (((rcossin_tbl[((ang >> 3) & 0x1FFE) + 1] << 2) * dist) >> W2V_SHIFT);
+    room_num = item->room_number;
+    floor = GetFloor(x, y, z, &room_num);
+    height = GetHeight(floor, x, y, z);
+    if (height != NO_HEIGHT)
+        height -= item->pos.y_pos;
+    return (sint16)height;
+}
+
 void lara_as_crawl(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
