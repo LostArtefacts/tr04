@@ -159,3 +159,9 @@ void twentythree_init(void)
 {
     horus_item_thing = find_a_fucking_item(HORUS_STATUE);
 }
+
+void twentythree_end(void)
+{
+    DelsHandyTeleportLara(17476, 29952, 15872, -16135);
+    lara.questitems &= 1;
+}
