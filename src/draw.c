@@ -12,3 +12,9 @@ void InitInterpolate(sint32 frac, sint32 rate)
     IMptr = IMstack;
     S_LongMemCpy(IMstack, phd_mxptr, 12);
 }
+
+void phd_PopMatrix_I(void)
+{
+    phd_PopMatrix();
+    IMptr -= 12;
+}
