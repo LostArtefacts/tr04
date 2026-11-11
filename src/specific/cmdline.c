@@ -67,6 +67,21 @@ void InitD3DDevice(HWND dlg, HWND hwnd)
     InitResolution(dlg, GetDlgItem(dlg, 1004), 1);
 }
 
+void InitDDDevice(HWND dlg, HWND hwnd)
+{
+    sint32 i;
+    char buffer[256];
+
+    SendMessage(hwnd, CB_RESETCONTENT, 0, 0);
+    for (i = 0; i < App.DXInfo.nDDInfo; i++) {
+        wsprintf(buffer, "%s - %s (%d.%d.%02d.%04d)", App.DXInfo.DDInfo[i].DDIdentifier.szDescription, App.DXInfo.DDInfo[i].DDIdentifier.szDriver, HIWORD(App.DXInfo.DDInfo[i].DDIdentifier.liDriverVersion.HighPart), LOWORD(App.DXInfo.DDInfo[i].DDIdentifier.liDriverVersion.HighPart), HIWORD(App.DXInfo.DDInfo[i].DDIdentifier.liDriverVersion.LowPart), LOWORD(App.DXInfo.DDInfo[i].DDIdentifier.liDriverVersion.LowPart));
+        SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)buffer);
+    }
+    SendMessage(hwnd, CB_SETCURSEL, App.DXInfo.nDDInfo - 1, 0);
+    nDDDevice = App.DXInfo.nDDInfo - 1;
+    InitD3DDevice(dlg, GetDlgItem(dlg, 1003));
+}
+
 char *MapASCIIToANSI(char *s, char *d)
 {
     char *p;

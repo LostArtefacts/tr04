@@ -12,6 +12,7 @@ void InitDSDevice(HWND dlg, HWND hwnd);
 void InitTFormats(HWND dlg, HWND hwnd);
 void InitResolution(HWND dlg, HWND hwnd, uint8 resetvms);
 void InitD3DDevice(HWND dlg, HWND hwnd);
+void InitDDDevice(HWND dlg, HWND hwnd);
 char *MapASCIIToANSI(char *s, char *d);
 BOOL CALLBACK DXSetupDlgProc(HWND dlg, UINT message, WPARAM wParam, LPARAM lParam);
 
