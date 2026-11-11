@@ -449,6 +449,25 @@ void trigger_item_in_room(sint32 room_number, sint32 object_number)
     }
 }
 
+void untrigger_item_in_room(sint32 room_number, sint32 object_number)
+{
+    ITEM_INFO *item;
+    sint16 item_number;
+    sint16 next;
+
+    item_number = room[room_number].item_number;
+    while (item_number != NO_ITEM) {
+        item = &items[item_number];
+        next = item->next_item;
+        if (item->object_number == object_number) {
+            RemoveActiveItem(item_number);
+            item->status = ITEM_INACTIVE;
+            item->flags &= ~IFL_CODEBITS;
+        }
+        item_number = next;
+    }
+}
+
 ITEM_INFO *find_a_fucking_item(sint32 object_number)
 {
     ITEM_INFO *item;
