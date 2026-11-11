@@ -43,6 +43,15 @@ void SetD3DMatrix(D3DMATRIX *mx, sint32 *imx)
     mx->_43 = (float)(imx[M23] >> W2V_SHIFT);
 }
 
+void S_InitD3DMatrix(void)
+{
+    D3DIdentityMatrix(&D3DMWorld);
+    D3DIdentityMatrix(&D3DMProjection);
+    D3DMProjection._22 = -1;
+    DXAttempt(IDirect3DDevice3_SetTransform(App.dx.lpD3DDevice, D3DTRANSFORMSTATE_WORLD, &D3DMWorld));
+    DXAttempt(IDirect3DDevice3_SetTransform(App.dx.lpD3DDevice, D3DTRANSFORMSTATE_PROJECTION, &D3DMProjection));
+}
+
 D3DVECTOR *D3DNormalise(D3DVECTOR *vec)
 {
     float val;

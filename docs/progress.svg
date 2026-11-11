@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="35.68" height="12" x="0" y="0" class="named"><title>149 · 9.64%</title></rect>
-<rect width="0.24" height="12" x="35.68" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.92" height="12" x="35.92" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="332.16" height="12" x="37.84" y="0" class="todo"><title>1387 · 89.77%</title></rect>
+<rect width="35.92" height="12" x="0" y="0" class="named"><title>150 · 9.71%</title></rect>
+<rect width="0.24" height="12" x="35.92" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.92" height="12" x="36.16" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="331.92" height="12" x="38.08" y="0" class="todo"><title>1386 · 89.71%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">9.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">149</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1387</tspan></text>
+<text text-anchor="end" x="540" y="7.50">9.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">150</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1386</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="15.80" height="12" x="0" y="0" class="named"><title>26 KB · 4.27%</title></rect>
-<rect width="0.10" height="12" x="15.80" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="3.07" height="12" x="15.83" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="351.10" height="12" x="18.90" y="0" class="todo"><title>588 KB · 94.89%</title></rect>
+<rect width="15.85" height="12" x="0" y="0" class="named"><title>27 KB · 4.28%</title></rect>
+<rect width="0.10" height="12" x="15.85" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="3.07" height="12" x="15.88" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="351.05" height="12" x="18.95" y="0" class="todo"><title>588 KB · 94.88%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">4.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">26 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">588 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">27 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">588 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1487,7 +1487,7 @@
 <rect width="12" height="12" x="270" y="420" class="named"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="420" class="named"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="420" class="todo"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="420" class="todo"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="420" class="named"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="420" class="named"><title>0x00490d50 D3DNormalise (114 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="420" class="named"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="420" class="todo"><title>0x00490e10 D3DTransform (101 bytes)</title></rect>
@@ -2725,7 +2725,7 @@
 <rect width="5.90" height="5.64" x="661.63" y="313.86" class="todo"><title>0x00423b30 lara_as_monkeyr (86 bytes)</title></rect>
 <rect width="5.90" height="5.64" x="670.53" y="313.86" class="named"><title>0x0042d410 lara_col_climbright (86 bytes)</title></rect>
 <rect width="5.90" height="5.64" x="679.43" y="313.86" class="todo"><title>0x0046b920 ninth_cutseq_init (86 bytes)</title></rect>
-<rect width="5.90" height="5.64" x="688.33" y="313.86" class="todo"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
+<rect width="5.90" height="5.64" x="688.33" y="313.86" class="named"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
 <rect width="5.90" height="5.64" x="697.22" y="313.86" class="todo"><title>0x00491f60 DXD3DCreate (86 bytes)</title></rect>
 <rect width="5.83" height="5.64" x="706.12" y="313.86" class="todo"><title>0x004492d0 KillMoveItems (85 bytes)</title></rect>
 <rect width="5.83" height="5.64" x="714.95" y="313.86" class="todo"><title>0x00449330 KillMoveEffects (85 bytes)</title></rect>
