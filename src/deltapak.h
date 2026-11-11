@@ -102,5 +102,6 @@ void special1_init(void);
 void special1_end(void);
 void twentyfour_control(void);
 void trigger_weapon_dynamics(sint32 left_or_right);
+void fifteen_init(void);
 
 #endif
