@@ -12,5 +12,6 @@ void PuzzleDoneCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
 void PuzzleDone(ITEM_INFO *item, sint16 item_number);
 sint32 KeyTrigger(sint16 item_num);
 sint32 PickupTrigger(sint16 item_num);
+void RegeneratePickups(void);
 
 #endif

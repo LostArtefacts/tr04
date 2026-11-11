@@ -16,6 +16,38 @@ void AnimatingPickUp(sint16 item_number)
         AnimateItem(&items[item_number]);
 }
 
+void RegeneratePickups(void)
+{
+    ITEM_INFO *item;
+    sint16 *ammo;
+    sint16 objnum;
+    sint16 i;
+
+    for (i = 0; i < NumRPickups; i++) {
+        item = &items[RPickups[i]];
+        if (item->status == ITEM_INVISIBLE) {
+            objnum = item->object_number;
+            if (objnum >= CROSSBOW_AMMO1_ITEM && objnum <= CROSSBOW_AMMO3_ITEM) {
+                ammo = &lara.num_crossbow_ammo1;
+                if (!ammo[objnum - CROSSBOW_AMMO1_ITEM])
+                    item->status = ITEM_INACTIVE;
+            } else if (objnum >= GRENADE_GUN_AMMO1_ITEM && objnum <= GRENADE_GUN_AMMO3_ITEM) {
+                ammo = &lara.num_grenade_ammo1;
+                if (!ammo[objnum - GRENADE_GUN_AMMO1_ITEM])
+                    item->status = ITEM_INACTIVE;
+            } else if (objnum >= SHOTGUN_AMMO1_ITEM && objnum <= SHOTGUN_AMMO2_ITEM) {
+                ammo = &lara.num_shotgun_ammo1;
+                if (!ammo[objnum - SHOTGUN_AMMO1_ITEM])
+                    item->status = ITEM_INACTIVE;
+            } else if (objnum == SIXSHOOTER_AMMO_ITEM) {
+                ammo = &lara.num_revolver_ammo;
+                if (!*ammo)
+                    item->status = ITEM_INACTIVE;
+            }
+        }
+    }
+}
+
 void PuzzleDoneCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
 {
     if (items[item_num].trigger_flags != 999)
