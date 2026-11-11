@@ -246,6 +246,7 @@ sint32 LaraTestClimbStance(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stepright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stepleft(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_dash(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_deathslide(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
