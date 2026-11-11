@@ -262,6 +262,17 @@ void twentyfive_end(void)
     DelsHandyTeleportLara(55396, -1792, 77122, -7105);
 }
 
+void twentyfive_init(void)
+{
+    ITEM_INFO *item;
+
+    item = find_a_fucking_item(ANIMATING5);
+    item->flags &= ~IFL_CODEBITS;
+    old_status_flags[numnailed] = item->status;
+    item->status = ITEM_INVISIBLE;
+    numnailed++;
+}
+
 void twentysix_control(void)
 {
     handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 14, 1, ANIMATING8, troop_chat_ranges26);
