@@ -36,5 +36,9 @@ typedef struct savegame_info {
 } SAVEGAME_INFO;
 
 extern SAVEGAME_INFO savegame;
+extern char *SGpoint;
+extern sint32 SGcount;
+
+void ReadSG(void *pointer, sint32 size);
 
 #endif
