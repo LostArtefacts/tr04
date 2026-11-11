@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="119.15" height="12" x="0" y="0" class="named"><title>529 · 34.24%</title></rect>
-<rect width="0.45" height="12" x="119.15" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="119.60" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="223.67" height="12" x="124.33" y="0" class="todo"><title>993 · 64.27%</title></rect>
+<rect width="119.38" height="12" x="0" y="0" class="named"><title>530 · 34.30%</title></rect>
+<rect width="0.45" height="12" x="119.38" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="119.83" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="223.44" height="12" x="124.56" y="0" class="todo"><title>992 · 64.21%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">34.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">529</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">993</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">530</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">992</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="51.46" height="12" x="0" y="0" class="named"><title>92 KB · 14.79%</title></rect>
-<rect width="0.12" height="12" x="51.46" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="51.58" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="289.04" height="12" x="58.96" y="0" class="todo"><title>515 KB · 83.06%</title></rect>
+<rect width="51.54" height="12" x="0" y="0" class="named"><title>92 KB · 14.81%</title></rect>
+<rect width="0.12" height="12" x="51.54" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="51.67" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="288.96" height="12" x="59.04" y="0" class="todo"><title>515 KB · 83.03%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">92 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">515 KB</tspan></text>
@@ -946,7 +946,7 @@
 <rect width="12" height="12" x="405" y="255" class="todo"><title>0x00456120 PoleCollision (570 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="255" class="todo"><title>0x00456360 ControlTriggerTriggerer (180 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="255" class="todo"><title>0x00456420 AnimateWaterfalls (182 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="255" class="todo"><title>0x004564e0 ControlWaterfall (148 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="255" class="named"><title>0x004564e0 ControlWaterfall (148 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="255" class="todo"><title>0x00456580 ControlMapper (509 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="255" class="todo"><title>0x00456780 TriggerRopeFlame (390 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="255" class="todo"><title>0x00456910 BurningRopeCollision (425 bytes)</title></rect>
@@ -2492,7 +2492,7 @@
 <rect width="7.75" height="7.43" x="540.48" y="371.82" class="named"><title>0x004401f0 TargetBox (149 bytes)</title></rect>
 <rect width="7.75" height="7.43" x="540.48" y="382.25" class="named"><title>0x004425d0 AlertNearbyGuards (149 bytes)</title></rect>
 <rect width="7.75" height="7.38" x="540.48" y="392.68" class="todo"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
-<rect width="7.75" height="7.38" x="540.48" y="403.06" class="todo"><title>0x004564e0 ControlWaterfall (148 bytes)</title></rect>
+<rect width="7.75" height="7.38" x="540.48" y="403.06" class="named"><title>0x004564e0 ControlWaterfall (148 bytes)</title></rect>
 <rect width="7.75" height="7.33" x="540.48" y="413.45" class="named"><title>0x0040a930 InitialiseMummy (147 bytes)</title></rect>
 <rect width="7.75" height="7.33" x="540.48" y="423.78" class="todo"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
 <rect width="7.75" height="7.33" x="540.48" y="434.11" class="named"><title>0x00450dc0 GetFrames (147 bytes)</title></rect>

@@ -140,3 +140,20 @@ void ControlAnimatingSlots(sint16 item_number)
     } else if (item->trigger_flags == 2)
         item->status = ITEM_INVISIBLE;
 }
+
+void ControlWaterfall(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (!TriggerActive(item)) {
+        if (item->trigger_flags == 2 || item->trigger_flags == 668)
+            item->status = ITEM_INVISIBLE;
+    } else {
+        item->status = ITEM_ACTIVE;
+        if (item->trigger_flags == 668)
+            SoundEffect(SFX_SAND_LOOP, &item->pos, SFX_DEFAULT);
+        else if (item->trigger_flags == 777)
+            SoundEffect(SFX_WATERFALL_LOOP, &item->pos, SFX_DEFAULT);
+    }
+}
