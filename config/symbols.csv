@@ -2026,6 +2026,8 @@ address,size,name,symbol
 0x004afae8,12,PolePos,_PolePos
 0x004afaf4,24,PoleBounds,_PoleBounds
 0x004afb0c,24,StatuePlinthBounds,_StatuePlinthBounds
+0x004afbec,24,KeyHoleBounds,_KeyHoleBounds
+0x004afc08,12,KeyHolePosition,_KeyHolePosition
 0x004afcd0,24,Switch2Bounds,_Switch2Bounds
 0x004afce8,12,Switch2Pos,_Switch2Pos
 0x004afcf4,24,TurnSwitchBoundsA,_TurnSwitchBoundsA
@@ -2267,6 +2269,7 @@ address,size,name,symbol
 0x005333a0,1,cd_drive,_cd_drive
 0x005333a4,4,FileData,_FileData
 0x005333a8,4,LevelLoadingThread,_LevelLoadingThread
+0x005333c0,1680,static_objects,_static_objects
 0x00533a58,4,CompressedData,_CompressedData
 0x00533a5c,2,number_rooms,_number_rooms
 0x00533a64,4,room,_room

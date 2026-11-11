@@ -9,6 +9,7 @@
 #include "newinv.h"
 #include "sound.h"
 #include "specific/input.h"
+#include "camera.h"
 
 void AnimatingPickUp(sint16 item_number)
 {
@@ -46,6 +47,39 @@ void RegeneratePickups(void)
             }
         }
     }
+}
+
+sint16 *FindPlinth(ITEM_INFO *item)
+{
+    ITEM_INFO *plinth;
+    ROOM_INFO *r;
+    MESH_INFO *mesh;
+    sint16 *p;
+    sint16 *o;
+    sint32 i;
+    sint16 item_num;
+
+    r = &room[item->room_number];
+    mesh = r->mesh;
+    for (i = r->num_meshes; i > 0; i--) {
+        if (mesh->Flags & 1 && item->pos.x_pos == mesh->x && item->pos.z_pos == mesh->z) {
+            p = GetBestFrame(item);
+            o = &static_objects[mesh->static_number].x_minc;
+            if (p[0] <= o[1] && p[1] >= o[0] && p[4] <= o[5] && p[5] >= o[4] && (o[0] || o[1]))
+                break;
+        }
+        mesh++;
+    }
+    if (i)
+        return o;
+    for (item_num = r->item_number; item_num != NO_ITEM; item_num = plinth->next_item) {
+        plinth = &items[item_num];
+        if (item != plinth && objects[plinth->object_number].collision != PickUpCollision && item->pos.x_pos == plinth->pos.x_pos && item->pos.y_pos <= plinth->pos.y_pos && item->pos.z_pos == plinth->pos.z_pos)
+            break;
+    }
+    if (item_num != NO_ITEM)
+        return GetBestFrame(&items[item_num]);
+    return 0;
 }
 
 void PuzzleDoneCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)

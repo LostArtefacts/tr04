@@ -4,6 +4,23 @@
 #include "items.h"
 #include "room.h"
 
+typedef struct static_info {
+    sint16 mesh_number;
+    sint16 flags;
+    sint16 x_minp;
+    sint16 x_maxp;
+    sint16 y_minp;
+    sint16 y_maxp;
+    sint16 z_minp;
+    sint16 z_maxp;
+    sint16 x_minc;
+    sint16 x_maxc;
+    sint16 y_minc;
+    sint16 y_maxc;
+    sint16 z_minc;
+    sint16 z_maxc;
+} STATIC_INFO;
+
 void phd_PopMatrix_I(void);
 void phd_PushMatrix_I(void);
 void phd_RotY_I(sint16 ang);
@@ -26,6 +43,7 @@ void SetRoomBounds(sint16 *door, sint32 rn, ROOM_INFO *actualRoom);
 sint32 DrawPhaseGame(void);
 void GetRoomBounds(void);
 
+extern STATIC_INFO static_objects[60];
 extern sint32 *IMptr;
 extern sint16 interpolated_bounds[6];
 extern sint32 IM_rate;
