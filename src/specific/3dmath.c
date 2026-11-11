@@ -251,3 +251,9 @@ void phd_PushMatrix(void)
     mx[indices_count + M23] = mx[M23];
     phd_mxptr += indices_count;
 }
+
+void phd_PushUnitMatrix(void)
+{
+    phd_mxptr += indices_count;
+    Func490320();
+}

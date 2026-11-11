@@ -1415,7 +1415,7 @@ address,size,name,symbol
 0x00490280,35,phd_sqrt,_phd_sqrt
 0x004902b0,84,phd_PushMatrix,_phd_PushMatrix
 0x00490310,12,phd_PushUnitMatrix,_phd_PushUnitMatrix
-0x00490320,48,Func490320,
+0x00490320,48,Func490320,_Func490320
 0x00490350,167,phd_TranslateRel,_phd_TranslateRel
 0x00490400,174,phd_RotX,_phd_RotX
 0x004904b0,172,phd_RotY,_phd_RotY

@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="9.05" height="12" x="0" y="0" class="named"><title>29 · 1.87%</title></rect>
-<rect width="474.95" height="12" x="9.05" y="0" class="todo"><title>1522 · 98.13%</title></rect>
+<rect width="9.36" height="12" x="0" y="0" class="named"><title>30 · 1.93%</title></rect>
+<rect width="474.64" height="12" x="9.36" y="0" class="todo"><title>1521 · 98.07%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="7.50">1.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">29</tspan> · <tspan class="todo">1522</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">30</tspan> · <tspan class="todo">1521</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="3.37" height="12" x="0" y="0" class="named"><title>4 KB · 0.70%</title></rect>
-<rect width="480.63" height="12" x="3.37" y="0" class="todo"><title>615 KB · 99.30%</title></rect>
+<rect width="3.38" height="12" x="0" y="0" class="named"><title>4 KB · 0.70%</title></rect>
+<rect width="480.62" height="12" x="3.38" y="0" class="todo"><title>615 KB · 99.30%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">4 KB</tspan> · <tspan class="todo">615 KB</tspan></text>
@@ -1473,7 +1473,7 @@
 <rect width="12" height="12" x="120" y="420" class="named"><title>0x00490210 phd_atan (98 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="420" class="named"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="420" class="named"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="420" class="todo"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="420" class="named"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="420" class="todo"><title>0x00490320 Func490320 (48 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="420" class="todo"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="420" class="todo"><title>0x00490400 phd_RotX (174 bytes)</title></rect>
@@ -3122,7 +3122,7 @@
 <rect width="2.18" height="2.21" x="724.10" y="444.07" class="todo"><title>0x0046e32c Func46e32c (12 bytes)</title></rect>
 <rect width="2.18" height="2.21" x="729.28" y="444.07" class="todo"><title>0x00473ad0 S_SoundStopSample (12 bytes)</title></rect>
 <rect width="2.18" height="2.21" x="734.46" y="444.07" class="named"><title>0x0048e800 TIME_Reset (12 bytes)</title></rect>
-<rect width="2.18" height="2.21" x="739.64" y="444.07" class="todo"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
+<rect width="2.18" height="2.21" x="739.64" y="444.07" class="named"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
 <rect width="2.18" height="2.21" x="744.82" y="444.07" class="todo"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
 <rect width="2.15" height="2.25" x="718.92" y="449.28" class="todo"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
 <rect width="2.15" height="2.25" x="718.92" y="454.52" class="todo"><title>0x004952a0 Func4952a0 (12 bytes)</title></rect>
