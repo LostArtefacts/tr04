@@ -72,5 +72,6 @@ void twentytwo_init(void);
 void twentytwo_end(void);
 void twentyfour_init(void);
 void sixth_cutseq_control(void);
+void seventh_control(void);
 
 #endif
