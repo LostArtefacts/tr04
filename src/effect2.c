@@ -2,6 +2,8 @@
 #include "control.h"
 #include "objnums.h"
 #include "lara.h"
+#include "anim.h"
+#include "tomb4fx.h"
 #include "specific/function_stubs.h"
 
 void TriggerExplosionSmokeEnd(sint32 x, sint32 y, sint32 z, sint32 uw)
@@ -267,6 +269,51 @@ void TriggerDartSmoke(sint32 x, sint32 y, sint32 z, sint32 xv, sint32 zv, sint32
 void KillAllCurrentItems(sint16 item_number)
 {
     KillEverythingFlag = 1;
+}
+
+void TriggerExplosionBubble(sint32 x, sint32 y, sint32 z, sint16 roomnum)
+{
+    SPARKS *sptr;
+    sint32 dx, dz, size;
+
+    dx = lara_item->pos.x_pos - x;
+    dz = lara_item->pos.z_pos - z;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sR = 128;
+    sptr->sG = 64;
+    sptr->sB = 0;
+    sptr->dR = 128;
+    sptr->dG = 128;
+    sptr->dB = 128;
+    sptr->ColFadeSpeed = 8;
+    sptr->FadeToBlack = 12;
+    sptr->sLife = sptr->Life = 24;
+    sptr->TransType = 2;
+    sptr->x = x;
+    sptr->y = y;
+    sptr->z = z;
+    sptr->Xvel = 0;
+    sptr->Yvel = 0;
+    sptr->Zvel = 0;
+    sptr->Friction = 0;
+    sptr->Flags = 2 | 8 | 2048;
+    sptr->Def = objects[DEFAULT_SPRITES].mesh_index + 13;
+    sptr->Scalar = 3;
+    sptr->Gravity = 0;
+    sptr->MaxYvel = 0;
+    size = (GetRandomControl() & 7) + 63;
+    sptr->Size = sptr->sSize = size >> 1;
+    sptr->dSize = size << 1;
+    for (dx = 0; dx < 7; dx++) {
+        PHD_3DPOS pos;
+        pos.x_pos = x + (GetRandomControl() & 511) - 256;
+        pos.y_pos = y + (GetRandomControl() & 127) - 64;
+        pos.z_pos = z + (GetRandomControl() & 511) - 256;
+        CreateBubble(&pos, roomnum, 6, 15);
+    }
 }
 
 void ClearDynamics(void)
