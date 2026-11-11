@@ -4,6 +4,7 @@
 #include "objnums.h"
 #include "anim.h"
 #include "camera.h"
+#include "sound.h"
 #include "specific/3dmath.h"
 #include "lara.h"
 #include "lara_states.h"
@@ -104,6 +105,46 @@ void UnderwaterSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll
             ForcedFixedCamera.room_number = item->room_number;
         }
     }
+}
+
+void PulleyCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint16 roty;
+
+    item = &items[item_number];
+    if (!(item->flags & IFL_INVISIBLE) && (((input & IN_ACTION) && lara.gun_status == LG_NO_ARMS && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && !l->gravity_status) || (lara.IsMoving && lara.GeneralPtr == (void *)item_number))) {
+        roty = item->pos.y_rot;
+        item->pos.y_rot = l->pos.y_rot;
+        if (TestLaraPosition(PulleyBounds, item, l)) {
+            if (item->item_flags[1]) {
+                if (OldPickupPos.x != l->pos.x_pos || OldPickupPos.y != l->pos.y_pos || OldPickupPos.z != l->pos.z_pos) {
+                    OldPickupPos.x = l->pos.x_pos;
+                    OldPickupPos.y = l->pos.y_pos;
+                    OldPickupPos.z = l->pos.z_pos;
+                    SayNo();
+                }
+            } else if (MoveLaraPosition(&PulleyPos, item, l)) {
+                l->anim_number = ANIM_STAT2PULLEY;
+                l->frame_number = anims[ANIM_STAT2PULLEY].frame_base;
+                l->current_anim_state = AS_PULLEY;
+                AddActiveItem(item_number);
+                item->status = ITEM_ACTIVE;
+                item->pos.y_rot = roty;
+                lara.IsMoving = 0;
+                lara.head_x_rot = lara.head_y_rot = 0;
+                lara.torso_x_rot = lara.torso_y_rot = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+                lara.GeneralPtr = item;
+            } else
+                lara.GeneralPtr = (void *)item_number;
+        } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+            lara.IsMoving = 0;
+            lara.gun_status = LG_NO_ARMS;
+        }
+        item->pos.y_rot = roty;
+    } else if (l->current_anim_state != AS_PULLEY)
+        ObjectCollision(item_number, l, coll);
 }
 
 void RailSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)

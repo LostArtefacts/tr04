@@ -2013,6 +2013,8 @@ address,size,name,symbol
 0x004afda4,24,RailSwitchBounds2,_RailSwitchBounds2
 0x004afdbc,24,JumpSwitchBounds,_JumpSwitchBounds
 0x004afdd8,12,JumpSwitchPos,_JumpSwitchPos
+0x004afe5c,24,PulleyBounds,_PulleyBounds
+0x004afe78,12,PulleyPos,_PulleyPos
 0x004afe84,24,UnderwaterSwitchBounds,_UnderwaterSwitchBounds
 0x004afe9c,24,UnderwaterSwitchBounds2,_UnderwaterSwitchBounds2
 0x004afeb8,12,UnderwaterSwitchPos,_UnderwaterSwitchPos
@@ -2429,7 +2431,7 @@ address,size,name,symbol
 0x007f76a4,4,sample_infos,_sample_infos
 0x007f76c0,4,savegame,_savegame
 0x007fd1a0,4,CurrentPendulum,_CurrentPendulum
-0x007fd1d0,,OldPickupPos,_OldPickupPos
+0x007fd1d0,12,OldPickupPos,_OldPickupPos
 0x007fd1dc,,NumRPickups,_NumRPickups
 0x007fd1fc,4,baddie_slots,_baddie_slots
 0x007fd200,2,nAIObjects,_nAIObjects
