@@ -285,6 +285,7 @@ sint16 TestMonkeyRight(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_crawl(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_crawlb(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_monkeyswing(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_back(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
