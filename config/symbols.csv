@@ -2019,6 +2019,9 @@ address,size,name,symbol
 0x004b25d8,4,water_color_B,_water_color_B
 0x004b263c,50,source_pcm_format,_source_pcm_format
 0x004b27a5,,load_roomnum,_load_roomnum
+0x004b2b04,4,water_abs,_water_abs
+0x004b2b08,8,water_shimmer,_water_shimmer
+0x004b2b10,8,water_choppy,_water_choppy
 0x004b2bac,72,layout,_layout
 0x004b3474,4,joy_unavailable,_joy_unavailable
 0x004b38a0,12,sfx_frequencies,_sfx_frequencies
@@ -2237,7 +2240,10 @@ address,size,name,symbol
 0x00533aec,4,CurrentFog,_CurrentFog
 0x00533b08,4,MainThread,_MainThread
 0x00533b10,4,thread_ended,_thread_ended
+0x00533b1c,5632,WaterTable,_WaterTable
+0x0053511c,1024,unused_vert_wibble_table,_unused_vert_wibble_table
 0x0053551c,2,FPCW,_FPCW
+0x00535520,128,vert_wibble_table,_vert_wibble_table
 0x005355b4,4,SaveCounter,_SaveCounter
 0x005355b8,72,conflict,_conflict
 0x00535600,4,inputBusy,_inputBusy
