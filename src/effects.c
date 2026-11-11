@@ -7,6 +7,17 @@
 #include "anim.h"
 #include "delstuff.h"
 #include "objnums.h"
+#include "effect2.h"
+#include "specific/3dmath.h"
+
+void Richochet(GAME_VECTOR *pos)
+{
+    sint32 angle;
+
+    angle = (mGetAngle(pos->z, pos->x, lara_item->pos.z_pos, lara_item->pos.x_pos) >> 4) & 4095;
+    TriggerRicochetSpark(pos, angle, 3, 0);
+    SoundEffect(SFX_LARA_RICOCHET, (PHD_3DPOS *)pos, SFX_DEFAULT);
+}
 
 void turn180_effect(ITEM_INFO *item)
 {

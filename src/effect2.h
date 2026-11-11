@@ -1,7 +1,7 @@
 #ifndef EFFECT2_H
 #define EFFECT2_H
 
-#include "types.h"
+#include "3dglodef.h"
 
 #define MAX_DYNAMICS 32
 
@@ -21,6 +21,7 @@ typedef struct dynamic {
 
 void DetatchSpark(sint32 num, sint32 type);
 void KillAllCurrentItems(sint16 item_number);
+void TriggerRicochetSpark(GAME_VECTOR *pos, sint32 ang, sint32 num, sint32 smoke_only);
 void ClearDynamics(void);
 
 extern sint32 KillEverythingFlag;
