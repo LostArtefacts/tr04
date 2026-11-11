@@ -11,6 +11,23 @@
 #define FASTFALL_FRICTION item->speed = (item->speed * 95) / 100
 #define HEAD_TURN (2 * ONE_DEGREE)
 
+sint32 LaraDeflectEdgeDuck(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (coll->coll_type == COLL_FRONT || coll->coll_type == COLL_TOPFRONT) {
+        ShiftItem(item, coll);
+        item->gravity_status = 0;
+        item->speed = 0;
+        return 1;
+    } else if (coll->coll_type == COLL_LEFT) {
+        ShiftItem(item, coll);
+        item->pos.y_rot += LARA_DUCK_DEFLECT;
+    } else if (coll->coll_type == COLL_RIGHT) {
+        ShiftItem(item, coll);
+        item->pos.y_rot -= LARA_DUCK_DEFLECT;
+    }
+    return 0;
+}
+
 void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->facing = lara.move_angle;

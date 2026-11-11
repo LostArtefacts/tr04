@@ -11,6 +11,7 @@
 #define LARA_SLOW_TURN ((ONE_DEGREE * 2) + LARA_TURN_UNDO)
 #define LARA_MED_TURN ((ONE_DEGREE * 4) + LARA_TURN_UNDO)
 #define LARA_FAST_TURN ((ONE_DEGREE * 6) + LARA_TURN_UNDO)
+#define LARA_DUCK_DEFLECT (2 * ONE_DEGREE)
 #define LARA_LEAN_UNDO ONE_DEGREE
 #define LARA_LEAN_RATE ((ONE_DEGREE / 2) + LARA_LEAN_UNDO)
 #define FASTFALL_SPEED 128
@@ -230,6 +231,7 @@ void lara_as_leftjump(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_switchon(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_back(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_walk(ITEM_INFO *item, COLL_INFO *coll);
+sint32 LaraDeflectEdgeDuck(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
