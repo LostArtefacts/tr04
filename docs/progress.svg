@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="110.37" height="12" x="0" y="0" class="named"><title>490 · 31.72%</title></rect>
 <rect width="0.45" height="12" x="110.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="110.82" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="234.25" height="12" x="113.75" y="0" class="todo"><title>1040 · 67.31%</title></rect>
+<rect width="3.15" height="12" x="110.82" y="0" class="nonmatching"><title>14 · 0.91%</title></rect>
+<rect width="234.03" height="12" x="113.97" y="0" class="todo"><title>1039 · 67.25%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">31.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">490</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1040</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">490</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">14</tspan> · <tspan class="todo">1039</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="47.15" height="12" x="0" y="0" class="named"><title>84 KB · 13.55%</title></rect>
 <rect width="0.12" height="12" x="47.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="47.27" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="295.11" height="12" x="52.89" y="0" class="todo"><title>526 KB · 84.80%</title></rect>
+<rect width="5.83" height="12" x="47.27" y="0" class="nonmatching"><title>10 KB · 1.67%</title></rect>
+<rect width="294.90" height="12" x="53.10" y="0" class="todo"><title>526 KB · 84.74%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">84 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">526 KB</tspan></text>
@@ -213,7 +213,7 @@
 <rect width="12" height="12" x="660" y="30" class="named"><title>0x00415ad0 TwoBlockPlatformFloor (74 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="30" class="named"><title>0x00415b20 TwoBlockPlatformCeiling (59 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="30" class="named"><title>0x00415b60 OnTwoBlockPlatform (200 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="30" class="todo"><title>0x00415c30 ControlTwoBlockPlatform (380 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="30" class="nonmatching"><title>0x00415c30 ControlTwoBlockPlatform (380 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="30" class="named"><title>0x00415db0 ControlSlicerDicer (269 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="30" class="todo"><title>0x00415ec0 TestBoundsCollideTeethSpikes (270 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="45" class="todo"><title>0x00415fd0 ControlScaledSpike (953 bytes)</title></rect>
@@ -2083,7 +2083,7 @@
 <rect width="12.50" height="11.78" x="460.33" y="128.72" class="todo"><title>0x0041f390 TriggerTorchFlame (381 bytes)</title></rect>
 <rect width="12.50" height="11.78" x="475.84" y="128.72" class="todo"><title>0x004671b0 GetOnJeep (381 bytes)</title></rect>
 <rect width="12.50" height="11.78" x="491.34" y="128.72" class="todo"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
-<rect width="12.47" height="11.78" x="506.84" y="128.72" class="todo"><title>0x00415c30 ControlTwoBlockPlatform (380 bytes)</title></rect>
+<rect width="12.47" height="11.78" x="506.84" y="128.72" class="nonmatching"><title>0x00415c30 ControlTwoBlockPlatform (380 bytes)</title></rect>
 <rect width="12.47" height="11.78" x="522.32" y="128.72" class="todo"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
 <rect width="12.47" height="11.78" x="537.79" y="128.72" class="todo"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12.44" height="11.78" x="553.26" y="128.72" class="todo"><title>0x0048c280 DoScreenFade (379 bytes)</title></rect>

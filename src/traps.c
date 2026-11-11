@@ -336,6 +336,50 @@ sint32 OnTwoBlockPlatform(ITEM_INFO *item, sint32 x, sint32 z)
     return 0;
 }
 
+void ControlTwoBlockPlatform(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint32 height;
+    sint16 room_number;
+
+    item = &items[item_number];
+    if (!TriggerActive(item))
+        return;
+    if (item->trigger_flags) {
+        if (item->pos.y_pos > item->item_flags[0] - ((item->trigger_flags & ~0xF) << 4))
+            item->pos.y_pos -= item->trigger_flags & 0xF;
+        room_number = item->room_number;
+        floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+        item->floor = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+        if (room_number != item->room_number)
+            ItemNewRoom(item_number, room_number);
+    } else {
+        OnObject = 0;
+        height = lara_item->pos.y_pos + 1;
+        TwoBlockPlatformFloor(item, lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos, &height);
+        if (!OnObject || lara_item->anim_number == 89)
+            item->item_flags[1] = -1;
+        else
+            item->item_flags[1] = 1;
+        if (item->item_flags[1] > 0) {
+            if (item->pos.y_pos < item->item_flags[0] + 128) {
+                SoundEffect(SFX_RUMBLE_NEXTDOOR, &item->pos, SFX_DEFAULT);
+                item->pos.y_pos += 4;
+            } else {
+                item->item_flags[1] = -1;
+            }
+        } else if (item->item_flags[1] < 0) {
+            if (item->pos.y_pos > item->item_flags[0]) {
+                SoundEffect(SFX_RUMBLE_NEXTDOOR, &item->pos, SFX_DEFAULT);
+                item->pos.y_pos -= 4;
+            } else {
+                item->item_flags[1] = 1;
+            }
+        }
+    }
+}
+
 void ControlSlicerDicer(sint16 item_number)
 {
     ITEM_INFO *item;
