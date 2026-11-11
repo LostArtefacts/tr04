@@ -55,6 +55,18 @@ void InitDSDevice(HWND dlg, HWND hwnd)
     SendMessage(hwnd, CB_SETCURSEL, 0, 0);
 }
 
+void InitD3DDevice(HWND dlg, HWND hwnd)
+{
+    sint32 i;
+
+    SendMessage(hwnd, CB_RESETCONTENT, 0, 0);
+    for (i = 0; i < App.DXInfo.DDInfo[nDDDevice].nD3DDevices; i++)
+        SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)App.DXInfo.DDInfo[nDDDevice].D3DDevices[i].About);
+    SendMessage(hwnd, CB_SETCURSEL, 1, 0);
+    nD3DDevice = 1;
+    InitResolution(dlg, GetDlgItem(dlg, 1004), 1);
+}
+
 char *MapASCIIToANSI(char *s, char *d)
 {
     char *p;
