@@ -249,6 +249,13 @@ void lara_as_fastdive(ITEM_INFO *item, COLL_INFO *coll)
     FASTFALL_FRICTION;
 }
 
+void lara_as_waterout(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    camera.flags = FOLLOW_CENTRE;
+}
+
 void lara_col_turn_l(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara_col_turn_r(item, coll);

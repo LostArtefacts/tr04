@@ -224,6 +224,7 @@ void lara_as_monkey180(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_ppready(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_swandive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_fastdive(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_waterout(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
