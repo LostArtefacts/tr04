@@ -2382,6 +2382,7 @@ address,size,name,symbol
 0x007f6ee0,544,Slist,_Slist
 0x007f7100,4,NumLaraSpheres,_NumLaraSpheres
 0x007f7120,240,LaraSpheres,_LaraSpheres
+0x007f7220,1152,LaSlot,_LaSlot
 0x007f76a0,4,sample_lut,_sample_lut
 0x007f76a4,4,sample_infos,_sample_infos
 0x007f76c0,4,savegame,_savegame
