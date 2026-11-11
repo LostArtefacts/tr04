@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="123.74" height="12" x="0" y="0" class="named"><title>559 · 36.18%</title></rect>
-<rect width="0.44" height="12" x="123.74" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="124.18" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="213.17" height="12" x="128.83" y="0" class="todo"><title>963 · 62.33%</title></rect>
+<rect width="123.96" height="12" x="0" y="0" class="named"><title>560 · 36.25%</title></rect>
+<rect width="0.44" height="12" x="123.96" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="124.40" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="212.95" height="12" x="129.05" y="0" class="todo"><title>962 · 62.27%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">36.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">559</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">963</tspan></text>
+<text text-anchor="end" x="522" y="7.50">36.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">560</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">962</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.11" height="12" x="0" y="0" class="named"><title>100 KB · 16.11%</title></rect>
-<rect width="0.12" height="12" x="55.11" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="55.23" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="279.53" height="12" x="62.47" y="0" class="todo"><title>507 KB · 81.73%</title></rect>
+<rect width="55.12" height="12" x="0" y="0" class="named"><title>100 KB · 16.12%</title></rect>
+<rect width="0.12" height="12" x="55.12" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="55.24" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="279.52" height="12" x="62.48" y="0" class="todo"><title>507 KB · 81.73%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">16.1%</text>
+<text text-anchor="end" x="522" y="24.50">16.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">100 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">507 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1102,7 +1102,7 @@
 <rect width="12" height="12" x="495" y="300" class="todo"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="300" class="todo"><title>0x0046b140 frigup_lara (218 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="300" class="todo"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="300" class="todo"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="300" class="named"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="300" class="todo"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="300" class="todo"><title>0x0046b2b0 DrawCutSeqActors (525 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="300" class="todo"><title>0x0046b4c0 CalcActorLighting (153 bytes)</title></rect>
@@ -3090,7 +3090,7 @@
 <rect width="2.60" height="2.53" x="705.78" y="453.95" class="todo"><title>0x0043e720 combine_PickupItem3 (17 bytes)</title></rect>
 <rect width="2.60" height="2.53" x="705.78" y="459.47" class="todo"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
 <rect width="2.65" height="2.48" x="711.39" y="420.79" class="todo"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
-<rect width="2.49" height="2.48" x="717.03" y="420.79" class="todo"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
+<rect width="2.49" height="2.48" x="717.03" y="420.79" class="named"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
 <rect width="2.49" height="2.48" x="722.53" y="420.79" class="todo"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
 <rect width="2.49" height="2.48" x="728.02" y="420.79" class="todo"><title>0x004761e0 LoadCinematic (16 bytes)</title></rect>
 <rect width="2.49" height="2.48" x="733.52" y="420.79" class="todo"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
