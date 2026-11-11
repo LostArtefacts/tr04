@@ -1984,6 +1984,7 @@ address,size,name,symbol
 0x004ad7f4,4,hair_wind_angle,_hair_wind_angle
 0x004ad7f8,4,hair_dwind_angle,_hair_dwind_angle
 0x004ad9c4,4,lara_coll,_lara_coll
+0x004add78,56,SkinJoints,_SkinJoints
 0x004adf58,2,ScreenFadeSpeed,_ScreenFadeSpeed
 0x004adf5c,4,next_fire_spark,_next_fire_spark
 0x004ae060,4,pcbright,_pcbright
@@ -2523,11 +2524,13 @@ address,size,name,symbol
 0x0080dbcc,4,SkinXYZPtr,_SkinXYZPtr
 0x0080dbd0,,JointMeshXYZ,_JointMeshXYZ
 0x0080dbe0,,BelowMeshXYZ,_BelowMeshXYZ
+0x0080dd80,312,PointsToCalc,_PointsToCalc
 0x0080deb8,2,cheat_hit_points,_cheat_hit_points
 0x0080dec0,,mycoll,_mycoll
 0x0080dfe0,4,lara,_lara
 0x0080e13a,2,DashTimer,_DashTimer
 0x0080e13c,4,lara_item,_lara_item
+0x0080e320,480,ScratchVertNums,_ScratchVertNums
 0x0080e500,4,in_joints,_in_joints
 0x0080e710,4,GLaraShadowframe,_GLaraShadowframe
 0x0080ecd0,1,bLaraInWater,_bLaraInWater

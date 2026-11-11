@@ -5,5 +5,6 @@
 
 void PushXYZ(void);
 void PopXYZ(void);
+void OptomiseSkinningData(void);
 
 #endif
