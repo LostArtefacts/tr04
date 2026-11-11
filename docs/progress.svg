@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="3.74" height="12" x="0" y="0" class="named"><title>12 · 0.77%</title></rect>
-<rect width="480.26" height="12" x="3.74" y="0" class="todo"><title>1539 · 99.23%</title></rect>
+<rect width="4.06" height="12" x="0" y="0" class="named"><title>13 · 0.84%</title></rect>
+<rect width="479.94" height="12" x="4.06" y="0" class="todo"><title>1538 · 99.16%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="7.50">0.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">12</tspan> · <tspan class="todo">1539</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">13</tspan> · <tspan class="todo">1538</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="1.41" height="12" x="0" y="0" class="named"><title>2 KB · 0.29%</title></rect>
-<rect width="482.59" height="12" x="1.41" y="0" class="todo"><title>618 KB · 99.71%</title></rect>
+<rect width="1.44" height="12" x="0" y="0" class="named"><title>2 KB · 0.30%</title></rect>
+<rect width="482.56" height="12" x="1.44" y="0" class="todo"><title>618 KB · 99.70%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">2 KB</tspan> · <tspan class="todo">618 KB</tspan></text>
@@ -1385,7 +1385,7 @@
 <rect width="12" height="12" x="300" y="390" class="todo"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="390" class="todo"><title>0x004849a0 AddPrelitMMX (122 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="390" class="todo"><title>0x00484a20 CalcColorSplit (217 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="390" class="todo"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="390" class="named"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="390" class="todo"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="390" class="todo"><title>0x00484b40 REG_WriteLong (30 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="390" class="todo"><title>0x00484b60 REG_WriteBool (42 bytes)</title></rect>
@@ -2899,7 +2899,7 @@
 <rect width="4.64" height="4.24" x="697.25" y="373.44" class="todo"><title>0x0046c7e0 twentyfive_control (49 bytes)</title></rect>
 <rect width="4.55" height="4.24" x="704.89" y="373.44" class="todo"><title>0x00428e40 draw_shotgun_meshes (48 bytes)</title></rect>
 <rect width="4.55" height="4.24" x="712.44" y="373.44" class="todo"><title>0x00450ee0 GetBestFrame (48 bytes)</title></rect>
-<rect width="4.55" height="4.24" x="719.99" y="373.44" class="todo"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
+<rect width="4.55" height="4.24" x="719.99" y="373.44" class="named"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
 <rect width="4.55" height="4.24" x="727.54" y="373.44" class="todo"><title>0x00490320 Func490320 (48 bytes)</title></rect>
 <rect width="4.46" height="4.24" x="735.09" y="373.44" class="todo"><title>0x0042ddc0 CheckForHoldingState (47 bytes)</title></rect>
 <rect width="4.46" height="4.24" x="742.54" y="373.44" class="todo"><title>0x00431e60 lara_col_surfswim (47 bytes)</title></rect>
