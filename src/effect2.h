@@ -3,9 +3,28 @@
 
 #include "types.h"
 
+#define MAX_DYNAMICS 32
+
+typedef struct dynamic {
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    uint8 on;
+    uint8 r;
+    uint8 g;
+    uint8 b;
+    uint16 falloff;
+    uint8 used;
+    uint8 pad1[1];
+    sint32 FalloffScale;
+} DYNAMIC;
+
 void DetatchSpark(sint32 num, sint32 type);
 void KillAllCurrentItems(sint16 item_number);
+void ClearDynamics(void);
 
 extern sint32 KillEverythingFlag;
+extern DYNAMIC dynamics[MAX_DYNAMICS * 2];
+extern sint32 number_dynamics;
 
 #endif

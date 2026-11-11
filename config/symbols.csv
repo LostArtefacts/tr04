@@ -2549,6 +2549,7 @@ address,size,name,symbol
 0x008012e8,2,next_fx_free,_next_fx_free
 0x008012ec,4,sound_effects,_sound_effects
 0x008012f0,2,next_fx_active,_next_fx_active
+0x00804860,1536,dynamics,_dynamics
 0x00804e60,4,SmokeWindX,_SmokeWindX
 0x00804e64,4,SmokeWindZ,_SmokeWindZ
 0x00804e68,4,SmokeCountL,_SmokeCountL
