@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="142.81" height="12" x="0" y="0" class="named"><title>646 · 41.76%</title></rect>
-<rect width="0.44" height="12" x="142.81" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="143.26" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="194.10" height="12" x="147.90" y="0" class="todo"><title>878 · 56.76%</title></rect>
+<rect width="143.03" height="12" x="0" y="0" class="named"><title>647 · 41.82%</title></rect>
+<rect width="0.44" height="12" x="143.03" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="143.48" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="193.88" height="12" x="148.12" y="0" class="todo"><title>877 · 56.69%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">41.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">646</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">878</tspan></text>
+<text text-anchor="end" x="522" y="7.50">42.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">647</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">877</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="59.03" height="12" x="0" y="0" class="named"><title>107 KB · 17.26%</title></rect>
-<rect width="0.12" height="12" x="59.03" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="59.15" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="275.60" height="12" x="66.40" y="0" class="todo"><title>500 KB · 80.58%</title></rect>
+<rect width="59.10" height="12" x="0" y="0" class="named"><title>107 KB · 17.28%</title></rect>
+<rect width="0.12" height="12" x="59.10" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="59.22" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="275.53" height="12" x="66.47" y="0" class="todo"><title>500 KB · 80.57%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">107 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">500 KB</tspan></text>
@@ -752,7 +752,7 @@
 <rect width="12" height="12" x="495" y="195" class="todo"><title>0x00442170 CreatureEffectT (89 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="195" class="named"><title>0x004421d0 CreatureVault (420 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="195" class="todo"><title>0x00442380 CreatureKill (450 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="195" class="todo"><title>0x00442550 AlertAllGuards (122 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="195" class="named"><title>0x00442550 AlertAllGuards (122 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="195" class="named"><title>0x004425d0 AlertNearbyGuards (149 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="195" class="named"><title>0x00442670 AIGuard (162 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="195" class="todo"><title>0x00442720 GetAITarget (831 bytes)</title></rect>
@@ -2566,7 +2566,7 @@
 <rect width="6.95" height="6.84" x="621.67" y="275.97" class="named"><title>0x0042b7c0 set_arm_info (123 bytes)</title></rect>
 <rect width="6.95" height="6.84" x="631.62" y="275.97" class="named"><title>0x0044c6f0 AddRoomFlipItems (123 bytes)</title></rect>
 <rect width="6.89" height="6.84" x="641.57" y="275.97" class="named"><title>0x00421880 LaraDeflectEdgeDuck (122 bytes)</title></rect>
-<rect width="6.89" height="6.84" x="651.46" y="275.97" class="todo"><title>0x00442550 AlertAllGuards (122 bytes)</title></rect>
+<rect width="6.89" height="6.84" x="651.46" y="275.97" class="named"><title>0x00442550 AlertAllGuards (122 bytes)</title></rect>
 <rect width="6.89" height="6.84" x="661.35" y="275.97" class="todo"><title>0x00449390 UpdateSky (122 bytes)</title></rect>
 <rect width="6.89" height="6.84" x="671.25" y="275.97" class="todo"><title>0x004849a0 AddPrelitMMX (122 bytes)</title></rect>
 <rect width="6.89" height="6.84" x="681.14" y="275.97" class="named"><title>0x00490a10 phd_TranslateAbs (122 bytes)</title></rect>

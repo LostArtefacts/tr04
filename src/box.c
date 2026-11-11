@@ -373,6 +373,24 @@ sint32 CreatureVault(sint16 item_number, sint16 angle, sint32 vault, sint32 shif
     return vault;
 }
 
+void AlertAllGuards(sint16 item_number)
+{
+    ITEM_INFO *target;
+    CREATURE_INFO *cinfo;
+    sint32 slot;
+    sint16 obj_number;
+
+    cinfo = baddie_slots;
+    obj_number = items[item_number].object_number;
+    for (slot = 0; slot < 5; slot++, cinfo++) {
+        if (cinfo->item_num == NO_ITEM)
+            continue;
+        target = &items[cinfo->item_num];
+        if (obj_number == target->object_number && target->status == ITEM_ACTIVE)
+            cinfo->alerted = 1;
+    }
+}
+
 void AlertNearbyGuards(ITEM_INFO *item)
 {
     sint32 slot;
