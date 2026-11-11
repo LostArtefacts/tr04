@@ -40,6 +40,29 @@ sint32 GetFreeFireSpark(void)
     return min_life_num;
 }
 
+void TriggerGlobalStaticFlame(void)
+{
+    FIRE_SPARKS *sptr;
+
+    sptr = &fire_spark[0];
+    sptr->On = 1;
+    sptr->sR = sptr->dR = (GetRandomControl() & 0x3F) - 64;
+    sptr->sG = sptr->dG = (GetRandomControl() & 0x3F) + 96;
+    sptr->sB = sptr->dB = 64;
+    sptr->ColFadeSpeed = 1;
+    sptr->FadeToBlack = 0;
+    sptr->sLife = sptr->Life = 8;
+    sptr->x = (GetRandomControl() & 7) - 4;
+    sptr->y = 0;
+    sptr->z = (GetRandomControl() & 7) - 4;
+    sptr->MaxYvel = 0;
+    sptr->Gravity = 0;
+    sptr->Friction = 0;
+    sptr->Xvel = sptr->Yvel = sptr->Zvel = 0;
+    sptr->Flags = 0;
+    sptr->Size = sptr->sSize = sptr->dSize = (GetRandomControl() & 0x1F) + 0x80;
+}
+
 void ClearFires(void)
 {
     FIRE_LIST *fire;
