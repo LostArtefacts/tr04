@@ -20,12 +20,12 @@ cflags = ["/G5", "/Zp1", "/W3", "/O2", "/DNDEBUG", "/DWIN32", "/D_WINDOWS"]
 crlf = true
 ml = 'C:\masm613\bin\ml.exe'
 bin = 'C:\msvc6sp3\bin'
-include = ['C:\msvc6sp3\include']
-lib = ['C:\msvc6sp3\lib']
+include = ['C:\dx6\include', 'C:\msvc6sp3\include']
+lib = ['C:\dx6\lib', 'C:\msvc6sp3\lib']
 
 [symbols]
 manifest = "refs/trx/docs/symbols/tr4.txt"
-import_libs = [".wine/drive_c/msvc6sp3/lib"]
+import_libs = [".wine/drive_c/msvc6sp3/lib", ".wine/drive_c/dx6/lib"]
 
 [reference]
 source = "refs/tomb4-legacy/TOMB4"

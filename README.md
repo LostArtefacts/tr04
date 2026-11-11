@@ -59,8 +59,11 @@ The versions above identify the selected build tools; their file hashes
 are recorded in `config/toolchain.sha256`. The Rich IDs are decoded using
 [richprint's compiler table](https://github.com/dishather/richprint/blob/master/comp_id.txt).
 
-The DLL build uses the Windows headers and import libraries from VC6.
-The exact SDK revision used for the original executable is not established.
+The build uses the DirectX 6.1 SDK at `C:\dx6`, ahead of VC6's own
+DirectX 5 headers. The exact SDK revision used for the original
+executable is not established: the DirectX 6.0 SDK's headers differ
+from 6.1's only by a forward declaration and a define, neither of
+which changes a structure.
 
 The compiler installation comes from Microsoft Visual C++ 6.0
 Professional (X04-58170) with the English updates from the Visual Studio
@@ -81,6 +84,8 @@ local symlinks work; game files, references, `.wine/` and `build/` are
 ignored by Git. Initialize the prefix with
 `WINEPREFIX="$PWD/.wine" wineboot -i`, and supply the compiler's `bin`,
 `include` and `lib` directories under `.wine/drive_c/msvc6sp3`.
+Install the DirectX 6.1 SDK (`dx61sdkimage.exe`) with
+`just dxsdk dx61sdkimage.exe 'C:\dx6'`.
 Set `GHIDRA` if the installation is outside the search paths in `project.toml`.
 
 ## Workflow
