@@ -18,6 +18,9 @@ typedef struct fx_info {
     sint16 flag2;
 } FX_INFO;
 
+extern sint32 GlobalFogOff;
+extern sint32 FogTableColor[28];
+
 void turn180_effect(ITEM_INFO *item);
 void Richochet(GAME_VECTOR *pos);
 void ExplosionFX(ITEM_INFO *item);
@@ -50,6 +53,7 @@ void swap_meshes_with_meshswap2(ITEM_INFO *item);
 void swap_meshes_with_meshswap3(ITEM_INFO *item);
 void RubbleFX(ITEM_INFO *item);
 void GhostTrap(ITEM_INFO *item);
+void SetFog(ITEM_INFO *item);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;

@@ -1990,6 +1990,7 @@ address,size,name,symbol
 0x004ad9a0,36,HoldStates,_HoldStates
 0x004ad9c4,4,lara_coll,_lara_coll
 0x004add78,56,SkinJoints,_SkinJoints
+0x004ade1c,112,FogTableColor,_FogTableColor
 0x004adf48,14,footsounds,_footsounds
 0x004adf58,2,ScreenFadeSpeed,_ScreenFadeSpeed
 0x004adf5c,4,next_fire_spark,_next_fire_spark

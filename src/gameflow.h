@@ -2,6 +2,7 @@
 #define GAMEFLOW_H
 
 #include "types.h"
+#include "3dglodef.h"
 
 enum languages {
     ENGLISH,
@@ -417,6 +418,7 @@ enum gf_strings {
 extern uint16 gfLevelFlags;
 extern char gfGameMode;
 extern uint8 gfCurrentLevel;
+extern CVECTOR gfFog;
 extern uint8 gfLevelComplete;
 extern GAMEFLOW *Gameflow;
 extern uint16 *gfStringOffset;

@@ -17,6 +17,10 @@
 #include "scarab.h"
 #include "deltapak.h"
 #include "lot.h"
+#include "text.h"
+#include "savegame.h"
+#include "specific/polyinsert.h"
+#include "specific/function_table.h"
 
 sint32 ItemNearLara(PHD_3DPOS *pos, sint32 distance)
 {
@@ -235,6 +239,36 @@ void shoot_right_gun(ITEM_INFO *item)
 void shoot_left_gun(ITEM_INFO *item)
 {
     lara.left_arm.flash_gun = 3;
+}
+
+void SetFog(ITEM_INFO *item)
+{
+    sint32 col;
+    uint16 timer;
+    sint32 r;
+    sint32 g;
+    sint32 b;
+
+    GlobalFogOff = 0;
+    timer = TriggerTimer;
+    if (IsVolumetric()) {
+        if (timer != 100) {
+            col = FogTableColor[timer];
+            r = CLRR(col);
+            g = CLRG(col);
+            b = CLRB(col);
+            SetFogColor(r, g, b);
+            savegame.fog_colour.r = r;
+            gfFog.r = r;
+            savegame.fog_colour.g = g;
+            savegame.fog_colour.b = b;
+            gfFog.g = g;
+            gfFog.b = b;
+        } else {
+            GlobalFogOff = 1;
+        }
+    }
+    flipeffect = -1;
 }
 
 void swap_meshes_with_meshswap1(ITEM_INFO *item)
