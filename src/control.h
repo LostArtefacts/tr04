@@ -39,12 +39,14 @@ extern sint16 *floor_data;
 extern sint32 flipeffect;
 extern sint32 SetDebounce;
 
+void TriggerNormalCDTrack(sint16 value, sint16 flags, sint16 type);
 FLOOR_INFO *GetFloor(sint32 x, sint32 y, sint32 z, sint16 *room_number);
 sint32 GetHeight(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 sint32 GetWaterHeight(sint32 x, sint32 y, sint32 z, sint16 room_number);
 sint32 GetCeiling(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 void AnimateItem(ITEM_INFO *item);
 sint16 GetDoor(FLOOR_INFO *floor);
+void TriggerCDTrack(sint16 value, sint16 flags, sint16 type);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;

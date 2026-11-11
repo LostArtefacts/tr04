@@ -25,3 +25,9 @@ sint16 GetDoor(FLOOR_INFO *floor)
         return *data;
     return NO_ROOM;
 }
+
+void TriggerCDTrack(sint16 value, sint16 flags, sint16 type)
+{
+    if (value < 128)
+        TriggerNormalCDTrack(value, flags, type);
+}
