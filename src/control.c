@@ -261,3 +261,27 @@ void TriggerCDTrack(sint16 value, sint16 flags, sint16 type)
     if (value < 128)
         TriggerNormalCDTrack(value, flags, type);
 }
+
+sint32 CheckNoColFloorTriangle(FLOOR_INFO *floor, sint32 x, sint32 z)
+{
+    sint16 *data, type, dx, dz;
+
+    if (!floor->index)
+        return 0;
+    data = &floor_data[floor->index];
+    type = *data & DATA_TYPE;
+    if (type == NOCOLF1T || type == NOCOLF1B || type == NOCOLF2T || type == NOCOLF2B) {
+        dx = x & 1023;
+        dz = z & 1023;
+        if (type == NOCOLF1T && dx <= 1024 - dz)
+            return -1;
+        else if (type == NOCOLF1B && dx > 1024 - dz)
+            return -1;
+        else if (type == NOCOLF2T && dx <= dz)
+            return -1;
+        else if (type == NOCOLF2B && dx > dz)
+            return -1;
+        return 1;
+    }
+    return 0;
+}
