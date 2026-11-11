@@ -479,6 +479,14 @@ sint16 TestMonkeyLeft(ITEM_INFO *item, COLL_INFO *coll)
     return 1;
 }
 
+sint16 GetDirOctant(sint32 rot)
+{
+    if (ABS(rot) < 8192 || ABS(rot) > 24576)
+        return 0;
+    else
+        return 1;
+}
+
 sint16 TestMonkeyRight(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint16 oct;
