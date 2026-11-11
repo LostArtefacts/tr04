@@ -1047,6 +1047,27 @@ void lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
     GetLaraCollisionInfo(item, coll);
 }
 
+void lara_col_jumper(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 192;
+    GetLaraCollisionInfo(item, coll);
+    LaraDeflectEdgeJump(item, coll);
+    if (item->fallspeed > 0) {
+        if (coll->mid_floor <= 0) {
+            if (LaraLandedBad(item, coll))
+                item->goal_anim_state = AS_DEATH;
+            else
+                item->goal_anim_state = AS_STOP;
+            item->fallspeed = 0;
+            item->gravity_status = 0;
+            if (coll->mid_floor != NO_HEIGHT)
+                item->pos.y_pos += coll->mid_floor;
+        }
+    }
+}
+
 void ResetLook(void)
 {
     if (camera.type == LOOK_CAMERA)
