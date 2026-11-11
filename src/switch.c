@@ -2,6 +2,7 @@
 #include "items.h"
 #include "control.h"
 #include "objnums.h"
+#include "anim.h"
 #include "lara.h"
 #include "lara_states.h"
 #include "specific/input.h"
@@ -58,6 +59,27 @@ void SwitchCollision2(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
             item->status = ITEM_ACTIVE;
             AddActiveItem(item_number);
             AnimateItem(item);
+        }
+    }
+}
+
+void JumpSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if ((input & IN_ACTION) && lara.gun_status == LG_NO_ARMS && (l->current_anim_state == AS_REACH || l->current_anim_state == AS_UPJUMP) && l->gravity_status && l->fallspeed > 0 && !item->current_anim_state) {
+        if (TestLaraPosition(JumpSwitchBounds, item, l)) {
+            AlignLaraPosition(&JumpSwitchPos, item, l);
+            l->current_anim_state = AS_SWITCHON;
+            l->anim_number = ANIM_LEAPSWITCH;
+            l->frame_number = anims[ANIM_LEAPSWITCH].frame_base;
+            l->fallspeed = 0;
+            l->gravity_status = 0;
+            lara.gun_status = LG_HANDS_BUSY;
+            item->goal_anim_state = 1;
+            item->status = ITEM_ACTIVE;
+            AddActiveItem(item_number);
         }
     }
 }

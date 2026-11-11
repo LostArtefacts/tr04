@@ -2007,6 +2007,8 @@ address,size,name,symbol
 0x004afab8,4,old_hitpoints,_old_hitpoints
 0x004afcd0,24,Switch2Bounds,_Switch2Bounds
 0x004afce8,12,Switch2Pos,_Switch2Pos
+0x004afdbc,24,JumpSwitchBounds,_JumpSwitchBounds
+0x004afdd8,12,JumpSwitchPos,_JumpSwitchPos
 0x004afeec,92,AccentTable,_AccentTable
 0x004aff48,80,ShadeFromTo,_ShadeFromTo
 0x004aff98,4,font_init,_font_init
