@@ -56,3 +56,37 @@ void InitWindow(sint32 x, sint32 y, sint32 w, sint32 h, sint32 znear, sint32 zfa
     f_bottom = (float)(1 + phd_winymax);
     phd_mxptr = matrix_stack;
 }
+
+uint32 mGetAngle(sint32 x, sint32 z, sint32 x1, sint32 z1)
+{
+    sint32 dx, dz, octant, swap, angle;
+
+    dx = x1 - x;
+    dz = z1 - z;
+    if (!dx && !dz)
+        return 0;
+
+    octant = 0;
+    if (dx < 0) {
+        octant = 4;
+        dx = -dx;
+    }
+    if (dz < 0) {
+        octant += 2;
+        dz = -dz;
+    }
+    if (dz > dx) {
+        octant++;
+        swap = dx;
+        dx = dz;
+        dz = swap;
+    }
+    while ((sint16)dz != dz) {
+        dx >>= 1;
+        dz >>= 1;
+    }
+    angle = phdtan2[octant] + phdtantab[(dz << 11) / dx];
+    if (angle < 0)
+        angle = -angle;
+    return -angle & 0xFFFF;
+}

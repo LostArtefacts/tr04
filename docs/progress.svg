@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="7.18" height="12" x="0" y="0" class="named"><title>23 · 1.48%</title></rect>
-<rect width="476.82" height="12" x="7.18" y="0" class="todo"><title>1528 · 98.52%</title></rect>
+<rect width="7.49" height="12" x="0" y="0" class="named"><title>24 · 1.55%</title></rect>
+<rect width="476.51" height="12" x="7.49" y="0" class="todo"><title>1527 · 98.45%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="7.50">1.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">23</tspan> · <tspan class="todo">1528</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">24</tspan> · <tspan class="todo">1527</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="2.26" height="12" x="0" y="0" class="named"><title>3 KB · 0.47%</title></rect>
-<rect width="481.74" height="12" x="2.26" y="0" class="todo"><title>617 KB · 99.53%</title></rect>
+<rect width="2.35" height="12" x="0" y="0" class="named"><title>3 KB · 0.49%</title></rect>
+<rect width="481.65" height="12" x="2.35" y="0" class="todo"><title>617 KB · 99.51%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">3 KB</tspan> · <tspan class="todo">617 KB</tspan></text>
@@ -1467,7 +1467,7 @@
 <rect width="12" height="12" x="30" y="420" class="named"><title>0x0048fa90 SetupZRange (200 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="420" class="named"><title>0x0048fb60 ScaleCurrentMatrix (171 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="420" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="420" class="todo"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="420" class="named"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="420" class="todo"><title>0x0048fdc0 phd_GenerateW2V (840 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="420" class="todo"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="420" class="todo"><title>0x00490210 phd_atan (98 bytes)</title></rect>
@@ -2583,7 +2583,7 @@
 <rect width="6.87" height="6.91" x="564.24" y="295.29" class="todo"><title>0x00413c20 FallingBlock (118 bytes)</title></rect>
 <rect width="6.87" height="6.91" x="564.24" y="305.20" class="todo"><title>0x00432720 lara_as_glide (118 bytes)</title></rect>
 <rect width="6.87" height="6.91" x="564.24" y="315.11" class="todo"><title>0x00458690 PuzzleDone (118 bytes)</title></rect>
-<rect width="6.87" height="6.91" x="564.24" y="325.01" class="todo"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>
+<rect width="6.87" height="6.91" x="564.24" y="325.01" class="named"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>
 <rect width="6.87" height="6.85" x="564.24" y="334.92" class="todo"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
 <rect width="6.87" height="6.85" x="564.24" y="344.77" class="todo"><title>0x004476d0 TrapCollision (117 bytes)</title></rect>
 <rect width="6.87" height="6.79" x="564.24" y="354.62" class="todo"><title>0x00419560 InitialiseVoncroy (116 bytes)</title></rect>

@@ -30,6 +30,7 @@ void AlterFOV(sint16 fov);
 void SetupZRange(sint32 znear, sint32 zfar);
 void ScaleCurrentMatrix(PHD_VECTOR *vec);
 void InitWindow(sint32 x, sint32 y, sint32 w, sint32 h, sint32 znear, sint32 zfar, sint32 fov, sint32 a, sint32 b);
+uint32 mGetAngle(sint32 x, sint32 z, sint32 x1, sint32 z1);
 
 extern sint32 phdtan2[8];
 extern sint16 phdtantab[2050];
