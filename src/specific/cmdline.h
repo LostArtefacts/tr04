@@ -8,11 +8,13 @@
 void CLSetup(char *cmd);
 void CLNoFMV(char *cmd);
 uint8 DXSetupDialog(void);
+void InitDSDevice(HWND dlg, HWND hwnd);
 char *MapASCIIToANSI(char *s, char *d);
 BOOL CALLBACK DXSetupDlgProc(HWND dlg, UINT message, WPARAM wParam, LPARAM lParam);
 
 extern uint8 start_setup;
 extern uint8 fmvs_disabled;
+extern sint32 nDSDevice;
 extern uint8 ASCIIToANSITable[7][2];
 
 #endif

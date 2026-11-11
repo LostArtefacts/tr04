@@ -2176,6 +2176,7 @@ address,size,name,symbol
 0x004bfe7c,4,nD3DDevice,_nD3DDevice
 0x004bfe84,1,start_setup,_start_setup
 0x004bfe85,1,fmvs_disabled,_fmvs_disabled
+0x004bfe88,4,nDSDevice,_nDSDevice
 0x004bfe90,4,nDDDevice,_nDDDevice
 0x004bfe94,1,TextLow,_TextLow
 0x004bfe95,1,BumpMap,_BumpMap

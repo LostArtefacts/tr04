@@ -3,6 +3,7 @@
 #include "cmdline.h"
 #include "function_stubs.h"
 #include "winmain.h"
+#include "../gameflow.h"
 
 void CLSetup(char *cmd)
 {
@@ -35,6 +36,23 @@ uint8 DXSetupDialog(void)
     }
     ret = ret != 0;
     return ret;
+}
+
+void InitDSDevice(HWND dlg, HWND hwnd)
+{
+    sint32 i;
+
+    SendMessage(hwnd, CB_RESETCONTENT, 0, 0);
+    for (i = 0; i < App.DXInfo.nDSInfo; i++)
+        SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)App.DXInfo.DSInfo[i].About);
+    nDSDevice = 0;
+    if (!App.DXInfo.nDSInfo) {
+        SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)SCRIPT_TEXT(TXT_No_Sound_Card_Installed));
+        EnableWindow(GetDlgItem(dlg, 1018), 0);
+        SendMessage(GetDlgItem(dlg, 1018), BM_SETCHECK, 1, 0);
+        EnableWindow(hwnd, 0);
+    }
+    SendMessage(hwnd, CB_SETCURSEL, 0, 0);
 }
 
 char *MapASCIIToANSI(char *s, char *d)
