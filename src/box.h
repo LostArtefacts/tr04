@@ -27,6 +27,15 @@ typedef struct box_node {
     sint16 box_number;
 } BOX_NODE;
 
+typedef struct box_info {
+    uint8 left;
+    uint8 right;
+    uint8 top;
+    uint8 bottom;
+    sint16 height;
+    sint16 overlap_index;
+} BOX_INFO;
+
 typedef struct lot_info {
     BOX_NODE *node;
     sint16 head;
@@ -102,9 +111,11 @@ void CreatureUnderwater(ITEM_INFO *item, sint32 depth);
 void CreatureJoint(ITEM_INFO *item, sint16 joint, sint16 required);
 sint16 CreatureEffectT(ITEM_INFO *item, BITE_INFO *bite, sint16 damage, sint16 angle, sint16 (*generate)(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 room_number));
 sint16 AIGuard(CREATURE_INFO *creature);
+sint32 EscapeBox(ITEM_INFO *item, ITEM_INFO *enemy, sint16 box_number);
 
 extern CREATURE_INFO *baddie_slots;
 
+extern BOX_INFO *boxes;
 extern int num_boxes;
 extern sint16 *ground_zone[5][2];
 
