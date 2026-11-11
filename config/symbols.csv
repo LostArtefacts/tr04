@@ -2461,6 +2461,7 @@ address,size,name,symbol
 0x007fe128,2,SkyPos,_SkyPos
 0x007fe12c,4,camera_underwater,_camera_underwater
 0x007fe138,4,outside_right,_outside_right
+0x007fe140,12,interpolated_bounds,_interpolated_bounds
 0x007fe14c,2,dLightningRand,_dLightningRand
 0x007fe150,4,outside_top,_outside_top
 0x007fe154,,HeavyTriggered,_HeavyTriggered

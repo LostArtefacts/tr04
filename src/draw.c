@@ -111,6 +111,20 @@ void phd_PutPolygons_I(sint16 *ptr, sint32 clip)
     phd_PopMatrix();
 }
 
+sint16 *GetBoundsAccurate(ITEM_INFO *item)
+{
+    sint32 i, frac, rate;
+    sint16 *bptr, *frmptr[2];
+
+    frac = GetFrames(item, frmptr, &rate);
+    if (frac == 0)
+        return frmptr[0];
+    bptr = interpolated_bounds;
+    for (i = 0; i < 6; i++, bptr++, frmptr[0]++, frmptr[1]++)
+        *bptr = *frmptr[0] + ((*frmptr[1] - *frmptr[0]) * frac) / rate;
+    return interpolated_bounds;
+}
+
 sint16 *GetBestFrame(ITEM_INFO *item)
 {
     sint32 frac;
