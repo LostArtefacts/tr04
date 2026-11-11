@@ -172,6 +172,9 @@ sint32 GetFreeShockwave(void);
 sint32 GetFreeSmokeSpark(void);
 sint32 GetFreeFireSpark(void);
 sint32 GetFreeBlood(void);
+sint32 GetFreeGunshell(void);
+sint32 GetFreeBubble(void);
+sint32 GetFreeDrip(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;

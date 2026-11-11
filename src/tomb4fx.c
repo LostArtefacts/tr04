@@ -128,6 +128,40 @@ sint32 GetFreeBlood(void)
     return min_life_num;
 }
 
+sint32 GetFreeGunshell(void)
+{
+    GUNSHELL_STRUCT *shell;
+    sint32 min_life, min_life_num, free, i;
+
+    shell = &Gunshells[next_gunshell];
+    min_life = 4095;
+    min_life_num = 0;
+    for (free = next_gunshell, i = 0; i < 24; i++) {
+        if (shell->counter) {
+            if (shell->counter < min_life) {
+                min_life = shell->counter;
+                min_life_num = free;
+            }
+            if (free == 23) {
+                shell = &Gunshells[0];
+                free = 0;
+            } else {
+                free++;
+                shell++;
+            }
+        } else {
+            next_gunshell = free + 1;
+            if (next_gunshell >= 24)
+                next_gunshell = 0;
+            return free;
+        }
+    }
+    next_gunshell = min_life_num + 1;
+    if (next_gunshell >= 24)
+        next_gunshell = 0;
+    return min_life_num;
+}
+
 void SetFadeClip(sint16 height, sint16 speed)
 {
     DestFadeScreenHeight = height;
