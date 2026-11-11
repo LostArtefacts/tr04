@@ -168,6 +168,21 @@ void fifteen_end(void)
     lara.questitems |= 1;
 }
 
+void sixteen_init(void)
+{
+    cutseq_meshbits[6] &= 0xFFFFFFFE;
+    trigger_item_in_room(169, FLAME_EMITTER2);
+    trigger_item_in_room(184, FLAME_EMITTER2);
+    cutseq_meshbits[1] &= ~0x80000000;
+    cutseq_meshbits[2] &= ~0x80000000;
+    cutseq_meshbits[4] &= ~0x80000000;
+    cutseq_meshbits[5] &= ~0x80000000;
+    cutseq_meshbits[6] &= ~0x80000000;
+    cutseq_meshbits[7] &= ~0x80000000;
+    cutseq_meshbits[8] &= ~0x80000000;
+    cutseq_meshbits[9] &= ~0x80000000;
+}
+
 void sixteen_end(void)
 {
     untrigger_item_in_room(169, FLAME_EMITTER2);
