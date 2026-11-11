@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="103.61" height="12" x="0" y="0" class="named"><title>460 · 29.77%</title></rect>
-<rect width="0.45" height="12" x="103.61" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="104.06" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="241.01" height="12" x="106.99" y="0" class="todo"><title>1070 · 69.26%</title></rect>
+<rect width="103.84" height="12" x="0" y="0" class="named"><title>461 · 29.84%</title></rect>
+<rect width="0.45" height="12" x="103.84" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="104.29" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="240.78" height="12" x="107.22" y="0" class="todo"><title>1069 · 69.19%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">29.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">460</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1070</tspan></text>
+<text text-anchor="end" x="528" y="7.50">30.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">461</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1069</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="43.29" height="12" x="0" y="0" class="named"><title>77 KB · 12.44%</title></rect>
-<rect width="0.12" height="12" x="43.29" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="43.41" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="298.97" height="12" x="49.03" y="0" class="todo"><title>533 KB · 85.91%</title></rect>
+<rect width="43.40" height="12" x="0" y="0" class="named"><title>77 KB · 12.47%</title></rect>
+<rect width="0.12" height="12" x="43.40" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="43.52" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="298.86" height="12" x="49.14" y="0" class="todo"><title>533 KB · 85.88%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">12.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">77 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">533 KB</tspan></text>
@@ -571,7 +571,7 @@
 <rect width="12" height="12" x="30" y="150" class="named"><title>0x00436050 KillEverything (11 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="150" class="named"><title>0x00436060 TriggerExplosionBubble (320 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="150" class="named"><title>0x004361a0 TriggerDynamic (163 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="150" class="todo"><title>0x00436250 TriggerDynamic_MIRROR (198 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="150" class="named"><title>0x00436250 TriggerDynamic_MIRROR (198 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="150" class="named"><title>0x00436320 ClearDynamics (29 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="150" class="todo"><title>0x00436340 ControlSmokeEmitter (1462 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="150" class="named"><title>0x00436900 ControlColouredLights (173 bytes)</title></rect>
@@ -2344,7 +2344,7 @@
 <rect width="8.92" height="8.63" x="495.70" y="280.18" class="todo"><title>0x00418fa0 GetAIEnemy (199 bytes)</title></rect>
 <rect width="8.92" height="8.63" x="495.70" y="291.81" class="todo"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
 <rect width="8.92" height="8.63" x="495.70" y="303.44" class="todo"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
-<rect width="8.92" height="8.58" x="495.70" y="315.07" class="todo"><title>0x00436250 TriggerDynamic_MIRROR (198 bytes)</title></rect>
+<rect width="8.92" height="8.58" x="495.70" y="315.07" class="named"><title>0x00436250 TriggerDynamic_MIRROR (198 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.70" y="326.65" class="todo"><title>0x00439e40 Fade (198 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.70" y="338.23" class="todo"><title>0x0046b600 CalculateObjectLightingLaraCutSeq (198 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.70" y="349.82" class="todo"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>

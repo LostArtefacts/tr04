@@ -107,6 +107,7 @@ void TriggerExplosionBubble(sint32 x, sint32 y, sint32 z, sint16 roomnum);
 void TriggerWaterfallMist(sint32 x, sint32 y, sint32 z, sint32 angle);
 void TriggerFireFlame(sint32 x, sint32 y, sint32 z, sint32 body_part, sint32 type);
 void KillEverything(void);
+void TriggerDynamic_MIRROR(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint32 g, sint32 b);
 
 extern sint32 wibble;
 extern sint32 KillEverythingFlag;

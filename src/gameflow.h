@@ -419,6 +419,7 @@ extern uint16 gfLevelFlags;
 extern char gfGameMode;
 extern uint8 gfCurrentLevel;
 extern CVECTOR gfFog;
+extern sint32 gfMirrorZPlane;
 extern uint8 gfLevelComplete;
 extern GAMEFLOW *Gameflow;
 extern uint16 *gfStringOffset;

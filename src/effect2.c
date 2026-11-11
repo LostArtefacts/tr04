@@ -4,6 +4,7 @@
 #include "lara.h"
 #include "anim.h"
 #include "tomb4fx.h"
+#include "gameflow.h"
 #include "effects.h"
 #include "specific/3dmath.h"
 #include "specific/function_stubs.h"
@@ -598,6 +599,35 @@ void TriggerDynamic(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint
     }
     dl->FalloffScale = 0x200000 / (falloff << 8);
     number_dynamics++;
+}
+
+void TriggerDynamic_MIRROR(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint32 g, sint32 b)
+{
+    DYNAMIC *dl;
+    sint32 i;
+
+    for (i = 0; i < 2; i++) {
+        if (number_dynamics == MAX_DYNAMICS || !falloff)
+            return;
+        dl = &dynamics[number_dynamics];
+        dl->on = 1;
+        dl->x = x;
+        dl->y = y;
+        dl->z = z;
+        dl->falloff = (uint16)(falloff << 8);
+        if (falloff >= 8) {
+            dl->r = (uint8)r;
+            dl->g = (uint8)g;
+            dl->b = (uint8)b;
+        } else {
+            dl->r = (uint8)((r * falloff) >> 3);
+            dl->g = (uint8)((g * falloff) >> 3);
+            dl->b = (uint8)((b * falloff) >> 3);
+        }
+        dl->FalloffScale = 0x200000 / (falloff << 8);
+        number_dynamics++;
+        z = 2 * gfMirrorZPlane - z;
+    }
 }
 
 void ClearDynamics(void)
