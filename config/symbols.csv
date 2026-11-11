@@ -2438,6 +2438,7 @@ address,size,name,symbol
 0x007fe330,,ClosestCoord,_ClosestCoord
 0x007fe380,4,ClosestDist,_ClosestDist
 0x007fe384,4,OutsideRoomTable,_OutsideRoomTable
+0x007fe3a0,1024,ItemNewRooms,_ItemNewRooms
 0x007fe7e0,2,FXType,_FXType
 0x007fe7e2,2,IsRoomOutsideNo,_IsRoomOutsideNo
 0x007fe7e4,4,CutSceneTriggered,_CutSceneTriggered

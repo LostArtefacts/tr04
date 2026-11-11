@@ -10,6 +10,8 @@
 #define ITEM_DEACTIVATED 2
 #define ITEM_INVISIBLE 3
 
+#define IFL_CLEARBODY 0x8000
+
 typedef struct pclight {
     float x;
     float y;
