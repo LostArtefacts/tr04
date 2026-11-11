@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="9.16" height="12" x="0" y="0" class="named"><title>34 · 2.19%</title></rect>
-<rect width="0.27" height="12" x="9.16" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="408.57" height="12" x="9.43" y="0" class="todo"><title>1516 · 97.74%</title></rect>
+<rect width="9.43" height="12" x="0" y="0" class="named"><title>35 · 2.26%</title></rect>
+<rect width="0.27" height="12" x="9.43" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="408.30" height="12" x="9.70" y="0" class="todo"><title>1515 · 97.68%</title></rect>
 </g>
 <text text-anchor="end" x="588" y="7.50">2.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="7"><tspan class="named">34</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="todo">1516</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="7"><tspan class="named">35</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="todo">1515</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="3.38" height="12" x="0" y="0" class="named"><title>5 KB · 0.81%</title></rect>
-<rect width="0.10" height="12" x="3.38" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="414.59" height="12" x="3.41" y="0" class="todo"><title>615 KB · 99.18%</title></rect>
+<rect width="3.72" height="12" x="0" y="0" class="named"><title>6 KB · 0.89%</title></rect>
+<rect width="0.10" height="12" x="3.72" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="414.24" height="12" x="3.76" y="0" class="todo"><title>614 KB · 99.10%</title></rect>
 </g>
-<text text-anchor="end" x="588" y="24.50">0.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="24"><tspan class="named">5 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="todo">615 KB</tspan></text>
+<text text-anchor="end" x="588" y="24.50">0.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="24"><tspan class="named">6 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="todo">614 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1481,7 +1481,7 @@
 <rect width="12" height="12" x="210" y="420" class="named"><title>0x00490400 phd_RotX (174 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="420" class="named"><title>0x004904b0 phd_RotY (172 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="420" class="named"><title>0x00490560 phd_RotZ (172 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="420" class="todo"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="420" class="named"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="420" class="todo"><title>0x00490820 phd_RotYXZ (490 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="420" class="todo"><title>0x00490a10 phd_TranslateAbs (122 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="420" class="todo"><title>0x00490a90 phd_GetVectorAngles (126 bytes)</title></rect>
@@ -1968,7 +1968,7 @@
 <rect width="14.67" height="14.24" x="364.64" y="292.45" class="todo"><title>0x0043ab00 TriggerShockwaveHitEffect (520 bytes)</title></rect>
 <rect width="14.67" height="14.21" x="364.64" y="309.69" class="todo"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
 <rect width="14.67" height="14.21" x="364.64" y="326.90" class="todo"><title>0x0042c770 lara_col_climbstnc (519 bytes)</title></rect>
-<rect width="14.67" height="14.08" x="364.64" y="344.11" class="todo"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
+<rect width="14.67" height="14.08" x="364.64" y="344.11" class="named"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
 <rect width="14.67" height="14.05" x="364.64" y="361.19" class="todo"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
 <rect width="14.67" height="14.05" x="364.64" y="378.24" class="todo"><title>0x0049bdb0 Func49bdb0 (513 bytes)</title></rect>
 <rect width="14.67" height="13.97" x="364.64" y="395.28" class="todo"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
