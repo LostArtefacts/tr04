@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="118.93" height="12" x="0" y="0" class="named"><title>528 · 34.17%</title></rect>
-<rect width="0.45" height="12" x="118.93" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="119.38" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="223.89" height="12" x="124.11" y="0" class="todo"><title>994 · 64.34%</title></rect>
+<rect width="119.15" height="12" x="0" y="0" class="named"><title>529 · 34.24%</title></rect>
+<rect width="0.45" height="12" x="119.15" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="119.60" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="223.67" height="12" x="124.33" y="0" class="todo"><title>993 · 64.27%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">34.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">528</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">994</tspan></text>
+<text text-anchor="end" x="528" y="7.50">34.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">529</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">993</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="51.35" height="12" x="0" y="0" class="named"><title>92 KB · 14.76%</title></rect>
-<rect width="0.12" height="12" x="51.35" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="51.47" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="289.15" height="12" x="58.85" y="0" class="todo"><title>515 KB · 83.09%</title></rect>
+<rect width="51.46" height="12" x="0" y="0" class="named"><title>92 KB · 14.79%</title></rect>
+<rect width="0.12" height="12" x="51.46" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="51.58" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="289.04" height="12" x="58.96" y="0" class="todo"><title>515 KB · 83.06%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">14.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">92 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">515 KB</tspan></text>
@@ -942,7 +942,7 @@
 <rect width="12" height="12" x="345" y="255" class="named"><title>0x00455f80 BridgeTilt1Ceiling (53 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="255" class="named"><title>0x00455fc0 BridgeTilt2Floor (67 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="255" class="named"><title>0x00456010 BridgeTilt2Ceiling (52 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="255" class="todo"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="255" class="named"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="255" class="todo"><title>0x00456120 PoleCollision (570 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="255" class="todo"><title>0x00456360 ControlTriggerTriggerer (180 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="255" class="todo"><title>0x00456420 AnimateWaterfalls (182 bytes)</title></rect>
@@ -2358,7 +2358,7 @@
 <rect width="8.45" height="8.92" x="727.09" y="210.68" class="todo"><title>0x00426600 IsValidHangPos (195 bytes)</title></rect>
 <rect width="8.45" height="8.92" x="738.55" y="210.68" class="todo"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="8.65" height="8.72" x="506.85" y="222.59" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
-<rect width="8.65" height="8.67" x="506.85" y="234.31" class="todo"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>
+<rect width="8.65" height="8.67" x="506.85" y="234.31" class="named"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>
 <rect width="8.65" height="8.67" x="506.85" y="245.98" class="todo"><title>0x0048c5f0 DrawFlash (194 bytes)</title></rect>
 <rect width="8.65" height="8.63" x="506.85" y="257.65" class="named"><title>0x0040aeb0 TargetVisible (193 bytes)</title></rect>
 <rect width="8.65" height="8.63" x="506.85" y="269.28" class="named"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>

@@ -121,3 +121,22 @@ void BridgeTilt2Ceiling(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *h
         *height = level + STEP_L;
 }
 
+void ControlAnimatingSlots(sint16 item_number)
+{
+    ITEM_INFO *item;
+    PHD_VECTOR pos;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        item->status = ITEM_ACTIVE;
+        AnimateItem(item);
+        if (item->trigger_flags == 666) {
+            pos.x = pos.y = pos.z = 0;
+            GetJointAbsPosition(item, &pos, 0);
+            SoundEffect(SFX_HELICOPTER_LOOP, (PHD_3DPOS *)&pos, SFX_DEFAULT);
+            if (item->frame_number == anims[item->anim_number].frame_end)
+                item->flags &= ~IFL_CODEBITS;
+        }
+    } else if (item->trigger_flags == 2)
+        item->status = ITEM_INVISIBLE;
+}

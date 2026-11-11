@@ -12,5 +12,6 @@ void BridgeTilt2Floor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *hei
 void BridgeFlatFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height);
 void SmashObject(sint16 item_number);
 void SmashObjectControl(sint16 item_number);
+void ControlAnimatingSlots(sint16 item_number);
 
 #endif
