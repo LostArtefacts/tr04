@@ -134,3 +134,19 @@ void DrawPickups(void)
             CurrentPickup = 0;
     }
 }
+
+void AddDisplayPickup(sint16 object_number)
+{
+    DISPLAYPU *pu;
+    int i;
+
+    pu = pickups;
+    for (i = 0; i < 8; pu++, i++) {
+        if (pu->life < 0) {
+            pu->life = 45;
+            pu->object_number = object_number;
+            break;
+        }
+    }
+    DEL_picked_up_object(object_number);
+}
