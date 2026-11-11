@@ -12,5 +12,6 @@ void SetCullCW(void);
 void SetCullCCW(void);
 
 extern uint8 (*IsVisible)(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2);
+extern HRESULT (*_EndScene)(void);
 
 #endif
