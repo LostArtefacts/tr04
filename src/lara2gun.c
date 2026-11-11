@@ -23,6 +23,25 @@ void draw_pistols(sint32 weapon_type)
     set_arm_info(&lara.left_arm, ani);
 }
 
+void set_arm_info(LARA_ARM *arm, sint32 frame)
+{
+    sint32 anim_base;
+    PISTOL_DEF *p;
+
+    p = &PistolTable[lara.gun_type];
+    anim_base = objects[p->ObjectNum].anim_index;
+    if (frame < p->Draw1Anim)
+        arm->anim_number = anim_base;
+    else if (frame < p->Draw2Anim)
+        arm->anim_number = anim_base + 1;
+    else if (frame < p->RecoilAnim)
+        arm->anim_number = anim_base + 2;
+    else
+        arm->anim_number = anim_base + 3;
+    arm->frame_base = anims[arm->anim_number].frame_ptr;
+    arm->frame_number = frame;
+}
+
 void ready_pistols(int weapon_type)
 {
     lara.gun_status = LG_READY;
