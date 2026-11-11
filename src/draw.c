@@ -103,6 +103,39 @@ void gar_RotYXZsuperpack_I(sint16 **pprot1, sint16 **pprot2, sint32 skip)
     phd_mxptr = oldm;
 }
 
+void gar_RotYXZsuperpack(sint16 **pprot, sint32 skip)
+{
+    uint16 *prot;
+    sint32 packed;
+
+    while (skip) {
+        prot = *pprot;
+        if (*prot & (3 << 14))
+            (*pprot) += 1;
+        else
+            (*pprot) += 2;
+        skip--;
+    }
+    prot = *pprot;
+    switch (*prot >> 14) {
+    case 0:
+        packed = (*prot << 16) + *(prot + 1);
+        phd_RotYXZpack(packed);
+        (*pprot) += 2;
+        return;
+    case 1:
+        phd_RotX((sint16)((*prot & 0xFFF) << 4));
+        break;
+    case 2:
+        phd_RotY((sint16)((*prot & 0xFFF) << 4));
+        break;
+    default:
+        phd_RotZ((sint16)((*prot & 0xFFF) << 4));
+        break;
+    }
+    (*pprot) += 1;
+}
+
 void phd_PutPolygons_I(sint16 *ptr, sint32 clip)
 {
     phd_PushMatrix();
