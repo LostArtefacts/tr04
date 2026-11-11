@@ -79,6 +79,7 @@ sint32 ExplodeItemNode(ITEM_INFO *item, sint32 Node, sint32 NoXZVel, sint32 bits
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;
+extern uint32 CutSceneTriggered;
 extern uint16 GlobalCounter;
 
 #endif

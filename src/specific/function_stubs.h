@@ -15,6 +15,7 @@ void SeedRandomDraw(sint32 seed);
 void init_game_malloc(void);
 void *game_malloc(int size);
 
+extern char *malloc_buffer;
 extern PHD_VECTOR CamPos;
 extern PHD_VECTOR CamRot;
 

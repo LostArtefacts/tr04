@@ -1,6 +1,9 @@
 #include "savegame.h"
 #include "gameflow.h"
 #include "control.h"
+#include "anim.h"
+#include "objnums.h"
+#include "specific/function_stubs.h"
 #include <string.h>
 
 sint32 CheckSumValid(sint8 *buffer)
@@ -42,6 +45,33 @@ void sgInitialiseHub(sint32 dont_save_lara)
     savegame.Lara.location = -1;
     savegame.Lara.highest_location = -1;
     savegame.Lara.vehicle = NO_ITEM;
+}
+
+void SaveLaraData(void)
+{
+    ITEM_INFO *item;
+    sint32 i;
+
+    for (i = 0; i < 15; i++)
+        lara.mesh_ptrs[i] = (sint16 *)((sint32)lara.mesh_ptrs[i] - (sint32)mesh_base);
+    lara.left_arm.frame_base = (sint16 *)((sint32)lara.left_arm.frame_base - (sint32)objects[PISTOLS_ANIM].frame_base);
+    lara.right_arm.frame_base = (sint16 *)((sint32)lara.right_arm.frame_base - (sint32)objects[PISTOLS_ANIM].frame_base);
+    lara.GeneralPtr = (void *)((sint32)lara.GeneralPtr - (sint32)malloc_buffer);
+    memcpy(&savegame.Lara, &lara, sizeof(savegame.Lara));
+    for (i = 0; i < 15; i++)
+        lara.mesh_ptrs[i] = (sint16 *)((sint32)lara.mesh_ptrs[i] + (sint32)mesh_base);
+    lara.left_arm.frame_base = (sint16 *)((sint32)lara.left_arm.frame_base + (sint32)objects[PISTOLS_ANIM].frame_base);
+    lara.right_arm.frame_base = (sint16 *)((sint32)lara.right_arm.frame_base + (sint32)objects[PISTOLS_ANIM].frame_base);
+    lara.GeneralPtr = (void *)((sint32)lara.GeneralPtr + (sint32)malloc_buffer);
+    if (lara.weapon_item != NO_ITEM) {
+        item = &items[lara.weapon_item];
+        savegame.WeaponObject = item->object_number;
+        savegame.WeaponAnim = item->anim_number;
+        savegame.WeaponFrame = item->frame_number;
+        savegame.WeaponCurrent = item->current_anim_state;
+        savegame.WeaponGoal = item->goal_anim_state;
+    }
+    savegame.cutscene_triggered = CutSceneTriggered;
 }
 
 void sgSaveGame(void)
