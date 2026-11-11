@@ -14,7 +14,22 @@
 #define HEAD_TURN (2 * ONE_DEGREE)
 #define CAM_A_HANG 0
 #define CAM_E_HANG (-60 * ONE_DEGREE)
+#define LARA_DEF_ADD_EDGE (5 * ONE_DEGREE)
 extern sint32 jump_ok;
+
+sint32 LaraFallen(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (lara.water_status != LW_WADE && coll->mid_floor > STEPUP_HEIGHT) {
+        item->anim_number = ANIM_FALLDOWN;
+        item->frame_number = anims[ANIM_FALLDOWN].frame_base;
+        item->current_anim_state = AS_FORWARDJUMP;
+        item->goal_anim_state = AS_FORWARDJUMP;
+        item->fallspeed = 0;
+        item->gravity_status = 1;
+        return 1;
+    }
+    return 0;
+}
 
 void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll)
 {

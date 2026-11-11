@@ -275,6 +275,7 @@ void lara_col_swandive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_fastfall(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraTestEdgeCatch(ITEM_INFO *item, COLL_INFO *coll, sint32 *edge);
 void lara_col_crawl(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_pushblock(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
