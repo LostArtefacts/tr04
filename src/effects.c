@@ -179,6 +179,25 @@ void LaraLocationPad(ITEM_INFO *item)
     lara.location = TriggerTimer;
 }
 
+void GhostTrap(ITEM_INFO *item)
+{
+    ITEM_INFO *wraith;
+    sint16 nex;
+
+    nex = next_item_active;
+    if (next_item_active != NO_ITEM) {
+        while (nex != NO_ITEM) {
+            wraith = &items[nex];
+            if (wraith->object_number == WRAITH3 && !wraith->hit_points) {
+                wraith->hit_points = item - items;
+                break;
+            }
+            nex = wraith->next_active;
+        }
+    }
+    flipeffect = -1;
+}
+
 void lara_hands_free(ITEM_INFO *item)
 {
     lara.gun_status = LG_NO_ARMS;

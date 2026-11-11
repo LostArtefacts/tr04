@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="103.57" height="12" x="0" y="0" class="named"><title>452 · 29.26%</title></rect>
-<rect width="0.23" height="12" x="103.57" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.98" height="12" x="103.79" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="247.23" height="12" x="106.77" y="0" class="todo"><title>1079 · 69.84%</title></rect>
+<rect width="103.79" height="12" x="0" y="0" class="named"><title>453 · 29.32%</title></rect>
+<rect width="0.23" height="12" x="103.79" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.98" height="12" x="104.02" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="247" height="12" x="107" y="0" class="todo"><title>1078 · 69.77%</title></rect>
 </g>
-<text text-anchor="end" x="534" y="7.50">29.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="549" y="7"><tspan class="named">452</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1079</tspan></text>
+<text text-anchor="end" x="534" y="7.50">29.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="549" y="7"><tspan class="named">453</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1078</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="43.19" height="12" x="0" y="0" class="named"><title>76 KB · 12.20%</title></rect>
-<rect width="0.10" height="12" x="43.19" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.71" height="12" x="43.22" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="305.07" height="12" x="48.93" y="0" class="todo"><title>534 KB · 86.18%</title></rect>
+<rect width="43.27" height="12" x="0" y="0" class="named"><title>76 KB · 12.22%</title></rect>
+<rect width="0.10" height="12" x="43.27" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.71" height="12" x="43.29" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="305" height="12" x="49" y="0" class="todo"><title>534 KB · 86.16%</title></rect>
 </g>
 <text text-anchor="end" x="534" y="24.50">12.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="549" y="24"><tspan class="named">76 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">534 KB</tspan></text>
@@ -596,7 +596,7 @@
 <rect width="12" height="12" x="405" y="150" class="named"><title>0x00437820 ExplosionFX (35 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="150" class="named"><title>0x00437850 LaraLocation (36 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="150" class="named"><title>0x00437880 LaraLocationPad (26 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="150" class="todo"><title>0x004378a0 GhostTrap (130 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="150" class="named"><title>0x004378a0 GhostTrap (130 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="150" class="todo"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="150" class="named"><title>0x004379e0 lara_hands_free (10 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="150" class="named"><title>0x004379f0 draw_right_gun (67 bytes)</title></rect>
@@ -2543,7 +2543,7 @@
 <rect width="7.01" height="7.17" x="601.37" y="266.26" class="todo"><title>0x00418f10 ClearCutSceneCamera (130 bytes)</title></rect>
 <rect width="7.01" height="7.17" x="611.38" y="266.26" class="todo"><title>0x00423f60 lara_col_poleup (130 bytes)</title></rect>
 <rect width="7.01" height="7.17" x="621.40" y="266.26" class="named"><title>0x004288d0 lara_col_fastdive (130 bytes)</title></rect>
-<rect width="7.01" height="7.17" x="631.41" y="266.26" class="todo"><title>0x004378a0 GhostTrap (130 bytes)</title></rect>
+<rect width="7.01" height="7.17" x="631.41" y="266.26" class="named"><title>0x004378a0 GhostTrap (130 bytes)</title></rect>
 <rect width="7.01" height="7.17" x="641.42" y="266.26" class="todo"><title>0x00469b90 InitialiseEnemyJeep (130 bytes)</title></rect>
 <rect width="6.96" height="7.17" x="651.44" y="266.26" class="named"><title>0x00437c20 swap_meshes_with_meshswap3 (129 bytes)</title></rect>
 <rect width="6.91" height="7.17" x="661.40" y="266.26" class="todo"><title>0x00405f20 InitialiseGuide (128 bytes)</title></rect>
