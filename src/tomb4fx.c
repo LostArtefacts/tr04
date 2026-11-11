@@ -53,6 +53,45 @@ void keep_those_fires_burning(void)
     }
 }
 
+void TriggerGlobalFireSmoke(void)
+{
+    FIRE_SPARKS *sptr;
+    sint32 size;
+
+    sptr = &fire_spark[GetFreeFireSpark()];
+    sptr->On = 1;
+    sptr->sR = 0;
+    sptr->sG = 0;
+    sptr->sB = 0;
+    sptr->dR = 32;
+    sptr->dG = 32;
+    sptr->dB = 32;
+    sptr->ColFadeSpeed = (GetRandomControl() & 7) + 32;
+    sptr->FadeToBlack = 16;
+    sptr->sLife = sptr->Life = (GetRandomControl() & 0xF) + 57;
+    sptr->x = (GetRandomControl() & 0xF) - 8;
+    sptr->y = -256 - (GetRandomControl() & 0x7F);
+    sptr->z = (GetRandomControl() & 0xF) - 8;
+    sptr->Xvel = (GetRandomControl() & 0xFF) - 128;
+    sptr->Yvel = -16 - (GetRandomControl() & 0xF);
+    sptr->Zvel = (GetRandomControl() & 0xFF) - 128;
+    sptr->Friction = 4;
+    if (GetRandomControl() & 1) {
+        sptr->Flags = 16;
+        sptr->RotAng = GetRandomControl() & 0xFFF;
+        if (GetRandomControl() & 1)
+            sptr->RotAdd = -16 - (GetRandomControl() & 0xF);
+        else
+            sptr->RotAdd = (GetRandomControl() & 0xF) + 16;
+    } else
+        sptr->Flags = 0;
+    sptr->Gravity = -16 - (GetRandomControl() & 0xF);
+    sptr->MaxYvel = -8 - (GetRandomControl() & 7);
+    size = (GetRandomControl() & 0x7F) + 128;
+    sptr->Size = sptr->sSize = size >> 2;
+    sptr->dSize = size;
+}
+
 void TriggerGlobalFireFlame(void)
 {
     FIRE_SPARKS *sptr;
