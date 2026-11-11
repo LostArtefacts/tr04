@@ -842,6 +842,21 @@ void lara_as_fastfall(ITEM_INFO *item, COLL_INFO *coll)
         SoundEffect(30, &item->pos, 0);
 }
 
+void lara_as_hang(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.IsClimbing = 0;
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_STOP;
+        return;
+    }
+    if (input & IN_LOOK)
+        LookUpDown();
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    camera.target_angle = 0;
+    camera.target_elevation = -10920;
+}
+
 void lara_as_hangleft(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->enable_spaz = 0;
