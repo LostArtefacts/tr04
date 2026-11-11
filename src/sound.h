@@ -4,7 +4,9 @@
 #include "3dglodef.h"
 
 enum sfx_options {
-    SFX_ALWAYS = 2
+    SFX_WATER = 1,
+    SFX_ALWAYS = 2,
+    SFX_SETPITCH = 4
 };
 
 #define SFX_LARA_NO 2
@@ -36,7 +38,7 @@ void SOUND_Stop(void);
 void SOUND_Init(void);
 void SayNo(void);
 sint32 SoundEffect(sint32 sfx, PHD_3DPOS *pos, sint32 flags);
-void nullsub_1(sint32 n);
+void nullsub_1();
 
 extern SAMPLE_INFO *sample_infos;
 extern SoundSlot LaSlot[32];

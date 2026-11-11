@@ -948,7 +948,7 @@ address,size,name,symbol
 0x0045f110,132,InitTarget,_InitTarget
 0x0045f1a0,31,ClearFootPrints,_ClearFootPrints
 0x0045f1c0,34,reset_cutseq_vars,_reset_cutseq_vars
-0x0045f1f0,1497,SoundEffect,_SoundEffect
+0x0045f1f0,1524,SoundEffect,_SoundEffect
 0x0045f7f0,365,GetPanVolume,_GetPanVolume
 0x0045f960,170,Func45f960,
 0x0045fa10,96,StopSoundEffect,_StopSoundEffect

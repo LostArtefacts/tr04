@@ -5,6 +5,10 @@
 
 #define WALL_SHIFT 10
 
+enum room_flags {
+    ROOM_UNDERWATER = 1
+};
+
 typedef struct floor_info {
     uint16 index;
     uint16 fx:4;
