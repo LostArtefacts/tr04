@@ -42,7 +42,7 @@ void phd_PushMatrix(void);
 void phd_PushUnitMatrix(void);
 void Func490320(void);
 sint32 phd_TranslateRel(sint32 x, sint32 y, sint32 z);
-void phd_RotX(sint16 angle);
+void phd_RotX(PHD_ANGLE rx);
 void phd_RotY(sint16 angle);
 void phd_RotZ(sint16 angle);
 void phd_RotYXZpack(sint32 angles);
