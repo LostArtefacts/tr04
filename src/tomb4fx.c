@@ -275,6 +275,44 @@ void TriggerGunSmoke(sint32 x, sint32 y, sint32 z, sint32 xVel, sint32 yVel, sin
     sptr->mirror = (gfLevelFlags & GF_MIRROR) && lara_item->room_number == gfMirrorRoom;
 }
 
+void TriggerShatterSmoke(sint32 x, sint32 y, sint32 z)
+{
+    SMOKE_SPARKS *sptr;
+    sint32 size;
+
+    sptr = &smoke_spark[GetFreeSmokeSpark()];
+    sptr->On = 1;
+    sptr->sShade = 0;
+    sptr->dShade = (GetRandomControl() & 0x1F) + 64;
+    sptr->ColFadeSpeed = 4;
+    sptr->FadeToBlack = 24 - (GetRandomControl() & 7);
+    sptr->sLife = sptr->Life = (GetRandomControl() & 7) + 48;
+    sptr->TransType = 2;
+    sptr->x = (GetRandomControl() & 0x1F) + x - 16;
+    sptr->y = (GetRandomControl() & 0x1F) + y - 16;
+    sptr->z = (GetRandomControl() & 0x1F) + z - 16;
+    sptr->Xvel = 2 * (GetRandomControl() & 0x1FF) - 512;
+    sptr->Yvel = 2 * (GetRandomControl() & 0x1FF) - 512;
+    sptr->Zvel = 2 * (GetRandomControl() & 0x1FF) - 512;
+    sptr->Friction = 7;
+    if (GetRandomControl() & 1) {
+        sptr->Flags = 16;
+        sptr->RotAng = GetRandomControl() & 0xFFF;
+        if (GetRandomControl() & 1)
+            sptr->RotAdd = -64 - (GetRandomControl() & 0x3F);
+        else
+            sptr->RotAdd = (GetRandomControl() & 0x3F) + 64;
+    } else if (room[lara_item->room_number].flags & ROOM_NOT_INSIDE)
+        sptr->Flags = 256;
+    else
+        sptr->Flags = 0;
+    sptr->Gravity = -4 - (GetRandomControl() & 3);
+    sptr->MaxYvel = -4 - (GetRandomControl() & 3);
+    size = (GetRandomControl() & 0x3F) + 64;
+    sptr->Size = sptr->sSize = size >> 3;
+    sptr->dSize = size;
+}
+
 sint32 GetFreeBlood(void)
 {
     BLOOD_STRUCT *bptr;
