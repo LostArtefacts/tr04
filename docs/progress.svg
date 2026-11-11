@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="125.07" height="12" x="0" y="0" class="named"><title>565 · 36.57%</title></rect>
-<rect width="0.44" height="12" x="125.07" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="125.51" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="211.84" height="12" x="130.16" y="0" class="todo"><title>957 · 61.94%</title></rect>
+<rect width="125.29" height="12" x="0" y="0" class="named"><title>566 · 36.63%</title></rect>
+<rect width="0.44" height="12" x="125.29" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="125.73" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="211.62" height="12" x="130.38" y="0" class="todo"><title>956 · 61.88%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">36.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">565</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">957</tspan></text>
+<text text-anchor="end" x="522" y="7.50">36.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">566</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">956</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.17" height="12" x="0" y="0" class="named"><title>100 KB · 16.13%</title></rect>
-<rect width="0.12" height="12" x="55.17" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="55.29" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="279.46" height="12" x="62.54" y="0" class="todo"><title>507 KB · 81.71%</title></rect>
+<rect width="55.19" height="12" x="0" y="0" class="named"><title>100 KB · 16.14%</title></rect>
+<rect width="0.12" height="12" x="55.19" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="55.31" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="279.44" height="12" x="62.56" y="0" class="todo"><title>507 KB · 81.71%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">100 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">507 KB</tspan></text>
@@ -1116,7 +1116,7 @@
 <rect width="12" height="12" x="705" y="300" class="named"><title>0x0046b820 fifth_cutseq_end (29 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="300" class="named"><title>0x0046b840 sixth_cutseq_init (9 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="300" class="todo"><title>0x0046b850 sixth_cutseq_control (46 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="315" class="todo"><title>0x0046b880 sixth_cutseq_end (29 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="315" class="named"><title>0x0046b880 sixth_cutseq_end (29 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="315" class="todo"><title>0x0046b8a0 seventh_cutseq_init (28 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="315" class="todo"><title>0x0046b8c0 seventh_control (46 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="315" class="todo"><title>0x0046b8f0 eighth_control (46 bytes)</title></rect>
@@ -3011,7 +3011,7 @@
 <rect width="3.54" height="3.16" x="681.88" y="416.15" class="named"><title>0x00427580 lara_as_special (29 bytes)</title></rect>
 <rect width="3.54" height="3.16" x="681.88" y="422.31" class="named"><title>0x00436320 ClearDynamics (29 bytes)</title></rect>
 <rect width="3.54" height="3.16" x="681.88" y="428.47" class="named"><title>0x0046b820 fifth_cutseq_end (29 bytes)</title></rect>
-<rect width="3.54" height="3.16" x="681.88" y="434.64" class="todo"><title>0x0046b880 sixth_cutseq_end (29 bytes)</title></rect>
+<rect width="3.54" height="3.16" x="681.88" y="434.64" class="named"><title>0x0046b880 sixth_cutseq_end (29 bytes)</title></rect>
 <rect width="3.54" height="3.05" x="681.88" y="440.80" class="named"><title>0x00425630 lara_as_reach (28 bytes)</title></rect>
 <rect width="3.54" height="3.05" x="681.88" y="446.85" class="named"><title>0x004377b0 PoseidonSFX (28 bytes)</title></rect>
 <rect width="3.54" height="3.05" x="681.88" y="452.90" class="todo"><title>0x0046b8a0 seventh_cutseq_init (28 bytes)</title></rect>
