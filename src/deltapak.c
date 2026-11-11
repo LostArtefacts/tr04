@@ -428,6 +428,34 @@ void trigger_weapon_dynamics(sint32 left_or_right)
     TriggerDynamic(pos.x, pos.y, pos.z, 10, (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 128, (GetRandomControl() & 0x3F));
 }
 
+void deal_with_pistols(void)
+{
+    PHD_VECTOR pos;
+
+    if (SmokeCountL) {
+        pos.x = 4;
+        pos.y = 128;
+        pos.z = 40;
+        GetLaraJointPos(&pos, 14);
+        TriggerGunSmoke(pos.x, pos.y, pos.z, 0, 0, 0, 0, SmokeWeapon, SmokeCountL);
+    }
+    if (SmokeCountR) {
+        pos.x = -16;
+        pos.y = 128;
+        pos.z = 40;
+        GetLaraJointPos(&pos, 11);
+        TriggerGunSmoke(pos.x, pos.y, pos.z, 0, 0, 0, 0, SmokeWeapon, SmokeCountR);
+    }
+    if (lara.left_arm.flash_gun) {
+        lara.left_arm.flash_gun--;
+        trigger_weapon_dynamics(14);
+    }
+    if (lara.right_arm.flash_gun) {
+        lara.right_arm.flash_gun--;
+        trigger_weapon_dynamics(11);
+    }
+}
+
 void cutseq_kill_item(sint32 num)
 {
     ITEM_INFO *item;

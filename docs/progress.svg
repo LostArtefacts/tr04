@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="139.50" height="12" x="0" y="0" class="named"><title>631 · 40.79%</title></rect>
-<rect width="0.44" height="12" x="139.50" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="139.94" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="197.42" height="12" x="144.58" y="0" class="todo"><title>893 · 57.72%</title></rect>
+<rect width="139.72" height="12" x="0" y="0" class="named"><title>632 · 40.85%</title></rect>
+<rect width="0.44" height="12" x="139.72" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="140.16" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="197.20" height="12" x="144.80" y="0" class="todo"><title>892 · 57.66%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">40.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">631</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">893</tspan></text>
+<text text-anchor="end" x="522" y="7.50">41.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">632</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">892</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="57.18" height="12" x="0" y="0" class="named"><title>104 KB · 16.72%</title></rect>
-<rect width="0.12" height="12" x="57.18" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="57.30" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="277.45" height="12" x="64.55" y="0" class="todo"><title>503 KB · 81.13%</title></rect>
+<rect width="57.31" height="12" x="0" y="0" class="named"><title>104 KB · 16.76%</title></rect>
+<rect width="0.12" height="12" x="57.31" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="57.43" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="277.32" height="12" x="64.68" y="0" class="todo"><title>503 KB · 81.09%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">104 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">503 KB</tspan></text>
@@ -1170,7 +1170,7 @@
 <rect width="12" height="12" x="15" y="330" class="named"><title>0x0046ca50 do_key_meshswap (34 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="330" class="named"><title>0x0046ca80 cutseq_shoot_pistols (47 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="330" class="named"><title>0x0046cab0 trigger_weapon_dynamics (137 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="330" class="todo"><title>0x0046cb40 deal_with_pistols (241 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="330" class="named"><title>0x0046cb40 deal_with_pistols (241 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="330" class="named"><title>0x0046cc40 cutseq_kill_item (109 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="330" class="named"><title>0x0046ccb0 cutseq_restore_item (109 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="330" class="todo"><title>0x0046cd20 Load_and_Init_Cutseq (260 bytes)</title></rect>
@@ -2262,7 +2262,7 @@
 <rect width="9.56" height="9.82" x="470.53" y="275.39" class="named"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
 <rect width="9.56" height="9.78" x="470.53" y="288.21" class="named"><title>0x00462cb0 JumpSwitchCollision (242 bytes)</title></rect>
 <rect width="9.56" height="9.74" x="470.53" y="300.99" class="named"><title>0x00455cf0 SmashObject (241 bytes)</title></rect>
-<rect width="9.56" height="9.74" x="470.53" y="313.73" class="todo"><title>0x0046cb40 deal_with_pistols (241 bytes)</title></rect>
+<rect width="9.56" height="9.74" x="470.53" y="313.73" class="named"><title>0x0046cb40 deal_with_pistols (241 bytes)</title></rect>
 <rect width="9.56" height="9.70" x="470.53" y="326.47" class="todo"><title>0x0040e2d0 TriggerScarab (240 bytes)</title></rect>
 <rect width="9.56" height="9.70" x="470.53" y="339.17" class="named"><title>0x00442c40 SameZone (240 bytes)</title></rect>
 <rect width="9.56" height="9.62" x="470.53" y="351.87" class="todo"><title>0x00410130 TriggerSethSparks (238 bytes)</title></rect>
