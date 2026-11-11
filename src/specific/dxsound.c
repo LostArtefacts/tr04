@@ -127,3 +127,14 @@ uint8 DSIsChannelPlaying(sint32 num)
     }
     return 0;
 }
+
+sint32 DSGetFreeChannel(void)
+{
+    int i;
+
+    for (i = 0; i < 32; i++) {
+        if (!DSIsChannelPlaying(i))
+            return i;
+    }
+    return -1;
+}
