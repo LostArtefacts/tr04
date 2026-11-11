@@ -17,3 +17,11 @@ void REG_WriteLong(char *SubKeyName, uint32 value)
 {
     RegSetValueEx(phkResult, SubKeyName, 0, REG_DWORD, (CONST BYTE *)&value, sizeof(uint32));
 }
+
+void REG_WriteBool(char *SubKeyName, uint8 value)
+{
+    uint32 Lvalue;
+
+    Lvalue = (uint32)value;
+    RegSetValueEx(phkResult, SubKeyName, 0, REG_DWORD, (CONST BYTE *)&Lvalue, sizeof(uint32));
+}
