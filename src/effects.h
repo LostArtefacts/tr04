@@ -23,6 +23,13 @@ extern sint32 FogTableColor[28];
 
 void nullsub_1();
 
+extern OBJECT_VECTOR *sound_effects;
+extern sint32 number_sound_effects;
+extern void (*effect_routines[47])(ITEM_INFO *item);
+
+#define UNFLIPFLAG 0x80
+#define FLIPFLAG 0x40
+
 void turn180_effect(ITEM_INFO *item);
 void Richochet(GAME_VECTOR *pos);
 void ExplosionFX(ITEM_INFO *item);
@@ -57,6 +64,7 @@ void RubbleFX(ITEM_INFO *item);
 void GhostTrap(ITEM_INFO *item);
 void SetFog(ITEM_INFO *item);
 void WaterFall(sint16 item_number);
+void SoundEffects(void);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;

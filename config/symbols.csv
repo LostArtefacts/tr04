@@ -950,7 +950,7 @@ address,size,name,symbol
 0x0045f1c0,34,reset_cutseq_vars,_reset_cutseq_vars
 0x0045f1f0,1524,SoundEffect,_SoundEffect
 0x0045f7f0,365,GetPanVolume,_GetPanVolume
-0x0045f960,170,Func45f960,
+0x0045f960,170,Func45f960,_Func45f960
 0x0045fa10,96,StopSoundEffect,_StopSoundEffect
 0x0045fa70,36,SOUND_Stop,_SOUND_Stop
 0x0045faa0,42,SOUND_Init,_SOUND_Init
@@ -1991,6 +1991,7 @@ address,size,name,symbol
 0x004ad9c4,4,lara_coll,_lara_coll
 0x004add78,56,SkinJoints,_SkinJoints
 0x004ade1c,112,FogTableColor,_FogTableColor
+0x004ade8c,188,effect_routines,_effect_routines
 0x004adf48,14,footsounds,_footsounds
 0x004adf58,2,ScreenFadeSpeed,_ScreenFadeSpeed
 0x004adf5c,4,next_fire_spark,_next_fire_spark

@@ -40,6 +40,24 @@ sint32 ItemNearLara(PHD_3DPOS *pos, sint32 distance)
     return 1;
 }
 
+void SoundEffects(void)
+{
+    sint32 i;
+    OBJECT_VECTOR *sound;
+
+    sound = sound_effects;
+    for (i = number_sound_effects; i > 0; i--, sound++) {
+        if (!flip_status && (sound->flags & UNFLIPFLAG) == 0)
+            continue;
+        else if (flip_status && (sound->flags & FLIPFLAG) == 0)
+            continue;
+        SoundEffect(sound->data, (PHD_3DPOS *)&sound->x, 0);
+    }
+    if (flipeffect != -1)
+        (*effect_routines[flipeffect])(NULL);
+    Func45f960();
+}
+
 void Richochet(GAME_VECTOR *pos)
 {
     sint32 angle;

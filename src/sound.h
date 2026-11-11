@@ -40,6 +40,7 @@ typedef struct sound_slot {
 } SoundSlot;
 
 void GetPanVolume(SoundSlot *slot);
+void Func45f960(void);
 void StopSoundEffect(sint32 sfx);
 void SOUND_Stop(void);
 void SOUND_Init(void);
