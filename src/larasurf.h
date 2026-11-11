@@ -11,5 +11,6 @@ void LaraSurfaceCollision(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_surfswim(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_surfback(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_surfleft(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_surfright(ITEM_INFO *item, COLL_INFO *coll);
 
 #endif
