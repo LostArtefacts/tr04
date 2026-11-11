@@ -251,3 +251,49 @@ void ControlMapper(sint16 item_number)
     }
     AnimateItem(item);
 }
+
+void TriggerRopeFlame(PHD_VECTOR *pos)
+{
+    SPARKS *sptr;
+    sint32 size;
+
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sR = 255;
+    sptr->sG = (GetRandomControl() & 0x1F) + 48;
+    sptr->sB = 48;
+    sptr->dR = (GetRandomControl() & 0x3F) - 64;
+    sptr->dG = (GetRandomControl() & 0x3F) + 0x80;
+    sptr->dB = 32;
+    sptr->ColFadeSpeed = (GetRandomControl() & 3) + 4;
+    sptr->FadeToBlack = 4;
+    sptr->sLife = sptr->Life = (GetRandomControl() & 3) + 24;
+    sptr->TransType = 2;
+    sptr->x = (GetRandomControl() & 0xF) + pos->x - 8;
+    sptr->y = pos->y;
+    sptr->z = (GetRandomControl() & 0xF) + pos->z - 8;
+    sptr->Xvel = (GetRandomControl() & 0xFF) - 128;
+    sptr->Zvel = (GetRandomControl() & 0xFF) - 128;
+    sptr->Friction = 5;
+    sptr->Flags = 538;
+    if (!(GetRandomControl() & 3))
+        sptr->Flags |= 0x20;
+    sptr->RotAng = GetRandomControl() & 0xFFF;
+    if (GetRandomControl() & 1)
+        sptr->RotAdd = -16 - (GetRandomControl() & 0xF);
+    else
+        sptr->RotAdd = (GetRandomControl() & 0xF) + 16;
+    if (GetRandomControl() & 0xF) {
+        sptr->Yvel = -24 - (GetRandomControl() & 0xF);
+        sptr->Gravity = -24 - (GetRandomControl() & 0x1F);
+        sptr->MaxYvel = -16 - (GetRandomControl() & 7);
+    } else {
+        sptr->Yvel = (GetRandomControl() & 0xF) + 24;
+        sptr->Gravity = (GetRandomControl() & 0x1F) + 24;
+        sptr->MaxYvel = 0;
+    }
+    sptr->Scalar = 2;
+    size = (GetRandomControl() & 0xF) + 96;
+    sptr->Size = sptr->sSize = size;
+    sptr->dSize = size >> 3;
+}

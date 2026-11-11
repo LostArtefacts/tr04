@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="119.83" height="12" x="0" y="0" class="named"><title>532 · 34.43%</title></rect>
-<rect width="0.45" height="12" x="119.83" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="120.28" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="222.99" height="12" x="125.01" y="0" class="todo"><title>990 · 64.08%</title></rect>
+<rect width="120.05" height="12" x="0" y="0" class="named"><title>533 · 34.50%</title></rect>
+<rect width="0.45" height="12" x="120.05" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="120.50" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="222.77" height="12" x="125.23" y="0" class="todo"><title>989 · 64.01%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">34.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">532</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">990</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">533</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">989</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="51.93" height="12" x="0" y="0" class="named"><title>93 KB · 14.92%</title></rect>
-<rect width="0.12" height="12" x="51.93" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="52.05" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="288.57" height="12" x="59.43" y="0" class="todo"><title>514 KB · 82.92%</title></rect>
+<rect width="52.15" height="12" x="0" y="0" class="named"><title>93 KB · 14.99%</title></rect>
+<rect width="0.12" height="12" x="52.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="52.27" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="288.35" height="12" x="59.65" y="0" class="todo"><title>514 KB · 82.86%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">15.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">93 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">514 KB</tspan></text>
@@ -948,7 +948,7 @@
 <rect width="12" height="12" x="435" y="255" class="todo"><title>0x00456420 AnimateWaterfalls (182 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="255" class="named"><title>0x004564e0 ControlWaterfall (148 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="255" class="named"><title>0x00456580 ControlMapper (509 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="255" class="todo"><title>0x00456780 TriggerRopeFlame (390 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="255" class="named"><title>0x00456780 TriggerRopeFlame (390 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="255" class="todo"><title>0x00456910 BurningRopeCollision (425 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="255" class="todo"><title>0x00456ac0 ControlBurningRope (521 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="255" class="todo"><title>0x00456cd0 ControlLightningConductor (1048 bytes)</title></rect>
@@ -2070,7 +2070,7 @@
 <rect width="12.47" height="12.19" x="413.61" y="299.09" class="named"><title>0x00434fa0 TriggerExplosionSmoke (393 bytes)</title></rect>
 <rect width="12.47" height="12.19" x="413.61" y="314.28" class="todo"><title>0x0043bd80 DrawThreeDeeObject2D (393 bytes)</title></rect>
 <rect width="12.47" height="12.09" x="413.61" y="329.47" class="todo"><title>0x0042ae50 draw_shotgun (390 bytes)</title></rect>
-<rect width="12.47" height="12.09" x="413.61" y="344.56" class="todo"><title>0x00456780 TriggerRopeFlame (390 bytes)</title></rect>
+<rect width="12.47" height="12.09" x="413.61" y="344.56" class="named"><title>0x00456780 TriggerRopeFlame (390 bytes)</title></rect>
 <rect width="12.47" height="12.06" x="413.61" y="359.65" class="todo"><title>0x00410220 TriggerSethFlame (389 bytes)</title></rect>
 <rect width="12.47" height="12.06" x="413.61" y="374.72" class="named"><title>0x004139f0 CeilingTrapDoorCollision (389 bytes)</title></rect>
 <rect width="12.47" height="12.06" x="413.61" y="389.78" class="todo"><title>0x00415750 ControlJobySpike (389 bytes)</title></rect>

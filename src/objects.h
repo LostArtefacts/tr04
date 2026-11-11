@@ -17,5 +17,6 @@ void ControlAnimatingSlots(sint16 item_number);
 void ControlWaterfall(sint16 item_number);
 void ControlTriggerTriggerer(sint16 item_number);
 void ControlMapper(sint16 item_number);
+void TriggerRopeFlame(PHD_VECTOR *pos);
 
 #endif
