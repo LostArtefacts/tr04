@@ -102,3 +102,35 @@ void InitialisePickUpDisplay(void)
     PickupVel = 0;
     CurrentPickup = 0;
 }
+
+void DrawPickups(void)
+{
+    DISPLAYPU *pu;
+    sint32 lp;
+
+    pu = &pickups[CurrentPickup];
+    if (pu->life > 0) {
+        if (PickupX > 0)
+            PickupX += -PickupX >> 3;
+        else
+            pu->life--;
+    } else if (!pu->life) {
+        if (PickupX < 128) {
+            if (PickupVel < 16)
+                PickupVel++;
+            PickupX += PickupVel;
+        } else {
+            pu->life = -1;
+            PickupVel = 0;
+        }
+    } else {
+        for (lp = 0; lp < 8; lp++) {
+            if (pickups[CurrentPickup].life > 0)
+                break;
+            CurrentPickup++;
+            CurrentPickup &= 7;
+        }
+        if (lp == 8)
+            CurrentPickup = 0;
+    }
+}
