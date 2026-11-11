@@ -18,3 +18,8 @@ void SetCullCW(void)
 {
     IsVisible = _Visible;
 }
+
+void SetCullCCW(void)
+{
+    IsVisible = _NVisible;
+}
