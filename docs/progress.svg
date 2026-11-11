@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="139.72" height="12" x="0" y="0" class="named"><title>632 · 40.85%</title></rect>
-<rect width="0.44" height="12" x="139.72" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="140.16" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="197.20" height="12" x="144.80" y="0" class="todo"><title>892 · 57.66%</title></rect>
+<rect width="139.94" height="12" x="0" y="0" class="named"><title>633 · 40.92%</title></rect>
+<rect width="0.44" height="12" x="139.94" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="140.38" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="196.98" height="12" x="145.02" y="0" class="todo"><title>891 · 57.60%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">41.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">632</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">892</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">633</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">891</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="57.31" height="12" x="0" y="0" class="named"><title>104 KB · 16.76%</title></rect>
-<rect width="0.12" height="12" x="57.31" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="57.43" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="277.32" height="12" x="64.68" y="0" class="todo"><title>503 KB · 81.09%</title></rect>
+<rect width="57.43" height="12" x="0" y="0" class="named"><title>104 KB · 16.79%</title></rect>
+<rect width="0.12" height="12" x="57.43" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="57.55" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="277.20" height="12" x="64.80" y="0" class="todo"><title>503 KB · 81.05%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">104 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">503 KB</tspan></text>
@@ -1110,7 +1110,7 @@
 <rect width="12" height="12" x="615" y="300" class="todo"><title>0x0046b600 CalculateObjectLightingLaraCutSeq (198 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="300" class="named"><title>0x0046b6d0 third_cutseq_control (18 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="300" class="named"><title>0x0046b6f0 fourth_cutseq_init (30 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="300" class="todo"><title>0x0046b710 fourth_cutseq_control (208 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="300" class="named"><title>0x0046b710 fourth_cutseq_control (208 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="300" class="named"><title>0x0046b7e0 fourth_cutseq_end (23 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="300" class="named"><title>0x0046b800 fifth_cutseq_control (18 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="300" class="named"><title>0x0046b820 fifth_cutseq_end (29 bytes)</title></rect>
@@ -2317,7 +2317,7 @@
 <rect width="9.03" height="8.90" x="483.10" y="429.30" class="todo"><title>0x0040e6b0 InitialiseScarabGenerator (208 bytes)</title></rect>
 <rect width="9.03" height="8.90" x="483.10" y="441.20" class="todo"><title>0x00448070 AlignLaraPosition (208 bytes)</title></rect>
 <rect width="9.03" height="8.90" x="483.10" y="453.10" class="named"><title>0x00457650 RegeneratePickups (208 bytes)</title></rect>
-<rect width="8.64" height="9.30" x="495.13" y="210.62" class="todo"><title>0x0046b710 fourth_cutseq_control (208 bytes)</title></rect>
+<rect width="8.64" height="9.30" x="495.13" y="210.62" class="named"><title>0x0046b710 fourth_cutseq_control (208 bytes)</title></rect>
 <rect width="8.64" height="9.30" x="495.13" y="222.92" class="named"><title>0x004777e0 ReadJoystick (208 bytes)</title></rect>
 <rect width="8.64" height="9.25" x="495.13" y="235.22" class="named"><title>0x0040af80 Targetable (207 bytes)</title></rect>
 <rect width="8.64" height="9.25" x="495.13" y="247.47" class="named"><title>0x00425480 lara_as_forwardjump (207 bytes)</title></rect>

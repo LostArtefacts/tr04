@@ -37,6 +37,30 @@ void fourth_cutseq_init(void)
     draw_pistol_meshes(1);
 }
 
+void fourth_cutseq_control(void)
+{
+    sint32 frame;
+
+    frame = GLOBAL_cutseq_frame;
+    if (frame == 309) {
+        undraw_pistol_mesh_left(1);
+        undraw_pistol_mesh_right(1);
+        lara.holster = old_lara_holster;
+    } else {
+        if (frame == 51 || frame == 68)
+            cutseq_shoot_pistols(11);
+        if (frame == 51 || frame == 64 || frame == 73)
+            cutseq_shoot_pistols(14);
+        if (frame == 108 || frame == 114 || frame == 120 || frame == 128 || frame == 134 || frame == 141 || frame == 147 || frame == 158) {
+            cutseq_shoot_pistols(11);
+            cutseq_shoot_pistols(14);
+        }
+    }
+    deal_with_pistols();
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 8, 1, TROOPS, troop_chat_ranges4);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void fourth_cutseq_end(void)
 {
     trigger_item_in_room(101, ANIMATING9);

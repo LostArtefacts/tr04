@@ -109,5 +109,6 @@ void fifteen_init(void);
 void sixteen_init(void);
 void cutseq_shoot_pistols(sint32 left_or_right);
 void deal_with_pistols(void);
+void fourth_cutseq_control(void);
 
 #endif
