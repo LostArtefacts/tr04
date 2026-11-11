@@ -252,3 +252,10 @@ void lara_col_climbright(ITEM_INFO *item, COLL_INFO *coll)
         LaraDoClimbLeftRight(item, coll, res, shift);
     }
 }
+
+void lara_as_climbing(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    camera.target_elevation = 5460;
+}

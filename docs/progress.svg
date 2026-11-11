@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="24.09" height="12" x="0" y="0" class="named"><title>101 · 6.51%</title></rect>
-<rect width="0.24" height="12" x="24.09" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="0.72" height="12" x="24.33" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
-<rect width="344.95" height="12" x="25.05" y="0" class="todo"><title>1446 · 93.23%</title></rect>
+<rect width="24.33" height="12" x="0" y="0" class="named"><title>102 · 6.58%</title></rect>
+<rect width="0.24" height="12" x="24.33" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="0.72" height="12" x="24.57" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
+<rect width="344.71" height="12" x="25.29" y="0" class="todo"><title>1445 · 93.17%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">6.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">101</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1446</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">102</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1445</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="9.21" height="12" x="0" y="0" class="named"><title>15 KB · 2.49%</title></rect>
-<rect width="0.10" height="12" x="9.21" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="0.73" height="12" x="9.24" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
-<rect width="360.04" height="12" x="9.96" y="0" class="todo"><title>603 KB · 97.31%</title></rect>
+<rect width="9.22" height="12" x="0" y="0" class="named"><title>15 KB · 2.49%</title></rect>
+<rect width="0.10" height="12" x="9.22" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="0.73" height="12" x="9.25" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
+<rect width="360.02" height="12" x="9.98" y="0" class="todo"><title>603 KB · 97.30%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">2.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">15 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">603 KB</tspan></text>
@@ -471,7 +471,7 @@
 <rect width="12" height="12" x="30" y="120" class="todo"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="120" class="named"><title>0x0042d3d0 lara_as_climbright (54 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="120" class="named"><title>0x0042d410 lara_col_climbright (86 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="120" class="todo"><title>0x0042d470 lara_as_climbing (23 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="120" class="named"><title>0x0042d470 lara_as_climbing (23 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="120" class="todo"><title>0x0042d490 lara_col_climbing (329 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="120" class="todo"><title>0x0042d5e0 lara_as_climbdown (23 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="120" class="todo"><title>0x0042d600 lara_col_climbdown (409 bytes)</title></rect>
@@ -3039,7 +3039,7 @@
 <rect width="2.83" height="3.39" x="738.33" y="415.15" class="todo"><title>0x00439d40 SetFadeClip (24 bytes)</title></rect>
 <rect width="2.83" height="3.39" x="744.17" y="415.15" class="todo"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
 <rect width="3.20" height="2.88" x="685.21" y="421.54" class="todo"><title>0x004278b0 lara_as_controlledl (23 bytes)</title></rect>
-<rect width="3.20" height="2.88" x="685.21" y="427.42" class="todo"><title>0x0042d470 lara_as_climbing (23 bytes)</title></rect>
+<rect width="3.20" height="2.88" x="685.21" y="427.42" class="named"><title>0x0042d470 lara_as_climbing (23 bytes)</title></rect>
 <rect width="3.20" height="2.88" x="685.21" y="433.31" class="todo"><title>0x0042d5e0 lara_as_climbdown (23 bytes)</title></rect>
 <rect width="3.20" height="2.88" x="685.21" y="439.19" class="todo"><title>0x00437cc0 invisibility_off (23 bytes)</title></rect>
 <rect width="3.20" height="2.88" x="685.21" y="445.08" class="todo"><title>0x0046b7e0 fourth_cutseq_end (23 bytes)</title></rect>
