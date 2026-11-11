@@ -13,6 +13,7 @@ enum sfx_options {
 #define SFX_DEFAULT 0
 
 #define SFX_LARA_NO 2
+#define SFX_METAL_SCRAPE_LOOP1 12
 #define SFX_LARA_NO_FRENCH 348
 #define SFX_LARA_NO_JAPAN 349
 #define SFX_FOOTSTEPS_MUD 288
