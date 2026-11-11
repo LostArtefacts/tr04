@@ -104,3 +104,10 @@ void sixteen_end(void)
     untrigger_item_in_room(177, AMBER_LIGHT);
     DelsHandyTeleportLara(61868, 0, 44994, -16060);
 }
+
+void seventeen_end(void)
+{
+    cutseq_restore_item(ANIMATING4);
+    cutseq_restore_item(JEAN_YVES);
+    DelsHandyTeleportLara(54706, -8192, 50470, 4514);
+}

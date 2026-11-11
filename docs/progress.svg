@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="127.28" height="12" x="0" y="0" class="named"><title>575 · 37.22%</title></rect>
-<rect width="0.44" height="12" x="127.28" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="127.72" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="209.63" height="12" x="132.37" y="0" class="todo"><title>947 · 61.29%</title></rect>
+<rect width="127.50" height="12" x="0" y="0" class="named"><title>576 · 37.28%</title></rect>
+<rect width="0.44" height="12" x="127.50" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="127.95" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="209.41" height="12" x="132.59" y="0" class="todo"><title>946 · 61.23%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">37.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">575</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">947</tspan></text>
+<text text-anchor="end" x="522" y="7.50">37.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">576</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">946</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.34" height="12" x="0" y="0" class="named"><title>100 KB · 16.18%</title></rect>
-<rect width="0.12" height="12" x="55.34" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="55.46" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="279.29" height="12" x="62.71" y="0" class="todo"><title>506 KB · 81.66%</title></rect>
+<rect width="55.37" height="12" x="0" y="0" class="named"><title>100 KB · 16.19%</title></rect>
+<rect width="0.12" height="12" x="55.37" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="55.49" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="279.27" height="12" x="62.73" y="0" class="todo"><title>506 KB · 81.66%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">100 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">506 KB</tspan></text>
@@ -1139,7 +1139,7 @@
 <rect width="12" height="12" x="300" y="315" class="todo"><title>0x0046c250 sixteen_control (353 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="315" class="named"><title>0x0046c3c0 sixteen_end (71 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="315" class="todo"><title>0x0046c410 seventeen_control (36 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="315" class="todo"><title>0x0046c440 seventeen_end (46 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="315" class="named"><title>0x0046c440 seventeen_end (46 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="315" class="todo"><title>0x0046c470 eighteen_init (9 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="315" class="todo"><title>0x0046c480 eighteen_control (36 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="315" class="todo"><title>0x0046c4b0 eighteen_end (36 bytes)</title></rect>
@@ -2915,7 +2915,7 @@
 <rect width="4.11" height="4.33" x="654.86" y="384.74" class="todo"><title>0x0046b850 sixth_cutseq_control (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="392.07" class="todo"><title>0x0046b8c0 seventh_control (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="399.40" class="todo"><title>0x0046b8f0 eighth_control (46 bytes)</title></rect>
-<rect width="4.11" height="4.33" x="654.86" y="406.73" class="todo"><title>0x0046c440 seventeen_end (46 bytes)</title></rect>
+<rect width="4.11" height="4.33" x="654.86" y="406.73" class="named"><title>0x0046c440 seventeen_end (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="414.06" class="todo"><title>0x0046c530 nineteen_end (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="421.39" class="todo"><title>0x0046c590 twenty_end (46 bytes)</title></rect>
 <rect width="4.11" height="4.33" x="654.86" y="428.72" class="todo"><title>0x0046d450 find_a_fucking_item (46 bytes)</title></rect>
