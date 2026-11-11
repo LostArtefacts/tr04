@@ -35,3 +35,8 @@ void fifth_cutseq_end(void)
 {
     DelsHandyTeleportLara(100938, 768, 58040, -32552);
 }
+
+void sixth_cutseq_init(void)
+{
+    init_voncroy_meshbits(1);
+}
