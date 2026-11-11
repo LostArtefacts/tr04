@@ -68,7 +68,7 @@ address,size,name,symbol
 0x0040a4c0,814,ControlPlanetEffect,_ControlPlanetEffect
 0x0040a7f0,314,DrawPlanetEffect,_DrawPlanetEffect
 0x0040a930,147,InitialiseMummy,_InitialiseMummy
-0x0040a9d0,1197,MummyControl,_MummyControl
+0x0040a9d0,1244,MummyControl,_MummyControl
 0x0040aeb0,193,TargetVisible,_TargetVisible
 0x0040af80,207,Targetable,_Targetable
 0x0040b050,5,GunShot,_GunShot
@@ -1974,6 +1974,8 @@ address,size,name,symbol
 0x004a9248,4,joyGetDevCapsA,__imp__joyGetDevCapsA@12
 0x004a924c,4,joyGetPosEx,__imp__joyGetPosEx@8
 0x004ad0a8,16,bat_bite,_bat_bite
+0x004ad1e8,16,left_hand,_left_hand
+0x004ad1f8,16,right_hand,_right_hand
 0x004ad6c0,16,wildboar_bite,_wildboar_bite
 0x004ad6d0,2,WraithSpeed,_WraithSpeed
 0x004ad7d4,4,GlobalAlpha,_GlobalAlpha

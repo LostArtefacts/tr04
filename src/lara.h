@@ -12,6 +12,18 @@ enum lara_gun_states {
     LG_FLARE
 };
 
+enum weapon_types {
+    WEAPON_NONE,
+    WEAPON_PISTOLS,
+    WEAPON_REVOLVER,
+    WEAPON_UZI,
+    WEAPON_SHOTGUN,
+    WEAPON_GRENADE,
+    WEAPON_CROSSBOW,
+    WEAPON_FLARE,
+    WEAPON_TORCH
+};
+
 enum lara_water_states {
     LW_ABOVE_WATER,
     LW_UNDERWATER,
