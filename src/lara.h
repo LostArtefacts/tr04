@@ -198,6 +198,10 @@ void GetLaraCollisionInfo(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraHitCeiling(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraDeflectEdge(ITEM_INFO *item, COLL_INFO *coll);
 sint32 TestLaraSlide(ITEM_INFO *item, COLL_INFO *coll);
+sint32 TestLaraVault(ITEM_INFO *item, COLL_INFO *coll);
+sint32 TestWall(ITEM_INFO *item, sint32 front, sint32 right, sint32 down);
+void LaraCollideStop(ITEM_INFO *item, COLL_INFO *coll);
+sint32 LaraFallen(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_dashdive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_hangturnl(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_hangturnr(ITEM_INFO *item, COLL_INFO *coll);
@@ -241,6 +245,7 @@ void lara_as_turn_r(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraTestClimbStance(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stepright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stepleft(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_dash(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
