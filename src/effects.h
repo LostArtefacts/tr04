@@ -22,6 +22,7 @@ void turn180_effect(ITEM_INFO *item);
 void ExplosionFX(ITEM_INFO *item);
 void lara_hands_free(ITEM_INFO *item);
 sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 direction, sint16 room_number);
+void shoot_right_gun(ITEM_INFO *item);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;

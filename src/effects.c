@@ -21,3 +21,8 @@ void lara_hands_free(ITEM_INFO *item)
 {
     lara.gun_status = LG_NO_ARMS;
 }
+
+void shoot_right_gun(ITEM_INFO *item)
+{
+    lara.right_arm.flash_gun = 3;
+}
