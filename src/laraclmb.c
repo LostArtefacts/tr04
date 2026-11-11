@@ -58,3 +58,61 @@ void lara_as_climbstnc(ITEM_INFO *item, COLL_INFO *coll)
         }
     }
 }
+
+void lara_col_climbstnc(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 result_r, result_l, shift_r, shift_l, ledge_r, ledge_l;
+
+    if (LaraCheckForLetGo(item, coll) || item->anim_number != ANIM_CLIMBSTNC)
+        return;
+    if (input & IN_FORWARD) {
+        if (item->goal_anim_state == AS_NULL)
+            return;
+        item->goal_anim_state = AS_CLIMBSTNC;
+        result_r = LaraTestClimbUpPos(item, coll->radius, coll->radius + 120, &shift_r, &ledge_r);
+        result_l = LaraTestClimbUpPos(item, coll->radius, -(coll->radius + 120), &shift_l, &ledge_l);
+        if (!result_r || !result_l)
+            return;
+        if (result_r < 0 || result_l < 0) {
+            if (ABS(ledge_l - ledge_r) > 120)
+                return;
+            item->goal_anim_state = AS_NULL;
+            item->pos.y_pos += (ledge_l + ledge_r) / 2 - 256;
+            return;
+        }
+        if (shift_r) {
+            if (shift_l) {
+                if ((shift_r < 0) ^ (shift_l < 0))
+                    return;
+                if (shift_r < 0 && shift_r < shift_l)
+                    shift_l = shift_r;
+                else if (shift_r > 0 && shift_r > shift_l)
+                    shift_l = shift_r;
+            } else
+                shift_l = shift_r;
+        }
+        item->goal_anim_state = AS_CLIMBING;
+        item->pos.y_pos += shift_l;
+    } else if (input & IN_BACK) {
+        if (item->goal_anim_state == AS_HANG)
+            return;
+        item->goal_anim_state = AS_CLIMBSTNC;
+        item->pos.y_pos += 256;
+        result_r = LaraTestClimbPos(item, coll->radius, coll->radius + 120, -512, 512, &shift_r);
+        result_l = LaraTestClimbPos(item, coll->radius, -(coll->radius + 120), -512, 512, &shift_l);
+        item->pos.y_pos -= 256;
+        if (!result_r || !result_l)
+            return;
+        if (shift_r && shift_l) {
+            if ((shift_r < 0) ^ (shift_l < 0))
+                return;
+            if ((shift_r < 0 && shift_r < shift_l) || (shift_r > 0 && shift_r > shift_l))
+                shift_l = shift_r;
+        }
+        if (result_r == 1 && result_l == 1) {
+            item->goal_anim_state = AS_CLIMBDOWN;
+            item->pos.y_pos += shift_l;
+        } else
+            item->goal_anim_state = AS_HANG;
+    }
+}
