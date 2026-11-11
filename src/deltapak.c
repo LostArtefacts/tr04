@@ -80,3 +80,8 @@ void fourteen_end(void)
     FlipMap(1);
     lara.questitems |= 1;
 }
+
+void fifteen_end(void)
+{
+    lara.questitems |= 1;
+}

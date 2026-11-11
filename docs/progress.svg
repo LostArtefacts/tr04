@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="126.62" height="12" x="0" y="0" class="named"><title>572 · 37.02%</title></rect>
-<rect width="0.44" height="12" x="126.62" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="127.06" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="210.29" height="12" x="131.71" y="0" class="todo"><title>950 · 61.49%</title></rect>
+<rect width="126.84" height="12" x="0" y="0" class="named"><title>573 · 37.09%</title></rect>
+<rect width="0.44" height="12" x="126.84" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="127.28" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="210.07" height="12" x="131.93" y="0" class="todo"><title>949 · 61.42%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">37.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">572</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">950</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">573</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">949</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="55.28" height="12" x="0" y="0" class="named"><title>100 KB · 16.16%</title></rect>
 <rect width="0.12" height="12" x="55.28" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
 <rect width="7.25" height="12" x="55.40" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="279.36" height="12" x="62.64" y="0" class="todo"><title>507 KB · 81.68%</title></rect>
+<rect width="279.35" height="12" x="62.65" y="0" class="todo"><title>507 KB · 81.68%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">100 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">507 KB</tspan></text>
@@ -1134,7 +1134,7 @@
 <rect width="12" height="12" x="225" y="315" class="todo"><title>0x0046bf40 fourteen_control (37 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="315" class="todo"><title>0x0046bf70 fifteen_init (163 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="315" class="todo"><title>0x0046c020 fifteen_control (356 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="315" class="todo"><title>0x0046c190 fifteen_end (8 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="315" class="named"><title>0x0046c190 fifteen_end (8 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="315" class="todo"><title>0x0046c1a0 sixteen_init (163 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="315" class="todo"><title>0x0046c250 sixteen_control (353 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="315" class="todo"><title>0x0046c3c0 sixteen_end (71 bytes)</title></rect>
@@ -3136,7 +3136,7 @@
 <rect width="1.96" height="1.56" x="727.15" y="442.18" class="named"><title>0x004377d0 ActivateCamera (8 bytes)</title></rect>
 <rect width="1.96" height="1.56" x="727.15" y="446.75" class="named"><title>0x004377e0 ActivateKey (8 bytes)</title></rect>
 <rect width="1.96" height="1.56" x="727.15" y="451.31" class="todo"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
-<rect width="1.96" height="1.56" x="727.15" y="455.87" class="todo"><title>0x0046c190 fifteen_end (8 bytes)</title></rect>
+<rect width="1.96" height="1.56" x="727.15" y="455.87" class="named"><title>0x0046c190 fifteen_end (8 bytes)</title></rect>
 <rect width="1.96" height="1.56" x="727.15" y="460.44" class="todo"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="1.76" height="1.75" x="732.11" y="442.18" class="todo"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="1.76" height="1.75" x="736.88" y="442.18" class="todo"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
