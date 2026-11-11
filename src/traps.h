@@ -25,5 +25,6 @@ void ControlSmashableBikeWall(sint16 item_number);
 void ControlCatwalkBlade(sint16 item_number);
 void ControlMovingBlade(sint16 item_number);
 void ControlPlinthBlade(sint16 item_number);
+void ControlFallingSquishyBlock(sint16 item_number);
 
 #endif

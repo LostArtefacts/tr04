@@ -318,3 +318,21 @@ void ControlPlinthBlade(sint16 item_number)
     } else
         item->frame_number = anims[item->anim_number].frame_base;
 }
+
+void ControlFallingSquishyBlock(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        if (item->item_flags[0] < 60) {
+            SoundEffect(SFX_EARTHQUAKE_LOOP, &item->pos, SFX_DEFAULT);
+            camera.bounce = (item->item_flags[0] - 92) >> 1;
+            item->item_flags[0]++;
+        } else {
+            if (item->frame_number - anims[item->anim_number].frame_base == 8)
+                camera.bounce = -96;
+            AnimateItem(item);
+        }
+    }
+}
