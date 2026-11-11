@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="78.06" height="12" x="0" y="0" class="named"><title>335 · 21.68%</title></rect>
-<rect width="0.23" height="12" x="78.06" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.56" height="12" x="78.29" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
-<rect width="279.15" height="12" x="80.85" y="0" class="todo"><title>1198 · 77.54%</title></rect>
+<rect width="78.29" height="12" x="0" y="0" class="named"><title>336 · 21.75%</title></rect>
+<rect width="0.23" height="12" x="78.29" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.56" height="12" x="78.52" y="0" class="nonmatching"><title>11 · 0.71%</title></rect>
+<rect width="278.91" height="12" x="81.09" y="0" class="todo"><title>1197 · 77.48%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">21.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">335</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1198</tspan></text>
+<text text-anchor="end" x="540" y="7.50">21.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">336</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">11</tspan> · <tspan class="todo">1197</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="28.64" height="12" x="0" y="0" class="named"><title>49 KB · 7.95%</title></rect>
-<rect width="0.10" height="12" x="28.64" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.01" height="12" x="28.66" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
-<rect width="326.32" height="12" x="33.68" y="0" class="todo"><title>562 KB · 90.65%</title></rect>
+<rect width="28.75" height="12" x="0" y="0" class="named"><title>50 KB · 7.99%</title></rect>
+<rect width="0.10" height="12" x="28.75" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.01" height="12" x="28.78" y="0" class="nonmatching"><title>9 KB · 1.39%</title></rect>
+<rect width="326.21" height="12" x="33.79" y="0" class="todo"><title>562 KB · 90.61%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">8.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">49 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">562 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">50 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">562 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -312,7 +312,7 @@
 <rect width="12" height="12" x="645" y="60" class="named"><title>0x00423660 MonkeySwingSnap (66 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="60" class="named"><title>0x004236b0 TestMonkeyLeft (201 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="60" class="todo"><title>0x00423780 GetDirOctant (42 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="60" class="todo"><title>0x004237b0 TestMonkeyRight (197 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="60" class="named"><title>0x004237b0 TestMonkeyRight (197 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="60" class="todo"><title>0x00423880 lara_as_monkeyswing (165 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="60" class="todo"><title>0x00423930 lara_col_monkeyswing (301 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="60" class="named"><title>0x00423a60 lara_as_monkeyl (88 bytes)</title></rect>
@@ -2347,7 +2347,7 @@
 <rect width="8.91" height="8.59" x="495.77" y="315.08" class="todo"><title>0x00439e40 Fade (198 bytes)</title></rect>
 <rect width="8.91" height="8.59" x="495.77" y="326.67" class="todo"><title>0x0046b600 CalculateObjectLightingLaraCutSeq (198 bytes)</title></rect>
 <rect width="8.91" height="8.59" x="495.77" y="338.27" class="todo"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>
-<rect width="8.91" height="8.55" x="495.77" y="349.86" class="todo"><title>0x004237b0 TestMonkeyRight (197 bytes)</title></rect>
+<rect width="8.91" height="8.55" x="495.77" y="349.86" class="named"><title>0x004237b0 TestMonkeyRight (197 bytes)</title></rect>
 <rect width="8.91" height="8.55" x="495.77" y="361.41" class="todo"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
 <rect width="8.91" height="8.55" x="495.77" y="372.96" class="todo"><title>0x00467ac0 JeepExplode (197 bytes)</title></rect>
 <rect width="8.91" height="8.55" x="495.77" y="384.51" class="todo"><title>0x00487b60 InitTarget_2 (197 bytes)</title></rect>

@@ -427,6 +427,27 @@ sint16 TestMonkeyLeft(ITEM_INFO *item, COLL_INFO *coll)
     return 1;
 }
 
+sint16 TestMonkeyRight(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint16 oct;
+
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 0;
+    coll->facing = lara.move_angle = item->pos.y_rot + 16384;
+    coll->radius = LARA_RAD;
+    coll->slopes_are_walls = 0;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, HANG_HEIGHT);
+    if (ABS(coll->mid_ceiling - coll->front_ceiling) > 50)
+        return 0;
+    if (coll->coll_type) {
+        oct = GetDirOctant(item->pos.y_rot);
+        if ((oct == 0 && coll->coll_type == COLL_FRONT) || (oct == 1 && coll->coll_type == COLL_FRONT) || (oct == 1 && coll->coll_type == COLL_RIGHT) || (oct == 1 && coll->coll_type == COLL_LEFT))
+            return 0;
+    }
+    return 1;
+}
+
 void lara_as_monkeyl(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
