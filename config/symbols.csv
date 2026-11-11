@@ -2028,6 +2028,9 @@ address,size,name,symbol
 0x004afb0c,24,StatuePlinthBounds,_StatuePlinthBounds
 0x004afbec,24,KeyHoleBounds,_KeyHoleBounds
 0x004afc08,12,KeyHolePosition,_KeyHolePosition
+0x004afc14,24,PuzzleBounds,_PuzzleBounds
+0x004afc2c,24,SarcophagusBounds,_SarcophagusBounds
+0x004afc48,12,SarcophagusPos,_SarcophagusPos
 0x004afcd0,24,Switch2Bounds,_Switch2Bounds
 0x004afce8,12,Switch2Pos,_Switch2Pos
 0x004afcf4,24,TurnSwitchBoundsA,_TurnSwitchBoundsA

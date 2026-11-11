@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="123.21" height="12" x="0" y="0" class="named"><title>547 · 35.40%</title></rect>
-<rect width="0.45" height="12" x="123.21" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="123.66" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="219.61" height="12" x="128.39" y="0" class="todo"><title>975 · 63.11%</title></rect>
+<rect width="123.43" height="12" x="0" y="0" class="named"><title>548 · 35.47%</title></rect>
+<rect width="0.45" height="12" x="123.43" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="123.88" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="219.39" height="12" x="128.61" y="0" class="todo"><title>974 · 63.04%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">35.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">547</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">975</tspan></text>
+<text text-anchor="end" x="528" y="7.50">35.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">548</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">974</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="54.47" height="12" x="0" y="0" class="named"><title>97 KB · 15.65%</title></rect>
-<rect width="0.12" height="12" x="54.47" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="54.59" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="286.04" height="12" x="61.96" y="0" class="todo"><title>510 KB · 82.19%</title></rect>
+<rect width="55.03" height="12" x="0" y="0" class="named"><title>98 KB · 15.81%</title></rect>
+<rect width="0.12" height="12" x="55.03" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="55.15" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="285.48" height="12" x="62.52" y="0" class="todo"><title>509 KB · 82.03%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="24.50">15.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">97 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">510 KB</tspan></text>
+<text text-anchor="end" x="528" y="24.50">15.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">98 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">509 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -962,7 +962,7 @@
 <rect width="12" height="12" x="645" y="255" class="named"><title>0x00457f30 FindPlinth (344 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="255" class="named"><title>0x00458090 KeyHoleCollision (462 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="255" class="named"><title>0x00458260 PuzzleDoneCollision (57 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="255" class="todo"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="255" class="named"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="255" class="named"><title>0x00458690 PuzzleDone (118 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="255" class="named"><title>0x00458710 KeyTrigger (108 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="255" class="named"><title>0x00458780 PickupTrigger (91 bytes)</title></rect>
@@ -1768,7 +1768,7 @@
 <rect width="20.17" height="19.34" x="282.70" y="158.64" class="todo"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
 <rect width="20.17" height="19.24" x="282.70" y="180.98" class="todo"><title>0x004664b0 AnimateBike (1004 bytes)</title></rect>
 <rect width="20.17" height="19.24" x="282.70" y="203.22" class="todo"><title>0x0048e2f0 CreateTexturePage (1004 bytes)</title></rect>
-<rect width="20.17" height="19.17" x="282.70" y="225.47" class="todo"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
+<rect width="20.17" height="19.17" x="282.70" y="225.47" class="named"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
 <rect width="20.17" height="19.03" x="282.70" y="247.63" class="todo"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
 <rect width="20.17" height="18.99" x="282.70" y="269.66" class="todo"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
 <rect width="20.17" height="18.95" x="282.70" y="291.66" class="todo"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
