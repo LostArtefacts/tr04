@@ -854,6 +854,11 @@ void lara_as_hangright(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_HANG;
 }
 
+void lara_as_splat(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.look = 0;
+}
+
 void lara_as_compress(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (lara.water_status != LW_WADE) {
