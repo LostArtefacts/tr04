@@ -78,3 +78,13 @@ void SOUND_Stop(void)
             LaSlot[i].nSampleInfo = -1;
     }
 }
+
+void SOUND_Init(void)
+{
+    int i;
+
+    nullsub_1(32);
+    for (i = 0; i < 32; i++)
+        LaSlot[i].nSampleInfo = -1;
+    sound_active = 1;
+}
