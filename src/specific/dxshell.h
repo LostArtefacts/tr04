@@ -7,6 +7,7 @@
 
 void DXReadKeyboard(char *KeyMap);
 sint32 DXAttempt(HRESULT r);
+void DXBitMask2ShiftCnt(uint32 mask, uint8 *shift, uint8 *count);
 
 extern uint8 keymap[256];
 
