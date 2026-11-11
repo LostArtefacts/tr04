@@ -37,5 +37,6 @@ void DoorControl(sint16 item_number);
 void DoubleDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
 void UnderwaterDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
 void PushPullKickDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
+void SequenceDoorControl(sint16 item_number);
 
 #endif

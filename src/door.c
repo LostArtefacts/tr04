@@ -312,3 +312,64 @@ void UnderwaterDoorCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
     } else if (item->status == ITEM_ACTIVE)
         ObjectCollision(item_num, l, coll);
 }
+
+void SequenceDoorControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    DOOR_DATA *door;
+
+    item = &items[item_number];
+    door = (DOOR_DATA *)item->data;
+    if (!item->item_flags[0]) {
+        if (!item->current_anim_state && CurrentSequence == 3 && SequenceResults[Sequences[0]][Sequences[1]][Sequences[2]] == item->trigger_flags) {
+            if (item->trigger_flags && item->trigger_flags != 2 && !SequenceUsed[0]) {
+                Sequences[1] = 0;
+                Sequences[0] = 1;
+                Sequences[2] = 2;
+                return;
+            }
+            item->goal_anim_state = 1;
+            item->item_flags[0] = 1;
+        }
+    } else if (TriggerActive(item)) {
+        if (!item->current_anim_state) {
+            item->goal_anim_state = 1;
+        } else {
+            if (!door->Opened) {
+                OpenThatDoor(&door->d1);
+                OpenThatDoor(&door->d2);
+                OpenThatDoor(&door->d1flip);
+                OpenThatDoor(&door->d2flip);
+                door->Opened = 1;
+            }
+            if (CurrentSequence == 3) {
+                if (SequenceResults[Sequences[0]][Sequences[1]][Sequences[2]] == item->trigger_flags && !Sequences[0] && Sequences[1] == 1 && Sequences[2] == 2) {
+                    CurrentSequence = 4;
+                    SequenceUsed[item->trigger_flags] = Sequences[1];
+                }
+            } else if ((CurrentSequence == 1 || CurrentSequence == 2) && item->trigger_flags == 2) {
+                item->flags &= ~(IFL_INVISIBLE | IFL_ANTITRIGGER_ONESHOT);
+                item->goal_anim_state = 0;
+                item->item_flags[0] = 0;
+            }
+        }
+    } else {
+        if (item->current_anim_state == 1) {
+            item->goal_anim_state = 0;
+        } else {
+            if (CurrentSequence == 3 && SequenceResults[Sequences[0]][Sequences[1]][Sequences[2]] == item->trigger_flags) {
+                CurrentSequence = 4;
+                if (item->trigger_flags != 2)
+                    SequenceUsed[item->trigger_flags] = 1;
+            }
+            if (door->Opened) {
+                ShutThatDoor(&door->d1);
+                ShutThatDoor(&door->d2);
+                ShutThatDoor(&door->d1flip);
+                ShutThatDoor(&door->d2flip);
+                door->Opened = 0;
+            }
+        }
+    }
+    AnimateItem(item);
+}
