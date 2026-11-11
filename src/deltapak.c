@@ -436,6 +436,31 @@ void handle_lara_chatting(sint16 *_ranges)
     lara.mesh_ptrs[LM_HEAD] = meshes[objects[LARA_SKIN].mesh_index + 2 * LM_HEAD];
 }
 
+void handle_actor_chatting(sint32 speechslot, sint32 node, sint32 slot, sint32 objslot, sint16 *_ranges)
+{
+    sint32 r1, r2, f, rnd;
+
+    rnd = GetRandomControl() & 1;
+    f = GLOBAL_cutseq_frame;
+    while (1) {
+        r1 = _ranges[0];
+        r2 = _ranges[1];
+        if (r1 == -1)
+            break;
+        if (f >= r1 && f <= r2) {
+            if (!actor_chat_cnt) {
+                cutseq_meshswapbits[slot] |= (1 << node);
+                meshes[objects[objslot].mesh_index + (2 * node) + 1] = meshes[objects[speechslot + rnd].mesh_index + 2 * node];
+                if ((GetRandomControl() & 7) >= 6)
+                    cutseq_meshswapbits[slot] &= ~(1 << node);
+            }
+            return;
+        }
+        _ranges += 2;
+    }
+    cutseq_meshswapbits[slot] &= ~(1 << node);
+}
+
 void trigger_item_in_room(sint32 room_number, sint32 object_number)
 {
     ITEM_INFO *item;
