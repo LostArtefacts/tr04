@@ -27,6 +27,7 @@ typedef struct chardef {
 
 void InitFont(void);
 void UpdatePulseColour(void);
+void PrintString(uint16 x, uint16 y, uint8 col, const char *string, uint16 flags);
 
 extern CVECTOR FontShades[10][32];
 extern CVECTOR ShadeFromTo[10][2];

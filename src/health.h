@@ -9,6 +9,12 @@ typedef struct displaypu {
 } DISPLAYPU;
 
 sint32 FlashIt(void);
+void DrawGameInfo(sint32 timed);
+void DrawHealthBar(sint32 flash_state);
+void DrawAirBar(sint32 flash_state);
+void InitialisePickUpDisplay(void);
+void DrawPickups(void);
+void AddDisplayPickup(sint16 object_number);
 
 extern DISPLAYPU pickups[8];
 extern sint16 PickupX;
