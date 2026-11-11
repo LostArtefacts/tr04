@@ -441,6 +441,31 @@ sint32 GetFreeBubble(void)
     return free;
 }
 
+void CreateBubble(PHD_3DPOS *pos, sint16 room_number, sint32 size, sint32 biggest)
+{
+    BUBBLE_STRUCT *bubble;
+    sint16 room_num, bubble_num;
+
+    room_num = room_number;
+    GetFloor(pos->x_pos, pos->y_pos, pos->z_pos, &room_num);
+    if (room[room_num].flags & ROOM_UNDERWATER) {
+        bubble_num = (sint16)GetFreeBubble();
+        if (bubble_num != -1) {
+            bubble = &Bubbles[bubble_num];
+            bubble->pos.x = pos->x_pos;
+            bubble->pos.y = pos->y_pos;
+            bubble->pos.z = pos->z_pos;
+            bubble->room_number = room_num;
+            bubble->speed = (GetRandomControl() & 0xFF) + 64;
+            size = (size + (biggest & GetRandomControl())) << 1;
+            bubble->shade = 0;
+            bubble->size = (sint16)size;
+            bubble->dsize = (sint16)(size << 4);
+            bubble->vel = (GetRandomControl() & 0x1F) + 32;
+        }
+    }
+}
+
 void SetFadeClip(sint16 height, sint16 speed)
 {
     DestFadeScreenHeight = height;
