@@ -4,5 +4,6 @@
 #include "types.h"
 
 void ready_flare(void);
+void set_flare_arm(sint32 frame);
 
 #endif
