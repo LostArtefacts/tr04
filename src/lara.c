@@ -720,6 +720,56 @@ void lara_as_deathslide(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void lara_col_run(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 0;
+    coll->slopes_are_walls = 1;
+    GetLaraCollisionInfo(item, coll);
+    if (LaraHitCeiling(item, coll))
+        return;
+    if (TestLaraVault(item, coll))
+        return;
+    if (LaraDeflectEdge(item, coll)) {
+        item->pos.z_rot = 0;
+        if (item->anim_number != ANIM_STARTRUN && TestWall(item, 256, 0, -640)) {
+            item->current_anim_state = AS_SPLAT;
+            if (item->frame_number >= 0 && item->frame_number <= 9) {
+                item->anim_number = ANIM_HITWALLLEFT;
+                item->frame_number = anims[ANIM_HITWALLLEFT].frame_base;
+                return;
+            }
+            if (item->frame_number >= 10 && item->frame_number <= 21) {
+                item->anim_number = ANIM_HITWALLRIGHT;
+                item->frame_number = anims[ANIM_HITWALLRIGHT].frame_base;
+                return;
+            }
+        }
+        LaraCollideStop(item, coll);
+    }
+    if (LaraFallen(item, coll))
+        return;
+    if (coll->mid_floor >= -STEPUP_HEIGHT && coll->mid_floor < -STEP_L / 2) {
+        if (coll->front_floor == NO_HEIGHT || coll->front_floor < -STEPUP_HEIGHT || coll->front_floor >= -STEP_L / 2)
+            coll->mid_floor = 0;
+        else if (item->frame_number >= 3 && item->frame_number <= 14) {
+            item->anim_number = ANIM_RUNSTEPUP_LEFT;
+            item->frame_number = anims[ANIM_RUNSTEPUP_LEFT].frame_base;
+        } else {
+            item->anim_number = ANIM_RUNSTEPUP_RIGHT;
+            item->frame_number = anims[ANIM_RUNSTEPUP_RIGHT].frame_base;
+        }
+    }
+    if (TestLaraSlide(item, coll))
+        return;
+    if (coll->mid_floor >= 50)
+        item->pos.y_pos += 50;
+    else if (coll->mid_floor != NO_HEIGHT)
+        item->pos.y_pos += coll->mid_floor;
+}
+
 void lara_col_turn_l(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara_col_turn_r(item, coll);
