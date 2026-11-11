@@ -91,5 +91,6 @@ void do_backpack_meshswap(void);
 void third_cutseq_control(void);
 void fifth_cutseq_control(void);
 void do_spade_meshswap(void);
+void special3_control(void);
 
 #endif
