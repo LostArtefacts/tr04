@@ -76,6 +76,85 @@ sint32 ValidBox(ITEM_INFO *item, sint16 zone_number, sint16 box_number)
     return 1;
 }
 
+void GetCreatureMood(ITEM_INFO *item, AI_INFO *info, sint32 violent)
+{
+    CREATURE_INFO *creature;
+    MOOD_TYPE mood;
+    LOT_INFO *LOT;
+    ITEM_INFO *enemy;
+
+    if (item->data == NULL)
+        return;
+    creature = (CREATURE_INFO *)item->data;
+    enemy = creature->enemy;
+    LOT = &creature->LOT;
+    if (LOT->node[item->box_number].search_number == (LOT->search_number | 0x8000))
+        LOT->required_box = NO_BOX;
+    if (creature->mood != ATTACK_MOOD && LOT->required_box != NO_BOX) {
+        if (!ValidBox(item, info->zone_number, LOT->target_box)) {
+            if (info->zone_number == info->enemy_zone)
+                creature->mood = BORED_MOOD;
+            LOT->required_box = NO_BOX;
+        }
+    }
+    mood = creature->mood;
+    if (!enemy) {
+        creature->mood = BORED_MOOD;
+    } else if (enemy->hit_points <= 0 && enemy == lara_item) {
+        creature->mood = BORED_MOOD;
+    } else if (violent) {
+        switch (creature->mood) {
+        case ATTACK_MOOD:
+            if (info->zone_number != info->enemy_zone)
+                creature->mood = BORED_MOOD;
+            break;
+        case BORED_MOOD:
+        case STALK_MOOD:
+            if (info->zone_number == info->enemy_zone)
+                creature->mood = ATTACK_MOOD;
+            else if (item->hit_status)
+                creature->mood = ESCAPE_MOOD;
+            break;
+        case ESCAPE_MOOD:
+            if (info->zone_number == info->enemy_zone)
+                creature->mood = ATTACK_MOOD;
+            break;
+        }
+    } else {
+        switch (creature->mood) {
+        case ATTACK_MOOD:
+            if (item->hit_status && (GetRandomControl() < 0x800 || info->zone_number != info->enemy_zone))
+                creature->mood = STALK_MOOD;
+            else if (info->zone_number != info->enemy_zone && info->distance > WALL_L * 6)
+                creature->mood = BORED_MOOD;
+            break;
+        case BORED_MOOD:
+        case STALK_MOOD:
+            if (creature->alerted && info->zone_number != info->enemy_zone) {
+                if (info->distance > WALL_L * 3)
+                    creature->mood = STALK_MOOD;
+                else
+                    creature->mood = BORED_MOOD;
+            } else if (info->zone_number == info->enemy_zone) {
+                if (info->distance < (WALL_L * 3) * (WALL_L * 3) || (mood == STALK_MOOD && LOT->required_box == NO_BOX))
+                    creature->mood = ATTACK_MOOD;
+                else
+                    creature->mood = STALK_MOOD;
+            }
+            break;
+        case ESCAPE_MOOD:
+            if (info->zone_number == info->enemy_zone && GetRandomControl() < 0x100)
+                creature->mood = STALK_MOOD;
+            break;
+        }
+    }
+    if (mood != creature->mood) {
+        if (mood == ATTACK_MOOD)
+            TargetBox(LOT, LOT->target_box);
+        LOT->required_box = NO_BOX;
+    }
+}
+
 sint32 BadFloor(sint32 x, sint32 y, sint32 z, sint32 box_height, sint32 next_height, sint16 room_number, LOT_INFO *LOT)
 {
     FLOOR_INFO *floor;
