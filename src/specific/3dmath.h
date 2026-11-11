@@ -38,6 +38,8 @@ void phd_GenerateW2V(PHD_3DPOS *viewPos);
 void phd_LookAt(sint32 sx, sint32 sy, sint32 sz, sint32 tx, sint32 ty, sint32 tz, sint16 roll);
 sint32 phd_atan(sint32 x, sint32 y);
 sint32 phd_sqrt(sint32 num);
+#define phd_PopMatrix() phd_mxptr -= 12
+
 void phd_PushMatrix(void);
 void phd_PushUnitMatrix(void);
 void Func490320(void);

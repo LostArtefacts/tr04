@@ -13,6 +13,7 @@ typedef struct sphere {
 sint32 TestCollision(ITEM_INFO *item, ITEM_INFO *l);
 sint32 GetSpheres(ITEM_INFO *item, SPHERE *ptr, sint32 WorldSpace);
 void InitInterpolate2(sint32 frac, sint32 rate);
+void GetJointAbsPosition(ITEM_INFO *item, PHD_VECTOR *pos, sint32 joint);
 
 extern SPHERE Slist[34];
 extern char GotLaraSpheres;

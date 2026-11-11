@@ -2105,6 +2105,7 @@ address,size,name,symbol
 0x004bf624,2,LightningSFXDelay,_LightningSFXDelay
 0x004bf628,4,room_list_start,_room_list_start
 0x004bf62c,4,room_list_end,_room_list_end
+0x004bf630,24,no_rotation,_no_rotation
 0x004bf64c,4,gfScriptOffset,_gfScriptOffset
 0x004bf650,4,gfStatus,_gfStatus
 0x004bf654,4,gfExtensions,_gfExtensions
