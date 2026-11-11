@@ -133,6 +133,88 @@ sint32 GetSpheres(ITEM_INFO *item, SPHERE *ptr, sint32 WorldSpace)
     return obj->nmeshes;
 }
 
+void GetJointAbsPosition(ITEM_INFO *item, PHD_VECTOR *pos, sint32 joint)
+{
+    OBJECT_INFO *obj;
+    sint32 *mx;
+    sint32 *imx;
+    sint32 *bone;
+    sint16 *frm[2];
+    sint16 *extra_rotation;
+    sint16 *rot;
+    sint16 *rot2;
+    sint32 frac, rate, poppush;
+
+    mx = phd_mxptr;
+    imx = IMptr;
+    obj = &objects[item->object_number];
+    frac = GetFrames(item, frm, &rate);
+    phd_PushUnitMatrix();
+    phd_mxptr[M03] = 0;
+    phd_mxptr[M13] = 0;
+    phd_mxptr[M23] = 0;
+    phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    extra_rotation = (sint16 *)item->data;
+    if (!extra_rotation)
+        extra_rotation = no_rotation;
+    bone = &bones[obj->bone_index];
+    if (!frac) {
+        phd_TranslateRel(frm[0][6], frm[0][7], frm[0][8]);
+        rot = frm[0] + 9;
+        gar_RotYXZsuperpack(&rot, 0);
+        for (; joint > 0; joint--) {
+            poppush = *bone;
+            if (poppush & 1)
+                phd_PopMatrix();
+            if (poppush & 2)
+                phd_PushMatrix();
+            phd_TranslateRel(bone[1], bone[2], bone[3]);
+            gar_RotYXZsuperpack(&rot, 0);
+            if (poppush & 0x1C) {
+                if (poppush & 8)
+                    phd_RotY(*extra_rotation++);
+                if (poppush & 4)
+                    phd_RotX(*extra_rotation++);
+                if (poppush & 0x10)
+                    phd_RotZ(*extra_rotation++);
+            }
+            bone += 4;
+        }
+        phd_TranslateRel(pos->x, pos->y, pos->z);
+    } else {
+        InitInterpolate2(frac, rate);
+        rot = frm[0] + 9;
+        rot2 = frm[1] + 9;
+        phd_TranslateRel_ID(frm[0][6], frm[0][7], frm[0][8], frm[1][6], frm[1][7], frm[1][8]);
+        gar_RotYXZsuperpack_I(&rot, &rot2, 0);
+        for (; joint > 0; joint--) {
+            poppush = *bone;
+            if (poppush & 1)
+                phd_PopMatrix_I();
+            if (poppush & 2)
+                phd_PushMatrix_I();
+            phd_TranslateRel_I(bone[1], bone[2], bone[3]);
+            gar_RotYXZsuperpack_I(&rot, &rot2, 0);
+            if (poppush & 0x1C) {
+                if (poppush & 8)
+                    phd_RotY_I(*extra_rotation++);
+                if (poppush & 4)
+                    phd_RotX_I(*extra_rotation++);
+                if (poppush & 0x10)
+                    phd_RotZ_I(*extra_rotation++);
+            }
+            bone += 4;
+        }
+        phd_TranslateRel_I(pos->x, pos->y, pos->z);
+        InterpolateMatrix();
+    }
+    pos->x = item->pos.x_pos + (phd_mxptr[M03] >> W2V_SHIFT);
+    pos->y = item->pos.y_pos + (phd_mxptr[M13] >> W2V_SHIFT);
+    pos->z = item->pos.z_pos + (phd_mxptr[M23] >> W2V_SHIFT);
+    phd_mxptr = mx;
+    IMptr = imx;
+}
+
 void InitInterpolate2(sint32 frac, sint32 rate)
 {
     IM_frac = frac;
