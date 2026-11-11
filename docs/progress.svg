@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="22.66" height="12" x="0" y="0" class="named"><title>95 · 6.13%</title></rect>
-<rect width="0.24" height="12" x="22.66" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="0.72" height="12" x="22.90" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
-<rect width="346.38" height="12" x="23.62" y="0" class="todo"><title>1452 · 93.62%</title></rect>
+<rect width="22.90" height="12" x="0" y="0" class="named"><title>96 · 6.19%</title></rect>
+<rect width="0.24" height="12" x="22.90" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="0.72" height="12" x="23.14" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
+<rect width="346.14" height="12" x="23.86" y="0" class="todo"><title>1451 · 93.55%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">6.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">95</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1452</tspan></text>
+<text text-anchor="end" x="540" y="7.50">6.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">96</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1451</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="8.64" height="12" x="0" y="0" class="named"><title>14 KB · 2.34%</title></rect>
-<rect width="0.10" height="12" x="8.64" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="0.73" height="12" x="8.67" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
-<rect width="360.60" height="12" x="9.40" y="0" class="todo"><title>604 KB · 97.46%</title></rect>
+<rect width="8.77" height="12" x="0" y="0" class="named"><title>15 KB · 2.37%</title></rect>
+<rect width="0.10" height="12" x="8.77" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="0.73" height="12" x="8.80" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
+<rect width="360.47" height="12" x="9.53" y="0" class="todo"><title>604 KB · 97.43%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">2.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">14 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">604 KB</tspan></text>
+<text text-anchor="end" x="540" y="24.50">2.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">15 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">604 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -462,7 +462,7 @@
 <rect width="12" height="12" x="645" y="105" class="todo"><title>0x0042c470 LaraTestClimb (588 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="105" class="named"><title>0x0042c6c0 lara_as_climbstnc (163 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="105" class="named"><title>0x0042c770 lara_col_climbstnc (519 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="105" class="todo"><title>0x0042c980 LaraCheckForLetGo (213 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="105" class="named"><title>0x0042c980 LaraCheckForLetGo (213 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="105" class="todo"><title>0x0042ca60 LaraTestClimbUpPos (535 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="105" class="todo"><title>0x0042cc80 lara_as_climbleft (54 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="105" class="todo"><title>0x0042ccc0 lara_col_climbleft (90 bytes)</title></rect>
@@ -2308,7 +2308,7 @@
 <rect width="8.93" height="9.71" x="485.97" y="230.97" class="todo"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
 <rect width="8.93" height="9.67" x="485.97" y="243.69" class="todo"><title>0x0045ec50 GetAIPickups (215 bytes)</title></rect>
 <rect width="8.93" height="9.63" x="485.97" y="256.36" class="todo"><title>0x00453400 InitialiseScaledSpike (214 bytes)</title></rect>
-<rect width="8.93" height="9.58" x="485.97" y="268.98" class="todo"><title>0x0042c980 LaraCheckForLetGo (213 bytes)</title></rect>
+<rect width="8.93" height="9.58" x="485.97" y="268.98" class="named"><title>0x0042c980 LaraCheckForLetGo (213 bytes)</title></rect>
 <rect width="8.93" height="9.58" x="485.97" y="281.56" class="todo"><title>0x0046d270 handle_actor_chatting (213 bytes)</title></rect>
 <rect width="8.93" height="9.54" x="485.97" y="294.14" class="todo"><title>0x00432a30 LaraTestWaterDepth (212 bytes)</title></rect>
 <rect width="8.93" height="9.54" x="485.97" y="306.68" class="todo"><title>0x004534e0 InitialiseRaisingBlock (212 bytes)</title></rect>

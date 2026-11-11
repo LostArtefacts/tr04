@@ -1,5 +1,7 @@
 #include "laraclmb.h"
+#include "anim.h"
 #include "camera.h"
+#include "control.h"
 #include "lara.h"
 #include "lara_states.h"
 #include "specific/input.h"
@@ -115,4 +117,32 @@ void lara_col_climbstnc(ITEM_INFO *item, COLL_INFO *coll)
         } else
             item->goal_anim_state = AS_HANG;
     }
+}
+
+sint32 LaraCheckForLetGo(ITEM_INFO *item, COLL_INFO *coll)
+{
+    FLOOR_INFO *floor;
+    sint16 room_number;
+
+    item->fallspeed = 0;
+    item->gravity_status = 0;
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    coll->trigger = trigger_index;
+    if (!(input & IN_ACTION) || item->hit_points <= 0) {
+        lara.torso_y_rot = 0;
+        lara.torso_x_rot = 0;
+        lara.head_y_rot = 0;
+        lara.head_x_rot = 0;
+        item->current_anim_state = item->goal_anim_state = AS_FORWARDJUMP;
+        item->anim_number = ANIM_FALLDOWN;
+        item->frame_number = anims[ANIM_FALLDOWN].frame_base;
+        item->speed = 2;
+        item->gravity_status = 1;
+        item->fallspeed = 1;
+        lara.gun_status = LG_NO_ARMS;
+        return 1;
+    }
+    return 0;
 }
