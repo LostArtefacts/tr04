@@ -268,6 +268,16 @@ void twentysix_control(void)
     actor_chat_cnt = (actor_chat_cnt - 1) & 1;
 }
 
+void twentyseven_init(void)
+{
+    ITEM_INFO *item;
+
+    item = find_a_fucking_item(ANIMATING4);
+    item->flags &= ~IFL_CODEBITS;
+    cutseq_meshbits[1] &= ~0x200;
+    lara.questitems = 0;
+}
+
 void twentyseven_end(void)
 {
     ITEM_INFO *item;

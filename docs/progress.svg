@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="133.26" height="12" x="0" y="0" class="named"><title>602 · 38.96%</title></rect>
-<rect width="0.44" height="12" x="133.26" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="133.70" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="203.65" height="12" x="138.35" y="0" class="todo"><title>920 · 59.55%</title></rect>
+<rect width="133.48" height="12" x="0" y="0" class="named"><title>603 · 39.03%</title></rect>
+<rect width="0.44" height="12" x="133.48" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="133.92" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="203.43" height="12" x="138.57" y="0" class="todo"><title>919 · 59.48%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">39.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">602</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">920</tspan></text>
+<text text-anchor="end" x="522" y="7.50">39.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">603</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">919</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.97" height="12" x="0" y="0" class="named"><title>101 KB · 16.37%</title></rect>
-<rect width="0.12" height="12" x="55.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="56.09" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="278.66" height="12" x="63.34" y="0" class="todo"><title>505 KB · 81.48%</title></rect>
+<rect width="55.99" height="12" x="0" y="0" class="named"><title>102 KB · 16.37%</title></rect>
+<rect width="0.12" height="12" x="55.99" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="56.11" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="278.64" height="12" x="63.36" y="0" class="todo"><title>505 KB · 81.47%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">101 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">505 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">102 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">505 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1160,7 +1160,7 @@
 <rect width="12" height="12" x="615" y="315" class="named"><title>0x0046c820 twentyfive_end (90 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="315" class="todo"><title>0x0046c880 twentyfive_init (67 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="315" class="named"><title>0x0046c8d0 twentysix_control (39 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="315" class="todo"><title>0x0046c900 twentyseven_init (40 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="315" class="named"><title>0x0046c900 twentyseven_init (40 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="315" class="todo"><title>0x0046c930 twentyseven_control (26 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="315" class="named"><title>0x0046c950 twentyseven_end (71 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="315" class="named"><title>0x0046c9a0 twentytwo_init (12 bytes)</title></rect>
@@ -2945,7 +2945,7 @@
 <rect width="3.78" height="4.19" x="709.89" y="376.94" class="named"><title>0x00422a90 lara_as_dashdive (41 bytes)</title></rect>
 <rect width="3.68" height="4.19" x="716.67" y="376.94" class="todo"><title>0x0040e2a0 ClearScarabs (40 bytes)</title></rect>
 <rect width="3.68" height="4.19" x="723.36" y="376.94" class="named"><title>0x0046bf10 fourteen_end (40 bytes)</title></rect>
-<rect width="3.68" height="4.19" x="730.04" y="376.94" class="todo"><title>0x0046c900 twentyseven_init (40 bytes)</title></rect>
+<rect width="3.68" height="4.19" x="730.04" y="376.94" class="named"><title>0x0046c900 twentyseven_init (40 bytes)</title></rect>
 <rect width="3.68" height="4.19" x="736.73" y="376.94" class="todo"><title>0x0049464c SW_D3D_DrawPrimitive (40 bytes)</title></rect>
 <rect width="3.59" height="4.19" x="743.41" y="376.94" class="named"><title>0x00450590 phd_PushMatrix_I (39 bytes)</title></rect>
 <rect width="3.88" height="3.89" x="661.97" y="384.13" class="named"><title>0x0045bdc0 sgSaveLevel (39 bytes)</title></rect>
