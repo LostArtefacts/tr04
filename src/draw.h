@@ -15,6 +15,8 @@ void gar_RotYXZsuperpack(sint16 **pprot, sint32 skip);
 void InterpolateMatrix(void);
 sint32 GetFrames(ITEM_INFO *item, sint16 *frm[], sint32 *rate);
 sint16 *GetBestFrame(ITEM_INFO *item);
+void phd_PutPolygons(sint16 *objptr, sint32 clip);
+void InitInterpolate(sint32 frac, sint32 rate);
 
 extern sint32 *IMptr;
 extern sint32 IM_rate;
