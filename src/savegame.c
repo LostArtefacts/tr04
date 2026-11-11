@@ -61,3 +61,13 @@ void ReadSG(void *pointer, sint32 size)
     for (; size > 0; size--)
         *(data++) = *(SGpoint++);
 }
+
+void sgSaveLevel(void)
+{
+    sint32 level_index;
+
+    level_index = OpenSaveGame(gfCurrentLevel, 1);
+    SaveLevelData(0);
+    SaveLaraData();
+    SaveHubData(level_index);
+}

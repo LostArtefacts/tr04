@@ -50,5 +50,6 @@ sint32 CheckSumValid(sint8 *buffer);
 void sgSaveGame(void);
 void SaveHubData(sint32 index);
 void sgRestoreGame(void);
+void sgSaveLevel(void);
 
 #endif

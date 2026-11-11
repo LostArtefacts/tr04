@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="124.33" height="12" x="0" y="0" class="named"><title>552 · 35.73%</title></rect>
-<rect width="0.45" height="12" x="124.33" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="124.78" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="218.49" height="12" x="129.51" y="0" class="todo"><title>970 · 62.78%</title></rect>
+<rect width="124.56" height="12" x="0" y="0" class="named"><title>553 · 35.79%</title></rect>
+<rect width="0.45" height="12" x="124.56" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="125.01" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="218.26" height="12" x="129.74" y="0" class="todo"><title>969 · 62.72%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">35.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">552</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">970</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">553</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">969</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.15" height="12" x="0" y="0" class="named"><title>98 KB · 15.85%</title></rect>
-<rect width="0.12" height="12" x="55.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="55.28" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="285.35" height="12" x="62.65" y="0" class="todo"><title>509 KB · 82%</title></rect>
+<rect width="55.17" height="12" x="0" y="0" class="named"><title>98 KB · 15.85%</title></rect>
+<rect width="0.12" height="12" x="55.17" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="55.30" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="285.33" height="12" x="62.67" y="0" class="todo"><title>509 KB · 81.99%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">15.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">98 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">509 KB</tspan></text>
@@ -997,7 +997,7 @@
 <rect width="12" height="12" x="420" y="270" class="todo"><title>0x0045b080 RestoreLaraData (417 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="270" class="todo"><title>0x0045b230 RestoreLevelData (2881 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="270" class="named"><title>0x0045bd80 ReadSG (53 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="270" class="todo"><title>0x0045bdc0 sgSaveLevel (39 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="270" class="named"><title>0x0045bdc0 sgSaveLevel (39 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="270" class="todo"><title>0x0045bdf0 sgRestoreLevel (440 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="270" class="todo"><title>0x0045bfb0 InitialiseLara (286 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="270" class="todo"><title>0x0045c0d0 InitialiseObjects (268 bytes)</title></rect>
@@ -2948,7 +2948,7 @@
 <rect width="3.68" height="4.19" x="730.04" y="376.94" class="todo"><title>0x0046c900 twentyseven_init (40 bytes)</title></rect>
 <rect width="3.68" height="4.19" x="736.73" y="376.94" class="todo"><title>0x0049464c SW_D3D_DrawPrimitive (40 bytes)</title></rect>
 <rect width="3.59" height="4.19" x="743.41" y="376.94" class="named"><title>0x00450590 phd_PushMatrix_I (39 bytes)</title></rect>
-<rect width="3.88" height="3.89" x="661.97" y="384.13" class="todo"><title>0x0045bdc0 sgSaveLevel (39 bytes)</title></rect>
+<rect width="3.88" height="3.89" x="661.97" y="384.13" class="named"><title>0x0045bdc0 sgSaveLevel (39 bytes)</title></rect>
 <rect width="3.88" height="3.89" x="661.97" y="391.02" class="todo"><title>0x0046bc00 tenth_cutseq_end (39 bytes)</title></rect>
 <rect width="3.88" height="3.89" x="661.97" y="397.91" class="todo"><title>0x0046c8d0 twentysix_control (39 bytes)</title></rect>
 <rect width="3.88" height="3.89" x="661.97" y="404.80" class="todo"><title>0x00491c30 DXAttempt (39 bytes)</title></rect>
