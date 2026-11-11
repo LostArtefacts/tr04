@@ -35,6 +35,7 @@ void invisibility_off(ITEM_INFO *item);
 void floor_shake_effect(ITEM_INFO *item);
 void Splash(ITEM_INFO *item);
 void finish_level_effect(ITEM_INFO *item);
+void PoseidonSFX(ITEM_INFO *item);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;
