@@ -178,3 +178,35 @@ void phd_LookAt(sint32 sx, sint32 sy, sint32 sz, sint32 tx, sint32 ty, sint32 tz
     phd_GenerateW2V(&viewPos);
     S_InitD3DMatrix();
 }
+
+sint32 phd_atan(sint32 x, sint32 y)
+{
+    sint32 octant, n, result;
+
+    if (!x && !y)
+        return 0;
+
+    octant = 0;
+    if (x < 0) {
+        octant += 4;
+        x = -x;
+    }
+    if (y < 0) {
+        octant += 2;
+        y = -y;
+    }
+    if (y > x) {
+        octant++;
+        n = x;
+        x = y;
+        y = n;
+    }
+    while ((sint16)y != y) {
+        x >>= 1;
+        y >>= 1;
+    }
+    result = phdtan2[octant] + phdtantab[(y << 11) / x];
+    if (result < 0)
+        result = -result;
+    return result;
+}
