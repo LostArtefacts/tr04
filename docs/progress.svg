@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="55.22" height="12" x="0" y="0" class="named"><title>237 · 15.34%</title></rect>
 <rect width="0.23" height="12" x="55.22" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="55.46" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="302.68" height="12" x="57.32" y="0" class="todo"><title>1299 · 84.08%</title></rect>
+<rect width="2.10" height="12" x="55.46" y="0" class="nonmatching"><title>9 · 0.58%</title></rect>
+<rect width="302.45" height="12" x="57.55" y="0" class="todo"><title>1298 · 84.01%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">15.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">237</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1299</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">237</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">9</tspan> · <tspan class="todo">1298</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="20.18" height="12" x="0" y="0" class="named"><title>35 KB · 5.61%</title></rect>
 <rect width="0.10" height="12" x="20.18" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="2.99" height="12" x="20.21" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="336.80" height="12" x="23.20" y="0" class="todo"><title>580 KB · 93.56%</title></rect>
+<rect width="3.30" height="12" x="20.21" y="0" class="nonmatching"><title>6 KB · 0.92%</title></rect>
+<rect width="336.49" height="12" x="23.51" y="0" class="todo"><title>579 KB · 93.47%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">5.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">35 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">580 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">35 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">6 KB</tspan> · <tspan class="todo">579 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1208,7 +1208,7 @@
 <rect width="12" height="12" x="585" y="330" class="named"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="330" class="named"><title>0x0046fe80 DXSetupDialog (79 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="330" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="330" class="todo"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="330" class="nonmatching"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="330" class="todo"><title>0x004701c0 InitResolution (1057 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="330" class="named"><title>0x004705f0 InitD3DDevice (186 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="330" class="named"><title>0x004706b0 InitDDDevice (228 bytes)</title></rect>
@@ -1941,7 +1941,7 @@
 <rect width="14.43" height="14.53" x="559.91" y="78.90" class="todo"><title>0x0049bb90 Func49bb90 (542 bytes)</title></rect>
 <rect width="14.40" height="14.53" x="577.34" y="78.90" class="todo"><title>0x004403e0 GetCreatureMood (541 bytes)</title></rect>
 <rect width="14.35" height="14.53" x="594.74" y="78.90" class="todo"><title>0x00431e90 LaraTestWaterClimbOut (539 bytes)</title></rect>
-<rect width="14.35" height="14.53" x="612.08" y="78.90" class="todo"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
+<rect width="14.35" height="14.53" x="612.08" y="78.90" class="nonmatching"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
 <rect width="14.29" height="14.53" x="629.43" y="78.90" class="todo"><title>0x0044c9c0 IsRoomOutside (537 bytes)</title></rect>
 <rect width="14.27" height="14.53" x="646.72" y="78.90" class="todo"><title>0x0041c4c0 TriggerWraithEffect (536 bytes)</title></rect>
 <rect width="14.24" height="14.53" x="663.99" y="78.90" class="todo"><title>0x00407060 HammerheadControl (535 bytes)</title></rect>

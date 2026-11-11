@@ -55,6 +55,46 @@ void InitDSDevice(HWND dlg, HWND hwnd)
     SendMessage(hwnd, CB_SETCURSEL, 0, 0);
 }
 
+void InitTFormats(HWND dlg, HWND hwnd)
+{
+    DXTEXTUREINFO *tex;
+    sint32 i;
+    sint32 bpp;
+    sint32 r;
+    sint32 g;
+    sint32 b;
+    sint32 a;
+    char buffer[40];
+    uint8 software;
+
+    SendMessage(hwnd, CB_RESETCONTENT, 0, 0);
+    EnableWindow(GetDlgItem(dlg, 1006), 1);
+    software = SendMessage(GetDlgItem(dlg, 1011), BM_GETCHECK, 0, 0) != 0;
+    for (i = 0; i < App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].nTextureInfos; i++) {
+        tex = &App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].TextureInfos[i];
+        r = tex->rbpp;
+        a = tex->abpp;
+        bpp = tex->bpp;
+        b = tex->bbpp;
+        g = tex->gbpp;
+        wsprintf(buffer, "%d %s RGBA %d%d%d%d", bpp, SCRIPT_TEXT(TXT_Bit), r, g, b, a);
+        SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)buffer);
+        if (software) {
+            if (bpp == 32 && r == 8 && b == 8 && g == 8 && a == 8) {
+                SendMessage(hwnd, CB_SETCURSEL, i, 0);
+                nTFormat = i;
+                EnableWindow(GetDlgItem(dlg, 1006), 0);
+            }
+        } else if (bpp == 16 && r == 5 && b == 5 && g == 5 && a == 1) {
+            SendMessage(hwnd, CB_SETCURSEL, i, 0);
+            nTFormat = i;
+        } else {
+            SendMessage(hwnd, CB_SETCURSEL, 0, 0);
+            nTFormat = 0;
+        }
+    }
+}
+
 void InitD3DDevice(HWND dlg, HWND hwnd)
 {
     sint32 i;

@@ -20,6 +20,7 @@ extern uint8 start_setup;
 extern uint8 fmvs_disabled;
 extern sint32 nDSDevice;
 extern sint32 nVMode;
+extern sint32 nTFormat;
 extern sint32 nD3DDevice;
 extern sint32 nDDDevice;
 extern uint8 ASCIIToANSITable[7][2];

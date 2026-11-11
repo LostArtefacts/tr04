@@ -2174,6 +2174,7 @@ address,size,name,symbol
 0x004bfe70,4,audio_counter,_audio_counter
 0x004bfe74,1,reading_audio_file,_reading_audio_file
 0x004bfe7c,4,nD3DDevice,_nD3DDevice
+0x004bfe80,4,nTFormat,_nTFormat
 0x004bfe84,1,start_setup,_start_setup
 0x004bfe85,1,fmvs_disabled,_fmvs_disabled
 0x004bfe88,4,nDSDevice,_nDSDevice
