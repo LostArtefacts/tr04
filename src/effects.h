@@ -19,6 +19,7 @@ typedef struct fx_info {
 } FX_INFO;
 
 void lara_hands_free(ITEM_INFO *item);
+sint16 DoBloodSplat(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 direction, sint16 room_number);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;

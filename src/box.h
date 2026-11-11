@@ -69,7 +69,35 @@ typedef struct creature_info {
     LOT_INFO LOT;
 } CREATURE_INFO;
 
+typedef struct ai_info {
+    sint16 zone_number;
+    sint16 enemy_zone;
+    sint32 distance;
+    sint32 ahead;
+    sint32 bite;
+    sint16 angle;
+    sint16 x_angle;
+    sint16 enemy_facing;
+} AI_INFO;
+
+typedef struct bite_info {
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint32 mesh_num;
+} BITE_INFO;
+
 void InitialiseCreature(sint16 item_number);
+sint32 CreatureActive(sint16 item_number);
+void CreatureAIInfo(ITEM_INFO *item, AI_INFO *info);
+void GetCreatureMood(ITEM_INFO *item, AI_INFO *info, sint32 violent);
+void CreatureMood(ITEM_INFO *item, AI_INFO *info, sint32 violent);
+sint32 CreatureAnimation(sint16 item_number, sint16 angle, sint16 tilt);
+sint16 CreatureTurn(ITEM_INFO *item, sint16 maximum_turn);
+sint16 CreatureEffect(ITEM_INFO *item, BITE_INFO *bite, sint16 (*generate)(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 room_number));
+void GetAITarget(CREATURE_INFO *creature);
+
+extern CREATURE_INFO *baddie_slots;
 
 extern int num_boxes;
 extern sint16 *ground_zone[5][2];
