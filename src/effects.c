@@ -98,6 +98,11 @@ void shoot_left_gun(ITEM_INFO *item)
     lara.left_arm.flash_gun = 3;
 }
 
+void invisibility_on(ITEM_INFO *item)
+{
+    item->status = ITEM_INVISIBLE;
+}
+
 void reset_hair(ITEM_INFO *item)
 {
     InitialiseHair();
