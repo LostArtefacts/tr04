@@ -2388,7 +2388,10 @@ address,size,name,symbol
 0x007f5050,4,font_height,_font_height
 0x007f5054,4,small_font,_small_font
 0x007f5060,1696,CharDefCopy,_CharDefCopy
-0x007f5700,,CurrentSequence,_CurrentSequence
+0x007f5700,1,CurrentSequence,_CurrentSequence
+0x007f5708,6,SequenceUsed,_SequenceUsed
+0x007f5720,27,SequenceResults,_SequenceResults
+0x007f573c,3,Sequences,_Sequences
 0x007f5740,2,current_camera_cnt,_current_camera_cnt
 0x007f5750,,InitialCameraTarget,_InitialCameraTarget
 0x007f5760,,LaraFixedPosition,_LaraFixedPosition

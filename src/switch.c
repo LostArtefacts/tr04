@@ -83,3 +83,25 @@ void JumpSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
         }
     }
 }
+
+void FullBlockSwitchControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (item->anim_number == objects[item->object_number].anim_index + 2 && CurrentSequence < 3 && !item->item_flags[0]) {
+        item->item_flags[0] = 1;
+        Sequences[CurrentSequence] = (uint8)item->trigger_flags;
+        CurrentSequence++;
+        if (CurrentSequence == 3 && SequenceUsed[SequenceResults[Sequences[0]][Sequences[1]][Sequences[2]]])
+            CurrentSequence++;
+    } else if (CurrentSequence >= 4) {
+        item->item_flags[0] = 0;
+        item->goal_anim_state = 1;
+        item->status = ITEM_INACTIVE;
+        CurrentSequence++;
+        if (CurrentSequence >= 7)
+            CurrentSequence = 0;
+    }
+    AnimateItem(item);
+}
