@@ -66,3 +66,32 @@ void InitFont(void)
     }
     font_height = (sint32)((float)phd_winymax * 0.075F);
 }
+
+void UpdatePulseColour(void)
+{
+    D3DTLVERTEX v;
+    uint8 c, r, g, b;
+    int i;
+
+    PulseCnt = (PulseCnt + 1) & 0x1F;
+    if (PulseCnt >= 16)
+        c = -PulseCnt;
+    else
+        c = PulseCnt;
+    c <<= 3;
+    CalcColorSplit(RGBONLY(c, c, c), &v.color);
+    for (i = 0; i < 16; i++) {
+        r = (uint8)CLRR(v.color);
+        g = (uint8)CLRG(v.color);
+        b = (uint8)CLRB(v.color);
+        FontShades[1][i << 1].r = r;
+        FontShades[1][i << 1].g = g;
+        FontShades[1][i << 1].b = b;
+        r = (uint8)CLRR(v.specular);
+        g = (uint8)CLRG(v.specular);
+        b = (uint8)CLRB(v.specular);
+        FontShades[1][(i << 1) + 1].r = r;
+        FontShades[1][(i << 1) + 1].g = g;
+        FontShades[1][(i << 1) + 1].b = b;
+    }
+}

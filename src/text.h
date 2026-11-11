@@ -33,6 +33,7 @@ typedef struct chardef {
 } CHARDEF;
 
 void InitFont(void);
+void UpdatePulseColour(void);
 
 extern CVECTOR FontShades[10][32];
 extern CVECTOR ShadeFromTo[10][2];
