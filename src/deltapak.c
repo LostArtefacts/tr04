@@ -84,6 +84,15 @@ void ninth_cutseq_init(void)
     cutseq_meshbits[7] &= ~0x80000000;
 }
 
+void tenth_cutseq_init(void)
+{
+    cutseq_kill_item(DOOR_TYPE5);
+    cutseq_meshbits[1] &= ~0x80000000;
+    cutseq_meshbits[2] &= ~0x80000000;
+    cutseq_meshbits[3] &= ~0x80000000;
+    cutseq_meshbits[4] &= ~0x80000000;
+}
+
 void tenth_cutseq_end(void)
 {
     cutseq_restore_item(DOOR_TYPE5);
