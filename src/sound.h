@@ -26,6 +26,10 @@ enum sfx_options {
 #define SFX_LARA_NO_FRENCH 348
 #define SFX_LARA_NO_JAPAN 349
 #define SFX_FOOTSTEPS_MUD 288
+#define SFX_MINE_EXP_OVERLAY 103
+#define SFX_EXPLOSION1 105
+#define SFX_EXPLOSION2 106
+#define SFX_DART_SPITT 325
 
 typedef struct sample_info {
     sint16 number;

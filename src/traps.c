@@ -251,6 +251,40 @@ void FallingCeiling(sint16 item_number)
     }
 }
 
+void DartsControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint32 x, z, speed, i;
+    sint16 room_num;
+
+    item = &items[item_number];
+    if (item->touch_bits) {
+        lara_item->hit_points -= 25;
+        lara_item->hit_status = 1;
+        lara.poisoned += 160;
+        DoBloodSplat(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, (GetRandomControl() & 3) + 4, lara_item->pos.y_rot, lara_item->room_number);
+        KillItem(item_number);
+    } else {
+        x = item->pos.x_pos;
+        z = item->pos.z_pos;
+        speed = ((rcossin_tbl[((item->pos.x_rot >> 3) & 0x1FFE) + 1] << 2) * item->speed) >> 14;
+        item->pos.z_pos += ((rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * speed) >> 14;
+        item->pos.x_pos += ((rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * speed) >> 14;
+        item->pos.y_pos -= ((rcossin_tbl[(item->pos.x_rot >> 3) & 0x1FFE] << 2) * item->speed) >> 14;
+        room_num = item->room_number;
+        floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_num);
+        if (item->room_number != room_num)
+            ItemNewRoom(item_number, room_num);
+        item->floor = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+        if (item->pos.y_pos >= item->floor) {
+            for (i = 0; i < 4; i++)
+                TriggerDartSmoke(x, item->pos.y_pos, z, 0, 0, 1);
+            KillItem(item_number);
+        }
+    }
+}
+
 void LaraBurn(void)
 {
     sint16 fx_number;
