@@ -49,5 +49,6 @@ void MineCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void ControlRaisingBlock(sint16 item_number);
 void FallingSquishyBlockCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 sint32 TestBoundsCollideTeethSpikes(ITEM_INFO *item);
+void FlameEmitter2Control(sint16 item_number);
 
 #endif
