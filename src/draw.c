@@ -26,6 +26,17 @@ void phd_PushMatrix_I(void)
     IMptr += 12;
 }
 
+void phd_TranslateRel_I(sint32 x, sint32 y, sint32 z)
+{
+    sint32 *oldm;
+
+    phd_TranslateRel(x, y, z);
+    oldm = phd_mxptr;
+    phd_mxptr = IMptr;
+    phd_TranslateRel(x, y, z);
+    phd_mxptr = oldm;
+}
+
 void phd_PutPolygons_I(sint16 *ptr, sint32 clip)
 {
     phd_PushMatrix();
