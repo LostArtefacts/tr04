@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="7.80" height="12" x="0" y="0" class="named"><title>25 · 1.61%</title></rect>
-<rect width="476.20" height="12" x="7.80" y="0" class="todo"><title>1526 · 98.39%</title></rect>
+<rect width="8.11" height="12" x="0" y="0" class="named"><title>26 · 1.68%</title></rect>
+<rect width="475.89" height="12" x="8.11" y="0" class="todo"><title>1525 · 98.32%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">1.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">25</tspan> · <tspan class="todo">1526</tspan></text>
+<text text-anchor="end" x="654" y="7.50">1.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">26</tspan> · <tspan class="todo">1525</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="3.01" height="12" x="0" y="0" class="named"><title>4 KB · 0.62%</title></rect>
-<rect width="480.99" height="12" x="3.01" y="0" class="todo"><title>616 KB · 99.38%</title></rect>
+<rect width="3.20" height="12" x="0" y="0" class="named"><title>4 KB · 0.66%</title></rect>
+<rect width="480.80" height="12" x="3.20" y="0" class="todo"><title>616 KB · 99.34%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="24.50">0.6%</text>
+<text text-anchor="end" x="654" y="24.50">0.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">4 KB</tspan> · <tspan class="todo">616 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1469,7 +1469,7 @@
 <rect width="12" height="12" x="60" y="420" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="420" class="named"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="420" class="named"><title>0x0048fdc0 phd_GenerateW2V (840 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="420" class="todo"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="420" class="named"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="420" class="todo"><title>0x00490210 phd_atan (98 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="420" class="todo"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="420" class="todo"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
@@ -2256,7 +2256,7 @@
 <rect width="10.03" height="9.78" x="697.97" y="193.17" class="todo"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
 <rect width="10.03" height="9.78" x="711" y="193.17" class="todo"><title>0x00447be0 TestBoundsCollideStatic (244 bytes)</title></rect>
 <rect width="9.99" height="9.78" x="724.03" y="193.17" class="todo"><title>0x004321b0 LaraTestWaterStepOut (243 bytes)</title></rect>
-<rect width="9.99" height="9.78" x="737.01" y="193.17" class="todo"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
+<rect width="9.99" height="9.78" x="737.01" y="193.17" class="named"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
 <rect width="10.04" height="9.69" x="472.93" y="205.95" class="todo"><title>0x00462cb0 JumpSwitchCollision (242 bytes)</title></rect>
 <rect width="10.04" height="9.69" x="472.93" y="218.64" class="todo"><title>0x0046de50 OpenStreamFile (242 bytes)</title></rect>
 <rect width="10.04" height="9.65" x="472.93" y="231.33" class="todo"><title>0x00455cf0 SmashObject (241 bytes)</title></rect>

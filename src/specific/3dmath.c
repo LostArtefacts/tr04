@@ -1,8 +1,10 @@
+#include <math.h>
 #include <stdlib.h>
 
 #include "3dmath.h"
 #include "d3dmatrix.h"
 #include "../lara.h"
+#include "function_stubs.h"
 
 extern D3DMATRIX D3DMW2VMatrix;
 
@@ -148,4 +150,31 @@ void phd_GenerateW2V(PHD_3DPOS *viewPos)
     w2v_matrix[M11] = matrix_stack[M11] = (sint32)(LfAspectCorrection * (float)matrix_stack[M11]);
     w2v_matrix[M12] = matrix_stack[M12] = (sint32)(LfAspectCorrection * (float)matrix_stack[M12]);
     SetD3DMatrix(&D3DMW2VMatrix, w2v_matrix);
+}
+
+void phd_LookAt(sint32 sx, sint32 sy, sint32 sz, sint32 tx, sint32 ty, sint32 tz, sint16 roll)
+{
+    PHD_3DPOS viewPos;
+    sint32 dx, dy, dz, val;
+    sint16 angles[2];
+
+    phd_GetVectorAngles(tx - sx, ty - sy, tz - sz, angles);
+    viewPos.x_pos = sx;
+    viewPos.y_pos = sy;
+    viewPos.z_pos = sz;
+    viewPos.x_rot = angles[1];
+    viewPos.y_rot = angles[0];
+    viewPos.z_rot = roll;
+    dx = sx - tx;
+    dy = sy - ty;
+    dz = sz - tz;
+    val = (sint32)sqrt(dx * dx + dz * dz);
+    CamRot.x = (mGetAngle(0, 0, val, dy) >> 4) & 0xFFF;
+    CamRot.y = (mGetAngle(sz, sx, tz, tx) >> 4) & 0xFFF;
+    CamRot.z = 0;
+    CamPos.x = sx;
+    CamPos.y = sy;
+    CamPos.z = sz;
+    phd_GenerateW2V(&viewPos);
+    S_InitD3DMatrix();
 }

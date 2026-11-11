@@ -6,9 +6,10 @@
 
 #include "../types.h"
 
-D3DMATRIX *D3DIdentityMatrix(D3DMATRIX *mx);
 void SetD3DMatrix(D3DMATRIX *mx, sint32 *imx);
-void D3DTransform(D3DVECTOR *vec, D3DMATRIX *mx);
+void S_InitD3DMatrix(void);
 D3DVECTOR *D3DNormalise(D3DVECTOR *vec);
+D3DMATRIX *D3DIdentityMatrix(D3DMATRIX *mx);
+void D3DTransform(D3DVECTOR *vec, D3DMATRIX *mx);
 
 #endif
