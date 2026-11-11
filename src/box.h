@@ -69,6 +69,8 @@ typedef struct creature_info {
     LOT_INFO LOT;
 } CREATURE_INFO;
 
+void InitialiseCreature(sint16 item_number);
+
 extern int num_boxes;
 extern sint16 *ground_zone[5][2];
 
