@@ -2544,6 +2544,7 @@ address,size,name,symbol
 0x00808f80,4,DebrisMeshAmbient,_DebrisMeshAmbient
 0x00808f84,4,DebrisMesh,_DebrisMesh
 0x00808f88,4,DebrisMeshFlags,_DebrisMeshFlags
+0x00808fa0,18432,debris,_debris
 0x0080d7a0,4,DebrisMeshC2,_DebrisMeshC2
 0x0080d7a4,4,DebrisMeshC1,_DebrisMeshC1
 0x0080d7a8,4,DebrisMeshC3,_DebrisMeshC3
