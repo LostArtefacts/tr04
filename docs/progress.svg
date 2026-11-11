@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="36.16" height="12" x="0" y="0" class="named"><title>151 · 9.77%</title></rect>
-<rect width="0.24" height="12" x="36.16" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.92" height="12" x="36.40" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="331.68" height="12" x="38.32" y="0" class="todo"><title>1385 · 89.64%</title></rect>
+<rect width="36.40" height="12" x="0" y="0" class="named"><title>152 · 9.84%</title></rect>
+<rect width="0.24" height="12" x="36.40" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.92" height="12" x="36.64" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="331.44" height="12" x="38.56" y="0" class="todo"><title>1384 · 89.58%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">9.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">151</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1385</tspan></text>
+<text text-anchor="end" x="540" y="7.50">9.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">152</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1384</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="16.56" height="12" x="0" y="0" class="named"><title>28 KB · 4.48%</title></rect>
-<rect width="0.10" height="12" x="16.56" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="3.07" height="12" x="16.59" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="350.33" height="12" x="19.67" y="0" class="todo"><title>587 KB · 94.68%</title></rect>
+<rect width="16.92" height="12" x="0" y="0" class="named"><title>28 KB · 4.57%</title></rect>
+<rect width="0.10" height="12" x="16.92" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="3.07" height="12" x="16.95" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="349.97" height="12" x="20.03" y="0" class="todo"><title>586 KB · 94.59%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">4.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">28 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">587 KB</tspan></text>
+<text text-anchor="end" x="540" y="24.50">4.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">28 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">586 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1392,7 +1392,7 @@
 <rect width="12" height="12" x="345" y="390" class="named"><title>0x00484c70 OpenRegistry (75 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="390" class="named"><title>0x00484cc0 CloseRegistry (5 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="390" class="named"><title>0x00484cd0 LoadSettings (1201 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="390" class="todo"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="390" class="named"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="390" class="todo"><title>0x004853f0 SaveSettings (527 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="390" class="todo"><title>0x00485600 setXY4 (474 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="390" class="todo"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
@@ -1899,7 +1899,7 @@
 <rect width="15.31" height="15.31" x="346.19" y="283.62" class="todo"><title>0x004624c0 TurnSwitchControl (606 bytes)</title></rect>
 <rect width="15.31" height="15.25" x="346.19" y="301.92" class="todo"><title>0x00493c00 DXClose (604 bytes)</title></rect>
 <rect width="15.31" height="15.20" x="346.19" y="320.18" class="todo"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
-<rect width="15.31" height="15.15" x="346.19" y="338.38" class="todo"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
+<rect width="15.31" height="15.15" x="346.19" y="338.38" class="named"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
 <rect width="15.31" height="15.10" x="346.19" y="356.53" class="todo"><title>0x00409200 ControlBodyPart (598 bytes)</title></rect>
 <rect width="15.31" height="15.08" x="346.19" y="374.64" class="todo"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
 <rect width="15.31" height="15.08" x="346.19" y="392.71" class="todo"><title>0x00438940 TriggerGunSmoke (597 bytes)</title></rect>

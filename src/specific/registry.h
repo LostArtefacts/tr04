@@ -14,6 +14,7 @@ uint8 REG_ReadBool(char *SubKeyName, uint8 *value, uint8 defaultValue);
 uint8 OpenRegistry(LPCSTR SubKeyName);
 void CloseRegistry(void);
 uint8 LoadSettings(void);
+uint8 SaveSetup(HWND hDlg);
 
 extern uint8 REG_Setup;
 
