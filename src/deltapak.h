@@ -112,5 +112,6 @@ void deal_with_pistols(void);
 void fourth_cutseq_control(void);
 void eleventh_cutseq_init(void);
 void twentythree_control(void);
+void ninth_control(void);
 
 #endif

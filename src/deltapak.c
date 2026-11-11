@@ -126,6 +126,25 @@ void ninth_cutseq_init(void)
     cutseq_meshbits[7] &= ~0x80000000;
 }
 
+void ninth_control(void)
+{
+    if (GLOBAL_cutseq_frame == 3000) {
+        cutseq_meshbits[3] |= 0x80000000;
+        cutseq_meshbits[4] |= 0x80000000;
+        cutseq_meshbits[5] |= 0x80000000;
+        cutseq_meshbits[6] |= 0x80000000;
+        cutseq_meshbits[7] |= 0x80000000;
+        cutseq_meshbits[1] &= ~0x80000000;
+    } else if (GLOBAL_cutseq_frame == 1300) {
+        cutseq_meshbits[1] &= ~0x80000000;
+    } else if (GLOBAL_cutseq_frame == 1677) {
+        cutseq_meshbits[1] |= 0x80000000;
+    }
+    handle_lara_chatting(lara_chat_ranges9);
+    handle_actor_chatting(ACTOR1_SPEECH_HEAD1, 21, 1, VON_CROY, voncroy_chat_ranges9);
+    actor_chat_cnt = (actor_chat_cnt - 1) & 1;
+}
+
 void tenth_cutseq_init(void)
 {
     cutseq_kill_item(DOOR_TYPE5);
