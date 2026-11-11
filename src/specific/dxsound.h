@@ -19,6 +19,7 @@ void DSChangeVolume(sint32 num, sint32 volume);
 void DSAdjustPitch(sint32 num, sint32 pitch);
 void DSAdjustPan(sint32 num, sint32 pan);
 uint8 DXSetOutputFormat(void);
+uint8 DXDSCreate(void);
 uint8 InitSampleDecompress(void);
 uint8 FreeSampleDecompress(void);
 void DXStopSample(sint32 num);

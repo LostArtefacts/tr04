@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="35.88" height="12" x="0" y="0" class="named"><title>154 · 9.97%</title></rect>
-<rect width="0.23" height="12" x="35.88" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="1.86" height="12" x="36.12" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
-<rect width="322.02" height="12" x="37.98" y="0" class="todo"><title>1382 · 89.45%</title></rect>
+<rect width="36.12" height="12" x="0" y="0" class="named"><title>155 · 10.03%</title></rect>
+<rect width="0.23" height="12" x="36.12" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="1.86" height="12" x="36.35" y="0" class="nonmatching"><title>8 · 0.52%</title></rect>
+<rect width="321.79" height="12" x="38.21" y="0" class="todo"><title>1381 · 89.39%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">10.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">154</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1382</tspan></text>
+<text text-anchor="end" x="540" y="7.50">10.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">155</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">8</tspan> · <tspan class="todo">1381</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="16.86" height="12" x="0" y="0" class="named"><title>29 KB · 4.68%</title></rect>
-<rect width="0.10" height="12" x="16.86" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="2.99" height="12" x="16.89" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
-<rect width="340.12" height="12" x="19.88" y="0" class="todo"><title>586 KB · 94.48%</title></rect>
+<rect width="16.93" height="12" x="0" y="0" class="named"><title>29 KB · 4.70%</title></rect>
+<rect width="0.10" height="12" x="16.93" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="2.99" height="12" x="16.95" y="0" class="nonmatching"><title>5 KB · 0.83%</title></rect>
+<rect width="340.06" height="12" x="19.94" y="0" class="todo"><title>586 KB · 94.46%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">4.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">29 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">5 KB</tspan> · <tspan class="todo">586 KB</tspan></text>
@@ -1233,7 +1233,7 @@
 <rect width="12" height="12" x="210" y="345" class="named"><title>0x004733b0 DSAdjustPitch (80 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="345" class="named"><title>0x00473400 DSAdjustPan (82 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="345" class="named"><title>0x00473460 DXSetOutputFormat (159 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="345" class="todo"><title>0x00473500 DXDSCreate (105 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="345" class="named"><title>0x00473500 DXDSCreate (105 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="345" class="named"><title>0x00473570 InitSampleDecompress (273 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="345" class="named"><title>0x00473690 FreeSampleDecompress (121 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="345" class="todo"><title>0x00473710 DXCreateSampleADPCM (410 bytes)</title></rect>
@@ -2637,7 +2637,7 @@
 <rect width="6.33" height="6.42" x="580.53" y="343.05" class="todo"><title>0x004280f0 lara_col_splat (105 bytes)</title></rect>
 <rect width="6.33" height="6.42" x="580.53" y="352.47" class="todo"><title>0x0043e140 spinback (105 bytes)</title></rect>
 <rect width="6.33" height="6.42" x="580.53" y="361.89" class="todo"><title>0x0044eba0 DrawPhaseGame (105 bytes)</title></rect>
-<rect width="6.33" height="6.42" x="580.53" y="371.31" class="todo"><title>0x00473500 DXDSCreate (105 bytes)</title></rect>
+<rect width="6.33" height="6.42" x="580.53" y="371.31" class="named"><title>0x00473500 DXDSCreate (105 bytes)</title></rect>
 <rect width="6.33" height="6.42" x="580.53" y="380.73" class="todo"><title>0x00478440 ApplyMatrix (105 bytes)</title></rect>
 <rect width="6.33" height="6.42" x="580.53" y="390.14" class="todo"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
 <rect width="6.33" height="6.42" x="580.53" y="399.56" class="named"><title>0x0048e860 Sync (105 bytes)</title></rect>

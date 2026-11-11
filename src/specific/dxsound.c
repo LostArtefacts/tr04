@@ -81,6 +81,16 @@ uint8 DXSetOutputFormat(void)
     return 1;
 }
 
+uint8 DXDSCreate(void)
+{
+    Log(2, "DXDSCreate");
+    DXAttempt(DirectSoundCreate(G_dxinfo->DSInfo[G_dxinfo->nDS].lpGuid, &App.dx.lpDS, 0));
+    DXAttempt(IDirectSound_SetCooperativeLevel(App.dx.lpDS, App.hWnd, DSSCL_EXCLUSIVE));
+    DXSetOutputFormat();
+    sound_active = 1;
+    return 1;
+}
+
 uint8 InitSampleDecompress(void)
 {
     pcm_format.wFormatTag = WAVE_FORMAT_PCM;
