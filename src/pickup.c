@@ -48,3 +48,14 @@ sint32 KeyTrigger(sint16 item_num)
     KeyTriggerActive = 0;
     return oldkey;
 }
+
+sint32 PickupTrigger(sint16 item_num)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_num];
+    if ((sint16)(item->flags & IFL_CLEARBODY) || item->status != ITEM_INVISIBLE || item->item_flags[3] != 1 || item->trigger_flags & 128)
+        return 0;
+    KillItem(item_num);
+    return 1;
+}

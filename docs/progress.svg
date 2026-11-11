@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="122.31" height="12" x="0" y="0" class="named"><title>543 · 35.15%</title></rect>
-<rect width="0.45" height="12" x="122.31" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="122.76" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="220.51" height="12" x="127.49" y="0" class="todo"><title>979 · 63.37%</title></rect>
+<rect width="122.53" height="12" x="0" y="0" class="named"><title>544 · 35.21%</title></rect>
+<rect width="0.45" height="12" x="122.53" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="122.98" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="220.29" height="12" x="127.71" y="0" class="todo"><title>978 · 63.30%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">35.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">543</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">979</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">544</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">978</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="53.85" height="12" x="0" y="0" class="named"><title>96 KB · 15.47%</title></rect>
-<rect width="0.12" height="12" x="53.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="53.97" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="286.66" height="12" x="61.34" y="0" class="todo"><title>511 KB · 82.37%</title></rect>
+<rect width="53.90" height="12" x="0" y="0" class="named"><title>96 KB · 15.49%</title></rect>
+<rect width="0.12" height="12" x="53.90" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="54.02" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="286.61" height="12" x="61.39" y="0" class="todo"><title>511 KB · 82.36%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">15.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">96 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">511 KB</tspan></text>
@@ -965,7 +965,7 @@
 <rect width="12" height="12" x="690" y="255" class="todo"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="255" class="named"><title>0x00458690 PuzzleDone (118 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="255" class="named"><title>0x00458710 KeyTrigger (108 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="255" class="todo"><title>0x00458780 PickupTrigger (91 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="255" class="named"><title>0x00458780 PickupTrigger (91 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="270" class="todo"><title>0x004587e0 SarcophagusCollision (529 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="270" class="todo"><title>0x00458a00 vMul (49 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="270" class="todo"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>
@@ -2694,7 +2694,7 @@
 <rect width="5.86" height="6.01" x="679.35" y="304.80" class="named"><title>0x00422e50 MonkeySwingFall (91 bytes)</title></rect>
 <rect width="5.86" height="6.01" x="688.20" y="304.80" class="named"><title>0x00427420 lara_as_pickupflare (91 bytes)</title></rect>
 <rect width="5.86" height="6.01" x="697.06" y="304.80" class="named"><title>0x00432b70 lara_col_uwdeath (91 bytes)</title></rect>
-<rect width="5.86" height="6.01" x="705.92" y="304.80" class="todo"><title>0x00458780 PickupTrigger (91 bytes)</title></rect>
+<rect width="5.86" height="6.01" x="705.92" y="304.80" class="named"><title>0x00458780 PickupTrigger (91 bytes)</title></rect>
 <rect width="5.86" height="6.01" x="714.77" y="304.80" class="todo"><title>0x00478010 MallocD3DLights (91 bytes)</title></rect>
 <rect width="5.79" height="6.01" x="723.63" y="304.80" class="named"><title>0x00402a10 InitialiseBat (90 bytes)</title></rect>
 <rect width="5.79" height="6.01" x="732.42" y="304.80" class="todo"><title>0x00407a30 InitialiseHarpy (90 bytes)</title></rect>
