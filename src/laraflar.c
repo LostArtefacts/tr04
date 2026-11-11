@@ -28,6 +28,11 @@ void draw_flare_meshes(void)
     lara.mesh_ptrs[LM_LHAND] = meshes[objects[FLARE_ANIM].mesh_index + LM_LHAND * 2];
 }
 
+void undraw_flare_meshes(void)
+{
+    lara.mesh_ptrs[LM_LHAND] = meshes[objects[LARA].mesh_index + LM_LHAND * 2];
+}
+
 void ready_flare(void)
 {
     lara.gun_status = LG_NO_ARMS;
