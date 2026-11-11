@@ -273,6 +273,7 @@ void lara_col_compress(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_roll2(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_swandive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_fastfall(ITEM_INFO *item, COLL_INFO *coll);
+sint32 LaraTestEdgeCatch(ITEM_INFO *item, COLL_INFO *coll, sint32 *edge);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

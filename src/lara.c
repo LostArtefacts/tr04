@@ -3,6 +3,7 @@
 #include "anim.h"
 #include "room.h"
 #include "control.h"
+#include "draw.h"
 #include "camera.h"
 #include "sound.h"
 #include "specific/input.h"
@@ -46,6 +47,29 @@ sint32 LaraDeflectEdgeDuck(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_rot -= LARA_DUCK_DEFLECT;
     }
     return 0;
+}
+
+sint32 LaraTestEdgeCatch(ITEM_INFO *item, COLL_INFO *coll, sint32 *edge)
+{
+    sint32 hdif;
+    sint16 *bounds;
+
+    bounds = GetBoundsAccurate(item);
+    hdif = coll->front_floor - bounds[2];
+    if ((hdif < 0 && hdif + item->fallspeed < 0) || (hdif > 0 && hdif + item->fallspeed > 0)) {
+        hdif = item->pos.y_pos + bounds[2];
+        if ((hdif >> (WALL_SHIFT - 2)) != ((hdif + item->fallspeed) >> (WALL_SHIFT - 2))) {
+            if (item->fallspeed > 0)
+                *edge = (hdif + item->fallspeed) & ~(STEP_L - 1);
+            else
+                *edge = hdif & ~(STEP_L - 1);
+            return -1;
+        }
+        return 0;
+    }
+    if (ABS(coll->left_floor2 - coll->right_floor2) >= 60)
+        return 0;
+    return 1;
 }
 
 void lara_col_dash(ITEM_INFO *item, COLL_INFO *coll)
