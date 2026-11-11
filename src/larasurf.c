@@ -109,3 +109,9 @@ void lara_as_surftread(ITEM_INFO *item, COLL_INFO *coll)
         lara.dive_count = 0;
     }
 }
+
+void lara_col_surfback(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.move_angle = item->pos.y_rot - 32768;
+    LaraSurfaceCollision(item, coll);
+}
