@@ -7,6 +7,7 @@
 #include "delstuff.h"
 #include "deltapak.h"
 #include "health.h"
+#include "anim.h"
 
 #define S_LongMemCpy(d, s, n) memcpy(d, s, (n) * sizeof(sint32))
 
@@ -164,6 +165,32 @@ void phd_PutPolygons_I(sint16 *ptr, sint32 clip)
     InterpolateMatrix();
     phd_PutPolygons(ptr, clip);
     phd_PopMatrix();
+}
+
+sint32 GetFrames(ITEM_INFO *item, sint16 *frm[], sint32 *rate)
+{
+    ANIM_STRUCT *anim;
+    sint32 frame;
+    sint32 first, second;
+    sint32 frame_size;
+    sint32 interp, rat;
+
+    frame = item->frame_number;
+    anim = &anims[item->anim_number];
+    frm[0] = frm[1] = anim->frame_ptr;
+    rat = *rate = anim->interpolation & 0xff;
+    frame_size = anim->interpolation >> 8;
+    frame -= anim->frame_base;
+    first = frame / rat;
+    interp = frame % rat;
+    frm[0] += first * frame_size;
+    frm[1] = frm[0] + frame_size;
+    if (interp == 0)
+        return 0;
+    second = (first + 1) * rat;
+    if (second > anim->frame_end)
+        *rate = anim->frame_end - second + rat;
+    return interp;
 }
 
 sint16 *GetBoundsAccurate(ITEM_INFO *item)

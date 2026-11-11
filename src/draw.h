@@ -22,6 +22,7 @@ void phd_RotYXZ_I(sint16 y, sint16 x, sint16 z);
 sint16 *GetBoundsAccurate(ITEM_INFO *item);
 void DrawRooms(sint16 CurrentRoom);
 sint32 DrawPhaseGame(void);
+sint32 GetFrames(ITEM_INFO *item, sint16 *frmptr[], sint32 *rate);
 
 extern sint32 *IMptr;
 extern sint16 interpolated_bounds[6];
