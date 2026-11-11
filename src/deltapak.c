@@ -333,6 +333,15 @@ void twentytwo_end(void)
     trigger_item_in_room(39, DEMIGOD3);
 }
 
+void do_spade_meshswap(void)
+{
+    sint16 *temp;
+
+    temp = lara.mesh_ptrs[LM_LHAND];
+    lara.mesh_ptrs[LM_LHAND] = meshes[objects[MESHSWAP1].mesh_index + LM_LHAND * 2];
+    meshes[objects[MESHSWAP1].mesh_index + LM_LHAND * 2] = temp;
+}
+
 void do_backpack_meshswap(void)
 {
     sint16 *temp;
