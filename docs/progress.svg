@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="118.48" height="12" x="0" y="0" class="named"><title>526 · 34.05%</title></rect>
-<rect width="0.45" height="12" x="118.48" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="118.93" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="224.34" height="12" x="123.66" y="0" class="todo"><title>996 · 64.47%</title></rect>
+<rect width="118.70" height="12" x="0" y="0" class="named"><title>527 · 34.11%</title></rect>
+<rect width="0.45" height="12" x="118.70" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="119.15" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="224.12" height="12" x="123.88" y="0" class="todo"><title>995 · 64.40%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">34.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">526</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">996</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">527</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">995</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="51.12" height="12" x="0" y="0" class="named"><title>91 KB · 14.69%</title></rect>
-<rect width="0.12" height="12" x="51.12" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="51.24" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="289.38" height="12" x="58.62" y="0" class="todo"><title>516 KB · 83.16%</title></rect>
+<rect width="51.26" height="12" x="0" y="0" class="named"><title>91 KB · 14.73%</title></rect>
+<rect width="0.12" height="12" x="51.26" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="51.38" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="289.25" height="12" x="58.75" y="0" class="todo"><title>515 KB · 83.12%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="24.50">14.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">91 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">516 KB</tspan></text>
+<text text-anchor="end" x="528" y="24.50">14.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">91 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">515 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -933,7 +933,7 @@
 <rect width="12" height="12" x="210" y="255" class="named"><title>0x004557b0 ClearLOT (75 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="255" class="todo"><title>0x00455800 Draw_Mirror_Lara (735 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="255" class="todo"><title>0x00455ae0 EarthQuake (524 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="255" class="todo"><title>0x00455cf0 SmashObject (241 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="255" class="named"><title>0x00455cf0 SmashObject (241 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="255" class="todo"><title>0x00455df0 SmashObjectControl (168 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="255" class="named"><title>0x00455ea0 BridgeFlatFloor (42 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="255" class="named"><title>0x00455ed0 BridgeFlatCeiling (27 bytes)</title></rect>
@@ -2259,7 +2259,7 @@
 <rect width="9.57" height="9.82" x="470.60" y="262.60" class="named"><title>0x004321b0 LaraTestWaterStepOut (243 bytes)</title></rect>
 <rect width="9.57" height="9.82" x="470.60" y="275.42" class="named"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
 <rect width="9.57" height="9.78" x="470.60" y="288.24" class="named"><title>0x00462cb0 JumpSwitchCollision (242 bytes)</title></rect>
-<rect width="9.57" height="9.74" x="470.60" y="301.02" class="todo"><title>0x00455cf0 SmashObject (241 bytes)</title></rect>
+<rect width="9.57" height="9.74" x="470.60" y="301.02" class="named"><title>0x00455cf0 SmashObject (241 bytes)</title></rect>
 <rect width="9.57" height="9.74" x="470.60" y="313.76" class="todo"><title>0x0046cb40 deal_with_pistols (241 bytes)</title></rect>
 <rect width="9.57" height="9.70" x="470.60" y="326.50" class="todo"><title>0x0040e2d0 TriggerScarab (240 bytes)</title></rect>
 <rect width="9.57" height="9.70" x="470.60" y="339.19" class="named"><title>0x00442c40 SameZone (240 bytes)</title></rect>

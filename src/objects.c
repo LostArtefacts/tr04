@@ -10,6 +10,28 @@
 #include "sphere.h"
 #include "specific/3dmath.h"
 
+void SmashObject(sint16 item_number)
+{
+    ROOM_INFO *r;
+    FLOOR_INFO *floor;
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    r = &room[item->room_number];
+    floor = &r->floor[((item->pos.z_pos - r->z) >> WALL_SHIFT) + ((item->pos.x_pos - r->x) >> WALL_SHIFT) * r->x_size];
+    if (boxes[floor->box].overlap_index & 0x8000)
+        boxes[floor->box].overlap_index &= ~0x4000;
+    SoundEffect(SFX_EXPLOSION1, &item->pos, SFX_DEFAULT);
+    SoundEffect(SFX_EXPLOSION2, &item->pos, SFX_DEFAULT);
+    item->mesh_bits = 0xFFFE;
+    item->collidable = 0;
+    ExplodingDeath2(item_number, -1, 256);
+    item->flags |= IFL_INVISIBLE;
+    if (item->status == ITEM_ACTIVE)
+        RemoveActiveItem(item_number);
+    item->status = ITEM_DEACTIVATED;
+}
+
 void BridgeFlatFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
 {
     if (y <= item->pos.y_pos) {
