@@ -287,3 +287,42 @@ sint16 CreateEffect(sint16 room_num)
     fx->shade = 0x4210;
     return fx_num;
 }
+
+void KillEffect(sint16 fx_num)
+{
+    sint16 linknum;
+    FX_INFO *fx;
+
+    if (InItemControlLoop) {
+        ItemNewRooms[ItemNewRoomNo][0] = fx_num | 0x8000;
+        ItemNewRoomNo++;
+        return;
+    }
+
+    DetatchSpark(fx_num, 64);
+    fx = &effects[fx_num];
+    linknum = next_fx_active;
+    if (linknum == fx_num) {
+        next_fx_active = fx->next_active;
+    } else {
+        for (; linknum != NO_ITEM; linknum = effects[linknum].next_active) {
+            if (effects[linknum].next_active == fx_num) {
+                effects[linknum].next_active = fx->next_active;
+                break;
+            }
+        }
+    }
+    linknum = room[fx->room_number].fx_number;
+    if (linknum == fx_num) {
+        room[fx->room_number].fx_number = fx->next_fx;
+    } else {
+        for (; linknum != NO_ITEM; linknum = effects[linknum].next_fx) {
+            if (effects[linknum].next_fx == fx_num) {
+                effects[linknum].next_fx = fx->next_fx;
+                break;
+            }
+        }
+    }
+    fx->next_fx = next_fx_free;
+    next_fx_free = fx_num;
+}
