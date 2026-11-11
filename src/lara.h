@@ -292,6 +292,7 @@ sint16 GetDirOctant(sint32 rot);
 void lara_col_hangleft(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_hangright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_hang(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_pickupflare(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

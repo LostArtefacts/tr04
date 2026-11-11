@@ -1088,6 +1088,18 @@ void lara_as_pickup(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_distance = WALL_L;
 }
 
+void lara_as_pickupflare(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.look = 0;
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    camera.target_angle = 23660;
+    camera.target_elevation = -2730;
+    camera.target_distance = 1024;
+    if (item->frame_number == anims[item->anim_number].frame_end - 1)
+        lara.gun_status = LG_NO_ARMS;
+}
+
 void lara_as_switchon(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.look = 0;
