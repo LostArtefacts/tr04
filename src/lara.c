@@ -650,6 +650,50 @@ void MonkeySwingFall(ITEM_INFO *item)
     lara.gun_status = LG_NO_ARMS;
 }
 
+void lara_col_hang2(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->fallspeed = 0;
+    item->gravity_status = 0;
+    if (lara.CanMonkeySwing) {
+        coll->bad_pos = -NO_HEIGHT;
+        coll->bad_neg = NO_HEIGHT;
+        coll->bad_ceiling = 0;
+        coll->facing = lara.move_angle = item->pos.y_rot;
+        coll->slopes_are_walls = 0;
+        coll->radius = LARA_RAD;
+        GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, HANG_HEIGHT);
+        if ((input & IN_FORWARD) && coll->coll_type != COLL_FRONT && ABS(coll->mid_ceiling - coll->front_ceiling) < 50)
+            item->goal_anim_state = AS_MONKEYSWING;
+        else if ((input & IN_LSTEP) && TestMonkeyLeft(item, coll))
+            item->goal_anim_state = AS_MONKEYL;
+        else if ((input & IN_RSTEP) && TestMonkeyRight(item, coll))
+            item->goal_anim_state = AS_MONKEYR;
+        else if (input & IN_LEFT)
+            item->goal_anim_state = AS_HANGTURNL;
+        else if (input & IN_RIGHT)
+            item->goal_anim_state = AS_HANGTURNR;
+        MonkeySwingSnap(item, coll);
+    } else {
+        LaraHangTest(item, coll);
+        if (item->goal_anim_state == AS_HANG2) {
+            if ((input & IN_FORWARD) && coll->front_floor > -850 && coll->front_floor < -650 && coll->front_floor - coll->front_ceiling >= 0 && coll->left_floor2 - coll->left_ceiling2 >= 0 && coll->right_floor2 - coll->right_ceiling2 >= 0 && !coll->hit_static) {
+                if (input & IN_WALK)
+                    item->goal_anim_state = AS_GYMNAST;
+                else
+                    item->goal_anim_state = AS_NULL;
+                return;
+            }
+            if ((input & (IN_DUCK | IN_FORWARD)) && coll->front_floor > -850 && coll->front_floor < -650 && coll->front_floor - coll->front_ceiling >= -STEP_L && coll->left_floor2 - coll->left_ceiling2 >= -STEP_L && coll->right_floor2 - coll->right_ceiling2 >= -STEP_L && !coll->hit_static) {
+                item->goal_anim_state = AS_HANG2DUCK;
+                item->required_anim_state = AS_DUCK;
+            } else if ((input & IN_LEFT) || (input & IN_LSTEP))
+                item->goal_anim_state = AS_HANGLEFT;
+            else if ((input & IN_RIGHT) || (input & IN_RSTEP))
+                item->goal_anim_state = AS_HANGRIGHT;
+        }
+    }
+}
+
 void MonkeySwingSnap(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint16 room_num;

@@ -301,6 +301,7 @@ void lara_col_monkeyl(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_monkeyr(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_dash(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_crawl2hang(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_hang2(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

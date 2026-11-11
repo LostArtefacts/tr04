@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="94.37" height="12" x="0" y="0" class="named"><title>405 · 26.21%</title></rect>
-<rect width="0.23" height="12" x="94.37" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="2.80" height="12" x="94.60" y="0" class="nonmatching"><title>12 · 0.78%</title></rect>
-<rect width="262.60" height="12" x="97.40" y="0" class="todo"><title>1127 · 72.94%</title></rect>
+<rect width="94.60" height="12" x="0" y="0" class="named"><title>406 · 26.28%</title></rect>
+<rect width="0.23" height="12" x="94.60" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="2.80" height="12" x="94.83" y="0" class="nonmatching"><title>12 · 0.78%</title></rect>
+<rect width="262.37" height="12" x="97.63" y="0" class="todo"><title>1126 · 72.88%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">26.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">405</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">12</tspan> · <tspan class="todo">1127</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">406</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">12</tspan> · <tspan class="todo">1126</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="34.76" height="12" x="0" y="0" class="named"><title>60 KB · 9.66%</title></rect>
-<rect width="0.10" height="12" x="34.76" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="5.18" height="12" x="34.79" y="0" class="nonmatching"><title>9 KB · 1.44%</title></rect>
-<rect width="320.03" height="12" x="39.97" y="0" class="todo"><title>551 KB · 88.90%</title></rect>
+<rect width="35.08" height="12" x="0" y="0" class="named"><title>60 KB · 9.75%</title></rect>
+<rect width="0.10" height="12" x="35.08" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="5.18" height="12" x="35.11" y="0" class="nonmatching"><title>9 KB · 1.44%</title></rect>
+<rect width="319.70" height="12" x="40.30" y="0" class="todo"><title>551 KB · 88.81%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">9.7%</text>
+<text text-anchor="end" x="540" y="24.50">9.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">60 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">9 KB</tspan> · <tspan class="todo">551 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -306,7 +306,7 @@
 <rect width="12" height="12" x="555" y="60" class="todo"><title>0x00422c50 LaraDeflectEdgeJump (337 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="60" class="todo"><title>0x00422de0 lara_as_hang2 (106 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="60" class="named"><title>0x00422e50 MonkeySwingFall (91 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="60" class="todo"><title>0x00422eb0 lara_col_hang2 (559 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="60" class="named"><title>0x00422eb0 lara_col_hang2 (559 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="60" class="todo"><title>0x004230e0 LaraHangTest (1191 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="60" class="todo"><title>0x004235b0 SnapLaraToEdgeOfBlock (172 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="60" class="named"><title>0x00423660 MonkeySwingSnap (66 bytes)</title></rect>
@@ -1931,7 +1931,7 @@
 <rect width="14.94" height="14.52" x="382.38" y="78.86" class="todo"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
 <rect width="14.94" height="14.52" x="400.32" y="78.86" class="todo"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
 <rect width="14.94" height="14.52" x="418.25" y="78.86" class="named"><title>0x004543b0 InitialiseItem (561 bytes)</title></rect>
-<rect width="14.88" height="14.52" x="436.19" y="78.86" class="todo"><title>0x00422eb0 lara_col_hang2 (559 bytes)</title></rect>
+<rect width="14.88" height="14.52" x="436.19" y="78.86" class="named"><title>0x00422eb0 lara_col_hang2 (559 bytes)</title></rect>
 <rect width="14.80" height="14.52" x="454.07" y="78.86" class="named"><title>0x00455470 InitialiseSlot (556 bytes)</title></rect>
 <rect width="14.64" height="14.52" x="471.88" y="78.86" class="todo"><title>0x00482f90 SubdivideEdge (550 bytes)</title></rect>
 <rect width="14.62" height="14.52" x="489.52" y="78.86" class="todo"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
