@@ -47,6 +47,10 @@ extern sint32 height_type;
 extern sint16 *floor_data;
 extern sint32 flipeffect;
 extern sint32 SetDebounce;
+extern sint32 flipmap[10];
+extern sint32 flip_stats[10];
+extern sint32 flip_status;
+extern char cd_flags[128];
 
 void TriggerNormalCDTrack(sint16 value, sint16 flags, sint16 type);
 sint32 LOS(GAME_VECTOR *start, GAME_VECTOR *target);

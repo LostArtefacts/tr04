@@ -2466,6 +2466,7 @@ address,size,name,symbol
 0x007fe150,4,outside_top,_outside_top
 0x007fe154,,HeavyTriggered,_HeavyTriggered
 0x007fe160,4,SetDebounce,_SetDebounce
+0x007fe180,128,cd_flags,_cd_flags
 0x007fe200,4,OnObject,_OnObject
 0x007fe204,4,SenetTargetX,_SenetTargetX
 0x007fe208,4,SenetTargetZ,_SenetTargetZ
@@ -2474,6 +2475,7 @@ address,size,name,symbol
 0x007fe214,4,tiltyoff,_tiltyoff
 0x007fe218,4,flip_status,_flip_status
 0x007fe21c,1,CurrentAtmosphere,_CurrentAtmosphere
+0x007fe220,40,flipmap,_flipmap
 0x007fe248,4,trigger_index,_trigger_index
 0x007fe288,1,bVoncroyCutScene,_bVoncroyCutScene
 0x007fe28c,4,items,_items
@@ -2481,6 +2483,7 @@ address,size,name,symbol
 0x007fe2e0,4,ClosestItem,_ClosestItem
 0x007fe2e4,1,IsAtmospherePlaying,_IsAtmospherePlaying
 0x007fe2e8,4,OutsideRoomOffsets,_OutsideRoomOffsets
+0x007fe300,40,flip_stats,_flip_stats
 0x007fe330,,ClosestCoord,_ClosestCoord
 0x007fe380,4,ClosestDist,_ClosestDist
 0x007fe384,4,OutsideRoomTable,_OutsideRoomTable
