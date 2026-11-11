@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="123.43" height="12" x="0" y="0" class="named"><title>548 · 35.47%</title></rect>
-<rect width="0.45" height="12" x="123.43" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.73" height="12" x="123.88" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="219.39" height="12" x="128.61" y="0" class="todo"><title>974 · 63.04%</title></rect>
+<rect width="123.66" height="12" x="0" y="0" class="named"><title>549 · 35.53%</title></rect>
+<rect width="0.45" height="12" x="123.66" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.73" height="12" x="124.11" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="219.16" height="12" x="128.84" y="0" class="todo"><title>973 · 62.98%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="7.50">35.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">548</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">974</tspan></text>
+<text text-anchor="end" x="528" y="7.50">35.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">549</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">973</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.03" height="12" x="0" y="0" class="named"><title>98 KB · 15.81%</title></rect>
-<rect width="0.12" height="12" x="55.03" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="55.15" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="285.48" height="12" x="62.52" y="0" class="todo"><title>509 KB · 82.03%</title></rect>
+<rect width="55.05" height="12" x="0" y="0" class="named"><title>98 KB · 15.82%</title></rect>
+<rect width="0.12" height="12" x="55.05" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="55.17" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="285.46" height="12" x="62.54" y="0" class="todo"><title>509 KB · 82.03%</title></rect>
 </g>
-<text text-anchor="end" x="528" y="24.50">15.8%</text>
+<text text-anchor="end" x="528" y="24.50">15.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">98 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">509 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -984,7 +984,7 @@
 <rect width="12" height="12" x="225" y="270" class="todo"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="270" class="todo"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="270" class="todo"><title>0x00459f90 ProjectRopePoints (334 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="270" class="todo"><title>0x0045a0e0 CheckSumValid (31 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="270" class="named"><title>0x0045a0e0 CheckSumValid (31 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="270" class="todo"><title>0x0045a100 sgInitialiseHub (163 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="270" class="todo"><title>0x0045a1b0 SaveLaraData (290 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="270" class="todo"><title>0x0045a2e0 sgSaveGame (81 bytes)</title></rect>
@@ -2992,7 +2992,7 @@
 <rect width="3.37" height="3.78" x="675.50" y="431.89" class="named"><title>0x0042d7a0 lara_as_climbend (33 bytes)</title></rect>
 <rect width="3.37" height="3.67" x="675.50" y="438.67" class="todo"><title>0x004818a0 ClearFXFogBulbs (32 bytes)</title></rect>
 <rect width="3.37" height="3.55" x="675.50" y="445.34" class="named"><title>0x00437720 SoundFlipEffect (31 bytes)</title></rect>
-<rect width="3.37" height="3.55" x="675.50" y="451.89" class="todo"><title>0x0045a0e0 CheckSumValid (31 bytes)</title></rect>
+<rect width="3.37" height="3.55" x="675.50" y="451.89" class="named"><title>0x0045a0e0 CheckSumValid (31 bytes)</title></rect>
 <rect width="3.37" height="3.55" x="675.50" y="458.45" class="todo"><title>0x0045f1a0 ClearFootPrints (31 bytes)</title></rect>
 <rect width="3.27" height="3.66" x="681.88" y="390.67" class="named"><title>0x00473950 DSGetFreeChannel (31 bytes)</title></rect>
 <rect width="3.27" height="3.66" x="688.15" y="390.67" class="named"><title>0x00473b90 S_SoundSampleIsPlaying (31 bytes)</title></rect>

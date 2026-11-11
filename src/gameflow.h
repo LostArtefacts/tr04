@@ -415,6 +415,7 @@ enum gf_strings {
 
 #define SCRIPT_TEXT(num) (&gfStringWad[gfStringOffset[num]])
 
+extern uint32 GameTimer;
 extern uint16 gfLevelFlags;
 extern char gfGameMode;
 extern uint8 gfCurrentLevel;
