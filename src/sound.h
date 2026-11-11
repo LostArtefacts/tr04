@@ -6,12 +6,16 @@
 enum sfx_options {
     SFX_WATER = 1,
     SFX_ALWAYS = 2,
-    SFX_SETPITCH = 4
+    SFX_SETPITCH = 4,
+    SFX_LANDONLY = 0x4000
 };
+
+#define SFX_DEFAULT 0
 
 #define SFX_LARA_NO 2
 #define SFX_LARA_NO_FRENCH 348
 #define SFX_LARA_NO_JAPAN 349
+#define SFX_FOOTSTEPS_MUD 288
 
 typedef struct sample_info {
     sint16 number;
@@ -44,5 +48,6 @@ extern SAMPLE_INFO *sample_infos;
 extern SoundSlot LaSlot[32];
 extern sint16 *sample_lut;
 extern sint32 sound_active;
+extern sint16 FXType;
 
 #endif

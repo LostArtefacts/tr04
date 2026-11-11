@@ -1983,6 +1983,7 @@ address,size,name,symbol
 0x004ad840,8,LeftExtRightIntTab,_LeftExtRightIntTab
 0x004ad9c4,4,lara_coll,_lara_coll
 0x004add78,56,SkinJoints,_SkinJoints
+0x004adf48,14,footsounds,_footsounds
 0x004adf58,2,ScreenFadeSpeed,_ScreenFadeSpeed
 0x004adf5c,4,next_fire_spark,_next_fire_spark
 0x004ae060,4,pcbright,_pcbright
@@ -2531,6 +2532,7 @@ address,size,name,symbol
 0x00800164,4,LaserSightZ,_LaserSightZ
 0x00800168,4,LaserSightX,_LaserSightX
 0x008010c0,4,FootPrintNum,_FootPrintNum
+0x008010e0,512,FootPrint,_FootPrint
 0x008012e0,4,effects,_effects
 0x008012e4,4,number_sound_effects,_number_sound_effects
 0x008012e8,2,next_fx_free,_next_fx_free
