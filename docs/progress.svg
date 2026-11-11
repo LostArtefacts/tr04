@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="6.55" height="12" x="0" y="0" class="named"><title>21 · 1.35%</title></rect>
-<rect width="477.45" height="12" x="6.55" y="0" class="todo"><title>1530 · 98.65%</title></rect>
+<rect width="6.87" height="12" x="0" y="0" class="named"><title>22 · 1.42%</title></rect>
+<rect width="477.13" height="12" x="6.87" y="0" class="todo"><title>1529 · 98.58%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="7.50">1.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">21</tspan> · <tspan class="todo">1530</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">22</tspan> · <tspan class="todo">1529</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="1.89" height="12" x="0" y="0" class="named"><title>2 KB · 0.39%</title></rect>
-<rect width="482.11" height="12" x="1.89" y="0" class="todo"><title>617 KB · 99.61%</title></rect>
+<rect width="2.03" height="12" x="0" y="0" class="named"><title>3 KB · 0.42%</title></rect>
+<rect width="481.97" height="12" x="2.03" y="0" class="todo"><title>617 KB · 99.58%</title></rect>
 </g>
 <text text-anchor="end" x="654" y="24.50">0.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">2 KB</tspan> · <tspan class="todo">617 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">3 KB</tspan> · <tspan class="todo">617 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1465,7 +1465,7 @@
 <rect width="12" height="12" x="0" y="420" class="todo"><title>0x0048f9c1 Func48f9c1 (13 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="420" class="todo"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="420" class="named"><title>0x0048fa90 SetupZRange (200 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="420" class="todo"><title>0x0048fb60 ScaleCurrentMatrix (171 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="420" class="named"><title>0x0048fb60 ScaleCurrentMatrix (171 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="420" class="todo"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="420" class="todo"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="420" class="todo"><title>0x0048fdc0 phd_GenerateW2V (840 bytes)</title></rect>
@@ -2421,7 +2421,7 @@
 <rect width="8.34" height="8.29" x="682.22" y="241.73" class="todo"><title>0x00437ab0 SetFog (172 bytes)</title></rect>
 <rect width="8.34" height="8.29" x="693.56" y="241.73" class="todo"><title>0x004904b0 phd_RotY (172 bytes)</title></rect>
 <rect width="8.34" height="8.29" x="704.89" y="241.73" class="todo"><title>0x00490560 phd_RotZ (172 bytes)</title></rect>
-<rect width="8.29" height="8.29" x="716.23" y="241.73" class="todo"><title>0x0048fb60 ScaleCurrentMatrix (171 bytes)</title></rect>
+<rect width="8.29" height="8.29" x="716.23" y="241.73" class="named"><title>0x0048fb60 ScaleCurrentMatrix (171 bytes)</title></rect>
 <rect width="8.24" height="8.29" x="727.52" y="241.73" class="todo"><title>0x00430140 LaraInitialiseMeshes (170 bytes)</title></rect>
 <rect width="8.24" height="8.29" x="738.76" y="241.73" class="todo"><title>0x0045f960 Func45f960 (170 bytes)</title></rect>
 <rect width="7.98" height="8.50" x="521.52" y="253.02" class="todo"><title>0x00421de0 LaraTestEdgeCatch (169 bytes)</title></rect>

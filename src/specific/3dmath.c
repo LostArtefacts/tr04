@@ -16,3 +16,16 @@ void SetupZRange(sint32 znear, sint32 zfar)
     f_b = -f_b;
     f_boo = f_b / mone;
 }
+
+void ScaleCurrentMatrix(PHD_VECTOR *vec)
+{
+    phd_mxptr[M00] = (phd_mxptr[M00] * vec->x) >> W2V_SHIFT;
+    phd_mxptr[M10] = (phd_mxptr[M10] * vec->x) >> W2V_SHIFT;
+    phd_mxptr[M20] = (phd_mxptr[M20] * vec->x) >> W2V_SHIFT;
+    phd_mxptr[M01] = (phd_mxptr[M01] * vec->y) >> W2V_SHIFT;
+    phd_mxptr[M11] = (phd_mxptr[M11] * vec->y) >> W2V_SHIFT;
+    phd_mxptr[M21] = (phd_mxptr[M21] * vec->y) >> W2V_SHIFT;
+    phd_mxptr[M02] = (phd_mxptr[M02] * vec->z) >> W2V_SHIFT;
+    phd_mxptr[M12] = (phd_mxptr[M12] * vec->z) >> W2V_SHIFT;
+    phd_mxptr[M22] = (phd_mxptr[M22] * vec->z) >> W2V_SHIFT;
+}

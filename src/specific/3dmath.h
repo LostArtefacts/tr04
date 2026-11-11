@@ -28,6 +28,7 @@ __inline sint32 phd_cos(sint32 angle)
 
 void AlterFOV(sint16 fov);
 void SetupZRange(sint32 znear, sint32 zfar);
+void ScaleCurrentMatrix(PHD_VECTOR *vec);
 
 extern sint32 phdtan2[8];
 extern sint16 phdtantab[2050];
