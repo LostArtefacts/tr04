@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="25.76" height="12" x="0" y="0" class="named"><title>108 · 6.96%</title></rect>
-<rect width="0.24" height="12" x="25.76" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="0.72" height="12" x="26" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
-<rect width="343.28" height="12" x="26.72" y="0" class="todo"><title>1439 · 92.78%</title></rect>
+<rect width="26" height="12" x="0" y="0" class="named"><title>109 · 7.03%</title></rect>
+<rect width="0.24" height="12" x="26" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="0.72" height="12" x="26.24" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
+<rect width="343.04" height="12" x="26.96" y="0" class="todo"><title>1438 · 92.71%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="7.50">7.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">108</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1439</tspan></text>
+<text text-anchor="end" x="540" y="7.50">7.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">109</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1438</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="10.13" height="12" x="0" y="0" class="named"><title>17 KB · 2.74%</title></rect>
-<rect width="0.10" height="12" x="10.13" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="0.73" height="12" x="10.16" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
-<rect width="359.11" height="12" x="10.89" y="0" class="todo"><title>602 KB · 97.06%</title></rect>
+<rect width="10.50" height="12" x="0" y="0" class="named"><title>18 KB · 2.84%</title></rect>
+<rect width="0.10" height="12" x="10.50" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="0.73" height="12" x="10.53" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
+<rect width="358.74" height="12" x="11.26" y="0" class="todo"><title>601 KB · 96.96%</title></rect>
 </g>
-<text text-anchor="end" x="540" y="24.50">2.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">17 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">602 KB</tspan></text>
+<text text-anchor="end" x="540" y="24.50">2.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">18 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">601 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -468,7 +468,7 @@
 <rect width="12" height="12" x="735" y="105" class="named"><title>0x0042ccc0 lara_col_climbleft (90 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="120" class="named"><title>0x0042cd20 LaraDoClimbLeftRight (446 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="120" class="named"><title>0x0042cee0 LaraClimbLeftCornerTest (631 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="120" class="todo"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="120" class="named"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="120" class="named"><title>0x0042d3d0 lara_as_climbright (54 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="120" class="named"><title>0x0042d410 lara_col_climbright (86 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="120" class="named"><title>0x0042d470 lara_as_climbing (23 bytes)</title></rect>
@@ -1892,7 +1892,7 @@
 <rect width="16.28" height="15.35" x="326.84" y="461.65" class="todo"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
 <rect width="15.72" height="15.90" x="346.12" y="64.28" class="todo"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
 <rect width="15.67" height="15.90" x="364.83" y="64.28" class="todo"><title>0x00477180 init_water_table (620 bytes)</title></rect>
-<rect width="15.62" height="15.90" x="383.50" y="64.28" class="todo"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>
+<rect width="15.62" height="15.90" x="383.50" y="64.28" class="named"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>
 <rect width="15.62" height="15.90" x="402.12" y="64.28" class="todo"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
 <rect width="15.62" height="15.90" x="420.73" y="64.28" class="todo"><title>0x0049a6e0 Func49a6e0 (618 bytes)</title></rect>
 <rect width="15.54" height="15.90" x="439.35" y="64.28" class="todo"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
