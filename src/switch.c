@@ -6,6 +6,15 @@
 #include "lara_states.h"
 #include "specific/input.h"
 
+void TestTriggersAtXYZ(sint32 x, sint32 y, sint32 z, sint16 room_number, sint16 heavy, sint16 flags)
+{
+    FLOOR_INFO *floor;
+
+    floor = GetFloor(x, y, z, &room_number);
+    GetHeight(floor, x, y, z);
+    TestTriggers(trigger_index, heavy, flags);
+}
+
 void SwitchControl(sint16 item_number)
 {
     ITEM_INFO *item;

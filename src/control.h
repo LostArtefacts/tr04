@@ -61,6 +61,7 @@ sint32 CheckNoColFloorTriangle(FLOOR_INFO *floor, sint32 x, sint32 z);
 sint32 CheckNoColCeilingTriangle(FLOOR_INFO *floor, sint32 x, sint32 z);
 FLOOR_INFO *GetFloor(sint32 x, sint32 y, sint32 z, sint16 *room_number);
 sint32 GetHeight(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
+void TestTriggers(sint16 *data, sint32 heavy, sint32 HeavyFlags);
 sint32 GetWaterHeight(sint32 x, sint32 y, sint32 z, sint16 room_number);
 sint32 GetCeiling(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 void AnimateItem(ITEM_INFO *item);
