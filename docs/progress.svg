@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="137.29" height="12" x="0" y="0" class="named"><title>621 · 40.14%</title></rect>
-<rect width="0.44" height="12" x="137.29" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="137.73" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="199.63" height="12" x="142.37" y="0" class="todo"><title>903 · 58.37%</title></rect>
+<rect width="137.51" height="12" x="0" y="0" class="named"><title>622 · 40.21%</title></rect>
+<rect width="0.44" height="12" x="137.51" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="137.95" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="199.41" height="12" x="142.59" y="0" class="todo"><title>902 · 58.31%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">40.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">621</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">903</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">622</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">902</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="56.60" height="12" x="0" y="0" class="named"><title>103 KB · 16.55%</title></rect>
-<rect width="0.12" height="12" x="56.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="56.72" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="278.03" height="12" x="63.97" y="0" class="todo"><title>504 KB · 81.30%</title></rect>
+<rect width="56.63" height="12" x="0" y="0" class="named"><title>103 KB · 16.56%</title></rect>
+<rect width="0.12" height="12" x="56.63" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="56.75" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="278" height="12" x="64" y="0" class="todo"><title>504 KB · 81.29%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">103 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">504 KB</tspan></text>
@@ -1186,7 +1186,7 @@
 <rect width="12" height="12" x="255" y="330" class="named"><title>0x0046d450 find_a_fucking_item (46 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="330" class="named"><title>0x0046d480 special2_end (44 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="330" class="named"><title>0x0046d4b0 special2_init (20 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="330" class="todo"><title>0x0046d4d0 special3_end (50 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="330" class="named"><title>0x0046d4d0 special3_end (50 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="330" class="named"><title>0x0046d510 special3_control (77 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="330" class="todo"><title>0x0046d560 special1_init (125 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="330" class="todo"><title>0x0046d5e0 special1_end (44 bytes)</title></rect>
@@ -2891,7 +2891,7 @@
 <rect width="4.42" height="4.46" x="647.95" y="370.43" class="named"><title>0x0045a470 SaveHubData (51 bytes)</title></rect>
 <rect width="4.42" height="4.46" x="647.95" y="377.89" class="todo"><title>0x00476e80 SetFogColor (51 bytes)</title></rect>
 <rect width="4.42" height="4.38" x="647.95" y="385.36" class="named"><title>0x00422350 GetLaraCollisionInfo (50 bytes)</title></rect>
-<rect width="4.42" height="4.38" x="647.95" y="392.73" class="todo"><title>0x0046d4d0 special3_end (50 bytes)</title></rect>
+<rect width="4.42" height="4.38" x="647.95" y="392.73" class="named"><title>0x0046d4d0 special3_end (50 bytes)</title></rect>
 <rect width="4.42" height="4.29" x="647.95" y="400.11" class="named"><title>0x00457610 AnimatingPickUp (49 bytes)</title></rect>
 <rect width="4.42" height="4.29" x="647.95" y="407.40" class="todo"><title>0x00458a00 vMul (49 bytes)</title></rect>
 <rect width="4.42" height="4.29" x="647.95" y="414.69" class="named"><title>0x0046c7e0 twentyfive_control (49 bytes)</title></rect>

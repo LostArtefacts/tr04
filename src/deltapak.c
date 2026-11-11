@@ -499,6 +499,17 @@ void special2_init(void)
     Chris_Menu = 0;
 }
 
+void special3_end(void)
+{
+    if (!bDoCredits) {
+        InitialiseSpotCam(1);
+        lara_item->mesh_bits = 0;
+    }
+    CutSceneTriggered = 0;
+    Chris_Menu = 0;
+    title_controls_locked_out = 0;
+}
+
 void special3_control(void)
 {
     if (GLOBAL_cutseq_frame >= 348 && GLOBAL_cutseq_frame <= 358 && GLOBAL_cutseq_frame & 1)

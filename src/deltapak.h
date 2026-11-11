@@ -94,5 +94,6 @@ void do_spade_meshswap(void);
 void special3_control(void);
 void special2_init(void);
 void special2_end(void);
+void special3_end(void);
 
 #endif
