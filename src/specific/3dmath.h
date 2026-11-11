@@ -43,12 +43,12 @@ void phd_PushUnitMatrix(void);
 void Func490320(void);
 sint32 phd_TranslateRel(sint32 x, sint32 y, sint32 z);
 void phd_RotX(PHD_ANGLE rx);
-void phd_RotY(sint16 angle);
-void phd_RotZ(sint16 angle);
-void phd_RotYXZpack(sint32 angles);
-void phd_RotYXZ(sint16 y, sint16 x, sint16 z);
+void phd_RotY(PHD_ANGLE ry);
+void phd_RotZ(PHD_ANGLE rz);
+void phd_RotYXZpack(sint32 rots);
+void phd_RotYXZ(PHD_ANGLE ry, PHD_ANGLE rx, PHD_ANGLE rz);
 void phd_TranslateAbs(sint32 x, sint32 y, sint32 z);
-void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, sint16 *angles);
+void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest);
 
 extern sint32 phdtan2[8];
 extern sint16 phdtantab[2050];
