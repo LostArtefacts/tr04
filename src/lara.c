@@ -113,3 +113,24 @@ void lara_as_fastfall(ITEM_INFO *item, COLL_INFO *coll)
     if (item->fallspeed == DAMAGE_START + DAMAGE_LENGTH)
         SoundEffect(30, &item->pos, 0);
 }
+
+void lara_as_compress(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (lara.water_status != LW_WADE) {
+        if ((input & IN_FORWARD) && LaraFloorFront(item, item->pos.y_rot, 256) >= -STEPUP_HEIGHT) {
+            item->goal_anim_state = AS_FORWARDJUMP;
+            lara.move_angle = item->pos.y_rot;
+        } else if ((input & IN_LEFT) && LaraFloorFront(item, item->pos.y_rot - 16384, 256) >= -STEPUP_HEIGHT) {
+            item->goal_anim_state = AS_LEFTJUMP;
+            lara.move_angle = item->pos.y_rot - 16384;
+        } else if ((input & IN_RIGHT) && LaraFloorFront(item, item->pos.y_rot + 16384, 256) >= -STEPUP_HEIGHT) {
+            item->goal_anim_state = AS_RIGHTJUMP;
+            lara.move_angle = item->pos.y_rot + 16384;
+        } else if ((input & IN_BACK) && LaraFloorFront(item, item->pos.y_rot - 32768, 256) >= -STEPUP_HEIGHT) {
+            item->goal_anim_state = AS_BACKJUMP;
+            lara.move_angle = item->pos.y_rot - 32768;
+        }
+    }
+    if (item->fallspeed > LARA_FASTFALL_SPEED)
+        item->goal_anim_state = AS_FASTFALL;
+}
