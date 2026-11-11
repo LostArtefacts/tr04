@@ -5,6 +5,7 @@
 #include "anim.h"
 #include "camera.h"
 #include "draw.h"
+#include "newinv.h"
 #include "sound.h"
 #include "specific/3dmath.h"
 #include "lara.h"
@@ -283,6 +284,76 @@ void JumpSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
             AddActiveItem(item_number);
         }
     }
+}
+
+void CrowbarSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint32 flag;
+
+    flag = 0;
+    item = &items[item_number];
+    if ((((input & IN_ACTION) || GLOBAL_inventoryitemchosen == CROWBAR_ITEM) && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && lara.gun_status == LG_NO_ARMS && !item->item_flags[0]) || (lara.IsMoving && lara.GeneralPtr == (void *)item_number)) {
+        if (item->current_anim_state == 0) {
+            if (TestLaraPosition(CrowbarBounds, item, l)) {
+                if (lara.IsMoving || GLOBAL_inventoryitemchosen == CROWBAR_ITEM) {
+                    if (MoveLaraPosition(&CrowbarPos, item, l)) {
+                        flag = 1;
+                        l->anim_number = ANIM_CROWSWITCH;
+                        l->frame_number = anims[ANIM_CROWSWITCH].frame_base;
+                        item->goal_anim_state = 1;
+                    } else
+                        lara.GeneralPtr = (void *)item_number;
+                    GLOBAL_inventoryitemchosen = NO_ITEM;
+                } else
+                    flag = -1;
+            } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+                lara.IsMoving = 0;
+                lara.gun_status = LG_NO_ARMS;
+            }
+        } else if (item->current_anim_state == 1) {
+            l->pos.y_rot ^= 0x8000;
+            if (TestLaraPosition(CrowbarBounds2, item, l)) {
+                if (lara.IsMoving || GLOBAL_inventoryitemchosen == CROWBAR_ITEM) {
+                    if (MoveLaraPosition(&CrowbarPos2, item, l)) {
+                        flag = 1;
+                        l->anim_number = ANIM_CROWSWITCH;
+                        l->frame_number = anims[ANIM_CROWSWITCH].frame_base;
+                        item->goal_anim_state = 0;
+                    } else
+                        lara.GeneralPtr = (void *)item_number;
+                    GLOBAL_inventoryitemchosen = NO_ITEM;
+                } else
+                    flag = -1;
+            } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+                lara.IsMoving = 0;
+                lara.gun_status = LG_NO_ARMS;
+            }
+            l->pos.y_rot ^= 0x8000;
+        }
+    }
+    if (flag) {
+        if (flag == -1) {
+            if (lara.crowbar)
+                GLOBAL_enterinventory = CROWBAR_ITEM;
+            else if (OldPickupPos.x != l->pos.x_pos || OldPickupPos.y != l->pos.y_pos || OldPickupPos.z != l->pos.z_pos) {
+                OldPickupPos.x = l->pos.x_pos;
+                OldPickupPos.y = l->pos.y_pos;
+                OldPickupPos.z = l->pos.z_pos;
+                SayNo();
+            }
+        } else {
+            l->current_anim_state = l->goal_anim_state = AS_SWITCHON;
+            lara.IsMoving = 0;
+            lara.head_x_rot = lara.head_y_rot = 0;
+            lara.torso_x_rot = lara.torso_y_rot = 0;
+            lara.gun_status = LG_HANDS_BUSY;
+            item->status = ITEM_ACTIVE;
+            AddActiveItem(item_number);
+            AnimateItem(item);
+        }
+    } else
+        ObjectCollision(item_number, l, coll);
 }
 
 void FullBlockSwitchControl(sint16 item_number)

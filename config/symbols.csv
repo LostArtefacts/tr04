@@ -2013,6 +2013,10 @@ address,size,name,symbol
 0x004afda4,24,RailSwitchBounds2,_RailSwitchBounds2
 0x004afdbc,24,JumpSwitchBounds,_JumpSwitchBounds
 0x004afdd8,12,JumpSwitchPos,_JumpSwitchPos
+0x004afde8,12,CrowbarPos,_CrowbarPos
+0x004afdf4,24,CrowbarBounds,_CrowbarBounds
+0x004afe10,12,CrowbarPos2,_CrowbarPos2
+0x004afe1c,24,CrowbarBounds2,_CrowbarBounds2
 0x004afe5c,24,PulleyBounds,_PulleyBounds
 0x004afe78,12,PulleyPos,_PulleyPos
 0x004afe84,24,UnderwaterSwitchBounds,_UnderwaterSwitchBounds
