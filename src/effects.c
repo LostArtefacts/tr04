@@ -9,6 +9,7 @@
 #include "objnums.h"
 #include "effect2.h"
 #include "specific/3dmath.h"
+#include "specific/function_stubs.h"
 
 void Richochet(GAME_VECTOR *pos)
 {
@@ -17,6 +18,12 @@ void Richochet(GAME_VECTOR *pos)
     angle = (mGetAngle(pos->z, pos->x, lara_item->pos.z_pos, lara_item->pos.x_pos) >> 4) & 4095;
     TriggerRicochetSpark(pos, angle, 3, 0);
     SoundEffect(SFX_LARA_RICOCHET, (PHD_3DPOS *)pos, SFX_DEFAULT);
+}
+
+void DoLotsOfBlood(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 direction, sint16 room_num, sint32 number)
+{
+    for (; number > 0; number--)
+        DoBloodSplat(x - (GetRandomControl() << 9) / 0x8000 + 256, y - (GetRandomControl() << 9) / 0x8000 + 256, z - (GetRandomControl() << 9) / 0x8000 + 256, speed, direction, room_num);
 }
 
 void turn180_effect(ITEM_INFO *item)

@@ -28,6 +28,7 @@ void shoot_left_gun(ITEM_INFO *item);
 void reset_hair(ITEM_INFO *item);
 void draw_right_gun(ITEM_INFO *item);
 void draw_left_gun(ITEM_INFO *item);
+void DoLotsOfBlood(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 direction, sint16 room_num, sint32 number);
 
 extern FX_INFO *effects;
 extern sint16 next_fx_active;
