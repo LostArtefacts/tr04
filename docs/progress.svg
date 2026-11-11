@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="134.85" height="12" x="0" y="0" class="named"><title>610 · 39.43%</title></rect>
-<rect width="0.44" height="12" x="134.85" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="135.30" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="202.06" height="12" x="139.94" y="0" class="todo"><title>914 · 59.08%</title></rect>
+<rect width="135.08" height="12" x="0" y="0" class="named"><title>611 · 39.50%</title></rect>
+<rect width="0.44" height="12" x="135.08" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="135.52" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="201.84" height="12" x="140.16" y="0" class="todo"><title>913 · 59.02%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">39.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">610</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">914</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">611</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">913</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="56.12" height="12" x="0" y="0" class="named"><title>102 KB · 16.41%</title></rect>
-<rect width="0.12" height="12" x="56.12" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="56.24" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="278.51" height="12" x="63.49" y="0" class="todo"><title>505 KB · 81.44%</title></rect>
+<rect width="56.14" height="12" x="0" y="0" class="named"><title>102 KB · 16.42%</title></rect>
+<rect width="0.12" height="12" x="56.14" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="56.26" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="278.49" height="12" x="63.51" y="0" class="todo"><title>505 KB · 81.43%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">16.4%</text>
+<text text-anchor="end" x="522" y="24.50">16.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">102 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">505 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1167,7 +1167,7 @@
 <rect width="12" height="12" x="720" y="315" class="named"><title>0x0046c9b0 twentytwo_end (57 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="315" class="named"><title>0x0046c9f0 do_spade_meshswap (34 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="330" class="named"><title>0x0046ca20 do_backpack_meshswap (34 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="330" class="todo"><title>0x0046ca50 do_key_meshswap (34 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="330" class="named"><title>0x0046ca50 do_key_meshswap (34 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="330" class="todo"><title>0x0046ca80 cutseq_shoot_pistols (47 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="330" class="todo"><title>0x0046cab0 trigger_weapon_dynamics (137 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="330" class="todo"><title>0x0046cb40 deal_with_pistols (241 bytes)</title></rect>
@@ -2988,7 +2988,7 @@
 <rect width="3.53" height="3.73" x="669.29" y="451.55" class="named"><title>0x0046c5e0 twentyone_end (34 bytes)</title></rect>
 <rect width="3.53" height="3.73" x="669.29" y="458.27" class="named"><title>0x0046c9f0 do_spade_meshswap (34 bytes)</title></rect>
 <rect width="3.94" height="3.33" x="675.81" y="390.69" class="named"><title>0x0046ca20 do_backpack_meshswap (34 bytes)</title></rect>
-<rect width="3.94" height="3.33" x="682.75" y="390.69" class="todo"><title>0x0046ca50 do_key_meshswap (34 bytes)</title></rect>
+<rect width="3.94" height="3.33" x="682.75" y="390.69" class="named"><title>0x0046ca50 do_key_meshswap (34 bytes)</title></rect>
 <rect width="3.94" height="3.33" x="689.69" y="390.69" class="todo"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>
 <rect width="3.83" height="3.33" x="696.63" y="390.69" class="named"><title>0x004271e0 lara_as_slide (33 bytes)</title></rect>
 <rect width="3.83" height="3.33" x="703.46" y="390.69" class="named"><title>0x0042d7a0 lara_as_climbend (33 bytes)</title></rect>

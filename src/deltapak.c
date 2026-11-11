@@ -351,6 +351,15 @@ void do_backpack_meshswap(void)
     meshes[objects[PISTOLS_ANIM].mesh_index + LM_TORSO * 2] = temp;
 }
 
+void do_key_meshswap(void)
+{
+    sint16 *temp;
+
+    temp = lara.mesh_ptrs[LM_RHAND];
+    lara.mesh_ptrs[LM_RHAND] = meshes[objects[MESHSWAP1].mesh_index + LM_RHAND * 2];
+    meshes[objects[MESHSWAP1].mesh_index + LM_RHAND * 2] = temp;
+}
+
 void force_sky_lightning(void)
 {
     LightningCount = (GetRandomDraw() & 0x1F) + 64;
