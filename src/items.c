@@ -73,3 +73,15 @@ void KillItem(sint16 item_num)
         next_item_free = item_num;
     }
 }
+
+sint16 CreateItem(void)
+{
+    sint16 item_num;
+
+    item_num = next_item_free;
+    if (item_num == NO_ITEM)
+        return item_num;
+    items[item_num].flags = 0;
+    next_item_free = items[item_num].next_item;
+    return item_num;
+}
