@@ -49,6 +49,32 @@ void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_elevation = -23 * ONE_DEGREE;
 }
 
+void lara_as_crawl(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_ALL4S;
+        return;
+    }
+    if (input & IN_LOOK)
+        LookUpDown();
+    lara.torso_x_rot = lara.torso_y_rot = 0;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 1;
+    camera.target_elevation = -23 * ONE_DEGREE;
+    if ((input & IN_FORWARD) && ((input & IN_DUCK) || lara.keep_ducked) && lara.water_status != LW_WADE) {
+        if (input & IN_LEFT) {
+            lara.turn_rate -= LARA_TURN_RATE;
+            if (lara.turn_rate < -LARA_JUMP_TURN)
+                lara.turn_rate = -LARA_JUMP_TURN;
+        } else if (input & IN_RIGHT) {
+            lara.turn_rate += LARA_TURN_RATE;
+            if (lara.turn_rate > LARA_JUMP_TURN)
+                lara.turn_rate = LARA_JUMP_TURN;
+        }
+    } else
+        item->goal_anim_state = AS_ALL4S;
+}
+
 void lara_col_crawl(ITEM_INFO *item, COLL_INFO *coll)
 {
     item->gravity_status = item->fallspeed = 0;
