@@ -1701,6 +1701,32 @@ void ResetLook(void)
     }
 }
 
+void LookUpDown(void)
+{
+    if (lara.vehicle == NO_ITEM) {
+        camera.type = LOOK_CAMERA;
+        if (input & IN_FORWARD) {
+            input -= IN_FORWARD;
+            if (lara.head_x_rot > -6370) {
+                if (BinocularRange)
+                    lara.head_x_rot -= (sint16)(364 * (1792 - BinocularRange) / 3072);
+                else
+                    lara.head_x_rot -= 364;
+            }
+        } else if (input & IN_BACK) {
+            input -= IN_BACK;
+            if (lara.head_x_rot < 5460) {
+                if (BinocularRange)
+                    lara.head_x_rot += (sint16)(364 * (1792 - BinocularRange) / 3072);
+                else
+                    lara.head_x_rot += 364;
+            }
+        }
+        if (lara.gun_status != LG_HANDS_BUSY && !lara.left_arm.lock && !lara.right_arm.lock)
+            lara.torso_x_rot = lara.head_x_rot;
+    }
+}
+
 void LookLeftRight(void)
 {
     if (lara.vehicle == NO_ITEM) {
