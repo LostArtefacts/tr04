@@ -106,6 +106,55 @@ void UnderwaterSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll
     }
 }
 
+void RailSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint32 flag;
+
+    flag = 0;
+    item = &items[item_number];
+    if (((input & IN_ACTION) && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && lara.gun_status == LG_NO_ARMS) || (lara.IsMoving && lara.GeneralPtr == (void *)item_number)) {
+        if (item->current_anim_state == 0) {
+            if (TestLaraPosition(RailSwitchBounds, item, l)) {
+                if (MoveLaraPosition(&RailSwitchPos, item, l)) {
+                    item->goal_anim_state = 1;
+                    flag = 1;
+                } else
+                    lara.GeneralPtr = (void *)item_number;
+            } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+                lara.IsMoving = 0;
+                lara.gun_status = LG_NO_ARMS;
+            }
+        } else if (item->current_anim_state == 1) {
+            l->pos.y_rot ^= 0x8000;
+            if (TestLaraPosition(RailSwitchBounds2, item, l)) {
+                if (MoveLaraPosition(&RailSwitchPos2, item, l)) {
+                    item->goal_anim_state = 0;
+                    flag = 1;
+                } else
+                    lara.GeneralPtr = (void *)item_number;
+            } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+                lara.IsMoving = 0;
+                lara.gun_status = LG_NO_ARMS;
+            }
+            l->pos.y_rot ^= 0x8000;
+        }
+    }
+    if (flag) {
+        l->anim_number = ANIM_RAILSWITCH;
+        l->frame_number = anims[ANIM_RAILSWITCH].frame_base;
+        l->current_anim_state = l->goal_anim_state = AS_RAILSWITCH;
+        lara.IsMoving = 0;
+        lara.head_x_rot = lara.head_y_rot = 0;
+        lara.torso_x_rot = lara.torso_y_rot = 0;
+        lara.gun_status = LG_HANDS_BUSY;
+        item->status = ITEM_ACTIVE;
+        AddActiveItem(item_number);
+        AnimateItem(item);
+    } else
+        ObjectCollision(item_number, l, coll);
+}
+
 void JumpSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
 {
     ITEM_INFO *item;
