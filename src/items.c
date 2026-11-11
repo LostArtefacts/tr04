@@ -158,3 +158,23 @@ void InitialiseItem(sint16 item_num)
     item->il.pPrevLights = item->il.PrevLights;
 }
 
+
+void RemoveActiveItem(sint16 item_num)
+{
+    sint16 linknum;
+
+    if (!items[item_num].active)
+        return;
+    items[item_num].active = 0;
+    linknum = next_item_active;
+    if (linknum == item_num) {
+        next_item_active = items[item_num].next_active;
+        return;
+    }
+    for (; linknum != NO_ITEM; linknum = items[linknum].next_active) {
+        if (items[linknum].next_active == item_num) {
+            items[linknum].next_active = items[item_num].next_active;
+            return;
+        }
+    }
+}
