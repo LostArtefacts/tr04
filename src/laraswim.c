@@ -64,3 +64,8 @@ void lara_col_uwdeath(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_pos -= 5;
     LaraSwimCollision(item, coll);
 }
+
+void lara_col_waterroll(ITEM_INFO *item, COLL_INFO *coll)
+{
+    LaraSwimCollision(item, coll);
+}

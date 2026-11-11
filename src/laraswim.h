@@ -13,5 +13,6 @@ void lara_col_glide(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_tread(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_dive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_uwdeath(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_waterroll(ITEM_INFO *item, COLL_INFO *coll);
 
 #endif
