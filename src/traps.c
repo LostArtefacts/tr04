@@ -8,6 +8,10 @@
 #include "tomb4fx.h"
 #include "collide.h"
 #include "switch.h"
+#include "sphere.h"
+#include "anim.h"
+#include "camera.h"
+#include "specific/3dmath.h"
 #include "specific/function_stubs.h"
 
 void TrapDoorControl(sint16 item_number)
@@ -271,4 +275,19 @@ void ControlStargate(sint16 item_number)
         AnimateItem(item);
     } else
         *(sint32 *)&item->item_flags[0] = 0;
+}
+
+void ControlCatwalkBlade(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        if (item->frame_number == anims[item->anim_number].frame_end || item->frame_number - anims[item->anim_number].frame_base < 38)
+            item->item_flags[3] = 0;
+        else
+            item->item_flags[3] = 100;
+        AnimateItem(item);
+    } else
+        item->frame_number = anims[item->anim_number].frame_base;
 }

@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="108.34" height="12" x="0" y="0" class="named"><title>481 · 31.13%</title></rect>
-<rect width="0.45" height="12" x="108.34" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="2.93" height="12" x="108.79" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
-<rect width="236.28" height="12" x="111.72" y="0" class="todo"><title>1049 · 67.90%</title></rect>
+<rect width="108.57" height="12" x="0" y="0" class="named"><title>482 · 31.20%</title></rect>
+<rect width="0.45" height="12" x="108.57" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="2.93" height="12" x="109.02" y="0" class="nonmatching"><title>13 · 0.84%</title></rect>
+<rect width="236.05" height="12" x="111.95" y="0" class="todo"><title>1048 · 67.83%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="7.50">31.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">481</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1049</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="7"><tspan class="named">482</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">13</tspan> · <tspan class="todo">1048</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="46.03" height="12" x="0" y="0" class="named"><title>82 KB · 13.23%</title></rect>
-<rect width="0.12" height="12" x="46.03" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="5.62" height="12" x="46.15" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
-<rect width="296.23" height="12" x="51.77" y="0" class="todo"><title>528 KB · 85.12%</title></rect>
+<rect width="46.11" height="12" x="0" y="0" class="named"><title>82 KB · 13.25%</title></rect>
+<rect width="0.12" height="12" x="46.11" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="5.62" height="12" x="46.23" y="0" class="nonmatching"><title>10 KB · 1.61%</title></rect>
+<rect width="296.15" height="12" x="51.85" y="0" class="todo"><title>528 KB · 85.10%</title></rect>
 </g>
 <text text-anchor="end" x="528" y="24.50">13.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="543" y="24"><tspan class="named">82 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">10 KB</tspan> · <tspan class="todo">528 KB</tspan></text>
@@ -226,7 +226,7 @@
 <rect width="12" height="12" x="105" y="45" class="todo"><title>0x00416d70 ControlSpikeball (201 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="45" class="todo"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="45" class="todo"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="45" class="todo"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="45" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="45" class="todo"><title>0x00417020 ControlMovingBlade (83 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="45" class="todo"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="45" class="todo"><title>0x00417100 ControlSethBlade (253 bytes)</title></rect>
@@ -2518,7 +2518,7 @@
 <rect width="7.33" height="7.28" x="540.80" y="444.44" class="todo"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
 <rect width="7.33" height="7.28" x="540.80" y="454.72" class="todo"><title>0x0040fbd0 ShockwaveExplosion (138 bytes)</title></rect>
 <rect width="6.97" height="7.59" x="551.13" y="266.26" class="named"><title>0x004136c0 TrapDoorControl (137 bytes)</title></rect>
-<rect width="6.97" height="7.59" x="551.13" y="276.86" class="todo"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
+<rect width="6.97" height="7.59" x="551.13" y="276.86" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="6.97" height="7.59" x="551.13" y="287.45" class="todo"><title>0x0046cab0 trigger_weapon_dynamics (137 bytes)</title></rect>
 <rect width="6.97" height="7.54" x="551.13" y="298.04" class="todo"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
 <rect width="6.97" height="7.54" x="551.13" y="308.58" class="todo"><title>0x00417310 ControlFallingSquishyBlock (136 bytes)</title></rect>
