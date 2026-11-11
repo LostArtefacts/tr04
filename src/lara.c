@@ -568,6 +568,37 @@ void lara_as_monkeyswing(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void lara_col_monkeyswing(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (!(input & IN_ACTION) || !lara.CanMonkeySwing) {
+        MonkeySwingFall(item);
+        return;
+    }
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = NO_HEIGHT;
+    coll->bad_ceiling = 0;
+    coll->facing = lara.move_angle = item->pos.y_rot;
+    coll->slopes_are_walls = 0;
+    coll->radius = 100;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 600);
+    if (coll->coll_type != COLL_FRONT && ABS(coll->mid_ceiling - coll->front_ceiling) <= 50) {
+        if (ABS(coll->mid_ceiling - coll->left_ceiling2) > 50) {
+            ShiftItem(item, coll);
+            item->pos.y_rot += 910;
+        } else if (ABS(coll->mid_ceiling - coll->right_ceiling2) > 50) {
+            ShiftItem(item, coll);
+            item->pos.y_rot -= 910;
+        }
+        camera.target_elevation = 1820;
+        MonkeySwingSnap(item, coll);
+    } else {
+        item->anim_number = ANIM_MONKEYHANG;
+        item->current_anim_state = AS_HANG2;
+        item->goal_anim_state = AS_HANG2;
+        item->frame_number = anims[ANIM_MONKEYHANG].frame_base;
+    }
+}
+
 void lara_as_monkeyl(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
