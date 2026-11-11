@@ -259,3 +259,43 @@ void lara_as_climbing(ITEM_INFO *item, COLL_INFO *coll)
     coll->enable_spaz = 0;
     camera.target_elevation = 5460;
 }
+
+void lara_col_climbing(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 frame, yshift, result_r, result_l, shift_r, shift_l, ledge_l, ledge_r;
+
+    if (LaraCheckForLetGo(item, coll))
+        return;
+    if (item->anim_number != ANIM_CLIMBING)
+        return;
+    frame = item->frame_number - anims[ANIM_CLIMBING].frame_base;
+    if (!frame)
+        yshift = 0;
+    else if (frame == 28 || frame == 29)
+        yshift = -256;
+    else if (frame == 57)
+        yshift = -512;
+    else
+        return;
+    item->pos.y_pos += yshift - 256;
+    result_r = LaraTestClimbUpPos(item, coll->radius, coll->radius + 120, &shift_r, &ledge_r);
+    result_l = LaraTestClimbUpPos(item, coll->radius, -(coll->radius + 120), &shift_l, &ledge_l);
+    item->pos.y_pos += 256;
+    if (result_r && result_l && input & IN_FORWARD) {
+        if (result_r < 0 || result_l < 0) {
+            item->goal_anim_state = AS_CLIMBSTNC;
+            AnimateLara(item);
+            if (ABS(ledge_l - ledge_r) <= 120) {
+                item->goal_anim_state = AS_NULL;
+                item->pos.y_pos += (ledge_r + ledge_l) / 2 - 256;
+            }
+        } else {
+            item->goal_anim_state = AS_CLIMBING;
+            item->pos.y_pos -= yshift;
+        }
+    } else {
+        item->goal_anim_state = AS_CLIMBSTNC;
+        if (yshift)
+            AnimateLara(item);
+    }
+}

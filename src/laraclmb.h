@@ -16,6 +16,8 @@ sint32 LaraClimbRightCornerTest(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_climbright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_climbright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_climbing(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_climbing(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_climbdown(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_climbdown(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_climbend(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraTestClimbUpPos(ITEM_INFO *item, sint32 front, sint32 right, sint32 *shift, sint32 *ledge);
