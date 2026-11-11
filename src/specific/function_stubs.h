@@ -4,6 +4,13 @@
 #include "../3dglodef.h"
 
 void Log(unsigned int type, const char *s, ...);
+void other_log(char *format, ...);
+void S_ExitSystem(const char *string);
+sint32 GetRandomControl(void);
+sint32 GetRandomDraw(void);
+void SeedRandomControl(sint32 seed);
+void SeedRandomDraw(sint32 seed);
+void init_game_malloc(void);
 void *game_malloc(int size);
 
 extern PHD_VECTOR CamPos;
