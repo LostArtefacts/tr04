@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="131.27" height="12" x="0" y="0" class="named"><title>593 · 38.38%</title></rect>
-<rect width="0.44" height="12" x="131.27" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.65" height="12" x="131.71" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="205.64" height="12" x="136.36" y="0" class="todo"><title>929 · 60.13%</title></rect>
+<rect width="131.49" height="12" x="0" y="0" class="named"><title>594 · 38.45%</title></rect>
+<rect width="0.44" height="12" x="131.49" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.65" height="12" x="131.93" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="205.42" height="12" x="136.58" y="0" class="todo"><title>928 · 60.06%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">38.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">593</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">929</tspan></text>
+<text text-anchor="end" x="522" y="7.50">38.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">594</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">928</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="55.70" height="12" x="0" y="0" class="named"><title>101 KB · 16.29%</title></rect>
-<rect width="0.12" height="12" x="55.70" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="55.82" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="278.93" height="12" x="63.07" y="0" class="todo"><title>506 KB · 81.56%</title></rect>
+<rect width="55.75" height="12" x="0" y="0" class="named"><title>101 KB · 16.30%</title></rect>
+<rect width="0.12" height="12" x="55.75" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="55.87" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="278.88" height="12" x="63.12" y="0" class="todo"><title>506 KB · 81.54%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">16.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">101 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">506 KB</tspan></text>
@@ -1120,7 +1120,7 @@
 <rect width="12" height="12" x="15" y="315" class="named"><title>0x0046b8a0 seventh_cutseq_init (28 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="315" class="named"><title>0x0046b8c0 seventh_control (46 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="315" class="named"><title>0x0046b8f0 eighth_control (46 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="315" class="todo"><title>0x0046b920 ninth_cutseq_init (86 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="315" class="named"><title>0x0046b920 ninth_cutseq_init (86 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="315" class="todo"><title>0x0046b980 ninth_control (186 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="315" class="todo"><title>0x0046ba40 tenth_cutseq_init (75 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="315" class="todo"><title>0x0046ba90 tenth_cutseq_control (357 bytes)</title></rect>
@@ -2725,7 +2725,7 @@
 <rect width="5.65" height="5.95" x="598.87" y="376.55" class="todo"><title>0x0048f6a0 WinRunCheck (87 bytes)</title></rect>
 <rect width="5.65" height="5.88" x="598.87" y="385.49" class="named"><title>0x00423b30 lara_as_monkeyr (86 bytes)</title></rect>
 <rect width="5.65" height="5.88" x="598.87" y="394.37" class="named"><title>0x0042d410 lara_col_climbright (86 bytes)</title></rect>
-<rect width="5.65" height="5.88" x="598.87" y="403.25" class="todo"><title>0x0046b920 ninth_cutseq_init (86 bytes)</title></rect>
+<rect width="5.65" height="5.88" x="598.87" y="403.25" class="named"><title>0x0046b920 ninth_cutseq_init (86 bytes)</title></rect>
 <rect width="5.65" height="5.88" x="598.87" y="412.13" class="named"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
 <rect width="5.65" height="5.88" x="598.87" y="421.01" class="todo"><title>0x00491f60 DXD3DCreate (86 bytes)</title></rect>
 <rect width="5.65" height="5.81" x="598.87" y="429.89" class="todo"><title>0x004492d0 KillMoveItems (85 bytes)</title></rect>

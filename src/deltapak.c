@@ -74,6 +74,16 @@ void eighth_control(void)
     actor_chat_cnt = (actor_chat_cnt - 1) & 1;
 }
 
+void ninth_cutseq_init(void)
+{
+    init_voncroy_meshbits(1);
+    cutseq_meshbits[3] &= ~0x80000000;
+    cutseq_meshbits[4] &= ~0x80000000;
+    cutseq_meshbits[5] &= ~0x80000000;
+    cutseq_meshbits[6] &= ~0x80000000;
+    cutseq_meshbits[7] &= ~0x80000000;
+}
+
 void tenth_cutseq_end(void)
 {
     cutseq_restore_item(DOOR_TYPE5);
