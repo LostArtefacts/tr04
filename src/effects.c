@@ -26,3 +26,8 @@ void shoot_right_gun(ITEM_INFO *item)
 {
     lara.right_arm.flash_gun = 3;
 }
+
+void shoot_left_gun(ITEM_INFO *item)
+{
+    lara.left_arm.flash_gun = 3;
+}
