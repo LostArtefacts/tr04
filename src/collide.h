@@ -10,6 +10,16 @@ enum direction {
     WEST
 };
 
+enum coll_type {
+    COLL_NONE = 0,
+    COLL_FRONT = 1,
+    COLL_LEFT = 2,
+    COLL_RIGHT = 4,
+    COLL_TOP = 8,
+    COLL_TOPFRONT = 16,
+    COLL_CLAMP = 32
+};
+
 typedef struct coll_info {
     sint32 mid_floor;
     sint32 mid_ceiling;

@@ -8,6 +8,7 @@
 #define DIVE_COUNT 10
 
 void LaraSurfaceCollision(ITEM_INFO *item, COLL_INFO *coll);
+sint32 LaraTestWaterStepOut(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_surfswim(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_surfback(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_surfleft(ITEM_INFO *item, COLL_INFO *coll);
