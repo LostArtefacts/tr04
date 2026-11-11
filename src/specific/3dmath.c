@@ -257,3 +257,14 @@ void phd_PushUnitMatrix(void)
     phd_mxptr += indices_count;
     Func490320();
 }
+
+void Func490320(void)
+{
+    sint32 *mx;
+
+    mx = phd_mxptr;
+    mx[M00] = mx[M11] = mx[M22] = 0x4000;
+    mx[M01] = mx[M02] = mx[M03] = 0;
+    mx[M10] = mx[M12] = mx[M13] = 0;
+    mx[M20] = mx[M21] = mx[M23] = 0;
+}

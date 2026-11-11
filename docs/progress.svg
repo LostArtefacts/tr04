@@ -46,18 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="9.36" height="12" x="0" y="0" class="named"><title>30 · 1.93%</title></rect>
-<rect width="474.64" height="12" x="9.36" y="0" class="todo"><title>1521 · 98.07%</title></rect>
+<rect width="8.09" height="12" x="0" y="0" class="named"><title>30 · 1.93%</title></rect>
+<rect width="0.27" height="12" x="8.09" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="409.65" height="12" x="8.35" y="0" class="todo"><title>1520 · 98%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="7.50">1.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="7"><tspan class="named">30</tspan> · <tspan class="todo">1521</tspan></text>
+<text text-anchor="end" x="588" y="7.50">2.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="7"><tspan class="named">30</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="todo">1520</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="3.38" height="12" x="0" y="0" class="named"><title>4 KB · 0.70%</title></rect>
-<rect width="480.62" height="12" x="3.38" y="0" class="todo"><title>615 KB · 99.30%</title></rect>
+<rect width="2.92" height="12" x="0" y="0" class="named"><title>4 KB · 0.70%</title></rect>
+<rect width="0.10" height="12" x="2.92" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="415.05" height="12" x="2.95" y="0" class="todo"><title>615 KB · 99.29%</title></rect>
 </g>
-<text text-anchor="end" x="654" y="24.50">0.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="669" y="24"><tspan class="named">4 KB</tspan> · <tspan class="todo">615 KB</tspan></text>
+<text text-anchor="end" x="588" y="24.50">0.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="603" y="24"><tspan class="named">4 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="todo">615 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1474,7 +1476,7 @@
 <rect width="12" height="12" x="135" y="420" class="named"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="420" class="named"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="420" class="named"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="420" class="todo"><title>0x00490320 Func490320 (48 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="420" class="decompiled"><title>0x00490320 Func490320 (48 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="420" class="todo"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="420" class="todo"><title>0x00490400 phd_RotX (174 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="420" class="todo"><title>0x004904b0 phd_RotY (172 bytes)</title></rect>
@@ -2900,7 +2902,7 @@
 <rect width="4.55" height="4.24" x="704.89" y="373.44" class="todo"><title>0x00428e40 draw_shotgun_meshes (48 bytes)</title></rect>
 <rect width="4.55" height="4.24" x="712.44" y="373.44" class="todo"><title>0x00450ee0 GetBestFrame (48 bytes)</title></rect>
 <rect width="4.55" height="4.24" x="719.99" y="373.44" class="named"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
-<rect width="4.55" height="4.24" x="727.54" y="373.44" class="todo"><title>0x00490320 Func490320 (48 bytes)</title></rect>
+<rect width="4.55" height="4.24" x="727.54" y="373.44" class="decompiled"><title>0x00490320 Func490320 (48 bytes)</title></rect>
 <rect width="4.46" height="4.24" x="735.09" y="373.44" class="todo"><title>0x0042ddc0 CheckForHoldingState (47 bytes)</title></rect>
 <rect width="4.46" height="4.24" x="742.54" y="373.44" class="todo"><title>0x00431e60 lara_col_surfswim (47 bytes)</title></rect>
 <rect width="4.14" height="4.56" x="650.83" y="380.68" class="todo"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
