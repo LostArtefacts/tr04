@@ -189,3 +189,41 @@ uint8 SaveSetup(HWND hDlg)
     CloseRegistry();
     return 1;
 }
+
+void SaveSettings(void)
+{
+    OpenRegistry("Game");
+    REG_WriteLong("Key0", layout[1][0]);
+    REG_WriteLong("Key1", layout[1][1]);
+    REG_WriteLong("Key2", layout[1][2]);
+    REG_WriteLong("Key3", layout[1][3]);
+    REG_WriteLong("Key4", layout[1][4]);
+    REG_WriteLong("Key5", layout[1][5]);
+    REG_WriteLong("Key6", layout[1][6]);
+    REG_WriteLong("Key7", layout[1][7]);
+    REG_WriteLong("Key8", layout[1][8]);
+    REG_WriteLong("Key9", layout[1][9]);
+    REG_WriteLong("Key10", layout[1][10]);
+    REG_WriteLong("Key11", layout[1][11]);
+    REG_WriteLong("Key12", layout[1][12]);
+    REG_WriteLong("Key13", layout[1][13]);
+    REG_WriteLong("Key14", layout[1][14]);
+    REG_WriteLong("Key15", layout[1][15]);
+    REG_WriteLong("Key16", layout[1][16]);
+    REG_WriteLong("Key17", layout[1][17]);
+    REG_WriteLong("ControlMethod", ControlMethod);
+    REG_WriteLong("MusicVolume", MusicVolume);
+    REG_WriteLong("SFXVolume", SFXVolume);
+    REG_WriteLong("SoundQuality", SoundQuality);
+    REG_WriteLong("AutoTarget", App.AutoTarget);
+    REG_WriteLong("WindowX", App.dx.rScreen.left);
+    REG_WriteLong("WindowY", App.dx.rScreen.top);
+    CloseRegistry();
+    OpenRegistry("System");
+    REG_WriteLong("VMode", App.DXInfo.nDisplayMode);
+    if (App.dx.Flags & 2)
+        REG_WriteBool("Window", 1);
+    else
+        REG_WriteBool("Window", 0);
+    CloseRegistry();
+}

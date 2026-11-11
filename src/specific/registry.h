@@ -15,6 +15,7 @@ uint8 OpenRegistry(LPCSTR SubKeyName);
 void CloseRegistry(void);
 uint8 LoadSettings(void);
 uint8 SaveSetup(HWND hDlg);
+void SaveSettings(void);
 
 extern uint8 REG_Setup;
 
