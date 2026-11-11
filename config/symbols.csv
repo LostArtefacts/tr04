@@ -182,7 +182,7 @@ address,size,name,symbol
 0x004195e0,5975,VoncroyControl,_VoncroyControl
 0x0041af00,3869,VoncroyRaceControl,_VoncroyRaceControl
 0x0041bf00,90,InitialiseWildboar,_InitialiseWildboar
-0x0041bf60,870,WildboarControl,_WildboarControl
+0x0041bf60,888,WildboarControl,_WildboarControl
 0x0041c2e0,120,InitialiseWraith,_InitialiseWraith
 0x0041c360,337,TriggerWraithFlame,_TriggerWraithFlame
 0x0041c4c0,536,TriggerWraithEffect,_TriggerWraithEffect
