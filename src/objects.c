@@ -32,6 +32,27 @@ void SmashObject(sint16 item_number)
     item->status = ITEM_DEACTIVATED;
 }
 
+void SmashObjectControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint32 speed;
+
+    item = &items[item_number];
+    if (item->flags & IFL_INVISIBLE)
+        return;
+    if (lara.vehicle == NO_ITEM) {
+        if (!item->touch_bits)
+            return;
+        item->touch_bits = 0;
+        speed = ((rcossin_tbl[(((sint16)(lara_item->pos.y_rot - item->pos.y_rot) >> 3) & 0x1FFE) + 1] << 2) * lara_item->speed) >> W2V_SHIFT;
+        if (ABS(speed) < 50)
+            return;
+    } else if (!ItemNearLara(&item->pos, 512)) {
+        return;
+    }
+    SmashObject(item_number);
+}
+
 void BridgeFlatFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
 {
     if (y <= item->pos.y_pos) {
