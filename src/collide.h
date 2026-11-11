@@ -71,6 +71,7 @@ void UpdateLaraRoom(ITEM_INFO *item, sint32 height);
 sint32 TestBoundsCollide(ITEM_INFO *item, ITEM_INFO *l, sint32 rad);
 sint32 ItemPushLara(ITEM_INFO *item, ITEM_INFO *l, COLL_INFO *coll, sint32 spaz, sint32 big_push);
 sint32 TestLaraPosition(sint16 *bounds, ITEM_INFO *item, ITEM_INFO *laraitem);
+sint32 MoveLaraPosition(PHD_VECTOR *v, ITEM_INFO *item, ITEM_INFO *l);
 void AlignLaraPosition(PHD_VECTOR *vec, ITEM_INFO *item, ITEM_INFO *laraitem);
 void ObjectCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
 void TrapCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
