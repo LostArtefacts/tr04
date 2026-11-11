@@ -13,9 +13,11 @@ void S_CDPlay(sint32 track, sint32 mode);
 void S_CDStop(void);
 void S_StartSyncedAudio(sint32 track);
 void ACMSetVolume(void);
+BOOL __stdcall ACMEnumCallBack(HACMDRIVERID hadid, DWORD dwInstance, DWORD fdwSupport);
 void ACMEmulateCDPlay(sint32 track, sint32 mode);
 
 extern CRITICAL_SECTION audio_cs;
+extern HACMDRIVERID hACMDriverID;
 extern uint8 acm_ready;
 extern FILE *audio_stream_fp;
 extern sint32 audio_counter;

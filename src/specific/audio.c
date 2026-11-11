@@ -54,3 +54,16 @@ void ACMSetVolume(void)
     if (G_DSBuffer)
         IDirectSoundBuffer_SetVolume(G_DSBuffer, volume);
 }
+
+BOOL __stdcall ACMEnumCallBack(HACMDRIVERID hadid, DWORD dwInstance, DWORD fdwSupport)
+{
+    ACMDRIVERDETAILS driver;
+
+    memset(&driver, 0, sizeof(driver));
+    driver.cbStruct = sizeof(ACMDRIVERDETAILS);
+    acmDriverDetails(hadid, &driver, 0);
+    if (strcmp(driver.szShortName, "MS-ADPCM"))
+        return 1;
+    hACMDriverID = hadid;
+    return 0;
+}
