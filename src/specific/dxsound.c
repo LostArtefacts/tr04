@@ -173,3 +173,8 @@ sint32 S_SoundPlaySample(sint32 num, uint16 volume, sint32 pitch, sint16 pan)
 {
     return DXStartSample(num, CalcVolume(volume), pitch, pan, 0);
 }
+
+sint32 S_SoundPlaySampleLooped(sint32 num, uint16 volume, sint32 pitch, sint16 pan)
+{
+    return DXStartSample(num, CalcVolume(volume), pitch, pan, DSBPLAY_LOOPING);
+}
