@@ -11,6 +11,15 @@
 #define MAX_JOINT_CHANGE (ONE_DEGREE * 3)
 #define JOINT_ARC 0x3000
 
+void InitialiseCreature(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->collidable = 1;
+    item->data = 0;
+}
+
 sint32 UpdateLOT(LOT_INFO *LOT, sint32 expansion)
 {
     BOX_NODE *expand;

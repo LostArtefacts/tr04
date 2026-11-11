@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="142.37" height="12" x="0" y="0" class="named"><title>644 · 41.63%</title></rect>
-<rect width="0.44" height="12" x="142.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="142.81" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="194.54" height="12" x="147.46" y="0" class="todo"><title>880 · 56.88%</title></rect>
+<rect width="142.59" height="12" x="0" y="0" class="named"><title>645 · 41.69%</title></rect>
+<rect width="0.44" height="12" x="142.59" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="143.03" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="194.32" height="12" x="147.68" y="0" class="todo"><title>879 · 56.82%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">41.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">644</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">880</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">645</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">879</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="58.97" height="12" x="0" y="0" class="named"><title>107 KB · 17.24%</title></rect>
-<rect width="0.12" height="12" x="58.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="59.09" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="275.66" height="12" x="66.34" y="0" class="todo"><title>500 KB · 80.60%</title></rect>
+<rect width="59" height="12" x="0" y="0" class="named"><title>107 KB · 17.25%</title></rect>
+<rect width="0.12" height="12" x="59" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="59.12" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="275.63" height="12" x="66.37" y="0" class="todo"><title>500 KB · 80.59%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">107 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">500 KB</tspan></text>
@@ -727,7 +727,7 @@
 <rect width="12" height="12" x="120" y="195" class="todo"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="todo"><title>0x0043f7a0 InitialiseAutogun (59 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="195" class="todo"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="195" class="todo"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="195" class="named"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="todo"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="todo"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="195" class="named"><title>0x0043ff70 UpdateLOT (114 bytes)</title></rect>
@@ -2875,7 +2875,7 @@
 <rect width="4.82" height="4.24" x="640.12" y="457.76" class="named"><title>0x0045bd80 ReadSG (53 bytes)</title></rect>
 <rect width="4.39" height="4.66" x="647.95" y="355.30" class="named"><title>0x00473bb0 S_SoundSetPanAndVolume (53 bytes)</title></rect>
 <rect width="4.39" height="4.66" x="655.34" y="355.30" class="todo"><title>0x0048c240 SetFade (53 bytes)</title></rect>
-<rect width="4.31" height="4.66" x="662.73" y="355.30" class="todo"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
+<rect width="4.31" height="4.66" x="662.73" y="355.30" class="named"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
 <rect width="4.31" height="4.66" x="670.04" y="355.30" class="named"><title>0x00450520 InitInterpolate (52 bytes)</title></rect>
 <rect width="4.31" height="4.66" x="677.34" y="355.30" class="named"><title>0x00452f40 InitialisePickUpDisplay (52 bytes)</title></rect>
 <rect width="4.31" height="4.66" x="684.65" y="355.30" class="named"><title>0x00456010 BridgeTilt2Ceiling (52 bytes)</title></rect>
