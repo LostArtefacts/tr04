@@ -381,6 +381,27 @@ void force_sky_lightning(void)
     dLightningRand = (GetRandomDraw() & 0xFF) + 256;
 }
 
+void handle_lara_chatting(sint16 *_ranges)
+{
+    sint32 r1, r2, f;
+
+    lara_chat_cnt = (lara_chat_cnt - 1) & 1;
+    f = GLOBAL_cutseq_frame;
+    while (1) {
+        r1 = _ranges[0];
+        r2 = _ranges[1];
+        if (r1 == -1)
+            break;
+        if (f >= r1 && f <= r2) {
+            if (!lara_chat_cnt)
+                lara.mesh_ptrs[LM_HEAD] = meshes[objects[(GetRandomControl() & 3) + LARA_SPEECH_HEAD1].mesh_index + 2 * LM_HEAD];
+            return;
+        }
+        _ranges += 2;
+    }
+    lara.mesh_ptrs[LM_HEAD] = meshes[objects[LARA_SKIN].mesh_index + 2 * LM_HEAD];
+}
+
 ITEM_INFO *find_a_fucking_item(sint32 object_number)
 {
     ITEM_INFO *item;
