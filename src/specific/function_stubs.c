@@ -1,10 +1,17 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "function_stubs.h"
 
 extern sint32 rand_1;
 extern sint32 rand_2;
+extern char *malloc_buffer;
+extern sint32 malloc_size;
+extern char *malloc_ptr;
+extern sint32 malloc_free;
+extern sint32 malloc_used;
 
 void other_log(char *format, ...)
 {
@@ -41,4 +48,13 @@ void SeedRandomControl(sint32 seed)
 void SeedRandomDraw(sint32 seed)
 {
     rand_2 = seed;
+}
+
+void init_game_malloc(void)
+{
+    malloc_buffer = (char *)malloc(MALLOC_SIZE);
+    malloc_size = MALLOC_SIZE;
+    malloc_ptr = malloc_buffer;
+    malloc_free = MALLOC_SIZE;
+    malloc_used = 0;
 }

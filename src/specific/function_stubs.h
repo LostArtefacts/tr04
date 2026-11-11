@@ -3,6 +3,8 @@
 
 #include "../3dglodef.h"
 
+#define MALLOC_SIZE 5000000
+
 void Log(unsigned int type, const char *s, ...);
 void other_log(char *format, ...);
 void S_ExitSystem(const char *string);
