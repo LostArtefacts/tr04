@@ -59,6 +59,17 @@ void phd_RotYXZ_I(sint16 y, sint16 x, sint16 z)
     phd_mxptr = oldm;
 }
 
+void gar_RotYXZsuperpack_I(sint16 **pprot1, sint16 **pprot2, sint32 skip)
+{
+    sint32 *oldm;
+
+    gar_RotYXZsuperpack(pprot1, skip);
+    oldm = phd_mxptr;
+    phd_mxptr = IMptr;
+    gar_RotYXZsuperpack(pprot2, skip);
+    phd_mxptr = oldm;
+}
+
 void phd_PutPolygons_I(sint16 *ptr, sint32 clip)
 {
     phd_PushMatrix();
