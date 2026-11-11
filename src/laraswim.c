@@ -119,6 +119,34 @@ void lara_col_swim(ITEM_INFO *item, COLL_INFO *coll)
     LaraSwimCollision(item, coll);
 }
 
+void LaraTestWaterDepth(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 wd;
+    FLOOR_INFO *floor;
+    sint16 room_number;
+
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    wd = GetWaterDepth(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, room_number);
+    if (wd == NO_HEIGHT) {
+        item->pos.x_pos = coll->old.x;
+        item->pos.y_pos = coll->old.y;
+        item->pos.z_pos = coll->old.z;
+        item->fallspeed = 0;
+    } else if (wd <= STEP_L * 2) {
+        item->anim_number = ANIM_SWIM2QSTND;
+        item->frame_number = anims[ANIM_SWIM2QSTND].frame_base;
+        item->current_anim_state = AS_WATEROUT;
+        item->goal_anim_state = AS_STOP;
+        item->pos.x_rot = item->pos.z_rot = 0;
+        item->gravity_status = 0;
+        item->speed = 0;
+        item->fallspeed = 0;
+        lara.water_status = LW_WADE;
+        item->pos.y_pos = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    }
+}
+
 void lara_col_glide(ITEM_INFO *item, COLL_INFO *coll)
 {
     LaraSwimCollision(item, coll);
