@@ -36,6 +36,7 @@ sint32 ExplodingDeath2(sint16 item_number, sint32 mesh_bits, sint16 Flags);
 void AddFire(sint32 x, sint32 y, sint32 z, sint32 size, sint16 room_number, sint16 fade);
 void TriggerShockwave(PHD_VECTOR *pos, sint32 InnerOuterRads, sint32 speed, sint32 rgb, sint32 XRotFlags);
 void ClearFires(void);
+void SetFadeClip(sint16 height, sint16 speed);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;

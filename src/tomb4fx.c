@@ -31,3 +31,9 @@ void AddFire(sint32 x, sint32 y, sint32 z, sint32 size, sint16 room_number, sint
         break;
     }
 }
+
+void SetFadeClip(sint16 height, sint16 speed)
+{
+    DestFadeScreenHeight = height;
+    FadeClipSpeed = speed;
+}
