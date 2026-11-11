@@ -143,6 +143,8 @@ typedef struct WINAPP {
     sint32 AutoTarget;
 } WINAPP;
 
+void DXSaveScreen(LPDIRECTDRAWSURFACE4 surf, const char *name);
+
 extern WINAPP App;
 extern DXINFO *G_dxinfo;
 extern DXPTR *G_dxptr;

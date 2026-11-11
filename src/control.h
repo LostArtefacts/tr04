@@ -37,6 +37,7 @@ enum floor_types {
 extern sint32 OnObject;
 extern sint16 *floor_data;
 extern sint32 flipeffect;
+extern sint32 SetDebounce;
 
 FLOOR_INFO *GetFloor(sint32 x, sint32 y, sint32 z, sint16 *room_number);
 sint32 GetHeight(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);

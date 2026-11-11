@@ -43,5 +43,6 @@ typedef struct camera_info {
 } CAMERA_INFO;
 
 extern CAMERA_INFO camera;
+extern sint32 BinocularRange;
 
 #endif

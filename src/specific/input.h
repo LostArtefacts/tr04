@@ -45,12 +45,18 @@ enum input_buttons {
 
 sint32 Key(sint32 number);
 sint32 ReadJoystick(sint32 *x, sint32 *y);
+sint32 S_UpdateInput(void);
 
 extern sint16 layout[2][18];
 extern sint32 conflict[18];
 extern sint32 input;
 extern sint32 linput;
 extern sint32 dbinput;
+extern sint32 inputBusy;
+extern uint8 flare_no_db;
+extern sint32 LookCnt;
+extern sint32 med_hotkey_timer;
+extern sint32 cheat_code;
 extern sint32 joy_x;
 extern sint32 joy_y;
 extern sint32 joy_fire;

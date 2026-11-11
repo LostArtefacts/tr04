@@ -1228,7 +1228,7 @@ address,size,name,symbol
 0x00477600,184,S_LoadGame,_S_LoadGame
 0x004776c0,284,Key,_Key
 0x004777e0,208,ReadJoystick,_ReadJoystick
-0x004778b0,1869,S_UpdateInput,_S_UpdateInput
+0x004778b0,1888,S_UpdateInput,_S_UpdateInput
 0x00478010,91,MallocD3DLights,_MallocD3DLights
 0x00478070,597,CreateD3DLights,_CreateD3DLights
 0x004782d0,354,FreeD3DLights,_FreeD3DLights
@@ -2240,6 +2240,10 @@ address,size,name,symbol
 0x005358a4,4,joy_y,_joy_y
 0x005358a8,4,linput,_linput
 0x005358ac,4,dbinput,_dbinput
+0x005358be,1,flare_no_db,_flare_no_db
+0x005358c0,4,LookCnt,_LookCnt
+0x005358c4,4,med_hotkey_timer,_med_hotkey_timer
+0x005358c8,4,cheat_code,_cheat_code
 0x005358d0,,LaraTorchEnd,_LaraTorchEnd
 0x005358f0,,StaticMeshLightItem,_StaticMeshLightItem
 0x00536ee8,4,LaraTorchIntensity,_LaraTorchIntensity

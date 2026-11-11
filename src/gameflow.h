@@ -32,7 +32,22 @@ typedef struct gameflow {
 } GAMEFLOW;
 
 enum gf_level_options {
-    GF_TIMER = 0x1000
+    GF_YOUNGLARA = 0x1,
+    GF_WEATHER = 0x2,
+    GF_HORIZON = 0x4,
+    GF_LAYER1 = 0x8,
+    GF_LAYER2 = 0x10,
+    GF_STARFIELD = 0x20,
+    GF_LIGHTNING = 0x40,
+    GF_TRAIN = 0x80,
+    GF_PULSE = 0x100,
+    GF_HORIZONCOLADD = 0x200,
+    GF_RESETHUB = 0x400,
+    GF_LENSFLARE = 0x800,
+    GF_TIMER = 0x1000,
+    GF_MIRROR = 0x2000,
+    GF_REMOVEAMULET = 0x4000,
+    GF_NOLEVEL = 0x8000
 };
 
 enum gf_strings {

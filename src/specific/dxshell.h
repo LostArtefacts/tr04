@@ -5,6 +5,7 @@
 
 #include "../types.h"
 
+void DXReadKeyboard(char *KeyMap);
 sint32 DXAttempt(HRESULT r);
 
 extern uint8 keymap[256];
