@@ -1645,7 +1645,7 @@ address,size,name,symbol
 0x004a0f9f,340,_qsort,__qsort
 0x004a10f3,78,_shortsort,__shortsort
 0x004a1141,44,_swap,__swap
-0x004a1170,170,__alldiv,___alldiv
+0x004a1170,170,__alldiv,__alldiv
 0x004a1220,128,_strstr,__strstr
 0x004a12a0,111,_toupper,__toupper
 0x004a130f,204,_toupper_0,__toupper_0
