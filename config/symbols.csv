@@ -1974,6 +1974,8 @@ address,size,name,symbol
 0x004a9248,4,joyGetDevCapsA,__imp__joyGetDevCapsA@12
 0x004a924c,4,joyGetPosEx,__imp__joyGetPosEx@8
 0x004ad0a8,16,bat_bite,_bat_bite
+0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
+0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition
 0x004ad1e8,16,left_hand,_left_hand
 0x004ad1f8,16,right_hand,_right_hand
 0x004ad6c0,16,wildboar_bite,_wildboar_bite
