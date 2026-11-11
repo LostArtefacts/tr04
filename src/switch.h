@@ -6,6 +6,7 @@
 #include "collide.h"
 
 void SwitchControl(sint16 item_number);
+sint32 GetSwitchTrigger(ITEM_INFO *item, sint16 *ItemNos, sint32 AttatchedToSwitch);
 
 extern uint8 CurrentSequence;
 extern uint8 Sequences[3];
@@ -24,6 +25,7 @@ void FullBlockSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
 void CogSwitchControl(sint16 item_number);
 void CogSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void TurnSwitchControl(sint16 item_number);
+void TurnSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 extern sint16 Switch2Bounds[12];
 extern PHD_VECTOR Switch2Pos;
@@ -50,5 +52,9 @@ extern sint16 FullBlockSwitchBounds[12];
 extern PHD_VECTOR FullBlockSwitchPos;
 extern PHD_VECTOR CogSwitchPos;
 extern sint16 CogSwitchBounds[12];
+extern sint16 TurnSwitchBoundsA[12];
+extern PHD_VECTOR TurnSwitchPos;
+extern sint16 TurnSwitchBoundsC[12];
+extern PHD_VECTOR TurnSwitchPosA;
 
 #endif

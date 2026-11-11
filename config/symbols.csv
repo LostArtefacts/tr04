@@ -2007,6 +2007,10 @@ address,size,name,symbol
 0x004afab8,4,old_hitpoints,_old_hitpoints
 0x004afcd0,24,Switch2Bounds,_Switch2Bounds
 0x004afce8,12,Switch2Pos,_Switch2Pos
+0x004afcf4,24,TurnSwitchBoundsA,_TurnSwitchBoundsA
+0x004afd10,12,TurnSwitchPos,_TurnSwitchPos
+0x004afd1c,24,TurnSwitchBoundsC,_TurnSwitchBoundsC
+0x004afd38,12,TurnSwitchPosA,_TurnSwitchPosA
 0x004afd48,12,CogSwitchPos,_CogSwitchPos
 0x004afd54,24,CogSwitchBounds,_CogSwitchBounds
 0x004afd70,12,RailSwitchPos,_RailSwitchPos
@@ -2529,6 +2533,7 @@ address,size,name,symbol
 0x007fe7e0,2,FXType,_FXType
 0x007fe7e2,2,IsRoomOutsideNo,_IsRoomOutsideNo
 0x007fe7e4,4,CutSceneTriggered,_CutSceneTriggered
+0x007fe7f0,12,GlobalCollisionBounds,_GlobalCollisionBounds
 0x007fe820,4,camera,_camera
 0x007fe890,16,ForcedFixedCamera,_ForcedFixedCamera
 0x007fe8a0,4,last_target,_last_target
