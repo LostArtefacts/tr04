@@ -291,3 +291,15 @@ void ControlCatwalkBlade(sint16 item_number)
     } else
         item->frame_number = anims[item->anim_number].frame_base;
 }
+
+void ControlMovingBlade(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        item->item_flags[3] = 50;
+        AnimateItem(item);
+    } else
+        item->frame_number = anims[item->anim_number].frame_base;
+}

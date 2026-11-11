@@ -23,5 +23,6 @@ void ControlChain(sint16 item_number);
 void ControlStargate(sint16 item_number);
 void ControlSmashableBikeWall(sint16 item_number);
 void ControlCatwalkBlade(sint16 item_number);
+void ControlMovingBlade(sint16 item_number);
 
 #endif
