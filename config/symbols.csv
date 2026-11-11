@@ -864,7 +864,7 @@ address,size,name,symbol
 0x00455200,102,InitialiseLOTarray,_InitialiseLOTarray
 0x00455270,64,DisableBaddieAI,_DisableBaddieAI
 0x004552b0,447,EnableBaddieAI,_EnableBaddieAI
-0x00455470,465,InitialiseSlot,_InitialiseSlot
+0x00455470,556,InitialiseSlot,_InitialiseSlot
 0x004556a0,267,CreateZone,_CreateZone
 0x004557b0,75,ClearLOT,_ClearLOT
 0x00455800,735,Draw_Mirror_Lara,_Draw_Mirror_Lara
