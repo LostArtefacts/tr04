@@ -18,6 +18,7 @@
 #define FASTFALL_SPEED 128
 #define LARA_FASTFALL_SPEED (FASTFALL_SPEED + 3)
 #define LARA_HITE 762
+#define LARA_RAD 100
 #define STEPUP_HEIGHT ((256 * 3) / 2)
 
 enum lara_gun_states {
