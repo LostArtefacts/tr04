@@ -672,7 +672,7 @@ address,size,name,symbol
 0x00440290,164,EscapeBox,_EscapeBox
 0x00440340,159,ValidBox,_ValidBox
 0x004403e0,576,GetCreatureMood,_GetCreatureMood
-0x00440620,776,CreatureMood,_CreatureMood
+0x00440620,792,CreatureMood,_CreatureMood
 0x00440940,249,StalkBox,_StalkBox
 0x00440a40,1102,CalculateTarget,_CalculateTarget
 0x00440e90,310,CreatureCreature,_CreatureCreature
