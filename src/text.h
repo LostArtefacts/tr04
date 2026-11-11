@@ -1,7 +1,7 @@
 #ifndef TEXT_H
 #define TEXT_H
 
-#include "types.h"
+#include "3dglodef.h"
 
 #define RGBONLY(r, g, b) ((b) | (((g) | ((r) << 8)) << 8))
 #define CLRR(clr) (((clr) >> 16) & 0xFF)
@@ -14,13 +14,6 @@ enum font_flags {
     FF_RJUSTIFY = 0x4000,
     FF_CENTER = 0x8000
 };
-
-typedef struct cvector {
-    uint8 b;
-    uint8 g;
-    uint8 r;
-    uint8 a;
-} CVECTOR;
 
 typedef struct chardef {
     float u;

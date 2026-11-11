@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="14.79" height="12" x="0" y="0" class="named"><title>62 · 4%</title></rect>
-<rect width="0.24" height="12" x="14.79" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="0.72" height="12" x="15.03" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
-<rect width="354.26" height="12" x="15.74" y="0" class="todo"><title>1485 · 95.74%</title></rect>
+<rect width="15.03" height="12" x="0" y="0" class="named"><title>63 · 4.06%</title></rect>
+<rect width="0.24" height="12" x="15.03" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
+<rect width="0.72" height="12" x="15.27" y="0" class="nonmatching"><title>3 · 0.19%</title></rect>
+<rect width="354.02" height="12" x="15.98" y="0" class="todo"><title>1484 · 95.68%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="7.50">4.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">62</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1485</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="7"><tspan class="named">63</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">3</tspan> · <tspan class="todo">1484</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="5.98" height="12" x="0" y="0" class="named"><title>10 KB · 1.62%</title></rect>
-<rect width="0.10" height="12" x="5.98" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="0.73" height="12" x="6.01" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
-<rect width="363.26" height="12" x="6.74" y="0" class="todo"><title>609 KB · 98.18%</title></rect>
+<rect width="6.01" height="12" x="0" y="0" class="named"><title>10 KB · 1.62%</title></rect>
+<rect width="0.10" height="12" x="6.01" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
+<rect width="0.73" height="12" x="6.04" y="0" class="nonmatching"><title>1 KB · 0.20%</title></rect>
+<rect width="363.24" height="12" x="6.76" y="0" class="todo"><title>608 KB · 98.17%</title></rect>
 </g>
 <text text-anchor="end" x="540" y="24.50">1.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">10 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">609 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="555" y="24"><tspan class="named">10 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">1 KB</tspan> · <tspan class="todo">608 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -877,7 +877,7 @@
 <rect width="12" height="12" x="120" y="240" class="todo"><title>0x00451e30 DoTitle (2096 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="240" class="todo"><title>0x00452710 DoLevel (1133 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="240" class="todo"><title>0x00452b80 DoCredits (230 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="240" class="todo"><title>0x00452c70 FlashIt (45 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="240" class="named"><title>0x00452c70 FlashIt (45 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="240" class="todo"><title>0x00452ca0 DrawGameInfo (307 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="240" class="todo"><title>0x00452de0 DrawHealthBar (188 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="240" class="todo"><title>0x00452ea0 DrawAirBar (155 bytes)</title></rect>
@@ -2926,7 +2926,7 @@
 <rect width="4.45" height="4.15" x="650.83" y="402.53" class="todo"><title>0x0046c590 twenty_end (46 bytes)</title></rect>
 <rect width="4.45" height="4.15" x="650.83" y="409.69" class="todo"><title>0x0046d450 find_a_fucking_item (46 bytes)</title></rect>
 <rect width="4.45" height="4.06" x="650.83" y="416.84" class="todo"><title>0x00430eb0 InitialiseLaraLoad (45 bytes)</title></rect>
-<rect width="4.45" height="4.06" x="650.83" y="423.90" class="todo"><title>0x00452c70 FlashIt (45 bytes)</title></rect>
+<rect width="4.45" height="4.06" x="650.83" y="423.90" class="named"><title>0x00452c70 FlashIt (45 bytes)</title></rect>
 <rect width="4.45" height="4.06" x="650.83" y="430.95" class="todo"><title>0x00453340 InitialiseTwoBlockPlatform (45 bytes)</title></rect>
 <rect width="4.45" height="4.06" x="650.83" y="438.01" class="todo"><title>0x00453710 InitialiseMineHelicopter (45 bytes)</title></rect>
 <rect width="4.45" height="4.06" x="650.83" y="445.07" class="todo"><title>0x00453870 InitialiseStatuePlinth (45 bytes)</title></rect>

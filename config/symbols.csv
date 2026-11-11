@@ -1998,6 +1998,7 @@ address,size,name,symbol
 0x004af451,1,gfGameMode,_gfGameMode
 0x004af452,,gfInitialiseGame,_gfInitialiseGame
 0x004af454,4,nFrames,_nFrames
+0x004afab8,4,old_hitpoints,_old_hitpoints
 0x004aff48,80,ShadeFromTo,_ShadeFromTo
 0x004aff98,4,font_init,_font_init
 0x004b22c0,4,source_wav_format,_source_wav_format
@@ -2111,6 +2112,8 @@ address,size,name,symbol
 0x004bf66b,,gfNumMips,_gfNumMips
 0x004bf66c,1,Chris_Menu,_Chris_Menu
 0x004bf680,4,health_bar_timer,_health_bar_timer
+0x004bf684,4,flash_state,_flash_state
+0x004bf688,4,flash_count,_flash_count
 0x004bf68c,4,level_items,_level_items
 0x004bf690,4,slots_used,_slots_used
 0x004bf6a8,4,nRope,_nRope
@@ -2381,6 +2384,7 @@ address,size,name,symbol
 0x007fd210,2,PickupVel,_PickupVel
 0x007fd212,2,CurrentPickup,_CurrentPickup
 0x007fd214,1,PoisonFlag,_PoisonFlag
+0x007fd220,32,pickups,_pickups
 0x007fd250,,gfMirrorRoom,_gfMirrorRoom
 0x007fd251,1,gfLayer2Vel,_gfLayer2Vel
 0x007fd252,1,gfLayer1Vel,_gfLayer1Vel

@@ -12,6 +12,14 @@ enum lara_gun_states {
     LG_FLARE
 };
 
+enum lara_water_states {
+    LW_ABOVE_WATER,
+    LW_UNDERWATER,
+    LW_SURFACE,
+    LW_FLYCHEAT,
+    LW_WADE
+};
+
 typedef struct lara_arm {
     sint16 *frame_base;
     sint16 frame_number;
@@ -151,5 +159,7 @@ typedef struct lara_info {
 } LARA_INFO;
 
 extern LARA_INFO lara;
+extern ITEM_INFO *lara_item;
+extern uint16 DashTimer;
 
 #endif
