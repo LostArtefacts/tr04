@@ -4,6 +4,10 @@
 #include "anim.h"
 #include "objnums.h"
 #include "specific/function_stubs.h"
+#include "box.h"
+#include "laramisc.h"
+#include "bike.h"
+#include "jeep.h"
 #include <string.h>
 
 sint32 CheckSumValid(sint8 *buffer)
@@ -189,4 +193,46 @@ void sgSaveLevel(void)
     SaveLevelData(0);
     SaveLaraData();
     SaveHubData(level_index);
+}
+
+void sgRestoreLevel(void)
+{
+    AIOBJECT *lsp;
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint32 i;
+
+    if (OpenSaveGame(gfCurrentLevel, 0) >= 0)
+        RestoreLevelData(0);
+    RestoreLaraData(0);
+    if (gfRequiredStartPos) {
+        lsp = &AIObjects[gfRequiredStartPos - 1];
+        lara_item->pos.x_pos = lsp->x;
+        lara_item->pos.y_pos = lsp->y;
+        lara_item->pos.z_pos = lsp->z;
+        lara_item->pos.y_rot = lsp->y_rot;
+        if (lara_item->room_number != lsp->room_number)
+            ItemNewRoom(lara.item_number, lsp->room_number);
+    }
+    InitialiseLaraAnims(lara_item);
+    if (savegame.Lara.vehicle != NO_ITEM) {
+        for (i = 0; i < level_items; i++) {
+            if (items[i].object_number == MOTORBIKE || items[i].object_number == JEEP)
+                break;
+        }
+        item = &items[i];
+        item->pos.x_pos = lara_item->pos.x_pos;
+        item->pos.y_pos = lara_item->pos.y_pos;
+        item->pos.z_pos = lara_item->pos.z_pos;
+        item->pos.y_rot = lara_item->pos.y_rot;
+        if (item->room_number != lara_item->room_number)
+            ItemNewRoom(i, lara_item->room_number);
+        floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &item->room_number);
+        item->floor = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+        lara.vehicle = i;
+        if (items[lara.vehicle].object_number == MOTORBIKE)
+            BikeStart(item, lara_item);
+        else
+            JeepStart(item, lara_item);
+    }
 }

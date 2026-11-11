@@ -5,6 +5,7 @@
 #include "collide.h"
 
 void LaraInitialiseMeshes(void);
+void InitialiseLaraAnims(ITEM_INFO *item);
 void LaraCheat(ITEM_INFO *item, COLL_INFO *coll);
 void LaraCheatGetStuff(void);
 void LaraCheatGetStuff(void);

@@ -83,6 +83,20 @@ typedef struct creature_info {
     LOT_INFO LOT;
 } CREATURE_INFO;
 
+typedef struct ai_object {
+    sint16 object_number;
+    sint16 room_number;
+    sint32 x;
+    sint32 y;
+    sint32 z;
+    sint16 trigger_flags;
+    sint16 flags;
+    sint16 y_rot;
+    sint16 box_number;
+} AIOBJECT;
+
+extern AIOBJECT *AIObjects;
+
 enum ai_bits_types {
     GUARD = 1 << 0,
     AMBUSH = 1 << 1,

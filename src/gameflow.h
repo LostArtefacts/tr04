@@ -419,6 +419,7 @@ extern uint32 GameTimer;
 extern uint16 gfLevelFlags;
 extern char gfGameMode;
 extern uint8 gfCurrentLevel;
+extern uint8 gfRequiredStartPos;
 extern CVECTOR gfFog;
 extern sint32 gfMirrorZPlane;
 extern uint8 gfMirrorRoom;

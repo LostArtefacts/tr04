@@ -2498,7 +2498,7 @@ address,size,name,symbol
 0x007fd264,4,gfLayer1Col,_gfLayer1Col
 0x007fd268,1,title_controls_locked_out,_title_controls_locked_out
 0x007fd26c,4,gfLanguageFile,_gfLanguageFile
-0x007fd270,,gfRequiredStartPos,_gfRequiredStartPos
+0x007fd270,1,gfRequiredStartPos,_gfRequiredStartPos
 0x007fd274,4,gfStringOffset,_gfStringOffset
 0x007fd278,4,Gameflow,_Gameflow
 0x007fd288,,gfResetHubDest,_gfResetHubDest

@@ -53,5 +53,6 @@ void sgRestoreGame(void);
 void sgSaveLevel(void);
 void CreateCheckSum(void);
 void sgInitialiseHub(sint32 dont_save_lara);
+void sgRestoreLevel(void);
 
 #endif
