@@ -262,6 +262,43 @@ sint32 TestHangSwingIn(ITEM_INFO *item, PHD_ANGLE angle)
     return 0;
 }
 
+void lara_as_dash(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0 || !DashTimer || !(input & IN_SPRINT) || lara.water_status == LW_WADE) {
+        item->goal_anim_state = AS_RUN;
+        return;
+    }
+    DashTimer--;
+    if ((input & IN_DUCK) && (lara.gun_status == LG_NO_ARMS || lara.gun_type == WEAPON_NONE || lara.gun_type == WEAPON_PISTOLS || lara.gun_type == WEAPON_REVOLVER || lara.gun_type == WEAPON_UZI || lara.gun_type == WEAPON_FLARE)) {
+        item->goal_anim_state = AS_DUCK;
+        return;
+    }
+    if (input & IN_LEFT) {
+        lara.turn_rate -= 409;
+        if (lara.turn_rate < -728)
+            lara.turn_rate = -728;
+        item->pos.z_rot -= 273;
+        if (item->pos.z_rot < -2912)
+            item->pos.z_rot = -2912;
+    } else if (input & IN_RIGHT) {
+        lara.turn_rate += 409;
+        if (lara.turn_rate > 728)
+            lara.turn_rate = 728;
+        item->pos.z_rot += 273;
+        if (item->pos.z_rot > 2912)
+            item->pos.z_rot = 2912;
+    }
+    if ((input & IN_JUMP) && !item->gravity_status)
+        item->goal_anim_state = AS_DASHDIVE;
+    else if (input & IN_FORWARD) {
+        if (input & IN_WALK)
+            item->goal_anim_state = AS_WALK;
+        else
+            item->goal_anim_state = AS_DASH;
+    } else if (!(input & (IN_LEFT | IN_RIGHT)))
+        item->goal_anim_state = AS_STOP;
+}
+
 void lara_col_dash(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
