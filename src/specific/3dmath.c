@@ -7,6 +7,21 @@
 #include "function_stubs.h"
 
 extern D3DMATRIX D3DMW2VMatrix;
+extern sint16 CurrentFov;
+
+void AlterFOV(sint16 fov)
+{
+    CurrentFov = fov;
+    fov /= 2;
+    phd_persp = ((phd_winwidth / 2) * phd_cos(fov)) / phd_sin(fov);
+    f_persp = (float)phd_persp;
+    f_oneopersp = one / f_persp;
+    f_perspoznear = f_persp / f_znear;
+    LfAspectCorrection = (4.0F / 3.0F) / ((float)phd_winwidth / (float)phd_winheight);
+    f_mpersp = (float)phd_persp;
+    f_moneopersp = mone / f_mpersp;
+    f_mperspoznear = f_mpersp / f_mznear;
+}
 
 void SetupZRange(sint32 znear, sint32 zfar)
 {

@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="13.38" height="12" x="0" y="0" class="named"><title>60 · 3.87%</title></rect>
 <rect width="0.22" height="12" x="13.38" y="0" class="decompiled"><title>1 · 0.06%</title></rect>
-<rect width="0.22" height="12" x="13.61" y="0" class="nonmatching"><title>1 · 0.06%</title></rect>
-<rect width="332.17" height="12" x="13.83" y="0" class="todo"><title>1489 · 96%</title></rect>
+<rect width="0.45" height="12" x="13.61" y="0" class="nonmatching"><title>2 · 0.13%</title></rect>
+<rect width="331.95" height="12" x="14.05" y="0" class="todo"><title>1488 · 95.94%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">3.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">60</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">1</tspan> · <tspan class="todo">1489</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">60</tspan> · <tspan class="decompiled">1</tspan> · <tspan class="nonmatching">2</tspan> · <tspan class="todo">1488</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="5.10" height="12" x="0" y="0" class="named"><title>9 KB · 1.47%</title></rect>
 <rect width="0.10" height="12" x="5.10" y="0" class="decompiled"><title>48 bytes · 0.01%</title></rect>
-<rect width="0.15" height="12" x="5.12" y="0" class="nonmatching"><title>267 bytes · 0.04%</title></rect>
-<rect width="340.73" height="12" x="5.27" y="0" class="todo"><title>610 KB · 98.48%</title></rect>
+<rect width="0.26" height="12" x="5.12" y="0" class="nonmatching"><title>457 bytes · 0.07%</title></rect>
+<rect width="340.62" height="12" x="5.38" y="0" class="todo"><title>610 KB · 98.45%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">1.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">9 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">267 bytes</tspan> · <tspan class="todo">610 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">9 KB</tspan> · <tspan class="decompiled">48 bytes</tspan> · <tspan class="nonmatching">457 bytes</tspan> · <tspan class="todo">610 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1467,7 +1467,7 @@
 <rect width="12" height="12" x="720" y="405" class="todo"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="405" class="todo"><title>0x0048f9c0 nullsub_13 (1 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="420" class="todo"><title>0x0048f9c1 Func48f9c1 (13 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="420" class="todo"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="420" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="420" class="named"><title>0x0048fa90 SetupZRange (200 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="420" class="named"><title>0x0048fb60 ScaleCurrentMatrix (171 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="420" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
@@ -2379,7 +2379,7 @@
 <rect width="9.01" height="8.47" x="618.51" y="230.26" class="todo"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
 <rect width="9.01" height="8.47" x="630.53" y="230.26" class="todo"><title>0x00435920 SetupSplash (190 bytes)</title></rect>
 <rect width="9.01" height="8.47" x="642.54" y="230.26" class="todo"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
-<rect width="9.01" height="8.47" x="654.55" y="230.26" class="todo"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
+<rect width="9.01" height="8.47" x="654.55" y="230.26" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="8.97" height="8.47" x="666.57" y="230.26" class="todo"><title>0x00413dc0 ControlSmashableBikeWall (189 bytes)</title></rect>
 <rect width="8.97" height="8.47" x="678.53" y="230.26" class="todo"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>
 <rect width="8.97" height="8.47" x="690.50" y="230.26" class="todo"><title>0x004770c0 GameClose (189 bytes)</title></rect>
