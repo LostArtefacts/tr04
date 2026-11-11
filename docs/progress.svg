@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="142.15" height="12" x="0" y="0" class="named"><title>643 · 41.56%</title></rect>
-<rect width="0.44" height="12" x="142.15" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="142.59" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="194.77" height="12" x="147.23" y="0" class="todo"><title>881 · 56.95%</title></rect>
+<rect width="142.37" height="12" x="0" y="0" class="named"><title>644 · 41.63%</title></rect>
+<rect width="0.44" height="12" x="142.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="142.81" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="194.54" height="12" x="147.46" y="0" class="todo"><title>880 · 56.88%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">41.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">643</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">881</tspan></text>
+<text text-anchor="end" x="522" y="7.50">41.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">644</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">880</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="58.91" height="12" x="0" y="0" class="named"><title>107 KB · 17.23%</title></rect>
-<rect width="0.12" height="12" x="58.91" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="59.03" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="275.72" height="12" x="66.28" y="0" class="todo"><title>500 KB · 80.62%</title></rect>
+<rect width="58.97" height="12" x="0" y="0" class="named"><title>107 KB · 17.24%</title></rect>
+<rect width="0.12" height="12" x="58.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="59.09" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="275.66" height="12" x="66.34" y="0" class="todo"><title>500 KB · 80.60%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">107 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">500 KB</tspan></text>
@@ -1101,7 +1101,7 @@
 <rect width="12" height="12" x="480" y="300" class="todo"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="300" class="todo"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="300" class="todo"><title>0x0046b140 frigup_lara (218 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="300" class="todo"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="300" class="named"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="300" class="named"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="300" class="named"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="300" class="todo"><title>0x0046b2b0 DrawCutSeqActors (525 bytes)</title></rect>
@@ -2604,7 +2604,7 @@
 <rect width="6.70" height="6.46" x="570.80" y="352.24" class="named"><title>0x00437740 RubbleFX (112 bytes)</title></rect>
 <rect width="6.70" height="6.46" x="570.80" y="361.70" class="todo"><title>0x0043c5a0 insert_object_into_list_v2 (112 bytes)</title></rect>
 <rect width="6.70" height="6.46" x="570.80" y="371.17" class="named"><title>0x0044b620 TriggerActive (112 bytes)</title></rect>
-<rect width="6.70" height="6.46" x="570.80" y="380.63" class="todo"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
+<rect width="6.70" height="6.46" x="570.80" y="380.63" class="named"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
 <rect width="6.70" height="6.41" x="570.80" y="390.10" class="named"><title>0x00454740 AddActiveItem (111 bytes)</title></rect>
 <rect width="6.70" height="6.41" x="570.80" y="399.50" class="named"><title>0x00461cf0 SwitchControl (111 bytes)</title></rect>
 <rect width="6.70" height="6.35" x="570.80" y="408.91" class="todo"><title>0x004027e0 FindCrowbarSwitch (110 bytes)</title></rect>

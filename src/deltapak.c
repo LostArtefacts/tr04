@@ -17,6 +17,23 @@
 #include "specific/3dmath.h"
 #include "specific/lighting.h"
 
+void updateAnimFrame(PACKNODE *node, sint32 flags, sint16 *frame)
+{
+    sint16 *nex;
+    sint32 i;
+    uint32 t;
+
+    nex = frame + 9;
+    frame[6] = 3 * node->xrot_run;
+    frame[7] = 3 * node->yrot_run;
+    frame[8] = 3 * node->zrot_run;
+    for (i = 1; i < flags; i++) {
+        t = ((node[i].xrot_run << 10 | node[i].yrot_run) << 10) | node[i].zrot_run;
+        *nex++ = (sint16)(t >> 16);
+        *nex++ = (sint16)t;
+    }
+}
+
 void *cutseq_malloc(sint32 size)
 {
     return game_malloc(size, 0);

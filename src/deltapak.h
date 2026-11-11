@@ -5,7 +5,64 @@
 #include "items.h"
 #include "anim.h"
 
+typedef struct actorme {
+    sint32 offset;
+    sint16 objslot;
+    sint16 nodes;
+} ACTORME;
+
+typedef struct new_cutscene {
+    sint16 numactors;
+    sint16 numframes;
+    sint32 orgx;
+    sint32 orgy;
+    sint32 orgz;
+    sint32 audio_track;
+    sint32 camera_offset;
+    ACTORME actor_data[10];
+} NEW_CUTSCENE;
+
+typedef struct rtdecode {
+    uint32 length;
+    uint32 off;
+    uint16 counter;
+    uint16 data;
+    uint8 decodetype;
+    uint8 packmethod;
+    uint16 padfuck;
+} RTDECODE;
+
+typedef struct packnode {
+    sint16 xrot_run;
+    sint16 yrot_run;
+    sint16 zrot_run;
+    sint16 xkey;
+    sint16 ykey;
+    sint16 zkey;
+    RTDECODE decode_x;
+    RTDECODE decode_y;
+    RTDECODE decode_z;
+    uint32 xlength;
+    uint32 ylength;
+    uint32 zlength;
+    char *xpacked;
+    char *ypacked;
+    char *zpacked;
+} PACKNODE;
+
+typedef struct nodeloadheader {
+    sint16 xkey;
+    sint16 ykey;
+    sint16 zkey;
+    sint16 packmethod;
+    sint16 xlength;
+    sint16 ylength;
+    sint16 zlength;
+} NODELOADHEADER;
+
 extern sint32 GLOBAL_playing_cutseq;
+extern NEW_CUTSCENE *GLOBAL_cutme;
+extern PACKNODE *camera_pnodes;
 extern sint32 cutseq_num;
 extern sint32 GLOBAL_cutseq_frame;
 extern sint16 old_lara_holster;
@@ -129,5 +186,7 @@ void tenth_cutseq_control(void);
 void eleventh_cutseq_control(void);
 void GetJointAbsPositionCutSeq(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot, PHD_VECTOR *pos);
 void CalcActorLighting(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot);
+sint16 GetTrackWord(sint32 off, char *packed, sint32 packmethod);
+void updateAnimFrame(PACKNODE *node, sint32 flags, sint16 *frame);
 
 #endif
