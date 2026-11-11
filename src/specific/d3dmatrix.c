@@ -1,3 +1,5 @@
+#include <math.h>
+
 #include "d3dmatrix.h"
 #include "3dmath.h"
 
@@ -16,4 +18,17 @@ void SetD3DMatrix(D3DMATRIX *mx, sint32 *imx)
     mx->_41 = (float)(imx[M03] >> W2V_SHIFT);
     mx->_42 = (float)(imx[M13] >> W2V_SHIFT);
     mx->_43 = (float)(imx[M23] >> W2V_SHIFT);
+}
+
+D3DVECTOR *D3DNormalise(D3DVECTOR *vec)
+{
+    float val;
+
+    if (vec->x != 0 || vec->y != 0 || vec->z != 0) {
+        val = 1.0F / sqrt(vec->x * vec->x + vec->y * vec->y + vec->z * vec->z);
+        vec->x = val * vec->x;
+        vec->y = val * vec->y;
+        vec->z = val * vec->z;
+    }
+    return vec;
 }
