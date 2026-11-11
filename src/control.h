@@ -5,6 +5,9 @@
 #include "room.h"
 
 #define NO_HEIGHT (-32512)
+#define NO_ROOM 255
+#define DATA_TYPE 0x1F
+#define END_BIT 0x8000
 
 enum floor_types {
     FLOOR_TYPE,
@@ -32,6 +35,7 @@ enum floor_types {
 };
 
 extern sint32 OnObject;
+extern sint16 *floor_data;
 extern sint32 flipeffect;
 
 FLOOR_INFO *GetFloor(sint32 x, sint32 y, sint32 z, sint16 *room_number);
@@ -39,6 +43,7 @@ sint32 GetHeight(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 sint32 GetWaterHeight(sint32 x, sint32 y, sint32 z, sint16 room_number);
 sint32 GetCeiling(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 void AnimateItem(ITEM_INFO *item);
+sint16 GetDoor(FLOOR_INFO *floor);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;
