@@ -229,6 +229,22 @@ void swap_meshes_with_meshswap2(ITEM_INFO *item)
     }
 }
 
+void swap_meshes_with_meshswap3(ITEM_INFO *item)
+{
+    OBJECT_INFO *obj;
+    sint16 *tmp;
+    sint32 i;
+
+    obj = &objects[item->object_number];
+    for (i = 0; i < obj->nmeshes; i++) {
+        tmp = meshes[obj->mesh_index + i];
+        meshes[obj->mesh_index + i] = meshes[objects[MESHSWAP3].mesh_index + i];
+        if (item == lara_item)
+            lara.mesh_ptrs[i] = meshes[objects[MESHSWAP3].mesh_index + i * 2];
+        meshes[objects[MESHSWAP3].mesh_index + i * 2] = tmp;
+    }
+}
+
 void invisibility_on(ITEM_INFO *item)
 {
     item->status = ITEM_INVISIBLE;
