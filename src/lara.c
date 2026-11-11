@@ -19,6 +19,23 @@
 #define HANG_HEIGHT 600
 extern sint32 jump_ok;
 
+sint16 LaraCeilingFront(ITEM_INFO *item, sint16 ang, sint32 dist, sint32 h)
+{
+    sint16 room_num;
+    FLOOR_INFO *floor;
+    sint32 x, y, z, height;
+
+    x = item->pos.x_pos + (((rcossin_tbl[(ang >> 3) & 0x1FFE] << 2) * dist) >> W2V_SHIFT);
+    y = item->pos.y_pos - h;
+    z = item->pos.z_pos + (((rcossin_tbl[((ang >> 3) & 0x1FFE) + 1] << 2) * dist) >> W2V_SHIFT);
+    room_num = item->room_number;
+    floor = GetFloor(x, y, z, &room_num);
+    height = GetCeiling(floor, x, y, z);
+    if (height != NO_HEIGHT)
+        height += h - item->pos.y_pos;
+    return (sint16)height;
+}
+
 sint32 LaraFallen(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (lara.water_status != LW_WADE && coll->mid_floor > STEPUP_HEIGHT) {
