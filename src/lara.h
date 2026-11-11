@@ -206,6 +206,7 @@ void LaraCollideStop(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraFallen(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraLandedBad(ITEM_INFO *item, COLL_INFO *coll);
 void LaraDeflectEdgeJump(ITEM_INFO *item, COLL_INFO *coll);
+void LaraSlideEdgeJump(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_dashdive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_hangturnl(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_hangturnr(ITEM_INFO *item, COLL_INFO *coll);
@@ -271,6 +272,7 @@ void lara_col_fastdive(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_compress(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_roll2(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_swandive(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_fastfall(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

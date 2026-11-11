@@ -938,6 +938,31 @@ void lara_col_turn_l(ITEM_INFO *item, COLL_INFO *coll)
     lara_col_turn_r(item, coll);
 }
 
+void lara_col_fastfall(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->gravity_status = 1;
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 192;
+    GetLaraCollisionInfo(item, coll);
+    LaraSlideEdgeJump(item, coll);
+    if (coll->mid_floor <= 0) {
+        if (LaraLandedBad(item, coll)) {
+            item->goal_anim_state = AS_DEATH;
+        } else {
+            item->goal_anim_state = AS_STOP;
+            item->current_anim_state = AS_STOP;
+            item->frame_number = anims[ANIM_LANDFAR].frame_base;
+            item->anim_number = ANIM_LANDFAR;
+        }
+        StopSoundEffect(30);
+        item->fallspeed = 0;
+        item->gravity_status = 0;
+        if (coll->mid_floor != NO_HEIGHT)
+            item->pos.y_pos += coll->mid_floor;
+    }
+}
+
 void lara_col_splat(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
