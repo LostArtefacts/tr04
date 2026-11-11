@@ -18,3 +18,10 @@ void phd_PopMatrix_I(void)
     phd_PopMatrix();
     IMptr -= 12;
 }
+
+void phd_PushMatrix_I(void)
+{
+    phd_PushMatrix();
+    S_LongMemCpy(IMptr + 12, IMptr, 12);
+    IMptr += 12;
+}
