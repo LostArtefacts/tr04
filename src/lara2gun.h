@@ -13,10 +13,13 @@ typedef struct pistol_def {
 
 void set_arm_info(LARA_ARM *arm, sint32 frame);
 void draw_pistol_meshes(sint32 weapon_type);
+void undraw_pistol_mesh_left(sint32 weapon_type);
+void undraw_pistol_mesh_right(sint32 weapon_type);
 
 extern PISTOL_DEF PistolTable[4];
 
 void ready_pistols(int weapon_type);
 void draw_pistols(sint32 weapon_type);
+void undraw_pistols(sint32 weapon_type);
 
 #endif
