@@ -22,6 +22,38 @@ void TrapDoorControl(sint16 item_number)
         CloseTrapDoor(item);
 }
 
+void FallingCeiling(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint16 room_number;
+
+    item = &items[item_number];
+    if (!item->current_anim_state) {
+        item->gravity_status = 1;
+        item->goal_anim_state = 1;
+    } else if (item->current_anim_state == 1 && item->touch_bits) {
+        lara_item->hit_points -= 300;
+        lara_item->hit_status = 1;
+    }
+    AnimateItem(item);
+    if (item->status == ITEM_DEACTIVATED) {
+        RemoveActiveItem(item_number);
+        return;
+    }
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    item->floor = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (room_number != item->room_number)
+        ItemNewRoom(item_number, room_number);
+    if (item->current_anim_state == 1 && item->pos.y_pos >= item->floor) {
+        item->pos.y_pos = item->floor;
+        item->goal_anim_state = 2;
+        item->fallspeed = 0;
+        item->gravity_status = 0;
+    }
+}
+
 void LaraBurn(void)
 {
     sint16 fx_number;
