@@ -69,3 +69,24 @@ void DrawHealthBar(sint32 flash_state)
     if (PoisonFlag)
         PoisonFlag--;
 }
+
+void DrawAirBar(sint32 flash_state)
+{
+    sint32 air;
+
+    if (lara.vehicle == NO_ITEM && (lara.water_status == LW_UNDERWATER || lara.water_status == LW_SURFACE)) {
+        air = lara.air;
+        if (air < 0)
+            air = 0;
+        else if (air > 1800)
+            air = 1800;
+        if (air <= 450) {
+            if (flash_state)
+                S_DrawAirBar(100 * air / 1800);
+            else
+                S_DrawAirBar(0);
+        } else {
+            S_DrawAirBar(100 * air / 1800);
+        }
+    }
+}
