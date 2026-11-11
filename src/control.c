@@ -271,6 +271,20 @@ void FlipMap(sint32 FlipNumber)
         cinfo->LOT.target_box = NO_BOX;
 }
 
+void RemoveRoomFlipItems(ROOM_INFO *r)
+{
+    ITEM_INFO *item;
+    sint16 item_num;
+
+    for (item_num = r->item_number; item_num != NO_ITEM; item_num = items[item_num].next_item) {
+        item = &items[item_num];
+        if (item->flags & IFL_INVISIBLE && objects[item->object_number].intelligent) {
+            if (item->hit_points <= 0 && item->hit_points != -16384)
+                KillItem(item_num);
+        }
+    }
+}
+
 void AddRoomFlipItems(ROOM_INFO *r)
 {
     ITEM_INFO *item;
