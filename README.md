@@ -101,6 +101,11 @@ Record function and global addresses in `config/symbols.csv`. The DLL's
 hook table is generated from the functions defined in the build; other
 symbols resolve to the original executable's addresses.
 
+Use one newly recovered function per commit, with a subject such as
+`Decompile NAME (0xADDRESS)`. The hooks keep byte parity and the
+progress chart current on every commit; intentional differences are
+listed in `hooks.allow_diff` in `project.toml`.
+
 The build tools are a submodule of
 [decomp-tools](https://github.com/LostArtefacts/decomp-tools), shared with
 other Tomb Raider decompilations. `just` lists all available commands.
