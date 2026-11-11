@@ -535,6 +535,31 @@ void TriggerExplosionBubble(sint32 x, sint32 y, sint32 z, sint16 roomnum)
     }
 }
 
+void TriggerDynamic(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint32 g, sint32 b)
+{
+    DYNAMIC *dl;
+
+    if (number_dynamics == MAX_DYNAMICS || !falloff)
+        return;
+    dl = &dynamics[number_dynamics];
+    dl->on = 1;
+    dl->x = x;
+    dl->y = y;
+    dl->z = z;
+    dl->falloff = (uint16)(falloff << 8);
+    if (falloff >= 8) {
+        dl->r = (uint8)r;
+        dl->g = (uint8)g;
+        dl->b = (uint8)b;
+    } else {
+        dl->r = (uint8)((r * falloff) >> 3);
+        dl->g = (uint8)((g * falloff) >> 3);
+        dl->b = (uint8)((b * falloff) >> 3);
+    }
+    dl->FalloffScale = 0x200000 / (falloff << 8);
+    number_dynamics++;
+}
+
 void ClearDynamics(void)
 {
     sint32 lp;
