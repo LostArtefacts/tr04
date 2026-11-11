@@ -1133,8 +1133,7 @@ address,size,name,symbol
 0x0046d9c0,818,ACMInit,_ACMInit
 0x0046dd00,327,ACMClose,_ACMClose
 0x0046de50,254,OpenStreamFile,_OpenStreamFile
-0x0046df50,391,FillADPCMBuffer,_FillADPCMBuffer
-0x0046e02c,12,Func46e02c,
+0x0046df50,405,FillADPCMBuffer,_FillADPCMBuffer
 0x0046e0f0,143,GetADPCMData,_GetADPCMData
 0x0046e180,428,ACMEmulateCDPlay,_ACMEmulateCDPlay
 0x0046e32c,12,Func46e32c,

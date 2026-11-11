@@ -20,6 +20,7 @@ sint32 ACMSetupNotifications(void);
 sint32 ACMHandleNotifications(void);
 void ACMClose(void);
 void OpenStreamFile(char *name);
+void FillADPCMBuffer(char *p, sint32 track);
 void ACMEmulateCDPlay(sint32 track, sint32 mode);
 
 extern CRITICAL_SECTION audio_cs;
@@ -31,6 +32,7 @@ extern uint8 acm_ready;
 extern FILE *audio_stream_fp;
 extern sint32 audio_counter;
 extern volatile uint8 reading_audio_file;
+extern uint8 continue_reading_audio_file;
 extern LPDIRECTSOUNDBUFFER G_DSBuffer;
 extern LPDIRECTSOUNDNOTIFY G_DSNotify;
 extern HANDLE NotifyEventHandles[2];

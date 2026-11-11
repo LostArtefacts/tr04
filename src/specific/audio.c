@@ -156,3 +156,58 @@ void OpenStreamFile(char *name)
         Log(0, "FileReset In OpenStreamFile");
     }
 }
+
+void FillADPCMBuffer(char *p, sint32 track)
+{
+    sint32 n;
+
+    reading_audio_file = 1;
+    __try {
+        EnterCriticalSection(&audio_cs);
+    } __finally {
+        LeaveCriticalSection(&audio_cs);
+    }
+    if (!audio_stream_fp) {
+        reading_audio_file = 0;
+        continue_reading_audio_file = 0;
+        return;
+    }
+    if (track != XATrack || track == -1) {
+        Log(0, "Not Current Track %d", track);
+        reading_audio_file = 0;
+        continue_reading_audio_file = 0;
+        return;
+    }
+    memset(p, 0, 0x5800);
+    if (!audio_stream_fp) {
+        reading_audio_file = 0;
+        continue_reading_audio_file = 0;
+        return;
+    }
+    n = fread(p, 1, 0x5800, audio_stream_fp);
+    if (audio_stream_fp && feof(audio_stream_fp)) {
+        if (auido_play_mode == 1) {
+            fseek(audio_stream_fp, 90, SEEK_SET);
+        } else {
+            audio_counter++;
+            if (audio_counter > 8) {
+                audio_counter = 0;
+                if (auido_play_mode == 2) {
+                    reading_audio_file = 0;
+                    continue_reading_audio_file = 0;
+                    S_CDStop();
+                    return;
+                }
+                if (CurrentAtmosphere && !IsAtmospherePlaying) {
+                    reading_audio_file = 0;
+                    continue_reading_audio_file = 0;
+                    S_CDStop();
+                    S_CDPlay(CurrentAtmosphere, 1);
+                    return;
+                }
+            }
+        }
+    }
+    reading_audio_file = 0;
+    continue_reading_audio_file = 1;
+}
