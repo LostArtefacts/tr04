@@ -1163,6 +1163,31 @@ void lara_col_fastback(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_pos += coll->mid_floor;
 }
 
+void lara_col_turn_r(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->gravity_status = item->fallspeed = 0;
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = STEPUP_HEIGHT;
+    coll->bad_neg = -STEPUP_HEIGHT;
+    coll->bad_ceiling = 0;
+    coll->slopes_are_pits = 1;
+    coll->slopes_are_walls = 1;
+    GetLaraCollisionInfo(item, coll);
+    if (coll->mid_floor > 100) {
+        item->anim_number = ANIM_FALLDOWN;
+        item->frame_number = anims[ANIM_FALLDOWN].frame_base;
+        item->current_anim_state = AS_FORWARDJUMP;
+        item->goal_anim_state = AS_FORWARDJUMP;
+        item->fallspeed = 0;
+        item->gravity_status = 1;
+        return;
+    }
+    if (TestLaraSlide(item, coll))
+        return;
+    if (coll->mid_floor != NO_HEIGHT)
+        item->pos.y_pos += coll->mid_floor;
+}
+
 void lara_col_turn_l(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara_col_turn_r(item, coll);
