@@ -85,3 +85,11 @@ void fifteen_end(void)
 {
     lara.questitems |= 1;
 }
+
+void sixteen_end(void)
+{
+    untrigger_item_in_room(169, FLAME_EMITTER2);
+    untrigger_item_in_room(184, FLAME_EMITTER2);
+    untrigger_item_in_room(177, AMBER_LIGHT);
+    DelsHandyTeleportLara(61868, 0, 44994, -16060);
+}
