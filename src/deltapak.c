@@ -141,6 +141,25 @@ void tenth_cutseq_end(void)
     DelsHandyTeleportLara(68756, 512, 56493, 983);
 }
 
+void eleventh_cutseq_init(void)
+{
+    ITEM_INFO *item;
+
+    item = find_a_fucking_item(ANIMATING5);
+    item->flags &= ~IFL_CODEBITS;
+    old_status_flags[numnailed] = item->status;
+    item->status = ITEM_INVISIBLE;
+    numnailed++;
+    KillActiveBaddies(0);
+    cutseq_kill_item(MOTORBIKE);
+    cutseq_kill_item(ANIMATING4);
+    cutseq_kill_item(ANIMATING1);
+    cutseq_meshbits[3] &= ~0x80000000;
+    cutseq_meshbits[4] &= ~0x80000000;
+    cutseq_meshbits[5] &= ~0x80000000;
+    cutseq_meshbits[6] &= ~0x80000000;
+}
+
 void twelth_cutseq_init(void)
 {
     cutseq_kill_item(ANIMATING6);
