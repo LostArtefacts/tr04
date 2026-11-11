@@ -6,6 +6,7 @@
 #include "camera.h"
 #include "draw.h"
 #include "newinv.h"
+#include "door.h"
 #include "sound.h"
 #include "specific/3dmath.h"
 #include "lara.h"
@@ -433,4 +434,53 @@ void CogSwitchControl(sint16 item_number)
         lara_item->current_anim_state = lara_item->goal_anim_state = AS_STOP;
         lara.gun_status = LG_NO_ARMS;
     }
+}
+
+void CogSwitchCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *door_item;
+    DOOR_DATA *door;
+    FLOOR_INFO *floor;
+    sint16 *data;
+
+    item = &items[item_number];
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &item->room_number);
+    GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    data = trigger_index;
+    while ((*data & 0x1F) != TRIGGER_TYPE && !(*data & 0x8000))
+        data++;
+    door_item = &items[data[3] & 0x3FF];
+    door = (DOOR_DATA *)door_item->data;
+    if (item->status != ITEM_INACTIVE)
+        return;
+    if (!(item->flags & IFL_INVISIBLE) && (((input & IN_ACTION) && lara.gun_status == LG_NO_ARMS && !l->gravity_status && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH) || (lara.IsMoving && lara.GeneralPtr == (void *)item_number))) {
+        if (TestLaraPosition(CogSwitchBounds, item, l)) {
+            if (MoveLaraPosition(&CogSwitchPos, item, l)) {
+                lara.IsMoving = 0;
+                lara.head_x_rot = lara.head_y_rot = 0;
+                lara.torso_x_rot = lara.torso_y_rot = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+                lara.GeneralPtr = door_item;
+                l->anim_number = ANIM_COGSWITCHS;
+                l->frame_number = anims[ANIM_COGSWITCHS].frame_base;
+                l->current_anim_state = l->goal_anim_state = AS_COGSWITCH;
+                AddActiveItem(item_number);
+                item->status = ITEM_ACTIVE;
+                item->goal_anim_state = 1;
+                if (!door->Opened) {
+                    AddActiveItem(door_item - items);
+                    door_item->status = ITEM_ACTIVE;
+                    *(sint32 *)&door_item->item_flags[2] = door_item->pos.y_pos;
+                }
+            } else
+                lara.GeneralPtr = (void *)item_number;
+            return;
+        }
+        if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+            lara.IsMoving = 0;
+            lara.gun_status = LG_NO_ARMS;
+        }
+    }
+    ObjectCollision(item_number, l, coll);
 }

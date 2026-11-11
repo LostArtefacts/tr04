@@ -9,6 +9,14 @@ typedef struct doorpos_data {
     sint16 block;
 } DOORPOS_DATA;
 
+typedef struct door_data {
+    DOORPOS_DATA d1;
+    DOORPOS_DATA d1flip;
+    DOORPOS_DATA d2;
+    DOORPOS_DATA d2flip;
+    sint16 Opened;
+} DOOR_DATA;
+
 void ShutThatDoor(DOORPOS_DATA *d);
 void OpenThatDoor(DOORPOS_DATA *d);
 
