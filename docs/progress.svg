@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="217.31" height="12" x="0" y="0" class="named"><title>983 · 63.54%</title></rect>
-<rect width="0.44" height="12" x="217.31" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="217.76" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="116.95" height="12" x="225.05" y="0" class="todo"><title>529 · 34.20%</title></rect>
+<rect width="217.54" height="12" x="0" y="0" class="named"><title>984 · 63.61%</title></rect>
+<rect width="0.44" height="12" x="217.54" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="217.98" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="116.73" height="12" x="225.27" y="0" class="todo"><title>528 · 34.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">63.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">983</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">529</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">984</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">528</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="94.13" height="12" x="0" y="0" class="named"><title>171 KB · 27.52%</title></rect>
-<rect width="0.12" height="12" x="94.13" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="94.25" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="238.33" height="12" x="103.67" y="0" class="todo"><title>432 KB · 69.69%</title></rect>
+<rect width="94.19" height="12" x="0" y="0" class="named"><title>171 KB · 27.54%</title></rect>
+<rect width="0.12" height="12" x="94.19" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="94.31" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="238.27" height="12" x="103.73" y="0" class="todo"><title>432 KB · 69.67%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">27.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">171 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">432 KB</tspan></text>
@@ -74,7 +74,7 @@
 <rect width="12" height="12" x="75" y="0" class="todo"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="0" class="named"><title>0x00401db0 InitialiseBaboon (146 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="0" class="todo"><title>0x00401e50 BaboonControl (2389 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="0" class="todo"><title>0x004027e0 FindCrowbarSwitch (110 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="0" class="named"><title>0x004027e0 FindCrowbarSwitch (110 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="0" class="todo"><title>0x00402850 ReTriggerBaboon (282 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="0" class="todo"><title>0x00402970 ExplodeBaboon (160 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="0" class="named"><title>0x00402a10 InitialiseBat (90 bytes)</title></rect>
@@ -2607,7 +2607,7 @@
 <rect width="6.47" height="6.69" x="665.62" y="285.75" class="named"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
 <rect width="6.41" height="6.69" x="675.08" y="285.75" class="named"><title>0x00454740 AddActiveItem (111 bytes)</title></rect>
 <rect width="6.41" height="6.69" x="684.49" y="285.75" class="named"><title>0x00461cf0 SwitchControl (111 bytes)</title></rect>
-<rect width="6.35" height="6.69" x="693.90" y="285.75" class="todo"><title>0x004027e0 FindCrowbarSwitch (110 bytes)</title></rect>
+<rect width="6.35" height="6.69" x="693.90" y="285.75" class="named"><title>0x004027e0 FindCrowbarSwitch (110 bytes)</title></rect>
 <rect width="6.35" height="6.69" x="703.25" y="285.75" class="named"><title>0x0044a060 TranslateItem (110 bytes)</title></rect>
 <rect width="6.35" height="6.69" x="712.60" y="285.75" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
 <rect width="6.35" height="6.69" x="721.95" y="285.75" class="named"><title>0x00454900 CreateEffect (110 bytes)</title></rect>
