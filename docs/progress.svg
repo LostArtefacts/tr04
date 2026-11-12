@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="219.75" height="12" x="0" y="0" class="named"><title>994 · 64.25%</title></rect>
-<rect width="0.44" height="12" x="219.75" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="220.19" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="114.52" height="12" x="227.48" y="0" class="todo"><title>518 · 33.48%</title></rect>
+<rect width="219.97" height="12" x="0" y="0" class="named"><title>995 · 64.32%</title></rect>
+<rect width="0.44" height="12" x="219.97" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="220.41" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="114.29" height="12" x="227.71" y="0" class="todo"><title>517 · 33.42%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">64.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">994</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">518</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">995</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">517</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="95.58" height="12" x="0" y="0" class="named"><title>173 KB · 27.95%</title></rect>
-<rect width="0.12" height="12" x="95.58" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="95.70" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="236.87" height="12" x="105.13" y="0" class="todo"><title>430 KB · 69.26%</title></rect>
+<rect width="95.67" height="12" x="0" y="0" class="named"><title>174 KB · 27.97%</title></rect>
+<rect width="0.12" height="12" x="95.67" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="95.79" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="236.78" height="12" x="105.22" y="0" class="todo"><title>430 KB · 69.24%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">173 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">430 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">174 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">430 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -765,7 +765,7 @@
 <rect width="12" height="12" x="690" y="195" class="todo"><title>0x004435e0 ChaseCamera (1127 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="todo"><title>0x00443a50 CombatCamera (1145 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="todo"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="195" class="todo"><title>0x004447f0 FixedCamera (158 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="195" class="named"><title>0x004447f0 FixedCamera (158 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="210" class="todo"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="210" class="todo"><title>0x00444e00 CameraCollisionBounds (948 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="210" class="todo"><title>0x004451c0 mgLOS (327 bytes)</title></rect>
@@ -2467,7 +2467,7 @@
 <rect width="8.16" height="7.52" x="574.09" y="244.80" class="named"><title>0x00473460 DXSetOutputFormat (159 bytes)</title></rect>
 <rect width="8.11" height="7.52" x="585.26" y="244.80" class="named"><title>0x00425e20 lara_as_turn_l (158 bytes)</title></rect>
 <rect width="8.11" height="7.52" x="596.37" y="244.80" class="named"><title>0x00427730 lara_as_deathslide (158 bytes)</title></rect>
-<rect width="8.11" height="7.52" x="607.48" y="244.80" class="todo"><title>0x004447f0 FixedCamera (158 bytes)</title></rect>
+<rect width="8.11" height="7.52" x="607.48" y="244.80" class="named"><title>0x004447f0 FixedCamera (158 bytes)</title></rect>
 <rect width="8.06" height="7.52" x="618.59" y="244.80" class="named"><title>0x00402d90 InitialiseCroc (157 bytes)</title></rect>
 <rect width="8.06" height="7.52" x="629.65" y="244.80" class="named"><title>0x00425070 lara_col_stop (157 bytes)</title></rect>
 <rect width="8.06" height="7.52" x="640.71" y="244.80" class="named"><title>0x004286d0 lara_col_roll (157 bytes)</title></rect>
