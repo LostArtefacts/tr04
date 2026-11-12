@@ -1,5 +1,47 @@
 #include "drawroom.h"
 #include "polyinsert.h"
+#include "3dmath.h"
+#include "gamemain.h"
+#include "../effect2.h"
+
+void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
+{
+    float zv, x;
+    sint32 i;
+    sint16 clip_distance;
+
+    for (i = 0; i < nVerts; i++) {
+        v->tu = v->sx;
+        v->tv = v->sy;
+        clip_distance = 0;
+        if (v->sz >= f_mznear) {
+            zv = f_mpersp / v->sz;
+            if (v->sz > FogEnd) {
+                clip_distance = 16;
+                v->sz = f_zfar;
+            }
+            v->sx = zv * v->sx + f_centerx;
+            v->sy = zv * v->sy + f_centery;
+            v->rhw = f_moneopersp * zv;
+            if (bWaterEffect) {
+                x = v->sx;
+                v->sx += vert_wibble_table[((wibble + (sint32)v->sy) >> 3) & 0x1F];
+                v->sy += vert_wibble_table[((wibble + (sint32)x) >> 3) & 0x1F];
+            }
+            if (v->sx < clip_left)
+                clip_distance++;
+            else if (v->sx > clip_right)
+                clip_distance += 2;
+            if (v->sy < clip_top)
+                clip_distance += 4;
+            else if (v->sy > clip_bottom)
+                clip_distance += 8;
+        } else
+            clip_distance = -128;
+        *clip++ = clip_distance;
+        v++;
+    }
+}
 
 void PrelightVertsMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
 {
