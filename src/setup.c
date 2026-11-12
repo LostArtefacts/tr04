@@ -15,6 +15,35 @@
 #include "objnums.h"
 #include "box.h"
 #include "items.h"
+#include "pickup.h"
+#include "room.h"
+#include <stdlib.h>
+
+void GetCarriedItems(void)
+{
+    ITEM_INFO *baddy;
+    ITEM_INFO *pickup;
+    sint32 i;
+    sint16 item_num;
+
+    for (i = 0, baddy = items; i < level_items; i++, baddy++) {
+        baddy->carried_item = NO_ITEM;
+        if (objects[baddy->object_number].intelligent && baddy->object_number != SCORPION) {
+            item_num = room[baddy->room_number].item_number;
+            while (item_num != NO_ITEM) {
+                pickup = &items[item_num];
+                if (pickup->pos.x_pos == baddy->pos.x_pos && pickup->pos.z_pos == baddy->pos.z_pos && abs(pickup->pos.y_pos - baddy->pos.y_pos) < 256 && objects[pickup->object_number].collision == PickUpCollision) {
+                    pickup->carried_item = baddy->carried_item;
+                    baddy->carried_item = item_num;
+                    RemoveDrawnItem(item_num);
+                    pickup->room_number = 255;
+                    break;
+                }
+                item_num = pickup->next_item;
+            }
+        }
+    }
+}
 
 void GetAIPickups(void)
 {
