@@ -327,3 +327,21 @@ void InitialisePulley(sint16 item_number)
         item->status = ITEM_INACTIVE;
     }
 }
+
+void InitialisePickUp(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint16 *bounds;
+
+    item = &items[item_number];
+    if (!(item->trigger_flags & 0x3F) || (item->trigger_flags & 0x3F) == 3 || (item->trigger_flags & 0x3F) == 4) {
+        bounds = GetBoundsAccurate(item);
+        item->pos.y_pos -= bounds[3];
+    }
+    if (item->trigger_flags & 128)
+        RPickups[NumRPickups++] = (uint8)item_number;
+    if ((sint16)(item->trigger_flags & 256))
+        item->mesh_bits = 0;
+    if (item->status == ITEM_INVISIBLE)
+        item->flags |= IFL_TRIGGERED;
+}

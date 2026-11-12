@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="182.39" height="12" x="0" y="0" class="named"><title>825 · 53.33%</title></rect>
-<rect width="0.44" height="12" x="182.39" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="182.83" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="152.76" height="12" x="189.24" y="0" class="todo"><title>691 · 44.67%</title></rect>
+<rect width="182.61" height="12" x="0" y="0" class="named"><title>826 · 53.39%</title></rect>
+<rect width="0.44" height="12" x="182.61" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="183.05" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="152.54" height="12" x="189.46" y="0" class="todo"><title>690 · 44.60%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">53.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">825</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">691</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">826</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">690</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="78.95" height="12" x="0" y="0" class="named"><title>143 KB · 23.09%</title></rect>
-<rect width="0.12" height="12" x="78.95" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="79.07" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="254.28" height="12" x="87.72" y="0" class="todo"><title>461 KB · 74.35%</title></rect>
+<rect width="79.03" height="12" x="0" y="0" class="named"><title>143 KB · 23.11%</title></rect>
+<rect width="0.12" height="12" x="79.03" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="79.15" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="254.19" height="12" x="87.81" y="0" class="todo"><title>461 KB · 74.33%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">143 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">461 KB</tspan></text>
@@ -906,7 +906,7 @@
 <rect width="12" height="12" x="555" y="240" class="named"><title>0x00453980 InitialiseSmokeEmitter (176 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="240" class="todo"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="240" class="named"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="240" class="todo"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="240" class="named"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="240" class="todo"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="240" class="todo"><title>0x00453f60 CreateRope (270 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="240" class="todo"><title>0x00454070 InitialiseRope (203 bytes)</title></rect>
@@ -2493,7 +2493,7 @@
 <rect width="7.74" height="7.44" x="540.32" y="361.32" class="named"><title>0x004241d0 FallFromRope (149 bytes)</title></rect>
 <rect width="7.74" height="7.44" x="540.32" y="371.75" class="named"><title>0x004401f0 TargetBox (149 bytes)</title></rect>
 <rect width="7.74" height="7.44" x="540.32" y="382.19" class="named"><title>0x004425d0 AlertNearbyGuards (149 bytes)</title></rect>
-<rect width="7.74" height="7.39" x="540.32" y="392.63" class="todo"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
+<rect width="7.74" height="7.39" x="540.32" y="392.63" class="named"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
 <rect width="7.74" height="7.39" x="540.32" y="403.02" class="named"><title>0x004564e0 ControlWaterfall (148 bytes)</title></rect>
 <rect width="7.74" height="7.34" x="540.32" y="413.41" class="named"><title>0x0040a930 InitialiseMummy (147 bytes)</title></rect>
 <rect width="7.74" height="7.34" x="540.32" y="423.75" class="named"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
