@@ -28,6 +28,33 @@ void InitialiseFallingBlock2(sint16 item_number)
     items[item_number].mesh_bits = 1;
 }
 
+void InitialiseFlameEmitter(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (item->trigger_flags < 0) {
+        item->item_flags[0] = (GetRandomControl() & 0x3F) + 90;
+        item->item_flags[2] = 256;
+        if ((-item->trigger_flags & 7) == 7) {
+            switch (item->pos.y_rot) {
+            case 0:
+                item->pos.z_pos += 512;
+                break;
+            case 0x4000:
+                item->pos.x_pos += 512;
+                break;
+            case -0x8000:
+                item->pos.z_pos -= 512;
+                break;
+            case -0x4000:
+                item->pos.x_pos -= 512;
+                break;
+            }
+        }
+    }
+}
+
 void InitialiseJobySpike(sint16 item_number)
 {
     ITEM_INFO *item;

@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="179.29" height="12" x="0" y="0" class="named"><title>811 · 52.42%</title></rect>
-<rect width="0.44" height="12" x="179.29" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="179.73" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="155.86" height="12" x="186.14" y="0" class="todo"><title>705 · 45.57%</title></rect>
+<rect width="179.51" height="12" x="0" y="0" class="named"><title>812 · 52.49%</title></rect>
+<rect width="0.44" height="12" x="179.51" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="179.95" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="155.64" height="12" x="186.36" y="0" class="todo"><title>704 · 45.51%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">52.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">811</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">705</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">812</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">704</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="78" height="12" x="0" y="0" class="named"><title>141 KB · 22.81%</title></rect>
-<rect width="0.12" height="12" x="78" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="78.12" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="255.23" height="12" x="86.77" y="0" class="todo"><title>463 KB · 74.63%</title></rect>
+<rect width="78.09" height="12" x="0" y="0" class="named"><title>142 KB · 22.83%</title></rect>
+<rect width="0.12" height="12" x="78.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="78.21" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="255.14" height="12" x="86.86" y="0" class="todo"><title>463 KB · 74.60%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">22.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">141 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">463 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">22.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">142 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">463 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -886,7 +886,7 @@
 <rect width="12" height="12" x="255" y="240" class="named"><title>0x00453030 AddDisplayPickup (60 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="240" class="named"><title>0x00453070 InitialiseTrapDoor (37 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="240" class="named"><title>0x004530a0 InitialiseFallingBlock2 (35 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="240" class="todo"><title>0x004530d0 InitialiseFlameEmitter (152 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="240" class="named"><title>0x004530d0 InitialiseFlameEmitter (152 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="240" class="todo"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="240" class="todo"><title>0x00453230 InitialiseFlameEmitter3 (108 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="240" class="named"><title>0x004532a0 InitialiseJobySpike (159 bytes)</title></rect>
@@ -2483,7 +2483,7 @@
 <rect width="7.74" height="7.59" x="540.32" y="255.62" class="named"><title>0x00425ac0 lara_as_walk (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.32" y="266.21" class="named"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.32" y="276.80" class="named"><title>0x0044bbe0 LOS (152 bytes)</title></rect>
-<rect width="7.74" height="7.59" x="540.32" y="287.39" class="todo"><title>0x004530d0 InitialiseFlameEmitter (152 bytes)</title></rect>
+<rect width="7.74" height="7.59" x="540.32" y="287.39" class="named"><title>0x004530d0 InitialiseFlameEmitter (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.32" y="297.98" class="named"><title>0x0046b560 GetJointAbsPositionCutSeq (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.32" y="308.57" class="named"><title>0x0046d610 S_CDPlay (152 bytes)</title></rect>
 <rect width="7.74" height="7.54" x="540.32" y="319.16" class="todo"><title>0x00404e00 InitialiseDemigod (151 bytes)</title></rect>
