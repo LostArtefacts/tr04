@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="248.33" height="12" x="0" y="0" class="named"><title>1124 · 72.61%</title></rect>
-<rect width="0.66" height="12" x="248.33" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.45" height="12" x="248.99" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
-<rect width="75.56" height="12" x="266.44" y="0" class="todo"><title>342 · 22.09%</title></rect>
+<rect width="248.55" height="12" x="0" y="0" class="named"><title>1125 · 72.67%</title></rect>
+<rect width="0.66" height="12" x="248.55" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.45" height="12" x="249.21" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
+<rect width="75.34" height="12" x="266.66" y="0" class="todo"><title>341 · 22.03%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">72.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1124</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">342</tspan></text>
+<text text-anchor="end" x="522" y="7.50">72.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1125</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">341</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="130.57" height="12" x="0" y="0" class="named"><title>238 KB · 38.18%</title></rect>
-<rect width="0.13" height="12" x="130.57" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.18" height="12" x="130.70" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
-<rect width="180.11" height="12" x="161.89" y="0" class="todo"><title>328 KB · 52.67%</title></rect>
+<rect width="130.88" height="12" x="0" y="0" class="named"><title>238 KB · 38.27%</title></rect>
+<rect width="0.13" height="12" x="130.88" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="31.18" height="12" x="131.01" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
+<rect width="179.81" height="12" x="162.19" y="0" class="todo"><title>327 KB · 52.57%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">38.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">238 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">328 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">38.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">238 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">327 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -141,7 +141,7 @@
 <rect width="12" height="12" x="330" y="15" class="named"><title>0x0040b060 GunHit (182 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="15" class="named"><title>0x0040b120 GunMiss (161 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="15" class="named"><title>0x0040b1d0 ShotLara (486 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="15" class="todo"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="15" class="named"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="15" class="todo"><title>0x0040b600 RagheadControl (6498 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="15" class="named"><title>0x0040d040 InitialiseSas (90 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="15" class="nonmatching"><title>0x0040d0a0 SasControl (2388 bytes)</title></rect>
@@ -1933,7 +1933,7 @@
 <rect width="14.99" height="14.54" x="364.57" y="79.15" class="todo"><title>0x0043dbf0 Func43dbf0 (566 bytes)</title></rect>
 <rect width="14.96" height="14.54" x="382.55" y="79.15" class="todo"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
 <rect width="14.91" height="14.54" x="400.52" y="79.15" class="todo"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
-<rect width="14.86" height="14.54" x="418.43" y="79.15" class="todo"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
+<rect width="14.86" height="14.54" x="418.43" y="79.15" class="named"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
 <rect width="14.86" height="14.54" x="436.28" y="79.15" class="named"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
 <rect width="14.86" height="14.54" x="454.14" y="79.15" class="named"><title>0x004543b0 InitialiseItem (561 bytes)</title></rect>
 <rect width="14.80" height="14.54" x="472" y="79.15" class="named"><title>0x00422eb0 lara_col_hang2 (559 bytes)</title></rect>
