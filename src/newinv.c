@@ -141,3 +141,9 @@ void combine_PickupItem2(sint32 flag)
     lara.pickupitems |= 0x2;
     lara.pickupitemscombo &= ~0xC;
 }
+
+void combine_PickupItem3(sint32 flag)
+{
+    lara.pickupitems |= 0x4;
+    lara.pickupitemscombo &= ~0x30;
+}
