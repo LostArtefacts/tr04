@@ -53,6 +53,48 @@ sint32 GetFreeLocust(void)
     return NO_ITEM;
 }
 
+void TriggerLocust(ITEM_INFO *item)
+{
+    LOCUST_STRUCT *fx;
+    PHD_VECTOR vec;
+    PHD_VECTOR vec2;
+    sint16 fx_number;
+    sint16 angles[2];
+
+    fx_number = GetFreeLocust();
+    if (fx_number == NO_ITEM)
+        return;
+    fx = &Locusts[fx_number];
+    if (item->object_number == FISH) {
+        vec.x = item->pos.x_pos;
+        vec.y = item->pos.y_pos;
+        vec.z = item->pos.z_pos;
+        angles[0] = item->pos.y_rot + 0x8000;
+        angles[1] = 0;
+    } else {
+        vec2.x = 0;
+        vec2.y = -96;
+        vec2.z = 144;
+        GetJointAbsPosition(item, &vec2, 9);
+        vec.x = 0;
+        vec.y = -128;
+        vec.z = 288;
+        GetJointAbsPosition(item, &vec, 9);
+        phd_GetVectorAngles(vec.x - vec2.x, vec.y - vec2.y, vec.z - vec2.z, angles);
+    }
+    fx->room_number = item->room_number;
+    fx->pos.x_pos = vec.x;
+    fx->pos.y_pos = vec.y;
+    fx->pos.z_pos = vec.z;
+    fx->pos.y_rot = (GetRandomControl() & 0x7FF) + angles[0] - 1024;
+    fx->pos.x_rot = (GetRandomControl() & 0x3FF) + angles[1] - 512;
+    fx->On = 1;
+    fx->flags = 0;
+    fx->speed = (GetRandomControl() & 0x1F) + 16;
+    fx->LaraTarget = GetRandomControl() & 0x1FF;
+    fx->Counter = 20 * ((GetRandomControl() & 7) + 15);
+}
+
 void InitialiseLocustEmitter(sint16 item_number)
 {
     ITEM_INFO *item;
