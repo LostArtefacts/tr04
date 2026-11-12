@@ -5,6 +5,7 @@
 #include "specific/input.h"
 #include "gameflow.h"
 #include "objnums.h"
+#include "room.h"
 
 void LaraCheatGetStuff(void)
 {
@@ -74,4 +75,20 @@ void InitialiseLaraLoad(sint16 item_number)
 {
     lara.item_number = item_number;
     lara_item = &items[item_number];
+}
+
+void InitialiseLaraAnims(ITEM_INFO *item)
+{
+    if (room[item->room_number].flags & ROOM_UNDERWATER) {
+        lara.water_status = LW_UNDERWATER;
+        item->fallspeed = 0;
+        item->current_anim_state = item->goal_anim_state = AS_TREAD;
+        item->anim_number = ANIM_TREAD;
+        item->frame_number = anims[ANIM_TREAD].frame_base;
+    } else {
+        lara.water_status = LW_ABOVE_WATER;
+        item->current_anim_state = item->goal_anim_state = AS_STOP;
+        item->anim_number = ANIM_STOP;
+        item->frame_number = anims[ANIM_STOP].frame_base;
+    }
 }

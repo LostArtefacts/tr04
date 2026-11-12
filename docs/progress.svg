@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="231.68" height="12" x="0" y="0" class="named"><title>1048 · 67.74%</title></rect>
-<rect width="0.44" height="12" x="231.68" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="9.51" height="12" x="232.13" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
-<rect width="100.37" height="12" x="241.63" y="0" class="todo"><title>454 · 29.35%</title></rect>
+<rect width="231.91" height="12" x="0" y="0" class="named"><title>1049 · 67.81%</title></rect>
+<rect width="0.44" height="12" x="231.91" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="9.51" height="12" x="232.35" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
+<rect width="100.15" height="12" x="241.85" y="0" class="todo"><title>453 · 29.28%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">67.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1048</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">454</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1049</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">453</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="102.44" height="12" x="0" y="0" class="named"><title>186 KB · 29.95%</title></rect>
-<rect width="0.12" height="12" x="102.44" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="13.36" height="12" x="102.56" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
-<rect width="226.08" height="12" x="115.92" y="0" class="todo"><title>410 KB · 66.11%</title></rect>
+<rect width="102.51" height="12" x="0" y="0" class="named"><title>186 KB · 29.97%</title></rect>
+<rect width="0.12" height="12" x="102.51" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="13.36" height="12" x="102.63" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
+<rect width="226.01" height="12" x="115.99" y="0" class="todo"><title>410 KB · 66.09%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">30.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">186 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">24 KB</tspan> · <tspan class="todo">410 KB</tspan></text>
@@ -508,7 +508,7 @@
 <rect width="12" height="12" x="585" y="120" class="named"><title>0x00430a50 LaraCheatyBits (258 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="120" class="todo"><title>0x00430b60 AnimateLara (791 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="120" class="named"><title>0x00430eb0 InitialiseLaraLoad (45 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="120" class="todo"><title>0x00430ee0 InitialiseLaraAnims (133 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="120" class="named"><title>0x00430ee0 InitialiseLaraAnims (133 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="120" class="todo"><title>0x00430f70 CreateSkinningData (2027 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="120" class="named"><title>0x00431760 PushXYZ (46 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="120" class="named"><title>0x00431790 PopXYZ (8 bytes)</title></rect>
@@ -2535,7 +2535,7 @@
 <rect width="7.36" height="6.98" x="687.85" y="265.95" class="named"><title>0x00420a80 LaraCeilingFront (133 bytes)</title></rect>
 <rect width="7.36" height="6.98" x="698.21" y="265.95" class="named"><title>0x004270c0 lara_as_stepright (133 bytes)</title></rect>
 <rect width="7.36" height="6.98" x="708.56" y="265.95" class="named"><title>0x00427150 lara_as_stepleft (133 bytes)</title></rect>
-<rect width="7.36" height="6.98" x="718.92" y="265.95" class="todo"><title>0x00430ee0 InitialiseLaraAnims (133 bytes)</title></rect>
+<rect width="7.36" height="6.98" x="718.92" y="265.95" class="named"><title>0x00430ee0 InitialiseLaraAnims (133 bytes)</title></rect>
 <rect width="7.36" height="6.98" x="729.28" y="265.95" class="named"><title>0x004327a0 lara_as_tread (133 bytes)</title></rect>
 <rect width="7.36" height="6.98" x="739.64" y="265.95" class="todo"><title>0x00476a30 InitialiseFunctionTable (133 bytes)</title></rect>
 <rect width="7.17" height="7.11" x="551.10" y="275.93" class="named"><title>0x0045f110 InitTarget (132 bytes)</title></rect>
