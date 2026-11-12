@@ -115,7 +115,7 @@ address,size,name,symbol
 0x00410c90,2380,SethControl,_SethControl
 0x004115e0,499,TriggerRiseEffect,_TriggerRiseEffect
 0x004117e0,231,InitialiseSkeleton,_InitialiseSkeleton
-0x004118d0,4402,SkeletonControl,_SkeletonControl
+0x004118d0,4490,SkeletonControl,_SkeletonControl
 0x00412a60,88,InitialiseSphinx,_InitialiseSphinx
 0x00412ac0,1364,SphinxControl,_SphinxControl
 0x00413020,99,InitialiseTemplar,_InitialiseTemplar
@@ -2022,6 +2022,7 @@ address,size,name,symbol
 0x004ad2c8,12,GameStixPos,_GameStixPos
 0x004ad2d8,16,seth_left_hand,_seth_left_hand
 0x004ad2e8,16,seth_right_hand,_seth_right_hand
+0x004ad2f8,16,skelly_hit,_skelly_hit
 0x004ad308,16,sphinx_bite,_sphinx_bite
 0x004ad318,16,templar_hit,_templar_hit
 0x004ad328,12,FloorTrapDoorPos,_FloorTrapDoorPos

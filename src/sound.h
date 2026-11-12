@@ -56,6 +56,7 @@ enum sfx_options {
 #define SFX_LARA_POLE_LOOP 340
 #define SFX_LARA_ROPE_CREAK 351
 #define SFX_HIT_ROCK 347
+#define SFX_LARA_THUD 70
 #define SFX_BIKE_HIT_ENEMIES 367
 #define SFX_OBJ_GEM_SMASH 285
 #define SFX_HORSE_RICOCHETS 213
