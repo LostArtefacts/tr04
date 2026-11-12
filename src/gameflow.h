@@ -455,6 +455,7 @@ extern char gfLayer1Vel;
 extern char gfLayer2Vel;
 extern CVECTOR gfLayer1Col;
 extern CVECTOR gfLayer2Col;
+extern PHD_VECTOR gfLensFlare;
 extern char gfUVRotate;
 extern char gfGameMode;
 extern uint8 gfCurrentLevel;

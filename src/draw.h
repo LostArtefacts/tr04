@@ -80,6 +80,8 @@ extern sint32 current_room;
 extern sint32 camera_underwater;
 extern sint16 SkyPos;
 extern sint16 SkyPos2;
+extern sint16 LightningSFXDelay;
+extern char LaserSightActive;
 extern sint16 ClipRoomNum;
 extern PHD_VECTOR vbufdoor[4];
 

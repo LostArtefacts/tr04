@@ -18,6 +18,13 @@
 #include "specific/specificfx.h"
 #include "train.h"
 #include "objnums.h"
+#include "tomb4fx.h"
+#include "effect2.h"
+#include "mirror.h"
+#include "rope.h"
+#include "scarab.h"
+#include "croc.h"
+#include "specific/function_stubs.h"
 
 #define S_LongMemCpy(d, s, n) memcpy(d, s, (n) * sizeof(sint32))
 
@@ -36,6 +43,211 @@ sint32 DrawPhaseGame(void)
     camera.number_frames = S_DumpScreen();
     S_AnimateTextures(camera.number_frames);
     return camera.number_frames;
+}
+
+void DrawRooms(sint16 CurrentRoom)
+{
+    ROOM_INFO *r;
+    DYNAMIC *dptr;
+    sint32 lx, ly, lz, lr, i;
+
+    current_room = CurrentRoom;
+    r = &room[CurrentRoom];
+    r->test_left = 0;
+    phd_left = 0;
+    r->test_top = 0;
+    phd_top = 0;
+    r->test_right = phd_winxmax;
+    phd_right = phd_winxmax;
+    r->test_bottom = phd_winymax;
+    phd_bottom = phd_winymax;
+    outside = r->flags & ROOM_OUTSIDE;
+    camera_underwater = r->flags & ROOM_UNDERWATER;
+    r->bound_active = 2;
+    draw_room_list[0] = CurrentRoom;
+    room_list_start = 0;
+    room_list_end = 1;
+    number_draw_rooms = 0;
+
+    if (outside) {
+        outside_top = 0;
+        outside_left = 0;
+        outside_right = phd_winxmax;
+        outside_bottom = phd_winymax;
+    } else {
+        outside_left = phd_winxmax;
+        outside_top = phd_winymax;
+        outside_bottom = 0;
+        outside_right = 0;
+    }
+
+    GetRoomBounds();
+    InitialiseFogBulbs();
+    CreateFXBulbs();
+
+    if (outside) {
+        if (objects[HORIZON].loaded) {
+            if (BinocularRange)
+                AlterFOV(14560 - BinocularRange);
+
+            phd_PushMatrix();
+            phd_TranslateAbs(camera.pos.x, camera.pos.y, camera.pos.z);
+
+            if (gfLevelFlags & GF_LIGHTNING) {
+                if (!LightningCount && !LightningRand) {
+                    if (!(GetRandomDraw() & 127)) {
+                        LightningCount = (GetRandomDraw() & 0x1F) + 16;
+                        dLightningRand = (GetRandomDraw() & 0xFF) + 256;
+                        LightningSFXDelay = (GetRandomDraw() & 3) + 12;
+                    }
+                } else {
+                    UpdateSkyLightning();
+                    if (LightningSFXDelay > -1)
+                        LightningSFXDelay--;
+                    if (!LightningSFXDelay)
+                        SoundEffect(SFX_THUNDER_RUMBLE, 0, SFX_DEFAULT);
+                }
+            }
+
+            nPolyType = 6;
+            phd_PushMatrix();
+
+            if (gfLevelFlags & GF_LAYER1) {
+                phd_RotY(32760);
+                if (gfLevelFlags & GF_LIGHTNING)
+                    DrawFlatSky((((LightningRGB[0] | (44 << 8)) << 8 | LightningRGB[1]) << 8) | LightningRGB[2], SkyPos, -1536, 4);
+                else
+                    DrawFlatSky(*(uint32 *)&gfLayer1Col, SkyPos, -1536, 4);
+            }
+
+            if (gfLevelFlags & GF_LAYER2)
+                DrawFlatSky(0xFF000000 | *(uint32 *)&gfLayer2Col, SkyPos2, -1536, 2);
+
+            if (gfLevelFlags & (GF_LAYER1 | GF_LAYER2))
+                OutputSky();
+
+            phd_PopMatrix();
+
+            if (gfLevelFlags & GF_HORIZON) {
+                phd_PutPolygonSkyMesh(meshes[objects[HORIZON].mesh_index], -1);
+                OutputSky();
+            }
+
+            phd_PopMatrix();
+
+            if (BinocularRange)
+                AlterFOV(7 * (2080 - BinocularRange));
+        } else
+            outside = -1;
+    }
+
+    if (objects[LARA].loaded && !(lara_item->flags & IFL_INVISIBLE)) {
+        nPolyType = 4;
+
+        if (lara_item->mesh_bits) {
+            DrawLara(lara_item, 0);
+            phd_PushMatrix();
+
+            if (lara.right_arm.flash_gun) {
+                phd_mxptr[M00] = lara_matrices[132 + M00];
+                phd_mxptr[M01] = lara_matrices[132 + M01];
+                phd_mxptr[M02] = lara_matrices[132 + M02];
+                phd_mxptr[M03] = lara_matrices[132 + M03];
+                phd_mxptr[M10] = lara_matrices[132 + M10];
+                phd_mxptr[M11] = lara_matrices[132 + M11];
+                phd_mxptr[M12] = lara_matrices[132 + M12];
+                phd_mxptr[M13] = lara_matrices[132 + M13];
+                phd_mxptr[M20] = lara_matrices[132 + M20];
+                phd_mxptr[M21] = lara_matrices[132 + M21];
+                phd_mxptr[M22] = lara_matrices[132 + M22];
+                phd_mxptr[M23] = lara_matrices[132 + M23];
+                SetGunFlash(lara.gun_type);
+            }
+
+            if (lara.left_arm.flash_gun) {
+                phd_mxptr[M00] = lara_matrices[168 + M00];
+                phd_mxptr[M01] = lara_matrices[168 + M01];
+                phd_mxptr[M02] = lara_matrices[168 + M02];
+                phd_mxptr[M03] = lara_matrices[168 + M03];
+                phd_mxptr[M10] = lara_matrices[168 + M10];
+                phd_mxptr[M11] = lara_matrices[168 + M11];
+                phd_mxptr[M12] = lara_matrices[168 + M12];
+                phd_mxptr[M13] = lara_matrices[168 + M13];
+                phd_mxptr[M20] = lara_matrices[168 + M20];
+                phd_mxptr[M21] = lara_matrices[168 + M21];
+                phd_mxptr[M22] = lara_matrices[168 + M22];
+                phd_mxptr[M23] = lara_matrices[168 + M23];
+                SetGunFlash(lara.gun_type);
+            }
+
+            phd_PopMatrix();
+            DrawGunflashes();
+        }
+
+        if (gfLevelFlags & GF_MIRROR && lara_item->room_number == gfMirrorRoom)
+            Draw_Mirror_Lara();
+    }
+
+    InitDynamicLighting();
+    nPolyType = 0;
+
+    dptr = dynamics;
+    for (i = MAX_DYNAMICS; i > 0; i--, dptr++) {
+        if (dptr->on) {
+            if (dptr->x < 0)
+                dptr->x = 0;
+            if (dptr->z < 0)
+                dptr->z = 0;
+        }
+    }
+
+    for (i = 0; i < number_draw_rooms; i++)
+        S_InsertRoom(draw_rooms[i]);
+
+    if (gfLevelFlags & GF_TRAIN)
+        DrawTrainFloor();
+
+    DrawGunshells();
+    nPolyType = 3;
+
+    if (GLOBAL_playing_cutseq)
+        DrawCutSeqActors();
+
+    DrawRopeList();
+    S_DrawSparks();
+    lx = lara_item->pos.x_pos;
+    ly = lara_item->pos.y_pos;
+    lz = lara_item->pos.z_pos;
+    lr = lara_item->room_number;
+    lara_item->pos.x_pos = camera.pos.x;
+    lara_item->pos.y_pos = camera.pos.y;
+    lara_item->pos.z_pos = camera.pos.z;
+    lara_item->room_number = camera.pos.room_number;
+    DoUwEffect();
+    S_DrawFires();
+    S_DrawSmokeSparks();
+    S_DrawSplashes();
+    DrawBubbles();
+    DrawDebris();
+    DrawBlood();
+    DrawDrips();
+    DrawShockwaves();
+    DrawScarabs();
+    DrawLocusts();
+    DrawLightning();
+    lara_item->pos.x_pos = lx;
+    lara_item->pos.y_pos = ly;
+    lara_item->pos.z_pos = lz;
+    lara_item->room_number = lr;
+
+    if (gfLevelFlags & GF_LENSFLARE)
+        SetUpLensFlare(gfLensFlare.x, gfLensFlare.y - 4096, gfLensFlare.z, 0);
+
+    if (LaserSightActive)
+        DrawLaserSightSprite();
+
+    for (i = 0; i < number_draw_rooms; i++)
+        PrintObjects(draw_rooms[i]);
 }
 
 void S_InsertRoom(sint16 room_number)

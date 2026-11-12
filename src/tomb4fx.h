@@ -225,6 +225,8 @@ void DrawWeaponMissile(ITEM_INFO *item);
 void DrawGunflashes(void);
 void TriggerLaraDrips(void);
 void UpdateShockwaves(void);
+void S_DrawFires(void);
+void S_DrawSparks(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
