@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="157.18" height="12" x="0" y="0" class="named"><title>711 · 45.96%</title></rect>
-<rect width="0.44" height="12" x="157.18" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="157.63" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="179.73" height="12" x="162.27" y="0" class="todo"><title>813 · 52.55%</title></rect>
+<rect width="157.40" height="12" x="0" y="0" class="named"><title>712 · 46.02%</title></rect>
+<rect width="0.44" height="12" x="157.40" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="157.85" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="179.51" height="12" x="162.49" y="0" class="todo"><title>812 · 52.49%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">46.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">711</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">813</tspan></text>
+<text text-anchor="end" x="522" y="7.50">46.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">712</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">812</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="65.06" height="12" x="0" y="0" class="named"><title>118 KB · 19.02%</title></rect>
-<rect width="0.12" height="12" x="65.06" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="65.18" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="269.57" height="12" x="72.43" y="0" class="todo"><title>489 KB · 78.82%</title></rect>
+<rect width="65.20" height="12" x="0" y="0" class="named"><title>118 KB · 19.06%</title></rect>
+<rect width="0.12" height="12" x="65.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="65.32" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="269.44" height="12" x="72.56" y="0" class="todo"><title>489 KB · 78.78%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">19.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">118 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">489 KB</tspan></text>
@@ -786,7 +786,7 @@
 <rect width="12" height="12" x="255" y="210" class="named"><title>0x004476d0 TrapCollision (117 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="210" class="todo"><title>0x00447750 ItemPushLara (934 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="210" class="named"><title>0x00447b00 TestBoundsCollide (216 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="210" class="todo"><title>0x00447be0 TestBoundsCollideStatic (244 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="210" class="named"><title>0x00447be0 TestBoundsCollideStatic (244 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="210" class="todo"><title>0x00447ce0 ItemPushLaraStatic (590 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="210" class="named"><title>0x00447f30 TestLaraPosition (311 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="210" class="named"><title>0x00448070 AlignLaraPosition (208 bytes)</title></rect>
@@ -2257,7 +2257,7 @@
 <rect width="9.56" height="9.94" x="470.44" y="210.98" class="todo"><title>0x00459640 ModelRigidRope (246 bytes)</title></rect>
 <rect width="9.56" height="9.90" x="470.44" y="223.92" class="named"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
 <rect width="9.56" height="9.86" x="470.44" y="236.82" class="todo"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
-<rect width="9.56" height="9.86" x="470.44" y="249.68" class="todo"><title>0x00447be0 TestBoundsCollideStatic (244 bytes)</title></rect>
+<rect width="9.56" height="9.86" x="470.44" y="249.68" class="named"><title>0x00447be0 TestBoundsCollideStatic (244 bytes)</title></rect>
 <rect width="9.56" height="9.82" x="470.44" y="262.55" class="named"><title>0x004321b0 LaraTestWaterStepOut (243 bytes)</title></rect>
 <rect width="9.56" height="9.82" x="470.44" y="275.37" class="named"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>
 <rect width="9.56" height="9.78" x="470.44" y="288.19" class="named"><title>0x00462cb0 JumpSwitchCollision (242 bytes)</title></rect>

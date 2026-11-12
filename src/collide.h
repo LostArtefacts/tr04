@@ -77,6 +77,7 @@ void ObjectCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
 void TrapCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void ObjectCollisionNoBigPush(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void AlignLaraPosition(PHD_VECTOR *pos, ITEM_INFO *item, ITEM_INFO *l);
+sint32 TestBoundsCollideStatic(sint16 *bounds, PHD_3DPOS *pos, sint32 rad);
 
 extern sint16 GlobalCollisionBounds[6];
 

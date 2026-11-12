@@ -101,6 +101,25 @@ sint32 TestBoundsCollide(ITEM_INFO *item, ITEM_INFO *l, sint32 rad)
     return x >= bounds[0] - rad && x <= rad + bounds[1] && z >= bounds[4] - rad && z <= rad + bounds[5];
 }
 
+sint32 TestBoundsCollideStatic(sint16 *bounds, PHD_3DPOS *pos, sint32 rad)
+{
+    sint16 *lbounds;
+    sint32 s, c, dx, dz, x, z;
+
+    if (!(bounds[0] | bounds[1] | bounds[2] | bounds[3] | bounds[4] | bounds[5]))
+        return 0;
+    lbounds = GetBestFrame(lara_item);
+    if (pos->y_pos + bounds[3] <= lara_item->pos.y_pos + lbounds[2] || pos->y_pos + bounds[2] >= lara_item->pos.y_pos + lbounds[3])
+        return 0;
+    c = phd_cos(pos->y_rot);
+    s = phd_sin(pos->y_rot);
+    dx = lara_item->pos.x_pos - pos->x_pos;
+    dz = lara_item->pos.z_pos - pos->z_pos;
+    x = (dx * c - dz * s) >> W2V_SHIFT;
+    z = (dx * s + dz * c) >> W2V_SHIFT;
+    return x >= bounds[0] - rad && x <= rad + bounds[1] && z >= bounds[4] - rad && z <= rad + bounds[5];
+}
+
 sint32 TestLaraPosition(sint16 *bounds, ITEM_INFO *item, ITEM_INFO *laraitem)
 {
     PHD_ANGLE yrotrel, zrotrel, xrotrel;
