@@ -21,5 +21,6 @@ uint8 LoadSoundEffects(void);
 uint8 LoadCameras(void);
 uint8 LoadAnimatedTextures(void);
 uint8 LoadAIInfo(void);
+uint8 LoadBoxes(void);
 
 #endif

@@ -7,6 +7,7 @@
 #include "../camera.h"
 #include "../box.h"
 #include "../spotcam.h"
+#include "../gameflow.h"
 
 void FileClose(FILE *file)
 {
@@ -82,6 +83,43 @@ uint8 LoadSoundEffects(void)
     sound_effects = (OBJECT_VECTOR *)game_malloc(number_sound_effects * sizeof(OBJECT_VECTOR), 0);
     memcpy(sound_effects, FileData, number_sound_effects * sizeof(OBJECT_VECTOR));
     FileData += number_sound_effects * sizeof(OBJECT_VECTOR);
+    return 1;
+}
+
+uint8 LoadBoxes(void)
+{
+    BOX_INFO *box;
+    sint32 size, i, j;
+
+    Log(2, "LoadBoxes");
+    num_boxes = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    boxes = (BOX_INFO *)game_malloc(sizeof(BOX_INFO) * num_boxes, 0);
+    memcpy(boxes, FileData, sizeof(BOX_INFO) * num_boxes);
+    FileData += sizeof(BOX_INFO) * num_boxes;
+    size = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    overlap = (sint16 *)game_malloc(sizeof(uint16) * size, 0);
+    memcpy(overlap, FileData, sizeof(uint16) * size);
+    FileData += sizeof(uint16) * size;
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 4; j++) {
+            ground_zone[j][i] = (sint16 *)game_malloc(sizeof(sint16) * num_boxes, 0);
+            memcpy(ground_zone[j][i], FileData, sizeof(sint16) * num_boxes);
+            FileData += sizeof(sint16) * num_boxes;
+        }
+        ground_zone[4][i] = (sint16 *)game_malloc(sizeof(sint16) * num_boxes, 0);
+        memcpy(ground_zone[4][i], FileData, sizeof(sint16) * num_boxes);
+        FileData += sizeof(sint16) * num_boxes;
+    }
+    for (i = 0; i < num_boxes; i++) {
+        box = &boxes[i];
+        if (box->overlap_index & 0x8000) {
+            box->overlap_index |= 0x4000;
+        } else if ((gfLevelFlags & GF_TRAIN) && box->height > -256) {
+            box->overlap_index |= 0xC000;
+        }
+    }
     return 1;
 }
 
