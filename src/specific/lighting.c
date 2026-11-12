@@ -1,3 +1,4 @@
+#include <string.h>
 #include "lighting.h"
 #include "3dmath.h"
 #include "function_stubs.h"
@@ -5,6 +6,7 @@
 #include "../draw.h"
 #include "winmain.h"
 #include "dxshell.h"
+#include "function_table.h"
 #include "../control.h"
 #include "../text.h"
 #include "../delstuff.h"
@@ -18,6 +20,49 @@ void MallocD3DLights(void)
     MaxRoomLights *= 2;
     D3DLights = (D3DLIGHT_STRUCT *)game_malloc(sizeof(D3DLIGHT_STRUCT) * MaxRoomLights, 0);
     D3DDynamics = (D3DLIGHT_STRUCT *)game_malloc(sizeof(D3DLIGHT_STRUCT) * 32, 0);
+}
+
+void CreateD3DLights(void)
+{
+    D3DMATERIAL material;
+    sint32 i;
+
+    Log(2, "CreateD3DLights");
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_FOGCOLOR, CurrentFog);
+    for (i = 0; i < MaxRoomLights; i++) {
+        DXAttempt(IDirect3D3_CreateLight(App.dx.lpD3D, &D3DLights[i].D3DLight, 0));
+        memset(&D3DLights[i].D3DLightx, 0, sizeof(D3DLights[i].D3DLightx));
+        D3DLights[i].D3DLightx.dwSize = sizeof(D3DLights[i].D3DLightx);
+        D3DLights[i].D3DLightx.dltType = D3DLIGHT_POINT;
+        D3DLights[i].D3DLightx.dwFlags = D3DLIGHT_NO_SPECULAR;
+        DXAttempt(IDirect3DLight_SetLight(D3DLights[i].D3DLight, (LPD3DLIGHT)&D3DLights[i].D3DLightx));
+        DXAttempt(IDirect3DViewport3_AddLight(App.dx.lpViewport, D3DLights[i].D3DLight));
+    }
+    if (D3DDynamics) {
+        for (i = 0; i < 32; i++) {
+            DXAttempt(IDirect3D3_CreateLight(App.dx.lpD3D, &D3DDynamics[i].D3DLight, 0));
+            memset(&D3DDynamics[i].D3DLightx, 0, sizeof(D3DDynamics[i].D3DLightx));
+            D3DDynamics[i].D3DLightx.dwSize = sizeof(D3DDynamics[i].D3DLightx);
+            D3DDynamics[i].D3DLightx.dltType = D3DLIGHT_POINT;
+            D3DDynamics[i].D3DLightx.dwFlags = D3DLIGHT_NO_SPECULAR;
+            DXAttempt(IDirect3DLight_SetLight(D3DDynamics[i].D3DLight, (LPD3DLIGHT)&D3DDynamics[i].D3DLightx));
+            DXAttempt(IDirect3DViewport3_AddLight(App.dx.lpViewport, D3DDynamics[i].D3DLight));
+        }
+        DXAttempt(IDirect3D3_CreateMaterial(App.dx.lpD3D, &App.GlobalMaterial, 0));
+        memset(&material, 0, sizeof(material));
+        material.dwSize = sizeof(material);
+        material.ambient.a = 0;
+        material.diffuse.a = 0;
+        material.ambient.r = 1;
+        material.ambient.g = 1;
+        material.ambient.b = 1;
+        material.diffuse.r = 1;
+        material.diffuse.g = 1;
+        material.diffuse.b = 1;
+        DXAttempt(IDirect3DMaterial3_SetMaterial(App.GlobalMaterial, &material));
+        DXAttempt(IDirect3DMaterial3_GetHandle(App.GlobalMaterial, App.dx._lpD3DDevice, &App.GlobalMaterialHandle));
+        DXAttempt(IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_MATERIAL, App.GlobalMaterialHandle));
+    }
 }
 
 void FreeD3DLights(void)

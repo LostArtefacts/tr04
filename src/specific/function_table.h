@@ -19,6 +19,7 @@ void SW_ClearBuffer(LPDIRECT3DDEVICE3 dev, DWORD count, D3DRECT *rect, DWORD fla
 extern uint8 (*IsVisible)(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2);
 extern HRESULT (*_BeginScene)(void);
 extern HRESULT (*_EndScene)(void);
+extern sint32 CurrentFog;
 extern void (*AddTriSorted)(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided);
 extern void (*AddQuadSorted)(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint16 v3, TEXTURESTRUCT *tex, sint32 double_sided);
 extern void (*AddQuadZBuffer)(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint16 v3, TEXTURESTRUCT *tex, sint32 double_sided);

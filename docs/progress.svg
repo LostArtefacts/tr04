@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="243.02" height="12" x="0" y="0" class="named"><title>1100 · 71.06%</title></rect>
-<rect width="0.44" height="12" x="243.02" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="14.14" height="12" x="243.47" y="0" class="nonmatching"><title>64 · 4.13%</title></rect>
-<rect width="84.40" height="12" x="257.60" y="0" class="todo"><title>382 · 24.68%</title></rect>
+<rect width="243.24" height="12" x="0" y="0" class="named"><title>1101 · 71.12%</title></rect>
+<rect width="0.44" height="12" x="243.24" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="14.14" height="12" x="243.69" y="0" class="nonmatching"><title>64 · 4.13%</title></rect>
+<rect width="84.17" height="12" x="257.83" y="0" class="todo"><title>381 · 24.61%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">71.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1100</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">64</tspan> · <tspan class="todo">382</tspan></text>
+<text text-anchor="end" x="522" y="7.50">71.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1101</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">64</tspan> · <tspan class="todo">381</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="120.45" height="12" x="0" y="0" class="named"><title>219 KB · 35.22%</title></rect>
-<rect width="0.12" height="12" x="120.45" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="25.21" height="12" x="120.57" y="0" class="nonmatching"><title>46 KB · 7.37%</title></rect>
-<rect width="196.22" height="12" x="145.78" y="0" class="todo"><title>356 KB · 57.38%</title></rect>
+<rect width="120.78" height="12" x="0" y="0" class="named"><title>219 KB · 35.32%</title></rect>
+<rect width="0.12" height="12" x="120.78" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="25.21" height="12" x="120.90" y="0" class="nonmatching"><title>46 KB · 7.37%</title></rect>
+<rect width="195.90" height="12" x="146.10" y="0" class="todo"><title>356 KB · 57.28%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">35.3%</text>
+<text text-anchor="end" x="522" y="24.50">35.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">219 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">46 KB</tspan> · <tspan class="todo">356 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1296,7 +1296,7 @@
 <rect width="12" height="12" x="405" y="360" class="named"><title>0x004777e0 ReadJoystick (208 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="360" class="nonmatching"><title>0x004778b0 S_UpdateInput (1888 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="360" class="named"><title>0x00478010 MallocD3DLights (91 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="360" class="todo"><title>0x00478070 CreateD3DLights (597 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="360" class="named"><title>0x00478070 CreateD3DLights (597 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="360" class="named"><title>0x004782d0 FreeD3DLights (354 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="360" class="named"><title>0x00478440 ApplyMatrix (105 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="360" class="named"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
@@ -1907,7 +1907,7 @@
 <rect width="15.28" height="15.08" x="346" y="374.62" class="todo"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
 <rect width="15.28" height="15.08" x="346" y="392.70" class="named"><title>0x00438940 TriggerGunSmoke (597 bytes)</title></rect>
 <rect width="15.28" height="15.08" x="346" y="410.78" class="todo"><title>0x0043b0d0 CalcLightningSpline (597 bytes)</title></rect>
-<rect width="15.28" height="15.08" x="346" y="428.86" class="todo"><title>0x00478070 CreateD3DLights (597 bytes)</title></rect>
+<rect width="15.28" height="15.08" x="346" y="428.86" class="named"><title>0x00478070 CreateD3DLights (597 bytes)</title></rect>
 <rect width="15.28" height="15.06" x="346" y="446.94" class="todo"><title>0x00480310 phd_PutPolygons_train (596 bytes)</title></rect>
 <rect width="15.65" height="14.62" x="364.28" y="61.19" class="named"><title>0x00472650 InsertRoom (593 bytes)</title></rect>
 <rect width="15.60" height="14.62" x="382.93" y="61.19" class="todo"><title>0x00463de0 DrawChar (591 bytes)</title></rect>

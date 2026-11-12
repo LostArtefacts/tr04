@@ -40,5 +40,6 @@ void S_CalculateStaticMeshLight(sint32 x, sint32 y, sint32 z, sint32 shade, ROOM
 void MallocD3DLights(void);
 void ClearObjectLighting(void);
 void ClearDynamicLighting(void);
+void CreateD3DLights(void);
 
 #endif
