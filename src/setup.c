@@ -10,6 +10,9 @@
 #include "effect2.h"
 #include "specific/function_stubs.h"
 #include "specific/specificfx.h"
+#include "specific/3dmath.h"
+#include "anim.h"
+#include "objnums.h"
 
 void InitialiseGameFlags(void)
 {
@@ -37,6 +40,26 @@ void SetupGame(void)
     GetAIPickups();
     SeedRandomDraw(0xD371F947);
     SeedRandomControl(0xD371F947);
+}
+
+void InitTarget(void)
+{
+    sint16 **meshpp;
+    sint16 *meshp;
+    sint16 *vtx;
+    sint32 nVtx;
+    sint32 i;
+
+    meshpp = &meshes[objects[TARGET_GRAPHICS].mesh_index];
+    meshp = *meshpp;
+    targetMeshP = (MESH_DATA *)meshp;
+    nVtx = meshp[4] & 0xFF;
+    vtx = meshp + 6;
+    for (i = 0; i < nVtx; i++) {
+        *vtx++ = (sint16)(phd_centerx + 80 * *vtx / 96);
+        *vtx = (sint16)(phd_centery + 60 * *vtx / 224);
+        vtx += 3;
+    }
 }
 
 void ClearFootPrints(void)
