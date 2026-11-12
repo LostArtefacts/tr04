@@ -5,6 +5,7 @@
 #include "effects.h"
 #include "objnums.h"
 #include "room.h"
+#include "tomb4fx.h"
 #include "specific/function_stubs.h"
 
 void InitialiseBaboon(sint16 item_number)
@@ -34,4 +35,18 @@ void FindCrowbarSwitch(ITEM_INFO *item, sint16 switch_index)
             item2->item_flags[0] = switch_index;
     }
     item->item_flags[2] = switch_index;
+}
+
+void ExplodeBaboon(ITEM_INFO *item)
+{
+    item->pos.y_pos -= 128;
+    TriggerShockwave((PHD_VECTOR *)&item->pos, 0x2000280, -48, 0x28802000, 0);
+    TriggerShockwave((PHD_VECTOR *)&item->pos, 0x2000280, -48, 0x28802000, 0x2000);
+    TriggerShockwave((PHD_VECTOR *)&item->pos, 0x2000280, -48, 0x28802000, 0x4000);
+    TriggerShockwave((PHD_VECTOR *)&item->pos, 0x2000280, -48, 0x28802000, 0x6000);
+    item->pos.y_pos += 128;
+    FlashFadeR = 255;
+    FlashFadeG = 64;
+    FlashFadeB = 0;
+    FlashFader = 32;
 }
