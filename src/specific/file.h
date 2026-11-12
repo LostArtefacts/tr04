@@ -7,6 +7,9 @@
 extern TEXTURESTRUCT *AnimatingWaterfalls[3];
 extern sint32 AnimatingWaterfallsV[3];
 
+extern char *FileData;
+
 FILE *FileOpen(const char *name);
+void FileClose(FILE *file);
 
 #endif
