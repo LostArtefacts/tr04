@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="191.01" height="12" x="0" y="0" class="named"><title>864 · 55.85%</title></rect>
-<rect width="0.44" height="12" x="191.01" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="191.45" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="144.14" height="12" x="197.86" y="0" class="todo"><title>652 · 42.15%</title></rect>
+<rect width="191.23" height="12" x="0" y="0" class="named"><title>865 · 55.91%</title></rect>
+<rect width="0.44" height="12" x="191.23" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="191.67" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="143.92" height="12" x="198.08" y="0" class="todo"><title>651 · 42.08%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">56.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">864</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">652</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">865</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">651</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="81.90" height="12" x="0" y="0" class="named"><title>149 KB · 23.95%</title></rect>
-<rect width="0.12" height="12" x="81.90" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="82.02" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="251.33" height="12" x="90.67" y="0" class="todo"><title>456 KB · 73.49%</title></rect>
+<rect width="82.01" height="12" x="0" y="0" class="named"><title>149 KB · 23.98%</title></rect>
+<rect width="0.12" height="12" x="82.01" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="82.13" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="251.22" height="12" x="90.78" y="0" class="todo"><title>456 KB · 73.46%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">149 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">456 KB</tspan></text>
@@ -981,7 +981,7 @@
 <rect width="12" height="12" x="180" y="270" class="named"><title>0x00459510 ModelRigid (302 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="270" class="named"><title>0x00459640 ModelRigidRope (246 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="270" class="named"><title>0x00459740 SetPendulumPoint (142 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="270" class="todo"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="270" class="named"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="270" class="todo"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="270" class="todo"><title>0x00459f90 ProjectRopePoints (334 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="270" class="named"><title>0x0045a0e0 CheckSumValid (31 bytes)</title></rect>
@@ -2377,7 +2377,7 @@
 <rect width="8.50" height="8.64" x="681.24" y="221.72" class="named"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
 <rect width="8.50" height="8.64" x="692.74" y="221.72" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="8.45" height="8.64" x="704.23" y="221.72" class="named"><title>0x00413dc0 ControlSmashableBikeWall (189 bytes)</title></rect>
-<rect width="8.45" height="8.64" x="715.69" y="221.72" class="todo"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>
+<rect width="8.45" height="8.64" x="715.69" y="221.72" class="named"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>
 <rect width="8.45" height="8.64" x="727.14" y="221.72" class="todo"><title>0x004770c0 GameClose (189 bytes)</title></rect>
 <rect width="8.41" height="8.64" x="738.59" y="221.72" class="named"><title>0x00452de0 DrawHealthBar (188 bytes)</title></rect>
 <rect width="8.26" height="8.75" x="507.48" y="233.36" class="named"><title>0x00421ff0 TestHangSwingIn (187 bytes)</title></rect>

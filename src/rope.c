@@ -180,3 +180,18 @@ void SetPendulumPoint(ROPE_STRUCT *Rope, sint32 node)
     CurrentPendulum.Rope = Rope;
     CurrentPendulum.node = node;
 }
+
+void SetPendulumVelocity(sint32 x, sint32 y, sint32 z)
+{
+    sint32 scale;
+
+    if ((CurrentPendulum.node & ~1) < 24) {
+        scale = (4096 / (((12 - (CurrentPendulum.node >> 1)) << 9) >> 8)) << 8;
+        x = (__int64)scale * x >> (W2V_SHIFT + 2);
+        y = (__int64)scale * y >> (W2V_SHIFT + 2);
+        z = (__int64)scale * z >> (W2V_SHIFT + 2);
+    }
+    CurrentPendulum.Velocity.x += x;
+    CurrentPendulum.Velocity.y += y;
+    CurrentPendulum.Velocity.z += z;
+}
