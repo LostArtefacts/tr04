@@ -109,6 +109,17 @@ void ready_pistols(int weapon_type)
     lara.left_arm.frame_base = lara.right_arm.frame_base = objects[WeaponObject(weapon_type)].frame_base;
 }
 
+void draw_pistol_meshes(sint32 weapon_type)
+{
+    sint32 mesh_index;
+
+    mesh_index = objects[WeaponObjectMesh(weapon_type)].mesh_index;
+    lara.mesh_ptrs[LM_RHAND] = meshes[mesh_index + LM_RHAND * 2];
+    lara.holster = LARA_HOLSTERS;
+    if (weapon_type != WEAPON_REVOLVER)
+        lara.mesh_ptrs[LM_LHAND] = meshes[mesh_index + LM_LHAND * 2];
+}
+
 void undraw_pistol_mesh_left(sint32 weapon_type)
 {
     if (weapon_type != WEAPON_REVOLVER) {

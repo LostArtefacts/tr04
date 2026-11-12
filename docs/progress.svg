@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="155.19" height="12" x="0" y="0" class="named"><title>702 · 45.38%</title></rect>
-<rect width="0.44" height="12" x="155.19" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="155.64" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="181.72" height="12" x="160.28" y="0" class="todo"><title>822 · 53.14%</title></rect>
+<rect width="155.41" height="12" x="0" y="0" class="named"><title>703 · 45.44%</title></rect>
+<rect width="0.44" height="12" x="155.41" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="155.86" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="181.50" height="12" x="160.50" y="0" class="todo"><title>821 · 53.07%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">45.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">702</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">822</tspan></text>
+<text text-anchor="end" x="522" y="7.50">45.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">703</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">821</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="64.21" height="12" x="0" y="0" class="named"><title>116 KB · 18.78%</title></rect>
-<rect width="0.12" height="12" x="64.21" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="64.33" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="270.42" height="12" x="71.58" y="0" class="todo"><title>491 KB · 79.07%</title></rect>
+<rect width="64.25" height="12" x="0" y="0" class="named"><title>117 KB · 18.79%</title></rect>
+<rect width="0.12" height="12" x="64.25" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="64.37" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="270.39" height="12" x="71.61" y="0" class="todo"><title>490 KB · 79.06%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">18.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">116 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">491 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">117 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">490 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -453,7 +453,7 @@
 <rect width="12" height="12" x="510" y="105" class="named"><title>0x0042b7c0 set_arm_info (123 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="105" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="105" class="named"><title>0x0042bab0 ready_pistols (109 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="105" class="todo"><title>0x0042bb20 draw_pistol_meshes (65 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="105" class="named"><title>0x0042bb20 draw_pistol_meshes (65 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="105" class="named"><title>0x0042bb70 undraw_pistol_mesh_left (58 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="105" class="named"><title>0x0042bbb0 undraw_pistol_mesh_right (53 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="105" class="todo"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
@@ -2815,7 +2815,7 @@
 <rect width="4.84" height="5.27" x="624.25" y="456.73" class="todo"><title>0x00467330 DrawJeepExtras (66 bytes)</title></rect>
 <rect width="5.03" height="5.07" x="632.09" y="339.46" class="named"><title>0x00473900 DSIsChannelPlaying (66 bytes)</title></rect>
 <rect width="5.03" height="5.07" x="640.12" y="339.46" class="named"><title>0x00473b40 DXFreeSounds (66 bytes)</title></rect>
-<rect width="4.95" height="5.07" x="648.15" y="339.46" class="todo"><title>0x0042bb20 draw_pistol_meshes (65 bytes)</title></rect>
+<rect width="4.95" height="5.07" x="648.15" y="339.46" class="named"><title>0x0042bb20 draw_pistol_meshes (65 bytes)</title></rect>
 <rect width="4.95" height="5.07" x="656.10" y="339.46" class="todo"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="664.05" y="339.46" class="named"><title>0x00425f10 lara_as_fastfall (64 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="671.93" y="339.46" class="named"><title>0x00437140 Richochet (64 bytes)</title></rect>
