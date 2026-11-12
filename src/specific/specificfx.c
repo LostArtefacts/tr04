@@ -337,6 +337,68 @@ void DoScreenFade(void)
     AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
 }
 
+void DrawPsxTile(sint32 x_y, sint32 height_width, sint32 color, sint32 u0, sint32 u1)
+{
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    float x, y, z, rhw, w, h;
+    sint32 col;
+    sint32 drawtype;
+    sint32 alpha;
+
+    x = (float)((uint32)x_y >> 16);
+    y = (float)(x_y & 0xFFFF);
+    h = (float)((uint32)height_width >> 16) + 1;
+    w = (float)(height_width & 0xFFFF) + 1;
+    nPolyType = 6;
+    alpha = color & 0xFF000000;
+    if (alpha == 0x62000000) {
+        drawtype = 3;
+        col = color << 24;
+    } else {
+        drawtype = 2;
+        col = color | 0xFF000000;
+    }
+    z = f_znear;
+    rhw = f_moneoznear;
+    if (!gfCurrentLevel) {
+        z = f_znear + 10;
+        rhw = f_moneoznear + 50;
+    }
+    v[0].sx = x;
+    v[0].sy = y;
+    v[0].sz = z;
+    v[0].rhw = rhw;
+    v[0].color = col;
+    v[0].specular = 0xFF000000;
+    v[1].sx = x + w;
+    v[1].sy = y;
+    v[1].sz = z;
+    v[1].rhw = rhw;
+    v[1].color = col;
+    v[1].specular = 0xFF000000;
+    v[2].sx = x + w;
+    v[2].sy = y + h;
+    v[2].sz = z;
+    v[2].rhw = rhw;
+    v[2].color = col;
+    v[2].specular = 0xFF000000;
+    v[3].sx = x;
+    v[3].sy = y + h;
+    v[3].sz = z;
+    v[3].rhw = rhw;
+    v[3].color = col;
+    v[3].specular = 0xFF000000;
+    tex.drawtype = (uint16)drawtype;
+    tex.flag = 0;
+    tex.tpage = 0;
+    clipflags[0] = 0;
+    clipflags[1] = 0;
+    clipflags[2] = 0;
+    clipflags[3] = 0;
+    AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
+}
+
 void DrawFlash(void)
 {
     uint8 r;

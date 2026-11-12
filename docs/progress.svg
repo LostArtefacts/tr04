@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="202.95" height="12" x="0" y="0" class="named"><title>918 · 59.34%</title></rect>
 <rect width="0.44" height="12" x="202.95" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.85" height="12" x="203.39" y="0" class="nonmatching"><title>31 · 2%</title></rect>
-<rect width="131.76" height="12" x="210.24" y="0" class="todo"><title>596 · 38.53%</title></rect>
+<rect width="7.07" height="12" x="203.39" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="131.54" height="12" x="210.46" y="0" class="todo"><title>595 · 38.46%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">59.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">918</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">31</tspan> · <tspan class="todo">596</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">918</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">595</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="87.68" height="12" x="0" y="0" class="named"><title>159 KB · 25.64%</title></rect>
 <rect width="0.12" height="12" x="87.68" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.12" height="12" x="87.80" y="0" class="nonmatching"><title>17 KB · 2.67%</title></rect>
-<rect width="245.07" height="12" x="96.93" y="0" class="todo"><title>445 KB · 71.66%</title></rect>
+<rect width="9.39" height="12" x="87.80" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="244.81" height="12" x="97.19" y="0" class="todo"><title>444 KB · 71.58%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">159 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">445 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">159 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">444 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1428,7 +1428,7 @@
 <rect width="12" height="12" x="135" y="405" class="todo"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="405" class="named"><title>0x0048c240 SetFade (53 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="405" class="named"><title>0x0048c280 DoScreenFade (379 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="405" class="todo"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="405" class="nonmatching"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="405" class="named"><title>0x0048c5f0 DrawFlash (194 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="405" class="todo"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="405" class="todo"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
@@ -1994,7 +1994,7 @@
 <rect width="13.95" height="13.46" x="381.03" y="415.78" class="todo"><title>0x0040b1d0 ShotLara (486 bytes)</title></rect>
 <rect width="13.95" height="13.38" x="381.03" y="432.24" class="todo"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
 <rect width="13.95" height="13.38" x="381.03" y="448.62" class="named"><title>0x0046bce0 eleventh_cutseq_control (483 bytes)</title></rect>
-<rect width="14.18" height="13.16" x="397.98" y="96.35" class="todo"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>
+<rect width="14.18" height="13.16" x="397.98" y="96.35" class="nonmatching"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>
 <rect width="14.09" height="13.16" x="415.16" y="96.35" class="todo"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
 <rect width="14.06" height="13.16" x="432.25" y="96.35" class="named"><title>0x0044e480 PushPullKickDoorCollision (479 bytes)</title></rect>
 <rect width="14" height="13.16" x="449.31" y="96.35" class="todo"><title>0x0042f510 DoFlareLight (477 bytes)</title></rect>
