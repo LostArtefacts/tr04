@@ -10,3 +10,16 @@ sint32 LoadGame(void)
     else
         return -1;
 }
+
+sint32 SaveGame(void)
+{
+    sint32 Save;
+
+    Save = S_LoadSave(IN_SAVE, 1);
+    input = 0;
+    dbinput = 0;
+    if (Save >= 0)
+        return 1;
+    else
+        return -1;
+}

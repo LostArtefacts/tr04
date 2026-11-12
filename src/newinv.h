@@ -4,6 +4,7 @@
 #include "types.h"
 
 sint32 LoadGame(void);
+sint32 SaveGame(void);
 void DEL_picked_up_object(sint16 objnum);
 sint32 have_i_got_object(sint16 object_number);
 

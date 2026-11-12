@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="167.79" height="12" x="0" y="0" class="named"><title>759 · 49.06%</title></rect>
-<rect width="0.44" height="12" x="167.79" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="168.24" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="167.35" height="12" x="174.65" y="0" class="todo"><title>757 · 48.93%</title></rect>
+<rect width="168.02" height="12" x="0" y="0" class="named"><title>760 · 49.13%</title></rect>
+<rect width="0.44" height="12" x="168.02" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="168.46" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="167.13" height="12" x="174.87" y="0" class="todo"><title>756 · 48.87%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">49.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">759</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">757</tspan></text>
+<text text-anchor="end" x="522" y="7.50">49.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">760</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">756</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="75.93" height="12" x="0" y="0" class="named"><title>138 KB · 22.20%</title></rect>
-<rect width="0.12" height="12" x="75.93" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.05" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="257.30" height="12" x="84.70" y="0" class="todo"><title>467 KB · 75.23%</title></rect>
+<rect width="75.95" height="12" x="0" y="0" class="named"><title>138 KB · 22.21%</title></rect>
+<rect width="0.12" height="12" x="75.95" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.07" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="257.28" height="12" x="84.72" y="0" class="todo"><title>467 KB · 75.23%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">138 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">467 KB</tspan></text>
@@ -665,7 +665,7 @@
 <rect width="12" height="12" x="690" y="165" class="named"><title>0x0043b5f0 DrawLensFlares (57 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="165" class="todo"><title>0x0043b630 DrawWeaponMissile (222 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="165" class="named"><title>0x0043b710 LoadGame (30 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="165" class="todo"><title>0x0043b730 SaveGame (44 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="165" class="named"><title>0x0043b730 SaveGame (44 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="180" class="todo"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="180" class="todo"><title>0x0043b9b0 init_new_inventry (638 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="180" class="todo"><title>0x0043bc30 do_debounced_joystick_poo (334 bytes)</title></rect>
@@ -2926,7 +2926,7 @@
 <rect width="4.27" height="4.07" x="728.38" y="369.87" class="todo"><title>0x00453870 InitialiseStatuePlinth (45 bytes)</title></rect>
 <rect width="4.18" height="4.07" x="735.65" y="369.87" class="named"><title>0x004272e0 lara_as_fallback (44 bytes)</title></rect>
 <rect width="4.18" height="4.07" x="742.82" y="369.87" class="named"><title>0x004377f0 SwapCrowbar (44 bytes)</title></rect>
-<rect width="4.36" height="3.89" x="655.11" y="376.94" class="todo"><title>0x0043b730 SaveGame (44 bytes)</title></rect>
+<rect width="4.36" height="3.89" x="655.11" y="376.94" class="named"><title>0x0043b730 SaveGame (44 bytes)</title></rect>
 <rect width="4.36" height="3.89" x="655.11" y="383.84" class="named"><title>0x0046d480 special2_end (44 bytes)</title></rect>
 <rect width="4.36" height="3.89" x="655.11" y="390.73" class="named"><title>0x0046d5e0 special1_end (44 bytes)</title></rect>
 <rect width="4.36" height="3.89" x="655.11" y="397.62" class="todo"><title>0x00494620 SW_D3D_SetRenderState (44 bytes)</title></rect>
