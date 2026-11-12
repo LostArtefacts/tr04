@@ -708,7 +708,7 @@ address,size,name,symbol
 0x00445310,1407,BinocularCamera,_BinocularCamera
 0x00445890,90,LaraTorch,_LaraTorch
 0x004458f0,476,TriggerClockworkBeetle,_TriggerClockworkBeetle
-0x00445ad0,1666,ControlClockworkBeetle,_ControlClockworkBeetle
+0x00445ad0,1688,ControlClockworkBeetle,_ControlClockworkBeetle
 0x00446170,2867,GetCollisionInfo,_GetCollisionInfo
 0x00446cf0,47,FindGridShift,_FindGridShift
 0x00446d20,585,CollideStaticObjects,_CollideStaticObjects
