@@ -52,6 +52,7 @@ void DrawEffect(sint16 fx_num);
 void InterpolateArmMatrix(sint32 *mx);
 void PrintObjects(sint16 room_number);
 void mRotBoundingBoxNoPersp(sint16 *bounds, sint16 *rotatedBounds);
+void calc_animating_item_clip_window(ITEM_INFO *item, sint16 *bounds);
 
 extern STATIC_INFO static_objects[60];
 extern sint16 LightningCount;
