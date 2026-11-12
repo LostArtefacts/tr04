@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="222.84" height="12" x="0" y="0" class="named"><title>1008 · 65.16%</title></rect>
-<rect width="0.44" height="12" x="222.84" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="223.28" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="111.42" height="12" x="230.58" y="0" class="todo"><title>504 · 32.58%</title></rect>
+<rect width="223.06" height="12" x="0" y="0" class="named"><title>1009 · 65.22%</title></rect>
+<rect width="0.44" height="12" x="223.06" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="223.50" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="111.20" height="12" x="230.80" y="0" class="todo"><title>503 · 32.51%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">65.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1008</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">504</tspan></text>
+<text text-anchor="end" x="522" y="7.50">65.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1009</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">503</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="97.08" height="12" x="0" y="0" class="named"><title>176 KB · 28.39%</title></rect>
-<rect width="0.12" height="12" x="97.08" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="97.20" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="235.38" height="12" x="106.62" y="0" class="todo"><title>427 KB · 68.82%</title></rect>
+<rect width="97.13" height="12" x="0" y="0" class="named"><title>176 KB · 28.40%</title></rect>
+<rect width="0.12" height="12" x="97.13" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="97.25" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="235.32" height="12" x="106.68" y="0" class="todo"><title>427 KB · 68.81%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">176 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">427 KB</tspan></text>
@@ -116,7 +116,7 @@
 <rect width="12" height="12" x="705" y="0" class="named"><title>0x004078a0 TriggerHarpyFlame (387 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="0" class="named"><title>0x00407a30 InitialiseHarpy (90 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="0" class="todo"><title>0x00407a90 HarpyControl (1453 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="15" class="todo"><title>0x00408080 InitialiseHorseman (96 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="15" class="named"><title>0x00408080 InitialiseHorseman (96 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="15" class="todo"><title>0x004080e0 HorsemanControl (3285 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="15" class="todo"><title>0x00408e00 TriggerHorsemanRicochets (522 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="15" class="todo"><title>0x00409010 InitialiseHorse (79 bytes)</title></rect>
@@ -2670,7 +2670,7 @@
 <rect width="6.06" height="6.25" x="598.70" y="304.45" class="named"><title>0x00490210 phd_atan (98 bytes)</title></rect>
 <rect width="6" height="6.25" x="607.76" y="304.45" class="todo"><title>0x00464030 DrawTrainFloor (97 bytes)</title></rect>
 <rect width="6" height="6.25" x="616.76" y="304.45" class="named"><title>0x004761f0 LoadAIInfo (97 bytes)</title></rect>
-<rect width="5.94" height="6.25" x="625.76" y="304.45" class="todo"><title>0x00408080 InitialiseHorseman (96 bytes)</title></rect>
+<rect width="5.94" height="6.25" x="625.76" y="304.45" class="named"><title>0x00408080 InitialiseHorseman (96 bytes)</title></rect>
 <rect width="5.94" height="6.25" x="634.70" y="304.45" class="named"><title>0x00431ce0 lara_as_surfleft (96 bytes)</title></rect>
 <rect width="5.94" height="6.25" x="643.63" y="304.45" class="named"><title>0x00431d40 lara_as_surfright (96 bytes)</title></rect>
 <rect width="5.94" height="6.25" x="652.57" y="304.45" class="named"><title>0x0044e420 PushPullKickDoorControl (96 bytes)</title></rect>
