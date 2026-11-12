@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="167.57" height="12" x="0" y="0" class="named"><title>758 · 49%</title></rect>
-<rect width="0.44" height="12" x="167.57" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="168.02" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="167.57" height="12" x="174.43" y="0" class="todo"><title>758 · 49%</title></rect>
+<rect width="167.79" height="12" x="0" y="0" class="named"><title>759 · 49.06%</title></rect>
+<rect width="0.44" height="12" x="167.79" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="168.24" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="167.35" height="12" x="174.65" y="0" class="todo"><title>757 · 48.93%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">49.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">758</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">758</tspan></text>
+<text text-anchor="end" x="522" y="7.50">49.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">759</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">757</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="75.91" height="12" x="0" y="0" class="named"><title>138 KB · 22.20%</title></rect>
-<rect width="0.12" height="12" x="75.91" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.03" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="257.32" height="12" x="84.68" y="0" class="todo"><title>467 KB · 75.24%</title></rect>
+<rect width="75.93" height="12" x="0" y="0" class="named"><title>138 KB · 22.20%</title></rect>
+<rect width="0.12" height="12" x="75.93" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.05" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="257.30" height="12" x="84.70" y="0" class="todo"><title>467 KB · 75.23%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">138 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">467 KB</tspan></text>
@@ -664,7 +664,7 @@
 <rect width="12" height="12" x="675" y="165" class="todo"><title>0x0043b420 TriggerFlashSmoke (461 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="165" class="named"><title>0x0043b5f0 DrawLensFlares (57 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="165" class="todo"><title>0x0043b630 DrawWeaponMissile (222 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="165" class="todo"><title>0x0043b710 LoadGame (30 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="165" class="named"><title>0x0043b710 LoadGame (30 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="165" class="todo"><title>0x0043b730 SaveGame (44 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="180" class="todo"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="180" class="todo"><title>0x0043b9b0 init_new_inventry (638 bytes)</title></rect>
@@ -3000,7 +3000,7 @@
 <rect width="3.60" height="3.32" x="743.40" y="390.72" class="named"><title>0x00473b90 S_SoundSampleIsPlaying (31 bytes)</title></rect>
 <rect width="3.65" height="3.28" x="675.79" y="397.05" class="todo"><title>0x00481860 InitialiseSortList (31 bytes)</title></rect>
 <rect width="3.65" height="3.17" x="675.79" y="403.32" class="named"><title>0x00428450 lara_col_slide (30 bytes)</title></rect>
-<rect width="3.65" height="3.17" x="675.79" y="409.49" class="todo"><title>0x0043b710 LoadGame (30 bytes)</title></rect>
+<rect width="3.65" height="3.17" x="675.79" y="409.49" class="named"><title>0x0043b710 LoadGame (30 bytes)</title></rect>
 <rect width="3.65" height="3.17" x="675.79" y="415.66" class="named"><title>0x0044c770 TriggerCDTrack (30 bytes)</title></rect>
 <rect width="3.65" height="3.17" x="675.79" y="421.83" class="named"><title>0x0046b6f0 fourth_cutseq_init (30 bytes)</title></rect>
 <rect width="3.65" height="3.17" x="675.79" y="427.99" class="named"><title>0x0046fe40 CLSetup (30 bytes)</title></rect>
