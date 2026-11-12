@@ -15,6 +15,7 @@
 #include "laraflar.h"
 #include "newinv.h"
 #include "savegame.h"
+#include "specific/input.h"
 #include "specific/3dmath.h"
 #include "specific/audio.h"
 #include "specific/function_stubs.h"
@@ -121,6 +122,39 @@ void TriggerBikeBeam(ITEM_INFO *item)
         LaraTorch(&s, &d, item->pos.y_rot, intensity);
     else
         bLaraTorch = 0;
+}
+
+sint32 GetOnBike(sint16 item_number, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *l;
+    FLOOR_INFO *floor;
+    sint32 dx, dz, h;
+    sint16 room_number, ang;
+    uint16 rot;
+
+    item = &items[item_number];
+    l = lara_item;
+    if ((sint16)(item->flags & IFL_INVISIBLE) || lara.gun_status != LG_NO_ARMS || l->gravity_status)
+        return 0;
+    if (ABS(item->pos.y_pos - l->pos.y_pos) > 256 || (!(input & IN_ACTION) && GLOBAL_inventoryitemchosen != PUZZLE_ITEM1))
+        return 0;
+    dx = l->pos.x_pos - item->pos.x_pos;
+    dz = l->pos.z_pos - item->pos.z_pos;
+    if (SQUARE(dz) + SQUARE(dx) > 170000)
+        return 0;
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos) < -32000)
+        return 0;
+    h = phd_atan(item->pos.z_pos - l->pos.z_pos, item->pos.x_pos - l->pos.x_pos);
+    ang = (sint16)(h - item->pos.y_rot);
+    if (ang > -8190 && ang < 24570)
+        return 0;
+    rot = l->pos.y_rot - item->pos.y_rot;
+    if (rot <= 40950 || rot >= 57330)
+        return 0;
+    return 1;
 }
 
 void DrawBikeExtras(ITEM_INFO *item)
