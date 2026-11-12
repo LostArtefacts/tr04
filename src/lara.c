@@ -36,6 +36,13 @@ sint16 LaraCeilingFront(ITEM_INFO *item, sint16 ang, sint32 dist, sint32 h)
     return (sint16)height;
 }
 
+void lara_as_duckl(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if ((input & (IN_DUCK | IN_LEFT)) != (IN_DUCK | IN_LEFT) || item->hit_points <= 0)
+        item->goal_anim_state = AS_DUCK;
+    item->pos.y_rot -= 273;
+}
+
 sint32 LaraFallen(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (lara.water_status != LW_WADE && coll->mid_floor > STEPUP_HEIGHT) {
