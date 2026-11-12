@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="224.17" height="12" x="0" y="0" class="named"><title>1014 · 65.55%</title></rect>
-<rect width="0.44" height="12" x="224.17" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="224.61" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="110.09" height="12" x="231.91" y="0" class="todo"><title>498 · 32.19%</title></rect>
+<rect width="224.39" height="12" x="0" y="0" class="named"><title>1015 · 65.61%</title></rect>
+<rect width="0.44" height="12" x="224.39" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="224.83" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="109.87" height="12" x="232.13" y="0" class="todo"><title>497 · 32.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">65.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1014</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">498</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1015</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">497</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="97.37" height="12" x="0" y="0" class="named"><title>177 KB · 28.47%</title></rect>
-<rect width="0.12" height="12" x="97.37" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="97.49" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="235.09" height="12" x="106.91" y="0" class="todo"><title>426 KB · 68.74%</title></rect>
+<rect width="97.43" height="12" x="0" y="0" class="named"><title>177 KB · 28.49%</title></rect>
+<rect width="0.12" height="12" x="97.43" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="97.55" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="235.02" height="12" x="106.98" y="0" class="todo"><title>426 KB · 68.72%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">177 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">426 KB</tspan></text>
@@ -243,7 +243,7 @@
 <rect width="12" height="12" x="360" y="45" class="todo"><title>0x00418f10 ClearCutSceneCamera (130 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="45" class="todo"><title>0x00418fa0 GetAIEnemy (199 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="45" class="todo"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="45" class="todo"><title>0x00419560 InitialiseVoncroy (116 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="45" class="named"><title>0x00419560 InitialiseVoncroy (116 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="45" class="todo"><title>0x004195e0 VoncroyControl (5975 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="45" class="todo"><title>0x0041af00 VoncroyRaceControl (3869 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="45" class="named"><title>0x0041bf00 InitialiseWildboar (90 bytes)</title></rect>
@@ -2587,7 +2587,7 @@
 <rect width="7.01" height="6.50" x="651.26" y="276.24" class="named"><title>0x0048fd40 mGetAngle (118 bytes)</title></rect>
 <rect width="6.95" height="6.50" x="661.27" y="276.24" class="named"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
 <rect width="6.95" height="6.50" x="671.22" y="276.24" class="named"><title>0x004476d0 TrapCollision (117 bytes)</title></rect>
-<rect width="6.89" height="6.50" x="681.17" y="276.24" class="todo"><title>0x00419560 InitialiseVoncroy (116 bytes)</title></rect>
+<rect width="6.89" height="6.50" x="681.17" y="276.24" class="named"><title>0x00419560 InitialiseVoncroy (116 bytes)</title></rect>
 <rect width="6.89" height="6.50" x="691.06" y="276.24" class="named"><title>0x00439b80 SetGunFlash (116 bytes)</title></rect>
 <rect width="6.89" height="6.50" x="700.95" y="276.24" class="named"><title>0x0046d1f0 handle_lara_chatting (116 bytes)</title></rect>
 <rect width="6.83" height="6.50" x="710.85" y="276.24" class="named"><title>0x00484bf0 REG_ReadBool (115 bytes)</title></rect>

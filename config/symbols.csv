@@ -2643,6 +2643,7 @@ address,size,name,symbol
 0x007fe288,1,bVoncroyCutScene,_bVoncroyCutScene
 0x007fe28c,4,items,_items
 0x007fe290,4,height_type,_height_type
+0x007fe2a0,64,VonCroyCutFlags,_VonCroyCutFlags
 0x007fe2e0,4,ClosestItem,_ClosestItem
 0x007fe2e4,1,IsAtmospherePlaying,_IsAtmospherePlaying
 0x007fe2e8,4,OutsideRoomOffsets,_OutsideRoomOffsets
