@@ -53,5 +53,11 @@ sint32 TestBoundsCollideTeethSpikes(ITEM_INFO *item);
 void FlameEmitter2Control(sint16 item_number);
 void ControlHammer(sint16 item_number);
 void ControlMineHelicopter(sint16 item_number);
+void ControlBurningFloor(sint16 item_number);
+void ControlRollingBall(sint16 item_number);
+void ControlSprinkler(sint16 item_number);
+void FlameControl(sint16 fx_number);
+void FlameEmitter3Control(sint16 item_number);
+void FlameEmitterControl(sint16 item_number);
 
 #endif
