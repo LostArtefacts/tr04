@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="196.09" height="12" x="0" y="0" class="named"><title>887 · 57.34%</title></rect>
-<rect width="0.44" height="12" x="196.09" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="196.53" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="138.83" height="12" x="203.17" y="0" class="todo"><title>628 · 40.59%</title></rect>
+<rect width="196.31" height="12" x="0" y="0" class="named"><title>888 · 57.40%</title></rect>
+<rect width="0.44" height="12" x="196.31" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="196.76" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="138.61" height="12" x="203.39" y="0" class="todo"><title>627 · 40.53%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">57.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">887</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">628</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">888</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">627</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="83.88" height="12" x="0" y="0" class="named"><title>152 KB · 24.53%</title></rect>
-<rect width="0.12" height="12" x="83.88" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="84" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="249.09" height="12" x="92.91" y="0" class="todo"><title>452 KB · 72.83%</title></rect>
+<rect width="84.11" height="12" x="0" y="0" class="named"><title>153 KB · 24.59%</title></rect>
+<rect width="0.12" height="12" x="84.11" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="84.23" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="248.86" height="12" x="93.14" y="0" class="todo"><title>451 KB · 72.77%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">152 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">452 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">153 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">451 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1514,7 +1514,7 @@
 <rect width="12" height="12" x="675" y="420" class="named"><title>0x00492280 DXEnumDisplayModes (281 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="420" class="named"><title>0x004923a0 BPPToDDBD (136 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="420" class="todo"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="420" class="todo"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="420" class="named"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="420" class="named"><title>0x00492ad0 DXEnumZBufferFormats (101 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="435" class="named"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="435" class="named"><title>0x00492b90 DXSetVideoMode (80 bytes)</title></rect>
@@ -2042,7 +2042,7 @@
 <rect width="12.49" height="13.24" x="397.98" y="161.18" class="todo"><title>0x00499300 Func499300 (428 bytes)</title></rect>
 <rect width="12.49" height="13.21" x="397.98" y="177.42" class="todo"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
 <rect width="12.49" height="13.18" x="397.98" y="193.63" class="todo"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
-<rect width="12.49" height="13.18" x="397.98" y="209.81" class="todo"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
+<rect width="12.49" height="13.18" x="397.98" y="209.81" class="named"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
 <rect width="12.49" height="13.15" x="397.98" y="226" class="named"><title>0x00456910 BurningRopeCollision (425 bytes)</title></rect>
 <rect width="12.49" height="13.15" x="397.98" y="242.15" class="todo"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
 <rect width="12.49" height="13.06" x="397.98" y="258.30" class="named"><title>0x00432bf0 GetWaterDepth (422 bytes)</title></rect>

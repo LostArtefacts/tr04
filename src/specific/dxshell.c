@@ -174,6 +174,50 @@ sint32 BPPToDDBD(sint32 BPP)
     }
 }
 
+HRESULT CALLBACK DXEnumTextureFormats(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext)
+{
+    DXD3DDEVICE *d3d;
+    DXTEXTUREINFO *tex;
+    sint32 nTextureInfos;
+
+    if (!(lpDDPixFmt->dwFlags & DDPF_ALPHAPIXELS) || !(lpDDPixFmt->dwFlags & DDPF_RGB))
+        return DDENUMRET_OK;
+    d3d = (DXD3DDEVICE *)lpContext;
+    nTextureInfos = d3d->nTextureInfos;
+    d3d->TextureInfos = (DXTEXTUREINFO *)AddStruct(d3d->TextureInfos, nTextureInfos, sizeof(DXTEXTUREINFO));
+    tex = &d3d->TextureInfos[nTextureInfos];
+    memcpy(&tex->ddpf, lpDDPixFmt, sizeof(DDPIXELFORMAT));
+    if (lpDDPixFmt->dwFlags & DDPF_PALETTEINDEXED8) {
+        tex->bPalette = 1;
+        tex->bpp = 8;
+        Log(3, "8 Bit");
+    } else if (lpDDPixFmt->dwFlags & DDPF_PALETTEINDEXED4) {
+        tex->bPalette = 1;
+        tex->bpp = 4;
+        Log(3, "4 Bit");
+    } else {
+        tex->bPalette = 0;
+        tex->bpp = lpDDPixFmt->dwRGBBitCount;
+        if (lpDDPixFmt->dwFlags & DDPF_RGB) {
+            if (lpDDPixFmt->dwFlags & DDPF_ALPHAPIXELS) {
+                DXBitMask2ShiftCnt(lpDDPixFmt->dwRBitMask, &tex->rshift, &tex->rbpp);
+                DXBitMask2ShiftCnt(lpDDPixFmt->dwGBitMask, &tex->gshift, &tex->gbpp);
+                DXBitMask2ShiftCnt(lpDDPixFmt->dwBBitMask, &tex->bshift, &tex->bbpp);
+                DXBitMask2ShiftCnt(lpDDPixFmt->dwRGBAlphaBitMask, &tex->ashift, &tex->abpp);
+                tex->bAlpha = 1;
+                Log(3, "%d Bit %d%d%d%d RGBA", tex->bpp, tex->rbpp, tex->gbpp, tex->bbpp, tex->abpp);
+            } else {
+                DXBitMask2ShiftCnt(lpDDPixFmt->dwRBitMask, &tex->rshift, &tex->rbpp);
+                DXBitMask2ShiftCnt(lpDDPixFmt->dwGBitMask, &tex->gshift, &tex->gbpp);
+                DXBitMask2ShiftCnt(lpDDPixFmt->dwBBitMask, &tex->bshift, &tex->bbpp);
+                Log(3, "%d Bit %d%d%d RGB", tex->bpp, tex->rbpp, tex->gbpp, tex->bbpp);
+            }
+        }
+    }
+    d3d->nTextureInfos++;
+    return D3DENUMRET_OK;
+}
+
 HRESULT CALLBACK DXEnumZBufferFormats(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext)
 {
     DXD3DDEVICE *d3d;
