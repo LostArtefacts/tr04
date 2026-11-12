@@ -1393,7 +1393,7 @@ address,size,name,symbol
 0x0048f960,8,RestoreFPCW,_RestoreFPCW
 0x0048f970,5,j_nullsub_11,_j_nullsub_11
 0x0048f980,1,nullsub_11,_nullsub_11
-0x0048f981,13,Func48f981,
+0x0048f981,13,Func48f981,_Func48f981
 0x0048f990,5,j_nullsub_12,_j_nullsub_12
 0x0048f9a0,1,nullsub_12,_nullsub_12
 0x0048f9a1,13,Func48f9a1,
@@ -2119,6 +2119,8 @@ address,size,name,symbol
 0x004b27bc,18,Var4b27bc,_Var4b27bc
 0x004b27d0,3,Var4b27d0,_Var4b27d0
 0x004b27d4,14,Var4b27d4,_Var4b27d4
+0x004b2acc,5,Var4b2acc,_Var4b2acc
+0x004b2ad4,16,Var4b2ad4,_Var4b2ad4
 0x004b2b04,4,water_abs,_water_abs
 0x004b2b08,8,water_shimmer,_water_shimmer
 0x004b2b10,8,water_choppy,_water_choppy
@@ -2339,7 +2341,7 @@ address,size,name,symbol
 0x0053339c,4,nAnimUVRanges,_nAnimUVRanges
 0x005333a0,1,cd_drive,_cd_drive
 0x005333a4,4,FileData,_FileData
-0x005333a8,4,LevelLoadingThread,_LevelLoadingThread
+0x005333a8,20,LevelLoadingThread,_LevelLoadingThread
 0x005333c0,1680,static_objects,_static_objects
 0x00533a58,4,CompressedData,_CompressedData
 0x00533a5c,2,number_rooms,_number_rooms

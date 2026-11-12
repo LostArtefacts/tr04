@@ -44,7 +44,18 @@ extern TEXTURESTRUCT *textinfo;
 extern SPRITESTRUCT *spriteinfo;
 extern float AnimatingTexturesV[16][8][3];
 
+typedef struct thread_info {
+    volatile sint32 active;
+    sint32 unk;
+    volatile sint32 ended;
+    uint32 handle;
+    uint32 address;
+} THREAD;
+
+extern THREAD LevelLoadingThread;
 extern char cd_drive;
+extern char *gfFilenameWad;
+extern uint16 *gfFilenameOffset;
 
 FILE *FileOpen(const char *name);
 void FreeTextures(void);
@@ -60,6 +71,8 @@ uint8 LoadBoxes(void);
 void S_GetUVRotateTextures(void);
 uint8 Decompress(char *pDest, char *pCompressed, sint32 compressedSize, sint32 size);
 void FreeLevel(void);
+unsigned int __stdcall LoadLevel(void *name);
+sint32 S_LoadLevelFile(sint32 num);
 uint8 LoadSamples(void);
 
 #endif

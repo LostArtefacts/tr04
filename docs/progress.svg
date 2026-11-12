@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="224.39" height="12" x="0" y="0" class="named"><title>1015 · 65.61%</title></rect>
 <rect width="0.44" height="12" x="224.39" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.18" height="12" x="224.83" y="0" class="nonmatching"><title>37 · 2.39%</title></rect>
-<rect width="108.99" height="12" x="233.01" y="0" class="todo"><title>493 · 31.87%</title></rect>
+<rect width="8.40" height="12" x="224.83" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="108.77" height="12" x="233.23" y="0" class="todo"><title>492 · 31.80%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">65.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1015</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">37</tspan> · <tspan class="todo">493</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1015</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">492</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="97.43" height="12" x="0" y="0" class="named"><title>177 KB · 28.49%</title></rect>
 <rect width="0.12" height="12" x="97.43" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.05" height="12" x="97.55" y="0" class="nonmatching"><title>18 KB · 2.94%</title></rect>
-<rect width="234.40" height="12" x="107.60" y="0" class="todo"><title>425 KB · 68.54%</title></rect>
+<rect width="10.16" height="12" x="97.55" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="234.29" height="12" x="107.71" y="0" class="todo"><title>425 KB · 68.51%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">177 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">425 KB</tspan></text>
@@ -1275,7 +1275,7 @@
 <rect width="12" height="12" x="90" y="360" class="named"><title>0x00476410 S_GetUVRotateTextures (95 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="360" class="todo"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="360" class="named"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="360" class="todo"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="360" class="nonmatching"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="360" class="named"><title>0x00476990 _NVisible (57 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="360" class="named"><title>0x004769d0 _Visible (57 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="360" class="named"><title>0x00476a10 SetCullCW (11 bytes)</title></rect>
@@ -2350,7 +2350,7 @@
 <rect width="8.92" height="8.58" x="495.50" y="326.54" class="named"><title>0x00436250 TriggerDynamic_MIRROR (198 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.50" y="338.12" class="named"><title>0x00439e40 Fade (198 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.50" y="349.70" class="named"><title>0x0046b600 CalculateObjectLightingLaraCutSeq (198 bytes)</title></rect>
-<rect width="8.92" height="8.58" x="495.50" y="361.27" class="todo"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>
+<rect width="8.92" height="8.58" x="495.50" y="361.27" class="nonmatching"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>
 <rect width="8.92" height="8.53" x="495.50" y="372.85" class="named"><title>0x004237b0 TestMonkeyRight (197 bytes)</title></rect>
 <rect width="8.92" height="8.53" x="495.50" y="384.39" class="named"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
 <rect width="8.92" height="8.53" x="495.50" y="395.92" class="named"><title>0x00467ac0 JeepExplode (197 bytes)</title></rect>

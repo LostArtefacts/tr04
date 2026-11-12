@@ -301,3 +301,20 @@ void FreeLevel(void)
     malloc_ptr = malloc_buffer;
     malloc_free = malloc_size;
 }
+
+#ifndef TR4_EXE
+sint32 S_LoadLevelFile(sint32 num)
+{
+    char name[80];
+
+    Log(2, "S_LoadLevelFile");
+    strcpy(name, &gfFilenameWad[gfFilenameOffset[num]]);
+    strcat(name, ".TR4");
+    LevelLoadingThread.active = 1;
+    LevelLoadingThread.ended = 0;
+    LevelLoadingThread.handle = _beginthreadex(0, 0, LoadLevel, name, 0, &LevelLoadingThread.address);
+    while (LevelLoadingThread.active)
+        ;
+    return 1;
+}
+#endif
