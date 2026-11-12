@@ -190,7 +190,7 @@ address,size,name,symbol
 0x0041d010,304,CalcLaraMatrices,_CalcLaraMatrices
 0x0041d140,2131,DrawLara,_DrawLara
 0x0041d9a0,324,GetLaraJointPos,_GetLaraJointPos
-0x0041daf0,2835,Rich_CalcLaraMatrices_Normal,_Rich_CalcLaraMatrices_Normal
+0x0041daf0,2872,Rich_CalcLaraMatrices_Normal,_Rich_CalcLaraMatrices_Normal
 0x0041e630,3076,Rich_CalcLaraMatrices_Interpolated,_Rich_CalcLaraMatrices_Interpolated
 0x0041f234,,jpt_41EA46,_jpt_41EA46
 0x0041f260,289,SetLaraUnderwaterNodes,_SetLaraUnderwaterNodes
