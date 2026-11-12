@@ -8,6 +8,11 @@
 #include "dxshell.h"
 #include "function_table.h"
 #include "output.h"
+#include "d3dmatrix.h"
+#include "3dmath.h"
+#include "lighting.h"
+#include "file.h"
+#include "gamemain.h"
 
 void ClearSurfaces(void)
 {
@@ -82,6 +87,99 @@ void WinProcMsg(void)
             DispatchMessage(&msg);
         }
     } while (!thread_ended && msg.message != WM_QUIT);
+}
+
+void WinProcessCommands(sint32 cmd)
+{
+    switch (cmd) {
+    case 40001:
+    case 40002: {
+        sint32 odm;
+
+        if (LevelLoadingThread.active || App.fmv)
+            return;
+        Log(5, "Change Video Mode");
+        Log(5, "HangGameThread");
+        while (App.dx.InScene) {
+        }
+        App.dx.WaitAtBeginScene = 1;
+        while (!App.dx.InScene) {
+        }
+        SuspendThread((HANDLE)MainThread.handle);
+        Log(5, "Game Thread Suspended");
+        odm = App.DXInfo.nDisplayMode;
+        if (cmd == 40001) {
+            App.DXInfo.nDisplayMode++;
+            if (App.DXInfo.nDisplayMode >= G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].nDisplayModes)
+                App.DXInfo.nDisplayMode = G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].nDisplayModes - 1;
+            while (G_dxinfo->DDInfo[App.DXInfo.nDD].D3DDevices[App.DXInfo.nD3D].DisplayModes[App.DXInfo.nDisplayMode].bpp != G_dxinfo->DDInfo[App.DXInfo.nDD].D3DDevices[App.DXInfo.nD3D].DisplayModes[odm].bpp) {
+                App.DXInfo.nDisplayMode++;
+                if (App.DXInfo.nDisplayMode >= G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].nDisplayModes) {
+                    App.DXInfo.nDisplayMode = odm;
+                    break;
+                }
+            }
+        } else {
+            App.DXInfo.nDisplayMode--;
+            if (App.DXInfo.nDisplayMode < 0)
+                App.DXInfo.nDisplayMode = 0;
+            while (G_dxinfo->DDInfo[App.DXInfo.nDD].D3DDevices[App.DXInfo.nD3D].DisplayModes[App.DXInfo.nDisplayMode].bpp != G_dxinfo->DDInfo[App.DXInfo.nDD].D3DDevices[App.DXInfo.nD3D].DisplayModes[odm].bpp) {
+                App.DXInfo.nDisplayMode--;
+                if (App.DXInfo.nDisplayMode < 0) {
+                    App.DXInfo.nDisplayMode = odm;
+                    break;
+                }
+            }
+        }
+        if (odm != App.DXInfo.nDisplayMode) {
+            FreeD3DLights();
+            if (!DXChangeVideoMode()) {
+                App.DXInfo.nDisplayMode = odm;
+                DXChangeVideoMode();
+            }
+            HWInitialise();
+            CreateD3DLights();
+            InitWindow(0, 0, App.dx.dwRenderWidth, App.dx.dwRenderHeight, 20, 20480, 80, App.dx.dwRenderWidth, App.dx.dwRenderHeight);
+            InitFont();
+            S_InitD3DMatrix();
+            SetD3DViewMatrix();
+        }
+        ResumeThread((HANDLE)MainThread.handle);
+        App.dx.WaitAtBeginScene = 0;
+        Log(5, "Game Thread Resumed");
+        resChangeCounter = 120;
+        break;
+    }
+    case 8:
+        if (App.fmv || !(G_dxinfo->DDInfo[G_dxinfo->nDD].DDCaps.dwCaps2 & DDCAPS2_CANRENDERWINDOWED) || LevelLoadingThread.active)
+            return;
+        Log(6, "KA_ALTENTER");
+        Log(5, "HangGameThread");
+        while (App.dx.InScene) {
+        }
+        App.dx.WaitAtBeginScene = 1;
+        while (!App.dx.InScene) {
+        }
+        SuspendThread((HANDLE)MainThread.handle);
+        Log(5, "Game Thread Suspended");
+        FreeD3DLights();
+        DXToggleFullScreen();
+        HWInitialise();
+        CreateD3DLights();
+        S_InitD3DMatrix();
+        SetD3DViewMatrix();
+        ResumeThread((HANDLE)MainThread.handle);
+        App.dx.WaitAtBeginScene = 0;
+        Log(5, "Game Thread Resumed");
+        if (App.dx.Flags & 1) {
+            SetCursor(0);
+            ShowCursor(0);
+        } else {
+            SetCursor(LoadCursor(App.hInstance, MAKEINTRESOURCE(104)));
+            ShowCursor(1);
+        }
+        break;
+    }
 }
 
 uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex)
