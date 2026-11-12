@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="245.90" height="12" x="0" y="0" class="named"><title>1113 · 71.90%</title></rect>
-<rect width="0.44" height="12" x="245.90" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="16.13" height="12" x="246.34" y="0" class="nonmatching"><title>73 · 4.72%</title></rect>
-<rect width="79.53" height="12" x="262.47" y="0" class="todo"><title>360 · 23.26%</title></rect>
+<rect width="246.12" height="12" x="0" y="0" class="named"><title>1114 · 71.96%</title></rect>
+<rect width="0.44" height="12" x="246.12" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="16.13" height="12" x="246.56" y="0" class="nonmatching"><title>73 · 4.72%</title></rect>
+<rect width="79.31" height="12" x="262.69" y="0" class="todo"><title>359 · 23.19%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">72.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1113</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">73</tspan> · <tspan class="todo">360</tspan></text>
+<text text-anchor="end" x="522" y="7.50">72.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1114</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">73</tspan> · <tspan class="todo">359</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="127.45" height="12" x="0" y="0" class="named"><title>232 KB · 37.27%</title></rect>
-<rect width="0.12" height="12" x="127.45" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="29.29" height="12" x="127.57" y="0" class="nonmatching"><title>53 KB · 8.56%</title></rect>
-<rect width="185.14" height="12" x="156.86" y="0" class="todo"><title>337 KB · 54.13%</title></rect>
+<rect width="127.71" height="12" x="0" y="0" class="named"><title>232 KB · 37.34%</title></rect>
+<rect width="0.12" height="12" x="127.71" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="29.29" height="12" x="127.83" y="0" class="nonmatching"><title>53 KB · 8.56%</title></rect>
+<rect width="184.88" height="12" x="157.12" y="0" class="todo"><title>337 KB · 54.06%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">37.3%</text>
+<text text-anchor="end" x="522" y="24.50">37.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">232 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">53 KB</tspan> · <tspan class="todo">337 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -756,7 +756,7 @@
 <rect width="12" height="12" x="555" y="195" class="named"><title>0x004425d0 AlertNearbyGuards (149 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="195" class="named"><title>0x00442670 AIGuard (162 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="195" class="todo"><title>0x00442720 GetAITarget (831 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="195" class="todo"><title>0x00442a60 FindAITargetObject (469 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="195" class="named"><title>0x00442a60 FindAITargetObject (469 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="195" class="named"><title>0x00442c40 SameZone (240 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="195" class="named"><title>0x00442d30 CreatureYRot (54 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="195" class="named"><title>0x00442d70 MoveCreature3DPos (249 bytes)</title></rect>
@@ -2005,7 +2005,7 @@
 <rect width="13.84" height="13.13" x="517.30" y="96.63" class="named"><title>0x004570f0 StatuePlinthCollision (472 bytes)</title></rect>
 <rect width="13.81" height="13.13" x="534.15" y="96.63" class="nonmatching"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
 <rect width="13.75" height="13.13" x="550.96" y="96.63" class="named"><title>0x00434dc0 TriggerExplosionSmokeEnd (469 bytes)</title></rect>
-<rect width="13.75" height="13.13" x="567.71" y="96.63" class="todo"><title>0x00442a60 FindAITargetObject (469 bytes)</title></rect>
+<rect width="13.75" height="13.13" x="567.71" y="96.63" class="named"><title>0x00442a60 FindAITargetObject (469 bytes)</title></rect>
 <rect width="13.70" height="13.13" x="584.47" y="96.63" class="todo"><title>0x00424e90 UseInventoryItems (467 bytes)</title></rect>
 <rect width="13.64" height="13.13" x="601.17" y="96.63" class="named"><title>0x0040daf0 SasFireGrenade (465 bytes)</title></rect>
 <rect width="13.58" height="13.13" x="617.80" y="96.63" class="named"><title>0x00404a00 TriggerHammerSmoke (463 bytes)</title></rect>

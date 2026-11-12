@@ -909,6 +909,49 @@ sint16 AIGuard(CREATURE_INFO *creature)
     return 0;
 }
 
+void FindAITargetObject(CREATURE_INFO *creature, sint16 obj_num)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *enemy;
+    AIOBJECT *aiObj;
+    ROOM_INFO *r;
+    sint16 *zone;
+    sint16 zone_number, ai_zone;
+    sint16 i;
+
+    item = &items[creature->item_num];
+    aiObj = AIObjects;
+    for (i = 0; i < nAIObjects; i++, aiObj++) {
+        if (aiObj->object_number == obj_num && aiObj->trigger_flags == item->item_flags[3] && aiObj->room_number != 255) {
+            zone = ground_zone[creature->LOT.zone][flip_status];
+            r = &room[item->room_number];
+            item->box_number = r->floor[((item->pos.z_pos - r->z) >> 10) + r->x_size * ((item->pos.x_pos - r->x) >> 10)].box;
+            zone_number = zone[item->box_number];
+            r = &room[aiObj->room_number];
+            aiObj->box_number = r->floor[((aiObj->z - r->z) >> 10) + r->x_size * ((aiObj->x - r->x) >> 10)].box;
+            ai_zone = zone[aiObj->box_number];
+            if (zone_number == ai_zone) {
+                enemy = &creature->ai_target;
+                creature->enemy = enemy;
+                enemy->object_number = aiObj->object_number;
+                enemy->room_number = aiObj->room_number;
+                enemy->pos.x_pos = aiObj->x;
+                enemy->pos.y_pos = aiObj->y;
+                enemy->pos.z_pos = aiObj->z;
+                enemy->pos.y_rot = aiObj->y_rot;
+                enemy->flags = aiObj->flags;
+                enemy->trigger_flags = aiObj->trigger_flags;
+                enemy->box_number = aiObj->box_number;
+                if (!(enemy->flags & 0x20)) {
+                    enemy->pos.x_pos += 256 * phd_sin(enemy->pos.y_rot) >> W2V_SHIFT;
+                    enemy->pos.z_pos += 256 * phd_cos(enemy->pos.y_rot) >> W2V_SHIFT;
+                }
+                break;
+            }
+        }
+    }
+}
+
 sint16 SameZone(CREATURE_INFO *creature, ITEM_INFO *target_item)
 {
     ITEM_INFO *item;
