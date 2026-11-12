@@ -61,6 +61,8 @@ extern char UseForcedFixedCamera;
 extern sint32 BinocularRange;
 extern sint32 BinocularOn;
 extern OLD_CAMERA old_cam;
+extern GAME_VECTOR last_ideal;
+extern uint8 camerasnaps;
 extern sint32 Unk7e71cc;
 extern sint32 BinocularOldCamera;
 extern sint32 bLaraTorch;

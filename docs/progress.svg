@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="256.94" height="12" x="0" y="0" class="named"><title>1163 · 75.13%</title></rect>
 <rect width="0.66" height="12" x="256.94" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="20.10" height="12" x="257.60" y="0" class="nonmatching"><title>91 · 5.88%</title></rect>
-<rect width="64.29" height="12" x="277.71" y="0" class="todo"><title>291 · 18.80%</title></rect>
+<rect width="20.33" height="12" x="257.60" y="0" class="nonmatching"><title>92 · 5.94%</title></rect>
+<rect width="64.07" height="12" x="277.93" y="0" class="todo"><title>290 · 18.73%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1163</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">91</tspan> · <tspan class="todo">291</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1163</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">92</tspan> · <tspan class="todo">290</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="143.49" height="12" x="0" y="0" class="named"><title>261 KB · 41.96%</title></rect>
 <rect width="0.13" height="12" x="143.49" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="38.72" height="12" x="143.62" y="0" class="nonmatching"><title>71 KB · 11.32%</title></rect>
-<rect width="159.66" height="12" x="182.34" y="0" class="todo"><title>291 KB · 46.69%</title></rect>
+<rect width="39.64" height="12" x="143.62" y="0" class="nonmatching"><title>72 KB · 11.59%</title></rect>
+<rect width="158.74" height="12" x="183.26" y="0" class="todo"><title>289 KB · 46.41%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">42.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">261 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">71 KB</tspan> · <tspan class="todo">291 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">261 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">72 KB</tspan> · <tspan class="todo">289 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -761,7 +761,7 @@
 <rect width="12" height="12" x="630" y="195" class="named"><title>0x00442d30 CreatureYRot (54 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="195" class="named"><title>0x00442d70 MoveCreature3DPos (249 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="195" class="named"><title>0x00442e70 InitialiseCamera (200 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="195" class="todo"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="195" class="nonmatching"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="195" class="named"><title>0x004435e0 ChaseCamera (1127 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="named"><title>0x00443a50 CombatCamera (1145 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="todo"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
@@ -1688,7 +1688,7 @@
 <rect width="26.93" height="24.53" x="150.56" y="409.93" class="todo"><title>0x00496ae0 SW_TriSetupGA (1717 bytes)</title></rect>
 <rect width="26.93" height="24.53" x="150.56" y="437.47" class="todo"><title>0x004984e0 SW_TriSetupGTA (1717 bytes)</title></rect>
 <rect width="24.75" height="26.69" x="180.50" y="0" class="todo"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
-<rect width="24.75" height="26.24" x="180.50" y="29.69" class="todo"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
+<rect width="24.75" height="26.24" x="180.50" y="29.69" class="nonmatching"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
 <rect width="24.75" height="26.17" x="180.50" y="58.92" class="nonmatching"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
 <rect width="24.75" height="26.14" x="180.50" y="88.09" class="todo"><title>0x00401080 AhmetControl (1681 bytes)</title></rect>
 <rect width="24.75" height="25.91" x="180.50" y="117.24" class="todo"><title>0x00445ad0 ControlClockworkBeetle (1666 bytes)</title></rect>
