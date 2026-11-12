@@ -46,6 +46,52 @@ void DrawJeepExtras(ITEM_INFO *item)
     DrawJeepSpeedo(phd_winwidth - 64, phd_winheight - 16, jeep->velocity, 0x6000, 0x8000, 32, jeep->gear);
 }
 
+void TriggerExhaustSmoke_jeep(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 velocity, sint32 thing)
+{
+    SPARKS *sptr;
+    sint32 size, zv;
+
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sB = sptr->sG = sptr->sR = 0;
+    sptr->dB = 32;
+    sptr->dG = sptr->dR = 16;
+    if (thing) {
+        sptr->dG = sptr->dR = (uint8)((16 * velocity) >> 5);
+        sptr->dB = (uint8)((32 * velocity) >> 5);
+    }
+    sptr->ColFadeSpeed = 4;
+    sptr->FadeToBlack = 4;
+    sptr->sLife = sptr->Life = (uint8)((GetRandomControl() & 3) - (velocity >> 12) + 20);
+    if (sptr->Life < 9)
+        sptr->sLife = sptr->Life = 9;
+    sptr->TransType = 2;
+    sptr->x = (GetRandomControl() & 0xF) + x - 8;
+    sptr->y = (GetRandomControl() & 0xF) + y - 8;
+    sptr->z = (GetRandomControl() & 0xF) + z - 8;
+    zv = ((rcossin_tbl[((angle >> 3) & 0x1FFE) + 1] << 2) * velocity) >> 16;
+    sptr->Xvel = (sint16)(((rcossin_tbl[(angle >> 3) & 0x1FFE] << 2) * velocity) >> 16);
+    sptr->Yvel = -8 - (GetRandomControl() & 7);
+    sptr->Zvel = (sint16)zv;
+    sptr->Friction = 4;
+    if (GetRandomControl() & 1) {
+        sptr->Flags = 538;
+        sptr->RotAng = GetRandomControl() & 0xFFF;
+        if (GetRandomControl() & 1)
+            sptr->RotAdd = -24 - (GetRandomControl() & 7);
+        else
+            sptr->RotAdd = (GetRandomControl() & 7) + 24;
+    } else {
+        sptr->Flags = 522;
+    }
+    sptr->Scalar = 1;
+    sptr->Gravity = -4 - (GetRandomControl() & 3);
+    sptr->MaxYvel = -8 - (GetRandomControl() & 7);
+    size = (GetRandomControl() & 7) + (velocity >> 7) + 32;
+    sptr->Size = sptr->sSize = size >> 1;
+    sptr->dSize = size;
+}
+
 void JeepExplode(ITEM_INFO *item)
 {
     sint32 i;

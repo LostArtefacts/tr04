@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="163.37" height="12" x="0" y="0" class="named"><title>739 · 47.77%</title></rect>
-<rect width="0.44" height="12" x="163.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="5.97" height="12" x="163.82" y="0" class="nonmatching"><title>27 · 1.75%</title></rect>
-<rect width="172.22" height="12" x="169.78" y="0" class="todo"><title>779 · 50.36%</title></rect>
+<rect width="163.59" height="12" x="0" y="0" class="named"><title>740 · 47.83%</title></rect>
+<rect width="0.44" height="12" x="163.59" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="5.97" height="12" x="164.04" y="0" class="nonmatching"><title>27 · 1.75%</title></rect>
+<rect width="171.99" height="12" x="170.01" y="0" class="todo"><title>778 · 50.29%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">47.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">739</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">27</tspan> · <tspan class="todo">779</tspan></text>
+<text text-anchor="end" x="522" y="7.50">48.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">740</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">27</tspan> · <tspan class="todo">778</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="70.52" height="12" x="0" y="0" class="named"><title>128 KB · 20.62%</title></rect>
-<rect width="0.12" height="12" x="70.52" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.93" height="12" x="70.64" y="0" class="nonmatching"><title>14 KB · 2.32%</title></rect>
-<rect width="263.44" height="12" x="78.56" y="0" class="todo"><title>478 KB · 77.03%</title></rect>
+<rect width="70.74" height="12" x="0" y="0" class="named"><title>128 KB · 20.68%</title></rect>
+<rect width="0.12" height="12" x="70.74" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.93" height="12" x="70.86" y="0" class="nonmatching"><title>14 KB · 2.32%</title></rect>
+<rect width="263.21" height="12" x="78.79" y="0" class="todo"><title>477 KB · 76.96%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">20.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">128 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">478 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">128 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">477 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1078,7 +1078,7 @@
 <rect width="12" height="12" x="135" y="300" class="todo"><title>0x004671b0 GetOnJeep (381 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="300" class="named"><title>0x00467330 DrawJeepExtras (66 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="300" class="todo"><title>0x00467380 JeepControl (1427 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="300" class="todo"><title>0x00467920 TriggerExhaustSmoke_jeep (407 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="300" class="named"><title>0x00467920 TriggerExhaustSmoke_jeep (407 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="300" class="named"><title>0x00467ac0 JeepExplode (197 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="300" class="named"><title>0x00467b90 JeepCheckGetOut (203 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="300" class="named"><title>0x00467c60 DoDynamics_jeep (139 bytes)</title></rect>
@@ -2060,7 +2060,7 @@
 <rect width="12.49" height="12.69" x="397.98" y="449.31" class="named"><title>0x00473710 DXCreateSampleADPCM (410 bytes)</title></rect>
 <rect width="12.47" height="12.67" x="413.46" y="128.63" class="named"><title>0x0042d600 lara_col_climbdown (409 bytes)</title></rect>
 <rect width="12.47" height="12.67" x="413.46" y="144.30" class="named"><title>0x00437390 WadeSplash (409 bytes)</title></rect>
-<rect width="12.47" height="12.61" x="413.46" y="159.97" class="todo"><title>0x00467920 TriggerExhaustSmoke_jeep (407 bytes)</title></rect>
+<rect width="12.47" height="12.61" x="413.46" y="159.97" class="named"><title>0x00467920 TriggerExhaustSmoke_jeep (407 bytes)</title></rect>
 <rect width="12.47" height="12.55" x="413.46" y="175.58" class="todo"><title>0x00403d30 TriggerCrocgodMissileFlame (405 bytes)</title></rect>
 <rect width="12.47" height="12.55" x="413.46" y="191.13" class="named"><title>0x0046df50 FillADPCMBuffer (405 bytes)</title></rect>
 <rect width="12.47" height="12.49" x="413.46" y="206.68" class="named"><title>0x0044a390 GetWaterHeight (403 bytes)</title></rect>

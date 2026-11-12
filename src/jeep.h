@@ -32,5 +32,6 @@ sint32 GetCollisionAnim(ITEM_INFO *item, PHD_VECTOR *moved, JEEPINFO *jeep);
 void InitialiseEnemyJeep(sint16 item_number);
 sint32 CanGetOff_jeep(sint16 num);
 void InitialiseJeep(sint16 item_number);
+void TriggerExhaustSmoke_jeep(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 velocity, sint32 thing);
 
 #endif
