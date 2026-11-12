@@ -9,6 +9,7 @@
 #include "sound.h"
 #include "savegame.h"
 #include "effects.h"
+#include "control.h"
 
 sint32 CheckForHoldingState(sint32 state)
 {
@@ -141,6 +142,339 @@ sint32 WeaponObjectMesh(sint32 weapon_type)
     default:
         return PISTOLS_ANIM;
     }
+}
+
+void DoProperDetection(sint16 item_number, sint32 x, sint32 y, sint32 z, sint32 xv, sint32 yv, sint32 zv)
+{
+    ITEM_INFO *item;
+    sint16 room_number;
+    sint32 ceiling, height, oldtype, oldonobj, oldheight;
+    sint32 bs, yang, xs;
+    FLOOR_INFO *floor;
+
+    item = &items[item_number];
+    room_number = item->room_number;
+    floor = GetFloor(x, y, z, &room_number);
+    oldheight = GetHeight(floor, x, y, z);
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    height = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (item->pos.y_pos >= height) {
+        bs = 0;
+        oldtype = height_type;
+        if ((oldtype == BIG_SLOPE || oldtype == DIAGONAL) && oldheight < height) {
+            yang = (sint32)((uint16)item->pos.y_rot);
+            if (tiltyoff < 0) {
+                if (yang >= 0x8000)
+                    bs = 1;
+            } else if (tiltyoff > 0) {
+                if (yang <= 0x8000)
+                    bs = 1;
+            }
+            if (tiltxoff < 0) {
+                if (yang >= 0x4000 && yang <= 0xc000)
+                    bs = 1;
+            } else if (tiltxoff > 0) {
+                if (yang <= 0x4000 || yang >= 0xc000)
+                    bs = 1;
+            }
+        }
+        if (y > height + 32 && !bs && ((item->pos.x_pos ^ x) & ~0x3FF || (item->pos.z_pos ^ z) & ~0x3FF)) {
+            if ((item->pos.x_pos ^ x) & ~0x3FF && (item->pos.z_pos ^ z) & ~0x3FF)
+                xs = abs(x - item->pos.x_pos) < abs(z - item->pos.z_pos);
+            else
+                xs = 1;
+            if ((item->pos.x_pos ^ x) & ~0x3FF && xs) {
+                if (xv <= 0)
+                    item->pos.y_rot = -item->pos.y_rot;
+                else
+                    item->pos.y_rot = -item->pos.y_rot;
+            } else
+                item->pos.y_rot = 0x8000 - item->pos.y_rot;
+            item->pos.x_pos = x;
+            item->pos.y_pos = y;
+            item->pos.z_pos = z;
+            item->speed >>= 1;
+        } else if (oldtype != BIG_SLOPE && oldtype != DIAGONAL) {
+            if (item->fallspeed > 0) {
+                if (item->fallspeed > 16) {
+                    if (item->object_number == GRENADE)
+                        item->fallspeed = (item->fallspeed >> 1) - item->fallspeed;
+                    else {
+                        item->fallspeed = -(item->fallspeed >> 2);
+                        if (item->fallspeed < -100)
+                            item->fallspeed = -100;
+                    }
+                } else {
+                    item->fallspeed = 0;
+                    if (item->object_number == GRENADE) {
+                        item->speed--;
+                        item->required_anim_state = 1;
+                        item->pos.x_rot = 0;
+                    } else
+                        item->speed -= 3;
+                    if (item->speed < 0)
+                        item->speed = 0;
+                }
+            }
+            item->pos.y_pos = height;
+        } else {
+            item->speed -= item->speed >> 2;
+            if (tiltyoff < 0 && abs(tiltyoff) - abs(tiltxoff) >= 2) {
+                if ((uint16)item->pos.y_rot > 32768) {
+                    item->pos.y_rot = -1 - item->pos.y_rot;
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                } else {
+                    if (item->speed < 32) {
+                        item->speed -= (sint16)(2 * tiltyoff);
+                        if ((uint16)item->pos.y_rot > 16384 && (uint16)item->pos.y_rot < 49152) {
+                            item->pos.y_rot -= 4096;
+                            if ((uint16)item->pos.y_rot < 16384)
+                                item->pos.y_rot = 16384;
+                        } else if ((uint16)item->pos.y_rot < 16384) {
+                            item->pos.y_rot += 4096;
+                            if ((uint16)item->pos.y_rot > 16384)
+                                item->pos.y_rot = 16384;
+                        }
+                    }
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                    else
+                        item->fallspeed = 0;
+                }
+            } else if (tiltyoff > 0 && abs(tiltyoff) - abs(tiltxoff) >= 2) {
+                if ((uint16)item->pos.y_rot < 32768) {
+                    item->pos.y_rot = -1 - item->pos.y_rot;
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                } else {
+                    if (item->speed < 32) {
+                        item->speed += (sint16)(2 * tiltyoff);
+                        if ((uint16)item->pos.y_rot > 49152 || (uint16)item->pos.y_rot < 16384) {
+                            item->pos.y_rot -= 4096;
+                            if ((uint16)item->pos.y_rot < 49152)
+                                item->pos.y_rot = -16384;
+                        } else if ((uint16)item->pos.y_rot < 49152) {
+                            item->pos.y_rot += 4096;
+                            if ((uint16)item->pos.y_rot > 49152)
+                                item->pos.y_rot = -16384;
+                        }
+                    }
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                    else
+                        item->fallspeed = 0;
+                }
+            } else if (tiltxoff < 0 && abs(tiltxoff) - abs(tiltyoff) >= 2) {
+                if ((uint16)item->pos.y_rot > 16384 && (uint16)item->pos.y_rot < 49152) {
+                    item->pos.y_rot = 32767 - item->pos.y_rot;
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                } else {
+                    if (item->speed < 32) {
+                        item->speed -= (sint16)(2 * tiltxoff);
+                        if ((uint16)item->pos.y_rot < 32768) {
+                            item->pos.y_rot -= 4096;
+                            if ((uint16)item->pos.y_rot > 61440)
+                                item->pos.y_rot = 0;
+                        } else {
+                            item->pos.y_rot += 4096;
+                            if ((uint16)item->pos.y_rot < 4096)
+                                item->pos.y_rot = 0;
+                        }
+                    }
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                    else
+                        item->fallspeed = 0;
+                }
+            } else if (tiltxoff > 0 && abs(tiltxoff) - abs(tiltyoff) >= 2) {
+                if ((uint16)item->pos.y_rot > 49152 || (uint16)item->pos.y_rot < 16384) {
+                    item->pos.y_rot = 32767 - item->pos.y_rot;
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                } else {
+                    if (item->speed < 32) {
+                        item->speed += (sint16)(2 * tiltxoff);
+                        if ((uint16)item->pos.y_rot > 32768) {
+                            item->pos.y_rot -= 4096;
+                            if ((uint16)item->pos.y_rot < 32768)
+                                item->pos.y_rot = -32768;
+                        } else if ((uint16)item->pos.y_rot < 32768) {
+                            item->pos.y_rot += 4096;
+                            if ((uint16)item->pos.y_rot > 32768)
+                                item->pos.y_rot = -32768;
+                        }
+                    }
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                    else
+                        item->fallspeed = 0;
+                }
+            } else if (tiltyoff < 0 && tiltxoff < 0) {
+                if ((uint16)item->pos.y_rot > 24576 && (uint16)item->pos.y_rot < 57344) {
+                    item->pos.y_rot = -16385 - item->pos.y_rot;
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                } else {
+                    if (item->speed < 32) {
+                        item->speed -= (sint16)(tiltxoff + tiltyoff);
+                        if ((uint16)item->pos.y_rot > 8192 && (uint16)item->pos.y_rot < 40960) {
+                            item->pos.y_rot -= 4096;
+                            if ((uint16)item->pos.y_rot < 8192)
+                                item->pos.y_rot = 8192;
+                        } else if (item->pos.y_rot != 8192) {
+                            item->pos.y_rot += 4096;
+                            if ((uint16)item->pos.y_rot > 8192)
+                                item->pos.y_rot = 8192;
+                        }
+                    }
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                    else
+                        item->fallspeed = 0;
+                }
+            } else if (tiltyoff < 0 && tiltxoff > 0) {
+                if ((uint16)item->pos.y_rot > 40960 || (uint16)item->pos.y_rot < 8192) {
+                    item->pos.y_rot = 16383 - item->pos.y_rot;
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                } else {
+                    if (item->speed < 32) {
+                        item->speed += (sint16)(tiltxoff - tiltyoff);
+                        if ((uint16)item->pos.y_rot < 57344 && (uint16)item->pos.y_rot > 24576) {
+                            item->pos.y_rot -= 4096;
+                            if ((uint16)item->pos.y_rot < 24576)
+                                item->pos.y_rot = 24576;
+                        } else if (item->pos.y_rot != 24576) {
+                            item->pos.y_rot += 4096;
+                            if ((uint16)item->pos.y_rot > 24576)
+                                item->pos.y_rot = 24576;
+                        }
+                    }
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                    else
+                        item->fallspeed = 0;
+                }
+            } else if (tiltyoff > 0 && tiltxoff > 0) {
+                if ((uint16)item->pos.y_rot > 57344 || (uint16)item->pos.y_rot < 24576) {
+                    item->pos.y_rot = -16385 - item->pos.y_rot;
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                } else {
+                    if (item->speed < 32) {
+                        item->speed += (sint16)(tiltxoff + tiltyoff);
+                        if ((uint16)item->pos.y_rot < 8192 || (uint16)item->pos.y_rot > 40960) {
+                            item->pos.y_rot -= 4096;
+                            if ((uint16)item->pos.y_rot < 40960)
+                                item->pos.y_rot = -24576;
+                        } else if ((uint16)item->pos.y_rot != 40960) {
+                            item->pos.y_rot += 4096;
+                            if ((uint16)item->pos.y_rot > 40960)
+                                item->pos.y_rot = -24576;
+                        }
+                    }
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                    else
+                        item->fallspeed = 0;
+                }
+            } else if (tiltyoff > 0 && tiltxoff < 0) {
+                if ((uint16)item->pos.y_rot > 8192 && (uint16)item->pos.y_rot < 40960) {
+                    item->pos.y_rot = 16383 - item->pos.y_rot;
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                } else {
+                    if (item->speed < 32) {
+                        item->speed += (sint16)(tiltyoff - tiltxoff);
+                        if ((uint16)item->pos.y_rot < 24576 || (uint16)item->pos.y_rot > 57344) {
+                            item->pos.y_rot -= 4096;
+                            if ((uint16)item->pos.y_rot < 57344)
+                                item->pos.y_rot = -8192;
+                        } else if ((uint16)item->pos.y_rot != 57344) {
+                            item->pos.y_rot += 4096;
+                            if ((uint16)item->pos.y_rot > 57344)
+                                item->pos.y_rot = -8192;
+                        }
+                    }
+                    if (item->fallspeed > 0)
+                        item->fallspeed = -(item->fallspeed >> 1);
+                    else
+                        item->fallspeed = 0;
+                }
+            }
+            item->pos.x_pos = x;
+            item->pos.y_pos = y;
+            item->pos.z_pos = z;
+        }
+    } else {
+        if (yv >= 0) {
+            room_number = item->room_number;
+            floor = GetFloor(item->pos.x_pos, y, item->pos.z_pos, &room_number);
+            oldheight = GetHeight(floor, item->pos.x_pos, y, item->pos.z_pos);
+            oldonobj = OnObject;
+            room_number = item->room_number;
+            floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+            GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+            if (item->pos.y_pos >= oldheight && oldonobj) {
+                if (item->fallspeed > 0) {
+                    if (item->fallspeed > 16) {
+                        if (item->object_number == GRENADE)
+                            item->fallspeed = (item->fallspeed >> 1) - item->fallspeed;
+                        else {
+                            item->fallspeed = -(item->fallspeed >> 2);
+                            if (item->fallspeed < -100)
+                                item->fallspeed = -100;
+                        }
+                    } else {
+                        item->fallspeed = 0;
+                        if (item->object_number == GRENADE) {
+                            item->required_anim_state = 1;
+                            item->pos.x_rot = 0;
+                            item->speed--;
+                        } else
+                            item->speed -= 3;
+                        if (item->speed < 0)
+                            item->speed = 0;
+                    }
+                }
+                item->pos.y_pos = oldheight;
+            }
+        }
+        room_number = item->room_number;
+        floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+        ceiling = GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+        if (item->pos.y_pos < ceiling) {
+            if (y < ceiling
+                && (((x >> WALL_SHIFT) != (item->pos.x_pos >> WALL_SHIFT))
+                    || ((z >> WALL_SHIFT) != (item->pos.z_pos >> WALL_SHIFT)))) {
+                if ((x & (~(WALL_L - 1))) != (item->pos.x_pos & (~(WALL_L - 1)))) {
+                    if (xv <= 0)
+                        item->pos.y_rot = 0x4000 + (0xc000 - item->pos.y_rot);
+                    else
+                        item->pos.y_rot = 0xc000 + (0x4000 - item->pos.y_rot);
+                } else {
+                    item->pos.y_rot = 0x8000 - item->pos.y_rot;
+                }
+                if (item->object_number == GRENADE)
+                    item->speed -= item->speed >> 3;
+                else
+                    item->speed >>= 1;
+                item->pos.x_pos = x;
+                item->pos.y_pos = y;
+                item->pos.z_pos = z;
+            } else
+                item->pos.y_pos = ceiling;
+            if (item->fallspeed < 0)
+                item->fallspeed = -item->fallspeed;
+        }
+    }
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (room_number != item->room_number)
+        ItemNewRoom(item_number, room_number);
 }
 
 sint16 *get_current_ammo_pointer(sint32 weapon_type)

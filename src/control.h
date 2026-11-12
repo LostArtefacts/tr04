@@ -44,6 +44,7 @@ enum floor_types {
 
 extern sint32 OnObject;
 extern sint32 height_type;
+extern sint32 tiltxoff, tiltyoff;
 extern sint16 *floor_data;
 extern sint32 flipeffect;
 extern uint8 KeyTriggerActive;
