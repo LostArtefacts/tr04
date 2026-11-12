@@ -743,6 +743,46 @@ void TriggerShockwave(PHD_VECTOR *pos, sint32 InnerOuterRads, sint32 speed, sint
     }
 }
 
+void TriggerLightning(PHD_VECTOR *s, PHD_VECTOR *d, sint8 variation, sint32 rgb, uint8 flags, uint8 size, uint8 segments)
+{
+    LIGHTNING_STRUCT *lptr;
+    sint8 *vptr;
+    sint32 i, j;
+
+    lptr = Lightning;
+    for (i = 0; i < 16; i++, lptr++) {
+        if (!lptr->Life) {
+            lptr->Point[0].x = s->x;
+            lptr->Point[0].y = s->y;
+            lptr->Point[0].z = s->z;
+            lptr->Point[1].x = ((s->x * 3) + d->x) >> 2;
+            lptr->Point[1].y = ((s->y * 3) + d->y) >> 2;
+            lptr->Point[1].z = ((s->z * 3) + d->z) >> 2;
+            lptr->Point[2].x = ((d->x * 3) + s->x) >> 2;
+            lptr->Point[2].y = ((d->y * 3) + s->y) >> 2;
+            lptr->Point[2].z = ((d->z * 3) + s->z) >> 2;
+            lptr->Point[3].x = d->x;
+            lptr->Point[3].y = d->y;
+            lptr->Point[3].z = d->z;
+            vptr = &lptr->Xvel1;
+            for (j = 0; j < 6; j++)
+                *vptr++ = (GetRandomControl() % variation) - (variation >> 1);
+            for (j = 0; j < 3; j++) {
+                if (flags & 2)
+                    *vptr++ = (GetRandomControl() % variation) - (variation >> 1);
+                else
+                    *vptr++ = 0;
+            }
+            *(sint32 *)&lptr->r = rgb;
+            lptr->Flags = flags;
+            lptr->Rand = variation;
+            lptr->Size = size;
+            lptr->Segments = segments;
+            return;
+        }
+    }
+}
+
 void UpdateLightning(void)
 {
     LIGHTNING_STRUCT *lptr;

@@ -219,6 +219,7 @@ void DrawLensFlares(ITEM_INFO *item);
 void TriggerLightningGlow(sint32 x, sint32 y, sint32 z, sint32 rgb);
 void DrawGunshells(void);
 void UpdateLightning(void);
+void TriggerLightning(PHD_VECTOR *s, PHD_VECTOR *d, sint8 variation, sint32 rgb, uint8 flags, uint8 size, uint8 segments);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
