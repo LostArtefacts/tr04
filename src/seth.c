@@ -32,3 +32,39 @@ void TriggerSethMissile(PHD_3DPOS *pos, sint16 room_number, sint16 type)
         fx->frame_number = objects[BUBBLES].mesh_index + 2 * type;
     }
 }
+
+void TriggerSethSparks(sint32 x, sint32 y, sint32 z, sint16 xv, sint16 yv, sint16 zv)
+{
+    SPARKS *sptr;
+    sint32 dx, dz;
+
+    dx = lara_item->pos.x_pos - x;
+    dz = lara_item->pos.z_pos - z;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sR = 0;
+    sptr->sG = 0;
+    sptr->sB = 0;
+    sptr->dR = 64;
+    sptr->dG = (GetRandomControl() & 0x7F) + 64;
+    sptr->dB = sptr->dG + 32;
+    sptr->sLife = sptr->Life = 16;
+    sptr->ColFadeSpeed = 4;
+    sptr->TransType = 2;
+    sptr->FadeToBlack = 4;
+    sptr->x = x;
+    sptr->y = y;
+    sptr->z = z;
+    sptr->Xvel = xv;
+    sptr->Yvel = yv;
+    sptr->Zvel = zv;
+    sptr->Friction = 34;
+    sptr->Scalar = 1;
+    sptr->Size = sptr->sSize = (GetRandomControl() & 3) + 4;
+    sptr->dSize = (GetRandomControl() & 1) + 1;
+    sptr->MaxYvel = 0;
+    sptr->Gravity = 0;
+    sptr->Flags = 0;
+}
