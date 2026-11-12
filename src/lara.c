@@ -1032,6 +1032,23 @@ void lara_as_poleright(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_rot -= 256;
 }
 
+void lara_col_poleup(ITEM_INFO *item, COLL_INFO *coll)
+{
+    FLOOR_INFO *floor;
+    sint16 room_num;
+
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    if (input & IN_LOOK)
+        LookUpDown();
+    if (((input & (IN_FORWARD | IN_ACTION)) != (IN_FORWARD | IN_ACTION)) || item->hit_points <= 0)
+        item->goal_anim_state = AS_POLESTAT;
+    room_num = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_num);
+    if (item->pos.y_pos - GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos) < 1024)
+        item->goal_anim_state = AS_POLESTAT;
+}
+
 void ApplyVelocityToRope(sint32 node, uint16 angle, uint16 n)
 {
     sint32 xvel, zvel;

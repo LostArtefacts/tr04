@@ -329,6 +329,7 @@ void lara_col_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_upjump(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_pulley(ITEM_INFO *item, COLL_INFO *coll);
 void JumpOffRope(ITEM_INFO *item);
+void lara_col_poleup(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
