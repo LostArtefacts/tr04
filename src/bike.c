@@ -18,6 +18,7 @@
 #include "effects.h"
 #include "debris.h"
 #include "draw.h"
+#include "jeep.h"
 #include "specific/input.h"
 #include "specific/3dmath.h"
 #include "specific/audio.h"
@@ -336,6 +337,168 @@ sint32 DoDynamics_bike(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
             return fallspeed;
     }
     return fallspeed;
+}
+
+sint32 BikeDynamics(ITEM_INFO *item)
+{
+    BIKEINFO *bike;
+    FLOOR_INFO *floor;
+    PHD_VECTOR pos, newPos;
+    PHD_VECTOR flPos, frPos, blPos, brPos, fmPos, flPos2, frPos2, blPos2, brPos2, fmPos2;
+    sint32 front_left, front_right, back_left, back_right, front_mid;
+    sint32 h, speed, anim, s, s2;
+    sint16 ang, vel, shift, shift2, room_number;
+
+    dont_exit_bike = 0;
+    bike = (BIKEINFO *)item->data;
+    front_left = TestHeight(item, 500, -350, &flPos);
+    front_right = TestHeight(item, 500, 128, &frPos);
+    back_left = TestHeight(item, -500, -350, &blPos);
+    back_right = TestHeight(item, -500, 128, &brPos);
+    front_mid = TestHeight(item, -500, 0, &fmPos);
+    pos.x = item->pos.x_pos;
+    pos.y = item->pos.y_pos;
+    pos.z = item->pos.z_pos;
+    if (blPos.y > back_left)
+        blPos.y = back_left;
+    if (brPos.y > back_right)
+        brPos.y = back_right;
+    if (flPos.y > front_left)
+        flPos.y = front_left;
+    if (frPos.y > front_right)
+        frPos.y = front_right;
+    if (fmPos.y > front_mid)
+        fmPos.y = front_mid;
+    if (item->pos.y_pos > item->floor - 8) {
+        if (bike->bike_turn < -182)
+            bike->bike_turn += 182;
+        else if (bike->bike_turn > 182)
+            bike->bike_turn -= 182;
+        else
+            bike->bike_turn = 0;
+        item->pos.y_rot += (sint16)(bike->extra_rotation + bike->bike_turn);
+        ang = item->pos.y_rot - bike->move_angle;
+        vel = (sint16)(728 - ((2 * bike->velocity) >> 10));
+        if (!(input & IN_ACTION) && bike->velocity > 0)
+            vel += vel >> 1;
+        if (ang < -273) {
+            if (ang < -8190)
+                bike->move_angle = item->pos.y_rot + 8190;
+            else
+                bike->move_angle -= vel;
+        } else if (ang > 273) {
+            if (ang > 8190)
+                bike->move_angle = item->pos.y_rot - 8190;
+            else
+                bike->move_angle += vel;
+        } else
+            bike->move_angle = item->pos.y_rot;
+    } else {
+        if (bike->bike_turn < -91)
+            bike->bike_turn += 91;
+        else if (bike->bike_turn > 91)
+            bike->bike_turn -= 91;
+        else
+            bike->bike_turn = 0;
+        item->pos.y_rot += (sint16)(bike->extra_rotation + bike->bike_turn);
+        bike->move_angle += (sint16)(item->pos.y_rot - bike->move_angle) >> 5;
+    }
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (item->pos.y_pos >= h)
+        speed = (item->speed * (rcossin_tbl[((item->pos.x_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+    else
+        speed = item->speed;
+    item->pos.z_pos += (speed * (rcossin_tbl[((bike->move_angle >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+    item->pos.x_pos += (speed * (rcossin_tbl[(bike->move_angle >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+    if (item->pos.y_pos >= h) {
+        s = (100 * (rcossin_tbl[(item->pos.x_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+        if (ABS(s) > 16) {
+            s2 = s;
+            if (s < 0)
+                s2 = -s;
+            if (s2 > 24)
+                dont_exit_bike = 1;
+            s <<= 4;
+            bike->velocity -= s;
+        }
+        s = (128 * (rcossin_tbl[(item->pos.z_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+        if (ABS(s) > 32) {
+            dont_exit_bike = 1;
+            if (s < 0) {
+                item->pos.x_pos += ((abs(s) - 24) * (rcossin_tbl[((item->pos.y_rot - 0x4000) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+                item->pos.z_pos += ((abs(s) - 24) * (rcossin_tbl[(((item->pos.y_rot - 0x4000) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+            } else {
+                item->pos.x_pos += ((abs(s) - 24) * (rcossin_tbl[((item->pos.y_rot + 0x4000) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+                item->pos.z_pos += ((abs(s) - 24) * (rcossin_tbl[(((item->pos.y_rot + 0x4000) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+            }
+        }
+    }
+    if (bike->velocity > 0x8000 && !(bike->flags2 & 1))
+        bike->velocity -= 0x440;
+    else if (bike->velocity > 0xC000)
+        bike->velocity = 0xC000;
+    else if (bike->velocity < -0x3000)
+        bike->velocity = -0x3000;
+    newPos.x = item->pos.x_pos;
+    newPos.z = item->pos.z_pos;
+    if (!(sint16)(item->flags & 0x100)) {
+        if (BikeBaddieCollision(item))
+            return -888;
+        BikeCollideStaticObjects(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 512);
+    }
+    shift2 = 0;
+    shift = 0;
+    if (TestHeight(item, 500, -350, &flPos2) < flPos.y - 256)
+        shift = abs(DoShift(item, &flPos2, &flPos) << 2);
+    if (TestHeight(item, -500, -350, &blPos2) < blPos.y - 256) {
+        if (shift)
+            shift += abs(DoShift(item, &blPos2, &blPos) << 2);
+        else
+            shift = -abs(DoShift(item, &blPos2, &blPos) << 2);
+    }
+    if (TestHeight(item, 500, 128, &frPos2) < frPos.y - 256)
+        shift2 = -abs(DoShift(item, &frPos2, &frPos) << 2);
+    if (TestHeight(item, -500, 0, &fmPos2) < fmPos.y - 256)
+        DoShift(item, &fmPos2, &fmPos);
+    if (TestHeight(item, -500, 128, &brPos2) < brPos.y - 256) {
+        if (shift2)
+            shift2 -= abs(DoShift(item, &brPos2, &brPos) << 2);
+        else
+            shift2 = abs(DoShift(item, &brPos2, &brPos) << 2);
+    }
+    if (shift)
+        shift2 = shift;
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (h < item->pos.y_pos - 256)
+        DoShift(item, (PHD_VECTOR *)&item->pos, &pos);
+    if (!bike->velocity)
+        shift2 = 0;
+    bike->rot_thing = (sint16)((bike->rot_thing + shift2) >> 1);
+    if (abs(bike->rot_thing) < 2)
+        bike->rot_thing = 0;
+    if (abs(bike->rot_thing - bike->extra_rotation) < 4)
+        bike->extra_rotation = bike->rot_thing;
+    else
+        bike->extra_rotation += (bike->rot_thing - bike->extra_rotation) >> 2;
+    anim = GetCollisionAnim(item, &newPos, (JEEPINFO *)bike);
+    if (anim) {
+        speed = ((((item->pos.z_pos - pos.z) * (rcossin_tbl[((bike->move_angle >> 3) & 0x1FFE) + 1] << 2)) + ((item->pos.x_pos - pos.x) * (rcossin_tbl[(bike->move_angle >> 3) & 0x1FFE] << 2))) >> W2V_SHIFT) << 8;
+        if (&items[lara.vehicle] == item && bike->velocity >= 0x8000 && speed < bike->velocity - 10) {
+            lara_item->hit_points -= (sint16)((bike->velocity - speed) >> 7);
+            lara_item->hit_status = 1;
+        }
+        if (bike->velocity > 0 && speed < bike->velocity)
+            bike->velocity = speed < 0 ? 0 : speed;
+        else if (bike->velocity < 0 && speed > bike->velocity)
+            bike->velocity = speed > 0 ? 0 : speed;
+        if (bike->velocity < -0x3000)
+            bike->velocity = -0x3000;
+    }
+    return anim;
 }
 
 void BikeCollideStaticObjects(sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 height)

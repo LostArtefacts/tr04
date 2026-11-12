@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="256.34" height="12" x="0" y="0" class="named"><title>1181 · 76.29%</title></rect>
 <rect width="0.65" height="12" x="256.34" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="23.44" height="12" x="256.99" y="0" class="nonmatching"><title>108 · 6.98%</title></rect>
-<rect width="55.57" height="12" x="280.43" y="0" class="todo"><title>256 · 16.54%</title></rect>
+<rect width="23.66" height="12" x="256.99" y="0" class="nonmatching"><title>109 · 7.04%</title></rect>
+<rect width="55.35" height="12" x="280.65" y="0" class="todo"><title>255 · 16.47%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">76.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1181</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">108</tspan> · <tspan class="todo">256</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1181</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">109</tspan> · <tspan class="todo">255</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="158.95" height="12" x="0" y="0" class="named"><title>295 KB · 47.31%</title></rect>
 <rect width="0.13" height="12" x="158.95" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="54.36" height="12" x="159.08" y="0" class="nonmatching"><title>101 KB · 16.18%</title></rect>
-<rect width="122.56" height="12" x="213.44" y="0" class="todo"><title>227 KB · 36.48%</title></rect>
+<rect width="55.41" height="12" x="159.08" y="0" class="nonmatching"><title>103 KB · 16.49%</title></rect>
+<rect width="121.51" height="12" x="214.49" y="0" class="todo"><title>226 KB · 36.16%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">47.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">295 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">101 KB</tspan> · <tspan class="todo">227 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">295 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">103 KB</tspan> · <tspan class="todo">226 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1066,7 +1066,7 @@
 <rect width="12" height="12" x="705" y="285" class="nonmatching"><title>0x004654a0 BikeCheckGetOff (439 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="285" class="nonmatching"><title>0x00465660 TestHeight (269 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="285" class="nonmatching"><title>0x00465770 DoDynamics_bike (109 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="300" class="todo"><title>0x004657e0 BikeDynamics (1940 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="300" class="nonmatching"><title>0x004657e0 BikeDynamics (1940 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="300" class="named"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="300" class="named"><title>0x00466290 BikeBaddieCollision (529 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="300" class="named"><title>0x004664b0 AnimateBike (1072 bytes)</title></rect>
@@ -1672,7 +1672,7 @@
 <rect width="29.42" height="26.07" x="118.32" y="406.99" class="nonmatching"><title>0x0040e800 ScorpionControl (1996 bytes)</title></rect>
 <rect width="29.42" height="25.94" x="118.32" y="436.06" class="todo"><title>0x00470830 DXSetupDlgProc (1986 bytes)</title></rect>
 <rect width="27" height="27.80" x="150.74" y="0" class="named"><title>0x00402e30 CrocControl (1952 bytes)</title></rect>
-<rect width="27" height="27.63" x="150.74" y="30.80" class="todo"><title>0x004657e0 BikeDynamics (1940 bytes)</title></rect>
+<rect width="27" height="27.63" x="150.74" y="30.80" class="nonmatching"><title>0x004657e0 BikeDynamics (1940 bytes)</title></rect>
 <rect width="27" height="27.23" x="150.74" y="61.43" class="named"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
 <rect width="27" height="27.19" x="150.74" y="91.66" class="todo"><title>0x00449410 ControlPhase (1909 bytes)</title></rect>
 <rect width="27" height="26.89" x="150.74" y="121.85" class="nonmatching"><title>0x004778b0 S_UpdateInput (1888 bytes)</title></rect>
