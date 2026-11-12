@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.05" height="12" x="0" y="0" class="named"><title>1168 · 75.45%</title></rect>
 <rect width="0.66" height="12" x="258.05" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="21.87" height="12" x="258.71" y="0" class="nonmatching"><title>99 · 6.40%</title></rect>
-<rect width="61.42" height="12" x="280.58" y="0" class="todo"><title>278 · 17.96%</title></rect>
+<rect width="22.09" height="12" x="258.71" y="0" class="nonmatching"><title>100 · 6.46%</title></rect>
+<rect width="61.20" height="12" x="280.80" y="0" class="todo"><title>277 · 17.89%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1168</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">99</tspan> · <tspan class="todo">278</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1168</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">100</tspan> · <tspan class="todo">277</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="146.13" height="12" x="0" y="0" class="named"><title>266 KB · 42.73%</title></rect>
 <rect width="0.13" height="12" x="146.13" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="45.73" height="12" x="146.26" y="0" class="nonmatching"><title>83 KB · 13.37%</title></rect>
-<rect width="150.01" height="12" x="191.99" y="0" class="todo"><title>273 KB · 43.86%</title></rect>
+<rect width="46.29" height="12" x="146.26" y="0" class="nonmatching"><title>84 KB · 13.53%</title></rect>
+<rect width="149.45" height="12" x="192.55" y="0" class="todo"><title>272 KB · 43.70%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">42.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">266 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">83 KB</tspan> · <tspan class="todo">273 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">266 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">84 KB</tspan> · <tspan class="todo">272 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1303,7 +1303,7 @@
 <rect width="12" height="12" x="510" y="360" class="named"><title>0x00478520 S_CalculateStaticMeshLight (76 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="360" class="todo"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="360" class="todo"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="360" class="todo"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="360" class="nonmatching"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="360" class="todo"><title>0x00478b50 SetupLight (787 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="360" class="todo"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="360" class="named"><title>0x00479080 ClearObjectLighting (108 bytes)</title></rect>
@@ -1766,7 +1766,7 @@
 <rect width="20.15" height="19.77" x="283.48" y="45.85" class="named"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
 <rect width="20.15" height="19.71" x="283.48" y="68.62" class="todo"><title>0x004640a0 DrawTrainObjects (1032 bytes)</title></rect>
 <rect width="20.15" height="19.71" x="283.48" y="91.33" class="todo"><title>0x00489540 DrawRope (1032 bytes)</title></rect>
-<rect width="20.15" height="19.48" x="283.48" y="114.05" class="todo"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
+<rect width="20.15" height="19.48" x="283.48" y="114.05" class="nonmatching"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
 <rect width="20.15" height="19.39" x="283.48" y="136.53" class="todo"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
 <rect width="20.15" height="19.27" x="283.48" y="158.92" class="todo"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
 <rect width="20.15" height="19.18" x="283.48" y="181.19" class="todo"><title>0x004664b0 AnimateBike (1004 bytes)</title></rect>
