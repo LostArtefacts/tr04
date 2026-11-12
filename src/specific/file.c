@@ -19,3 +19,9 @@ sint32 FileSize(FILE *file)
     fseek(file, 0, SEEK_SET);
     return size;
 }
+
+uint8 LoadCinematic(void)
+{
+    FileData += sizeof(sint16);
+    return 1;
+}
