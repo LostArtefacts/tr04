@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="221.96" height="12" x="0" y="0" class="named"><title>1004 · 64.90%</title></rect>
-<rect width="0.44" height="12" x="221.96" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="222.40" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="112.31" height="12" x="229.69" y="0" class="todo"><title>508 · 32.84%</title></rect>
+<rect width="222.18" height="12" x="0" y="0" class="named"><title>1005 · 64.96%</title></rect>
+<rect width="0.44" height="12" x="222.18" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="222.62" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="112.08" height="12" x="229.92" y="0" class="todo"><title>507 · 32.77%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">65.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1004</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">508</tspan></text>
+<text text-anchor="end" x="522" y="7.50">65.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1005</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">507</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="96.84" height="12" x="0" y="0" class="named"><title>176 KB · 28.32%</title></rect>
-<rect width="0.12" height="12" x="96.84" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="96.96" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="235.62" height="12" x="106.38" y="0" class="todo"><title>427 KB · 68.89%</title></rect>
+<rect width="96.89" height="12" x="0" y="0" class="named"><title>176 KB · 28.33%</title></rect>
+<rect width="0.12" height="12" x="96.89" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="97.01" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="235.57" height="12" x="106.43" y="0" class="todo"><title>427 KB · 68.88%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">176 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">427 KB</tspan></text>
@@ -182,7 +182,7 @@
 <rect width="12" height="12" x="195" y="30" class="todo"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="30" class="todo"><title>0x004117e0 InitialiseSkeleton (231 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="30" class="todo"><title>0x004118d0 SkeletonControl (4402 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="30" class="todo"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="30" class="named"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="30" class="todo"><title>0x00412ac0 SphinxControl (1327 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="30" class="todo"><title>0x00413020 InitialiseTemplar (99 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="30" class="todo"><title>0x00413090 TemplarControl (1270 bytes)</title></rect>
@@ -2716,7 +2716,7 @@
 <rect width="5.85" height="5.88" x="598.65" y="420.79" class="named"><title>0x00442170 CreatureEffectT (89 bytes)</title></rect>
 <rect width="5.85" height="5.88" x="598.65" y="429.67" class="todo"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
 <rect width="5.85" height="5.81" x="598.65" y="438.56" class="named"><title>0x00403ed0 InitialiseCrocgod (88 bytes)</title></rect>
-<rect width="5.85" height="5.81" x="598.65" y="447.37" class="todo"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
+<rect width="5.85" height="5.81" x="598.65" y="447.37" class="named"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
 <rect width="5.85" height="5.81" x="598.65" y="456.19" class="named"><title>0x00421900 lara_as_all4turnl (88 bytes)</title></rect>
 <rect width="6.01" height="5.66" x="607.50" y="313.69" class="named"><title>0x004219b0 lara_as_all4turnr (88 bytes)</title></rect>
 <rect width="6.01" height="5.66" x="616.50" y="313.69" class="named"><title>0x00423a60 lara_as_monkeyl (88 bytes)</title></rect>
