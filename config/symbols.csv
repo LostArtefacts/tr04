@@ -2352,6 +2352,7 @@ address,size,name,symbol
 0x00533ad4,4,AddQuadSorted,_AddQuadSorted
 0x00533adc,4,_EndScene,__EndScene
 0x00533ae4,4,IsVisible,_IsVisible
+0x00533ae8,4,_BeginScene,__BeginScene
 0x00533aec,4,CurrentFog,_CurrentFog
 0x00533b08,4,MainThread,_MainThread
 0x00533b10,4,thread_ended,_thread_ended
