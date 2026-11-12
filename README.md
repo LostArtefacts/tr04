@@ -86,6 +86,10 @@ ignored by Git. Initialize the prefix with
 `include` and `lib` directories under `.wine/drive_c/msvc6sp3`.
 Install the DirectX 6.1 SDK (`dx61sdkimage.exe`) with
 `just dxsdk dx61sdkimage.exe 'C:\dx6'`.
+Supply MASM 6.13 under `.wine/drive_c/masm613/bin`: MASM 6.11's
+`ML.EXE` and `ML.ERR` updated with Microsoft's ML613 patch, a DOS
+program that runs in DOSBox. `ml /?` then reports 6.13.7299, the build
+the original's Rich header records.
 Set `GHIDRA` if the installation is outside the search paths in `project.toml`.
 
 ## Workflow
@@ -105,6 +109,12 @@ Write recovered functions in `src/`, following the original module layout.
 Record function and global addresses in `config/symbols.csv`. The DLL's
 hook table is generated from the functions defined in the build; other
 symbols resolve to the original executable's addresses.
+
+Some functions in the Steam executable are binary patches no compiler
+produced, such as the no-CD change in `FileOpen`. Their C source is the
+code before the patch, built for the DLL and listed in
+`hooks.allow_diff`, and `src/exe/` holds the patched bytes as MASM from
+`tools/asmgen.py` for the standalone executable.
 
 Use one newly recovered function per commit, with a subject such as
 `Decompile NAME (0xADDRESS)`. The hooks keep byte parity and the
