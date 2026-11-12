@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="171.11" height="12" x="0" y="0" class="named"><title>774 · 50.03%</title></rect>
-<rect width="0.44" height="12" x="171.11" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="171.55" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="164.04" height="12" x="177.96" y="0" class="todo"><title>742 · 47.96%</title></rect>
+<rect width="171.33" height="12" x="0" y="0" class="named"><title>775 · 50.10%</title></rect>
+<rect width="0.44" height="12" x="171.33" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="171.77" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="163.82" height="12" x="178.18" y="0" class="todo"><title>741 · 47.90%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">50.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">774</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">742</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">775</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">741</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.07" height="12" x="0" y="0" class="named"><title>138 KB · 22.24%</title></rect>
-<rect width="0.12" height="12" x="76.07" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.19" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="257.16" height="12" x="84.84" y="0" class="todo"><title>466 KB · 75.19%</title></rect>
+<rect width="76.08" height="12" x="0" y="0" class="named"><title>138 KB · 22.25%</title></rect>
+<rect width="0.12" height="12" x="76.08" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.20" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="257.15" height="12" x="84.85" y="0" class="todo"><title>466 KB · 75.19%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">138 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">466 KB</tspan></text>
@@ -704,7 +704,7 @@
 <rect width="12" height="12" x="525" y="180" class="named"><title>0x0043e600 combine_KeyItem2 (17 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="180" class="named"><title>0x0043e620 combine_KeyItem3 (17 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="180" class="named"><title>0x0043e640 combine_KeyItem4 (17 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="180" class="todo"><title>0x0043e660 combine_KeyItem5 (17 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="180" class="named"><title>0x0043e660 combine_KeyItem5 (17 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="180" class="todo"><title>0x0043e680 combine_KeyItem6 (17 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="180" class="todo"><title>0x0043e6a0 combine_KeyItem7 (17 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="180" class="todo"><title>0x0043e6c0 combine_KeyItem8 (17 bytes)</title></rect>
@@ -3085,7 +3085,7 @@
 <rect width="2.49" height="2.63" x="728.03" y="415.60" class="named"><title>0x0043e600 combine_KeyItem2 (17 bytes)</title></rect>
 <rect width="2.49" height="2.63" x="733.52" y="415.60" class="named"><title>0x0043e620 combine_KeyItem3 (17 bytes)</title></rect>
 <rect width="2.49" height="2.63" x="739.01" y="415.60" class="named"><title>0x0043e640 combine_KeyItem4 (17 bytes)</title></rect>
-<rect width="2.49" height="2.63" x="744.51" y="415.60" class="todo"><title>0x0043e660 combine_KeyItem5 (17 bytes)</title></rect>
+<rect width="2.49" height="2.63" x="744.51" y="415.60" class="named"><title>0x0043e660 combine_KeyItem5 (17 bytes)</title></rect>
 <rect width="2.66" height="2.47" x="706.05" y="421.23" class="todo"><title>0x0043e680 combine_KeyItem6 (17 bytes)</title></rect>
 <rect width="2.66" height="2.47" x="706.05" y="426.71" class="todo"><title>0x0043e6a0 combine_KeyItem7 (17 bytes)</title></rect>
 <rect width="2.66" height="2.47" x="706.05" y="432.18" class="todo"><title>0x0043e6c0 combine_KeyItem8 (17 bytes)</title></rect>
