@@ -2137,6 +2137,7 @@ address,size,name,symbol
 0x004bc508,18,tga_header,_tga_header
 0x004bf2e0,4,next_locust,_next_locust
 0x004bf2f8,4,next_scarab,_next_scarab
+0x004bf2fc,8,LibraryTab,_LibraryTab
 0x004bf338,4,TorchItem,_TorchItem
 0x004bf33c,4,hair_wind,_hair_wind
 0x004bf354,2,DebrisFlags,_DebrisFlags
@@ -2226,7 +2227,7 @@ address,size,name,symbol
 0x004bf668,,gfLegendTime,_gfLegendTime
 0x004bf669,1,bDoCredits,_bDoCredits
 0x004bf66a,,gfCutNumber,_gfCutNumber
-0x004bf66b,,gfNumMips,_gfNumMips
+0x004bf66b,1,gfNumMips,_gfNumMips
 0x004bf66c,1,Chris_Menu,_Chris_Menu
 0x004bf680,4,health_bar_timer,_health_bar_timer
 0x004bf684,4,flash_state,_flash_state
@@ -2583,6 +2584,7 @@ address,size,name,symbol
 0x007fd270,1,gfRequiredStartPos,_gfRequiredStartPos
 0x007fd274,4,gfStringOffset,_gfStringOffset
 0x007fd278,4,Gameflow,_Gameflow
+0x007fd280,8,gfMips,_gfMips
 0x007fd288,,gfResetHubDest,_gfResetHubDest
 0x007fd28c,4,gfFilenameWad,_gfFilenameWad
 0x007fd290,1,gfCurrentLevel,_gfCurrentLevel

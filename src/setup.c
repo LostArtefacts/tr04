@@ -21,6 +21,11 @@
 #include "lara.h"
 #include "laramisc.h"
 #include "gameflow.h"
+#include "draw.h"
+#include "hair.h"
+#include "init.h"
+#include "switch.h"
+#include "traps.h"
 
 void InitialiseLara(void)
 {
@@ -65,6 +70,58 @@ void InitialiseLara(void)
     lara.beetle_uses = 3;
     InitialiseLaraAnims(l);
     DashTimer = 120;
+}
+
+void InitialiseObjects(void)
+{
+    OBJECT_INFO *obj;
+    sint32 i, n;
+
+    obj = objects;
+    for (i = NUMBER_OBJECTS; i > 0; i--, obj++) {
+        obj->initialise = 0;
+        obj->collision = 0;
+        obj->control = 0;
+        obj->intelligent = 0;
+        obj->save_position = 0;
+        obj->save_hitpoints = 0;
+        obj->save_flags = 0;
+        obj->save_anim = 0;
+        obj->water_creature = 0;
+        obj->using_drawanimating_item = 1;
+        obj->save_mesh = 0;
+        obj->draw_routine = DrawAnimatingItem;
+        obj->ceiling = 0;
+        obj->floor = 0;
+        obj->pivot_length = 0;
+        obj->radius = 10;
+        obj->shadow_size = 0;
+        obj->hit_points = -16384;
+        obj->explodable_meshbits = 0;
+        obj->draw_routine_extra = 0;
+        obj->frame_base = (sint16 *)((sint32)obj->frame_base + (char *)frames);
+        obj->object_mip = 0;
+    }
+    BaddyObjects();
+    ObjectObjects();
+    TrapObjects();
+    InitialiseHair();
+    InitialiseEffects();
+    NumRPickups = 0;
+    CurrentSequence = 0;
+    SequenceResults[0][1][2] = 0;
+    SequenceResults[0][2][1] = 1;
+    SequenceResults[1][0][2] = 2;
+    SequenceResults[1][2][0] = 3;
+    SequenceResults[2][0][1] = 4;
+    SequenceResults[2][1][0] = 5;
+    memset(SequenceUsed, 0, 6);
+    memset(LibraryTab, 0, 8);
+    n = gfNumMips;
+    for (i = 0; i < n; i++) {
+        obj = &objects[((gfMips[i] & 0xF) << 1) + ANIMATING1];
+        obj->object_mip = (gfMips[i] & 0xF0) << 6;
+    }
 }
 
 void GetCarriedItems(void)

@@ -6,6 +6,10 @@
 extern sint32 trainmappos;
 
 void InitialiseLara(void);
+void InitialiseObjects(void);
+void BaddyObjects(void);
+void ObjectObjects(void);
+void TrapObjects(void);
 void GetCarriedItems(void);
 void GetAIPickups(void);
 void InitialiseGameFlags(void);

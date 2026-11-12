@@ -80,6 +80,7 @@ extern RANGE_STRUCT *ranges;
 extern sint16 **meshes;
 extern sint16 *mesh_base;
 extern sint32 *bones;
+extern sint16 *frames;
 
 sint32 GetChange(ITEM_INFO *item, ANIM_STRUCT *anim);
 

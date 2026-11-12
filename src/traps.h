@@ -9,6 +9,7 @@ extern sint16 FloorTrapDoorBounds[12];
 extern PHD_VECTOR CeilingTrapDoorPos;
 extern sint16 CeilingTrapDoorBounds[12];
 extern sint16 SPxzoffs[8];
+extern char LibraryTab[8];
 extern sint16 SPyoffs[8];
 extern sint16 SPDETyoffs[8];
 

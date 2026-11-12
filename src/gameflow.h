@@ -428,6 +428,8 @@ extern sint32 gfMirrorZPlane;
 extern uint8 gfMirrorRoom;
 extern uint8 gfLevelComplete;
 extern GAMEFLOW *Gameflow;
+extern uint8 gfNumMips;
+extern uint8 gfMips[8];
 extern uint16 *gfStringOffset;
 extern char *gfStringWad;
 extern uint8 bDoCredits;
