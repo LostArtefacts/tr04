@@ -14,6 +14,14 @@ typedef struct fire_list {
     sint16 room_number;
 } FIRE_LIST;
 
+typedef struct nodeoffset_info {
+    sint16 x;
+    sint16 y;
+    sint16 z;
+    sint8 mesh_num;
+    uint8 GotIt;
+} NODEOFFSET_INFO;
+
 typedef struct shockwave_struct {
     sint32 x;
     sint32 y;
@@ -228,6 +236,7 @@ void UpdateShockwaves(void);
 void S_DrawFires(void);
 void S_DrawSparks(void);
 
+extern NODEOFFSET_INFO NodeOffsets[];
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
 extern sint16 FlashFadeB;

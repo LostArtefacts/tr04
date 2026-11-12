@@ -11,6 +11,7 @@
 #include "sphere.h"
 #include "specific/3dmath.h"
 #include "specific/function_stubs.h"
+#include "tomb4fx.h"
 
 void TriggerSethMissile(PHD_3DPOS *pos, sint16 room_number, sint16 type)
 {
@@ -159,6 +160,146 @@ void TriggerSethMissileFlame(sint16 fx_number, sint32 xv, sint32 yv, sint32 zv)
     size = (GetRandomControl() & 7) + 64;
     sptr->Size = sptr->sSize = size;
     sptr->dSize = size >> 5;
+}
+
+void DoSethEffects(sint16 item_number)
+{
+    ITEM_INFO *item;
+    PHD_VECTOR r, l, vec;
+    PHD_3DPOS pos;
+    sint16 angles[2];
+    sint16 size;
+    sint32 i;
+
+    item = &items[item_number];
+    item->item_flags[0]++;
+    r.x = NodeOffsets[3].x;
+    r.y = NodeOffsets[3].y;
+    r.z = NodeOffsets[3].z;
+    GetJointAbsPosition(item, &r, NodeOffsets[3].mesh_num);
+    l.x = NodeOffsets[2].x;
+    l.y = NodeOffsets[2].y;
+    l.z = NodeOffsets[2].z;
+    GetJointAbsPosition(item, &l, NodeOffsets[2].mesh_num);
+    switch (item->current_anim_state) {
+    case 11:
+    case 15:
+        if (item->item_flags[0] < 78 && (GetRandomControl() & 0x1F) < item->item_flags[0]) {
+            for (i = 2; i > 0; i--) {
+                vec.x = (GetRandomControl() & 0x7FF) + r.x - 1024;
+                vec.y = (GetRandomControl() & 0x7FF) + r.y - 1024;
+                vec.z = (GetRandomControl() & 0x7FF) + r.z - 1024;
+                TriggerSethSparks(vec.x, vec.y, vec.z, (sint16)((r.x - vec.x) << 3), (sint16)((r.y - vec.y) << 3), (sint16)((r.z - vec.z) << 3));
+                vec.x = (GetRandomControl() & 0x7FF) + l.x - 1024;
+                vec.y = (GetRandomControl() & 0x7FF) + l.y - 1024;
+                vec.z = (GetRandomControl() & 0x7FF) + l.z - 1024;
+                TriggerSethSparks(vec.x, vec.y, vec.z, (sint16)((l.x - vec.x) << 3), (sint16)((l.y - vec.y) << 3), (sint16)((l.z - vec.z) << 3));
+            }
+        }
+        size = item->item_flags[0] * 2;
+        if (size > 128)
+            size = 128;
+        if ((wibble & 0xF) == 8) {
+            if (item->item_flags[0] < 127)
+                TriggerSethFlame(item_number, 2, size);
+        } else if (!(wibble & 0xF) && item->item_flags[0] < 103)
+            TriggerSethFlame(item_number, 3, size);
+        if (item->item_flags[0] >= 96 && item->item_flags[0] <= 99) {
+            vec.x = NodeOffsets[3].x;
+            vec.y = NodeOffsets[3].y << 1;
+            vec.z = NodeOffsets[3].z;
+            GetJointAbsPosition(item, &vec, NodeOffsets[3].mesh_num);
+            pos.x_pos = r.x;
+            pos.y_pos = r.y;
+            pos.z_pos = r.z;
+            phd_GetVectorAngles(vec.x - pos.x_pos, vec.y - pos.y_pos, vec.z - pos.z_pos, angles);
+            pos.y_rot = angles[0];
+            pos.x_rot = angles[1];
+            TriggerSethMissile(&pos, item->room_number, 0);
+        } else if (item->item_flags[0] >= 122 && item->item_flags[0] <= 125) {
+            vec.x = NodeOffsets[2].x;
+            vec.y = NodeOffsets[2].y << 1;
+            vec.z = NodeOffsets[2].z;
+            GetJointAbsPosition(item, &vec, NodeOffsets[2].mesh_num);
+            pos.x_pos = l.x;
+            pos.y_pos = l.y;
+            pos.z_pos = l.z;
+            phd_GetVectorAngles(vec.x - pos.x_pos, vec.y - pos.y_pos, vec.z - pos.z_pos, angles);
+            pos.y_rot = angles[0];
+            pos.x_rot = angles[1];
+            TriggerSethMissile(&pos, item->room_number, 0);
+        }
+        break;
+    case 12:
+        size = item->item_flags[0] * 4;
+        if (size > 160)
+            size = 160;
+        if ((wibble & 0xF) == 8) {
+            if (item->item_flags[0] < 132)
+                TriggerSethFlame(item_number, 2, size);
+        } else if (!(wibble & 0xF) && item->item_flags[0] < 132)
+            TriggerSethFlame(item_number, 3, size);
+        if (((item->item_flags[0] >= 60 && item->item_flags[0] <= 74) || (item->item_flags[0] >= 112 && item->item_flags[0] <= 124)) && wibble & 4) {
+            vec.x = NodeOffsets[3].x;
+            vec.y = NodeOffsets[3].y << 1;
+            vec.z = NodeOffsets[3].z;
+            GetJointAbsPosition(item, &vec, NodeOffsets[3].mesh_num);
+            pos.x_pos = r.x;
+            pos.y_pos = r.y;
+            pos.z_pos = r.z;
+            phd_GetVectorAngles(vec.x - pos.x_pos, vec.y - pos.y_pos, vec.z - pos.z_pos, angles);
+            pos.y_rot = angles[0];
+            pos.x_rot = angles[1];
+            TriggerSethMissile(&pos, item->room_number, 0);
+            vec.x = NodeOffsets[2].x;
+            vec.y = NodeOffsets[2].y << 1;
+            vec.z = NodeOffsets[2].z;
+            GetJointAbsPosition(item, &vec, NodeOffsets[2].mesh_num);
+            pos.x_pos = l.x;
+            pos.y_pos = l.y;
+            pos.z_pos = l.z;
+            phd_GetVectorAngles(vec.x - pos.x_pos, vec.y - pos.y_pos, vec.z - pos.z_pos, angles);
+            pos.y_rot = angles[0];
+            pos.x_rot = angles[1];
+            TriggerSethMissile(&pos, item->room_number, 0);
+        }
+        break;
+    case 13:
+        if (item->item_flags[0] > 40 && item->item_flags[0] < 100 && (GetRandomControl() & 7) < item->item_flags[0] - 40) {
+            for (i = 2; i > 0; i--) {
+                vec.x = (GetRandomControl() & 0x7FF) + r.x - 1024;
+                vec.y = (GetRandomControl() & 0x7FF) + r.y - 1024;
+                vec.z = (GetRandomControl() & 0x7FF) + r.z - 1024;
+                TriggerSethSparks(vec.x, vec.y, vec.z, (sint16)((r.x - vec.x) << 3), (sint16)((r.y - vec.y) << 3), (sint16)((r.z - vec.z) << 3));
+                vec.x = (GetRandomControl() & 0x7FF) + l.x - 1024;
+                vec.y = (GetRandomControl() & 0x7FF) + l.y - 1024;
+                vec.z = (GetRandomControl() & 0x7FF) + l.z - 1024;
+                TriggerSethSparks(vec.x, vec.y, vec.z, (sint16)((l.x - vec.x) << 3), (sint16)((l.y - vec.y) << 3), (sint16)((l.z - vec.z) << 3));
+            }
+        }
+        size = item->item_flags[0] * 2;
+        if (size > 128)
+            size = 128;
+        if ((wibble & 0xF) == 8) {
+            if (item->item_flags[0] < 103)
+                TriggerSethFlame(item_number, 2, size);
+        } else if (!(wibble & 0xF) && item->item_flags[0] < 103)
+            TriggerSethFlame(item_number, 3, size);
+        if (item->item_flags[0] == 102) {
+            vec.x = NodeOffsets[3].x;
+            vec.y = NodeOffsets[3].y << 1;
+            vec.z = NodeOffsets[3].z;
+            GetJointAbsPosition(item, &vec, NodeOffsets[3].mesh_num);
+            pos.x_pos = r.x;
+            pos.y_pos = r.y;
+            pos.z_pos = r.z;
+            phd_GetVectorAngles(vec.x - pos.x_pos, vec.y - pos.y_pos, vec.z - pos.z_pos, angles);
+            pos.y_rot = angles[0];
+            pos.x_rot = angles[1];
+            TriggerSethMissile(&pos, item->room_number, 1);
+        }
+        break;
+    }
 }
 
 void InitialiseSeth(sint16 item_number)

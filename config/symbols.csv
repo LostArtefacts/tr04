@@ -110,7 +110,7 @@ address,size,name,symbol
 0x00410130,238,TriggerSethSparks,_TriggerSethSparks
 0x00410220,389,TriggerSethFlame,_TriggerSethFlame
 0x004103b0,373,TriggerSethMissileFlame,_TriggerSethMissileFlame
-0x00410530,1758,DoSethEffects,_DoSethEffects
+0x00410530,1780,DoSethEffects,_DoSethEffects
 0x00410c30,90,InitialiseSeth,_InitialiseSeth
 0x00410c90,2380,SethControl,_SethControl
 0x004115e0,499,TriggerRiseEffect,_TriggerRiseEffect
@@ -2057,6 +2057,7 @@ address,size,name,symbol
 0x004adf48,14,footsounds,_footsounds
 0x004adf58,2,ScreenFadeSpeed,_ScreenFadeSpeed
 0x004adf5c,4,next_fire_spark,_next_fire_spark
+0x004adf60,32,NodeOffsets,_NodeOffsets
 0x004adf80,8,harpy_left_hand,_harpy_left_hand
 0x004adf88,8,harpy_right_hand,_harpy_right_hand
 0x004ae060,4,pcbright,_pcbright
