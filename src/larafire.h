@@ -32,7 +32,7 @@ void LaraGun(void);
 void LaraGetNewTarget(WEAPON_INFO *winfo);
 void AimWeapon(WEAPON_INFO *winfo, LARA_ARM *arm);
 
-extern WEAPON_INFO weapons[9];
+extern WEAPON_INFO weapons[];
 extern sint16 HoldStates[18];
 extern GAME_VECTOR bum_vdest;
 extern PHD_3DPOS bum_view;
