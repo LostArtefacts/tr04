@@ -2073,6 +2073,7 @@ address,size,name,symbol
 0x004af458,36,CreditGroups,_CreditGroups
 0x004af47c,1562,CreditsTable,_CreditsTable
 0x004afab8,4,old_hitpoints,_old_hitpoints
+0x004afacc,24,ElementPuzzleBounds,_ElementPuzzleBounds
 0x004afae8,12,PolePos,_PolePos
 0x004afaf4,24,PoleBounds,_PoleBounds
 0x004afb0c,24,StatuePlinthBounds,_StatuePlinthBounds
