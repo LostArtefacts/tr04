@@ -28,6 +28,9 @@
 #include "dxshell.h"
 #include "specificfx.h"
 #include "audio.h"
+#include "../effect2.h"
+#include "../control.h"
+#include "polyinsert.h"
 
 #ifndef TR4_EXE
 FILE *FileOpen(const char *name)
@@ -109,6 +112,110 @@ uint8 Decompress(char *pDest, char *pCompressed, sint32 compressedSize, sint32 s
     }
     inflateEnd(&stream);
     Log(5, "Decompression OK");
+    return 1;
+}
+
+uint8 LoadRooms(void)
+{
+    ROOM_INFO *r;
+    MESH_INFO *mesh;
+    sint32 size, nDoors, i, j;
+
+    Log(2, "LoadRooms");
+    wibble = 0;
+    MaxRoomLights = 0;
+    NumLevelFogBulbs = 0;
+    FileData += sizeof(sint32);
+    number_rooms = *(sint16 *)FileData;
+    FileData += sizeof(sint16);
+    Log(7, "Number Of Rooms %d", number_rooms);
+    if (number_rooms < 0 || number_rooms > 1024) {
+        Log(1, "Incorrect Number Of Rooms");
+        return 0;
+    }
+    room = (ROOM_INFO *)game_malloc(number_rooms * sizeof(ROOM_INFO), 0);
+    if (!room)
+        return 0;
+    r = room;
+    for (i = 0; i < number_rooms; i++, r++) {
+        r->x = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        r->y = 0;
+        r->z = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        r->minfloor = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        r->maxceiling = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        size = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        r->data = (sint16 *)game_malloc(size * sizeof(sint16), 0);
+        memcpy(r->data, FileData, size * sizeof(sint16));
+        FileData += size * sizeof(sint16);
+        nDoors = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        if (nDoors) {
+            r->door = (sint16 *)game_malloc((16 * nDoors + 1) * sizeof(sint16), 0);
+            r->door[0] = (sint16)nDoors;
+            memcpy(r->door + 1, FileData, 16 * nDoors * sizeof(sint16));
+            FileData += 16 * nDoors * sizeof(sint16);
+        } else
+            r->door = 0;
+        r->x_size = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        r->y_size = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        size = r->x_size * r->y_size * sizeof(FLOOR_INFO);
+        r->floor = (FLOOR_INFO *)game_malloc(size, 0);
+        memcpy(r->floor, FileData, size);
+        FileData += size;
+        r->ambient = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        r->num_lights = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        if (r->num_lights) {
+            r->light = (LIGHTINFO *)game_malloc(sizeof(LIGHTINFO) * r->num_lights, 0);
+            memcpy(r->light, FileData, sizeof(LIGHTINFO) * r->num_lights);
+            FileData += sizeof(LIGHTINFO) * r->num_lights;
+        } else
+            r->light = 0;
+        r->num_meshes = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        if (r->num_meshes) {
+            r->mesh = (MESH_INFO *)game_malloc(sizeof(MESH_INFO) * r->num_meshes, 0);
+            memcpy(r->mesh, FileData, sizeof(MESH_INFO) * r->num_meshes);
+            FileData += sizeof(MESH_INFO) * r->num_meshes;
+            mesh = r->mesh;
+            for (j = 0; j < r->num_meshes; j++, mesh++)
+                mesh->Flags = 1;
+        } else
+            r->mesh = 0;
+        r->flipped_room = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        r->flags = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        r->MeshEffect = *(sint8 *)FileData;
+        FileData += sizeof(sint8);
+        r->ReverbType = *(uint8 *)FileData;
+        FileData += sizeof(uint8);
+        r->FlipNumber = *(uint8 *)FileData;
+        FileData += sizeof(uint8);
+        r->left = 0x7FFF;
+        r->top = 0x7FFF;
+        r->bound_active = 0;
+        r->right = 0;
+        r->bottom = 0;
+        r->item_number = NO_ITEM;
+        r->fx_number = NO_ITEM;
+        ProcessRoomData(r);
+    }
+    BuildOutsideTable();
+    size = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    floor_data = (sint16 *)game_malloc(2 * size, 0);
+    memcpy(floor_data, FileData, 2 * size);
+    FileData += sizeof(sint16) * size;
+    Log(0, "Floor Data Size %d @ %x", size, floor_data);
     return 1;
 }
 

@@ -50,6 +50,7 @@ extern sint32 bWaterEffect;
 
 void InsertRoom(ROOM_INFO *r);
 void ProcessMeshData(sint32 num_meshes);
+void ProcessRoomData(ROOM_INFO *r);
 
 void InitBuckets(void);
 void DrawBucket(TEXTUREBUCKET *bucket);

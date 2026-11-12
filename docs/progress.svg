@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="244.79" height="12" x="0" y="0" class="named"><title>1108 · 71.58%</title></rect>
 <rect width="0.44" height="12" x="244.79" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="15.02" height="12" x="245.23" y="0" class="nonmatching"><title>68 · 4.39%</title></rect>
-<rect width="81.74" height="12" x="260.26" y="0" class="todo"><title>370 · 23.90%</title></rect>
+<rect width="15.24" height="12" x="245.23" y="0" class="nonmatching"><title>69 · 4.46%</title></rect>
+<rect width="81.52" height="12" x="260.48" y="0" class="todo"><title>369 · 23.84%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">71.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1108</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">68</tspan> · <tspan class="todo">370</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1108</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">69</tspan> · <tspan class="todo">369</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="123.72" height="12" x="0" y="0" class="named"><title>225 KB · 36.18%</title></rect>
 <rect width="0.12" height="12" x="123.72" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="26.67" height="12" x="123.84" y="0" class="nonmatching"><title>48 KB · 7.80%</title></rect>
-<rect width="191.49" height="12" x="150.51" y="0" class="todo"><title>348 KB · 55.99%</title></rect>
+<rect width="27.28" height="12" x="123.84" y="0" class="nonmatching"><title>50 KB · 7.98%</title></rect>
+<rect width="190.88" height="12" x="151.12" y="0" class="todo"><title>347 KB · 55.81%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">36.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">225 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">48 KB</tspan> · <tspan class="todo">348 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">225 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">50 KB</tspan> · <tspan class="todo">347 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1259,7 +1259,7 @@
 <rect width="12" height="12" x="600" y="345" class="named"><title>0x00473dd0 LoadFile (169 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="345" class="named"><title>0x00473e80 Decompress (156 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="345" class="todo"><title>0x00473f20 LoadTextures (2716 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="345" class="todo"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="345" class="nonmatching"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="345" class="nonmatching"><title>0x00474e10 LoadObjects (1156 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="345" class="todo"><title>0x004752a0 AdjustUV (1121 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="345" class="named"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
@@ -1750,7 +1750,7 @@
 <rect width="20.89" height="20.63" x="258.75" y="143.72" class="todo"><title>0x0048e9c0 WinMain (1117 bytes)</title></rect>
 <rect width="20.89" height="20.47" x="258.75" y="167.36" class="todo"><title>0x00487260 S_DrawSmokeSparks (1108 bytes)</title></rect>
 <rect width="20.89" height="20.36" x="258.75" y="190.82" class="nonmatching"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
-<rect width="20.89" height="20.30" x="258.75" y="214.18" class="todo"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
+<rect width="20.89" height="20.30" x="258.75" y="214.18" class="nonmatching"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
 <rect width="20.89" height="20.02" x="258.75" y="237.48" class="todo"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
 <rect width="20.89" height="19.91" x="258.75" y="260.50" class="todo"><title>0x0048eff0 WinProcessCommands (1078 bytes)</title></rect>
 <rect width="20.89" height="19.89" x="258.75" y="283.41" class="nonmatching"><title>0x00435130 TriggerFireFlame (1077 bytes)</title></rect>
