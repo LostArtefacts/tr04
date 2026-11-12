@@ -1976,6 +1976,15 @@ address,size,name,symbol
 0x004a9240,4,LoadImageA,__imp__LoadImageA@24
 0x004a9248,4,joyGetDevCapsA,__imp__joyGetDevCapsA@12
 0x004a924c,4,joyGetPosEx,__imp__joyGetPosEx@8
+0x004a9254,4,BinkDDSurfaceType,__imp__BinkDDSurfaceType@4
+0x004a9258,4,BinkClose,__imp__BinkClose@4
+0x004a925c,4,BinkNextFrame,__imp__BinkNextFrame@4
+0x004a9260,4,BinkWait,__imp__BinkWait@4
+0x004a9264,4,BinkDoFrame,__imp__BinkDoFrame@4
+0x004a9268,4,BinkCopyToBuffer,__imp__BinkCopyToBuffer@28
+0x004a926c,4,BinkOpen,__imp__BinkOpen@8
+0x004a9270,4,BinkSetSoundSystem,__imp__BinkSetSoundSystem@8
+0x004a9274,4,BinkOpenDirectSound,__imp__BinkOpenDirectSound@4
 0x004a9460,16,IID_IDirectDraw4,_IID_IDirectDraw4
 0x004a9780,16,IID_IDirect3D3,_IID_IDirect3D3
 0x004aa150,16,IID_IDirectInput2A,_IID_IDirectInput2A

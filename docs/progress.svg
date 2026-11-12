@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="232.13" height="12" x="0" y="0" class="named"><title>1050 · 67.87%</title></rect>
-<rect width="0.44" height="12" x="232.13" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="9.51" height="12" x="232.57" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
-<rect width="99.93" height="12" x="242.07" y="0" class="todo"><title>452 · 29.22%</title></rect>
+<rect width="232.35" height="12" x="0" y="0" class="named"><title>1051 · 67.94%</title></rect>
+<rect width="0.44" height="12" x="232.35" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="9.51" height="12" x="232.79" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
+<rect width="99.70" height="12" x="242.30" y="0" class="todo"><title>451 · 29.15%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">68.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1050</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">452</tspan></text>
+<text text-anchor="end" x="522" y="7.50">68.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1051</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">451</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="102.61" height="12" x="0" y="0" class="named"><title>186 KB · 30%</title></rect>
-<rect width="0.12" height="12" x="102.61" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="13.36" height="12" x="102.73" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
-<rect width="225.92" height="12" x="116.08" y="0" class="todo"><title>410 KB · 66.06%</title></rect>
+<rect width="102.68" height="12" x="0" y="0" class="named"><title>186 KB · 30.02%</title></rect>
+<rect width="0.12" height="12" x="102.68" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="13.36" height="12" x="102.80" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
+<rect width="225.84" height="12" x="116.16" y="0" class="todo"><title>410 KB · 66.04%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">30.0%</text>
+<text text-anchor="end" x="522" y="24.50">30.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">186 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">24 KB</tspan> · <tspan class="todo">410 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1607,7 +1607,7 @@
 <rect width="12" height="12" x="570" y="450" class="todo"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="450" class="todo"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="todo"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="450" class="todo"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="450" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="450" class="todo"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="450" class="todo"><title>0x0049c6e0 DBLog_MapView (23 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="450" class="todo"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
@@ -2518,7 +2518,7 @@
 <rect width="7.32" height="7.34" x="708.73" y="255.61" class="named"><title>0x00442080 CreatureUnderwater (139 bytes)</title></rect>
 <rect width="7.32" height="7.34" x="719.05" y="255.61" class="named"><title>0x00467c60 DoDynamics_jeep (139 bytes)</title></rect>
 <rect width="7.32" height="7.34" x="729.37" y="255.61" class="named"><title>0x00475a30 LoadSoundEffects (139 bytes)</title></rect>
-<rect width="7.32" height="7.34" x="739.68" y="255.61" class="todo"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
+<rect width="7.32" height="7.34" x="739.68" y="255.61" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
 <rect width="7.63" height="6.98" x="551.10" y="265.95" class="todo"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
 <rect width="7.63" height="6.98" x="561.73" y="265.95" class="named"><title>0x0040fbd0 ShockwaveExplosion (138 bytes)</title></rect>
 <rect width="7.58" height="6.98" x="572.36" y="265.95" class="named"><title>0x004136c0 TrapDoorControl (137 bytes)</title></rect>
