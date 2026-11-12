@@ -48,6 +48,7 @@ void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame);
 void CalculateObjectLightingLara(void);
 void UpdateSkyLightning(void);
 void DrawEffect(sint16 fx_num);
+void InterpolateArmMatrix(sint32 *mx);
 
 extern STATIC_INFO static_objects[60];
 extern sint16 LightningCount;

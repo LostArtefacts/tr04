@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="227.71" height="12" x="0" y="0" class="named"><title>1030 · 66.58%</title></rect>
-<rect width="0.44" height="12" x="227.71" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="228.15" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="105.45" height="12" x="236.55" y="0" class="todo"><title>477 · 30.83%</title></rect>
+<rect width="227.93" height="12" x="0" y="0" class="named"><title>1031 · 66.65%</title></rect>
+<rect width="0.44" height="12" x="227.93" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="228.37" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="105.23" height="12" x="236.77" y="0" class="todo"><title>476 · 30.77%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">66.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1030</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">477</tspan></text>
+<text text-anchor="end" x="522" y="7.50">66.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1031</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">476</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="99.67" height="12" x="0" y="0" class="named"><title>181 KB · 29.14%</title></rect>
-<rect width="0.12" height="12" x="99.67" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="99.79" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="232.05" height="12" x="109.95" y="0" class="todo"><title>421 KB · 67.85%</title></rect>
+<rect width="99.81" height="12" x="0" y="0" class="named"><title>181 KB · 29.19%</title></rect>
+<rect width="0.12" height="12" x="99.81" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="99.93" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="231.91" height="12" x="110.09" y="0" class="todo"><title>421 KB · 67.81%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">29.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">181 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">421 KB</tspan></text>
@@ -863,7 +863,7 @@
 <rect width="12" height="12" x="660" y="225" class="named"><title>0x00450760 gar_RotYXZsuperpack (162 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="225" class="named"><title>0x00450810 phd_PutPolygons_I (42 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="225" class="named"><title>0x00450840 InterpolateMatrix (623 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="225" class="todo"><title>0x00450ab0 InterpolateArmMatrix (255 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="225" class="named"><title>0x00450ab0 InterpolateArmMatrix (255 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="225" class="named"><title>0x00450bb0 CalculateObjectLighting (248 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="225" class="named"><title>0x00450cb0 CalculateObjectLightingLara (271 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="240" class="named"><title>0x00450dc0 GetFrames (147 bytes)</title></rect>
@@ -2230,7 +2230,7 @@
 <rect width="10.11" height="9.86" x="697.81" y="172.16" class="named"><title>0x00430a50 LaraCheatyBits (258 bytes)</title></rect>
 <rect width="10.07" height="9.86" x="710.92" y="172.16" class="named"><title>0x00413e80 FallingCeiling (257 bytes)</title></rect>
 <rect width="10.03" height="9.86" x="723.98" y="172.16" class="named"><title>0x0045a370 OpenSaveGame (256 bytes)</title></rect>
-<rect width="9.99" height="9.86" x="737.01" y="172.16" class="todo"><title>0x00450ab0 InterpolateArmMatrix (255 bytes)</title></rect>
+<rect width="9.99" height="9.86" x="737.01" y="172.16" class="named"><title>0x00450ab0 InterpolateArmMatrix (255 bytes)</title></rect>
 <rect width="9.83" height="9.98" x="470.39" y="185.02" class="named"><title>0x00427940 lara_as_pulley (254 bytes)</title></rect>
 <rect width="9.83" height="9.98" x="483.21" y="185.02" class="named"><title>0x00428d40 LookLeftRight (254 bytes)</title></rect>
 <rect width="9.83" height="9.98" x="496.04" y="185.02" class="todo"><title>0x00439f80 UpdateDrips (254 bytes)</title></rect>

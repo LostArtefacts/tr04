@@ -311,6 +311,39 @@ void InterpolateMatrix(void)
     }
 }
 
+void InterpolateArmMatrix(sint32 *mx)
+{
+    sint32 *mptr, *iptr;
+    sint32 frac, rate;
+
+    mptr = phd_mxptr;
+    iptr = IMptr;
+    frac = IM_frac;
+    rate = IM_rate;
+    mptr[M00] = mx[M00];
+    mptr[M01] = mx[M01];
+    mptr[M02] = mx[M02];
+    mptr[M10] = mx[M10];
+    mptr[M11] = mx[M11];
+    mptr[M12] = mx[M12];
+    mptr[M20] = mx[M20];
+    mptr[M21] = mx[M21];
+    mptr[M22] = mx[M22];
+    if (rate == 2 || (frac == 2 && rate == 4)) {
+        mptr[M03] = (iptr[M03] + mptr[M03]) >> 1;
+        mptr[M13] = (iptr[M13] + mptr[M13]) >> 1;
+        mptr[M23] = (iptr[M23] + mptr[M23]) >> 1;
+    } else if (frac == 1) {
+        mptr[M03] += (iptr[M03] - mptr[M03]) >> 2;
+        mptr[M13] += (iptr[M13] - mptr[M13]) >> 2;
+        mptr[M23] += (iptr[M23] - mptr[M23]) >> 2;
+    } else {
+        mptr[M03] = iptr[M03] - ((iptr[M03] - mptr[M03]) >> 2);
+        mptr[M13] = iptr[M13] - ((iptr[M13] - mptr[M13]) >> 2);
+        mptr[M23] = iptr[M23] - ((iptr[M23] - mptr[M23]) >> 2);
+    }
+}
+
 void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame)
 {
     sint32 *mptr;
