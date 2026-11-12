@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="213.78" height="12" x="0" y="0" class="named"><title>967 · 62.51%</title></rect>
-<rect width="0.44" height="12" x="213.78" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="214.22" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="120.48" height="12" x="221.52" y="0" class="todo"><title>545 · 35.23%</title></rect>
+<rect width="214" height="12" x="0" y="0" class="named"><title>968 · 62.57%</title></rect>
+<rect width="0.44" height="12" x="214" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="214.44" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="120.26" height="12" x="221.74" y="0" class="todo"><title>544 · 35.16%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">62.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">967</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">545</tspan></text>
+<text text-anchor="end" x="522" y="7.50">62.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">968</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">544</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="92.14" height="12" x="0" y="0" class="named"><title>167 KB · 26.94%</title></rect>
-<rect width="0.12" height="12" x="92.14" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="92.26" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="240.31" height="12" x="101.69" y="0" class="todo"><title>436 KB · 70.27%</title></rect>
+<rect width="92.24" height="12" x="0" y="0" class="named"><title>167 KB · 26.97%</title></rect>
+<rect width="0.12" height="12" x="92.24" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="92.36" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="240.21" height="12" x="101.79" y="0" class="todo"><title>436 KB · 70.24%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">27.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">167 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">436 KB</tspan></text>
@@ -172,7 +172,7 @@
 <rect width="12" height="12" x="45" y="30" class="named"><title>0x0040fcf0 ControlGodHead (219 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="30" class="todo"><title>0x0040fdd0 DrawGodHead (354 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="30" class="todo"><title>0x0040ff40 GameStixCollision (299 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="30" class="todo"><title>0x00410070 TriggerSethMissile (182 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="30" class="named"><title>0x00410070 TriggerSethMissile (182 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="30" class="todo"><title>0x00410130 TriggerSethSparks (238 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="30" class="todo"><title>0x00410220 TriggerSethFlame (389 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="30" class="todo"><title>0x004103b0 TriggerSethMissileFlame (373 bytes)</title></rect>
@@ -2393,7 +2393,7 @@
 <rect width="8.28" height="8.59" x="507.42" y="350.19" class="named"><title>0x00489480 OutputSky (184 bytes)</title></rect>
 <rect width="8.28" height="8.54" x="507.42" y="361.78" class="named"><title>0x004229d0 LaraCollideStop (183 bytes)</title></rect>
 <rect width="8.28" height="8.50" x="507.42" y="373.32" class="named"><title>0x0040b060 GunHit (182 bytes)</title></rect>
-<rect width="8.28" height="8.50" x="507.42" y="384.81" class="todo"><title>0x00410070 TriggerSethMissile (182 bytes)</title></rect>
+<rect width="8.28" height="8.50" x="507.42" y="384.81" class="named"><title>0x00410070 TriggerSethMissile (182 bytes)</title></rect>
 <rect width="8.28" height="8.50" x="507.42" y="396.31" class="todo"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
 <rect width="8.28" height="8.50" x="507.42" y="407.80" class="named"><title>0x00456420 AnimateWaterfalls (182 bytes)</title></rect>
 <rect width="8.28" height="8.45" x="507.42" y="419.30" class="named"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
