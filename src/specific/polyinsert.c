@@ -194,6 +194,63 @@ void InitialiseFogBulbs(void)
     }
 }
 
+void SubdivideEdge(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v, sint16 *c, float tu1, float tv1, float tu2, float tv2, float *tu, float *tv)
+{
+    float zv;
+    sint16 cf, r0, g0, b0, a0, r1, g1, b1, a1;
+
+    cf = 0;
+    *tu = (tu1 + tu2) * 0.5F;
+    *tv = (tv1 + tv2) * 0.5F;
+    v->sx = (v0->tu + v1->tu) * 0.5F;
+    v->sy = (v0->tv + v1->tv) * 0.5F;
+    v->sz = (v0->sz + v1->sz) * 0.5F;
+    v->tu = v->sx;
+    v->tv = v->sy;
+    if (v->sz >= f_mznear) {
+        zv = f_mpersp / v->sz;
+        v->sx = zv * v->sx + f_centerx;
+        v->sy = zv * v->sy + f_centery;
+        v->rhw = f_moneopersp * zv;
+        if (v->sx < f_left)
+            cf++;
+        else if (v->sx > f_right)
+            cf += 2;
+        if (v->sy < f_top)
+            cf += 4;
+        else if (v->sy > f_bottom)
+            cf += 8;
+    } else
+        cf = -128;
+    *c = cf;
+    a0 = (v0->color >> 24) & 0xFF;
+    r0 = (v0->color >> 16) & 0xFF;
+    g0 = (v0->color >> 8) & 0xFF;
+    b0 = v0->color & 0xFF;
+    a1 = (v1->color >> 24) & 0xFF;
+    r1 = (v1->color >> 16) & 0xFF;
+    g1 = (v1->color >> 8) & 0xFF;
+    b1 = v1->color & 0xFF;
+    a1 = (a0 + a1) >> 1;
+    r1 = (r0 + r1) >> 1;
+    g1 = (g0 + g1) >> 1;
+    b1 = (b0 + b1) >> 1;
+    v->color = RGBA(r1, g1, b1, a1);
+    a0 = (v0->specular >> 24) & 0xFF;
+    r0 = (v0->specular >> 16) & 0xFF;
+    g0 = (v0->specular >> 8) & 0xFF;
+    b0 = v0->specular & 0xFF;
+    a1 = (v1->specular >> 24) & 0xFF;
+    r1 = (v1->specular >> 16) & 0xFF;
+    g1 = (v1->specular >> 8) & 0xFF;
+    b1 = v1->specular & 0xFF;
+    a1 = (a0 + a1) >> 1;
+    r1 = (r0 + r1) >> 1;
+    g1 = (g0 + g1) >> 1;
+    b1 = (b0 + b1) >> 1;
+    v->specular = RGBA(r1, g1, b1, a1);
+}
+
 void AddTriSubdivide(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided)
 {
     sint32 steps;
