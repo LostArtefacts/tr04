@@ -13,7 +13,7 @@ address,size,name,symbol
 0x00402a10,90,InitialiseBat,_InitialiseBat
 0x00402a70,797,BatControl,_BatControl
 0x00402d90,157,InitialiseCroc,_InitialiseCroc
-0x00402e30,1913,CrocControl,_CrocControl
+0x00402e30,1952,CrocControl,_CrocControl
 0x004035d0,71,GetFreeLocust,_GetFreeLocust
 0x00403620,20,Func403620,_Func403620
 0x00403640,353,TriggerLocust,_TriggerLocust
@@ -1997,6 +1997,7 @@ address,size,name,symbol
 0x004ad070,16,ahmet_right_claw,_ahmet_right_claw
 0x004ad080,24,ScalesBounds,_ScalesBounds
 0x004ad0a8,16,bat_bite,_bat_bite
+0x004ad0b8,16,croc_bite,_croc_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
 0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition
 0x004ad1d0,24,MovingBlockBounds,_MovingBlockBounds

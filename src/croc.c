@@ -7,6 +7,7 @@
 #include "effects.h"
 #include "lara.h"
 #include "objnums.h"
+#include "people.h"
 #include "room.h"
 #include "sphere.h"
 #include "specific/3dmath.h"
@@ -27,6 +28,197 @@ void InitialiseCroc(sint16 item_number)
         item->anim_number = objects[CROCODILE].anim_index;
         item->frame_number = anims[item->anim_number].frame_base;
         item->current_anim_state = item->goal_anim_state = 1;
+    }
+}
+
+void CrocControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    CREATURE_INFO *croc;
+    FLOOR_INFO *floor;
+    AI_INFO info;
+    sint32 s, c, x, y, z, h, h2;
+    sint16 room_number, angle, rot, roll;
+
+    if (!CreatureActive(item_number))
+        return;
+    item = &items[item_number];
+    croc = (CREATURE_INFO *)item->data;
+    angle = 0;
+    rot = 0;
+    room_number = item->room_number;
+    y = item->pos.y_pos;
+    s = (1024 * (rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+    x = item->pos.x_pos + s;
+    c = (1024 * (rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+    z = item->pos.z_pos + c;
+    floor = GetFloor(x, y, z, &room_number);
+    h = GetHeight(floor, x, y, z);
+    if (abs(y - h) > 512)
+        h = y;
+    x = item->pos.x_pos - s;
+    z = item->pos.z_pos - c;
+    room_number = item->room_number;
+    floor = GetFloor(x, y, z, &room_number);
+    h2 = GetHeight(floor, x, y, z);
+    if (abs(y - h2) > 512)
+        h2 = y;
+    roll = (sint16)phd_atan(2048, h2 - h);
+    if (item->hit_points <= 0) {
+        item->hit_points = 0;
+        if (item->current_anim_state != 7 && item->current_anim_state != 10) {
+            if (room[item->room_number].flags & ROOM_UNDERWATER) {
+                item->anim_number = objects[CROCODILE].anim_index + 16;
+                item->frame_number = anims[item->anim_number].frame_base;
+                item->current_anim_state = item->goal_anim_state = 10;
+                item->hit_points = -16384;
+            } else {
+                item->anim_number = objects[CROCODILE].anim_index + 11;
+                item->frame_number = anims[item->anim_number].frame_base;
+                item->current_anim_state = item->goal_anim_state = 7;
+            }
+        }
+        if (room[item->room_number].flags & ROOM_UNDERWATER)
+            CreatureFloat(item_number);
+    } else {
+        if (item->ai_bits)
+            GetAITarget(croc);
+        else if (croc->hurt_by_lara)
+            croc->enemy = lara_item;
+        CreatureAIInfo(item, &info);
+        GetCreatureMood(item, &info, 1);
+        CreatureMood(item, &info, 1);
+        angle = CreatureTurn(item, croc->maximum_turn);
+        if (item->hit_status || info.distance < 0x240000 || (TargetVisible(item, &info) && info.distance < 0x1900000)) {
+            if (!croc->alerted)
+                croc->alerted = 1;
+            AlertAllGuards(item_number);
+        }
+        rot = angle << 2;
+        switch (item->current_anim_state) {
+        case 8:
+            croc->maximum_turn = 546;
+            croc->LOT.step = 20480;
+            croc->LOT.drop = -20480;
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (info.bite && item->touch_bits & 0x300)
+                item->goal_anim_state = 9;
+            break;
+        case 9:
+            if (item->frame_number == anims[item->anim_number].frame_base)
+                item->required_anim_state = 0;
+            if (info.bite && item->touch_bits & 0x300) {
+                if (!item->required_anim_state) {
+                    CreatureEffectT(item, &croc_bite, 10, -1, DoBloodSplat);
+                    lara_item->hit_points -= 120;
+                    lara_item->hit_status = 1;
+                    item->required_anim_state = 8;
+                }
+            } else {
+                item->goal_anim_state = 8;
+            }
+            break;
+        case 1:
+            croc->maximum_turn = 0;
+            if (item->ai_bits & GUARD) {
+                rot = item->item_flags[0];
+                item->goal_anim_state = 1;
+                item->item_flags[0] += item->item_flags[1];
+                if (!(GetRandomControl() & 0x1F)) {
+                    if (GetRandomControl() & 1)
+                        item->item_flags[1] = 0;
+                    else
+                        item->item_flags[1] = (GetRandomControl() & 1) ? 12 : -12;
+                }
+                if (item->item_flags[0] > 1024)
+                    item->item_flags[0] = 1024;
+                else if (item->item_flags[0] < -1024)
+                    item->item_flags[0] = -1024;
+            } else if (info.bite && info.distance < 0x90000) {
+                item->goal_anim_state = 5;
+            } else if (info.ahead && info.distance < 0x100000) {
+                item->goal_anim_state = 3;
+            } else {
+                item->goal_anim_state = 2;
+            }
+            break;
+        case 3:
+            croc->maximum_turn = 546;
+            croc->LOT.step = 256;
+            croc->LOT.drop = -256;
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (info.bite && info.distance < 0x90000)
+                item->goal_anim_state = 1;
+            else if (!info.ahead || info.distance > 0x240000)
+                item->goal_anim_state = 2;
+            break;
+        case 2:
+            croc->maximum_turn = 546;
+            if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (info.bite && info.distance < 0x90000)
+                item->goal_anim_state = 1;
+            else if (info.ahead && info.distance < 0x100000)
+                item->goal_anim_state = 3;
+            break;
+        case 5:
+            if (item->frame_number == anims[item->anim_number].frame_base)
+                item->required_anim_state = 0;
+            if (info.bite && item->touch_bits & 0x300) {
+                if (!item->required_anim_state) {
+                    CreatureEffectT(item, &croc_bite, 10, -1, DoBloodSplat);
+                    lara_item->hit_points -= 120;
+                    lara_item->hit_status = 1;
+                    item->required_anim_state = 1;
+                }
+            } else {
+                item->goal_anim_state = 1;
+            }
+            break;
+        }
+    }
+    CreatureTilt(item, 0);
+    CreatureJoint(item, 0, rot);
+    CreatureJoint(item, 1, rot);
+    CreatureJoint(item, 2, -rot);
+    CreatureJoint(item, 3, -rot);
+    if (item->current_anim_state < 8) {
+        if (abs(roll - item->pos.x_rot) < 256)
+            item->pos.x_rot = roll;
+        else if (roll > item->pos.x_rot)
+            item->pos.x_rot += 256;
+        else if (roll < item->pos.x_rot)
+            item->pos.x_rot -= 256;
+    }
+    CreatureAnimation(item_number, angle, 0);
+    room_number = item->room_number;
+    if (item->current_anim_state == 8)
+        GetFloor(item->pos.x_pos + ((1024 * (rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT), item->pos.y_pos, item->pos.z_pos + ((1024 * (rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT), &room_number);
+    else
+        GetFloor(item->pos.x_pos + ((512 * (rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT), item->pos.y_pos, item->pos.z_pos + ((1024 * (rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT), &room_number);
+    if (room[item->room_number].flags & ROOM_UNDERWATER) {
+        if (room[room_number].flags & ROOM_UNDERWATER) {
+            if (item->current_anim_state == 2) {
+                item->goal_anim_state = item->required_anim_state = 3;
+            } else if (item->current_anim_state == 3) {
+                item->goal_anim_state = item->required_anim_state = 8;
+            } else if (item->anim_number != objects[CROCODILE].anim_index + 17) {
+                croc->LOT.step = 20480;
+                croc->LOT.drop = -20480;
+                croc->LOT.fly = 16;
+                CreatureUnderwater(item, 256);
+            }
+        } else {
+            item->goal_anim_state = item->required_anim_state = 3;
+            croc->LOT.step = 256;
+            croc->LOT.drop = -256;
+            croc->LOT.fly = 0;
+            CreatureUnderwater(item, 0);
+        }
+    } else {
+        croc->LOT.fly = 0;
     }
 }
 

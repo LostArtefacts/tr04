@@ -1,6 +1,7 @@
 #ifndef CROC_H
 #define CROC_H
 
+#include "box.h"
 #include "items.h"
 
 typedef struct {
@@ -28,6 +29,7 @@ void TriggerCrocgodMissileFlame(sint16 fx_number, sint32 xv, sint32 yv, sint32 z
 
 extern LOCUST_STRUCT Locusts[64];
 extern sint32 next_locust;
+extern BITE_INFO croc_bite;
 void CrocControl(sint16 item_number);
 void CrocgodControl(sint16 item_number);
 
