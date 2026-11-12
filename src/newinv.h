@@ -222,6 +222,7 @@ void remove_inventory_item(sint16 object_number);
 sint32 have_i_got_item(sint16 obj);
 void handle_object_changeover(sint32 ringnum);
 void setup_objectlist_startposition(sint16 newobj);
+void setup_objectlist_startposition2(sint16 newobj);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];

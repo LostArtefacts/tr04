@@ -220,6 +220,16 @@ void setup_objectlist_startposition(sint16 newobj)
     }
 }
 
+void setup_objectlist_startposition2(sint16 newobj)
+{
+    sint32 i;
+
+    for (i = 0; i < NUM_INVOBJ; i++) {
+        if (newobj == inventry_objects_list[rings[RING_INVENTORY]->current_object_list[i].invitem].object_number)
+            rings[RING_INVENTORY]->curobjinlist = i;
+    }
+}
+
 sint32 have_i_got_object(sint16 object_number)
 {
     if (object_number >= PUZZLE_ITEM1_COMBO1 && object_number <= PUZZLE_ITEM8_COMBO2)

@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="174.65" height="12" x="0" y="0" class="named"><title>790 · 51.07%</title></rect>
-<rect width="0.44" height="12" x="174.65" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="175.09" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="160.50" height="12" x="181.50" y="0" class="todo"><title>726 · 46.93%</title></rect>
+<rect width="174.87" height="12" x="0" y="0" class="named"><title>791 · 51.13%</title></rect>
+<rect width="0.44" height="12" x="174.87" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="175.31" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="160.28" height="12" x="181.72" y="0" class="todo"><title>725 · 46.86%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">51.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">790</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">726</tspan></text>
+<text text-anchor="end" x="522" y="7.50">51.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">791</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">725</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.56" height="12" x="0" y="0" class="named"><title>139 KB · 22.39%</title></rect>
-<rect width="0.12" height="12" x="76.56" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.68" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.66" height="12" x="85.34" y="0" class="todo"><title>466 KB · 75.05%</title></rect>
+<rect width="76.60" height="12" x="0" y="0" class="named"><title>139 KB · 22.40%</title></rect>
+<rect width="0.12" height="12" x="76.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.72" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.63" height="12" x="85.37" y="0" class="todo"><title>465 KB · 75.04%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">139 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">466 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">139 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">465 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -715,7 +715,7 @@
 <rect width="12" height="12" x="690" y="180" class="named"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="180" class="todo"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="180" class="named"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="180" class="todo"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="180" class="named"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="195" class="todo"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="195" class="todo"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="195" class="named"><title>0x0043ef60 have_i_got_object (237 bytes)</title></rect>
@@ -2831,7 +2831,7 @@
 <rect width="4.78" height="5.01" x="632.09" y="347.53" class="todo"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
 <rect width="4.78" height="5.01" x="632.09" y="355.54" class="todo"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="4.78" height="4.93" x="632.09" y="363.55" class="named"><title>0x00413cf0 FallingBlockCeiling (61 bytes)</title></rect>
-<rect width="4.78" height="4.93" x="632.09" y="371.48" class="todo"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
+<rect width="4.78" height="4.93" x="632.09" y="371.48" class="named"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
 <rect width="4.78" height="4.93" x="632.09" y="379.40" class="todo"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
 <rect width="4.78" height="4.85" x="632.09" y="387.33" class="named"><title>0x00427480 lara_as_switchon (60 bytes)</title></rect>
 <rect width="4.78" height="4.85" x="632.09" y="395.18" class="named"><title>0x00453030 AddDisplayPickup (60 bytes)</title></rect>
