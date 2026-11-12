@@ -367,6 +367,17 @@ sint16 CreatureEffect(ITEM_INFO *item, BITE_INFO *bite, sint16 (*generate)(sint3
     return generate(pos.x, pos.y, pos.z, item->speed, item->pos.y_rot, item->room_number);
 }
 
+sint16 CreatureEffectT(ITEM_INFO *item, BITE_INFO *bite, sint16 damage, sint16 angle, sint16 (*generate)(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 room_number))
+{
+    PHD_VECTOR pos;
+
+    pos.x = bite->x;
+    pos.y = bite->y;
+    pos.z = bite->z;
+    GetJointAbsPosition(item, &pos, bite->mesh_num);
+    return generate(pos.x, pos.y, pos.z, damage, angle, item->room_number);
+}
+
 sint32 CreatureVault(sint16 item_number, sint16 angle, sint32 vault, sint32 shift)
 {
     ITEM_INFO *item;
