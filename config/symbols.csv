@@ -1439,7 +1439,7 @@ address,size,name,symbol
 0x00490f30,10,SeedRandomDraw,_SeedRandomDraw
 0x00490f40,54,init_game_malloc,_init_game_malloc
 0x00490f80,104,game_malloc,_game_malloc
-0x00490ff0,1672,DXGetErrorString,_DXGetErrorString
+0x00490ff0,3128,DXGetErrorString,_DXGetErrorString
 0x00491c30,39,DXAttempt,_DXAttempt
 0x00491c60,94,DXGetInfo,_DXGetInfo
 0x00491cc0,160,DXEnumDirectSound,_DXEnumDirectSound@16
