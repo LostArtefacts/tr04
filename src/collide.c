@@ -1,4 +1,5 @@
 #include "collide.h"
+#include "draw.h"
 #include "room.h"
 #include "specific/3dmath.h"
 #include "control.h"
@@ -22,6 +23,96 @@ sint32 FindGridShift(sint32 src, sint32 dst)
         return WALL_L - (src - 1);
     else
         return -(src + 1);
+}
+
+sint32 CollideStaticObjects(COLL_INFO *coll, sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 hite)
+{
+    ROOM_INFO *r;
+    MESH_INFO *mesh;
+    STATIC_INFO *sinfo;
+    sint16 *door;
+    sint32 lxmin, lxmax, lymin, lymax, lzmin, lzmax;
+    sint32 xmin, xmax, ymin, ymax, zmin, zmax;
+    sint32 i, j;
+    sint16 num_nearby_rooms;
+    sint16 nearby_rooms[22];
+
+    coll->hit_static = 0;
+    lxmin = x - coll->radius;
+    lxmax = x + coll->radius;
+    lymin = y - hite;
+    lymax = y;
+    lzmin = z - coll->radius;
+    lzmax = z + coll->radius;
+    num_nearby_rooms = 1;
+    nearby_rooms[0] = room_number;
+    door = room[room_number].door;
+
+    if (door) {
+        for (i = *door++; i > 0; i--) {
+            for (j = 0; j < num_nearby_rooms; j++) {
+                if (nearby_rooms[j] == *door)
+                    break;
+            }
+
+            if (j == num_nearby_rooms) {
+                nearby_rooms[num_nearby_rooms] = *door;
+                num_nearby_rooms++;
+            }
+
+            door += 16;
+        }
+    }
+
+    for (i = 0; i < num_nearby_rooms; i++) {
+        r = &room[nearby_rooms[i]];
+        mesh = r->mesh;
+
+        for (j = r->num_meshes; j > 0; j--, mesh++) {
+            sinfo = &static_objects[mesh->static_number];
+
+            if (!(mesh->Flags & 1))
+                continue;
+
+            ymin = mesh->y + sinfo->y_minc;
+            ymax = mesh->y + sinfo->y_maxc;
+
+            switch (mesh->y_rot) {
+            case -0x8000:
+                xmin = mesh->x - sinfo->x_maxc;
+                xmax = mesh->x - sinfo->x_minc;
+                zmin = mesh->z - sinfo->z_maxc;
+                zmax = mesh->z - sinfo->z_minc;
+                break;
+            case -0x4000:
+                xmin = mesh->x - sinfo->z_maxc;
+                xmax = mesh->x - sinfo->z_minc;
+                zmin = mesh->z + sinfo->x_minc;
+                zmax = mesh->z + sinfo->x_maxc;
+                break;
+            case 0x4000:
+                xmin = mesh->x + sinfo->z_minc;
+                xmax = mesh->x + sinfo->z_maxc;
+                zmin = mesh->z - sinfo->x_maxc;
+                zmax = mesh->z - sinfo->x_minc;
+                break;
+            default:
+                xmin = mesh->x + sinfo->x_minc;
+                xmax = mesh->x + sinfo->x_maxc;
+                zmin = mesh->z + sinfo->z_minc;
+                zmax = mesh->z + sinfo->z_maxc;
+                break;
+            }
+
+            if (lxmax <= xmin || lxmin >= xmax || lymax <= ymin || lymin >= ymax || lzmax <= zmin || lzmin >= zmax)
+                continue;
+
+            coll->hit_static = 1;
+            return 1;
+        }
+    }
+
+    return 0;
 }
 
 void ShiftItem(ITEM_INFO *item, COLL_INFO *coll)
