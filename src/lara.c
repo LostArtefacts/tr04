@@ -17,6 +17,7 @@
 #include "gameflow.h"
 #include "collide.h"
 #include "larafire.h"
+#include "debris.h"
 
 #define DAMAGE_START 140
 #define DAMAGE_LENGTH 14
@@ -203,6 +204,92 @@ void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll)
     if (item->anim_number == ANIM_DUCK_TO_ALL4S)
         lara.gun_status = LG_HANDS_BUSY;
     camera.target_elevation = -23 * ONE_DEGREE;
+}
+
+void lara_col_all4s(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 slope, x, collided;
+    sint16 height, angle;
+
+    item->fallspeed = 0;
+    item->gravity_status = 0;
+    if (item->goal_anim_state == AS_CRAWL2HANG)
+        return;
+    coll->facing = lara.move_angle = item->pos.y_rot;
+    coll->radius = 200;
+    coll->bad_pos = 255;
+    coll->bad_neg = -255;
+    coll->bad_ceiling = 400;
+    coll->slopes_are_walls = 1;
+    coll->slopes_are_pits = 1;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 400);
+    if (LaraFallen(item, coll)) {
+        lara.gun_status = LG_NO_ARMS;
+        return;
+    }
+    if (TestLaraSlide(item, coll))
+        return;
+    slope = ABS(coll->left_floor2 - coll->right_floor2) >= 120;
+    if (coll->mid_ceiling >= -362)
+        lara.keep_ducked = 1;
+    else
+        lara.keep_ducked = 0;
+    ShiftItem(item, coll);
+    if (coll->mid_floor != NO_HEIGHT && coll->mid_floor > -256)
+        item->pos.y_pos += coll->mid_floor;
+    if (!((input & IN_DUCK || lara.keep_ducked) && (!(input & (IN_FLARE | IN_DRAW)) || input & IN_FORWARD) && lara.water_status != LW_WADE))
+        item->goal_anim_state = AS_DUCK;
+    else if (item->anim_number == ANIM_ALL4S || item->anim_number == ANIM_ALL4S2) {
+        if (input & IN_FORWARD) {
+            height = LaraFloorFront(item, item->pos.y_rot, 256);
+            if (height < 255 && height > -255 && height_type != BIG_SLOPE)
+                item->goal_anim_state = AS_CRAWL;
+        } else if (input & IN_BACK) {
+            height = LaraCeilingFront(item, item->pos.y_rot, -300, 128);
+            if (height == NO_HEIGHT || height > 256)
+                return;
+            height = LaraFloorFront(item, item->pos.y_rot, -300);
+            if (height < 255 && height > -255 && height_type != BIG_SLOPE)
+                item->goal_anim_state = AS_CRAWLBACK;
+            else if (input & IN_ACTION && height > 768 && !slope) {
+                x = item->pos.x_pos;
+                item->pos.z_pos -= (rcossin_tbl[((coll->facing >> 3) & 0x1FFE) + 1] << 2) * 100 >> W2V_SHIFT;
+                item->pos.x_pos -= (rcossin_tbl[(coll->facing >> 3) & 0x1FFE] << 2) * 100 >> W2V_SHIFT;
+                collided = GetCollidedObjects(item, 100, 0, (ITEM_INFO **)&tsv_buffer[0], (MESH_INFO **)&tsv_buffer[1024], 0);
+                item->pos.x_pos = x;
+                if (!collided) {
+                    angle = (uint16)(item->pos.y_rot + 0x2000) / 0x4000;
+                    switch (angle) {
+                    case NORTH:
+                        item->pos.y_rot = 0;
+                        item->pos.z_pos = (item->pos.z_pos & ~0x3FF) + 225;
+                        break;
+                    case SOUTH:
+                        item->pos.y_rot = -32768;
+                        item->pos.z_pos = (item->pos.z_pos | 0x3FF) - 225;
+                        break;
+                    case EAST:
+                        item->pos.y_rot = 16384;
+                        item->pos.x_pos = (item->pos.x_pos & ~0x3FF) + 225;
+                        break;
+                    case WEST:
+                        item->pos.y_rot = -16384;
+                        item->pos.x_pos = (item->pos.x_pos | 0x3FF) - 225;
+                        break;
+                    }
+                    item->goal_anim_state = AS_CRAWL2HANG;
+                }
+            }
+        } else if (input & IN_LEFT) {
+            item->anim_number = ANIM_ALL4TURNL;
+            item->goal_anim_state = item->current_anim_state = AS_ALL4TURNL;
+            item->frame_number = anims[ANIM_ALL4TURNL].frame_base;
+        } else if (input & IN_RIGHT) {
+            item->anim_number = ANIM_ALL4TURNR;
+            item->goal_anim_state = item->current_anim_state = AS_ALL4TURNR;
+            item->frame_number = anims[ANIM_ALL4TURNR].frame_base;
+        }
+    }
 }
 
 sint16 LaraFloorFront(ITEM_INFO *item, sint16 ang, sint32 dist)

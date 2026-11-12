@@ -213,7 +213,7 @@ address,size,name,symbol
 0x00421040,175,lara_as_duck,_lara_as_duck
 0x004210f0,287,lara_col_duck,_lara_col_duck
 0x00421210,108,lara_as_all4s,_lara_as_all4s
-0x00421280,899,lara_col_all4s,_lara_col_all4s
+0x00421280,916,lara_col_all4s,_lara_col_all4s
 0x00421620,125,LaraFloorFront,_LaraFloorFront
 0x004216a0,202,lara_as_crawl,_lara_as_crawl
 0x00421770,267,lara_col_crawl,_lara_col_crawl

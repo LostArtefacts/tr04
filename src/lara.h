@@ -349,6 +349,7 @@ void lara_col_reach(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraHangTest(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
 void LaraAboveWater(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_all4s(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
