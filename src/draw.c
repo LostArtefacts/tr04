@@ -97,6 +97,114 @@ void GetRoomBounds(void)
     }
 }
 
+void SetRoomBounds(sint16 *door, sint32 rn, ROOM_INFO *actualRoom)
+{
+    sint32 i, z_behind, z_toofar;
+    sint32 left, right, top, bottom;
+    sint32 xv, yv, zv, xs, ys;
+    sint32 *mptr;
+    ROOM_INFO *r;
+    PHD_VECTOR *dest, *last;
+
+    r = &room[rn];
+    if (r->left <= actualRoom->test_left && r->right >= actualRoom->test_right && r->top <= actualRoom->test_top && r->bottom >= actualRoom->test_bottom)
+        return;
+
+    left = actualRoom->test_right;
+    right = actualRoom->test_left;
+    top = actualRoom->test_bottom;
+    bottom = actualRoom->test_top;
+    door += 3;
+    mptr = phd_mxptr;
+    dest = vbufdoor;
+    z_behind = z_toofar = 0;
+    for (i = 0; i < 4; i++, dest++, door += 3) {
+        dest->x = xv = (sint32)(*(mptr + 0) * *door + *(mptr + 1) * *(door + 1) + *(mptr + 2) * *(door + 2) + *(mptr + 3));
+        dest->y = yv = (sint32)(*(mptr + 4) * *door + *(mptr + 5) * *(door + 1) + *(mptr + 6) * *(door + 2) + *(mptr + 7));
+        dest->z = zv = (sint32)(*(mptr + 8) * *door + *(mptr + 9) * *(door + 1) + *(mptr + 10) * *(door + 2) + *(mptr + 11));
+        if (zv > 0) {
+            if (zv > phd_zfar)
+                z_toofar++;
+            zv /= phd_persp;
+            if (zv) {
+                xs = xv / zv + phd_centerx;
+                ys = yv / zv + phd_centery;
+            } else {
+                xs = (xv >= 0) ? phd_right : phd_left;
+                ys = (yv >= 0) ? phd_bottom : phd_top;
+            }
+            if (xs - 1 < left)
+                left = xs - 1;
+            if (xs + 1 > right)
+                right = xs + 1;
+            if (ys - 1 < top)
+                top = ys - 1;
+            if (ys + 1 > bottom)
+                bottom = ys + 1;
+        } else
+            z_behind++;
+    }
+
+    if (z_behind == 4)
+        return;
+    if (z_toofar == 4 && outside == 0)
+        return;
+
+    if (z_behind > 0) {
+        dest = vbufdoor;
+        last = dest + 3;
+        for (i = 0; i < 4; i++, last = dest, dest++) {
+            if ((dest->z <= 0) ^ (last->z <= 0)) {
+                if (dest->x < 0 && last->x < 0)
+                    left = 0;
+                else if (dest->x > 0 && last->x > 0)
+                    right = phd_winxmax;
+                else {
+                    left = 0;
+                    right = phd_winxmax;
+                }
+                if (dest->y < 0 && last->y < 0)
+                    top = 0;
+                else if (dest->y > 0 && last->y > 0)
+                    bottom = phd_winymax;
+                else {
+                    top = 0;
+                    bottom = phd_winymax;
+                }
+            }
+        }
+    }
+
+    if (left < actualRoom->test_left)
+        left = actualRoom->test_left;
+    if (right > actualRoom->test_right)
+        right = actualRoom->test_right;
+    if (top < actualRoom->test_top)
+        top = actualRoom->test_top;
+    if (bottom > actualRoom->test_bottom)
+        bottom = actualRoom->test_bottom;
+    if (left >= right || top >= bottom)
+        return;
+
+    if (r->bound_active & 2) {
+        if (left < r->test_left)
+            r->test_left = (sint16)left;
+        if (top < r->test_top)
+            r->test_top = (sint16)top;
+        if (right > r->test_right)
+            r->test_right = (sint16)right;
+        if (bottom > r->test_bottom)
+            r->test_bottom = (sint16)bottom;
+    } else {
+        draw_room_list[(room_list_end++) % 128] = rn;
+        r->bound_active |= 2;
+        r->test_left = (sint16)left;
+        r->test_right = (sint16)right;
+        r->test_top = (sint16)top;
+        r->test_bottom = (sint16)bottom;
+    }
+}
+
 void DrawEffect(sint16 fx_num)
 {
     FX_INFO *fx;

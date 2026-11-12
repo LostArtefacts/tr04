@@ -73,5 +73,6 @@ extern sint32 outside_right;
 extern sint32 outside_top;
 extern sint32 outside_bottom;
 extern sint32 current_room;
+extern PHD_VECTOR vbufdoor[4];
 
 #endif

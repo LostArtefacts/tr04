@@ -2653,6 +2653,7 @@ address,size,name,symbol
 0x007fd300,4,outside,_outside
 0x007fd304,4,number_draw_rooms,_number_draw_rooms
 0x007fd320,3072,IMstack,_IMstack
+0x007fdf20,48,vbufdoor,_vbufdoor
 0x007fdf50,2,ClipRoomNum,_ClipRoomNum
 0x007fdf54,4,IM_frac,_IM_frac
 0x007fdf58,4,outside_bottom,_outside_bottom
