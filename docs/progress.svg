@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="242.36" height="12" x="0" y="0" class="named"><title>1097 · 70.87%</title></rect>
-<rect width="0.44" height="12" x="242.36" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="14.14" height="12" x="242.80" y="0" class="nonmatching"><title>64 · 4.13%</title></rect>
-<rect width="85.06" height="12" x="256.94" y="0" class="todo"><title>385 · 24.87%</title></rect>
+<rect width="242.58" height="12" x="0" y="0" class="named"><title>1098 · 70.93%</title></rect>
+<rect width="0.44" height="12" x="242.58" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="14.14" height="12" x="243.02" y="0" class="nonmatching"><title>64 · 4.13%</title></rect>
+<rect width="84.84" height="12" x="257.16" y="0" class="todo"><title>384 · 24.81%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">71.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1097</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">64</tspan> · <tspan class="todo">385</tspan></text>
+<text text-anchor="end" x="522" y="7.50">71.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1098</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">64</tspan> · <tspan class="todo">384</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="119.60" height="12" x="0" y="0" class="named"><title>217 KB · 34.97%</title></rect>
-<rect width="0.12" height="12" x="119.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="25.21" height="12" x="119.72" y="0" class="nonmatching"><title>46 KB · 7.37%</title></rect>
-<rect width="197.07" height="12" x="144.93" y="0" class="todo"><title>358 KB · 57.62%</title></rect>
+<rect width="119.82" height="12" x="0" y="0" class="named"><title>218 KB · 35.04%</title></rect>
+<rect width="0.12" height="12" x="119.82" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="25.21" height="12" x="119.94" y="0" class="nonmatching"><title>46 KB · 7.37%</title></rect>
+<rect width="196.85" height="12" x="145.15" y="0" class="todo"><title>357 KB · 57.56%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">35.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">217 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">46 KB</tspan> · <tspan class="todo">358 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">35.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">218 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">46 KB</tspan> · <tspan class="todo">357 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1317,7 +1317,7 @@
 <rect width="12" height="12" x="720" y="360" class="todo"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="360" class="todo"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="375" class="todo"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="375" class="todo"><title>0x0047a6f0 GetSaveLoadFiles (398 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="375" class="named"><title>0x0047a6f0 GetSaveLoadFiles (398 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="375" class="todo"><title>0x0047a880 DoLoadSave (753 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="375" class="todo"><title>0x0047ab80 DoSlider (1449 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="375" class="named"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
@@ -2068,7 +2068,7 @@
 <rect width="12.47" height="12.47" x="413.49" y="222.24" class="named"><title>0x0044a390 GetWaterHeight (403 bytes)</title></rect>
 <rect width="12.47" height="12.44" x="413.49" y="237.71" class="named"><title>0x00424680 lara_col_ropefwd (402 bytes)</title></rect>
 <rect width="12.47" height="12.35" x="413.49" y="253.15" class="named"><title>0x004359e0 UpdateSplashes (399 bytes)</title></rect>
-<rect width="12.47" height="12.32" x="413.49" y="268.50" class="todo"><title>0x0047a6f0 GetSaveLoadFiles (398 bytes)</title></rect>
+<rect width="12.47" height="12.32" x="413.49" y="268.50" class="named"><title>0x0047a6f0 GetSaveLoadFiles (398 bytes)</title></rect>
 <rect width="12.47" height="12.28" x="413.49" y="283.81" class="named"><title>0x00422c50 LaraDeflectEdgeJump (397 bytes)</title></rect>
 <rect width="12.47" height="12.25" x="413.49" y="299.10" class="named"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
 <rect width="12.47" height="12.16" x="413.49" y="314.35" class="named"><title>0x00434fa0 TriggerExplosionSmoke (393 bytes)</title></rect>

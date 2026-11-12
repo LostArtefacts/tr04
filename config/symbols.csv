@@ -2431,6 +2431,8 @@ address,size,name,symbol
 0x00536f10,4,bLaraTorch,_bLaraTorch
 0x00536f14,4,bLaraUnderWater,_bLaraUnderWater
 0x00536f1c,1,MonoScreenOn,_MonoScreenOn
+0x00536f20,4,nSaves,_nSaves
+0x00536f28,1320,SaveGames,_SaveGames
 0x00577458,4,loadbar_maxpos,_loadbar_maxpos
 0x00577460,40,MonoScreen,_MonoScreen
 0x00577488,4,loadbar_pos,_loadbar_pos

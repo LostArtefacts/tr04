@@ -1,5 +1,7 @@
 #include <windows.h>
 #include <ddraw.h>
+#include <stdio.h>
+#include <string.h>
 
 #include "loadsave.h"
 #include "winmain.h"
@@ -64,6 +66,45 @@ void CreateMonoScreen(void)
 {
     MonoScreenOn = 1;
     ConvertSurfaceToTextures(App.dx.lpPrimaryBuffer);
+}
+
+sint32 GetSaveLoadFiles(void)
+{
+    FILE *file;
+    SAVEFILE_INFO *pSave;
+    SAVEGAME_INFO save_info;
+    char name[80];
+    sint32 i;
+
+    SaveCounter = 0;
+    for (i = 0; i < 15; i++) {
+        pSave = &SaveGames[i];
+        wsprintf(name, "savegame.%d", i);
+        file = fopen(name, "rb");
+        if (file) {
+            fread(&pSave->name, sizeof(char), 75, file);
+            fread(&pSave->num, sizeof(sint32), 1, file);
+            fread(&pSave->days, sizeof(sint16), 1, file);
+            fread(&pSave->hours, sizeof(sint16), 1, file);
+            fread(&pSave->minutes, sizeof(sint16), 1, file);
+            fread(&pSave->seconds, sizeof(sint16), 1, file);
+            fread(&save_info, 1, sizeof(SAVEGAME_INFO), file);
+            if (CheckSumValid((sint8 *)&save_info)) {
+                if (pSave->num > SaveCounter)
+                    SaveCounter = pSave->num;
+                pSave->valid = 1;
+                fclose(file);
+                nSaves++;
+            } else {
+                strcpy(pSave->name, SCRIPT_TEXT(TXT_Empty_Slot));
+            }
+        } else {
+            pSave->valid = 0;
+            strcpy(pSave->name, SCRIPT_TEXT(TXT_Empty_Slot));
+        }
+    }
+    SaveCounter++;
+    return nSaves;
 }
 
 void CheckKeyConflicts(void)
