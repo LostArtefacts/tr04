@@ -53,6 +53,16 @@ sint32 GetFreeLocust(void)
     return NO_ITEM;
 }
 
+void Func403620(void)
+{
+    LOCUST_STRUCT *fx;
+    sint32 i;
+
+    fx = Locusts;
+    for (i = 64; i > 0; i--, fx++)
+        fx->On = 0;
+}
+
 void TriggerLocust(ITEM_INFO *item)
 {
     LOCUST_STRUCT *fx;

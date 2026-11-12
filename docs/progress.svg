@@ -47,21 +47,21 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="247" height="12" x="0" y="0" class="named"><title>1118 · 72.22%</title></rect>
-<rect width="0.44" height="12" x="247" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="17.01" height="12" x="247.44" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
-<rect width="77.55" height="12" x="264.45" y="0" class="todo"><title>351 · 22.67%</title></rect>
+<rect width="0.66" height="12" x="247" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.01" height="12" x="247.66" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
+<rect width="77.33" height="12" x="264.67" y="0" class="todo"><title>350 · 22.61%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">351</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">350</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="128.85" height="12" x="0" y="0" class="named"><title>235 KB · 37.67%</title></rect>
-<rect width="0.12" height="12" x="128.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="30.52" height="12" x="128.97" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
-<rect width="182.51" height="12" x="159.49" y="0" class="todo"><title>332 KB · 53.37%</title></rect>
+<rect width="0.13" height="12" x="128.85" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="30.52" height="12" x="128.98" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
+<rect width="182.50" height="12" x="159.50" y="0" class="todo"><title>332 KB · 53.36%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">37.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">332 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">332 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -82,7 +82,7 @@
 <rect width="12" height="12" x="195" y="0" class="named"><title>0x00402d90 InitialiseCroc (157 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="0" class="todo"><title>0x00402e30 CrocControl (1913 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="0" class="named"><title>0x004035d0 GetFreeLocust (71 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="0" class="todo"><title>0x00403620 Func403620 (20 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="0" class="decompiled"><title>0x00403620 Func403620 (20 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="0" class="named"><title>0x00403640 TriggerLocust (353 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="0" class="named"><title>0x004037b0 InitialiseLocustEmitter (95 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="0" class="named"><title>0x00403810 ControlLocustEmitter (81 bytes)</title></rect>
@@ -3049,7 +3049,7 @@
 <rect width="3.17" height="2.53" x="688.58" y="432.19" class="named"><title>0x0046c4e0 nineteen_init (21 bytes)</title></rect>
 <rect width="3.17" height="2.53" x="688.58" y="437.72" class="named"><title>0x0046d790 S_StartSyncedAudio (21 bytes)</title></rect>
 <rect width="3.17" height="2.53" x="688.58" y="443.26" class="named"><title>0x00490ec0 S_ExitSystem (21 bytes)</title></rect>
-<rect width="3.17" height="2.40" x="688.58" y="448.79" class="todo"><title>0x00403620 Func403620 (20 bytes)</title></rect>
+<rect width="3.17" height="2.40" x="688.58" y="448.79" class="decompiled"><title>0x00403620 Func403620 (20 bytes)</title></rect>
 <rect width="3.17" height="2.40" x="688.58" y="454.19" class="named"><title>0x00432830 lara_as_dive (20 bytes)</title></rect>
 <rect width="3.17" height="2.40" x="688.58" y="459.60" class="named"><title>0x004384f0 ClearFires (20 bytes)</title></rect>
 <rect width="2.61" height="2.95" x="694.76" y="409.42" class="named"><title>0x0046d4b0 special2_init (20 bytes)</title></rect>
