@@ -945,6 +945,16 @@ void lara_col_monkey180(ITEM_INFO *item, COLL_INFO *coll)
     lara_col_monkeyswing(item, coll);
 }
 
+void lara_as_poleleft(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    if (((input & (IN_LEFT | IN_ACTION)) != (IN_LEFT | IN_ACTION)) || input & (IN_FORWARD | IN_BACK) || item->hit_points <= 0)
+        item->goal_anim_state = AS_POLESTAT;
+    else
+        item->pos.y_rot += 256;
+}
+
 void lara_col_stop(ITEM_INFO *item, COLL_INFO *coll)
 {
     item->gravity_status = item->fallspeed = 0;
