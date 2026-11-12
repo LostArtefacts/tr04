@@ -210,6 +210,16 @@ void combine_ClockWorkBeetle(sint32 flag)
     lara.mechanical_scarab = 1;
 }
 
+void setup_objectlist_startposition(sint16 newobj)
+{
+    sint32 i;
+
+    for (i = 0; i < NUM_INVOBJ; i++) {
+        if (newobj == rings[RING_INVENTORY]->current_object_list[i].invitem)
+            rings[RING_INVENTORY]->curobjinlist = i;
+    }
+}
+
 sint32 have_i_got_object(sint16 object_number)
 {
     if (object_number >= PUZZLE_ITEM1_COMBO1 && object_number <= PUZZLE_ITEM8_COMBO2)

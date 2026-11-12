@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="174.43" height="12" x="0" y="0" class="named"><title>789 · 51%</title></rect>
-<rect width="0.44" height="12" x="174.43" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="174.87" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="160.72" height="12" x="181.28" y="0" class="todo"><title>727 · 46.99%</title></rect>
+<rect width="174.65" height="12" x="0" y="0" class="named"><title>790 · 51.07%</title></rect>
+<rect width="0.44" height="12" x="174.65" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="175.09" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="160.50" height="12" x="181.50" y="0" class="todo"><title>726 · 46.93%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">51.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">789</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">727</tspan></text>
+<text text-anchor="end" x="522" y="7.50">51.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">790</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">726</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.54" height="12" x="0" y="0" class="named"><title>139 KB · 22.38%</title></rect>
-<rect width="0.12" height="12" x="76.54" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.66" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.69" height="12" x="85.31" y="0" class="todo"><title>466 KB · 75.06%</title></rect>
+<rect width="76.56" height="12" x="0" y="0" class="named"><title>139 KB · 22.39%</title></rect>
+<rect width="0.12" height="12" x="76.56" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.68" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.66" height="12" x="85.34" y="0" class="todo"><title>466 KB · 75.05%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">139 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">466 KB</tspan></text>
@@ -714,7 +714,7 @@
 <rect width="12" height="12" x="675" y="180" class="named"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="180" class="named"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="180" class="todo"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="180" class="todo"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="180" class="named"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="180" class="todo"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="195" class="todo"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="195" class="todo"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
@@ -2901,7 +2901,7 @@
 <rect width="4.42" height="4.19" x="647.68" y="450.70" class="decompiled"><title>0x00490320 Func490320 (48 bytes)</title></rect>
 <rect width="4.42" height="4.11" x="647.68" y="457.89" class="named"><title>0x0042ddc0 CheckForHoldingState (47 bytes)</title></rect>
 <rect width="4.35" height="4.18" x="655.11" y="362.70" class="named"><title>0x00431e60 lara_col_surfswim (47 bytes)</title></rect>
-<rect width="4.35" height="4.18" x="662.45" y="362.70" class="todo"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
+<rect width="4.35" height="4.18" x="662.45" y="362.70" class="named"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
 <rect width="4.35" height="4.18" x="669.80" y="362.70" class="named"><title>0x00446cf0 FindGridShift (47 bytes)</title></rect>
 <rect width="4.35" height="4.18" x="677.15" y="362.70" class="named"><title>0x0046ca80 cutseq_shoot_pistols (47 bytes)</title></rect>
 <rect width="4.35" height="4.18" x="684.50" y="362.70" class="named"><title>0x00473ae0 S_SoundPlaySample (47 bytes)</title></rect>
