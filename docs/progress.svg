@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="256.06" height="12" x="0" y="0" class="named"><title>1159 · 74.87%</title></rect>
 <rect width="0.66" height="12" x="256.06" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="19.44" height="12" x="256.72" y="0" class="nonmatching"><title>88 · 5.68%</title></rect>
-<rect width="65.84" height="12" x="276.16" y="0" class="todo"><title>298 · 19.25%</title></rect>
+<rect width="19.66" height="12" x="256.72" y="0" class="nonmatching"><title>89 · 5.75%</title></rect>
+<rect width="65.62" height="12" x="276.38" y="0" class="todo"><title>297 · 19.19%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1159</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">88</tspan> · <tspan class="todo">298</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1159</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">89</tspan> · <tspan class="todo">297</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="141.27" height="12" x="0" y="0" class="named"><title>257 KB · 41.31%</title></rect>
 <rect width="0.13" height="12" x="141.27" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="35.54" height="12" x="141.40" y="0" class="nonmatching"><title>65 KB · 10.39%</title></rect>
-<rect width="165.06" height="12" x="176.94" y="0" class="todo"><title>301 KB · 48.26%</title></rect>
+<rect width="36.33" height="12" x="141.40" y="0" class="nonmatching"><title>66 KB · 10.62%</title></rect>
+<rect width="164.27" height="12" x="177.73" y="0" class="todo"><title>299 KB · 48.03%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">41.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">257 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">65 KB</tspan> · <tspan class="todo">301 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">257 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">66 KB</tspan> · <tspan class="todo">299 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -166,7 +166,7 @@
 <rect width="12" height="12" x="705" y="15" class="named"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="15" class="named"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="15" class="named"><title>0x0040f600 InitialiseGameStix (42 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="30" class="todo"><title>0x0040f630 GameStixControl (1436 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="30" class="nonmatching"><title>0x0040f630 GameStixControl (1436 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="30" class="named"><title>0x0040fbd0 ShockwaveExplosion (138 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="30" class="named"><title>0x0040fc60 ThrowSticks (142 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="30" class="named"><title>0x0040fcf0 ControlGodHead (219 bytes)</title></rect>
@@ -1708,7 +1708,7 @@
 <rect width="23.30" height="23.93" x="208.25" y="27" class="todo"><title>0x0047ab80 DoSlider (1449 bytes)</title></rect>
 <rect width="23.30" height="23.90" x="208.25" y="53.94" class="todo"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
 <rect width="23.30" height="23.85" x="208.25" y="80.84" class="todo"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
-<rect width="23.30" height="23.72" x="208.25" y="107.69" class="todo"><title>0x0040f630 GameStixControl (1436 bytes)</title></rect>
+<rect width="23.30" height="23.72" x="208.25" y="107.69" class="nonmatching"><title>0x0040f630 GameStixControl (1436 bytes)</title></rect>
 <rect width="23.30" height="23.57" x="208.25" y="134.41" class="todo"><title>0x00467380 JeepControl (1427 bytes)</title></rect>
 <rect width="23.30" height="23.26" x="208.25" y="160.98" class="named"><title>0x0042d840 LaraGun (1408 bytes)</title></rect>
 <rect width="23.30" height="23.24" x="208.25" y="187.24" class="named"><title>0x0042be40 AnimatePistols (1407 bytes)</title></rect>

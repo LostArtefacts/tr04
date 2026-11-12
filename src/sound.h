@@ -62,6 +62,7 @@ enum sfx_options {
 #define SFX_PUSHABLE_SOUND 63
 #define SFX_ELEC_ARCING_LOOP 197
 #define SFX_THUNDER_CRACK 183
+#define SFX_SPINNING_PUZZLE 38
 
 typedef struct sample_info {
     sint16 number;

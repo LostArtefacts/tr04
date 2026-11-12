@@ -25,5 +25,7 @@ void ControlGodHead(sint16 item_number);
 void DrawGodHead(ITEM_INFO *item);
 void GameStixCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void MakeMove(sint32 piece, sint32 displacement);
+sint32 CheckSenetWinner(sint16 ourOrTheirs);
+void GameStixControl(sint16 item_number);
 
 #endif
