@@ -79,6 +79,34 @@ void CreateFXBulbs(void)
     }
 }
 
+void TriggerFXFogBulb(sint32 x, sint32 y, sint32 z, sint32 FXRad, sint32 density, sint32 r, sint32 g, sint32 b, sint32 room_number)
+{
+    sint32 num;
+
+    for (num = 0; num < 5; num++) {
+        if (!FXFogBulbs[num].active) {
+            FXFogBulbs[num].inRange = 1;
+            FXFogBulbs[num].density = density;
+            FXFogBulbs[num].WorldPos.x = (float)x;
+            FXFogBulbs[num].WorldPos.y = (float)y;
+            FXFogBulbs[num].WorldPos.z = (float)z;
+            FXFogBulbs[num].rad = 0;
+            FXFogBulbs[num].sqrad = 0;
+            FXFogBulbs[num].inv_sqrad = 1 / FXFogBulbs[num].sqrad;
+            FXFogBulbs[num].timer = 50;
+            FXFogBulbs[num].active = 1;
+            FXFogBulbs[num].FXRad = FXRad;
+            FXFogBulbs[num].r = r;
+            FXFogBulbs[num].g = g;
+            FXFogBulbs[num].b = b;
+            FXFogBulbs[num].room_number = room_number;
+            CreateFogPos(&FXFogBulbs[num]);
+            NumFXFogBulbs++;
+            return;
+        }
+    }
+}
+
 sint32 IsVolumetric(void)
 {
     return App.Volumetric;

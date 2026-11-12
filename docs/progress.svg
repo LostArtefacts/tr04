@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="186.59" height="12" x="0" y="0" class="named"><title>844 · 54.56%</title></rect>
-<rect width="0.44" height="12" x="186.59" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="187.03" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="148.56" height="12" x="193.44" y="0" class="todo"><title>672 · 43.44%</title></rect>
+<rect width="186.81" height="12" x="0" y="0" class="named"><title>845 · 54.62%</title></rect>
+<rect width="0.44" height="12" x="186.81" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="187.25" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="148.34" height="12" x="193.66" y="0" class="todo"><title>671 · 43.37%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">54.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">844</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">672</tspan></text>
+<text text-anchor="end" x="522" y="7.50">54.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">845</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">671</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.97" height="12" x="0" y="0" class="named"><title>145 KB · 23.38%</title></rect>
-<rect width="0.12" height="12" x="79.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="80.09" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="253.26" height="12" x="88.74" y="0" class="todo"><title>459 KB · 74.05%</title></rect>
+<rect width="80.09" height="12" x="0" y="0" class="named"><title>145 KB · 23.42%</title></rect>
+<rect width="0.12" height="12" x="80.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="80.21" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="253.14" height="12" x="88.86" y="0" class="todo"><title>459 KB · 74.02%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">23.4%</text>
+<text text-anchor="end" x="522" y="24.50">23.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">145 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">459 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1363,7 +1363,7 @@
 <rect width="12" height="12" x="660" y="375" class="named"><title>0x004818a0 ClearFXFogBulbs (32 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="375" class="todo"><title>0x004818c0 ControlFXBulb (232 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="375" class="named"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="375" class="todo"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="375" class="named"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="375" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="375" class="todo"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="390" class="todo"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
@@ -2302,7 +2302,7 @@
 <rect width="9.28" height="9.04" x="532.40" y="198.03" class="todo"><title>0x00484a20 CalcColorSplit (217 bytes)</title></rect>
 <rect width="9.24" height="9.04" x="544.68" y="198.03" class="named"><title>0x004277d0 lara_as_controlled (216 bytes)</title></rect>
 <rect width="9.24" height="9.04" x="556.91" y="198.03" class="named"><title>0x00447b00 TestBoundsCollide (216 bytes)</title></rect>
-<rect width="9.24" height="9.04" x="569.15" y="198.03" class="todo"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
+<rect width="9.24" height="9.04" x="569.15" y="198.03" class="named"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
 <rect width="9.19" height="9.04" x="581.39" y="198.03" class="todo"><title>0x0045ec50 GetAIPickups (215 bytes)</title></rect>
 <rect width="9.15" height="9.04" x="593.58" y="198.03" class="named"><title>0x00453400 InitialiseScaledSpike (214 bytes)</title></rect>
 <rect width="9.15" height="9.04" x="605.73" y="198.03" class="named"><title>0x0046d6b0 S_CDStop (214 bytes)</title></rect>
