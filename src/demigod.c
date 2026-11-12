@@ -149,52 +149,52 @@ void DoDemigodEffects(sint16 item_number)
     anim = item->anim_number - objects[item->object_number].anim_index;
     switch (anim) {
     case 16:
-            frame = item->frame_number - anims[item->anim_number].frame_base;
-            if (frame >= 8 && frame <= 64) {
-                pos1.x = 0;
-                pos1.y = 0;
-                pos1.z = 192;
-                pos2.x = 0;
-                pos2.y = 0;
-                pos2.z = 384;
-                if (!(GlobalCounter & 1)) {
-                    GetJointAbsPosition(item, &pos1, 17);
-                    GetJointAbsPosition(item, &pos2, 17);
-                } else {
-                    GetJointAbsPosition(item, &pos1, 18);
-                    GetJointAbsPosition(item, &pos2, 18);
-                }
-                pos.x_pos = pos1.x;
-                pos.y_pos = pos1.y;
-                pos.z_pos = pos1.z;
-                phd_GetVectorAngles(pos2.x - pos1.x, pos2.y - pos1.y, pos2.z - pos1.z, angles);
-                pos.y_rot = angles[0];
-                pos.x_rot = angles[1];
-                TriggerDemigodMissile(&pos, item->room_number, 4);
+        frame = item->frame_number - anims[item->anim_number].frame_base;
+        if (frame >= 8 && frame <= 64) {
+            pos1.x = 0;
+            pos1.y = 0;
+            pos1.z = 192;
+            pos2.x = 0;
+            pos2.y = 0;
+            pos2.z = 384;
+            if (!(GlobalCounter & 1)) {
+                GetJointAbsPosition(item, &pos1, 17);
+                GetJointAbsPosition(item, &pos2, 17);
+            } else {
+                GetJointAbsPosition(item, &pos1, 18);
+                GetJointAbsPosition(item, &pos2, 18);
             }
+            pos.x_pos = pos1.x;
+            pos.y_pos = pos1.y;
+            pos.z_pos = pos1.z;
+            phd_GetVectorAngles(pos2.x - pos1.x, pos2.y - pos1.y, pos2.z - pos1.z, angles);
+            pos.y_rot = angles[0];
+            pos.x_rot = angles[1];
+            TriggerDemigodMissile(&pos, item->room_number, 4);
+        }
         break;
     case 8:
     case 19:
-            if (item->frame_number == anims[item->anim_number].frame_base) {
-                pos1.x = -544;
-                pos1.y = 96;
-                pos1.z = 0;
-                GetJointAbsPosition(item, &pos1, 16);
-                pos2.x = -900;
-                pos2.y = 96;
-                pos2.z = 0;
-                GetJointAbsPosition(item, &pos2, 16);
-                pos.x_pos = pos1.x;
-                pos.y_pos = pos1.y;
-                pos.z_pos = pos1.z;
-                phd_GetVectorAngles(pos2.x - pos1.x, pos2.y - pos1.y, pos2.z - pos1.z, angles);
-                pos.y_rot = angles[0];
-                pos.x_rot = angles[1];
-                if (item->object_number == DEMIGOD3)
-                    TriggerDemigodMissile(&pos, item->room_number, 3);
-                else
-                    TriggerDemigodMissile(&pos, item->room_number, 5);
-            }
+        if (item->frame_number == anims[item->anim_number].frame_base) {
+            pos1.x = -544;
+            pos1.y = 96;
+            pos1.z = 0;
+            GetJointAbsPosition(item, &pos1, 16);
+            pos2.x = -900;
+            pos2.y = 96;
+            pos2.z = 0;
+            GetJointAbsPosition(item, &pos2, 16);
+            pos.x_pos = pos1.x;
+            pos.y_pos = pos1.y;
+            pos.z_pos = pos1.z;
+            phd_GetVectorAngles(pos2.x - pos1.x, pos2.y - pos1.y, pos2.z - pos1.z, angles);
+            pos.y_rot = angles[0];
+            pos.x_rot = angles[1];
+            if (item->object_number == DEMIGOD3)
+                TriggerDemigodMissile(&pos, item->room_number, 3);
+            else
+                TriggerDemigodMissile(&pos, item->room_number, 5);
+        }
         break;
     }
 }
