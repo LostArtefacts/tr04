@@ -2771,6 +2771,8 @@ address,size,name,symbol
 0x0080dfe0,4,lara,_lara
 0x0080e13a,2,DashTimer,_DashTimer
 0x0080e13c,4,lara_item,_lara_item
+0x0080e140,8,first_hair,_first_hair
+0x0080e160,420,hairs,_hairs
 0x0080e320,480,ScratchVertNums,_ScratchVertNums
 0x0080e500,4,in_joints,_in_joints
 0x0080e520,480,SkinVertNums,_SkinVertNums
