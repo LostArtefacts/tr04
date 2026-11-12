@@ -2413,6 +2413,83 @@ void lara_as_hang(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_elevation = -10920;
 }
 
+void lara_col_hang(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 flag;
+    sint32 dt;
+
+    item->fallspeed = 0;
+    item->gravity_status = 0;
+    if (item->anim_number == ANIM_GRABLEDGE && item->frame_number == anims[ANIM_GRABLEDGE].frame_base + 21) {
+        if (input & (IN_LEFT | IN_LSTEP)) {
+            if (CanLaraHangSideways(item, coll, -16384)) {
+                item->goal_anim_state = AS_HANGLEFT;
+                return;
+            }
+            flag = LaraHangLeftCornerTest(item, coll);
+            if (flag) {
+                if (flag > 0)
+                    item->goal_anim_state = AS_CORNEREXTL;
+                else
+                    item->goal_anim_state = AS_CORNERINTL;
+                return;
+            }
+        }
+        if (input & (IN_RIGHT | IN_RSTEP)) {
+            if (CanLaraHangSideways(item, coll, 16384)) {
+                item->goal_anim_state = AS_HANGRIGHT;
+                return;
+            }
+            flag = LaraHangRightCornerTest(item, coll);
+            if (flag) {
+                if (flag > 0)
+                    item->goal_anim_state = AS_CORNEREXTR;
+                else
+                    item->goal_anim_state = AS_CORNERINTR;
+                return;
+            }
+        }
+    }
+    lara.move_angle = item->pos.y_rot;
+    LaraHangTest(item, coll);
+    if (item->anim_number == ANIM_GRABLEDGE && item->frame_number == anims[ANIM_GRABLEDGE].frame_base + 21) {
+        if (input & IN_FORWARD) {
+            dt = (input & IN_DUCK) ? -256 : 0;
+            if (coll->front_floor > -850 && coll->front_floor < -650 && coll->front_floor - coll->front_ceiling >= dt
+                && coll->front_floor - coll->left_ceiling2 >= dt && coll->front_floor - coll->right_ceiling2 >= dt
+                && ABS(coll->left_floor2 - coll->right_floor2) < 60 && !coll->hit_static) {
+                if (input & IN_DUCK) {
+                    item->goal_anim_state = AS_HANG2DUCK;
+                    item->required_anim_state = AS_DUCK;
+                } else if (input & IN_WALK)
+                    item->goal_anim_state = AS_GYMNAST;
+                else
+                    item->goal_anim_state = AS_NULL;
+                return;
+            }
+            if (lara.climb_status && coll->mid_ceiling <= -256 && ABS(coll->left_ceiling2 - coll->right_ceiling2) < 60) {
+                if (LaraTestClimbStance(item, coll))
+                    item->goal_anim_state = AS_CLIMBSTNC;
+                else {
+                    item->anim_number = ANIM_HANGUP;
+                    item->current_anim_state = item->goal_anim_state = AS_HANG;
+                    item->frame_number = anims[ANIM_HANGUP].frame_base;
+                }
+                return;
+            }
+        }
+        if ((input & IN_BACK) && lara.climb_status && coll->mid_floor > 344) {
+            if (LaraTestClimbStance(item, coll))
+                item->goal_anim_state = AS_CLIMBSTNC;
+            else {
+                item->anim_number = ANIM_HANGDOWN;
+                item->current_anim_state = item->goal_anim_state = AS_HANG;
+                item->frame_number = anims[ANIM_HANGDOWN].frame_base;
+            }
+        }
+    }
+}
+
 sint32 IsValidHangPos(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint16 angle;
