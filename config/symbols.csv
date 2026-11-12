@@ -15,7 +15,7 @@ address,size,name,symbol
 0x00402d90,157,InitialiseCroc,_InitialiseCroc
 0x00402e30,1913,CrocControl,_CrocControl
 0x004035d0,71,GetFreeLocust,_GetFreeLocust
-0x00403620,20,Func403620,
+0x00403620,20,Func403620,_Func403620
 0x00403640,353,TriggerLocust,_TriggerLocust
 0x004037b0,95,InitialiseLocustEmitter,_InitialiseLocustEmitter
 0x00403810,81,ControlLocustEmitter,_ControlLocustEmitter

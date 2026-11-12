@@ -3,6 +3,8 @@
 
 #include "types.h"
 
+void Func403620(void);
+
 void InitialiseTrapDoor(sint16 item_number);
 void InitialiseFallingBlock2(sint16 item_number);
 void InitialiseJobySpike(sint16 item_number);
@@ -23,5 +25,6 @@ void InitialisePulley(sint16 item_number);
 void InitialiseLightningConductor(sint16 item_number);
 void InitialiseSmokeEmitter(sint16 item_number);
 void InitialisePickUp(sint16 item_number);
+void InitialiseEffects(void);
 
 #endif
