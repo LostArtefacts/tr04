@@ -413,7 +413,7 @@ address,size,name,symbol
 0x0042d600,409,lara_col_climbdown,_lara_col_climbdown
 0x0042d7a0,33,lara_as_climbend,_lara_as_climbend
 0x0042d7d0,104,GetClimbTrigger,_GetClimbTrigger
-0x0042d840,1303,LaraGun,_LaraGun
+0x0042d840,1408,LaraGun,_LaraGun
 0x0042ddc0,47,CheckForHoldingState,_CheckForHoldingState
 0x0042ddf0,308,InitialiseNewWeapon,_InitialiseNewWeapon
 0x0042df30,414,LaraTargetInfo,_LaraTargetInfo
