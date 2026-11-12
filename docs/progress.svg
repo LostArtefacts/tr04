@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="237.65" height="12" x="0" y="0" class="named"><title>1075 · 69.49%</title></rect>
-<rect width="0.44" height="12" x="237.65" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="11.94" height="12" x="238.10" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
-<rect width="91.97" height="12" x="250.03" y="0" class="todo"><title>416 · 26.89%</title></rect>
+<rect width="237.87" height="12" x="0" y="0" class="named"><title>1076 · 69.55%</title></rect>
+<rect width="0.44" height="12" x="237.87" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="11.94" height="12" x="238.32" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
+<rect width="91.75" height="12" x="250.25" y="0" class="todo"><title>415 · 26.83%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">69.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1075</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">416</tspan></text>
+<text text-anchor="end" x="522" y="7.50">69.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1076</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">415</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="111.97" height="12" x="0" y="0" class="named"><title>203 KB · 32.74%</title></rect>
-<rect width="0.12" height="12" x="111.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="20.70" height="12" x="112.09" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
-<rect width="209.21" height="12" x="132.79" y="0" class="todo"><title>380 KB · 61.17%</title></rect>
+<rect width="112.29" height="12" x="0" y="0" class="named"><title>204 KB · 32.83%</title></rect>
+<rect width="0.12" height="12" x="112.29" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="20.70" height="12" x="112.41" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
+<rect width="208.89" height="12" x="133.11" y="0" class="todo"><title>379 KB · 61.08%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">32.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">203 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">380 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">32.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">204 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">379 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -456,7 +456,7 @@
 <rect width="12" height="12" x="555" y="105" class="named"><title>0x0042bb20 draw_pistol_meshes (65 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="105" class="named"><title>0x0042bb70 undraw_pistol_mesh_left (58 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="105" class="named"><title>0x0042bbb0 undraw_pistol_mesh_right (53 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="105" class="todo"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="105" class="named"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="105" class="named"><title>0x0042be40 AnimatePistols (1407 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="105" class="named"><title>0x0042c3c0 LaraTestClimbPos (176 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="105" class="todo"><title>0x0042c470 LaraTestClimb (588 bytes)</title></rect>
@@ -1913,7 +1913,7 @@
 <rect width="15.60" height="14.62" x="401.59" y="61.16" class="todo"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
 <rect width="15.57" height="14.62" x="420.19" y="61.16" class="nonmatching"><title>0x00447ce0 ItemPushLaraStatic (590 bytes)</title></rect>
 <rect width="15.55" height="14.62" x="438.76" y="61.16" class="todo"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
-<rect width="15.52" height="14.62" x="457.31" y="61.16" class="todo"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
+<rect width="15.52" height="14.62" x="457.31" y="61.16" class="named"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
 <rect width="15.52" height="14.62" x="475.83" y="61.16" class="todo"><title>0x0042c470 LaraTestClimb (588 bytes)</title></rect>
 <rect width="15.52" height="14.62" x="494.35" y="61.16" class="todo"><title>0x004390f0 TriggerGunShell (588 bytes)</title></rect>
 <rect width="15.52" height="14.62" x="512.87" y="61.16" class="named"><title>0x0044c320 ClipTarget (588 bytes)</title></rect>

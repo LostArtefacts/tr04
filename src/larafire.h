@@ -29,6 +29,8 @@ sint32 FireWeapon(sint32 weapon_type, ITEM_INFO *target, ITEM_INFO *src, sint16 
 void DoProperDetection(sint16 item_number, sint32 x, sint32 y, sint32 z, sint32 xv, sint32 yv, sint32 zv);
 void LaraTargetInfo(WEAPON_INFO *winfo);
 void LaraGun(void);
+void LaraGetNewTarget(WEAPON_INFO *winfo);
+void AimWeapon(WEAPON_INFO *winfo, LARA_ARM *arm);
 
 extern WEAPON_INFO weapons[9];
 extern sint16 HoldStates[18];

@@ -8,6 +8,9 @@
 #include "effect2.h"
 #include "savegame.h"
 #include "objnums.h"
+#include "camera.h"
+#include "gameflow.h"
+#include "specific/function_stubs.h"
 
 void draw_pistols(sint32 weapon_type)
 {
@@ -140,6 +143,52 @@ void undraw_pistol_mesh_right(sint32 weapon_type)
     lara.mesh_ptrs[LM_RHAND] = meshes[objects[LARA].mesh_index + LM_RHAND * 2];
     if (weapon_type == WEAPON_PISTOLS)
         lara.holster = LARA_HOLSTERS_PISTOLS;
+}
+
+void PistolHandler(sint32 weapon_type)
+{
+    WEAPON_INFO *winfo;
+    PHD_VECTOR pos;
+
+    winfo = &weapons[weapon_type];
+    LaraGetNewTarget(winfo);
+    if (input & IN_ACTION)
+        LaraTargetInfo(winfo);
+    AimWeapon(winfo, &lara.left_arm);
+    AimWeapon(winfo, &lara.right_arm);
+    if (lara.left_arm.lock && !lara.right_arm.lock) {
+        lara.torso_y_rot = lara.left_arm.y_rot / 2;
+        lara.torso_x_rot = lara.left_arm.x_rot / 2;
+        if (camera.old_type != LOOK_CAMERA) {
+            lara.head_y_rot = lara.torso_y_rot;
+            lara.head_x_rot = lara.torso_x_rot;
+        }
+    } else if (lara.right_arm.lock && !lara.left_arm.lock) {
+        lara.torso_y_rot = lara.right_arm.y_rot / 2;
+        lara.torso_x_rot = lara.right_arm.x_rot / 2;
+        if (camera.old_type != LOOK_CAMERA) {
+            lara.head_y_rot = lara.torso_y_rot;
+            lara.head_x_rot = lara.torso_x_rot;
+        }
+    } else if (lara.left_arm.lock && lara.right_arm.lock) {
+        lara.torso_y_rot = (lara.left_arm.y_rot + lara.right_arm.y_rot) / 4;
+        lara.torso_x_rot = (lara.left_arm.x_rot + lara.right_arm.x_rot) / 4;
+        if (camera.old_type != LOOK_CAMERA) {
+            lara.head_y_rot = lara.torso_y_rot;
+            lara.head_x_rot = lara.torso_x_rot;
+        }
+    }
+    AnimatePistols(weapon_type);
+    if (lara.left_arm.flash_gun || lara.right_arm.flash_gun) {
+        pos.x = (GetRandomControl() & 255) - 128;
+        pos.y = (GetRandomControl() & 127) - 63;
+        pos.z = (GetRandomControl() & 255) - 128;
+        GetLaraJointPos(&pos, lara.left_arm.flash_gun ? 11 : 14);
+        if ((gfLevelFlags & GF_MIRROR) && lara_item->room_number == gfMirrorRoom)
+            TriggerDynamic_MIRROR(pos.x, pos.y, pos.z, 10, (GetRandomControl() & 0x3f) + 192, (GetRandomControl() & 0x1f) + 128, GetRandomControl() & 0x3f);
+        else
+            TriggerDynamic(pos.x, pos.y, pos.z, 10, (GetRandomControl() & 0x3f) + 192, (GetRandomControl() & 0x1f) + 128, GetRandomControl() & 0x3f);
+    }
 }
 
 void AnimatePistols(sint32 weapon_type)
