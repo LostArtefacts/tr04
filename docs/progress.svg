@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="199.85" height="12" x="0" y="0" class="named"><title>904 · 58.44%</title></rect>
-<rect width="0.44" height="12" x="199.85" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="200.29" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="135.08" height="12" x="206.92" y="0" class="todo"><title>611 · 39.50%</title></rect>
+<rect width="200.07" height="12" x="0" y="0" class="named"><title>905 · 58.50%</title></rect>
+<rect width="0.44" height="12" x="200.07" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="200.51" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="134.85" height="12" x="207.15" y="0" class="todo"><title>610 · 39.43%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">58.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">904</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">611</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">905</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">610</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="86.76" height="12" x="0" y="0" class="named"><title>157 KB · 25.37%</title></rect>
-<rect width="0.12" height="12" x="86.76" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="86.88" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="246.21" height="12" x="95.79" y="0" class="todo"><title>447 KB · 71.99%</title></rect>
+<rect width="86.77" height="12" x="0" y="0" class="named"><title>157 KB · 25.37%</title></rect>
+<rect width="0.12" height="12" x="86.77" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="86.89" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="246.19" height="12" x="95.81" y="0" class="todo"><title>447 KB · 71.99%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">157 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">447 KB</tspan></text>
@@ -1312,7 +1312,7 @@
 <rect width="12" height="12" x="645" y="360" class="todo"><title>0x00479760 ClearDynamicLighting (92 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="360" class="todo"><title>0x004797c0 MemBltSurf (1053 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="360" class="todo"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="360" class="todo"><title>0x00479f20 CreateMonoScreen (20 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="360" class="named"><title>0x00479f20 CreateMonoScreen (20 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="360" class="todo"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="360" class="todo"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="360" class="todo"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
@@ -3052,7 +3052,7 @@
 <rect width="2.41" height="3.18" x="744.59" y="403.53" class="named"><title>0x004384f0 ClearFires (20 bytes)</title></rect>
 <rect width="2.95" height="2.61" x="694.39" y="409.71" class="named"><title>0x0046d4b0 special2_init (20 bytes)</title></rect>
 <rect width="2.95" height="2.61" x="694.39" y="415.32" class="named"><title>0x00473ab0 S_SoundStopAllSamples (20 bytes)</title></rect>
-<rect width="2.95" height="2.61" x="694.39" y="420.93" class="todo"><title>0x00479f20 CreateMonoScreen (20 bytes)</title></rect>
+<rect width="2.95" height="2.61" x="694.39" y="420.93" class="named"><title>0x00479f20 CreateMonoScreen (20 bytes)</title></rect>
 <rect width="2.95" height="2.61" x="694.39" y="426.54" class="todo"><title>0x0047d4b0 S_InitLoadBar (20 bytes)</title></rect>
 <rect width="2.95" height="2.47" x="694.39" y="432.15" class="named"><title>0x00423d40 lara_col_monkey180 (19 bytes)</title></rect>
 <rect width="2.95" height="2.47" x="694.39" y="437.63" class="named"><title>0x00425110 lara_as_upjump (19 bytes)</title></rect>
