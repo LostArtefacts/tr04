@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="210.46" height="12" x="0" y="0" class="named"><title>952 · 61.54%</title></rect>
-<rect width="0.44" height="12" x="210.46" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="210.90" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="123.80" height="12" x="218.20" y="0" class="todo"><title>560 · 36.20%</title></rect>
+<rect width="210.68" height="12" x="0" y="0" class="named"><title>953 · 61.60%</title></rect>
+<rect width="0.44" height="12" x="210.68" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="211.12" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="123.58" height="12" x="218.42" y="0" class="todo"><title>559 · 36.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">61.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">952</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">560</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">953</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">559</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="90.46" height="12" x="0" y="0" class="named"><title>164 KB · 26.45%</title></rect>
-<rect width="0.12" height="12" x="90.46" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="90.58" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="241.99" height="12" x="100.01" y="0" class="todo"><title>439 KB · 70.76%</title></rect>
+<rect width="90.53" height="12" x="0" y="0" class="named"><title>164 KB · 26.47%</title></rect>
+<rect width="0.12" height="12" x="90.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="90.65" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="241.92" height="12" x="100.08" y="0" class="todo"><title>439 KB · 70.74%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">164 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">439 KB</tspan></text>
@@ -87,7 +87,7 @@
 <rect width="12" height="12" x="270" y="0" class="named"><title>0x004037b0 InitialiseLocustEmitter (95 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="0" class="named"><title>0x00403810 ControlLocustEmitter (81 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="0" class="todo"><title>0x00403870 UpdateLocusts (922 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="0" class="todo"><title>0x00403c10 DrawLocusts (126 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="0" class="named"><title>0x00403c10 DrawLocusts (126 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="0" class="todo"><title>0x00403c90 TriggerCrocgodMissile (159 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="0" class="todo"><title>0x00403d30 TriggerCrocgodMissileFlame (405 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="0" class="named"><title>0x00403ed0 InitialiseCrocgod (88 bytes)</title></rect>
@@ -2554,7 +2554,7 @@
 <rect width="6.90" height="7.17" x="691.05" y="266.08" class="named"><title>0x00435b70 SetupRipple (128 bytes)</title></rect>
 <rect width="6.84" height="7.17" x="700.95" y="266.08" class="named"><title>0x004168d0 ControlChain (127 bytes)</title></rect>
 <rect width="6.84" height="7.17" x="710.79" y="266.08" class="todo"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
-<rect width="6.79" height="7.17" x="720.63" y="266.08" class="todo"><title>0x00403c10 DrawLocusts (126 bytes)</title></rect>
+<rect width="6.79" height="7.17" x="720.63" y="266.08" class="named"><title>0x00403c10 DrawLocusts (126 bytes)</title></rect>
 <rect width="6.79" height="7.17" x="730.42" y="266.08" class="todo"><title>0x0040e630 DrawScarabs (126 bytes)</title></rect>
 <rect width="6.79" height="7.17" x="740.21" y="266.08" class="todo"><title>0x0041fdd0 InitialiseHair (126 bytes)</title></rect>
 <rect width="6.85" height="7.10" x="560.92" y="276.24" class="named"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>

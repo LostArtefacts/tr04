@@ -11,6 +11,7 @@
 #include "sphere.h"
 #include "specific/3dmath.h"
 #include "specific/function_stubs.h"
+#include "specific/output.h"
 
 void InitialiseCroc(sint16 item_number)
 {
@@ -85,6 +86,25 @@ void ControlLocustEmitter(sint16 item_number)
     } else {
         TriggerLocust(item);
         item->trigger_flags--;
+    }
+}
+
+void DrawLocusts(void)
+{
+    LOCUST_STRUCT *fx;
+    sint16 **meshpp;
+    sint32 i;
+
+    fx = Locusts;
+    for (i = 64; i > 0; i--, fx++) {
+        if (fx->On) {
+            meshpp = &meshes[objects[AHMET_MIP].mesh_index + 2 * (-GlobalCounter & 3)];
+            phd_PushMatrix();
+            phd_TranslateAbs(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
+            phd_RotYXZ(fx->pos.y_rot, fx->pos.x_rot, fx->pos.z_rot);
+            phd_PutPolygons_train(*meshpp, 0);
+            phd_PopMatrix();
+        }
     }
 }
 

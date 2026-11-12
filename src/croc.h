@@ -22,6 +22,7 @@ void InitialiseLocustEmitter(sint16 item_number);
 void ControlLocustEmitter(sint16 item_number);
 sint32 GetFreeLocust(void);
 void InitialiseCrocgod(sint16 item_number);
+void DrawLocusts(void);
 
 extern LOCUST_STRUCT Locusts[64];
 extern sint32 next_locust;
