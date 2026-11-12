@@ -60,6 +60,13 @@ typedef struct nodeloadheader {
     sint16 zlength;
 } NODELOADHEADER;
 
+typedef struct
+{
+    void (*init_func)(void);
+    void (*control_func)(void);
+    void (*end_func)(void);
+} CUTSEQ_ROUTINES;
+
 extern sint32 GLOBAL_playing_cutseq;
 extern NEW_CUTSCENE *GLOBAL_cutme;
 extern char *cutseqpakPtr;
@@ -83,6 +90,9 @@ extern uint32 cutseq_meshbits[10];
 extern uint32 cutseq_meshswapbits[10];
 extern char old_status_flags[16];
 extern sint32 numnailed;
+extern uint8 cutseq_busy_timeout;
+extern sint32 GLOBAL_oldcamtype;
+extern CUTSEQ_ROUTINES cutseq_control_routines[31];
 extern sint16 troop_chat_ranges4[14];
 extern sint16 lara_chat_ranges6[4];
 extern sint16 voncroy_chat_ranges6[4];
@@ -126,7 +136,7 @@ void untrigger_item_in_room(sint32 room_number, sint32 object_number);
 ITEM_INFO *find_a_fucking_item(sint32 object_number);
 void *cutseq_malloc(sint32 size);
 void InitPackNodes(NODELOADHEADER *lnode, PACKNODE *pnode, char *packed, sint32 numnodes);
-void finish_cutseq(void);
+void finish_cutseq();
 void fourth_cutseq_init(void);
 void fourth_cutseq_end(void);
 void fifth_cutseq_end(void);
@@ -204,5 +214,6 @@ void updateAnimFrame(PACKNODE *node, sint32 flags, sint16 *frame);
 void CalculateObjectLightingLaraCutSeq(void);
 sint32 Load_and_Init_Cutseq(sint32 num);
 void DrawCutSeqActors(void);
+void handle_cutseq_triggering(sint32 name);
 
 #endif

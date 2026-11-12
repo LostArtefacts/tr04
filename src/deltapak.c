@@ -16,6 +16,177 @@
 #include "camera.h"
 #include "specific/3dmath.h"
 #include "specific/lighting.h"
+#include "specific/audio.h"
+#include "sound.h"
+#include <string.h>
+
+void handle_cutseq_triggering(sint32 name)
+{
+    sint32 n, fuck;
+
+    if (!cutseq_num)
+        return;
+
+    if (!cutseq_trig) {
+        if ((lara.gun_status != LG_NO_ARMS || lara.gun_type == WEAPON_FLARE) && cutseq_num != 27 &&
+            (lara.gun_type == WEAPON_FLARE || lara.gun_status != LG_HANDS_BUSY))
+            lara.gun_status = LG_UNDRAW_GUNS;
+
+        cutseq_trig = 1;
+        memset(cutseq_meshswapbits, 0, sizeof(cutseq_meshswapbits));
+        cutseq_busy_timeout = 50;
+        memset(cutseq_meshbits, -1, sizeof(cutseq_meshbits));
+
+        if (gfCurrentLevel)
+            SetFadeClip(28, 1);
+
+        if (!ScreenFadedOut) {
+            if (gfCurrentLevel)
+                nullsub_1(0);
+
+            SetScreenFadeOut(16, 0);
+        }
+    } else if (cutseq_trig == 1) {
+        if (cutseq_num == 11)
+            lara.vehicle = NO_ITEM;
+
+        fuck = 0;
+        n = lara_item->current_anim_state;
+
+        if (ScreenFadedOut) {
+            cutseq_busy_timeout--;
+
+            if (!cutseq_busy_timeout) {
+                cutseq_busy_timeout = 0;
+                fuck = 1;
+            }
+
+            if (cutseq_num == 27 || lara.gun_status == LG_HANDS_BUSY || (lara.gun_status == LG_NO_ARMS && !lara.flare_control_left) ||
+                n == AS_ALL4S || n == AS_CRAWL || n == AS_ALL4TURNL || n == AS_ALL4TURNR || n == AS_CRAWLBACK || fuck) {
+                if (!(gfLevelFlags & GF_YOUNGLARA)) {
+                    lara.gun_type = WEAPON_NONE;
+                    lara.request_gun_type = WEAPON_NONE;
+                    lara.gun_status = LG_NO_ARMS;
+                    lara.last_gun_type = WEAPON_PISTOLS;
+                    lara.mesh_ptrs[LM_LHAND] = meshes[objects[LARA].mesh_index + 2 * LM_LHAND];
+                    lara.mesh_ptrs[LM_RHAND] = meshes[objects[LARA].mesh_index + 2 * LM_RHAND];
+                    lara.left_arm.frame_number = 0;
+                    lara.right_arm.frame_number = 0;
+                    lara.target = NULL;
+                    lara.right_arm.lock = 0;
+                    lara.left_arm.lock = 0;
+                    lara_item->goal_anim_state = AS_STOP;
+                    lara_item->current_anim_state = AS_STOP;
+                    lara_item->frame_number = anims[ANIM_STOP].frame_base;
+                    lara_item->anim_number = ANIM_STOP;
+                    lara_item->speed = 0;
+                    lara_item->fallspeed = 0;
+                    lara_item->gravity_status = 0;
+                    lara.back_gun = 0;
+
+                    if (lara.weapon_item != NO_ITEM) {
+                        KillItem(lara.weapon_item);
+                        lara.weapon_item = NO_ITEM;
+                    }
+                }
+
+                if (gfCurrentLevel)
+                    S_CDStop();
+
+                numnailed = 0;
+                GLOBAL_oldcamtype = camera.type;
+                ScreenFading = 0;
+                SetScreenFadeIn(16);
+                Load_and_Init_Cutseq(cutseq_num);
+                cutseq_trig = 2;
+
+                if (cutseq_control_routines[cutseq_num].init_func)
+                    cutseq_control_routines[cutseq_num].init_func();
+
+                AlterFOV(11488);
+
+                if (GLOBAL_cutme->audio_track != -1)
+                    S_StartSyncedAudio(GLOBAL_cutme->audio_track);
+            }
+        }
+    } else if (cutseq_trig == 3) {
+        SetScreenFadeOut(16, 1);
+
+        if (cutseq_num != 1 && gfCurrentLevel)
+            nullsub_1(0);
+
+        cutseq_trig = 4;
+    } else if (cutseq_trig == 4) {
+        if (ScreenFadedOut) {
+            if (gfCurrentLevel)
+                S_CDStop();
+
+            ScreenFadedOut = 0;
+            numnailed = 0;
+
+            if (cutseq_control_routines[cutseq_num].end_func)
+                cutseq_control_routines[cutseq_num].end_func();
+
+            cutseq_trig = 0;
+            GLOBAL_playing_cutseq = 0;
+
+            if (cutseq_num == 1) {
+                FlipMap(0);
+                cutseq_num = 2;
+                Load_and_Init_Cutseq(2);
+                cutseq_trig = 2;
+                lara.puzzleitems[0] = 0;
+            } else if (bDoCredits) {
+                if (cutseq_num == 28)
+                    cutseq_num = 29;
+                else if (cutseq_num == 29)
+                    cutseq_num = 30;
+                else if (cutseq_num == 30)
+                    cutseq_num = 28;
+
+                Load_and_Init_Cutseq(cutseq_num);
+                cutseq_trig = 2;
+            } else if (cutseq_num == 7 || cutseq_num == 8) {
+                cutseq_num = 9;
+                Load_and_Init_Cutseq(9);
+                cutseq_trig = 2;
+
+                if (cutseq_control_routines[cutseq_num].init_func)
+                    cutseq_control_routines[cutseq_num].init_func();
+
+                if (GLOBAL_cutme->audio_track != -1)
+                    S_StartSyncedAudio(GLOBAL_cutme->audio_track);
+            } else if (cutseq_num == 9 || cutseq_num == 11 || cutseq_num == 15 || cutseq_num == 23) {
+                gfLevelComplete = gfCurrentLevel + 1;
+                gfRequiredStartPos = 0;
+                cutseq_num = 0;
+                GLOBAL_playing_cutseq = 0;
+                cutseq_trig = 0;
+                AlterFOV(14560);
+                ScreenFade = 0;
+                dScreenFade = 0;
+                ScreenFadeBack = 0;
+                ScreenFadedOut = 0;
+                ScreenFading = 0;
+                ScreenFadeSpeed = 8;
+            } else {
+                finish_cutseq(name);
+                camera.type = GLOBAL_oldcamtype;
+                cutseq_num = 0;
+
+                if (gfCurrentLevel)
+                    SetFadeClip(0, 1);
+
+                AlterFOV(14560);
+
+                if (gfCurrentLevel)
+                    S_CDPlay(CurrentAtmosphere, 1);
+
+                IsAtmospherePlaying = 1;
+            }
+        }
+    }
+}
 
 void frigup_lara(void)
 {
