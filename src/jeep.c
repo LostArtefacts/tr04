@@ -11,6 +11,9 @@
 #include "tomb4fx.h"
 #include "laraflar.h"
 #include "lot.h"
+#include "laramisc.h"
+#include "traps.h"
+#include "effects.h"
 #include "specific/3dmath.h"
 #include "specific/audio.h"
 #include "specific/function_stubs.h"
@@ -222,6 +225,69 @@ sint32 DoDynamics_jeep(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
             return fallspeed;
     }
     return fallspeed;
+}
+
+void JeepBaddieCollision(ITEM_INFO *item)
+{
+    JEEPINFO *jeep;
+    ITEM_INFO *collided;
+    OBJECT_INFO *obj;
+    sint16 *doors;
+    sint32 i, j, dx, dy, dz;
+    sint16 room_count, item_number;
+
+    jeep = (JEEPINFO *)item->data;
+    room_count = 1;
+    jroomies[0] = item->room_number;
+    doors = room[item->room_number].door;
+    if (doors) {
+        for (i = *doors++; i > 0; i--, doors += 16) {
+            for (j = 0; j < room_count; j++) {
+                if (jroomies[j] == *doors)
+                    break;
+            }
+            if (j == room_count) {
+                jroomies[room_count] = *doors;
+                room_count++;
+            }
+        }
+    }
+    for (i = 0; i < room_count; i++) {
+        for (item_number = room[jroomies[i]].item_number; item_number != NO_ITEM; item_number = collided->next_item) {
+            collided = &items[item_number];
+            if (collided->collidable && collided->status != ITEM_INVISIBLE && collided != lara_item && collided != item) {
+                if (collided->object_number == ENEMY_JEEP) {
+                    mycoll.coll_type = 0;
+                    mycoll.radius = 400;
+                    mycoll.enable_baddie_push = 1;
+                    mycoll.enable_spaz = 0;
+                    ObjectCollision(item_number, item, &mycoll);
+                } else {
+                    obj = &objects[collided->object_number];
+                    if ((obj->collision && obj->intelligent) || collided->object_number == ROLLINGBALL || collided->object_number == TEETH_SPIKES) {
+                        dx = item->pos.x_pos - collided->pos.x_pos;
+                        dy = item->pos.y_pos - collided->pos.y_pos;
+                        dz = item->pos.z_pos - collided->pos.z_pos;
+                        if (dx > -2048 && dx < 2048 && dz > -2048 && dz < 2048 && dy > -2048 && dy < 2048) {
+                            if (collided->object_number == ROLLINGBALL) {
+                                if (TestBoundsCollide(collided, lara_item, 100) && lara_item->hit_points > 0) {
+                                    DoLotsOfBlood(lara_item->pos.x_pos, lara_item->pos.y_pos - 512, lara_item->pos.z_pos, (GetRandomControl() & 3) + 8, lara_item->pos.y_rot, lara_item->room_number, 5);
+                                    lara_item->hit_points -= 8;
+                                    lara_item->hit_status = 1;
+                                }
+                            } else if (collided->object_number == TEETH_SPIKES) {
+                                if (TestBoundsCollideTeethSpikes(collided) && collided->object_number == TEETH_SPIKES)
+                                    jeep->flags |= 0x40;
+                            } else if (TestBoundsCollide(collided, item, 550)) {
+                                DoLotsOfBlood(collided->pos.x_pos, item->pos.y_pos - 256, collided->pos.z_pos, (GetRandomControl() & 3) + 8, item->pos.y_rot, collided->room_number, 3);
+                                collided->hit_points = 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 sint32 GetCollisionAnim(ITEM_INFO *item, PHD_VECTOR *moved, JEEPINFO *jeep)

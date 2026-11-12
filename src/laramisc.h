@@ -13,5 +13,6 @@ void LaraCheatyBits(void);
 void InitialiseLaraLoad(sint16 item_number);
 
 extern sint16 cheat_hit_points;
+extern COLL_INFO mycoll;
 
 #endif

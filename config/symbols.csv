@@ -2469,6 +2469,7 @@ address,size,name,symbol
 0x007f4fc0,16,old_status_flags,_old_status_flags
 0x007f4fd0,4,GLOBAL_numcutseq_frames,_GLOBAL_numcutseq_frames
 0x007f4fd4,4,GLOBAL_cutseq_frame,_GLOBAL_cutseq_frame
+0x007f4fe0,44,jroomies,_jroomies
 0x007f5020,44,broomies,_broomies
 0x007f504c,4,GlobalBikeItem,_GlobalBikeItem
 0x007f5050,4,font_height,_font_height
