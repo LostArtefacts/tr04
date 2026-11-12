@@ -152,6 +152,34 @@ void InitialiseSlicerDicer(sint16 item_number)
     item->item_flags[2] = (sint16)(item->pos.z_pos >> 8);
 }
 
+void InitialiseScaledSpike(sint16 item_number)
+{
+    sint16 xzrots[8];
+    ITEM_INFO *item;
+
+    xzrots[0] = -0x8000;
+    xzrots[1] = -0x6000;
+    xzrots[2] = -0x4000;
+    xzrots[3] = -0x2000;
+    xzrots[4] = 0;
+    xzrots[5] = 0x2000;
+    xzrots[6] = 0x4000;
+    xzrots[7] = 0x6000;
+    item = &items[item_number];
+    item->status = ITEM_INVISIBLE;
+    if (item->trigger_flags & 8) {
+        item->pos.x_rot = xzrots[item->trigger_flags & 7];
+        item->pos.z_pos -= SPxzoffs[item->trigger_flags & 7];
+        item->pos.y_rot = 0x4000;
+    } else {
+        item->pos.z_rot = xzrots[item->trigger_flags & 7];
+        item->pos.x_pos += SPxzoffs[item->trigger_flags & 7];
+    }
+    item->pos.y_pos += SPyoffs[item->trigger_flags & 7];
+    item->item_flags[0] = 1024;
+    item->item_flags[2] = 0;
+}
+
 void InitialiseBurningFloor(sint16 item_number)
 {
     items[item_number].required_anim_state = 127;
