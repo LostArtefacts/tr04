@@ -56,5 +56,6 @@ extern sint32 DebrisMeshC3;
 extern sint32 DebrisMeshAmbient;
 extern sint32 DebrisMeshFlags;
 extern SHATTER_ITEM ShatterItem;
+extern char tsv_buffer[16384];
 
 #endif

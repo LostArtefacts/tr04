@@ -2,6 +2,9 @@
 #include "anim.h"
 #include "box.h"
 #include "control.h"
+#include "collide.h"
+#include "debris.h"
+#include "objnums.h"
 #include "draw.h"
 #include "specific/3dmath.h"
 #include "room.h"
@@ -46,6 +49,64 @@ void ClearMovableBlockSplitters(sint32 x, sint32 y, sint32 z, sint16 room_number
         if (boxes[floor->box].height == height && (boxes[floor->box].overlap_index & BLOCKABLE) && (boxes[floor->box].overlap_index & BLOCKED))
             ClearMovableBlockSplitters(x, y, z - WALL_L, room_number);
     }
+}
+
+sint32 TestBlockPush(ITEM_INFO *item, sint32 height, uint16 quadrant)
+{
+    ITEM_INFO **itemlist;
+    FLOOR_INFO *floor;
+    ROOM_INFO *r;
+    sint32 x, y, z, rx, rz;
+    sint16 room_number;
+
+    x = item->pos.x_pos;
+    y = item->pos.y_pos;
+    z = item->pos.z_pos;
+    itemlist = (ITEM_INFO **)&tsv_buffer[0];
+    switch (quadrant) {
+    case NORTH:
+        z += 1024;
+        break;
+    case EAST:
+        x += 1024;
+        break;
+    case SOUTH:
+        z -= 1024;
+        break;
+    case WEST:
+        x -= 1024;
+        break;
+    }
+    room_number = item->room_number;
+    floor = GetFloor(x, y - 256, z, &room_number);
+    r = &room[room_number];
+    rx = (x - r->x) >> 10;
+    rz = (z - r->z) >> 10;
+    if (r->floor[rx * r->x_size + rz].stopper)
+        return 0;
+    if (GetHeight(floor, x, y - 256, z) != y)
+        return 0;
+    GetHeight(floor, x, y, z);
+    if (height_type != WALL)
+        return 0;
+    floor = GetFloor(x, y - height + 100, z, &room_number);
+    if (GetCeiling(floor, x, y - height + 100, z) > y - height + 100)
+        return 0;
+    rx = item->pos.x_pos;
+    rz = item->pos.z_pos;
+    item->pos.x_pos = x;
+    item->pos.z_pos = z;
+    GetCollidedObjects(item, 256, 1, itemlist, 0, 0);
+    item->pos.x_pos = rx;
+    item->pos.z_pos = rz;
+    if (*itemlist) {
+        for (; *itemlist; itemlist++) {
+            if ((*itemlist)->object_number == TWOBLOCK_PLATFORM || (*itemlist)->object_number == HAMMER)
+                return 1;
+        }
+        return 0;
+    }
+    return 1;
 }
 
 void DrawPlanetEffect(ITEM_INFO *item)

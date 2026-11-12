@@ -2,6 +2,7 @@
 #define COLLIDE_H
 
 #include "items.h"
+#include "room.h"
 
 enum direction {
     NORTH,
@@ -81,6 +82,7 @@ sint32 TestBoundsCollideStatic(sint16 *bounds, PHD_3DPOS *pos, sint32 rad);
 sint32 TestBoundsCollide2(ITEM_INFO *item, ITEM_INFO *l, sint32 rad);
 void CogCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void CreatureCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
+sint32 GetCollidedObjects(ITEM_INFO *item, sint32 rad, sint32 noInvisible, ITEM_INFO **StoredItems, MESH_INFO **StoredStatics, sint32 StoreLara);
 
 extern sint16 GlobalCollisionBounds[6];
 

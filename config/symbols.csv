@@ -61,7 +61,7 @@ address,size,name,symbol
 0x00409460,56,InitialiseMovingBlock,_InitialiseMovingBlock
 0x004094a0,546,ClearMovableBlockSplitters,_ClearMovableBlockSplitters
 0x004096d0,1156,MovableBlock,_MovableBlock
-0x00409b80,397,TestBlockPush,_TestBlockPush
+0x00409b80,416,TestBlockPush,_TestBlockPush
 0x00409d20,775,TestBlockPull,_TestBlockPull
 0x0040a040,881,MovableBlockCollision,_MovableBlockCollision
 0x0040a3c0,244,InitialisePlanetEffect,_InitialisePlanetEffect
@@ -2768,6 +2768,7 @@ address,size,name,symbol
 0x00804e80,160,splashes,_splashes
 0x00804f20,4,SmokeWeapon,_SmokeWeapon
 0x00804f40,36,splash_setup,_splash_setup
+0x00804f80,16384,tsv_buffer,_tsv_buffer
 0x00808f80,4,DebrisMeshAmbient,_DebrisMeshAmbient
 0x00808f84,4,DebrisMesh,_DebrisMesh
 0x00808f88,4,DebrisMeshFlags,_DebrisMeshFlags
