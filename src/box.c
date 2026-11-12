@@ -46,6 +46,65 @@ sint32 UpdateLOT(LOT_INFO *LOT, sint32 expansion)
     return SearchLOT(LOT, expansion);
 }
 
+sint32 SearchLOT(LOT_INFO *LOT, sint32 expansion)
+{
+    sint32 i, index, done, change, box_number, overlap_flags;
+    BOX_NODE *expand, *node;
+    BOX_INFO *box;
+    sint16 *zone, search_zone;
+
+    zone = ground_zone[LOT->zone][flip_status];
+    search_zone = zone[LOT->head];
+    for (i = 0; i < expansion; i++) {
+        if (LOT->head == NO_BOX) {
+            LOT->tail = NO_BOX;
+            return 0;
+        }
+        node = &LOT->node[LOT->head];
+        box = &boxes[LOT->head];
+        index = box->overlap_index & 0x3fff;
+        done = 0;
+        do {
+            box_number = (uint16)overlap[index++];
+            overlap_flags = box_number & ~BOX_NUMBER;
+            if (box_number & 0x8000)
+                done = 1;
+            box_number &= BOX_NUMBER;
+            if (!LOT->fly && search_zone != zone[box_number])
+                continue;
+            change = boxes[box_number].height - box->height;
+            if ((change > LOT->step || change < LOT->drop) && (!(overlap_flags & 0x2000) || !LOT->can_monkey))
+                continue;
+            if ((overlap_flags & 0x800) && !LOT->can_jump)
+                continue;
+            expand = &LOT->node[box_number];
+            if ((node->search_number & 0x7fff) < (expand->search_number & 0x7fff))
+                continue;
+            if (node->search_number & 0x8000) {
+                if ((node->search_number & 0x7fff) == (expand->search_number & 0x7fff))
+                    continue;
+                expand->search_number = node->search_number;
+            } else {
+                if ((node->search_number & 0x7fff) == (expand->search_number & 0x7fff) && !(expand->search_number & 0x8000))
+                    continue;
+                if (boxes[box_number].overlap_index & LOT->block_mask)
+                    expand->search_number = node->search_number | 0x8000;
+                else {
+                    expand->search_number = node->search_number;
+                    expand->exit_box = LOT->head;
+                }
+            }
+            if (expand->next_expansion == NO_BOX && box_number != LOT->tail) {
+                LOT->node[LOT->tail].next_expansion = (sint16)box_number;
+                LOT->tail = (sint16)box_number;
+            }
+        } while (!done);
+        LOT->head = node->next_expansion;
+        node->next_expansion = NO_BOX;
+    }
+    return 1;
+}
+
 void TargetBox(LOT_INFO *LOT, sint16 box_number)
 {
     BOX_INFO *box;

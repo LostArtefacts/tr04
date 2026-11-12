@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="236.11" height="12" x="0" y="0" class="named"><title>1068 · 69.04%</title></rect>
-<rect width="0.44" height="12" x="236.11" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="11.94" height="12" x="236.55" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
-<rect width="93.51" height="12" x="248.49" y="0" class="todo"><title>423 · 27.34%</title></rect>
+<rect width="236.33" height="12" x="0" y="0" class="named"><title>1069 · 69.10%</title></rect>
+<rect width="0.44" height="12" x="236.33" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="11.94" height="12" x="236.77" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
+<rect width="93.29" height="12" x="248.71" y="0" class="todo"><title>422 · 27.28%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">69.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1068</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">423</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1069</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">422</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="109.54" height="12" x="0" y="0" class="named"><title>199 KB · 32.03%</title></rect>
-<rect width="0.12" height="12" x="109.54" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="20.70" height="12" x="109.66" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
-<rect width="211.63" height="12" x="130.37" y="0" class="todo"><title>384 KB · 61.88%</title></rect>
+<rect width="109.82" height="12" x="0" y="0" class="named"><title>199 KB · 32.11%</title></rect>
+<rect width="0.12" height="12" x="109.82" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="20.70" height="12" x="109.94" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
+<rect width="211.36" height="12" x="130.64" y="0" class="todo"><title>384 KB · 61.80%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">32.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">199 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">384 KB</tspan></text>
@@ -731,7 +731,7 @@
 <rect width="12" height="12" x="180" y="195" class="todo"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="todo"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="195" class="named"><title>0x0043ff70 UpdateLOT (114 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="195" class="todo"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="195" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="195" class="named"><title>0x004401f0 TargetBox (149 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="195" class="named"><title>0x00440290 EscapeBox (164 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="195" class="named"><title>0x00440340 ValidBox (159 bytes)</title></rect>
@@ -1974,7 +1974,7 @@
 <rect width="13.81" height="14.23" x="364.34" y="447.77" class="named"><title>0x004622c0 PulleyCollision (509 bytes)</title></rect>
 <rect width="13.93" height="14.10" x="381.15" y="96.31" class="todo"><title>0x0049a4e0 Func49a4e0 (509 bytes)</title></rect>
 <rect width="13.93" height="14.10" x="381.15" y="113.41" class="todo"><title>0x0049b990 Func49b990 (509 bytes)</title></rect>
-<rect width="13.93" height="14.05" x="381.15" y="130.52" class="todo"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
+<rect width="13.93" height="14.05" x="381.15" y="130.52" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="13.93" height="13.99" x="381.15" y="147.56" class="todo"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
 <rect width="13.93" height="13.96" x="381.15" y="164.55" class="todo"><title>0x0049a2e0 Func49a2e0 (504 bytes)</title></rect>
 <rect width="13.93" height="13.96" x="381.15" y="181.52" class="todo"><title>0x0049b790 Func49b790 (504 bytes)</title></rect>
