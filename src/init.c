@@ -257,3 +257,12 @@ void InitialiseMapper(sint16 item_number)
 {
     items[item_number].mesh_bits = 0xFFFFFFFD;    
 }
+
+void InitialiseStatuePlinth(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (!item->trigger_flags)
+        item->mesh_bits = 1;
+}
