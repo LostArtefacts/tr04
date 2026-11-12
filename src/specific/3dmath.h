@@ -16,6 +16,7 @@ enum matrix_indices {
 };
 
 extern sint16 rcossin_tbl[8192];
+extern sint16 CurrentFov;
 
 __inline sint32 phd_sin(sint32 angle)
 {

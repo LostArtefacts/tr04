@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="249.87" height="12" x="0" y="0" class="named"><title>1131 · 73.06%</title></rect>
 <rect width="0.66" height="12" x="249.87" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.45" height="12" x="250.53" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
-<rect width="74.01" height="12" x="267.99" y="0" class="todo"><title>335 · 21.64%</title></rect>
+<rect width="17.67" height="12" x="250.53" y="0" class="nonmatching"><title>80 · 5.17%</title></rect>
+<rect width="73.79" height="12" x="268.21" y="0" class="todo"><title>334 · 21.58%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">73.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1131</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">335</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1131</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">80</tspan> · <tspan class="todo">334</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="132.90" height="12" x="0" y="0" class="named"><title>242 KB · 38.86%</title></rect>
 <rect width="0.13" height="12" x="132.90" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.18" height="12" x="133.03" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
-<rect width="177.78" height="12" x="164.22" y="0" class="todo"><title>324 KB · 51.98%</title></rect>
+<rect width="31.47" height="12" x="133.03" y="0" class="nonmatching"><title>57 KB · 9.20%</title></rect>
+<rect width="177.50" height="12" x="164.50" y="0" class="todo"><title>323 KB · 51.90%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">38.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">242 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">324 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">242 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">323 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -239,7 +239,7 @@
 <rect width="12" height="12" x="300" y="45" class="todo"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="45" class="named"><title>0x004183b0 InitialiseTroop (120 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="45" class="nonmatching"><title>0x00418430 TroopControl (2248 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="45" class="todo"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="45" class="nonmatching"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="45" class="named"><title>0x00418f10 ClearCutSceneCamera (130 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="45" class="named"><title>0x00418fa0 GetAIEnemy (199 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="45" class="todo"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
@@ -1965,7 +1965,7 @@
 <rect width="13.80" height="14.57" x="364.57" y="273.80" class="named"><title>0x00408e00 TriggerHorsemanRicochets (522 bytes)</title></rect>
 <rect width="13.80" height="14.54" x="364.57" y="291.36" class="named"><title>0x00456ac0 ControlBurningRope (521 bytes)</title></rect>
 <rect width="13.80" height="14.51" x="364.57" y="308.90" class="named"><title>0x0043ab00 TriggerShockwaveHitEffect (520 bytes)</title></rect>
-<rect width="13.80" height="14.48" x="364.57" y="326.41" class="todo"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
+<rect width="13.80" height="14.48" x="364.57" y="326.41" class="nonmatching"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
 <rect width="13.80" height="14.48" x="364.57" y="343.90" class="named"><title>0x0042c770 lara_col_climbstnc (519 bytes)</title></rect>
 <rect width="13.80" height="14.34" x="364.57" y="361.38" class="named"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
 <rect width="13.80" height="14.32" x="364.57" y="378.72" class="todo"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
