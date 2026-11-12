@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="240.75" height="12" x="0" y="0" class="named"><title>1089 · 70.39%</title></rect>
-<rect width="0.44" height="12" x="240.75" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="13.71" height="12" x="241.19" y="0" class="nonmatching"><title>62 · 4.01%</title></rect>
-<rect width="87.10" height="12" x="254.90" y="0" class="todo"><title>394 · 25.47%</title></rect>
+<rect width="240.97" height="12" x="0" y="0" class="named"><title>1090 · 70.46%</title></rect>
+<rect width="0.44" height="12" x="240.97" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="13.71" height="12" x="241.41" y="0" class="nonmatching"><title>62 · 4.01%</title></rect>
+<rect width="86.88" height="12" x="255.12" y="0" class="todo"><title>393 · 25.40%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">70.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1089</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">62</tspan> · <tspan class="todo">394</tspan></text>
+<text text-anchor="end" x="522" y="7.50">70.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1090</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">62</tspan> · <tspan class="todo">393</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="117.06" height="12" x="0" y="0" class="named"><title>213 KB · 34.23%</title></rect>
-<rect width="0.12" height="12" x="117.06" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="24.44" height="12" x="117.18" y="0" class="nonmatching"><title>44 KB · 7.15%</title></rect>
-<rect width="200.38" height="12" x="141.62" y="0" class="todo"><title>364 KB · 58.59%</title></rect>
+<rect width="117.38" height="12" x="0" y="0" class="named"><title>213 KB · 34.32%</title></rect>
+<rect width="0.12" height="12" x="117.38" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="24.44" height="12" x="117.50" y="0" class="nonmatching"><title>44 KB · 7.15%</title></rect>
+<rect width="200.06" height="12" x="141.94" y="0" class="todo"><title>363 KB · 58.50%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">34.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">213 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">44 KB</tspan> · <tspan class="todo">364 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">34.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">213 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">44 KB</tspan> · <tspan class="todo">363 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1262,7 +1262,7 @@
 <rect width="12" height="12" x="645" y="345" class="todo"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="345" class="todo"><title>0x00474e10 LoadObjects (1156 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="345" class="todo"><title>0x004752a0 AdjustUV (1121 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="345" class="todo"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="345" class="named"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="345" class="named"><title>0x00475970 LoadCameras (187 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="345" class="named"><title>0x00475a30 LoadSoundEffects (139 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="345" class="named"><title>0x00475ac0 LoadBoxes (430 bytes)</title></rect>
@@ -1925,7 +1925,7 @@
 <rect width="15.20" height="14.62" x="623.41" y="61.21" class="todo"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
 <rect width="15.13" height="14.62" x="641.61" y="61.21" class="nonmatching"><title>0x00414670 FlameEmitter2Control (573 bytes)</title></rect>
 <rect width="15.10" height="14.62" x="659.74" y="61.21" class="todo"><title>0x00435570 TriggerSuperJetFlame (572 bytes)</title></rect>
-<rect width="15.10" height="14.62" x="677.84" y="61.21" class="todo"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
+<rect width="15.10" height="14.62" x="677.84" y="61.21" class="named"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
 <rect width="15.07" height="14.62" x="695.94" y="61.21" class="named"><title>0x00420b10 LaraAboveWater (571 bytes)</title></rect>
 <rect width="15.05" height="14.62" x="714.01" y="61.21" class="named"><title>0x00456120 PoleCollision (570 bytes)</title></rect>
 <rect width="14.94" height="14.62" x="732.06" y="61.21" class="todo"><title>0x0043dbf0 Func43dbf0 (566 bytes)</title></rect>

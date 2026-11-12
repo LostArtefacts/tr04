@@ -75,5 +75,6 @@ void FreeLevel(void);
 unsigned int __stdcall LoadLevel(void *name);
 sint32 S_LoadLevelFile(sint32 num);
 uint8 LoadSamples(void);
+uint8 LoadSprites(void);
 
 #endif

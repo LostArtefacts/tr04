@@ -81,6 +81,17 @@ typedef struct SPRITESTRUCT {
     float y2;
 } SPRITESTRUCT;
 
+typedef struct PHDSPRITESTRUCT {
+    uint16 tpage;
+    uint16 offset;
+    uint16 width;
+    uint16 height;
+    sint16 x1;
+    sint16 y1;
+    sint16 x2;
+    sint16 y2;
+} PHDSPRITESTRUCT;
+
 typedef struct texture_struct {
     uint16 drawtype;
     uint16 tpage;

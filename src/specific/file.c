@@ -12,6 +12,8 @@
 #include "../spotcam.h"
 #include "../gameflow.h"
 #include "../room.h"
+#include "../anim.h"
+#include "../draw.h"
 #include "lighting.h"
 #include "dxsound.h"
 #include "../sound.h"
@@ -96,6 +98,55 @@ uint8 Decompress(char *pDest, char *pCompressed, sint32 compressedSize, sint32 s
     }
     inflateEnd(&stream);
     Log(5, "Decompression OK");
+    return 1;
+}
+
+uint8 LoadSprites(void)
+{
+    PHDSPRITESTRUCT sprite;
+    sint32 num_sprites, num_slots, slot, i;
+
+    Log(2, "LoadSprites");
+    FileData += 3;
+    num_sprites = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    spriteinfo = (SPRITESTRUCT *)game_malloc(sizeof(SPRITESTRUCT) * num_sprites, 0);
+    for (i = 0; i < num_sprites; i++) {
+        memcpy(&sprite, FileData, sizeof(PHDSPRITESTRUCT));
+        FileData += sizeof(PHDSPRITESTRUCT);
+        spriteinfo[i].height = sprite.height;
+        spriteinfo[i].offset = sprite.offset;
+        spriteinfo[i].tpage = sprite.tpage;
+        spriteinfo[i].width = sprite.width;
+        spriteinfo[i].x1 = (float)sprite.x1 * (1.0F / 256.0F);
+        spriteinfo[i].y1 = (float)sprite.y1 * (1.0F / 256.0F);
+        spriteinfo[i].x2 = (float)sprite.x2 * (1.0F / 256.0F);
+        spriteinfo[i].y2 = (float)sprite.y2 * (1.0F / 256.0F);
+        spriteinfo[i].x1 += 1.0F / 256.0F;
+        spriteinfo[i].y1 += 1.0F / 256.0F;
+        spriteinfo[i].x2 -= 1.0F / 256.0F;
+        spriteinfo[i].y2 -= 1.0F / 256.0F;
+        spriteinfo[i].tpage++;
+    }
+    num_slots = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    for (i = 0; i < num_slots; i++) {
+        slot = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        if (slot < NUMBER_OBJECTS) {
+            objects[slot].nmeshes = *(sint16 *)FileData;
+            FileData += sizeof(sint16);
+            objects[slot].mesh_index = *(sint16 *)FileData;
+            FileData += sizeof(sint16);
+            objects[slot].loaded = 1;
+        } else {
+            slot -= NUMBER_OBJECTS;
+            static_objects[slot].mesh_number = *(sint16 *)FileData;
+            FileData += sizeof(sint16);
+            static_objects[slot].mesh_number = *(sint16 *)FileData;
+            FileData += sizeof(sint16);
+        }
+    }
     return 1;
 }
 
