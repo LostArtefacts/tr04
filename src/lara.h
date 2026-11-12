@@ -182,7 +182,7 @@ typedef struct lara_info {
     sint16 num_crossbow_ammo2;
     sint16 num_crossbow_ammo3;
     sint8 beetle_uses;
-    sint8 blindTimer;
+    uint8 blindTimer;
     sint8 location;
     sint8 highest_location;
     sint8 locationPad;

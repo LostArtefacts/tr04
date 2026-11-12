@@ -172,7 +172,7 @@ address,size,name,symbol
 0x00417db0,524,ControlMineHelicopter,_ControlMineHelicopter
 0x00417fc0,993,ControlSprinkler,_ControlSprinkler
 0x004183b0,120,InitialiseTroop,_InitialiseTroop
-0x00418430,2180,TroopControl,_TroopControl
+0x00418430,2248,TroopControl,_TroopControl
 0x00418cb4,,jpt_418786,_jpt_418786
 0x00418d00,519,SetCutSceneCamera,_SetCutSceneCamera
 0x00418f10,130,ClearCutSceneCamera,_ClearCutSceneCamera
@@ -2013,6 +2013,7 @@ address,size,name,symbol
 0x004ad394,16,SPxzoffs,_SPxzoffs
 0x004ad3a4,16,SPyoffs,_SPyoffs
 0x004ad3b4,16,SPDETyoffs,_SPDETyoffs
+0x004ad438,16,troop_gun,_troop_gun
 0x004ad6c0,16,wildboar_bite,_wildboar_bite
 0x004ad6d0,2,WraithSpeed,_WraithSpeed
 0x004ad6d4,60,HairRotScratchVertNums,_HairRotScratchVertNums
