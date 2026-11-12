@@ -31,6 +31,87 @@ sint32 SaveGame(void)
         return -1;
 }
 
+void init_new_inventry(void)
+{
+    sint32 i;
+
+    compass_settle_thang = 4096;
+    examine_mode = 0;
+    stats_mode = 0;
+    AlterFOV(14560);
+    lara.Busy = 0;
+    GLOBAL_inventoryitemchosen = -1;
+    left_debounce = 0;
+    right_debounce = 0;
+    up_debounce = 0;
+    down_debounce = 0;
+    go_left = 0;
+    go_right = 0;
+    go_up = 0;
+    go_down = 0;
+    select_debounce = 0;
+    deselect_debounce = 0;
+    go_select = 0;
+    go_deselect = 0;
+    left_repeat = 0;
+    right_repeat = 0;
+    loading_or_saving = 0;
+    use_the_bitch = 0;
+    if (lara.num_shotgun_ammo1 != -1)
+        AmountShotGunAmmo1 = lara.num_shotgun_ammo1 / 6;
+    else
+        AmountShotGunAmmo1 = -1;
+    if (lara.num_shotgun_ammo2 != -1)
+        AmountShotGunAmmo2 = lara.num_shotgun_ammo2 / 6;
+    else
+        AmountShotGunAmmo2 = -1;
+    AmountGrenadeAmmo1 = lara.num_grenade_ammo1;
+    AmountGrenadeAmmo2 = lara.num_grenade_ammo2;
+    AmountGrenadeAmmo3 = lara.num_grenade_ammo3;
+    AmountCrossBowAmmo1 = lara.num_crossbow_ammo1;
+    AmountCrossBowAmmo2 = lara.num_crossbow_ammo2;
+    AmountCrossBowAmmo3 = lara.num_crossbow_ammo3;
+    AmountUziAmmo = lara.num_uzi_ammo;
+    AmountRevolverAmmo = lara.num_revolver_ammo;
+    AmountPistolsAmmo = lara.num_pistols_ammo;
+    construct_object_list();
+    if (GLOBAL_enterinventory != NO_ITEM) {
+        if (have_i_got_object((sint16)GLOBAL_enterinventory))
+            setup_objectlist_startposition2((sint16)GLOBAL_enterinventory);
+        GLOBAL_enterinventory = -1;
+    } else if (GLOBAL_lastinvitem != NO_ITEM) {
+        if (have_i_got_item((sint16)GLOBAL_lastinvitem))
+            setup_objectlist_startposition((sint16)GLOBAL_lastinvitem);
+        else if (GLOBAL_lastinvitem >= INV_WATERSKIN1_EMPTY_ITEM && GLOBAL_lastinvitem <= INV_WATERSKIN1_3_ITEM) {
+            for (i = INV_WATERSKIN1_EMPTY_ITEM; i <= INV_WATERSKIN1_3_ITEM; i++) {
+                if (have_i_got_item((sint16)i)) {
+                    setup_objectlist_startposition((sint16)i);
+                    break;
+                }
+            }
+        } else if (GLOBAL_lastinvitem >= INV_WATERSKIN2_EMPTY_ITEM && GLOBAL_lastinvitem <= INV_WATERSKIN2_5_ITEM) {
+            for (i = INV_WATERSKIN2_EMPTY_ITEM; i <= INV_WATERSKIN2_5_ITEM; i++) {
+                if (have_i_got_item((sint16)i)) {
+                    setup_objectlist_startposition((sint16)i);
+                    break;
+                }
+            }
+        }
+        GLOBAL_lastinvitem = -1;
+    }
+    ammo_selector_fade_val = 0;
+    ammo_selector_fade_dir = 0;
+    combine_ring_fade_val = 0;
+    combine_ring_fade_dir = 0;
+    combine_type_flag = 0;
+    seperate_type_flag = 0;
+    combine_obj1 = 0;
+    combine_obj2 = 0;
+    normal_ring_fade_val = 128;
+    normal_ring_fade_dir = 0;
+    handle_object_changeover(RING_INVENTORY);
+}
+
 void do_debounced_joystick_poo(void)
 {
     go_left = 0;

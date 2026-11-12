@@ -240,6 +240,7 @@ sint32 do_special_waterskin_combine_bullshit(sint32 flag);
 void dels_give_lara_items_cheat(void);
 void construct_combine_object_list(void);
 void do_debounced_joystick_poo(void);
+void init_new_inventry(void);
 
 extern sint32 InventoryActive;
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
@@ -275,5 +276,28 @@ extern sint32 combine_obj1;
 extern sint32 combine_obj2;
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
+extern sint32 GLOBAL_lastinvitem;
+extern sint32 compass_settle_thang;
+extern sint16 examine_mode;
+extern sint16 stats_mode;
+extern char loading_or_saving;
+extern char use_the_bitch;
+extern uint16 AmountShotGunAmmo1;
+extern uint16 AmountShotGunAmmo2;
+extern sint16 AmountGrenadeAmmo1;
+extern sint16 AmountGrenadeAmmo2;
+extern sint16 AmountGrenadeAmmo3;
+extern sint16 AmountCrossBowAmmo1;
+extern sint16 AmountCrossBowAmmo2;
+extern sint16 AmountCrossBowAmmo3;
+extern sint16 AmountUziAmmo;
+extern sint16 AmountRevolverAmmo;
+extern sint16 AmountPistolsAmmo;
+extern sint16 combine_ring_fade_val;
+extern sint16 combine_ring_fade_dir;
+extern char combine_type_flag;
+extern char seperate_type_flag;
+extern sint16 normal_ring_fade_val;
+extern sint16 normal_ring_fade_dir;
 
 #endif
