@@ -11,7 +11,7 @@ typedef struct weapon_info {
     sint16 shot_accuracy;
     sint16 gun_height;
     sint16 target_dist;
-    sint8 damage;
+    uint8 damage;
     uint8 recoil_frame;
     uint8 flash_time;
     uint8 draw_frame;
@@ -34,5 +34,8 @@ void AimWeapon(WEAPON_INFO *winfo, LARA_ARM *arm);
 
 extern WEAPON_INFO weapons[9];
 extern sint16 HoldStates[18];
+extern GAME_VECTOR bum_vdest;
+extern PHD_3DPOS bum_view;
+extern GAME_VECTOR bum_vsrc;
 
 #endif

@@ -77,6 +77,7 @@ sint32 LOS(GAME_VECTOR *start, GAME_VECTOR *target);
 sint32 xLOS(GAME_VECTOR *start, GAME_VECTOR *target);
 sint32 zLOS(GAME_VECTOR *start, GAME_VECTOR *target);
 sint32 ClipTarget(GAME_VECTOR *start, GAME_VECTOR *target);
+sint32 GetTargetOnLOS(GAME_VECTOR *src, GAME_VECTOR *dest, sint32 DrawTarget, sint32 firing);
 sint32 CheckNoColFloorTriangle(FLOOR_INFO *floor, sint32 x, sint32 z);
 sint32 CheckNoColCeilingTriangle(FLOOR_INFO *floor, sint32 x, sint32 z);
 FLOOR_INFO *GetFloor(sint32 x, sint32 y, sint32 z, sint16 *room_number);
