@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="189.24" height="12" x="0" y="0" class="named"><title>856 · 55.33%</title></rect>
-<rect width="0.44" height="12" x="189.24" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="189.68" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="145.91" height="12" x="196.09" y="0" class="todo"><title>660 · 42.66%</title></rect>
+<rect width="189.46" height="12" x="0" y="0" class="named"><title>857 · 55.40%</title></rect>
+<rect width="0.44" height="12" x="189.46" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="189.90" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="145.69" height="12" x="196.31" y="0" class="todo"><title>659 · 42.60%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">55.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">856</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">660</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">857</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">659</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="81.10" height="12" x="0" y="0" class="named"><title>147 KB · 23.71%</title></rect>
-<rect width="0.12" height="12" x="81.10" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="81.22" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="252.12" height="12" x="89.88" y="0" class="todo"><title>457 KB · 73.72%</title></rect>
+<rect width="81.19" height="12" x="0" y="0" class="named"><title>147 KB · 23.74%</title></rect>
+<rect width="0.12" height="12" x="81.19" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="81.31" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="252.04" height="12" x="89.96" y="0" class="todo"><title>457 KB · 73.70%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">23.7%</text>
+<text text-anchor="end" x="522" y="24.50">23.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">147 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">457 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -972,7 +972,7 @@
 <rect width="12" height="12" x="45" y="270" class="todo"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="270" class="todo"><title>0x00458ad0 phd_GetMatrixAngles (177 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="270" class="todo"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="270" class="todo"><title>0x00459060 GetRopePos (146 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="270" class="named"><title>0x00459060 GetRopePos (146 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="270" class="todo"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="270" class="todo"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="270" class="todo"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
@@ -2500,7 +2500,7 @@
 <rect width="7.74" height="7.34" x="540.32" y="434.09" class="named"><title>0x00450dc0 GetFrames (147 bytes)</title></rect>
 <rect width="7.74" height="7.29" x="540.32" y="444.42" class="todo"><title>0x00401db0 InitialiseBaboon (146 bytes)</title></rect>
 <rect width="7.74" height="7.29" x="540.32" y="454.71" class="named"><title>0x00423c40 lara_col_hangturnlr (146 bytes)</title></rect>
-<rect width="7.71" height="7.32" x="551.06" y="255.62" class="todo"><title>0x00459060 GetRopePos (146 bytes)</title></rect>
+<rect width="7.71" height="7.32" x="551.06" y="255.62" class="named"><title>0x00459060 GetRopePos (146 bytes)</title></rect>
 <rect width="7.66" height="7.32" x="561.77" y="255.62" class="named"><title>0x00413b80 FallingBlockCollision (145 bytes)</title></rect>
 <rect width="7.66" height="7.32" x="572.43" y="255.62" class="named"><title>0x00426ab0 CanLaraHangSideways (145 bytes)</title></rect>
 <rect width="7.66" height="7.32" x="583.08" y="255.62" class="named"><title>0x00439ae0 TriggerGunflash (145 bytes)</title></rect>
