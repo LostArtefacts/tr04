@@ -4,6 +4,7 @@
 #include "control.h"
 #include "draw.h"
 #include "objnums.h"
+#include "anim.h"
 #include "specific/function_stubs.h"
 
 #define ESCAPE_DIST (WALL_L * 5)
@@ -243,6 +244,41 @@ void CreatureMood(ITEM_INFO *item, AI_INFO *info, sint32 violent)
                 creature->monkey_ahead = 1;
         }
     }
+}
+
+sint32 CreatureCreature(sint16 item_number)
+{
+    sint16 link, angle;
+    sint32 x, z, y_rot, xdistance, zdistance, distance, radius;
+    ROOM_INFO *r;
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    x = item->pos.x_pos;
+    z = item->pos.z_pos;
+    y_rot = item->pos.y_rot;
+    radius = objects[item->object_number].radius;
+    r = &room[item->room_number];
+    link = r->item_number;
+    do {
+        item = &items[link];
+        if (link == item_number)
+            return 0;
+        if (item != lara_item && item->status == ITEM_ACTIVE && item->hit_points > 0) {
+            xdistance = abs(item->pos.x_pos - x);
+            zdistance = abs(item->pos.z_pos - z);
+            if (xdistance > zdistance)
+                distance = xdistance + (zdistance >> 1);
+            else
+                distance = zdistance + (xdistance >> 1);
+            if (distance < radius + objects[item->object_number].radius) {
+                angle = phd_atan(item->pos.z_pos - z, item->pos.x_pos - x) - y_rot;
+                return angle;
+            }
+        }
+        link = item->next_item;
+    } while (link != NO_ITEM);
+    return 0;
 }
 
 sint32 BadFloor(sint32 x, sint32 y, sint32 z, sint32 box_height, sint32 next_height, sint16 room_number, LOT_INFO *LOT)

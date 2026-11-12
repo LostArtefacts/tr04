@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="157.40" height="12" x="0" y="0" class="named"><title>712 · 46.02%</title></rect>
-<rect width="0.44" height="12" x="157.40" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="157.85" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="179.51" height="12" x="162.49" y="0" class="todo"><title>812 · 52.49%</title></rect>
+<rect width="157.63" height="12" x="0" y="0" class="named"><title>713 · 46.09%</title></rect>
+<rect width="0.44" height="12" x="157.63" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="158.07" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="179.29" height="12" x="162.71" y="0" class="todo"><title>811 · 52.42%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">46.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">712</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">812</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">713</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">811</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="65.20" height="12" x="0" y="0" class="named"><title>118 KB · 19.06%</title></rect>
-<rect width="0.12" height="12" x="65.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="65.32" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="269.44" height="12" x="72.56" y="0" class="todo"><title>489 KB · 78.78%</title></rect>
+<rect width="65.37" height="12" x="0" y="0" class="named"><title>119 KB · 19.11%</title></rect>
+<rect width="0.12" height="12" x="65.37" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="65.49" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="269.27" height="12" x="72.73" y="0" class="todo"><title>488 KB · 78.73%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">19.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">118 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">489 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">119 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">488 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -739,7 +739,7 @@
 <rect width="12" height="12" x="300" y="195" class="named"><title>0x00440620 CreatureMood (792 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="195" class="todo"><title>0x00440940 StalkBox (249 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="195" class="todo"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="195" class="todo"><title>0x00440e90 CreatureCreature (310 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="195" class="named"><title>0x00440e90 CreatureCreature (310 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="195" class="named"><title>0x00440fd0 BadFloor (163 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="195" class="todo"><title>0x00441080 CreatureDie (422 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="195" class="todo"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
@@ -2156,7 +2156,7 @@
 <rect width="11.01" height="10.99" x="443.07" y="286.03" class="todo"><title>0x00471e00 ProjectVerts (313 bytes)</title></rect>
 <rect width="11.01" height="10.95" x="443.07" y="300.02" class="todo"><title>0x0043ad10 UpdateShockwaves (312 bytes)</title></rect>
 <rect width="11.01" height="10.92" x="443.07" y="313.97" class="named"><title>0x00447f30 TestLaraPosition (311 bytes)</title></rect>
-<rect width="11.01" height="10.88" x="443.07" y="327.89" class="todo"><title>0x00440e90 CreatureCreature (310 bytes)</title></rect>
+<rect width="11.01" height="10.88" x="443.07" y="327.89" class="named"><title>0x00440e90 CreatureCreature (310 bytes)</title></rect>
 <rect width="11.01" height="10.85" x="443.07" y="341.77" class="todo"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
 <rect width="11.01" height="10.81" x="443.07" y="355.62" class="named"><title>0x0042ddf0 InitialiseNewWeapon (308 bytes)</title></rect>
 <rect width="11.01" height="10.78" x="443.07" y="369.43" class="named"><title>0x00452ca0 DrawGameInfo (307 bytes)</title></rect>

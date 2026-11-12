@@ -151,6 +151,7 @@ sint32 CalculateTarget(PHD_VECTOR *target, ITEM_INFO *item, LOT_INFO *LOT);
 sint32 CreatureVault(sint16 item_number, sint16 angle, sint32 vault, sint32 shift);
 void CreatureYRot(PHD_3DPOS *srcpos, sint16 angle, sint16 angadd);
 void AlertAllGuards(sint16 item_number);
+sint32 CreatureCreature(sint16 item_number);
 
 extern CREATURE_INFO *baddie_slots;
 
