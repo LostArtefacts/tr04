@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="193" height="12" x="0" y="0" class="named"><title>873 · 56.43%</title></rect>
-<rect width="0.44" height="12" x="193" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="193.44" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="142.15" height="12" x="199.85" y="0" class="todo"><title>643 · 41.56%</title></rect>
+<rect width="193.22" height="12" x="0" y="0" class="named"><title>874 · 56.50%</title></rect>
+<rect width="0.44" height="12" x="193.22" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="193.66" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="141.93" height="12" x="200.07" y="0" class="todo"><title>642 · 41.50%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">56.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">873</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">643</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">874</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">642</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="82.44" height="12" x="0" y="0" class="named"><title>150 KB · 24.10%</title></rect>
-<rect width="0.12" height="12" x="82.44" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="82.56" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="250.79" height="12" x="91.21" y="0" class="todo"><title>455 KB · 73.33%</title></rect>
+<rect width="82.49" height="12" x="0" y="0" class="named"><title>150 KB · 24.12%</title></rect>
+<rect width="0.12" height="12" x="82.49" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="82.61" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="250.74" height="12" x="91.26" y="0" class="todo"><title>455 KB · 73.32%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">24.1%</text>
+<text text-anchor="end" x="522" y="24.50">24.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">150 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">455 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1270,7 +1270,7 @@
 <rect width="12" height="12" x="15" y="360" class="todo"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="360" class="todo"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="360" class="named"><title>0x004761e0 LoadCinematic (16 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="360" class="todo"><title>0x004761f0 LoadAIInfo (97 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="360" class="named"><title>0x004761f0 LoadAIInfo (97 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="360" class="todo"><title>0x00476260 LoadSamples (418 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="360" class="todo"><title>0x00476410 S_GetUVRotateTextures (95 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="360" class="todo"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
@@ -2669,7 +2669,7 @@
 <rect width="6.25" height="6.06" x="589.44" y="304.63" class="named"><title>0x0043e360 combine_these_two_objects (98 bytes)</title></rect>
 <rect width="6.25" height="6.06" x="589.44" y="313.70" class="named"><title>0x00490210 phd_atan (98 bytes)</title></rect>
 <rect width="6.25" height="6" x="589.44" y="322.76" class="todo"><title>0x00464030 DrawTrainFloor (97 bytes)</title></rect>
-<rect width="6.25" height="6" x="589.44" y="331.76" class="todo"><title>0x004761f0 LoadAIInfo (97 bytes)</title></rect>
+<rect width="6.25" height="6" x="589.44" y="331.76" class="named"><title>0x004761f0 LoadAIInfo (97 bytes)</title></rect>
 <rect width="6.25" height="5.94" x="589.44" y="340.76" class="todo"><title>0x00408080 InitialiseHorseman (96 bytes)</title></rect>
 <rect width="6.25" height="5.94" x="589.44" y="349.69" class="named"><title>0x00431ce0 lara_as_surfleft (96 bytes)</title></rect>
 <rect width="6.25" height="5.94" x="589.44" y="358.63" class="named"><title>0x00431d40 lara_as_surfright (96 bytes)</title></rect>

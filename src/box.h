@@ -96,6 +96,7 @@ typedef struct ai_object {
 } AIOBJECT;
 
 extern AIOBJECT *AIObjects;
+extern sint16 nAIObjects;
 
 enum ai_bits_types {
     GUARD = 1 << 0,

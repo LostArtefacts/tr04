@@ -106,3 +106,18 @@ uint8 LoadCinematic(void)
     FileData += sizeof(sint16);
     return 1;
 }
+
+uint8 LoadAIInfo(void)
+{
+    sint32 num_ai;
+
+    num_ai = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    if (num_ai) {
+        nAIObjects = (sint16)num_ai;
+        AIObjects = (AIOBJECT *)game_malloc(sizeof(AIOBJECT) * num_ai, 0);
+        memcpy(AIObjects, FileData, sizeof(AIOBJECT) * num_ai);
+        FileData += sizeof(AIOBJECT) * num_ai;
+    }
+    return 1;
+}
