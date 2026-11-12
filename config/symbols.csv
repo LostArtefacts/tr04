@@ -2692,6 +2692,7 @@ address,size,name,symbol
 0x007fe21c,1,CurrentAtmosphere,_CurrentAtmosphere
 0x007fe220,40,flipmap,_flipmap
 0x007fe248,4,trigger_index,_trigger_index
+0x007fe260,40,los_rooms,_los_rooms
 0x007fe288,1,bVoncroyCutScene,_bVoncroyCutScene
 0x007fe28c,4,items,_items
 0x007fe290,4,height_type,_height_type

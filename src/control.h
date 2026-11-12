@@ -111,6 +111,8 @@ extern sint16 ItemNewRoomNo;
 extern sint16 ItemNewRooms[256][2];
 extern sint16 SkyPos;
 extern sint16 SkyPos2;
+extern sint16 los_rooms[20];
+extern sint32 number_los_rooms;
 
 extern MESH_INFO *SmashedMesh[16];
 extern sint16 SmashedMeshRoom[16];
