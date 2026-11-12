@@ -39,3 +39,23 @@ void InitialiseInjuredSas(sint16 item_number)
     }
     item->frame_number = anims[item->anim_number].frame_base;
 }
+
+void InjuredSasControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    switch (item->current_anim_state) {
+    case 4:
+        if (!(GetRandomControl() & 0x7F))
+            item->goal_anim_state = 5;
+        break;
+    case 1:
+        if (!(GetRandomControl() & 0x7F))
+            item->goal_anim_state = 2;
+        else if (!(GetRandomControl() & 0xFF))
+            item->goal_anim_state = 3;
+        break;
+    }
+    AnimateItem(item);
+}
