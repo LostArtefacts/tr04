@@ -43,12 +43,15 @@ typedef struct camera_info {
 } CAMERA_INFO;
 
 extern CAMERA_INFO camera;
+extern GAME_VECTOR last_target;
 extern sint32 LaserSight;
 extern GAME_VECTOR ForcedFixedCamera;
 extern char UseForcedFixedCamera;
 extern sint32 BinocularRange;
 extern sint32 bLaraTorch;
 
+void CalculateCamera(void);
 void LaraTorch(PHD_VECTOR *Soffset, PHD_VECTOR *Eoffset, sint16 yrot, sint32 brightness);
+void InitialiseCamera(void);
 
 #endif
