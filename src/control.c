@@ -1181,6 +1181,94 @@ sint32 IsRoomOutside(sint32 x, sint32 y, sint32 z)
     return -2;
 }
 
+sint32 RayBoxIntersect(PHD_VECTOR *min, PHD_VECTOR *max, PHD_VECTOR *origin, PHD_VECTOR *dir, PHD_VECTOR *Coord)
+{
+    sint32 planes[3], i;
+    sint32 dists[3];
+    sint32 plane;
+    sint8 quad[3];
+    sint8 inside;
+
+    inside = 1;
+    if (origin->x < min->x) {
+        quad[0] = 1;
+        planes[0] = min->x;
+        inside = 0;
+    } else if (origin->x > max->x) {
+        quad[0] = 0;
+        planes[0] = max->x;
+        inside = 0;
+    } else
+        quad[0] = 2;
+    if (origin->y < min->y) {
+        quad[1] = 1;
+        planes[1] = min->y;
+        inside = 0;
+    } else if (origin->y > max->y) {
+        quad[1] = 0;
+        planes[1] = max->y;
+        inside = 0;
+    } else
+        quad[1] = 2;
+    if (origin->z < min->z) {
+        quad[2] = 1;
+        planes[2] = min->z;
+        inside = 0;
+    } else if (origin->z > max->z) {
+        quad[2] = 0;
+        planes[2] = max->z;
+        inside = 0;
+    } else
+        quad[2] = 2;
+    if (inside) {
+        Coord->x = origin->x >> 16;
+        Coord->y = origin->y >> 16;
+        Coord->z = origin->z >> 16;
+        return 1;
+    }
+    if (quad[0] == 2 || !dir->x)
+        dists[0] = -65536;
+    else
+        dists[0] = ((planes[0] - origin->x) / (dir->x >> 8)) << 8;
+    if (quad[1] == 2 || !dir->y)
+        dists[1] = -65536;
+    else
+        dists[1] = ((planes[1] - origin->y) / (dir->y >> 8)) << 8;
+    if (quad[2] == 2 || !dir->z)
+        dists[2] = -65536;
+    else
+        dists[2] = ((planes[2] - origin->z) / (dir->z >> 8)) << 8;
+    plane = 0;
+    for (i = 1; i < 3; i++) {
+        if (dists[plane] < dists[i])
+            plane = i;
+    }
+    if (dists[plane] < 0)
+        return 0;
+    if (plane) {
+        Coord->x = origin->x + (((__int64)dir->x * (__int64)dists[plane]) >> 16);
+        if ((!quad[0] && Coord->x < min->x) || (quad[0] == 1 && Coord->x > max->x))
+            return 0;
+    } else
+        Coord->x = planes[0];
+    if (plane != 1) {
+        Coord->y = origin->y + (((__int64)dir->y * (__int64)dists[plane]) >> 16);
+        if ((!quad[1] && Coord->y < min->y) || (quad[1] == 1 && Coord->y > max->y))
+            return 0;
+    } else
+        Coord->y = planes[1];
+    if (plane != 2) {
+        Coord->z = origin->z + (((__int64)dir->z * (__int64)dists[plane]) >> 16);
+        if ((!quad[2] && Coord->z < min->z) || (quad[2] == 1 && Coord->z > max->z))
+            return 0;
+    } else
+        Coord->z = planes[2];
+    Coord->x >>= 16;
+    Coord->y >>= 16;
+    Coord->z >>= 16;
+    return 1;
+}
+
 void FireCrossBowFromLaserSight(GAME_VECTOR *start, GAME_VECTOR *target)
 {
     PHD_3DPOS pos;

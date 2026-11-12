@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="256.06" height="12" x="0" y="0" class="named"><title>1159 · 74.87%</title></rect>
-<rect width="0.66" height="12" x="256.06" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="19.66" height="12" x="256.72" y="0" class="nonmatching"><title>89 · 5.75%</title></rect>
-<rect width="65.62" height="12" x="276.38" y="0" class="todo"><title>297 · 19.19%</title></rect>
+<rect width="256.28" height="12" x="0" y="0" class="named"><title>1160 · 74.94%</title></rect>
+<rect width="0.66" height="12" x="256.28" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="19.66" height="12" x="256.94" y="0" class="nonmatching"><title>89 · 5.75%</title></rect>
+<rect width="65.40" height="12" x="276.60" y="0" class="todo"><title>296 · 19.12%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1159</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">89</tspan> · <tspan class="todo">297</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1160</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">89</tspan> · <tspan class="todo">296</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="141.27" height="12" x="0" y="0" class="named"><title>257 KB · 41.31%</title></rect>
-<rect width="0.13" height="12" x="141.27" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="36.33" height="12" x="141.40" y="0" class="nonmatching"><title>66 KB · 10.62%</title></rect>
-<rect width="164.27" height="12" x="177.73" y="0" class="todo"><title>299 KB · 48.03%</title></rect>
+<rect width="141.68" height="12" x="0" y="0" class="named"><title>258 KB · 41.43%</title></rect>
+<rect width="0.13" height="12" x="141.68" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="36.33" height="12" x="141.81" y="0" class="nonmatching"><title>66 KB · 10.62%</title></rect>
+<rect width="163.86" height="12" x="178.14" y="0" class="todo"><title>298 KB · 47.91%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">41.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">257 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">66 KB</tspan> · <tspan class="todo">299 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">41.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">258 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">66 KB</tspan> · <tspan class="todo">298 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -828,7 +828,7 @@
 <rect width="12" height="12" x="135" y="225" class="named"><title>0x0044c9c0 IsRoomOutside (537 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="225" class="todo"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="225" class="todo"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="225" class="todo"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="225" class="named"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="225" class="todo"><title>0x0044d890 GetTargetOnLOS (1464 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="225" class="named"><title>0x0044de50 ExplodeItemNode (259 bytes)</title></rect>
@@ -1844,7 +1844,7 @@
 <rect width="17.59" height="16.58" x="306.58" y="406.45" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
 <rect width="17.59" height="16.49" x="306.58" y="426.03" class="named"><title>0x004687e0 JeepBaddieCollision (754 bytes)</title></rect>
 <rect width="17.59" height="16.47" x="306.58" y="445.53" class="named"><title>0x0047a880 DoLoadSave (753 bytes)</title></rect>
-<rect width="16.17" height="17.73" x="327.17" y="42.39" class="todo"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
+<rect width="16.17" height="17.73" x="327.17" y="42.39" class="named"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
 <rect width="16.17" height="17.64" x="327.17" y="63.13" class="nonmatching"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
 <rect width="16.17" height="17.62" x="327.17" y="83.77" class="nonmatching"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
 <rect width="16.17" height="17.59" x="327.17" y="104.38" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>

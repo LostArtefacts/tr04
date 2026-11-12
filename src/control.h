@@ -103,6 +103,7 @@ void KillMoveEffects(void);
 void UpdateSky(void);
 void TranslateItem(ITEM_INFO *item, sint32 x, sint32 y, sint32 z);
 sint16 GetTiltType(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
+sint32 RayBoxIntersect(PHD_VECTOR *min, PHD_VECTOR *max, PHD_VECTOR *origin, PHD_VECTOR *dir, PHD_VECTOR *Coord);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;
