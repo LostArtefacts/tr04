@@ -68,5 +68,6 @@ void InitialiseFogBulbs(void);
 void AddLineClippedSorted(D3DTLVERTEX *v0, D3DTLVERTEX *v1, sint16 drawtype);
 void CalcColorSplit(D3DCOLOR s, D3DCOLOR *d);
 void CalcColorSplitMMX(D3DCOLOR s, D3DCOLOR *d);
+void AddPrelitMMX(sint32 prelight, D3DCOLOR *color);
 
 #endif
