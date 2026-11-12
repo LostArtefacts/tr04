@@ -1494,6 +1494,16 @@ void lara_as_pushblock(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_elevation = -25 * ONE_DEGREE;
 }
 
+void lara_as_pullblock(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.look = 0;
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    camera.flags = 1;
+    camera.target_angle = 6370;
+    camera.target_elevation = -4550;
+}
+
 void lara_as_ppready(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->enable_spaz = 0;

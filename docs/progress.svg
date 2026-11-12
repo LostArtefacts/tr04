@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="146.35" height="12" x="0" y="0" class="named"><title>662 · 42.79%</title></rect>
-<rect width="0.44" height="12" x="146.35" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="146.79" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="190.56" height="12" x="151.44" y="0" class="todo"><title>862 · 55.72%</title></rect>
+<rect width="146.57" height="12" x="0" y="0" class="named"><title>663 · 42.86%</title></rect>
+<rect width="0.44" height="12" x="146.57" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="147.01" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="190.34" height="12" x="151.66" y="0" class="todo"><title>861 · 55.66%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">42.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">662</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">862</tspan></text>
+<text text-anchor="end" x="522" y="7.50">43.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">663</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">861</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="59.78" height="12" x="0" y="0" class="named"><title>108 KB · 17.48%</title></rect>
-<rect width="0.12" height="12" x="59.78" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="59.90" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="274.85" height="12" x="67.15" y="0" class="todo"><title>498 KB · 80.37%</title></rect>
+<rect width="59.81" height="12" x="0" y="0" class="named"><title>108 KB · 17.49%</title></rect>
+<rect width="0.12" height="12" x="59.81" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="59.93" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="274.82" height="12" x="67.18" y="0" class="todo"><title>498 KB · 80.36%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">108 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">498 KB</tspan></text>
@@ -386,7 +386,7 @@
 <rect width="12" height="12" x="255" y="90" class="named"><title>0x004272e0 lara_as_fallback (44 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="90" class="named"><title>0x00427310 lara_as_slideback (24 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="90" class="named"><title>0x00427330 lara_as_pushblock (51 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="90" class="todo"><title>0x00427370 lara_as_pullblock (51 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="90" class="named"><title>0x00427370 lara_as_pullblock (51 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="90" class="named"><title>0x004273b0 lara_as_ppready (42 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="90" class="named"><title>0x004273e0 lara_as_pickup (51 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="90" class="named"><title>0x00427420 lara_as_pickupflare (91 bytes)</title></rect>
@@ -2885,7 +2885,7 @@
 <rect width="4.22" height="4.66" x="713.88" y="355.30" class="named"><title>0x00427260 lara_as_rightjump (51 bytes)</title></rect>
 <rect width="4.22" height="4.66" x="721.11" y="355.30" class="named"><title>0x004272a0 lara_as_leftjump (51 bytes)</title></rect>
 <rect width="4.22" height="4.66" x="728.33" y="355.30" class="named"><title>0x00427330 lara_as_pushblock (51 bytes)</title></rect>
-<rect width="4.22" height="4.66" x="735.55" y="355.30" class="todo"><title>0x00427370 lara_as_pullblock (51 bytes)</title></rect>
+<rect width="4.22" height="4.66" x="735.55" y="355.30" class="named"><title>0x00427370 lara_as_pullblock (51 bytes)</title></rect>
 <rect width="4.22" height="4.66" x="742.78" y="355.30" class="named"><title>0x004273e0 lara_as_pickup (51 bytes)</title></rect>
 <rect width="4.42" height="4.46" x="647.95" y="362.96" class="named"><title>0x004274c0 lara_as_usekey (51 bytes)</title></rect>
 <rect width="4.42" height="4.46" x="647.95" y="370.43" class="named"><title>0x0045a470 SaveHubData (51 bytes)</title></rect>
