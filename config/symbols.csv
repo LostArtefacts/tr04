@@ -179,7 +179,7 @@ address,size,name,symbol
 0x00418fa0,199,GetAIEnemy,_GetAIEnemy
 0x00419070,1262,DoVonCroyCutscene,_DoVonCroyCutscene
 0x00419560,116,InitialiseVoncroy,_InitialiseVoncroy
-0x004195e0,5975,VoncroyControl,_VoncroyControl
+0x004195e0,6420,VoncroyControl,_VoncroyControl
 0x0041af00,4092,VoncroyRaceControl,_VoncroyRaceControl
 0x0041bf00,90,InitialiseWildboar,_InitialiseWildboar
 0x0041bf60,888,WildboarControl,_WildboarControl
