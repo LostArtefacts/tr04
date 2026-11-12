@@ -63,5 +63,6 @@ void CreateFXBulbs(void);
 void TriggerFXFogBulb(sint32 x, sint32 y, sint32 z, sint32 FXRad, sint32 density, sint32 r, sint32 g, sint32 b, sint32 room_number);
 void InitialiseFogBulbs(void);
 void AddLineClippedSorted(D3DTLVERTEX *v0, D3DTLVERTEX *v1, sint16 drawtype);
+void CalcColorSplit(D3DCOLOR s, D3DCOLOR *d);
 
 #endif

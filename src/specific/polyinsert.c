@@ -6,6 +6,8 @@
 #include "function_stubs.h"
 #include "drawroom.h"
 #include "3dmath.h"
+#include "output.h"
+#include "../text.h"
 
 void DoSort(sint32 left, sint32 right, SORTLIST **list)
 {
@@ -220,4 +222,53 @@ void AddLineClippedSorted(D3DTLVERTEX *v0, D3DTLVERTEX *v1, sint16 drawtype)
     v->rhw = v1->rhw;
     v->color = v1->color;
     v->specular = v1->specular;
+}
+
+void CalcColorSplit(D3DCOLOR s, D3DCOLOR *d)
+{
+    sint32 b, sb, sg, r, g, sr;
+
+    sb = 0;
+    sg = 0;
+    sr = 0;
+    b = CLRB(s);
+    r = CLRR(s);
+    g = CLRG(s);
+    r -= 128;
+    g -= 128;
+    b -= 128;
+    if (r > 0) {
+        sr = r;
+        r = 255;
+    } else {
+        r = CLRR(s) << 1;
+    }
+    if (g > 0) {
+        sg = g;
+        g = 255;
+    } else {
+        g = CLRG(s) << 1;
+    }
+    if (b > 0) {
+        sb = b;
+        b = 255;
+    } else {
+        b = CLRB(s) << 1;
+    }
+    if (r > 255) {
+        r = 255;
+    }
+    if (g > 255) {
+        g = 255;
+    }
+    if (b > 255) {
+        b = 255;
+    }
+    d[0] = (d[0] & 0xFF000000) | RGBONLY(r, g, b);
+    sr >>= 1;
+    sg >>= 1;
+    sb >>= 1;
+    d[1] = (d[1] & 0xFF000000) | RGBONLY(sr, sg, sb);
+    d[0] &= 0xFFFFFF;
+    d[0] |= GlobalAlpha;
 }
