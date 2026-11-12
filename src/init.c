@@ -53,3 +53,8 @@ void InitialiseTwoBlockPlatform(sint16 item_number)
     item->item_flags[0] = (sint16)item->pos.y_pos;
     item->item_flags[1] = 1;
 }
+
+void InitialiseBurningFloor(sint16 item_number)
+{
+    items[item_number].required_anim_state = 127;
+}
