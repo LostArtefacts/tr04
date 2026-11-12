@@ -51,6 +51,21 @@ void combine_revolver_lasersight(sint32 flag)
     }
 }
 
+void combine_crossbow_lasersight(sint32 flag)
+{
+    if (!flag) {
+        lara.lasersight = 0;
+        lara.crossbow_type_carried |= 4;
+    } else {
+        lara.lasersight = 1;
+        lara.crossbow_type_carried &= ~4;
+    }
+    if (lara.gun_status && lara.gun_type == WEAPON_CROSSBOW) {
+        undraw_shotgun_meshes(WEAPON_CROSSBOW);
+        draw_shotgun_meshes(WEAPON_CROSSBOW);
+    }
+}
+
 void combine_PuzzleItem1(sint32 flag)
 {
     lara.puzzleitemscombo &= ~0x3;

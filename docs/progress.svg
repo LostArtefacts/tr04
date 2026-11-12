@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="173.32" height="12" x="0" y="0" class="named"><title>784 · 50.68%</title></rect>
-<rect width="0.44" height="12" x="173.32" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="173.76" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="161.83" height="12" x="180.17" y="0" class="todo"><title>732 · 47.32%</title></rect>
+<rect width="173.54" height="12" x="0" y="0" class="named"><title>785 · 50.74%</title></rect>
+<rect width="0.44" height="12" x="173.54" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="173.98" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="161.60" height="12" x="180.40" y="0" class="todo"><title>731 · 47.25%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">50.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">784</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">732</tspan></text>
+<text text-anchor="end" x="522" y="7.50">50.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">785</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">731</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.19" height="12" x="0" y="0" class="named"><title>138 KB · 22.28%</title></rect>
-<rect width="0.12" height="12" x="76.19" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.31" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="257.03" height="12" x="84.97" y="0" class="todo"><title>466 KB · 75.16%</title></rect>
+<rect width="76.24" height="12" x="0" y="0" class="named"><title>138 KB · 22.29%</title></rect>
+<rect width="0.12" height="12" x="76.24" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.36" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.99" height="12" x="85.01" y="0" class="todo"><title>466 KB · 75.14%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">138 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">466 KB</tspan></text>
@@ -691,7 +691,7 @@
 <rect width="12" height="12" x="330" y="180" class="todo"><title>0x0043e360 combine_these_two_objects (98 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="180" class="todo"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="180" class="named"><title>0x0043e420 combine_revolver_lasersight (81 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="180" class="todo"><title>0x0043e480 combine_crossbow_lasersight (81 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="180" class="named"><title>0x0043e480 combine_crossbow_lasersight (81 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="180" class="named"><title>0x0043e4e0 combine_PuzzleItem1 (17 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="180" class="named"><title>0x0043e500 combine_PuzzleItem2 (17 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="180" class="named"><title>0x0043e520 combine_PuzzleItem3 (17 bytes)</title></rect>
@@ -2743,7 +2743,7 @@
 <rect width="5.84" height="5.43" x="607.34" y="373.32" class="named"><title>0x00473400 DSAdjustPan (82 bytes)</title></rect>
 <rect width="5.84" height="5.36" x="607.34" y="381.74" class="todo"><title>0x00403810 ControlLocustEmitter (81 bytes)</title></rect>
 <rect width="5.84" height="5.36" x="607.34" y="390.10" class="named"><title>0x0043e420 combine_revolver_lasersight (81 bytes)</title></rect>
-<rect width="5.84" height="5.36" x="607.34" y="398.46" class="todo"><title>0x0043e480 combine_crossbow_lasersight (81 bytes)</title></rect>
+<rect width="5.84" height="5.36" x="607.34" y="398.46" class="named"><title>0x0043e480 combine_crossbow_lasersight (81 bytes)</title></rect>
 <rect width="5.84" height="5.36" x="607.34" y="406.82" class="named"><title>0x00441f20 CreatureJoint (81 bytes)</title></rect>
 <rect width="5.84" height="5.36" x="607.34" y="415.18" class="named"><title>0x0045a2e0 sgSaveGame (81 bytes)</title></rect>
 <rect width="5.84" height="5.29" x="607.34" y="423.54" class="todo"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
