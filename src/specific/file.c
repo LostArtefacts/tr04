@@ -20,6 +20,33 @@ sint32 FileSize(FILE *file)
     return size;
 }
 
+sint32 LoadFile(const char *name, char **dest)
+{
+    FILE *file;
+    sint32 size, count;
+
+    Log(2, "LoadFile");
+    Log(5, "File - %s", name);
+    file = FileOpen(name);
+    if (file) {
+        size = FileSize(file);
+        if (!*dest) {
+            *dest = (char *)malloc(size);
+        }
+        count = fread(*dest, 1, size, file);
+        Log(5, "Read - %d FileSize - %d", count, size);
+        if (count != size) {
+            Log(1, "Error Reading File");
+            FileClose(file);
+            free(*dest);
+        } else {
+            FileClose(file);
+            return size;
+        }
+    }
+    return 0;
+}
+
 uint8 LoadCinematic(void)
 {
     FileData += sizeof(sint16);

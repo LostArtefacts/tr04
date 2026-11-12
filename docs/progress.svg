@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="192.11" height="12" x="0" y="0" class="named"><title>869 · 56.17%</title></rect>
-<rect width="0.44" height="12" x="192.11" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="192.55" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="143.03" height="12" x="198.97" y="0" class="todo"><title>647 · 41.82%</title></rect>
+<rect width="192.33" height="12" x="0" y="0" class="named"><title>870 · 56.24%</title></rect>
+<rect width="0.44" height="12" x="192.33" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="192.78" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="142.81" height="12" x="199.19" y="0" class="todo"><title>646 · 41.76%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">56.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">869</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">647</tspan></text>
+<text text-anchor="end" x="522" y="7.50">56.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">870</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">646</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="82.10" height="12" x="0" y="0" class="named"><title>149 KB · 24.01%</title></rect>
-<rect width="0.12" height="12" x="82.10" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="82.22" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="251.12" height="12" x="90.88" y="0" class="todo"><title>456 KB · 73.43%</title></rect>
+<rect width="82.20" height="12" x="0" y="0" class="named"><title>149 KB · 24.03%</title></rect>
+<rect width="0.12" height="12" x="82.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="82.32" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="251.03" height="12" x="90.97" y="0" class="todo"><title>455 KB · 73.40%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">24.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">149 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">456 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">24.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">149 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">455 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1256,7 +1256,7 @@
 <rect width="12" height="12" x="555" y="345" class="todo"><title>0x00473ce0 FileOpen (153 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="345" class="named"><title>0x00473d80 FileClose (26 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="345" class="named"><title>0x00473da0 FileSize (42 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="345" class="todo"><title>0x00473dd0 LoadFile (169 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="345" class="named"><title>0x00473dd0 LoadFile (169 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="345" class="todo"><title>0x00473e80 Decompress (156 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="345" class="todo"><title>0x00473f20 LoadTextures (2716 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="345" class="todo"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
@@ -2427,7 +2427,7 @@
 <rect width="8.08" height="8.13" x="518.74" y="278.36" class="decompiled"><title>0x0045f960 Func45f960 (170 bytes)</title></rect>
 <rect width="8.08" height="8.09" x="518.74" y="289.49" class="named"><title>0x00421de0 LaraTestEdgeCatch (169 bytes)</title></rect>
 <rect width="8.08" height="8.09" x="518.74" y="300.58" class="named"><title>0x0044c820 CheckNoColFloorTriangle (169 bytes)</title></rect>
-<rect width="8.08" height="8.09" x="518.74" y="311.66" class="todo"><title>0x00473dd0 LoadFile (169 bytes)</title></rect>
+<rect width="8.08" height="8.09" x="518.74" y="311.66" class="named"><title>0x00473dd0 LoadFile (169 bytes)</title></rect>
 <rect width="8.08" height="8.04" x="518.74" y="322.75" class="named"><title>0x00455df0 SmashObjectControl (168 bytes)</title></rect>
 <rect width="8.08" height="8.04" x="518.74" y="333.79" class="todo"><title>0x00457560 ControlBlinker (168 bytes)</title></rect>
 <rect width="8.08" height="7.99" x="518.74" y="344.83" class="named"><title>0x00452f80 DrawPickups (167 bytes)</title></rect>

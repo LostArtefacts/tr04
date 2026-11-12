@@ -13,5 +13,6 @@ FILE *FileOpen(const char *name);
 void FileClose(FILE *file);
 sint32 FileSize(FILE *file);
 uint8 LoadCinematic(void);
+sint32 LoadFile(const char *name, char **dest);
 
 #endif
