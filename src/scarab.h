@@ -14,6 +14,7 @@ typedef struct {
 
 void InitialiseScarab(sint16 item_number);
 void ClearScarabs(void);
+sint32 GetFreeScarab(void);
 
 extern SCARAB_STRUCT Scarabs[128];
 extern sint32 next_scarab;

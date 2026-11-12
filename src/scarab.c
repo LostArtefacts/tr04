@@ -18,3 +18,26 @@ void InitialiseScarab(sint16 item_number)
     item->frame_number = anims[item->anim_number].frame_base;
     item->current_anim_state = item->goal_anim_state = 1;
 }
+
+sint32 GetFreeScarab(void)
+{
+    SCARAB_STRUCT *fx;
+    sint32 free, i;
+
+    free = next_scarab;
+    fx = &Scarabs[free];
+    for (i = 0; i < 128; i++) {
+        if (!fx->On) {
+            next_scarab = (free + 1) & 0x7F;
+            return free;
+        }
+        if (free == 127) {
+            fx = Scarabs;
+            free = 0;
+        } else {
+            free++;
+            fx++;
+        }
+    }
+    return -1;
+}

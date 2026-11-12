@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="211.57" height="12" x="0" y="0" class="named"><title>957 · 61.86%</title></rect>
-<rect width="0.44" height="12" x="211.57" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="212.01" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="122.70" height="12" x="219.30" y="0" class="todo"><title>555 · 35.88%</title></rect>
+<rect width="211.79" height="12" x="0" y="0" class="named"><title>958 · 61.93%</title></rect>
+<rect width="0.44" height="12" x="211.79" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="212.23" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="122.47" height="12" x="219.53" y="0" class="todo"><title>554 · 35.81%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">62.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">957</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">555</tspan></text>
+<text text-anchor="end" x="522" y="7.50">62.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">958</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">554</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="91.09" height="12" x="0" y="0" class="named"><title>165 KB · 26.63%</title></rect>
-<rect width="0.12" height="12" x="91.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="91.21" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="241.37" height="12" x="100.63" y="0" class="todo"><title>438 KB · 70.58%</title></rect>
+<rect width="91.13" height="12" x="0" y="0" class="named"><title>165 KB · 26.65%</title></rect>
+<rect width="0.12" height="12" x="91.13" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="91.25" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="241.33" height="12" x="100.67" y="0" class="todo"><title>438 KB · 70.56%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">165 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">438 KB</tspan></text>
@@ -151,7 +151,7 @@
 <rect width="12" height="12" x="480" y="15" class="todo"><title>0x0040dcd0 DragSASCollision (439 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="15" class="named"><title>0x0040de90 InitialiseScarab (92 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="15" class="todo"><title>0x0040def0 ScarabControl (827 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="15" class="todo"><title>0x0040e250 GetFreeScarab (74 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="15" class="named"><title>0x0040e250 GetFreeScarab (74 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="15" class="todo"><title>0x0040e2a0 ClearScarabs (40 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="15" class="todo"><title>0x0040e2d0 TriggerScarab (240 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="15" class="todo"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
@@ -2774,7 +2774,7 @@
 <rect width="5.37" height="5.40" x="616.10" y="364.86" class="named"><title>0x004557b0 ClearLOT (75 bytes)</title></rect>
 <rect width="5.37" height="5.40" x="616.10" y="373.25" class="named"><title>0x0046ba40 tenth_cutseq_init (75 bytes)</title></rect>
 <rect width="5.37" height="5.40" x="616.10" y="381.65" class="named"><title>0x00484c70 OpenRegistry (75 bytes)</title></rect>
-<rect width="5.37" height="5.33" x="616.10" y="390.05" class="todo"><title>0x0040e250 GetFreeScarab (74 bytes)</title></rect>
+<rect width="5.37" height="5.33" x="616.10" y="390.05" class="named"><title>0x0040e250 GetFreeScarab (74 bytes)</title></rect>
 <rect width="5.37" height="5.33" x="616.10" y="398.38" class="named"><title>0x00415ad0 TwoBlockPlatformFloor (74 bytes)</title></rect>
 <rect width="5.37" height="5.33" x="616.10" y="406.71" class="named"><title>0x00421960 lara_col_all4turnlr (74 bytes)</title></rect>
 <rect width="5.37" height="5.33" x="616.10" y="415.04" class="named"><title>0x00425f50 lara_as_hang (74 bytes)</title></rect>
