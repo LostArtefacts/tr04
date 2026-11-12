@@ -84,6 +84,8 @@ void CogCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void CreatureCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
 sint32 GetCollidedObjects(ITEM_INFO *item, sint32 rad, sint32 noInvisible, ITEM_INFO **StoredItems, MESH_INFO **StoredStatics, sint32 StoreLara);
 sint32 CollideStaticObjects(COLL_INFO *coll, sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 hite);
+sint32 ItemPushLaraStatic(ITEM_INFO *l, sint16 *bounds, PHD_3DPOS *pos, COLL_INFO *coll);
+void LaraBaddieCollision(ITEM_INFO *l, COLL_INFO *coll);
 
 extern sint16 GlobalCollisionBounds[6];
 
