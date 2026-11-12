@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="179.73" height="12" x="0" y="0" class="named"><title>813 · 52.55%</title></rect>
-<rect width="0.44" height="12" x="179.73" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="180.17" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="155.41" height="12" x="186.59" y="0" class="todo"><title>703 · 45.44%</title></rect>
+<rect width="179.95" height="12" x="0" y="0" class="named"><title>814 · 52.62%</title></rect>
+<rect width="0.44" height="12" x="179.95" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="180.40" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="155.19" height="12" x="186.81" y="0" class="todo"><title>702 · 45.38%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">52.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">813</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">703</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">814</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">702</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="78.19" height="12" x="0" y="0" class="named"><title>142 KB · 22.86%</title></rect>
-<rect width="0.12" height="12" x="78.19" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="78.31" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="255.04" height="12" x="86.96" y="0" class="todo"><title>463 KB · 74.57%</title></rect>
+<rect width="78.25" height="12" x="0" y="0" class="named"><title>142 KB · 22.88%</title></rect>
+<rect width="0.12" height="12" x="78.25" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="78.37" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="254.98" height="12" x="87.02" y="0" class="todo"><title>463 KB · 74.56%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">142 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">463 KB</tspan></text>
@@ -888,7 +888,7 @@
 <rect width="12" height="12" x="285" y="240" class="named"><title>0x004530a0 InitialiseFallingBlock2 (35 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="240" class="named"><title>0x004530d0 InitialiseFlameEmitter (152 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="240" class="named"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="240" class="todo"><title>0x00453230 InitialiseFlameEmitter3 (108 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="240" class="named"><title>0x00453230 InitialiseFlameEmitter3 (108 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="240" class="named"><title>0x004532a0 InitialiseJobySpike (159 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="240" class="named"><title>0x00453340 InitialiseTwoBlockPlatform (45 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="240" class="todo"><title>0x00453370 InitialiseSlicerDicer (135 bytes)</title></rect>
@@ -2626,7 +2626,7 @@
 <rect width="6.45" height="6.53" x="674.93" y="285.77" class="todo"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
 <rect width="6.39" height="6.53" x="684.38" y="285.77" class="named"><title>0x00414f30 LavaBurn (108 bytes)</title></rect>
 <rect width="6.39" height="6.53" x="693.77" y="285.77" class="named"><title>0x00421210 lara_as_all4s (108 bytes)</title></rect>
-<rect width="6.39" height="6.53" x="703.16" y="285.77" class="todo"><title>0x00453230 InitialiseFlameEmitter3 (108 bytes)</title></rect>
+<rect width="6.39" height="6.53" x="703.16" y="285.77" class="named"><title>0x00453230 InitialiseFlameEmitter3 (108 bytes)</title></rect>
 <rect width="6.39" height="6.53" x="712.55" y="285.77" class="named"><title>0x00458710 KeyTrigger (108 bytes)</title></rect>
 <rect width="6.39" height="6.53" x="721.95" y="285.77" class="todo"><title>0x00479080 ClearObjectLighting (108 bytes)</title></rect>
 <rect width="6.33" height="6.53" x="731.34" y="285.77" class="named"><title>0x004248e0 lara_as_climbrope (107 bytes)</title></rect>

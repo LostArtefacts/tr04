@@ -91,6 +91,28 @@ void InitialiseFlameEmitter2(sint16 item_number)
     }
 }
 
+void InitialiseFlameEmitter3(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *item2;
+    sint32 i;
+    sint16 tf;
+
+    item = &items[item_number];
+    tf = item->trigger_flags;
+    if (tf < 3)
+        return;
+    item2 = items;
+    for (i = 0; i < level_items; i++, item2++) {
+        if (item2->object_number == ANIMATING3) {
+            if (item2->trigger_flags == tf)
+                item->item_flags[2] = i;
+            else if (!item2->trigger_flags)
+                item->item_flags[3] = i;
+        }
+    }
+}
+
 void InitialiseJobySpike(sint16 item_number)
 {
     ITEM_INFO *item;
