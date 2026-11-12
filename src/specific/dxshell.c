@@ -277,6 +277,32 @@ sint32 DXChangeVideoMode(void)
     return val;
 }
 
+sint32 DXToggleFullScreen(void)
+{
+    DXDISPLAYMODE *dm;
+
+    Log(2, "DXToggleFullScreen");
+    if (G_dxptr->Flags & 2) {
+        Log(5, "Switching To Full Screen");
+        G_dxptr->Flags ^= 2;
+        G_dxptr->Flags |= 65;
+        G_dxptr->Flags |= 64;
+        IDirect3D3_EvictManagedTextures(G_dxptr->lpD3D);
+        dm = &G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode];
+        DXCreate(dm->w, dm->h, dm->bpp, G_dxptr->Flags, G_dxptr, G_dxptr->hWnd, G_dxptr->WindowStyle);
+        G_dxptr->Flags ^= 64;
+        return 1;
+    }
+    Log(5, "Switching To A Window");
+    G_dxptr->Flags ^= 1;
+    G_dxptr->Flags |= 66;
+    IDirect3D3_EvictManagedTextures(G_dxptr->lpD3D);
+    dm = &G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode];
+    DXCreate(dm->w, dm->h, dm->bpp, G_dxptr->Flags, G_dxptr, G_dxptr->hWnd, G_dxptr->WindowStyle);
+    G_dxptr->Flags ^= 64;
+    return 1;
+}
+
 void DXMove(sint32 x, sint32 y)
 {
     Log(2, "DXMove : x %d y %d", x, y);
