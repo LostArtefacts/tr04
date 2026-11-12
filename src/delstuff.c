@@ -1,8 +1,52 @@
 #include "delstuff.h"
+#include "anim.h"
 #include "control.h"
+#include "draw.h"
+#include "lara_states.h"
 #include "lara.h"
 #include "room.h"
 #include "specific/3dmath.h"
+
+void CalcLaraMatrices(sint32 flag)
+{
+    ITEM_INFO *l;
+    sint32 *bone;
+    sint16 *frame;
+    sint16 *frmptr[2];
+    sint32 rate, frac;
+    sint16 jerk;
+
+    l = lara_item;
+    bone = &bones[objects[l->object_number].bone_index];
+    if (lara.hit_direction < 0) {
+        frac = GetFrames(l, frmptr, &rate);
+        if (frac) {
+            GLaraShadowframe = GetBoundsAccurate(l);
+            Rich_CalcLaraMatrices_Interpolated(frmptr[0], frmptr[1], frac, rate, bone, flag);
+            return;
+        }
+    }
+    if (lara.hit_direction >= 0) {
+        switch (lara.hit_direction) {
+        case 0:
+            jerk = lara.IsDucked ? ANIM_JERK_DUCKF : ANIM_JERK_FORWARD;
+            break;
+        case 1:
+            jerk = lara.IsDucked ? ANIM_JERK_DUCKR : ANIM_JERK_RIGHT;
+            break;
+        case 2:
+            jerk = lara.IsDucked ? ANIM_JERK_DUCKB : ANIM_JERK_BACK;
+            break;
+        default:
+            jerk = lara.IsDucked ? ANIM_JERK_DUCKL : ANIM_JERK_LEFT;
+            break;
+        }
+        frame = &anims[jerk].frame_ptr[lara.hit_frame * (anims[jerk].interpolation >> 8)];
+    } else {
+        frame = *frmptr;
+    }
+    Rich_CalcLaraMatrices_Normal(frame, bone, flag);
+}
 
 void GetLaraJointPos(PHD_VECTOR *pos, sint32 node)
 {

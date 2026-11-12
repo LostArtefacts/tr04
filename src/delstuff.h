@@ -25,6 +25,7 @@ void GetLaraJointPos(PHD_VECTOR *pos, sint32 node);
 void SetLaraUnderwaterNodes(void);
 void CalcLaraMatrices(sint32 flag);
 void Rich_CalcLaraMatrices_Normal(sint16 *frame, sint32 *bone, sint32 flag);
+void Rich_CalcLaraMatrices_Interpolated(sint16 *frame1, sint16 *frame2, sint32 frac, sint32 rate, sint32 *bone, sint32 flag);
 
 extern uint8 LaraNodeUnderwater[15];
 extern sint32 LaraNodeAmbient[2];
