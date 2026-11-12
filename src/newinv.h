@@ -238,6 +238,7 @@ void update_laras_weapons_status(void);
 void draw_compass(void);
 sint32 do_special_waterskin_combine_bullshit(sint32 flag);
 void dels_give_lara_items_cheat(void);
+void construct_combine_object_list(void);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];

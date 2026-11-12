@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="177.74" height="12" x="0" y="0" class="named"><title>804 · 51.97%</title></rect>
-<rect width="0.44" height="12" x="177.74" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="178.18" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="157.40" height="12" x="184.60" y="0" class="todo"><title>712 · 46.02%</title></rect>
+<rect width="177.96" height="12" x="0" y="0" class="named"><title>805 · 52.04%</title></rect>
+<rect width="0.44" height="12" x="177.96" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="178.41" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="157.18" height="12" x="184.82" y="0" class="todo"><title>711 · 45.96%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">52.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">804</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">712</tspan></text>
+<text text-anchor="end" x="522" y="7.50">52.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">805</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">711</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="77.44" height="12" x="0" y="0" class="named"><title>140 KB · 22.64%</title></rect>
-<rect width="0.12" height="12" x="77.44" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="77.56" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="255.79" height="12" x="86.21" y="0" class="todo"><title>464 KB · 74.79%</title></rect>
+<rect width="77.65" height="12" x="0" y="0" class="named"><title>141 KB · 22.70%</title></rect>
+<rect width="0.12" height="12" x="77.65" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="77.77" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="255.58" height="12" x="86.42" y="0" class="todo"><title>464 KB · 74.73%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">140 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">464 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">141 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">464 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -673,7 +673,7 @@
 <rect width="12" height="12" x="60" y="180" class="todo"><title>0x0043bf10 DrawInventoryItemMe (1252 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="180" class="named"><title>0x0043c400 go_and_load_game (5 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="180" class="named"><title>0x0043c410 go_and_save_game (5 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="180" class="todo"><title>0x0043c420 construct_combine_object_list (374 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="180" class="named"><title>0x0043c420 construct_combine_object_list (374 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="180" class="named"><title>0x0043c5a0 insert_object_into_list_v2 (112 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="180" class="todo"><title>0x0043c610 construct_object_list (1149 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="180" class="named"><title>0x0043ca90 insert_object_into_list (80 bytes)</title></rect>
@@ -2092,7 +2092,7 @@
 <rect width="12.41" height="11.80" x="568.51" y="128.63" class="todo"><title>0x0048c280 DoScreenFade (379 bytes)</title></rect>
 <rect width="12.34" height="11.80" x="583.92" y="128.63" class="named"><title>0x00447470 CreatureCollision (377 bytes)</title></rect>
 <rect width="12.31" height="11.80" x="599.26" y="128.63" class="named"><title>0x00423d60 lara_col_polestat (376 bytes)</title></rect>
-<rect width="12.24" height="11.80" x="614.57" y="128.63" class="todo"><title>0x0043c420 construct_combine_object_list (374 bytes)</title></rect>
+<rect width="12.24" height="11.80" x="614.57" y="128.63" class="named"><title>0x0043c420 construct_combine_object_list (374 bytes)</title></rect>
 <rect width="12.21" height="11.80" x="629.81" y="128.63" class="todo"><title>0x004103b0 TriggerSethMissileFlame (373 bytes)</title></rect>
 <rect width="12.08" height="11.80" x="645.02" y="128.63" class="named"><title>0x00438ba0 TriggerShatterSmoke (369 bytes)</title></rect>
 <rect width="12.05" height="11.80" x="660.10" y="128.63" class="named"><title>0x004639e0 GetStringLength (368 bytes)</title></rect>

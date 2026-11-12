@@ -1,7 +1,9 @@
 #include "newinv.h"
+#include "items.h"
 #include "lara.h"
 #include "objnums.h"
 #include "anim.h"
+#include "gameflow.h"
 #include "lara1gun.h"
 #include "lara2gun.h"
 #include "specific/3dmath.h"
@@ -37,6 +39,54 @@ sint32 go_and_load_game(void)
 sint32 go_and_save_game(void)
 {
     return SaveGame();
+}
+
+void construct_combine_object_list(void)
+{
+    sint32 i;
+
+    rings[RING_AMMO]->numobjectsinlist = 0;
+    for (i = 0; i < NUM_INVOBJ; i++)
+        rings[RING_AMMO]->current_object_list[i].invitem = NO_ITEM;
+    if (!(gfLevelFlags & GF_YOUNGLARA)) {
+        if (lara.sixshooter_type_carried & 1) {
+            if (lara.sixshooter_type_carried & 4)
+                insert_object_into_list_v2(INV_REVOLVER_LASER_ITEM);
+            else
+                insert_object_into_list_v2(INV_REVOLVER_ITEM);
+        }
+        if (lara.crossbow_type_carried & 1) {
+            if (lara.crossbow_type_carried & 4)
+                insert_object_into_list_v2(INV_CROSSBOW_LASER_ITEM);
+            else
+                insert_object_into_list_v2(INV_CROSSBOW_ITEM);
+        }
+        if (lara.lasersight)
+            insert_object_into_list_v2(INV_LASERSIGHT_ITEM);
+    }
+    if (lara.small_water_skin)
+        insert_object_into_list_v2(lara.small_water_skin + INV_WATERSKIN1_EMPTY_ITEM - 1);
+    if (lara.big_water_skin)
+        insert_object_into_list_v2(lara.big_water_skin + INV_WATERSKIN2_EMPTY_ITEM - 1);
+    for (i = 0; i < 16; i++) {
+        if ((1 << i) & lara.puzzleitemscombo)
+            insert_object_into_list_v2(i + INV_PUZZLE1_COMBO1_ITEM);
+    }
+    for (i = 0; i < 16; i++) {
+        if ((1 << i) & lara.keyitemscombo)
+            insert_object_into_list_v2(i + INV_KEY1_COMBO1_ITEM);
+    }
+    for (i = 0; i < 8; i++) {
+        if ((1 << i) & lara.pickupitemscombo)
+            insert_object_into_list_v2(i + INV_PICKUP1_COMBO1_ITEM);
+    }
+    if (lara.mechanical_scarab & 2)
+        insert_object_into_list_v2(INV_WINDING_KEY_ITEM);
+    if (lara.mechanical_scarab & 4)
+        insert_object_into_list_v2(INV_MECHANICAL_SCARAB_ITEM);
+    rings[RING_AMMO]->objlistmovement = 0;
+    rings[RING_AMMO]->curobjinlist = 0;
+    rings[RING_AMMO]->ringactive = 0;
 }
 
 void insert_object_into_list_v2(sint32 num)
