@@ -194,6 +194,19 @@ sint32 DoShift(ITEM_INFO *item, PHD_VECTOR *pos, PHD_VECTOR *old)
     return 0;
 }
 
+void InitialiseEnemyJeep(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    InitialiseCreature(item_number);
+    item->anim_number = objects[item->object_number].anim_index + 14;
+    item->frame_number = anims[item->anim_number].frame_base;
+    item->current_anim_state = item->goal_anim_state = 0;
+    item->mesh_bits = ~0x24000;
+    item->status += ITEM_ACTIVE;
+}
+
 void JeepStart(ITEM_INFO *item, ITEM_INFO *l)
 {
     JEEPINFO *jeep;

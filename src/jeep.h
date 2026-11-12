@@ -29,5 +29,6 @@ sint32 JeepCheckGetOut(void);
 void JeepExplode(ITEM_INFO *item);
 sint32 DoDynamics_jeep(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero);
 sint32 GetCollisionAnim(ITEM_INFO *item, PHD_VECTOR *moved, JEEPINFO *jeep);
+void InitialiseEnemyJeep(sint16 item_number);
 
 #endif
