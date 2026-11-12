@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="193.66" height="12" x="0" y="0" class="named"><title>876 · 56.63%</title></rect>
-<rect width="0.44" height="12" x="193.66" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="194.10" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="141.49" height="12" x="200.51" y="0" class="todo"><title>640 · 41.37%</title></rect>
+<rect width="193.88" height="12" x="0" y="0" class="named"><title>877 · 56.69%</title></rect>
+<rect width="0.44" height="12" x="193.88" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="194.32" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="141.27" height="12" x="200.73" y="0" class="todo"><title>639 · 41.31%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">56.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">876</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">640</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">877</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">639</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="82.78" height="12" x="0" y="0" class="named"><title>150 KB · 24.20%</title></rect>
-<rect width="0.12" height="12" x="82.78" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="82.90" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="250.45" height="12" x="91.55" y="0" class="todo"><title>454 KB · 73.23%</title></rect>
+<rect width="82.87" height="12" x="0" y="0" class="named"><title>150 KB · 24.23%</title></rect>
+<rect width="0.12" height="12" x="82.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="82.99" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="250.36" height="12" x="91.64" y="0" class="todo"><title>454 KB · 73.21%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">24.2%</text>
+<text text-anchor="end" x="522" y="24.50">24.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">150 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">454 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1257,7 +1257,7 @@
 <rect width="12" height="12" x="570" y="345" class="named"><title>0x00473d80 FileClose (26 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="345" class="named"><title>0x00473da0 FileSize (42 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="345" class="named"><title>0x00473dd0 LoadFile (169 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="345" class="todo"><title>0x00473e80 Decompress (156 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="345" class="named"><title>0x00473e80 Decompress (156 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="345" class="todo"><title>0x00473f20 LoadTextures (2716 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="345" class="todo"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="345" class="todo"><title>0x00474e10 LoadObjects (1156 bytes)</title></rect>
@@ -2470,7 +2470,7 @@
 <rect width="7.51" height="8.08" x="529.82" y="322.54" class="todo"><title>0x00402d90 InitialiseCroc (157 bytes)</title></rect>
 <rect width="7.51" height="8.08" x="529.82" y="333.62" class="named"><title>0x00425070 lara_col_stop (157 bytes)</title></rect>
 <rect width="7.51" height="8.08" x="529.82" y="344.69" class="named"><title>0x004286d0 lara_col_roll (157 bytes)</title></rect>
-<rect width="7.51" height="8.03" x="529.82" y="355.77" class="todo"><title>0x00473e80 Decompress (156 bytes)</title></rect>
+<rect width="7.51" height="8.03" x="529.82" y="355.77" class="named"><title>0x00473e80 Decompress (156 bytes)</title></rect>
 <rect width="7.51" height="7.97" x="529.82" y="366.79" class="named"><title>0x0043e1b0 update_laras_weapons_status (155 bytes)</title></rect>
 <rect width="7.51" height="7.97" x="529.82" y="377.77" class="named"><title>0x00452ea0 DrawAirBar (155 bytes)</title></rect>
 <rect width="7.51" height="7.97" x="529.82" y="388.74" class="named"><title>0x00464850 TriggerBikeBeam (155 bytes)</title></rect>

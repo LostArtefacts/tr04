@@ -52,6 +52,27 @@ sint32 LoadFile(const char *name, char **dest)
     return 0;
 }
 
+uint8 Decompress(char *pDest, char *pCompressed, sint32 compressedSize, sint32 size)
+{
+    z_stream stream;
+
+    Log(2, "Decompress");
+    memset(&stream, 0, sizeof(z_stream));
+    stream.avail_in = compressedSize;
+    stream.avail_out = size;
+    stream.next_out = (uint8 *)pDest;
+    stream.next_in = (uint8 *)pCompressed;
+    inflateInit(&stream);
+    inflate(&stream, Z_FINISH);
+    if (stream.total_out != size) {
+        Log(1, "Error Decompressing Data");
+        return 0;
+    }
+    inflateEnd(&stream);
+    Log(5, "Decompression OK");
+    return 1;
+}
+
 uint8 LoadCameras(void)
 {
     Log(2, "LoadCameras");
