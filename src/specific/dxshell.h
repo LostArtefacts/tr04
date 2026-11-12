@@ -24,6 +24,7 @@ sint32 DXCreateViewport(LPDIRECT3D3 d3d, LPDIRECT3DDEVICE3 device, sint32 w, sin
 void DXInitKeyboard(HWND hwnd, HINSTANCE hinstance);
 sint32 DXSetCooperativeLevel(LPDIRECTDRAW4 dd, HWND hwnd, sint32 flags);
 BOOL CALLBACK DXEnumDirectDraw(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext);
+void DXClose(void);
 
 extern uint8 keymap[256];
 extern uint8 keymap2[256];

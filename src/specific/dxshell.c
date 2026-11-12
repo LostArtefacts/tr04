@@ -359,6 +359,61 @@ sint32 DXToggleFullScreen(void)
     return 1;
 }
 
+#ifndef TR4_EXE
+void DXClose(void)
+{
+    Log(2, "CloseDirectX");
+    if (G_dxptr) {
+        if (G_dxptr->lpDD)
+            DXSetCooperativeLevel(G_dxptr->lpDD, 0, DDSCL_NORMAL);
+        if (G_dxptr->lpViewport) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "Viewport", G_dxptr->lpViewport, IDirect3DViewport3_Release(G_dxptr->lpViewport));
+            G_dxptr->lpViewport = 0;
+        } else {
+            Log(1, "%s Attempt To Release NULL Ptr", "Viewport");
+        }
+        if (G_dxptr->lpD3DDevice) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "Direct3DDevice", G_dxptr->lpD3DDevice, IDirect3DDevice3_Release(G_dxptr->lpD3DDevice));
+            G_dxptr->lpD3DDevice = 0;
+        } else {
+            Log(1, "%s Attempt To Release NULL Ptr", "Direct3DDevice");
+        }
+        if (G_dxptr->lpZBuffer) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "Z Buffer", G_dxptr->lpZBuffer, IDirectDrawSurface4_Release(G_dxptr->lpZBuffer));
+            G_dxptr->lpZBuffer = 0;
+        } else {
+            Log(1, "%s Attempt To Release NULL Ptr", "Z Buffer");
+        }
+        if (G_dxptr->lpBackBuffer) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "Back Buffer", G_dxptr->lpBackBuffer, IDirectDrawSurface4_Release(G_dxptr->lpBackBuffer));
+            G_dxptr->lpBackBuffer = 0;
+        } else {
+            Log(1, "%s Attempt To Release NULL Ptr", "Back Buffer");
+        }
+        if (G_dxptr->lpPrimaryBuffer) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "Primary Buffer", G_dxptr->lpPrimaryBuffer, IDirectDrawSurface4_Release(G_dxptr->lpPrimaryBuffer));
+            G_dxptr->lpPrimaryBuffer = 0;
+        } else {
+            Log(1, "%s Attempt To Release NULL Ptr", "Primary Buffer");
+        }
+        if (!(G_dxptr->Flags & 0x40)) {
+            if (G_dxptr->lpDD) {
+                Log(4, "Released %s @ %x - RefCnt = %d", "DirectDraw", G_dxptr->lpDD, IDirectDraw4_Release(G_dxptr->lpDD));
+                G_dxptr->lpDD = 0;
+            } else {
+                Log(1, "%s Attempt To Release NULL Ptr", "DirectDraw");
+            }
+            if (G_dxptr->lpD3D) {
+                Log(4, "Released %s @ %x - RefCnt = %d", "Direct3D", G_dxptr->lpD3D, IDirect3D3_Release(G_dxptr->lpD3D));
+                G_dxptr->lpD3D = 0;
+            } else {
+                Log(1, "%s Attempt To Release NULL Ptr", "Direct3D");
+            }
+        }
+    }
+}
+#endif
+
 sint32 DXCreateViewport(LPDIRECT3D3 d3d, LPDIRECT3DDEVICE3 device, sint32 w, sint32 h, LPDIRECT3DVIEWPORT3 *viewport)
 {
     D3DVIEWPORT2 vp2;

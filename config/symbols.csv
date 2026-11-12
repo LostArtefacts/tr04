@@ -1462,7 +1462,7 @@ address,size,name,symbol
 0x004939e0,109,DXChangeVideoMode,_DXChangeVideoMode
 0x00493a50,417,DXToggleFullScreen,_DXToggleFullScreen
 0x00493bf1,15,SW_SleepTick,_SW_SleepTick
-0x00493c00,604,DXClose,_DXClose
+0x00493c00,621,DXClose,_DXClose
 0x00493e70,238,DXCreateViewport,_DXCreateViewport
 0x00493f60,201,DXShowFrame,_DXShowFrame
 0x00494030,69,DXMove,_DXMove
@@ -2138,6 +2138,8 @@ address,size,name,symbol
 0x004b22c0,4,source_wav_format,_source_wav_format
 0x004b22f4,4,XATrack,_XATrack
 0x004b22f8,4,XAFlag,_XAFlag
+0x004b2408,31,Var4b2408,_Var4b2408
+0x004b2428,31,Var4b2428,_Var4b2428
 0x004b253a,1,Filter,_Filter
 0x004b253c,14,ASCIIToANSITable,_ASCIIToANSITable
 0x004b25d0,4,water_color_R,_water_color_R
@@ -2174,6 +2176,14 @@ address,size,name,symbol
 0x004b96a4,4,rand_1,_rand_1
 0x004b96a8,4,rand_2,_rand_2
 0x004bc508,18,tga_header,_tga_header
+0x004bc5c4,11,Var4bc5c4,_Var4bc5c4
+0x004bc614,9,Var4bc614,_Var4bc614
+0x004bcb00,15,Var4bcb00,_Var4bcb00
+0x004bcb10,12,Var4bcb10,_Var4bcb10
+0x004bcb1c,9,Var4bcb1c,_Var4bcb1c
+0x004bcb28,15,Var4bcb28,_Var4bcb28
+0x004bcb38,9,Var4bcb38,_Var4bcb38
+0x004bcb44,13,Var4bcb44,_Var4bcb44
 0x004bf2e0,4,next_locust,_next_locust
 0x004bf2e8,12,MovingBlockPos,_MovingBlockPos
 0x004bf2f8,4,next_scarab,_next_scarab
