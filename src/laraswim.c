@@ -4,6 +4,79 @@
 #include "control.h"
 #include "specific/input.h"
 #include "specific/3dmath.h"
+#include "collide.h"
+#include "larafire.h"
+
+void LaraUnderWater(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -400;
+    coll->bad_ceiling = 400;
+    coll->old.x = item->pos.x_pos;
+    coll->old.y = item->pos.y_pos;
+    coll->old.z = item->pos.z_pos;
+    coll->radius = 300;
+    coll->trigger = NULL;
+    coll->slopes_are_walls = 0;
+    coll->slopes_are_pits = 0;
+    coll->lava_is_pit = 0;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 1;
+    if ((input & IN_LOOK) && lara.look)
+        LookLeftRight();
+    else
+        ResetLook();
+    lara.look = 1;
+    (*lara_control_routines[item->current_anim_state])(item, coll);
+    if (item->pos.z_rot >= -364 && item->pos.z_rot <= 364)
+        item->pos.z_rot = 0;
+    else if (item->pos.z_rot < 0)
+        item->pos.z_rot += 364;
+    else
+        item->pos.z_rot -= 364;
+    if (item->pos.x_rot < -15470)
+        item->pos.x_rot = -15470;
+    else if (item->pos.x_rot > 15470)
+        item->pos.x_rot = 15470;
+    if (item->pos.z_rot < -4004)
+        item->pos.z_rot = -4004;
+    else if (item->pos.z_rot > 4004)
+        item->pos.z_rot = 4004;
+    if (lara.turn_rate >= -364 && lara.turn_rate <= 364)
+        lara.turn_rate = 0;
+    else if (lara.turn_rate < -364)
+        lara.turn_rate += 364;
+    else
+        lara.turn_rate -= 364;
+    item->pos.y_rot += lara.turn_rate;
+    if (lara.current_active && lara.water_status != LW_FLYCHEAT)
+        LaraWaterCurrent(coll);
+    if (lara.water_status == LW_FLYCHEAT) {
+        if (input & IN_ACTION) {
+            item->anim_number = 0;
+            item->frame_number = 0;
+        } else {
+            item->anim_number = 103;
+            item->frame_number = anims[103].frame_base;
+            item->fallspeed = 0;
+            item->speed = 0;
+        }
+    }
+    AnimateLara(item);
+    item->pos.y_pos -= ((rcossin_tbl[(item->pos.x_rot >> 3) & 0x1FFE] << 2) * item->fallspeed) >> (W2V_SHIFT + 2);
+    item->pos.x_pos += ((((rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * item->fallspeed) >> (W2V_SHIFT + 2)) * (rcossin_tbl[((item->pos.x_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+    item->pos.z_pos += ((((rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * item->fallspeed) >> (W2V_SHIFT + 2)) * (rcossin_tbl[((item->pos.x_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+    LaraBaddieCollision(item, coll);
+    if (lara.vehicle == NO_ITEM)
+        (*lara_collision_routines[item->current_anim_state])(item, coll);
+    UpdateLaraRoom(item, 0);
+    LaraGun();
+    TestTriggers(coll->trigger, 0, 0);
+    if (lara.water_status == LW_FLYCHEAT) {
+        item->anim_number = ANIM_FASTFALL;
+        item->frame_number = anims[ANIM_FASTFALL].frame_base + 5;
+    }
+}
 
 void lara_as_swim(ITEM_INFO *item, COLL_INFO *coll)
 {
