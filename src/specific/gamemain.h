@@ -12,6 +12,7 @@ typedef struct watertab {
 
 uint16 GetRandom(WATERTAB *w, sint32 n);
 void init_water_table(void);
+sint32 S_LoadGame(sint32 slot_num);
 
 extern WATERTAB WaterTable[22][64];
 extern float vert_wibble_table[32];

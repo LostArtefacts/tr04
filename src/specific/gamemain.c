@@ -1,7 +1,9 @@
+#include <windows.h>
 #include <stdlib.h>
 
 #include "gamemain.h"
 #include "3dmath.h"
+#include "../savegame.h"
 
 void init_water_table(void)
 {
@@ -64,5 +66,26 @@ uint16 GetRandom(WATERTAB *w, sint32 n)
         if (i == n)
             return random;
     } while (1);
+    return 0;
+}
+
+sint32 S_LoadGame(sint32 slot_num)
+{
+    HANDLE file;
+    DWORD bytes;
+    sint32 value, value2, value3;
+    char buffer[80];
+
+    wsprintf(buffer, "savegame.%d", slot_num);
+    file = CreateFile(buffer, GENERIC_READ, 0, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
+    if (file != INVALID_HANDLE_VALUE) {
+        ReadFile(file, buffer, 75, &bytes, 0);
+        ReadFile(file, &value, sizeof(sint32), &bytes, 0);
+        ReadFile(file, &value2, sizeof(sint32), &bytes, 0);
+        ReadFile(file, &value3, sizeof(sint32), &bytes, 0);
+        ReadFile(file, &savegame, sizeof(SAVEGAME_INFO), &bytes, 0);
+        CloseHandle(file);
+        return 1;
+    }
     return 0;
 }
