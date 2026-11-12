@@ -187,6 +187,63 @@ sint32 GetSaveLoadFiles(void)
     return nSaves;
 }
 
+sint32 DoLoadSave(sint32 LoadSave)
+{
+    SAVEFILE_INFO *pSave;
+    static sint32 selection;
+    sint32 color, l, i, y;
+    char string[80];
+    char name[41];
+
+    y = font_height;
+    if (LoadSave & IN_SAVE)
+        PrintString((uint16)phd_centerx, (uint16)y, 6, SCRIPT_TEXT(TXT_Save_Game), FF_CENTER);
+    else
+        PrintString((uint16)phd_centerx, (uint16)y, 6, SCRIPT_TEXT(TXT_Load_Game), FF_CENTER);
+    for (i = 0; i < 15; i++) {
+        pSave = &SaveGames[i];
+        color = 2;
+        if (i == selection)
+            color = 1;
+        memset(name, ' ', 40);
+        l = strlen(pSave->name);
+        if (l > 40)
+            l = 40;
+        strncpy(name, pSave->name, l);
+        name[40] = 0;
+        small_font = 1;
+        if (pSave->valid) {
+            wsprintf(string, "%03d", pSave->num);
+            PrintString((uint16)(phd_centerx - (sint32)(310.0F * ((float)phd_winwidth * (1.0F / 640.0F)))), (uint16)(y + font_height * (i + 2)), (uint8)color, string, 0);
+            PrintString((uint16)(phd_centerx - (sint32)(270.0F * ((float)phd_winwidth * (1.0F / 640.0F)))), (uint16)(y + font_height * (i + 2)), (uint8)color, name, 0);
+            wsprintf(string, "%d %s %02d:%02d:%02d", pSave->days, SCRIPT_TEXT(TXT_days), pSave->hours, pSave->minutes, pSave->seconds);
+            PrintString((uint16)(phd_centerx - (sint32)(-135.0F * ((float)phd_winwidth * (1.0F / 640.0F)))), (uint16)(y + font_height * (i + 2)), (uint8)color, string, 0);
+        } else {
+            wsprintf(string, "%s", pSave->name);
+            PrintString((uint16)phd_centerx, (uint16)(y + font_height * (i + 2)), (uint8)color, string, FF_CENTER);
+        }
+        small_font = 0;
+    }
+    if (dbinput & IN_FORWARD) {
+        selection--;
+        SoundEffect(SFX_MENU_CHOOSE, 0, SFX_DEFAULT);
+    }
+    if (dbinput & IN_BACK) {
+        selection++;
+        SoundEffect(SFX_MENU_CHOOSE, 0, SFX_DEFAULT);
+    }
+    if (selection < 0)
+        selection = 0;
+    else if (selection > 14)
+        selection = 14;
+    if (dbinput & IN_SELECT) {
+        if (SaveGames[selection].valid || LoadSave == IN_SAVE)
+            return selection;
+        SoundEffect(SFX_LARA_NO, 0, SFX_DEFAULT);
+    }
+    return -1;
+}
+
 void CheckKeyConflicts(void)
 {
     sint16 key;
