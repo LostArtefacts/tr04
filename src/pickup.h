@@ -22,5 +22,6 @@ void RegeneratePickups(void);
 sint16 *FindPlinth(ITEM_INFO *item);
 void KeyHoleCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void PuzzleHoleCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll);
+void SarcophagusCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif
