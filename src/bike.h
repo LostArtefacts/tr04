@@ -34,7 +34,9 @@ sint32 TestHeight(ITEM_INFO *item, sint32 z, sint32 x, PHD_VECTOR *pos);
 sint32 DoDynamics_bike(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero);
 void TriggerExhaustSmoke_bike(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 velocity, sint32 thing);
 void BikeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
+sint32 BikeBaddieCollision(ITEM_INFO *bike);
 
 extern ITEM_INFO *GlobalBikeItem;
+extern sint16 broomies[22];
 
 #endif

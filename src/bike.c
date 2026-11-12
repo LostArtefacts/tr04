@@ -15,6 +15,7 @@
 #include "laraflar.h"
 #include "newinv.h"
 #include "savegame.h"
+#include "effects.h"
 #include "specific/input.h"
 #include "specific/3dmath.h"
 #include "specific/audio.h"
@@ -333,6 +334,55 @@ sint32 DoDynamics_bike(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
             return fallspeed;
     }
     return fallspeed;
+}
+
+sint32 BikeBaddieCollision(ITEM_INFO *bike)
+{
+    ITEM_INFO *item;
+    OBJECT_INFO *obj;
+    sint16 *doors;
+    sint32 i, j, dx, dy, dz;
+    sint16 room_count, item_number;
+
+    room_count = 1;
+    broomies[0] = bike->room_number;
+    doors = room[bike->room_number].door;
+    if (doors) {
+        for (i = *doors++; i > 0; i--, doors += 16) {
+            for (j = 0; j < room_count; j++) {
+                if (broomies[j] == *doors)
+                    break;
+            }
+            if (j == room_count) {
+                broomies[room_count] = *doors;
+                room_count++;
+            }
+        }
+    }
+    for (i = 0; i < room_count; i++) {
+        for (item_number = room[broomies[i]].item_number; item_number != NO_ITEM; item_number = item->next_item) {
+            item = &items[item_number];
+            if (item->collidable && item->status != ITEM_INVISIBLE && item != lara_item && item != bike) {
+                obj = &objects[item->object_number];
+                if (obj->collision && obj->intelligent) {
+                    dx = bike->pos.x_pos - item->pos.x_pos;
+                    dy = bike->pos.y_pos - item->pos.y_pos;
+                    dz = bike->pos.z_pos - item->pos.z_pos;
+                    if (dx > -2048 && dx < 2048 && dz > -2048 && dz < 2048 && dy > -2048 && dy < 2048) {
+                        if (TestBoundsCollide(item, bike, 500)) {
+                            if (item->object_number == MUTANT)
+                                return 1;
+                            if (item->hit_points)
+                                SoundEffect(SFX_BIKE_HIT_ENEMIES, &item->pos, SFX_DEFAULT);
+                            DoLotsOfBlood(item->pos.x_pos, bike->pos.y_pos - 256, item->pos.z_pos, (GetRandomControl() & 3) + 8, bike->pos.y_rot, item->room_number, 3);
+                            item->hit_points = 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return 0;
 }
 
 sint32 CanGetOff_bike(sint16 num)

@@ -42,6 +42,7 @@ enum sfx_options {
 #define SFX_BAD_SWORD_RICO 262
 #define SFX_LARA_POLE_LOOP 340
 #define SFX_LARA_ROPE_CREAK 351
+#define SFX_BIKE_HIT_ENEMIES 367
 
 typedef struct sample_info {
     sint16 number;
