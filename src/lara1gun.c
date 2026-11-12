@@ -10,6 +10,7 @@
 #include "box.h"
 #include "savegame.h"
 #include "specific/function_stubs.h"
+#include "sound.h"
 
 void draw_shotgun_meshes(sint32 weapon_type)
 {
@@ -35,6 +36,57 @@ void ready_shotgun(int weapon_type)
     lara.left_arm.lock = lara.right_arm.lock = 0;
     lara.target = NULL;
     lara.left_arm.frame_base = lara.right_arm.frame_base = objects[WeaponObject(weapon_type)].frame_base;
+}
+
+void FireShotgun(void)
+{
+    sint32 i, fired, scatter, x, y, z, lp;
+    PHD_VECTOR pos;
+    PHD_ANGLE angles[2];
+    PHD_ANGLE dangles[2];
+
+    angles[0] = lara.left_arm.y_rot + lara_item->pos.y_rot;
+    angles[1] = lara.left_arm.x_rot;
+    if (!lara.left_arm.lock) {
+        angles[0] += lara.torso_y_rot;
+        angles[1] += lara.torso_x_rot;
+    }
+    fired = 0;
+    if (lara.shotgun_type_carried & 8)
+        scatter = 1820;
+    else
+        scatter = 5460;
+    for (i = 0; i < 6; i++) {
+        dangles[0] = (PHD_ANGLE)(angles[0] + scatter * (GetRandomControl() - 0x4000) / 0x10000);
+        dangles[1] = (PHD_ANGLE)(angles[1] + scatter * (GetRandomControl() - 0x4000) / 0x10000);
+        if (FireWeapon(WEAPON_SHOTGUN, lara.target, lara_item, dangles))
+            fired = 1;
+    }
+    if (fired) {
+        pos.x = 0;
+        pos.y = 228;
+        pos.z = 32;
+        GetLaraJointPos(&pos, 11);
+        x = pos.x;
+        y = pos.y;
+        z = pos.z;
+        pos.x = 0;
+        pos.y = 228 + 1280;
+        pos.z = 32;
+        GetLaraJointPos(&pos, 11);
+        SmokeCountL = 32;
+        SmokeWeapon = WEAPON_SHOTGUN;
+        if (lara_item->mesh_bits) {
+            for (lp = 0; lp < 7; lp++)
+                TriggerGunSmoke(x, y, z, pos.x - x, pos.y - y, pos.z - z, 1, SmokeWeapon, 32);
+            for (lp = 0; lp < 12; lp++)
+                nullsub_1(x, y, z, (pos.x - x) << 1, (pos.y - y) << 1, (pos.z - z) << 1);
+        }
+        lara.right_arm.flash_gun = weapons[WEAPON_SHOTGUN].flash_time;
+        SoundEffect(SFX_EXPLOSION1, &lara_item->pos, 0x1400000 | 4);
+        SoundEffect(weapons[WEAPON_SHOTGUN].sample_num, &lara_item->pos, SFX_DEFAULT);
+        savegame.Game.AmmoUsed++;
+    }
 }
 
 void draw_shotgun(sint32 weapon_type)
