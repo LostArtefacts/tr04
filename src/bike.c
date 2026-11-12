@@ -470,6 +470,131 @@ sint32 BikeBaddieCollision(ITEM_INFO *bike)
     return 0;
 }
 
+void AnimateBike(ITEM_INFO *item, sint32 hitWall, sint32 killed)
+{
+    BIKEINFO *bike;
+    ITEM_INFO *l;
+    sint16 dmg;
+
+    l = lara_item;
+    bike = (BIKEINFO *)item->data;
+    if (item->pos.y_pos != item->floor && l->current_anim_state != 8 && l->current_anim_state != 17 && l->current_anim_state != 20 && !killed) {
+        if (bike->velocity < 0)
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 6;
+        else
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 22;
+        l->frame_number = anims[l->anim_number].frame_base;
+        l->goal_anim_state = 8;
+        l->current_anim_state = 8;
+    } else if (hitWall && l->current_anim_state != 12 && l->current_anim_state != 11 && l->current_anim_state != 13 && l->current_anim_state != 14 && l->current_anim_state != 20 && bike->velocity > 10922 && !killed) {
+        if (hitWall == 13) {
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 12;
+            l->goal_anim_state = 12;
+            l->current_anim_state = 12;
+        } else if (hitWall == 14) {
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 11;
+            l->goal_anim_state = 11;
+            l->current_anim_state = 11;
+        } else if (hitWall == 11) {
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 14;
+            l->goal_anim_state = 13;
+            l->current_anim_state = 13;
+        } else {
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 13;
+            l->goal_anim_state = 14;
+            l->current_anim_state = 14;
+        }
+        l->frame_number = anims[l->anim_number].frame_base;
+    } else {
+        switch (l->current_anim_state) {
+        case 15:
+            if (killed)
+                l->goal_anim_state = 7;
+            else if ((input & (IN_JUMP | IN_RIGHT)) == (IN_JUMP | IN_RIGHT) && !bike->velocity && !dont_exit_bike) {
+                if (CanGetOff_bike(1))
+                    l->goal_anim_state = 10;
+            } else if (input & IN_ACTION && !(input & IN_JUMP))
+                l->goal_anim_state = 1;
+            else if (input & IN_BACK)
+                l->goal_anim_state = 3;
+            break;
+        case 1:
+            if (killed) {
+                if (bike->velocity > 0x4000)
+                    l->goal_anim_state = 19;
+                else
+                    l->goal_anim_state = 7;
+            } else if (!(bike->velocity & 0xFFFFFF00) && !(input & (IN_ACTION | IN_JUMP)))
+                l->goal_anim_state = 15;
+            else if (input & IN_LEFT)
+                l->goal_anim_state = 2;
+            else if (input & IN_RIGHT)
+                l->goal_anim_state = 22;
+            else if (input & IN_JUMP) {
+                if (bike->velocity > 21844)
+                    l->goal_anim_state = 6;
+                else
+                    l->goal_anim_state = 5;
+            } else if (input & IN_BACK && bike->velocity <= 2048)
+                l->goal_anim_state = 3;
+            break;
+        case 3:
+            if (input & IN_BACK)
+                l->goal_anim_state = 4;
+            else
+                l->goal_anim_state = 15;
+            break;
+        case 5:
+        case 6:
+        case 18:
+            if (!(bike->velocity & 0xFFFFFF00))
+                l->goal_anim_state = 15;
+            else if (input & IN_LEFT)
+                l->goal_anim_state = 2;
+            else if (input & IN_RIGHT)
+                l->goal_anim_state = 22;
+            break;
+        case 2:
+            if (!(bike->velocity & 0xFFFFFF00))
+                l->goal_anim_state = 15;
+            else if (input & IN_RIGHT || !(input & IN_LEFT))
+                l->goal_anim_state = 1;
+            break;
+        case 22:
+            if (!(bike->velocity & 0xFFFFFF00))
+                l->goal_anim_state = 15;
+            else if (input & IN_LEFT || !(input & IN_RIGHT))
+                l->goal_anim_state = 1;
+            break;
+        case 8:
+            if (item->pos.y_pos == item->floor) {
+                l->goal_anim_state = 17;
+                dmg = (sint16)(bikefspeed - 140);
+                if (dmg > 0) {
+                    if (dmg > 100)
+                        l->hit_points = -1;
+                    else
+                        l->hit_points += -1000 * dmg * dmg / 10000;
+                }
+            } else if (item->fallspeed > 220)
+                bike->flags |= 0x40;
+            break;
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+            if (input & (IN_ACTION | IN_JUMP))
+                l->goal_anim_state = 1;
+            break;
+        }
+    }
+    if (room[item->room_number].flags & ROOM_UNDERWATER) {
+        l->goal_anim_state = 20;
+        l->hit_points = 0;
+        BikeExplode(item);
+    }
+}
+
 sint32 CanGetOff_bike(sint16 num)
 {
     ITEM_INFO *item;

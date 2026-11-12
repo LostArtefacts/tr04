@@ -38,10 +38,13 @@ sint32 BikeBaddieCollision(ITEM_INFO *bike);
 void BikeCollideStaticObjects(sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 height);
 sint32 UserControl_bike(ITEM_INFO *item, sint32 height, sint32 *pitch);
 void BikeControl(sint16 item_number);
+void AnimateBike(ITEM_INFO *item, sint32 hitWall, sint32 killed);
 
 extern ITEM_INFO *GlobalBikeItem;
 extern sint16 broomies[22];
 extern sint32 BikeBounds[6];
 extern sint32 CollidedStaticBounds[6];
+extern sint32 bikefspeed;
+extern char dont_exit_bike;
 
 #endif

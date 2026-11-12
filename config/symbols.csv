@@ -1005,7 +1005,7 @@ address,size,name,symbol
 0x004657e0,1940,BikeDynamics,_BikeDynamics
 0x00465f80,771,BikeCollideStaticObjects,_BikeCollideStaticObjects
 0x00466290,529,BikeBaddieCollision,_BikeBaddieCollision
-0x004664b0,1004,AnimateBike,_AnimateBike
+0x004664b0,1072,AnimateBike,_AnimateBike
 0x004668e0,460,CanGetOff_bike,_CanGetOff_bike
 0x00466ab0,980,UserControl_bike,_UserControl_bike
 0x00466e90,176,BikeStart,_BikeStart
