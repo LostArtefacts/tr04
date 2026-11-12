@@ -32,5 +32,6 @@ HRESULT _LoadBitmap(LPDIRECTDRAWSURFACE4 surf, LPCSTR name);
 void do_boot_screen(sint32 language);
 void ProjectTrainVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip, sint32 x);
 void RenderLoadPic(sint32 unused);
+void nullsub_9(void);
 
 #endif

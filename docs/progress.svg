@@ -46,13 +46,13 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="251.64" height="12" x="0" y="0" class="named"><title>1139 · 73.58%</title></rect>
-<rect width="0.66" height="12" x="251.64" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="18.56" height="12" x="252.30" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
-<rect width="71.14" height="12" x="270.86" y="0" class="todo"><title>322 · 20.80%</title></rect>
+<rect width="251.86" height="12" x="0" y="0" class="named"><title>1140 · 73.64%</title></rect>
+<rect width="0.66" height="12" x="251.86" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="18.56" height="12" x="252.52" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
+<rect width="70.92" height="12" x="271.08" y="0" class="todo"><title>321 · 20.74%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">73.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1139</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">322</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1140</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">321</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="136.98" height="12" x="0" y="0" class="named"><title>249 KB · 40.05%</title></rect>
@@ -1334,7 +1334,7 @@
 <rect width="12" height="12" x="225" y="375" class="named"><title>0x0047d4d0 S_LoadBar (212 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="375" class="named"><title>0x0047d5b0 S_InitialisePolyList (217 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="375" class="todo"><title>0x0047d690 j_nullsub_9 (5 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="375" class="todo"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="375" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="375" class="todo"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="375" class="todo"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="375" class="todo"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
@@ -3161,7 +3161,7 @@
 <rect width="1.03" height="1.78" x="736.37" y="455.45" class="todo"><title>0x00490b10 j_nullsub_14 (5 bytes)</title></rect>
 <rect width="1.03" height="1.78" x="736.37" y="460.22" class="todo"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="455.45" class="named"><title>0x004357b0 nullsub_1 (1 bytes)</title></rect>
-<rect width="1.12" height="1" x="740.40" y="458.63" class="todo"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
+<rect width="1.12" height="1" x="740.40" y="458.63" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="461" class="todo"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="744.51" y="455.45" class="todo"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="746" y="455.45" class="todo"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>

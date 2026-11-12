@@ -45,6 +45,10 @@ void S_InitialisePolyList(void)
     InitialiseSortList();
 }
 
+void nullsub_9(void)
+{
+}
+
 void _InsertRoom(ROOM_INFO *r)
 {
     SetD3DViewMatrix();
