@@ -1715,6 +1715,22 @@ void lara_as_controlledl(ITEM_INFO *item, COLL_INFO *coll)
     coll->enable_spaz = 0;
 }
 
+void lara_col_turnswitch(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (coll->old.x != item->pos.x_pos || coll->old.z != item->pos.z_pos) {
+        if (item->anim_number == ANIM_TURNSWITCHAC) {
+            item->pos.y_rot -= 0x4000;
+            item->anim_number = ANIM_TURNSWITCHAD;
+            item->frame_number = anims[ANIM_TURNSWITCHAD].frame_base;
+        }
+        if (item->anim_number == ANIM_TURNSWITCHCC) {
+            item->pos.y_rot += 0x4000;
+            item->anim_number = ANIM_TURNSWITCHCD;
+            item->frame_number = anims[ANIM_TURNSWITCHCD].frame_base;
+        }
+    }
+}
+
 void lara_col_run(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
