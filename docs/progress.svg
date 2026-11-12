@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="218.20" height="12" x="0" y="0" class="named"><title>987 · 63.80%</title></rect>
-<rect width="0.44" height="12" x="218.20" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="218.64" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="116.06" height="12" x="225.94" y="0" class="todo"><title>525 · 33.94%</title></rect>
+<rect width="218.42" height="12" x="0" y="0" class="named"><title>988 · 63.87%</title></rect>
+<rect width="0.44" height="12" x="218.42" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="218.86" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="115.84" height="12" x="226.16" y="0" class="todo"><title>524 · 33.87%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">63.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">987</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">525</tspan></text>
+<text text-anchor="end" x="522" y="7.50">64.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">988</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">524</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="94.52" height="12" x="0" y="0" class="named"><title>171 KB · 27.64%</title></rect>
-<rect width="0.12" height="12" x="94.52" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="94.64" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="237.93" height="12" x="104.07" y="0" class="todo"><title>432 KB · 69.57%</title></rect>
+<rect width="94.69" height="12" x="0" y="0" class="named"><title>172 KB · 27.69%</title></rect>
+<rect width="0.12" height="12" x="94.69" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="94.81" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="237.77" height="12" x="104.23" y="0" class="todo"><title>431 KB · 69.52%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">27.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">171 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">432 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">172 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">431 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -70,7 +70,7 @@
 <rect width="12" height="12" x="15" y="0" class="todo"><title>0x00401080 AhmetControl (1681 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="0" class="named"><title>0x00401730 ExplodeAhmet (164 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="0" class="todo"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="0" class="todo"><title>0x00401990 ReTriggerAhmet (302 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="0" class="named"><title>0x00401990 ReTriggerAhmet (302 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="0" class="todo"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="0" class="named"><title>0x00401db0 InitialiseBaboon (146 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="0" class="todo"><title>0x00401e50 BaboonControl (2389 bytes)</title></rect>
@@ -2162,7 +2162,7 @@
 <rect width="11" height="10.78" x="443.02" y="369.43" class="named"><title>0x00452ca0 DrawGameInfo (307 bytes)</title></rect>
 <rect width="11" height="10.74" x="443.02" y="383.21" class="todo"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
 <rect width="11" height="10.67" x="443.02" y="396.95" class="todo"><title>0x0041d010 CalcLaraMatrices (304 bytes)</title></rect>
-<rect width="11" height="10.60" x="443.02" y="410.62" class="todo"><title>0x00401990 ReTriggerAhmet (302 bytes)</title></rect>
+<rect width="11" height="10.60" x="443.02" y="410.62" class="named"><title>0x00401990 ReTriggerAhmet (302 bytes)</title></rect>
 <rect width="11" height="10.60" x="443.02" y="424.23" class="todo"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
 <rect width="11" height="10.60" x="443.02" y="437.83" class="named"><title>0x00459510 ModelRigid (302 bytes)</title></rect>
 <rect width="11" height="10.57" x="443.02" y="451.43" class="named"><title>0x00423930 lara_col_monkeyswing (301 bytes)</title></rect>
