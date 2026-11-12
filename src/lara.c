@@ -192,6 +192,13 @@ sint32 LaraDeflectEdgeDuck(ITEM_INFO *item, COLL_INFO *coll)
     return 0;
 }
 
+void lara_col_all4turnlr(ITEM_INFO *item, COLL_INFO *coll)
+{
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 400);
+    if (!TestLaraSlide(item, coll) && coll->mid_floor != NO_HEIGHT && coll->mid_floor > -256)
+        item->pos.y_pos += coll->mid_floor;
+}
+
 void lara_as_crawlb(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0 || lara.water_status == LW_WADE) {
