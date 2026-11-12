@@ -113,6 +113,20 @@ void OutputSky(void)
     InitialiseSortList();
 }
 
+void DrawTrainStrips(void)
+{
+    sint16 *ar;
+
+    ar = &aranges[2];
+    DrawTrainFloorStrip(-20480, -5120, &textinfo[ar[5]], 0x1101010);
+    DrawTrainFloorStrip(-20480, 3072, &textinfo[ar[5]], 0x1101010);
+    DrawTrainFloorStrip(-20480, -2048, &textinfo[ar[3]], 0x100800);
+    DrawTrainFloorStrip(-20480, 2048, &textinfo[ar[4]], 0x810);
+    DrawTrainFloorStrip(-20480, -1024, &textinfo[ar[1]], 0);
+    DrawTrainFloorStrip(-20480, 1024, &textinfo[ar[2]], 0);
+    DrawTrainFloorStrip(-20480, 0, &textinfo[ar[0]], 0);
+}
+
 void SetFade(sint32 start, sint32 end)
 {
     DoFade = 1;
