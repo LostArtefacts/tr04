@@ -1397,10 +1397,10 @@ address,size,name,symbol
 0x0048f981,13,Func48f981,_Func48f981
 0x0048f990,5,j_nullsub_12,_j_nullsub_12
 0x0048f9a0,1,nullsub_12,_nullsub_12
-0x0048f9a1,13,Func48f9a1,
+0x0048f9a1,13,Func48f9a1,_Func48f9a1
 0x0048f9b0,5,j_nullsub_13,_j_nullsub_13
 0x0048f9c0,1,nullsub_13,_nullsub_13
-0x0048f9c1,13,Func48f9c1,
+0x0048f9c1,13,Func48f9c1,_Func48f9c1
 0x0048f9d0,190,AlterFOV,_AlterFOV
 0x0048fa90,200,SetupZRange,_SetupZRange
 0x0048fb60,171,ScaleCurrentMatrix,_ScaleCurrentMatrix
@@ -2174,6 +2174,16 @@ address,size,name,symbol
 0x004b4540,12,Var4b4540,_Var4b4540
 0x004b454c,34,Var4b454c,_Var4b454c
 0x004b4570,15,Var4b4570,_Var4b4570
+0x004b45a4,20,Var4b45a4,_Var4b45a4
+0x004b45b8,22,Var4b45b8,_Var4b45b8
+0x004b45d0,15,Var4b45d0,_Var4b45d0
+0x004b45f4,11,Var4b45f4,_Var4b45f4
+0x004b4600,9,Var4b4600,_Var4b4600
+0x004b460c,10,Var4b460c,_Var4b460c
+0x004b4618,8,Var4b4618,_Var4b4618
+0x004b4620,12,Var4b4620,_Var4b4620
+0x004b462c,10,Var4b462c,_Var4b462c
+0x004b4638,12,Var4b4638,_Var4b4638
 0x004b4670,4,FogStart,_FogStart
 0x004b4674,4,FogEnd,_FogEnd
 0x004b4678,4,one,_one
@@ -2428,6 +2438,7 @@ address,size,name,symbol
 0x00533b10,4,thread_ended,_thread_ended
 0x00533b14,4,Var533b14,_Var533b14
 0x00533b18,4,Var533b18,_Var533b18
+0x00533b14,4,Var533b14,_Var533b14
 0x00533b1c,5632,WaterTable,_WaterTable
 0x0053511c,1024,unused_vert_wibble_table,_unused_vert_wibble_table
 0x0053551c,2,FPCW,_FPCW
@@ -2499,6 +2510,9 @@ address,size,name,symbol
 0x00753958,4,nClippedPolys,_nClippedPolys
 0x00753960,4,GameUnk753960,_GameUnk753960
 0x00753964,4,nPolys,_nPolys
+0x00753968,4,Var753968,_Var753968
+0x0075396c,4,Var75396c,_Var75396c
+0x00753970,4,Var753970,_Var753970
 0x0075397c,4,clipflags,_clipflags
 0x00753980,248,App,_App
 0x00753a78,4,GameUnk753a78,_GameUnk753a78
@@ -2509,6 +2523,7 @@ address,size,name,symbol
 0x00753bdc,4,aranges,_aranges
 0x00753be0,64,D3DMWorld,_D3DMWorld
 0x00753c20,4,GameUnk753c20,_GameUnk753c20
+0x00753c24,1,Var753c24,_Var753c24
 0x00753c30,4,phd_top,_phd_top
 0x00753c34,4,f_a,_f_a
 0x00753c38,4,f_b,_f_b

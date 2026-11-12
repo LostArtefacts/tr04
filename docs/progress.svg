@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="245.45" height="12" x="0" y="0" class="named"><title>1111 · 71.77%</title></rect>
 <rect width="0.44" height="12" x="245.45" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="15.47" height="12" x="245.90" y="0" class="nonmatching"><title>70 · 4.52%</title></rect>
-<rect width="80.64" height="12" x="261.36" y="0" class="todo"><title>365 · 23.58%</title></rect>
+<rect width="15.69" height="12" x="245.90" y="0" class="nonmatching"><title>71 · 4.59%</title></rect>
+<rect width="80.42" height="12" x="261.58" y="0" class="todo"><title>364 · 23.51%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">71.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1111</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">70</tspan> · <tspan class="todo">365</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1111</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">71</tspan> · <tspan class="todo">364</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="126.95" height="12" x="0" y="0" class="named"><title>231 KB · 37.12%</title></rect>
 <rect width="0.12" height="12" x="126.95" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="27.84" height="12" x="127.07" y="0" class="nonmatching"><title>51 KB · 8.14%</title></rect>
-<rect width="187.09" height="12" x="154.91" y="0" class="todo"><title>341 KB · 54.70%</title></rect>
+<rect width="28.19" height="12" x="127.07" y="0" class="nonmatching"><title>51 KB · 8.24%</title></rect>
+<rect width="186.74" height="12" x="155.26" y="0" class="todo"><title>340 KB · 54.60%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">37.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">231 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">51 KB</tspan> · <tspan class="todo">341 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">231 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">51 KB</tspan> · <tspan class="todo">340 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1448,7 +1448,7 @@
 <rect width="12" height="12" x="435" y="405" class="named"><title>0x0048ef20 WinClose (68 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="405" class="named"><title>0x0048ef70 WinProcMsg (121 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="405" class="named"><title>0x0048eff0 WinProcessCommands (1078 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="405" class="todo"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="405" class="nonmatching"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="405" class="named"><title>0x0048f6a0 WinRunCheck (87 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="405" class="todo"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="405" class="todo"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
@@ -1887,7 +1887,7 @@
 <rect width="14.84" height="16.16" x="696.52" y="42.37" class="named"><title>0x00450840 InterpolateMatrix (623 bytes)</title></rect>
 <rect width="14.82" height="16.16" x="714.36" y="42.37" class="named"><title>0x0044e930 SequenceDoorControl (622 bytes)</title></rect>
 <rect width="14.82" height="16.16" x="732.18" y="42.37" class="todo"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
-<rect width="15.28" height="15.68" x="346.32" y="61.53" class="todo"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
+<rect width="15.28" height="15.68" x="346.32" y="61.53" class="nonmatching"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
 <rect width="15.28" height="15.65" x="346.32" y="80.21" class="nonmatching"><title>0x00493c00 DXClose (621 bytes)</title></rect>
 <rect width="15.28" height="15.63" x="346.32" y="98.86" class="named"><title>0x00477180 init_water_table (620 bytes)</title></rect>
 <rect width="15.28" height="15.58" x="346.32" y="117.48" class="named"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>

@@ -20,6 +20,7 @@
 #include "lighting.h"
 #include "file.h"
 #include "gamemain.h"
+#include "audio.h"
 
 void ClearSurfaces(void)
 {
@@ -305,6 +306,75 @@ void WinProcessCommands(sint32 cmd)
         break;
     }
 }
+
+#ifndef TR4_EXE
+LRESULT CALLBACK WinMainWndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+    static sint32 mouseY, mouseX, mouseB;
+    static uint8 closing;
+
+    switch (uMsg) {
+    case WM_CREATE:
+        resChangeCounter = 0;
+        Log(6, "WM_CREATE");
+        break;
+    case WM_MOVE:
+        Log(6, "WM_MOVE");
+        DXMove((sint16)lParam, (sint16)((uint32)lParam >> 16));
+        break;
+    case WM_ACTIVATE:
+        Log(6, "WM_ACTIVATE");
+        if (!closing) {
+            if (App.fmv)
+                return 0;
+            switch ((sint32)(wParam & 0xFFFF)) {
+            case WA_INACTIVE:
+                Log(6, "WM_INACTIVE");
+                if (App.SetupComplete) {
+                    Log(5, "HangGameThread");
+                    while (App.dx.InScene) {
+                    }
+                    App.dx.WaitAtBeginScene = 1;
+                    while (!App.dx.InScene) {
+                    }
+                    SuspendThread((HANDLE)MainThread.handle);
+                    Log(5, "Game Thread Suspended");
+                }
+                break;
+            case WA_ACTIVE:
+            case WA_CLICKACTIVE:
+                Log(6, "WM_ACTIVE");
+                if (App.SetupComplete) {
+                    ResumeThread((HANDLE)MainThread.handle);
+                    App.dx.WaitAtBeginScene = 0;
+                    Log(5, "Game Thread Resumed");
+                }
+                return 0;
+            }
+            return 0;
+        }
+        break;
+    case WM_CLOSE:
+        Log(6, "WM_CLOSE");
+        closing = 1;
+        PostQuitMessage(0);
+        break;
+    case WM_COMMAND:
+        Log(6, "WM_COMMAND");
+        WinProcessCommands(wParam & 0xFFFF);
+        break;
+    case WM_MOUSEMOVE:
+        mouseX = (sint16)lParam;
+        mouseY = (sint16)((uint32)lParam >> 16);
+        mouseB = wParam;
+        break;
+    case WM_APP:
+        FillADPCMBuffer((char *)lParam, wParam);
+        return 0;
+    }
+    return DefWindowProc(hwnd, uMsg, wParam, lParam);
+}
+#endif
 
 uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex)
 {
