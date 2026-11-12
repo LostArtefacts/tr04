@@ -1975,6 +1975,7 @@ address,size,name,symbol
 0x004a9240,4,LoadImageA,__imp__LoadImageA@24
 0x004a9248,4,joyGetDevCapsA,__imp__joyGetDevCapsA@12
 0x004a924c,4,joyGetPosEx,__imp__joyGetPosEx@8
+0x004a9780,16,IID_IDirect3D3,_IID_IDirect3D3
 0x004ad0a8,16,bat_bite,_bat_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
 0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition

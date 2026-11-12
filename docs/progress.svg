@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="184.82" height="12" x="0" y="0" class="named"><title>836 · 54.04%</title></rect>
-<rect width="0.44" height="12" x="184.82" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="185.26" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="150.33" height="12" x="191.67" y="0" class="todo"><title>680 · 43.96%</title></rect>
+<rect width="185.04" height="12" x="0" y="0" class="named"><title>837 · 54.10%</title></rect>
+<rect width="0.44" height="12" x="185.04" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="185.48" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="150.11" height="12" x="191.89" y="0" class="todo"><title>679 · 43.89%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">54.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">836</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">680</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">837</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">679</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.66" height="12" x="0" y="0" class="named"><title>144 KB · 23.29%</title></rect>
-<rect width="0.12" height="12" x="79.66" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="79.78" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="253.57" height="12" x="88.43" y="0" class="todo"><title>460 KB · 74.14%</title></rect>
+<rect width="79.71" height="12" x="0" y="0" class="named"><title>145 KB · 23.31%</title></rect>
+<rect width="0.12" height="12" x="79.71" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="79.83" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="253.52" height="12" x="88.48" y="0" class="todo"><title>460 KB · 74.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">144 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">460 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">145 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">460 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1508,7 +1508,7 @@
 <rect width="12" height="12" x="585" y="420" class="todo"><title>0x00491d60 DXFreeInfo (232 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="420" class="named"><title>0x00491e50 AddStruct (77 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="420" class="todo"><title>0x00491ea0 DXDDCreate (185 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="420" class="todo"><title>0x00491f60 DXD3DCreate (86 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="420" class="named"><title>0x00491f60 DXD3DCreate (86 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="420" class="todo"><title>0x00491fc0 DXEnumDirectDraw (633 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="420" class="named"><title>0x00492240 DXBitMask2ShiftCnt (52 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="420" class="todo"><title>0x00492280 DXEnumDisplayModes (281 bytes)</title></rect>
@@ -2730,7 +2730,7 @@
 <rect width="5.66" height="5.87" x="598.68" y="403.16" class="named"><title>0x0042d410 lara_col_climbright (86 bytes)</title></rect>
 <rect width="5.66" height="5.87" x="598.68" y="412.03" class="named"><title>0x0046b920 ninth_cutseq_init (86 bytes)</title></rect>
 <rect width="5.66" height="5.87" x="598.68" y="420.91" class="named"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
-<rect width="5.66" height="5.87" x="598.68" y="429.78" class="todo"><title>0x00491f60 DXD3DCreate (86 bytes)</title></rect>
+<rect width="5.66" height="5.87" x="598.68" y="429.78" class="named"><title>0x00491f60 DXD3DCreate (86 bytes)</title></rect>
 <rect width="5.66" height="5.81" x="598.68" y="438.65" class="named"><title>0x004492d0 KillMoveItems (85 bytes)</title></rect>
 <rect width="5.66" height="5.81" x="598.68" y="447.46" class="named"><title>0x00449330 KillMoveEffects (85 bytes)</title></rect>
 <rect width="5.66" height="5.74" x="598.68" y="456.26" class="named"><title>0x004301f0 LaraCheatGetStuff (84 bytes)</title></rect>

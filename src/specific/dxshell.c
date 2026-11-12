@@ -27,6 +27,17 @@ void *AddStruct(void *p, sint32 num, sint32 size)
     return ptr;
 }
 
+sint32 DXD3DCreate(LPDIRECTDRAW4 pDD4, void **pD3D)
+{
+    Log(2, "DXD3DCreate");
+    if (DXAttempt(IDirectDraw4_QueryInterface(pDD4, &IID_IDirect3D3, pD3D)) == DD_OK) {
+        Log(5, "DXD3DCreate Successful");
+        return 1;
+    }
+    Log(1, "DXD3DCreate Failed");
+    return 0;
+}
+
 void DXBitMask2ShiftCnt(uint32 mask, uint8 *shift, uint8 *count)
 {
     uint8 i;
