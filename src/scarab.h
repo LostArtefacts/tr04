@@ -1,8 +1,21 @@
 #ifndef SCARAB_H
 #define SCARAB_H
 
-#include "types.h"
+#include "items.h"
 
+typedef struct {
+    PHD_3DPOS pos;
+    sint16 room_number;
+    sint16 speed;
+    sint16 fallspeed;
+    uint8 On;
+    uint8 flags;
+} SCARAB_STRUCT;
+
+void InitialiseScarab(sint16 item_number);
 void ClearScarabs(void);
+
+extern SCARAB_STRUCT Scarabs[128];
+extern sint32 next_scarab;
 
 #endif

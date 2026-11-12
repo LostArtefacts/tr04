@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="211.35" height="12" x="0" y="0" class="named"><title>956 · 61.80%</title></rect>
-<rect width="0.44" height="12" x="211.35" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="211.79" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="122.92" height="12" x="219.08" y="0" class="todo"><title>556 · 35.94%</title></rect>
+<rect width="211.57" height="12" x="0" y="0" class="named"><title>957 · 61.86%</title></rect>
+<rect width="0.44" height="12" x="211.57" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="212.01" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="122.70" height="12" x="219.30" y="0" class="todo"><title>555 · 35.88%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">61.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">956</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">556</tspan></text>
+<text text-anchor="end" x="522" y="7.50">62.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">957</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">555</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="91.04" height="12" x="0" y="0" class="named"><title>165 KB · 26.62%</title></rect>
-<rect width="0.12" height="12" x="91.04" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="91.16" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="241.42" height="12" x="100.58" y="0" class="todo"><title>438 KB · 70.59%</title></rect>
+<rect width="91.09" height="12" x="0" y="0" class="named"><title>165 KB · 26.63%</title></rect>
+<rect width="0.12" height="12" x="91.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="91.21" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="241.37" height="12" x="100.63" y="0" class="todo"><title>438 KB · 70.58%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">165 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">438 KB</tspan></text>
@@ -149,7 +149,7 @@
 <rect width="12" height="12" x="450" y="15" class="todo"><title>0x0040da70 InjuredSasControl (121 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="15" class="todo"><title>0x0040daf0 SasFireGrenade (465 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="15" class="todo"><title>0x0040dcd0 DragSASCollision (439 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="15" class="todo"><title>0x0040de90 InitialiseScarab (92 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="15" class="named"><title>0x0040de90 InitialiseScarab (92 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="15" class="todo"><title>0x0040def0 ScarabControl (827 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="15" class="todo"><title>0x0040e250 GetFreeScarab (74 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="15" class="todo"><title>0x0040e2a0 ClearScarabs (40 bytes)</title></rect>
@@ -2688,7 +2688,7 @@
 <rect width="6.01" height="5.98" x="589.64" y="322.74" class="named"><title>0x0046c760 twentyfour_control (93 bytes)</title></rect>
 <rect width="6.01" height="5.98" x="589.64" y="331.72" class="todo"><title>0x00494530 SW_D3D_GetCaps (93 bytes)</title></rect>
 <rect width="6.01" height="5.98" x="589.64" y="340.70" class="todo"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>
-<rect width="6.01" height="5.92" x="589.64" y="349.68" class="todo"><title>0x0040de90 InitialiseScarab (92 bytes)</title></rect>
+<rect width="6.01" height="5.92" x="589.64" y="349.68" class="named"><title>0x0040de90 InitialiseScarab (92 bytes)</title></rect>
 <rect width="6.01" height="5.92" x="589.64" y="358.59" class="named"><title>0x00420fe0 LaraFallen (92 bytes)</title></rect>
 <rect width="6.01" height="5.92" x="589.64" y="367.51" class="named"><title>0x004370e0 SoundEffects (92 bytes)</title></rect>
 <rect width="6.01" height="5.92" x="589.64" y="376.42" class="todo"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
