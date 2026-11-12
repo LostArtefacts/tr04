@@ -2378,13 +2378,13 @@ address,size,name,symbol
 0x005358c0,4,LookCnt,_LookCnt
 0x005358c4,4,med_hotkey_timer,_med_hotkey_timer
 0x005358c8,4,cheat_code,_cheat_code
-0x005358d0,,LaraTorchEnd,_LaraTorchEnd
+0x005358d0,12,LaraTorchEnd,_LaraTorchEnd
 0x005358f0,5622,StaticMeshLightItem,_StaticMeshLightItem
 0x00536ee8,4,LaraTorchIntensity,_LaraTorchIntensity
 0x00536eec,4,LaraTorchYRot,_LaraTorchYRot
 0x00536ef0,4,SetupLight_thing,_SetupLight_thing
 0x00536ef4,4,StaticMeshShade,_StaticMeshShade
-0x00536ef8,,LaraTorchStart,_LaraTorchStart
+0x00536ef8,12,LaraTorchStart,_LaraTorchStart
 0x00536f04,4,MaxRoomLights,_MaxRoomLights
 0x00536f08,4,D3DLights,_D3DLights
 0x00536f0c,4,D3DDynamics,_D3DDynamics

@@ -51,3 +51,16 @@ void FixedCamera(void)
             camera.timer = -1;
     }
 }
+
+void LaraTorch(PHD_VECTOR *Soffset, PHD_VECTOR *Eoffset, sint16 yrot, sint32 brightness)
+{
+    bLaraTorch = 1;
+    LaraTorchStart.x = Soffset->x;
+    LaraTorchStart.y = Soffset->y;
+    LaraTorchStart.z = Soffset->z;
+    LaraTorchEnd.x = Eoffset->x;
+    LaraTorchEnd.y = Eoffset->y;
+    LaraTorchEnd.z = Eoffset->z;
+    LaraTorchIntensity = brightness;
+    LaraTorchYRot = yrot;
+}

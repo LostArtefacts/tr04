@@ -49,6 +49,10 @@ extern GAME_VECTOR ForcedFixedCamera;
 extern char UseForcedFixedCamera;
 extern sint32 BinocularRange;
 extern sint32 bLaraTorch;
+extern PHD_VECTOR LaraTorchStart;
+extern PHD_VECTOR LaraTorchEnd;
+extern sint32 LaraTorchIntensity;
+extern sint32 LaraTorchYRot;
 
 void MoveCamera(GAME_VECTOR *ideal, sint32 speed);
 void CalculateCamera(void);
