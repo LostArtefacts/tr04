@@ -2543,6 +2543,7 @@ address,size,name,symbol
 0x007fd2b0,1,gfLevelComplete,_gfLevelComplete
 0x007fd2b4,4,gfLensFlareColour,_gfLensFlareColour
 0x007fd2b8,4,gfStringWad,_gfStringWad
+0x007fd2c0,40,gfLevelNames,_gfLevelNames
 0x007fd2e8,,gfLegend,_gfLegend
 0x007fd2e9,1,gfUVRotate,_gfUVRotate
 0x007fd2ec,4,gfFilenameOffset,_gfFilenameOffset

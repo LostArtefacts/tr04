@@ -421,6 +421,7 @@ extern char gfLayer1Vel;
 extern char gfLayer2Vel;
 extern char gfGameMode;
 extern uint8 gfCurrentLevel;
+extern uint8 gfLevelNames[40];
 extern uint8 gfRequiredStartPos;
 extern CVECTOR gfFog;
 extern sint32 gfMirrorZPlane;

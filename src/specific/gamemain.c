@@ -4,6 +4,7 @@
 #include "gamemain.h"
 #include "3dmath.h"
 #include "../savegame.h"
+#include "../gameflow.h"
 
 void init_water_table(void)
 {
@@ -66,6 +67,39 @@ uint16 GetRandom(WATERTAB *w, sint32 n)
         if (i == n)
             return random;
     } while (1);
+    return 0;
+}
+
+sint32 S_SaveGame(sint32 slot_num)
+{
+    HANDLE file;
+    DWORD bytes;
+    sint32 t, days, hours, minutes, seconds;
+    char buffer[80], counter[16];
+
+    memset(buffer, 0, sizeof(buffer));
+    wsprintf(buffer, "savegame.%d", slot_num);
+    file = CreateFile(buffer, GENERIC_WRITE, 0, 0, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, 0);
+    if (file != INVALID_HANDLE_VALUE) {
+        memset(buffer, 0, sizeof(buffer));
+        wsprintf(buffer, "%s", SCRIPT_TEXT(gfLevelNames[gfCurrentLevel]));
+        WriteFile(file, buffer, 75, &bytes, 0);
+        WriteFile(file, &SaveCounter, sizeof(sint32), &bytes, 0);
+        t = savegame.Game.Timer / 30;
+        days = t / 86400;
+        hours = t % 86400 / 3600;
+        minutes = t / 60 % 60;
+        seconds = t % 60;
+        WriteFile(file, &days, 2, &bytes, 0);
+        WriteFile(file, &hours, 2, &bytes, 0);
+        WriteFile(file, &minutes, 2, &bytes, 0);
+        WriteFile(file, &seconds, 2, &bytes, 0);
+        WriteFile(file, &savegame, sizeof(SAVEGAME_INFO), &bytes, 0);
+        CloseHandle(file);
+        wsprintf(counter, "%d", SaveCounter);
+        SaveCounter++;
+        return 1;
+    }
     return 0;
 }
 
