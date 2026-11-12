@@ -11,6 +11,25 @@
 #include "newinv.h"
 #include "camera.h"
 #include "draw.h"
+#include "control.h"
+#include "deltapak.h"
+#include "health.h"
+#include "items.h"
+#include "lara.h"
+#include "lot.h"
+#include "sound.h"
+#include "spotcam.h"
+#include "tomb4fx.h"
+#include "specific/audio.h"
+#include "specific/dxshell.h"
+#include "specific/dxsound.h"
+#include "specific/function_table.h"
+#include "specific/gamemain.h"
+#include "specific/input.h"
+#include "specific/loadsave.h"
+#include "specific/polyinsert.h"
+#include "specific/specificfx.h"
+#include "specific/winmain.h"
 
 void LoadGameflow(void)
 {
@@ -280,6 +299,232 @@ void DoGameflow(void)
             break;
         }
     }
+}
+
+static __inline sint32 TitleOptions(void)
+{
+    __int64 i, flag;
+    sint32 ret, ret2, ii, n, n2, load, num, y;
+
+    ret = 0;
+    if (load_or_new) {
+        ret2 = load_or_new;
+        if (DoFade == 2) {
+            gfLevelComplete = (uint8)gfLevelComplete_bak;
+            gfLevelComplete_bak = 0;
+            load_or_new = 0;
+            return ret2;
+        }
+        input = 0;
+        dbinput = 0;
+    }
+    if (bDoCredits) {
+        if (DoCredits())
+            return 0;
+        bDoCredits = 0;
+    }
+    if (!always0) {
+        switch (menu_to_display) {
+        case 1:
+            y = font_height + phd_winymin;
+            PrintString(phd_centerx, y, 6, SCRIPT_TEXT(TXT_Select_Level), FF_CENTER);
+            y += font_height;
+            if (Gameflow->nLevels < 10) {
+                n2 = 1;
+                num = Gameflow->nLevels - 1;
+            } else {
+                i = selected_option;
+                n = 0;
+                num = 10;
+                while (i) {
+                    i >>= 1;
+                    n++;
+                }
+                n2 = n - 9;
+                if (n2 < 1)
+                    n2 = 1;
+                else if (n2 > 1) {
+                    PrintString(32, font_height + y, 6, "\x18", 0);
+                    PrintString(phd_winxmax - 48, font_height + y, 6, "\x18", 0);
+                }
+                if (n != Gameflow->nLevels - 1) {
+                    PrintString(32, y + 10 * font_height, 6, "\x1a", 0);
+                    PrintString(phd_winxmax - 48, y + 10 * font_height, 6, "\x1a", 0);
+                }
+            }
+            for (ii = n2; ii < num + n2; ii++) {
+                n = ii - 1;
+                y += font_height;
+                PrintString(phd_centerx, y, (selected_option & ((__int64)1 << n)) ? 1 : 2, SCRIPT_TEXT(gfLevelNames[ii]), FF_CENTER);
+            }
+            flag = (__int64)1 << (Gameflow->nLevels - 2);
+            break;
+        case 2:
+            if (Gameflow->LoadSaveEnabled) {
+                load = DoLoadSave(IN_LOAD);
+                if (load >= 0) {
+                    S_LoadGame(load);
+                    ret = 2;
+                }
+                break;
+            }
+            SoundEffect(SFX_LARA_NO, 0, SFX_ALWAYS);
+            menu_to_display = 0;
+        case 0:
+            y = phd_winymax - 4 * font_height;
+            ShowTitle();
+            Chris_Menu = 0;
+            PrintString(phd_centerx, y, (selected_option & 1) ? 1 : 2, SCRIPT_TEXT(TXT_New_Game), FF_CENTER);
+            PrintString(phd_centerx, y + font_height, (selected_option & 2) ? 1 : 2, SCRIPT_TEXT(TXT_Load_Game), FF_CENTER);
+            PrintString(phd_centerx, y + 2 * font_height, (selected_option & 4) ? 1 : 2, SCRIPT_TEXT(TXT_Options), FF_CENTER);
+            PrintString(phd_centerx, y + 3 * font_height, (selected_option & 8) ? 1 : 2, SCRIPT_TEXT(TXT_Exit), FF_CENTER);
+            flag = 8;
+            break;
+        case 3:
+            DoOptions();
+            break;
+        }
+        if (menu_to_display < 2) {
+            if (dbinput & IN_FORWARD) {
+                if (selected_option > 1)
+                    selected_option >>= 1;
+                SoundEffect(SFX_MENU_CHOOSE, 0, SFX_ALWAYS);
+            }
+            if (dbinput & IN_BACK) {
+                if (selected_option < flag)
+                    selected_option <<= 1;
+                SoundEffect(SFX_MENU_CHOOSE, 0, SFX_ALWAYS);
+            }
+        }
+        if (dbinput & IN_DESELECT && menu_to_display > 0) {
+            menu_to_display = 0;
+            selected_option = selected_option_bak;
+            S_SoundStopAllSamples();
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+        }
+        if (dbinput & IN_SELECT && !keymap[DIK_LALT] && menu_to_display < 2) {
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            switch (menu_to_display) {
+            case 1:
+                gfLevelComplete = 0;
+                i = selected_option;
+                while (i) {
+                    i >>= 1;
+                    gfLevelComplete++;
+                }
+                ret = 3;
+                break;
+            case 0:
+                switch (selected_option) {
+                case 1:
+                    if (Gameflow->PlayAnyLevel) {
+                        selected_option_bak = selected_option;
+                        menu_to_display = 1;
+                    } else {
+                        gfLevelComplete = 1;
+                        ret = 3;
+                    }
+                    break;
+                case 2:
+                    GetSaveLoadFiles();
+                    selected_option_bak = selected_option;
+                    menu_to_display = 2;
+                    break;
+                case 3:
+                case 5:
+                case 6:
+                case 7:
+                    break;
+                case 4:
+                    selected_option_bak = selected_option;
+                    menu_to_display = 3;
+                    break;
+                case 8:
+                    ret = 4;
+                    break;
+                }
+                break;
+            }
+        }
+    }
+    if (thread_ended)
+        return 4;
+    if (ret) {
+        load_or_new = ret;
+        gfLevelComplete_bak = gfLevelComplete;
+        gfLevelComplete = 0;
+        ret = 0;
+        SetFade(0, 255);
+    }
+    return ret;
+}
+
+void DoTitle(uint8 Name, uint8 Audio)
+{
+    Unk7fe114 = 0;
+    SetFade(255, 0);
+    num_fmvs = 0;
+    fmv_to_play[1] = 0;
+    fmv_to_play[0] = 0;
+    sgInitialiseHub(1);
+    memset(&savegame.Level, 0, sizeof(STATS));
+    savegame.HaveBikeBooster = 0;
+    memset(&savegame.Game, 0, sizeof(STATS));
+    S_LoadLevelFile(Name);
+    GLOBAL_lastinvitem = -1;
+    InitSpotCamSequences();
+    title_controls_locked_out = 0;
+    InitialiseFXArray(1);
+    InitialiseLOTarray(1);
+    SetFogColor(gfFog.r, gfFog.g, gfFog.b);
+    ClearFXFogBulbs();
+    InitialisePickUpDisplay();
+    nullsub_1();
+    SOUND_Stop();
+    S_CDPlay(Audio, 1);
+    IsAtmospherePlaying = 0;
+    nullsub_1(1);
+    InitialiseCamera();
+    if (!bDoCredits) {
+        InitialiseSpotCam(1);
+        ScreenFadedOut = 0;
+        ScreenFade = 0;
+        dScreenFade = 0;
+        ScreenFadeBack = 0;
+        ScreenFadeSpeed = 8;
+        ScreenFading = 0;
+    } else {
+        cutseq_num = 28;
+        SetFadeClip(32, 1);
+        ScreenFadedOut = 1;
+        ScreenFade = 255;
+        dScreenFade = 255;
+        S_CDPlay(98, 1);
+    }
+    bUseSpotCam = 1;
+    lara_item->mesh_bits = 0;
+    gfGameMode = 1;
+    gfLevelComplete = 0;
+    nFrames = 2;
+    gfStatus = ControlPhase(2, 0);
+    while (!gfStatus) {
+        S_InitialisePolyList();
+        gfStatus = TitleOptions();
+        if (gfStatus)
+            break;
+        handle_cutseq_triggering(Name);
+        nFrames = DrawPhaseGame();
+        gfStatus = ControlPhase(nFrames, 0);
+    }
+    S_SoundStopAllSamples();
+    S_CDStop();
+    bUseSpotCam = 0;
+    bDisableLaraControl = 0;
+    if (gfLevelComplete == 1 && gfStatus != 2)
+        PlayFmvNow(12);
+    if (gfStatus != 4)
+        RenderLoadPic(0);
+    input = 0;
 }
 
 sint32 DoCredits(void)

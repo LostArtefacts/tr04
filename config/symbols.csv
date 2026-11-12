@@ -810,7 +810,7 @@ address,size,name,symbol
 0x00451240,711,RenderIt,_RenderIt
 0x00451510,604,LoadGameflow,_LoadGameflow
 0x00451770,1716,DoGameflow,_DoGameflow
-0x00451e30,2096,DoTitle,_DoTitle
+0x00451e30,2272,DoTitle,_DoTitle
 0x00452710,1133,DoLevel,_DoLevel
 0x00452b80,230,DoCredits,_DoCredits
 0x00452c70,45,FlashIt,_FlashIt
@@ -2083,6 +2083,7 @@ address,size,name,symbol
 0x004af454,4,nFrames,_nFrames
 0x004af458,36,CreditGroups,_CreditGroups
 0x004af47c,1562,CreditsTable,_CreditsTable
+0x004afab0,8,selected_option,_selected_option
 0x004afab8,4,old_hitpoints,_old_hitpoints
 0x004afacc,24,ElementPuzzleBounds,_ElementPuzzleBounds
 0x004afae8,12,PolePos,_PolePos
@@ -2329,6 +2330,9 @@ address,size,name,symbol
 0x004bf66b,1,gfNumMips,_gfNumMips
 0x004bf66c,1,Chris_Menu,_Chris_Menu
 0x004bf670,4,CreditsInit,_CreditsInit
+0x004bf674,4,menu_to_display,_menu_to_display
+0x004bf678,4,always0,_always0
+0x004bf67c,4,load_or_new,_load_or_new
 0x004bf680,4,health_bar_timer,_health_bar_timer
 0x004bf684,4,flash_state,_flash_state
 0x004bf688,4,flash_count,_flash_count
@@ -2708,6 +2712,8 @@ address,size,name,symbol
 0x007fd212,2,CurrentPickup,_CurrentPickup
 0x007fd214,1,PoisonFlag,_PoisonFlag
 0x007fd220,32,pickups,_pickups
+0x007fd240,4,gfLevelComplete_bak,_gfLevelComplete_bak
+0x007fd248,8,selected_option_bak,_selected_option_bak
 0x007fd250,1,gfMirrorRoom,_gfMirrorRoom
 0x007fd251,1,gfLayer2Vel,_gfLayer2Vel
 0x007fd252,1,gfLayer1Vel,_gfLayer1Vel
@@ -2751,6 +2757,7 @@ address,size,name,symbol
 0x007fdf6c,4,current_room,_current_room
 0x007fdf80,400,draw_rooms,_draw_rooms
 0x007fe110,4,number_dynamics,_number_dynamics
+0x007fe114,1,Unk7fe114,_Unk7fe114
 0x007fe118,4,outside_left,_outside_left
 0x007fe11c,4,targetMeshP,_targetMeshP
 0x007fe120,4,IM_rate,_IM_rate

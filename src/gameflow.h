@@ -495,6 +495,14 @@ extern sint16 CreditGroups[18];
 extern char CreditsTable[71][22];
 extern uint32 CreditsStartPos;
 extern sint32 CreditsInit;
+extern sint32 menu_to_display;
+extern sint32 always0;
+extern sint32 load_or_new;
+extern __int64 selected_option;
+extern sint32 gfLevelComplete_bak;
+extern __int64 selected_option_bak;
+extern uint8 Unk7fe114;
+extern sint32 nFrames;
 
 void DoGameflow(void);
 void DoLevel(uint8 Name, uint8 Audio);

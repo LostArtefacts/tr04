@@ -43,6 +43,7 @@ sint16 *GetBoundsAccurate(ITEM_INFO *item);
 void DrawRooms(sint16 CurrentRoom);
 void SetRoomBounds(sint16 *door, sint32 rn, ROOM_INFO *actualRoom);
 sint32 DrawPhaseGame(void);
+sint32 ControlPhase(sint32 nframes, sint32 demo_mode);
 void GetRoomBounds(void);
 void S_InsertRoom(sint16 room_number);
 void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame);
