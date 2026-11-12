@@ -33,6 +33,49 @@ void PrelightVertsMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
     }
 }
 
+void PrelightVertsNonMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
+{
+    sint32 *prelight;
+    sint32 p, c, cR, cG, cB, i;
+
+    if (bWaterEffect && !(r->flags & ROOM_UNDERWATER))
+        prelight = r->prelightwater;
+    else
+        prelight = r->prelight;
+    for (i = 0; i < r->nWaterVerts; i++) {
+        p = r->prelight[i];
+        c = v->color;
+        cR = (c & 0xFF0000) + (p & 0xFF0000);
+        cG = (c & 0xFF00) + (p & 0xFF00);
+        cB = (c & 0xFF) + (p & 0xFF);
+        if (cR > 0xFF0000)
+            cR = 0xFF0000;
+        if (cG > 0xFF00)
+            cG = 0xFF00;
+        if (cB > 0xFF)
+            cB = 0xFF;
+        v->color = (v->color & 0xFF000000) | cB | cG | cR;
+        v->specular &= 0xFF000000;
+        v++;
+    }
+    for (i = r->nWaterVerts; i < r->nVerts; i++) {
+        p = prelight[i];
+        c = v->color;
+        cR = (c & 0xFF0000) + (p & 0xFF0000);
+        cG = (c & 0xFF00) + (p & 0xFF00);
+        cB = (c & 0xFF) + (p & 0xFF);
+        if (cR > 0xFF0000)
+            cR = 0xFF0000;
+        if (cG > 0xFF00)
+            cG = 0xFF00;
+        if (cB > 0xFF)
+            cB = 0xFF;
+        v->color = (c & 0xFF000000) | cB | cG | cR;
+        CalcColorSplit(v->color, &v->color);
+        v++;
+    }
+}
+
 void InitBuckets(void)
 {
     sint32 n;

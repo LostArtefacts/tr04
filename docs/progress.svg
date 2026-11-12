@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="219.30" height="12" x="0" y="0" class="named"><title>992 · 64.12%</title></rect>
-<rect width="0.44" height="12" x="219.30" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="219.75" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="114.96" height="12" x="227.04" y="0" class="todo"><title>520 · 33.61%</title></rect>
+<rect width="219.53" height="12" x="0" y="0" class="named"><title>993 · 64.19%</title></rect>
+<rect width="0.44" height="12" x="219.53" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="219.97" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="114.74" height="12" x="227.26" y="0" class="todo"><title>519 · 33.55%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">64.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">992</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">520</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">993</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">519</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="95.26" height="12" x="0" y="0" class="named"><title>173 KB · 27.85%</title></rect>
-<rect width="0.12" height="12" x="95.26" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="95.38" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="237.20" height="12" x="104.80" y="0" class="todo"><title>430 KB · 69.36%</title></rect>
+<rect width="95.47" height="12" x="0" y="0" class="named"><title>173 KB · 27.92%</title></rect>
+<rect width="0.12" height="12" x="95.47" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="95.59" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="236.98" height="12" x="105.02" y="0" class="todo"><title>430 KB · 69.29%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">27.9%</text>
+<text text-anchor="end" x="522" y="24.50">28.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">173 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">430 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1222,7 +1222,7 @@
 <rect width="12" height="12" x="45" y="345" class="todo"><title>0x00471f40 ProjectWaterVerts (588 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="345" class="todo"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="345" class="named"><title>0x00472400 PrelightVertsMMX (186 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="345" class="todo"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="345" class="named"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="345" class="todo"><title>0x00472650 InsertRoom (593 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="345" class="named"><title>0x004728b0 InitBuckets (30 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="345" class="named"><title>0x004728d0 FindBucket (268 bytes)</title></rect>
@@ -2069,7 +2069,7 @@
 <rect width="12.47" height="12.33" x="413.40" y="252.97" class="todo"><title>0x0047a6f0 GetSaveLoadFiles (398 bytes)</title></rect>
 <rect width="12.47" height="12.30" x="413.40" y="268.30" class="todo"><title>0x00409b80 TestBlockPush (397 bytes)</title></rect>
 <rect width="12.47" height="12.30" x="413.40" y="283.60" class="named"><title>0x00422c50 LaraDeflectEdgeJump (397 bytes)</title></rect>
-<rect width="12.47" height="12.27" x="413.40" y="298.91" class="todo"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
+<rect width="12.47" height="12.27" x="413.40" y="298.91" class="named"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
 <rect width="12.47" height="12.18" x="413.40" y="314.18" class="named"><title>0x00434fa0 TriggerExplosionSmoke (393 bytes)</title></rect>
 <rect width="12.47" height="12.18" x="413.40" y="329.36" class="todo"><title>0x0043bd80 DrawThreeDeeObject2D (393 bytes)</title></rect>
 <rect width="12.47" height="12.09" x="413.40" y="344.53" class="todo"><title>0x0042ae50 draw_shotgun (390 bytes)</title></rect>
