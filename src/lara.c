@@ -1071,6 +1071,32 @@ void lara_as_roper(ITEM_INFO *item, COLL_INFO *coll)
         FallFromRope(item);
 }
 
+void JumpOffRope(ITEM_INFO *item)
+{
+    if (lara.RopePtr != -1) {
+        if (item->pos.x_rot < 0) {
+            item->speed = 0;
+            item->fallspeed = -20;
+        } else {
+            item->fallspeed = -112;
+            item->speed = item->pos.x_rot / 128;
+        }
+        item->pos.x_rot = 0;
+        item->gravity_status = 1;
+        lara.gun_status = LG_NO_ARMS;
+        if (item->frame_number - anims[ANIM_SWINGFWD].frame_base <= 21)
+            item->anim_number = 386;
+        else if (item->frame_number - anims[ANIM_SWINGFWD].frame_base <= 42)
+            item->anim_number = 407;
+        else
+            item->anim_number = 406;
+        item->frame_number = anims[item->anim_number].frame_base;
+        item->current_anim_state = AS_REACH;
+        item->goal_anim_state = AS_REACH;
+        lara.RopePtr = -1;
+    }
+}
+
 void lara_col_stop(ITEM_INFO *item, COLL_INFO *coll)
 {
     item->gravity_status = item->fallspeed = 0;

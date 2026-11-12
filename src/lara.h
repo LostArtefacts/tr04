@@ -328,6 +328,7 @@ void SnapLaraToEdgeOfBlock(ITEM_INFO *item, COLL_INFO *coll, sint16 angle);
 void lara_col_walk(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_upjump(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_pulley(ITEM_INFO *item, COLL_INFO *coll);
+void JumpOffRope(ITEM_INFO *item);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

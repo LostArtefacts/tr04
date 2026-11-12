@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="150.33" height="12" x="0" y="0" class="named"><title>680 · 43.96%</title></rect>
-<rect width="0.44" height="12" x="150.33" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="150.77" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="186.59" height="12" x="155.41" y="0" class="todo"><title>844 · 54.56%</title></rect>
+<rect width="150.55" height="12" x="0" y="0" class="named"><title>681 · 44.02%</title></rect>
+<rect width="0.44" height="12" x="150.55" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="150.99" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="186.36" height="12" x="155.64" y="0" class="todo"><title>843 · 54.49%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">44.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">680</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">844</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">681</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">843</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="61.46" height="12" x="0" y="0" class="named"><title>111 KB · 17.97%</title></rect>
-<rect width="0.12" height="12" x="61.46" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="61.58" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="273.18" height="12" x="68.82" y="0" class="todo"><title>495 KB · 79.88%</title></rect>
+<rect width="61.56" height="12" x="0" y="0" class="named"><title>112 KB · 18%</title></rect>
+<rect width="0.12" height="12" x="61.56" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="61.68" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="273.07" height="12" x="68.93" y="0" class="todo"><title>495 KB · 79.85%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">18.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">111 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">495 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">112 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">495 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -337,7 +337,7 @@
 <rect width="12" height="12" x="270" y="75" class="named"><title>0x00424620 lara_as_ropel (46 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="75" class="named"><title>0x00424650 lara_as_roper (46 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="75" class="todo"><title>0x00424680 lara_col_ropefwd (402 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="75" class="todo"><title>0x00424820 JumpOffRope (187 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="75" class="named"><title>0x00424820 JumpOffRope (187 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="75" class="todo"><title>0x004248e0 lara_as_climbrope (107 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="75" class="todo"><title>0x00424950 lara_as_climbroped (265 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="75" class="todo"><title>0x00424a60 lara_as_stop (1071 bytes)</title></rect>
@@ -2381,7 +2381,7 @@
 <rect width="8.64" height="8.45" x="506.77" y="442.14" class="todo"><title>0x004770c0 GameClose (189 bytes)</title></rect>
 <rect width="8.64" height="8.41" x="506.77" y="453.59" class="named"><title>0x00452de0 DrawHealthBar (188 bytes)</title></rect>
 <rect width="8.74" height="8.26" x="518.42" y="222.53" class="named"><title>0x00421ff0 TestHangSwingIn (187 bytes)</title></rect>
-<rect width="8.74" height="8.26" x="530.16" y="222.53" class="todo"><title>0x00424820 JumpOffRope (187 bytes)</title></rect>
+<rect width="8.74" height="8.26" x="530.16" y="222.53" class="named"><title>0x00424820 JumpOffRope (187 bytes)</title></rect>
 <rect width="8.74" height="8.26" x="541.91" y="222.53" class="todo"><title>0x00475970 LoadCameras (187 bytes)</title></rect>
 <rect width="8.70" height="8.26" x="553.65" y="222.53" class="named"><title>0x0046b980 ninth_control (186 bytes)</title></rect>
 <rect width="8.70" height="8.26" x="565.35" y="222.53" class="named"><title>0x004705f0 InitD3DDevice (186 bytes)</title></rect>
