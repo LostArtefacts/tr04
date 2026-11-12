@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="247" height="12" x="0" y="0" class="named"><title>1118 · 72.22%</title></rect>
 <rect width="0.44" height="12" x="247" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="16.35" height="12" x="247.44" y="0" class="nonmatching"><title>74 · 4.78%</title></rect>
-<rect width="78.21" height="12" x="263.79" y="0" class="todo"><title>354 · 22.87%</title></rect>
+<rect width="16.57" height="12" x="247.44" y="0" class="nonmatching"><title>75 · 4.84%</title></rect>
+<rect width="77.99" height="12" x="264.01" y="0" class="todo"><title>353 · 22.80%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">74</tspan> · <tspan class="todo">354</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">75</tspan> · <tspan class="todo">353</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="128.85" height="12" x="0" y="0" class="named"><title>235 KB · 37.67%</title></rect>
 <rect width="0.12" height="12" x="128.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="29.61" height="12" x="128.97" y="0" class="nonmatching"><title>54 KB · 8.66%</title></rect>
-<rect width="183.42" height="12" x="158.58" y="0" class="todo"><title>334 KB · 53.63%</title></rect>
+<rect width="29.87" height="12" x="128.97" y="0" class="nonmatching"><title>54 KB · 8.73%</title></rect>
+<rect width="183.17" height="12" x="158.83" y="0" class="todo"><title>333 KB · 53.56%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">37.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">54 KB</tspan> · <tspan class="todo">334 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">54 KB</tspan> · <tspan class="todo">333 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -341,7 +341,7 @@
 <rect width="12" height="12" x="330" y="75" class="named"><title>0x004248e0 lara_as_climbrope (107 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="75" class="named"><title>0x00424950 lara_as_climbroped (265 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="75" class="nonmatching"><title>0x00424a60 lara_as_stop (1071 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="75" class="todo"><title>0x00424e90 UseInventoryItems (467 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="75" class="nonmatching"><title>0x00424e90 UseInventoryItems (467 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="75" class="named"><title>0x00425070 lara_col_stop (157 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="75" class="named"><title>0x00425110 lara_as_upjump (19 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="75" class="named"><title>0x00425130 lara_col_upjump (847 bytes)</title></rect>
@@ -2006,7 +2006,7 @@
 <rect width="13.81" height="13.13" x="534.15" y="96.63" class="nonmatching"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
 <rect width="13.75" height="13.13" x="550.96" y="96.63" class="named"><title>0x00434dc0 TriggerExplosionSmokeEnd (469 bytes)</title></rect>
 <rect width="13.75" height="13.13" x="567.71" y="96.63" class="named"><title>0x00442a60 FindAITargetObject (469 bytes)</title></rect>
-<rect width="13.70" height="13.13" x="584.47" y="96.63" class="todo"><title>0x00424e90 UseInventoryItems (467 bytes)</title></rect>
+<rect width="13.70" height="13.13" x="584.47" y="96.63" class="nonmatching"><title>0x00424e90 UseInventoryItems (467 bytes)</title></rect>
 <rect width="13.64" height="13.13" x="601.17" y="96.63" class="named"><title>0x0040daf0 SasFireGrenade (465 bytes)</title></rect>
 <rect width="13.58" height="13.13" x="617.80" y="96.63" class="named"><title>0x00404a00 TriggerHammerSmoke (463 bytes)</title></rect>
 <rect width="13.58" height="13.13" x="634.38" y="96.63" class="named"><title>0x00464680 BikeCollision (463 bytes)</title></rect>

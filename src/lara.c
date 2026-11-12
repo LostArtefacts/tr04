@@ -18,6 +18,7 @@
 #include "collide.h"
 #include "larafire.h"
 #include "debris.h"
+#include "newinv.h"
 
 #define DAMAGE_START 140
 #define DAMAGE_LENGTH 14
@@ -1913,6 +1914,70 @@ void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll)
             item->goal_anim_state = AS_FASTBACK;
         }
     }
+}
+
+sint32 UseInventoryItems(ITEM_INFO *item)
+{
+    sint32 in_use, goin;
+    sint32 flags;
+
+    in_use = GLOBAL_inventoryitemchosen;
+    goin = 0;
+    if (item->anim_number == ANIM_BREATH && lara.gun_status == LG_NO_ARMS && in_use != NO_ITEM) {
+        if (in_use >= WATERSKIN1_EMPTY && in_use <= WATERSKIN2_5) {
+            item->item_flags[2] = LARA_WATER_MESH;
+            if (in_use != WATERSKIN1_3 && in_use != WATERSKIN2_5 && (LaraNodeUnderwater[3] || LaraNodeUnderwater[6])) {
+                if (in_use < WATERSKIN1_3)
+                    lara.small_water_skin = 4;
+                else
+                    lara.big_water_skin = 6;
+                item->anim_number = ANIM_FILLWATERSKIN;
+                goin = 1;
+            } else if (in_use != WATERSKIN1_EMPTY && in_use != WATERSKIN2_EMPTY) {
+                if (in_use > WATERSKIN1_3) {
+                    item->item_flags[3] = lara.big_water_skin - 1;
+                    lara.big_water_skin = 1;
+                } else {
+                    item->item_flags[3] = lara.small_water_skin - 1;
+                    lara.small_water_skin = 1;
+                }
+                item->anim_number = ANIM_POURWATERSKIN;
+                goin = 1;
+            }
+        } else if (in_use >= PICKUP_ITEM1 && in_use <= PICKUP_ITEM4) {
+            flags = inventry_objects_list[in_use - 138].flags;
+            if (flags & 0x8000) {
+                item->item_flags[2] = LARA_DIRT_MESH;
+                item->anim_number = ANIM_POURWATERSKIN;
+                goin = 1;
+            } else if (flags & 0x4000) {
+                item->item_flags[2] = LARA_PETROL_MESH;
+                item->anim_number = ANIM_POURWATERSKIN;
+                goin = 1;
+            }
+        } else if (in_use == PUZZLE_ITEM8) {
+            if (inventry_objects_list[INV_PUZZLE8_ITEM].flags & 0x2000) {
+                if (item->room_number == 25 || item->room_number == 26) {
+                    remove_inventory_item(PUZZLE_ITEM8);
+                    item->anim_number = ANIM_MINEDETECT;
+                    goin = 1;
+                }
+            }
+        } else if (in_use == CLOCKWORK_BEETLE) {
+            item->anim_number = ANIM_USEBEETLE;
+            TriggerClockworkBeetle(1);
+            goin = 1;
+        }
+        if (goin) {
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = AS_CONTROLLED;
+            item->goal_anim_state = AS_CONTROLLED;
+            lara.gun_status = LG_HANDS_BUSY;
+            GLOBAL_inventoryitemchosen = NO_ITEM;
+            return 1;
+        }
+    }
+    return 0;
 }
 
 void lara_col_stop(ITEM_INFO *item, COLL_INFO *coll)
