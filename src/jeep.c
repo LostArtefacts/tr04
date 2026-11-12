@@ -4,6 +4,8 @@
 #include "lara1gun.h"
 #include "lara_states.h"
 #include "anim.h"
+#include "objnums.h"
+#include "box.h"
 #include "sound.h"
 #include "effect2.h"
 #include "tomb4fx.h"
@@ -190,4 +192,22 @@ sint32 DoShift(ITEM_INFO *item, PHD_VECTOR *pos, PHD_VECTOR *old)
         }
     }
     return 0;
+}
+
+void JeepStart(ITEM_INFO *item, ITEM_INFO *l)
+{
+    JEEPINFO *jeep;
+
+    jeep = (JEEPINFO *)item->data;
+    lara.gun_status = LG_HANDS_BUSY;
+    lara.hit_direction = -1;
+    l->current_anim_state = l->goal_anim_state = 0;
+    l->anim_number = objects[VEHICLE_EXTRA].anim_index + 14;
+    l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 14].frame_base;
+    item->anim_number = objects[JEEP].anim_index - objects[VEHICLE_EXTRA].anim_index + l->anim_number;
+    item->frame_number = anims[item->anim_number].frame_base - anims[l->anim_number].frame_base + l->frame_number;
+    item->flags |= IFL_TRIGGERED;
+    item->hit_points = 1;
+    jeep->unused1 = 0;
+    jeep->gear = 0;
 }

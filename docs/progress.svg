@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="160.94" height="12" x="0" y="0" class="named"><title>728 · 47.06%</title></rect>
-<rect width="0.44" height="12" x="160.94" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.86" height="12" x="161.38" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
-<rect width="175.75" height="12" x="166.25" y="0" class="todo"><title>795 · 51.39%</title></rect>
+<rect width="161.16" height="12" x="0" y="0" class="named"><title>729 · 47.12%</title></rect>
+<rect width="0.44" height="12" x="161.16" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.86" height="12" x="161.60" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
+<rect width="175.53" height="12" x="166.47" y="0" class="todo"><title>794 · 51.33%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">47.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">728</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">795</tspan></text>
+<text text-anchor="end" x="522" y="7.50">47.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">729</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">794</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="69.04" height="12" x="0" y="0" class="named"><title>125 KB · 20.19%</title></rect>
-<rect width="0.12" height="12" x="69.04" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="69.16" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
-<rect width="265.47" height="12" x="76.53" y="0" class="todo"><title>482 KB · 77.62%</title></rect>
+<rect width="69.13" height="12" x="0" y="0" class="named"><title>125 KB · 20.21%</title></rect>
+<rect width="0.12" height="12" x="69.13" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="69.26" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
+<rect width="265.38" height="12" x="76.62" y="0" class="todo"><title>481 KB · 77.60%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">20.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">125 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">482 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">20.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">125 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">481 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1093,7 +1093,7 @@
 <rect width="12" height="12" x="360" y="300" class="todo"><title>0x00469b90 InitialiseEnemyJeep (130 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="300" class="todo"><title>0x00469c20 EnemyJeepControl (2188 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="300" class="todo"><title>0x0046a4d0 JeepFireGrenade (333 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="300" class="todo"><title>0x0046a620 JeepStart (167 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="300" class="named"><title>0x0046a620 JeepStart (167 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="300" class="todo"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="300" class="todo"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="300" class="todo"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
@@ -2431,7 +2431,7 @@
 <rect width="8.08" height="8.04" x="518.74" y="322.75" class="named"><title>0x00455df0 SmashObjectControl (168 bytes)</title></rect>
 <rect width="8.08" height="8.04" x="518.74" y="333.79" class="todo"><title>0x00457560 ControlBlinker (168 bytes)</title></rect>
 <rect width="8.08" height="7.99" x="518.74" y="344.83" class="named"><title>0x00452f80 DrawPickups (167 bytes)</title></rect>
-<rect width="8.08" height="7.99" x="518.74" y="355.82" class="todo"><title>0x0046a620 JeepStart (167 bytes)</title></rect>
+<rect width="8.08" height="7.99" x="518.74" y="355.82" class="named"><title>0x0046a620 JeepStart (167 bytes)</title></rect>
 <rect width="8.08" height="7.99" x="518.74" y="366.81" class="todo"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
 <rect width="8.08" height="7.99" x="518.74" y="377.80" class="todo"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
 <rect width="8.08" height="7.99" x="518.74" y="388.79" class="named"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
