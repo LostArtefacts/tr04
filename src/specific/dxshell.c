@@ -1,3 +1,5 @@
+#include <stdlib.h>
+#include <string.h>
 #include <windows.h>
 #include <ddraw.h>
 
@@ -10,6 +12,18 @@ sint32 DXAttempt(HRESULT r)
         return DD_OK;
     Log(1, "ERROR : %s", DXGetErrorString(r));
     return DD_FALSE;
+}
+
+void *AddStruct(void *p, sint32 num, sint32 size)
+{
+    void *ptr;
+
+    if (num)
+        ptr = realloc(p, size * (num + 1));
+    else
+        ptr = malloc(size);
+    memset((char *)ptr + size * num, 0, size);
+    return ptr;
 }
 
 void DXBitMask2ShiftCnt(uint32 mask, uint8 *shift, uint8 *count)

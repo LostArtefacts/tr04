@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="183.71" height="12" x="0" y="0" class="named"><title>831 · 53.72%</title></rect>
-<rect width="0.44" height="12" x="183.71" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="184.15" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="151.44" height="12" x="190.56" y="0" class="todo"><title>685 · 44.28%</title></rect>
+<rect width="183.93" height="12" x="0" y="0" class="named"><title>832 · 53.78%</title></rect>
+<rect width="0.44" height="12" x="183.93" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="184.37" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="151.21" height="12" x="190.79" y="0" class="todo"><title>684 · 44.21%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">53.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">831</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">685</tspan></text>
+<text text-anchor="end" x="522" y="7.50">53.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">832</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">684</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.45" height="12" x="0" y="0" class="named"><title>144 KB · 23.23%</title></rect>
-<rect width="0.12" height="12" x="79.45" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="79.57" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="253.77" height="12" x="88.23" y="0" class="todo"><title>460 KB · 74.20%</title></rect>
+<rect width="79.50" height="12" x="0" y="0" class="named"><title>144 KB · 23.24%</title></rect>
+<rect width="0.12" height="12" x="79.50" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="79.62" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="253.73" height="12" x="88.27" y="0" class="todo"><title>460 KB · 74.19%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">144 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">460 KB</tspan></text>
@@ -1506,7 +1506,7 @@
 <rect width="12" height="12" x="555" y="420" class="todo"><title>0x00491c60 DXGetInfo (94 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="420" class="todo"><title>0x00491cc0 DXEnumDirectSound (160 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="420" class="todo"><title>0x00491d60 DXFreeInfo (232 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="420" class="todo"><title>0x00491e50 AddStruct (77 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="420" class="named"><title>0x00491e50 AddStruct (77 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="420" class="todo"><title>0x00491ea0 DXDDCreate (185 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="420" class="todo"><title>0x00491f60 DXD3DCreate (86 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="420" class="todo"><title>0x00491fc0 DXEnumDirectDraw (633 bytes)</title></rect>
@@ -2761,7 +2761,7 @@
 <rect width="5.38" height="5.60" x="675.51" y="322.49" class="named"><title>0x0044dfc0 OpenThatDoor (78 bytes)</title></rect>
 <rect width="5.31" height="5.60" x="683.89" y="322.49" class="named"><title>0x0046d510 special3_control (77 bytes)</title></rect>
 <rect width="5.31" height="5.60" x="692.20" y="322.49" class="named"><title>0x0046d7b0 ACMSetVolume (77 bytes)</title></rect>
-<rect width="5.31" height="5.60" x="700.50" y="322.49" class="todo"><title>0x00491e50 AddStruct (77 bytes)</title></rect>
+<rect width="5.31" height="5.60" x="700.50" y="322.49" class="named"><title>0x00491e50 AddStruct (77 bytes)</title></rect>
 <rect width="5.24" height="5.60" x="708.81" y="322.49" class="named"><title>0x00413ca0 FallingBlockFloor (76 bytes)</title></rect>
 <rect width="5.24" height="5.60" x="717.05" y="322.49" class="named"><title>0x00416950 ControlPlough (76 bytes)</title></rect>
 <rect width="5.24" height="5.60" x="725.29" y="322.49" class="named"><title>0x0042ea70 WeaponObject (76 bytes)</title></rect>
