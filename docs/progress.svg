@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="238.32" height="12" x="0" y="0" class="named"><title>1078 · 69.68%</title></rect>
-<rect width="0.44" height="12" x="238.32" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="12.82" height="12" x="238.76" y="0" class="nonmatching"><title>58 · 3.75%</title></rect>
-<rect width="90.42" height="12" x="251.58" y="0" class="todo"><title>409 · 26.44%</title></rect>
+<rect width="238.54" height="12" x="0" y="0" class="named"><title>1079 · 69.75%</title></rect>
+<rect width="0.44" height="12" x="238.54" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="12.82" height="12" x="238.98" y="0" class="nonmatching"><title>58 · 3.75%</title></rect>
+<rect width="90.20" height="12" x="251.80" y="0" class="todo"><title>408 · 26.37%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">69.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1078</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">58</tspan> · <tspan class="todo">409</tspan></text>
+<text text-anchor="end" x="522" y="7.50">69.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1079</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">58</tspan> · <tspan class="todo">408</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="112.99" height="12" x="0" y="0" class="named"><title>205 KB · 33.04%</title></rect>
-<rect width="0.12" height="12" x="112.99" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="22.71" height="12" x="113.11" y="0" class="nonmatching"><title>41 KB · 6.64%</title></rect>
-<rect width="206.18" height="12" x="135.82" y="0" class="todo"><title>374 KB · 60.29%</title></rect>
+<rect width="113.37" height="12" x="0" y="0" class="named"><title>206 KB · 33.15%</title></rect>
+<rect width="0.12" height="12" x="113.37" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="22.71" height="12" x="113.49" y="0" class="nonmatching"><title>41 KB · 6.64%</title></rect>
+<rect width="205.80" height="12" x="136.20" y="0" class="todo"><title>374 KB · 60.18%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">33.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">205 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">41 KB</tspan> · <tspan class="todo">374 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">33.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">206 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">41 KB</tspan> · <tspan class="todo">374 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1410,7 +1410,7 @@
 <rect width="12" height="12" x="615" y="390" class="todo"><title>0x00487d00 DrawBinoculars (1074 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="390" class="todo"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="390" class="todo"><title>0x00488650 Func488650 (63 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="390" class="todo"><title>0x00488690 ClipLine (689 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="390" class="named"><title>0x00488690 ClipLine (689 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="390" class="todo"><title>0x00488950 DrawFlatSky (2568 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="390" class="named"><title>0x00489360 ClipCheckPoint (278 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="390" class="named"><title>0x00489480 OutputSky (184 bytes)</title></rect>
@@ -1862,7 +1862,7 @@
 <rect width="16.19" height="16.73" x="326.86" y="367.38" class="named"><title>0x004044b0 ControlDeathSlide (702 bytes)</title></rect>
 <rect width="16.19" height="16.71" x="326.86" y="387.11" class="todo"><title>0x004790f0 InitDynamicLighting (701 bytes)</title></rect>
 <rect width="16.19" height="16.42" x="326.86" y="406.82" class="nonmatching"><title>0x004471b0 LaraBaddieCollision (689 bytes)</title></rect>
-<rect width="16.19" height="16.42" x="326.86" y="426.25" class="todo"><title>0x00488690 ClipLine (689 bytes)</title></rect>
+<rect width="16.19" height="16.42" x="326.86" y="426.25" class="named"><title>0x00488690 ClipLine (689 bytes)</title></rect>
 <rect width="16.19" height="16.33" x="326.86" y="445.67" class="todo"><title>0x00454f50 ControlElementPuzzle (685 bytes)</title></rect>
 <rect width="16.29" height="16.19" x="346.05" y="41.99" class="todo"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
 <rect width="16.29" height="16.19" x="365.34" y="41.99" class="named"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>

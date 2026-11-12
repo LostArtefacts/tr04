@@ -180,6 +180,59 @@ void InitBinoculars(void)
     IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
 }
 
+uint8 ClipLine(sint32 *x1, sint32 *y1, sint32 z1, sint32 *x2, sint32 *y2, sint32 z2, sint32 xMin, sint32 yMin, sint32 w, sint32 h)
+{
+    float clip;
+
+    if (z1 < 20 || z2 < 20)
+        return 0;
+    if (*x1 < xMin && *x2 < xMin || *y1 < yMin && *y2 < yMin)
+        return 0;
+    if (*x1 > w && *x2 > w || *y1 > h && *y2 > h)
+        return 0;
+    if (*x1 > w) {
+        clip = ((float)w - *x2) / (float)(*x1 - *x2);
+        *x1 = w;
+        *y1 = (sint32)((*y1 - *y2) * clip + *y2);
+    }
+    if (*x2 > w) {
+        clip = ((float)w - *x1) / (float)(*x2 - *x1);
+        *x2 = w;
+        *y2 = (sint32)((*y2 - *y1) * clip + *y1);
+    }
+    if (*x1 < xMin) {
+        clip = ((float)xMin - *x1) / (float)(*x2 - *x1);
+        *x1 = xMin;
+        *y1 = (sint32)((*y2 - *y1) * clip + *y1);
+    }
+    if (*x2 < xMin) {
+        clip = ((float)xMin - *x2) / (float)(*x1 - *x2);
+        *x2 = xMin;
+        *y2 = (sint32)((*y1 - *y2) * clip + *y2);
+    }
+    if (*y1 > h) {
+        clip = ((float)h - *y2) / (float)(*y1 - *y2);
+        *y1 = h;
+        *x1 = (sint32)((*x1 - *x2) * clip + *x2);
+    }
+    if (*y2 > h) {
+        clip = ((float)h - *y1) / (float)(*y2 - *y1);
+        *y2 = h;
+        *x2 = (sint32)((*x2 - *x1) * clip + *x1);
+    }
+    if (*y1 < yMin) {
+        clip = ((float)yMin - *y1) / (float)(*y2 - *y1);
+        *y1 = yMin;
+        *x1 = (sint32)((*x2 - *x1) * clip + *x1);
+    }
+    if (*y2 < yMin) {
+        clip = ((float)yMin - *y2) / (float)(*y1 - *y2);
+        *y2 = yMin;
+        *x2 = (sint32)((*x1 - *x2) * clip + *x2);
+    }
+    return 1;
+}
+
 void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip)
 {
     float perspz;

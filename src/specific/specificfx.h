@@ -36,5 +36,6 @@ void DrawTrainStrips(void);
 void S_DrawDarts(struct item_info *item);
 
 void S_DrawFireSparks(sint32 size, sint32 life);
+uint8 ClipLine(sint32 *x1, sint32 *y1, sint32 z1, sint32 *x2, sint32 *y2, sint32 z2, sint32 xMin, sint32 yMin, sint32 w, sint32 h);
 
 #endif
