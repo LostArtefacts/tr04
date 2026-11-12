@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="147.23" height="12" x="0" y="0" class="named"><title>666 · 43.05%</title></rect>
-<rect width="0.44" height="12" x="147.23" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="147.68" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="189.68" height="12" x="152.32" y="0" class="todo"><title>858 · 55.46%</title></rect>
+<rect width="147.46" height="12" x="0" y="0" class="named"><title>667 · 43.12%</title></rect>
+<rect width="0.44" height="12" x="147.46" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="147.90" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="189.46" height="12" x="152.54" y="0" class="todo"><title>857 · 55.40%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">43.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">666</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">858</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">667</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">857</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="59.88" height="12" x="0" y="0" class="named"><title>109 KB · 17.51%</title></rect>
-<rect width="0.12" height="12" x="59.88" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="60" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="274.75" height="12" x="67.25" y="0" class="todo"><title>498 KB · 80.34%</title></rect>
+<rect width="59.93" height="12" x="0" y="0" class="named"><title>109 KB · 17.52%</title></rect>
+<rect width="0.12" height="12" x="59.93" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="60.05" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="274.70" height="12" x="67.30" y="0" class="todo"><title>498 KB · 80.32%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">17.5%</text>
+<text text-anchor="end" x="522" y="24.50">17.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">109 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">498 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -284,7 +284,7 @@
 <rect width="12" height="12" x="225" y="60" class="named"><title>0x00421880 LaraDeflectEdgeDuck (122 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="60" class="named"><title>0x00421900 lara_as_all4turnl (88 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="60" class="named"><title>0x00421960 lara_col_all4turnlr (74 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="60" class="todo"><title>0x004219b0 lara_as_all4turnr (88 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="60" class="named"><title>0x004219b0 lara_as_all4turnr (88 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="60" class="named"><title>0x00421a10 lara_as_crawlb (190 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="60" class="todo"><title>0x00421ad0 lara_col_crawlb (273 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="60" class="named"><title>0x00421bf0 lara_col_crawl2hang (493 bytes)</title></rect>
@@ -2717,7 +2717,7 @@
 <rect width="5.82" height="5.84" x="714.72" y="313.69" class="todo"><title>0x00403ed0 InitialiseCrocgod (88 bytes)</title></rect>
 <rect width="5.82" height="5.84" x="723.54" y="313.69" class="todo"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
 <rect width="5.82" height="5.84" x="732.36" y="313.69" class="named"><title>0x00421900 lara_as_all4turnl (88 bytes)</title></rect>
-<rect width="5.82" height="5.84" x="741.18" y="313.69" class="todo"><title>0x004219b0 lara_as_all4turnr (88 bytes)</title></rect>
+<rect width="5.82" height="5.84" x="741.18" y="313.69" class="named"><title>0x004219b0 lara_as_all4turnr (88 bytes)</title></rect>
 <rect width="5.65" height="6.02" x="598.74" y="322.53" class="named"><title>0x00423a60 lara_as_monkeyl (88 bytes)</title></rect>
 <rect width="5.65" height="6.02" x="598.74" y="331.56" class="todo"><title>0x0044f2d0 S_InsertRoom (88 bytes)</title></rect>
 <rect width="5.65" height="6.02" x="598.74" y="340.58" class="todo"><title>0x004535f0 InitialiseSethBlade (88 bytes)</title></rect>

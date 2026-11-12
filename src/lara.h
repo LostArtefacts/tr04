@@ -314,6 +314,7 @@ void lara_as_pullblock(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_controlledl(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_pose(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_all4turnl(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_all4turnr(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
