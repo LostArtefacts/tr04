@@ -721,6 +721,157 @@ sint32 DXCreateD3DDevice(LPDIRECT3D3 d3d, GUID guid, LPDIRECTDRAWSURFACE4 surf, 
     return 0;
 }
 
+sint32 DXCreate(sint32 w, sint32 h, sint32 bpp, sint32 Flags, DXPTR *dxptr, HWND hWnd, sint32 WindowStyle)
+{
+    DEVMODE dev;
+    DDSURFACEDESC2 desc;
+    RECT r;
+    sint32 flag, CoopLevel;
+
+    flag = 0;
+    Log(2, "DXCreate");
+    G_dxptr = dxptr;
+    G_dxptr->Flags = Flags;
+    G_dxptr->hWnd = hWnd;
+    G_dxptr->WindowStyle = WindowStyle;
+    if (Flags & 64)
+        flag = 1;
+    DXClose();
+    if (!flag) {
+        if (!DXDDCreate(G_dxinfo->DDInfo[G_dxinfo->nDD].lpGuid, (void **)&G_dxptr->lpDD)) {
+            DXClose();
+            return 0;
+        }
+        if (!DXD3DCreate(G_dxptr->lpDD, (void **)&G_dxptr->lpD3D)) {
+            DXClose();
+            return 0;
+        }
+    }
+    flag = Flags & 1;
+    CoopLevel = flag ? DDSCL_FULLSCREEN | DDSCL_ALLOWREBOOT | DDSCL_EXCLUSIVE : DDSCL_NORMAL;
+    if (Flags & 0x20)
+        CoopLevel |= DDSCL_FPUSETUP;
+    G_dxptr->CoopLevel = CoopLevel;
+    if (!DXSetCooperativeLevel(G_dxptr->lpDD, hWnd, CoopLevel)) {
+        DXClose();
+        return 0;
+    }
+    if (flag) {
+        DXSetVideoMode(G_dxptr->lpDD, G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].w, G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].h, G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].bpp);
+    } else {
+        HWND desktop;
+        HDC hDC;
+
+        desktop = GetDesktopWindow();
+        hDC = GetDC(desktop);
+        dev.dmSize = 148;
+        dev.dmBitsPerPel = G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].bpp;
+        ReleaseDC(desktop, hDC);
+        dev.dmFields = DM_BITSPERPEL;
+        ChangeDisplaySettings(&dev, 0);
+    }
+    memset(&desc, 0, sizeof(DDSURFACEDESC2));
+    desc.dwSize = sizeof(DDSURFACEDESC2);
+    if (flag) {
+        desc.dwBackBufferCount = 1;
+        desc.dwFlags = DDSD_CAPS | DDSD_BACKBUFFERCOUNT;
+        desc.ddsCaps.dwCaps = DDSCAPS_COMPLEX | DDSCAPS_FLIP | DDSCAPS_PRIMARYSURFACE | DDSCAPS_3DDEVICE | DDSCAPS_VIDEOMEMORY;
+        if (!(Flags & 0x80)) {
+            desc.dwBackBufferCount = 0;
+            desc.dwFlags = DDSD_CAPS;
+            desc.ddsCaps.dwCaps = DDSCAPS_PRIMARYSURFACE | DDSCAPS_3DDEVICE | DDSCAPS_VIDEOMEMORY;
+        }
+        Log(3, "Create Primary Surface");
+        if (!DXCreateSurface(G_dxptr->lpDD, &desc, &G_dxptr->lpPrimaryBuffer)) {
+            DXClose();
+            return 0;
+        }
+        if (Flags & 0x80) {
+            Log(3, "Get Attached Back Buffer");
+            desc.ddsCaps.dwCaps = DDSCAPS_BACKBUFFER;
+            IDirectDrawSurface4_GetAttachedSurface(G_dxptr->lpPrimaryBuffer, &desc.ddsCaps, &G_dxptr->lpBackBuffer);
+        } else
+            G_dxptr->lpBackBuffer = G_dxptr->lpPrimaryBuffer;
+        G_dxptr->dwRenderWidth = G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].w;
+        G_dxptr->dwRenderHeight = G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].h;
+        G_dxptr->rViewport.top = 0;
+        G_dxptr->rViewport.left = 0;
+        G_dxptr->rViewport.right = G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].w;
+        G_dxptr->rViewport.bottom = G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].h;
+    } else {
+        LPDIRECTDRAWCLIPPER clipper;
+
+        Log(5, "DXCreate: Windowed Mode");
+        r.top = 0;
+        r.left = 0;
+        r.right = G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].w;
+        r.bottom = G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].h;
+        AdjustWindowRect(&r, WindowStyle, 0);
+        SetWindowPos(hWnd, 0, 0, 0, r.right - r.left, r.bottom - r.top, SWP_NOMOVE | SWP_NOZORDER);
+        GetClientRect(hWnd, &G_dxptr->rViewport);
+        GetClientRect(hWnd, &G_dxptr->rScreen);
+        ClientToScreen(hWnd, (LPPOINT)&G_dxptr->rScreen);
+        ClientToScreen(hWnd, (LPPOINT)&G_dxptr->rScreen.right);
+        G_dxptr->dwRenderWidth = G_dxptr->rViewport.right;
+        G_dxptr->dwRenderHeight = G_dxptr->rViewport.bottom;
+        Log(5, "w %d h %d", G_dxptr->dwRenderWidth, G_dxptr->dwRenderHeight);
+        desc.dwFlags = DDSD_CAPS;
+        desc.ddsCaps.dwCaps = DDSCAPS_PRIMARYSURFACE;
+        if (!DXCreateSurface(G_dxptr->lpDD, &desc, &G_dxptr->lpPrimaryBuffer)) {
+            DXClose();
+            return 0;
+        }
+        if (DXAttempt(IDirectDraw4_CreateClipper(G_dxptr->lpDD, 0, &clipper, 0)) != DD_OK) {
+            DXClose();
+            return 0;
+        }
+        DXAttempt(IDirectDrawClipper_SetHWnd(clipper, 0, hWnd));
+        DXAttempt(IDirectDrawSurface4_SetClipper(G_dxptr->lpPrimaryBuffer, clipper));
+        if (clipper) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "Clipper", clipper, IDirectDrawClipper_Release(clipper));
+            clipper = 0;
+        } else
+            Log(1, "%s Attempt To Release NULL Ptr", "Clipper");
+        desc.dwFlags = DDSD_CAPS | DDSD_HEIGHT | DDSD_WIDTH;
+        desc.dwWidth = G_dxptr->dwRenderWidth;
+        desc.dwHeight = G_dxptr->dwRenderHeight;
+        desc.ddsCaps.dwCaps = DDSCAPS_OFFSCREENPLAIN | DDSCAPS_3DDEVICE;
+        if (DXAttempt(IDirectDraw4_CreateSurface(G_dxptr->lpDD, &desc, &G_dxptr->lpBackBuffer, 0)) != DD_OK) {
+            DXClose();
+            return 0;
+        }
+    }
+    if (Flags & 0x10 && Flags & 0x80) {
+        Log(3, "Creating ZBuffer");
+        memset(&desc, 0, sizeof(DDSURFACEDESC2));
+        desc.dwSize = sizeof(DDSURFACEDESC2);
+        desc.dwFlags = DDSD_CAPS | DDSD_HEIGHT | DDSD_WIDTH | DDSD_PIXELFORMAT;
+        desc.ddsCaps.dwCaps = DDSCAPS_VIDEOMEMORY | DDSCAPS_ZBUFFER;
+        desc.dwWidth = G_dxptr->dwRenderWidth;
+        desc.dwHeight = G_dxptr->dwRenderHeight;
+        memcpy(&desc.ddpfPixelFormat, &G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].ZBufferInfos->ddpf, sizeof(DDPIXELFORMAT));
+        if (DXAttempt(IDirectDraw4_CreateSurface(G_dxptr->lpDD, &desc, &G_dxptr->lpZBuffer, 0)) != DD_OK) {
+            DXClose();
+            return 0;
+        }
+        DXAttempt(IDirectDrawSurface4_AddAttachedSurface(G_dxptr->lpBackBuffer, G_dxptr->lpZBuffer));
+        Log(3, "ZBuffer Created %x", G_dxptr->lpZBuffer);
+    }
+    if (!DXCreateD3DDevice(G_dxptr->lpD3D, G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].Guid, G_dxptr->lpBackBuffer, &G_dxptr->lpD3DDevice)) {
+        DXClose();
+        return 0;
+    }
+    G_dxptr->_lpD3DDevice = G_dxptr->lpD3DDevice;
+    if (!DXCreateViewport(G_dxptr->lpD3D, G_dxptr->lpD3DDevice, G_dxptr->dwRenderWidth, G_dxptr->dwRenderHeight, &G_dxptr->lpViewport)) {
+        DXClose();
+        return 0;
+    }
+    DXAttempt(IDirect3DDevice3_SetRenderTarget(G_dxptr->lpD3DDevice, G_dxptr->lpBackBuffer, 0));
+    if (!(G_dxptr->Flags & 0x80))
+        SW_D3D_CreateDevice();
+    return 1;
+}
+
 sint32 DXChangeVideoMode(void)
 {
     sint32 val;

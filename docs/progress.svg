@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="245.23" height="12" x="0" y="0" class="named"><title>1110 · 71.71%</title></rect>
-<rect width="0.44" height="12" x="245.23" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="15.24" height="12" x="245.67" y="0" class="nonmatching"><title>69 · 4.46%</title></rect>
-<rect width="81.08" height="12" x="260.92" y="0" class="todo"><title>367 · 23.71%</title></rect>
+<rect width="245.45" height="12" x="0" y="0" class="named"><title>1111 · 71.77%</title></rect>
+<rect width="0.44" height="12" x="245.45" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="15.24" height="12" x="245.90" y="0" class="nonmatching"><title>69 · 4.46%</title></rect>
+<rect width="80.86" height="12" x="261.14" y="0" class="todo"><title>366 · 23.64%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">71.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1110</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">69</tspan> · <tspan class="todo">367</tspan></text>
+<text text-anchor="end" x="522" y="7.50">71.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1111</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">69</tspan> · <tspan class="todo">366</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="125.74" height="12" x="0" y="0" class="named"><title>229 KB · 36.77%</title></rect>
-<rect width="0.12" height="12" x="125.74" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="27.21" height="12" x="125.86" y="0" class="nonmatching"><title>50 KB · 7.96%</title></rect>
-<rect width="188.93" height="12" x="153.07" y="0" class="todo"><title>344 KB · 55.24%</title></rect>
+<rect width="126.96" height="12" x="0" y="0" class="named"><title>231 KB · 37.12%</title></rect>
+<rect width="0.12" height="12" x="126.96" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="27.21" height="12" x="127.08" y="0" class="nonmatching"><title>50 KB · 7.96%</title></rect>
+<rect width="187.71" height="12" x="154.29" y="0" class="todo"><title>342 KB · 54.89%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">36.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">229 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">50 KB</tspan> · <tspan class="todo">344 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">37.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">231 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">50 KB</tspan> · <tspan class="todo">342 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1521,7 +1521,7 @@
 <rect width="12" height="12" x="30" y="435" class="named"><title>0x00492b90 DXSetVideoMode (80 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="435" class="todo"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="435" class="named"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="435" class="todo"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="435" class="named"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="435" class="named"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="435" class="named"><title>0x00493a50 DXToggleFullScreen (417 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="435" class="todo"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
@@ -1659,7 +1659,7 @@
 <rect width="29.28" height="30.52" x="118.35" y="0" class="todo"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
 <rect width="29.28" height="30.51" x="118.35" y="33.52" class="todo"><title>0x00410c90 SethControl (2320 bytes)</title></rect>
 <rect width="29.28" height="29.57" x="118.35" y="67.04" class="nonmatching"><title>0x00418430 TroopControl (2248 bytes)</title></rect>
-<rect width="29.28" height="29.12" x="118.35" y="99.60" class="todo"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
+<rect width="29.28" height="29.12" x="118.35" y="99.60" class="named"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
 <rect width="29.28" height="28.78" x="118.35" y="131.72" class="todo"><title>0x00469c20 EnemyJeepControl (2188 bytes)</title></rect>
 <rect width="29.28" height="28.18" x="118.35" y="163.50" class="todo"><title>0x00433410 ShatterObject (2143 bytes)</title></rect>
 <rect width="29.28" height="28.04" x="118.35" y="194.68" class="todo"><title>0x00480a50 DrawSortList (2132 bytes)</title></rect>
