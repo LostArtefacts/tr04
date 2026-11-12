@@ -2439,7 +2439,6 @@ address,size,name,symbol
 0x00533b10,4,thread_ended,_thread_ended
 0x00533b14,4,Var533b14,_Var533b14
 0x00533b18,4,Var533b18,_Var533b18
-0x00533b14,4,Var533b14,_Var533b14
 0x00533b1c,5632,WaterTable,_WaterTable
 0x0053511c,1024,unused_vert_wibble_table,_unused_vert_wibble_table
 0x0053551c,2,FPCW,_FPCW
