@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <stdlib.h>
 #include <process.h>
+#include <string.h>
 
 #include "gamemain.h"
 #include "3dmath.h"
@@ -12,6 +13,7 @@
 #include "function_stubs.h"
 #include "function_table.h"
 #include "winmain.h"
+#include "dxshell.h"
 #include "time.h"
 #include "../text.h"
 #include "../sound.h"
@@ -42,6 +44,27 @@ uint32 __stdcall GameMain(void *ptr)
         MainThread.active = 0;
         _endthreadex(1);
     }
+    return 1;
+}
+
+uint8 GameInitialise(void)
+{
+    D3DVERTEXBUFFERDESC desc;
+
+    Log(2, "GameInitialise");
+    memset(&desc, 0, sizeof(desc));
+    desc.dwCaps = 0;
+    desc.dwSize = sizeof(desc);
+    desc.dwFVF = D3DFVF_TLVERTEX;
+    desc.dwNumVertices = 0x2000;
+    DXAttempt(IDirect3D3_CreateVertexBuffer(App.dx.lpD3D, &desc, &DestVB, D3DDP_DONOTCLIP, 0));
+    init_game_malloc();
+    clipflags = (sint16 *)malloc(0x4000);
+    GameUnk753a7c = 0.0F;
+    GameUnk753c20 = 0.0F;
+    GameUnk753a78 = (float)G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].w;
+    GameUnk753960 = (float)G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode].h;
+    init_water_table();
     return 1;
 }
 
