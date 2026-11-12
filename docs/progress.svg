@@ -46,13 +46,13 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="253.41" height="12" x="0" y="0" class="named"><title>1147 · 74.10%</title></rect>
-<rect width="0.66" height="12" x="253.41" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="18.56" height="12" x="254.07" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
-<rect width="69.37" height="12" x="272.63" y="0" class="todo"><title>314 · 20.28%</title></rect>
+<rect width="253.63" height="12" x="0" y="0" class="named"><title>1148 · 74.16%</title></rect>
+<rect width="0.66" height="12" x="253.63" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="18.56" height="12" x="254.29" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
+<rect width="69.15" height="12" x="272.85" y="0" class="todo"><title>313 · 20.22%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">74.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1147</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">314</tspan></text>
+<text text-anchor="end" x="522" y="7.50">74.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1148</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">313</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="136.99" height="12" x="0" y="0" class="named"><title>249 KB · 40.06%</title></rect>
@@ -1459,7 +1459,7 @@
 <rect width="12" height="12" x="600" y="405" class="named"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="405" class="todo"><title>0x0048f981 Func48f981 (13 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="405" class="todo"><title>0x0048f990 j_nullsub_12 (5 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="405" class="todo"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="405" class="named"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="405" class="todo"><title>0x0048f9a1 Func48f9a1 (13 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="405" class="todo"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="405" class="todo"><title>0x0048f9c0 nullsub_13 (1 bytes)</title></rect>
@@ -3164,7 +3164,7 @@
 <rect width="1.12" height="1" x="740.40" y="458.63" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="461" class="named"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="744.51" y="455.45" class="named"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
-<rect width="1" height="1.78" x="746" y="455.45" class="todo"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>
+<rect width="1" height="1.78" x="746" y="455.45" class="named"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="744.51" y="460.22" class="todo"><title>0x0048f9c0 nullsub_13 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="746" y="460.22" class="named"><title>0x00490b20 nullsub_14 (1 bytes)</title></rect>
 </g>
