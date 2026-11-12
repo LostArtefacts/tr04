@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="234.34" height="12" x="0" y="0" class="named"><title>1060 · 68.52%</title></rect>
-<rect width="0.44" height="12" x="234.34" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="10.39" height="12" x="234.78" y="0" class="nonmatching"><title>47 · 3.04%</title></rect>
-<rect width="96.83" height="12" x="245.17" y="0" class="todo"><title>438 · 28.31%</title></rect>
+<rect width="234.56" height="12" x="0" y="0" class="named"><title>1061 · 68.58%</title></rect>
+<rect width="0.44" height="12" x="234.56" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="10.39" height="12" x="235" y="0" class="nonmatching"><title>47 · 3.04%</title></rect>
+<rect width="96.61" height="12" x="245.39" y="0" class="todo"><title>437 · 28.25%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">68.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1060</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">47</tspan> · <tspan class="todo">438</tspan></text>
+<text text-anchor="end" x="522" y="7.50">68.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1061</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">47</tspan> · <tspan class="todo">437</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="104.13" height="12" x="0" y="0" class="named"><title>189 KB · 30.45%</title></rect>
-<rect width="0.12" height="12" x="104.13" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="14.55" height="12" x="104.25" y="0" class="nonmatching"><title>26 KB · 4.26%</title></rect>
-<rect width="223.20" height="12" x="118.80" y="0" class="todo"><title>405 KB · 65.26%</title></rect>
+<rect width="104.70" height="12" x="0" y="0" class="named"><title>190 KB · 30.61%</title></rect>
+<rect width="0.12" height="12" x="104.70" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="14.55" height="12" x="104.82" y="0" class="nonmatching"><title>26 KB · 4.26%</title></rect>
+<rect width="222.62" height="12" x="119.38" y="0" class="todo"><title>404 KB · 65.09%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">30.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">189 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">26 KB</tspan> · <tspan class="todo">405 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">30.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">190 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">26 KB</tspan> · <tspan class="todo">404 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -904,7 +904,7 @@
 <rect width="12" height="12" x="525" y="240" class="named"><title>0x00453870 InitialiseStatuePlinth (45 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="240" class="named"><title>0x004538a0 InitialiseEffects (218 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="240" class="named"><title>0x00453980 InitialiseSmokeEmitter (176 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="240" class="todo"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="240" class="named"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="240" class="named"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="240" class="named"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="240" class="named"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
@@ -1761,7 +1761,7 @@
 <rect width="20.87" height="19.49" x="258.71" y="420.12" class="todo"><title>0x004797c0 MemBltSurf (1053 bytes)</title></rect>
 <rect width="20.87" height="19.39" x="258.71" y="442.61" class="todo"><title>0x00456cd0 ControlLightningConductor (1048 bytes)</title></rect>
 <rect width="20.15" height="19.90" x="282.58" y="0" class="todo"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>
-<rect width="20.15" height="19.84" x="282.58" y="22.90" class="todo"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
+<rect width="20.15" height="19.84" x="282.58" y="22.90" class="named"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
 <rect width="20.15" height="19.78" x="282.58" y="45.73" class="todo"><title>0x004640a0 DrawTrainObjects (1032 bytes)</title></rect>
 <rect width="20.15" height="19.78" x="282.58" y="68.52" class="todo"><title>0x00489540 DrawRope (1032 bytes)</title></rect>
 <rect width="20.15" height="19.55" x="282.58" y="91.30" class="todo"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
