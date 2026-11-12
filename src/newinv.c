@@ -87,3 +87,9 @@ void combine_KeyItem1(sint32 flag)
     lara.keyitems |= 0x1;
     lara.keyitemscombo &= ~0x3;
 }
+
+void combine_KeyItem2(sint32 flag)
+{
+    lara.keyitems |= 0x2;
+    lara.keyitemscombo &= ~0xC;
+}
