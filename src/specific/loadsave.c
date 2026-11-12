@@ -149,6 +149,12 @@ void S_DrawAirBar(sint32 pos)
         DoBar(490 - (font_height >> 2), (font_height >> 2) + (font_height >> 1), 150, 12, pos, 0xFF000000, 0xFF0000FF);
 }
 
+void S_DrawHealthBar(sint32 pos)
+{
+    if (gfCurrentLevel)
+        DoBar(font_height >> 2, font_height >> 2, 150, 12, pos, 0xFF000000, lara.poisoned ? 0xFFFFFF00 : 0xFFFF0000);
+}
+
 void S_InitLoadBar(sint32 maxpos)
 {
     loadbar_pos = 0;
