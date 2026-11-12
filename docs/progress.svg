@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="237.43" height="12" x="0" y="0" class="named"><title>1074 · 69.42%</title></rect>
-<rect width="0.44" height="12" x="237.43" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="11.94" height="12" x="237.87" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
-<rect width="92.19" height="12" x="249.81" y="0" class="todo"><title>417 · 26.96%</title></rect>
+<rect width="237.65" height="12" x="0" y="0" class="named"><title>1075 · 69.49%</title></rect>
+<rect width="0.44" height="12" x="237.65" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="11.94" height="12" x="238.10" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
+<rect width="91.97" height="12" x="250.03" y="0" class="todo"><title>416 · 26.89%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">69.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1074</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">417</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1075</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">416</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="111.50" height="12" x="0" y="0" class="named"><title>202 KB · 32.60%</title></rect>
-<rect width="0.12" height="12" x="111.50" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="20.70" height="12" x="111.62" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
-<rect width="209.68" height="12" x="132.32" y="0" class="todo"><title>381 KB · 61.31%</title></rect>
+<rect width="111.97" height="12" x="0" y="0" class="named"><title>203 KB · 32.74%</title></rect>
+<rect width="0.12" height="12" x="111.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="20.70" height="12" x="112.09" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
+<rect width="209.21" height="12" x="132.79" y="0" class="todo"><title>380 KB · 61.17%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">32.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">202 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">381 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">32.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">203 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">380 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -816,7 +816,7 @@
 <rect width="12" height="12" x="705" y="210" class="named"><title>0x0044bb20 GetDoor (178 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="210" class="named"><title>0x0044bbe0 LOS (152 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="210" class="named"><title>0x0044bc80 zLOS (841 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="225" class="todo"><title>0x0044bfd0 xLOS (842 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="225" class="named"><title>0x0044bfd0 xLOS (842 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="225" class="named"><title>0x0044c320 ClipTarget (588 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="225" class="named"><title>0x0044c570 FlipMap (248 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="225" class="named"><title>0x0044c670 RemoveRoomFlipItems (119 bytes)</title></rect>
@@ -1810,7 +1810,7 @@
 <rect width="17.96" height="18.33" x="305.90" y="151.44" class="todo"><title>0x004860d0 DrawBubbles (853 bytes)</title></rect>
 <rect width="17.96" height="18.20" x="305.90" y="172.78" class="named"><title>0x00425130 lara_col_upjump (847 bytes)</title></rect>
 <rect width="17.96" height="18.12" x="305.90" y="193.98" class="todo"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
-<rect width="17.96" height="18.10" x="305.90" y="215.10" class="todo"><title>0x0044bfd0 xLOS (842 bytes)</title></rect>
+<rect width="17.96" height="18.10" x="305.90" y="215.10" class="named"><title>0x0044bfd0 xLOS (842 bytes)</title></rect>
 <rect width="17.96" height="18.10" x="305.90" y="236.19" class="todo"><title>0x0048b130 ShowTitle (842 bytes)</title></rect>
 <rect width="17.96" height="18.07" x="305.90" y="257.29" class="named"><title>0x0044bc80 zLOS (841 bytes)</title></rect>
 <rect width="17.96" height="18.05" x="305.90" y="278.36" class="named"><title>0x0048fdc0 phd_GenerateW2V (840 bytes)</title></rect>
