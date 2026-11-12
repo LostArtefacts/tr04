@@ -7,6 +7,9 @@
 #include "footprnt.h"
 #include "deltapak.h"
 #include "tomb4fx.h"
+#include "effect2.h"
+#include "specific/function_stubs.h"
+#include "specific/specificfx.h"
 
 void InitialiseGameFlags(void)
 {
@@ -17,6 +20,23 @@ void InitialiseGameFlags(void)
     flipeffect = -1;
     IsAtmospherePlaying = 0;
     camera.underwater = 0;
+}
+
+void SetupGame(void)
+{
+    SeedRandomDraw(0xD371F947);
+    SeedRandomControl(0xD371F947);
+    wibble = 0;
+    ClearFootPrints();
+    InitBinoculars();
+    InitTarget();
+    trainmappos = 0;
+    InitialiseGameFlags();
+    InitialiseLara();
+    GetCarriedItems();
+    GetAIPickups();
+    SeedRandomDraw(0xD371F947);
+    SeedRandomControl(0xD371F947);
 }
 
 void ClearFootPrints(void)
