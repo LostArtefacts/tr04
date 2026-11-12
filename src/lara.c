@@ -192,6 +192,22 @@ sint32 LaraDeflectEdgeDuck(ITEM_INFO *item, COLL_INFO *coll)
     return 0;
 }
 
+void lara_as_all4turnl(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_ALL4S;
+        return;
+    }
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 1;
+    lara.torso_y_rot = 0;
+    lara.torso_x_rot = 0;
+    camera.target_elevation = -4186;
+    item->pos.y_rot -= 273;
+    if (!(input & IN_LEFT))
+        item->goal_anim_state = AS_ALL4S;
+}
+
 void lara_col_all4turnlr(ITEM_INFO *item, COLL_INFO *coll)
 {
     GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 400);
