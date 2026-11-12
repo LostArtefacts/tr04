@@ -4,6 +4,7 @@
 #include <windows.h>
 #include <d3d.h>
 #include "../types.h"
+#include "../3dglodef.h"
 
 typedef struct FVECTOR {
     float x;
@@ -52,7 +53,13 @@ extern sint32 NumActiveFogBulbs;
 extern sint32 rgb80h;
 extern sint32 rgbmask;
 extern sint32 zero;
+extern sint32 nPolyType;
+extern sint16 *clipflags;
 
+void AddTriClippedSorted(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided);
+void AddQuadClippedSorted(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint16 v3, TEXTURESTRUCT *tex, sint32 double_sided);
+void SubdivideTri(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2, TEXTURESTRUCT *tex, sint32 double_sided, sint32 steps, sint16 *c);
+void SubdivideQuad(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2, D3DTLVERTEX *v3, TEXTURESTRUCT *tex, sint32 double_sided, sint32 steps, sint16 *c);
 int DistCompare(const void *a, const void *b);
 
 void CreateFogPos(FOGBULB_STRUCT *FogBulb);
@@ -69,5 +76,6 @@ void AddLineClippedSorted(D3DTLVERTEX *v0, D3DTLVERTEX *v1, sint16 drawtype);
 void CalcColorSplit(D3DCOLOR s, D3DCOLOR *d);
 void CalcColorSplitMMX(D3DCOLOR s, D3DCOLOR *d);
 void AddPrelitMMX(sint32 prelight, D3DCOLOR *color);
+void AddTriSubdivide(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided);
 
 #endif

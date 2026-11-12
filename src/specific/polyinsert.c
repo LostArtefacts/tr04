@@ -194,6 +194,31 @@ void InitialiseFogBulbs(void)
     }
 }
 
+void AddTriSubdivide(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided)
+{
+    sint32 steps;
+    sint16 c[4];
+    float z;
+
+    if (!nPolyType) {
+        z = v[v2].sz;
+        if (z < 3500) {
+            steps = 1;
+            if (z < 2000) {
+                steps = 2;
+            }
+            c[0] = clipflags[v0];
+            c[1] = clipflags[v1];
+            c[2] = clipflags[v2];
+            SubdivideTri(&v[v0], &v[v1], &v[v2], tex, double_sided, steps, c);
+        } else {
+            AddTriClippedSorted(v, v0, v1, v2, tex, double_sided);
+        }
+    } else {
+        AddTriClippedSorted(v, v0, v1, v2, tex, double_sided);
+    }
+}
+
 void AddLineClippedSorted(D3DTLVERTEX *v0, D3DTLVERTEX *v1, sint16 drawtype)
 {
     D3DTLBUMPVERTEX *v;
