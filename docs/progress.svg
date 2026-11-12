@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="231.24" height="12" x="0" y="0" class="named"><title>1046 · 67.61%</title></rect>
-<rect width="0.44" height="12" x="231.24" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="9.06" height="12" x="231.68" y="0" class="nonmatching"><title>41 · 2.65%</title></rect>
-<rect width="101.25" height="12" x="240.75" y="0" class="todo"><title>458 · 29.61%</title></rect>
+<rect width="231.46" height="12" x="0" y="0" class="named"><title>1047 · 67.68%</title></rect>
+<rect width="0.44" height="12" x="231.46" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="9.06" height="12" x="231.91" y="0" class="nonmatching"><title>41 · 2.65%</title></rect>
+<rect width="101.03" height="12" x="240.97" y="0" class="todo"><title>457 · 29.54%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">67.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1046</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">41</tspan> · <tspan class="todo">458</tspan></text>
+<text text-anchor="end" x="522" y="7.50">67.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1047</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">41</tspan> · <tspan class="todo">457</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="101.72" height="12" x="0" y="0" class="named"><title>185 KB · 29.74%</title></rect>
-<rect width="0.12" height="12" x="101.72" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="11.85" height="12" x="101.84" y="0" class="nonmatching"><title>21 KB · 3.46%</title></rect>
-<rect width="228.31" height="12" x="113.69" y="0" class="todo"><title>414 KB · 66.76%</title></rect>
+<rect width="102.02" height="12" x="0" y="0" class="named"><title>185 KB · 29.83%</title></rect>
+<rect width="0.12" height="12" x="102.02" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="11.85" height="12" x="102.14" y="0" class="nonmatching"><title>21 KB · 3.46%</title></rect>
+<rect width="228.01" height="12" x="113.99" y="0" class="todo"><title>414 KB · 66.67%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">29.8%</text>
+<text text-anchor="end" x="522" y="24.50">29.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">185 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">21 KB</tspan> · <tspan class="todo">414 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -98,7 +98,7 @@
 <rect width="12" height="12" x="435" y="0" class="named"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="0" class="named"><title>0x00404840 TriggerDemigodMissileFlame (437 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="0" class="named"><title>0x00404a00 TriggerHammerSmoke (463 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="0" class="todo"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="0" class="named"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="0" class="named"><title>0x00404e00 InitialiseDemigod (151 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="0" class="todo"><title>0x00404ea0 DemigodControl (2362 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="0" class="named"><title>0x00405820 InitialiseDog (130 bytes)</title></rect>
@@ -1938,7 +1938,7 @@
 <rect width="14.78" height="14.53" x="471.78" y="78.79" class="named"><title>0x00455470 InitialiseSlot (556 bytes)</title></rect>
 <rect width="14.62" height="14.53" x="489.56" y="78.79" class="todo"><title>0x00482f90 SubdivideEdge (550 bytes)</title></rect>
 <rect width="14.60" height="14.53" x="507.19" y="78.79" class="todo"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
-<rect width="14.57" height="14.53" x="524.79" y="78.79" class="todo"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>
+<rect width="14.57" height="14.53" x="524.79" y="78.79" class="named"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>
 <rect width="14.57" height="14.53" x="542.36" y="78.79" class="todo"><title>0x004729e0 DrawBucket (548 bytes)</title></rect>
 <rect width="14.52" height="14.53" x="559.93" y="78.79" class="named"><title>0x004094a0 ClearMovableBlockSplitters (546 bytes)</title></rect>
 <rect width="14.41" height="14.53" x="577.45" y="78.79" class="todo"><title>0x0049bb90 Func49bb90 (542 bytes)</title></rect>

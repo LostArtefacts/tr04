@@ -7,6 +7,7 @@
 #include "lara.h"
 #include "objnums.h"
 #include "room.h"
+#include "sphere.h"
 #include "tomb4fx.h"
 #include "specific/3dmath.h"
 #include "specific/function_stubs.h"
@@ -132,6 +133,69 @@ void TriggerHammerSmoke(sint32 x, sint32 y, sint32 z, sint32 num)
         sptr->Size = sptr->sSize = size >> 3;
         sptr->dSize = size;
         angle += step;
+    }
+}
+
+void DoDemigodEffects(sint16 item_number)
+{
+    ITEM_INFO *item;
+    PHD_3DPOS pos;
+    PHD_VECTOR pos1;
+    PHD_VECTOR pos2;
+    sint16 angles[2];
+    sint32 anim, frame;
+
+    item = &items[item_number];
+    anim = item->anim_number - objects[item->object_number].anim_index;
+    switch (anim) {
+    case 16:
+            frame = item->frame_number - anims[item->anim_number].frame_base;
+            if (frame >= 8 && frame <= 64) {
+                pos1.x = 0;
+                pos1.y = 0;
+                pos1.z = 192;
+                pos2.x = 0;
+                pos2.y = 0;
+                pos2.z = 384;
+                if (!(GlobalCounter & 1)) {
+                    GetJointAbsPosition(item, &pos1, 17);
+                    GetJointAbsPosition(item, &pos2, 17);
+                } else {
+                    GetJointAbsPosition(item, &pos1, 18);
+                    GetJointAbsPosition(item, &pos2, 18);
+                }
+                pos.x_pos = pos1.x;
+                pos.y_pos = pos1.y;
+                pos.z_pos = pos1.z;
+                phd_GetVectorAngles(pos2.x - pos1.x, pos2.y - pos1.y, pos2.z - pos1.z, angles);
+                pos.y_rot = angles[0];
+                pos.x_rot = angles[1];
+                TriggerDemigodMissile(&pos, item->room_number, 4);
+            }
+        break;
+    case 8:
+    case 19:
+            if (item->frame_number == anims[item->anim_number].frame_base) {
+                pos1.x = -544;
+                pos1.y = 96;
+                pos1.z = 0;
+                GetJointAbsPosition(item, &pos1, 16);
+                pos2.x = -900;
+                pos2.y = 96;
+                pos2.z = 0;
+                GetJointAbsPosition(item, &pos2, 16);
+                pos.x_pos = pos1.x;
+                pos.y_pos = pos1.y;
+                pos.z_pos = pos1.z;
+                phd_GetVectorAngles(pos2.x - pos1.x, pos2.y - pos1.y, pos2.z - pos1.z, angles);
+                pos.y_rot = angles[0];
+                pos.x_rot = angles[1];
+                if (item->object_number == DEMIGOD3)
+                    TriggerDemigodMissile(&pos, item->room_number, 3);
+                else
+                    TriggerDemigodMissile(&pos, item->room_number, 5);
+            }
+        break;
     }
 }
 
