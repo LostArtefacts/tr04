@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="224.39" height="12" x="0" y="0" class="named"><title>1015 · 65.61%</title></rect>
-<rect width="0.44" height="12" x="224.39" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="224.83" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="108.77" height="12" x="233.23" y="0" class="todo"><title>492 · 31.80%</title></rect>
+<rect width="224.61" height="12" x="0" y="0" class="named"><title>1016 · 65.68%</title></rect>
+<rect width="0.44" height="12" x="224.61" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="225.05" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="108.55" height="12" x="233.45" y="0" class="todo"><title>491 · 31.74%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">65.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1015</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">492</tspan></text>
+<text text-anchor="end" x="522" y="7.50">65.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1016</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">491</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="97.43" height="12" x="0" y="0" class="named"><title>177 KB · 28.49%</title></rect>
-<rect width="0.12" height="12" x="97.43" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="97.55" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="234.29" height="12" x="107.71" y="0" class="todo"><title>425 KB · 68.51%</title></rect>
+<rect width="97.50" height="12" x="0" y="0" class="named"><title>177 KB · 28.51%</title></rect>
+<rect width="0.12" height="12" x="97.50" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="97.62" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="234.22" height="12" x="107.78" y="0" class="todo"><title>425 KB · 68.49%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">177 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">425 KB</tspan></text>
@@ -122,7 +122,7 @@
 <rect width="12" height="12" x="45" y="15" class="named"><title>0x00409010 InitialiseHorse (79 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="15" class="named"><title>0x00409060 InitialiseJeanYves (75 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="15" class="named"><title>0x004090b0 JeanYvesControl (200 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="15" class="todo"><title>0x00409180 ExplodeFX (125 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="15" class="named"><title>0x00409180 ExplodeFX (125 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="15" class="todo"><title>0x00409200 ControlBodyPart (598 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="15" class="named"><title>0x00409460 InitialiseMovingBlock (56 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="15" class="named"><title>0x004094a0 ClearMovableBlockSplitters (546 bytes)</title></rect>
@@ -2559,7 +2559,7 @@
 <rect width="6.79" height="7.17" x="740.21" y="266.08" class="todo"><title>0x0041fdd0 InitialiseHair (126 bytes)</title></rect>
 <rect width="6.85" height="7.10" x="560.92" y="276.24" class="named"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="6.85" height="7.10" x="560.92" y="286.35" class="named"><title>0x00490a90 phd_GetVectorAngles (126 bytes)</title></rect>
-<rect width="6.85" height="7.05" x="560.92" y="296.45" class="todo"><title>0x00409180 ExplodeFX (125 bytes)</title></rect>
+<rect width="6.85" height="7.05" x="560.92" y="296.45" class="named"><title>0x00409180 ExplodeFX (125 bytes)</title></rect>
 <rect width="6.85" height="7.05" x="560.92" y="306.50" class="named"><title>0x00421620 LaraFloorFront (125 bytes)</title></rect>
 <rect width="6.85" height="7.05" x="560.92" y="316.54" class="named"><title>0x00428b20 lara_col_jumper (125 bytes)</title></rect>
 <rect width="6.85" height="7.05" x="560.92" y="326.59" class="named"><title>0x0046d560 special1_init (125 bytes)</title></rect>

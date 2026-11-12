@@ -55,5 +55,6 @@ extern sint32 DebrisMeshC2;
 extern sint32 DebrisMeshC3;
 extern sint32 DebrisMeshAmbient;
 extern sint32 DebrisMeshFlags;
+extern SHATTER_ITEM ShatterItem;
 
 #endif
