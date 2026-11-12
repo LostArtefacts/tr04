@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="210.68" height="12" x="0" y="0" class="named"><title>953 · 61.60%</title></rect>
-<rect width="0.44" height="12" x="210.68" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="211.12" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="123.58" height="12" x="218.42" y="0" class="todo"><title>559 · 36.13%</title></rect>
+<rect width="210.90" height="12" x="0" y="0" class="named"><title>954 · 61.67%</title></rect>
+<rect width="0.44" height="12" x="210.90" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="211.35" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="123.36" height="12" x="218.64" y="0" class="todo"><title>558 · 36.07%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">61.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">953</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">559</tspan></text>
+<text text-anchor="end" x="522" y="7.50">61.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">954</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">558</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="90.53" height="12" x="0" y="0" class="named"><title>164 KB · 26.47%</title></rect>
-<rect width="0.12" height="12" x="90.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="90.65" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="241.92" height="12" x="100.08" y="0" class="todo"><title>439 KB · 70.74%</title></rect>
+<rect width="90.62" height="12" x="0" y="0" class="named"><title>164 KB · 26.50%</title></rect>
+<rect width="0.12" height="12" x="90.62" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="90.74" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="241.84" height="12" x="100.16" y="0" class="todo"><title>439 KB · 70.71%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">164 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">439 KB</tspan></text>
@@ -88,7 +88,7 @@
 <rect width="12" height="12" x="285" y="0" class="named"><title>0x00403810 ControlLocustEmitter (81 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="0" class="todo"><title>0x00403870 UpdateLocusts (922 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="0" class="named"><title>0x00403c10 DrawLocusts (126 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="0" class="todo"><title>0x00403c90 TriggerCrocgodMissile (159 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="0" class="named"><title>0x00403c90 TriggerCrocgodMissile (159 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="0" class="todo"><title>0x00403d30 TriggerCrocgodMissileFlame (405 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="0" class="named"><title>0x00403ed0 InitialiseCrocgod (88 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="0" class="todo"><title>0x00403f30 CrocgodControl (1073 bytes)</title></rect>
@@ -2460,7 +2460,7 @@
 <rect width="7.82" height="7.95" x="529.79" y="421.38" class="named"><title>0x00463930 UpdatePulseColour (161 bytes)</title></rect>
 <rect width="7.82" height="7.90" x="529.79" y="432.34" class="todo"><title>0x00402970 ExplodeBaboon (160 bytes)</title></rect>
 <rect width="7.82" height="7.90" x="529.79" y="443.24" class="named"><title>0x00491cc0 DXEnumDirectSound (160 bytes)</title></rect>
-<rect width="7.82" height="7.85" x="529.79" y="454.15" class="todo"><title>0x00403c90 TriggerCrocgodMissile (159 bytes)</title></rect>
+<rect width="7.82" height="7.85" x="529.79" y="454.15" class="named"><title>0x00403c90 TriggerCrocgodMissile (159 bytes)</title></rect>
 <rect width="8.16" height="7.52" x="540.61" y="244.80" class="named"><title>0x00440340 ValidBox (159 bytes)</title></rect>
 <rect width="8.16" height="7.52" x="551.77" y="244.80" class="named"><title>0x00449fc0 GetChange (159 bytes)</title></rect>
 <rect width="8.16" height="7.52" x="562.93" y="244.80" class="named"><title>0x004532a0 InitialiseJobySpike (159 bytes)</title></rect>

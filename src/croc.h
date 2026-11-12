@@ -23,6 +23,7 @@ void ControlLocustEmitter(sint16 item_number);
 sint32 GetFreeLocust(void);
 void InitialiseCrocgod(sint16 item_number);
 void DrawLocusts(void);
+void TriggerCrocgodMissile(PHD_3DPOS *pos, sint16 room_number, sint16 num);
 
 extern LOCUST_STRUCT Locusts[64];
 extern sint32 next_locust;

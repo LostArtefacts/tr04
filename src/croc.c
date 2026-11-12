@@ -108,6 +108,29 @@ void DrawLocusts(void)
     }
 }
 
+void TriggerCrocgodMissile(PHD_3DPOS *pos, sint16 room_number, sint16 num)
+{
+    FX_INFO *fx;
+    sint16 fx_number;
+
+    fx_number = CreateEffect(room_number);
+    if (fx_number != NO_ITEM) {
+        fx = &effects[fx_number];
+        fx->pos.x_pos = pos->x_pos;
+        fx->pos.y_pos = pos->y_pos - (GetRandomControl() & 0x3F) - 32;
+        fx->pos.z_pos = pos->z_pos;
+        fx->pos.x_rot = pos->x_rot;
+        fx->pos.y_rot = pos->y_rot;
+        fx->pos.z_rot = 0;
+        fx->room_number = room_number;
+        fx->counter = 15 + (num << 4);
+        fx->speed = (GetRandomControl() & 0x1F) + 96;
+        fx->flag1 = 6;
+        fx->object_number = 384;
+        fx->frame_number = objects[BUBBLES].mesh_index + 10;
+    }
+}
+
 void InitialiseCrocgod(sint16 item_number)
 {
     ITEM_INFO *item;
