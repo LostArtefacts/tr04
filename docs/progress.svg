@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="187.03" height="12" x="0" y="0" class="named"><title>846 · 54.69%</title></rect>
-<rect width="0.44" height="12" x="187.03" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="187.47" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="148.12" height="12" x="193.88" y="0" class="todo"><title>670 · 43.31%</title></rect>
+<rect width="187.25" height="12" x="0" y="0" class="named"><title>847 · 54.75%</title></rect>
+<rect width="0.44" height="12" x="187.25" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="187.69" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="147.90" height="12" x="194.10" y="0" class="todo"><title>669 · 43.24%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">54.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">846</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">670</tspan></text>
+<text text-anchor="end" x="522" y="7.50">54.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">847</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">669</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="80.15" height="12" x="0" y="0" class="named"><title>145 KB · 23.44%</title></rect>
-<rect width="0.12" height="12" x="80.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="80.27" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="253.08" height="12" x="88.92" y="0" class="todo"><title>459 KB · 74%</title></rect>
+<rect width="80.26" height="12" x="0" y="0" class="named"><title>146 KB · 23.47%</title></rect>
+<rect width="0.12" height="12" x="80.26" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="80.38" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="252.97" height="12" x="89.03" y="0" class="todo"><title>459 KB · 73.97%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">145 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">459 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">146 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">459 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1367,7 +1367,7 @@
 <rect width="12" height="12" x="720" y="375" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="375" class="todo"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="390" class="todo"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="390" class="todo"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="390" class="named"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="390" class="named"><title>0x00481df0 InitialiseFogBulbs (109 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="390" class="todo"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="390" class="todo"><title>0x004820c0 OmniFog (706 bytes)</title></rect>
@@ -2346,7 +2346,7 @@
 <rect width="8.92" height="8.62" x="495.56" y="280.09" class="todo"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
 <rect width="8.92" height="8.62" x="495.56" y="291.71" class="todo"><title>0x00418fa0 GetAIEnemy (199 bytes)</title></rect>
 <rect width="8.92" height="8.62" x="495.56" y="303.34" class="todo"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
-<rect width="8.92" height="8.62" x="495.56" y="314.96" class="todo"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
+<rect width="8.92" height="8.62" x="495.56" y="314.96" class="named"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.56" y="326.58" class="named"><title>0x00436250 TriggerDynamic_MIRROR (198 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.56" y="338.16" class="named"><title>0x00439e40 Fade (198 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.56" y="349.74" class="todo"><title>0x0046b600 CalculateObjectLightingLaraCutSeq (198 bytes)</title></rect>

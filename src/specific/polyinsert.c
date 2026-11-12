@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "polyinsert.h"
 #include "winmain.h"
+#include "../camera.h"
 
 void DoSort(sint32 left, sint32 right, SORTLIST **list)
 {
@@ -111,6 +112,35 @@ void TriggerFXFogBulb(sint32 x, sint32 y, sint32 z, sint32 FXRad, sint32 density
 sint32 IsVolumetric(void)
 {
     return App.Volumetric;
+}
+
+int DistCompare(const void *a, const void *b)
+{
+    FOGBULB_STRUCT *bulbA;
+    FOGBULB_STRUCT *bulbB;
+    FVECTOR dA;
+    FVECTOR dB;
+    float distA, distB;
+
+    bulbA = (FOGBULB_STRUCT *)a;
+    bulbB = (FOGBULB_STRUCT *)b;
+    dA.x = bulbA->WorldPos.x - camera.pos.x;
+    dA.y = bulbA->WorldPos.y - camera.pos.y;
+    dA.z = bulbA->WorldPos.z - camera.pos.z;
+    dB.x = bulbB->WorldPos.x - camera.pos.x;
+    dB.y = bulbB->WorldPos.y - camera.pos.y;
+    dB.z = bulbB->WorldPos.z - camera.pos.z;
+    distA = dA.x * dA.x + dA.y * dA.y + dA.z * dA.z;
+    distB = dB.x * dB.x + dB.y * dB.y + dB.z * dB.z;
+    bulbA->dist = distA;
+    bulbB->dist = distB;
+    if (distA > distB) {
+        return 1;
+    }
+    if (distA < distB) {
+        return -1;
+    }
+    return 0;
 }
 
 void InitialiseFogBulbs(void)
