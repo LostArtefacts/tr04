@@ -78,7 +78,7 @@ address,size,name,symbol
 0x0040b3c0,561,InitialiseRaghead,_InitialiseRaghead
 0x0040b600,6498,RagheadControl,_RagheadControl
 0x0040d040,90,InitialiseSas,_InitialiseSas
-0x0040d0a0,2319,SasControl,_SasControl
+0x0040d0a0,2388,SasControl,_SasControl
 0x0040da00,106,InitialiseInjuredSas,_InitialiseInjuredSas
 0x0040da70,121,InjuredSasControl,_InjuredSasControl
 0x0040daf0,465,SasFireGrenade,_SasFireGrenade
