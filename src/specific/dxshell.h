@@ -3,6 +3,7 @@
 
 #include <windows.h>
 #include <ddraw.h>
+#include <d3d.h>
 
 #include "../types.h"
 
@@ -17,6 +18,7 @@ void DXMove(sint32 x, sint32 y);
 sint32 DXCreateSurface(LPDIRECTDRAW4 dd, LPDDSURFACEDESC2 desc, LPDIRECTDRAWSURFACE4 *surf);
 sint32 DXSetVideoMode(LPDIRECTDRAW4 dd, sint32 dwWidth, sint32 dwHeight, sint32 dwBPP);
 sint32 DXD3DCreate(LPDIRECTDRAW4 pDD4, void **pD3D);
+sint32 DXCreateD3DDevice(LPDIRECT3D3 d3d, GUID guid, LPDIRECTDRAWSURFACE4 surf, LPDIRECT3DDEVICE3 *device);
 
 extern uint8 keymap[256];
 

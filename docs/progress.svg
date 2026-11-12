@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="185.04" height="12" x="0" y="0" class="named"><title>837 · 54.10%</title></rect>
-<rect width="0.44" height="12" x="185.04" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="185.48" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="150.11" height="12" x="191.89" y="0" class="todo"><title>679 · 43.89%</title></rect>
+<rect width="185.26" height="12" x="0" y="0" class="named"><title>838 · 54.17%</title></rect>
+<rect width="0.44" height="12" x="185.26" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="185.70" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="149.89" height="12" x="192.11" y="0" class="todo"><title>678 · 43.83%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">54.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">837</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">679</tspan></text>
+<text text-anchor="end" x="522" y="7.50">54.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">838</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">678</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.71" height="12" x="0" y="0" class="named"><title>145 KB · 23.31%</title></rect>
-<rect width="0.12" height="12" x="79.71" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="79.83" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="253.52" height="12" x="88.48" y="0" class="todo"><title>460 KB · 74.13%</title></rect>
+<rect width="79.76" height="12" x="0" y="0" class="named"><title>145 KB · 23.32%</title></rect>
+<rect width="0.12" height="12" x="79.76" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="79.88" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="253.47" height="12" x="88.53" y="0" class="todo"><title>460 KB · 74.11%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">23.3%</text>
+<text text-anchor="end" x="522" y="24.50">23.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">145 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">460 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1519,7 +1519,7 @@
 <rect width="12" height="12" x="0" y="435" class="named"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="435" class="named"><title>0x00492b90 DXSetVideoMode (80 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="435" class="todo"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="435" class="todo"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="435" class="named"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="435" class="todo"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="435" class="todo"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="435" class="todo"><title>0x00493a50 DXToggleFullScreen (417 bytes)</title></rect>
@@ -2684,7 +2684,7 @@
 <rect width="6.25" height="5.81" x="589.44" y="438.56" class="nonmatching"><title>0x00466f40 InitialiseJeep (94 bytes)</title></rect>
 <rect width="6.25" height="5.81" x="589.44" y="447.38" class="named"><title>0x00484b90 REG_ReadLong (94 bytes)</title></rect>
 <rect width="6.25" height="5.81" x="589.44" y="456.19" class="todo"><title>0x00491c60 DXGetInfo (94 bytes)</title></rect>
-<rect width="6.04" height="6.01" x="598.68" y="304.63" class="todo"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
+<rect width="6.04" height="6.01" x="598.68" y="304.63" class="named"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
 <rect width="5.98" height="6.01" x="607.73" y="304.63" class="named"><title>0x0046c760 twentyfour_control (93 bytes)</title></rect>
 <rect width="5.98" height="6.01" x="616.71" y="304.63" class="todo"><title>0x00494530 SW_D3D_GetCaps (93 bytes)</title></rect>
 <rect width="5.98" height="6.01" x="625.69" y="304.63" class="todo"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>

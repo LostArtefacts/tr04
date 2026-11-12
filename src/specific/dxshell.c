@@ -90,6 +90,17 @@ sint32 DXSetVideoMode(LPDIRECTDRAW4 dd, sint32 dwWidth, sint32 dwHeight, sint32 
     return 1;
 }
 
+sint32 DXCreateD3DDevice(LPDIRECT3D3 d3d, GUID guid, LPDIRECTDRAWSURFACE4 surf, LPDIRECT3DDEVICE3 *device)
+{
+    Log(2, "DXCreateD3DDevice");
+    if (DXAttempt(IDirect3D3_CreateDevice(d3d, &guid, surf, device, 0)) == DD_OK) {
+        Log(2, "DXCreateD3DDevice Successful");
+        return 1;
+    }
+    Log(1, "DXCreateD3DDevice Failed");
+    return 0;
+}
+
 void DXMove(sint32 x, sint32 y)
 {
     Log(2, "DXMove : x %d y %d", x, y);
