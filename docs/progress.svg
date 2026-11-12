@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="247" height="12" x="0" y="0" class="named"><title>1118 · 72.22%</title></rect>
 <rect width="0.44" height="12" x="247" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="16.13" height="12" x="247.44" y="0" class="nonmatching"><title>73 · 4.72%</title></rect>
-<rect width="78.43" height="12" x="263.57" y="0" class="todo"><title>355 · 22.93%</title></rect>
+<rect width="16.35" height="12" x="247.44" y="0" class="nonmatching"><title>74 · 4.78%</title></rect>
+<rect width="78.21" height="12" x="263.79" y="0" class="todo"><title>354 · 22.87%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">73</tspan> · <tspan class="todo">355</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">74</tspan> · <tspan class="todo">354</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="128.85" height="12" x="0" y="0" class="named"><title>235 KB · 37.67%</title></rect>
 <rect width="0.12" height="12" x="128.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="29.29" height="12" x="128.97" y="0" class="nonmatching"><title>53 KB · 8.56%</title></rect>
-<rect width="183.74" height="12" x="158.26" y="0" class="todo"><title>334 KB · 53.73%</title></rect>
+<rect width="29.61" height="12" x="128.97" y="0" class="nonmatching"><title>54 KB · 8.66%</title></rect>
+<rect width="183.42" height="12" x="158.58" y="0" class="todo"><title>334 KB · 53.63%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">37.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">53 KB</tspan> · <tspan class="todo">334 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">54 KB</tspan> · <tspan class="todo">334 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -262,7 +262,7 @@
 <rect width="12" height="12" x="645" y="45" class="todo"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="45" class="todo"><title>0x0041f7c0 DoFlameTorch (793 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="45" class="named"><title>0x0041faf0 GetFlameTorch (133 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="45" class="todo"><title>0x0041fb80 FlameTorchControl (584 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="45" class="nonmatching"><title>0x0041fb80 FlameTorchControl (584 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="45" class="named"><title>0x0041fdd0 InitialiseHair (126 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="45" class="named"><title>0x0041fe50 HairControl (2592 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="45" class="named"><title>0x00420870 GetCorrectStashPoints (176 bytes)</title></rect>
@@ -1921,7 +1921,7 @@
 <rect width="15.51" height="14.60" x="531.53" y="61.53" class="todo"><title>0x00471f40 ProjectWaterVerts (588 bytes)</title></rect>
 <rect width="15.43" height="14.60" x="550.04" y="61.53" class="named"><title>0x00446d20 CollideStaticObjects (585 bytes)</title></rect>
 <rect width="15.43" height="14.60" x="568.47" y="61.53" class="named"><title>0x00463400 CogSwitchCollision (585 bytes)</title></rect>
-<rect width="15.40" height="14.60" x="586.90" y="61.53" class="todo"><title>0x0041fb80 FlameTorchControl (584 bytes)</title></rect>
+<rect width="15.40" height="14.60" x="586.90" y="61.53" class="nonmatching"><title>0x0041fb80 FlameTorchControl (584 bytes)</title></rect>
 <rect width="15.19" height="14.60" x="605.30" y="61.53" class="named"><title>0x004403e0 GetCreatureMood (576 bytes)</title></rect>
 <rect width="15.19" height="14.60" x="623.50" y="61.53" class="named"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
 <rect width="15.11" height="14.60" x="641.69" y="61.53" class="nonmatching"><title>0x00414670 FlameEmitter2Control (573 bytes)</title></rect>

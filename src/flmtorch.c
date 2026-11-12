@@ -9,6 +9,11 @@
 #include "laraflar.h"
 #include "delstuff.h"
 #include "specific/function_stubs.h"
+#include "specific/3dmath.h"
+#include "draw.h"
+#include "debris.h"
+#include "laramisc.h"
+#include "larafire.h"
 
 void TriggerTorchFlame(sint16 item_number, sint32 node)
 {
@@ -64,4 +69,63 @@ void GetFlameTorch(void)
     lara.left_arm.frame_number = 0;
     lara.left_arm.frame_base = anims[objects[TORCH_ANIM].anim_index].frame_ptr;
     lara.mesh_ptrs[LM_LHAND] = meshes[objects[TORCH_ANIM].mesh_index + LM_LHAND * 2];
+}
+
+void FlameTorchControl(sint16 item_number)
+{
+    ITEM_INFO **itemlist;
+    MESH_INFO **meshlist;
+    ITEM_INFO *item;
+    STATIC_INFO *sinfo;
+    PHD_3DPOS pos;
+    sint32 x, y, z, xv, yv, zv;
+
+    item = &items[item_number];
+    if (item->fallspeed)
+        item->pos.z_rot += 910;
+    if (!item->fallspeed && !item->speed) {
+        item->pos.x_rot = 0;
+        item->pos.z_rot = 0;
+    }
+    xv = (rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * item->speed >> W2V_SHIFT;
+    x = item->pos.x_pos;
+    item->pos.x_pos += xv;
+    y = item->pos.y_pos;
+    zv = (rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * item->speed >> W2V_SHIFT;
+    z = item->pos.z_pos;
+    item->pos.z_pos += zv;
+    if (room[item->room_number].flags & ROOM_UNDERWATER) {
+        item->fallspeed += (5 - item->fallspeed) / 2;
+        item->speed += (5 - item->speed) / 2;
+        if (item->item_flags[3])
+            item->item_flags[3] = 0;
+    } else
+        item->fallspeed += 6;
+    yv = item->fallspeed;
+    item->pos.y_pos += yv;
+    DoProperDetection(item_number, x, y, z, xv, yv, zv);
+    itemlist = (ITEM_INFO**)&tsv_buffer[0];
+    meshlist = (MESH_INFO**)&tsv_buffer[1024];
+    if (GetCollidedObjects(item, 0, 1, itemlist, meshlist, 0)) {
+        mycoll.enable_baddie_push = 1;
+        if (itemlist[0]) {
+            if (!objects[itemlist[0]->object_number].intelligent)
+                ObjectCollision(itemlist[0] - items, item, &mycoll);
+        } else {
+            sinfo = &static_objects[meshlist[0]->static_number];
+            pos.x_pos = meshlist[0]->x;
+            pos.y_pos = meshlist[0]->y;
+            pos.z_pos = meshlist[0]->z;
+            pos.y_rot = meshlist[0]->y_rot;
+            ItemPushLaraStatic(item, (sint16 *)&sinfo->x_minc, &pos, &mycoll);
+        }
+        item->speed >>= 1;
+    }
+    if (item->item_flags[3]) {
+        TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 12 - (GetRandomControl() & 1),
+            (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 96, 0);
+        if (!(wibble & 7))
+            TriggerTorchFlame(item_number, 1);
+        TorchItem = item;
+    }
 }
