@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="201.40" height="12" x="0" y="0" class="named"><title>911 · 58.89%</title></rect>
-<rect width="0.44" height="12" x="201.40" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="201.84" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="133.53" height="12" x="208.47" y="0" class="todo"><title>604 · 39.04%</title></rect>
+<rect width="201.62" height="12" x="0" y="0" class="named"><title>912 · 58.95%</title></rect>
+<rect width="0.44" height="12" x="201.62" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="202.06" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="133.31" height="12" x="208.69" y="0" class="todo"><title>603 · 38.98%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">59.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">911</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">604</tspan></text>
+<text text-anchor="end" x="522" y="7.50">59.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">912</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">603</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="87.10" height="12" x="0" y="0" class="named"><title>158 KB · 25.47%</title></rect>
-<rect width="0.12" height="12" x="87.10" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="87.22" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="245.87" height="12" x="96.13" y="0" class="todo"><title>446 KB · 71.89%</title></rect>
+<rect width="87.23" height="12" x="0" y="0" class="named"><title>158 KB · 25.51%</title></rect>
+<rect width="0.12" height="12" x="87.23" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="87.35" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="245.74" height="12" x="96.26" y="0" class="todo"><title>446 KB · 71.85%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">158 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">446 KB</tspan></text>
@@ -1324,7 +1324,7 @@
 <rect width="12" height="12" x="75" y="375" class="todo"><title>0x0047c6b0 DoStatScreen (868 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="375" class="todo"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="375" class="named"><title>0x0047cc60 S_PauseMenu (178 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="375" class="todo"><title>0x0047cd20 S_LoadSave (238 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="375" class="named"><title>0x0047cd20 S_LoadSave (238 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="375" class="todo"><title>0x0047ce10 DoBar (1479 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="375" class="named"><title>0x0047d3e0 S_DrawDashBar (57 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="375" class="named"><title>0x0047d420 S_DrawAirBar (63 bytes)</title></rect>
@@ -2267,7 +2267,7 @@
 <rect width="9.56" height="9.70" x="470.44" y="339.16" class="named"><title>0x00442c40 SameZone (240 bytes)</title></rect>
 <rect width="9.56" height="9.62" x="470.44" y="351.86" class="todo"><title>0x00410130 TriggerSethSparks (238 bytes)</title></rect>
 <rect width="9.56" height="9.62" x="470.44" y="364.48" class="todo"><title>0x00464520 TrainJeepControl (238 bytes)</title></rect>
-<rect width="9.56" height="9.62" x="470.44" y="377.10" class="todo"><title>0x0047cd20 S_LoadSave (238 bytes)</title></rect>
+<rect width="9.56" height="9.62" x="470.44" y="377.10" class="named"><title>0x0047cd20 S_LoadSave (238 bytes)</title></rect>
 <rect width="9.56" height="9.62" x="470.44" y="389.72" class="named"><title>0x00493e70 DXCreateViewport (238 bytes)</title></rect>
 <rect width="9.56" height="9.58" x="470.44" y="402.34" class="named"><title>0x00413750 OpenTrapDoor (237 bytes)</title></rect>
 <rect width="9.56" height="9.58" x="470.44" y="414.92" class="named"><title>0x0043ef60 have_i_got_object (237 bytes)</title></rect>

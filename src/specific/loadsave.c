@@ -16,6 +16,8 @@
 #include "time.h"
 #include "../newinv.h"
 #include "../control.h"
+#include "../savegame.h"
+#include "gamemain.h"
 
 void CreateMonoScreen(void)
 {
@@ -78,6 +80,59 @@ sint32 S_PauseMenu(void)
     }
     TIME_Init();
     FreeMonoScreen();
+    InventoryActive = 0;
+    return ret;
+}
+
+sint32 S_LoadSave(sint32 load_or_save, sint32 mono)
+{
+    sint32 fade;
+    sint32 ret;
+
+    fade = 0;
+    if (!mono)
+        CreateMonoScreen();
+    GetSaveLoadFiles();
+    InventoryActive = 1;
+    while (1) {
+        S_InitialisePolyList();
+        if (!fade)
+            S_UpdateInput();
+        else
+            dbinput = 0;
+        SetDebounce = 1;
+        S_DisplayMonoScreen();
+        ret = DoLoadSave(load_or_save);
+        UpdatePulseColour();
+        S_OutputPolyList();
+        S_DumpScreen();
+        if (ret >= 0) {
+            if (!(load_or_save & IN_SAVE)) {
+                fade = ret + 1;
+                S_LoadGame(ret);
+                SetFade(0, 255);
+                ret = -1;
+            } else {
+                sgSaveGame();
+                S_SaveGame(ret);
+                GetSaveLoadFiles();
+                break;
+            }
+        }
+        if (fade && DoFade == 2) {
+            ret = fade - 1;
+            break;
+        }
+        if (input & IN_OPTION) {
+            ret = -1;
+            break;
+        }
+        if (thread_ended)
+            break;
+    }
+    TIME_Init();
+    if (!mono)
+        FreeMonoScreen();
     InventoryActive = 0;
     return ret;
 }
