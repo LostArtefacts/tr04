@@ -50,6 +50,25 @@ BOOL CALLBACK DXEnumDirectSound(LPGUID lpGuid, LPCSTR lpcstrDescription, LPCSTR 
     return DDENUMRET_OK;
 }
 
+void DXFreeInfo(DXINFO *dxinfo)
+{
+    sint32 i;
+    sint32 j;
+
+    Log(2, "DXFreeInfo");
+    for (i = 0; i < dxinfo->nDDInfo; i++) {
+        for (j = 0; j < dxinfo->DDInfo[i].nD3DDevices; j++) {
+            free(dxinfo->DDInfo[i].D3DDevices[j].DisplayModes);
+            free(dxinfo->DDInfo[i].D3DDevices[j].TextureInfos);
+            free(dxinfo->DDInfo[i].D3DDevices[j].ZBufferInfos);
+        }
+        free(dxinfo->DDInfo[i].D3DDevices);
+        free(dxinfo->DDInfo[i].DisplayModes);
+    }
+    free(dxinfo->DDInfo);
+    free(dxinfo->DSInfo);
+}
+
 void *AddStruct(void *p, sint32 num, sint32 size)
 {
     void *ptr;
