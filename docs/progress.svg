@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="217.76" height="12" x="0" y="0" class="named"><title>985 · 63.67%</title></rect>
-<rect width="0.44" height="12" x="217.76" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="218.20" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="116.51" height="12" x="225.49" y="0" class="todo"><title>527 · 34.07%</title></rect>
+<rect width="217.98" height="12" x="0" y="0" class="named"><title>986 · 63.74%</title></rect>
+<rect width="0.44" height="12" x="217.98" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="218.42" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="116.28" height="12" x="225.72" y="0" class="todo"><title>526 · 34%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">63.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">985</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">527</tspan></text>
+<text text-anchor="end" x="522" y="7.50">63.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">986</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">526</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="94.28" height="12" x="0" y="0" class="named"><title>171 KB · 27.57%</title></rect>
-<rect width="0.12" height="12" x="94.28" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="94.40" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="238.18" height="12" x="103.82" y="0" class="todo"><title>432 KB · 69.64%</title></rect>
+<rect width="94.43" height="12" x="0" y="0" class="named"><title>171 KB · 27.61%</title></rect>
+<rect width="0.12" height="12" x="94.43" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="94.55" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="238.02" height="12" x="103.98" y="0" class="todo"><title>432 KB · 69.60%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">27.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">171 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">432 KB</tspan></text>
@@ -75,7 +75,7 @@
 <rect width="12" height="12" x="90" y="0" class="named"><title>0x00401db0 InitialiseBaboon (146 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="0" class="todo"><title>0x00401e50 BaboonControl (2389 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="0" class="named"><title>0x004027e0 FindCrowbarSwitch (110 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="0" class="todo"><title>0x00402850 ReTriggerBaboon (282 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="0" class="named"><title>0x00402850 ReTriggerBaboon (282 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="0" class="named"><title>0x00402970 ExplodeBaboon (160 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="0" class="named"><title>0x00402a10 InitialiseBat (90 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="0" class="named"><title>0x00402a70 BatControl (797 bytes)</title></rect>
@@ -2191,7 +2191,7 @@
 <rect width="10.37" height="10.62" x="457.02" y="172.16" class="todo"><title>0x00460b50 SetSplineData (285 bytes)</title></rect>
 <rect width="10.37" height="10.58" x="457.02" y="185.78" class="named"><title>0x004776c0 Key (284 bytes)</title></rect>
 <rect width="10.37" height="10.55" x="457.02" y="199.36" class="todo"><title>0x0048e6e0 FreeTextures (283 bytes)</title></rect>
-<rect width="10.37" height="10.51" x="457.02" y="212.91" class="todo"><title>0x00402850 ReTriggerBaboon (282 bytes)</title></rect>
+<rect width="10.37" height="10.51" x="457.02" y="212.91" class="named"><title>0x00402850 ReTriggerBaboon (282 bytes)</title></rect>
 <rect width="10.37" height="10.47" x="457.02" y="226.42" class="named"><title>0x00492280 DXEnumDisplayModes (281 bytes)</title></rect>
 <rect width="10.37" height="10.43" x="457.02" y="239.89" class="named"><title>0x00422ac0 lara_col_dashdive (280 bytes)</title></rect>
 <rect width="10.37" height="10.43" x="457.02" y="253.32" class="todo"><title>0x0042b600 DoGrenadeDamageOnBaddie (280 bytes)</title></rect>

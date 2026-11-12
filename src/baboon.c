@@ -37,6 +37,35 @@ void FindCrowbarSwitch(ITEM_INFO *item, sint16 switch_index)
     item->item_flags[2] = switch_index;
 }
 
+void ReTriggerBaboon(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    ExplodeBaboon(item);
+    item->pos.x_pos = ((uint16)item->item_flags[0] & 0xFF) << 10 | 0x200;
+    item->pos.y_pos = item->item_flags[1] << 8;
+    item->pos.z_pos = ((uint16)item->item_flags[0] & 0xFFFFFF00) << 2 | 0x200;
+    IsRoomOutside(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (item->room_number != IsRoomOutsideNo)
+        ItemNewRoom(item_number, IsRoomOutsideNo);
+    item->anim_number = objects[BABOON_NORMAL].anim_index + 2;
+    item->frame_number = anims[item->anim_number].frame_base;
+    item->goal_anim_state = 6;
+    item->current_anim_state = 6;
+    item->hit_points = objects[item->object_number].hit_points;
+    RemoveActiveItem(item_number);
+    item->after_death = 0;
+    item->status = ITEM_INVISIBLE;
+    item->flags &= ~(IFL_INVISIBLE | IFL_CODEBITS);
+    DisableBaddieAI(item_number);
+    if (item->object_number != BABOON_NORMAL || !item->trigger_flags) {
+        if (item->object_number == BABOON_NORMAL || !item->trigger_flags)
+            item->ai_bits = FOLLOW;
+        FindCrowbarSwitch(item, 0);
+    }
+}
+
 void ExplodeBaboon(ITEM_INFO *item)
 {
     item->pos.y_pos -= 128;
