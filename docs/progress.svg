@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="216.87" height="12" x="0" y="0" class="named"><title>981 · 63.41%</title></rect>
-<rect width="0.44" height="12" x="216.87" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="217.31" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="117.39" height="12" x="224.61" y="0" class="todo"><title>531 · 34.32%</title></rect>
+<rect width="217.09" height="12" x="0" y="0" class="named"><title>982 · 63.48%</title></rect>
+<rect width="0.44" height="12" x="217.09" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="217.54" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="117.17" height="12" x="224.83" y="0" class="todo"><title>530 · 34.26%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">63.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">981</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">531</tspan></text>
+<text text-anchor="end" x="522" y="7.50">63.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">982</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">530</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="93.78" height="12" x="0" y="0" class="named"><title>170 KB · 27.42%</title></rect>
-<rect width="0.12" height="12" x="93.78" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="93.90" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="238.68" height="12" x="103.32" y="0" class="todo"><title>433 KB · 69.79%</title></rect>
+<rect width="93.89" height="12" x="0" y="0" class="named"><title>170 KB · 27.45%</title></rect>
+<rect width="0.12" height="12" x="93.89" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="94.01" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="238.57" height="12" x="103.43" y="0" class="todo"><title>433 KB · 69.76%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">27.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">170 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">433 KB</tspan></text>
@@ -95,7 +95,7 @@
 <rect width="12" height="12" x="390" y="0" class="named"><title>0x00404380 InitialiseDeathSlide (70 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="0" class="named"><title>0x004043d0 DeathSlideCollision (209 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="0" class="named"><title>0x004044b0 ControlDeathSlide (702 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="0" class="todo"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="0" class="named"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="0" class="todo"><title>0x00404840 TriggerDemigodMissileFlame (437 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="0" class="todo"><title>0x00404a00 TriggerHammerSmoke (463 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="0" class="todo"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>
@@ -2326,7 +2326,7 @@
 <rect width="9.20" height="8.65" x="569.11" y="210.04" class="named"><title>0x00454a90 EffectNewRoom (206 bytes)</title></rect>
 <rect width="9.20" height="8.65" x="581.31" y="210.04" class="named"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
 <rect width="9.11" height="8.65" x="593.51" y="210.04" class="todo"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
-<rect width="9.07" height="8.65" x="605.62" y="210.04" class="todo"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
+<rect width="9.07" height="8.65" x="605.62" y="210.04" class="named"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
 <rect width="9.07" height="8.65" x="617.69" y="210.04" class="todo"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="9.07" height="8.65" x="629.76" y="210.04" class="named"><title>0x00454070 InitialiseRope (203 bytes)</title></rect>
 <rect width="9.07" height="8.65" x="641.83" y="210.04" class="named"><title>0x00467b90 JeepCheckGetOut (203 bytes)</title></rect>
