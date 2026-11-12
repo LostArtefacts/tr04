@@ -2823,6 +2823,8 @@ address,size,name,symbol
 0x007fea4d,1,Stashedcurrent_selected_option,_Stashedcurrent_selected_option
 0x007fea50,4,compass_settle_thang,_compass_settle_thang
 0x007fea54,,go_deselect,_go_deselect
+0x007fea60,730,pcring2,_pcring2
+0x007fed40,730,pcring1,_pcring1
 0x007ff020,1,combine_type_flag,_combine_type_flag
 0x007ff021,,left_repeat,_left_repeat
 0x007ff022,,go_select,_go_select

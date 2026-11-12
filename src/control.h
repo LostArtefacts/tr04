@@ -60,6 +60,7 @@ enum trigobj_types {
 };
 
 extern sint32 OnObject;
+extern sint32 reset_flag;
 extern sint32 height_type;
 extern sint32 tiltxoff, tiltyoff;
 extern sint16 *floor_data;

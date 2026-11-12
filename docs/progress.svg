@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="249.87" height="12" x="0" y="0" class="named"><title>1131 · 73.06%</title></rect>
 <rect width="0.66" height="12" x="249.87" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.67" height="12" x="250.53" y="0" class="nonmatching"><title>80 · 5.17%</title></rect>
-<rect width="73.79" height="12" x="268.21" y="0" class="todo"><title>334 · 21.58%</title></rect>
+<rect width="17.90" height="12" x="250.53" y="0" class="nonmatching"><title>81 · 5.23%</title></rect>
+<rect width="73.57" height="12" x="268.43" y="0" class="todo"><title>333 · 21.51%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">73.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1131</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">80</tspan> · <tspan class="todo">334</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1131</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">81</tspan> · <tspan class="todo">333</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="132.90" height="12" x="0" y="0" class="named"><title>242 KB · 38.86%</title></rect>
 <rect width="0.13" height="12" x="132.90" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.47" height="12" x="133.03" y="0" class="nonmatching"><title>57 KB · 9.20%</title></rect>
-<rect width="177.50" height="12" x="164.50" y="0" class="todo"><title>323 KB · 51.90%</title></rect>
+<rect width="31.79" height="12" x="133.03" y="0" class="nonmatching"><title>58 KB · 9.30%</title></rect>
+<rect width="177.17" height="12" x="164.83" y="0" class="todo"><title>323 KB · 51.80%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">38.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">242 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">323 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">242 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">58 KB</tspan> · <tspan class="todo">323 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -666,7 +666,7 @@
 <rect width="12" height="12" x="705" y="165" class="named"><title>0x0043b630 DrawWeaponMissile (222 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="165" class="named"><title>0x0043b710 LoadGame (30 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="165" class="named"><title>0x0043b730 SaveGame (44 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="180" class="todo"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="180" class="nonmatching"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="180" class="named"><title>0x0043b9b0 init_new_inventry (638 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="180" class="named"><title>0x0043bc30 do_debounced_joystick_poo (334 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="180" class="todo"><title>0x0043bd80 DrawThreeDeeObject2D (393 bytes)</title></rect>
@@ -1914,7 +1914,7 @@
 <rect width="15.55" height="14.63" x="401.85" y="61.52" class="todo"><title>0x00463de0 DrawChar (591 bytes)</title></rect>
 <rect width="15.55" height="14.63" x="420.40" y="61.52" class="todo"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
 <rect width="15.52" height="14.63" x="438.95" y="61.52" class="nonmatching"><title>0x00447ce0 ItemPushLaraStatic (590 bytes)</title></rect>
-<rect width="15.50" height="14.63" x="457.47" y="61.52" class="todo"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
+<rect width="15.50" height="14.63" x="457.47" y="61.52" class="nonmatching"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
 <rect width="15.47" height="14.63" x="475.97" y="61.52" class="named"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
 <rect width="15.47" height="14.63" x="494.44" y="61.52" class="todo"><title>0x0042c470 LaraTestClimb (588 bytes)</title></rect>
 <rect width="15.47" height="14.63" x="512.91" y="61.52" class="todo"><title>0x004390f0 TriggerGunShell (588 bytes)</title></rect>

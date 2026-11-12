@@ -17,6 +17,10 @@
 #include "savegame.h"
 #include "larafire.h"
 #include "lara_states.h"
+#include "control.h"
+#include "health.h"
+#include "specific/output.h"
+#include "specific/gamemain.h"
 
 sint32 LoadGame(void)
 {
@@ -37,6 +41,94 @@ sint32 SaveGame(void)
         return 1;
     else
         return -1;
+}
+
+sint32 S_CallInventory2(void)
+{
+    sint32 return_value, flag;
+    sint16 val;
+
+    val = 0;
+    oldLaraBusy = lara.Busy;
+    friggrimmer = 0;
+    if (input & IN_SELECT)
+        friggrimmer = 1;
+    rings[RING_INVENTORY] = &pcring1;
+    rings[RING_AMMO] = &pcring2;
+    CreateMonoScreen();
+    InventoryActive = 1;
+    init_new_inventry();
+    camera.number_frames = 2;
+    return_value = 0;
+    while (!val && !reset_flag) {
+        OBJLIST_SPACING = phd_centerx >> 1;
+        if (compass_settle_thang != 1024)
+            compass_settle_thang -= 32;
+        S_InitialisePolyList();
+        SetDebounce = 1;
+        S_UpdateInput();
+        input = inputBusy;
+        UpdatePulseColour();
+        GameTimer++;
+        if (dbinput & IN_OPTION) {
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            val = 1;
+        }
+        if (MainThread.ended)
+            return MainThread.ended;
+        S_DisplayMonoScreen();
+        do_debounced_joystick_poo();
+        if (!examine_mode) {
+            draw_current_object_list(RING_INVENTORY);
+            handle_inventry_menu();
+            if (rings[RING_AMMO]->ringactive)
+                draw_current_object_list(RING_AMMO);
+            draw_ammo_selector();
+            fade_ammo_selector();
+            draw_compass();
+        } else
+            do_examine_mode();
+        if (use_the_bitch && !input)
+            val = 1;
+        S_OutputPolyList();
+        camera.number_frames = S_DumpScreen();
+        if (loading_or_saving) {
+            while (1) {
+                S_InitialisePolyList();
+                SetDebounce = 1;
+                S_UpdateInput();
+                input = inputBusy;
+                UpdatePulseColour();
+                if (loading_or_saving == 1) {
+                    flag = go_and_load_game();
+                    if (!flag)
+                        continue;
+                    if (flag != 1)
+                        break;
+                } else if (!go_and_save_game())
+                    continue;
+                if (loading_or_saving == 1) {
+                    return_value = 1;
+                    val = 1;
+                }
+                break;
+            }
+            friggrimmer2 = 1;
+            friggrimmer = 1;
+            deselect_debounce = 0;
+            go_deselect = 0;
+            loading_or_saving = 0;
+        }
+    }
+    InitialisePickUpDisplay();
+    GLOBAL_lastinvitem = rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem;
+    update_laras_weapons_status();
+    if (use_the_bitch)
+        use_current_item();
+    FreeMonoScreen();
+    InventoryActive = 0;
+    lara.Busy = oldLaraBusy;
+    return return_value;
 }
 
 void init_new_inventry(void)
