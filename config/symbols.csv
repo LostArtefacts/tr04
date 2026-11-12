@@ -744,7 +744,7 @@ address,size,name,symbol
 0x0044a0d0,193,AlterFloorHeight,_AlterFloorHeight
 0x0044a1a0,493,GetFloor,_GetFloor
 0x0044a390,403,GetWaterHeight,_GetWaterHeight
-0x0044a530,1213,GetHeight,_GetHeight
+0x0044a530,1261,GetHeight,_GetHeight
 0x0044aa20,295,RefreshCamera,_RefreshCamera
 0x0044ab50,2659,TestTriggers,_TestTriggers
 0x0044b620,112,TriggerActive,_TriggerActive
