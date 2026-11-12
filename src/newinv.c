@@ -64,6 +64,31 @@ void handle_object_changeover(sint32 ringnum)
     Func43dbf0();
 }
 
+sint32 is_item_currently_combinable(sint16 obj)
+{
+    sint32 i;
+
+    if (obj < INV_WATERSKIN1_EMPTY_ITEM || obj > INV_WATERSKIN2_5_ITEM) {
+        for (i = 0; i < 23; i++) {
+            if (dels_handy_combine_table[i].item1 == obj && have_i_got_item(dels_handy_combine_table[i].item2))
+                return 1;
+            if (dels_handy_combine_table[i].item2 == obj && have_i_got_item(dels_handy_combine_table[i].item1))
+                return 1;
+        }
+        return 0;
+    } else if (obj <= INV_WATERSKIN1_3_ITEM) {
+        for (i = 0; i < 6; i++) {
+            if (have_i_got_item(i + INV_WATERSKIN2_EMPTY_ITEM))
+                return 1;
+        }
+    } else {
+        for (i = 0; i < 4; i++) {
+            if (have_i_got_item(i + INV_WATERSKIN1_EMPTY_ITEM))
+                return 1;
+        }
+    }
+}
+
 sint32 have_i_got_item(sint16 obj)
 {
     sint32 i;

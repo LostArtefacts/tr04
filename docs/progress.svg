@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="176.20" height="12" x="0" y="0" class="named"><title>797 · 51.52%</title></rect>
-<rect width="0.44" height="12" x="176.20" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="176.64" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="158.95" height="12" x="183.05" y="0" class="todo"><title>719 · 46.48%</title></rect>
+<rect width="176.42" height="12" x="0" y="0" class="named"><title>798 · 51.58%</title></rect>
+<rect width="0.44" height="12" x="176.42" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="176.86" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="158.73" height="12" x="183.27" y="0" class="todo"><title>718 · 46.41%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">51.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">797</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">719</tspan></text>
+<text text-anchor="end" x="522" y="7.50">51.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">798</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">718</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.85" height="12" x="0" y="0" class="named"><title>139 KB · 22.47%</title></rect>
-<rect width="0.12" height="12" x="76.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.97" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.38" height="12" x="85.62" y="0" class="todo"><title>465 KB · 74.96%</title></rect>
+<rect width="76.93" height="12" x="0" y="0" class="named"><title>140 KB · 22.49%</title></rect>
+<rect width="0.12" height="12" x="76.93" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="77.05" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.30" height="12" x="85.70" y="0" class="todo"><title>465 KB · 74.94%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">139 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">465 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">140 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">465 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -685,7 +685,7 @@
 <rect width="12" height="12" x="240" y="180" class="todo"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="180" class="todo"><title>0x0043e140 spinback (105 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="180" class="todo"><title>0x0043e1b0 update_laras_weapons_status (155 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="180" class="todo"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="180" class="named"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="180" class="named"><title>0x0043e2f0 have_i_got_item (36 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="180" class="named"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="180" class="named"><title>0x0043e360 combine_these_two_objects (98 bytes)</title></rect>
@@ -2481,7 +2481,7 @@
 <rect width="7.51" height="7.87" x="529.82" y="443.26" class="named"><title>0x0046b4c0 CalcActorLighting (153 bytes)</title></rect>
 <rect width="7.51" height="7.87" x="529.82" y="454.13" class="todo"><title>0x00473ce0 FileOpen (153 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.32" y="255.62" class="named"><title>0x00425ac0 lara_as_walk (152 bytes)</title></rect>
-<rect width="7.74" height="7.59" x="540.32" y="266.21" class="todo"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
+<rect width="7.74" height="7.59" x="540.32" y="266.21" class="named"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.32" y="276.80" class="named"><title>0x0044bbe0 LOS (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.32" y="287.39" class="todo"><title>0x004530d0 InitialiseFlameEmitter (152 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.32" y="297.98" class="named"><title>0x0046b560 GetJointAbsPositionCutSeq (152 bytes)</title></rect>
