@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="176.64" height="12" x="0" y="0" class="named"><title>799 · 51.65%</title></rect>
-<rect width="0.44" height="12" x="176.64" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="177.08" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="158.51" height="12" x="183.49" y="0" class="todo"><title>717 · 46.35%</title></rect>
+<rect width="176.86" height="12" x="0" y="0" class="named"><title>800 · 51.71%</title></rect>
+<rect width="0.44" height="12" x="176.86" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="177.30" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="158.29" height="12" x="183.71" y="0" class="todo"><title>716 · 46.28%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">51.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">799</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">717</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">800</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">716</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.99" height="12" x="0" y="0" class="named"><title>140 KB · 22.51%</title></rect>
-<rect width="0.12" height="12" x="76.99" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="77.11" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.24" height="12" x="85.76" y="0" class="todo"><title>465 KB · 74.92%</title></rect>
+<rect width="77.07" height="12" x="0" y="0" class="named"><title>140 KB · 22.54%</title></rect>
+<rect width="0.12" height="12" x="77.07" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="77.19" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.16" height="12" x="85.84" y="0" class="todo"><title>465 KB · 74.90%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">22.5%</text>
+<text text-anchor="end" x="522" y="24.50">22.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">140 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">465 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -681,7 +681,7 @@
 <rect width="12" height="12" x="180" y="180" class="named"><title>0x0043d450 handle_object_changeover (19 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="180" class="todo"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="180" class="todo"><title>0x0043dbf0 Func43dbf0 (566 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="180" class="todo"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="180" class="named"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="180" class="todo"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="180" class="named"><title>0x0043e140 spinback (105 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="180" class="todo"><title>0x0043e1b0 update_laras_weapons_status (155 bytes)</title></rect>
@@ -2496,7 +2496,7 @@
 <rect width="7.74" height="7.39" x="540.32" y="392.63" class="todo"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
 <rect width="7.74" height="7.39" x="540.32" y="403.02" class="named"><title>0x004564e0 ControlWaterfall (148 bytes)</title></rect>
 <rect width="7.74" height="7.34" x="540.32" y="413.41" class="named"><title>0x0040a930 InitialiseMummy (147 bytes)</title></rect>
-<rect width="7.74" height="7.34" x="540.32" y="423.75" class="todo"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
+<rect width="7.74" height="7.34" x="540.32" y="423.75" class="named"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
 <rect width="7.74" height="7.34" x="540.32" y="434.09" class="named"><title>0x00450dc0 GetFrames (147 bytes)</title></rect>
 <rect width="7.74" height="7.29" x="540.32" y="444.42" class="todo"><title>0x00401db0 InitialiseBaboon (146 bytes)</title></rect>
 <rect width="7.74" height="7.29" x="540.32" y="454.71" class="named"><title>0x00423c40 lara_col_hangturnlr (146 bytes)</title></rect>

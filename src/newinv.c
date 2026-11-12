@@ -64,6 +64,27 @@ void handle_object_changeover(sint32 ringnum)
     Func43dbf0();
 }
 
+void fade_ammo_selector(void)
+{
+    if (rings[RING_INVENTORY]->ringactive && (right_repeat >= 8 || left_repeat >= 8))
+        ammo_selector_fade_val = 0;
+    else if (ammo_selector_fade_dir == 1) {
+        if (ammo_selector_fade_val < 128)
+            ammo_selector_fade_val += 32;
+        if (ammo_selector_fade_val > 128) {
+            ammo_selector_fade_val = 128;
+            ammo_selector_fade_dir = 0;
+        }
+    } else if (ammo_selector_fade_dir == 2) {
+        if (ammo_selector_fade_val > 0)
+            ammo_selector_fade_val -= 32;
+        if (ammo_selector_fade_val < 0) {
+            ammo_selector_fade_val = 0;
+            ammo_selector_fade_dir = 0;
+        }
+    }
+}
+
 void spinback(uint16 *cock)
 {
     uint16 val, val2;

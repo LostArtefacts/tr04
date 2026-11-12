@@ -232,6 +232,7 @@ void combine_these_two_objects(sint16 obj1, sint16 obj2);
 void seperate_object(sint16 obj);
 sint32 is_item_currently_combinable(sint16 obj);
 void spinback(uint16 *cock);
+void fade_ammo_selector(void);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];
@@ -239,6 +240,10 @@ extern sint16 options_table[NUM_INVOBJ];
 extern COMBINELIST dels_handy_combine_table[23];
 extern uint8 current_selected_option;
 extern sint8 menu_active;
+extern uint8 left_repeat;
+extern uint8 right_repeat;
+extern sint16 ammo_selector_fade_val;
+extern sint16 ammo_selector_fade_dir;
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
 
