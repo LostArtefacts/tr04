@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="192.55" height="12" x="0" y="0" class="named"><title>871 · 56.30%</title></rect>
-<rect width="0.44" height="12" x="192.55" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="193" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="142.59" height="12" x="199.41" y="0" class="todo"><title>645 · 41.69%</title></rect>
+<rect width="192.78" height="12" x="0" y="0" class="named"><title>872 · 56.37%</title></rect>
+<rect width="0.44" height="12" x="192.78" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="193.22" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="142.37" height="12" x="199.63" y="0" class="todo"><title>644 · 41.63%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">56.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">871</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">645</tspan></text>
+<text text-anchor="end" x="522" y="7.50">56.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">872</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">644</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="82.27" height="12" x="0" y="0" class="named"><title>149 KB · 24.06%</title></rect>
-<rect width="0.12" height="12" x="82.27" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="82.39" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="250.95" height="12" x="91.05" y="0" class="todo"><title>455 KB · 73.38%</title></rect>
+<rect width="82.38" height="12" x="0" y="0" class="named"><title>149 KB · 24.09%</title></rect>
+<rect width="0.12" height="12" x="82.38" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="82.50" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="250.85" height="12" x="91.15" y="0" class="todo"><title>455 KB · 73.35%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">149 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">455 KB</tspan></text>
@@ -1263,7 +1263,7 @@
 <rect width="12" height="12" x="660" y="345" class="todo"><title>0x00474e10 LoadObjects (1156 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="345" class="todo"><title>0x004752a0 AdjustUV (1121 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="345" class="todo"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="345" class="todo"><title>0x00475970 LoadCameras (187 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="345" class="named"><title>0x00475970 LoadCameras (187 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="345" class="named"><title>0x00475a30 LoadSoundEffects (139 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="345" class="todo"><title>0x00475ac0 LoadBoxes (430 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="360" class="todo"><title>0x00475c70 LoadAnimatedTextures (109 bytes)</title></rect>
@@ -2382,7 +2382,7 @@
 <rect width="8.41" height="8.64" x="738.59" y="221.72" class="named"><title>0x00452de0 DrawHealthBar (188 bytes)</title></rect>
 <rect width="8.26" height="8.75" x="507.48" y="233.36" class="named"><title>0x00421ff0 TestHangSwingIn (187 bytes)</title></rect>
 <rect width="8.26" height="8.75" x="507.48" y="245.11" class="named"><title>0x00424820 JumpOffRope (187 bytes)</title></rect>
-<rect width="8.26" height="8.75" x="507.48" y="256.85" class="todo"><title>0x00475970 LoadCameras (187 bytes)</title></rect>
+<rect width="8.26" height="8.75" x="507.48" y="256.85" class="named"><title>0x00475970 LoadCameras (187 bytes)</title></rect>
 <rect width="8.26" height="8.70" x="507.48" y="268.60" class="named"><title>0x0046b980 ninth_control (186 bytes)</title></rect>
 <rect width="8.26" height="8.70" x="507.48" y="280.30" class="named"><title>0x004705f0 InitD3DDevice (186 bytes)</title></rect>
 <rect width="8.26" height="8.70" x="507.48" y="292" class="todo"><title>0x00472400 PrelightVertsMMX (186 bytes)</title></rect>

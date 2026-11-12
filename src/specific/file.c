@@ -51,6 +51,25 @@ sint32 LoadFile(const char *name, char **dest)
     return 0;
 }
 
+uint8 LoadCameras(void)
+{
+    Log(2, "LoadCameras");
+    number_cameras = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    if (number_cameras) {
+        camera.fixed = (OBJECT_VECTOR *)game_malloc(number_cameras * sizeof(OBJECT_VECTOR), 0);
+        memcpy(camera.fixed, FileData, number_cameras * sizeof(OBJECT_VECTOR));
+        FileData += number_cameras * sizeof(OBJECT_VECTOR);
+    }
+    number_spotcams = *(sint16 *)FileData;
+    FileData += sizeof(sint32);
+    if (number_spotcams) {
+        memcpy(SpotCam, FileData, number_spotcams * sizeof(SPOTCAM));
+        FileData += number_spotcams * sizeof(SPOTCAM);
+    }
+    return 1;
+}
+
 uint8 LoadSoundEffects(void)
 {
     Log(2, "LoadSoundEffects");
