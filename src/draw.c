@@ -8,6 +8,8 @@
 #include "deltapak.h"
 #include "health.h"
 #include "anim.h"
+#include "effects.h"
+#include "specific/lighting.h"
 
 #define S_LongMemCpy(d, s, n) memcpy(d, s, (n) * sizeof(sint32))
 
@@ -229,6 +231,31 @@ void phd_PutPolygons_I(sint16 *ptr, sint32 clip)
     InterpolateMatrix();
     phd_PutPolygons(ptr, clip);
     phd_PopMatrix();
+}
+
+void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame)
+{
+    sint32 *mptr;
+    sint32 x, y, z;
+
+    if (item->shade < 0) {
+        phd_PushUnitMatrix();
+        mptr = phd_mxptr;
+        mptr[M03] = mptr[M13] = mptr[M23] = 0;
+        phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+        phd_TranslateRel((frame[0] + frame[1]) >> 1, (frame[2] + frame[3]) >> 1, (frame[4] + frame[5]) >> 1);
+        x = item->pos.x_pos + (phd_mxptr[M03] >> 14);
+        y = item->pos.y_pos + (phd_mxptr[M13] >> 14);
+        z = item->pos.z_pos + (phd_mxptr[M23] >> 14);
+        phd_PopMatrix();
+        current_item = item;
+        item->il.item_pos.x = x;
+        item->il.item_pos.y = y;
+        item->il.item_pos.z = z;
+        CalcAmbientLight(item);
+        CreateLightList(item);
+    } else
+        S_CalculateStaticMeshLight(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->shade & 0x7FFF, &room[item->room_number]);
 }
 
 sint32 GetFrames(ITEM_INFO *item, sint16 *frm[], sint32 *rate)
