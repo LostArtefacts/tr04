@@ -6,6 +6,9 @@
 #include "effects.h"
 #include "lara.h"
 #include "objnums.h"
+#include "room.h"
+#include "tomb4fx.h"
+#include "specific/3dmath.h"
 #include "specific/function_stubs.h"
 
 void TriggerDemigodMissile(PHD_3DPOS *pos, sint16 room_number, sint16 type)
@@ -86,6 +89,50 @@ void TriggerDemigodMissileFlame(sint16 fx_number, sint32 xv, sint32 yv, sint32 z
     size = (GetRandomControl() & 7) + 64;
     sptr->Size = sptr->sSize = size;
     sptr->dSize = size >> 5;
+}
+
+void TriggerHammerSmoke(sint32 x, sint32 y, sint32 z, sint32 num)
+{
+    SMOKE_SPARKS *sptr;
+    sint32 angle, step, off, size;
+
+    angle = GetRandomControl() << 1;
+    step = 0x10000 / num;
+    for (; num > 0; num--) {
+        sptr = &smoke_spark[GetFreeSmokeSpark()];
+        sptr->On = 1;
+        sptr->sShade = 0;
+        sptr->dShade = (GetRandomControl() & 0x1F) + 96;
+        sptr->ColFadeSpeed = 4;
+        sptr->FadeToBlack = 24 - (GetRandomControl() & 7);
+        sptr->sLife = sptr->Life = (GetRandomControl() & 7) + 48;
+        sptr->TransType = 2;
+        sptr->x = (GetRandomControl() & 0x1F) + x - 16;
+        sptr->y = (GetRandomControl() & 0x1F) + y - 16;
+        sptr->z = (GetRandomControl() & 0x1F) + z - 16;
+        off = (GetRandomControl() & 0xFF) + 256;
+        sptr->Xvel = (sint16)(((rcossin_tbl[(angle >> 3) & 0x1FFE] << 2) * off) >> W2V_SHIFT);
+        sptr->Yvel = -32 - (GetRandomControl() & 0x3F);
+        sptr->Zvel = (sint16)(((rcossin_tbl[((angle >> 3) & 0x1FFE) + 1] << 2) * off) >> W2V_SHIFT);
+        sptr->Friction = 9;
+        if (GetRandomControl() & 1) {
+            sptr->Flags = 16;
+            sptr->RotAng = GetRandomControl() & 0xFFF;
+            if (GetRandomControl() & 1)
+                sptr->RotAdd = -64 - (GetRandomControl() & 0x3F);
+            else
+                sptr->RotAdd = (GetRandomControl() & 0x3F) + 64;
+        } else if (room[lara_item->room_number].flags & ROOM_NOT_INSIDE)
+            sptr->Flags = 256;
+        else
+            sptr->Flags = 0;
+        sptr->Gravity = -4 - (GetRandomControl() & 3);
+        sptr->MaxYvel = -4 - (GetRandomControl() & 3);
+        size = (GetRandomControl() & 0x3F) + 64;
+        sptr->Size = sptr->sSize = size >> 3;
+        sptr->dSize = size;
+        angle += step;
+    }
 }
 
 void InitialiseDemigod(sint16 item_number)
