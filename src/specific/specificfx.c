@@ -1,4 +1,34 @@
+#include <windows.h>
+#include <d3d.h>
+
 #include "specificfx.h"
+#include "3dmath.h"
+#include "../anim.h"
+#include "../objnums.h"
+
+void InitTarget_2(void)
+{
+    OBJECT_INFO *obj;
+    MESH_DATA *mesh;
+    D3DTLVERTEX *v;
+    sint32 i;
+
+    obj = &objects[TARGET_GRAPHICS];
+    if (!obj->loaded)
+        return;
+    mesh = (MESH_DATA *)meshes[obj->mesh_index];
+    targetMeshP = mesh;
+    IDirect3DVertexBuffer_Lock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB, DDLOCK_READONLY, (void **)&v, 0);
+    for (i = 0; i < mesh->nVerts; i++) {
+        v[i].sx = (1.0F / 96.0F) * (v[i].sx * 80.0F);
+        v[i].sy = (1.0F / 224.0F) * (v[i].sy * 60.0F);
+        v[i].color = 0xFF000000;
+        v[i].specular = 0xFF000000;
+        v[i].sz = 0;
+        v[i].rhw = f_mpersp / f_mznear * f_moneopersp;
+    }
+    IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
+}
 
 void SetFade(sint32 start, sint32 end)
 {
