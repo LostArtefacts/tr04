@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="196.31" height="12" x="0" y="0" class="named"><title>888 · 57.40%</title></rect>
-<rect width="0.44" height="12" x="196.31" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="196.76" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="138.61" height="12" x="203.39" y="0" class="todo"><title>627 · 40.53%</title></rect>
+<rect width="196.53" height="12" x="0" y="0" class="named"><title>889 · 57.47%</title></rect>
+<rect width="0.44" height="12" x="196.53" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="196.98" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="138.39" height="12" x="203.61" y="0" class="todo"><title>626 · 40.47%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">57.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">888</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">627</tspan></text>
+<text text-anchor="end" x="522" y="7.50">57.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">889</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">626</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="84.11" height="12" x="0" y="0" class="named"><title>153 KB · 24.59%</title></rect>
-<rect width="0.12" height="12" x="84.11" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="84.23" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="248.86" height="12" x="93.14" y="0" class="todo"><title>451 KB · 72.77%</title></rect>
+<rect width="84.17" height="12" x="0" y="0" class="named"><title>153 KB · 24.61%</title></rect>
+<rect width="0.12" height="12" x="84.17" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="84.29" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="248.80" height="12" x="93.20" y="0" class="todo"><title>451 KB · 72.75%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">153 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">451 KB</tspan></text>
@@ -1521,7 +1521,7 @@
 <rect width="12" height="12" x="30" y="435" class="todo"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="435" class="named"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="435" class="todo"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="435" class="todo"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="435" class="named"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="435" class="todo"><title>0x00493a50 DXToggleFullScreen (417 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="435" class="todo"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="435" class="todo"><title>0x00493c00 DXClose (604 bytes)</title></rect>
@@ -2623,7 +2623,7 @@
 <rect width="6.45" height="6.53" x="646.58" y="285.77" class="todo"><title>0x00472ee0 CalcTriFaceNormal (109 bytes)</title></rect>
 <rect width="6.45" height="6.53" x="656.03" y="285.77" class="named"><title>0x00475c70 LoadAnimatedTextures (109 bytes)</title></rect>
 <rect width="6.45" height="6.53" x="665.48" y="285.77" class="named"><title>0x00481df0 InitialiseFogBulbs (109 bytes)</title></rect>
-<rect width="6.45" height="6.53" x="674.93" y="285.77" class="todo"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
+<rect width="6.45" height="6.53" x="674.93" y="285.77" class="named"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
 <rect width="6.39" height="6.53" x="684.38" y="285.77" class="named"><title>0x00414f30 LavaBurn (108 bytes)</title></rect>
 <rect width="6.39" height="6.53" x="693.77" y="285.77" class="named"><title>0x00421210 lara_as_all4s (108 bytes)</title></rect>
 <rect width="6.39" height="6.53" x="703.16" y="285.77" class="named"><title>0x00453230 InitialiseFlameEmitter3 (108 bytes)</title></rect>

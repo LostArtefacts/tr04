@@ -264,6 +264,19 @@ sint32 DXCreateD3DDevice(LPDIRECT3D3 d3d, GUID guid, LPDIRECTDRAWSURFACE4 surf, 
     return 0;
 }
 
+sint32 DXChangeVideoMode(void)
+{
+    sint32 val;
+
+    Log(2, "DXChangeVideoMode");
+    G_dxptr->Flags |= 0x40;
+    IDirect3D3_EvictManagedTextures(G_dxptr->lpD3D);
+    val = DXCreate(0, 0, 0, G_dxptr->Flags, G_dxptr, G_dxptr->hWnd, G_dxptr->WindowStyle);
+    G_dxptr->Flags ^= 0x40;
+    Log(2, "Exited DXChangeVideoMode %d", val);
+    return val;
+}
+
 void DXMove(sint32 x, sint32 y)
 {
     Log(2, "DXMove : x %d y %d", x, y);
