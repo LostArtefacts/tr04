@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="257.86" height="12" x="0" y="0" class="named"><title>1188 · 76.74%</title></rect>
 <rect width="0.65" height="12" x="257.86" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="26.91" height="12" x="258.51" y="0" class="nonmatching"><title>124 · 8.01%</title></rect>
-<rect width="50.57" height="12" x="285.43" y="0" class="todo"><title>233 · 15.05%</title></rect>
+<rect width="27.13" height="12" x="258.51" y="0" class="nonmatching"><title>125 · 8.07%</title></rect>
+<rect width="50.36" height="12" x="285.64" y="0" class="todo"><title>232 · 14.99%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">76.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1188</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">124</tspan> · <tspan class="todo">233</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1188</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">125</tspan> · <tspan class="todo">232</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="166.37" height="12" x="0" y="0" class="named"><title>309 KB · 49.51%</title></rect>
 <rect width="0.13" height="12" x="166.37" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="80.42" height="12" x="166.50" y="0" class="nonmatching"><title>150 KB · 23.94%</title></rect>
-<rect width="89.08" height="12" x="246.92" y="0" class="todo"><title>166 KB · 26.51%</title></rect>
+<rect width="82.44" height="12" x="166.50" y="0" class="nonmatching"><title>153 KB · 24.53%</title></rect>
+<rect width="87.07" height="12" x="248.93" y="0" class="todo"><title>162 KB · 25.91%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">309 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">150 KB</tspan> · <tspan class="todo">166 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">309 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">153 KB</tspan> · <tspan class="todo">162 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1027,7 +1027,7 @@
 <rect width="12" height="12" x="120" y="285" class="todo"><title>0x00460320 Spline (249 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="285" class="nonmatching"><title>0x00460420 InitialiseSpotCam (1833 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="285" class="named"><title>0x00460b50 SetSplineData (285 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="285" class="todo"><title>0x00460c70 CalculateSpotCams (3744 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="285" class="nonmatching"><title>0x00460c70 CalculateSpotCams (3744 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="285" class="todo"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="285" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="285" class="named"><title>0x00461ca0 TestTriggersAtXYZ (67 bytes)</title></rect>
@@ -1627,7 +1627,7 @@
 <rect width="44.78" height="38.46" x="0" y="277.42" class="nonmatching"><title>0x004118d0 SkeletonControl (4490 bytes)</title></rect>
 <rect width="44.78" height="35.88" x="0" y="318.88" class="nonmatching"><title>0x00405fa0 GuideControl (4191 bytes)</title></rect>
 <rect width="44.78" height="35.03" x="0" y="357.76" class="nonmatching"><title>0x0041af00 VoncroyRaceControl (4092 bytes)</title></rect>
-<rect width="44.78" height="32.02" x="0" y="395.78" class="todo"><title>0x00460c70 CalculateSpotCams (3744 bytes)</title></rect>
+<rect width="44.78" height="32.02" x="0" y="395.78" class="nonmatching"><title>0x00460c70 CalculateSpotCams (3744 bytes)</title></rect>
 <rect width="44.78" height="31.20" x="0" y="430.80" class="todo"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
 <rect width="34.50" height="38.22" x="47.78" y="0" class="todo"><title>0x0047e8b0 phd_PutPolygonsPickup (3437 bytes)</title></rect>
 <rect width="34.50" height="37.32" x="47.78" y="41.22" class="nonmatching"><title>0x004080e0 HorsemanControl (3356 bytes)</title></rect>

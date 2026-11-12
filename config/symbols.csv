@@ -2371,6 +2371,7 @@ address,size,name,symbol
 0x004bf6e8,4,bCheckTrigger,_bCheckTrigger
 0x004bf6ec,4,bUseSpotCam,_bUseSpotCam
 0x004bf6f0,4,bDisableLaraControl,_bDisableLaraControl
+0x004bf6f4,4,bFirstLook,_bFirstLook
 0x004bf6f8,12,SwitchPos,_SwitchPos
 0x004bf704,1280,FontShades,_FontShades
 0x004bfc04,1,ScaleFlag,_ScaleFlag
