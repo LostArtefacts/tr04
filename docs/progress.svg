@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="191.23" height="12" x="0" y="0" class="named"><title>865 · 55.91%</title></rect>
-<rect width="0.44" height="12" x="191.23" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="191.67" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="143.92" height="12" x="198.08" y="0" class="todo"><title>651 · 42.08%</title></rect>
+<rect width="191.45" height="12" x="0" y="0" class="named"><title>866 · 55.98%</title></rect>
+<rect width="0.44" height="12" x="191.45" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="191.89" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="143.70" height="12" x="198.30" y="0" class="todo"><title>650 · 42.02%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">56.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">865</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">651</tspan></text>
+<text text-anchor="end" x="522" y="7.50">56.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">866</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">650</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="82.01" height="12" x="0" y="0" class="named"><title>149 KB · 23.98%</title></rect>
-<rect width="0.12" height="12" x="82.01" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="82.13" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="251.22" height="12" x="90.78" y="0" class="todo"><title>456 KB · 73.46%</title></rect>
+<rect width="82.06" height="12" x="0" y="0" class="named"><title>149 KB · 23.99%</title></rect>
+<rect width="0.12" height="12" x="82.06" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="82.18" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="251.17" height="12" x="90.83" y="0" class="todo"><title>456 KB · 73.44%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">149 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">456 KB</tspan></text>
@@ -975,7 +975,7 @@
 <rect width="12" height="12" x="90" y="270" class="named"><title>0x00459060 GetRopePos (146 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="270" class="todo"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="270" class="named"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="270" class="todo"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="270" class="named"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="270" class="named"><title>0x00459410 DrawRopeList (56 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="270" class="named"><title>0x00459450 Normalise (179 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="270" class="named"><title>0x00459510 ModelRigid (302 bytes)</title></rect>
@@ -2692,7 +2692,7 @@
 <rect width="5.92" height="6.01" x="643.59" y="304.63" class="named"><title>0x00420fe0 LaraFallen (92 bytes)</title></rect>
 <rect width="5.92" height="6.01" x="652.50" y="304.63" class="named"><title>0x004370e0 SoundEffects (92 bytes)</title></rect>
 <rect width="5.92" height="6.01" x="661.42" y="304.63" class="todo"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
-<rect width="5.92" height="6.01" x="670.34" y="304.63" class="todo"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
+<rect width="5.92" height="6.01" x="670.34" y="304.63" class="named"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
 <rect width="5.92" height="6.01" x="679.25" y="304.63" class="todo"><title>0x00479760 ClearDynamicLighting (92 bytes)</title></rect>
 <rect width="5.85" height="6.01" x="688.17" y="304.63" class="named"><title>0x00422e50 MonkeySwingFall (91 bytes)</title></rect>
 <rect width="5.85" height="6.01" x="697.02" y="304.63" class="named"><title>0x00427420 lara_as_pickupflare (91 bytes)</title></rect>

@@ -67,6 +67,19 @@ sint32 RopeNodeCollision(ROPE_STRUCT *rope, sint32 x, sint32 y, sint32 z, sint32
     return -1;
 }
 
+void RopeControl(sint16 item_num)
+{
+    ROPE_STRUCT *currope;
+
+    currope = &RopeList[items[item_num].trigger_flags];
+    if (!TriggerActive(&items[item_num])) {
+        currope->Active = 0;
+    } else {
+        currope->Active = 1;
+        CalculateRope(currope);
+    }
+}
+
 void DrawRopeList(void)
 {
     sint32 i;

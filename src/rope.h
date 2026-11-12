@@ -2,6 +2,7 @@
 #define ROPE_H
 
 #include "3dglodef.h"
+#include "items.h"
 
 typedef struct {
     PHD_VECTOR Segment[24];
@@ -22,6 +23,9 @@ typedef struct {
 } PENDULUM;
 
 PHD_VECTOR *Normalise(PHD_VECTOR *v);
+void CalculateRope(ROPE_STRUCT *Rope);
+void AlignLaraToRope(ITEM_INFO *l);
+void RopeControl(sint16 item_num);
 void vMul(PHD_VECTOR *v, sint32 scale, PHD_VECTOR *d);
 sint32 mDotProduct(PHD_VECTOR *a, PHD_VECTOR *b);
 void GetRopePos(ROPE_STRUCT *rope, sint32 pos, sint32 *x, sint32 *y, sint32 *z);
