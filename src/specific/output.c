@@ -5,6 +5,7 @@
 #include "time.h"
 #include "../text.h"
 #include "d3dmatrix.h"
+#include "3dmath.h"
 #include "drawroom.h"
 #include "polyinsert.h"
 #include "../effects.h"
@@ -56,6 +57,41 @@ sint32 S_DumpScreen(void)
     DXShowFrame();
     App.dx.DoneBlit = 1;
     return n;
+}
+
+void ProjectTrainVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip, sint32 x)
+{
+    float zv;
+    sint32 i;
+    sint16 clip_distance;
+
+    for (i = 0; i < nVerts; i++) {
+        clip_distance = 0;
+        v->tu = v->sx;
+        v->tv = v->sy;
+        if (v->sz >= f_mznear) {
+            zv = f_mpersp / v->sz;
+            if (v->sz > FogEnd) {
+                v->sz = f_zfar;
+                clip_distance = 256;
+            }
+            v->sx = zv * v->sx + f_centerx;
+            v->sy = zv * v->sy + f_centery;
+            v->rhw = f_moneopersp * zv;
+            if (v->sx < clip_left)
+                clip_distance++;
+            else if (v->sx > clip_right)
+                clip_distance += 2;
+            if (v->sy < clip_top)
+                clip_distance += 4;
+            else if (v->sy > clip_bottom)
+                clip_distance += 8;
+        } else
+            clip_distance = -128;
+        clip[0] = clip_distance;
+        clip++;
+        v++;
+    }
 }
 
 HRESULT DDCopyBitmap(LPDIRECTDRAWSURFACE4 surf, HBITMAP hbm, sint32 x, sint32 y, sint32 dx, sint32 dy)
