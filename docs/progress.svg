@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="144.14" height="12" x="0" y="0" class="named"><title>652 · 42.15%</title></rect>
-<rect width="0.44" height="12" x="144.14" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="144.58" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="192.78" height="12" x="149.22" y="0" class="todo"><title>872 · 56.37%</title></rect>
+<rect width="144.36" height="12" x="0" y="0" class="named"><title>653 · 42.21%</title></rect>
+<rect width="0.44" height="12" x="144.36" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="144.80" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="192.55" height="12" x="149.45" y="0" class="todo"><title>871 · 56.30%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">42.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">652</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">872</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">653</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">871</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="59.39" height="12" x="0" y="0" class="named"><title>108 KB · 17.37%</title></rect>
-<rect width="0.12" height="12" x="59.39" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="59.52" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="275.24" height="12" x="66.76" y="0" class="todo"><title>499 KB · 80.48%</title></rect>
+<rect width="59.46" height="12" x="0" y="0" class="named"><title>108 KB · 17.38%</title></rect>
+<rect width="0.12" height="12" x="59.46" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="59.58" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="275.18" height="12" x="66.82" y="0" class="todo"><title>499 KB · 80.46%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">108 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">499 KB</tspan></text>
@@ -804,7 +804,7 @@
 <rect width="12" height="12" x="525" y="210" class="todo"><title>0x00449410 ControlPhase (1909 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="210" class="todo"><title>0x00449b90 AnimateItem (1009 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="210" class="named"><title>0x00449fc0 GetChange (159 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="210" class="todo"><title>0x0044a060 TranslateItem (110 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="210" class="named"><title>0x0044a060 TranslateItem (110 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="210" class="named"><title>0x0044a0d0 AlterFloorHeight (193 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="210" class="named"><title>0x0044a1a0 GetFloor (493 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="210" class="named"><title>0x0044a390 GetWaterHeight (403 bytes)</title></rect>
@@ -2608,7 +2608,7 @@
 <rect width="6.70" height="6.41" x="570.80" y="390.10" class="named"><title>0x00454740 AddActiveItem (111 bytes)</title></rect>
 <rect width="6.70" height="6.41" x="570.80" y="399.50" class="named"><title>0x00461cf0 SwitchControl (111 bytes)</title></rect>
 <rect width="6.70" height="6.35" x="570.80" y="408.91" class="todo"><title>0x004027e0 FindCrowbarSwitch (110 bytes)</title></rect>
-<rect width="6.70" height="6.35" x="570.80" y="418.26" class="todo"><title>0x0044a060 TranslateItem (110 bytes)</title></rect>
+<rect width="6.70" height="6.35" x="570.80" y="418.26" class="named"><title>0x0044a060 TranslateItem (110 bytes)</title></rect>
 <rect width="6.70" height="6.35" x="570.80" y="427.61" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
 <rect width="6.70" height="6.35" x="570.80" y="436.96" class="named"><title>0x00454900 CreateEffect (110 bytes)</title></rect>
 <rect width="6.70" height="6.35" x="570.80" y="446.30" class="todo"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>

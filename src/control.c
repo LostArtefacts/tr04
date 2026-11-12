@@ -77,6 +77,17 @@ sint32 GetChange(ITEM_INFO *item, ANIM_STRUCT *anim)
     return 0;
 }
 
+void TranslateItem(ITEM_INFO *item, sint32 x, sint32 y, sint32 z)
+{
+    sint32 s, c;
+
+    c = phd_cos(item->pos.y_rot);
+    s = phd_sin(item->pos.y_rot);
+    item->pos.x_pos += (z * s + x * c) >> W2V_SHIFT;
+    item->pos.y_pos += y;
+    item->pos.z_pos += (z * c - x * s) >> W2V_SHIFT;
+}
+
 void AlterFloorHeight(ITEM_INFO *item, sint32 height)
 {
     FLOOR_INFO *floor, *ceiling;
