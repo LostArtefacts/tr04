@@ -12,5 +12,7 @@ void CreateFlare(sint16 object, sint32 thrown);
 void undraw_flare(void);
 void DrawFlareInAir(ITEM_INFO *item);
 void draw_flare(void);
+sint32 DoFlareLight(PHD_VECTOR *pos, sint32 flare_age);
+void FlareControl(sint16 item_number);
 
 #endif
