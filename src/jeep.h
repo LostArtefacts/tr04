@@ -54,5 +54,6 @@ void JeepBaddieCollision(ITEM_INFO *item);
 void JeepCollideStaticObjects(sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 height);
 sint32 UserControl_jeep(ITEM_INFO *item, sint32 height, sint32 *pitch);
 void JeepFireGrenade(ITEM_INFO *item);
+void JeepControl(sint16 item_number);
 
 #endif

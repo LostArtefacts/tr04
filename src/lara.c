@@ -11,6 +11,12 @@
 #include "delstuff.h"
 #include "specific/input.h"
 #include "laraclmb.h"
+#include "bike.h"
+#include "jeep.h"
+#include "objnums.h"
+#include "gameflow.h"
+#include "collide.h"
+#include "larafire.h"
 
 #define DAMAGE_START 140
 #define DAMAGE_LENGTH 14
@@ -37,6 +43,76 @@ sint16 LaraCeilingFront(ITEM_INFO *item, sint16 ang, sint32 dist, sint32 h)
     if (height != NO_HEIGHT)
         height += h - item->pos.y_pos;
     return (sint16)height;
+}
+
+void LaraAboveWater(ITEM_INFO *item, COLL_INFO *coll)
+{
+    coll->old.x = item->pos.x_pos;
+    coll->old.y = item->pos.y_pos;
+    coll->old.z = item->pos.z_pos;
+    coll->old_anim_state = item->current_anim_state;
+    coll->old_anim_number = item->anim_number;
+    coll->old_frame_number = item->frame_number;
+    coll->radius = 100;
+    coll->trigger = NULL;
+    coll->slopes_are_walls = 0;
+    coll->slopes_are_pits = 0;
+    coll->lava_is_pit = 0;
+    coll->enable_baddie_push = 1;
+    coll->enable_spaz = 1;
+    if ((input & IN_LOOK) && lara.look)
+        LookLeftRight();
+    else
+        ResetLook();
+    lara.look = 1;
+    if (lara.vehicle != NO_ITEM) {
+        if (items[lara.vehicle].object_number == MOTORBIKE) {
+            BikeControl(lara.vehicle);
+            return;
+        }
+        JeepControl(lara.vehicle);
+        return;
+    }
+    if (item->current_anim_state != AS_DEATH && (gfLevelFlags & GF_TRAIN) && item->pos.y_pos >= 0) {
+        if (item->pos.z_pos > 51900 && item->pos.z_pos < 53554) {
+            ForcedFixedCamera.y = -384;
+            ForcedFixedCamera.z = 52736;
+        } else {
+            ForcedFixedCamera.y = -1024;
+            ForcedFixedCamera.z = item->pos.z_pos <= 51900 ? 50176 : 55296;
+        }
+        ForcedFixedCamera.x = item->pos.x_pos;
+        ForcedFixedCamera.room_number = item->room_number;
+        UseForcedFixedCamera = 1;
+        item->anim_number = ANIM_TRAINDEATH;
+        item->frame_number = anims[ANIM_TRAINDEATH].frame_base;
+        item->current_anim_state = AS_DEATH;
+        item->pos.y_rot = -16384;
+        item->gravity_status = 0;
+        item->fallspeed = 0;
+        item->speed = 0;
+    }
+    (*lara_control_routines[item->current_anim_state])(item, coll);
+    if (item->pos.z_rot >= -182 && item->pos.z_rot <= 182)
+        item->pos.z_rot = 0;
+    else if (item->pos.z_rot < -182)
+        item->pos.z_rot += 182;
+    else
+        item->pos.z_rot -= 182;
+    if (lara.turn_rate >= -364 && lara.turn_rate <= 364)
+        lara.turn_rate = 0;
+    else if (lara.turn_rate < -364)
+        lara.turn_rate += 364;
+    else
+        lara.turn_rate -= 364;
+    item->pos.y_rot += lara.turn_rate;
+    AnimateLara(item);
+    LaraBaddieCollision(item, coll);
+    if (lara.vehicle == NO_ITEM)
+        (*lara_collision_routines[item->current_anim_state])(item, coll);
+    UpdateLaraRoom(item, -381);
+    LaraGun();
+    TestTriggers(coll->trigger, 0, 0);
 }
 
 void lara_as_duckl(ITEM_INFO *item, COLL_INFO *coll)
