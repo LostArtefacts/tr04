@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="254.95" height="12" x="0" y="0" class="named"><title>1154 · 74.55%</title></rect>
 <rect width="0.66" height="12" x="254.95" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="18.78" height="12" x="255.62" y="0" class="nonmatching"><title>85 · 5.49%</title></rect>
-<rect width="67.60" height="12" x="274.40" y="0" class="todo"><title>306 · 19.77%</title></rect>
+<rect width="19" height="12" x="255.62" y="0" class="nonmatching"><title>86 · 5.56%</title></rect>
+<rect width="67.38" height="12" x="274.62" y="0" class="todo"><title>305 · 19.70%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">74.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1154</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">85</tspan> · <tspan class="todo">306</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1154</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">86</tspan> · <tspan class="todo">305</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="138.73" height="12" x="0" y="0" class="named"><title>253 KB · 40.56%</title></rect>
 <rect width="0.13" height="12" x="138.73" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="33.85" height="12" x="138.86" y="0" class="nonmatching"><title>62 KB · 9.90%</title></rect>
-<rect width="169.29" height="12" x="172.71" y="0" class="todo"><title>308 KB · 49.50%</title></rect>
+<rect width="34.34" height="12" x="138.86" y="0" class="nonmatching"><title>63 KB · 10.04%</title></rect>
+<rect width="168.80" height="12" x="173.20" y="0" class="todo"><title>307 KB · 49.36%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">40.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">253 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">62 KB</tspan> · <tspan class="todo">308 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">253 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">63 KB</tspan> · <tspan class="todo">307 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -218,7 +218,7 @@
 <rect width="12" height="12" x="735" y="30" class="named"><title>0x00415ec0 TestBoundsCollideTeethSpikes (270 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="45" class="todo"><title>0x00415fd0 ControlScaledSpike (953 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="45" class="named"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="45" class="todo"><title>0x00416550 ControlBurningFloor (891 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="45" class="nonmatching"><title>0x00416550 ControlBurningFloor (891 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="45" class="named"><title>0x004168d0 ControlChain (127 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="45" class="named"><title>0x00416950 ControlPlough (76 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="45" class="named"><title>0x004169a0 ControlStargate (89 bytes)</title></rect>
@@ -1796,7 +1796,7 @@
 <rect width="18.99" height="18.41" x="555.45" y="0" class="nonmatching"><title>0x00454b60 ElementPuzzleCollision (908 bytes)</title></rect>
 <rect width="18.82" height="18.41" x="577.43" y="0" class="nonmatching"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
 <rect width="18.63" height="18.41" x="599.25" y="0" class="nonmatching"><title>0x004142f0 FlameEmitterControl (891 bytes)</title></rect>
-<rect width="18.63" height="18.41" x="620.88" y="0" class="todo"><title>0x00416550 ControlBurningFloor (891 bytes)</title></rect>
+<rect width="18.63" height="18.41" x="620.88" y="0" class="nonmatching"><title>0x00416550 ControlBurningFloor (891 bytes)</title></rect>
 <rect width="18.57" height="18.41" x="642.51" y="0" class="nonmatching"><title>0x0041bf60 WildboarControl (888 bytes)</title></rect>
 <rect width="18.53" height="18.41" x="664.08" y="0" class="named"><title>0x0044f790 SetRoomBounds (886 bytes)</title></rect>
 <rect width="18.53" height="18.41" x="685.61" y="0" class="todo"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>

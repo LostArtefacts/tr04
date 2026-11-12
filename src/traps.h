@@ -61,4 +61,7 @@ void FlameEmitter3Control(sint16 item_number);
 void FlameEmitterControl(sint16 item_number);
 void DrawScaledSpike(ITEM_INFO *item);
 
+extern sint16 floor_fires[48];
+extern sint16 deadly_floor_fires[8];
+
 #endif

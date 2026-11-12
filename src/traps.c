@@ -751,6 +751,105 @@ void ControlRaisingBlock(sint16 item_number)
     }
 }
 
+void ControlBurningFloor(sint16 item_number)
+{
+    ITEM_INFO *item, *torch;
+    SPHERE *sphere;
+    sint32 nSpheres, i, dx, dy, dz;
+    sint16 torch_num, xoff, zoff, size;
+
+    item = &items[item_number];
+    if (item->item_flags[3]) {
+        for (i = 0; i < 48; i += 3) {
+            size = floor_fires[i + 2];
+            if (item->item_flags[size])
+                AddFire(item->pos.x_pos + floor_fires[i], item->pos.y_pos - (size << 6) - 64, item->pos.z_pos + floor_fires[i + 1], size, item->room_number, item->item_flags[size]);
+        }
+        if (!lara.burn) {
+            for (i = 0; i < 4; i++) {
+                xoff = deadly_floor_fires[i * 2 + 0];
+                zoff = deadly_floor_fires[i * 2 + 1];
+                dx = abs(xoff - lara_item->pos.x_pos + item->pos.x_pos);
+                dy = abs(item->pos.y_pos - lara_item->pos.y_pos);
+                dz = abs(item->pos.z_pos - lara_item->pos.z_pos + xoff);
+                if (dx < 256 && dy < 256 && dz < 256) {
+                    LaraBurn();
+                    lara_item->hit_points = 100;
+                    item->item_flags[3] = 450;
+                    item->item_flags[0] = 2;
+                    item->item_flags[1] = 2;
+                    item->item_flags[2] = 2;
+                    FlashFadeR = 255;
+                    FlashFadeG = 64;
+                    FlashFadeB = 0;
+                    FlashFader = 32;
+                    break;
+                }
+            }
+        }
+        if (item->item_flags[3] < 450) {
+            item->item_flags[0] += 4;
+            if (item->item_flags[3] > 30)
+                item->item_flags[1] += 4;
+            if (item->item_flags[3] > 60)
+                item->item_flags[2] += 8;
+            if (item->item_flags[0] > 255)
+                item->item_flags[0] = 255;
+            if (item->item_flags[1] > 255)
+                item->item_flags[1] = 255;
+            if (item->item_flags[2] > 255)
+                item->item_flags[2] = 255;
+            item->item_flags[3]++;
+            item->required_anim_state = 127 - item->item_flags[3] / 6;
+        } else {
+            item->item_flags[0] -= 4;
+            item->item_flags[1] -= 3;
+            item->item_flags[2] -= 2;
+            if (item->item_flags[0] < 2)
+                item->item_flags[0] = 2;
+            if (item->item_flags[1] < 2)
+                item->item_flags[1] = 2;
+            if (item->item_flags[2] < 2)
+                item->item_flags[2] = 2;
+            if (item->item_flags[0] == 2 && item->item_flags[1] == 2 && item->item_flags[2] == 2) {
+                FlipMap(0);
+                ExplodeItemNode(item, 0, 1, -24);
+                ExplodeItemNode(item, 1, 1, -24);
+                ExplodeItemNode(item, 2, 1, -24);
+                ExplodeItemNode(item, 3, 1, -24);
+                ExplodeItemNode(item, 4, 1, -32);
+                KillItem(item_number);
+            }
+        }
+    } else {
+        nSpheres = 0;
+        torch_num = room[item->room_number].item_number;
+        while (1) {
+            torch = &items[torch_num];
+            if (torch->object_number == BURNING_TORCH_ITEM && !torch->speed && !torch->fallspeed && torch->item_flags[3]) {
+                if (!nSpheres)
+                    nSpheres = GetSpheres(item, Slist, 1);
+                for (i = 0; i < nSpheres; i++) {
+                    sphere = &Slist[i];
+                    if (sphere->r > 0) {
+                        dx = sphere->x - torch->pos.x_pos;
+                        dy = sphere->y - torch->pos.y_pos;
+                        dz = sphere->z - torch->pos.z_pos;
+                        if (SQUARE(dx) + SQUARE(dy) + SQUARE(dz) < SQUARE(sphere->r + 32)) {
+                            item->item_flags[3] = 1;
+                            KillItem(torch_num);
+                            return;
+                        }
+                    }
+                }
+            }
+            torch_num = torch->next_item;
+            if (torch_num == NO_ITEM)
+                return;
+        }
+    }
+}
+
 void ControlChain(sint16 item_number)
 {
     ITEM_INFO *item;
