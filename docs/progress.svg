@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="234.12" height="12" x="0" y="0" class="named"><title>1059 · 68.46%</title></rect>
 <rect width="0.44" height="12" x="234.12" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="9.51" height="12" x="234.56" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
-<rect width="97.94" height="12" x="244.06" y="0" class="todo"><title>443 · 28.64%</title></rect>
+<rect width="9.73" height="12" x="234.56" y="0" class="nonmatching"><title>44 · 2.84%</title></rect>
+<rect width="97.71" height="12" x="244.29" y="0" class="todo"><title>442 · 28.57%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">68.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1059</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">443</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1059</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">44</tspan> · <tspan class="todo">442</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="103.81" height="12" x="0" y="0" class="named"><title>188 KB · 30.35%</title></rect>
 <rect width="0.12" height="12" x="103.81" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="13.36" height="12" x="103.93" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
-<rect width="224.72" height="12" x="117.28" y="0" class="todo"><title>408 KB · 65.71%</title></rect>
+<rect width="13.48" height="12" x="103.93" y="0" class="nonmatching"><title>24 KB · 3.94%</title></rect>
+<rect width="224.59" height="12" x="117.41" y="0" class="todo"><title>408 KB · 65.67%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">30.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">188 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">24 KB</tspan> · <tspan class="todo">408 KB</tspan></text>
@@ -876,7 +876,7 @@
 <rect width="12" height="12" x="105" y="240" class="todo"><title>0x00451770 DoGameflow (1624 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="240" class="todo"><title>0x00451e30 DoTitle (2096 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="240" class="todo"><title>0x00452710 DoLevel (1133 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="240" class="todo"><title>0x00452b80 DoCredits (230 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="240" class="nonmatching"><title>0x00452b80 DoCredits (230 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="240" class="named"><title>0x00452c70 FlashIt (45 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="240" class="named"><title>0x00452ca0 DrawGameInfo (307 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="240" class="named"><title>0x00452de0 DrawHealthBar (188 bytes)</title></rect>
@@ -2282,7 +2282,7 @@
 <rect width="9.55" height="9.34" x="482.99" y="259.81" class="named"><title>0x004372a0 Splash (231 bytes)</title></rect>
 <rect width="9.55" height="9.34" x="482.99" y="272.14" class="named"><title>0x0044c8d0 CheckNoColCeilingTriangle (231 bytes)</title></rect>
 <rect width="9.55" height="9.30" x="482.99" y="284.48" class="named"><title>0x00420db0 lara_col_ducklr (230 bytes)</title></rect>
-<rect width="9.55" height="9.30" x="482.99" y="296.78" class="todo"><title>0x00452b80 DoCredits (230 bytes)</title></rect>
+<rect width="9.55" height="9.30" x="482.99" y="296.78" class="nonmatching"><title>0x00452b80 DoCredits (230 bytes)</title></rect>
 <rect width="9.55" height="9.26" x="482.99" y="309.08" class="named"><title>0x0043b330 TriggerLightningGlow (229 bytes)</title></rect>
 <rect width="9.55" height="9.26" x="482.99" y="321.33" class="named"><title>0x0048e8d0 ClearSurfaces (229 bytes)</title></rect>
 <rect width="9.55" height="9.22" x="482.99" y="333.59" class="named"><title>0x004706b0 InitDDDevice (228 bytes)</title></rect>

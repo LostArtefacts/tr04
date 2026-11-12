@@ -2059,6 +2059,8 @@ address,size,name,symbol
 0x004af451,1,gfGameMode,_gfGameMode
 0x004af452,,gfInitialiseGame,_gfInitialiseGame
 0x004af454,4,nFrames,_nFrames
+0x004af458,36,CreditGroups,_CreditGroups
+0x004af47c,1562,CreditsTable,_CreditsTable
 0x004afab8,4,old_hitpoints,_old_hitpoints
 0x004afae8,12,PolePos,_PolePos
 0x004afaf4,24,PoleBounds,_PoleBounds
@@ -2245,6 +2247,7 @@ address,size,name,symbol
 0x004bf628,4,room_list_start,_room_list_start
 0x004bf62c,4,room_list_end,_room_list_end
 0x004bf630,24,no_rotation,_no_rotation
+0x004bf648,4,CreditsStartPos,_CreditsStartPos
 0x004bf64c,4,gfScriptOffset,_gfScriptOffset
 0x004bf650,4,gfStatus,_gfStatus
 0x004bf654,4,gfExtensions,_gfExtensions
@@ -2257,6 +2260,7 @@ address,size,name,symbol
 0x004bf66a,,gfCutNumber,_gfCutNumber
 0x004bf66b,1,gfNumMips,_gfNumMips
 0x004bf66c,1,Chris_Menu,_Chris_Menu
+0x004bf670,4,CreditsInit,_CreditsInit
 0x004bf680,4,health_bar_timer,_health_bar_timer
 0x004bf684,4,flash_state,_flash_state
 0x004bf688,4,flash_count,_flash_count

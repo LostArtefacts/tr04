@@ -438,6 +438,12 @@ extern char title_controls_locked_out;
 extern uint8 *gfScriptFile;
 extern uint8 *gfLanguageFile;
 
+extern sint16 CreditGroups[18];
+extern char CreditsTable[71][22];
+extern uint32 CreditsStartPos;
+extern sint32 CreditsInit;
+
 void DoGameflow(void);
+sint32 DoCredits(void);
 
 #endif
