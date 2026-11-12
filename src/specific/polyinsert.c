@@ -33,6 +33,19 @@ void DoSort(sint32 left, sint32 right, SORTLIST **list)
     }
 }
 
+void SortPolyList(sint32 count, SORTLIST **list)
+{
+    sint32 i;
+
+    if (!count) {
+        return;
+    }
+    for (i = 0; i < count; i++) {
+        list[i]->zVal -= (float)i * 0.1F;
+    }
+    DoSort(0, count - 1, list);
+}
+
 void InitialiseSortList(void)
 {
     pSortBuffer = SortBuffer;

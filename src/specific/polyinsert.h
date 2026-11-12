@@ -48,5 +48,6 @@ void InitialiseSortList(void);
 sint32 IsVolumetric(void);
 void ClearFXFogBulbs(void);
 void DoSort(sint32 left, sint32 right, SORTLIST **list);
+void SortPolyList(sint32 count, SORTLIST **list);
 
 #endif
