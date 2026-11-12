@@ -8,6 +8,7 @@
 #include "box.h"
 #include "camera.h"
 #include "sphere.h"
+#include "delstuff.h"
 #include "sound.h"
 #include "effect2.h"
 #include "tomb4fx.h"
@@ -87,6 +88,60 @@ void BikeExplode(ITEM_INFO *item)
     SoundEffect(SFX_EXPLOSION1, 0, SFX_DEFAULT);
     SoundEffect(SFX_EXPLOSION2, 0, SFX_DEFAULT);
     lara.vehicle = NO_ITEM;
+}
+
+sint32 BikeCheckGetOff(void)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *l;
+    BIKEINFO *bike;
+    PHD_VECTOR pos;
+    sint16 state;
+
+    item = &items[lara.vehicle];
+    l = lara_item;
+    state = l->current_anim_state;
+    if (state == 10 && l->frame_number == anims[l->anim_number].frame_end) {
+        l->pos.y_rot -= 0x4000;
+        l->anim_number = ANIM_STOP;
+        l->frame_number = anims[ANIM_STOP].frame_base;
+        l->current_anim_state = l->goal_anim_state = AS_STOP;
+        l->pos.x_pos -= 512 * phd_sin(l->pos.y_rot) >> W2V_SHIFT;
+        l->pos.z_pos -= 512 * phd_cos(l->pos.y_rot) >> W2V_SHIFT;
+        l->pos.x_rot = l->pos.z_rot = 0;
+        lara.vehicle = NO_ITEM;
+        lara.gun_status = LG_NO_ARMS;
+        DashTimer = 120;
+    } else if (l->frame_number == anims[l->anim_number].frame_end) {
+        bike = (BIKEINFO *)item->data;
+        if (state == 20) {
+            l->anim_number = ANIM_FASTFALL;
+            l->frame_number = anims[ANIM_FASTFALL].frame_base;
+            l->current_anim_state = AS_FASTFALL;
+            pos.x = 0;
+            pos.y = 0;
+            pos.z = 0;
+            GetLaraJointPos(&pos, LM_HIPS);
+            l->pos.x_pos = pos.x;
+            l->pos.y_pos = pos.y;
+            l->pos.z_pos = pos.z;
+            l->fallspeed = item->fallspeed;
+            l->gravity_status = 1;
+            l->pos.x_rot = l->pos.z_rot = 0;
+            l->hit_points = 0;
+            lara.gun_status = LG_NO_ARMS;
+            item->flags |= IFL_INVISIBLE;
+            return 0;
+        }
+        if (state == 19) {
+            l->goal_anim_state = AS_DEATH;
+            l->fallspeed = 240;
+            l->speed = 0;
+            bike->flags |= 0x80;
+            return 0;
+        }
+    }
+    return 1;
 }
 
 sint32 CanGetOff_bike(sint16 num)

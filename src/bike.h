@@ -27,6 +27,7 @@ void BikeExplode(ITEM_INFO *item);
 void TriggerBikeBeam(ITEM_INFO *item);
 sint32 CanGetOff_bike(sint16 num);
 void InitialiseBike(sint16 item_number);
+sint32 BikeCheckGetOff(void);
 
 extern ITEM_INFO *GlobalBikeItem;
 
