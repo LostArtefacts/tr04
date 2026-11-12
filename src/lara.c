@@ -997,6 +997,15 @@ void lara_as_poleright(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_rot -= 256;
 }
 
+void ApplyVelocityToRope(sint32 node, uint16 angle, uint16 n)
+{
+    sint32 xvel, zvel;
+
+    xvel = ((rcossin_tbl[(angle >> 3) & 0x1FFE] << 2) * n) >> 2;
+    zvel = ((rcossin_tbl[((angle >> 3) & 0x1FFE) + 1] << 2) * n) >> 2;
+    SetPendulumVelocity(xvel, 0, zvel);
+}
+
 void lara_as_rope(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (!(input & IN_ACTION))
