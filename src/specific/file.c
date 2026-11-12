@@ -13,6 +13,7 @@
 #include "../room.h"
 #include "lighting.h"
 #include "dxsound.h"
+#include "../sound.h"
 
 void FileClose(FILE *file)
 {
@@ -183,6 +184,47 @@ uint8 LoadAIInfo(void)
         memcpy(AIObjects, FileData, sizeof(AIOBJECT) * num_ai);
         FileData += sizeof(AIOBJECT) * num_ai;
     }
+    return 1;
+}
+
+uint8 LoadSamples(void)
+{
+    sint32 num_samples, uncomp_size, comp_size, i;
+    static sint32 num_sample_infos;
+
+    Log(2, "LoadSamples");
+    sample_lut = (sint16 *)game_malloc(370 * sizeof(sint16), 0);
+    memcpy(sample_lut, FileData, 370 * sizeof(sint16));
+    FileData += 370 * sizeof(sint16);
+    num_sample_infos = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    Log(8, "Number Of Sample Infos %d", num_sample_infos);
+    if (!num_sample_infos) {
+        Log(1, "No Sample Infos");
+        return 0;
+    }
+    sample_infos = (SAMPLE_INFO *)game_malloc(sizeof(SAMPLE_INFO) * num_sample_infos, 0);
+    memcpy(sample_infos, FileData, sizeof(SAMPLE_INFO) * num_sample_infos);
+    FileData += sizeof(SAMPLE_INFO) * num_sample_infos;
+    i = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    if (!i) {
+        Log(1, "No Samples");
+        return 0;
+    }
+    Log(8, "Number Of Samples %d", i);
+    fread(&num_samples, 1, 4, level_fp);
+    InitSampleDecompress();
+    for (i = 0; i < num_samples; i++) {
+        fread(&uncomp_size, 1, 4, level_fp);
+        fread(&comp_size, 1, 4, level_fp);
+        fread(samples_buffer, comp_size, 1, level_fp);
+        if (!DXCreateSampleADPCM(samples_buffer, comp_size, uncomp_size, i)) {
+            FreeSampleDecompress();
+            return 0;
+        }
+    }
+    FreeSampleDecompress();
     return 1;
 }
 

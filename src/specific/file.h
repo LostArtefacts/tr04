@@ -37,6 +37,7 @@ extern sint32 num_level_meshes;
 extern char *OutsideRoomTable;
 extern sint16 *OutsideRoomOffsets;
 extern sint32 number_cameras;
+extern FILE *level_fp;
 extern sint16 *aranges;
 extern sint32 nAnimUVRanges;
 extern TEXTURESTRUCT *textinfo;
@@ -56,5 +57,6 @@ uint8 LoadBoxes(void);
 void S_GetUVRotateTextures(void);
 uint8 Decompress(char *pDest, char *pCompressed, sint32 compressedSize, sint32 size);
 void FreeLevel(void);
+uint8 LoadSamples(void);
 
 #endif
