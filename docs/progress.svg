@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="233.67" height="12" x="0" y="0" class="named"><title>1057 · 68.33%</title></rect>
-<rect width="0.44" height="12" x="233.67" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="9.51" height="12" x="234.12" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
-<rect width="98.38" height="12" x="243.62" y="0" class="todo"><title>445 · 28.77%</title></rect>
+<rect width="233.90" height="12" x="0" y="0" class="named"><title>1058 · 68.39%</title></rect>
+<rect width="0.44" height="12" x="233.90" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="9.51" height="12" x="234.34" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
+<rect width="98.16" height="12" x="243.84" y="0" class="todo"><title>444 · 28.70%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">68.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1057</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">445</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1058</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">444</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="103.44" height="12" x="0" y="0" class="named"><title>188 KB · 30.25%</title></rect>
-<rect width="0.12" height="12" x="103.44" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="13.36" height="12" x="103.56" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
-<rect width="225.08" height="12" x="116.92" y="0" class="todo"><title>408 KB · 65.81%</title></rect>
+<rect width="103.59" height="12" x="0" y="0" class="named"><title>188 KB · 30.29%</title></rect>
+<rect width="0.12" height="12" x="103.59" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="13.36" height="12" x="103.71" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
+<rect width="224.93" height="12" x="117.07" y="0" class="todo"><title>408 KB · 65.77%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">30.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">188 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">24 KB</tspan> · <tspan class="todo">408 KB</tspan></text>
@@ -448,7 +448,7 @@
 <rect width="12" height="12" x="435" y="105" class="named"><title>0x0042afe0 undraw_shotgun (275 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="105" class="todo"><title>0x0042b100 AnimateShotgun (802 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="105" class="named"><title>0x0042b430 TriggerUnderwaterExplosion (449 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="105" class="todo"><title>0x0042b600 DoGrenadeDamageOnBaddie (280 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="105" class="named"><title>0x0042b600 DoGrenadeDamageOnBaddie (280 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="105" class="named"><title>0x0042b720 draw_pistols (153 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="105" class="named"><title>0x0042b7c0 set_arm_info (123 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="105" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>
@@ -2194,7 +2194,7 @@
 <rect width="10.36" height="10.51" x="457.07" y="212.90" class="named"><title>0x00402850 ReTriggerBaboon (282 bytes)</title></rect>
 <rect width="10.36" height="10.47" x="457.07" y="226.41" class="named"><title>0x00492280 DXEnumDisplayModes (281 bytes)</title></rect>
 <rect width="10.36" height="10.44" x="457.07" y="239.88" class="named"><title>0x00422ac0 lara_col_dashdive (280 bytes)</title></rect>
-<rect width="10.36" height="10.44" x="457.07" y="253.32" class="todo"><title>0x0042b600 DoGrenadeDamageOnBaddie (280 bytes)</title></rect>
+<rect width="10.36" height="10.44" x="457.07" y="253.32" class="named"><title>0x0042b600 DoGrenadeDamageOnBaddie (280 bytes)</title></rect>
 <rect width="10.36" height="10.44" x="457.07" y="266.75" class="named"><title>0x0048b990 DrawTrainStrips (280 bytes)</title></rect>
 <rect width="10.36" height="10.40" x="457.07" y="280.19" class="named"><title>0x0046d040 DelsHandyTeleportLara (279 bytes)</title></rect>
 <rect width="10.36" height="10.36" x="457.07" y="293.58" class="named"><title>0x00428210 lara_col_back (278 bytes)</title></rect>

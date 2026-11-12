@@ -6,6 +6,9 @@
 #include "control.h"
 #include "effect2.h"
 #include "tomb4fx.h"
+#include "traps.h"
+#include "box.h"
+#include "savegame.h"
 #include "specific/function_stubs.h"
 
 void draw_shotgun_meshes(sint32 weapon_type)
@@ -96,6 +99,30 @@ void TriggerUnderwaterExplosion(ITEM_INFO *item, sint32 vehicle)
                 splash_setup.MiddleYVel = (sint16)((wh >> 6) + 32);
                 splash_setup.pad2 = (sint16)((wh >> 6) + 32);
                 SetupSplash(&splash_setup);
+            }
+        }
+    }
+}
+
+void DoGrenadeDamageOnBaddie(ITEM_INFO *baddie, ITEM_INFO *item)
+{
+    if ((sint16)(baddie->flags & IFL_CLEARBODY))
+        return;
+    if (baddie == lara_item && lara_item->hit_points > 0) {
+        lara_item->hit_points -= 50;
+        if (!(room[item->room_number].flags & ROOM_UNDERWATER) && lara_item->hit_points <= 50)
+            LaraBurn();
+    } else if (!item->item_flags[2]) {
+        baddie->hit_status = 1;
+        if ((!objects[baddie->object_number].undead || baddie->object_number == SKELETON || baddie->object_number == MUMMY) && baddie->object_number != AHMET) {
+            HitTarget(baddie, 0, 30, 1);
+            if (baddie != lara_item) {
+                savegame.Game.AmmoHits++;
+                if (baddie->hit_points <= 0) {
+                    savegame.Level.Kills++;
+                    if (baddie->object_number != BABOON_NORMAL && baddie->object_number != BABOON_INV && baddie->object_number != BABOON_SILENT)
+                        CreatureDie(baddie - items, 1);
+                }
             }
         }
     }
