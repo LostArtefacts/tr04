@@ -60,6 +60,62 @@ void InjuredSasControl(sint16 item_number)
     AnimateItem(item);
 }
 
+void SasFireGrenade(ITEM_INFO *sas, sint16 xrot, sint16 yrot)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    PHD_VECTOR pos;
+    sint32 ox, oy, oz;
+    sint32 h, i;
+    sint16 item_number;
+
+    item_number = CreateItem();
+    if (item_number == NO_ITEM)
+        return;
+    item = &items[item_number];
+    item->shade = -0x3DF0;
+    item->object_number = GRENADE;
+    item->room_number = sas->room_number;
+    pos.x = sas_fire.x;
+    pos.y = sas_fire.y;
+    pos.z = sas_fire.z;
+    GetJointAbsPosition(sas, &pos, sas_fire.mesh_num);
+    ox = pos.x;
+    item->pos.x_pos = ox;
+    oy = pos.y;
+    item->pos.y_pos = oy;
+    oz = pos.z;
+    item->pos.z_pos = oz;
+    floor = GetFloor(pos.x, pos.y, pos.z, &item->room_number);
+    h = GetHeight(floor, pos.x, pos.y, pos.z);
+    if (h < pos.y) {
+        item->pos.x_pos = sas->pos.x_pos;
+        item->pos.y_pos = pos.y;
+        item->pos.z_pos = sas->pos.z_pos;
+        item->room_number = sas->room_number;
+    }
+    SmokeCountL = 32;
+    SmokeWeapon = WEAPON_GRENADE;
+    for (i = 0; i < 5; i++)
+        TriggerGunSmoke(ox, oy, oz, pos.x - ox, pos.y - oy, pos.z - oz, 1, 5, 32);
+    InitialiseItem(item_number);
+    item->pos.x_rot = xrot + sas->pos.x_rot;
+    item->pos.y_rot = yrot + sas->pos.y_rot;
+    item->pos.z_rot = 0;
+    if (GetRandomControl() & 3)
+        item->item_flags[0] = 1;
+    else
+        item->item_flags[0] = 2;
+    item->item_flags[2] = 1;
+    item->speed = 128;
+    item->fallspeed = (-128 * phd_sin(item->pos.x_rot)) >> W2V_SHIFT;
+    item->current_anim_state = item->pos.x_rot;
+    item->goal_anim_state = item->pos.y_rot;
+    item->required_anim_state = 0;
+    item->hit_points = 120;
+    AddActiveItem(item_number);
+}
+
 void DragSASCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
 {
     ITEM_INFO *item;
