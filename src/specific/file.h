@@ -43,6 +43,7 @@ extern sint32 nAnimUVRanges;
 extern TEXTURESTRUCT *textinfo;
 extern SPRITESTRUCT *spriteinfo;
 extern float AnimatingTexturesV[16][8][3];
+extern sint16 AnimatingTexturesVOffset;
 
 typedef struct thread_info {
     volatile sint32 active;

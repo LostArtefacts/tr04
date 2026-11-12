@@ -419,6 +419,7 @@ extern uint32 GameTimer;
 extern uint16 gfLevelFlags;
 extern char gfLayer1Vel;
 extern char gfLayer2Vel;
+extern char gfUVRotate;
 extern char gfGameMode;
 extern uint8 gfCurrentLevel;
 extern uint8 gfLevelNames[40];

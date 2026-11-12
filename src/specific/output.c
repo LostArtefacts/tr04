@@ -10,6 +10,7 @@
 #include "polyinsert.h"
 #include "../effects.h"
 #include "../gameflow.h"
+#include "file.h"
 
 void S_InitialisePolyList(void)
 {
@@ -57,6 +58,57 @@ sint32 S_DumpScreen(void)
     DXShowFrame();
     App.dx.DoneBlit = 1;
     return n;
+}
+
+void S_AnimateTextures(sint32 n)
+{
+    TEXTURESTRUCT *tex;
+    TEXTURESTRUCT tex2;
+    sint16 *range;
+    float voff;
+    static sint32 comp;
+    sint32 i;
+    sint32 nRanges;
+    sint32 nRangeFrames;
+
+    for (comp += n; comp > 5; comp -= 5) {
+        nRanges = *aranges;
+        range = aranges + 1;
+        for (i = 0; i < nRanges; i++, range++) {
+            nRangeFrames = *range++;
+            if (i < nAnimUVRanges && gfUVRotate) {
+                while (nRangeFrames > 0) {
+                    range++;
+                    nRangeFrames--;
+                }
+            } else {
+                tex2 = textinfo[*range];
+                while (nRangeFrames > 0) {
+                    textinfo[range[0]] = textinfo[range[1]];
+                    range++;
+                    nRangeFrames--;
+                }
+                textinfo[*range] = tex2;
+            }
+        }
+    }
+    if (gfUVRotate) {
+        range = aranges + 1;
+        AnimatingTexturesVOffset = (AnimatingTexturesVOffset - gfUVRotate * (n >> 1)) & 0x1F;
+        for (i = 0; i < nAnimUVRanges; i++) {
+            nRangeFrames = *range++;
+            while (nRangeFrames >= 0) {
+                tex = &textinfo[range[0]];
+                voff = AnimatingTexturesVOffset * (1.0F / 256.0F);
+                tex->v1 = voff + AnimatingTexturesV[i][nRangeFrames][0];
+                tex->v2 = voff + AnimatingTexturesV[i][nRangeFrames][0];
+                tex->v3 = voff + AnimatingTexturesV[i][nRangeFrames][0] + 0.125F;
+                tex->v4 = voff + AnimatingTexturesV[i][nRangeFrames][0] + 0.125F;
+                nRangeFrames--;
+                range++;
+            }
+        }
+    }
 }
 
 void ProjectTrainVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip, sint32 x)
