@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="175.53" height="12" x="0" y="0" class="named"><title>794 · 51.33%</title></rect>
-<rect width="0.44" height="12" x="175.53" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="175.97" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="159.61" height="12" x="182.39" y="0" class="todo"><title>722 · 46.67%</title></rect>
+<rect width="175.75" height="12" x="0" y="0" class="named"><title>795 · 51.39%</title></rect>
+<rect width="0.44" height="12" x="175.75" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="176.20" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="159.39" height="12" x="182.61" y="0" class="todo"><title>721 · 46.61%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">51.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">794</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">722</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">795</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">721</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.72" height="12" x="0" y="0" class="named"><title>139 KB · 22.43%</title></rect>
-<rect width="0.12" height="12" x="76.72" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.84" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.50" height="12" x="85.50" y="0" class="todo"><title>465 KB · 75%</title></rect>
+<rect width="76.76" height="12" x="0" y="0" class="named"><title>139 KB · 22.44%</title></rect>
+<rect width="0.12" height="12" x="76.76" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.88" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.47" height="12" x="85.53" y="0" class="todo"><title>465 KB · 74.99%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">139 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">465 KB</tspan></text>
@@ -687,7 +687,7 @@
 <rect width="12" height="12" x="270" y="180" class="todo"><title>0x0043e1b0 update_laras_weapons_status (155 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="180" class="todo"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="180" class="named"><title>0x0043e2f0 have_i_got_item (36 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="180" class="todo"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="180" class="named"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="180" class="todo"><title>0x0043e360 combine_these_two_objects (98 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="180" class="todo"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="180" class="named"><title>0x0043e420 combine_revolver_lasersight (81 bytes)</title></rect>
@@ -2819,7 +2819,7 @@
 <rect width="4.95" height="5.07" x="656.10" y="339.46" class="todo"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="664.05" y="339.46" class="named"><title>0x00425f10 lara_as_fastfall (64 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="671.93" y="339.46" class="named"><title>0x00437140 Richochet (64 bytes)</title></rect>
-<rect width="4.88" height="5.07" x="679.81" y="339.46" class="todo"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>
+<rect width="4.88" height="5.07" x="679.81" y="339.46" class="named"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="687.68" y="339.46" class="named"><title>0x00455270 DisableBaddieAI (64 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="695.56" y="339.46" class="todo"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
 <rect width="4.80" height="5.07" x="703.43" y="339.46" class="named"><title>0x0045fad0 SayNo (63 bytes)</title></rect>

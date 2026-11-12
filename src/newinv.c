@@ -75,6 +75,19 @@ sint32 have_i_got_item(sint16 obj)
     return 0;
 }
 
+sint32 do_these_objects_combine(sint32 obj1, sint32 obj2)
+{
+    sint32 i;
+
+    for (i = 0; i < 23; i++) {
+        if (dels_handy_combine_table[i].item1 == obj1 && dels_handy_combine_table[i].item2 == obj2)
+            return 1;
+        if (dels_handy_combine_table[i].item1 == obj2 && dels_handy_combine_table[i].item2 == obj1)
+            return 1;
+    }
+    return 0;
+}
+
 void combine_revolver_lasersight(sint32 flag)
 {
     if (!flag) {
