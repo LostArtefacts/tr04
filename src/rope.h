@@ -21,8 +21,9 @@ typedef struct {
     ROPE_STRUCT *Rope;
 } PENDULUM;
 
-void Normalise(PHD_VECTOR *v);
+PHD_VECTOR *Normalise(PHD_VECTOR *v);
 void vMul(PHD_VECTOR *v, sint32 scale, PHD_VECTOR *d);
+sint32 mDotProduct(PHD_VECTOR *a, PHD_VECTOR *b);
 
 extern ROPE_STRUCT RopeList[5];
 extern sint32 nRope;

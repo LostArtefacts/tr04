@@ -16,3 +16,8 @@ void vMul(PHD_VECTOR *v, sint32 scale, PHD_VECTOR *d)
     d->y = scale * v->y >> W2V_SHIFT;
     d->z = scale * v->z >> W2V_SHIFT;
 }
+
+sint32 mDotProduct(PHD_VECTOR *a, PHD_VECTOR *b)
+{
+    return (a->x * b->x + a->y * b->y + a->z * b->z) >> W2V_SHIFT;
+}

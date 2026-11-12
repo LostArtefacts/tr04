@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="189.02" height="12" x="0" y="0" class="named"><title>855 · 55.27%</title></rect>
-<rect width="0.44" height="12" x="189.02" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="189.46" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="146.13" height="12" x="195.87" y="0" class="todo"><title>661 · 42.73%</title></rect>
+<rect width="189.24" height="12" x="0" y="0" class="named"><title>856 · 55.33%</title></rect>
+<rect width="0.44" height="12" x="189.24" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="189.68" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="145.91" height="12" x="196.09" y="0" class="todo"><title>660 · 42.66%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">55.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">855</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">661</tspan></text>
+<text text-anchor="end" x="522" y="7.50">55.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">856</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">660</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="81.08" height="12" x="0" y="0" class="named"><title>147 KB · 23.71%</title></rect>
-<rect width="0.12" height="12" x="81.08" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="81.20" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="252.14" height="12" x="89.86" y="0" class="todo"><title>457 KB · 73.73%</title></rect>
+<rect width="81.10" height="12" x="0" y="0" class="named"><title>147 KB · 23.71%</title></rect>
+<rect width="0.12" height="12" x="81.10" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="81.22" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="252.12" height="12" x="89.88" y="0" class="todo"><title>457 KB · 73.72%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">147 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">457 KB</tspan></text>
@@ -968,7 +968,7 @@
 <rect width="12" height="12" x="735" y="255" class="named"><title>0x00458780 PickupTrigger (91 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="270" class="named"><title>0x004587e0 SarcophagusCollision (529 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="270" class="named"><title>0x00458a00 vMul (49 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="270" class="todo"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="270" class="named"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="270" class="todo"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="270" class="todo"><title>0x00458ad0 phd_GetMatrixAngles (177 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="270" class="todo"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
@@ -2955,7 +2955,7 @@
 <rect width="3.79" height="3.97" x="662.47" y="384.08" class="named"><title>0x00491c30 DXAttempt (39 bytes)</title></rect>
 <rect width="3.79" height="3.87" x="662.47" y="391.05" class="named"><title>0x004241a0 lara_as_rope (38 bytes)</title></rect>
 <rect width="3.79" height="3.77" x="662.47" y="397.92" class="named"><title>0x00453070 InitialiseTrapDoor (37 bytes)</title></rect>
-<rect width="3.79" height="3.77" x="662.47" y="404.69" class="todo"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>
+<rect width="3.79" height="3.77" x="662.47" y="404.69" class="named"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>
 <rect width="3.79" height="3.77" x="662.47" y="411.46" class="named"><title>0x0046bf40 fourteen_control (37 bytes)</title></rect>
 <rect width="3.79" height="3.77" x="662.47" y="418.23" class="named"><title>0x0046c700 twentythree_end (37 bytes)</title></rect>
 <rect width="3.79" height="3.67" x="662.47" y="425" class="named"><title>0x00437850 LaraLocation (36 bytes)</title></rect>
