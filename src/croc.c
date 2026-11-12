@@ -9,10 +9,12 @@
 #include "objnums.h"
 #include "people.h"
 #include "room.h"
+#include "sound.h"
 #include "sphere.h"
 #include "specific/3dmath.h"
 #include "specific/function_stubs.h"
 #include "specific/output.h"
+#include "tomb4fx.h"
 
 void InitialiseCroc(sint16 item_number)
 {
@@ -330,6 +332,96 @@ void ControlLocustEmitter(sint16 item_number)
     } else {
         TriggerLocust(item);
         item->trigger_flags--;
+    }
+}
+
+void UpdateLocusts(void)
+{
+    LOCUST_STRUCT *fx;
+    sint16 *lb;
+    sint32 bounds[6];
+    sint32 speed, ox, oy, oz, closestdist, closestnum, i;
+    sint16 angles[2];
+    sint16 max_turn;
+
+    lb = GetBoundsAccurate(lara_item);
+    bounds[0] = lb[0] - (lb[0] >> 2) + lara_item->pos.x_pos;
+    bounds[1] = lb[1] - (lb[1] >> 2) + lara_item->pos.x_pos;
+    bounds[2] = lb[2] - (lb[2] >> 2) + lara_item->pos.y_pos;
+    bounds[3] = lb[3] - (lb[3] >> 2) + lara_item->pos.y_pos;
+    bounds[4] = lb[4] - (lb[4] >> 2) + lara_item->pos.z_pos;
+    bounds[5] = lb[5] - (lb[5] >> 2) + lara_item->pos.z_pos;
+    closestdist = 0xFFFFFFF;
+    closestnum = -1;
+    fx = Locusts;
+    for (i = 0; i < 64; i++, fx++) {
+        if (fx->On) {
+            if ((lara.burn || lara_item->hit_points <= 0) && fx->Counter > 90 && !(GetRandomControl() & 7))
+                fx->Counter = 90;
+            fx->Counter--;
+            if (!fx->Counter) {
+                fx->On = 0;
+                continue;
+            }
+            if (!(GetRandomControl() & 7)) {
+                fx->LaraTarget = GetRandomControl() % 640 + 128;
+                fx->XTarget = (GetRandomControl() & 0x7F) - 64;
+                fx->ZTarget = (GetRandomControl() & 0x7F) - 64;
+            }
+            phd_GetVectorAngles(lara_item->pos.x_pos + (fx->XTarget << 3) - fx->pos.x_pos, lara_item->pos.y_pos - fx->LaraTarget - fx->pos.y_pos, lara_item->pos.z_pos + (fx->ZTarget << 3) - fx->pos.z_pos, angles);
+            ox = lara_item->pos.x_pos - fx->pos.x_pos;
+            oz = lara_item->pos.z_pos - fx->pos.z_pos;
+            ox = SQUARE(ox) + SQUARE(oz);
+            if (ox < closestdist) {
+                closestdist = ox;
+                closestnum = i;
+            }
+            ox = phd_sqrt(ox) >> 3;
+            if (ox > 128)
+                ox = 128;
+            else if (ox < 48)
+                ox = 48;
+            if (fx->speed < ox)
+                fx->speed++;
+            else if (fx->speed > ox)
+                fx->speed--;
+            if (fx->Counter > 90) {
+                max_turn = fx->speed << 7;
+                oy = (uint16)angles[0] - (uint16)fx->pos.y_rot;
+                if (abs(oy) > 32768)
+                    oy = (uint16)fx->pos.y_rot - (uint16)angles[0];
+                ox = (uint16)angles[1] - (uint16)fx->pos.x_rot;
+                if (abs(ox) > 32768)
+                    ox = (uint16)fx->pos.x_rot - (uint16)angles[0];
+                ox >>= 3;
+                oy >>= 3;
+                if (oy > max_turn)
+                    oy = max_turn;
+                else if (oy < -max_turn)
+                    oy = -max_turn;
+                if (ox > max_turn)
+                    ox = max_turn;
+                else if (ox < -max_turn)
+                    ox = -max_turn;
+                fx->pos.y_rot += (sint16)oy;
+                fx->pos.x_rot += (sint16)ox;
+            }
+            speed = ((rcossin_tbl[((fx->pos.x_rot >> 3) & 0x1FFE) + 1] << 2) * fx->speed) >> W2V_SHIFT;
+            fx->pos.x_pos += ((rcossin_tbl[(fx->pos.y_rot >> 3) & 0x1FFE] << 2) * speed) >> W2V_SHIFT;
+            fx->pos.y_pos += ((rcossin_tbl[(-fx->pos.x_rot >> 3) & 0x1FFE] << 2) * fx->speed) >> W2V_SHIFT;
+            fx->pos.z_pos += ((rcossin_tbl[((fx->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * speed) >> W2V_SHIFT;
+            if (!(i & 1)) {
+                if (fx->pos.x_pos > bounds[0] && fx->pos.x_pos < bounds[1] && fx->pos.y_pos > bounds[2] && fx->pos.y_pos < bounds[3] && fx->pos.z_pos > bounds[4] && fx->pos.z_pos < bounds[5]) {
+                    TriggerBlood(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, GetRandomControl() << 1, 2);
+                    if (lara_item->hit_points > 0)
+                        lara_item->hit_points -= 3;
+                }
+            }
+        }
+    }
+    if (closestnum != -1) {
+        fx = &Locusts[closestnum];
+        SoundEffect(SFX_LOCUSTS_LOOP, &fx->pos, 0);
     }
 }
 
