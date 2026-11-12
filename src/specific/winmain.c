@@ -441,6 +441,11 @@ void nullsub_11(void)
 {
 }
 
+void j_nullsub_12(void)
+{
+    nullsub_12();
+}
+
 void nullsub_12(void)
 {
 }
