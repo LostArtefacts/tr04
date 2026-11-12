@@ -6,6 +6,8 @@
 #include "anim.h"
 #include "objnums.h"
 #include "box.h"
+#include "camera.h"
+#include "sphere.h"
 #include "sound.h"
 #include "effect2.h"
 #include "tomb4fx.h"
@@ -13,6 +15,30 @@
 #include "specific/audio.h"
 #include "specific/function_stubs.h"
 #include "specific/specificfx.h"
+
+void TriggerBikeBeam(ITEM_INFO *item)
+{
+    BIKEINFO *bike;
+    PHD_VECTOR s;
+    PHD_VECTOR d;
+    sint32 intensity;
+
+    bike = (BIKEINFO *)item->data;
+    s.x = 0;
+    s.y = -470;
+    s.z = 1836;
+    GetJointAbsPosition(item, &s, 0);
+    d.x = 0;
+    d.y = -470;
+    d.z = 20780;
+    GetJointAbsPosition(item, &d, 0);
+    intensity = bike->light_intensity << 1;
+    intensity -= GetRandomControl() & 0xF;
+    if (intensity > 0)
+        LaraTorch(&s, &d, item->pos.y_rot, intensity);
+    else
+        bLaraTorch = 0;
+}
 
 void DrawBikeExtras(ITEM_INFO *item)
 {
