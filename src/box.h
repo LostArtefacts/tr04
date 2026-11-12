@@ -153,6 +153,7 @@ void CreatureYRot(PHD_3DPOS *srcpos, sint16 angle, sint16 angadd);
 void AlertAllGuards(sint16 item_number);
 sint32 CreatureCreature(sint16 item_number);
 sint32 MoveCreature3DPos(PHD_3DPOS *srcpos, PHD_3DPOS *destpos, sint32 velocity, sint16 angdif, sint16 angadd);
+void CreatureKill(ITEM_INFO *item, sint16 kill_anim, sint16 kill_state, sint16 lara_anim);
 
 extern CREATURE_INFO *baddie_slots;
 
