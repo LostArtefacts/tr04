@@ -626,6 +626,215 @@ void handle_object_changeover(sint32 ringnum)
     Func43dbf0();
 }
 
+void handle_inventry_menu(void)
+{
+    sint32 i, num, opts, ypos, type, item;
+    sint16 inv_item, ammo_item;
+
+    if (rings[RING_AMMO]->ringactive) {
+        PrintString((uint16)phd_centerx, (uint16)phd_centery, 1, SCRIPT_TEXT(optmessages[5]), FF_CENTER);
+        if (rings[RING_INVENTORY]->objlistmovement || rings[RING_AMMO]->objlistmovement)
+            return;
+        if (go_select) {
+            inv_item = rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem;
+            ammo_item = rings[RING_AMMO]->current_object_list[rings[RING_AMMO]->curobjinlist].invitem;
+            if (inv_item >= INV_WATERSKIN1_EMPTY_ITEM && inv_item <= INV_WATERSKIN1_3_ITEM && ammo_item >= INV_WATERSKIN2_EMPTY_ITEM && ammo_item <= INV_WATERSKIN2_5_ITEM) {
+                if (do_special_waterskin_combine_bullshit(0)) {
+                    combine_type_flag = 2;
+                    combine_ring_fade_dir = 2;
+                } else {
+                    SayNo();
+                    combine_ring_fade_dir = 2;
+                }
+            } else if (ammo_item >= INV_WATERSKIN1_EMPTY_ITEM && ammo_item <= INV_WATERSKIN1_3_ITEM && inv_item >= INV_WATERSKIN2_EMPTY_ITEM && inv_item <= INV_WATERSKIN2_5_ITEM) {
+                if (do_special_waterskin_combine_bullshit(1)) {
+                    combine_type_flag = 2;
+                    combine_ring_fade_dir = 2;
+                    SoundEffect(SFX_MENU_COMBINE, 0, SFX_ALWAYS);
+                } else {
+                    SayNo();
+                    combine_ring_fade_dir = 2;
+                }
+            } else if (do_these_objects_combine(inv_item, ammo_item)) {
+                combine_ring_fade_dir = 2;
+                combine_type_flag = 1;
+                combine_obj1 = inv_item;
+                combine_obj2 = ammo_item;
+                SoundEffect(SFX_MENU_COMBINE, 0, SFX_ALWAYS);
+            } else {
+                SayNo();
+                combine_ring_fade_dir = 2;
+            }
+        }
+        if (go_deselect) {
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            combine_ring_fade_dir = 2;
+            go_deselect = 0;
+        }
+        return;
+    }
+    item = rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem;
+    for (i = 0; i < 3; i++) {
+        current_options[i].type = 0;
+        current_options[i].text = 0;
+    }
+    num = 0;
+    opts = options_table[item];
+    if (!ammo_active) {
+        if (opts & 0x1000) {
+            current_options[num].type = 9;
+            current_options[num].text = SCRIPT_TEXT(optmessages[6]);
+            num++;
+        }
+        if (opts & 0x2000) {
+            current_options[num].type = 10;
+            current_options[num].text = SCRIPT_TEXT(optmessages[7]);
+            num++;
+        }
+        if (opts & 0x20) {
+            current_options[num].type = 11;
+            current_options[num].text = SCRIPT_TEXT(optmessages[8]);
+            num++;
+        }
+        if (opts & 4) {
+            current_options[num].type = 1;
+            current_options[num].text = SCRIPT_TEXT(optmessages[0]);
+            num++;
+        }
+        if (opts & 2) {
+            current_options[num].type = 5;
+            current_options[num].text = SCRIPT_TEXT(optmessages[4]);
+            num++;
+        }
+        if (opts & 0xC0 || opts & 0x100) {
+            current_options[num].type = 2;
+            current_options[num].text = SCRIPT_TEXT(optmessages[1]);
+            num++;
+        }
+        if (opts & 8) {
+            if (is_item_currently_combinable(item)) {
+                current_options[num].type = 3;
+                current_options[num].text = SCRIPT_TEXT(optmessages[2]);
+                num++;
+            }
+        }
+        if (opts & 1) {
+            current_options[num].type = 3;
+            current_options[num].text = SCRIPT_TEXT(optmessages[2]);
+            num++;
+        }
+        if (opts & 0x10) {
+            current_options[num].type = 4;
+            current_options[num].text = SCRIPT_TEXT(optmessages[3]);
+            num++;
+        }
+    } else {
+        current_options[num].type = 6;
+        current_options[num].text = SCRIPT_TEXT(inventry_objects_list[ammo_object_list[num].invitem].objname);
+        num++;
+        current_options[num].type = 7;
+        current_options[num].text = SCRIPT_TEXT(inventry_objects_list[ammo_object_list[num].invitem].objname);
+        num++;
+        if (opts & 0x80 || opts & 0x100) {
+            current_options[num].type = 8;
+            current_options[num].text = SCRIPT_TEXT(inventry_objects_list[ammo_object_list[num].invitem].objname);
+            num++;
+        }
+        current_selected_option = *current_ammo_type;
+    }
+    ypos = phd_centery - font_height;
+    if (num == 1)
+        ypos += font_height;
+    else if (num == 2)
+        ypos += font_height >> 1;
+    for (i = 0; i < num; i++) {
+        if (i == current_selected_option)
+            PrintString((uint16)phd_centerx, (uint16)ypos, 1, current_options[i].text, FF_CENTER);
+        else
+            PrintString((uint16)phd_centerx, (uint16)ypos, 5, current_options[i].text, FF_CENTER);
+        ypos += font_height;
+    }
+    if (menu_active) {
+        if (rings[RING_INVENTORY]->objlistmovement || rings[RING_AMMO]->objlistmovement)
+            return;
+        if (go_up && current_selected_option > 0) {
+            current_selected_option--;
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+        }
+        if (go_down && current_selected_option < num - 1) {
+            current_selected_option++;
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+        }
+        if (ammo_active) {
+            if (go_left && current_selected_option > 0) {
+                current_selected_option--;
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            }
+            if (go_right && current_selected_option < num - 1) {
+                current_selected_option++;
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            }
+            *current_ammo_type = current_selected_option;
+        }
+        if (go_select) {
+            type = current_options[current_selected_option].type;
+            if (type != 5 && type != 1)
+                SoundEffect(SFX_MENU_CHOOSE, 0, SFX_ALWAYS);
+            type = current_options[current_selected_option].type;
+            if (type == 2) {
+                rings[RING_INVENTORY]->ringactive = 0;
+                ammo_active = 1;
+                Stashedcurrent_selected_option = current_selected_option;
+                StashedCurrentPistolsAmmoType = CurrentPistolsAmmoType;
+                StashedCurrentUziAmmoType = CurrentUziAmmoType;
+                StashedCurrentRevolverAmmoType = CurrentRevolverAmmoType;
+                StashedCurrentShotGunAmmoType = CurrentShotGunAmmoType;
+                StashedCurrentGrenadeGunAmmoType = CurrentGrenadeGunAmmoType;
+                StashedCurrentCrossBowAmmoType = CurrentCrossBowAmmoType;
+            } else if (type == 9)
+                loading_or_saving = 1;
+            else if (type == 10)
+                loading_or_saving = 2;
+            else if (type == 11) {
+                examine_mode = 1;
+                stats_mode = 0;
+            } else if (type == 6 || type == 7 || type == 8) {
+                ammo_active = 0;
+                rings[RING_INVENTORY]->ringactive = 1;
+                current_selected_option = 0;
+            } else if (type == 3) {
+                construct_combine_object_list();
+                rings[RING_INVENTORY]->ringactive = 0;
+                rings[RING_AMMO]->ringactive = 1;
+                ammo_selector_flag = 0;
+                menu_active = 0;
+                combine_ring_fade_dir = 1;
+            } else if (type == 4) {
+                seperate_type_flag = 1;
+                normal_ring_fade_dir = 2;
+            } else if (type == 5 || type == 1) {
+                menu_active = 0;
+                use_the_bitch = 1;
+            }
+        }
+        if (go_deselect) {
+            if (ammo_active) {
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+                go_deselect = 0;
+                ammo_active = 0;
+                rings[RING_INVENTORY]->ringactive = 1;
+                CurrentPistolsAmmoType = StashedCurrentPistolsAmmoType;
+                CurrentUziAmmoType = StashedCurrentUziAmmoType;
+                CurrentRevolverAmmoType = StashedCurrentRevolverAmmoType;
+                CurrentShotGunAmmoType = StashedCurrentShotGunAmmoType;
+                CurrentGrenadeGunAmmoType = StashedCurrentGrenadeGunAmmoType;
+                CurrentCrossBowAmmoType = StashedCurrentCrossBowAmmoType;
+                current_selected_option = Stashedcurrent_selected_option;
+            }
+        }
+    }
+}
+
 void Func43dbf0(void)
 {
     sint32 opts;

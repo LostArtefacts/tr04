@@ -183,6 +183,11 @@ typedef struct {
 } AMMOLIST;
 
 typedef struct {
+    sint32 type;
+    char *text;
+} MENUTHANG;
+
+typedef struct {
     void (*combine_routine)(sint32 flag);
     sint16 item1;
     sint16 item2;
@@ -281,6 +286,15 @@ extern sint8 CurrentRevolverAmmoType;
 extern sint8 CurrentShotGunAmmoType;
 extern sint8 CurrentGrenadeGunAmmoType;
 extern sint8 CurrentCrossBowAmmoType;
+extern sint8 StashedCurrentPistolsAmmoType;
+extern sint8 StashedCurrentUziAmmoType;
+extern sint8 StashedCurrentRevolverAmmoType;
+extern sint8 StashedCurrentShotGunAmmoType;
+extern sint8 StashedCurrentGrenadeGunAmmoType;
+extern sint8 StashedCurrentCrossBowAmmoType;
+extern uint8 Stashedcurrent_selected_option;
+extern sint16 optmessages[9];
+extern MENUTHANG current_options[3];
 extern sint16 inventry_xpos;
 extern sint16 inventry_ypos;
 extern sint32 combine_obj1;

@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="256.12" height="12" x="0" y="0" class="named"><title>1180 · 76.23%</title></rect>
-<rect width="0.65" height="12" x="256.12" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="23.44" height="12" x="256.78" y="0" class="nonmatching"><title>108 · 6.98%</title></rect>
-<rect width="55.78" height="12" x="280.22" y="0" class="todo"><title>257 · 16.60%</title></rect>
+<rect width="256.34" height="12" x="0" y="0" class="named"><title>1181 · 76.29%</title></rect>
+<rect width="0.65" height="12" x="256.34" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="23.44" height="12" x="256.99" y="0" class="nonmatching"><title>108 · 6.98%</title></rect>
+<rect width="55.57" height="12" x="280.43" y="0" class="todo"><title>256 · 16.54%</title></rect>
 </g>
-<text text-anchor="end" x="516" y="7.50">76.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1180</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">108</tspan> · <tspan class="todo">257</tspan></text>
+<text text-anchor="end" x="516" y="7.50">76.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1181</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">108</tspan> · <tspan class="todo">256</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="157.92" height="12" x="0" y="0" class="named"><title>293 KB · 47%</title></rect>
-<rect width="0.13" height="12" x="157.92" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="54.36" height="12" x="158.05" y="0" class="nonmatching"><title>101 KB · 16.18%</title></rect>
-<rect width="123.59" height="12" x="212.41" y="0" class="todo"><title>229 KB · 36.78%</title></rect>
+<rect width="158.95" height="12" x="0" y="0" class="named"><title>295 KB · 47.31%</title></rect>
+<rect width="0.13" height="12" x="158.95" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="54.36" height="12" x="159.08" y="0" class="nonmatching"><title>101 KB · 16.18%</title></rect>
+<rect width="122.56" height="12" x="213.44" y="0" class="todo"><title>227 KB · 36.48%</title></rect>
 </g>
-<text text-anchor="end" x="516" y="24.50">47.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">293 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">101 KB</tspan> · <tspan class="todo">229 KB</tspan></text>
+<text text-anchor="end" x="516" y="24.50">47.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">295 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">101 KB</tspan> · <tspan class="todo">227 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -679,7 +679,7 @@
 <rect width="12" height="12" x="150" y="180" class="named"><title>0x0043ca90 insert_object_into_list (80 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="180" class="todo"><title>0x0043cae0 draw_current_object_list (2405 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="180" class="named"><title>0x0043d450 handle_object_changeover (19 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="180" class="todo"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="180" class="named"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="180" class="nonmatching"><title>0x0043dbf0 Func43dbf0 (566 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="180" class="named"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="180" class="named"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
@@ -1673,7 +1673,7 @@
 <rect width="29.42" height="25.94" x="118.32" y="436.06" class="todo"><title>0x00470830 DXSetupDlgProc (1986 bytes)</title></rect>
 <rect width="27" height="27.80" x="150.74" y="0" class="named"><title>0x00402e30 CrocControl (1952 bytes)</title></rect>
 <rect width="27" height="27.63" x="150.74" y="30.80" class="todo"><title>0x004657e0 BikeDynamics (1940 bytes)</title></rect>
-<rect width="27" height="27.23" x="150.74" y="61.43" class="todo"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
+<rect width="27" height="27.23" x="150.74" y="61.43" class="named"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
 <rect width="27" height="27.19" x="150.74" y="91.66" class="todo"><title>0x00449410 ControlPhase (1909 bytes)</title></rect>
 <rect width="27" height="26.89" x="150.74" y="121.85" class="nonmatching"><title>0x004778b0 S_UpdateInput (1888 bytes)</title></rect>
 <rect width="27" height="26.72" x="150.74" y="151.74" class="nonmatching"><title>0x00430250 LaraControl (1876 bytes)</title></rect>
