@@ -1986,6 +1986,9 @@ address,size,name,symbol
 0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition
 0x004ad1e8,16,left_hand,_left_hand
 0x004ad1f8,16,right_hand,_right_hand
+0x004ad228,16,sas_fire,_sas_fire
+0x004ad238,24,DragSASBounds,_DragSASBounds
+0x004ad250,12,DragSASPos,_DragSASPos
 0x004ad328,12,FloorTrapDoorPos,_FloorTrapDoorPos
 0x004ad334,24,FloorTrapDoorBounds,_FloorTrapDoorBounds
 0x004ad350,12,CeilingTrapDoorPos,_CeilingTrapDoorPos

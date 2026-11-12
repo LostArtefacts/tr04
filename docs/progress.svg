@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="215.55" height="12" x="0" y="0" class="named"><title>975 · 63.03%</title></rect>
-<rect width="0.44" height="12" x="215.55" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="215.99" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="118.72" height="12" x="223.28" y="0" class="todo"><title>537 · 34.71%</title></rect>
+<rect width="215.77" height="12" x="0" y="0" class="named"><title>976 · 63.09%</title></rect>
+<rect width="0.44" height="12" x="215.77" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="216.21" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="118.50" height="12" x="223.50" y="0" class="todo"><title>536 · 34.65%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">63.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">975</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">537</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">976</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">536</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="93.02" height="12" x="0" y="0" class="named"><title>169 KB · 27.20%</title></rect>
-<rect width="0.12" height="12" x="93.02" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="93.14" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="239.44" height="12" x="102.56" y="0" class="todo"><title>434 KB · 70.01%</title></rect>
+<rect width="93.26" height="12" x="0" y="0" class="named"><title>169 KB · 27.27%</title></rect>
+<rect width="0.12" height="12" x="93.26" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="93.38" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="239.20" height="12" x="102.80" y="0" class="todo"><title>434 KB · 69.94%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">27.2%</text>
+<text text-anchor="end" x="522" y="24.50">27.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">169 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">434 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -148,7 +148,7 @@
 <rect width="12" height="12" x="435" y="15" class="named"><title>0x0040da00 InitialiseInjuredSas (106 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="15" class="named"><title>0x0040da70 InjuredSasControl (121 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="15" class="todo"><title>0x0040daf0 SasFireGrenade (465 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="15" class="todo"><title>0x0040dcd0 DragSASCollision (439 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="15" class="named"><title>0x0040dcd0 DragSASCollision (439 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="15" class="named"><title>0x0040de90 InitialiseScarab (92 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="15" class="todo"><title>0x0040def0 ScarabControl (827 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="15" class="named"><title>0x0040e250 GetFreeScarab (74 bytes)</title></rect>
@@ -2027,7 +2027,7 @@
 <rect width="13.05" height="13.11" x="543.96" y="112.48" class="named"><title>0x00413f90 DartEmitterControl (443 bytes)</title></rect>
 <rect width="12.96" height="13.11" x="560.01" y="112.48" class="named"><title>0x0045bdf0 sgRestoreLevel (440 bytes)</title></rect>
 <rect width="12.96" height="13.11" x="575.98" y="112.48" class="named"><title>0x0046e180 ACMEmulateCDPlay (440 bytes)</title></rect>
-<rect width="12.93" height="13.11" x="591.94" y="112.48" class="todo"><title>0x0040dcd0 DragSASCollision (439 bytes)</title></rect>
+<rect width="12.93" height="13.11" x="591.94" y="112.48" class="named"><title>0x0040dcd0 DragSASCollision (439 bytes)</title></rect>
 <rect width="12.93" height="13.11" x="607.87" y="112.48" class="nonmatching"><title>0x004654a0 BikeCheckGetOff (439 bytes)</title></rect>
 <rect width="12.87" height="13.11" x="623.81" y="112.48" class="todo"><title>0x00404840 TriggerDemigodMissileFlame (437 bytes)</title></rect>
 <rect width="12.87" height="13.11" x="639.68" y="112.48" class="named"><title>0x00462100 UnderwaterSwitchCollision (437 bytes)</title></rect>
