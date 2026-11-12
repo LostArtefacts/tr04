@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="231.02" height="12" x="0" y="0" class="named"><title>1045 · 67.55%</title></rect>
-<rect width="0.44" height="12" x="231.02" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.62" height="12" x="231.46" y="0" class="nonmatching"><title>39 · 2.52%</title></rect>
-<rect width="101.91" height="12" x="240.09" y="0" class="todo"><title>461 · 29.80%</title></rect>
+<rect width="231.24" height="12" x="0" y="0" class="named"><title>1046 · 67.61%</title></rect>
+<rect width="0.44" height="12" x="231.24" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.62" height="12" x="231.68" y="0" class="nonmatching"><title>39 · 2.52%</title></rect>
+<rect width="101.69" height="12" x="240.31" y="0" class="todo"><title>460 · 29.73%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">67.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1045</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">39</tspan> · <tspan class="todo">461</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1046</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">39</tspan> · <tspan class="todo">460</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="101.45" height="12" x="0" y="0" class="named"><title>184 KB · 29.66%</title></rect>
-<rect width="0.12" height="12" x="101.45" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.38" height="12" x="101.57" y="0" class="nonmatching"><title>19 KB · 3.04%</title></rect>
-<rect width="230.04" height="12" x="111.96" y="0" class="todo"><title>417 KB · 67.26%</title></rect>
+<rect width="101.73" height="12" x="0" y="0" class="named"><title>185 KB · 29.74%</title></rect>
+<rect width="0.12" height="12" x="101.73" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.38" height="12" x="101.85" y="0" class="nonmatching"><title>19 KB · 3.04%</title></rect>
+<rect width="229.77" height="12" x="112.23" y="0" class="todo"><title>417 KB · 67.18%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">29.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">184 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">19 KB</tspan> · <tspan class="todo">417 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">29.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">185 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">19 KB</tspan> · <tspan class="todo">417 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -179,7 +179,7 @@
 <rect width="12" height="12" x="150" y="30" class="todo"><title>0x00410530 DoSethEffects (1758 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="30" class="named"><title>0x00410c30 InitialiseSeth (90 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="30" class="todo"><title>0x00410c90 SethControl (2320 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="30" class="todo"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="30" class="named"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="30" class="named"><title>0x004117e0 InitialiseSkeleton (231 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="30" class="todo"><title>0x004118d0 SkeletonControl (4402 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="30" class="named"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
@@ -1981,7 +1981,7 @@
 <rect width="13.94" height="13.85" x="380.96" y="198.49" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>
 <rect width="13.94" height="13.85" x="380.96" y="215.34" class="todo"><title>0x0049a0e0 Func49a0e0 (500 bytes)</title></rect>
 <rect width="13.94" height="13.85" x="380.96" y="232.19" class="todo"><title>0x0049b370 Func49b370 (500 bytes)</title></rect>
-<rect width="13.94" height="13.83" x="380.96" y="249.05" class="todo"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
+<rect width="13.94" height="13.83" x="380.96" y="249.05" class="named"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
 <rect width="13.94" height="13.83" x="380.96" y="265.87" class="todo"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
 <rect width="13.94" height="13.71" x="380.96" y="282.70" class="todo"><title>0x00499ef0 Func499ef0 (495 bytes)</title></rect>
 <rect width="13.94" height="13.69" x="380.96" y="299.41" class="todo"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
