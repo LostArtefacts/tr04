@@ -1,5 +1,6 @@
 #include "newinv.h"
 #include "lara.h"
+#include "objnums.h"
 #include "lara1gun.h"
 #include "lara2gun.h"
 #include "specific/input.h"
@@ -189,4 +190,25 @@ void combine_PickupItem4(sint32 flag)
 void combine_ClockWorkBeetle(sint32 flag)
 {
     lara.mechanical_scarab = 1;
+}
+
+sint32 have_i_got_object(sint16 object_number)
+{
+    if (object_number >= PUZZLE_ITEM1_COMBO1 && object_number <= PUZZLE_ITEM8_COMBO2)
+        return (lara.puzzleitemscombo >> (object_number - PUZZLE_ITEM1_COMBO1)) & 1;
+    if (object_number >= PUZZLE_ITEM1 && object_number <= PUZZLE_ITEM12)
+        return lara.puzzleitems[object_number - PUZZLE_ITEM1];
+    if (object_number >= KEY_ITEM1_COMBO1 && object_number <= KEY_ITEM8_COMBO2)
+        return (lara.keyitemscombo >> (object_number - KEY_ITEM1_COMBO1)) & 1;
+    if (object_number >= KEY_ITEM1 && object_number <= KEY_ITEM12)
+        return (lara.keyitems >> (object_number - KEY_ITEM1)) & 1;
+    if (object_number >= PICKUP_ITEM1_COMBO1 && object_number <= PICKUP_ITEM4_COMBO2)
+        return (lara.pickupitemscombo >> (object_number - PICKUP_ITEM1_COMBO1)) & 1;
+    if (object_number >= PICKUP_ITEM1 && object_number <= PICKUP_ITEM4)
+        return (lara.pickupitems >> (object_number - PICKUP_ITEM1)) & 1;
+    if (object_number >= QUEST_ITEM1 && object_number <= QUEST_ITEM6)
+        return (lara.questitems >> (object_number - QUEST_ITEM1)) & 1;
+    if (object_number == CROWBAR_ITEM)
+        return lara.crowbar;
+    return 0;
 }
