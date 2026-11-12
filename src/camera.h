@@ -59,5 +59,6 @@ void CalculateCamera(void);
 void LaraTorch(PHD_VECTOR *Soffset, PHD_VECTOR *Eoffset, sint16 yrot, sint32 brightness);
 void InitialiseCamera(void);
 void FixedCamera(void);
+sint32 mgLOS(GAME_VECTOR *start, GAME_VECTOR *target, sint32 push);
 
 #endif
