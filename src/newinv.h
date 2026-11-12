@@ -26,6 +26,7 @@ void combine_KeyItem6(sint32 flag);
 void combine_KeyItem7(sint32 flag);
 void combine_KeyItem8(sint32 flag);
 void combine_PickupItem1(sint32 flag);
+void combine_PickupItem2(sint32 flag);
 
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
