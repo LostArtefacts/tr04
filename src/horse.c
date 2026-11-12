@@ -15,3 +15,13 @@ void InitialiseHorseman(sint16 item_number)
     item->current_anim_state = item->goal_anim_state = 9;
     item->item_flags[0] = -1;
 }
+
+void InitialiseHorse(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->anim_number = objects[HORSE].anim_index + 2;
+    item->frame_number = anims[item->anim_number].frame_base;
+    item->current_anim_state = item->goal_anim_state = 1;
+}

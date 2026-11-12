@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="223.06" height="12" x="0" y="0" class="named"><title>1009 · 65.22%</title></rect>
-<rect width="0.44" height="12" x="223.06" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="223.50" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="111.20" height="12" x="230.80" y="0" class="todo"><title>503 · 32.51%</title></rect>
+<rect width="223.28" height="12" x="0" y="0" class="named"><title>1010 · 65.29%</title></rect>
+<rect width="0.44" height="12" x="223.28" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="223.73" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="110.98" height="12" x="231.02" y="0" class="todo"><title>502 · 32.45%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">65.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1009</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">503</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1010</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">502</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="97.13" height="12" x="0" y="0" class="named"><title>176 KB · 28.40%</title></rect>
-<rect width="0.12" height="12" x="97.13" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="97.25" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="235.32" height="12" x="106.68" y="0" class="todo"><title>427 KB · 68.81%</title></rect>
+<rect width="97.18" height="12" x="0" y="0" class="named"><title>176 KB · 28.41%</title></rect>
+<rect width="0.12" height="12" x="97.18" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="97.30" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="235.28" height="12" x="106.72" y="0" class="todo"><title>427 KB · 68.80%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">176 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">427 KB</tspan></text>
@@ -119,7 +119,7 @@
 <rect width="12" height="12" x="0" y="15" class="named"><title>0x00408080 InitialiseHorseman (96 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="15" class="todo"><title>0x004080e0 HorsemanControl (3285 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="15" class="todo"><title>0x00408e00 TriggerHorsemanRicochets (522 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="15" class="todo"><title>0x00409010 InitialiseHorse (79 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="15" class="named"><title>0x00409010 InitialiseHorse (79 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="15" class="named"><title>0x00409060 InitialiseJeanYves (75 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="15" class="named"><title>0x004090b0 JeanYvesControl (200 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="15" class="todo"><title>0x00409180 ExplodeFX (125 bytes)</title></rect>
@@ -2754,7 +2754,7 @@
 <rect width="5.60" height="5.52" x="607.50" y="331.19" class="named"><title>0x004733b0 DSAdjustPitch (80 bytes)</title></rect>
 <rect width="5.60" height="5.52" x="607.50" y="339.70" class="named"><title>0x0048e810 TIME_Init (80 bytes)</title></rect>
 <rect width="5.60" height="5.52" x="607.50" y="348.22" class="named"><title>0x00492b90 DXSetVideoMode (80 bytes)</title></rect>
-<rect width="5.60" height="5.45" x="607.50" y="356.73" class="todo"><title>0x00409010 InitialiseHorse (79 bytes)</title></rect>
+<rect width="5.60" height="5.45" x="607.50" y="356.73" class="named"><title>0x00409010 InitialiseHorse (79 bytes)</title></rect>
 <rect width="5.60" height="5.45" x="607.50" y="365.18" class="named"><title>0x00425ec0 lara_as_death (79 bytes)</title></rect>
 <rect width="5.60" height="5.45" x="607.50" y="373.62" class="named"><title>0x0046fe80 DXSetupDialog (79 bytes)</title></rect>
 <rect width="5.60" height="5.45" x="607.50" y="382.07" class="named"><title>0x004738b0 DXStopSample (79 bytes)</title></rect>
