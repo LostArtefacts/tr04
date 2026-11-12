@@ -37,6 +37,17 @@ sint32 go_and_save_game(void)
     return SaveGame();
 }
 
+sint32 have_i_got_item(sint16 obj)
+{
+    sint32 i;
+
+    for (i = 0; i < NUM_INVOBJ; i++) {
+        if (obj == rings[RING_INVENTORY]->current_object_list[i].invitem)
+            return 1;
+    }
+    return 0;
+}
+
 void combine_revolver_lasersight(sint32 flag)
 {
     if (!flag) {

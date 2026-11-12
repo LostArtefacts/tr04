@@ -2009,6 +2009,7 @@ address,size,name,symbol
 0x004ae064,4,GLOBAL_lastinvitem,_GLOBAL_lastinvitem
 0x004ae068,4,GLOBAL_enterinventory,_GLOBAL_enterinventory
 0x004ae06c,4,GLOBAL_inventoryitemchosen,_GLOBAL_inventoryitemchosen
+0x004ae070,2380,inventry_objects_list,_inventry_objects_list
 0x004aebf8,1,piece_moving,_piece_moving
 0x004aebfc,4,flipeffect,_flipeffect
 0x004aec00,2,cdtrack,_cdtrack
@@ -2649,6 +2650,7 @@ address,size,name,symbol
 0x007fea18,2,stats_mode,_stats_mode
 0x007fea1a,1,seperate_type_flag,_seperate_type_flag
 0x007fea1b,,current_selected_option,_current_selected_option
+0x007fea20,8,rings,_rings
 0x007fea28,2,normal_ring_fade_val,_normal_ring_fade_val
 0x007fea2a,2,ammo_selector_fade_val,_ammo_selector_fade_val
 0x007fea2c,4,yoffset,_yoffset

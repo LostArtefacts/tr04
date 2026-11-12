@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="173.98" height="12" x="0" y="0" class="named"><title>787 · 50.87%</title></rect>
-<rect width="0.44" height="12" x="173.98" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="174.43" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="161.16" height="12" x="180.84" y="0" class="todo"><title>729 · 47.12%</title></rect>
+<rect width="174.21" height="12" x="0" y="0" class="named"><title>788 · 50.94%</title></rect>
+<rect width="0.44" height="12" x="174.21" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="174.65" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="160.94" height="12" x="181.06" y="0" class="todo"><title>728 · 47.06%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">51.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">787</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">729</tspan></text>
+<text text-anchor="end" x="522" y="7.50">51.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">788</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">728</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.51" height="12" x="0" y="0" class="named"><title>139 KB · 22.37%</title></rect>
-<rect width="0.12" height="12" x="76.51" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.63" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.72" height="12" x="85.28" y="0" class="todo"><title>466 KB · 75.06%</title></rect>
+<rect width="76.53" height="12" x="0" y="0" class="named"><title>139 KB · 22.38%</title></rect>
+<rect width="0.12" height="12" x="76.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.65" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.70" height="12" x="85.30" y="0" class="todo"><title>466 KB · 75.06%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">139 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">466 KB</tspan></text>
@@ -686,7 +686,7 @@
 <rect width="12" height="12" x="255" y="180" class="todo"><title>0x0043e140 spinback (105 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="180" class="todo"><title>0x0043e1b0 update_laras_weapons_status (155 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="180" class="todo"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="180" class="todo"><title>0x0043e2f0 have_i_got_item (36 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="180" class="named"><title>0x0043e2f0 have_i_got_item (36 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="180" class="todo"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="180" class="todo"><title>0x0043e360 combine_these_two_objects (98 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="180" class="todo"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
@@ -2959,7 +2959,7 @@
 <rect width="3.79" height="3.77" x="662.47" y="411.46" class="named"><title>0x0046bf40 fourteen_control (37 bytes)</title></rect>
 <rect width="3.79" height="3.77" x="662.47" y="418.23" class="named"><title>0x0046c700 twentythree_end (37 bytes)</title></rect>
 <rect width="3.79" height="3.67" x="662.47" y="425" class="named"><title>0x00437850 LaraLocation (36 bytes)</title></rect>
-<rect width="3.79" height="3.67" x="662.47" y="431.67" class="todo"><title>0x0043e2f0 have_i_got_item (36 bytes)</title></rect>
+<rect width="3.79" height="3.67" x="662.47" y="431.67" class="named"><title>0x0043e2f0 have_i_got_item (36 bytes)</title></rect>
 <rect width="3.79" height="3.67" x="662.47" y="438.33" class="named"><title>0x0045fa70 SOUND_Stop (36 bytes)</title></rect>
 <rect width="3.79" height="3.67" x="662.47" y="445" class="named"><title>0x0046c410 seventeen_control (36 bytes)</title></rect>
 <rect width="3.79" height="3.67" x="662.47" y="451.67" class="named"><title>0x0046c480 eighteen_control (36 bytes)</title></rect>
