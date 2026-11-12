@@ -504,3 +504,29 @@ void CreatureYRot(PHD_3DPOS *srcpos, sint16 angle, sint16 angadd)
     else
         srcpos->y_rot += angle;
 }
+
+sint32 MoveCreature3DPos(PHD_3DPOS *srcpos, PHD_3DPOS *destpos, sint32 velocity, sint16 angdif, sint16 angadd)
+{
+    sint32 x, y, z, dist;
+
+    x = destpos->x_pos - srcpos->x_pos;
+    y = destpos->y_pos - srcpos->y_pos;
+    z = destpos->z_pos - srcpos->z_pos;
+    dist = phd_sqrt(SQUARE(x) + SQUARE(y) + SQUARE(z));
+    if (velocity >= dist) {
+        srcpos->x_pos = destpos->x_pos;
+        srcpos->y_pos = destpos->y_pos;
+        srcpos->z_pos = destpos->z_pos;
+    } else {
+        srcpos->x_pos += velocity * x / dist;
+        srcpos->y_pos += velocity * y / dist;
+        srcpos->z_pos += velocity * z / dist;
+    }
+    if (angdif > angadd)
+        srcpos->y_rot += angadd;
+    else if (angdif < -angadd)
+        srcpos->y_rot -= angadd;
+    else
+        srcpos->y_rot = destpos->y_rot;
+    return srcpos->x_pos == destpos->x_pos && srcpos->y_pos == destpos->y_pos && srcpos->z_pos == destpos->z_pos && srcpos->y_rot == destpos->y_rot;
+}

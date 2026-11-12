@@ -152,6 +152,7 @@ sint32 CreatureVault(sint16 item_number, sint16 angle, sint32 vault, sint32 shif
 void CreatureYRot(PHD_3DPOS *srcpos, sint16 angle, sint16 angadd);
 void AlertAllGuards(sint16 item_number);
 sint32 CreatureCreature(sint16 item_number);
+sint32 MoveCreature3DPos(PHD_3DPOS *srcpos, PHD_3DPOS *destpos, sint32 velocity, sint16 angdif, sint16 angadd);
 
 extern CREATURE_INFO *baddie_slots;
 
