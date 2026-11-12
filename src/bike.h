@@ -2,6 +2,7 @@
 #define BIKE_H
 
 #include "items.h"
+#include "collide.h"
 
 typedef struct bikeinfo {
     sint16 right_front_wheelrot;
@@ -20,6 +21,7 @@ typedef struct bikeinfo {
     sint16 light_intensity;
 } BIKEINFO;
 
+sint32 GetOnBike(sint16 item_number, COLL_INFO *coll);
 void DrawBikeBeam(ITEM_INFO *item);
 void BikeStart(ITEM_INFO *item, ITEM_INFO *l);
 void DrawBikeExtras(ITEM_INFO *item);
@@ -31,6 +33,7 @@ sint32 BikeCheckGetOff(void);
 sint32 TestHeight(ITEM_INFO *item, sint32 z, sint32 x, PHD_VECTOR *pos);
 sint32 DoDynamics_bike(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero);
 void TriggerExhaustSmoke_bike(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 velocity, sint32 thing);
+void BikeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 extern ITEM_INFO *GlobalBikeItem;
 

@@ -12,6 +12,9 @@
 #include "sound.h"
 #include "effect2.h"
 #include "tomb4fx.h"
+#include "laraflar.h"
+#include "newinv.h"
+#include "savegame.h"
 #include "specific/3dmath.h"
 #include "specific/audio.h"
 #include "specific/function_stubs.h"
@@ -38,6 +41,62 @@ void InitialiseBike(sint16 item_number)
     bike->left_wheelrot = 0;
     item->mesh_bits = 1015;
     GlobalBikeItem = item;
+}
+
+void BikeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    BIKEINFO *bike;
+    sint16 ang;
+
+    if (l->hit_points < 0 || lara.vehicle != NO_ITEM)
+        return;
+    item = &items[item_number];
+    bike = (BIKEINFO *)item->data;
+    if (bike->light_intensity) {
+        bike->light_intensity = bike->light_intensity - (bike->light_intensity >> 3) - 1;
+        TriggerBikeBeam(item);
+    }
+    if (GetOnBike(item_number, coll)) {
+        lara.vehicle = item_number;
+        if (lara.gun_type == WEAPON_FLARE) {
+            CreateFlare(FLARE_ITEM, 0);
+            undraw_flare_meshes();
+            lara.flare_control_left = 0;
+            lara.request_gun_type = lara.gun_type = WEAPON_NONE;
+            lara.flare_age = 0;
+        }
+        lara.gun_status = LG_HANDS_BUSY;
+        ang = (sint16)phd_atan(item->pos.z_pos - l->pos.z_pos, item->pos.x_pos - l->pos.x_pos);
+        ang -= item->pos.y_rot;
+        if (ang <= -8190 || ang >= 24570) {
+            if (GLOBAL_inventoryitemchosen == PUZZLE_ITEM1) {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 28;
+                GLOBAL_inventoryitemchosen = NO_ITEM;
+                savegame.HaveBikeBooster = 1;
+            } else {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 9;
+            }
+            l->current_anim_state = l->goal_anim_state = 9;
+        }
+        l->frame_number = anims[l->anim_number].frame_base;
+        item->hit_points = 1;
+        l->pos.x_pos = item->pos.x_pos;
+        l->pos.y_pos = item->pos.y_pos;
+        l->pos.z_pos = item->pos.z_pos;
+        l->pos.y_rot = item->pos.y_rot;
+        lara.head_y_rot = 0;
+        lara.head_x_rot = 0;
+        lara.torso_y_rot = 0;
+        lara.torso_x_rot = 0;
+        lara.hit_direction = -1;
+        AnimateItem(l);
+        bike = (BIKEINFO *)item->data;
+        bike->unused1 = 0;
+        item->flags |= IFL_TRIGGERED;
+    } else {
+        ObjectCollision(item_number, l, coll);
+    }
 }
 
 void TriggerBikeBeam(ITEM_INFO *item)
