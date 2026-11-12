@@ -20,5 +20,6 @@ void lara_col_surfleft(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_surfright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_surftread(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_surfswim(ITEM_INFO *item, COLL_INFO *coll);
+void LaraSurface(ITEM_INFO *item, COLL_INFO *coll);
 
 #endif

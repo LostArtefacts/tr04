@@ -3,6 +3,52 @@
 #include "anim.h"
 #include "control.h"
 #include "specific/input.h"
+#include "camera.h"
+#include "collide.h"
+#include "larafire.h"
+#include "laraswim.h"
+#include "specific/3dmath.h"
+
+void LaraSurface(ITEM_INFO *item, COLL_INFO *coll)
+{
+    camera.target_elevation = -22 * ONE_DEGREE;
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -STEP_L / 2;
+    coll->bad_ceiling = 100;
+    coll->old.x = item->pos.x_pos;
+    coll->old.y = item->pos.y_pos;
+    coll->old.z = item->pos.z_pos;
+    coll->radius = 100;
+    coll->trigger = NULL;
+    coll->slopes_are_walls = 0;
+    coll->slopes_are_pits = 0;
+    coll->lava_is_pit = 0;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    if ((input & IN_LOOK) && lara.look)
+        LookLeftRight();
+    else
+        ResetLook();
+    lara.look = 1;
+    (*lara_control_routines[item->current_anim_state])(item, coll);
+    if (item->pos.z_rot >= -(2 * ONE_DEGREE) && item->pos.z_rot <= 2 * ONE_DEGREE)
+        item->pos.z_rot = 0;
+    else if (item->pos.z_rot < 0)
+        item->pos.z_rot += 2 * ONE_DEGREE;
+    else
+        item->pos.z_rot -= 2 * ONE_DEGREE;
+    if (lara.current_active && lara.water_status != LW_FLYCHEAT)
+        LaraWaterCurrent(coll);
+    AnimateLara(item);
+    item->pos.x_pos += ((rcossin_tbl[(lara.move_angle >> 3) & 0x1FFE] << 2) * item->fallspeed) >> (W2V_SHIFT + 2);
+    item->pos.z_pos += ((rcossin_tbl[((lara.move_angle >> 3) & 0x1FFE) + 1] << 2) * item->fallspeed) >> (W2V_SHIFT + 2);
+    LaraBaddieCollision(item, coll);
+    if (lara.vehicle == NO_ITEM)
+        (*lara_collision_routines[item->current_anim_state])(item, coll);
+    UpdateLaraRoom(item, 100);
+    LaraGun();
+    TestTriggers(coll->trigger, 0, 0);
+}
 
 void lara_as_surfswim(ITEM_INFO *item, COLL_INFO *coll)
 {

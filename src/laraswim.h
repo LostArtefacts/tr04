@@ -24,5 +24,6 @@ void lara_as_glide(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_tread(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_uwdeath(ITEM_INFO *item, COLL_INFO *coll);
 void LaraTestWaterDepth(ITEM_INFO *item, COLL_INFO *coll);
+void LaraWaterCurrent(COLL_INFO *coll);
 
 #endif

@@ -352,5 +352,7 @@ void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
 extern uint16 DashTimer;
+extern void (*lara_control_routines[118])(ITEM_INFO *item, COLL_INFO *coll);
+extern void (*lara_collision_routines[118])(ITEM_INFO *item, COLL_INFO *coll);
 
 #endif

@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="235.88" height="12" x="0" y="0" class="named"><title>1067 · 68.97%</title></rect>
-<rect width="0.44" height="12" x="235.88" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="11.94" height="12" x="236.33" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
-<rect width="93.73" height="12" x="248.27" y="0" class="todo"><title>424 · 27.41%</title></rect>
+<rect width="236.11" height="12" x="0" y="0" class="named"><title>1068 · 69.04%</title></rect>
+<rect width="0.44" height="12" x="236.11" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="11.94" height="12" x="236.55" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
+<rect width="93.51" height="12" x="248.49" y="0" class="todo"><title>423 · 27.34%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">69.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1067</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">424</tspan></text>
+<text text-anchor="end" x="522" y="7.50">69.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1068</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">423</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="109.34" height="12" x="0" y="0" class="named"><title>199 KB · 31.97%</title></rect>
-<rect width="0.12" height="12" x="109.34" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="20.70" height="12" x="109.46" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
-<rect width="211.84" height="12" x="130.16" y="0" class="todo"><title>385 KB · 61.94%</title></rect>
+<rect width="109.54" height="12" x="0" y="0" class="named"><title>199 KB · 32.03%</title></rect>
+<rect width="0.12" height="12" x="109.54" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="20.70" height="12" x="109.66" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
+<rect width="211.63" height="12" x="130.37" y="0" class="todo"><title>384 KB · 61.88%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">32.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">199 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">385 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">32.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">199 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">384 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -513,7 +513,7 @@
 <rect width="12" height="12" x="660" y="120" class="named"><title>0x00431760 PushXYZ (46 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="120" class="named"><title>0x00431790 PopXYZ (8 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="120" class="nonmatching"><title>0x004317a0 OptomiseSkinningData (760 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="120" class="todo"><title>0x00431aa0 LaraSurface (367 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="120" class="named"><title>0x00431aa0 LaraSurface (367 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="120" class="named"><title>0x00431c10 lara_as_surfswim (112 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="120" class="named"><title>0x00431c80 lara_as_surfback (94 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="135" class="named"><title>0x00431ce0 lara_as_surfleft (96 bytes)</title></rect>
@@ -2097,7 +2097,7 @@
 <rect width="12.07" height="11.80" x="645.03" y="128.58" class="named"><title>0x00438ba0 TriggerShatterSmoke (369 bytes)</title></rect>
 <rect width="12.04" height="11.80" x="660.11" y="128.58" class="named"><title>0x004639e0 GetStringLength (368 bytes)</title></rect>
 <rect width="12.04" height="11.80" x="675.15" y="128.58" class="todo"><title>0x00499940 Func499940 (368 bytes)</title></rect>
-<rect width="12.01" height="11.80" x="690.19" y="128.58" class="todo"><title>0x00431aa0 LaraSurface (367 bytes)</title></rect>
+<rect width="12.01" height="11.80" x="690.19" y="128.58" class="named"><title>0x00431aa0 LaraSurface (367 bytes)</title></rect>
 <rect width="11.94" height="11.80" x="705.20" y="128.58" class="named"><title>0x0045f7f0 GetPanVolume (365 bytes)</title></rect>
 <rect width="11.94" height="11.80" x="720.15" y="128.58" class="todo"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
 <rect width="11.91" height="11.80" x="735.09" y="128.58" class="named"><title>0x004808e0 do_boot_screen (364 bytes)</title></rect>

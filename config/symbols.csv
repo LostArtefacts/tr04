@@ -2028,6 +2028,8 @@ address,size,name,symbol
 0x004ad848,342,weapons,_weapons
 0x004ad9a0,36,HoldStates,_HoldStates
 0x004ad9c4,4,lara_coll,_lara_coll
+0x004ad9c8,472,lara_control_routines,_lara_control_routines
+0x004adba0,472,lara_collision_routines,_lara_collision_routines
 0x004add78,56,SkinJoints,_SkinJoints
 0x004ade1c,112,FogTableColor,_FogTableColor
 0x004ade8c,188,effect_routines,_effect_routines
