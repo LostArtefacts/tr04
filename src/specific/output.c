@@ -4,6 +4,14 @@
 #include "function_table.h"
 #include "time.h"
 #include "../text.h"
+#include "d3dmatrix.h"
+#include "drawroom.h"
+
+void _InsertRoom(ROOM_INFO *r)
+{
+    SetD3DViewMatrix();
+    InsertRoom(r);
+}
 
 sint32 S_DumpScreen(void)
 {

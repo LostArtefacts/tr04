@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="194.32" height="12" x="0" y="0" class="named"><title>879 · 56.82%</title></rect>
-<rect width="0.44" height="12" x="194.32" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="194.77" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="140.82" height="12" x="201.18" y="0" class="todo"><title>637 · 41.18%</title></rect>
+<rect width="194.54" height="12" x="0" y="0" class="named"><title>880 · 56.88%</title></rect>
+<rect width="0.44" height="12" x="194.54" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="194.99" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="140.60" height="12" x="201.40" y="0" class="todo"><title>636 · 41.11%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">56.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">879</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">637</tspan></text>
+<text text-anchor="end" x="522" y="7.50">57.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">880</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">636</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="83.26" height="12" x="0" y="0" class="named"><title>151 KB · 24.34%</title></rect>
-<rect width="0.12" height="12" x="83.26" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="83.38" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="249.97" height="12" x="92.03" y="0" class="todo"><title>453 KB · 73.09%</title></rect>
+<rect width="83.27" height="12" x="0" y="0" class="named"><title>151 KB · 24.35%</title></rect>
+<rect width="0.12" height="12" x="83.27" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="83.39" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="249.96" height="12" x="92.04" y="0" class="todo"><title>453 KB · 73.09%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">151 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">453 KB</tspan></text>
@@ -1341,7 +1341,7 @@
 <rect width="12" height="12" x="330" y="375" class="todo"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="375" class="todo"><title>0x0047e8b0 phd_PutPolygonsPickup (3437 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="375" class="todo"><title>0x0047f620 phd_PutPolygonSkyMesh (808 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="375" class="todo"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="375" class="named"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="375" class="todo"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="375" class="todo"><title>0x0047fa10 S_OutputPolyList (656 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="375" class="named"><title>0x0047fca0 S_DumpScreen (76 bytes)</title></rect>
@@ -3093,7 +3093,7 @@
 <rect width="2.66" height="2.47" x="706.05" y="443.12" class="named"><title>0x0043e700 combine_PickupItem2 (17 bytes)</title></rect>
 <rect width="2.66" height="2.47" x="706.05" y="448.59" class="named"><title>0x0043e720 combine_PickupItem3 (17 bytes)</title></rect>
 <rect width="2.66" height="2.47" x="706.05" y="454.06" class="named"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
-<rect width="2.66" height="2.47" x="706.05" y="459.53" class="todo"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
+<rect width="2.66" height="2.47" x="706.05" y="459.53" class="named"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
 <rect width="2.49" height="2.48" x="711.71" y="421.23" class="named"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
 <rect width="2.49" height="2.48" x="717.20" y="421.23" class="named"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
 <rect width="2.49" height="2.48" x="722.69" y="421.23" class="named"><title>0x004761e0 LoadCinematic (16 bytes)</title></rect>

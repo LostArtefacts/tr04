@@ -2,6 +2,7 @@
 #define SPECIFIC_DRAWROOM_H
 
 #include "../types.h"
+#include "../room.h"
 
 typedef struct d3dtlbumpvertex {
     float sx;
@@ -23,6 +24,8 @@ typedef struct texturebucket {
 } TEXTUREBUCKET;
 
 extern TEXTUREBUCKET Bucket[20];
+
+void InsertRoom(ROOM_INFO *r);
 
 void InitBuckets(void);
 
