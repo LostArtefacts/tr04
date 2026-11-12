@@ -2791,6 +2791,7 @@ address,size,name,symbol
 0x007fe9cc,4,xoffset,_xoffset
 0x007fe9d0,1,num_ammo_slots,_num_ammo_slots
 0x007fe9f8,1,down_debounce,_down_debounce
+0x007fea00,18,ammo_object_list,_ammo_object_list
 0x007fea12,,deselect_debounce,_deselect_debounce
 0x007fea13,1,friggrimmer2,_friggrimmer2
 0x007fea14,1,friggrimmer,_friggrimmer

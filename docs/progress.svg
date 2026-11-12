@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="249.21" height="12" x="0" y="0" class="named"><title>1128 · 72.87%</title></rect>
-<rect width="0.66" height="12" x="249.21" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.45" height="12" x="249.87" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
-<rect width="74.67" height="12" x="267.33" y="0" class="todo"><title>338 · 21.83%</title></rect>
+<rect width="249.43" height="12" x="0" y="0" class="named"><title>1129 · 72.93%</title></rect>
+<rect width="0.66" height="12" x="249.43" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.45" height="12" x="250.09" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
+<rect width="74.45" height="12" x="267.55" y="0" class="todo"><title>337 · 21.77%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">73.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1128</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">338</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1129</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">337</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="131.77" height="12" x="0" y="0" class="named"><title>240 KB · 38.53%</title></rect>
-<rect width="0.13" height="12" x="131.77" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.18" height="12" x="131.90" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
-<rect width="178.91" height="12" x="163.09" y="0" class="todo"><title>326 KB · 52.31%</title></rect>
+<rect width="132.11" height="12" x="0" y="0" class="named"><title>240 KB · 38.63%</title></rect>
+<rect width="0.13" height="12" x="132.11" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="31.18" height="12" x="132.24" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
+<rect width="178.58" height="12" x="163.42" y="0" class="todo"><title>325 KB · 52.22%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">38.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">240 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">326 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">38.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">240 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">325 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -682,7 +682,7 @@
 <rect width="12" height="12" x="195" y="180" class="todo"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="180" class="todo"><title>0x0043dbf0 Func43dbf0 (566 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="180" class="named"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="180" class="todo"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="180" class="named"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="180" class="named"><title>0x0043e140 spinback (105 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="180" class="named"><title>0x0043e1b0 update_laras_weapons_status (155 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="180" class="named"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
@@ -1897,7 +1897,7 @@
 <rect width="15.29" height="15.47" x="346.28" y="191.64" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>
 <rect width="15.29" height="15.44" x="346.28" y="210.10" class="nonmatching"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
 <rect width="15.29" height="15.42" x="346.28" y="228.54" class="todo"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
-<rect width="15.29" height="15.39" x="346.28" y="246.96" class="todo"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
+<rect width="15.29" height="15.39" x="346.28" y="246.96" class="named"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
 <rect width="15.29" height="15.39" x="346.28" y="265.35" class="todo"><title>0x0049a950 Func49a950 (611 bytes)</title></rect>
 <rect width="15.29" height="15.29" x="346.28" y="283.74" class="todo"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
 <rect width="15.29" height="15.26" x="346.28" y="302.03" class="named"><title>0x004624c0 TurnSwitchControl (606 bytes)</title></rect>

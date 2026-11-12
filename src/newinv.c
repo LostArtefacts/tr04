@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #include "newinv.h"
 #include "items.h"
 #include "lara.h"
@@ -9,6 +11,7 @@
 #include "specific/3dmath.h"
 #include "specific/input.h"
 #include "specific/loadsave.h"
+#include "text.h"
 
 sint32 LoadGame(void)
 {
@@ -277,6 +280,43 @@ void fade_ammo_selector(void)
             ammo_selector_fade_val = 0;
             ammo_selector_fade_dir = 0;
         }
+    }
+}
+
+void draw_ammo_selector(void)
+{
+    sint32 xpos;
+    sint32 i;
+    sint16 yrot;
+    char cunter[256];
+
+    if (!ammo_selector_flag)
+        return;
+    xpos = (2 * phd_centerx - OBJLIST_SPACING) >> 1;
+    if (num_ammo_slots == 2)
+        xpos -= OBJLIST_SPACING / 2;
+    else if (num_ammo_slots == 3)
+        xpos -= OBJLIST_SPACING;
+    for (i = 0; i < num_ammo_slots; i++) {
+        if (i == *current_ammo_type) {
+            if (inventry_objects_list[ammo_object_list[i].invitem].flags & 2)
+                ammo_object_list[i].yrot += 1022;
+        } else
+            spinback(&ammo_object_list[i].yrot);
+        yrot = ammo_object_list[i].yrot;
+        if (i == *current_ammo_type) {
+            if (ammo_object_list[i].amount == -1)
+                sprintf(cunter, SCRIPT_TEXT(TXT_Unlimited_s), SCRIPT_TEXT(inventry_objects_list[ammo_object_list[i].invitem].objname));
+            else
+                sprintf(cunter, "%d x %s", ammo_object_list[i].amount, SCRIPT_TEXT(inventry_objects_list[ammo_object_list[i].invitem].objname));
+            if (ammo_selector_fade_val)
+                PrintString((uint16)phd_centerx, (uint16)(font_height + phd_centery + 2 * font_height - 9), 8, cunter, FF_CENTER);
+        }
+        if (i == *current_ammo_type)
+            DrawThreeDeeObject2D((sint32)(64.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos + xpos), (sint32)(190.0F * ((float)phd_centery * (1.0F / 120.0F)) + inventry_ypos), ammo_object_list[i].invitem, ammo_selector_fade_val, 0, yrot, 0, 0, 0);
+        else
+            DrawThreeDeeObject2D((sint32)(64.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos + xpos), (sint32)(190.0F * ((float)phd_centery * (1.0F / 120.0F)) + inventry_ypos), ammo_object_list[i].invitem, ammo_selector_fade_val, 0, yrot, 0, 1, 0);
+        xpos += OBJLIST_SPACING;
     }
 }
 
