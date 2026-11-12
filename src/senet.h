@@ -17,5 +17,6 @@ void SenetControl(sint16 item_number);
 void InitialiseGameStix(sint16 item_number);
 void InitialiseSenet(sint16 item_number);
 void ThrowSticks(ITEM_INFO *item);
+void ShockwaveExplosion(ITEM_INFO *item, uint32 col, sint32 speed);
 
 #endif

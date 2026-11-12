@@ -64,6 +64,22 @@ void InitialiseGameStix(sint16 item_number)
     item->data = item->item_flags;
 }
 
+void ShockwaveExplosion(ITEM_INFO *item, uint32 col, sint32 speed)
+{
+    sint32 InnerOuter;
+
+    if (speed < 0)
+        InnerOuter = 0x2000280;
+    else
+        InnerOuter = 0xA00020;
+    item->pos.y_pos -= 384;
+    TriggerShockwave((PHD_VECTOR *)&item->pos, InnerOuter, speed, col | 0x18000000, 0);
+    TriggerShockwave((PHD_VECTOR *)&item->pos, InnerOuter, speed, col | 0x18000000, 0x2000);
+    TriggerShockwave((PHD_VECTOR *)&item->pos, InnerOuter, speed, col | 0x18000000, 0x4000);
+    TriggerShockwave((PHD_VECTOR *)&item->pos, InnerOuter, speed, col | 0x18000000, 0x6000);
+    item->pos.y_pos += 384;
+}
+
 void ThrowSticks(ITEM_INFO *item)
 {
     sint16 rnd;
