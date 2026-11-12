@@ -262,6 +262,37 @@ void CheckKeyConflicts(void)
     }
 }
 
+void DoStatScreen(void)
+{
+    sint32 y, t;
+    sint16 days, hours, min, sec;
+    char buf[40];
+
+    y = phd_centery - (font_height << 2);
+    PrintString((uint16)phd_centerx, (uint16)y, 6, SCRIPT_TEXT(TXT_Statistics), FF_CENTER);
+    PrintString((uint16)phd_centerx, (uint16)(y + 2 * font_height), 2, SCRIPT_TEXT(gfLevelNames[gfCurrentLevel]), FF_CENTER);
+    PrintString((uint16)(phd_centerx >> 2), (uint16)(y + 3 * font_height), 2, SCRIPT_TEXT(TXT_Time_Taken), 0);
+    PrintString((uint16)(phd_centerx >> 2), (uint16)(y + 4 * font_height), 2, SCRIPT_TEXT(TXT_Distance_Travelled), 0);
+    PrintString((uint16)(phd_centerx >> 2), (uint16)(y + 5 * font_height), 2, SCRIPT_TEXT(TXT_Ammo_Used), 0);
+    PrintString((uint16)(phd_centerx >> 2), (uint16)(y + 6 * font_height), 2, SCRIPT_TEXT(TXT_Health_Packs_Used), 0);
+    PrintString((uint16)(phd_centerx >> 2), (uint16)(y + 7 * font_height), 2, SCRIPT_TEXT(TXT_Secrets_Found), 0);
+    t = GameTimer / 30;
+    days = (sint16)(t / 86400);
+    hours = (sint16)((t % 86400) / 3600);
+    min = (sint16)((t / 60) % 60);
+    sec = (sint16)(t % 60);
+    sprintf(buf, "%02d:%02d:%02d", days * 24 + hours, min, sec);
+    PrintString((uint16)(phd_centerx + (phd_centerx >> 2)), (uint16)(y + 3 * font_height), 6, buf, 0);
+    sprintf(buf, "%dm", (sint32)savegame.Game.Distance / 419);
+    PrintString((uint16)(phd_centerx + (phd_centerx >> 2)), (uint16)(y + 4 * font_height), 6, buf, 0);
+    sprintf(buf, "%d", savegame.Game.AmmoUsed);
+    PrintString((uint16)(phd_centerx + (phd_centerx >> 2)), (uint16)(y + 5 * font_height), 6, buf, 0);
+    sprintf(buf, "%d", savegame.Game.HealthUsed);
+    PrintString((uint16)(phd_centerx + (phd_centerx >> 2)), (uint16)(y + 6 * font_height), 6, buf, 0);
+    sprintf(buf, "%d / 70", savegame.Game.Secrets);
+    PrintString((uint16)(phd_centerx + (phd_centerx >> 2)), (uint16)(y + 7 * font_height), 6, buf, 0);
+}
+
 sint32 S_DisplayPauseMenu(sint32 reset)
 {
     sint32 y;
