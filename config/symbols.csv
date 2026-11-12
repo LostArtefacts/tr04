@@ -2319,6 +2319,7 @@ address,size,name,symbol
 0x0052b84c,4,lastSPC,_lastSPC
 0x0052b850,29696,objects,_objects
 0x00532c90,4,num_items,_num_items
+0x00532d9c,1536,AnimatingTexturesV,_AnimatingTexturesV
 0x0053339c,4,nAnimUVRanges,_nAnimUVRanges
 0x005333a0,1,cd_drive,_cd_drive
 0x005333a4,4,FileData,_FileData

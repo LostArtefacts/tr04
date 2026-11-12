@@ -159,3 +159,19 @@ uint8 LoadAIInfo(void)
     }
     return 1;
 }
+
+void S_GetUVRotateTextures(void)
+{
+    TEXTURESTRUCT *tex;
+    sint16 *pRange;
+    sint32 i, j;
+
+    pRange = aranges + 1;
+    for (i = 0; i < nAnimUVRanges; i++, pRange++) {
+        for (j = (int)*(pRange++); j >= 0; j--, pRange++) {
+            tex = &textinfo[*pRange];
+            AnimatingTexturesV[i][j][0] = tex->v1;
+        }
+        pRange--;
+    }
+}

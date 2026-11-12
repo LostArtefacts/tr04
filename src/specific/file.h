@@ -11,6 +11,8 @@ extern char *FileData;
 extern sint32 number_cameras;
 extern sint16 *aranges;
 extern sint32 nAnimUVRanges;
+extern TEXTURESTRUCT *textinfo;
+extern float AnimatingTexturesV[16][8][3];
 
 FILE *FileOpen(const char *name);
 void FileClose(FILE *file);
@@ -22,5 +24,6 @@ uint8 LoadCameras(void);
 uint8 LoadAnimatedTextures(void);
 uint8 LoadAIInfo(void);
 uint8 LoadBoxes(void);
+void S_GetUVRotateTextures(void);
 
 #endif
