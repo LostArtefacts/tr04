@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="193.88" height="12" x="0" y="0" class="named"><title>877 · 56.69%</title></rect>
-<rect width="0.44" height="12" x="193.88" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="194.32" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="141.27" height="12" x="200.73" y="0" class="todo"><title>639 · 41.31%</title></rect>
+<rect width="194.10" height="12" x="0" y="0" class="named"><title>878 · 56.76%</title></rect>
+<rect width="0.44" height="12" x="194.10" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="194.54" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="141.04" height="12" x="200.96" y="0" class="todo"><title>638 · 41.24%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">56.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">877</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">639</tspan></text>
+<text text-anchor="end" x="522" y="7.50">56.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">878</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">638</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="82.87" height="12" x="0" y="0" class="named"><title>150 KB · 24.23%</title></rect>
-<rect width="0.12" height="12" x="82.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="82.99" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="250.36" height="12" x="91.64" y="0" class="todo"><title>454 KB · 73.21%</title></rect>
+<rect width="83.03" height="12" x="0" y="0" class="named"><title>151 KB · 24.28%</title></rect>
+<rect width="0.12" height="12" x="83.03" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="83.15" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="250.20" height="12" x="91.80" y="0" class="todo"><title>454 KB · 73.16%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">150 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">454 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">151 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">454 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1274,7 +1274,7 @@
 <rect width="12" height="12" x="75" y="360" class="todo"><title>0x00476260 LoadSamples (418 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="360" class="named"><title>0x00476410 S_GetUVRotateTextures (95 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="360" class="todo"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="360" class="todo"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="360" class="named"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="360" class="todo"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="360" class="named"><title>0x00476990 _NVisible (57 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="360" class="named"><title>0x004769d0 _Visible (57 bytes)</title></rect>
@@ -2176,7 +2176,7 @@
 <rect width="10.42" height="10.94" x="551.89" y="158.24" class="todo"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
 <rect width="10.38" height="10.94" x="565.31" y="158.24" class="todo"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>
 <rect width="10.31" height="10.94" x="578.69" y="158.24" class="todo"><title>0x0043ae50 TriggerLightning (292 bytes)</title></rect>
-<rect width="10.31" height="10.94" x="592" y="158.24" class="todo"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
+<rect width="10.31" height="10.94" x="592" y="158.24" class="named"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
 <rect width="10.28" height="10.94" x="605.31" y="158.24" class="todo"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
 <rect width="10.28" height="10.94" x="618.59" y="158.24" class="todo"><title>0x0049c750 Log (291 bytes)</title></rect>
 <rect width="10.24" height="10.94" x="631.87" y="158.24" class="named"><title>0x0045a1b0 SaveLaraData (290 bytes)</title></rect>

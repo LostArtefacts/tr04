@@ -32,6 +32,10 @@ extern TEXTURESTRUCT *AnimatingWaterfalls[3];
 extern sint32 AnimatingWaterfallsV[3];
 
 extern char *FileData;
+extern MESH_DATA **mesh_vtxbuf;
+extern sint32 num_level_meshes;
+extern char *OutsideRoomTable;
+extern sint16 *OutsideRoomOffsets;
 extern sint32 number_cameras;
 extern sint16 *aranges;
 extern sint32 nAnimUVRanges;
@@ -39,6 +43,7 @@ extern TEXTURESTRUCT *textinfo;
 extern float AnimatingTexturesV[16][8][3];
 
 FILE *FileOpen(const char *name);
+void FreeTextures(void);
 void FileClose(FILE *file);
 sint32 FileSize(FILE *file);
 uint8 LoadCinematic(void);
@@ -50,5 +55,6 @@ uint8 LoadAIInfo(void);
 uint8 LoadBoxes(void);
 void S_GetUVRotateTextures(void);
 uint8 Decompress(char *pDest, char *pCompressed, sint32 compressedSize, sint32 size);
+void FreeLevel(void);
 
 #endif

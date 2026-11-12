@@ -1,3 +1,5 @@
+#include <windows.h>
+#include <d3d.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,6 +10,9 @@
 #include "../box.h"
 #include "../spotcam.h"
 #include "../gameflow.h"
+#include "../room.h"
+#include "lighting.h"
+#include "dxsound.h"
 
 void FileClose(FILE *file)
 {
@@ -195,4 +200,42 @@ void S_GetUVRotateTextures(void)
         }
         pRange--;
     }
+}
+
+void FreeLevel(void)
+{
+    MESH_DATA **vbuf;
+    MESH_DATA *mesh;
+    ROOM_INFO *r;
+    sint32 i;
+
+    Log(2, "FreeLevel");
+    vbuf = mesh_vtxbuf;
+    for (i = 0; i < num_level_meshes; i++, vbuf++) {
+        mesh = *vbuf;
+        if (mesh->SourceVB) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "Mesh VB", mesh->SourceVB, IDirect3DVertexBuffer_Release((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB));
+            mesh->SourceVB = 0;
+        }
+    }
+    if (room) {
+        r = room;
+        for (i = 0; i < number_rooms; i++, r++) {
+            if (r->SourceVB) {
+                Log(4, "Released %s @ %x - RefCnt = %d", "Source VB", r->SourceVB, IDirect3DVertexBuffer_Release(r->SourceVB));
+                r->SourceVB = 0;
+            } else {
+                Log(1, "%s Attempt To Release NULL Ptr", "Source VB");
+            }
+        }
+    }
+    Log(5, "Free Textures");
+    FreeTextures();
+    Log(5, "Free Lights");
+    FreeD3DLights();
+    DXFreeSounds();
+    free(OutsideRoomTable);
+    free(OutsideRoomOffsets);
+    malloc_ptr = malloc_buffer;
+    malloc_free = malloc_size;
 }

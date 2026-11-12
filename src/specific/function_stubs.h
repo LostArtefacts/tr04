@@ -16,6 +16,9 @@ void init_game_malloc(void);
 void *game_malloc();
 
 extern char *malloc_buffer;
+extern sint32 malloc_size;
+extern char *malloc_ptr;
+extern sint32 malloc_free;
 extern PHD_VECTOR CamPos;
 extern PHD_VECTOR CamRot;
 
