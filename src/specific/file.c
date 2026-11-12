@@ -20,6 +20,14 @@
 #include "../sound.h"
 #include "../laramisc.h"
 #include "../setup.h"
+#include "../lara.h"
+#include "../objnums.h"
+#include "../tomb4fx.h"
+#include "winmain.h"
+#include "loadsave.h"
+#include "dxshell.h"
+#include "specificfx.h"
+#include "audio.h"
 
 #ifndef TR4_EXE
 FILE *FileOpen(const char *name)
@@ -517,6 +525,99 @@ void S_GetUVRotateTextures(void)
         }
         pRange--;
     }
+}
+
+unsigned int __stdcall LoadLevel(void *name)
+{
+    OBJECT_INFO *obj;
+    TEXTURESTRUCT *tex;
+    char *pData;
+    sint32 version, size, compressedSize, i;
+
+    Log(2, "LoadLevel");
+    FreeLevel();
+    memset(malloc_ptr, 0, MALLOC_SIZE);
+    memset(&lara, 0, sizeof(LARA_INFO));
+    Textures = (TEXTURE *)AddStruct(Textures, nTextures, sizeof(TEXTURE));
+    nTextures = 1;
+    Textures[0].tex = 0;
+    Textures[0].surface = 0;
+    Textures[0].width = 0;
+    Textures[0].height = 0;
+    Textures[0].bump = 0;
+    S_InitLoadBar(20);
+    S_LoadBar();
+    CompressedData = 0;
+    FileData = 0;
+    level_fp = 0;
+    level_fp = FileOpen((const char *)name);
+    if (level_fp) {
+        sint16 RTPages, OTPages, BTPages;
+
+        fread(&version, 1, 4, level_fp);
+        fread(&RTPages, 1, 2, level_fp);
+        fread(&OTPages, 1, 2, level_fp);
+        fread(&BTPages, 1, 2, level_fp);
+        Log(7, "Process Level Data");
+        LoadTextures(RTPages, OTPages, BTPages);
+        fread(&size, 1, 4, level_fp);
+        fread(&compressedSize, 1, 4, level_fp);
+        CompressedData = (char *)malloc(compressedSize);
+        FileData = (char *)malloc(size);
+        fread(CompressedData, compressedSize, 1, level_fp);
+        Decompress(FileData, CompressedData, compressedSize, size);
+        free(CompressedData);
+        pData = FileData;
+        S_LoadBar();
+        LoadRooms();
+        S_LoadBar();
+        LoadObjects();
+        S_LoadBar();
+        LoadSprites();
+        S_LoadBar();
+        LoadCameras();
+        S_LoadBar();
+        LoadSoundEffects();
+        S_LoadBar();
+        LoadBoxes();
+        S_LoadBar();
+        LoadAnimatedTextures();
+        S_LoadBar();
+        LoadTextureInfos();
+        S_LoadBar();
+        LoadItems();
+        S_LoadBar();
+        LoadAIInfo();
+        S_LoadBar();
+        LoadCinematic();
+        S_LoadBar();
+        if (acm_ready && !App.SoundDisabled)
+            LoadSamples();
+        free(pData);
+        S_LoadBar();
+        for (i = 0; i < 3; i++) {
+            obj = &objects[WATERFALL1 + i];
+            if (obj->loaded) {
+                tex = &textinfo[mesh_vtxbuf[obj->mesh_index]->gt4[4] & 0x7FFF];
+                AnimatingWaterfalls[i] = tex;
+                AnimatingWaterfallsV[i] = (sint32)tex->v1;
+            }
+        }
+        S_LoadBar();
+        S_GetUVRotateTextures();
+        InitTarget_2();
+        S_LoadBar();
+        MallocD3DLights();
+        CreateD3DLights();
+        SetupGame();
+        S_LoadBar();
+        SetFadeClip(0, 1);
+        reset_cutseq_vars();
+        FileClose(level_fp);
+    }
+    LevelLoadingThread.active = 0;
+    _endthreadex(1);
+    return 1;
 }
 
 void FreeLevel(void)

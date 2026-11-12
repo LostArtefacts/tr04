@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="243.47" height="12" x="0" y="0" class="named"><title>1102 · 71.19%</title></rect>
-<rect width="0.44" height="12" x="243.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="15.02" height="12" x="243.91" y="0" class="nonmatching"><title>68 · 4.39%</title></rect>
-<rect width="83.07" height="12" x="258.93" y="0" class="todo"><title>376 · 24.29%</title></rect>
+<rect width="243.69" height="12" x="0" y="0" class="named"><title>1103 · 71.25%</title></rect>
+<rect width="0.44" height="12" x="243.69" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="15.02" height="12" x="244.13" y="0" class="nonmatching"><title>68 · 4.39%</title></rect>
+<rect width="82.85" height="12" x="259.15" y="0" class="todo"><title>375 · 24.22%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">71.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1102</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">68</tspan> · <tspan class="todo">376</tspan></text>
+<text text-anchor="end" x="522" y="7.50">71.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1103</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">68</tspan> · <tspan class="todo">375</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="121.09" height="12" x="0" y="0" class="named"><title>220 KB · 35.41%</title></rect>
-<rect width="0.12" height="12" x="121.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="26.67" height="12" x="121.21" y="0" class="nonmatching"><title>48 KB · 7.80%</title></rect>
-<rect width="194.12" height="12" x="147.88" y="0" class="todo"><title>353 KB · 56.76%</title></rect>
+<rect width="121.52" height="12" x="0" y="0" class="named"><title>221 KB · 35.53%</title></rect>
+<rect width="0.12" height="12" x="121.52" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="26.67" height="12" x="121.64" y="0" class="nonmatching"><title>48 KB · 7.80%</title></rect>
+<rect width="193.69" height="12" x="148.31" y="0" class="todo"><title>352 KB · 56.63%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">35.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">220 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">48 KB</tspan> · <tspan class="todo">353 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">35.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">221 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">48 KB</tspan> · <tspan class="todo">352 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1273,7 +1273,7 @@
 <rect width="12" height="12" x="60" y="360" class="named"><title>0x004761f0 LoadAIInfo (97 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="360" class="named"><title>0x00476260 LoadSamples (418 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="360" class="named"><title>0x00476410 S_GetUVRotateTextures (95 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="360" class="todo"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="360" class="named"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="360" class="named"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="360" class="nonmatching"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="360" class="named"><title>0x00476990 _NVisible (57 bytes)</title></rect>
@@ -1832,7 +1832,7 @@
 <rect width="17.38" height="17.59" x="450.20" y="21.42" class="named"><title>0x00440620 CreatureMood (792 bytes)</title></rect>
 <rect width="17.38" height="17.59" x="470.58" y="21.42" class="named"><title>0x00469870 UserControl_jeep (792 bytes)</title></rect>
 <rect width="17.35" height="17.59" x="490.95" y="21.42" class="nonmatching"><title>0x0045ed30 BuildOutsideTable (791 bytes)</title></rect>
-<rect width="17.27" height="17.59" x="511.31" y="21.42" class="todo"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
+<rect width="17.27" height="17.59" x="511.31" y="21.42" class="named"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
 <rect width="17.27" height="17.59" x="531.58" y="21.42" class="todo"><title>0x00478b50 SetupLight (787 bytes)</title></rect>
 <rect width="17.16" height="17.59" x="551.84" y="21.42" class="named"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>
 <rect width="17.11" height="17.59" x="572" y="21.42" class="named"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>

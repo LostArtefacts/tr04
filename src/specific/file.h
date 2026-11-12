@@ -83,5 +83,8 @@ uint8 LoadItems(void);
 void AdjustUV(sint32 num);
 uint8 LoadTextureInfos(void);
 uint8 LoadObjects(void);
+uint8 LoadRooms(void);
+uint8 LoadTextures(sint32 RTPages, sint32 OTPages, sint32 BTPages);
+extern char *CompressedData;
 
 #endif
