@@ -20,6 +20,9 @@
 #include "scarab.h"
 #include "voncroy.h"
 #include "rope.h"
+#include "lot.h"
+#include "clockworkbeetle.h"
+#include "pickup.h"
 #include "specific/fmv.h"
 #include "specific/audio.h"
 #include "specific/file.h"
@@ -508,6 +511,269 @@ void RestoreLaraData(sint32 FullSave)
             lara.mesh_ptrs[i] = (sint16 *)((sint32)lara.mesh_ptrs[i] + (sint32)mesh_base);
     }
     CutSceneTriggered = savegame.cutscene_triggered;
+}
+
+void RestoreLevelData(sint32 FullSave)
+{
+    ROOM_INFO *r;
+    ITEM_INFO *item;
+    CREATURE_INFO *creature;
+    FLOOR_INFO *floor;
+    OBJECT_INFO *obj;
+    uint32 flags, f;
+    sint32 i, j, k, flare_age, uroom_number, room_number, req, goal;
+    uint16 word, packed, uword;
+    sint16 sword, item_number;
+    uint8 byte, anim, lflags, lf;
+
+    ReadSG(&FmvSceneTriggered, sizeof(sint32));
+    ReadSG(&GLOBAL_lastinvitem, sizeof(sint32));
+    ReadSG(&sword, sizeof(sint16));
+    for (i = 0; i < 10; i++) {
+        if (sword & (1 << i))
+            FlipMap(i);
+        ReadSG(&uword, sizeof(uint16));
+        flipmap[i] = uword << 8;
+    }
+    ReadSG(&flipeffect, sizeof(sint32));
+    ReadSG(&fliptimer, sizeof(sint32));
+    ReadSG(&flip_status, sizeof(sint32));
+    ReadSG(cd_flags, 128);
+    ReadSG(&CurrentAtmosphere, sizeof(uint8));
+    k = 16;
+    for (i = 0; i < number_rooms; i++) {
+        r = &room[i];
+        for (j = 0; j < r->num_meshes; j++) {
+            if (r->mesh[j].static_number >= SHATTER0) {
+                if (k == 16) {
+                    ReadSG(&uword, sizeof(uint16));
+                    k = 0;
+                }
+                r->mesh[j].Flags ^= (r->mesh[j].Flags ^ uword) & 1;
+                if (!r->mesh[j].Flags) {
+                    room_number = i;
+                    floor = GetFloor(r->mesh[j].x, r->mesh[j].y, r->mesh[j].z, (sint16 *)&room_number);
+                    GetHeight(floor, r->mesh[j].x, r->mesh[j].y, r->mesh[j].z);
+                    TestTriggers(trigger_index, 1, 0);
+                    floor->stopper = 0;
+                }
+                uword >>= 1;
+                k++;
+            }
+        }
+    }
+    ReadSG(&byte, sizeof(uint8));
+    for (i = 0; i < 8; i++) {
+        LibraryTab[i] = byte & 1;
+        byte >>= 1;
+    }
+    ReadSG(&CurrentSequence, sizeof(uint8));
+    ReadSG(&byte, sizeof(uint8));
+    for (i = 0; i < 6; i++) {
+        SequenceUsed[i] = byte & 1;
+        byte >>= 1;
+    }
+    ReadSG(Sequences, 3);
+    for (i = 0; i < number_cameras; i++)
+        ReadSG(&camera.fixed[i].flags, sizeof(sint16));
+    for (i = 0; i < number_spotcams; i++)
+        ReadSG(&SpotCam[i].flags, sizeof(sint16));
+    for (i = 0; i < level_items; i++) {
+        item = &items[i];
+        obj = &objects[item->object_number];
+        ReadSG(&packed, sizeof(uint16));
+        if (packed & 0x2000) {
+            KillItem(i);
+            item->status = ITEM_DEACTIVATED;
+            item->flags |= IFL_INVISIBLE;
+        } else if (packed & 0x8000) {
+            if (obj->save_position) {
+                uroom_number = 0;
+                ReadSG(&uword, sizeof(uint16));
+                item->pos.x_pos = (uword << 1) | (packed >> 2) & 1;
+                ReadSG(&sword, sizeof(sint16));
+                item->pos.y_pos = (sword << 1) | (packed >> 3) & 1;
+                ReadSG(&uword, sizeof(uint16));
+                item->pos.z_pos = (uword << 1) | (packed >> 4) & 1;
+                ReadSG(&uroom_number, sizeof(uint8));
+                ReadSG(&item->pos.y_rot, sizeof(sint16));
+                if (packed & 1)
+                    ReadSG(&item->pos.x_rot, sizeof(sint16));
+                if (packed & 2)
+                    ReadSG(&item->pos.z_rot, sizeof(sint16));
+                if (packed & 0x20)
+                    ReadSG(&item->speed, sizeof(sint16));
+                if (packed & 0x40)
+                    ReadSG(&item->fallspeed, sizeof(sint16));
+                if (item->room_number != (uint16)uroom_number)
+                    ItemNewRoom(i, (sint16)uroom_number);
+                if (obj->shadow_size) {
+                    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, (sint16 *)&uroom_number);
+                    item->floor = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+                }
+            }
+            if (obj->save_anim) {
+                uroom_number = 0;
+                goal = 0;
+                req = 0;
+                ReadSG(&uroom_number, sizeof(sint8));
+                ReadSG(&goal, sizeof(sint8));
+                ReadSG(&req, sizeof(sint8));
+                item->current_anim_state = (sint16)uroom_number;
+                item->goal_anim_state = (sint16)goal;
+                item->required_anim_state = (sint16)req;
+                if (item->object_number != LARA) {
+                    ReadSG(&anim, sizeof(sint8));
+                    item->anim_number = obj->anim_index + anim;
+                } else
+                    ReadSG(&item->anim_number, sizeof(sint16));
+                ReadSG(&item->frame_number, sizeof(sint16));
+            }
+            if (packed & 0x4000)
+                ReadSG(&item->hit_points, sizeof(sint16));
+            if (obj->save_flags) {
+                ReadSG(&flags, sizeof(uint32));
+                item->flags = (sint16)flags;
+                if (packed & 0x80)
+                    ReadSG(&item->item_flags[0], sizeof(sint16));
+                if (packed & 0x100)
+                    ReadSG(&item->item_flags[1], sizeof(sint16));
+                if (packed & 0x200)
+                    ReadSG(&item->item_flags[2], sizeof(sint16));
+                if (packed & 0x400)
+                    ReadSG(&item->item_flags[3], sizeof(sint16));
+                if (packed & 0x800)
+                    ReadSG(&item->timer, sizeof(sint16));
+                if (packed & 0x1000)
+                    ReadSG(&item->trigger_flags, sizeof(sint16));
+                if (obj->intelligent)
+                    ReadSG(&item->carried_item, sizeof(sint16));
+                if (flags & 0x10000 && !item->active)
+                    AddActiveItem(i);
+                f = flags;
+                item->active = (f >> 16) & 1;
+                item->status = (f >> 17) & 3;
+                item->gravity_status = (f >> 19) & 1;
+                item->hit_status = (f >> 20) & 1;
+                item->collidable = (f >> 21) & 1;
+                item->looked_at = (f >> 22) & 1;
+                item->dynamic_light = (f >> 23) & 1;
+                item->poisoned = (f >> 24) & 1;
+                item->ai_bits = (f >> 25) & 31;
+                item->really_active = (f >> 30) & 1;
+                if (f & 0x80000000) {
+                    EnableBaddieAI(i, 1);
+                    creature = (CREATURE_INFO *)item->data;
+                    if (creature) {
+                        ReadSG(creature, 22);
+                        ((CREATURE_INFO *)item->data)->enemy = (ITEM_INFO *)((sint32)((CREATURE_INFO *)item->data)->enemy + (sint32)malloc_buffer);
+                        if ((sint32)creature->enemy < 0)
+                            creature->enemy = 0;
+                        ReadSG(&creature->ai_target.object_number, sizeof(sint16));
+                        ReadSG(&creature->ai_target.room_number, sizeof(sint16));
+                        ReadSG(&creature->ai_target.box_number, sizeof(uint16));
+                        ReadSG(&creature->ai_target.flags, sizeof(sint16));
+                        ReadSG(&creature->ai_target.trigger_flags, sizeof(sint16));
+                        ReadSG(&creature->ai_target.pos, sizeof(PHD_3DPOS));
+                        ReadSG(&lflags, sizeof(uint8));
+                        lf = lflags;
+                        creature->LOT.can_jump = (lf & 1) == 1;
+                        creature->LOT.can_monkey = (lf & 2) == 2;
+                        creature->LOT.is_amphibious = (lf & 4) == 4;
+                        creature->LOT.is_jumping = (lf & 8) == 8;
+                        creature->LOT.is_monkeying = (lf & 16) == 16;
+                    } else
+                        SGpoint += 51;
+                }
+            }
+            if (obj->save_mesh) {
+                ReadSG(&item->mesh_bits, sizeof(uint32));
+                ReadSG(&item->meshswap_meshbits, sizeof(uint32));
+            }
+            if (item->object_number == MOTORBIKE)
+                ReadSG(item->data, sizeof(BIKEINFO));
+            if (item->object_number == JEEP)
+                ReadSG(item->data, sizeof(JEEPINFO));
+            if (obj->collision == PuzzleHoleCollision) {
+                if (item->status == ITEM_DEACTIVATED || item->status == ITEM_ACTIVE) {
+                    item->object_number += 12;
+                    item->anim_number = objects[item->object_number].anim_index + anim;
+                }
+            }
+            if (item->object_number >= SMASH_OBJECT1 && item->object_number <= SMASH_OBJECT8 && item->flags & IFL_INVISIBLE)
+                item->mesh_bits = 0x100;
+            if (item->object_number == RAISING_BLOCK1 && item->item_flags[1] || item->object_number == EXPANDING_PLATFORM && item->item_flags[2])
+                AlterFloorHeight(item, -1024);
+            if (item->object_number == RAISING_BLOCK2 && item->item_flags[1])
+                AlterFloorHeight(item, -2048);
+        }
+    }
+    if (objects[WHEEL_OF_FORTUNE].loaded) {
+        ReadSG(senet_item, sizeof(sint16) * 6);
+        ReadSG(senet_piece, sizeof(sint8) * 6);
+        ReadSG(senet_board, sizeof(sint8) * 17);
+        ReadSG(&last_throw, sizeof(sint8));
+        ReadSG(&SenetTargetX, sizeof(sint32));
+        ReadSG(&SenetTargetZ, sizeof(sint32));
+        ReadSG(&piece_moving, sizeof(sint8));
+    }
+    if (FullSave) {
+        ReadSG(&FullSave, sizeof(uint8));
+        for (i = 0; i < (uint8)FullSave; i++) {
+            item_number = CreateItem();
+            item = &items[item_number];
+            ReadSG(&byte, sizeof(sint8));
+            item->object_number = byte ? BURNING_TORCH_ITEM : FLARE_ITEM;
+            ReadSG(&item->pos, sizeof(PHD_3DPOS));
+            ReadSG(&item->room_number, sizeof(sint16));
+            ReadSG(&item->speed, sizeof(sint16));
+            ReadSG(&item->fallspeed, sizeof(sint16));
+            InitialiseItem(item_number);
+            AddActiveItem(item_number);
+            if (byte)
+                ReadSG(&item->item_flags[3], sizeof(sint16));
+            else {
+                ReadSG(&flare_age, sizeof(sint32));
+                item->data = (void *)flare_age;
+            }
+        }
+        if (objects[LITTLE_BEETLE].loaded) {
+            ReadSG(&FullSave, sizeof(uint8));
+            for (i = 0; i < (uint8)FullSave; i++) {
+                ReadSG(&uword, sizeof(uint16));
+                ReadSG(&word, sizeof(uint16));
+                Scarabs[i].pos.x_pos = (word << 1) | uword & 1;
+                ReadSG(&sword, sizeof(sint16));
+                Scarabs[i].pos.y_pos = (sword << 1) | (uword >> 1) & 1;
+                ReadSG(&word, sizeof(uint16));
+                Scarabs[i].pos.z_pos = (word << 1) | (uword >> 2) & 1;
+                ReadSG(&Scarabs[i].pos.y_rot, sizeof(sint16));
+                if (uword & 8)
+                    ReadSG(&Scarabs[i].pos.x_rot, sizeof(sint16));
+                Scarabs[i].On = 1;
+                Scarabs[i].room_number = (uword >> 8) & 0xFF;
+            }
+        }
+        ReadSG(&FullSave, sizeof(uint8));
+        if ((uint8)FullSave) {
+            item = TriggerClockworkBeetle(1);
+            ReadSG(&item->pos, sizeof(PHD_3DPOS));
+            ReadSG(item->item_flags, sizeof(sint16) * 4);
+        }
+        if (gfCurrentLevel == 1) {
+            for (i = 0; i < 64; i++) {
+                if (!(i & 0xF))
+                    ReadSG(&uword, sizeof(uint16));
+                if (uword & 1 << (i & 0xF))
+                    VonCroyCutFlags[i] = 1;
+            }
+        }
+        if (lara.RopePtr != -1) {
+            ReadSG(&RopeList[lara.RopePtr], sizeof(ROPE_STRUCT));
+            ReadSG(&CurrentPendulum, sizeof(PENDULUM));
+            CurrentPendulum.Rope = (ROPE_STRUCT *)((sint8 *)CurrentPendulum.Rope + (sint32)RopeList);
+        }
+    }
 }
 
 void ReadSG(void *pointer, sint32 size)

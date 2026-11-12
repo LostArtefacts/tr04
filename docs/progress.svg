@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="256.56" height="12" x="0" y="0" class="named"><title>1182 · 76.36%</title></rect>
 <rect width="0.65" height="12" x="256.56" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="26.05" height="12" x="257.21" y="0" class="nonmatching"><title>120 · 7.75%</title></rect>
-<rect width="52.74" height="12" x="283.26" y="0" class="todo"><title>243 · 15.70%</title></rect>
+<rect width="26.26" height="12" x="257.21" y="0" class="nonmatching"><title>121 · 7.82%</title></rect>
+<rect width="52.53" height="12" x="283.47" y="0" class="todo"><title>242 · 15.63%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">76.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1182</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">120</tspan> · <tspan class="todo">243</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1182</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">121</tspan> · <tspan class="todo">242</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="159.90" height="12" x="0" y="0" class="named"><title>297 KB · 47.59%</title></rect>
 <rect width="0.13" height="12" x="159.90" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="77.10" height="12" x="160.03" y="0" class="nonmatching"><title>143 KB · 22.95%</title></rect>
-<rect width="98.87" height="12" x="237.13" y="0" class="todo"><title>184 KB · 29.43%</title></rect>
+<rect width="78.65" height="12" x="160.03" y="0" class="nonmatching"><title>146 KB · 23.41%</title></rect>
+<rect width="97.32" height="12" x="238.68" y="0" class="todo"><title>181 KB · 28.97%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">47.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">297 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">143 KB</tspan> · <tspan class="todo">184 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">297 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">146 KB</tspan> · <tspan class="todo">181 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -995,7 +995,7 @@
 <rect width="12" height="12" x="390" y="270" class="named"><title>0x0045b000 WriteSG (56 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="270" class="named"><title>0x0045b040 sgRestoreGame (60 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="270" class="named"><title>0x0045b080 RestoreLaraData (417 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="270" class="todo"><title>0x0045b230 RestoreLevelData (2881 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="270" class="nonmatching"><title>0x0045b230 RestoreLevelData (2881 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="270" class="named"><title>0x0045bd80 ReadSG (53 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="270" class="named"><title>0x0045bdc0 sgSaveLevel (39 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="270" class="named"><title>0x0045bdf0 sgRestoreLevel (440 bytes)</title></rect>
@@ -1635,7 +1635,7 @@
 <rect width="34.44" height="34.28" x="47.78" y="119.54" class="todo"><title>0x0041e630 Rich_CalcLaraMatrices_Interpolated (3076 bytes)</title></rect>
 <rect width="34.44" height="32.44" x="47.78" y="156.82" class="named"><title>0x00429710 ControlGrenade (2911 bytes)</title></rect>
 <rect width="34.44" height="32.14" x="47.78" y="192.26" class="nonmatching"><title>0x0045a4b0 SaveLevelData (2884 bytes)</title></rect>
-<rect width="34.44" height="32.10" x="47.78" y="227.39" class="todo"><title>0x0045b230 RestoreLevelData (2881 bytes)</title></rect>
+<rect width="34.44" height="32.10" x="47.78" y="227.39" class="nonmatching"><title>0x0045b230 RestoreLevelData (2881 bytes)</title></rect>
 <rect width="34.44" height="31.95" x="47.78" y="262.49" class="todo"><title>0x00446170 GetCollisionInfo (2867 bytes)</title></rect>
 <rect width="34.44" height="31.59" x="47.78" y="297.44" class="todo"><title>0x0041daf0 Rich_CalcLaraMatrices_Normal (2835 bytes)</title></rect>
 <rect width="34.44" height="31.04" x="47.78" y="332.03" class="todo"><title>0x004971b0 SW_TriSetupGTLit (2786 bytes)</title></rect>
