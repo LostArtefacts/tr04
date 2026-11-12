@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="257.83" height="12" x="0" y="0" class="named"><title>1167 · 75.39%</title></rect>
 <rect width="0.66" height="12" x="257.83" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="20.55" height="12" x="258.49" y="0" class="nonmatching"><title>93 · 6.01%</title></rect>
-<rect width="62.97" height="12" x="279.03" y="0" class="todo"><title>285 · 18.41%</title></rect>
+<rect width="20.77" height="12" x="258.49" y="0" class="nonmatching"><title>94 · 6.07%</title></rect>
+<rect width="62.74" height="12" x="279.26" y="0" class="todo"><title>284 · 18.35%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1167</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">93</tspan> · <tspan class="todo">285</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1167</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">94</tspan> · <tspan class="todo">284</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="145.51" height="12" x="0" y="0" class="named"><title>265 KB · 42.55%</title></rect>
 <rect width="0.13" height="12" x="145.51" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="40.41" height="12" x="145.64" y="0" class="nonmatching"><title>74 KB · 11.82%</title></rect>
-<rect width="155.94" height="12" x="186.06" y="0" class="todo"><title>284 KB · 45.60%</title></rect>
+<rect width="41.14" height="12" x="145.64" y="0" class="nonmatching"><title>75 KB · 12.03%</title></rect>
+<rect width="155.21" height="12" x="186.79" y="0" class="todo"><title>283 KB · 45.38%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">42.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">265 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">74 KB</tspan> · <tspan class="todo">284 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">265 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">75 KB</tspan> · <tspan class="todo">283 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -797,7 +797,7 @@
 <rect width="12" height="12" x="420" y="210" class="nonmatching"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="210" class="named"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="210" class="named"><title>0x00448cc0 CogCollision (217 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="210" class="todo"><title>0x00448da0 GetCollidedObjects (1325 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="210" class="nonmatching"><title>0x00448da0 GetCollidedObjects (1325 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="210" class="named"><title>0x004492d0 KillMoveItems (85 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="210" class="named"><title>0x00449330 KillMoveEffects (85 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="210" class="named"><title>0x00449390 UpdateSky (122 bytes)</title></rect>
@@ -1716,7 +1716,7 @@
 <rect width="23.30" height="23.01" x="208.23" y="239.72" class="todo"><title>0x00482390 AddQuadClippedZBuffer (1393 bytes)</title></rect>
 <rect width="23.30" height="22.94" x="208.23" y="265.73" class="nonmatching"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
 <rect width="23.30" height="22.53" x="208.23" y="291.67" class="nonmatching"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>
-<rect width="23.30" height="21.88" x="208.23" y="317.20" class="todo"><title>0x00448da0 GetCollidedObjects (1325 bytes)</title></rect>
+<rect width="23.30" height="21.88" x="208.23" y="317.20" class="nonmatching"><title>0x00448da0 GetCollidedObjects (1325 bytes)</title></rect>
 <rect width="23.30" height="21.77" x="208.23" y="342.09" class="todo"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
 <rect width="23.30" height="21.69" x="208.23" y="366.86" class="todo"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
 <rect width="23.30" height="21.59" x="208.23" y="391.54" class="todo"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
