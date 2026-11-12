@@ -77,5 +77,6 @@ void CalcColorSplit(D3DCOLOR s, D3DCOLOR *d);
 void CalcColorSplitMMX(D3DCOLOR s, D3DCOLOR *d);
 void AddPrelitMMX(sint32 prelight, D3DCOLOR *color);
 void AddTriSubdivide(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided);
+void AddQuadSubdivide(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint16 v3, TEXTURESTRUCT *tex, sint32 double_sided);
 
 #endif

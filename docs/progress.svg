@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="188.58" height="12" x="0" y="0" class="named"><title>853 · 55.14%</title></rect>
-<rect width="0.44" height="12" x="188.58" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="189.02" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="146.57" height="12" x="195.43" y="0" class="todo"><title>663 · 42.86%</title></rect>
+<rect width="188.80" height="12" x="0" y="0" class="named"><title>854 · 55.20%</title></rect>
+<rect width="0.44" height="12" x="188.80" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="189.24" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="146.35" height="12" x="195.65" y="0" class="todo"><title>662 · 42.79%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">55.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">853</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">663</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">854</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">662</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="80.89" height="12" x="0" y="0" class="named"><title>147 KB · 23.65%</title></rect>
-<rect width="0.12" height="12" x="80.89" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="81.01" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="252.34" height="12" x="89.66" y="0" class="todo"><title>458 KB · 73.78%</title></rect>
+<rect width="81.06" height="12" x="0" y="0" class="named"><title>147 KB · 23.70%</title></rect>
+<rect width="0.12" height="12" x="81.06" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="81.18" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="252.17" height="12" x="89.83" y="0" class="todo"><title>457 KB · 73.73%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">147 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">458 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">147 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">457 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1378,7 +1378,7 @@
 <rect width="12" height="12" x="135" y="390" class="todo"><title>0x004831c0 SubdivideTri (862 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="390" class="todo"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="390" class="named"><title>0x00483a40 AddTriSubdivide (261 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="390" class="todo"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="390" class="named"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="390" class="todo"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="390" class="todo"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="390" class="named"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
@@ -2169,7 +2169,7 @@
 <rect width="10.63" height="10.94" x="457.07" y="158.24" class="named"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>
 <rect width="10.63" height="10.94" x="470.70" y="158.24" class="todo"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
 <rect width="10.56" height="10.94" x="484.34" y="158.24" class="todo"><title>0x0040ff40 GameStixCollision (299 bytes)</title></rect>
-<rect width="10.56" height="10.94" x="497.90" y="158.24" class="todo"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
+<rect width="10.56" height="10.94" x="497.90" y="158.24" class="named"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
 <rect width="10.56" height="10.94" x="511.46" y="158.24" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
 <rect width="10.45" height="10.94" x="525.02" y="158.24" class="todo"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
 <rect width="10.42" height="10.94" x="538.47" y="158.24" class="nonmatching"><title>0x0044aa20 RefreshCamera (295 bytes)</title></rect>
