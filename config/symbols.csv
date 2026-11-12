@@ -51,7 +51,7 @@ address,size,name,symbol
 0x00407a30,90,InitialiseHarpy,_InitialiseHarpy
 0x00407a90,1453,HarpyControl,_HarpyControl
 0x00408080,96,InitialiseHorseman,_InitialiseHorseman
-0x004080e0,3285,HorsemanControl,_HorsemanControl
+0x004080e0,3356,HorsemanControl,_HorsemanControl
 0x00408e00,522,TriggerHorsemanRicochets,_TriggerHorsemanRicochets
 0x00409010,79,InitialiseHorse,_InitialiseHorse
 0x00409060,75,InitialiseJeanYves,_InitialiseJeanYves
@@ -2001,6 +2001,12 @@ address,size,name,symbol
 0x004ad0b8,16,croc_bite,_croc_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
 0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition
+0x004ad170,16,horseman_axe,_horseman_axe
+0x004ad180,16,horseman_lfoot,_horseman_lfoot
+0x004ad190,16,horseman_shield,_horseman_shield
+0x004ad1a0,16,horse_lfoot,_horse_lfoot
+0x004ad1b0,16,horse_rfoot,_horse_rfoot
+0x004ad1c0,16,horse_head,_horse_head
 0x004ad1d0,24,MovingBlockBounds,_MovingBlockBounds
 0x004ad1e8,16,left_hand,_left_hand
 0x004ad1f8,16,right_hand,_right_hand
