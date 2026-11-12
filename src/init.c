@@ -44,3 +44,12 @@ void InitialiseJobySpike(sint16 item_number)
     c = GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
     item->item_flags[3] = (sint16)((4096 * (h - c)) / 3328);
 }
+
+void InitialiseTwoBlockPlatform(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->item_flags[0] = (sint16)item->pos.y_pos;
+    item->item_flags[1] = 1;
+}
