@@ -1123,6 +1123,64 @@ sint32 CheckNoColCeilingTriangle(FLOOR_INFO *floor, sint32 x, sint32 z)
     return 0;
 }
 
+sint32 IsRoomOutside(sint32 x, sint32 y, sint32 z)
+{
+    sint16 room_no;
+    ROOM_INFO *r;
+    FLOOR_INFO *floor;
+    uint8 *pTable;
+    sint32 h;
+    sint32 c;
+    sint16 offset;
+
+
+    if (x < 0 || z < 0)
+        return -2;
+    offset = OutsideRoomOffsets[27 * (x >> 12) + (z >> 12)];
+    if (offset == -1)
+        return -2;
+    if (offset < 0) {
+        r = &room[offset & 0x7FFF];
+        if (y >= r->maxceiling && y <= r->minfloor && z >= r->z + 1024 && z <= (r->x_size << 10) + r->z - 1024
+            && x >= r->x + 1024 && x <= (r->y_size << 10) + r->x - 1024) {
+            room_no = offset & 0x7FFF;
+            IsRoomOutsideNo = room_no;
+            floor = GetFloor(x, y, z, &room_no);
+            h = GetHeight(floor, x, y, z);
+            if (h == NO_HEIGHT || y > h)
+                return -2;
+            c = GetCeiling(floor, x, y, z);
+            if (y < c)
+                return -2;
+            if (r->flags & (ROOM_UNDERWATER | ROOM_NOT_INSIDE))
+                return 1;
+            return -3;
+        }
+    } else {
+        pTable = &OutsideRoomTable[offset];
+        while (*pTable != 255) {
+            r = &room[*pTable];
+            if (y >= r->maxceiling && y <= r->minfloor && z >= r->z + 1024 && z <= (r->x_size << 10) + r->z - 1024
+                && x >= r->x + 1024 && x <= (r->y_size << 10) + r->x - 1024) {
+                room_no = *pTable;
+                IsRoomOutsideNo = room_no;
+                floor = GetFloor(x, y, z, &room_no);
+                h = GetHeight(floor, x, y, z);
+                if (h == NO_HEIGHT || y > h)
+                    return -2;
+                c = GetCeiling(floor, x, y, z);
+                if (y < c)
+                    return -2;
+                if (r->flags & (ROOM_UNDERWATER | ROOM_NOT_INSIDE))
+                    return 1;
+                return -3;
+            }
+            pTable++;
+        }
+    }
+    return -2;
+}
+
 void FireCrossBowFromLaserSight(GAME_VECTOR *start, GAME_VECTOR *target)
 {
     PHD_3DPOS pos;
