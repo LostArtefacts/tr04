@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="166.03" height="12" x="0" y="0" class="named"><title>751 · 48.55%</title></rect>
-<rect width="0.44" height="12" x="166.03" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="166.47" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="169.12" height="12" x="172.88" y="0" class="todo"><title>765 · 49.45%</title></rect>
+<rect width="166.25" height="12" x="0" y="0" class="named"><title>752 · 48.61%</title></rect>
+<rect width="0.44" height="12" x="166.25" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="166.69" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="168.90" height="12" x="173.10" y="0" class="todo"><title>764 · 49.39%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">48.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">751</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">765</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">752</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">764</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="74.10" height="12" x="0" y="0" class="named"><title>134 KB · 21.67%</title></rect>
-<rect width="0.12" height="12" x="74.10" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="74.22" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="259.13" height="12" x="82.87" y="0" class="todo"><title>470 KB · 75.77%</title></rect>
+<rect width="74.33" height="12" x="0" y="0" class="named"><title>135 KB · 21.73%</title></rect>
+<rect width="0.12" height="12" x="74.33" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="74.45" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="258.90" height="12" x="83.10" y="0" class="todo"><title>470 KB · 75.70%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">21.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">134 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">470 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">21.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">135 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">470 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -778,7 +778,7 @@
 <rect width="12" height="12" x="135" y="210" class="todo"><title>0x00446d20 CollideStaticObjects (585 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="210" class="named"><title>0x00446f70 ShiftItem (55 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="210" class="named"><title>0x00446fb0 UpdateLaraRoom (94 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="210" class="todo"><title>0x00447010 GetTiltType (412 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="210" class="named"><title>0x00447010 GetTiltType (412 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="210" class="todo"><title>0x004471b0 LaraBaddieCollision (689 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="210" class="todo"><title>0x00447470 CreatureCollision (377 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="210" class="named"><title>0x004475f0 ObjectCollision (100 bytes)</title></rect>
@@ -2056,7 +2056,7 @@
 <rect width="12.49" height="12.90" x="397.98" y="386.03" class="todo"><title>0x00493a50 DXToggleFullScreen (417 bytes)</title></rect>
 <rect width="12.49" height="12.81" x="397.98" y="401.94" class="named"><title>0x00414150 DartsControl (414 bytes)</title></rect>
 <rect width="12.49" height="12.81" x="397.98" y="417.75" class="todo"><title>0x0042df30 LaraTargetInfo (414 bytes)</title></rect>
-<rect width="12.49" height="12.75" x="397.98" y="433.56" class="todo"><title>0x00447010 GetTiltType (412 bytes)</title></rect>
+<rect width="12.49" height="12.75" x="397.98" y="433.56" class="named"><title>0x00447010 GetTiltType (412 bytes)</title></rect>
 <rect width="12.49" height="12.69" x="397.98" y="449.31" class="named"><title>0x00473710 DXCreateSampleADPCM (410 bytes)</title></rect>
 <rect width="12.47" height="12.67" x="413.46" y="128.63" class="named"><title>0x0042d600 lara_col_climbdown (409 bytes)</title></rect>
 <rect width="12.47" height="12.67" x="413.46" y="144.30" class="named"><title>0x00437390 WadeSplash (409 bytes)</title></rect>

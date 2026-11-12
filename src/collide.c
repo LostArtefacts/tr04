@@ -49,6 +49,56 @@ void UpdateLaraRoom(ITEM_INFO *item, sint32 height)
     Func488650();
 }
 
+sint16 GetTiltType(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z)
+{
+    ROOM_INFO *r;
+    sint16 *data;
+    sint16 type, tilts, t0, t1, t2, t3, dx, dz, xoff, yoff;
+
+    while (floor->pit_room != NO_ROOM) {
+        if (CheckNoColFloorTriangle(floor, x, z) == 1)
+            break;
+        r = &room[floor->pit_room];
+        floor = &r->floor[((z - r->z) >> WALL_SHIFT) + ((x - r->x) >> WALL_SHIFT) * r->x_size];
+    }
+    if (y + 512 < floor->floor << 8)
+        return 0;
+    if (floor->index) {
+        data = &floor_data[floor->index];
+        type = *data & 0x1f;
+        if (type == 2)
+            return data[1];
+        if (type == 7 || type == 8 || type == 11 || type == 13 || type == 12 || type == 14) {
+            tilts = data[1];
+            t0 = tilts & 15;
+            t1 = (tilts >> 4) & 15;
+            t2 = (tilts >> 8) & 15;
+            t3 = (tilts >> 12) & 15;
+            dx = x & 1023;
+            dz = z & 1023;
+            if ((type & 0x1f) == 7 || (type & 0x1f) == 11 || (type & 0x1f) == 12) {
+                if (dx <= 1024 - dz) {
+                    xoff = t2 - t1;
+                    yoff = t0 - t1;
+                } else {
+                    xoff = t3 - t0;
+                    yoff = t3 - t2;
+                }
+            } else {
+                if (dx <= dz) {
+                    xoff = t2 - t1;
+                    yoff = t3 - t2;
+                } else {
+                    xoff = t3 - t0;
+                    yoff = t0 - t1;
+                }
+            }
+            return (xoff << 8) | (yoff & 0xff);
+        }
+    }
+    return 0;
+}
+
 void ObjectCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
 {
     ITEM_INFO *item;

@@ -83,6 +83,7 @@ void KillMoveItems(void);
 void KillMoveEffects(void);
 void UpdateSky(void);
 void TranslateItem(ITEM_INFO *item, sint32 x, sint32 y, sint32 z);
+sint16 GetTiltType(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;
