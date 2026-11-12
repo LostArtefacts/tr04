@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -397,6 +398,95 @@ void GetAIPickups(void)
             }
         }
     }
+}
+
+void BuildOutsideTable(void)
+{
+    ROOM_INFO *r;
+    uint8 *pTable, *oTable, *cTable;
+    sint32 max_slots, roomx, roomy, cont, offset, z, z2;
+    sint32 i, x, y, rx, ry, j;
+    char flipped[256];
+
+    max_slots = 0;
+    OutsideRoomOffsets = (sint16 *)malloc(0x5B2);
+    OutsideRoomTable = (uint8 *)malloc(0xB640);
+    memset(OutsideRoomTable, 0xFF, 0xB640);
+    memset(flipped, 0, 255);
+    for (i = 0; i < number_rooms; i++) {
+        r = &room[i];
+        if (r->flipped_room != -1)
+            flipped[r->flipped_room] = 1;
+    }
+    r = &room[0];
+    printf("X %d, Y %d, Z %d, Xs %d, Ys %d\n", r->x, r->y, r->z, r->x_size, r->y_size);
+    for (y = 0; y < 108; y += 4) {
+        for (x = 0; x < 108; x += 4) {
+            for (i = 0; i < number_rooms; i++) {
+                r = &room[i];
+                if (!flipped[i]) {
+                    roomx = (r->z >> 10) + 1;
+                    roomy = (r->x >> 10) + 1;
+                    cont = 0;
+                    for (ry = 0; ry < 4; ry++) {
+                        for (rx = 0; rx < 4; rx++) {
+                            if (x + rx >= roomx && x + rx < roomx + r->x_size - 2 && y + ry >= roomy && y + ry < roomy + r->y_size - 2) {
+                                cont = 1;
+                                break;
+                            }
+                        }
+                    }
+                    if (cont) {
+                        pTable = &OutsideRoomTable[64 * ((x >> 2) + 27 * (y >> 2))];
+                        for (j = 0; j < 64; j++) {
+                            if (pTable[j] == 0xFF) {
+                                pTable[j] = i;
+                                if (j > max_slots)
+                                    max_slots = j;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    oTable = OutsideRoomTable;
+    for (y = 0; y < 27; y++) {
+        for (x = 0; x < 27; x++) {
+            z = 0;
+            offset = x + y * 27;
+            pTable = &OutsideRoomTable[64 * (x + 27 * y)];
+            while (pTable[z] != 0xFF)
+                z++;
+            if (!z)
+                OutsideRoomOffsets[offset] = -1;
+            else if (z == 1)
+                OutsideRoomOffsets[offset] = *pTable | 0x8000;
+            else {
+                cTable = OutsideRoomTable;
+                while (cTable < oTable) {
+                    if (!memcmp(cTable, pTable, z)) {
+                        OutsideRoomOffsets[offset] = (sint16)((sint32)cTable - (sint32)OutsideRoomTable);
+                        break;
+                    }
+                    z2 = 0;
+                    while (cTable[z2] != 0xFF)
+                        z2++;
+                    cTable += z2 + 1;
+                }
+                if (cTable >= oTable) {
+                    OutsideRoomOffsets[offset] = (sint16)((sint32)oTable - (sint32)OutsideRoomTable);
+                    do {
+                        *oTable++ = *pTable++;
+                        z--;
+                    } while (z);
+                    *oTable++ = 0xFF;
+                }
+            }
+        }
+    }
+    printf("Ouside room table = %d bytes, max_slots = %d\n", oTable - OutsideRoomTable, max_slots);
 }
 
 void InitialiseGameFlags(void)

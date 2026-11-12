@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="239.86" height="12" x="0" y="0" class="named"><title>1085 · 70.14%</title></rect>
 <rect width="0.44" height="12" x="239.86" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="13.49" height="12" x="240.31" y="0" class="nonmatching"><title>61 · 3.94%</title></rect>
-<rect width="88.21" height="12" x="253.79" y="0" class="todo"><title>399 · 25.79%</title></rect>
+<rect width="13.71" height="12" x="240.31" y="0" class="nonmatching"><title>62 · 4.01%</title></rect>
+<rect width="87.99" height="12" x="254.01" y="0" class="todo"><title>398 · 25.73%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">70.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1085</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">61</tspan> · <tspan class="todo">399</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1085</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">62</tspan> · <tspan class="todo">398</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="115.87" height="12" x="0" y="0" class="named"><title>210 KB · 33.88%</title></rect>
 <rect width="0.12" height="12" x="115.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="24" height="12" x="115.99" y="0" class="nonmatching"><title>44 KB · 7.02%</title></rect>
-<rect width="202.01" height="12" x="139.99" y="0" class="todo"><title>367 KB · 59.07%</title></rect>
+<rect width="24.44" height="12" x="115.99" y="0" class="nonmatching"><title>44 KB · 7.15%</title></rect>
+<rect width="201.57" height="12" x="140.43" y="0" class="todo"><title>366 KB · 58.94%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">33.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">210 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">44 KB</tspan> · <tspan class="todo">367 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">210 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">44 KB</tspan> · <tspan class="todo">366 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1006,7 +1006,7 @@
 <rect width="12" height="12" x="555" y="270" class="todo"><title>0x0045e1f0 ObjectObjects (2380 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="270" class="named"><title>0x0045eb40 GetCarriedItems (259 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="270" class="named"><title>0x0045ec50 GetAIPickups (215 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="270" class="todo"><title>0x0045ed30 BuildOutsideTable (791 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="270" class="nonmatching"><title>0x0045ed30 BuildOutsideTable (791 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="270" class="named"><title>0x0045f050 InitialiseGameFlags (71 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="270" class="named"><title>0x0045f0a0 SetupGame (99 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="270" class="named"><title>0x0045f110 InitTarget (132 bytes)</title></rect>
@@ -1830,7 +1830,7 @@
 <rect width="17.37" height="17.60" x="429.87" y="21.43" class="nonmatching"><title>0x00409d20 TestBlockPull (792 bytes)</title></rect>
 <rect width="17.37" height="17.60" x="450.24" y="21.43" class="named"><title>0x00440620 CreatureMood (792 bytes)</title></rect>
 <rect width="17.37" height="17.60" x="470.61" y="21.43" class="named"><title>0x00469870 UserControl_jeep (792 bytes)</title></rect>
-<rect width="17.35" height="17.60" x="490.99" y="21.43" class="todo"><title>0x0045ed30 BuildOutsideTable (791 bytes)</title></rect>
+<rect width="17.35" height="17.60" x="490.99" y="21.43" class="nonmatching"><title>0x0045ed30 BuildOutsideTable (791 bytes)</title></rect>
 <rect width="17.26" height="17.60" x="511.34" y="21.43" class="todo"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
 <rect width="17.26" height="17.60" x="531.60" y="21.43" class="todo"><title>0x00478b50 SetupLight (787 bytes)</title></rect>
 <rect width="17.15" height="17.60" x="551.87" y="21.43" class="named"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>

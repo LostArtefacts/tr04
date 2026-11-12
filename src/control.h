@@ -117,5 +117,7 @@ extern sint32 number_los_rooms;
 extern MESH_INFO *SmashedMesh[16];
 extern sint16 SmashedMeshRoom[16];
 extern sint16 SmashedMeshCount;
+extern sint16 *OutsideRoomOffsets;
+extern uint8 *OutsideRoomTable;
 
 #endif

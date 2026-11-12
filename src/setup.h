@@ -17,5 +17,6 @@ void InitTarget(void);
 void ClearFootPrints(void);
 void reset_cutseq_vars(void);
 void SetupGame(void);
+void BuildOutsideTable(void);
 
 #endif
