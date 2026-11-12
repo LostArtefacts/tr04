@@ -12,6 +12,7 @@
 #include "../gameflow.h"
 #include "file.h"
 #include "specificfx.h"
+#include "lighting.h"
 #include "loadsave.h"
 #include "../tomb4fx.h"
 #include "../camera.h"
@@ -231,6 +232,73 @@ void ProjectTrainVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip, sint32 x)
         clip[0] = clip_distance;
         clip++;
         v++;
+    }
+}
+
+void phd_PutPolygons_train(sint16 *objptr, sint32 x)
+{
+    MESH_DATA *mesh;
+    D3DTLVERTEX *v;
+    TEXTURESTRUCT *pTex;
+    sint16 *quad;
+    sint16 *tri;
+    uint16 drawbak;
+
+    phd_PushMatrix();
+    phd_TranslateRel(x, 0, 0);
+    SetD3DViewMatrix();
+    mesh = (MESH_DATA *)objptr;
+    phd_PopMatrix();
+    if (objptr) {
+        sint32 i;
+
+        ClearObjectLighting();
+        ClearDynamicLighting();
+        IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_AMBIENT, 0xFFFFFF);
+        if (mesh->nVerts)
+            DXAttempt(IDirect3DVertexBuffer_ProcessVertices(DestVB, D3DVOP_LIGHT | D3DVOP_TRANSFORM, 0, mesh->nVerts, mesh->SourceVB, 0, App.dx._lpD3DDevice, 0));
+        IDirect3DVertexBuffer_Lock(DestVB, DDLOCK_READONLY, (void **)&v, 0);
+        clip_left = f_left;
+        clip_right = f_right;
+        clip_bottom = f_bottom;
+        clip_top = f_top;
+        if (mesh->nVerts)
+            ProjectTrainVerts(mesh->nVerts, v, clipflags, x);
+        quad = mesh->gt4;
+        for (i = 0; i < mesh->ngt4; i++, quad += 6) {
+            pTex = &textinfo[quad[4] & 0x7FFF];
+            drawbak = pTex->drawtype;
+            if (quad[5] & 1)
+                pTex->drawtype = 2;
+            switch (pTex->drawtype) {
+            case 1:
+            case 2:
+                AddQuadSorted(v, quad[0], quad[1], quad[2], quad[3], pTex, 0);
+                break;
+            case 0:
+                AddQuadZBuffer(v, quad[0], quad[1], quad[2], quad[3], pTex, 0);
+                break;
+            }
+            pTex->drawtype = drawbak;
+        }
+        tri = mesh->gt3;
+        for (i = 0; i < mesh->ngt3; i++, tri += 5) {
+            pTex = &textinfo[tri[3] & 0x7FFF];
+            drawbak = pTex->drawtype;
+            if (tri[4] & 1)
+                pTex->drawtype = 2;
+            switch (pTex->drawtype) {
+            case 1:
+            case 2:
+                AddTriSorted(v, tri[0], tri[1], tri[2], pTex, 0);
+                break;
+            case 0:
+                AddTriZBuffer(v, tri[0], tri[1], tri[2], pTex, 0);
+                break;
+            }
+            pTex->drawtype = drawbak;
+        }
+        IDirect3DVertexBuffer_Unlock(DestVB);
     }
 }
 
