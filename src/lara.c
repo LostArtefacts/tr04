@@ -1380,6 +1380,16 @@ void lara_as_intcornerl(ITEM_INFO *item, COLL_INFO *coll)
     SetCornerAnim(item, coll, -0x4000, flip);
 }
 
+void lara_as_intcornerr(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 flip;
+
+    camera.target_angle = 0x4000;
+    camera.target_elevation = -6144;
+    flip = item->anim_number == ANIM_INTCORNERR_END || item->anim_number == ANIM_INTCLIMBR_END;
+    SetCornerAnim(item, coll, 0x4000, flip);
+}
+
 void lara_as_splat(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.look = 0;
