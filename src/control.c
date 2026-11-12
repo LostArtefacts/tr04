@@ -8,6 +8,9 @@
 #include "gameflow.h"
 #include "specific/3dmath.h"
 #include "specific/audio.h"
+#include "sound.h"
+#include "sphere.h"
+#include "debris.h"
 
 void KillMoveItems(void)
 {
@@ -551,4 +554,34 @@ void FireCrossBowFromLaserSight(GAME_VECTOR *start, GAME_VECTOR *target)
     pos.y_rot = angles[0];
     pos.z_rot = 0;
     FireCrossbow(&pos);
+}
+
+sint32 ExplodeItemNode(ITEM_INFO *item, sint32 Node, sint32 NoXZVel, sint32 bits)
+{
+    OBJECT_INFO *object;
+    sint16 **meshpp;
+
+    if (!(item->mesh_bits & (1 << Node)))
+        return 0;
+    if (bits != 256)
+        SoundEffect(SFX_HIT_ROCK, &item->pos, SFX_DEFAULT);
+    else
+        bits = -64;
+    GetSpheres(item, Slist, 3);
+    object = &objects[item->object_number];
+    meshpp = &meshes[object->mesh_index + Node * 2];
+    ShatterItem.YRot = item->pos.y_rot;
+    ShatterItem.meshp = *meshpp;
+    ShatterItem.Sphere.x = Slist[Node].x;
+    ShatterItem.Sphere.y = Slist[Node].y;
+    ShatterItem.Sphere.z = Slist[Node].z;
+    ShatterItem.Bit = 1 << Node;
+    ShatterItem.il = &item->il;
+    if (item->object_number == CROSSBOW_BOLT)
+        ShatterItem.Flags = 1024;
+    else
+        ShatterItem.Flags = 0;
+    ShatterObject(&ShatterItem, 0, (sint16)bits, item->room_number, NoXZVel);
+    item->mesh_bits &= ~ShatterItem.Bit;
+    return 1;
 }

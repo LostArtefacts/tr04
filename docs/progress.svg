@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="233.45" height="12" x="0" y="0" class="named"><title>1056 · 68.26%</title></rect>
-<rect width="0.44" height="12" x="233.45" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="9.51" height="12" x="233.90" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
-<rect width="98.60" height="12" x="243.40" y="0" class="todo"><title>446 · 28.83%</title></rect>
+<rect width="233.67" height="12" x="0" y="0" class="named"><title>1057 · 68.33%</title></rect>
+<rect width="0.44" height="12" x="233.67" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="9.51" height="12" x="234.12" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
+<rect width="98.38" height="12" x="243.62" y="0" class="todo"><title>445 · 28.77%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">68.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1056</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">446</tspan></text>
+<text text-anchor="end" x="522" y="7.50">68.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1057</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">445</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="103.30" height="12" x="0" y="0" class="named"><title>187 KB · 30.20%</title></rect>
-<rect width="0.12" height="12" x="103.30" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="13.36" height="12" x="103.42" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
-<rect width="225.23" height="12" x="116.77" y="0" class="todo"><title>409 KB · 65.86%</title></rect>
+<rect width="103.44" height="12" x="0" y="0" class="named"><title>188 KB · 30.25%</title></rect>
+<rect width="0.12" height="12" x="103.44" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="13.36" height="12" x="103.56" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
+<rect width="225.08" height="12" x="116.92" y="0" class="todo"><title>408 KB · 65.81%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">30.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">187 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">24 KB</tspan> · <tspan class="todo">409 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">30.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">188 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">24 KB</tspan> · <tspan class="todo">408 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -831,7 +831,7 @@
 <rect width="12" height="12" x="180" y="225" class="todo"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="225" class="todo"><title>0x0044d890 GetTargetOnLOS (1464 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="225" class="todo"><title>0x0044de50 ExplodeItemNode (259 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="225" class="named"><title>0x0044de50 ExplodeItemNode (259 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="225" class="named"><title>0x0044df60 ShutThatDoor (94 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="225" class="named"><title>0x0044dfc0 OpenThatDoor (78 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="225" class="named"><title>0x0044e010 DoorControl (432 bytes)</title></rect>
@@ -2225,7 +2225,7 @@
 <rect width="10.22" height="9.86" x="631.92" y="172.15" class="named"><title>0x00461ff0 SwitchCollision2 (261 bytes)</title></rect>
 <rect width="10.22" height="9.86" x="645.14" y="172.15" class="named"><title>0x00483a40 AddTriSubdivide (261 bytes)</title></rect>
 <rect width="10.18" height="9.86" x="658.36" y="172.15" class="named"><title>0x0046cd20 Load_and_Init_Cutseq (260 bytes)</title></rect>
-<rect width="10.14" height="9.86" x="671.54" y="172.15" class="todo"><title>0x0044de50 ExplodeItemNode (259 bytes)</title></rect>
+<rect width="10.14" height="9.86" x="671.54" y="172.15" class="named"><title>0x0044de50 ExplodeItemNode (259 bytes)</title></rect>
 <rect width="10.14" height="9.86" x="684.68" y="172.15" class="named"><title>0x0045eb40 GetCarriedItems (259 bytes)</title></rect>
 <rect width="10.10" height="9.86" x="697.82" y="172.15" class="named"><title>0x00430a50 LaraCheatyBits (258 bytes)</title></rect>
 <rect width="10.06" height="9.86" x="710.93" y="172.15" class="named"><title>0x00413e80 FallingCeiling (257 bytes)</title></rect>
