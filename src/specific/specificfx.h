@@ -21,5 +21,6 @@ void SetFade(sint32 start, sint32 end);
 void InitTarget_2(void);
 void InitBinoculars(void);
 void DrawFlash(void);
+void DoScreenFade(void);
 
 #endif

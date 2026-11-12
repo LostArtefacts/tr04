@@ -6,6 +6,8 @@
 #include "../anim.h"
 #include "../objnums.h"
 #include "../tomb4fx.h"
+#include "function_table.h"
+#include "polyinsert.h"
 
 void InitTarget_2(void)
 {
@@ -62,6 +64,53 @@ void SetFade(sint32 start, sint32 end)
     FadeStep = (end - start) >> 3;
     FadeCnt = 0;
     FadeEnd = end;
+}
+
+void DoScreenFade(void)
+{
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    sint32 a;
+
+    a = FadeVal << 24;
+    FadeVal += FadeStep;
+    FadeCnt++;
+    if (FadeCnt > 8) {
+        DoFade = 2;
+        a = FadeEnd << 24;
+    }
+    v[0].sx = 0;
+    v[0].sy = 0;
+    v[0].sz = 0;
+    v[0].rhw = f_moneoznear;
+    v[0].color = a;
+    v[0].specular = 0xFF000000;
+    v[1].sx = (float)(phd_winxmax + 1);
+    v[1].sy = (float)phd_winymin;
+    v[1].sz = 0;
+    v[1].rhw = f_moneoznear;
+    v[1].color = a;
+    v[1].specular = 0xFF000000;
+    v[2].sx = (float)(phd_winxmax + 1);
+    v[2].sy = (float)(phd_winymax + 1);
+    v[2].sz = 0;
+    v[2].rhw = f_moneoznear;
+    v[2].color = a;
+    v[2].specular = 0xFF000000;
+    v[3].sx = (float)phd_winxmin;
+    v[3].sy = (float)(phd_winymax + 1);
+    v[3].sz = 0;
+    v[3].rhw = f_moneoznear;
+    v[3].color = a;
+    v[3].specular = 0xFF000000;
+    tex.drawtype = 3;
+    tex.flag = 0;
+    tex.tpage = 0;
+    clipflags[0] = 0;
+    clipflags[1] = 0;
+    clipflags[2] = 0;
+    clipflags[3] = 0;
+    AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
 }
 
 void DrawFlash(void)
