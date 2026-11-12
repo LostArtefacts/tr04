@@ -193,5 +193,6 @@ void GetJointAbsPositionCutSeq(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot, P
 void CalcActorLighting(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot);
 sint16 GetTrackWord(sint32 off, char *packed, sint32 packmethod);
 void updateAnimFrame(PACKNODE *node, sint32 flags, sint16 *frame);
+void CalculateObjectLightingLaraCutSeq(void);
 
 #endif

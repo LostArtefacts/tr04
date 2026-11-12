@@ -104,6 +104,31 @@ void GetJointAbsPositionCutSeq(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot, P
     phd_PopMatrix();
 }
 
+void CalculateObjectLightingLaraCutSeq(void)
+{
+    PHD_VECTOR pos;
+    sint16 room_num, room_num2;
+
+    pos.x = 0;
+    pos.y = 0;
+    pos.z = 0;
+    GetLaraJointPos(&pos, 7);
+    room_num = lara_item->room_number;
+    IsRoomOutsideNo = -1;
+    IsRoomOutside(pos.x, pos.y, pos.z);
+    if (IsRoomOutsideNo != -1)
+        room_num = IsRoomOutsideNo;
+    room_num2 = lara_item->room_number;
+    current_item = lara_item;
+    lara_item->il.item_pos.x = pos.x;
+    lara_item->il.item_pos.y = pos.y;
+    lara_item->il.item_pos.z = pos.z;
+    lara_item->room_number = room_num;
+    CalcAmbientLight(lara_item);
+    CreateLightList(lara_item);
+    lara_item->room_number = room_num2;
+}
+
 void third_cutseq_control(void)
 {
     if (GLOBAL_cutseq_frame == 1890)
