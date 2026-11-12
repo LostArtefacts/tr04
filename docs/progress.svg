@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="180.84" height="12" x="0" y="0" class="named"><title>818 · 52.88%</title></rect>
-<rect width="0.44" height="12" x="180.84" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="181.28" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="154.31" height="12" x="187.69" y="0" class="todo"><title>698 · 45.12%</title></rect>
+<rect width="181.06" height="12" x="0" y="0" class="named"><title>819 · 52.94%</title></rect>
+<rect width="0.44" height="12" x="181.06" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="181.50" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="154.09" height="12" x="187.91" y="0" class="todo"><title>697 · 45.05%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">53.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">818</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">698</tspan></text>
+<text text-anchor="end" x="522" y="7.50">53.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">819</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">697</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="78.61" height="12" x="0" y="0" class="named"><title>143 KB · 22.98%</title></rect>
-<rect width="0.12" height="12" x="78.61" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="78.73" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="254.62" height="12" x="87.38" y="0" class="todo"><title>462 KB · 74.45%</title></rect>
+<rect width="78.63" height="12" x="0" y="0" class="named"><title>143 KB · 22.99%</title></rect>
+<rect width="0.12" height="12" x="78.63" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="78.75" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="254.60" height="12" x="87.40" y="0" class="todo"><title>462 KB · 74.44%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">143 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">462 KB</tspan></text>
@@ -897,7 +897,7 @@
 <rect width="12" height="12" x="420" y="240" class="named"><title>0x004535c0 InitialiseBurningFloor (34 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="240" class="named"><title>0x004535f0 InitialiseSethBlade (88 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="240" class="todo"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="240" class="todo"><title>0x00453710 InitialiseMineHelicopter (45 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="240" class="named"><title>0x00453710 InitialiseMineHelicopter (45 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="240" class="todo"><title>0x00453740 InitialiseSmashObject (141 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="240" class="todo"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="240" class="todo"><title>0x00453800 InitialiseLightningConductor (103 bytes)</title></rect>
@@ -2922,7 +2922,7 @@
 <rect width="4.27" height="4.07" x="699.29" y="369.87" class="named"><title>0x00430eb0 InitialiseLaraLoad (45 bytes)</title></rect>
 <rect width="4.27" height="4.07" x="706.56" y="369.87" class="named"><title>0x00452c70 FlashIt (45 bytes)</title></rect>
 <rect width="4.27" height="4.07" x="713.83" y="369.87" class="named"><title>0x00453340 InitialiseTwoBlockPlatform (45 bytes)</title></rect>
-<rect width="4.27" height="4.07" x="721.11" y="369.87" class="todo"><title>0x00453710 InitialiseMineHelicopter (45 bytes)</title></rect>
+<rect width="4.27" height="4.07" x="721.11" y="369.87" class="named"><title>0x00453710 InitialiseMineHelicopter (45 bytes)</title></rect>
 <rect width="4.27" height="4.07" x="728.38" y="369.87" class="todo"><title>0x00453870 InitialiseStatuePlinth (45 bytes)</title></rect>
 <rect width="4.18" height="4.07" x="735.65" y="369.87" class="named"><title>0x004272e0 lara_as_fallback (44 bytes)</title></rect>
 <rect width="4.18" height="4.07" x="742.82" y="369.87" class="named"><title>0x004377f0 SwapCrowbar (44 bytes)</title></rect>

@@ -228,3 +228,12 @@ void InitialiseSethBlade(sint16 item_number)
     item->current_anim_state = item->goal_anim_state = 2;
     item->item_flags[2] = abs(item->trigger_flags);
 }
+
+void InitialiseMineHelicopter(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (!item->trigger_flags)
+        item->mesh_bits = 0;
+}
