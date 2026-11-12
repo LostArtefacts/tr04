@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="230.80" height="12" x="0" y="0" class="named"><title>1044 · 67.49%</title></rect>
-<rect width="0.44" height="12" x="230.80" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.62" height="12" x="231.24" y="0" class="nonmatching"><title>39 · 2.52%</title></rect>
-<rect width="102.14" height="12" x="239.86" y="0" class="todo"><title>462 · 29.86%</title></rect>
+<rect width="231.02" height="12" x="0" y="0" class="named"><title>1045 · 67.55%</title></rect>
+<rect width="0.44" height="12" x="231.02" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.62" height="12" x="231.46" y="0" class="nonmatching"><title>39 · 2.52%</title></rect>
+<rect width="101.91" height="12" x="240.09" y="0" class="todo"><title>461 · 29.80%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">67.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1044</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">39</tspan> · <tspan class="todo">462</tspan></text>
+<text text-anchor="end" x="522" y="7.50">67.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1045</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">39</tspan> · <tspan class="todo">461</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="101.32" height="12" x="0" y="0" class="named"><title>184 KB · 29.63%</title></rect>
-<rect width="0.12" height="12" x="101.32" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.38" height="12" x="101.44" y="0" class="nonmatching"><title>19 KB · 3.04%</title></rect>
-<rect width="230.17" height="12" x="111.83" y="0" class="todo"><title>418 KB · 67.30%</title></rect>
+<rect width="101.45" height="12" x="0" y="0" class="named"><title>184 KB · 29.66%</title></rect>
+<rect width="0.12" height="12" x="101.45" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.38" height="12" x="101.57" y="0" class="nonmatching"><title>19 KB · 3.04%</title></rect>
+<rect width="230.04" height="12" x="111.96" y="0" class="todo"><title>417 KB · 67.26%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">29.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">184 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">19 KB</tspan> · <tspan class="todo">418 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">184 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">19 KB</tspan> · <tspan class="todo">417 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -180,7 +180,7 @@
 <rect width="12" height="12" x="165" y="30" class="named"><title>0x00410c30 InitialiseSeth (90 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="30" class="todo"><title>0x00410c90 SethControl (2320 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="30" class="todo"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="30" class="todo"><title>0x004117e0 InitialiseSkeleton (231 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="30" class="named"><title>0x004117e0 InitialiseSkeleton (231 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="30" class="todo"><title>0x004118d0 SkeletonControl (4402 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="30" class="named"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="30" class="todo"><title>0x00412ac0 SphinxControl (1327 bytes)</title></rect>
@@ -2277,7 +2277,7 @@
 <rect width="9.56" height="9.38" x="482.95" y="198" class="named"><title>0x0044fb10 DrawEffect (232 bytes)</title></rect>
 <rect width="9.56" height="9.38" x="482.95" y="210.38" class="named"><title>0x004818c0 ControlFXBulb (232 bytes)</title></rect>
 <rect width="9.56" height="9.38" x="482.95" y="222.75" class="named"><title>0x00491d60 DXFreeInfo (232 bytes)</title></rect>
-<rect width="9.56" height="9.34" x="482.95" y="235.13" class="todo"><title>0x004117e0 InitialiseSkeleton (231 bytes)</title></rect>
+<rect width="9.56" height="9.34" x="482.95" y="235.13" class="named"><title>0x004117e0 InitialiseSkeleton (231 bytes)</title></rect>
 <rect width="9.56" height="9.34" x="482.95" y="247.47" class="named"><title>0x00427e00 lara_col_fastback (231 bytes)</title></rect>
 <rect width="9.56" height="9.34" x="482.95" y="259.81" class="named"><title>0x004372a0 Splash (231 bytes)</title></rect>
 <rect width="9.56" height="9.34" x="482.95" y="272.15" class="named"><title>0x0044c8d0 CheckNoColCeilingTriangle (231 bytes)</title></rect>
