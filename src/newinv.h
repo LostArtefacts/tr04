@@ -23,6 +23,7 @@ void combine_KeyItem3(sint32 flag);
 void combine_KeyItem4(sint32 flag);
 void combine_KeyItem5(sint32 flag);
 void combine_KeyItem6(sint32 flag);
+void combine_KeyItem7(sint32 flag);
 
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
