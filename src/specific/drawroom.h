@@ -30,7 +30,9 @@ extern TEXTUREBUCKET Bucket[20];
 void InsertRoom(ROOM_INFO *r);
 
 void InitBuckets(void);
+void DrawBucket(TEXTUREBUCKET *bucket);
 void DrawBuckets(void);
 void CalcTriFaceNormal(D3DVECTOR *p1, D3DVECTOR *p2, D3DVECTOR *p3, D3DVECTOR *N);
+void FindBucket(sint32 tpage, D3DTLBUMPVERTEX **Vpp, sint32 **nVtxpp);
 
 #endif
