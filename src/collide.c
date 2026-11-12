@@ -110,3 +110,23 @@ sint32 TestLaraPosition(sint16 *bounds, ITEM_INFO *item, ITEM_INFO *laraitem)
         return 0;
     return 1;
 }
+
+void AlignLaraPosition(PHD_VECTOR *pos, ITEM_INFO *item, ITEM_INFO *l)
+{
+    sint32 *mptr;
+    sint32 x, y, z;
+
+    l->pos.x_rot = item->pos.x_rot;
+    l->pos.y_rot = item->pos.y_rot;
+    l->pos.z_rot = item->pos.z_rot;
+    phd_PushUnitMatrix();
+    ((void (*)(sint32, sint32, sint32))phd_RotYXZ)(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    mptr = phd_mxptr;
+    x = item->pos.x_pos + ((mptr[M00] * pos->x + mptr[M01] * pos->y + mptr[M02] * pos->z) >> W2V_SHIFT);
+    y = item->pos.y_pos + ((mptr[M10] * pos->x + mptr[M11] * pos->y + mptr[M12] * pos->z) >> W2V_SHIFT);
+    z = item->pos.z_pos + ((mptr[M20] * pos->x + mptr[M21] * pos->y + mptr[M22] * pos->z) >> W2V_SHIFT);
+    phd_PopMatrix();
+    l->pos.x_pos = x;
+    l->pos.y_pos = y;
+    l->pos.z_pos = z;
+}
