@@ -158,3 +158,14 @@ void TriggerSethMissileFlame(sint16 fx_number, sint32 xv, sint32 yv, sint32 zv)
     sptr->Size = sptr->sSize = size;
     sptr->dSize = size >> 5;
 }
+
+void InitialiseSeth(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    InitialiseCreature(item_number);
+    item->anim_number = objects[SETHA].anim_index + 4;
+    item->frame_number = anims[item->anim_number].frame_base;
+    item->current_anim_state = item->goal_anim_state = 12;
+}
