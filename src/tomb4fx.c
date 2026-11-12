@@ -750,6 +750,37 @@ sint32 GetFreeDrip(void)
     return min_life_num;
 }
 
+void TriggerLaraDrips(void)
+{
+    DRIP_STRUCT *drip;
+    PHD_VECTOR pos;
+    sint32 i;
+
+    if (wibble & 0xF)
+        return;
+    for (i = 14; i >= 0; i--) {
+        if (lara.wet[i] && !LaraNodeUnderwater[i] && (GetRandomControl() & 0x1FF) < lara.wet[i]) {
+            pos.x = (GetRandomControl() & 0x1F) - 16;
+            pos.y = (GetRandomControl() & 0xF) + 16;
+            pos.z = (GetRandomControl() & 0x1F) - 16;
+            GetLaraJointPos(&pos, i);
+            drip = &Drips[GetFreeDrip()];
+            drip->x = pos.x;
+            drip->y = pos.y;
+            drip->z = pos.z;
+            drip->On = 1;
+            drip->R = (GetRandomControl() & 7) + 16;
+            drip->G = (GetRandomControl() & 7) + 24;
+            drip->B = (GetRandomControl() & 7) + 32;
+            drip->Yvel = (GetRandomControl() & 0x1F) + 32;
+            drip->Gravity = (GetRandomControl() & 0x1F) + 32;
+            drip->Life = (GetRandomControl() & 0x1F) + 16;
+            drip->RoomNumber = lara_item->room_number;
+            lara.wet[i] -= 4;
+        }
+    }
+}
+
 sint32 GetFreeShockwave(void)
 {
     SHOCKWAVE_STRUCT *sw;

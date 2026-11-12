@@ -222,6 +222,7 @@ void UpdateLightning(void);
 void TriggerLightning(PHD_VECTOR *s, PHD_VECTOR *d, sint8 variation, sint32 rgb, uint8 flags, uint8 size, uint8 segments);
 void DrawWeaponMissile(ITEM_INFO *item);
 void DrawGunflashes(void);
+void TriggerLaraDrips(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;

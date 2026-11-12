@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="204.05" height="12" x="0" y="0" class="named"><title>923 · 59.66%</title></rect>
-<rect width="0.44" height="12" x="204.05" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="204.49" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="130.43" height="12" x="211.57" y="0" class="todo"><title>590 · 38.14%</title></rect>
+<rect width="204.27" height="12" x="0" y="0" class="named"><title>924 · 59.73%</title></rect>
+<rect width="0.44" height="12" x="204.27" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="204.71" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="130.21" height="12" x="211.79" y="0" class="todo"><title>589 · 38.07%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">59.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">923</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">590</tspan></text>
+<text text-anchor="end" x="522" y="7.50">59.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">924</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">589</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="88.27" height="12" x="0" y="0" class="named"><title>160 KB · 25.81%</title></rect>
-<rect width="0.12" height="12" x="88.27" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="88.40" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="244.22" height="12" x="97.78" y="0" class="todo"><title>443 KB · 71.41%</title></rect>
+<rect width="88.44" height="12" x="0" y="0" class="named"><title>160 KB · 25.86%</title></rect>
+<rect width="0.12" height="12" x="88.44" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="88.56" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="244.05" height="12" x="97.95" y="0" class="todo"><title>443 KB · 71.36%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">25.8%</text>
+<text text-anchor="end" x="522" y="24.50">25.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">160 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">443 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -649,7 +649,7 @@
 <rect width="12" height="12" x="450" y="165" class="named"><title>0x00439e40 Fade (198 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="165" class="named"><title>0x00439f10 GetFreeDrip (104 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="165" class="todo"><title>0x00439f80 UpdateDrips (254 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="165" class="todo"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="165" class="named"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x0043a1b0 S_DrawSparks (1240 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="165" class="todo"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="165" class="named"><title>0x0043aa70 GetFreeShockwave (25 bytes)</title></rect>
@@ -2171,7 +2171,7 @@
 <rect width="10.56" height="10.94" x="484.34" y="158.24" class="todo"><title>0x0040ff40 GameStixCollision (299 bytes)</title></rect>
 <rect width="10.56" height="10.94" x="497.90" y="158.24" class="named"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
 <rect width="10.56" height="10.94" x="511.46" y="158.24" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
-<rect width="10.45" height="10.94" x="525.02" y="158.24" class="todo"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
+<rect width="10.45" height="10.94" x="525.02" y="158.24" class="named"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
 <rect width="10.42" height="10.94" x="538.47" y="158.24" class="nonmatching"><title>0x0044aa20 RefreshCamera (295 bytes)</title></rect>
 <rect width="10.42" height="10.94" x="551.89" y="158.24" class="todo"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
 <rect width="10.38" height="10.94" x="565.31" y="158.24" class="todo"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>

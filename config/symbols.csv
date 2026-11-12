@@ -2753,6 +2753,7 @@ address,size,name,symbol
 0x0080e13c,4,lara_item,_lara_item
 0x0080e320,480,ScratchVertNums,_ScratchVertNums
 0x0080e500,4,in_joints,_in_joints
+0x0080e700,15,LaraNodeUnderwater,_LaraNodeUnderwater
 0x0080e710,4,GLaraShadowframe,_GLaraShadowframe
 0x0080ecd0,1,bLaraInWater,_bLaraInWater
 0x0080ecd4,4,actualRoomNumber,_actualRoomNumber
