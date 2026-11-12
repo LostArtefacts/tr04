@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="249.65" height="12" x="0" y="0" class="named"><title>1130 · 73%</title></rect>
-<rect width="0.66" height="12" x="249.65" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.45" height="12" x="250.31" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
-<rect width="74.23" height="12" x="267.77" y="0" class="todo"><title>336 · 21.71%</title></rect>
+<rect width="249.87" height="12" x="0" y="0" class="named"><title>1131 · 73.06%</title></rect>
+<rect width="0.66" height="12" x="249.87" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.45" height="12" x="250.53" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
+<rect width="74.01" height="12" x="267.99" y="0" class="todo"><title>335 · 21.64%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">73.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1130</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">336</tspan></text>
+<text text-anchor="end" x="522" y="7.50">73.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1131</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">335</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="132.50" height="12" x="0" y="0" class="named"><title>241 KB · 38.74%</title></rect>
-<rect width="0.13" height="12" x="132.50" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.18" height="12" x="132.63" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
-<rect width="178.18" height="12" x="163.82" y="0" class="todo"><title>324 KB · 52.10%</title></rect>
+<rect width="132.90" height="12" x="0" y="0" class="named"><title>242 KB · 38.86%</title></rect>
+<rect width="0.13" height="12" x="132.90" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="31.18" height="12" x="133.03" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
+<rect width="177.78" height="12" x="164.22" y="0" class="todo"><title>324 KB · 51.98%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">38.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">241 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">324 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">38.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">242 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">324 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -722,7 +722,7 @@
 <rect width="12" height="12" x="45" y="195" class="named"><title>0x0043f050 remove_inventory_item (252 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="195" class="named"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="195" class="named"><title>0x0043f180 draw_compass (82 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="195" class="todo"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="195" class="named"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="195" class="named"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="195" class="named"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="named"><title>0x0043f7a0 InitialiseAutogun (59 bytes)</title></rect>
@@ -1851,7 +1851,7 @@
 <rect width="16.17" height="17.57" x="327.11" y="124.95" class="nonmatching"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
 <rect width="16.17" height="17.55" x="327.11" y="145.52" class="named"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
 <rect width="16.17" height="17.50" x="327.11" y="166.07" class="todo"><title>0x00455800 Draw_Mirror_Lara (735 bytes)</title></rect>
-<rect width="16.17" height="17.33" x="327.11" y="186.57" class="todo"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
+<rect width="16.17" height="17.33" x="327.11" y="186.57" class="named"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
 <rect width="16.17" height="17.31" x="327.11" y="206.90" class="named"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
 <rect width="16.17" height="17.29" x="327.11" y="227.21" class="named"><title>0x00463650 InitFont (726 bytes)</title></rect>
 <rect width="16.17" height="17.26" x="327.11" y="247.50" class="named"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>

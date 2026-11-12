@@ -841,6 +841,47 @@ void draw_compass(void)
     DrawThreeDeeObject2D((sint32)(60.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos), phd_centery + inventry_ypos, INV_COMPASS_ITEM, 128, 0, 0, 0, 0, 0);
 }
 
+void do_examine_mode(void)
+{
+    INVOBJ *objme;
+    static sint32 WANK_RULES_YPOS;
+    static sint32 WANK_SCROL_YPOS;
+    sint32 saved_scale;
+    sint16 invitem;
+
+    WANK_RULES_YPOS = font_height;
+    WANK_SCROL_YPOS = font_height * 5;
+    examine_mode += 8;
+    if (examine_mode > 128)
+        examine_mode = 128;
+    invitem = rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem;
+    objme = &inventry_objects_list[invitem];
+    if (invitem == INV_EXAMINE1_ITEM) {
+        saved_scale = objme->scale1;
+        objme->scale1 = 300;
+        DrawThreeDeeObject2D((sint32)(256.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos), (sint32)(256.0F * ((float)phd_centery * (1.0F / 120.0F)) + inventry_ypos) / 2, INV_EXAMINE1_ITEM, examine_mode, 0x8000, 0x4000, 0x4000, 96, 0);
+        objme->scale1 = saved_scale;
+    } else if (invitem == INV_EXAMINE2_ITEM) {
+        saved_scale = objme->scale1;
+        objme->scale1 = 300;
+        DrawThreeDeeObject2D((sint32)(256.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos), (sint32)(256.0F * ((float)phd_centery * (1.0F / 120.0F)) + inventry_ypos) / 2, INV_EXAMINE2_ITEM, examine_mode, 0, 0, 0, 0, 0);
+        objme->scale1 = saved_scale;
+        PrintString((uint16)phd_centerx, (uint16)WANK_RULES_YPOS, 5, SCRIPT_TEXT(TXT_RULES1), FF_CENTER);
+        PrintString((uint16)phd_centerx, (uint16)(WANK_RULES_YPOS + phd_winheight / 2), 5, SCRIPT_TEXT(TXT_RULES2), FF_CENTER);
+    } else if (invitem == INV_EXAMINE3_ITEM) {
+        saved_scale = objme->scale1;
+        objme->scale1 = 400;
+        DrawThreeDeeObject2D((sint32)(256.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos), (sint32)(256.0F * ((float)phd_centery * (1.0F / 120.0F)) + inventry_ypos) / 2 - 8, INV_EXAMINE3_ITEM, examine_mode, 0x8000, 0x4000, 0x4000, 96, 0);
+        objme->scale1 = saved_scale;
+        PrintString((uint16)phd_centerx, (uint16)WANK_SCROL_YPOS, 8, SCRIPT_TEXT(TXT_PETEPOO), FF_CENTER);
+    }
+    if (go_deselect) {
+        SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+        go_deselect = 0;
+        examine_mode = 0;
+    }
+}
+
 void dels_give_lara_items_cheat(void)
 {
     sint32 piss;

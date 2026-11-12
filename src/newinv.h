@@ -243,6 +243,7 @@ void do_debounced_joystick_poo(void);
 void init_new_inventry(void);
 void draw_ammo_selector(void);
 void use_current_item(void);
+void do_examine_mode(void);
 
 extern sint32 InventoryActive;
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
