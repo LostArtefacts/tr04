@@ -18,6 +18,8 @@
 #include "drawroom.h"
 #include "dxsound.h"
 #include "../sound.h"
+#include "../laramisc.h"
+#include "../setup.h"
 
 #ifndef TR4_EXE
 FILE *FileOpen(const char *name)
@@ -99,6 +101,115 @@ uint8 Decompress(char *pDest, char *pCompressed, sint32 compressedSize, sint32 s
     }
     inflateEnd(&stream);
     Log(5, "Decompression OK");
+    return 1;
+}
+
+uint8 LoadObjects(void)
+{
+    OBJECT_INFO *obj;
+    STATIC_INFO *stat;
+    sint16 **mesh;
+    sint16 **mesh_size;
+    sint32 size, num, slot, i;
+
+    Log(2, "LoadObjects");
+    memset(objects, 0, sizeof(objects));
+    memset(static_objects, 0, sizeof(STATIC_INFO) * NUMBER_STATIC_OBJECTS);
+    size = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    mesh_base = (sint16 *)game_malloc(size * sizeof(sint16), 0);
+    memcpy(mesh_base, FileData, size * sizeof(sint16));
+    FileData += size * sizeof(sint16);
+    size = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    meshes = (sint16 **)game_malloc(2 * size * sizeof(sint16 *), 0);
+    memcpy(meshes, FileData, size * sizeof(sint16 *));
+    FileData += size * sizeof(sint16 *);
+    for (i = 0; i < size; i++)
+        meshes[i] = mesh_base + (sint32)meshes[i] / 2;
+    num_meshes = size;
+    num_anims = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    anims = (ANIM_STRUCT *)game_malloc(sizeof(ANIM_STRUCT) * num_anims, 0);
+    memcpy(anims, FileData, sizeof(ANIM_STRUCT) * num_anims);
+    FileData += sizeof(ANIM_STRUCT) * num_anims;
+    size = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    changes = (CHANGE_STRUCT *)game_malloc(sizeof(CHANGE_STRUCT) * size, 0);
+    memcpy(changes, FileData, sizeof(CHANGE_STRUCT) * size);
+    FileData += sizeof(CHANGE_STRUCT) * size;
+    size = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    ranges = (RANGE_STRUCT *)game_malloc(sizeof(RANGE_STRUCT) * size, 0);
+    memcpy(ranges, FileData, sizeof(RANGE_STRUCT) * size);
+    FileData += sizeof(RANGE_STRUCT) * size;
+    size = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    commands = (sint16 *)game_malloc(sizeof(sint16) * size, 0);
+    memcpy(commands, FileData, sizeof(sint16) * size);
+    FileData += sizeof(sint16) * size;
+    size = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    bones = (sint32 *)game_malloc(sizeof(sint32) * size, 0);
+    memcpy(bones, FileData, sizeof(sint32) * size);
+    FileData += sizeof(sint32) * size;
+    size = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    frames = (sint16 *)game_malloc(sizeof(sint16) * size, 0);
+    memcpy(frames, FileData, sizeof(sint16) * size);
+    FileData += sizeof(sint16) * size;
+    for (i = 0; i < num_anims; i++)
+        anims[i].frame_ptr = (sint16 *)((sint32)anims[i].frame_ptr + (sint32)frames);
+    num = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    for (i = 0; i < num; i++) {
+        slot = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        objects[slot].nmeshes = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        objects[slot].mesh_index = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        objects[slot].bone_index = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        objects[slot].frame_base = *(sint16 **)FileData;
+        FileData += sizeof(sint16 *);
+        objects[slot].anim_index = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        objects[slot].loaded = 1;
+    }
+    CreateSkinningData();
+    for (i = 0; i < NUMBER_OBJECTS; i++) {
+        obj = &objects[i];
+        obj->mesh_index *= 2;
+    }
+    mesh = meshes;
+    mesh_size = &meshes[num_meshes];
+    memcpy(mesh_size, mesh, num_meshes * 4);
+    for (i = 0; i < num_meshes; i++) {
+        *mesh++ = *mesh_size;
+        *mesh++ = *mesh_size;
+        mesh_size++;
+    }
+    InitialiseObjects();
+    num = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    for (i = 0; i < num; i++) {
+        slot = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        static_objects[slot].mesh_number = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        memcpy(&static_objects[slot].x_minp, FileData, 6 * sizeof(sint16));
+        FileData += 6 * sizeof(sint16);
+        memcpy(&static_objects[slot].x_minc, FileData, 6 * sizeof(sint16));
+        FileData += 6 * sizeof(sint16);
+        static_objects[slot].flags = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+    }
+    for (i = 0; i < NUMBER_STATIC_OBJECTS; i++) {
+        stat = &static_objects[i];
+        stat->mesh_number *= 2;
+    }
+    ProcessMeshData(num_meshes * 2);
     return 1;
 }
 

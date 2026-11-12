@@ -41,6 +41,8 @@ extern FILE *level_fp;
 extern sint16 *aranges;
 extern sint32 nAnimUVRanges;
 extern sint32 num_items;
+extern sint32 num_meshes;
+extern sint32 num_anims;
 extern TEXTURESTRUCT *textinfo;
 extern SPRITESTRUCT *spriteinfo;
 extern float AnimatingTexturesV[16][8][3];
@@ -80,5 +82,6 @@ uint8 LoadSprites(void);
 uint8 LoadItems(void);
 void AdjustUV(sint32 num);
 uint8 LoadTextureInfos(void);
+uint8 LoadObjects(void);
 
 #endif

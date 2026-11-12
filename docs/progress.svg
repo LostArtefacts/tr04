@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="243.47" height="12" x="0" y="0" class="named"><title>1102 · 71.19%</title></rect>
 <rect width="0.44" height="12" x="243.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="14.14" height="12" x="243.91" y="0" class="nonmatching"><title>64 · 4.13%</title></rect>
-<rect width="83.95" height="12" x="258.05" y="0" class="todo"><title>380 · 24.55%</title></rect>
+<rect width="14.36" height="12" x="243.91" y="0" class="nonmatching"><title>65 · 4.20%</title></rect>
+<rect width="83.73" height="12" x="258.27" y="0" class="todo"><title>379 · 24.48%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">71.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1102</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">64</tspan> · <tspan class="todo">380</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1102</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">65</tspan> · <tspan class="todo">379</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="121.09" height="12" x="0" y="0" class="named"><title>220 KB · 35.41%</title></rect>
 <rect width="0.12" height="12" x="121.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="25.21" height="12" x="121.21" y="0" class="nonmatching"><title>46 KB · 7.37%</title></rect>
-<rect width="195.58" height="12" x="146.42" y="0" class="todo"><title>355 KB · 57.19%</title></rect>
+<rect width="25.84" height="12" x="121.21" y="0" class="nonmatching"><title>47 KB · 7.56%</title></rect>
+<rect width="194.94" height="12" x="147.06" y="0" class="todo"><title>354 KB · 57%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">35.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">220 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">46 KB</tspan> · <tspan class="todo">355 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">220 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">47 KB</tspan> · <tspan class="todo">354 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1260,7 +1260,7 @@
 <rect width="12" height="12" x="615" y="345" class="named"><title>0x00473e80 Decompress (156 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="345" class="todo"><title>0x00473f20 LoadTextures (2716 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="345" class="todo"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="345" class="todo"><title>0x00474e10 LoadObjects (1156 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="345" class="nonmatching"><title>0x00474e10 LoadObjects (1156 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="345" class="todo"><title>0x004752a0 AdjustUV (1121 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="345" class="named"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="345" class="named"><title>0x00475970 LoadCameras (187 bytes)</title></rect>
@@ -1739,7 +1739,7 @@
 <rect width="22.06" height="20.45" x="233.69" y="348.56" class="todo"><title>0x004876c0 S_PrintShadow (1169 bytes)</title></rect>
 <rect width="22.06" height="20.39" x="233.69" y="372.01" class="todo"><title>0x00486dd0 S_DrawFireSparks (1166 bytes)</title></rect>
 <rect width="22.06" height="20.22" x="233.69" y="395.40" class="todo"><title>0x004096d0 MovableBlock (1156 bytes)</title></rect>
-<rect width="22.06" height="20.22" x="233.69" y="418.62" class="todo"><title>0x00474e10 LoadObjects (1156 bytes)</title></rect>
+<rect width="22.06" height="20.22" x="233.69" y="418.62" class="nonmatching"><title>0x00474e10 LoadObjects (1156 bytes)</title></rect>
 <rect width="22.06" height="20.16" x="233.69" y="441.84" class="named"><title>0x0044b690 GetCeiling (1153 bytes)</title></rect>
 <rect width="20.89" height="21.22" x="258.75" y="0" class="todo"><title>0x0043c610 construct_object_list (1149 bytes)</title></rect>
 <rect width="20.89" height="21.15" x="258.75" y="24.22" class="todo"><title>0x00443a50 CombatCamera (1145 bytes)</title></rect>
