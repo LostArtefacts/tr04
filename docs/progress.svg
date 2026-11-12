@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="206.26" height="12" x="0" y="0" class="named"><title>933 · 60.31%</title></rect>
-<rect width="0.44" height="12" x="206.26" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="206.70" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="128.22" height="12" x="213.78" y="0" class="todo"><title>580 · 37.49%</title></rect>
+<rect width="206.48" height="12" x="0" y="0" class="named"><title>934 · 60.37%</title></rect>
+<rect width="0.44" height="12" x="206.48" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="206.92" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="128" height="12" x="214" y="0" class="todo"><title>579 · 37.43%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">60.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">933</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">580</tspan></text>
+<text text-anchor="end" x="522" y="7.50">60.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">934</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">579</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="89.24" height="12" x="0" y="0" class="named"><title>162 KB · 26.09%</title></rect>
-<rect width="0.12" height="12" x="89.24" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="89.36" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="243.25" height="12" x="98.75" y="0" class="todo"><title>441 KB · 71.13%</title></rect>
+<rect width="89.42" height="12" x="0" y="0" class="named"><title>162 KB · 26.15%</title></rect>
+<rect width="0.12" height="12" x="89.42" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="89.54" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="243.07" height="12" x="98.93" y="0" class="todo"><title>441 KB · 71.07%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">26.1%</text>
+<text text-anchor="end" x="522" y="24.50">26.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">162 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">441 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1350,7 +1350,7 @@
 <rect width="12" height="12" x="465" y="375" class="todo"><title>0x00480220 ProjectTrainVerts (237 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="375" class="todo"><title>0x00480310 phd_PutPolygons_train (596 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="375" class="todo"><title>0x00480570 RenderLoadPic (388 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="375" class="todo"><title>0x00480700 DDCopyBitmap (326 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="375" class="named"><title>0x00480700 DDCopyBitmap (326 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="375" class="todo"><title>0x00480850 _LoadBitmap (132 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="375" class="todo"><title>0x004808e0 do_boot_screen (331 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="375" class="todo"><title>0x00480a50 DrawSortList (2132 bytes)</title></rect>
@@ -2144,7 +2144,7 @@
 <rect width="11.13" height="11.35" x="428.93" y="421.96" class="named"><title>0x004220b0 lara_as_dash (327 bytes)</title></rect>
 <rect width="11.13" height="11.35" x="428.93" y="436.30" class="todo"><title>0x004451c0 mgLOS (327 bytes)</title></rect>
 <rect width="11.13" height="11.35" x="428.93" y="450.65" class="named"><title>0x0046dd00 ACMClose (327 bytes)</title></rect>
-<rect width="11.01" height="11.44" x="443.07" y="158.24" class="todo"><title>0x00480700 DDCopyBitmap (326 bytes)</title></rect>
+<rect width="11.01" height="11.44" x="443.07" y="158.24" class="named"><title>0x00480700 DDCopyBitmap (326 bytes)</title></rect>
 <rect width="11.01" height="11.37" x="443.07" y="172.68" class="todo"><title>0x0041d9a0 GetLaraJointPos (324 bytes)</title></rect>
 <rect width="11.01" height="11.34" x="443.07" y="187.05" class="nonmatching"><title>0x004332c0 UpdateDebris (323 bytes)</title></rect>
 <rect width="11.01" height="11.23" x="443.07" y="201.39" class="named"><title>0x00436060 TriggerExplosionBubble (320 bytes)</title></rect>

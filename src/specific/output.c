@@ -57,3 +57,45 @@ sint32 S_DumpScreen(void)
     App.dx.DoneBlit = 1;
     return n;
 }
+
+HRESULT DDCopyBitmap(LPDIRECTDRAWSURFACE4 surf, HBITMAP hbm, sint32 x, sint32 y, sint32 dx, sint32 dy)
+{
+    HDC hdc;
+    HDC hdc2;
+    BITMAP bitmap;
+    DDSURFACEDESC2 desc;
+    HRESULT result;
+    sint32 l, t;
+
+    if (!hbm || !surf)
+        return E_FAIL;
+    IDirectDrawSurface4_Restore(surf);
+    hdc = CreateCompatibleDC(0);
+    if (!hdc)
+        OutputDebugString("createcompatible dc failed\n");
+    SelectObject(hdc, hbm);
+    GetObject(hbm, sizeof(BITMAP), &bitmap);
+    if (!dx)
+        dx = bitmap.bmWidth;
+    if (!dy)
+        dy = bitmap.bmHeight;
+    desc.dwSize = sizeof(DDSURFACEDESC2);
+    desc.dwFlags = DDSD_WIDTH | DDSD_HEIGHT;
+    IDirectDrawSurface4_GetSurfaceDesc(surf, &desc);
+    l = 0;
+    t = 0;
+    if (!(App.dx.Flags & 0x80)) {
+        surf = App.dx.lpPrimaryBuffer;
+        if (App.dx.Flags & 2) {
+            l = App.dx.rScreen.left;
+            t = App.dx.rScreen.top;
+        }
+    }
+    result = IDirectDrawSurface4_GetDC(surf, &hdc2);
+    if (!result) {
+        StretchBlt(hdc2, l, t, desc.dwWidth, desc.dwHeight, hdc, x, y, dx, dy, SRCCOPY);
+        IDirectDrawSurface4_ReleaseDC(surf, hdc2);
+    }
+    DeleteDC(hdc);
+    return result;
+}
