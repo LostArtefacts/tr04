@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="255.17" height="12" x="0" y="0" class="named"><title>1155 · 74.61%</title></rect>
-<rect width="0.66" height="12" x="255.17" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="19.22" height="12" x="255.84" y="0" class="nonmatching"><title>87 · 5.62%</title></rect>
-<rect width="66.94" height="12" x="275.06" y="0" class="todo"><title>303 · 19.57%</title></rect>
+<rect width="255.40" height="12" x="0" y="0" class="named"><title>1156 · 74.68%</title></rect>
+<rect width="0.66" height="12" x="255.40" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="19.22" height="12" x="256.06" y="0" class="nonmatching"><title>87 · 5.62%</title></rect>
+<rect width="66.72" height="12" x="275.28" y="0" class="todo"><title>302 · 19.51%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">74.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1155</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">87</tspan> · <tspan class="todo">303</tspan></text>
+<text text-anchor="end" x="522" y="7.50">74.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1156</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">87</tspan> · <tspan class="todo">302</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="139.38" height="12" x="0" y="0" class="named"><title>254 KB · 40.75%</title></rect>
-<rect width="0.13" height="12" x="139.38" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="34.87" height="12" x="139.51" y="0" class="nonmatching"><title>63 KB · 10.20%</title></rect>
-<rect width="167.62" height="12" x="174.38" y="0" class="todo"><title>305 KB · 49.01%</title></rect>
+<rect width="139.82" height="12" x="0" y="0" class="named"><title>255 KB · 40.88%</title></rect>
+<rect width="0.13" height="12" x="139.82" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="34.87" height="12" x="139.95" y="0" class="nonmatching"><title>63 KB · 10.20%</title></rect>
+<rect width="167.17" height="12" x="174.83" y="0" class="todo"><title>304 KB · 48.88%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">40.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">254 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">63 KB</tspan> · <tspan class="todo">305 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">40.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">255 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">63 KB</tspan> · <tspan class="todo">304 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -131,7 +131,7 @@
 <rect width="12" height="12" x="180" y="15" class="nonmatching"><title>0x00409d20 TestBlockPull (792 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="15" class="nonmatching"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="15" class="todo"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="15" class="todo"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="15" class="named"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="15" class="named"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="15" class="named"><title>0x0040a930 InitialiseMummy (147 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="15" class="nonmatching"><title>0x0040a9d0 MummyControl (1244 bytes)</title></rect>
@@ -1822,7 +1822,7 @@
 <rect width="17.74" height="17.95" x="667.68" y="21.41" class="todo"><title>0x0040def0 ScarabControl (827 bytes)</title></rect>
 <rect width="17.59" height="17.95" x="688.41" y="21.41" class="todo"><title>0x00485d90 setXYZ3 (820 bytes)</title></rect>
 <rect width="17.54" height="17.95" x="709" y="21.41" class="todo"><title>0x0046d9c0 ACMInit (818 bytes)</title></rect>
-<rect width="17.46" height="17.95" x="729.54" y="21.41" class="todo"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
+<rect width="17.46" height="17.95" x="729.54" y="21.41" class="named"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
 <rect width="17.59" height="17.77" x="306.60" y="42.36" class="named"><title>0x0041f7c0 DoFlameTorch (812 bytes)</title></rect>
 <rect width="17.59" height="17.77" x="306.60" y="63.13" class="named"><title>0x00434440 TriggerRicochetSpark (812 bytes)</title></rect>
 <rect width="17.59" height="17.68" x="306.60" y="83.89" class="todo"><title>0x0047f620 phd_PutPolygonSkyMesh (808 bytes)</title></rect>

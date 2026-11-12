@@ -60,6 +60,7 @@ enum sfx_options {
 #define SFX_FLAME_EMITTER 368
 #define SFX_PUSH_BLOCK_END 11
 #define SFX_PUSHABLE_SOUND 63
+#define SFX_ELEC_ARCING_LOOP 197
 
 typedef struct sample_info {
     sint16 number;
