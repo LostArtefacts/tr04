@@ -39,3 +39,21 @@ void BikeExplode(ITEM_INFO *item)
     SoundEffect(SFX_EXPLOSION2, 0, SFX_DEFAULT);
     lara.vehicle = NO_ITEM;
 }
+
+void BikeStart(ITEM_INFO *item, ITEM_INFO *l)
+{
+    BIKEINFO *bike;
+
+    bike = (BIKEINFO *)item->data;
+    lara.gun_status = LG_HANDS_BUSY;
+    lara.hit_direction = -1;
+    l->current_anim_state = l->goal_anim_state = 15;
+    l->anim_number = objects[VEHICLE_EXTRA].anim_index + 18;
+    l->frame_number = anims[l->anim_number].frame_base;
+    l->gravity_status = 0;
+    item->anim_number = objects[MOTORBIKE].anim_index - objects[VEHICLE_EXTRA].anim_index + l->anim_number;
+    item->frame_number = anims[item->anim_number].frame_base - anims[l->anim_number].frame_base + l->frame_number;
+    item->flags |= IFL_TRIGGERED;
+    item->hit_points = 1;
+    bike->unused1 = 0;
+}
