@@ -61,6 +61,8 @@ extern char UseForcedFixedCamera;
 extern sint32 BinocularRange;
 extern sint32 BinocularOn;
 extern OLD_CAMERA old_cam;
+extern PHD_VECTOR static_lookcamt;
+extern GAME_VECTOR static_lookcamp;
 extern GAME_VECTOR last_ideal;
 extern uint8 camerasnaps;
 extern sint32 Unk7e71cc;
@@ -83,5 +85,6 @@ void ChaseCamera(ITEM_INFO *item);
 void CombatCamera(ITEM_INFO *item);
 sint32 CameraCollisionBounds(GAME_VECTOR *ideal, sint32 push, sint32 yfirst);
 void BinocularCamera(ITEM_INFO *item);
+void LookCamera(ITEM_INFO *item);
 
 #endif

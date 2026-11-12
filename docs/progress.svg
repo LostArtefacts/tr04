@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.05" height="12" x="0" y="0" class="named"><title>1168 · 75.45%</title></rect>
 <rect width="0.66" height="12" x="258.05" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="21.43" height="12" x="258.71" y="0" class="nonmatching"><title>97 · 6.27%</title></rect>
-<rect width="61.86" height="12" x="280.14" y="0" class="todo"><title>280 · 18.09%</title></rect>
+<rect width="21.65" height="12" x="258.71" y="0" class="nonmatching"><title>98 · 6.33%</title></rect>
+<rect width="61.64" height="12" x="280.36" y="0" class="todo"><title>279 · 18.02%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1168</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">97</tspan> · <tspan class="todo">280</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1168</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">98</tspan> · <tspan class="todo">279</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="146.13" height="12" x="0" y="0" class="named"><title>266 KB · 42.73%</title></rect>
 <rect width="0.13" height="12" x="146.13" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="43.65" height="12" x="146.26" y="0" class="nonmatching"><title>80 KB · 12.76%</title></rect>
-<rect width="152.09" height="12" x="189.91" y="0" class="todo"><title>277 KB · 44.47%</title></rect>
+<rect width="44.92" height="12" x="146.26" y="0" class="nonmatching"><title>82 KB · 13.14%</title></rect>
+<rect width="150.82" height="12" x="191.18" y="0" class="todo"><title>275 KB · 44.10%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">42.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">266 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">80 KB</tspan> · <tspan class="todo">277 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">266 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">82 KB</tspan> · <tspan class="todo">275 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -764,7 +764,7 @@
 <rect width="12" height="12" x="675" y="195" class="nonmatching"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="195" class="named"><title>0x004435e0 ChaseCamera (1127 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="named"><title>0x00443a50 CombatCamera (1145 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="195" class="todo"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="195" class="nonmatching"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="named"><title>0x004447f0 FixedCamera (158 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="210" class="nonmatching"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="210" class="named"><title>0x00444e00 CameraCollisionBounds (948 bytes)</title></rect>
@@ -1656,7 +1656,7 @@
 <rect width="30.93" height="29.33" x="84.34" y="368.55" class="todo"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
 <rect width="30.93" height="29.08" x="84.34" y="400.87" class="todo"><title>0x0041c6e0 WraithControl (2337 bytes)</title></rect>
 <rect width="30.93" height="29.05" x="84.34" y="432.95" class="todo"><title>0x00468e00 AnimateJeep (2335 bytes)</title></rect>
-<rect width="29.26" height="30.52" x="118.28" y="0" class="todo"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
+<rect width="29.26" height="30.52" x="118.28" y="0" class="nonmatching"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
 <rect width="29.26" height="30.51" x="118.28" y="33.52" class="todo"><title>0x00410c90 SethControl (2320 bytes)</title></rect>
 <rect width="29.26" height="29.57" x="118.28" y="67.04" class="nonmatching"><title>0x00418430 TroopControl (2248 bytes)</title></rect>
 <rect width="29.26" height="29.12" x="118.28" y="99.60" class="named"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
