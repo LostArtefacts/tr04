@@ -31,6 +31,68 @@ sint32 SaveGame(void)
         return -1;
 }
 
+void do_debounced_joystick_poo(void)
+{
+    go_left = 0;
+    go_right = 0;
+    go_up = 0;
+    go_down = 0;
+    go_select = 0;
+    go_deselect = 0;
+    if (input & IN_LEFT) {
+        if (left_repeat < 8)
+            left_repeat++;
+        else
+            go_left = 1;
+        if (!left_debounce)
+            go_left = 1;
+        left_debounce = 1;
+    } else {
+        left_debounce = 0;
+        left_repeat = 0;
+    }
+    if (input & IN_RIGHT) {
+        if (right_repeat < 8)
+            right_repeat++;
+        else
+            go_right = 1;
+        if (!right_debounce)
+            go_right = 1;
+        right_debounce = 1;
+    } else {
+        right_debounce = 0;
+        right_repeat = 0;
+    }
+    if (input & IN_FORWARD) {
+        if (!up_debounce)
+            go_up = 1;
+        up_debounce = 1;
+    } else
+        up_debounce = 0;
+    if (input & IN_BACK) {
+        if (!down_debounce)
+            go_down = 1;
+        down_debounce = 1;
+    } else
+        down_debounce = 0;
+    if (input & IN_ACTION || input & IN_SELECT)
+        select_debounce = 1;
+    else {
+        if (select_debounce == 1 && !friggrimmer)
+            go_select = 1;
+        select_debounce = 0;
+        friggrimmer = 0;
+    }
+    if (input & IN_DESELECT)
+        deselect_debounce = 1;
+    else {
+        if (deselect_debounce == 1 && !friggrimmer2)
+            go_deselect = 1;
+        deselect_debounce = 0;
+        friggrimmer2 = 0;
+    }
+}
+
 sint32 go_and_load_game(void)
 {
     return LoadGame();
