@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="154.75" height="12" x="0" y="0" class="named"><title>700 · 45.25%</title></rect>
-<rect width="0.44" height="12" x="154.75" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="155.19" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="182.16" height="12" x="159.84" y="0" class="todo"><title>824 · 53.26%</title></rect>
+<rect width="154.97" height="12" x="0" y="0" class="named"><title>701 · 45.31%</title></rect>
+<rect width="0.44" height="12" x="154.97" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="155.41" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="181.94" height="12" x="160.06" y="0" class="todo"><title>823 · 53.20%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">45.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">700</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">824</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">701</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">823</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="64.15" height="12" x="0" y="0" class="named"><title>116 KB · 18.76%</title></rect>
-<rect width="0.12" height="12" x="64.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="64.27" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="270.48" height="12" x="71.52" y="0" class="todo"><title>491 KB · 79.09%</title></rect>
+<rect width="64.18" height="12" x="0" y="0" class="named"><title>116 KB · 18.77%</title></rect>
+<rect width="0.12" height="12" x="64.18" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="64.30" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="270.45" height="12" x="71.55" y="0" class="todo"><title>491 KB · 79.08%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">18.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">116 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">491 KB</tspan></text>
@@ -454,7 +454,7 @@
 <rect width="12" height="12" x="525" y="105" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="105" class="named"><title>0x0042bab0 ready_pistols (109 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="105" class="todo"><title>0x0042bb20 draw_pistol_meshes (65 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="105" class="todo"><title>0x0042bb70 undraw_pistol_mesh_left (58 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="105" class="named"><title>0x0042bb70 undraw_pistol_mesh_left (58 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="105" class="todo"><title>0x0042bbb0 undraw_pistol_mesh_right (53 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="105" class="todo"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="105" class="todo"><title>0x0042be40 AnimatePistols (1407 bytes)</title></rect>
@@ -2842,7 +2842,7 @@
 <rect width="4.78" height="4.77" x="632.09" y="434.18" class="named"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
 <rect width="4.78" height="4.69" x="632.09" y="441.94" class="named"><title>0x00426b90 lara_col_hangleft (58 bytes)</title></rect>
 <rect width="4.78" height="4.69" x="632.09" y="449.63" class="named"><title>0x00426c10 lara_col_hangright (58 bytes)</title></rect>
-<rect width="4.78" height="4.69" x="632.09" y="457.31" class="todo"><title>0x0042bb70 undraw_pistol_mesh_left (58 bytes)</title></rect>
+<rect width="4.78" height="4.69" x="632.09" y="457.31" class="named"><title>0x0042bb70 undraw_pistol_mesh_left (58 bytes)</title></rect>
 <rect width="4.96" height="4.51" x="639.87" y="347.53" class="named"><title>0x00450720 gar_RotYXZsuperpack_I (58 bytes)</title></rect>
 <rect width="4.88" height="4.51" x="647.83" y="347.53" class="named"><title>0x00423c00 lara_as_hangturnl (57 bytes)</title></rect>
 <rect width="4.88" height="4.51" x="655.71" y="347.53" class="named"><title>0x00423ce0 lara_as_hangturnr (57 bytes)</title></rect>

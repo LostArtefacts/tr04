@@ -3,6 +3,7 @@
 #include "anim.h"
 #include "sound.h"
 #include "specific/input.h"
+#include "delstuff.h"
 
 void draw_pistols(sint32 weapon_type)
 {
@@ -106,4 +107,14 @@ void ready_pistols(int weapon_type)
     lara.target = NULL;
     lara.left_arm.lock = lara.right_arm.lock = 0;
     lara.left_arm.frame_base = lara.right_arm.frame_base = objects[WeaponObject(weapon_type)].frame_base;
+}
+
+void undraw_pistol_mesh_left(sint32 weapon_type)
+{
+    if (weapon_type != WEAPON_REVOLVER) {
+        WeaponObject(weapon_type);
+        lara.mesh_ptrs[LM_LHAND] = meshes[objects[LARA].mesh_index + LM_LHAND * 2];
+        if (weapon_type == WEAPON_PISTOLS)
+            lara.holster = LARA_HOLSTERS_PISTOLS;
+    }
 }
