@@ -351,11 +351,14 @@ void lara_as_stop(ITEM_INFO *item, COLL_INFO *coll);
 void LaraAboveWater(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_all4s(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_hang(ITEM_INFO *item, COLL_INFO *coll);
+sint32 LaraHangRightCornerTest(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
 extern uint16 DashTimer;
 extern void (*lara_control_routines[118])(ITEM_INFO *item, COLL_INFO *coll);
 extern void (*lara_collision_routines[118])(ITEM_INFO *item, COLL_INFO *coll);
+extern sint16 LeftClimbTab[4];
+extern sint16 RightClimbTab[4];
 
 #endif

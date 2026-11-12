@@ -2555,6 +2555,112 @@ void lara_col_hang(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+sint32 LaraHangRightCornerTest(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 oldx, oldz, front, x, z, flag;
+    sint16 oldy, angle;
+
+    if (item->anim_number != ANIM_GRABLEDGE)
+        return 0;
+    if (coll->hit_static)
+        return 0;
+    oldx = item->pos.x_pos;
+    oldy = item->pos.y_rot;
+    oldz = item->pos.z_pos;
+    front = coll->front_floor;
+    angle = (uint16)(item->pos.y_rot + 0x2000) / 0x4000;
+    switch (angle) {
+    case NORTH:
+    case SOUTH:
+        x = oldx ^ ((uint16)oldx ^ (uint16)oldz) & 1023;
+        z = oldz ^ ((uint16)oldx ^ (uint16)oldz) & 1023;
+        break;
+    default:
+        x = (oldx & ~1023) - (oldz & 1023) + 1024;
+        z = (oldz & ~1023) - (oldx & 1023) + 1024;
+        break;
+    }
+    lara.CornerX = item->pos.x_pos = x;
+    lara.CornerZ = item->pos.z_pos = z;
+    item->pos.y_rot += 0x4000;
+    flag = -IsValidHangPos(item, coll);
+    if (flag) {
+        if (lara.climb_status) {
+            if (!(GetClimbTrigger(x, item->pos.y_pos, z, item->room_number) & LeftClimbTab[angle]))
+                flag = 0;
+        } else if (ABS(front - coll->front_floor) > 60)
+            flag = 0;
+    }
+    if (!flag) {
+        item->pos.x_pos = oldx;
+        item->pos.y_rot = lara.move_angle = oldy;
+        item->pos.z_pos = oldz;
+        if (LaraFloorFront(item, item->pos.y_rot + 0x4000, 116) < 0)
+            return 0;
+        switch (angle) {
+        case NORTH:
+            x = ((item->pos.x_pos + 1024) & ~1023) - (item->pos.z_pos & 1023) + 1024;
+            z = ((item->pos.z_pos + 1024) & ~1023) - (item->pos.x_pos & 1023) + 1024;
+            break;
+        case SOUTH:
+            x = ((item->pos.x_pos - 1024) & ~1023) - (item->pos.z_pos & 1023) + 1024;
+            z = ((item->pos.z_pos - 1024) & ~1023) - (item->pos.x_pos & 1023) + 1024;
+            break;
+        case WEST:
+            x = (item->pos.x_pos ^ (item->pos.x_pos ^ item->pos.z_pos) & 1023) - 1024;
+            z = (item->pos.x_pos ^ item->pos.z_pos) & 1023 ^ (item->pos.z_pos + 1024);
+            break;
+        default:
+            x = ((item->pos.x_pos ^ item->pos.z_pos) & 1023) ^ (item->pos.x_pos + 1024);
+            z = (item->pos.z_pos ^ ((item->pos.x_pos ^ item->pos.z_pos) & 1023)) - 1024;
+            break;
+        }
+        lara.CornerX = item->pos.x_pos = x;
+        lara.CornerZ = item->pos.z_pos = z;
+        item->pos.y_rot -= 0x4000;
+        flag = IsValidHangPos(item, coll);
+        if (flag) {
+            item->pos.x_pos = oldx;
+            item->pos.y_rot = lara.move_angle = oldy;
+            item->pos.z_pos = oldz;
+            if (lara.climb_status) {
+                if (!(GetClimbTrigger(x, item->pos.y_pos, z, item->room_number) & RightClimbTab[angle])) {
+                    front = LaraFloorFront(item, item->pos.y_rot, 116);
+                    if (ABS(coll->front_floor - front) > 60 || front < -768)
+                        flag = 0;
+                }
+            } else {
+                if (ABS(front - coll->front_floor) <= 60) {
+                    switch (angle) {
+                    case NORTH:
+                        if ((oldx & 1023) < 512)
+                            flag = 0;
+                        break;
+                    case WEST:
+                        if ((oldz & 1023) < 512)
+                            flag = 0;
+                        break;
+                    case SOUTH:
+                        if ((oldx & 1023) > 512)
+                            flag = 0;
+                        break;
+                    case EAST:
+                        if ((oldz & 1023) > 512)
+                            flag = 0;
+                        break;
+                    }
+                } else
+                    flag = 0;
+            }
+            return flag;
+        }
+    }
+    item->pos.x_pos = oldx;
+    item->pos.y_rot = lara.move_angle = oldy;
+    item->pos.z_pos = oldz;
+    return flag;
+}
+
 sint32 IsValidHangPos(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint16 angle;

@@ -295,7 +295,7 @@ address,size,name,symbol
 0x00425f10,64,lara_as_fastfall,_lara_as_fastfall
 0x00425f50,74,lara_as_hang,_lara_as_hang
 0x00425fa0,645,lara_col_hang,_lara_col_hang
-0x00426230,954,LaraHangRightCornerTest,_LaraHangRightCornerTest
+0x00426230,976,LaraHangRightCornerTest,_LaraHangRightCornerTest
 0x00426600,212,IsValidHangPos,_IsValidHangPos
 0x004266e0,949,LaraHangLeftCornerTest,_LaraHangLeftCornerTest
 0x00426ab0,145,CanLaraHangSideways,_CanLaraHangSideways
@@ -2032,6 +2032,8 @@ address,size,name,symbol
 0x004ad7dc,24,FireBounds,_FireBounds
 0x004ad7f4,4,hair_wind_angle,_hair_wind_angle
 0x004ad7f8,4,hair_dwind_angle,_hair_dwind_angle
+0x004ad800,8,LeftClimbTab,_LeftClimbTab
+0x004ad808,8,RightClimbTab,_RightClimbTab
 0x004ad810,4,jump_ok,_jump_ok
 0x004ad820,24,PistolTable,_PistolTable
 0x004ad838,8,LeftIntRightExtTab,_LeftIntRightExtTab
