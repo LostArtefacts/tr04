@@ -13,5 +13,11 @@ extern BITE_INFO stinger;
 extern BITE_INFO pincer;
 extern BITE_INFO s_stinger;
 extern BITE_INFO s_pincer;
+void SmlscorpControl(sint16 item_number);
+
+extern BITE_INFO stinger;
+extern BITE_INFO pincer;
+extern BITE_INFO s_stinger;
+extern BITE_INFO s_pincer;
 
 #endif

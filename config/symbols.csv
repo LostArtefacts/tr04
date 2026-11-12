@@ -94,7 +94,7 @@ address,size,name,symbol
 0x0040e780,120,InitialiseScorpion,_InitialiseScorpion
 0x0040e800,1996,ScorpionControl,_ScorpionControl
 0x0040efd0,90,InitialiseSmlscorp,_InitialiseSmlscorp
-0x0040f030,717,SmlscorpControl,_SmlscorpControl
+0x0040f030,740,SmlscorpControl,_SmlscorpControl
 0x0040f320,138,CheckSenetWinner,_CheckSenetWinner
 0x0040f3b0,199,InitialiseSenet,_InitialiseSenet
 0x0040f480,80,SenetControl,_SenetControl
