@@ -7,9 +7,12 @@
 #include "sound.h"
 #include "lara.h"
 #include "laraflar.h"
+#include "lara_states.h"
 #include "delstuff.h"
+#include "switch.h"
 #include "specific/function_stubs.h"
 #include "specific/3dmath.h"
+#include "specific/input.h"
 #include "draw.h"
 #include "debris.h"
 #include "laramisc.h"
@@ -54,6 +57,65 @@ void TriggerTorchFlame(sint16 item_number, sint32 node)
     sptr->Size = sptr->sSize = size;
     sptr->dSize = size >> 3;
     SoundEffect(SFX_LOOP_FOR_SMALL_FIRES, &items[item_number].pos, 0);
+}
+
+void FireCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint16 rot;
+
+    item = &items[item_number];
+    if (lara.gun_type == WEAPON_TORCH && lara.gun_status == LG_READY && !lara.left_arm.lock && (item->status & 1) != lara.LitTorch && item->timer != -1 && input & IN_ACTION && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && !l->gravity_status) {
+        rot = item->pos.y_rot;
+        if (item->object_number == FLAME_EMITTER) {
+            FireBounds[0] = -256;
+            FireBounds[1] = 256;
+            FireBounds[2] = 0;
+            FireBounds[3] = 1024;
+            FireBounds[4] = -800;
+            FireBounds[5] = 800;
+        } else if (item->object_number == FLAME_EMITTER2) {
+            FireBounds[0] = -256;
+            FireBounds[1] = 256;
+            FireBounds[2] = 0;
+            FireBounds[3] = 1024;
+            FireBounds[4] = -600;
+            FireBounds[5] = 600;
+        } else if (item->object_number == SPRINKLER) {
+            FireBounds[0] = -256;
+            FireBounds[1] = 256;
+            FireBounds[2] = 0;
+            FireBounds[3] = 1024;
+            FireBounds[4] = -384;
+            FireBounds[5] = 0;
+        }
+        item->pos.y_rot = l->pos.y_rot;
+        if (TestLaraPosition(FireBounds, item, l)) {
+            if (item->object_number == SPRINKLER)
+                l->anim_number = ANIM_LIGHT_TORCH4;
+            else {
+                l->anim_number = (sint16)((ABS(l->pos.y_pos - item->pos.y_pos) >> 8) + ANIM_LIGHT_TORCH1);
+                l->item_flags[3] = 1;
+            }
+            l->frame_number = anims[l->anim_number].frame_base;
+            l->current_anim_state = AS_CONTROLLED;
+            lara.flare_control_left = 0;
+            lara.left_arm.lock = 3;
+            lara.GeneralPtr = (void *)item_number;
+        }
+        item->pos.y_rot = rot;
+    }
+    if (lara.GeneralPtr == (void *)item_number && item->status != ITEM_ACTIVE && l->current_anim_state == AS_CONTROLLED && l->anim_number >= ANIM_LIGHT_TORCH1 && l->anim_number <= ANIM_LIGHT_TORCH5 && l->frame_number - anims[l->anim_number].frame_base == 40) {
+        if (item->object_number == SPRINKLER) {
+            l->item_flags[3] = 0;
+            lara.LitTorch = 0;
+        }
+        TestTriggersAtXYZ(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 1, item->flags & IFL_CODEBITS);
+        item->flags |= IFL_CODEBITS;
+        item->status = ITEM_ACTIVE;
+        item->item_flags[3] = 0;
+        AddActiveItem(item_number);
+    }
 }
 
 void GetFlameTorch(void)

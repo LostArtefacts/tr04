@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="248.10" height="12" x="0" y="0" class="named"><title>1123 · 72.55%</title></rect>
-<rect width="0.66" height="12" x="248.10" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.01" height="12" x="248.77" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
-<rect width="76.22" height="12" x="265.78" y="0" class="todo"><title>345 · 22.29%</title></rect>
+<rect width="248.33" height="12" x="0" y="0" class="named"><title>1124 · 72.61%</title></rect>
+<rect width="0.66" height="12" x="248.33" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.01" height="12" x="248.99" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
+<rect width="76" height="12" x="266" y="0" class="todo"><title>344 · 22.22%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">72.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1123</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">345</tspan></text>
+<text text-anchor="end" x="522" y="7.50">72.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1124</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">344</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="130.21" height="12" x="0" y="0" class="named"><title>237 KB · 38.07%</title></rect>
-<rect width="0.13" height="12" x="130.21" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="30.52" height="12" x="130.34" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
-<rect width="181.14" height="12" x="160.86" y="0" class="todo"><title>330 KB · 52.96%</title></rect>
+<rect width="130.59" height="12" x="0" y="0" class="named"><title>238 KB · 38.18%</title></rect>
+<rect width="0.13" height="12" x="130.59" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="30.52" height="12" x="130.72" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
+<rect width="180.76" height="12" x="161.24" y="0" class="todo"><title>329 KB · 52.85%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">38.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">237 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">330 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">38.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">238 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">329 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -259,7 +259,7 @@
 <rect width="12" height="12" x="600" y="45" class="todo"><title>0x0041e630 Rich_CalcLaraMatrices_Interpolated (3076 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="45" class="named"><title>0x0041f260 SetLaraUnderwaterNodes (289 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="45" class="named"><title>0x0041f390 TriggerTorchFlame (381 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="45" class="todo"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="45" class="named"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="45" class="todo"><title>0x0041f7c0 DoFlameTorch (793 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="45" class="named"><title>0x0041faf0 GetFlameTorch (133 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="45" class="nonmatching"><title>0x0041fb80 FlameTorchControl (584 bytes)</title></rect>
@@ -1865,7 +1865,7 @@
 <rect width="16.17" height="16.41" x="327.15" y="406.87" class="nonmatching"><title>0x004471b0 LaraBaddieCollision (689 bytes)</title></rect>
 <rect width="16.17" height="16.41" x="327.15" y="426.28" class="named"><title>0x00488690 ClipLine (689 bytes)</title></rect>
 <rect width="16.17" height="16.31" x="327.15" y="445.69" class="named"><title>0x00454f50 ControlElementPuzzle (685 bytes)</title></rect>
-<rect width="16.28" height="16.16" x="346.32" y="42.37" class="todo"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
+<rect width="16.28" height="16.16" x="346.32" y="42.37" class="named"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
 <rect width="16.28" height="16.16" x="365.60" y="42.37" class="named"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>
 <rect width="16.02" height="16.16" x="384.87" y="42.37" class="named"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
 <rect width="15.82" height="16.16" x="403.89" y="42.37" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>

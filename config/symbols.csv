@@ -2023,6 +2023,7 @@ address,size,name,symbol
 0x004ad6d4,60,HairRotScratchVertNums,_HairRotScratchVertNums
 0x004ad784,60,lara_mesh_sweetness_table,_lara_mesh_sweetness_table
 0x004ad7d4,4,GlobalAlpha,_GlobalAlpha
+0x004ad7dc,24,FireBounds,_FireBounds
 0x004ad7f4,4,hair_wind_angle,_hair_wind_angle
 0x004ad7f8,4,hair_dwind_angle,_hair_dwind_angle
 0x004ad810,4,jump_ok,_jump_ok
