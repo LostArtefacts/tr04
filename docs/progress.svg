@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="191.67" height="12" x="0" y="0" class="named"><title>867 · 56.04%</title></rect>
-<rect width="0.44" height="12" x="191.67" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="192.11" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="143.48" height="12" x="198.52" y="0" class="todo"><title>649 · 41.95%</title></rect>
+<rect width="191.89" height="12" x="0" y="0" class="named"><title>868 · 56.11%</title></rect>
+<rect width="0.44" height="12" x="191.89" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="192.33" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="143.26" height="12" x="198.74" y="0" class="todo"><title>648 · 41.89%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">56.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">867</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">649</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">868</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">648</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="82.07" height="12" x="0" y="0" class="named"><title>149 KB · 24%</title></rect>
-<rect width="0.12" height="12" x="82.07" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="82.19" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="251.16" height="12" x="90.84" y="0" class="todo"><title>456 KB · 73.44%</title></rect>
+<rect width="82.09" height="12" x="0" y="0" class="named"><title>149 KB · 24%</title></rect>
+<rect width="0.12" height="12" x="82.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="82.22" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="251.13" height="12" x="90.87" y="0" class="todo"><title>456 KB · 73.43%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">149 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">456 KB</tspan></text>
@@ -1255,7 +1255,7 @@
 <rect width="12" height="12" x="540" y="345" class="todo"><title>0x00473c10 FindCDDrive (203 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="345" class="todo"><title>0x00473ce0 FileOpen (153 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="345" class="named"><title>0x00473d80 FileClose (26 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="345" class="todo"><title>0x00473da0 FileSize (42 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="345" class="named"><title>0x00473da0 FileSize (42 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="345" class="todo"><title>0x00473dd0 LoadFile (169 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="345" class="todo"><title>0x00473e80 Decompress (156 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="345" class="todo"><title>0x00473f20 LoadTextures (2716 bytes)</title></rect>
@@ -2938,7 +2938,7 @@
 <rect width="4.36" height="3.71" x="655.11" y="438.16" class="named"><title>0x00455ea0 BridgeFlatFloor (42 bytes)</title></rect>
 <rect width="4.36" height="3.71" x="655.11" y="444.87" class="named"><title>0x0045faa0 SOUND_Init (42 bytes)</title></rect>
 <rect width="4.36" height="3.71" x="655.11" y="451.58" class="named"><title>0x0046c730 twentyfour_init (42 bytes)</title></rect>
-<rect width="4.36" height="3.71" x="655.11" y="458.29" class="todo"><title>0x00473da0 FileSize (42 bytes)</title></rect>
+<rect width="4.36" height="3.71" x="655.11" y="458.29" class="named"><title>0x00473da0 FileSize (42 bytes)</title></rect>
 <rect width="3.92" height="4.14" x="662.47" y="376.94" class="named"><title>0x00484b60 REG_WriteBool (42 bytes)</title></rect>
 <rect width="3.83" height="4.14" x="669.39" y="376.94" class="named"><title>0x00420d50 lara_as_duckl (41 bytes)</title></rect>
 <rect width="3.83" height="4.14" x="676.22" y="376.94" class="named"><title>0x00420d80 lara_as_duckr (41 bytes)</title></rect>

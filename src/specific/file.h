@@ -11,5 +11,6 @@ extern char *FileData;
 
 FILE *FileOpen(const char *name);
 void FileClose(FILE *file);
+sint32 FileSize(FILE *file);
 
 #endif
