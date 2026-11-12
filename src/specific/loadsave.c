@@ -19,6 +19,16 @@
 #include "../savegame.h"
 #include "gamemain.h"
 
+void RGBM_Mono(uint8 *r, uint8 *g, uint8 *b)
+{
+    sint16 c;
+
+    c = (sint16)(*r + *b) >> 1;
+    *r = (uint8)c;
+    *g = (uint8)c;
+    *b = (uint8)c;
+}
+
 void CreateMonoScreen(void)
 {
     MonoScreenOn = 1;

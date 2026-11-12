@@ -19,6 +19,7 @@ void GetSaveLoadFiles(void);
 sint32 DoLoadSave(sint32 LoadSave);
 void S_InitLoadBar(sint32 maxpos);
 void DoBar(sint32 x, sint32 y, sint32 width, sint32 height, sint32 pos, sint32 clr1, sint32 clr2);
+void RGBM_Mono(uint8 *r, uint8 *g, uint8 *b);
 void ConvertSurfaceToTextures(LPDIRECTDRAWSURFACE4 surface);
 void S_LoadBar(void);
 sint32 S_PauseMenu(void);

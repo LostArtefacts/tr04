@@ -1247,6 +1247,7 @@ address,size,name,symbol
 0x004793b0,939,InitItemDynamicLighting,_InitItemDynamicLighting
 0x00479760,92,ClearDynamicLighting,_ClearDynamicLighting
 0x004797c0,1053,MemBltSurf,_MemBltSurf
+0x00479be0,35,RGBM_Mono,_RGBM_Mono
 0x00479c10,775,ConvertSurfaceToTextures,_ConvertSurfaceToTextures
 0x00479f20,20,CreateMonoScreen,_CreateMonoScreen
 0x00479f40,727,FreeMonoScreen,_FreeMonoScreen
