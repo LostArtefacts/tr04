@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="170.23" height="12" x="0" y="0" class="named"><title>770 · 49.77%</title></rect>
-<rect width="0.44" height="12" x="170.23" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="170.67" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="164.92" height="12" x="177.08" y="0" class="todo"><title>746 · 48.22%</title></rect>
+<rect width="170.45" height="12" x="0" y="0" class="named"><title>771 · 49.84%</title></rect>
+<rect width="0.44" height="12" x="170.45" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="170.89" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="164.70" height="12" x="177.30" y="0" class="todo"><title>745 · 48.16%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">49.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">770</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">746</tspan></text>
+<text text-anchor="end" x="522" y="7.50">50.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">771</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">745</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.03" height="12" x="0" y="0" class="named"><title>138 KB · 22.23%</title></rect>
-<rect width="0.12" height="12" x="76.03" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.15" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="257.20" height="12" x="84.80" y="0" class="todo"><title>467 KB · 75.20%</title></rect>
+<rect width="76.04" height="12" x="0" y="0" class="named"><title>138 KB · 22.23%</title></rect>
+<rect width="0.12" height="12" x="76.04" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.16" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="257.19" height="12" x="84.81" y="0" class="todo"><title>467 KB · 75.20%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">138 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">467 KB</tspan></text>
@@ -700,7 +700,7 @@
 <rect width="12" height="12" x="465" y="180" class="named"><title>0x0043e580 combine_PuzzleItem6 (17 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="180" class="named"><title>0x0043e5a0 combine_PuzzleItem7 (17 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="180" class="named"><title>0x0043e5c0 combine_PuzzleItem8 (17 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="180" class="todo"><title>0x0043e5e0 combine_KeyItem1 (17 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="180" class="named"><title>0x0043e5e0 combine_KeyItem1 (17 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="180" class="todo"><title>0x0043e600 combine_KeyItem2 (17 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="180" class="todo"><title>0x0043e620 combine_KeyItem3 (17 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="180" class="todo"><title>0x0043e640 combine_KeyItem4 (17 bytes)</title></rect>
@@ -3081,7 +3081,7 @@
 <rect width="2.49" height="2.63" x="706.05" y="415.60" class="named"><title>0x0043e580 combine_PuzzleItem6 (17 bytes)</title></rect>
 <rect width="2.49" height="2.63" x="711.54" y="415.60" class="named"><title>0x0043e5a0 combine_PuzzleItem7 (17 bytes)</title></rect>
 <rect width="2.49" height="2.63" x="717.04" y="415.60" class="named"><title>0x0043e5c0 combine_PuzzleItem8 (17 bytes)</title></rect>
-<rect width="2.49" height="2.63" x="722.53" y="415.60" class="todo"><title>0x0043e5e0 combine_KeyItem1 (17 bytes)</title></rect>
+<rect width="2.49" height="2.63" x="722.53" y="415.60" class="named"><title>0x0043e5e0 combine_KeyItem1 (17 bytes)</title></rect>
 <rect width="2.49" height="2.63" x="728.03" y="415.60" class="todo"><title>0x0043e600 combine_KeyItem2 (17 bytes)</title></rect>
 <rect width="2.49" height="2.63" x="733.52" y="415.60" class="todo"><title>0x0043e620 combine_KeyItem3 (17 bytes)</title></rect>
 <rect width="2.49" height="2.63" x="739.01" y="415.60" class="todo"><title>0x0043e640 combine_KeyItem4 (17 bytes)</title></rect>

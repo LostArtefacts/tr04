@@ -81,3 +81,9 @@ void combine_PuzzleItem8(sint32 flag)
     lara.puzzleitemscombo &= ~0xC000;
     lara.puzzleitems[7] = 1;
 }
+
+void combine_KeyItem1(sint32 flag)
+{
+    lara.keyitems |= 0x1;
+    lara.keyitemscombo &= ~0x3;
+}
