@@ -2015,6 +2015,7 @@ address,size,name,symbol
 0x004ad334,24,FloorTrapDoorBounds,_FloorTrapDoorBounds
 0x004ad350,12,CeilingTrapDoorPos,_CeilingTrapDoorPos
 0x004ad35c,24,CeilingTrapDoorBounds,_CeilingTrapDoorBounds
+0x004ad374,32,Flame3xzoffs,_Flame3xzoffs
 0x004ad394,16,SPxzoffs,_SPxzoffs
 0x004ad3a4,16,SPyoffs,_SPyoffs
 0x004ad3b4,16,SPDETyoffs,_SPDETyoffs

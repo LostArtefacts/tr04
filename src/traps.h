@@ -63,5 +63,6 @@ void DrawScaledSpike(ITEM_INFO *item);
 
 extern sint16 floor_fires[48];
 extern sint16 deadly_floor_fires[8];
+extern uint8 Flame3xzoffs[16][2];
 
 #endif
