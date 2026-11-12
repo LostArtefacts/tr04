@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="235.66" height="12" x="0" y="0" class="named"><title>1066 · 68.91%</title></rect>
 <rect width="0.44" height="12" x="235.66" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="11.50" height="12" x="236.11" y="0" class="nonmatching"><title>52 · 3.36%</title></rect>
-<rect width="94.40" height="12" x="247.60" y="0" class="todo"><title>427 · 27.60%</title></rect>
+<rect width="11.72" height="12" x="236.11" y="0" class="nonmatching"><title>53 · 3.43%</title></rect>
+<rect width="94.18" height="12" x="247.82" y="0" class="todo"><title>426 · 27.54%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">69.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1066</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">52</tspan> · <tspan class="todo">427</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1066</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">53</tspan> · <tspan class="todo">426</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="108.85" height="12" x="0" y="0" class="named"><title>198 KB · 31.83%</title></rect>
 <rect width="0.12" height="12" x="108.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="19.17" height="12" x="108.97" y="0" class="nonmatching"><title>35 KB · 5.60%</title></rect>
-<rect width="213.86" height="12" x="128.14" y="0" class="todo"><title>388 KB · 62.53%</title></rect>
+<rect width="20.10" height="12" x="108.97" y="0" class="nonmatching"><title>36 KB · 5.88%</title></rect>
+<rect width="212.93" height="12" x="129.07" y="0" class="todo"><title>387 KB · 62.26%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">31.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">198 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">35 KB</tspan> · <tspan class="todo">388 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">198 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">36 KB</tspan> · <tspan class="todo">387 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -575,7 +575,7 @@
 <rect width="12" height="12" x="90" y="150" class="named"><title>0x00436320 ClearDynamics (29 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="150" class="nonmatching"><title>0x00436340 ControlSmokeEmitter (1462 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="150" class="named"><title>0x00436900 ControlColouredLights (173 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="150" class="todo"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="150" class="nonmatching"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="150" class="named"><title>0x00437050 ItemNearLara (140 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="150" class="named"><title>0x004370e0 SoundEffects (92 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="150" class="named"><title>0x00437140 Richochet (64 bytes)</title></rect>
@@ -1687,7 +1687,7 @@
 <rect width="26.81" height="24.72" x="149.89" y="409.56" class="todo"><title>0x004984e0 SW_TriSetupGTA (1717 bytes)</title></rect>
 <rect width="26.81" height="24.71" x="149.89" y="437.29" class="todo"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
 <rect width="24.78" height="26.28" x="179.70" y="0" class="todo"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
-<rect width="24.78" height="26.22" x="179.70" y="29.28" class="todo"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
+<rect width="24.78" height="26.22" x="179.70" y="29.28" class="nonmatching"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
 <rect width="24.78" height="26.19" x="179.70" y="58.50" class="todo"><title>0x00401080 AhmetControl (1681 bytes)</title></rect>
 <rect width="24.78" height="26.05" x="179.70" y="87.68" class="todo"><title>0x00490ff0 DXGetErrorString (1672 bytes)</title></rect>
 <rect width="24.78" height="25.95" x="179.70" y="116.73" class="todo"><title>0x00445ad0 ControlClockworkBeetle (1666 bytes)</title></rect>

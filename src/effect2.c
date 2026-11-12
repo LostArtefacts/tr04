@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "effect2.h"
 #include "control.h"
 #include "objnums.h"
@@ -6,6 +7,11 @@
 #include "tomb4fx.h"
 #include "gameflow.h"
 #include "effects.h"
+#include "missile.h"
+#include "seth.h"
+#include "demigod.h"
+#include "harpy.h"
+#include "croc.h"
 #include "draw.h"
 #include "traps.h"
 #include "specific/3dmath.h"
@@ -1006,5 +1012,142 @@ void ControlColouredLights(sint16 item_number)
     if (TriggerActive(item)) {
         objnum = item->object_number - RED_LIGHT;
         TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 24, colours[objnum][0], colours[objnum][1], colours[objnum][2]);
+    }
+}
+
+void ControlEnemyMissile(sint16 fx_number)
+{
+    FX_INFO *fx;
+    FLOOR_INFO *floor;
+    sint32 speed, ox, oy, oz, h, c;
+    sint16 room_number, max_speed, max_turn;
+    sint16 angles[2];
+
+    fx = &effects[fx_number];
+    phd_GetVectorAngles(lara_item->pos.x_pos - fx->pos.x_pos, lara_item->pos.y_pos - fx->pos.y_pos - 256, lara_item->pos.z_pos - fx->pos.z_pos, angles);
+    if (fx->flag1 == 1) {
+        max_turn = 512;
+        max_speed = 256;
+    } else if (fx->flag1 == 6) {
+        if (fx->counter)
+            fx->counter--;
+        max_turn = 256;
+        max_speed = 192;
+    } else {
+        max_turn = 768;
+        max_speed = 192;
+    }
+    if (fx->speed < max_speed) {
+        if (fx->flag1 == 6)
+            fx->speed++;
+        else
+            fx->speed += 3;
+        oy = (uint16)angles[0] - (uint16)fx->pos.y_rot;
+        if (abs(oy) > 0x8000)
+            oy = (uint16)fx->pos.y_rot - (uint16)angles[0];
+        ox = (uint16)angles[1] - (uint16)fx->pos.x_rot;
+        if (abs(ox) > 0x8000)
+            ox = (uint16)fx->pos.x_rot - (uint16)angles[0];
+        oy >>= 3;
+        ox >>= 3;
+        if (oy > max_turn)
+            oy = max_turn;
+        else if (oy < -max_turn)
+            oy = -max_turn;
+        if (ox > max_turn)
+            ox = max_turn;
+        else if (ox < -max_turn)
+            ox = -max_turn;
+        if (fx->flag1 != 4 && (fx->flag1 != 6 || !fx->counter))
+            fx->pos.y_rot += (sint16)oy;
+        fx->pos.x_rot += (sint16)ox;
+    }
+    fx->pos.z_rot += fx->speed << 4;
+    if (fx->flag1 == 6)
+        fx->pos.z_rot += fx->speed << 4;
+    ox = fx->pos.x_pos;
+    oy = fx->pos.y_pos;
+    oz = fx->pos.z_pos;
+    speed = ((rcossin_tbl[((fx->pos.x_rot >> 3) & 0x1FFE) + 1] << 2) * fx->speed) >> W2V_SHIFT;
+    fx->pos.x_pos += ((rcossin_tbl[(fx->pos.y_rot >> 3) & 0x1FFE] << 2) * speed) >> W2V_SHIFT;
+    fx->pos.y_pos += ((rcossin_tbl[(-fx->pos.x_rot >> 3) & 0x1FFE] << 2) * fx->speed) >> W2V_SHIFT;
+    fx->pos.z_pos += ((rcossin_tbl[((fx->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * speed) >> W2V_SHIFT;
+    room_number = fx->room_number;
+    floor = GetFloor(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, &room_number);
+    h = GetHeight(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
+    c = GetCeiling(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
+    if (fx->pos.y_pos < h && fx->pos.y_pos > c) {
+        if (ItemNearLara(&fx->pos, 200)) {
+            lara_item->hit_status = 1;
+            if (fx->flag1 != 6)
+                ExplodeFX(fx, 0, -32);
+            KillEffect(fx_number);
+            if (fx->flag1 == 1) {
+                TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xF00030, 64, 0x18008040, 0);
+                TriggerExplosionSparks(ox, oy, oz, 3, -2, 2, fx->room_number);
+                LaraBurn();
+                lara.BurnGreen = 1;
+            } else if (fx->flag1 == 0)
+                TriggerShockwave((PHD_VECTOR *)&fx->pos, 0x580018, 48, 0x10008040, ((uint8)~(uint8)room[fx->room_number].flags >> 4 & 2) << 16);
+            else if (fx->flag1 == 3 || fx->flag1 == 4)
+                TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xA00020, 64, 0x10004080, 0x10000);
+            else if (fx->flag1 == 5)
+                TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xA00020, 64, 0x10806000, 0x20000);
+            else if (fx->flag1 == 2)
+                TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xA00020, 64, 0x10808000, 0x20000);
+            else if (fx->flag1 == 6) {
+                TriggerExplosionSparks(ox, oy, oz, 3, -2, 0, fx->room_number);
+                TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xF00030, 64, 0x18806000, 0);
+                fx->pos.y_pos -= 128;
+                TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xF00030, 48, 0x10807000, 0);
+                fx->pos.y_pos += 256;
+                TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xF00030, 48, 0x10807000, 0);
+                LaraBurn();
+            }
+        } else {
+            if (room_number != fx->room_number)
+                EffectNewRoom(fx_number, room_number);
+            ox -= fx->pos.x_pos;
+            oy -= fx->pos.y_pos;
+            oz -= fx->pos.z_pos;
+            if (wibble & 4 || fx->flag1 == 1 || fx->flag1 == 5 || fx->flag1 == 2) {
+                if (fx->flag1 == 0)
+                    TriggerSethMissileFlame(fx_number, ox << 4, oy << 4, oz << 4);
+                else if (fx->flag1 == 1)
+                    TriggerSethMissileFlame(fx_number, ox << 5, oy << 5, oz << 5);
+                else if (fx->flag1 >= 3 && fx->flag1 <= 5)
+                    TriggerDemigodMissileFlame(fx_number, ox << 4, oy << 4, oz << 4);
+                else if (fx->flag1 == 2)
+                    TriggerHarpyMissileFlame(fx_number, ox << 4, oy << 4, oz << 4);
+                else if (fx->flag1 == 6)
+                    TriggerCrocgodMissileFlame(fx_number, ox << 4, oy << 4, oz << 4);
+            }
+        }
+    } else {
+        fx->pos.x_pos = ox;
+        fx->pos.y_pos = oy;
+        fx->pos.z_pos = oz;
+        if (fx->flag1 != 6)
+            ExplodeFX(fx, 0, -32);
+        if (fx->flag1 == 1) {
+            TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xA00020, 64, 0x18008040, ((uint8)~(uint8)room[fx->room_number].flags >> 4 & 2) << 16);
+            TriggerExplosionSparks(ox, oy, oz, 3, -2, 2, fx->room_number);
+        } else if (fx->flag1 == 0)
+            TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xA00020, 64, 0x10008040, 0);
+        else if (fx->flag1 == 3 || fx->flag1 == 4)
+            TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xA00020, 64, 0x10004080, 0);
+        else if (fx->flag1 == 5)
+            TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xA00020, 64, 0x10806000, 0);
+        else if (fx->flag1 == 2)
+            TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xA00020, 64, 0x10808000, 0);
+        else if (fx->flag1 == 6) {
+            TriggerExplosionSparks(ox, oy, oz, 3, -2, 0, fx->room_number);
+            TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xF00030, 64, 0x18806000, 0x20000);
+            fx->pos.y_pos -= 128;
+            TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xF00030, 48, 0x10807000, 0x20000);
+            fx->pos.y_pos += 256;
+            TriggerShockwave((PHD_VECTOR *)&fx->pos, 0xF00030, 48, 0x10807000, 0x20000);
+        }
+        KillEffect(fx_number);
     }
 }

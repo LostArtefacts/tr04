@@ -144,6 +144,7 @@ void UpdateSparks(void);
 void TriggerFlareSparks();
 void TriggerExplosionSparks(sint32 x, sint32 y, sint32 z, sint32 extras, sint32 dynamic, sint32 uw, sint16 room_number);
 void ControlSmokeEmitter(sint16 item_number);
+void ControlEnemyMissile(sint16 fx_number);
 
 extern sint32 wibble;
 extern sint32 KillEverythingFlag;
