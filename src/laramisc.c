@@ -69,3 +69,9 @@ void LaraCheatyBits(void)
         }
     }
 }
+
+void InitialiseLaraLoad(sint16 item_number)
+{
+    lara.item_number = item_number;
+    lara_item = &items[item_number];
+}
