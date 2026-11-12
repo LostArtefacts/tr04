@@ -169,6 +169,7 @@ void WinProcessCommandLine(LPSTR cmd);
 LRESULT CALLBACK WinMainWndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 void WinProcessCommands(sint32 cmd);
 void ClearSurfaces(void);
+void nullsub_11(void);
 
 extern WINAPP App;
 extern sint32 resChangeCounter;

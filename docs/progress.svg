@@ -46,13 +46,13 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="252.97" height="12" x="0" y="0" class="named"><title>1145 · 73.97%</title></rect>
-<rect width="0.66" height="12" x="252.97" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="18.56" height="12" x="253.63" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
-<rect width="69.81" height="12" x="272.19" y="0" class="todo"><title>316 · 20.41%</title></rect>
+<rect width="253.19" height="12" x="0" y="0" class="named"><title>1146 · 74.03%</title></rect>
+<rect width="0.66" height="12" x="253.19" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="18.56" height="12" x="253.85" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
+<rect width="69.59" height="12" x="272.41" y="0" class="todo"><title>315 · 20.35%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">74.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1145</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">316</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1146</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">315</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="136.99" height="12" x="0" y="0" class="named"><title>249 KB · 40.05%</title></rect>
@@ -1456,7 +1456,7 @@
 <rect width="12" height="12" x="555" y="405" class="named"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="405" class="named"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="405" class="todo"><title>0x0048f970 j_nullsub_11 (5 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="405" class="todo"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="405" class="named"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="405" class="todo"><title>0x0048f981 Func48f981 (13 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="405" class="todo"><title>0x0048f990 j_nullsub_12 (5 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="405" class="todo"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>
@@ -3163,7 +3163,7 @@
 <rect width="1.12" height="1" x="740.40" y="455.45" class="named"><title>0x004357b0 nullsub_1 (1 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="458.63" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="461" class="named"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>
-<rect width="1" height="1.78" x="744.51" y="455.45" class="todo"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
+<rect width="1" height="1.78" x="744.51" y="455.45" class="named"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="746" y="455.45" class="todo"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="744.51" y="460.22" class="todo"><title>0x0048f9c0 nullsub_13 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="746" y="460.22" class="named"><title>0x00490b20 nullsub_14 (1 bytes)</title></rect>
