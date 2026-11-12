@@ -87,6 +87,7 @@ sint32 CollideStaticObjects(COLL_INFO *coll, sint32 x, sint32 y, sint32 z, sint1
 sint32 ItemPushLaraStatic(ITEM_INFO *l, sint16 *bounds, PHD_3DPOS *pos, COLL_INFO *coll);
 void LaraBaddieCollision(ITEM_INFO *l, COLL_INFO *coll);
 sint32 ItemPushLaraStatic(ITEM_INFO *l, sint16 *bounds, PHD_3DPOS *pos, COLL_INFO *coll);
+sint32 Move3DPosTo3DPos(PHD_3DPOS *pos, PHD_3DPOS *dest, sint32 speed, PHD_ANGLE rotation);
 
 extern sint16 GlobalCollisionBounds[6];
 
