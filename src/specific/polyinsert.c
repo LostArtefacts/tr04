@@ -61,6 +61,10 @@ void InitialiseSortList(void)
     SortCount = 0;
 }
 
+void nullsub_10(void)
+{
+}
+
 void ClearFXFogBulbs(void)
 {
     sint32 i;

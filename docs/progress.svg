@@ -46,13 +46,13 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="252.08" height="12" x="0" y="0" class="named"><title>1141 · 73.71%</title></rect>
-<rect width="0.66" height="12" x="252.08" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="18.56" height="12" x="252.74" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
-<rect width="70.70" height="12" x="271.30" y="0" class="todo"><title>320 · 20.67%</title></rect>
+<rect width="252.30" height="12" x="0" y="0" class="named"><title>1142 · 73.77%</title></rect>
+<rect width="0.66" height="12" x="252.30" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="18.56" height="12" x="252.97" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
+<rect width="70.48" height="12" x="271.52" y="0" class="todo"><title>319 · 20.61%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">73.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1141</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">320</tspan></text>
+<text text-anchor="end" x="522" y="7.50">74.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1142</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">319</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="136.98" height="12" x="0" y="0" class="named"><title>249 KB · 40.05%</title></rect>
@@ -1360,7 +1360,7 @@
 <rect width="12" height="12" x="615" y="375" class="named"><title>0x00481810 SortPolyList (70 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="375" class="named"><title>0x00481860 InitialiseSortList (31 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="375" class="todo"><title>0x00481880 j_nullsub_10 (5 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="375" class="todo"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="375" class="named"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="375" class="named"><title>0x004818a0 ClearFXFogBulbs (32 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="375" class="named"><title>0x004818c0 ControlFXBulb (232 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="375" class="named"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
@@ -3162,7 +3162,7 @@
 <rect width="1.03" height="1.78" x="736.37" y="460.22" class="todo"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="455.45" class="named"><title>0x004357b0 nullsub_1 (1 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="458.63" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
-<rect width="1.12" height="1" x="740.40" y="461" class="todo"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>
+<rect width="1.12" height="1" x="740.40" y="461" class="named"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="744.51" y="455.45" class="todo"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="746" y="455.45" class="todo"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>
 <rect width="1" height="1.78" x="744.51" y="460.22" class="todo"><title>0x0048f9c0 nullsub_13 (1 bytes)</title></rect>
