@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="201.62" height="12" x="0" y="0" class="named"><title>912 · 58.95%</title></rect>
-<rect width="0.44" height="12" x="201.62" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="202.06" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="133.31" height="12" x="208.69" y="0" class="todo"><title>603 · 38.98%</title></rect>
+<rect width="201.84" height="12" x="0" y="0" class="named"><title>913 · 59.02%</title></rect>
+<rect width="0.44" height="12" x="201.84" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="202.28" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="133.09" height="12" x="208.91" y="0" class="todo"><title>602 · 38.91%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">59.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">912</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">603</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">913</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">602</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="87.23" height="12" x="0" y="0" class="named"><title>158 KB · 25.51%</title></rect>
-<rect width="0.12" height="12" x="87.23" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="87.35" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="245.74" height="12" x="96.26" y="0" class="todo"><title>446 KB · 71.85%</title></rect>
+<rect width="87.28" height="12" x="0" y="0" class="named"><title>158 KB · 25.52%</title></rect>
+<rect width="0.12" height="12" x="87.28" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="87.40" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="245.69" height="12" x="96.31" y="0" class="todo"><title>446 KB · 71.84%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">25.5%</text>
+<text text-anchor="end" x="522" y="24.50">25.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">158 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">446 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -163,7 +163,7 @@
 <rect width="12" height="12" x="660" y="15" class="todo"><title>0x0040f030 SmlscorpControl (717 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="15" class="todo"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="15" class="todo"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="15" class="todo"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="15" class="named"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="15" class="todo"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="15" class="todo"><title>0x0040f600 InitialiseGameStix (42 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="30" class="todo"><title>0x0040f630 GameStixControl (1436 bytes)</title></rect>
@@ -2746,7 +2746,7 @@
 <rect width="5.84" height="5.36" x="607.34" y="398.46" class="named"><title>0x0043e480 combine_crossbow_lasersight (81 bytes)</title></rect>
 <rect width="5.84" height="5.36" x="607.34" y="406.82" class="named"><title>0x00441f20 CreatureJoint (81 bytes)</title></rect>
 <rect width="5.84" height="5.36" x="607.34" y="415.18" class="named"><title>0x0045a2e0 sgSaveGame (81 bytes)</title></rect>
-<rect width="5.84" height="5.29" x="607.34" y="423.54" class="todo"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
+<rect width="5.84" height="5.29" x="607.34" y="423.54" class="named"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
 <rect width="5.84" height="5.29" x="607.34" y="431.83" class="named"><title>0x00438510 AddFire (80 bytes)</title></rect>
 <rect width="5.84" height="5.29" x="607.34" y="440.12" class="todo"><title>0x0043af80 UpdateLightning (80 bytes)</title></rect>
 <rect width="5.84" height="5.29" x="607.34" y="448.42" class="named"><title>0x0043ca90 insert_object_into_list (80 bytes)</title></rect>

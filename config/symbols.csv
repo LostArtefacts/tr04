@@ -2202,6 +2202,7 @@ address,size,name,symbol
 0x004bf3fa,2,GlobalCounter,_GlobalCounter
 0x004bf3fc,1,TriggerTimer,_TriggerTimer
 0x004bf3fe,2,SmashedMeshCount,_SmashedMeshCount
+0x004bf400,12,senet_item,_senet_item
 0x004bf40c,1,last_throw,_last_throw
 0x004bf410,4,fliptimer,_fliptimer
 0x004bf414,4,reset_flag,_reset_flag
@@ -2615,6 +2616,7 @@ address,size,name,symbol
 0x007fe14c,2,dLightningRand,_dLightningRand
 0x007fe150,4,outside_top,_outside_top
 0x007fe154,,HeavyTriggered,_HeavyTriggered
+0x007fe158,6,senet_piece,_senet_piece
 0x007fe160,4,SetDebounce,_SetDebounce
 0x007fe180,128,cd_flags,_cd_flags
 0x007fe200,4,OnObject,_OnObject
@@ -2635,6 +2637,7 @@ address,size,name,symbol
 0x007fe2e8,4,OutsideRoomOffsets,_OutsideRoomOffsets
 0x007fe300,40,flip_stats,_flip_stats
 0x007fe330,,ClosestCoord,_ClosestCoord
+0x007fe340,17,senet_board,_senet_board
 0x007fe360,32,SmashedMeshRoom,_SmashedMeshRoom
 0x007fe380,4,ClosestDist,_ClosestDist
 0x007fe384,4,OutsideRoomTable,_OutsideRoomTable
