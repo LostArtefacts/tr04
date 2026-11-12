@@ -129,3 +129,9 @@ void combine_KeyItem8(sint32 flag)
     lara.keyitems |= 0x80;
     lara.keyitemscombo &= ~0xC000;
 }
+
+void combine_PickupItem1(sint32 flag)
+{
+    lara.pickupitems |= 0x1;
+    lara.pickupitemscombo &= ~0x3;
+}
