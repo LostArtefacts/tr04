@@ -8,6 +8,9 @@
 #include "lara_states.h"
 #include "lot.h"
 #include "objnums.h"
+#include "people.h"
+#include "effects.h"
+#include "specific/3dmath.h"
 #include "sound.h"
 #include "sphere.h"
 #include "switch.h"
@@ -26,6 +29,180 @@ void InitialiseAhmet(sint16 item_number)
     item->item_flags[0] = (sint16)(item->pos.x_pos >> 10);
     item->item_flags[1] = (sint16)(item->pos.y_pos >> 8);
     item->item_flags[2] = (sint16)(item->pos.z_pos >> 10);
+}
+
+void AhmetControl(sint16 item_number)
+{
+    ITEM_INFO *item, *enemy;
+    CREATURE_INFO *ahmet;
+    FLOOR_INFO *floor;
+    AI_INFO info, larainfo;
+    sint32 dx, dz, frame, base;
+    sint16 angle, head, room_number;
+
+    if (!CreatureActive(item_number))
+        return;
+    item = &items[item_number];
+    if (item->trigger_flags == 1) {
+        item->trigger_flags = 0;
+        return;
+    }
+    ahmet = (CREATURE_INFO *)item->data;
+    angle = 0;
+    head = 0;
+    if (item->hit_points <= 0) {
+        if (item->current_anim_state != 7) {
+            item->anim_number = objects[item->object_number].anim_index + 10;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = 7;
+            lara.GeneralPtr = (void *)item_number;
+        } else if (item->frame_number == anims[item->anim_number].frame_end) {
+            item->frame_number = anims[item->anim_number].frame_end - 1;
+            return;
+        }
+        ExplodeAhmet(item);
+    } else {
+        if (item->ai_bits)
+            GetAITarget(ahmet);
+        CreatureAIInfo(item, &info);
+        if (ahmet->enemy == lara_item) {
+            larainfo.angle = info.angle;
+            larainfo.distance = info.distance;
+        } else {
+            dz = lara_item->pos.z_pos - item->pos.z_pos;
+            dx = lara_item->pos.x_pos - item->pos.x_pos;
+            larainfo.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+            larainfo.distance = SQUARE(dx) + SQUARE(dz);
+        }
+        GetCreatureMood(item, &info, 1);
+        CreatureMood(item, &info, 1);
+        angle = CreatureTurn(item, ahmet->maximum_turn);
+        enemy = ahmet->enemy;
+        ahmet->enemy = lara_item;
+        if (larainfo.distance < 0x100000 || item->hit_status || TargetVisible(item, &larainfo))
+            AlertAllGuards(item_number);
+        ahmet->enemy = enemy;
+        if (info.ahead)
+            head = info.angle;
+        switch (item->current_anim_state) {
+        case 1:
+            ahmet->maximum_turn = 0;
+            ahmet->flags = 0;
+            if (item->ai_bits & GUARD) {
+                head = AIGuard(ahmet);
+                item->goal_anim_state = 1;
+            } else if (item->ai_bits & PATROL1) {
+                item->goal_anim_state = 2;
+                head = 0;
+            } else if (ahmet->mood == BORED_MOOD || ahmet->mood == ESCAPE_MOOD) {
+                if (lara.target != item && info.ahead)
+                    item->goal_anim_state = 1;
+                else
+                    item->goal_anim_state = 3;
+            } else if (info.bite && info.distance < 0x718E4)
+                item->goal_anim_state = 4;
+            else if (info.angle < 0x2000 && info.angle > -0x2000 && info.distance < 0x190000) {
+                if (GetRandomControl() & 1)
+                    item->goal_anim_state = 5;
+                else
+                    item->goal_anim_state = 6;
+            } else if (item->required_anim_state)
+                item->goal_anim_state = item->required_anim_state;
+            else if (info.ahead && info.distance < 0x640000)
+                item->goal_anim_state = 2;
+            else
+                item->goal_anim_state = 3;
+            break;
+        case 2:
+            ahmet->maximum_turn = 910;
+            if (item->ai_bits & PATROL1) {
+                item->goal_anim_state = 2;
+                head = 0;
+            } else if (info.bite && info.distance < 0x190000)
+                item->goal_anim_state = 1;
+            else if (ahmet->mood == ESCAPE_MOOD || info.distance > 0x640000 || !info.ahead ||
+                     info.enemy_facing > -0x4000 || info.enemy_facing < 0x4000)
+                item->goal_anim_state = 3;
+            break;
+        case 3:
+            ahmet->maximum_turn = 1456;
+            if (item->ai_bits & GUARD || ahmet->mood == BORED_MOOD ||
+                (ahmet->mood == ESCAPE_MOOD && lara.target != item && info.ahead) ||
+                (info.bite && info.distance < 0x190000))
+                item->goal_anim_state = 1;
+            else if (info.distance < 0x640000 && info.ahead && (info.enemy_facing < -0x4000 || info.enemy_facing > 0x4000))
+                item->goal_anim_state = 2;
+            ahmet->flags = 0;
+            break;
+        case 4:
+            ahmet->maximum_turn = 0;
+            if (abs(info.angle) < 910)
+                item->pos.y_rot += info.angle;
+            else if (info.angle < 0)
+                item->pos.y_rot -= 910;
+            else
+                item->pos.y_rot += 910;
+            base = anims[item->anim_number].frame_base;
+            frame = item->frame_number;
+            if (frame > base + 7 && !(ahmet->flags & 1) && item->touch_bits & 0x3C000) {
+                lara_item->hit_status = 1;
+                lara_item->hit_points -= 80;
+                CreatureEffectT(item, &ahmet_left_claw, 10, -1, DoBloodSplat);
+                ahmet->flags |= 1;
+            } else if (frame > base + 32 && !(ahmet->flags & 2) && item->touch_bits & 0xF00000) {
+                lara_item->hit_status = 1;
+                lara_item->hit_points -= 80;
+                CreatureEffectT(item, &ahmet_right_claw, 10, -1, DoBloodSplat);
+                ahmet->flags |= 2;
+            }
+            break;
+        case 6:
+            ahmet->maximum_turn = 0;
+            if (item->anim_number == objects[AHMET].anim_index + 7) {
+                if (abs(info.angle) < 910)
+                    item->pos.y_rot += info.angle;
+                else if (info.angle < 0)
+                    item->pos.y_rot -= 910;
+                else
+                    item->pos.y_rot += 910;
+            } else if (item->frame_number > anims[item->anim_number].frame_base + 21 && !(ahmet->flags & 1) && item->touch_bits & 0x3C000) {
+                lara_item->hit_status = 1;
+                lara_item->hit_points -= 80;
+                CreatureEffectT(item, &ahmet_left_claw, 10, -1, DoBloodSplat);
+                ahmet->flags |= 1;
+            } else if (item->frame_number > anims[item->anim_number].frame_base + 14 && !(ahmet->flags & 2) && item->touch_bits & 0xF00000) {
+                lara_item->hit_status = 1;
+                lara_item->hit_points -= 80;
+                CreatureEffectT(item, &ahmet_right_claw, 10, -1, DoBloodSplat);
+                ahmet->flags |= 2;
+            }
+            break;
+        case 5:
+            ahmet->maximum_turn = 0;
+            if (item->anim_number == objects[AHMET].anim_index + 3) {
+                if (abs(info.angle) < 910)
+                    item->pos.y_rot += info.angle;
+                else if (info.angle < 0)
+                    item->pos.y_rot -= 910;
+                else
+                    item->pos.y_rot += 910;
+            } else if (!ahmet->flags && item->anim_number == objects[AHMET].anim_index + 4 &&
+                       item->frame_number > anims[item->anim_number].frame_base + 11 && item->touch_bits & 0xC00) {
+                lara_item->hit_status = 1;
+                lara_item->hit_points -= 120;
+                CreatureEffectT(item, &ahmet_bite, 20, -1, DoBloodSplat);
+                ahmet->flags = 1;
+            }
+            break;
+        }
+    }
+    CreatureTilt(item, 0);
+    CreatureJoint(item, 0, head);
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    TestTriggers(trigger_index, 1, 0);
+    CreatureAnimation(item_number, angle, 0);
 }
 
 void ExplodeAhmet(ITEM_INFO *item)

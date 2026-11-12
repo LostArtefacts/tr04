@@ -3,13 +3,18 @@
 
 #include "items.h"
 #include "collide.h"
+#include "box.h"
 
 void InitialiseAhmet(sint16 item_number);
 void ExplodeAhmet(ITEM_INFO *item);
 sint32 ReTriggerAhmet(sint16 item_number);
 void ScalesControl(sint16 item_number);
 void ScalesCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
+void AhmetControl(sint16 item_number);
 
+extern BITE_INFO ahmet_bite;
+extern BITE_INFO ahmet_left_claw;
+extern BITE_INFO ahmet_right_claw;
 extern sint16 ScalesBounds[12];
 
 #endif

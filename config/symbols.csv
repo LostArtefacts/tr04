@@ -1,6 +1,6 @@
 address,size,name,symbol
 0x00401000,118,InitialiseAhmet,_InitialiseAhmet
-0x00401080,1681,AhmetControl,_AhmetControl
+0x00401080,1708,AhmetControl,_AhmetControl
 0x00401730,164,ExplodeAhmet,_ExplodeAhmet
 0x004017e0,426,ScalesControl,_ScalesControl
 0x00401990,302,ReTriggerAhmet,_ReTriggerAhmet
@@ -1992,6 +1992,9 @@ address,size,name,symbol
 0x004aa150,16,IID_IDirectInput2A,_IID_IDirectInput2A
 0x004aa190,16,IID_IDirectInputDevice2A,_IID_IDirectInputDevice2A
 0x004aa280,16,GUID_SysKeyboard,_GUID_SysKeyboard
+0x004ad050,16,ahmet_bite,_ahmet_bite
+0x004ad060,16,ahmet_left_claw,_ahmet_left_claw
+0x004ad070,16,ahmet_right_claw,_ahmet_right_claw
 0x004ad080,24,ScalesBounds,_ScalesBounds
 0x004ad0a8,16,bat_bite,_bat_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
