@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="226.60" height="12" x="0" y="0" class="named"><title>1025 · 66.26%</title></rect>
-<rect width="0.44" height="12" x="226.60" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="227.04" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="106.56" height="12" x="235.44" y="0" class="todo"><title>482 · 31.16%</title></rect>
+<rect width="226.82" height="12" x="0" y="0" class="named"><title>1026 · 66.32%</title></rect>
+<rect width="0.44" height="12" x="226.82" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="227.26" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="106.34" height="12" x="235.66" y="0" class="todo"><title>481 · 31.09%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">66.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1025</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">482</tspan></text>
+<text text-anchor="end" x="522" y="7.50">66.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1026</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">481</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="98.87" height="12" x="0" y="0" class="named"><title>179 KB · 28.91%</title></rect>
-<rect width="0.12" height="12" x="98.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="98.99" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="232.85" height="12" x="109.15" y="0" class="todo"><title>422 KB · 68.08%</title></rect>
+<rect width="99.06" height="12" x="0" y="0" class="named"><title>180 KB · 28.97%</title></rect>
+<rect width="0.12" height="12" x="99.06" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="99.18" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="232.66" height="12" x="109.34" y="0" class="todo"><title>422 KB · 68.03%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">28.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">179 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">422 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">29.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">180 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">422 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -266,7 +266,7 @@
 <rect width="12" height="12" x="705" y="45" class="named"><title>0x0041fdd0 InitialiseHair (126 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="45" class="todo"><title>0x0041fe50 HairControl (2569 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="45" class="named"><title>0x00420870 GetCorrectStashPoints (176 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="60" class="todo"><title>0x00420920 DrawHair (338 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="60" class="named"><title>0x00420920 DrawHair (338 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="60" class="named"><title>0x00420a80 LaraCeilingFront (133 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="60" class="todo"><title>0x00420b10 LaraAboveWater (571 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="60" class="named"><title>0x00420d50 lara_as_duckl (41 bytes)</title></rect>
@@ -2130,7 +2130,7 @@
 <rect width="11.15" height="11.78" x="428.86" y="217.53" class="named"><title>0x00421e90 LaraTestHangOnClimbWall (340 bytes)</title></rect>
 <rect width="11.15" height="11.78" x="428.86" y="232.31" class="todo"><title>0x0047d900 PrelightVerts (340 bytes)</title></rect>
 <rect width="11.15" height="11.74" x="428.86" y="247.08" class="named"><title>0x004357c0 TriggerRocketSmoke (339 bytes)</title></rect>
-<rect width="11.15" height="11.71" x="428.86" y="261.82" class="todo"><title>0x00420920 DrawHair (338 bytes)</title></rect>
+<rect width="11.15" height="11.71" x="428.86" y="261.82" class="named"><title>0x00420920 DrawHair (338 bytes)</title></rect>
 <rect width="11.15" height="11.67" x="428.86" y="276.53" class="todo"><title>0x0041c360 TriggerWraithFlame (337 bytes)</title></rect>
 <rect width="11.15" height="11.64" x="428.86" y="291.20" class="named"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
 <rect width="11.15" height="11.64" x="428.86" y="305.84" class="todo"><title>0x00499ac0 Func499ac0 (336 bytes)</title></rect>
