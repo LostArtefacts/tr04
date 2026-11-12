@@ -432,6 +432,11 @@ void RestoreFPCW(sint16 fpcw)
     }
 }
 
+void j_nullsub_11(void)
+{
+    nullsub_11();
+}
+
 void nullsub_11(void)
 {
 }
