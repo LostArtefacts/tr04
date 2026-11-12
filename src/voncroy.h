@@ -2,6 +2,7 @@
 #define VONCROY_H
 
 #include "items.h"
+#include "box.h"
 
 extern uint8 VonCroyCutFlags[64];
 extern char bVoncroyCutScene;
@@ -12,5 +13,6 @@ extern PHD_VECTOR actualCameraPos;
 
 void InitialiseVoncroy(sint16 item_number);
 void ClearCutSceneCamera(void);
+void GetAIEnemy(CREATURE_INFO *info, sint32 tfl);
 
 #endif

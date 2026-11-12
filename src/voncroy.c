@@ -24,6 +24,35 @@ void ClearCutSceneCamera(void)
     camera.type = CHASE_CAMERA;
 }
 
+void GetAIEnemy(CREATURE_INFO *info, sint32 tfl)
+{
+    AIOBJECT *ai;
+    ITEM_INFO *target;
+    sint32 i;
+
+    ai = AIObjects;
+    for (i = 0; i < nAIObjects; i++, ai++) {
+        if (ai->trigger_flags == tfl && ai->room_number != 255) {
+            target = &info->ai_target;
+            info->enemy = target;
+            target->object_number = ai->object_number;
+            target->room_number = ai->room_number;
+            target->pos.x_pos = ai->x;
+            target->pos.y_pos = ai->y;
+            target->pos.z_pos = ai->z;
+            target->pos.y_rot = ai->y_rot;
+            target->flags = ai->flags;
+            target->trigger_flags = ai->trigger_flags;
+            target->box_number = ai->box_number;
+            if (!(target->flags & IFL_TRIGGERED)) {
+                target->pos.x_pos += ((rcossin_tbl[(target->pos.y_rot >> 3) & 0x1FFE] << 2) * 256) >> W2V_SHIFT;
+                target->pos.z_pos += ((rcossin_tbl[((target->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * 256) >> W2V_SHIFT;
+            }
+            return;
+        }
+    }
+}
+
 void InitialiseVoncroy(sint16 item_number)
 {
     ITEM_INFO *item;
