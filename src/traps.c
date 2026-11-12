@@ -353,6 +353,81 @@ void DartsControl(sint16 item_number)
     }
 }
 
+void FlameEmitterControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    uint32 distance;
+    sint32 x, z, r, g;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        if (item->trigger_flags < 0) {
+            if ((-item->trigger_flags & 7) == 2 || (-item->trigger_flags & 7) == 7) {
+                SoundEffect(SFX_FLAME_EMITTER, &item->pos, 0);
+                r = (GetRandomControl() & 0x3F) + 192;
+                g = (GetRandomControl() & 0x1F) + 96;
+                TriggerSuperJetFlame(item, -256 - (3072 * GlobalCounter & 0x1C00), GlobalCounter & 1);
+                TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, (GetRandomControl() & 3) + 20, r, g, 0);
+            } else {
+                if (item->item_flags[0]) {
+                    if (item->item_flags[1])
+                        item->item_flags[1] -= item->item_flags[1] >> 2;
+                    if (item->item_flags[2] < 256)
+                        item->item_flags[2] += 8;
+                    item->item_flags[0]--;
+                    if (!item->item_flags[0])
+                        item->item_flags[3] = (GetRandomControl() & 0x3F) + 150;
+                } else {
+                    item->item_flags[3]--;
+                    if (!item->item_flags[3]) {
+                        x = -item->trigger_flags >> 3;
+                        if (x)
+                            item->item_flags[0] = (GetRandomControl() & 0x1F) + 30 * x;
+                        else
+                            item->item_flags[0] = (GetRandomControl() & 0x3F) + 60;
+                    }
+                    if (item->item_flags[2])
+                        item->item_flags[2] -= 8;
+                    if (item->item_flags[1] > -8192)
+                        item->item_flags[1] -= 512;
+                }
+                if (item->item_flags[2])
+                    AddFire(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 0, item->room_number, item->item_flags[2] & 0xFF);
+                if (item->item_flags[1]) {
+                    SoundEffect(SFX_FLAME_EMITTER, &item->pos, 0);
+                    if (item->item_flags[1] > -8192)
+                        TriggerSuperJetFlame(item, item->item_flags[1], GlobalCounter & 1);
+                    else
+                        TriggerSuperJetFlame(item, -256 - (3072 * GlobalCounter & 0x1C00), GlobalCounter & 1);
+                    r = (GetRandomControl() & 0x3F) + 192;
+                    g = (GetRandomControl() & 0x1F) + 96;
+                    TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, (-item->item_flags[1] >> 10) - (GetRandomControl() & 1) + 16, r, g, 0);
+                } else {
+                    r = (GetRandomControl() & 0x3F) + 192;
+                    g = (GetRandomControl() & 0x1F) + 96;
+                    TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 10 - (GetRandomControl() & 1), r, g, 0);
+                }
+            }
+            SoundEffect(SFX_LOOP_FOR_SMALL_FIRES, &item->pos, 0);
+        } else {
+            LibraryTab[item->trigger_flags] = 1;
+            AddFire(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 2, item->room_number, 0);
+            r = (GetRandomControl() & 0x3F) + 192;
+            g = (GetRandomControl() & 0x1F) + 96;
+            TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 16 - (GetRandomControl() & 1), r, g, 0);
+            SoundEffect(SFX_LOOP_FOR_SMALL_FIRES, &item->pos, 0);
+            if (!lara.burn && ItemNearLara(&item->pos, 600)) {
+                x = lara_item->pos.x_pos - item->pos.x_pos;
+                z = lara_item->pos.z_pos - item->pos.z_pos;
+                distance = z * z + x * x;
+                if (distance < 0x40000)
+                    LaraBurn();
+            }
+        }
+    } else if (item->trigger_flags >= 0)
+        LibraryTab[item->trigger_flags] = 0;
+}
+
 void FlameEmitter2Control(sint16 item_number)
 {
     ITEM_INFO *item;
