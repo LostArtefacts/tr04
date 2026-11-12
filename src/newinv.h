@@ -13,6 +13,7 @@ void combine_PuzzleItem1(sint32 flag);
 void combine_PuzzleItem2(sint32 flag);
 void combine_PuzzleItem3(sint32 flag);
 void combine_PuzzleItem4(sint32 flag);
+void combine_PuzzleItem5(sint32 flag);
 
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;

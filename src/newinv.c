@@ -57,3 +57,9 @@ void combine_PuzzleItem4(sint32 flag)
     lara.puzzleitemscombo &= ~0xC0;
     lara.puzzleitems[3] = 1;
 }
+
+void combine_PuzzleItem5(sint32 flag)
+{
+    lara.puzzleitemscombo &= ~0x300;
+    lara.puzzleitems[4] = 1;
+}
