@@ -748,7 +748,7 @@ address,size,name,symbol
 0x0044aa20,295,RefreshCamera,_RefreshCamera
 0x0044ab50,2659,TestTriggers,_TestTriggers
 0x0044b620,112,TriggerActive,_TriggerActive
-0x0044b690,1119,GetCeiling,_GetCeiling
+0x0044b690,1153,GetCeiling,_GetCeiling
 0x0044bb20,178,GetDoor,_GetDoor
 0x0044bbe0,152,LOS,_LOS
 0x0044bc80,841,zLOS,_zLOS

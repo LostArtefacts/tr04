@@ -414,6 +414,148 @@ sint32 TriggerActive(ITEM_INFO *item)
     return ok;
 }
 
+sint32 GetCeiling(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z)
+{
+    ITEM_INFO *item;
+    ROOM_INFO *r;
+    FLOOR_INFO *f;
+    sint32 xoff, yoff, height;
+    sint16 *data, type, trigger, tilts, dx, dz, t0, t1, t2, t3, hadj, ended;
+
+    f = floor;
+    while (f->sky_room != NO_ROOM) {
+        if (CheckNoColCeilingTriangle(floor, x, z) == 1)
+            break;
+        r = &room[f->sky_room];
+        f = &r->floor[((z - r->z) >> 10) + ((x - r->x) >> 10) * r->x_size];
+    }
+    height = f->ceiling << 8;
+    if (height == NO_HEIGHT)
+        return height;
+    if (f->index) {
+        data = &floor_data[f->index];
+        hadj = *data++;
+        type = hadj & DATA_TYPE;
+        ended = 0;
+        if (type == TILT_TYPE || type == SPLIT1 || type == SPLIT2 || type == NOCOLF1T || type == NOCOLF1B || type == NOCOLF2T || type == NOCOLF2B) {
+            ended = hadj & END_BIT;
+            data++;
+            hadj = *data++;
+            type = hadj & DATA_TYPE;
+        }
+        if (!ended && (type == ROOF_TYPE || type == SPLIT3 || type == SPLIT4 || type == NOCOLC1T || type == NOCOLC1B || type == NOCOLC2T || type == NOCOLC2B)) {
+            if (type != ROOF_TYPE) {
+                tilts = *data;
+                t0 = -(tilts & 15);
+                t1 = -((tilts >> 4) & 15);
+                t2 = -((tilts >> 8) & 15);
+                t3 = -((tilts >> 12) & 15);
+                dx = x & 1023;
+                dz = z & 1023;
+                xoff = yoff = 0;
+                if (type == SPLIT3 || type == NOCOLC1T || type == NOCOLC1B) {
+                    if (dx <= 1024 - dz) {
+                        hadj = (hadj >> 10) & 0x1F;
+                        if (hadj & 0x10)
+                            hadj |= 0xFFF0;
+                        height += hadj << 8;
+                        xoff = t2 - t1;
+                        yoff = t3 - t2;
+                    } else {
+                        hadj = (hadj >> 5) & 0x1F;
+                        if (hadj & 0x10)
+                            hadj |= 0xFFF0;
+                        height += hadj << 8;
+                        xoff = t3 - t0;
+                        yoff = t0 - t1;
+                    }
+                } else {
+                    if (dx <= dz) {
+                        hadj = (hadj >> 10) & 0x1F;
+                        if (hadj & 0x10)
+                            hadj |= 0xFFF0;
+                        height += hadj << 8;
+                        xoff = t2 - t1;
+                        yoff = t0 - t1;
+                    } else {
+                        hadj = (hadj >> 5) & 0x1F;
+                        if (hadj & 0x10)
+                            hadj |= 0xFFF0;
+                        height += hadj << 8;
+                        xoff = t3 - t0;
+                        yoff = t3 - t2;
+                    }
+                }
+            } else {
+                xoff = *data >> 8;
+                yoff = *(sint8 *)data;
+            }
+            if (xoff < 0)
+                height += (z & 1023) * xoff >> 2;
+            else
+                height -= ((1023 - z) & 1023) * xoff >> 2;
+            if (yoff >= 0)
+                height -= (x & 1023) * yoff >> 2;
+            else
+                height += ((1023 - x) & 1023) * yoff >> 2;
+        }
+    }
+    while (floor->pit_room != NO_ROOM) {
+        if (CheckNoColFloorTriangle(floor, x, z) == 1)
+            break;
+        r = &room[floor->pit_room];
+        floor = &r->floor[((z - r->z) >> 10) + ((x - r->x) >> 10) * r->x_size];
+    }
+    if (!floor->index)
+        return height;
+    data = &floor_data[floor->index];
+    do {
+        type = *data++;
+        switch (type & DATA_TYPE) {
+        case DOOR_TYPE:
+        case TILT_TYPE:
+        case ROOF_TYPE:
+        case SPLIT1:
+        case SPLIT2:
+        case SPLIT3:
+        case SPLIT4:
+        case NOCOLF1T:
+        case NOCOLF1B:
+        case NOCOLF2T:
+        case NOCOLF2B:
+        case NOCOLC1T:
+        case NOCOLC1B:
+        case NOCOLC2T:
+        case NOCOLC2B:
+            data++;
+            break;
+        case TRIGGER_TYPE:
+            data++;
+            do {
+                trigger = *data++;
+                if ((trigger & 0x3C00) != TO_OBJECT << 10) {
+                    if ((trigger & 0x3C00) == TO_CAMERA << 10 || (trigger & 0x3C00) == TO_FLYBY << 10)
+                        trigger = *data++;
+                    continue;
+                }
+                item = &items[trigger & 0x3FF];
+                if (objects[item->object_number].ceiling && !(sint16)(item->flags & 0x8000))
+                    objects[item->object_number].ceiling(item, x, y, z, &height);
+            } while (!(trigger & END_BIT));
+            break;
+        case LAVA_TYPE:
+        case CLIMB_TYPE:
+        case MONKEY_TYPE:
+        case TRIGTRIGGER_TYPE:
+        case MINER_TYPE:
+            break;
+        default:
+            S_ExitSystem("GetCeiling(): Unknown type");
+        }
+    } while (!(type & END_BIT));
+    return height;
+}
+
 sint16 GetDoor(FLOOR_INFO *floor)
 {
     sint16 *data;
