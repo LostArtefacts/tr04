@@ -70,6 +70,15 @@ sint32 DXCreateSurface(LPDIRECTDRAW4 dd, LPDDSURFACEDESC2 desc, LPDIRECTDRAWSURF
     return 0;
 }
 
+sint32 DXSetVideoMode(LPDIRECTDRAW4 dd, sint32 dwWidth, sint32 dwHeight, sint32 dwBPP)
+{
+    Log(2, "DXSetVideoMode");
+    Log(5, "SetDisplayMode - %dx%dx%d", dwWidth, dwHeight, dwBPP);
+    if (DXAttempt(IDirectDraw4_SetDisplayMode(dd, dwWidth, dwHeight, dwBPP, 0, 0)) != DD_OK)
+        return 0;
+    return 1;
+}
+
 void DXMove(sint32 x, sint32 y)
 {
     Log(2, "DXMove : x %d y %d", x, y);
