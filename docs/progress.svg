@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="194.77" height="12" x="0" y="0" class="named"><title>881 · 56.95%</title></rect>
 <rect width="0.44" height="12" x="194.77" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="195.21" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="140.38" height="12" x="201.62" y="0" class="todo"><title>635 · 41.05%</title></rect>
+<rect width="6.63" height="12" x="195.21" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="140.16" height="12" x="201.84" y="0" class="todo"><title>634 · 40.98%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">57.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">881</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">635</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">881</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">634</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="83.30" height="12" x="0" y="0" class="named"><title>151 KB · 24.36%</title></rect>
 <rect width="0.12" height="12" x="83.30" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="83.42" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="249.93" height="12" x="92.07" y="0" class="todo"><title>453 KB · 73.08%</title></rect>
+<rect width="8.91" height="12" x="83.42" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="249.67" height="12" x="92.33" y="0" class="todo"><title>453 KB · 73%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">151 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">453 KB</tspan></text>
@@ -973,7 +973,7 @@
 <rect width="12" height="12" x="60" y="270" class="named"><title>0x00458ad0 phd_GetMatrixAngles (177 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="270" class="todo"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="270" class="named"><title>0x00459060 GetRopePos (146 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="270" class="todo"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="270" class="nonmatching"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="270" class="named"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="270" class="named"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="270" class="named"><title>0x00459410 DrawRopeList (56 bytes)</title></rect>
@@ -2002,7 +2002,7 @@
 <rect width="13.92" height="13.16" x="483.29" y="96.35" class="todo"><title>0x00485600 setXY4 (474 bytes)</title></rect>
 <rect width="13.89" height="13.16" x="500.20" y="96.35" class="todo"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="13.86" height="13.16" x="517.09" y="96.35" class="named"><title>0x004570f0 StatuePlinthCollision (472 bytes)</title></rect>
-<rect width="13.83" height="13.16" x="533.95" y="96.35" class="todo"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
+<rect width="13.83" height="13.16" x="533.95" y="96.35" class="nonmatching"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
 <rect width="13.77" height="13.16" x="550.78" y="96.35" class="named"><title>0x00434dc0 TriggerExplosionSmokeEnd (469 bytes)</title></rect>
 <rect width="13.77" height="13.16" x="567.55" y="96.35" class="todo"><title>0x00442a60 FindAITargetObject (469 bytes)</title></rect>
 <rect width="13.71" height="13.16" x="584.32" y="96.35" class="todo"><title>0x00424e90 UseInventoryItems (467 bytes)</title></rect>

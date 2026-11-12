@@ -3,6 +3,7 @@
 
 #include "3dglodef.h"
 #include "items.h"
+#include "collide.h"
 
 typedef struct {
     PHD_VECTOR Segment[24];
@@ -36,6 +37,7 @@ sint32 RopeNodeCollision(ROPE_STRUCT *rope, sint32 x, sint32 y, sint32 z, sint32
 void ModelRigid(PHD_VECTOR *pa, PHD_VECTOR *pb, PHD_VECTOR *va, PHD_VECTOR *vb, sint32 rlength);
 void ModelRigidRope(PHD_VECTOR *pa, PHD_VECTOR *pb, PHD_VECTOR *va, PHD_VECTOR *vb, sint32 rlength);
 void SetPendulumVelocity(sint32 x, sint32 y, sint32 z);
+void RopeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 extern ROPE_STRUCT RopeList[5];
 extern sint32 nRope;
