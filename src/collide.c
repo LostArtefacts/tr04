@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 
 #include "collide.h"
 #include "anim.h"
@@ -670,6 +671,58 @@ sint32 TestBoundsCollide2(ITEM_INFO *item, ITEM_INFO *l, sint32 rad)
     x = (c * dx - s * dz) >> W2V_SHIFT;
     z = (c * dz + s * dx) >> W2V_SHIFT;
     return x >= GlobalCollisionBounds[0] - rad && x <= rad + GlobalCollisionBounds[1] && z >= GlobalCollisionBounds[4] - rad && z <= rad + GlobalCollisionBounds[5];
+}
+
+void StargateCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    SPHERE *sphere;
+    sint32 touchedBits, hurtfulBits, x, y, z;
+    sint32 i;
+
+    item = &items[item_number];
+    if (item->status == ITEM_INVISIBLE)
+        return;
+    if (!TestBoundsCollide(item, l, coll->radius))
+        return;
+    for (i = 0; i < 24; i += 6) {
+        memcpy(GlobalCollisionBounds, &StarGateBounds[i], 12);
+        if (TestBoundsCollide2(item, l, coll->radius))
+            ItemPushLara(item, l, coll, 0, 2);
+    }
+    hurtfulBits = TestCollision(item, l);
+    if (!hurtfulBits)
+        return;
+    touchedBits = *(sint32 *)&item->item_flags[0];
+    hurtfulBits &= touchedBits;
+    if (!hurtfulBits)
+        return;
+    sphere = Slist;
+    while (hurtfulBits) {
+        if (hurtfulBits & 1) {
+            GlobalCollisionBounds[0] = (sint16)(sphere->x - item->pos.x_pos - sphere->r);
+            GlobalCollisionBounds[2] = (sint16)(sphere->y - item->pos.y_pos - sphere->r);
+            GlobalCollisionBounds[4] = (sint16)(sphere->z - item->pos.z_pos - sphere->r);
+            GlobalCollisionBounds[1] = (sint16)(sphere->x + sphere->r - item->pos.x_pos);
+            GlobalCollisionBounds[3] = (sint16)(sphere->y + sphere->r - item->pos.y_pos);
+            GlobalCollisionBounds[5] = (sint16)(sphere->z + sphere->r - item->pos.z_pos);
+            x = lara_item->pos.x_pos;
+            y = lara_item->pos.y_pos;
+            z = lara_item->pos.z_pos;
+            if (ItemPushLara(item, l, coll, touchedBits & 1, 2) && touchedBits & 1) {
+                x -= lara_item->pos.x_pos;
+                y -= lara_item->pos.y_pos;
+                z -= lara_item->pos.z_pos;
+                if ((x || y || z) && TriggerActive(item)) {
+                    DoBloodSplat(l->pos.x_pos + (GetRandomControl() & 0x3F) - 32, sphere->y + (GetRandomControl() & 0x1F) - 16, l->pos.z_pos + (GetRandomControl() & 0x3F) - 32, (GetRandomControl() & 3) + 2, (sint16)(GetRandomControl() << 1), l->room_number);
+                    lara_item->hit_points -= 100;
+                }
+            }
+        }
+        hurtfulBits >>= 1;
+        sphere++;
+        touchedBits >>= 1;
+    }
 }
 
 void CogCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)

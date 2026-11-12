@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="245.67" height="12" x="0" y="0" class="named"><title>1112 · 71.83%</title></rect>
-<rect width="0.44" height="12" x="245.67" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="16.13" height="12" x="246.12" y="0" class="nonmatching"><title>73 · 4.72%</title></rect>
-<rect width="79.76" height="12" x="262.24" y="0" class="todo"><title>361 · 23.32%</title></rect>
+<rect width="245.90" height="12" x="0" y="0" class="named"><title>1113 · 71.90%</title></rect>
+<rect width="0.44" height="12" x="245.90" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="16.13" height="12" x="246.34" y="0" class="nonmatching"><title>73 · 4.72%</title></rect>
+<rect width="79.53" height="12" x="262.47" y="0" class="todo"><title>360 · 23.26%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1112</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">73</tspan> · <tspan class="todo">361</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1113</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">73</tspan> · <tspan class="todo">360</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="127.14" height="12" x="0" y="0" class="named"><title>231 KB · 37.18%</title></rect>
-<rect width="0.12" height="12" x="127.14" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="29.29" height="12" x="127.26" y="0" class="nonmatching"><title>53 KB · 8.56%</title></rect>
-<rect width="185.44" height="12" x="156.56" y="0" class="todo"><title>338 KB · 54.22%</title></rect>
+<rect width="127.45" height="12" x="0" y="0" class="named"><title>232 KB · 37.27%</title></rect>
+<rect width="0.12" height="12" x="127.45" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="29.29" height="12" x="127.57" y="0" class="nonmatching"><title>53 KB · 8.56%</title></rect>
+<rect width="185.14" height="12" x="156.86" y="0" class="todo"><title>337 KB · 54.13%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">37.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">231 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">53 KB</tspan> · <tspan class="todo">338 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">37.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">232 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">53 KB</tspan> · <tspan class="todo">337 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -795,7 +795,7 @@
 <rect width="12" height="12" x="390" y="210" class="todo"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="named"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="210" class="nonmatching"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="210" class="todo"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="210" class="named"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="210" class="named"><title>0x00448cc0 CogCollision (217 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="210" class="todo"><title>0x00448da0 GetCollidedObjects (1325 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="210" class="named"><title>0x004492d0 KillMoveItems (85 bytes)</title></rect>
@@ -1933,7 +1933,7 @@
 <rect width="15" height="14.50" x="364.60" y="79.13" class="todo"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
 <rect width="14.95" height="14.50" x="382.60" y="79.13" class="todo"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
 <rect width="14.90" height="14.50" x="400.55" y="79.13" class="todo"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
-<rect width="14.90" height="14.50" x="418.45" y="79.13" class="todo"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
+<rect width="14.90" height="14.50" x="418.45" y="79.13" class="named"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
 <rect width="14.90" height="14.50" x="436.35" y="79.13" class="named"><title>0x004543b0 InitialiseItem (561 bytes)</title></rect>
 <rect width="14.84" height="14.50" x="454.24" y="79.13" class="named"><title>0x00422eb0 lara_col_hang2 (559 bytes)</title></rect>
 <rect width="14.76" height="14.50" x="472.09" y="79.13" class="named"><title>0x00455470 InitialiseSlot (556 bytes)</title></rect>

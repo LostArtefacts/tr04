@@ -93,5 +93,6 @@ void GenericSphereBoxCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll
 void StargateCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 extern sint16 GlobalCollisionBounds[6];
+extern sint16 StarGateBounds[24];
 
 #endif
