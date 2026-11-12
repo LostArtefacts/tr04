@@ -118,6 +118,83 @@ void FireCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
     }
 }
 
+void DoFlameTorch(void)
+{
+    PHD_VECTOR pos;
+
+    switch (lara.left_arm.lock) {
+    case 0:    
+        if (lara.request_gun_type != lara.gun_type) {
+            lara.left_arm.lock = 2;    
+            lara.left_arm.frame_number = 31;
+            lara.left_arm.anim_number = objects[TORCH_ANIM].anim_index + 2;
+        } else if (input & IN_DRAW && !lara_item->gravity_status && !lara_item->fallspeed && lara_item->current_anim_state != AS_COMPRESS && lara_item->current_anim_state != AS_UPJUMP && lara_item->current_anim_state != AS_FORWARDJUMP && lara_item->current_anim_state != AS_BACKJUMP && lara_item->current_anim_state != AS_RIGHTJUMP && lara_item->current_anim_state != AS_LEFTJUMP || lara.water_status == LW_UNDERWATER) {
+            lara.left_arm.lock = 1;    
+            lara.left_arm.frame_number = 1;
+            lara.left_arm.anim_number = objects[TORCH_ANIM].anim_index + 1;
+            if (lara.water_status == LW_UNDERWATER)
+                lara.LitTorch = 0;
+        }
+        break;
+    case 1:    
+        if (lara.left_arm.frame_number < 12 && lara_item->gravity_status) {
+            lara.left_arm.lock = 0;    
+            lara.left_arm.frame_number = 0;
+            lara.left_arm.anim_number = objects[TORCH_ANIM].anim_index;
+        } else {
+            lara.left_arm.frame_number++;
+            if (lara.left_arm.frame_number == 27) {
+                lara.flare_control_left = 0;
+                lara.LitTorch = 0;
+                lara.left_arm.lock = 0;
+                lara.gun_type = lara.last_gun_type;
+                lara.request_gun_type = WEAPON_NONE;
+                lara.gun_status = LG_NO_ARMS;
+            } else if (lara.left_arm.frame_number == 12) {
+                lara.mesh_ptrs[LM_LHAND] = meshes[objects[LARA].mesh_index + LM_LHAND * 2];
+                CreateFlare(BURNING_TORCH_ITEM, 1);
+            }
+        }
+        break;
+    case 2:    
+        lara.left_arm.frame_number++;
+        if (lara.left_arm.frame_number == 41) {
+            lara.flare_control_left = 0;
+            lara.LitTorch = 0;
+            lara.left_arm.lock = 0;
+            lara.last_gun_type = WEAPON_NONE;
+            lara.gun_type = WEAPON_NONE;
+            lara.gun_status = LG_NO_ARMS;
+        } else if (lara.left_arm.frame_number == 36) {
+            lara.mesh_ptrs[LM_LHAND] = meshes[objects[LARA].mesh_index + LM_LHAND * 2];
+            CreateFlare(BURNING_TORCH_ITEM, 0);
+        }
+        break;
+    case 3:    
+        if (lara_item->current_anim_state != AS_CONTROLLED) {
+            lara.LitTorch = lara_item->item_flags[3];
+            lara.flare_control_left = 1;
+            lara.left_arm.lock = 0;
+            lara.left_arm.frame_number = 0;
+            lara.left_arm.anim_number = objects[TORCH_ANIM].anim_index;
+        }
+        break;
+    }
+    if (lara.flare_control_left)
+        lara.gun_status = LG_READY;
+    lara.left_arm.frame_base = anims[lara.left_arm.anim_number].frame_ptr;
+    if (lara.LitTorch) {
+        pos.x = -32;
+        pos.y = 64;
+        pos.z = 256;
+        GetLaraJointPos(&pos, 14);
+        TriggerDynamic(pos.x, pos.y, pos.z, 12 - (GetRandomControl() & 1), (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 96, 0);
+        if (!(wibble & 7))
+            TriggerTorchFlame(lara_item - items, 0);
+        TorchItem = lara_item;
+    }
+}
+
 void GetFlameTorch(void)
 {
     if (lara.gun_type == WEAPON_FLARE)
