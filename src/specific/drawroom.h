@@ -1,6 +1,8 @@
 #ifndef SPECIFIC_DRAWROOM_H
 #define SPECIFIC_DRAWROOM_H
 
+#include <windows.h>
+#include <d3d.h>
 #include "../types.h"
 #include "../room.h"
 
@@ -29,5 +31,6 @@ void InsertRoom(ROOM_INFO *r);
 
 void InitBuckets(void);
 void DrawBuckets(void);
+void CalcTriFaceNormal(D3DVECTOR *p1, D3DVECTOR *p2, D3DVECTOR *p3, D3DVECTOR *N);
 
 #endif
