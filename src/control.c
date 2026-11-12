@@ -389,6 +389,26 @@ void TriggerCDTrack(sint16 value, sint16 flags, sint16 type)
         TriggerNormalCDTrack(value, flags, type);
 }
 
+void TriggerNormalCDTrack(sint16 value, sint16 flags, sint16 type)
+{
+    sint32 code;
+
+    if (value >= 105 && value <= 111 || value == 102 || value == 97) {
+        if (CurrentAtmosphere != value) {
+            CurrentAtmosphere = (uint8)value;
+            if (IsAtmospherePlaying)
+                S_CDPlay(value, 1);
+        }
+    } else {
+        code = (flags >> 8) & 0x3F;
+        if ((cd_flags[value] & code) != code) {
+            cd_flags[value] |= code;
+            S_CDPlay(value, 0);
+            IsAtmospherePlaying = 0;
+        }
+    }
+}
+
 sint32 CheckNoColFloorTriangle(FLOOR_INFO *floor, sint32 x, sint32 z)
 {
     sint16 *data, type, dx, dz;

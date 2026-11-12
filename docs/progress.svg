@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="143.92" height="12" x="0" y="0" class="named"><title>651 · 42.08%</title></rect>
-<rect width="0.44" height="12" x="143.92" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="144.36" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="193" height="12" x="149" y="0" class="todo"><title>873 · 56.43%</title></rect>
+<rect width="144.14" height="12" x="0" y="0" class="named"><title>652 · 42.15%</title></rect>
+<rect width="0.44" height="12" x="144.14" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="144.58" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="192.78" height="12" x="149.22" y="0" class="todo"><title>872 · 56.37%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">42.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">651</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">873</tspan></text>
+<text text-anchor="end" x="522" y="7.50">42.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">652</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">872</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="59.32" height="12" x="0" y="0" class="named"><title>108 KB · 17.35%</title></rect>
-<rect width="0.12" height="12" x="59.32" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="59.44" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="275.31" height="12" x="66.69" y="0" class="todo"><title>499 KB · 80.50%</title></rect>
+<rect width="59.39" height="12" x="0" y="0" class="named"><title>108 KB · 17.37%</title></rect>
+<rect width="0.12" height="12" x="59.39" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="59.52" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="275.24" height="12" x="66.76" y="0" class="todo"><title>499 KB · 80.48%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">108 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">499 KB</tspan></text>
@@ -822,7 +822,7 @@
 <rect width="12" height="12" x="45" y="225" class="named"><title>0x0044c670 RemoveRoomFlipItems (119 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="225" class="named"><title>0x0044c6f0 AddRoomFlipItems (123 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="225" class="named"><title>0x0044c770 TriggerCDTrack (30 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="225" class="todo"><title>0x0044c790 TriggerNormalCDTrack (134 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="225" class="named"><title>0x0044c790 TriggerNormalCDTrack (134 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="225" class="named"><title>0x0044c820 CheckNoColFloorTriangle (169 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="225" class="named"><title>0x0044c8d0 CheckNoColCeilingTriangle (231 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="225" class="todo"><title>0x0044c9c0 IsRoomOutside (537 bytes)</title></rect>
@@ -2529,7 +2529,7 @@
 <rect width="7.54" height="6.96" x="625.11" y="266.01" class="named"><title>0x004923a0 BPPToDDBD (136 bytes)</title></rect>
 <rect width="7.49" height="6.96" x="635.66" y="266.01" class="todo"><title>0x00453370 InitialiseSlicerDicer (135 bytes)</title></rect>
 <rect width="7.43" height="6.96" x="646.15" y="266.01" class="named"><title>0x00432690 SwimTurn (134 bytes)</title></rect>
-<rect width="7.43" height="6.96" x="656.58" y="266.01" class="todo"><title>0x0044c790 TriggerNormalCDTrack (134 bytes)</title></rect>
+<rect width="7.43" height="6.96" x="656.58" y="266.01" class="named"><title>0x0044c790 TriggerNormalCDTrack (134 bytes)</title></rect>
 <rect width="7.38" height="6.96" x="667.02" y="266.01" class="todo"><title>0x0041faf0 GetFlameTorch (133 bytes)</title></rect>
 <rect width="7.38" height="6.96" x="677.40" y="266.01" class="named"><title>0x00420a80 LaraCeilingFront (133 bytes)</title></rect>
 <rect width="7.38" height="6.96" x="687.78" y="266.01" class="named"><title>0x004270c0 lara_as_stepright (133 bytes)</title></rect>
