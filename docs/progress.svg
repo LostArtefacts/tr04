@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="238.32" height="12" x="0" y="0" class="named"><title>1078 · 69.68%</title></rect>
 <rect width="0.44" height="12" x="238.32" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="12.16" height="12" x="238.76" y="0" class="nonmatching"><title>55 · 3.56%</title></rect>
-<rect width="91.08" height="12" x="250.92" y="0" class="todo"><title>412 · 26.63%</title></rect>
+<rect width="12.38" height="12" x="238.76" y="0" class="nonmatching"><title>56 · 3.62%</title></rect>
+<rect width="90.86" height="12" x="251.14" y="0" class="todo"><title>411 · 26.57%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">69.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1078</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">55</tspan> · <tspan class="todo">412</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1078</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">56</tspan> · <tspan class="todo">411</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="112.99" height="12" x="0" y="0" class="named"><title>205 KB · 33.04%</title></rect>
 <rect width="0.12" height="12" x="112.99" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="21.14" height="12" x="113.11" y="0" class="nonmatching"><title>38 KB · 6.18%</title></rect>
-<rect width="207.75" height="12" x="134.25" y="0" class="todo"><title>377 KB · 60.75%</title></rect>
+<rect width="21.63" height="12" x="113.11" y="0" class="nonmatching"><title>39 KB · 6.33%</title></rect>
+<rect width="207.25" height="12" x="134.75" y="0" class="todo"><title>376 KB · 60.60%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">33.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">205 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">377 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">205 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">39 KB</tspan> · <tspan class="todo">376 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -729,7 +729,7 @@
 <rect width="12" height="12" x="150" y="195" class="todo"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="195" class="named"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="todo"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="195" class="todo"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="195" class="nonmatching"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="195" class="named"><title>0x0043ff70 UpdateLOT (114 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="195" class="named"><title>0x004401f0 TargetBox (149 bytes)</title></rect>
@@ -1792,7 +1792,7 @@
 <rect width="19.33" height="18.41" x="488.71" y="0" class="todo"><title>0x00403870 UpdateLocusts (922 bytes)</title></rect>
 <rect width="19.10" height="18.41" x="511.04" y="0" class="todo"><title>0x00472f50 CreateVertexNormals (911 bytes)</title></rect>
 <rect width="19.04" height="18.41" x="533.14" y="0" class="todo"><title>0x00454b60 ElementPuzzleCollision (908 bytes)</title></rect>
-<rect width="18.87" height="18.41" x="555.18" y="0" class="todo"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
+<rect width="18.87" height="18.41" x="555.18" y="0" class="nonmatching"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
 <rect width="18.85" height="18.41" x="577.05" y="0" class="todo"><title>0x00421280 lara_col_all4s (899 bytes)</title></rect>
 <rect width="18.68" height="18.41" x="598.90" y="0" class="todo"><title>0x004142f0 FlameEmitterControl (891 bytes)</title></rect>
 <rect width="18.68" height="18.41" x="620.58" y="0" class="todo"><title>0x00416550 ControlBurningFloor (891 bytes)</title></rect>
