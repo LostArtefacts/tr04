@@ -153,3 +153,8 @@ void combine_PickupItem4(sint32 flag)
     lara.pickupitems |= 0x8;
     lara.pickupitemscombo &= ~0xC0;
 }
+
+void combine_ClockWorkBeetle(sint32 flag)
+{
+    lara.mechanical_scarab = 1;
+}

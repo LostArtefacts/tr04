@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="172.88" height="12" x="0" y="0" class="named"><title>782 · 50.55%</title></rect>
-<rect width="0.44" height="12" x="172.88" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="173.32" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="162.27" height="12" x="179.73" y="0" class="todo"><title>734 · 47.45%</title></rect>
+<rect width="173.10" height="12" x="0" y="0" class="named"><title>783 · 50.61%</title></rect>
+<rect width="0.44" height="12" x="173.10" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="173.54" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="162.05" height="12" x="179.95" y="0" class="todo"><title>733 · 47.38%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">50.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">782</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">734</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">783</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">733</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.14" height="12" x="0" y="0" class="named"><title>138 KB · 22.26%</title></rect>
-<rect width="0.12" height="12" x="76.14" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.26" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="76.15" height="12" x="0" y="0" class="named"><title>138 KB · 22.27%</title></rect>
+<rect width="0.12" height="12" x="76.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.27" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
 <rect width="257.08" height="12" x="84.92" y="0" class="todo"><title>466 KB · 75.17%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.3%</text>
@@ -712,7 +712,7 @@
 <rect width="12" height="12" x="645" y="180" class="named"><title>0x0043e700 combine_PickupItem2 (17 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="180" class="named"><title>0x0043e720 combine_PickupItem3 (17 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="180" class="named"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="180" class="todo"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="180" class="named"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="180" class="todo"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="180" class="todo"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="180" class="todo"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
@@ -3139,7 +3139,7 @@
 <rect width="2.15" height="1.39" x="722.33" y="460.61" class="named"><title>0x00431790 PopXYZ (8 bytes)</title></rect>
 <rect width="1.50" height="2.03" x="727.48" y="441.85" class="named"><title>0x004377d0 ActivateCamera (8 bytes)</title></rect>
 <rect width="1.50" height="2.03" x="731.98" y="441.85" class="named"><title>0x004377e0 ActivateKey (8 bytes)</title></rect>
-<rect width="1.50" height="2.03" x="736.49" y="441.85" class="todo"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
+<rect width="1.50" height="2.03" x="736.49" y="441.85" class="named"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
 <rect width="1.50" height="2.03" x="740.99" y="441.85" class="named"><title>0x0046c190 fifteen_end (8 bytes)</title></rect>
 <rect width="1.50" height="2.03" x="745.50" y="441.85" class="todo"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="1.69" height="1.83" x="727.48" y="446.88" class="todo"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
