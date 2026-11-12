@@ -3,6 +3,14 @@
 #include "control.h"
 #include "room.h"
 
+void InitialiseMovingBlock(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    ClearMovableBlockSplitters(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number);
+}
+
 void ClearMovableBlockSplitters(sint32 x, sint32 y, sint32 z, sint16 room_number)
 {
     sint16 height, base_room_number;
