@@ -66,6 +66,8 @@ extern uint8 camerasnaps;
 extern sint32 Unk7e71cc;
 extern sint32 BinocularOldCamera;
 extern sint32 bLaraTorch;
+extern sint32 ExittingBinos;
+extern char WeaponDelay;
 extern PHD_VECTOR LaraTorchStart;
 extern PHD_VECTOR LaraTorchEnd;
 extern sint32 LaraTorchIntensity;
