@@ -2,6 +2,7 @@
 #define SPECIFIC_DXSHELL_H
 
 #include <windows.h>
+#include <ddraw.h>
 
 #include "../types.h"
 
@@ -13,6 +14,9 @@ HRESULT DXShowFrame(void);
 sint32 BPPToDDBD(sint32 BPP);
 void *AddStruct(void *p, sint32 num, sint32 size);
 void DXMove(sint32 x, sint32 y);
+sint32 DXCreateSurface(LPDIRECTDRAW4 dd, LPDDSURFACEDESC2 desc, LPDIRECTDRAWSURFACE4 *surf);
+sint32 DXSetVideoMode(LPDIRECTDRAW4 dd, sint32 dwWidth, sint32 dwHeight, sint32 dwBPP);
+sint32 DXD3DCreate(LPDIRECTDRAW4 pDD4, void **pD3D);
 
 extern uint8 keymap[256];
 

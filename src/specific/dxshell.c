@@ -61,6 +61,15 @@ sint32 BPPToDDBD(sint32 BPP)
     }
 }
 
+sint32 DXCreateSurface(LPDIRECTDRAW4 dd, LPDDSURFACEDESC2 desc, LPDIRECTDRAWSURFACE4 *surf)
+{
+    Log(2, "DXCreateSurface");
+    if (DXAttempt(IDirectDraw4_CreateSurface(dd, desc, surf, 0)) == DD_OK)
+        return 1;
+    Log(1, "DXCreateSurface Failed");
+    return 0;
+}
+
 void DXMove(sint32 x, sint32 y)
 {
     Log(2, "DXMove : x %d y %d", x, y);

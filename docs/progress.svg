@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="184.37" height="12" x="0" y="0" class="named"><title>834 · 53.91%</title></rect>
-<rect width="0.44" height="12" x="184.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="184.82" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="150.77" height="12" x="191.23" y="0" class="todo"><title>682 · 44.09%</title></rect>
+<rect width="184.60" height="12" x="0" y="0" class="named"><title>835 · 53.98%</title></rect>
+<rect width="0.44" height="12" x="184.60" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="185.04" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="150.55" height="12" x="191.45" y="0" class="todo"><title>681 · 44.02%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">54.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">834</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">682</tspan></text>
+<text text-anchor="end" x="522" y="7.50">54.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">835</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">681</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.58" height="12" x="0" y="0" class="named"><title>144 KB · 23.27%</title></rect>
-<rect width="0.12" height="12" x="79.58" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="79.70" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="253.65" height="12" x="88.35" y="0" class="todo"><title>460 KB · 74.17%</title></rect>
+<rect width="79.62" height="12" x="0" y="0" class="named"><title>144 KB · 23.28%</title></rect>
+<rect width="0.12" height="12" x="79.62" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="79.74" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="253.61" height="12" x="88.39" y="0" class="todo"><title>460 KB · 74.16%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">144 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">460 KB</tspan></text>
@@ -1516,7 +1516,7 @@
 <rect width="12" height="12" x="705" y="420" class="todo"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="420" class="todo"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="420" class="todo"><title>0x00492ad0 DXEnumZBufferFormats (101 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="435" class="todo"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="435" class="named"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="435" class="todo"><title>0x00492b90 DXSetVideoMode (80 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="435" class="todo"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="435" class="todo"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
@@ -2781,7 +2781,7 @@
 <rect width="5.33" height="5.37" x="708.36" y="331.10" class="named"><title>0x00427210 lara_as_backjump (74 bytes)</title></rect>
 <rect width="5.33" height="5.37" x="716.69" y="331.10" class="named"><title>0x004548b0 InitialiseFXArray (74 bytes)</title></rect>
 <rect width="5.33" height="5.37" x="725.02" y="331.10" class="todo"><title>0x00476ac0 HWBeginScene (74 bytes)</title></rect>
-<rect width="5.33" height="5.37" x="733.34" y="331.10" class="todo"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
+<rect width="5.33" height="5.37" x="733.34" y="331.10" class="named"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
 <rect width="5.33" height="5.37" x="741.67" y="331.10" class="named"><title>0x004944d0 DXReadKeyboard (74 bytes)</title></rect>
 <rect width="5.07" height="5.55" x="616.18" y="339.46" class="named"><title>0x00428ad0 lara_default_col (73 bytes)</title></rect>
 <rect width="5.07" height="5.55" x="616.18" y="348.02" class="todo"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
