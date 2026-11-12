@@ -815,6 +815,61 @@ void TriggerShockwave(PHD_VECTOR *pos, sint32 InnerOuterRads, sint32 speed, sint
     }
 }
 
+void TriggerShockwaveHitEffect(sint32 x, sint32 y, sint32 z, sint32 rgb, sint16 dir, sint32 speed)
+{
+    SPARKS *sptr;
+    sint32 dx, dz, xvel, zvel;
+
+    dx = lara_item->pos.x_pos - x;
+    dz = lara_item->pos.z_pos - z;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sR = 0;
+    sptr->sG = 0;
+    sptr->sB = 0;
+    sptr->dB = CLRB(rgb);
+    sptr->dG = CLRG(rgb);
+    sptr->dR = CLRR(rgb);
+    sptr->ColFadeSpeed = 4;
+    sptr->FadeToBlack = 8;
+    sptr->Life = (GetRandomControl() & 3) + 16;
+    sptr->TransType = 2;
+    sptr->sLife = sptr->Life;
+    speed += GetRandomControl() & 0xF;
+    xvel = (rcossin_tbl[(dir >> 3) & 0x1FFE] << 2) * speed >> (W2V_SHIFT - 4);
+    zvel = (rcossin_tbl[((dir >> 3) & 0x1FFE) + 1] << 2) * speed >> (W2V_SHIFT - 4);
+    if (GetRandomControl() & 1)
+        dir += 0x4000;
+    else
+        dir -= 0x4000;
+    speed = (GetRandomControl() & 0x1FF) - 256;
+    x += (rcossin_tbl[(dir >> 3) & 0x1FFE] << 2) * speed >> W2V_SHIFT;
+    z += (rcossin_tbl[((dir >> 3) & 0x1FFE) + 1] << 2) * speed >> W2V_SHIFT;
+    sptr->x = (GetRandomControl() & 0x1F) + x - 16;
+    sptr->y = (GetRandomControl() & 0x1F) + y - 16;
+    sptr->z = (GetRandomControl() & 0x1F) + z - 16;
+    sptr->Xvel = (sint16)xvel;
+    sptr->Yvel = -512 - (GetRandomControl() & 0x1FF);
+    sptr->Zvel = (sint16)zvel;
+    sptr->Friction = 3;
+    sptr->Flags = 538;
+    sptr->RotAng = GetRandomControl() & 0xFFF;
+    if (GetRandomControl() & 1)
+        sptr->RotAdd = -16 - (GetRandomControl() & 0xF);
+    else
+        sptr->RotAdd = (GetRandomControl() & 0xF) + 16;
+    sptr->Def = (uint8)(objects[DEFAULT_SPRITES].mesh_index + 14);
+    sptr->Scalar = 1;
+    sptr->Gravity = (GetRandomControl() & 0x3F) + 64;
+    sptr->MaxYvel = 0;
+    speed = (GetRandomControl() & 0x1F) + 32;
+    sptr->sSize = speed;
+    sptr->Size = speed;
+    sptr->dSize = speed >> 2;
+}
+
 void UpdateShockwaves(void)
 {
     SHOCKWAVE_STRUCT *sw;
