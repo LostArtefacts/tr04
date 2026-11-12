@@ -52,3 +52,17 @@ void ClearObjectLighting(void)
         }
     }
 }
+
+void ClearDynamicLighting(void)
+{
+    sint32 i;
+
+    IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_AMBIENT, 0);
+    for (i = 0; i < 32; i++) {
+        if (D3DDynamics[i].D3DLightx.dwFlags & D3DLIGHT_ACTIVE) {
+            D3DDynamics[i].D3DLightx.dwFlags = D3DLIGHT_NO_SPECULAR;
+            D3DDynamics[i].D3DLightx.dltType = D3DLIGHT_POINT;
+            IDirect3DLight_SetLight(D3DDynamics[i].D3DLight, (LPD3DLIGHT)&D3DDynamics[i].D3DLightx);
+        }
+    }
+}
