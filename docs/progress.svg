@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="213.56" height="12" x="0" y="0" class="named"><title>966 · 62.44%</title></rect>
-<rect width="0.44" height="12" x="213.56" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="214" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="120.71" height="12" x="221.29" y="0" class="todo"><title>546 · 35.29%</title></rect>
+<rect width="213.78" height="12" x="0" y="0" class="named"><title>967 · 62.51%</title></rect>
+<rect width="0.44" height="12" x="213.78" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="214.22" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="120.48" height="12" x="221.52" y="0" class="todo"><title>545 · 35.23%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">62.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">966</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">546</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">967</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">545</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="91.95" height="12" x="0" y="0" class="named"><title>167 KB · 26.89%</title></rect>
-<rect width="0.12" height="12" x="91.95" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="92.07" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="240.51" height="12" x="101.49" y="0" class="todo"><title>436 KB · 70.32%</title></rect>
+<rect width="92.14" height="12" x="0" y="0" class="named"><title>167 KB · 26.94%</title></rect>
+<rect width="0.12" height="12" x="92.14" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="92.26" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="240.31" height="12" x="101.69" y="0" class="todo"><title>436 KB · 70.27%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">26.9%</text>
+<text text-anchor="end" x="522" y="24.50">27.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">167 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">436 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -109,7 +109,7 @@
 <rect width="12" height="12" x="600" y="0" class="todo"><title>0x00405fa0 GuideControl (4092 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="0" class="named"><title>0x00407000 InitialiseHammerhead (87 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="0" class="todo"><title>0x00407060 HammerheadControl (535 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="0" class="todo"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="0" class="named"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="0" class="todo"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="0" class="named"><title>0x00407700 TriggerHarpyMissile (162 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="0" class="named"><title>0x004077b0 TriggerHarpySparks (235 bytes)</title></rect>
@@ -2119,7 +2119,7 @@
 <rect width="11.53" height="11.83" x="648.96" y="143.39" class="named"><title>0x0046c250 sixteen_control (353 bytes)</title></rect>
 <rect width="11.49" height="11.83" x="663.49" y="143.39" class="named"><title>0x00423ff0 lara_col_poledown (352 bytes)</title></rect>
 <rect width="11.49" height="11.83" x="677.99" y="143.39" class="todo"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
-<rect width="11.46" height="11.83" x="692.48" y="143.39" class="todo"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
+<rect width="11.46" height="11.83" x="692.48" y="143.39" class="named"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
 <rect width="11.43" height="11.83" x="706.94" y="143.39" class="named"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
 <rect width="11.33" height="11.83" x="721.37" y="143.39" class="todo"><title>0x00499670 Func499670 (347 bytes)</title></rect>
 <rect width="11.30" height="11.83" x="735.70" y="143.39" class="todo"><title>0x004952b0 SW_SetRenderStateFlags (346 bytes)</title></rect>
