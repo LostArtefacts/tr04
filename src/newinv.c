@@ -1,6 +1,7 @@
 #include "newinv.h"
 #include "lara.h"
 #include "objnums.h"
+#include "anim.h"
 #include "lara1gun.h"
 #include "lara2gun.h"
 #include "specific/3dmath.h"
@@ -503,4 +504,37 @@ sint32 convert_obj_to_invobj(sint16 obj)
 void draw_compass(void)
 {
     DrawThreeDeeObject2D((sint32)(60.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos), phd_centery + inventry_ypos, INV_COMPASS_ITEM, 128, 0, 0, 0, 0, 0);
+}
+
+void dels_give_lara_items_cheat(void)
+{
+    sint32 piss;
+
+    if (objects[CROWBAR_ITEM].loaded)
+        lara.crowbar = 1;
+    if (objects[CLOCKWORK_BEETLE].loaded)
+        lara.mechanical_scarab = 1;
+    for (piss = 0; piss < 12; piss++) {
+        if (objects[PUZZLE_ITEM1 + piss].loaded)
+            lara.puzzleitems[piss] = 1;
+    }
+    for (piss = 0; piss < 12; piss++) {
+        if (objects[KEY_ITEM1 + piss].loaded)
+            lara.keyitems |= 1 << piss;
+    }
+    for (piss = 0; piss < 4; piss++) {
+        if (objects[PICKUP_ITEM1 + piss].loaded)
+            lara.pickupitems |= 1 << piss;
+    }
+    for (piss = 0; piss < 6; piss++) {
+        if (objects[QUEST_ITEM1 + piss].loaded)
+            lara.questitems |= 1 << piss;
+    }
+    if (objects[WATERSKIN1_EMPTY].loaded)
+        lara.small_water_skin = 1;
+    if (objects[WATERSKIN2_EMPTY].loaded)
+        lara.big_water_skin = 1;
+    lara.pickupitemscombo = 0;
+    lara.puzzleitemscombo = 0;
+    lara.keyitemscombo = 0;
 }

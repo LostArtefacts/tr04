@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="177.52" height="12" x="0" y="0" class="named"><title>803 · 51.91%</title></rect>
-<rect width="0.44" height="12" x="177.52" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="177.96" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="157.63" height="12" x="184.37" y="0" class="todo"><title>713 · 46.09%</title></rect>
+<rect width="177.74" height="12" x="0" y="0" class="named"><title>804 · 51.97%</title></rect>
+<rect width="0.44" height="12" x="177.74" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="178.18" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="157.40" height="12" x="184.60" y="0" class="todo"><title>712 · 46.02%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">52.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">803</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">713</tspan></text>
+<text text-anchor="end" x="522" y="7.50">52.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">804</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">712</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="77.30" height="12" x="0" y="0" class="named"><title>140 KB · 22.60%</title></rect>
-<rect width="0.12" height="12" x="77.30" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="77.42" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="255.93" height="12" x="86.07" y="0" class="todo"><title>464 KB · 74.83%</title></rect>
+<rect width="77.44" height="12" x="0" y="0" class="named"><title>140 KB · 22.64%</title></rect>
+<rect width="0.12" height="12" x="77.44" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="77.56" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="255.79" height="12" x="86.21" y="0" class="todo"><title>464 KB · 74.79%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">22.6%</text>
+<text text-anchor="end" x="522" y="24.50">22.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">140 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">464 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -723,7 +723,7 @@
 <rect width="12" height="12" x="60" y="195" class="named"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="195" class="named"><title>0x0043f180 draw_compass (82 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="195" class="todo"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="195" class="todo"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="195" class="named"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="195" class="todo"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="todo"><title>0x0043f7a0 InitialiseAutogun (59 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="195" class="todo"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
@@ -2241,7 +2241,7 @@
 <rect width="9.75" height="9.99" x="560.18" y="185.04" class="named"><title>0x004228d0 TestWall (252 bytes)</title></rect>
 <rect width="9.75" height="9.99" x="572.93" y="185.04" class="named"><title>0x00428c40 LookUpDown (252 bytes)</title></rect>
 <rect width="9.75" height="9.99" x="585.68" y="185.04" class="named"><title>0x0043f050 remove_inventory_item (252 bytes)</title></rect>
-<rect width="9.75" height="9.99" x="598.42" y="185.04" class="todo"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
+<rect width="9.75" height="9.99" x="598.42" y="185.04" class="named"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
 <rect width="9.71" height="9.99" x="611.17" y="185.04" class="named"><title>0x00463080 FullBlockSwitchControl (251 bytes)</title></rect>
 <rect width="9.71" height="9.99" x="623.88" y="185.04" class="named"><title>0x00469770 CanGetOff_jeep (251 bytes)</title></rect>
 <rect width="9.67" height="9.99" x="636.59" y="185.04" class="todo"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
