@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <string.h>
 
 #include "setup.h"
@@ -17,7 +18,54 @@
 #include "items.h"
 #include "pickup.h"
 #include "room.h"
-#include <stdlib.h>
+#include "lara.h"
+#include "laramisc.h"
+#include "gameflow.h"
+
+void InitialiseLara(void)
+{
+    ITEM_INFO *l;
+    sint32 item_num;
+    sint16 gun;
+
+    item_num = lara.item_number;
+    if (item_num == NO_ITEM)
+        return;
+    l = lara_item;
+    l->data = &lara;
+    l->collidable = 0;
+    memset(&lara, 0, sizeof(LARA_INFO));
+    lara.look = 1;
+    lara.item_number = item_num;
+    lara.hit_direction = -1;
+    lara.air = 1800;
+    lara.vehicle = NO_ITEM;
+    lara.weapon_item = NO_ITEM;
+    lara.water_surface_dist = 100;
+    lara.holster = LARA_HOLSTERS_PISTOLS;
+    lara.location = -1;
+    lara.highest_location = -1;
+    lara.RopePtr = -1;
+    l->hit_points = 1000;
+    lara.gun_status = LG_NO_ARMS;
+    if (gfLevelFlags & GF_YOUNGLARA)
+        gun = WEAPON_NONE;
+    else
+        gun = WEAPON_PISTOLS;
+    lara.request_gun_type = lara.gun_type = lara.last_gun_type = gun;
+    LaraInitialiseMeshes();
+    lara.pistols_type_carried = 9;
+    lara.binoculars = 1;
+    lara.num_flares = 3;
+    lara.num_small_medipack = 3;
+    lara.num_large_medipack = 1;
+    lara.num_pistols_ammo = -1;
+    if (Gameflow->DemoDisc)
+        lara.crowbar = 1;
+    lara.beetle_uses = 3;
+    InitialiseLaraAnims(l);
+    DashTimer = 120;
+}
 
 void GetCarriedItems(void)
 {
