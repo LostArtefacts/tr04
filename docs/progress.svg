@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="163.15" height="12" x="0" y="0" class="named"><title>738 · 47.71%</title></rect>
-<rect width="0.44" height="12" x="163.15" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="5.97" height="12" x="163.59" y="0" class="nonmatching"><title>27 · 1.75%</title></rect>
-<rect width="172.44" height="12" x="169.56" y="0" class="todo"><title>780 · 50.42%</title></rect>
+<rect width="163.37" height="12" x="0" y="0" class="named"><title>739 · 47.77%</title></rect>
+<rect width="0.44" height="12" x="163.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="5.97" height="12" x="163.82" y="0" class="nonmatching"><title>27 · 1.75%</title></rect>
+<rect width="172.22" height="12" x="169.78" y="0" class="todo"><title>779 · 50.36%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">47.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">738</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">27</tspan> · <tspan class="todo">780</tspan></text>
+<text text-anchor="end" x="522" y="7.50">47.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">739</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">27</tspan> · <tspan class="todo">779</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="70.29" height="12" x="0" y="0" class="named"><title>127 KB · 20.55%</title></rect>
-<rect width="0.12" height="12" x="70.29" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.93" height="12" x="70.41" y="0" class="nonmatching"><title>14 KB · 2.32%</title></rect>
-<rect width="263.67" height="12" x="78.33" y="0" class="todo"><title>478 KB · 77.10%</title></rect>
+<rect width="70.52" height="12" x="0" y="0" class="named"><title>128 KB · 20.62%</title></rect>
+<rect width="0.12" height="12" x="70.52" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.93" height="12" x="70.64" y="0" class="nonmatching"><title>14 KB · 2.32%</title></rect>
+<rect width="263.44" height="12" x="78.56" y="0" class="todo"><title>478 KB · 77.03%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">20.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">127 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">478 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">20.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">128 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">478 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1061,7 +1061,7 @@
 <rect width="12" height="12" x="630" y="285" class="todo"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="285" class="named"><title>0x00464c20 DrawBikeExtras (76 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="285" class="todo"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="285" class="todo"><title>0x00465220 TriggerExhaustSmoke_bike (417 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="285" class="named"><title>0x00465220 TriggerExhaustSmoke_bike (417 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="285" class="named"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="285" class="nonmatching"><title>0x004654a0 BikeCheckGetOff (439 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="285" class="nonmatching"><title>0x00465660 TestHeight (269 bytes)</title></rect>
@@ -2052,7 +2052,7 @@
 <rect width="12.49" height="12.94" x="397.98" y="322.38" class="todo"><title>0x00476260 LoadSamples (418 bytes)</title></rect>
 <rect width="12.49" height="12.90" x="397.98" y="338.32" class="named"><title>0x004541b0 KillItem (417 bytes)</title></rect>
 <rect width="12.49" height="12.90" x="397.98" y="354.22" class="named"><title>0x0045b080 RestoreLaraData (417 bytes)</title></rect>
-<rect width="12.49" height="12.90" x="397.98" y="370.13" class="todo"><title>0x00465220 TriggerExhaustSmoke_bike (417 bytes)</title></rect>
+<rect width="12.49" height="12.90" x="397.98" y="370.13" class="named"><title>0x00465220 TriggerExhaustSmoke_bike (417 bytes)</title></rect>
 <rect width="12.49" height="12.90" x="397.98" y="386.03" class="todo"><title>0x00493a50 DXToggleFullScreen (417 bytes)</title></rect>
 <rect width="12.49" height="12.81" x="397.98" y="401.94" class="named"><title>0x00414150 DartsControl (414 bytes)</title></rect>
 <rect width="12.49" height="12.81" x="397.98" y="417.75" class="todo"><title>0x0042df30 LaraTargetInfo (414 bytes)</title></rect>
