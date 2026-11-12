@@ -28,3 +28,8 @@ sint32 go_and_load_game(void)
 {
     return LoadGame();
 }
+
+sint32 go_and_save_game(void)
+{
+    return SaveGame();
+}
