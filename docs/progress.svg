@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="257.83" height="12" x="0" y="0" class="named"><title>1167 · 75.39%</title></rect>
 <rect width="0.66" height="12" x="257.83" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="20.99" height="12" x="258.49" y="0" class="nonmatching"><title>95 · 6.14%</title></rect>
-<rect width="62.52" height="12" x="279.48" y="0" class="todo"><title>283 · 18.28%</title></rect>
+<rect width="21.21" height="12" x="258.49" y="0" class="nonmatching"><title>96 · 6.20%</title></rect>
+<rect width="62.30" height="12" x="279.70" y="0" class="todo"><title>282 · 18.22%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1167</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">95</tspan> · <tspan class="todo">283</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1167</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">96</tspan> · <tspan class="todo">282</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="145.51" height="12" x="0" y="0" class="named"><title>265 KB · 42.55%</title></rect>
 <rect width="0.13" height="12" x="145.51" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="41.95" height="12" x="145.64" y="0" class="nonmatching"><title>76 KB · 12.27%</title></rect>
-<rect width="154.41" height="12" x="187.59" y="0" class="todo"><title>281 KB · 45.15%</title></rect>
+<rect width="42.62" height="12" x="145.64" y="0" class="nonmatching"><title>78 KB · 12.46%</title></rect>
+<rect width="153.73" height="12" x="188.27" y="0" class="todo"><title>280 KB · 44.95%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">42.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">265 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">76 KB</tspan> · <tspan class="todo">281 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">265 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">78 KB</tspan> · <tspan class="todo">280 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -971,7 +971,7 @@
 <rect width="12" height="12" x="30" y="270" class="named"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="270" class="todo"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="270" class="named"><title>0x00458ad0 phd_GetMatrixAngles (177 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="270" class="todo"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="270" class="nonmatching"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="270" class="named"><title>0x00459060 GetRopePos (146 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="270" class="nonmatching"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="270" class="named"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
@@ -1732,7 +1732,7 @@
 <rect width="22.03" height="21.87" x="234.54" y="176.62" class="named"><title>0x0043bf10 DrawInventoryItemMe (1252 bytes)</title></rect>
 <rect width="22.03" height="21.73" x="234.54" y="201.49" class="nonmatching"><title>0x0040a9d0 MummyControl (1244 bytes)</title></rect>
 <rect width="22.03" height="21.66" x="234.54" y="226.22" class="todo"><title>0x0043a1b0 S_DrawSparks (1240 bytes)</title></rect>
-<rect width="22.03" height="21.47" x="234.54" y="250.89" class="todo"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
+<rect width="22.03" height="21.47" x="234.54" y="250.89" class="nonmatching"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
 <rect width="22.03" height="21.42" x="234.54" y="275.35" class="nonmatching"><title>0x004148b0 FlameEmitter3Control (1226 bytes)</title></rect>
 <rect width="22.03" height="21.38" x="234.54" y="299.77" class="nonmatching"><title>0x004230e0 LaraHangTest (1224 bytes)</title></rect>
 <rect width="22.03" height="20.98" x="234.54" y="324.15" class="named"><title>0x00484cd0 LoadSettings (1201 bytes)</title></rect>

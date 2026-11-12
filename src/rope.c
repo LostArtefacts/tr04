@@ -41,6 +41,91 @@ void phd_GetMatrixAngles(sint32 *m, sint16 *dest)
     dest[2] = roll;
 }
 
+void AlignLaraToRope(ITEM_INFO *l)
+{
+    ROPE_STRUCT *rope;
+    PHD_VECTOR n, v, u, n2, up;
+    PHD_VECTOR v1, v2;
+    sint32 *mptr;
+    sint16 *frame;
+    sint32 temp[indices_count];
+    static sint32 ropematrix[indices_count];
+    sint32 i, x, y, z, x1, y1, z1;
+    sint16 xyz[3];
+    static sint16 ropeangle;
+
+    up.x = 4096;
+    up.y = 0;
+    up.z = 0;
+    frame = GetBestFrame(l);
+    ropeangle = lara.RopeY - 16380;
+    rope = &RopeList[lara.RopePtr];
+    i = lara.RopeSegment - 1;
+    GetRopePos(rope, (i << 7) + frame[7], &x, &y, &z);
+    GetRopePos(rope, (i << 7) + frame[7] - 192, &x1, &y1, &z1);
+    u.x = (x - x1) << (W2V_SHIFT + 2);
+    u.y = (y - y1) << (W2V_SHIFT + 2);
+    u.z = (z - z1) << (W2V_SHIFT + 2);
+    Normalise(&u);
+    u.x >>= 2;
+    u.y >>= 2;
+    u.z >>= 2;
+    vMul(&u, mDotProduct(&up, &u), &v);
+    v.x = up.x - v.x;
+    v.y = up.y - v.y;
+    v.z = up.z - v.z;
+    v1 = v;
+    v2 = v;
+    n2 = u;
+    vMul(&v1, phd_cos(ropeangle), &v1);
+    vMul(&n2, mDotProduct(&n2, &v), &n2);
+    vMul(&n2, 4096 - (rcossin_tbl[((ropeangle >> 3) & 0x1FFE) + 1] << 2), &n2);
+    mCrossProduct(&u, &v, &v2);
+    vMul(&v2, phd_sin(ropeangle), &v2);
+    n2.x += v1.x;
+    n2.y += v1.y;
+    n2.z += v1.z;
+    v.x = (n2.x + v2.x) << (W2V_SHIFT + 2);
+    v.y = (n2.y + v2.y) << (W2V_SHIFT + 2);
+    v.z = (n2.z + v2.z) << (W2V_SHIFT + 2);
+    Normalise(&v);
+    v.x >>= 2;
+    v.y >>= 2;
+    v.z >>= 2;
+    mCrossProduct(&u, &v, &n);
+    n.x <<= (W2V_SHIFT + 2);
+    n.y <<= (W2V_SHIFT + 2);
+    n.z <<= (W2V_SHIFT + 2);
+    Normalise(&n);
+    n.x >>= 2;
+    n.y >>= 2;
+    n.z >>= 2;
+    temp[M00] = n.x;
+    temp[M01] = u.x;
+    temp[M02] = v.x;
+    temp[M10] = n.y;
+    temp[M11] = u.y;
+    temp[M12] = v.y;
+    temp[M20] = n.z;
+    temp[M21] = u.z;
+    temp[M22] = v.z;
+    phd_GetMatrixAngles(temp, xyz);
+    memcpy(ropematrix, temp, sizeof(ropematrix));
+    l->pos.x_pos = rope->Position.x + (rope->MeshSegment[i + 1].x >> (W2V_SHIFT + 2));
+    l->pos.y_pos = rope->Position.y + (rope->MeshSegment[i + 1].y >> (W2V_SHIFT + 2)) + lara.RopeOffset;
+    l->pos.z_pos = rope->Position.z + (rope->MeshSegment[i + 1].z >> (W2V_SHIFT + 2));
+    phd_PushUnitMatrix();
+    phd_RotYXZ(xyz[1], xyz[0], xyz[2]);
+    mptr = phd_mxptr;
+    l->pos.x_pos += -112 * mptr[2] >> W2V_SHIFT;
+    l->pos.y_pos += -112 * mptr[6] >> W2V_SHIFT;
+    l->pos.z_pos += -112 * mptr[10] >> W2V_SHIFT;
+    phd_PopMatrix();
+    l->pos.x_rot = xyz[0];
+    l->pos.y_rot = xyz[1];
+    l->pos.z_rot = xyz[2];
+}
+
 void GetRopePos(ROPE_STRUCT *rope, sint32 pos, sint32 *x, sint32 *y, sint32 *z)
 {
     sint32 segment;
