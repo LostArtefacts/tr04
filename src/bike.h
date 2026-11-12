@@ -15,7 +15,8 @@ typedef struct bikeinfo {
     sint16 rot_thing;
     sint32 bike_turn;
     sint32 pitch2;
-    sint16 flags;
+    uint8 flags;
+    uint8 flags2;
     sint16 light_intensity;
 } BIKEINFO;
 
@@ -25,6 +26,7 @@ void DrawBikeExtras(ITEM_INFO *item);
 void BikeExplode(ITEM_INFO *item);
 void TriggerBikeBeam(ITEM_INFO *item);
 sint32 CanGetOff_bike(sint16 num);
+void InitialiseBike(sint16 item_number);
 
 extern ITEM_INFO *GlobalBikeItem;
 

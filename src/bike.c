@@ -16,6 +16,29 @@
 #include "specific/function_stubs.h"
 #include "specific/specificfx.h"
 
+void InitialiseBike(sint16 item_number)
+{
+    ITEM_INFO *item;
+    BIKEINFO *bike;
+
+    item = &items[item_number];
+    bike = (BIKEINFO *)game_malloc(sizeof(BIKEINFO));
+    item->data = bike;
+    bike->velocity = 0;
+    bike->bike_turn = 0;
+    bike->pitch2 = 0;
+    bike->move_angle = item->pos.y_rot;
+    bike->rot_thing = 0;
+    bike->extra_rotation = 0;
+    bike->flags2 &= 0xFE;
+    bike->light_intensity = 0;
+    bike->flags = 0;
+    *(sint32 *)&bike->right_front_wheelrot = 0;
+    bike->left_wheelrot = 0;
+    item->mesh_bits = 1015;
+    GlobalBikeItem = item;
+}
+
 void TriggerBikeBeam(ITEM_INFO *item)
 {
     BIKEINFO *bike;
