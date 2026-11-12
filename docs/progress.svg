@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="148.34" height="12" x="0" y="0" class="named"><title>671 · 43.37%</title></rect>
-<rect width="0.44" height="12" x="148.34" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="148.78" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="188.58" height="12" x="153.42" y="0" class="todo"><title>853 · 55.14%</title></rect>
+<rect width="148.56" height="12" x="0" y="0" class="named"><title>672 · 43.44%</title></rect>
+<rect width="0.44" height="12" x="148.56" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="149" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="188.35" height="12" x="153.65" y="0" class="todo"><title>852 · 55.07%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">43.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">671</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">853</tspan></text>
+<text text-anchor="end" x="522" y="7.50">43.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">672</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">852</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="60.08" height="12" x="0" y="0" class="named"><title>109 KB · 17.57%</title></rect>
-<rect width="0.12" height="12" x="60.08" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="60.20" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="274.55" height="12" x="67.45" y="0" class="todo"><title>498 KB · 80.28%</title></rect>
+<rect width="60.13" height="12" x="0" y="0" class="named"><title>109 KB · 17.58%</title></rect>
+<rect width="0.12" height="12" x="60.13" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="60.25" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="274.51" height="12" x="67.49" y="0" class="todo"><title>498 KB · 80.27%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">109 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">498 KB</tspan></text>
@@ -355,7 +355,7 @@
 <rect width="12" height="12" x="540" y="75" class="named"><title>0x00425d10 lara_as_fastback (87 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="75" class="named"><title>0x00425d70 lara_as_turn_r (162 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="75" class="named"><title>0x00425e20 lara_as_turn_l (158 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="75" class="todo"><title>0x00425ec0 lara_as_death (79 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="75" class="named"><title>0x00425ec0 lara_as_death (79 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="75" class="named"><title>0x00425f10 lara_as_fastfall (64 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="75" class="named"><title>0x00425f50 lara_as_hang (74 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="75" class="todo"><title>0x00425fa0 lara_col_hang (645 bytes)</title></rect>
@@ -2754,7 +2754,7 @@
 <rect width="5.52" height="5.60" x="616.21" y="322.53" class="named"><title>0x0048e810 TIME_Init (80 bytes)</title></rect>
 <rect width="5.52" height="5.60" x="624.73" y="322.53" class="todo"><title>0x00492b90 DXSetVideoMode (80 bytes)</title></rect>
 <rect width="5.45" height="5.60" x="633.25" y="322.53" class="todo"><title>0x00409010 InitialiseHorse (79 bytes)</title></rect>
-<rect width="5.45" height="5.60" x="641.70" y="322.53" class="todo"><title>0x00425ec0 lara_as_death (79 bytes)</title></rect>
+<rect width="5.45" height="5.60" x="641.70" y="322.53" class="named"><title>0x00425ec0 lara_as_death (79 bytes)</title></rect>
 <rect width="5.45" height="5.60" x="650.14" y="322.53" class="todo"><title>0x0042eac0 WeaponObjectMesh (79 bytes)</title></rect>
 <rect width="5.45" height="5.60" x="658.59" y="322.53" class="named"><title>0x0046fe80 DXSetupDialog (79 bytes)</title></rect>
 <rect width="5.45" height="5.60" x="667.04" y="322.53" class="named"><title>0x004738b0 DXStopSample (79 bytes)</title></rect>

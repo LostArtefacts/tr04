@@ -43,6 +43,7 @@ typedef struct camera_info {
 } CAMERA_INFO;
 
 extern CAMERA_INFO camera;
+extern sint32 LaserSight;
 extern GAME_VECTOR ForcedFixedCamera;
 extern char UseForcedFixedCamera;
 extern sint32 BinocularRange;

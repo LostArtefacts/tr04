@@ -1292,6 +1292,20 @@ void lara_as_turn_l(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_STOP;
 }
 
+void lara_as_death(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.look = 0;
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    if (BinocularRange) {
+        BinocularRange = 0;
+        LaserSight = 0;
+        AlterFOV(14560);
+        lara_item->mesh_bits = -1;
+        lara.Busy = 0;
+    }
+}
+
 void lara_as_fastfall(ITEM_INFO *item, COLL_INFO *coll)
 {
     FASTFALL_FRICTION;
