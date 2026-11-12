@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="152.76" height="12" x="0" y="0" class="named"><title>691 · 44.67%</title></rect>
-<rect width="0.44" height="12" x="152.76" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="153.20" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="184.15" height="12" x="157.85" y="0" class="todo"><title>833 · 53.85%</title></rect>
+<rect width="152.98" height="12" x="0" y="0" class="named"><title>692 · 44.73%</title></rect>
+<rect width="0.44" height="12" x="152.98" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="153.42" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="183.93" height="12" x="158.07" y="0" class="todo"><title>832 · 53.78%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">44.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">691</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">833</tspan></text>
+<text text-anchor="end" x="522" y="7.50">44.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">692</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">832</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="62.86" height="12" x="0" y="0" class="named"><title>114 KB · 18.38%</title></rect>
-<rect width="0.12" height="12" x="62.86" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="62.98" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="271.78" height="12" x="70.22" y="0" class="todo"><title>493 KB · 79.47%</title></rect>
+<rect width="62.92" height="12" x="0" y="0" class="named"><title>114 KB · 18.40%</title></rect>
+<rect width="0.12" height="12" x="62.92" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="63.04" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="271.72" height="12" x="70.28" y="0" class="todo"><title>493 KB · 79.45%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">18.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">114 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">493 KB</tspan></text>
@@ -338,7 +338,7 @@
 <rect width="12" height="12" x="285" y="75" class="named"><title>0x00424650 lara_as_roper (46 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="75" class="named"><title>0x00424680 lara_col_ropefwd (402 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="75" class="named"><title>0x00424820 JumpOffRope (187 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="75" class="todo"><title>0x004248e0 lara_as_climbrope (107 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="75" class="named"><title>0x004248e0 lara_as_climbrope (107 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="75" class="named"><title>0x00424950 lara_as_climbroped (265 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="75" class="todo"><title>0x00424a60 lara_as_stop (1071 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="75" class="todo"><title>0x00424e90 UseInventoryItems (467 bytes)</title></rect>
@@ -2629,7 +2629,7 @@
 <rect width="6.39" height="6.54" x="703.18" y="285.82" class="todo"><title>0x00453230 InitialiseFlameEmitter3 (108 bytes)</title></rect>
 <rect width="6.39" height="6.54" x="712.57" y="285.82" class="named"><title>0x00458710 KeyTrigger (108 bytes)</title></rect>
 <rect width="6.39" height="6.54" x="721.96" y="285.82" class="todo"><title>0x00479080 ClearObjectLighting (108 bytes)</title></rect>
-<rect width="6.33" height="6.54" x="731.34" y="285.82" class="todo"><title>0x004248e0 lara_as_climbrope (107 bytes)</title></rect>
+<rect width="6.33" height="6.54" x="731.34" y="285.82" class="named"><title>0x004248e0 lara_as_climbrope (107 bytes)</title></rect>
 <rect width="6.33" height="6.54" x="740.67" y="285.82" class="named"><title>0x00432620 lara_as_swim (107 bytes)</title></rect>
 <rect width="6.52" height="6.34" x="580.50" y="295.35" class="named"><title>0x00438690 GetFreeSmokeSpark (107 bytes)</title></rect>
 <rect width="6.52" height="6.34" x="590.02" y="295.35" class="todo"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>

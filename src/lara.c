@@ -1266,6 +1266,21 @@ void JumpOffRope(ITEM_INFO *item)
     }
 }
 
+void lara_as_climbrope(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (input & IN_ROLL)
+        FallFromRope(item);
+    else {
+        camera.target_angle = 5460;
+        if (item->frame_number == anims[item->anim_number].frame_end) {
+            item->frame_number = anims[item->anim_number].frame_base;
+            lara.RopeSegment -= 2;
+        }
+        if (!(input & IN_FORWARD) || lara.RopeSegment <= 4)
+            item->goal_anim_state = AS_ROPE;
+    }
+}
+
 void lara_as_climbroped(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (!(input & IN_ACTION)) {
