@@ -2798,7 +2798,7 @@ address,size,name,symbol
 0x0080ecd0,1,bLaraInWater,_bLaraInWater
 0x0080ecd4,4,actualRoomNumber,_actualRoomNumber
 0x0080ecd8,4,actualFOV,_actualFOV
-0x0080ece0,,actualCameraTarget,_actualCameraTarget
-0x0080ecf0,,actualCameraPos,_actualCameraPos
+0x0080ece0,12,actualCameraTarget,_actualCameraTarget
+0x0080ecf0,12,actualCameraPos,_actualCameraPos
 0x0080ed00,3328,Scarabs,_Scarabs
 0x0080fa00,1920,Locusts,_Locusts

@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="230.14" height="12" x="0" y="0" class="named"><title>1041 · 67.29%</title></rect>
-<rect width="0.44" height="12" x="230.14" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="230.58" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="103.02" height="12" x="238.98" y="0" class="todo"><title>466 · 30.12%</title></rect>
+<rect width="230.36" height="12" x="0" y="0" class="named"><title>1042 · 67.36%</title></rect>
+<rect width="0.44" height="12" x="230.36" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="230.80" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="102.80" height="12" x="239.20" y="0" class="todo"><title>465 · 30.06%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">67.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1041</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">466</tspan></text>
+<text text-anchor="end" x="522" y="7.50">67.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1042</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">465</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="100.86" height="12" x="0" y="0" class="named"><title>183 KB · 29.49%</title></rect>
-<rect width="0.12" height="12" x="100.86" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="100.98" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="230.86" height="12" x="111.14" y="0" class="todo"><title>419 KB · 67.50%</title></rect>
+<rect width="100.93" height="12" x="0" y="0" class="named"><title>183 KB · 29.51%</title></rect>
+<rect width="0.12" height="12" x="100.93" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="101.05" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="230.79" height="12" x="111.21" y="0" class="todo"><title>419 KB · 67.48%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">29.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">183 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">419 KB</tspan></text>
@@ -240,7 +240,7 @@
 <rect width="12" height="12" x="315" y="45" class="named"><title>0x004183b0 InitialiseTroop (120 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="45" class="todo"><title>0x00418430 TroopControl (2180 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="45" class="todo"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="45" class="todo"><title>0x00418f10 ClearCutSceneCamera (130 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="45" class="named"><title>0x00418f10 ClearCutSceneCamera (130 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="45" class="todo"><title>0x00418fa0 GetAIEnemy (199 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="45" class="todo"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="45" class="named"><title>0x00419560 InitialiseVoncroy (116 bytes)</title></rect>
@@ -2543,7 +2543,7 @@
 <rect width="7.06" height="7.17" x="581.15" y="266.08" class="named"><title>0x00437e60 GetFreeFireSpark (131 bytes)</title></rect>
 <rect width="7.06" height="7.17" x="591.21" y="266.08" class="named"><title>0x00439060 GetFreeGunshell (131 bytes)</title></rect>
 <rect width="7.01" height="7.17" x="601.27" y="266.08" class="named"><title>0x00405820 InitialiseDog (130 bytes)</title></rect>
-<rect width="7.01" height="7.17" x="611.28" y="266.08" class="todo"><title>0x00418f10 ClearCutSceneCamera (130 bytes)</title></rect>
+<rect width="7.01" height="7.17" x="611.28" y="266.08" class="named"><title>0x00418f10 ClearCutSceneCamera (130 bytes)</title></rect>
 <rect width="7.01" height="7.17" x="621.28" y="266.08" class="named"><title>0x00423f60 lara_col_poleup (130 bytes)</title></rect>
 <rect width="7.01" height="7.17" x="631.29" y="266.08" class="named"><title>0x004288d0 lara_col_fastdive (130 bytes)</title></rect>
 <rect width="7.01" height="7.17" x="641.29" y="266.08" class="named"><title>0x004378a0 GhostTrap (130 bytes)</title></rect>

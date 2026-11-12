@@ -5,6 +5,24 @@
 #include "box.h"
 #include "control.h"
 #include "objnums.h"
+#include "camera.h"
+#include "specific/3dmath.h"
+
+void ClearCutSceneCamera(void)
+{
+    camera.pos.x = actualCameraPos.x;
+    camera.pos.y = actualCameraPos.y;
+    camera.pos.z = actualCameraPos.z;
+    camera.target.x = actualCameraTarget.x;
+    camera.target.y = actualCameraTarget.y;
+    bVoncroyCutScene = 0;
+    camera.target.z = actualCameraTarget.z;
+    camera.pos.room_number = (sint16)actualRoomNumber;
+    AlterFOV((sint16)actualFOV);
+    camera.speed = 1;
+    camera.old_type = FIXED_CAMERA;
+    camera.type = CHASE_CAMERA;
+}
 
 void InitialiseVoncroy(sint16 item_number)
 {
