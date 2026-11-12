@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="244.13" height="12" x="0" y="0" class="named"><title>1105 · 71.38%</title></rect>
-<rect width="0.44" height="12" x="244.13" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="15.02" height="12" x="244.57" y="0" class="nonmatching"><title>68 · 4.39%</title></rect>
-<rect width="82.41" height="12" x="259.59" y="0" class="todo"><title>373 · 24.10%</title></rect>
+<rect width="244.35" height="12" x="0" y="0" class="named"><title>1106 · 71.45%</title></rect>
+<rect width="0.44" height="12" x="244.35" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="15.02" height="12" x="244.79" y="0" class="nonmatching"><title>68 · 4.39%</title></rect>
+<rect width="82.19" height="12" x="259.81" y="0" class="todo"><title>372 · 24.03%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">71.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1105</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">68</tspan> · <tspan class="todo">373</tspan></text>
+<text text-anchor="end" x="522" y="7.50">71.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1106</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">68</tspan> · <tspan class="todo">372</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="122.31" height="12" x="0" y="0" class="named"><title>222 KB · 35.76%</title></rect>
-<rect width="0.12" height="12" x="122.31" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="26.67" height="12" x="122.43" y="0" class="nonmatching"><title>48 KB · 7.80%</title></rect>
-<rect width="192.90" height="12" x="149.10" y="0" class="todo"><title>350 KB · 56.40%</title></rect>
+<rect width="122.83" height="12" x="0" y="0" class="named"><title>223 KB · 35.91%</title></rect>
+<rect width="0.12" height="12" x="122.83" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="26.67" height="12" x="122.95" y="0" class="nonmatching"><title>48 KB · 7.80%</title></rect>
+<rect width="192.38" height="12" x="149.62" y="0" class="todo"><title>349 KB · 56.25%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">35.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">222 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">48 KB</tspan> · <tspan class="todo">350 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">35.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">223 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">48 KB</tspan> · <tspan class="todo">349 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1308,7 +1308,7 @@
 <rect width="12" height="12" x="585" y="360" class="todo"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="360" class="named"><title>0x00479080 ClearObjectLighting (108 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="360" class="named"><title>0x004790f0 InitDynamicLighting (701 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="360" class="todo"><title>0x004793b0 InitItemDynamicLighting (939 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="360" class="named"><title>0x004793b0 InitItemDynamicLighting (939 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="360" class="named"><title>0x00479760 ClearDynamicLighting (92 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="360" class="todo"><title>0x004797c0 MemBltSurf (1053 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="360" class="named"><title>0x00479be0 RGBM_Mono (35 bytes)</title></rect>
@@ -1788,7 +1788,7 @@
 <rect width="19.88" height="18.42" x="374.72" y="0" class="todo"><title>0x004266e0 LaraHangLeftCornerTest (949 bytes)</title></rect>
 <rect width="19.86" height="18.42" x="397.60" y="0" class="todo"><title>0x00444e00 CameraCollisionBounds (948 bytes)</title></rect>
 <rect width="19.82" height="18.42" x="420.46" y="0" class="todo"><title>0x0042a490 CrossbowHitSwitchType78 (946 bytes)</title></rect>
-<rect width="19.67" height="18.42" x="443.28" y="0" class="todo"><title>0x004793b0 InitItemDynamicLighting (939 bytes)</title></rect>
+<rect width="19.67" height="18.42" x="443.28" y="0" class="named"><title>0x004793b0 InitItemDynamicLighting (939 bytes)</title></rect>
 <rect width="19.57" height="18.42" x="465.95" y="0" class="todo"><title>0x00447750 ItemPushLara (934 bytes)</title></rect>
 <rect width="19.32" height="18.42" x="488.52" y="0" class="todo"><title>0x00403870 UpdateLocusts (922 bytes)</title></rect>
 <rect width="19.19" height="18.42" x="510.83" y="0" class="named"><title>0x00421280 lara_col_all4s (916 bytes)</title></rect>
