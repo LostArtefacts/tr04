@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="217.98" height="12" x="0" y="0" class="named"><title>986 · 63.74%</title></rect>
-<rect width="0.44" height="12" x="217.98" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="218.42" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="116.28" height="12" x="225.72" y="0" class="todo"><title>526 · 34%</title></rect>
+<rect width="218.20" height="12" x="0" y="0" class="named"><title>987 · 63.80%</title></rect>
+<rect width="0.44" height="12" x="218.20" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="218.64" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="116.06" height="12" x="225.94" y="0" class="todo"><title>525 · 33.94%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">63.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">986</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">526</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">987</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">525</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="94.43" height="12" x="0" y="0" class="named"><title>171 KB · 27.61%</title></rect>
-<rect width="0.12" height="12" x="94.43" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="94.55" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="238.02" height="12" x="103.98" y="0" class="todo"><title>432 KB · 69.60%</title></rect>
+<rect width="94.52" height="12" x="0" y="0" class="named"><title>171 KB · 27.64%</title></rect>
+<rect width="0.12" height="12" x="94.52" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="94.64" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="237.93" height="12" x="104.07" y="0" class="todo"><title>432 KB · 69.57%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">27.6%</text>
+<text text-anchor="end" x="522" y="24.50">27.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">171 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">432 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -68,7 +68,7 @@
 <g transform="translate(0 20)">
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00401000 InitialiseAhmet (118 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="0" class="todo"><title>0x00401080 AhmetControl (1681 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="0" class="todo"><title>0x00401730 ExplodeAhmet (164 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="0" class="named"><title>0x00401730 ExplodeAhmet (164 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="0" class="todo"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="0" class="todo"><title>0x00401990 ReTriggerAhmet (302 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="0" class="todo"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
@@ -2438,7 +2438,7 @@
 <rect width="8.09" height="7.97" x="518.69" y="399.74" class="named"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
 <rect width="8.09" height="7.92" x="518.69" y="410.72" class="todo"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
 <rect width="8.09" height="7.88" x="518.69" y="421.64" class="named"><title>0x00423880 lara_as_monkeyswing (165 bytes)</title></rect>
-<rect width="8.09" height="7.83" x="518.69" y="432.52" class="todo"><title>0x00401730 ExplodeAhmet (164 bytes)</title></rect>
+<rect width="8.09" height="7.83" x="518.69" y="432.52" class="named"><title>0x00401730 ExplodeAhmet (164 bytes)</title></rect>
 <rect width="8.09" height="7.83" x="518.69" y="443.34" class="named"><title>0x004371f0 DoLotsOfBlood (164 bytes)</title></rect>
 <rect width="8.09" height="7.83" x="518.69" y="454.17" class="named"><title>0x00440290 EscapeBox (164 bytes)</title></rect>
 <rect width="7.82" height="8.10" x="529.79" y="244.80" class="named"><title>0x0046bc30 eleventh_cutseq_init (164 bytes)</title></rect>
