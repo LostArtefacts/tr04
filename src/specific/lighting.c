@@ -3,6 +3,7 @@
 #include "function_stubs.h"
 #include "../room.h"
 #include "../draw.h"
+#include "winmain.h"
 
 void MallocD3DLights(void)
 {
@@ -36,4 +37,18 @@ void S_CalculateStaticMeshLight(sint32 x, sint32 y, sint32 z, sint32 shade, ROOM
     StaticMeshLightItem.room_number = current_room;
     StaticMeshShade = shade;
     current_item = &StaticMeshLightItem;
+}
+
+void ClearObjectLighting(void)
+{
+    sint32 i;
+
+    IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_AMBIENT, 0);
+    for (i = 0; i < MaxRoomLights; i++) {
+        if (D3DLights[i].D3DLightx.dwFlags & D3DLIGHT_ACTIVE) {
+            D3DLights[i].D3DLightx.dwFlags = D3DLIGHT_NO_SPECULAR;
+            D3DLights[i].D3DLightx.dltType = D3DLIGHT_POINT;
+            IDirect3DLight_SetLight(D3DLights[i].D3DLight, (LPD3DLIGHT)&D3DLights[i].D3DLightx);
+        }
+    }
 }
