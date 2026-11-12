@@ -344,7 +344,146 @@ void insert_object_into_list_v2(sint32 num)
     }
 }
 
-void insert_object_into_list(sint16 num)
+void construct_object_list(void)
+{
+    sint32 i;
+
+    rings[RING_INVENTORY]->numobjectsinlist = 0;
+    for (i = 0; i < NUM_INVOBJ; i++)
+        rings[RING_INVENTORY]->current_object_list[i].invitem = NO_ITEM;
+    CurrentPistolsAmmoType = 0;
+    CurrentUziAmmoType = 0;
+    CurrentRevolverAmmoType = 0;
+    CurrentShotGunAmmoType = 0;
+    CurrentGrenadeGunAmmoType = 0;
+    CurrentCrossBowAmmoType = 0;
+    if (!(gfLevelFlags & GF_YOUNGLARA)) {
+        if (lara.pistols_type_carried & 1)
+            insert_object_into_list(INV_PISTOLS_ITEM);
+        if (lara.uzis_type_carried & 1)
+            insert_object_into_list(INV_UZI_ITEM);
+        else if (AmountUziAmmo)
+            insert_object_into_list(INV_UZI_AMMO_ITEM);
+        if (lara.sixshooter_type_carried & 1) {
+            if (lara.sixshooter_type_carried & 4)
+                insert_object_into_list(INV_REVOLVER_LASER_ITEM);
+            else
+                insert_object_into_list(INV_REVOLVER_ITEM);
+        } else if (AmountRevolverAmmo)
+            insert_object_into_list(INV_REVOLVER_AMMO_ITEM);
+        if (lara.shotgun_type_carried & 1) {
+            insert_object_into_list(INV_SHOTGUN_ITEM);
+            if (lara.shotgun_type_carried & 0x10)
+                CurrentShotGunAmmoType = 1;
+        } else {
+            if (AmountShotGunAmmo1)
+                insert_object_into_list(INV_SHOTGUN_AMMO1_ITEM);
+            if (AmountShotGunAmmo2)
+                insert_object_into_list(INV_SHOTGUN_AMMO2_ITEM);
+        }
+        if (lara.grenade_type_carried & 1) {
+            insert_object_into_list(INV_GRENADEGUN_ITEM);
+            if (lara.grenade_type_carried & 0x10)
+                CurrentGrenadeGunAmmoType = 1;
+            else if (lara.grenade_type_carried & 0x20)
+                CurrentGrenadeGunAmmoType = 2;
+        } else {
+            if (AmountGrenadeAmmo1)
+                insert_object_into_list(INV_GRENADEGUN_AMMO1_ITEM);
+            if (AmountGrenadeAmmo2)
+                insert_object_into_list(INV_GRENADEGUN_AMMO2_ITEM);
+            if (AmountGrenadeAmmo3)
+                insert_object_into_list(INV_GRENADEGUN_AMMO3_ITEM);
+        }
+        if (lara.crossbow_type_carried & 1) {
+            if (lara.crossbow_type_carried & 4)
+                insert_object_into_list(INV_CROSSBOW_LASER_ITEM);
+            else
+                insert_object_into_list(INV_CROSSBOW_ITEM);
+            if (lara.crossbow_type_carried & 0x10)
+                CurrentCrossBowAmmoType = 1;
+            else if (lara.crossbow_type_carried & 0x20)
+                CurrentCrossBowAmmoType = 2;
+        } else {
+            if (AmountCrossBowAmmo1)
+                insert_object_into_list(INV_CROSSBOW_AMMO1_ITEM);
+            if (AmountCrossBowAmmo2)
+                insert_object_into_list(INV_CROSSBOW_AMMO2_ITEM);
+            if (AmountCrossBowAmmo3)
+                insert_object_into_list(INV_CROSSBOW_AMMO3_ITEM);
+        }
+        if (lara.lasersight)
+            insert_object_into_list(INV_LASERSIGHT_ITEM);
+        if (lara.binoculars)
+            insert_object_into_list(INV_BINOCULARS_ITEM);
+        if (lara.num_flares)
+            insert_object_into_list(INV_FLARE_INV_ITEM);
+    }
+    if (lara.num_small_medipack)
+        insert_object_into_list(INV_SMALLMEDI_ITEM);
+    if (lara.num_large_medipack)
+        insert_object_into_list(INV_BIGMEDI_ITEM);
+    if (lara.small_water_skin)
+        insert_object_into_list(lara.small_water_skin + INV_WATERSKIN1_EMPTY_ITEM - 1);
+    if (lara.big_water_skin)
+        insert_object_into_list(lara.big_water_skin + INV_WATERSKIN2_EMPTY_ITEM - 1);
+    if (lara.crowbar)
+        insert_object_into_list(INV_CROWBAR_ITEM);
+    if (lara.mechanical_scarab & 1)
+        insert_object_into_list(INV_CLOCKWORK_BEETLE_ITEM);
+    if (lara.mechanical_scarab & 2)
+        insert_object_into_list(INV_WINDING_KEY_ITEM);
+    if (lara.mechanical_scarab & 4)
+        insert_object_into_list(INV_MECHANICAL_SCARAB_ITEM);
+    for (i = 0; i < 12; i++) {
+        if (lara.puzzleitems[i])
+            insert_object_into_list(i + INV_PUZZLE1_ITEM);
+    }
+    for (i = 0; i < 16; i++) {
+        if ((1 << i) & lara.puzzleitemscombo)
+            insert_object_into_list(i + INV_PUZZLE1_COMBO1_ITEM);
+    }
+    for (i = 0; i < 12; i++) {
+        if ((1 << i) & lara.keyitems)
+            insert_object_into_list(i + INV_KEY1_ITEM);
+    }
+    for (i = 0; i < 16; i++) {
+        if ((1 << i) & lara.keyitemscombo)
+            insert_object_into_list(i + INV_KEY1_COMBO1_ITEM);
+    }
+    for (i = 0; i < 4; i++) {
+        if ((1 << i) & lara.pickupitems)
+            insert_object_into_list(i + INV_PICKUP1_ITEM);
+    }
+    for (i = 0; i < 8; i++) {
+        if ((1 << i) & lara.pickupitemscombo)
+            insert_object_into_list(i + INV_PICKUP1_COMBO1_ITEM);
+    }
+    for (i = 0; i < 6; i++) {
+        if ((1 << i) & lara.questitems)
+            insert_object_into_list(i + INV_QUEST1_ITEM);
+    }
+    if (lara.examine1)
+        insert_object_into_list(INV_EXAMINE1_ITEM);
+    if (lara.examine2)
+        insert_object_into_list(INV_EXAMINE2_ITEM);
+    if (lara.examine3)
+        insert_object_into_list(INV_EXAMINE3_ITEM);
+    if (Gameflow->LoadSaveEnabled) {
+        insert_object_into_list(INV_MEMCARD_LOAD_ITEM);
+        insert_object_into_list(INV_MEMCARD_SAVE_ITEM);
+    }
+    rings[RING_INVENTORY]->objlistmovement = 0;
+    rings[RING_INVENTORY]->curobjinlist = 0;
+    rings[RING_AMMO]->objlistmovement = 0;
+    rings[RING_AMMO]->curobjinlist = 0;
+    handle_object_changeover(RING_INVENTORY);
+    rings[RING_INVENTORY]->ringactive = 1;
+    rings[RING_AMMO]->ringactive = 0;
+    ammo_active = 0;
+}
+
+void insert_object_into_list(sint32 num)
 {
     rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->numobjectsinlist].invitem = num;
     rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->numobjectsinlist].yrot = 0;
