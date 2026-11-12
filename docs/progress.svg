@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="166.91" height="12" x="0" y="0" class="named"><title>755 · 48.80%</title></rect>
-<rect width="0.44" height="12" x="166.91" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="167.35" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="168.24" height="12" x="173.76" y="0" class="todo"><title>761 · 49.19%</title></rect>
+<rect width="167.13" height="12" x="0" y="0" class="named"><title>756 · 48.87%</title></rect>
+<rect width="0.44" height="12" x="167.13" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="167.57" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="168.02" height="12" x="173.98" y="0" class="todo"><title>760 · 49.13%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">48.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">755</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">761</tspan></text>
+<text text-anchor="end" x="522" y="7.50">49.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">756</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">760</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="75.20" height="12" x="0" y="0" class="named"><title>136 KB · 21.99%</title></rect>
-<rect width="0.12" height="12" x="75.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="75.32" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="258.03" height="12" x="83.97" y="0" class="todo"><title>468 KB · 75.45%</title></rect>
+<rect width="75.44" height="12" x="0" y="0" class="named"><title>137 KB · 22.06%</title></rect>
+<rect width="0.12" height="12" x="75.44" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="75.56" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="257.79" height="12" x="84.21" y="0" class="todo"><title>468 KB · 75.38%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">22.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">136 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">468 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">22.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">137 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">468 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -543,7 +543,7 @@
 <rect width="12" height="12" x="360" y="135" class="named"><title>0x00432b50 lara_col_dive (19 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="135" class="named"><title>0x00432b70 lara_col_uwdeath (91 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="135" class="named"><title>0x00432bd0 lara_col_waterroll (19 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="135" class="todo"><title>0x00432bf0 GetWaterDepth (422 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="135" class="named"><title>0x00432bf0 GetWaterDepth (422 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="135" class="todo"><title>0x00432da0 LaraWaterCurrent (631 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="135" class="named"><title>0x00433020 GetFreeDebris (113 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="135" class="named"><title>0x004330a0 TriggerDebris (533 bytes)</title></rect>
@@ -2045,7 +2045,7 @@
 <rect width="12.49" height="13.18" x="397.98" y="209.81" class="todo"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
 <rect width="12.49" height="13.15" x="397.98" y="226" class="named"><title>0x00456910 BurningRopeCollision (425 bytes)</title></rect>
 <rect width="12.49" height="13.15" x="397.98" y="242.15" class="todo"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
-<rect width="12.49" height="13.06" x="397.98" y="258.30" class="todo"><title>0x00432bf0 GetWaterDepth (422 bytes)</title></rect>
+<rect width="12.49" height="13.06" x="397.98" y="258.30" class="named"><title>0x00432bf0 GetWaterDepth (422 bytes)</title></rect>
 <rect width="12.49" height="13.06" x="397.98" y="274.36" class="named"><title>0x00441080 CreatureDie (422 bytes)</title></rect>
 <rect width="12.49" height="13" x="397.98" y="290.42" class="named"><title>0x004421d0 CreatureVault (420 bytes)</title></rect>
 <rect width="12.49" height="12.97" x="397.98" y="306.41" class="named"><title>0x00425b60 lara_as_run (419 bytes)</title></rect>
