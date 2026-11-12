@@ -710,6 +710,30 @@ sint32 DXSetVideoMode(LPDIRECTDRAW4 dd, sint32 dwWidth, sint32 dwHeight, sint32 
     return 1;
 }
 
+sint32 DXSetCooperativeLevel(LPDIRECTDRAW4 dd, HWND hwnd, sint32 flags)
+{
+    char *ptr;
+    sint32 i;
+    sint32 cl[11] = {DDSCL_ALLOWMODEX, DDSCL_ALLOWREBOOT, DDSCL_CREATEDEVICEWINDOW, DDSCL_EXCLUSIVE, DDSCL_FPUSETUP, DDSCL_FULLSCREEN, DDSCL_MULTITHREADED, DDSCL_NORMAL, DDSCL_NOWINDOWCHANGES, DDSCL_SETDEVICEWINDOW, DDSCL_SETFOCUSWINDOW};
+    char text[11][30] = {"allowmodex", "allowreboot", "createdevicewindow", "exclusive", "fpusetup", "fullscreen", "multithreaded", "normal", "nowindowchanges", "setdevicewindow", "setfocuswindow"};
+    char buf[1024];
+
+    ptr = "DXSetCooperativeLevel - ";
+    strcpy(buf, ptr);
+    ptr = &buf[strlen(buf)];
+    for (i = 0; i < 11; i++) {
+        if (cl[i] & flags) {
+            strcpy(ptr, text[i]);
+            ptr += strlen(text[i]);
+            *ptr++ = ' ';
+            *ptr = 0;
+        }
+    }
+    *(ptr - 1) = 0;
+    Log(2, buf);
+    return DXAttempt(IDirectDraw4_SetCooperativeLevel(dd, hwnd, flags)) == DD_OK;
+}
+
 sint32 DXCreateD3DDevice(LPDIRECT3D3 d3d, GUID guid, LPDIRECTDRAWSURFACE4 surf, LPDIRECT3DDEVICE3 *device)
 {
     Log(2, "DXCreateD3DDevice");
