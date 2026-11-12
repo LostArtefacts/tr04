@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="247.88" height="12" x="0" y="0" class="named"><title>1122 · 72.48%</title></rect>
-<rect width="0.66" height="12" x="247.88" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.01" height="12" x="248.55" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
-<rect width="76.44" height="12" x="265.56" y="0" class="todo"><title>346 · 22.35%</title></rect>
+<rect width="248.10" height="12" x="0" y="0" class="named"><title>1123 · 72.55%</title></rect>
+<rect width="0.66" height="12" x="248.10" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.01" height="12" x="248.77" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
+<rect width="76.22" height="12" x="265.78" y="0" class="todo"><title>345 · 22.29%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1122</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">346</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1123</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">345</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="129.81" height="12" x="0" y="0" class="named"><title>236 KB · 37.96%</title></rect>
-<rect width="0.13" height="12" x="129.81" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="30.52" height="12" x="129.94" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
-<rect width="181.54" height="12" x="160.46" y="0" class="todo"><title>330 KB · 53.08%</title></rect>
+<rect width="130.21" height="12" x="0" y="0" class="named"><title>237 KB · 38.07%</title></rect>
+<rect width="0.13" height="12" x="130.21" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="30.52" height="12" x="130.34" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
+<rect width="181.14" height="12" x="160.86" y="0" class="todo"><title>330 KB · 52.96%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">38.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">236 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">330 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">38.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">237 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">330 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -71,7 +71,7 @@
 <rect width="12" height="12" x="30" y="0" class="named"><title>0x00401730 ExplodeAhmet (164 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="0" class="nonmatching"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="0" class="named"><title>0x00401990 ReTriggerAhmet (302 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="0" class="todo"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="0" class="named"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="0" class="named"><title>0x00401db0 InitialiseBaboon (146 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="0" class="todo"><title>0x00401e50 BaboonControl (2389 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="0" class="named"><title>0x004027e0 FindCrowbarSwitch (110 bytes)</title></rect>
@@ -1849,7 +1849,7 @@
 <rect width="16.17" height="17.62" x="327.15" y="83.75" class="nonmatching"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
 <rect width="16.17" height="17.59" x="327.15" y="104.36" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
 <rect width="16.17" height="17.57" x="327.15" y="124.96" class="nonmatching"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
-<rect width="16.17" height="17.55" x="327.15" y="145.53" class="todo"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
+<rect width="16.17" height="17.55" x="327.15" y="145.53" class="named"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
 <rect width="16.17" height="17.50" x="327.15" y="166.07" class="todo"><title>0x00455800 Draw_Mirror_Lara (735 bytes)</title></rect>
 <rect width="16.17" height="17.33" x="327.15" y="186.57" class="todo"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
 <rect width="16.17" height="17.31" x="327.15" y="206.91" class="named"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
