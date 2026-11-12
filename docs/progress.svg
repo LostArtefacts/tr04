@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="196.98" height="12" x="0" y="0" class="named"><title>891 · 57.60%</title></rect>
-<rect width="0.44" height="12" x="196.98" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="197.42" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="137.95" height="12" x="204.05" y="0" class="todo"><title>624 · 40.34%</title></rect>
+<rect width="197.20" height="12" x="0" y="0" class="named"><title>892 · 57.66%</title></rect>
+<rect width="0.44" height="12" x="197.20" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="197.64" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="137.73" height="12" x="204.27" y="0" class="todo"><title>623 · 40.27%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">57.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">891</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">624</tspan></text>
+<text text-anchor="end" x="522" y="7.50">57.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">892</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">623</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="84.53" height="12" x="0" y="0" class="named"><title>153 KB · 24.72%</title></rect>
-<rect width="0.12" height="12" x="84.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="84.65" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="248.44" height="12" x="93.56" y="0" class="todo"><title>451 KB · 72.64%</title></rect>
+<rect width="84.64" height="12" x="0" y="0" class="named"><title>154 KB · 24.75%</title></rect>
+<rect width="0.12" height="12" x="84.64" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="84.76" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="248.33" height="12" x="93.67" y="0" class="todo"><title>450 KB · 72.61%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">153 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">451 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">154 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">450 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1526,7 +1526,7 @@
 <rect width="12" height="12" x="105" y="435" class="todo"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="435" class="todo"><title>0x00493c00 DXClose (604 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="435" class="named"><title>0x00493e70 DXCreateViewport (238 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="435" class="todo"><title>0x00493f60 DXShowFrame (201 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="435" class="named"><title>0x00493f60 DXShowFrame (201 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="435" class="named"><title>0x00494030 DXMove (69 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="435" class="todo"><title>0x00494080 DXSaveScreen (488 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="435" class="todo"><title>0x00494270 DXInitKeyboard (387 bytes)</title></rect>
@@ -2337,7 +2337,7 @@
 <rect width="8.98" height="8.65" x="702.09" y="210.07" class="nonmatching"><title>0x00416d70 ControlSpikeball (201 bytes)</title></rect>
 <rect width="8.98" height="8.65" x="714.07" y="210.07" class="named"><title>0x004236b0 TestMonkeyLeft (201 bytes)</title></rect>
 <rect width="8.98" height="8.65" x="726.05" y="210.07" class="named"><title>0x00438420 TriggerGlobalStaticFlame (201 bytes)</title></rect>
-<rect width="8.98" height="8.65" x="738.02" y="210.07" class="todo"><title>0x00493f60 DXShowFrame (201 bytes)</title></rect>
+<rect width="8.98" height="8.65" x="738.02" y="210.07" class="named"><title>0x00493f60 DXShowFrame (201 bytes)</title></rect>
 <rect width="8.92" height="8.71" x="495.56" y="221.72" class="todo"><title>0x00494400 Func494400 (201 bytes)</title></rect>
 <rect width="8.92" height="8.67" x="495.56" y="233.43" class="named"><title>0x004090b0 JeanYvesControl (200 bytes)</title></rect>
 <rect width="8.92" height="8.67" x="495.56" y="245.09" class="named"><title>0x00415b60 OnTwoBlockPlatform (200 bytes)</title></rect>

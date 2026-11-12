@@ -330,6 +330,24 @@ sint32 DXCreateViewport(LPDIRECT3D3 d3d, LPDIRECT3DDEVICE3 device, sint32 w, sin
     return 1;
 }
 
+HRESULT DXShowFrame(void)
+{
+    if (IDirectDrawSurface4_IsLost(G_dxptr->lpPrimaryBuffer)) {
+        Log(3, "Restored Primary Buffer");
+        DXAttempt(IDirectDrawSurface4_Restore(G_dxptr->lpPrimaryBuffer));
+    }
+    if (IDirectDrawSurface4_IsLost(G_dxptr->lpBackBuffer)) {
+        Log(3, "Restored Back Buffer");
+        DXAttempt(IDirectDrawSurface4_Restore(G_dxptr->lpBackBuffer));
+    }
+    if (!(App.dx.Flags & 0x82))
+        return 0;
+    if (G_dxptr->Flags & 2)
+        return DXAttempt(IDirectDrawSurface4_Blt(G_dxptr->lpPrimaryBuffer, &G_dxptr->rScreen, G_dxptr->lpBackBuffer, &G_dxptr->rViewport, DDBLT_WAIT, 0));
+    else
+        return DXAttempt(IDirectDrawSurface4_Flip(G_dxptr->lpPrimaryBuffer, 0, DDFLIP_WAIT));
+}
+
 void DXMove(sint32 x, sint32 y)
 {
     Log(2, "DXMove : x %d y %d", x, y);
