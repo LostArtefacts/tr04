@@ -68,6 +68,49 @@ void TriggerHarpySparks(sint32 x, sint32 y, sint32 z, sint16 xv, sint16 yv, sint
     sptr->Flags = 0;
 }
 
+void TriggerHarpyFlame(sint16 item_number, uint8 NodeNumber, sint32 size)
+{
+    SPARKS *sptr;
+    sint32 dx, dz;
+
+    dx = lara_item->pos.x_pos - items[item_number].pos.x_pos;
+    dz = lara_item->pos.z_pos - items[item_number].pos.z_pos;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sR = 0;
+    sptr->sG = 0;
+    sptr->sB = 0;
+    sptr->dR = sptr->dG = (GetRandomControl() & 0x7F) + 32;
+    sptr->dB = 0;
+    sptr->ColFadeSpeed = (GetRandomControl() & 3) + 4;
+    sptr->FadeToBlack = 8;
+    sptr->sLife = sptr->Life = (GetRandomControl() & 7) + 20;
+    sptr->TransType = 2;
+    sptr->x = (GetRandomControl() & 0xF) - 8;
+    sptr->y = 0;
+    sptr->z = (GetRandomControl() & 0xF) - 8;
+    sptr->Xvel = (GetRandomControl() & 0xFF) - 128;
+    sptr->Yvel = 0;
+    sptr->Zvel = (GetRandomControl() & 0xFF) - 128;
+    sptr->Friction = 5;
+    sptr->Flags = 4762;
+    sptr->RotAng = GetRandomControl() & 0xFFF;
+    if (GetRandomControl() & 1)
+        sptr->RotAdd = -32 - (GetRandomControl() & 0x1F);
+    else
+        sptr->RotAdd = (GetRandomControl() & 0x1F) + 32;
+    sptr->Gravity = (GetRandomControl() & 0x1F) + 16;
+    sptr->MaxYvel = 0;
+    sptr->FxObj = (uint8)item_number;
+    sptr->NodeNumber = NodeNumber;
+    sptr->Scalar = 2;
+    size += GetRandomControl() & 0xF;
+    sptr->Size = sptr->sSize = size;
+    sptr->dSize = size >> 4;
+}
+
 void InitialiseHarpy(sint16 item_number)
 {
     ITEM_INFO *item;
