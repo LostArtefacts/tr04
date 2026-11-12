@@ -66,6 +66,44 @@ void BikeExplode(ITEM_INFO *item)
     lara.vehicle = NO_ITEM;
 }
 
+sint32 CanGetOff_bike(sint16 num)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint32 x, y, z, h, c;
+    sint16 yrot, room_number;
+
+    item = &items[lara.vehicle];
+    yrot = item->pos.y_rot + 16384;
+    x = item->pos.x_pos + (512 * phd_sin(yrot) >> W2V_SHIFT);
+    y = item->pos.y_pos;
+    z = item->pos.z_pos + (512 * phd_cos(yrot) >> W2V_SHIFT);
+    room_number = item->room_number;
+    floor = GetFloor(x, y, z, &room_number);
+    h = GetHeight(floor, x, y, z);
+    if (height_type == BIG_SLOPE || height_type == DIAGONAL || h == NO_HEIGHT)
+        return 0;
+    if (ABS(h - item->pos.y_pos) > 272)
+        return 0;
+    c = GetCeiling(floor, x, y, z);
+    if (c - item->pos.y_pos > -762 || h - c < 762)
+        return 0;
+    x = item->pos.x_pos + (512 * phd_sin(yrot) >> (W2V_SHIFT + 2));
+    y = item->pos.y_pos;
+    z = item->pos.z_pos + (512 * phd_cos(yrot) >> (W2V_SHIFT + 2));
+    room_number = item->room_number;
+    floor = GetFloor(x, y, z, &room_number);
+    h = GetHeight(floor, x, y, z);
+    if (height_type == BIG_SLOPE || height_type == DIAGONAL || h == NO_HEIGHT)
+        return 0;
+    if (ABS(h - item->pos.y_pos) > 80)
+        return 0;
+    c = GetCeiling(floor, x, y, z);
+    if (c - item->pos.y_pos > -762 || h - c < 762)
+        return 0;
+    return 1;
+}
+
 void BikeStart(ITEM_INFO *item, ITEM_INFO *l)
 {
     BIKEINFO *bike;
