@@ -26,6 +26,30 @@ sint32 DXGetInfo(DXINFO *dxinfo, HWND hwnd)
     return 1;
 }
 
+BOOL CALLBACK DXEnumDirectSound(LPGUID lpGuid, LPCSTR lpcstrDescription, LPCSTR lpcstrModule, LPVOID lpContext)
+{
+    DXINFO *dxinfo;
+    DXDIRECTSOUNDINFO *DSInfo;
+    sint32 nDSInfo;
+
+    Log(2, "DXEnumDirectSound");
+    dxinfo = (DXINFO *)lpContext;
+    nDSInfo = dxinfo->nDSInfo;
+    dxinfo->DSInfo = (DXDIRECTSOUNDINFO *)AddStruct(dxinfo->DSInfo, nDSInfo, sizeof(DXDIRECTSOUNDINFO));
+    DSInfo = &dxinfo->DSInfo[nDSInfo];
+    if (!lpGuid) {
+        DSInfo->lpGuid = 0;
+    } else {
+        DSInfo->lpGuid = &DSInfo->Guid;
+        DSInfo->Guid = *lpGuid;
+    }
+    lstrcpy(DSInfo->About, lpcstrDescription);
+    lstrcpy(DSInfo->Name, lpcstrModule);
+    Log(5, "Found - %s %s", lpcstrDescription, lpcstrModule);
+    dxinfo->nDSInfo++;
+    return DDENUMRET_OK;
+}
+
 void *AddStruct(void *p, sint32 num, sint32 size)
 {
     void *ptr;
