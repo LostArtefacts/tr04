@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="183.05" height="12" x="0" y="0" class="named"><title>828 · 53.52%</title></rect>
-<rect width="0.44" height="12" x="183.05" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="183.49" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="152.10" height="12" x="189.90" y="0" class="todo"><title>688 · 44.47%</title></rect>
+<rect width="183.27" height="12" x="0" y="0" class="named"><title>829 · 53.59%</title></rect>
+<rect width="0.44" height="12" x="183.27" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="183.71" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="151.88" height="12" x="190.12" y="0" class="todo"><title>687 · 44.41%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">53.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">828</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">688</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">829</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">687</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.17" height="12" x="0" y="0" class="named"><title>144 KB · 23.15%</title></rect>
-<rect width="0.12" height="12" x="79.17" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="79.29" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="254.06" height="12" x="87.94" y="0" class="todo"><title>461 KB · 74.29%</title></rect>
+<rect width="79.32" height="12" x="0" y="0" class="named"><title>144 KB · 23.19%</title></rect>
+<rect width="0.12" height="12" x="79.32" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="79.44" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="253.91" height="12" x="88.09" y="0" class="todo"><title>461 KB · 74.24%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">144 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">461 KB</tspan></text>
@@ -908,7 +908,7 @@
 <rect width="12" height="12" x="585" y="240" class="named"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="240" class="named"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="240" class="named"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="240" class="todo"><title>0x00453f60 CreateRope (270 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="240" class="named"><title>0x00453f60 CreateRope (270 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="240" class="todo"><title>0x00454070 InitialiseRope (203 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="240" class="named"><title>0x00454140 InitialiseItemArray (100 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="240" class="named"><title>0x004541b0 KillItem (417 bytes)</title></rect>
@@ -2210,7 +2210,7 @@
 <rect width="10.37" height="10.06" x="457.07" y="425.82" class="named"><title>0x00415ec0 TestBoundsCollideTeethSpikes (270 bytes)</title></rect>
 <rect width="10.37" height="10.06" x="457.07" y="438.88" class="todo"><title>0x0042fb50 draw_flare (270 bytes)</title></rect>
 <rect width="10.37" height="10.06" x="457.07" y="451.94" class="named"><title>0x00437d50 AddFootPrint (270 bytes)</title></rect>
-<rect width="10.57" height="9.87" x="470.44" y="172.18" class="todo"><title>0x00453f60 CreateRope (270 bytes)</title></rect>
+<rect width="10.57" height="9.87" x="470.44" y="172.18" class="named"><title>0x00453f60 CreateRope (270 bytes)</title></rect>
 <rect width="10.53" height="9.87" x="484.01" y="172.18" class="named"><title>0x00415db0 ControlSlicerDicer (269 bytes)</title></rect>
 <rect width="10.53" height="9.87" x="497.54" y="172.18" class="nonmatching"><title>0x00465660 TestHeight (269 bytes)</title></rect>
 <rect width="10.49" height="9.87" x="511.08" y="172.18" class="named"><title>0x00426ec0 lara_as_compress (268 bytes)</title></rect>

@@ -29,5 +29,6 @@ void InitialiseSmokeEmitter(sint16 item_number);
 void InitialisePickUp(sint16 item_number);
 void InitialiseEffects(void);
 void init_all_ropes(void);
+void CreateRope(ROPE_STRUCT *rope, PHD_VECTOR *pos, PHD_VECTOR *dir, sint32 slength, ITEM_INFO *item);
 
 #endif

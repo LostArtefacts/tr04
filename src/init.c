@@ -384,3 +384,27 @@ void init_all_ropes(void)
         RopeList[i].Active = 0;
     nRope = 0;
 }
+
+void CreateRope(ROPE_STRUCT *rope, PHD_VECTOR *pos, PHD_VECTOR *dir, sint32 slength, ITEM_INFO *item)
+{
+    sint32 n, l;
+
+    rope->Position.x = pos->x;
+    rope->Position.y = pos->y;
+    rope->Position.z = pos->z;
+    l = slength << 16;
+    rope->SegmentLength = l;
+    dir->x <<= 16;
+    dir->y <<= 16;
+    dir->z <<= 16;
+    Normalise(dir);
+    for (n = 0; n < 24; n++) {
+        rope->Segment[n].x = (__int64)(l * n) * dir->x >> 16;
+        rope->Segment[n].y = (__int64)(l * n) * dir->y >> 16;
+        rope->Segment[n].z = (__int64)(l * n) * dir->z >> 16;
+        rope->Velocity[n].x = 0;
+        rope->Velocity[n].y = 0;
+        rope->Velocity[n].z = 0;
+    }
+    rope->Active = 0;
+}
