@@ -1196,6 +1196,238 @@ void InitialiseEnemyJeep(sint16 item_number)
     item->status += ITEM_ACTIVE;
 }
 
+void EnemyJeepControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *enemy;
+    CREATURE_INFO *jeep;
+    FLOOR_INFO *floor;
+    AIOBJECT *aiobj;
+    AI_INFO info, larainfo;
+    PHD_VECTOR pos;
+    sint32 Xoffset, Zoffset, x, y, z, h1, h2, front, back, i;
+    sint16 j;
+    sint16 room_number, xrot, zrot;
+
+    if (!CreatureActive(item_number))
+        return;
+    item = &items[item_number];
+    jeep = (CREATURE_INFO *)item->data;
+    room_number = item->room_number;
+    Xoffset = (682 * (rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+    Zoffset = (682 * (rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+    x = item->pos.x_pos - Zoffset;
+    y = item->pos.y_pos;
+    z = item->pos.z_pos + Xoffset;
+    floor = GetFloor(x, y, z, &room_number);
+    h1 = GetHeight(floor, x, y, z);
+    if (abs(y - h1) > 768) {
+        item->pos.y_rot += 364;
+        h1 = y;
+        item->pos.x_pos += Zoffset >> 6;
+        item->pos.z_pos -= Xoffset >> 6;
+    }
+    x = Zoffset + item->pos.x_pos;
+    z = item->pos.z_pos - Xoffset;
+    room_number = item->room_number;
+    floor = GetFloor(x, y, z, &room_number);
+    h2 = GetHeight(floor, x, y, z);
+    if (abs(y - h2) > 768) {
+        item->pos.y_rot -= 364;
+        h2 = y;
+        item->pos.x_pos -= Zoffset >> 6;
+        item->pos.z_pos += Xoffset >> 6;
+    }
+    zrot = (sint16)phd_atan(1364, h2 - h1);
+    x = Xoffset + item->pos.x_pos;
+    z = Zoffset + item->pos.z_pos;
+    room_number = item->room_number;
+    floor = GetFloor(x, y, z, &room_number);
+    h1 = GetHeight(floor, x, y, z);
+    front = h1;
+    if (abs(y - h1) > 768)
+        h1 = y;
+    x = item->pos.x_pos - Xoffset;
+    z = item->pos.z_pos - Zoffset;
+    room_number = item->room_number;
+    floor = GetFloor(x, y, z, &room_number);
+    h2 = GetHeight(floor, x, y, z);
+    back = h2;
+    if (abs(y - h2) > 768)
+        h2 = y;
+    xrot = (sint16)phd_atan(1364, h2 - h1);
+    CreatureAIInfo(item, &info);
+    enemy = &jeep->ai_target;
+    jeep->enemy = enemy;
+    if (enemy == lara_item) {
+        larainfo.angle = info.angle;
+        larainfo.distance = info.distance;
+    } else {
+        z = lara_item->pos.z_pos - item->pos.z_pos;
+        x = lara_item->pos.x_pos - item->pos.x_pos;
+        larainfo.angle = phd_atan(z, x) - item->pos.y_rot;
+        if (z > 32000 || z < -32000 || x > 32000 || x < -32000)
+            larainfo.distance = 0x7FFFFFFF;
+        else
+            larainfo.distance = SQUARE(z) + SQUARE(x);
+    }
+    switch (item->current_anim_state) {
+    case 1:
+        jeep->maximum_turn = item->item_flags[0] >> 4;
+        item->item_flags[0] += 37;
+        item->mesh_bits = ~0x24000;
+        if (item->item_flags[0] > 0x2200)
+            item->item_flags[0] = 0x2200;
+        if (info.angle > 256)
+            item->goal_anim_state = 4;
+        else if (info.angle < -256)
+            item->goal_anim_state = 3;
+        break;
+    case 0:
+    case 2:
+        item->item_flags[0] -= 128;
+        item->mesh_bits = ~0x18000;
+        if (item->item_flags[0] < 0)
+            item->item_flags[0] = 0;
+        pos.x = 0;
+        pos.y = -144;
+        pos.z = -1024;
+        GetJointAbsPosition(item, &pos, 11);
+        TriggerDynamic(pos.x, pos.y, pos.z, 10, 64, 0, 0);
+        if (item->required_anim_state)
+            item->goal_anim_state = item->required_anim_state;
+        else if (info.distance > 0x100000 || lara.location >= item->item_flags[3])
+            item->goal_anim_state = 1;
+        break;
+    case 3:
+    case 4:
+        item->item_flags[0] += 18;
+        if (item->item_flags[0] > 0x2200)
+            item->item_flags[0] = 0x2200;
+        if (abs(0) < 256)
+            item->goal_anim_state = 1;
+        else
+            item->goal_anim_state = item->current_anim_state;
+        break;
+    case 5:
+        if (item->item_flags[0] < 0x4A0)
+            item->item_flags[0] = 0x4A0;
+        break;
+    }
+    if (front > item->floor + 512) {
+        jeep->LOT.is_jumping = 1;
+        if (item->item_flags[1] <= 0) {
+            item->item_flags[1] = xrot << 1;
+            jeep->LOT.is_jumping = 1;
+        } else {
+            xrot = item->item_flags[1];
+            item->item_flags[1] -= 8;
+            if (item->item_flags[1] < 0)
+                jeep->LOT.is_jumping = 0;
+            item->pos.y_pos += item->item_flags[1] >> 6;
+        }
+        if (jeep->LOT.is_jumping) {
+            jeep->maximum_turn = 0;
+            item->goal_anim_state = 1;
+        }
+    } else if (back > item->floor + 512 && item->current_anim_state != 5) {
+        item->item_flags[1] = 0;
+        item->anim_number = objects[item->object_number].anim_index + 8;
+        item->frame_number = anims[item->anim_number].frame_base;
+        item->current_anim_state = 5;
+        item->goal_anim_state = 1;
+    }
+    if (info.distance < 0x240000 || item->item_flags[3] == -2)
+        jeep->reached_goal = 1;
+    if (jeep->reached_goal) {
+        TestTriggersAtXYZ(enemy->pos.x_pos, enemy->pos.y_pos, enemy->pos.z_pos, enemy->room_number, 1, 0);
+        if (lara.location < item->item_flags[3] && item->current_anim_state != 2 && item->goal_anim_state != 2) {
+            item->anim_number = objects[item->object_number].anim_index + 1;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = 2;
+            item->goal_anim_state = 2;
+            if (enemy->flags & 4) {
+                item->pos = enemy->pos;
+                if (item->room_number != enemy->room_number)
+                    ItemNewRoom(item_number, enemy->room_number);
+            }
+        }
+        if (larainfo.distance > 0x400000 && larainfo.distance < 0x6400000 && !item->item_flags[2] && (larainfo.angle < -20480 || larainfo.angle > 20480)) {
+            JeepFireGrenade(item);
+            item->item_flags[2] = 150;
+        }
+        if (enemy->flags == 62) {
+            item->status = ITEM_INVISIBLE;
+            RemoveActiveItem(item_number);
+            DisableBaddieAI(item_number);
+        }
+        if (lara.location >= item->item_flags[3] || !(enemy->flags & 4)) {
+            jeep->reached_goal = 0;
+            item->item_flags[3]++;
+            jeep->enemy = 0;
+            aiobj = AIObjects;
+            for (j = 0; j < nAIObjects; j++, aiobj++) {
+                if (aiobj->trigger_flags == item->item_flags[3] && aiobj->room_number != 255) {
+                    jeep->enemy = enemy;
+                    enemy->object_number = aiobj->object_number;
+                    enemy->room_number = aiobj->room_number;
+                    enemy->pos.x_pos = aiobj->x;
+                    enemy->pos.y_pos = aiobj->y;
+                    enemy->pos.z_pos = aiobj->z;
+                    enemy->pos.y_rot = aiobj->y_rot;
+                    enemy->flags = aiobj->flags;
+                    enemy->trigger_flags = aiobj->trigger_flags;
+                    enemy->box_number = aiobj->box_number;
+                    if (!(enemy->flags & 0x20)) {
+                        enemy->pos.x_pos += (256 * (rcossin_tbl[(enemy->pos.y_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+                        enemy->pos.z_pos += (256 * (rcossin_tbl[((enemy->pos.y_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+                    }
+                    break;
+                }
+            }
+        }
+    }
+    item->item_flags[2]--;
+    if (item->item_flags[2] < 0)
+        item->item_flags[2] = 0;
+    if (abs(xrot - item->pos.x_rot) < 256)
+        item->pos.x_rot = xrot;
+    else if (xrot > item->pos.x_rot)
+        item->pos.x_rot += 256;
+    else if (xrot < item->pos.x_rot)
+        item->pos.x_rot -= 256;
+    if (abs(zrot - item->pos.z_rot) < 256)
+        item->pos.z_rot = zrot;
+    else if (zrot > item->pos.z_rot)
+        item->pos.z_rot += 256;
+    else if (zrot < item->pos.z_rot)
+        item->pos.z_rot -= 256;
+    item->item_flags[0] += -2 - (xrot >> 9);
+    if (item->item_flags[0] < 0)
+        item->item_flags[0] = 0;
+    x = ((rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * item->item_flags[0]) >> W2V_SHIFT;
+    z = ((rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * item->item_flags[0]) >> W2V_SHIFT;
+    for (i = 0; i < 4; i++)
+        jeep->joint_rotation[i] -= item->item_flags[0];
+    item->pos.x_pos += x >> 6;
+    item->pos.z_pos += z >> 6;
+    if (!jeep->reached_goal)
+        CreatureYRot(&item->pos, info.angle, item->item_flags[0] >> 4);
+    jeep->maximum_turn = 0;
+    AnimateItem(item);
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    item->floor = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (item->room_number != room_number)
+        ItemNewRoom(item_number, room_number);
+    if (item->pos.y_pos >= item->floor) {
+        item->fallspeed = 0;
+        item->pos.y_pos = item->floor;
+        item->gravity_status = 0;
+    } else
+        item->gravity_status = 1;
+    SoundEffect(SFX_JEEP_MOVE, &item->pos, (item->item_flags[0] << 10) + 0x1000004);
+}
+
 void JeepFireGrenade(ITEM_INFO *item)
 {
     sint16 item_number;

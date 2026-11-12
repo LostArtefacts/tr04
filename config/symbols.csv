@@ -1027,7 +1027,7 @@ address,size,name,symbol
 0x00469770,251,CanGetOff_jeep,_CanGetOff_jeep
 0x00469870,792,UserControl_jeep,_UserControl_jeep
 0x00469b90,130,InitialiseEnemyJeep,_InitialiseEnemyJeep
-0x00469c20,2188,EnemyJeepControl,_EnemyJeepControl
+0x00469c20,2212,EnemyJeepControl,_EnemyJeepControl
 0x0046a4d0,333,JeepFireGrenade,_JeepFireGrenade
 0x0046a620,167,JeepStart,_JeepStart
 0x0046a6d0,1295,handle_cutseq_triggering,_handle_cutseq_triggering
