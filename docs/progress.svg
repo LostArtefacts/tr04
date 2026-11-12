@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="222.62" height="12" x="0" y="0" class="named"><title>1007 · 65.09%</title></rect>
-<rect width="0.44" height="12" x="222.62" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="223.06" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="111.64" height="12" x="230.36" y="0" class="todo"><title>505 · 32.64%</title></rect>
+<rect width="222.84" height="12" x="0" y="0" class="named"><title>1008 · 65.16%</title></rect>
+<rect width="0.44" height="12" x="222.84" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="223.28" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="111.42" height="12" x="230.58" y="0" class="todo"><title>504 · 32.58%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">65.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1007</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">505</tspan></text>
+<text text-anchor="end" x="522" y="7.50">65.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1008</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">504</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="97.01" height="12" x="0" y="0" class="named"><title>176 KB · 28.37%</title></rect>
-<rect width="0.12" height="12" x="97.01" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="97.13" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="235.45" height="12" x="106.55" y="0" class="todo"><title>427 KB · 68.84%</title></rect>
+<rect width="97.08" height="12" x="0" y="0" class="named"><title>176 KB · 28.39%</title></rect>
+<rect width="0.12" height="12" x="97.08" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="97.20" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="235.38" height="12" x="106.62" y="0" class="todo"><title>427 KB · 68.82%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">176 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">427 KB</tspan></text>
@@ -105,7 +105,7 @@
 <rect width="12" height="12" x="540" y="0" class="todo"><title>0x004058b0 DogControl (1467 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="0" class="named"><title>0x00405ea0 InitialiseLaraDouble (12 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="0" class="named"><title>0x00405eb0 LaraDoubleControl (104 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="0" class="todo"><title>0x00405f20 InitialiseGuide (128 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="0" class="named"><title>0x00405f20 InitialiseGuide (128 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="0" class="todo"><title>0x00405fa0 GuideControl (4092 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="0" class="named"><title>0x00407000 InitialiseHammerhead (87 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="0" class="todo"><title>0x00407060 HammerheadControl (535 bytes)</title></rect>
@@ -2549,7 +2549,7 @@
 <rect width="7.01" height="7.17" x="641.29" y="266.08" class="named"><title>0x004378a0 GhostTrap (130 bytes)</title></rect>
 <rect width="7.01" height="7.17" x="651.30" y="266.08" class="named"><title>0x00469b90 InitialiseEnemyJeep (130 bytes)</title></rect>
 <rect width="6.95" height="7.17" x="661.30" y="266.08" class="named"><title>0x00437c20 swap_meshes_with_meshswap3 (129 bytes)</title></rect>
-<rect width="6.90" height="7.17" x="671.26" y="266.08" class="todo"><title>0x00405f20 InitialiseGuide (128 bytes)</title></rect>
+<rect width="6.90" height="7.17" x="671.26" y="266.08" class="named"><title>0x00405f20 InitialiseGuide (128 bytes)</title></rect>
 <rect width="6.90" height="7.17" x="681.15" y="266.08" class="named"><title>0x00422400 LaraDeflectEdge (128 bytes)</title></rect>
 <rect width="6.90" height="7.17" x="691.05" y="266.08" class="named"><title>0x00435b70 SetupRipple (128 bytes)</title></rect>
 <rect width="6.84" height="7.17" x="700.95" y="266.08" class="named"><title>0x004168d0 ControlChain (127 bytes)</title></rect>
