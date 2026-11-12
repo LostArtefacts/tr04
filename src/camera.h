@@ -48,6 +48,7 @@ extern sint32 LaserSight;
 extern GAME_VECTOR ForcedFixedCamera;
 extern char UseForcedFixedCamera;
 extern sint32 BinocularRange;
+extern sint32 BinocularOldCamera;
 extern sint32 bLaraTorch;
 extern PHD_VECTOR LaraTorchStart;
 extern PHD_VECTOR LaraTorchEnd;

@@ -12,6 +12,11 @@
 #include "specific/input.h"
 #include "specific/loadsave.h"
 #include "text.h"
+#include "camera.h"
+#include "sound.h"
+#include "savegame.h"
+#include "larafire.h"
+#include "lara_states.h"
 
 sint32 LoadGame(void)
 {
@@ -681,6 +686,103 @@ void setup_objectlist_startposition2(sint16 newobj)
         if (newobj == inventry_objects_list[rings[RING_INVENTORY]->current_object_list[i].invitem].object_number)
             rings[RING_INVENTORY]->curobjinlist = i;
     }
+}
+
+void use_current_item(void)
+{
+    sint32 OldBinocular;
+    sint16 invobject, gmeobject;
+
+    OldBinocular = BinocularRange;
+    BinocularRange = 0;
+    oldLaraBusy = 0;
+    lara_item->mesh_bits = -1;
+    invobject = rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem;
+    gmeobject = inventry_objects_list[invobject].object_number;
+    if (lara.water_status == LW_ABOVE_WATER || lara.water_status == LW_WADE) {
+        if (gmeobject == PISTOLS_ITEM) {
+            lara.request_gun_type = WEAPON_PISTOLS;
+            if (lara.gun_status == LG_NO_ARMS && lara.gun_type == WEAPON_PISTOLS)
+                lara.gun_status = LG_DRAW_GUNS;
+            return;
+        }
+        if (gmeobject == SHOTGUN_ITEM) {
+            lara.request_gun_type = WEAPON_SHOTGUN;
+            if (lara.gun_status == LG_NO_ARMS && lara.gun_type == WEAPON_SHOTGUN)
+                lara.gun_status = LG_DRAW_GUNS;
+            return;
+        }
+        if (gmeobject == UZI_ITEM) {
+            lara.request_gun_type = WEAPON_UZI;
+            if (lara.gun_status == LG_NO_ARMS && lara.gun_type == WEAPON_UZI)
+                lara.gun_status = LG_DRAW_GUNS;
+            return;
+        }
+        if (gmeobject == SIXSHOOTER_ITEM) {
+            lara.request_gun_type = WEAPON_REVOLVER;
+            if (lara.gun_status == LG_NO_ARMS && lara.gun_type == WEAPON_REVOLVER)
+                lara.gun_status = LG_DRAW_GUNS;
+            return;
+        }
+        if (gmeobject == GRENADE_GUN_ITEM) {
+            lara.request_gun_type = WEAPON_GRENADE;
+            if (lara.gun_status == LG_NO_ARMS && lara.gun_type == WEAPON_GRENADE)
+                lara.gun_status = LG_DRAW_GUNS;
+            return;
+        }
+        if (gmeobject == CROSSBOW_ITEM) {
+            lara.request_gun_type = WEAPON_CROSSBOW;
+            if (lara.gun_status == LG_NO_ARMS && lara.gun_type == WEAPON_CROSSBOW)
+                lara.gun_status = LG_DRAW_GUNS;
+            return;
+        }
+    }
+    if (gmeobject == FLARE_INV_ITEM) {
+        if (lara.gun_status == LG_NO_ARMS && lara_item->current_anim_state != AS_ALL4S && lara_item->current_anim_state != AS_CRAWL && lara_item->current_anim_state != AS_ALL4TURNL && lara_item->current_anim_state != AS_ALL4TURNR && lara_item->current_anim_state != AS_CRAWLBACK && lara_item->current_anim_state != AS_CRAWL2HANG) {
+            if (lara.gun_type != WEAPON_FLARE) {
+                input = IN_FLARE;
+                LaraGun();
+                input = 0;
+            }
+        } else
+            SayNo();
+    } else if (invobject == INV_BINOCULARS_ITEM) {
+        if ((lara_item->current_anim_state == AS_STOP && lara_item->anim_number == ANIM_BREATH) || (lara.IsDucked && !(input & IN_DUCK))) {
+            oldLaraBusy = 1;
+            BinocularRange = 128;
+            if (lara.gun_status != LG_NO_ARMS)
+                lara.gun_status = LG_UNDRAW_GUNS;
+        }
+        if (OldBinocular)
+            BinocularRange = OldBinocular;
+        else
+            BinocularOldCamera = camera.old_type;
+    } else if (invobject == INV_SMALLMEDI_ITEM) {
+        if ((lara_item->hit_points > 0 && lara_item->hit_points < 1000) || lara.poisoned) {
+            if (lara.num_small_medipack != -1)
+                lara.num_small_medipack--;
+            lara.dpoisoned = 0;
+            lara_item->hit_points += 500;
+            if (lara_item->hit_points > 1000)
+                lara_item->hit_points = 1000;
+            SoundEffect(SFX_MENU_MEDI, 0, SFX_ALWAYS);
+            savegame.Game.HealthUsed++;
+        } else
+            SayNo();
+    } else if (invobject == INV_BIGMEDI_ITEM) {
+        if ((lara_item->hit_points > 0 && lara_item->hit_points < 1000) || lara.poisoned) {
+            if (lara.num_large_medipack != -1)
+                lara.num_large_medipack--;
+            lara.dpoisoned = 0;
+            lara_item->hit_points += 1000;
+            if (lara_item->hit_points > 1000)
+                lara_item->hit_points = 1000;
+            SoundEffect(SFX_MENU_MEDI, 0, SFX_ALWAYS);
+            savegame.Game.HealthUsed++;
+        } else
+            SayNo();
+    } else
+        GLOBAL_inventoryitemchosen = gmeobject;
 }
 
 sint32 have_i_got_object(sint16 object_number)

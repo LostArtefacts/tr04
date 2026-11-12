@@ -242,6 +242,7 @@ void construct_combine_object_list(void);
 void do_debounced_joystick_poo(void);
 void init_new_inventry(void);
 void draw_ammo_selector(void);
+void use_current_item(void);
 
 extern sint32 InventoryActive;
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
@@ -278,6 +279,7 @@ extern sint32 combine_obj2;
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
 extern sint32 GLOBAL_lastinvitem;
+extern uint8 oldLaraBusy;
 extern char ammo_selector_flag;
 extern uint8 num_ammo_slots;
 extern uint8 *current_ammo_type;

@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="249.43" height="12" x="0" y="0" class="named"><title>1129 · 72.93%</title></rect>
-<rect width="0.66" height="12" x="249.43" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.45" height="12" x="250.09" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
-<rect width="74.45" height="12" x="267.55" y="0" class="todo"><title>337 · 21.77%</title></rect>
+<rect width="249.65" height="12" x="0" y="0" class="named"><title>1130 · 73%</title></rect>
+<rect width="0.66" height="12" x="249.65" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.45" height="12" x="250.31" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
+<rect width="74.23" height="12" x="267.77" y="0" class="todo"><title>336 · 21.71%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">73.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1129</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">337</tspan></text>
+<text text-anchor="end" x="522" y="7.50">73.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1130</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">336</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="132.11" height="12" x="0" y="0" class="named"><title>240 KB · 38.63%</title></rect>
-<rect width="0.13" height="12" x="132.11" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.18" height="12" x="132.24" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
-<rect width="178.58" height="12" x="163.42" y="0" class="todo"><title>325 KB · 52.22%</title></rect>
+<rect width="132.50" height="12" x="0" y="0" class="named"><title>241 KB · 38.74%</title></rect>
+<rect width="0.13" height="12" x="132.50" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="31.18" height="12" x="132.63" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
+<rect width="178.18" height="12" x="163.82" y="0" class="todo"><title>324 KB · 52.10%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">38.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">240 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">325 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">38.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">241 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">324 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -716,7 +716,7 @@
 <rect width="12" height="12" x="705" y="180" class="named"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="180" class="named"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="180" class="named"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="195" class="todo"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="195" class="named"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="195" class="todo"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="195" class="named"><title>0x0043ef60 have_i_got_object (237 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="195" class="named"><title>0x0043f050 remove_inventory_item (252 bytes)</title></rect>
@@ -1854,7 +1854,7 @@
 <rect width="16.17" height="17.33" x="327.11" y="186.57" class="todo"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
 <rect width="16.17" height="17.31" x="327.11" y="206.90" class="named"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
 <rect width="16.17" height="17.29" x="327.11" y="227.21" class="named"><title>0x00463650 InitFont (726 bytes)</title></rect>
-<rect width="16.17" height="17.26" x="327.11" y="247.50" class="todo"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>
+<rect width="16.17" height="17.26" x="327.11" y="247.50" class="named"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>
 <rect width="16.17" height="17.24" x="327.11" y="267.76" class="todo"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
 <rect width="16.17" height="16.93" x="327.11" y="288" class="todo"><title>0x00451240 RenderIt (711 bytes)</title></rect>
 <rect width="16.17" height="16.91" x="327.11" y="307.93" class="named"><title>0x00472c10 DrawBuckets (710 bytes)</title></rect>
