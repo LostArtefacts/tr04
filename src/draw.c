@@ -10,6 +10,8 @@
 #include "anim.h"
 #include "effects.h"
 #include "specific/lighting.h"
+#include "lara.h"
+#include "lara_states.h"
 
 #define S_LongMemCpy(d, s, n) memcpy(d, s, (n) * sizeof(sint32))
 
@@ -256,6 +258,40 @@ void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame)
         CreateLightList(item);
     } else
         S_CalculateStaticMeshLight(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->shade & 0x7FFF, &room[item->room_number]);
+}
+
+void CalculateObjectLightingLara(void)
+{
+    PHD_VECTOR pos;
+    sint16 room_no;
+
+    if (GLOBAL_playing_cutseq)
+        CalculateObjectLightingLaraCutSeq();
+    else {
+        pos.x = 0;
+        pos.y = 0;
+        pos.z = 0;
+        if (lara_item->anim_number == ANIM_DUCKBREATHE || lara_item->anim_number == ANIM_ALL4S || lara_item->anim_number == ANIM_BREATH) {
+            pos.x = lara_item->pos.x_pos;
+            if (lara_item->anim_number == ANIM_BREATH)
+                pos.y = lara_item->pos.y_pos - 512;
+            else
+                pos.y = lara_item->pos.y_pos - 192;
+            pos.z = lara_item->pos.z_pos;
+            room_no = lara_item->room_number;
+            GetFloor(pos.x, pos.y, pos.z, &room_no);
+        } else {
+            GetLaraJointPos(&pos, 7);
+            room_no = lara_item->room_number;
+            GetFloor(pos.x, pos.y, pos.z, &room_no);
+        }
+        current_item = lara_item;
+        lara_item->il.item_pos.x = pos.x;
+        lara_item->il.item_pos.y = pos.y;
+        lara_item->il.item_pos.z = pos.z;
+        CalcAmbientLight(lara_item);
+        CreateLightList(lara_item);
+    }
 }
 
 sint32 GetFrames(ITEM_INFO *item, sint16 *frm[], sint32 *rate)

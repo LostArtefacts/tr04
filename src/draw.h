@@ -44,6 +44,7 @@ sint32 DrawPhaseGame(void);
 void GetRoomBounds(void);
 void S_InsertRoom(sint16 room_number);
 void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame);
+void CalculateObjectLightingLara(void);
 
 extern STATIC_INFO static_objects[60];
 extern sint16 LightningCount;
