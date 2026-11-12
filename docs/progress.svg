@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="175.97" height="12" x="0" y="0" class="named"><title>796 · 51.45%</title></rect>
-<rect width="0.44" height="12" x="175.97" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="176.42" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="159.17" height="12" x="182.83" y="0" class="todo"><title>720 · 46.54%</title></rect>
+<rect width="176.20" height="12" x="0" y="0" class="named"><title>797 · 51.52%</title></rect>
+<rect width="0.44" height="12" x="176.20" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="176.64" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="158.95" height="12" x="183.05" y="0" class="todo"><title>719 · 46.48%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">51.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">796</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">720</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">797</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">719</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.81" height="12" x="0" y="0" class="named"><title>139 KB · 22.46%</title></rect>
-<rect width="0.12" height="12" x="76.81" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.93" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.42" height="12" x="85.58" y="0" class="todo"><title>465 KB · 74.98%</title></rect>
+<rect width="76.85" height="12" x="0" y="0" class="named"><title>139 KB · 22.47%</title></rect>
+<rect width="0.12" height="12" x="76.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.97" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.38" height="12" x="85.62" y="0" class="todo"><title>465 KB · 74.96%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">139 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">465 KB</tspan></text>
@@ -689,7 +689,7 @@
 <rect width="12" height="12" x="300" y="180" class="named"><title>0x0043e2f0 have_i_got_item (36 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="180" class="named"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="180" class="named"><title>0x0043e360 combine_these_two_objects (98 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="180" class="todo"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="180" class="named"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="180" class="named"><title>0x0043e420 combine_revolver_lasersight (81 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="180" class="named"><title>0x0043e480 combine_crossbow_lasersight (81 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="180" class="named"><title>0x0043e4e0 combine_PuzzleItem1 (17 bytes)</title></rect>
@@ -2816,7 +2816,7 @@
 <rect width="5.03" height="5.07" x="632.09" y="339.46" class="named"><title>0x00473900 DSIsChannelPlaying (66 bytes)</title></rect>
 <rect width="5.03" height="5.07" x="640.12" y="339.46" class="named"><title>0x00473b40 DXFreeSounds (66 bytes)</title></rect>
 <rect width="4.95" height="5.07" x="648.15" y="339.46" class="named"><title>0x0042bb20 draw_pistol_meshes (65 bytes)</title></rect>
-<rect width="4.95" height="5.07" x="656.10" y="339.46" class="todo"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
+<rect width="4.95" height="5.07" x="656.10" y="339.46" class="named"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="664.05" y="339.46" class="named"><title>0x00425f10 lara_as_fastfall (64 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="671.93" y="339.46" class="named"><title>0x00437140 Richochet (64 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="679.81" y="339.46" class="named"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>

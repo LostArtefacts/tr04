@@ -106,6 +106,21 @@ void combine_these_two_objects(sint16 obj1, sint16 obj2)
     handle_object_changeover(RING_INVENTORY);
 }
 
+void seperate_object(sint16 obj)
+{
+    sint32 i;
+    sint16 item;
+
+    for (i = 0; i < 23; i++) {
+        if (dels_handy_combine_table[i].combined_item == obj)
+            break;
+    }
+    item = dels_handy_combine_table[i].item1;
+    dels_handy_combine_table[i].combine_routine(1);
+    construct_object_list();
+    setup_objectlist_startposition(item);
+}
+
 void combine_revolver_lasersight(sint32 flag)
 {
     if (!flag) {

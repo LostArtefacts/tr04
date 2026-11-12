@@ -229,6 +229,7 @@ void insert_object_into_list(sint16 num);
 void insert_object_into_list_v2(sint32 num);
 sint32 do_these_objects_combine(sint32 obj1, sint32 obj2);
 void combine_these_two_objects(sint16 obj1, sint16 obj2);
+void seperate_object(sint16 obj);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];
