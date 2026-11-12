@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="239.86" height="12" x="0" y="0" class="named"><title>1085 · 70.14%</title></rect>
 <rect width="0.44" height="12" x="239.86" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="12.82" height="12" x="240.31" y="0" class="nonmatching"><title>58 · 3.75%</title></rect>
-<rect width="88.87" height="12" x="253.13" y="0" class="todo"><title>402 · 25.99%</title></rect>
+<rect width="13.04" height="12" x="240.31" y="0" class="nonmatching"><title>59 · 3.81%</title></rect>
+<rect width="88.65" height="12" x="253.35" y="0" class="todo"><title>401 · 25.92%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">70.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1085</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">58</tspan> · <tspan class="todo">402</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1085</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">59</tspan> · <tspan class="todo">401</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="115.87" height="12" x="0" y="0" class="named"><title>210 KB · 33.88%</title></rect>
 <rect width="0.12" height="12" x="115.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="22.70" height="12" x="115.99" y="0" class="nonmatching"><title>41 KB · 6.64%</title></rect>
-<rect width="203.31" height="12" x="138.69" y="0" class="todo"><title>369 KB · 59.45%</title></rect>
+<rect width="23.03" height="12" x="115.99" y="0" class="nonmatching"><title>42 KB · 6.73%</title></rect>
+<rect width="202.98" height="12" x="139.02" y="0" class="todo"><title>369 KB · 59.35%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">33.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">210 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">41 KB</tspan> · <tspan class="todo">369 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">210 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">42 KB</tspan> · <tspan class="todo">369 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -123,7 +123,7 @@
 <rect width="12" height="12" x="60" y="15" class="named"><title>0x00409060 InitialiseJeanYves (75 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="15" class="named"><title>0x004090b0 JeanYvesControl (200 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="15" class="named"><title>0x00409180 ExplodeFX (125 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="15" class="todo"><title>0x00409200 ControlBodyPart (598 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="15" class="nonmatching"><title>0x00409200 ControlBodyPart (598 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="15" class="named"><title>0x00409460 InitialiseMovingBlock (56 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="15" class="named"><title>0x004094a0 ClearMovableBlockSplitters (546 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="15" class="todo"><title>0x004096d0 MovableBlock (1156 bytes)</title></rect>
@@ -1902,7 +1902,7 @@
 <rect width="15.28" height="15.26" x="346.05" y="301.90" class="todo"><title>0x00493c00 DXClose (604 bytes)</title></rect>
 <rect width="15.28" height="15.21" x="346.05" y="320.16" class="named"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
 <rect width="15.28" height="15.16" x="346.05" y="338.37" class="named"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
-<rect width="15.28" height="15.11" x="346.05" y="356.52" class="todo"><title>0x00409200 ControlBodyPart (598 bytes)</title></rect>
+<rect width="15.28" height="15.11" x="346.05" y="356.52" class="nonmatching"><title>0x00409200 ControlBodyPart (598 bytes)</title></rect>
 <rect width="15.28" height="15.08" x="346.05" y="374.63" class="todo"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
 <rect width="15.28" height="15.08" x="346.05" y="392.71" class="named"><title>0x00438940 TriggerGunSmoke (597 bytes)</title></rect>
 <rect width="15.28" height="15.08" x="346.05" y="410.79" class="todo"><title>0x0043b0d0 CalcLightningSpline (597 bytes)</title></rect>
