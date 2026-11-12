@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="229.47" height="12" x="0" y="0" class="named"><title>1038 · 67.10%</title></rect>
-<rect width="0.44" height="12" x="229.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="229.92" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="103.68" height="12" x="238.32" y="0" class="todo"><title>469 · 30.32%</title></rect>
+<rect width="229.69" height="12" x="0" y="0" class="named"><title>1039 · 67.16%</title></rect>
+<rect width="0.44" height="12" x="229.69" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="230.14" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="103.46" height="12" x="238.54" y="0" class="todo"><title>468 · 30.25%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">67.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1038</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">469</tspan></text>
+<text text-anchor="end" x="522" y="7.50">67.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1039</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">468</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="100.59" height="12" x="0" y="0" class="named"><title>182 KB · 29.41%</title></rect>
-<rect width="0.12" height="12" x="100.59" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="100.71" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="231.13" height="12" x="110.87" y="0" class="todo"><title>419 KB · 67.58%</title></rect>
+<rect width="100.72" height="12" x="0" y="0" class="named"><title>183 KB · 29.45%</title></rect>
+<rect width="0.12" height="12" x="100.72" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="100.84" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="231" height="12" x="111" y="0" class="todo"><title>419 KB · 67.54%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">29.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">182 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">419 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">29.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">183 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">419 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1053,7 +1053,7 @@
 <rect width="12" height="12" x="510" y="285" class="named"><title>0x00464030 DrawTrainFloor (97 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="285" class="todo"><title>0x004640a0 DrawTrainObjects (1032 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="285" class="named"><title>0x004644b0 InitialiseTrainJeep (109 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="285" class="todo"><title>0x00464520 TrainJeepControl (238 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="285" class="named"><title>0x00464520 TrainJeepControl (238 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="285" class="nonmatching"><title>0x00464610 InitialiseBike (106 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="285" class="named"><title>0x00464680 BikeCollision (463 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="285" class="named"><title>0x00464850 TriggerBikeBeam (155 bytes)</title></rect>
@@ -2266,7 +2266,7 @@
 <rect width="9.56" height="9.70" x="470.39" y="326.44" class="named"><title>0x0040e2d0 TriggerScarab (240 bytes)</title></rect>
 <rect width="9.56" height="9.70" x="470.39" y="339.14" class="named"><title>0x00442c40 SameZone (240 bytes)</title></rect>
 <rect width="9.56" height="9.62" x="470.39" y="351.85" class="named"><title>0x00410130 TriggerSethSparks (238 bytes)</title></rect>
-<rect width="9.56" height="9.62" x="470.39" y="364.47" class="todo"><title>0x00464520 TrainJeepControl (238 bytes)</title></rect>
+<rect width="9.56" height="9.62" x="470.39" y="364.47" class="named"><title>0x00464520 TrainJeepControl (238 bytes)</title></rect>
 <rect width="9.56" height="9.62" x="470.39" y="377.09" class="named"><title>0x0047cd20 S_LoadSave (238 bytes)</title></rect>
 <rect width="9.56" height="9.62" x="470.39" y="389.71" class="named"><title>0x00493e70 DXCreateViewport (238 bytes)</title></rect>
 <rect width="9.56" height="9.58" x="470.39" y="402.33" class="named"><title>0x00413750 OpenTrapDoor (237 bytes)</title></rect>
