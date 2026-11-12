@@ -56,6 +56,8 @@ enum sfx_options {
 #define SFX_LOOP_FOR_SMALL_FIRES 150
 #define SFX_JOBY_WIND 362
 #define SFX_POUR 97
+#define SFX_SANDHAM_IN_THE_HOUSE 363
+#define SFX_FLAME_EMITTER 368
 
 typedef struct sample_info {
     sint16 number;

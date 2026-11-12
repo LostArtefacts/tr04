@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="254.73" height="12" x="0" y="0" class="named"><title>1153 · 74.48%</title></rect>
-<rect width="0.66" height="12" x="254.73" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="18.56" height="12" x="255.40" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
-<rect width="68.05" height="12" x="273.95" y="0" class="todo"><title>308 · 19.90%</title></rect>
+<rect width="254.95" height="12" x="0" y="0" class="named"><title>1154 · 74.55%</title></rect>
+<rect width="0.66" height="12" x="254.95" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="18.56" height="12" x="255.62" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
+<rect width="67.83" height="12" x="274.17" y="0" class="todo"><title>307 · 19.83%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">74.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1153</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">308</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1154</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">307</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="138.19" height="12" x="0" y="0" class="named"><title>252 KB · 40.41%</title></rect>
-<rect width="0.13" height="12" x="138.19" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="33.36" height="12" x="138.32" y="0" class="nonmatching"><title>61 KB · 9.75%</title></rect>
-<rect width="170.32" height="12" x="171.68" y="0" class="todo"><title>310 KB · 49.80%</title></rect>
+<rect width="138.73" height="12" x="0" y="0" class="named"><title>253 KB · 40.56%</title></rect>
+<rect width="0.13" height="12" x="138.73" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="33.36" height="12" x="138.86" y="0" class="nonmatching"><title>61 KB · 9.75%</title></rect>
+<rect width="169.78" height="12" x="172.22" y="0" class="todo"><title>309 KB · 49.64%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">40.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">252 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">61 KB</tspan> · <tspan class="todo">310 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">40.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">253 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">61 KB</tspan> · <tspan class="todo">309 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -236,7 +236,7 @@
 <rect width="12" height="12" x="255" y="45" class="todo"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="45" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="45" class="nonmatching"><title>0x00417db0 ControlMineHelicopter (524 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="45" class="todo"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="45" class="named"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="45" class="named"><title>0x004183b0 InitialiseTroop (120 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="45" class="nonmatching"><title>0x00418430 TroopControl (2248 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="45" class="nonmatching"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
@@ -1772,7 +1772,7 @@
 <rect width="20.12" height="19.21" x="283.46" y="181.43" class="todo"><title>0x004664b0 AnimateBike (1004 bytes)</title></rect>
 <rect width="20.12" height="19.21" x="283.46" y="203.64" class="todo"><title>0x0048e2f0 CreateTexturePage (1004 bytes)</title></rect>
 <rect width="20.12" height="19.13" x="283.46" y="225.85" class="named"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
-<rect width="20.12" height="19" x="283.46" y="247.98" class="todo"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
+<rect width="20.12" height="19" x="283.46" y="247.98" class="named"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
 <rect width="20.12" height="18.96" x="283.46" y="269.98" class="todo"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
 <rect width="20.12" height="18.92" x="283.46" y="291.93" class="todo"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
 <rect width="20.12" height="18.88" x="283.46" y="313.85" class="named"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
