@@ -127,7 +127,7 @@ typedef struct lara_info {
     struct creature_info *creature;
     sint32 CornerX;
     sint32 CornerZ;
-    sint8 RopeSegment;
+    uint8 RopeSegment;
     sint8 RopeDirection;
     sint16 RopeArcFront;
     sint16 RopeArcBack;
@@ -331,6 +331,7 @@ void lara_as_pulley(ITEM_INFO *item, COLL_INFO *coll);
 void JumpOffRope(ITEM_INFO *item);
 void lara_col_poleup(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_ducklr(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_rope(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

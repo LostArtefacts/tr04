@@ -1092,6 +1092,29 @@ void lara_as_rope(ITEM_INFO *item, COLL_INFO *coll)
         LookUpDown();
 }
 
+void lara_col_rope(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (!(input & IN_ACTION))
+        FallFromRope(item);
+    else {
+        UpdateRopeSwing(item);
+        if (input & IN_SPRINT) {
+            lara.RopeDFrame = (anims[ANIM_SWINGFWD].frame_base + 32) << 8;
+            lara.RopeFrame = lara.RopeDFrame;
+            item->goal_anim_state = AS_ROPEFWD;
+        } else if (input & IN_FORWARD && lara.RopeSegment > 4)
+            item->goal_anim_state = AS_CLIMBROPE;
+        else if (input & IN_BACK && lara.RopeSegment < 21) {
+            item->goal_anim_state = AS_SLIDEROPE;
+            lara.RopeFlag = 0;
+            lara.RopeCount = 0;
+        } else if (input & IN_LEFT)
+            item->goal_anim_state = AS_ROPELEFT;
+        else if (input & IN_RIGHT)
+            item->goal_anim_state = AS_ROPERIGHT;
+    }
+}
+
 void lara_as_ropel(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (input & IN_ACTION) {

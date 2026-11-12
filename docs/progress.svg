@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="150.99" height="12" x="0" y="0" class="named"><title>683 · 44.15%</title></rect>
-<rect width="0.44" height="12" x="150.99" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="151.44" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="185.92" height="12" x="156.08" y="0" class="todo"><title>841 · 54.36%</title></rect>
+<rect width="151.21" height="12" x="0" y="0" class="named"><title>684 · 44.21%</title></rect>
+<rect width="0.44" height="12" x="151.21" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="151.66" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="185.70" height="12" x="156.30" y="0" class="todo"><title>840 · 54.30%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">44.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">683</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">841</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">684</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">840</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="61.76" height="12" x="0" y="0" class="named"><title>112 KB · 18.06%</title></rect>
-<rect width="0.12" height="12" x="61.76" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="61.88" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="272.88" height="12" x="69.12" y="0" class="todo"><title>495 KB · 79.79%</title></rect>
+<rect width="61.85" height="12" x="0" y="0" class="named"><title>112 KB · 18.08%</title></rect>
+<rect width="0.12" height="12" x="61.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="61.97" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="272.79" height="12" x="69.21" y="0" class="todo"><title>495 KB · 79.76%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">18.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">112 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">495 KB</tspan></text>
@@ -332,7 +332,7 @@
 <rect width="12" height="12" x="195" y="75" class="named"><title>0x00424150 ApplyVelocityToRope (69 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="75" class="named"><title>0x004241a0 lara_as_rope (38 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="75" class="todo"><title>0x004241d0 FallFromRope (149 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="75" class="todo"><title>0x00424270 lara_col_rope (163 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="75" class="named"><title>0x00424270 lara_col_rope (163 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="75" class="todo"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="75" class="named"><title>0x00424620 lara_as_ropel (46 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="75" class="named"><title>0x00424650 lara_as_roper (46 bytes)</title></rect>
@@ -2442,7 +2442,7 @@
 <rect width="7.84" height="8.08" x="728.31" y="233.80" class="named"><title>0x00440290 EscapeBox (164 bytes)</title></rect>
 <rect width="7.84" height="8.08" x="739.16" y="233.80" class="named"><title>0x0046bc30 eleventh_cutseq_init (164 bytes)</title></rect>
 <rect width="8.11" height="7.82" x="529.88" y="244.88" class="todo"><title>0x0049abc0 Func49abc0 (164 bytes)</title></rect>
-<rect width="8.06" height="7.82" x="540.99" y="244.88" class="todo"><title>0x00424270 lara_col_rope (163 bytes)</title></rect>
+<rect width="8.06" height="7.82" x="540.99" y="244.88" class="named"><title>0x00424270 lara_col_rope (163 bytes)</title></rect>
 <rect width="8.06" height="7.82" x="552.05" y="244.88" class="named"><title>0x0042c6c0 lara_as_climbstnc (163 bytes)</title></rect>
 <rect width="8.06" height="7.82" x="563.11" y="244.88" class="named"><title>0x004361a0 TriggerDynamic (163 bytes)</title></rect>
 <rect width="8.06" height="7.82" x="574.17" y="244.88" class="todo"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
