@@ -16,5 +16,6 @@ void S_OutputPolyList(void);
 sint32 S_GetObjectBounds(sint16 *bounds);
 void _InsertRoom();
 HRESULT DDCopyBitmap(LPDIRECTDRAWSURFACE4 surf, HBITMAP hbm, sint32 x, sint32 y, sint32 dx, sint32 dy);
+HRESULT _LoadBitmap(LPDIRECTDRAWSURFACE4 surf, LPCSTR name);
 
 #endif
