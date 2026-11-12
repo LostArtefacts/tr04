@@ -46,5 +46,6 @@ extern sint32 NumFXFogBulbs;
 
 void InitialiseSortList(void);
 sint32 IsVolumetric(void);
+void ClearFXFogBulbs(void);
 
 #endif

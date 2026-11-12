@@ -7,3 +7,13 @@ void InitialiseSortList(void)
     pSortList = SortList;
     SortCount = 0;
 }
+
+void ClearFXFogBulbs(void)
+{
+    sint32 i;
+
+    for (i = 0; i < 5; i++) {
+        FXFogBulbs[i].active = 0;
+    }
+    NumFXFogBulbs = 0;
+}
