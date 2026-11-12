@@ -5,6 +5,28 @@
 #include "delstuff.h"
 #include "larafire.h"
 #include "lara_states.h"
+#include "gameflow.h"
+#include "specific/3dmath.h"
+#include "draw.h"
+#include "effect2.h"
+
+void DrawFlareInAir(ITEM_INFO *item)
+{
+    phd_PushMatrix();
+    phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    phd_PutPolygons_train(meshes[objects[FLARE_ITEM].mesh_index], 0);
+    phd_PopMatrix();
+    if (gfLevelFlags & GF_MIRROR) {
+        if (item->room_number == gfMirrorRoom) {
+            phd_PushMatrix();
+            phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, 2 * gfMirrorZPlane - item->pos.z_pos);
+            phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+            phd_PutPolygons_train(meshes[objects[FLARE_ITEM].mesh_index], 0);
+            phd_PopMatrix();
+        }
+    }
+}
 
 void set_flare_arm(sint32 frame)
 {
