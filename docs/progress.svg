@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="161.38" height="12" x="0" y="0" class="named"><title>730 · 47.19%</title></rect>
-<rect width="0.44" height="12" x="161.38" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.86" height="12" x="161.83" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
-<rect width="175.31" height="12" x="166.69" y="0" class="todo"><title>793 · 51.26%</title></rect>
+<rect width="161.60" height="12" x="0" y="0" class="named"><title>731 · 47.25%</title></rect>
+<rect width="0.44" height="12" x="161.60" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.86" height="12" x="162.05" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
+<rect width="175.09" height="12" x="166.91" y="0" class="todo"><title>792 · 51.20%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">47.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">730</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">793</tspan></text>
+<text text-anchor="end" x="522" y="7.50">47.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">731</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">792</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="69.21" height="12" x="0" y="0" class="named"><title>126 KB · 20.24%</title></rect>
-<rect width="0.12" height="12" x="69.21" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="69.33" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
-<rect width="265.31" height="12" x="76.69" y="0" class="todo"><title>481 KB · 77.57%</title></rect>
+<rect width="69.34" height="12" x="0" y="0" class="named"><title>126 KB · 20.28%</title></rect>
+<rect width="0.12" height="12" x="69.34" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="69.47" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
+<rect width="265.17" height="12" x="76.83" y="0" class="todo"><title>481 KB · 77.53%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">20.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">126 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">481 KB</tspan></text>
@@ -1088,7 +1088,7 @@
 <rect width="12" height="12" x="285" y="300" class="named"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="300" class="named"><title>0x00468b80 DoShift (634 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="300" class="todo"><title>0x00468e00 AnimateJeep (2335 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="300" class="todo"><title>0x00469770 CanGetOff_jeep (251 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="300" class="named"><title>0x00469770 CanGetOff_jeep (251 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="300" class="todo"><title>0x00469870 UserControl_jeep (792 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="300" class="named"><title>0x00469b90 InitialiseEnemyJeep (130 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="300" class="todo"><title>0x00469c20 EnemyJeepControl (2188 bytes)</title></rect>
@@ -2243,7 +2243,7 @@
 <rect width="9.75" height="9.99" x="585.68" y="185.04" class="todo"><title>0x0043f050 remove_inventory_item (252 bytes)</title></rect>
 <rect width="9.75" height="9.99" x="598.42" y="185.04" class="todo"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
 <rect width="9.71" height="9.99" x="611.17" y="185.04" class="named"><title>0x00463080 FullBlockSwitchControl (251 bytes)</title></rect>
-<rect width="9.71" height="9.99" x="623.88" y="185.04" class="todo"><title>0x00469770 CanGetOff_jeep (251 bytes)</title></rect>
+<rect width="9.71" height="9.99" x="623.88" y="185.04" class="named"><title>0x00469770 CanGetOff_jeep (251 bytes)</title></rect>
 <rect width="9.67" height="9.99" x="636.59" y="185.04" class="todo"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="9.63" height="9.99" x="649.26" y="185.04" class="todo"><title>0x00440940 StalkBox (249 bytes)</title></rect>
 <rect width="9.63" height="9.99" x="661.89" y="185.04" class="named"><title>0x00442d70 MoveCreature3DPos (249 bytes)</title></rect>
