@@ -626,6 +626,81 @@ void handle_object_changeover(sint32 ringnum)
     Func43dbf0();
 }
 
+void Func43dbf0(void)
+{
+    sint32 opts;
+    uint8 num;
+
+    num = 0;
+    opts = options_table[rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem];
+    ammo_selector_flag = 0;
+    num_ammo_slots = num;
+    if (rings[RING_AMMO]->ringactive)
+        return;
+    ammo_object_list[0].yrot = ammo_object_list[1].yrot = ammo_object_list[2].yrot = 0;
+    if (opts & 0xFC0) {
+        ammo_selector_flag = 1;
+        ammo_selector_fade_dir = 1;
+        if (opts & 0x200) {
+            ammo_object_list[0].invitem = INV_UZI_AMMO_ITEM;
+            ammo_object_list[0].amount = AmountUziAmmo;
+            num = 1;
+            num_ammo_slots = num;
+            current_ammo_type = &CurrentUziAmmoType;
+        }
+        if (opts & 0x400) {
+            ammo_object_list[0].invitem = INV_PISTOLS_AMMO_ITEM;
+            ammo_object_list[0].amount = -1;
+            num = 1;
+            num_ammo_slots = num;
+            current_ammo_type = &CurrentPistolsAmmoType;
+        }
+        if (opts & 0x800) {
+            ammo_object_list[0].invitem = INV_REVOLVER_AMMO_ITEM;
+            ammo_object_list[0].amount = AmountRevolverAmmo;
+            num = 1;
+            num_ammo_slots = num;
+            current_ammo_type = &CurrentRevolverAmmoType;
+        }
+        if (opts & 0x80) {
+            current_ammo_type = &CurrentCrossBowAmmoType;
+            ammo_object_list[num].invitem = INV_CROSSBOW_AMMO1_ITEM;
+            ammo_object_list[num].amount = AmountCrossBowAmmo1;
+            num++;
+            ammo_object_list[num].invitem = INV_CROSSBOW_AMMO2_ITEM;
+            ammo_object_list[num].amount = AmountCrossBowAmmo2;
+            num++;
+            ammo_object_list[num].invitem = INV_CROSSBOW_AMMO3_ITEM;
+            ammo_object_list[num].amount = AmountCrossBowAmmo3;
+            num++;
+            num_ammo_slots = num;
+        }
+        if (opts & 0x100) {
+            current_ammo_type = &CurrentGrenadeGunAmmoType;
+            ammo_object_list[num].invitem = INV_GRENADEGUN_AMMO1_ITEM;
+            ammo_object_list[num].amount = AmountGrenadeAmmo1;
+            num++;
+            ammo_object_list[num].invitem = INV_GRENADEGUN_AMMO2_ITEM;
+            ammo_object_list[num].amount = AmountGrenadeAmmo2;
+            num++;
+            ammo_object_list[num].invitem = INV_GRENADEGUN_AMMO3_ITEM;
+            ammo_object_list[num].amount = AmountGrenadeAmmo3;
+            num++;
+            num_ammo_slots = num;
+        }
+        if (opts & 0x40) {
+            current_ammo_type = &CurrentShotGunAmmoType;
+            ammo_object_list[num].invitem = INV_SHOTGUN_AMMO1_ITEM;
+            ammo_object_list[num].amount = AmountShotGunAmmo1;
+            num++;
+            ammo_object_list[num].invitem = INV_SHOTGUN_AMMO2_ITEM;
+            ammo_object_list[num].amount = AmountShotGunAmmo2;
+            num++;
+            num_ammo_slots = num;
+        }
+    }
+}
+
 void fade_ammo_selector(void)
 {
     if (rings[RING_INVENTORY]->ringactive && (right_repeat >= 8 || left_repeat >= 8))
