@@ -92,3 +92,43 @@ sint32 WeaponObjectMesh(sint32 weapon_type)
         return PISTOLS_ANIM;
     }
 }
+
+sint16 *get_current_ammo_pointer(sint32 weapon_type)
+{
+    sint16 *ammo;
+
+    switch (weapon_type) {
+    case WEAPON_SHOTGUN:
+        if (lara.shotgun_type_carried & 8)
+            ammo = &lara.num_shotgun_ammo1;
+        else
+            ammo = &lara.num_shotgun_ammo2;
+        break;
+    case WEAPON_REVOLVER:
+        ammo = &lara.num_revolver_ammo;
+        break;
+    case WEAPON_UZI:
+        ammo = &lara.num_uzi_ammo;
+        break;
+    case WEAPON_GRENADE:
+        if (lara.grenade_type_carried & 8)
+            ammo = &lara.num_grenade_ammo1;
+        else if (lara.grenade_type_carried & 0x10)
+            ammo = &lara.num_grenade_ammo2;
+        else
+            ammo = &lara.num_grenade_ammo3;
+        break;
+    case WEAPON_CROSSBOW:
+        if (lara.crossbow_type_carried & 8)
+            ammo = &lara.num_crossbow_ammo1;
+        else if (lara.crossbow_type_carried & 0x10)
+            ammo = &lara.num_crossbow_ammo2;
+        else
+            ammo = &lara.num_crossbow_ammo3;
+        break;
+    default:
+        ammo = &lara.num_pistols_ammo;
+        break;
+    }
+    return ammo;
+}
