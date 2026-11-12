@@ -1664,6 +1664,11 @@ void lara_col_run(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_pos += coll->mid_floor;
 }
 
+void lara_col_pose(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara_col_stop(item, coll);
+}
+
 void lara_col_fastback(ITEM_INFO *item, COLL_INFO *coll)
 {
     item->gravity_status = item->fallspeed = 0;

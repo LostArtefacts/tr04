@@ -312,6 +312,7 @@ void lara_as_ropel(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_roper(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_pullblock(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_controlledl(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_pose(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
