@@ -60,7 +60,7 @@ address,size,name,symbol
 0x00409200,598,ControlBodyPart,_ControlBodyPart
 0x00409460,56,InitialiseMovingBlock,_InitialiseMovingBlock
 0x004094a0,546,ClearMovableBlockSplitters,_ClearMovableBlockSplitters
-0x004096d0,1156,MovableBlock,_MovableBlock
+0x004096d0,1188,MovableBlock,_MovableBlock
 0x00409b80,416,TestBlockPush,_TestBlockPush
 0x00409d20,792,TestBlockPull,_TestBlockPull
 0x0040a040,881,MovableBlockCollision,_MovableBlockCollision

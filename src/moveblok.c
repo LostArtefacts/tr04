@@ -12,6 +12,7 @@
 #include "lara_states.h"
 #include "delstuff.h"
 #include "specific/input.h"
+#include "sound.h"
 
 void InitialiseMovingBlock(sint16 item_number)
 {
@@ -52,6 +53,122 @@ void ClearMovableBlockSplitters(sint32 x, sint32 y, sint32 z, sint16 room_number
     if (floor->box != NO_BOX) {
         if (boxes[floor->box].height == height && (boxes[floor->box].overlap_index & BLOCKABLE) && (boxes[floor->box].overlap_index & BLOCKED))
             ClearMovableBlockSplitters(x, y, z - WALL_L, room_number);
+    }
+}
+
+void MovableBlock(sint16 item_number)
+{
+    ITEM_INFO *item, *l;
+    PHD_VECTOR pos;
+    sint32 offset;
+    uint16 quadrant;
+    sint32 frame, base;
+    static sint8 sfx = 0;
+
+    item = &items[item_number];
+    l = lara_item;
+    pos.x = 0;
+    pos.y = 0;
+    pos.z = 0;
+    quadrant = (uint16)(l->pos.y_rot + 0x2000) / 0x4000;
+    if (l->anim_number == ANIM_PUSH) {
+        base = anims[ANIM_PUSH].frame_base;
+        frame = l->frame_number;
+        if ((frame < base + 30 || frame > base + 67) && (frame < base + 78 || frame > base + 125) && (frame < base + 140 || frame > base + 160)) {
+            if (sfx) {
+                SoundEffect(SFX_PUSH_BLOCK_END, &item->pos, SFX_ALWAYS);
+                sfx = 0;
+            }
+        } else {
+            SoundEffect(SFX_PUSHABLE_SOUND, &item->pos, SFX_ALWAYS);
+            sfx = 1;
+        }
+        GetLaraJointPos(&pos, 14);
+        switch (quadrant) {
+        case NORTH:
+            offset = pos.z + *(sint32 *)&item->item_flags[2] - *(sint32 *)&l->item_flags[2];
+            if (ABS(item->pos.z_pos - offset) < 512 && item->pos.z_pos < offset)
+                item->pos.z_pos = offset;
+            break;
+        case SOUTH:
+            offset = pos.z + *(sint32 *)&item->item_flags[2] - *(sint32 *)&l->item_flags[2];
+            if (ABS(item->pos.z_pos - offset) < 512 && item->pos.z_pos > offset)
+                item->pos.z_pos = offset;
+            break;
+        case EAST:
+            offset = pos.x + *(sint32 *)item->item_flags - *(sint32 *)l->item_flags;
+            if (ABS(item->pos.x_pos - offset) < 512 && item->pos.x_pos < offset)
+                item->pos.x_pos = offset;
+            break;
+        case WEST:
+            offset = pos.x + *(sint32 *)item->item_flags - *(sint32 *)l->item_flags;
+            if (ABS(item->pos.x_pos - offset) < 512 && item->pos.x_pos > offset)
+                item->pos.x_pos = offset;
+            break;
+        }
+        if (l->frame_number == anims[l->anim_number].frame_end - 1) {
+            if (!(input & IN_ACTION))
+                l->goal_anim_state = AS_STOP;
+            else if (!TestBlockPush(item, 1024, quadrant))
+                l->goal_anim_state = AS_STOP;
+        }
+    } else if (l->anim_number == ANIM_PULL) {
+        base = anims[ANIM_PULL].frame_base;
+        frame = l->frame_number;
+        if ((frame < base + 40 || frame > base + 122) && (frame < base + 130 || frame > base + 170)) {
+            if (sfx) {
+                SoundEffect(SFX_PUSH_BLOCK_END, &item->pos, SFX_ALWAYS);
+                sfx = 0;
+            }
+        } else {
+            SoundEffect(SFX_PUSHABLE_SOUND, &item->pos, SFX_ALWAYS);
+            sfx = 1;
+        }
+        GetLaraJointPos(&pos, 14);
+        switch (quadrant) {
+        case NORTH:
+            offset = pos.z + *(sint32 *)&item->item_flags[2] - *(sint32 *)&l->item_flags[2];
+            if (ABS(item->pos.z_pos - offset) < 512 && item->pos.z_pos > offset)
+                item->pos.z_pos = offset;
+            break;
+        case SOUTH:
+            offset = pos.z + *(sint32 *)&item->item_flags[2] - *(sint32 *)&l->item_flags[2];
+            if (ABS(item->pos.z_pos - offset) < 512 && item->pos.z_pos < offset)
+                item->pos.z_pos = offset;
+            break;
+        case EAST:
+            offset = pos.x + *(sint32 *)item->item_flags - *(sint32 *)l->item_flags;
+            if (ABS(item->pos.x_pos - offset) < 512 && item->pos.x_pos > offset)
+                item->pos.x_pos = offset;
+            break;
+        case WEST:
+            offset = pos.x + *(sint32 *)item->item_flags - *(sint32 *)l->item_flags;
+            if (ABS(item->pos.x_pos - offset) < 512 && item->pos.x_pos < offset)
+                item->pos.x_pos = offset;
+            break;
+        }
+        if (l->frame_number == anims[l->anim_number].frame_end - 1) {
+            if (!(input & IN_ACTION))
+                l->goal_anim_state = AS_STOP;
+            else if (!TestBlockPull(item, 1024, quadrant))
+                l->goal_anim_state = AS_STOP;
+        }
+    } else if (l->anim_number == 417 || l->anim_number == 418) {
+        if (l->frame_number == anims[417].frame_base || l->frame_number == anims[418].frame_base) {
+            item->pos.x_pos = (item->pos.x_pos & -512) | 512;
+            item->pos.z_pos = (item->pos.z_pos & -512) | 512;
+        }
+        if (l->frame_number == anims[l->anim_number].frame_end) {
+            FLOOR_INFO *floor;
+            sint16 room_number;
+
+            room_number = item->room_number;
+            floor = GetFloor(item->pos.x_pos, item->pos.y_pos - 256, item->pos.z_pos, &room_number);
+            GetHeight(floor, item->pos.x_pos, item->pos.y_pos - 256, item->pos.z_pos);
+            TestTriggers(trigger_index, 1, item->flags & IFL_CODEBITS);
+            RemoveActiveItem(item_number);
+            item->status = ITEM_INACTIVE;
+        }
     }
 }
 
