@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="248.55" height="12" x="0" y="0" class="named"><title>1125 · 72.67%</title></rect>
-<rect width="0.66" height="12" x="248.55" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.45" height="12" x="249.21" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
-<rect width="75.34" height="12" x="266.66" y="0" class="todo"><title>341 · 22.03%</title></rect>
+<rect width="248.77" height="12" x="0" y="0" class="named"><title>1126 · 72.74%</title></rect>
+<rect width="0.66" height="12" x="248.77" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.45" height="12" x="249.43" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
+<rect width="75.12" height="12" x="266.88" y="0" class="todo"><title>340 · 21.96%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1125</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">341</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1126</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">340</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="130.88" height="12" x="0" y="0" class="named"><title>238 KB · 38.27%</title></rect>
-<rect width="0.13" height="12" x="130.88" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.18" height="12" x="131.01" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
-<rect width="179.81" height="12" x="162.19" y="0" class="todo"><title>327 KB · 52.57%</title></rect>
+<rect width="131.14" height="12" x="0" y="0" class="named"><title>239 KB · 38.34%</title></rect>
+<rect width="0.13" height="12" x="131.14" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="31.18" height="12" x="131.27" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
+<rect width="179.54" height="12" x="162.46" y="0" class="todo"><title>327 KB · 52.50%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">38.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">238 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">327 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">38.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">239 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">327 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -771,7 +771,7 @@
 <rect width="12" height="12" x="30" y="210" class="named"><title>0x004451c0 mgLOS (327 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="210" class="todo"><title>0x00445310 BinocularCamera (1407 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="210" class="named"><title>0x00445890 LaraTorch (90 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="210" class="todo"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="210" class="named"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="210" class="todo"><title>0x00445ad0 ControlClockworkBeetle (1666 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="210" class="todo"><title>0x00446170 GetCollisionInfo (2867 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="210" class="named"><title>0x00446cf0 FindGridShift (47 bytes)</title></rect>
@@ -1999,7 +1999,7 @@
 <rect width="14.08" height="13.13" x="415.44" y="96.69" class="todo"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
 <rect width="14.05" height="13.13" x="432.52" y="96.69" class="named"><title>0x0044e480 PushPullKickDoorCollision (479 bytes)</title></rect>
 <rect width="13.99" height="13.13" x="449.57" y="96.69" class="named"><title>0x0042f510 DoFlareLight (477 bytes)</title></rect>
-<rect width="13.96" height="13.13" x="466.56" y="96.69" class="todo"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>
+<rect width="13.96" height="13.13" x="466.56" y="96.69" class="named"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>
 <rect width="13.90" height="13.13" x="483.52" y="96.69" class="named"><title>0x00485600 setXY4 (474 bytes)</title></rect>
 <rect width="13.87" height="13.13" x="500.42" y="96.69" class="named"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="13.84" height="13.13" x="517.29" y="96.69" class="named"><title>0x004570f0 StatuePlinthCollision (472 bytes)</title></rect>
