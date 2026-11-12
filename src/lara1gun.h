@@ -7,5 +7,6 @@ void undraw_shotgun_meshes(sint32 weapon_type);
 void ready_shotgun(int weapon_type);
 void draw_shotgun_meshes(sint32 weapon_type);
 void undraw_shotgun(sint32 weapon_type);
+void TriggerUnderwaterExplosion(ITEM_INFO *item, sint32 vehicle);
 
 #endif

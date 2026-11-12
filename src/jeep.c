@@ -1,5 +1,27 @@
 #include "jeep.h"
 #include "control.h"
+#include "lara.h"
+#include "lara1gun.h"
+#include "lara_states.h"
+#include "anim.h"
+#include "sound.h"
+#include "effect2.h"
+#include "tomb4fx.h"
+#include "specific/3dmath.h"
+#include "specific/audio.h"
+#include "specific/function_stubs.h"
+#include "specific/specificfx.h"
+
+
+void DrawJeepExtras(ITEM_INFO *item)
+{
+    JEEPINFO *jeep;
+
+    if (lara.vehicle == NO_ITEM)
+        return;
+    jeep = (JEEPINFO *)item->data;
+    DrawJeepSpeedo(phd_winwidth - 64, phd_winheight - 16, jeep->velocity, 0x6000, 0x8000, 32, jeep->gear);
+}
 
 sint32 DoShift(ITEM_INFO *item, PHD_VECTOR *pos, PHD_VECTOR *old)
 {
