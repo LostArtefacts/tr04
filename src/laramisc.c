@@ -6,6 +6,11 @@
 #include "gameflow.h"
 #include "objnums.h"
 #include "room.h"
+#include "control.h"
+#include "effects.h"
+#include "sound.h"
+#include "rope.h"
+#include "specific/3dmath.h"
 
 void LaraInitialiseMeshes(void)
 {
@@ -90,6 +95,112 @@ void LaraCheatyBits(void)
             lara.head_x_rot = 0;
             cheat_hit_points = lara_item->hit_points;
         }
+    }
+}
+
+void AnimateLara(ITEM_INFO *item)
+{
+    sint32 i;
+    ANIM_STRUCT *anim;
+    sint16 *command;
+    sint32 speed;
+    uint16 type;
+
+    item->frame_number++;
+    anim = &anims[item->anim_number];
+    if (anim->number_changes > 0) {
+        if (GetChange(item, anim)) {
+            anim = &anims[item->anim_number];
+            item->current_anim_state = anim->current_anim_state;
+        }
+    }
+    if (item->frame_number > anim->frame_end) {
+        if (anim->number_commands > 0) {
+            command = &commands[anim->command_index];
+            for (i = anim->number_commands; i > 0; i--) {
+                switch (*(command++)) {
+                case 1:
+                    TranslateItem(item, *command, *(command + 1), *(command + 2));
+                    UpdateLaraRoom(item, -381);
+                    command += 3;
+                    break;
+                case 2:
+                    item->fallspeed = *(command++);
+                    item->speed = *(command++);
+                    item->gravity_status = 1;
+                    if (lara.calc_fallspeed) {
+                        item->fallspeed = lara.calc_fallspeed;
+                        lara.calc_fallspeed = 0;
+                    }
+                    break;
+                case 3:
+                    if (lara.gun_status != LG_FLARE)
+                        lara.gun_status = LG_NO_ARMS;
+                    break;
+                case 4:
+                    break;
+                case 5:
+                case 6:
+                    command += 2;
+                    break;
+                }
+            }
+        }
+        item->anim_number = anim->jump_anim_num;
+        item->frame_number = anim->jump_frame_num;
+        anim = &anims[item->anim_number];
+        item->current_anim_state = anim->current_anim_state;
+    }
+    if (anim->number_commands > 0) {
+        command = &commands[anim->command_index];
+        for (i = anim->number_commands; i > 0; i--) {
+            switch (*(command++)) {
+            case 1:
+                command += 3;
+                break;
+            case 2:
+                command += 2;
+                break;
+            case 3:
+            case 4:
+                break;
+            case 5:
+                if (item->frame_number == *command) {
+                    type = *(command + 1) & 0xC000;
+                    if (type == 0 || (type == 0x4000 && (lara.water_surface_dist >= 0 || lara.water_surface_dist == NO_HEIGHT)) ||
+                        (type == 0x8000 && lara.water_surface_dist < 0 && lara.water_surface_dist != NO_HEIGHT))
+                        SoundEffect(*(command + 1) & 0x3FFF, &item->pos, 2);
+                }
+                command += 2;
+                break;
+            case 6:
+                if (item->frame_number == *command) {
+                    FXType = *(command + 1) & 0xC000;
+                    effect_routines[*(command + 1) & 0x3FFF](item);
+                }
+                command += 2;
+                break;
+            }
+        }
+    }
+    if (!item->gravity_status) {
+        speed = anim->velocity;
+        if (anim->acceleration)
+            speed += anim->acceleration * (item->frame_number - anim->frame_base);
+        item->speed = (sint16)(speed >> 16);
+    } else {
+        speed = anim->velocity + anim->acceleration * (item->frame_number - anim->frame_base - 1);
+        item->speed -= (sint16)(speed >> 16);
+        speed += anim->acceleration;
+        item->speed += (sint16)(speed >> 16);
+        item->fallspeed += (item->fallspeed < FASTFALL_SPEED) ? 6 : 1;
+        item->pos.y_pos += item->fallspeed;
+    }
+    if (lara.RopePtr != -1)
+        AlignLaraToRope(item);
+    if (!lara.IsMoving) {
+        item->pos.x_pos += (rcossin_tbl[(lara.move_angle >> 3) & 0x1FFE] << 2) * item->speed >> W2V_SHIFT;
+        item->pos.z_pos += (rcossin_tbl[((lara.move_angle >> 3) & 0x1FFE) + 1] << 2) * item->speed >> W2V_SHIFT;
     }
 }
 

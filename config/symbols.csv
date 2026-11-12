@@ -442,7 +442,7 @@ address,size,name,symbol
 0x00430250,1835,LaraControl,_LaraControl
 0x004309b0,151,LaraCheat,_LaraCheat
 0x00430a50,258,LaraCheatyBits,_LaraCheatyBits
-0x00430b60,791,AnimateLara,_AnimateLara
+0x00430b60,840,AnimateLara,_AnimateLara
 0x00430eb0,45,InitialiseLaraLoad,_InitialiseLaraLoad
 0x00430ee0,133,InitialiseLaraAnims,_InitialiseLaraAnims
 0x00430f70,2027,CreateSkinningData,_CreateSkinningData
