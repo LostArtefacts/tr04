@@ -2022,6 +2022,7 @@ address,size,name,symbol
 0x004ad3c4,96,floor_fires,_floor_fires
 0x004ad424,16,deadly_floor_fires,_deadly_floor_fires
 0x004ad438,16,troop_gun,_troop_gun
+0x004ad458,124,VonCroyCutTracks,_VonCroyCutTracks
 0x004ad4d4,64,VonCroyCutIndices,_VonCroyCutIndices
 0x004ad518,420,VonCroyCutscenes,_VonCroyCutscenes
 0x004ad6c0,16,wildboar_bite,_wildboar_bite

@@ -18,11 +18,13 @@ extern sint32 actualFOV;
 extern PHD_VECTOR actualCameraTarget;
 extern PHD_VECTOR actualCameraPos;
 extern uint8 VonCroyCutIndices[64];
+extern sint16 VonCroyCutTracks[64];
 extern VONCROY_CUT_DATA VonCroyCutscenes[15];
 
 void InitialiseVoncroy(sint16 item_number);
 void ClearCutSceneCamera(void);
 void SetCutSceneCamera(ITEM_INFO *item);
 void GetAIEnemy(CREATURE_INFO *info, sint32 tfl);
+void DoVonCroyCutscene(ITEM_INFO *item, CREATURE_INFO *info);
 
 #endif

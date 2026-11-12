@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="258.27" height="12" x="0" y="0" class="named"><title>1169 · 75.52%</title></rect>
-<rect width="0.66" height="12" x="258.27" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="22.09" height="12" x="258.93" y="0" class="nonmatching"><title>100 · 6.46%</title></rect>
-<rect width="60.98" height="12" x="281.02" y="0" class="todo"><title>276 · 17.83%</title></rect>
+<rect width="258.49" height="12" x="0" y="0" class="named"><title>1170 · 75.58%</title></rect>
+<rect width="0.66" height="12" x="258.49" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="22.09" height="12" x="259.15" y="0" class="nonmatching"><title>100 · 6.46%</title></rect>
+<rect width="60.76" height="12" x="281.24" y="0" class="todo"><title>275 · 17.76%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">75.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1169</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">100</tspan> · <tspan class="todo">276</tspan></text>
+<text text-anchor="end" x="522" y="7.50">75.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1170</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">100</tspan> · <tspan class="todo">275</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="146.84" height="12" x="0" y="0" class="named"><title>267 KB · 42.94%</title></rect>
-<rect width="0.13" height="12" x="146.84" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="46.29" height="12" x="146.97" y="0" class="nonmatching"><title>84 KB · 13.53%</title></rect>
-<rect width="148.74" height="12" x="193.26" y="0" class="todo"><title>271 KB · 43.49%</title></rect>
+<rect width="147.53" height="12" x="0" y="0" class="named"><title>269 KB · 43.14%</title></rect>
+<rect width="0.13" height="12" x="147.53" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="46.29" height="12" x="147.66" y="0" class="nonmatching"><title>84 KB · 13.53%</title></rect>
+<rect width="148.05" height="12" x="193.95" y="0" class="todo"><title>270 KB · 43.29%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">43.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">267 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">84 KB</tspan> · <tspan class="todo">271 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">43.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">269 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">84 KB</tspan> · <tspan class="todo">270 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -242,7 +242,7 @@
 <rect width="12" height="12" x="345" y="45" class="nonmatching"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="45" class="named"><title>0x00418f10 ClearCutSceneCamera (130 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="45" class="named"><title>0x00418fa0 GetAIEnemy (199 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="45" class="todo"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="45" class="named"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="45" class="named"><title>0x00419560 InitialiseVoncroy (116 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="45" class="todo"><title>0x004195e0 VoncroyControl (5975 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="45" class="todo"><title>0x0041af00 VoncroyRaceControl (3869 bytes)</title></rect>
@@ -1725,7 +1725,7 @@
 <rect width="22.03" height="22.62" x="234.55" y="0" class="named"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
 <rect width="22.03" height="22.57" x="234.55" y="25.62" class="todo"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
 <rect width="22.03" height="22.41" x="234.55" y="51.19" class="todo"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
-<rect width="22.03" height="22.04" x="234.55" y="76.60" class="todo"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
+<rect width="22.03" height="22.04" x="234.55" y="76.60" class="named"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
 <rect width="22.03" height="22.04" x="234.55" y="101.64" class="todo"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
 <rect width="22.03" height="22.03" x="234.55" y="126.68" class="named"><title>0x0044a530 GetHeight (1261 bytes)</title></rect>
 <rect width="22.03" height="21.90" x="234.55" y="151.71" class="nonmatching"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
