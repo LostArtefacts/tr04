@@ -8,6 +8,14 @@
 #include "../room.h"
 #include "../3dglodef.h"
 
+enum light_types {
+    LIGHT_SUN,
+    LIGHT_POINT,
+    LIGHT_SPOT,
+    LIGHT_SHADOW,
+    LIGHT_FOG
+};
+
 typedef struct {
     LPDIRECT3DLIGHT D3DLight;
     D3DLIGHT2 D3DLightx;

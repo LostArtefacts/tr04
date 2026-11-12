@@ -4,6 +4,9 @@
 #include "../room.h"
 #include "../draw.h"
 #include "winmain.h"
+#include "dxshell.h"
+#include "../control.h"
+#include "../text.h"
 
 void MallocD3DLights(void)
 {
@@ -12,6 +15,37 @@ void MallocD3DLights(void)
     MaxRoomLights *= 2;
     D3DLights = (D3DLIGHT_STRUCT *)game_malloc(sizeof(D3DLIGHT_STRUCT) * MaxRoomLights, 0);
     D3DDynamics = (D3DLIGHT_STRUCT *)game_malloc(sizeof(D3DLIGHT_STRUCT) * 32, 0);
+}
+
+void FreeD3DLights(void)
+{
+    sint32 i;
+
+    if (MaxRoomLights) {
+        for (i = 0; i < MaxRoomLights; i++) {
+            IDirect3DViewport3_DeleteLight(App.dx.lpViewport, D3DLights[i].D3DLight);
+            if (D3DLights[i].D3DLight) {
+                Log(4, "Released %s @ %x - RefCnt = %d", "Room Light", D3DLights[i].D3DLight, IDirect3DLight_Release(D3DLights[i].D3DLight));
+                D3DLights[i].D3DLight = 0;
+            } else
+                Log(1, "%s Attempt To Release NULL Ptr", "Room Light");
+        }
+    }
+    if (D3DDynamics) {
+        for (i = 0; i < 32; i++) {
+            DXAttempt(IDirect3DViewport3_DeleteLight(App.dx.lpViewport, D3DDynamics[i].D3DLight));
+            if (D3DDynamics[i].D3DLight) {
+                Log(4, "Released %s @ %x - RefCnt = %d", "Dynamic Light", D3DDynamics[i].D3DLight, IDirect3DLight_Release(D3DDynamics[i].D3DLight));
+                D3DDynamics[i].D3DLight = 0;
+            } else
+                Log(1, "%s Attempt To Release NULL Ptr", "Dynamic Light");
+        }
+    }
+    if (App.GlobalMaterial) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Global Material", App.GlobalMaterial, IDirect3DMaterial3_Release(App.GlobalMaterial));
+        App.GlobalMaterial = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Global Material");
 }
 
 void ApplyMatrix(sint32 *matrix, PHD_VECTOR *start, PHD_VECTOR *dest)
