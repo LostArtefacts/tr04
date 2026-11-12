@@ -32,5 +32,6 @@ void init_all_ropes(void);
 void CreateRope(ROPE_STRUCT *rope, PHD_VECTOR *pos, PHD_VECTOR *dir, sint32 slength);
 void InitialiseRope(sint16 item_number);
 void InitialiseDoor(sint16 item_number);
+void InitialiseObelisk(sint16 item_number);
 
 #endif
