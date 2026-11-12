@@ -521,3 +521,7 @@ void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest)
         pitch = -pitch;
     dest[1] = pitch;
 }
+
+void nullsub_14(void)
+{
+}
