@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="235.66" height="12" x="0" y="0" class="named"><title>1066 · 68.91%</title></rect>
 <rect width="0.44" height="12" x="235.66" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="11.72" height="12" x="236.11" y="0" class="nonmatching"><title>53 · 3.43%</title></rect>
-<rect width="94.18" height="12" x="247.82" y="0" class="todo"><title>426 · 27.54%</title></rect>
+<rect width="11.94" height="12" x="236.11" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
+<rect width="93.96" height="12" x="248.04" y="0" class="todo"><title>425 · 27.47%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">69.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1066</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">53</tspan> · <tspan class="todo">426</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1066</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">425</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="108.85" height="12" x="0" y="0" class="named"><title>198 KB · 31.83%</title></rect>
 <rect width="0.12" height="12" x="108.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="20.10" height="12" x="108.97" y="0" class="nonmatching"><title>36 KB · 5.88%</title></rect>
-<rect width="212.93" height="12" x="129.07" y="0" class="todo"><title>387 KB · 62.26%</title></rect>
+<rect width="20.70" height="12" x="108.97" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
+<rect width="212.32" height="12" x="129.68" y="0" class="todo"><title>385 KB · 62.08%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">31.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">198 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">36 KB</tspan> · <tspan class="todo">387 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">198 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">385 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -738,7 +738,7 @@
 <rect width="12" height="12" x="285" y="195" class="named"><title>0x004403e0 GetCreatureMood (576 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="195" class="named"><title>0x00440620 CreatureMood (792 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="195" class="todo"><title>0x00440940 StalkBox (249 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="195" class="todo"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="195" class="nonmatching"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="195" class="named"><title>0x00440e90 CreatureCreature (310 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="195" class="named"><title>0x00440fd0 BadFloor (163 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="195" class="named"><title>0x00441080 CreatureDie (422 bytes)</title></rect>
@@ -1748,7 +1748,7 @@
 <rect width="20.90" height="20.71" x="258.82" y="120.01" class="todo"><title>0x004752a0 AdjustUV (1121 bytes)</title></rect>
 <rect width="20.90" height="20.63" x="258.82" y="143.72" class="todo"><title>0x0048e9c0 WinMain (1117 bytes)</title></rect>
 <rect width="20.90" height="20.47" x="258.82" y="167.36" class="todo"><title>0x00487260 S_DrawSmokeSparks (1108 bytes)</title></rect>
-<rect width="20.90" height="20.36" x="258.82" y="190.82" class="todo"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
+<rect width="20.90" height="20.36" x="258.82" y="190.82" class="nonmatching"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
 <rect width="20.90" height="20.30" x="258.82" y="214.18" class="todo"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
 <rect width="20.90" height="20.02" x="258.82" y="237.48" class="todo"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
 <rect width="20.90" height="19.91" x="258.82" y="260.50" class="todo"><title>0x0048eff0 WinProcessCommands (1078 bytes)</title></rect>

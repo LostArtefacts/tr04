@@ -251,6 +251,160 @@ void CreatureMood(ITEM_INFO *item, AI_INFO *info, sint32 violent)
     }
 }
 
+sint32 CalculateTarget(PHD_VECTOR *target, ITEM_INFO *item, LOT_INFO *LOT)
+{
+    BOX_INFO *box;
+    sint32 box_number, box_left, box_right, box_top, box_bottom;
+    sint32 left, right, top, bottom, prime_free;
+    static uint16 loops;
+
+    UpdateLOT(LOT, 5);
+    target->x = item->pos.x_pos;
+    target->y = item->pos.y_pos;
+    target->z = item->pos.z_pos;
+    box_number = item->box_number;
+    if (box_number == NO_BOX)
+        return 0;
+    box = &boxes[box_number];
+    left = box->left << WALL_SHIFT;
+    right = (box->right << WALL_SHIFT) - 1;
+    top = box->top << WALL_SHIFT;
+    bottom = (box->bottom << WALL_SHIFT) - 1;
+    loops = 0;
+    prime_free = 15;
+    do {
+        loops++;
+        box = &boxes[box_number];
+        if (LOT->fly == NO_FLYING) {
+            if (target->y > box->height)
+                target->y = box->height;
+        } else if (target->y > box->height - WALL_L) {
+            target->y = box->height - WALL_L;
+        }
+        box_left = box->left << WALL_SHIFT;
+        box_right = (box->right << WALL_SHIFT) - 1;
+        box_top = box->top << WALL_SHIFT;
+        box_bottom = (box->bottom << WALL_SHIFT) - 1;
+        if (item->pos.z_pos >= box_left && item->pos.z_pos <= box_right && item->pos.x_pos >= box_top && item->pos.x_pos <= box_bottom) {
+            left = box->left << WALL_SHIFT;
+            right = (box->right << WALL_SHIFT) - 1;
+            top = box->top << WALL_SHIFT;
+            bottom = (box->bottom << WALL_SHIFT) - 1;
+        } else {
+            if (item->pos.z_pos < box_left && prime_free != 2) {
+                if ((prime_free & 1) && item->pos.x_pos >= box_top && item->pos.x_pos <= box_bottom) {
+                    if (target->z < box_left + 512)
+                        target->z = box_left + 512;
+                    if (prime_free & 16)
+                        return 2;
+                    if (box_top > top)
+                        top = box_top;
+                    if (box_bottom < bottom)
+                        bottom = box_bottom;
+                    prime_free = 1;
+                } else if (prime_free != 1) {
+                    target->z = right - 512;
+                    if (prime_free != 15)
+                        return 2;
+                    prime_free = 31;
+                }
+            } else if (item->pos.z_pos > box_right && prime_free != 1) {
+                if ((prime_free & 2) && item->pos.x_pos >= box_top && item->pos.x_pos <= box_bottom) {
+                    if (target->z > box_right - 512)
+                        target->z = box_right - 512;
+                    if (prime_free & 16)
+                        return 2;
+                    if (box_top > top)
+                        top = box_top;
+                    if (box_bottom < bottom)
+                        bottom = box_bottom;
+                    prime_free = 2;
+                } else if (prime_free != 2) {
+                    target->z = left + 512;
+                    if (prime_free != 15)
+                        return 2;
+                    prime_free = 31;
+                }
+            }
+            if (item->pos.x_pos < box_top && prime_free != 8) {
+                if ((prime_free & 4) && item->pos.z_pos >= box_left && item->pos.z_pos <= box_right) {
+                    if (target->x < box_top + 512)
+                        target->x = box_top + 512;
+                    if (prime_free & 16)
+                        return 2;
+                    if (box_left > left)
+                        left = box_left;
+                    if (box_right < right)
+                        right = box_right;
+                    prime_free = 4;
+                } else if (prime_free != 4) {
+                    target->x = bottom - 512;
+                    if (prime_free != 15)
+                        return 2;
+                    prime_free = 31;
+                }
+            } else if (item->pos.x_pos > box_bottom && prime_free != 4) {
+                if ((prime_free & 8) && item->pos.z_pos >= box_left && item->pos.z_pos <= box_right) {
+                    if (target->x > box_bottom - 512)
+                        target->x = box_bottom - 512;
+                    if (prime_free & 16)
+                        return 2;
+                    if (box_left > left)
+                        left = box_left;
+                    if (box_right < right)
+                        right = box_right;
+                    prime_free = 8;
+                } else if (prime_free != 8) {
+                    target->x = top + 512;
+                    if (prime_free != 15)
+                        return 2;
+                    prime_free = 31;
+                }
+            }
+        }
+        if (box_number == LOT->target_box) {
+            if (prime_free & 3) {
+                target->z = LOT->target.z;
+            } else if (!(prime_free & 16)) {
+                if (target->z < box_left + 512)
+                    target->z = box_left + 512;
+                else if (target->z > box_right - 512)
+                    target->z = box_right - 512;
+            }
+            if (prime_free & 12) {
+                target->x = LOT->target.x;
+            } else if (!(prime_free & 16)) {
+                if (target->x < box_top + 512)
+                    target->x = box_top + 512;
+                else if (target->x > box_bottom - 512)
+                    target->x = box_bottom - 512;
+            }
+            target->y = LOT->target.y;
+            return 1;
+        }
+        box_number = LOT->node[box_number].exit_box;
+        if (box_number != NO_BOX && (boxes[box_number].overlap_index & LOT->block_mask))
+            break;
+    } while (box_number != NO_BOX);
+    if (!(prime_free & 16)) {
+        if (target->z < box_left + 512)
+            target->z = box_left + 512;
+        else if (target->z > box_right - 512)
+            target->z = box_right - 512;
+    }
+    if (!(prime_free & 16)) {
+        if (target->x < box_top + 512)
+            target->x = box_top + 512;
+        else if (target->x > box_bottom - 512)
+            target->x = box_bottom - 512;
+    }
+    if (LOT->fly == NO_FLYING)
+        target->y = box->height;
+    else
+        target->y = box->height - 320;
+    return 0;
+}
+
 sint32 CreatureCreature(sint16 item_number)
 {
     sint16 link, angle;
