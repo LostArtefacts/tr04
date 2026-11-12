@@ -76,7 +76,7 @@ address,size,name,symbol
 0x0040b120,161,GunMiss,_GunMiss
 0x0040b1d0,486,ShotLara,_ShotLara
 0x0040b3c0,561,InitialiseRaghead,_InitialiseRaghead
-0x0040b600,6498,RagheadControl,_RagheadControl
+0x0040b600,6716,RagheadControl,_RagheadControl
 0x0040d040,90,InitialiseSas,_InitialiseSas
 0x0040d0a0,2388,SasControl,_SasControl
 0x0040da00,106,InitialiseInjuredSas,_InitialiseInjuredSas
@@ -2012,6 +2012,8 @@ address,size,name,symbol
 0x004ad1d0,24,MovingBlockBounds,_MovingBlockBounds
 0x004ad1e8,16,left_hand,_left_hand
 0x004ad1f8,16,right_hand,_right_hand
+0x004ad208,16,raghead_blade,_raghead_blade
+0x004ad218,16,raghead_fire,_raghead_fire
 0x004ad228,16,sas_fire,_sas_fire
 0x004ad238,24,DragSASBounds,_DragSASBounds
 0x004ad250,12,DragSASPos,_DragSASPos
