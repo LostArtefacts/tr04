@@ -212,3 +212,22 @@ sint32 have_i_got_object(sint16 object_number)
         return lara.crowbar;
     return 0;
 }
+
+void remove_inventory_item(sint16 object_number)
+{
+    if (object_number >= PUZZLE_ITEM1_COMBO1 && object_number <= PUZZLE_ITEM8_COMBO2)
+        lara.puzzleitemscombo &= ~(1 << (object_number - PUZZLE_ITEM1_COMBO1));
+    else if (object_number >= PUZZLE_ITEM1 && object_number <= PUZZLE_ITEM12) {
+        if (lara.puzzleitems[object_number - PUZZLE_ITEM1])
+            lara.puzzleitems[object_number - PUZZLE_ITEM1]--;
+    } else if (object_number >= KEY_ITEM1_COMBO1 && object_number <= KEY_ITEM8_COMBO2)
+        lara.keyitemscombo &= ~(1 << (object_number - KEY_ITEM1_COMBO1));
+    else if (object_number >= KEY_ITEM1 && object_number <= KEY_ITEM11)
+        lara.keyitems &= ~(1 << (object_number - KEY_ITEM1));
+    else if (object_number >= PICKUP_ITEM1_COMBO1 && object_number <= PICKUP_ITEM4_COMBO2)
+        lara.pickupitemscombo &= ~(1 << (object_number - PICKUP_ITEM1_COMBO1));
+    else if (object_number >= PICKUP_ITEM1 && object_number <= PICKUP_ITEM4)
+        lara.pickupitems &= ~(1 << (object_number - PICKUP_ITEM1));
+    else if (object_number >= QUEST_ITEM1 && object_number <= QUEST_ITEM6)
+        lara.questitems &= ~(1 << (object_number - QUEST_ITEM1));
+}
