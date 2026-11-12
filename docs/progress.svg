@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="238.32" height="12" x="0" y="0" class="named"><title>1078 · 69.68%</title></rect>
 <rect width="0.44" height="12" x="238.32" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="12.38" height="12" x="238.76" y="0" class="nonmatching"><title>56 · 3.62%</title></rect>
-<rect width="90.86" height="12" x="251.14" y="0" class="todo"><title>411 · 26.57%</title></rect>
+<rect width="12.60" height="12" x="238.76" y="0" class="nonmatching"><title>57 · 3.68%</title></rect>
+<rect width="90.64" height="12" x="251.36" y="0" class="todo"><title>410 · 26.50%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">69.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1078</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">56</tspan> · <tspan class="todo">411</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1078</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">57</tspan> · <tspan class="todo">410</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="112.99" height="12" x="0" y="0" class="named"><title>205 KB · 33.04%</title></rect>
 <rect width="0.12" height="12" x="112.99" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="21.63" height="12" x="113.11" y="0" class="nonmatching"><title>39 KB · 6.33%</title></rect>
-<rect width="207.25" height="12" x="134.75" y="0" class="todo"><title>376 KB · 60.60%</title></rect>
+<rect width="21.88" height="12" x="113.11" y="0" class="nonmatching"><title>40 KB · 6.40%</title></rect>
+<rect width="207.01" height="12" x="134.99" y="0" class="todo"><title>376 KB · 60.53%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">33.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">205 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">39 KB</tspan> · <tspan class="todo">376 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">205 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">40 KB</tspan> · <tspan class="todo">376 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -791,7 +791,7 @@
 <rect width="12" height="12" x="330" y="210" class="named"><title>0x00447f30 TestLaraPosition (311 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="210" class="named"><title>0x00448070 AlignLaraPosition (208 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="210" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="210" class="todo"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="210" class="nonmatching"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="210" class="todo"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="todo"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="210" class="nonmatching"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>
@@ -2023,7 +2023,7 @@
 <rect width="13.16" height="13.11" x="479.53" y="112.48" class="named"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
 <rect width="13.16" height="13.11" x="495.69" y="112.48" class="named"><title>0x004552b0 EnableBaddieAI (447 bytes)</title></rect>
 <rect width="13.13" height="13.11" x="511.85" y="112.48" class="named"><title>0x0042cd20 LaraDoClimbLeftRight (446 bytes)</title></rect>
-<rect width="13.07" height="13.11" x="527.98" y="112.48" class="todo"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
+<rect width="13.07" height="13.11" x="527.98" y="112.48" class="nonmatching"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
 <rect width="13.04" height="13.11" x="544.06" y="112.48" class="named"><title>0x00413f90 DartEmitterControl (443 bytes)</title></rect>
 <rect width="12.96" height="13.11" x="560.10" y="112.48" class="named"><title>0x0045bdf0 sgRestoreLevel (440 bytes)</title></rect>
 <rect width="12.96" height="13.11" x="576.06" y="112.48" class="named"><title>0x0046e180 ACMEmulateCDPlay (440 bytes)</title></rect>

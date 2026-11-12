@@ -10,6 +10,7 @@
 #include "lara_states.h"
 #include "sphere.h"
 #include "effects.h"
+#include "objnums.h"
 
 void Func488650(void);
 
@@ -592,6 +593,39 @@ sint32 Move3DPosTo3DPos(PHD_3DPOS *pos, PHD_3DPOS *dest, sint32 speed, PHD_ANGLE
         pos->z_rot = dest->z_rot;
 
     return pos->x_pos == dest->x_pos && pos->y_pos == dest->y_pos && pos->z_pos == dest->z_pos && pos->x_rot == dest->x_rot && pos->y_rot == dest->y_rot && pos->z_rot == dest->z_rot;
+}
+
+sint32 MoveLaraPosition(PHD_VECTOR *v, ITEM_INFO *item, ITEM_INFO *l)
+{
+    PHD_3DPOS pos;
+    FLOOR_INFO *floor;
+    sint32 height;
+    sint16 room_number;
+
+    pos.x_rot = item->pos.x_rot;
+    pos.y_rot = item->pos.y_rot;
+    pos.z_rot = item->pos.z_rot;
+    phd_PushUnitMatrix();
+    ((void (*)(sint32, sint32, sint32))phd_RotYXZ)(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    pos.x_pos = item->pos.x_pos + ((phd_mxptr[M00] * v->x + phd_mxptr[M01] * v->y + phd_mxptr[M02] * v->z) >> W2V_SHIFT);
+    pos.y_pos = item->pos.y_pos + ((phd_mxptr[M10] * v->x + phd_mxptr[M11] * v->y + phd_mxptr[M12] * v->z) >> W2V_SHIFT);
+    pos.z_pos = item->pos.z_pos + ((phd_mxptr[M20] * v->x + phd_mxptr[M21] * v->y + phd_mxptr[M22] * v->z) >> W2V_SHIFT);
+    phd_PopMatrix();
+    if (item->object_number == FLARE_ITEM || item->object_number == BURNING_TORCH_ITEM || item->object_number == CLOCKWORK_BEETLE) {
+        room_number = l->room_number;
+        floor = GetFloor(pos.x_pos, pos.y_pos, pos.z_pos, &room_number);
+        height = GetHeight(floor, pos.x_pos, pos.y_pos, pos.z_pos);
+        if (ABS(height - l->pos.y_pos) > 512) {
+            if (lara.IsMoving) {
+                lara.IsMoving = 0;
+                lara.gun_status = LG_NO_ARMS;
+            }
+            return 0;
+        }
+        if (phd_sqrt(SQUARE(pos.x_pos - l->pos.x_pos) + SQUARE(pos.y_pos - l->pos.y_pos) + SQUARE(pos.z_pos - l->pos.z_pos)) < 128)
+            return 1;
+    }
+    return Move3DPosTo3DPos(&l->pos, &pos, 12, 364);
 }
 
 sint32 TestBoundsCollide2(ITEM_INFO *item, ITEM_INFO *l, sint32 rad)
