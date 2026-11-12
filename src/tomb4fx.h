@@ -164,6 +164,7 @@ typedef struct gunflash_struct {
 } GUNFLASH_STRUCT;
 
 void TriggerShatterSmoke(sint32 x, sint32 y, sint32 z);
+void TriggerFlashSmoke(sint32 x, sint32 y, sint32 z, sint16 room_number);
 void TriggerBlood(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 num);
 void CreateBubble(PHD_3DPOS *pos, sint16 room_number, sint32 size, sint32 biggest);
 sint32 ExplodingDeath2(sint16 item_number, sint32 mesh_bits, sint16 Flags);

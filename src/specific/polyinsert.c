@@ -2,6 +2,8 @@
 #include "polyinsert.h"
 #include "winmain.h"
 #include "../camera.h"
+#include "../tomb4fx.h"
+#include "function_stubs.h"
 
 void DoSort(sint32 left, sint32 right, SORTLIST **list)
 {
@@ -63,6 +65,31 @@ void ClearFXFogBulbs(void)
         FXFogBulbs[i].active = 0;
     }
     NumFXFogBulbs = 0;
+}
+
+void ControlFXBulb(FOGBULB_STRUCT *FogBulb)
+{
+    if (FogBulb->timer > 0) {
+        FogBulb->timer--;
+        FogBulb->rad += (GetRandomDraw() - 0x100) & 0x1FF;
+        if (FogBulb->rad > FogBulb->FXRad) {
+            FogBulb->rad = (float)(FogBulb->FXRad + (GetRandomDraw() & 0xFF));
+        }
+    } else {
+        FogBulb->timer--;
+        if (FogBulb->timer < -30) {
+            FogBulb->timer = 0;
+        }
+        FogBulb->rad -= 255;
+        if (FogBulb->rad < 0) {
+            FogBulb->rad = 0;
+            FogBulb->active = 0;
+        }
+    }
+    TriggerFlashSmoke((sint32)FogBulb->WorldPos.x, (sint32)FogBulb->WorldPos.y, (sint32)FogBulb->WorldPos.z, (sint16)FogBulb->room_number);
+    TriggerFlashSmoke((sint32)FogBulb->WorldPos.x, (sint32)FogBulb->WorldPos.y, (sint32)FogBulb->WorldPos.z, (sint16)FogBulb->room_number);
+    FogBulb->sqrad = FogBulb->rad * FogBulb->rad;
+    FogBulb->inv_sqrad = 1.0F / FogBulb->sqrad;
 }
 
 void CreateFXBulbs(void)
