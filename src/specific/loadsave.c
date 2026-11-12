@@ -31,3 +31,9 @@ void CheckKeyConflicts(void)
         }
     }
 }
+
+void S_DrawDashBar(sint32 pos)
+{
+    if (gfCurrentLevel)
+        DoBar(490 - (font_height >> 2), font_height >> 2, 150, 12, pos, 0xFF000000, 0xFF00FF00);
+}
