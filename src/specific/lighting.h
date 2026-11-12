@@ -24,11 +24,14 @@ typedef struct {
 extern ITEM_INFO *current_item;
 extern ITEM_INFO StaticMeshLightItem;
 extern sint32 StaticMeshShade;
+extern sint32 SetupLight_thing;
 extern sint32 MaxRoomLights;
 extern D3DLIGHT_STRUCT *D3DLights;
 extern D3DLIGHT_STRUCT *D3DDynamics;
 
 void FreeD3DLights(void);
+void SetupLight(D3DLIGHT_STRUCT *d3dlight, PCLIGHT *light, sint32 *ambient);
+void InitItemDynamicLighting(ITEM_INFO *item);
 void CalcAmbientLight(ITEM_INFO *item);
 void CreateLightList(ITEM_INFO *item);
 void ApplyMatrix(sint32 *matrix, PHD_VECTOR *start, PHD_VECTOR *dest);

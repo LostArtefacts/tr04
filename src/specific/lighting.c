@@ -7,6 +7,9 @@
 #include "dxshell.h"
 #include "../control.h"
 #include "../text.h"
+#include "../delstuff.h"
+#include "../lara.h"
+#include "../objnums.h"
 
 void MallocD3DLights(void)
 {

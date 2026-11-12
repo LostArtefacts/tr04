@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="206.04" height="12" x="0" y="0" class="named"><title>932 · 60.25%</title></rect>
-<rect width="0.44" height="12" x="206.04" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="206.48" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="128.44" height="12" x="213.56" y="0" class="todo"><title>581 · 37.56%</title></rect>
+<rect width="206.26" height="12" x="0" y="0" class="named"><title>933 · 60.31%</title></rect>
+<rect width="0.44" height="12" x="206.26" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="206.70" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="128.22" height="12" x="213.78" y="0" class="todo"><title>580 · 37.49%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">60.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">932</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">581</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">933</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">580</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="89.12" height="12" x="0" y="0" class="named"><title>162 KB · 26.06%</title></rect>
-<rect width="0.12" height="12" x="89.12" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="89.24" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="243.37" height="12" x="98.63" y="0" class="todo"><title>441 KB · 71.16%</title></rect>
+<rect width="89.24" height="12" x="0" y="0" class="named"><title>162 KB · 26.09%</title></rect>
+<rect width="0.12" height="12" x="89.24" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="89.36" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="243.25" height="12" x="98.75" y="0" class="todo"><title>441 KB · 71.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">162 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">441 KB</tspan></text>
@@ -1331,7 +1331,7 @@
 <rect width="12" height="12" x="180" y="375" class="todo"><title>0x0047d460 S_DrawHealthBar (68 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="375" class="named"><title>0x0047d4b0 S_InitLoadBar (20 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="375" class="named"><title>0x0047d4d0 S_LoadBar (212 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="375" class="todo"><title>0x0047d5b0 S_InitialisePolyList (217 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="375" class="named"><title>0x0047d5b0 S_InitialisePolyList (217 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="375" class="todo"><title>0x0047d690 j_nullsub_9 (5 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="375" class="todo"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="375" class="todo"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
@@ -2298,7 +2298,7 @@
 <rect width="9.56" height="8.81" x="483" y="453.19" class="todo"><title>0x0046b140 frigup_lara (218 bytes)</title></rect>
 <rect width="9.28" height="9.04" x="495.56" y="198.03" class="named"><title>0x00428770 lara_col_roll2 (217 bytes)</title></rect>
 <rect width="9.28" height="9.04" x="507.84" y="198.03" class="named"><title>0x00448cc0 CogCollision (217 bytes)</title></rect>
-<rect width="9.28" height="9.04" x="520.12" y="198.03" class="todo"><title>0x0047d5b0 S_InitialisePolyList (217 bytes)</title></rect>
+<rect width="9.28" height="9.04" x="520.12" y="198.03" class="named"><title>0x0047d5b0 S_InitialisePolyList (217 bytes)</title></rect>
 <rect width="9.28" height="9.04" x="532.40" y="198.03" class="named"><title>0x00484a20 CalcColorSplit (217 bytes)</title></rect>
 <rect width="9.24" height="9.04" x="544.68" y="198.03" class="named"><title>0x004277d0 lara_as_controlled (216 bytes)</title></rect>
 <rect width="9.24" height="9.04" x="556.91" y="198.03" class="named"><title>0x00447b00 TestBoundsCollide (216 bytes)</title></rect>
