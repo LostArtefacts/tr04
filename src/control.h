@@ -80,6 +80,7 @@ sint32 IsRoomOutside(sint32 x, sint32 y, sint32 z);
 void FireCrossBowFromLaserSight(GAME_VECTOR *start, GAME_VECTOR *target);
 void KillMoveItems(void);
 void KillMoveEffects(void);
+void UpdateSky(void);
 
 extern char PoisonFlag;
 extern sint16 *trigger_index;
