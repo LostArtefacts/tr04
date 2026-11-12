@@ -1602,6 +1602,109 @@ void lara_as_reach(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_FASTFALL;
 }
 
+void lara_col_reach(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint16 *bounds;
+    sint32 edge, edge_catch;
+    sint16 angle;
+
+    if (lara.RopePtr == -1)
+        item->gravity_status = 1;
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = 0;
+    coll->bad_ceiling = 192;
+    GetLaraCollisionInfo(item, coll);
+    if (input & IN_ACTION && lara.gun_status == LG_NO_ARMS && !coll->hit_static) {
+        if (lara.CanMonkeySwing && coll->coll_type == COLL_TOP) {
+            lara.head_y_rot = 0;
+            lara.head_x_rot = 0;
+            lara.torso_y_rot = 0;
+            lara.torso_x_rot = 0;
+            item->current_anim_state = item->goal_anim_state = AS_HANG2;
+            item->anim_number = ANIM_HANG2STOP;
+            item->frame_number = anims[ANIM_HANG2STOP].frame_base;
+            item->gravity_status = 0;
+            item->speed = 0;
+            item->fallspeed = 0;
+            lara.gun_status = LG_HANDS_BUSY;
+            return;
+        }
+        if (coll->mid_ceiling <= -384 && coll->mid_floor >= 200 && coll->coll_type == COLL_FRONT) {
+            edge_catch = LaraTestEdgeCatch(item, coll, &edge);
+            if (edge_catch && (edge_catch >= 0 || LaraTestHangOnClimbWall(item, coll))) {
+                angle = item->pos.y_rot;
+                if (angle >= -6370 && angle <= 6370)
+                    angle = 0;
+                else if (angle >= 10014 && angle <= 22754)
+                    angle = 16384;
+                else if (angle >= 26397 || angle <= -26397)
+                    angle = -32768;
+                else if (angle >= -22754 && angle <= -10014)
+                    angle = -16384;
+                if (!(angle & 0x3FFF)) {
+                    if (TestHangSwingIn(item, angle)) {
+                        lara.head_y_rot = 0;
+                        lara.head_x_rot = 0;
+                        lara.torso_y_rot = 0;
+                        lara.torso_x_rot = 0;
+                        item->anim_number = ANIM_HANG2STOP;
+                        item->frame_number = anims[ANIM_HANG2STOP].frame_base;
+                        item->goal_anim_state = item->current_anim_state = AS_HANG2;
+                    } else {
+                        item->anim_number = ANIM_GRABLEDGE;
+                        item->frame_number = anims[ANIM_GRABLEDGE].frame_base;
+                        item->goal_anim_state = item->current_anim_state = AS_HANG;
+                    }
+                    bounds = GetBoundsAccurate(item);
+                    if (edge_catch > 0) {
+                        item->pos.y_pos += coll->front_floor - bounds[2];
+                        switch ((uint16)(item->pos.y_rot + 0x2000) / 0x4000) {
+                        case NORTH:
+                            item->pos.z_pos = (item->pos.z_pos | 0x3FF) - 100;
+                            item->pos.x_pos += coll->shift.x;
+                            break;
+                        case SOUTH:
+                            item->pos.z_pos = (item->pos.z_pos & ~0x3FF) + 100;
+                            item->pos.x_pos += coll->shift.x;
+                            break;
+                        case EAST:
+                            item->pos.x_pos = (item->pos.x_pos | 0x3FF) - 100;
+                            item->pos.z_pos += coll->shift.z;
+                            break;
+                        case WEST:
+                            item->pos.x_pos = (item->pos.x_pos & ~0x3FF) + 100;
+                            item->pos.z_pos += coll->shift.z;
+                            break;
+                        }
+                    } else
+                        item->pos.y_pos = edge - bounds[2] - 22;
+                    item->pos.y_rot = angle;
+                    item->gravity_status = 1;
+                    item->speed = 2;
+                    item->fallspeed = 1;
+                    lara.gun_status = LG_HANDS_BUSY;
+                    return;
+                }
+            }
+        }
+    }
+    LaraSlideEdgeJump(item, coll);
+    GetLaraCollisionInfo(item, coll);
+    ShiftItem(item, coll);
+    if (item->fallspeed > 0 && coll->mid_floor <= 0) {
+        if (LaraLandedBad(item, coll))
+            item->goal_anim_state = AS_DEATH;
+        else {
+            item->gravity_status = 0;
+            item->goal_anim_state = AS_STOP;
+            item->fallspeed = 0;
+            if (coll->mid_floor != NO_HEIGHT)
+                item->pos.y_pos += coll->mid_floor;
+        }
+    }
+}
+
 void LaraSlideEdgeJump(ITEM_INFO *item, COLL_INFO *coll)
 {
     ShiftItem(item, coll);

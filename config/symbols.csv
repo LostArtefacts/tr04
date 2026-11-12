@@ -284,7 +284,7 @@ address,size,name,symbol
 0x00425480,207,lara_as_forwardjump,_lara_as_forwardjump
 0x00425550,224,lara_col_forwardjump,_lara_col_forwardjump
 0x00425630,28,lara_as_reach,_lara_as_reach
-0x00425650,860,lara_col_reach,_lara_col_reach
+0x00425650,876,lara_col_reach,_lara_col_reach
 0x004259c0,247,LaraSlideEdgeJump,_LaraSlideEdgeJump
 0x00425ac0,152,lara_as_walk,_lara_as_walk
 0x00425b60,419,lara_as_run,_lara_as_run

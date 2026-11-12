@@ -343,6 +343,7 @@ void lara_as_climbrope(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_hang2(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_controlled(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_poledown(ITEM_INFO *item, COLL_INFO *coll);
+void lara_col_reach(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
