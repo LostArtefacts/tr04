@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="239.86" height="12" x="0" y="0" class="named"><title>1085 · 70.14%</title></rect>
 <rect width="0.44" height="12" x="239.86" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="13.26" height="12" x="240.31" y="0" class="nonmatching"><title>60 · 3.88%</title></rect>
-<rect width="88.43" height="12" x="253.57" y="0" class="todo"><title>400 · 25.86%</title></rect>
+<rect width="13.49" height="12" x="240.31" y="0" class="nonmatching"><title>61 · 3.94%</title></rect>
+<rect width="88.21" height="12" x="253.79" y="0" class="todo"><title>399 · 25.79%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">70.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1085</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">60</tspan> · <tspan class="todo">400</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1085</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">61</tspan> · <tspan class="todo">399</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="115.87" height="12" x="0" y="0" class="named"><title>210 KB · 33.88%</title></rect>
 <rect width="0.12" height="12" x="115.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="23.52" height="12" x="115.99" y="0" class="nonmatching"><title>43 KB · 6.88%</title></rect>
-<rect width="202.49" height="12" x="139.51" y="0" class="todo"><title>368 KB · 59.21%</title></rect>
+<rect width="24" height="12" x="115.99" y="0" class="nonmatching"><title>44 KB · 7.02%</title></rect>
+<rect width="202.01" height="12" x="139.99" y="0" class="todo"><title>367 KB · 59.07%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">33.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">210 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">43 KB</tspan> · <tspan class="todo">368 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">210 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">44 KB</tspan> · <tspan class="todo">367 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -296,7 +296,7 @@
 <rect width="12" height="12" x="405" y="60" class="named"><title>0x00422350 GetLaraCollisionInfo (50 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="60" class="named"><title>0x00422390 LaraHitCeiling (112 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="60" class="named"><title>0x00422400 LaraDeflectEdge (128 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="60" class="todo"><title>0x00422480 TestLaraVault (882 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="60" class="nonmatching"><title>0x00422480 TestLaraVault (882 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="60" class="named"><title>0x00422810 LaraTestClimbStance (190 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="60" class="named"><title>0x004228d0 TestWall (252 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="60" class="named"><title>0x004229d0 LaraCollideStop (183 bytes)</title></rect>
@@ -1799,7 +1799,7 @@
 <rect width="18.60" height="18.43" x="642.34" y="0" class="nonmatching"><title>0x0041bf60 WildboarControl (888 bytes)</title></rect>
 <rect width="18.56" height="18.43" x="663.94" y="0" class="named"><title>0x0044f790 SetRoomBounds (886 bytes)</title></rect>
 <rect width="18.56" height="18.43" x="685.51" y="0" class="todo"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
-<rect width="18.48" height="18.43" x="707.07" y="0" class="todo"><title>0x00422480 TestLaraVault (882 bytes)</title></rect>
+<rect width="18.48" height="18.43" x="707.07" y="0" class="nonmatching"><title>0x00422480 TestLaraVault (882 bytes)</title></rect>
 <rect width="18.46" height="18.43" x="728.54" y="0" class="nonmatching"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
 <rect width="17.99" height="18.84" x="305.86" y="21.43" class="nonmatching"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
 <rect width="17.99" height="18.79" x="305.86" y="43.26" class="named"><title>0x00425650 lara_col_reach (876 bytes)</title></rect>
