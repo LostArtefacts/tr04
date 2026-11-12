@@ -1607,6 +1607,13 @@ void lara_as_deathslide(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void lara_as_controlledl(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.look = 0;
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+}
+
 void lara_col_run(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
