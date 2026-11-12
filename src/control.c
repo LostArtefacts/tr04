@@ -11,6 +11,8 @@
 #include "sound.h"
 #include "sphere.h"
 #include "debris.h"
+#include "effects.h"
+#include "lara.h"
 
 void KillMoveItems(void)
 {
@@ -54,6 +56,122 @@ void UpdateSky(void)
         else if (SkyPos2 < 0)
             SkyPos2 += 0x2C00;
     }
+}
+
+void AnimateItem(ITEM_INFO *item)
+{
+    ANIM_STRUCT *anim;
+    sint16 *cmd;
+    sint32 speed, speed2, i;
+    uint16 type, num;
+
+    item->touch_bits = 0;
+    item->hit_status = 0;
+    anim = &anims[item->anim_number];
+    item->frame_number++;
+    if (anim->number_changes > 0) {
+        if (GetChange(item, anim)) {
+            anim = &anims[item->anim_number];
+            item->current_anim_state = anim->current_anim_state;
+            if (item->required_anim_state == item->current_anim_state)
+                item->required_anim_state = 0;
+        }
+    }
+    if (item->frame_number > anim->frame_end) {
+        if (anim->number_commands > 0) {
+            cmd = &commands[anim->command_index];
+            for (i = anim->number_commands; i > 0; i--) {
+                switch (*cmd++) {
+                case ACMD_SETPOS:
+                    TranslateItem(item, cmd[0], cmd[1], cmd[2]);
+                    cmd += 3;
+                    break;
+                case ACMD_JUMPVEL:
+                    item->fallspeed = *cmd++;
+                    item->speed = *cmd++;
+                    item->gravity_status = 1;
+                    break;
+                case ACMD_KILL:
+                    if (objects[item->object_number].intelligent && !item->after_death)
+                        item->after_death = 1;
+                    item->status = ITEM_DEACTIVATED;
+                    break;
+                case ACMD_PLAYSFX:
+                case ACMD_FLIPEFFECT:
+                    cmd += 2;
+                    break;
+                }
+            }
+        }
+        item->anim_number = anim->jump_anim_num;
+        item->frame_number = anim->jump_frame_num;
+        anim = &anims[item->anim_number];
+        if (item->current_anim_state != anim->current_anim_state) {
+            item->goal_anim_state = item->current_anim_state = anim->current_anim_state;
+        }
+        if (item->required_anim_state == item->current_anim_state)
+            item->required_anim_state = 0;
+    }
+    if (anim->number_commands > 0) {
+        cmd = &commands[anim->command_index];
+        for (i = anim->number_commands; i > 0; i--) {
+            switch (*cmd++) {
+            case ACMD_SETPOS:
+                cmd += 3;
+                break;
+            case ACMD_PLAYSFX:
+                if (item->frame_number == *cmd) {
+                    type = cmd[1] & 0xC000;
+                    num = cmd[1] & 0x3FFF;
+                    if (objects[item->object_number].water_creature) {
+                        if (room[item->room_number].flags & ROOM_UNDERWATER)
+                            SoundEffect(num, &item->pos, SFX_WATER);
+                        else
+                            SoundEffect(num, &item->pos, SFX_DEFAULT);
+                    } else if (item->room_number == 255) {
+                        item->pos.x_pos = lara_item->pos.x_pos;
+                        item->pos.y_pos = lara_item->pos.y_pos - 762;
+                        item->pos.z_pos = lara_item->pos.z_pos;
+                        SoundEffect(num, &item->pos, SFX_DEFAULT);
+                    } else if (room[item->room_number].flags & ROOM_UNDERWATER) {
+                        if (type == SFX_LANDANDWATER || type == SFX_WATERONLY)
+                            SoundEffect(num, &item->pos, SFX_DEFAULT);
+                    } else if (type == SFX_LANDANDWATER || type == SFX_LANDONLY)
+                        SoundEffect(num, &item->pos, SFX_DEFAULT);
+                }
+                cmd += 2;
+                break;
+            case ACMD_FLIPEFFECT:
+                if (item->frame_number == *cmd) {
+                    FXType = cmd[1] & 0xC000;
+                    effect_routines[cmd[1] & 0x3FFF](item);
+                }
+                cmd += 2;
+                break;
+            case ACMD_JUMPVEL:
+                cmd += 2;
+                break;
+            }
+        }
+    }
+    speed2 = 0;
+    if (!item->gravity_status) {
+        speed = anim->velocity;
+        if (anim->acceleration)
+            speed += anim->acceleration * (item->frame_number - anim->frame_base);
+        item->speed = speed >> 16;
+        speed2 = anim->Xvelocity;
+        if (anim->Xacceleration)
+            speed2 += anim->Xacceleration * (item->frame_number - anim->frame_base);
+        speed2 >>= 16;
+    } else {
+        item->fallspeed += item->fallspeed < 128 ? 6 : 1;
+        item->pos.y_pos += item->fallspeed;
+    }
+    item->pos.x_pos += ((rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * item->speed) >> W2V_SHIFT;
+    item->pos.z_pos += ((rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * item->speed) >> W2V_SHIFT;
+    item->pos.x_pos += ((rcossin_tbl[((item->pos.y_rot + 0x4000) >> 3) & 0x1FFE] << 2) * speed2) >> W2V_SHIFT;
+    item->pos.z_pos += ((rcossin_tbl[(((item->pos.y_rot + 0x4000) >> 3) & 0x1FFE) + 1] << 2) * speed2) >> W2V_SHIFT;
 }
 
 sint32 GetChange(ITEM_INFO *item, ANIM_STRUCT *anim)

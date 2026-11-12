@@ -73,6 +73,16 @@ typedef struct object_info {
     uint32 padfuck;
 } OBJECT_INFO;
 
+enum command_types {
+    ACMD_NULL,
+    ACMD_SETPOS,
+    ACMD_JUMPVEL,
+    ACMD_FREEHANDS,
+    ACMD_KILL,
+    ACMD_PLAYSFX,
+    ACMD_FLIPEFFECT
+};
+
 extern OBJECT_INFO objects[NUMBER_OBJECTS];
 extern ANIM_STRUCT *anims;
 extern CHANGE_STRUCT *changes;
@@ -81,6 +91,7 @@ extern sint16 **meshes;
 extern sint16 *mesh_base;
 extern sint32 *bones;
 extern sint16 *frames;
+extern sint16 *commands;
 
 sint32 GetChange(ITEM_INFO *item, ANIM_STRUCT *anim);
 

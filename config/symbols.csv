@@ -738,7 +738,7 @@ address,size,name,symbol
 0x00449330,85,KillMoveEffects,_KillMoveEffects
 0x00449390,122,UpdateSky,_UpdateSky
 0x00449410,1909,ControlPhase,_ControlPhase
-0x00449b90,1009,AnimateItem,_AnimateItem
+0x00449b90,1060,AnimateItem,_AnimateItem
 0x00449fc0,159,GetChange,_GetChange
 0x0044a060,110,TranslateItem,_TranslateItem
 0x0044a0d0,193,AlterFloorHeight,_AlterFloorHeight

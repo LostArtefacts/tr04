@@ -7,10 +7,12 @@ enum sfx_options {
     SFX_WATER = 1,
     SFX_ALWAYS = 2,
     SFX_SETPITCH = 4,
-    SFX_LANDONLY = 0x4000
+    SFX_LANDONLY = 0x4000,
+    SFX_WATERONLY = 0x8000
 };
 
 #define SFX_DEFAULT 0
+#define SFX_LANDANDWATER 0
 
 #define SFX_LARA_NO 2
 #define SFX_ROCK_FALL_CRUMBLE 66

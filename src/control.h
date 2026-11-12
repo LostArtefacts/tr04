@@ -42,6 +42,23 @@ enum floor_types {
     MINER_TYPE
 };
 
+enum trigobj_types {
+    TO_OBJECT,
+    TO_CAMERA,
+    TO_SINK,
+    TO_FLIPMAP,
+    TO_FLIPON,
+    TO_FLIPOFF,
+    TO_TARGET,
+    TO_FINISH,
+    TO_CD,
+    TO_FLIPEFFECT,
+    TO_SECRET,
+    TO_BODYBAG,
+    TO_FLYBY,
+    TO_CUTSCENE
+};
+
 extern sint32 OnObject;
 extern sint32 height_type;
 extern sint32 tiltxoff, tiltyoff;
