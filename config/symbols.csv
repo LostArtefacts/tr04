@@ -33,7 +33,7 @@ address,size,name,symbol
 0x00404a00,463,TriggerHammerSmoke,_TriggerHammerSmoke
 0x00404bd0,548,DoDemigodEffects,_DoDemigodEffects
 0x00404e00,151,InitialiseDemigod,_InitialiseDemigod
-0x00404ea0,2362,DemigodControl,_DemigodControl
+0x00404ea0,2424,DemigodControl,_DemigodControl
 0x00405820,130,InitialiseDog,_InitialiseDog
 0x004058b0,1467,DogControl,_DogControl
 0x00405ea0,12,InitialiseLaraDouble,_InitialiseLaraDouble
