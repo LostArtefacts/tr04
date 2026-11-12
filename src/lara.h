@@ -323,6 +323,7 @@ void lara_as_death(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_usepuzzle(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_turnswitch(ITEM_INFO *item, COLL_INFO *coll);
 void ApplyVelocityToRope(sint32 node, uint16 angle, uint16 n);
+void lara_col_wade(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
