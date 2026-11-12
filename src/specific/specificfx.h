@@ -21,11 +21,15 @@ void SetUpLensFlare(sint32 x, sint32 y, sint32 z, GAME_VECTOR *lfobj);
 void DrawBikeSpeedo(sint32 ux, sint32 uy, sint32 vel, sint32 maxVel, sint32 turboVel, sint32 size, sint32 unk);
 void DrawJeepSpeedo(sint32 ux, sint32 uy, sint32 vel, sint32 maxVel, sint32 turboVel, sint32 size, sint32 spriteSlot);
 void SetFade(sint32 start, sint32 end);
+void setXY4(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 x3, sint32 y3, sint32 x4, sint32 y4, sint32 z, sint16 *clip);
+void setXY3(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 x3, sint32 y3, sint32 z, sint16 *clip);
 void InitTarget_2(void);
 void InitBinoculars(void);
 void DrawFlash(void);
 void DoScreenFade(void);
 void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip);
 void OutputSky(void);
+void DrawSprite(sint32 x, sint32 y, sint32 slot, sint32 col, sint32 size, sint32 z);
+void Draw2DSprite(sint32 x, sint32 y, sint32 slot, sint32 unused, sint32 unused2);
 
 #endif

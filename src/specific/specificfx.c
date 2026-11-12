@@ -181,3 +181,45 @@ void DrawFlash(void)
     DrawPsxTile(0, phd_winwidth | (phd_winheight << 16), b | ((g | ((r | (0x62 << 8)) << 8)) << 8), 1, 0);
     DrawPsxTile(0, phd_winwidth | (phd_winheight << 16), b | ((g | ((r | (0xFF << 8)) << 8)) << 8), 2, 0);
 }
+
+void Draw2DSprite(sint32 x, sint32 y, sint32 slot, sint32 unused, sint32 unused2)
+{
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    sint32 w;
+    sint32 h;
+    float u1;
+    float v1;
+    float u2;
+    float v2;
+
+    sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + slot];
+    w = (sint32)((float)(sprite->width >> 8) * phd_centerx * (1.0F / 320.0F));
+    h = (sint32)((float)(sprite->height >> 8) * phd_centery * (1.0F / 240.0F));
+    setXY4(v, (sint32)(float)x, (sint32)(float)y, (sint32)(float)(x + w + 1), (sint32)(float)y, (sint32)(float)(x + w + 1), (sint32)(float)(h + y + 1), (sint32)(float)x, (sint32)(float)(h + y + 1), (sint32)f_mznear, clipflags);
+    v[0].specular = 0xFF000000;
+    v[1].specular = 0xFF000000;
+    v[2].specular = 0xFF000000;
+    v[3].specular = 0xFF000000;
+    v[0].color = 0xFFFFFFFF;
+    v[1].color = 0xFFFFFFFF;
+    v[2].color = 0xFFFFFFFF;
+    v[3].color = 0xFFFFFFFF;
+    u1 = sprite->x1;
+    v1 = sprite->y1;
+    u2 = sprite->x2;
+    v2 = sprite->y2;
+    tex.drawtype = 1;
+    tex.flag = 0;
+    tex.tpage = sprite->tpage;
+    tex.u1 = u1;
+    tex.v1 = v1;
+    tex.u2 = u2;
+    tex.v2 = v1;
+    tex.u3 = u2;
+    tex.v3 = v2;
+    tex.u4 = u1;
+    tex.v4 = v2;
+    AddQuadClippedSorted(v, 0, 1, 2, 3, &tex, 0);
+}

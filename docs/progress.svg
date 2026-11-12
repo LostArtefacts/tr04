@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="198.97" height="12" x="0" y="0" class="named"><title>900 · 58.18%</title></rect>
-<rect width="0.44" height="12" x="198.97" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="199.41" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="135.96" height="12" x="206.04" y="0" class="todo"><title>615 · 39.75%</title></rect>
+<rect width="199.19" height="12" x="0" y="0" class="named"><title>901 · 58.24%</title></rect>
+<rect width="0.44" height="12" x="199.19" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="199.63" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="135.74" height="12" x="206.26" y="0" class="todo"><title>614 · 39.69%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">58.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">900</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">615</tspan></text>
+<text text-anchor="end" x="522" y="7.50">58.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">901</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">614</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="85.91" height="12" x="0" y="0" class="named"><title>156 KB · 25.12%</title></rect>
-<rect width="0.12" height="12" x="85.91" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="86.03" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="247.05" height="12" x="94.95" y="0" class="todo"><title>448 KB · 72.24%</title></rect>
+<rect width="86.15" height="12" x="0" y="0" class="named"><title>156 KB · 25.19%</title></rect>
+<rect width="0.12" height="12" x="86.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="86.27" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="246.82" height="12" x="95.18" y="0" class="todo"><title>448 KB · 72.17%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">156 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">448 KB</tspan></text>
@@ -1433,7 +1433,7 @@
 <rect width="12" height="12" x="210" y="405" class="todo"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="405" class="todo"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="405" class="todo"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="405" class="todo"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="405" class="named"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="405" class="todo"><title>0x0048d580 DrawJeepSpeedo (1067 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="405" class="todo"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="405" class="todo"><title>0x0048e2f0 CreateTexturePage (1004 bytes)</title></rect>
@@ -2044,7 +2044,7 @@
 <rect width="12.49" height="13.18" x="397.98" y="193.63" class="todo"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
 <rect width="12.49" height="13.18" x="397.98" y="209.81" class="named"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
 <rect width="12.49" height="13.15" x="397.98" y="226" class="named"><title>0x00456910 BurningRopeCollision (425 bytes)</title></rect>
-<rect width="12.49" height="13.15" x="397.98" y="242.15" class="todo"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
+<rect width="12.49" height="13.15" x="397.98" y="242.15" class="named"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
 <rect width="12.49" height="13.06" x="397.98" y="258.30" class="named"><title>0x00432bf0 GetWaterDepth (422 bytes)</title></rect>
 <rect width="12.49" height="13.06" x="397.98" y="274.36" class="named"><title>0x00441080 CreatureDie (422 bytes)</title></rect>
 <rect width="12.49" height="13" x="397.98" y="290.42" class="named"><title>0x004421d0 CreatureVault (420 bytes)</title></rect>
