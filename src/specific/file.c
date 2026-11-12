@@ -237,6 +237,67 @@ uint8 LoadAnimatedTextures(void)
     return 1;
 }
 
+uint8 LoadItems(void)
+{
+    ITEM_INFO *item;
+    ROOM_INFO *r;
+    FLOOR_INFO *floor;
+    MESH_INFO *mesh;
+    sint32 i, j, x, z;
+    sint16 y;
+
+    Log(2, "LoadItems");
+    num_items = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    if (!num_items)
+        return 1;
+    items = (ITEM_INFO *)game_malloc(256 * sizeof(ITEM_INFO), 0);
+    level_items = num_items;
+    InitialiseItemArray(256);
+    for (i = 0; i < num_items; i++) {
+        item = &items[i];
+        item->object_number = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        item->room_number = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        item->pos.x_pos = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        item->pos.y_pos = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        item->pos.z_pos = *(sint32 *)FileData;
+        FileData += sizeof(sint32);
+        item->pos.y_rot = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        item->shade = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        item->trigger_flags = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+        item->flags = *(sint16 *)FileData;
+        FileData += sizeof(sint16);
+    }
+    for (i = 0; i < num_items; i++)
+        InitialiseItem(i);
+    for (i = 0; i < number_rooms; i++) {
+        r = &room[i];
+        for (j = r->num_meshes, mesh = r->mesh; j > 0; j--, mesh++) {
+            x = (mesh->x - r->x) >> 10;
+            z = (mesh->z - r->z) >> 10;
+            floor = &r->floor[x * r->x_size + z];
+            if (!(boxes[floor->box].overlap_index & 0x4000) && (gfCurrentLevel != 4 || i != 19 && i != 23 && i != 16)) {
+                y = floor->floor << 8;
+                if (y <= mesh->y - static_objects[mesh->static_number].y_maxc + 512 && y < mesh->y - static_objects[mesh->static_number].y_minc) {
+                    if (!static_objects[mesh->static_number].x_maxc || !static_objects[mesh->static_number].x_minc
+                        || !static_objects[mesh->static_number].z_maxc || !static_objects[mesh->static_number].z_minc
+                        || (static_objects[mesh->static_number].x_maxc ^ static_objects[mesh->static_number].x_minc) & 0x8000
+                        && (static_objects[mesh->static_number].z_maxc ^ static_objects[mesh->static_number].z_minc) & 0x8000)
+                        floor->stopper = 1;
+                }
+            }
+        }
+    }
+    return 1;
+}
+
 uint8 LoadCinematic(void)
 {
     FileData += sizeof(sint16);

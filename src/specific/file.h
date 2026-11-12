@@ -40,6 +40,7 @@ extern sint32 number_cameras;
 extern FILE *level_fp;
 extern sint16 *aranges;
 extern sint32 nAnimUVRanges;
+extern sint32 num_items;
 extern TEXTURESTRUCT *textinfo;
 extern SPRITESTRUCT *spriteinfo;
 extern float AnimatingTexturesV[16][8][3];
@@ -76,5 +77,6 @@ unsigned int __stdcall LoadLevel(void *name);
 sint32 S_LoadLevelFile(sint32 num);
 uint8 LoadSamples(void);
 uint8 LoadSprites(void);
+uint8 LoadItems(void);
 
 #endif
