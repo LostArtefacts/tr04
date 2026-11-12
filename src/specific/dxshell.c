@@ -303,6 +303,33 @@ sint32 DXToggleFullScreen(void)
     return 1;
 }
 
+sint32 DXCreateViewport(LPDIRECT3D3 d3d, LPDIRECT3DDEVICE3 device, sint32 w, sint32 h, LPDIRECT3DVIEWPORT3 *viewport)
+{
+    D3DVIEWPORT2 vp2;
+
+    Log(2, "DXCreateViewport");
+    if (DXAttempt(IDirect3D3_CreateViewport(d3d, viewport, 0)) != DD_OK)
+        return 0;
+    if (DXAttempt(IDirect3DDevice3_AddViewport(device, *viewport)) != DD_OK)
+        return 0;
+    memset(&vp2, 0, sizeof(D3DVIEWPORT2));
+    vp2.dwSize = sizeof(D3DVIEWPORT2);
+    vp2.dvClipWidth = (float)w;
+    vp2.dvClipHeight = (float)h;
+    vp2.dwX = 0;
+    vp2.dwY = 0;
+    vp2.dvClipX = 0;
+    vp2.dvClipY = 0;
+    vp2.dvMinZ = 0;
+    vp2.dwWidth = w;
+    vp2.dvMaxZ = 1;
+    vp2.dwHeight = h;
+    if (DXAttempt(IDirect3DViewport3_SetViewport2(*viewport, &vp2)) != DD_OK)
+        return 0;
+    DXAttempt(IDirect3DDevice3_SetCurrentViewport(device, *viewport));
+    return 1;
+}
+
 void DXMove(sint32 x, sint32 y)
 {
     Log(2, "DXMove : x %d y %d", x, y);
