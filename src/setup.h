@@ -4,5 +4,6 @@
 #include "types.h"
 
 void InitialiseGameFlags(void);
+void ClearFootPrints(void);
 
 #endif

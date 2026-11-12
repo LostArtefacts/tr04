@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="206.92" height="12" x="0" y="0" class="named"><title>936 · 60.50%</title></rect>
-<rect width="0.44" height="12" x="206.92" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="207.37" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="127.56" height="12" x="214.44" y="0" class="todo"><title>577 · 37.30%</title></rect>
+<rect width="207.15" height="12" x="0" y="0" class="named"><title>937 · 60.57%</title></rect>
+<rect width="0.44" height="12" x="207.15" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="207.59" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="127.34" height="12" x="214.66" y="0" class="todo"><title>576 · 37.23%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">60.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">936</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">577</tspan></text>
+<text text-anchor="end" x="522" y="7.50">60.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">937</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">576</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="89.69" height="12" x="0" y="0" class="named"><title>163 KB · 26.23%</title></rect>
-<rect width="0.12" height="12" x="89.69" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="89.81" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="242.80" height="12" x="99.20" y="0" class="todo"><title>440 KB · 70.99%</title></rect>
+<rect width="89.71" height="12" x="0" y="0" class="named"><title>163 KB · 26.23%</title></rect>
+<rect width="0.12" height="12" x="89.71" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="89.83" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="242.78" height="12" x="99.22" y="0" class="todo"><title>440 KB · 70.99%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">163 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">440 KB</tspan></text>
@@ -1010,7 +1010,7 @@
 <rect width="12" height="12" x="615" y="270" class="named"><title>0x0045f050 InitialiseGameFlags (71 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="270" class="todo"><title>0x0045f0a0 SetupGame (99 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="270" class="todo"><title>0x0045f110 InitTarget (132 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="270" class="todo"><title>0x0045f1a0 ClearFootPrints (31 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="270" class="named"><title>0x0045f1a0 ClearFootPrints (31 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="270" class="todo"><title>0x0045f1c0 reset_cutseq_vars (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="270" class="named"><title>0x0045f1f0 SoundEffect (1524 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="270" class="named"><title>0x0045f7f0 GetPanVolume (365 bytes)</title></rect>
@@ -2995,7 +2995,7 @@
 <rect width="3.32" height="3.72" x="675.72" y="425.27" class="named"><title>0x004818a0 ClearFXFogBulbs (32 bytes)</title></rect>
 <rect width="3.32" height="3.60" x="675.72" y="431.99" class="named"><title>0x00437720 SoundFlipEffect (31 bytes)</title></rect>
 <rect width="3.32" height="3.60" x="675.72" y="438.59" class="named"><title>0x0045a0e0 CheckSumValid (31 bytes)</title></rect>
-<rect width="3.32" height="3.60" x="675.72" y="445.19" class="todo"><title>0x0045f1a0 ClearFootPrints (31 bytes)</title></rect>
+<rect width="3.32" height="3.60" x="675.72" y="445.19" class="named"><title>0x0045f1a0 ClearFootPrints (31 bytes)</title></rect>
 <rect width="3.32" height="3.60" x="675.72" y="451.80" class="named"><title>0x00473950 DSGetFreeChannel (31 bytes)</title></rect>
 <rect width="3.32" height="3.60" x="675.72" y="458.40" class="named"><title>0x00473b90 S_SoundSampleIsPlaying (31 bytes)</title></rect>
 <rect width="3.28" height="3.65" x="682.05" y="390.79" class="named"><title>0x00481860 InitialiseSortList (31 bytes)</title></rect>

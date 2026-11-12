@@ -2392,6 +2392,8 @@ address,size,name,symbol
 0x00577488,4,loadbar_pos,_loadbar_pos
 0x005b7494,4,ControlMethod,_ControlMethod
 0x005b74b0,4,current_item,_current_item
+0x005bc4b8,15360,SkinVerts,_SkinVerts
+0x005c00b8,960,SkinClip,_SkinClip
 0x005c047c,4,GlobalAmbient,_GlobalAmbient
 0x005c07a8,4,pSortList,_pSortList
 0x005c07ac,655360,SortBuffer,_SortBuffer
@@ -2753,6 +2755,7 @@ address,size,name,symbol
 0x0080e13c,4,lara_item,_lara_item
 0x0080e320,480,ScratchVertNums,_ScratchVertNums
 0x0080e500,4,in_joints,_in_joints
+0x0080e520,480,SkinVertNums,_SkinVertNums
 0x0080e700,15,LaraNodeUnderwater,_LaraNodeUnderwater
 0x0080e710,4,GLaraShadowframe,_GLaraShadowframe
 0x0080e9f0,8,LaraNodeAmbient,_LaraNodeAmbient

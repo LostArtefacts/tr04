@@ -3,11 +3,18 @@
 
 #include <windows.h>
 #include <ddraw.h>
+#include <d3d.h>
 
 #include "../types.h"
 
 extern sint32 GlobalAlpha;
 extern sint32 GlobalAmbient;
+extern D3DTLVERTEX SkinVerts[40][12];
+extern sint16 SkinClip[40][12];
+extern char SkinVertNums[40][12];
+extern char ScratchVertNums[40][12];
+extern LPDIRECT3DVERTEXBUFFER DestVB;
+extern sint16 *clipflags;
 
 void S_AnimateTextures(sint32 n);
 sint32 S_DumpScreen(void);

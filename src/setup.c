@@ -4,6 +4,9 @@
 #include "camera.h"
 #include "control.h"
 #include "specific/audio.h"
+#include "footprnt.h"
+#include "deltapak.h"
+#include "tomb4fx.h"
 
 void InitialiseGameFlags(void)
 {
@@ -14,4 +17,13 @@ void InitialiseGameFlags(void)
     flipeffect = -1;
     IsAtmospherePlaying = 0;
     camera.underwater = 0;
+}
+
+void ClearFootPrints(void)
+{
+    sint32 i;
+
+    for (i = 0; i < 32; i++)
+        FootPrint[i].Active = 0;
+    FootPrintNum = 0;
 }
