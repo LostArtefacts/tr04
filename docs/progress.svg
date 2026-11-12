@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="188.80" height="12" x="0" y="0" class="named"><title>854 · 55.20%</title></rect>
-<rect width="0.44" height="12" x="188.80" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="189.24" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="146.35" height="12" x="195.65" y="0" class="todo"><title>662 · 42.79%</title></rect>
+<rect width="189.02" height="12" x="0" y="0" class="named"><title>855 · 55.27%</title></rect>
+<rect width="0.44" height="12" x="189.02" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="189.46" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="146.13" height="12" x="195.87" y="0" class="todo"><title>661 · 42.73%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">55.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">854</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">662</tspan></text>
+<text text-anchor="end" x="522" y="7.50">55.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">855</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">661</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="81.06" height="12" x="0" y="0" class="named"><title>147 KB · 23.70%</title></rect>
-<rect width="0.12" height="12" x="81.06" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="81.18" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="252.17" height="12" x="89.83" y="0" class="todo"><title>457 KB · 73.73%</title></rect>
+<rect width="81.08" height="12" x="0" y="0" class="named"><title>147 KB · 23.71%</title></rect>
+<rect width="0.12" height="12" x="81.08" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="81.20" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="252.14" height="12" x="89.86" y="0" class="todo"><title>457 KB · 73.73%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">147 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">457 KB</tspan></text>
@@ -967,7 +967,7 @@
 <rect width="12" height="12" x="720" y="255" class="named"><title>0x00458710 KeyTrigger (108 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="255" class="named"><title>0x00458780 PickupTrigger (91 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="270" class="named"><title>0x004587e0 SarcophagusCollision (529 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="270" class="todo"><title>0x00458a00 vMul (49 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="270" class="named"><title>0x00458a00 vMul (49 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="270" class="todo"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="270" class="todo"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="270" class="todo"><title>0x00458ad0 phd_GetMatrixAngles (177 bytes)</title></rect>
@@ -2893,7 +2893,7 @@
 <rect width="4.42" height="4.37" x="647.68" y="392.53" class="named"><title>0x00422350 GetLaraCollisionInfo (50 bytes)</title></rect>
 <rect width="4.42" height="4.37" x="647.68" y="399.90" class="named"><title>0x0046d4d0 special3_end (50 bytes)</title></rect>
 <rect width="4.42" height="4.28" x="647.68" y="407.27" class="named"><title>0x00457610 AnimatingPickUp (49 bytes)</title></rect>
-<rect width="4.42" height="4.28" x="647.68" y="414.55" class="todo"><title>0x00458a00 vMul (49 bytes)</title></rect>
+<rect width="4.42" height="4.28" x="647.68" y="414.55" class="named"><title>0x00458a00 vMul (49 bytes)</title></rect>
 <rect width="4.42" height="4.28" x="647.68" y="421.83" class="named"><title>0x0046c7e0 twentyfive_control (49 bytes)</title></rect>
 <rect width="4.42" height="4.19" x="647.68" y="429.12" class="named"><title>0x00428e40 draw_shotgun_meshes (48 bytes)</title></rect>
 <rect width="4.42" height="4.19" x="647.68" y="436.31" class="named"><title>0x00450ee0 GetBestFrame (48 bytes)</title></rect>
