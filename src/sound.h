@@ -12,6 +12,8 @@ enum sfx_options {
 };
 
 #define SFX_DEFAULT 0
+#define SFX_LARA_FALL 30
+#define SFX_LARA_BREATH 36
 #define SFX_LANDANDWATER 0
 
 #define SFX_LARA_NO 2

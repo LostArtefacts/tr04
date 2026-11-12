@@ -439,7 +439,7 @@ address,size,name,symbol
 0x0042ff90,429,FlareControl,_FlareControl
 0x00430140,170,LaraInitialiseMeshes,_LaraInitialiseMeshes
 0x004301f0,84,LaraCheatGetStuff,_LaraCheatGetStuff
-0x00430250,1835,LaraControl,_LaraControl
+0x00430250,1876,LaraControl,_LaraControl
 0x004309b0,151,LaraCheat,_LaraCheat
 0x00430a50,258,LaraCheatyBits,_LaraCheatyBits
 0x00430b60,840,AnimateLara,_AnimateLara

@@ -12,6 +12,7 @@ void LaraCheatGetStuff(void);
 void LaraCheatyBits(void);
 void CreateSkinningData(void);
 void InitialiseLaraLoad(sint16 item_number);
+void LaraControl(sint16 item_number);
 
 extern sint16 cheat_hit_points;
 extern COLL_INFO mycoll;

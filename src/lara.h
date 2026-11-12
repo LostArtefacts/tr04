@@ -358,6 +358,7 @@ void UpdateRopeSwing(ITEM_INFO *item);
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
 extern uint16 DashTimer;
+extern COLL_INFO *lara_coll;
 extern void (*lara_control_routines[118])(ITEM_INFO *item, COLL_INFO *coll);
 extern void (*lara_collision_routines[118])(ITEM_INFO *item, COLL_INFO *coll);
 extern sint16 LeftClimbTab[4];
