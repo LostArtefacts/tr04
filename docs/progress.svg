@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="172.66" height="12" x="0" y="0" class="named"><title>781 · 50.48%</title></rect>
-<rect width="0.44" height="12" x="172.66" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="173.10" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="162.49" height="12" x="179.51" y="0" class="todo"><title>735 · 47.51%</title></rect>
+<rect width="172.88" height="12" x="0" y="0" class="named"><title>782 · 50.55%</title></rect>
+<rect width="0.44" height="12" x="172.88" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="173.32" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="162.27" height="12" x="179.73" y="0" class="todo"><title>734 · 47.45%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">50.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">781</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">735</tspan></text>
+<text text-anchor="end" x="522" y="7.50">50.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">782</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">734</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="76.14" height="12" x="0" y="0" class="named"><title>138 KB · 22.26%</title></rect>
 <rect width="0.12" height="12" x="76.14" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
 <rect width="8.65" height="12" x="76.26" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="257.09" height="12" x="84.91" y="0" class="todo"><title>466 KB · 75.17%</title></rect>
+<rect width="257.08" height="12" x="84.92" y="0" class="todo"><title>466 KB · 75.17%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">138 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">466 KB</tspan></text>
@@ -711,7 +711,7 @@
 <rect width="12" height="12" x="630" y="180" class="named"><title>0x0043e6e0 combine_PickupItem1 (17 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="180" class="named"><title>0x0043e700 combine_PickupItem2 (17 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="180" class="named"><title>0x0043e720 combine_PickupItem3 (17 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="180" class="todo"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="180" class="named"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="180" class="todo"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="180" class="todo"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="180" class="todo"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
@@ -3092,7 +3092,7 @@
 <rect width="2.66" height="2.47" x="706.05" y="437.65" class="named"><title>0x0043e6e0 combine_PickupItem1 (17 bytes)</title></rect>
 <rect width="2.66" height="2.47" x="706.05" y="443.12" class="named"><title>0x0043e700 combine_PickupItem2 (17 bytes)</title></rect>
 <rect width="2.66" height="2.47" x="706.05" y="448.59" class="named"><title>0x0043e720 combine_PickupItem3 (17 bytes)</title></rect>
-<rect width="2.66" height="2.47" x="706.05" y="454.06" class="todo"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
+<rect width="2.66" height="2.47" x="706.05" y="454.06" class="named"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
 <rect width="2.66" height="2.47" x="706.05" y="459.53" class="todo"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
 <rect width="2.49" height="2.48" x="711.71" y="421.23" class="named"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
 <rect width="2.49" height="2.48" x="717.20" y="421.23" class="named"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
