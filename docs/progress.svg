@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="225.49" height="12" x="0" y="0" class="named"><title>1020 · 65.93%</title></rect>
-<rect width="0.44" height="12" x="225.49" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="225.94" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="107.66" height="12" x="234.34" y="0" class="todo"><title>487 · 31.48%</title></rect>
+<rect width="225.72" height="12" x="0" y="0" class="named"><title>1021 · 66%</title></rect>
+<rect width="0.44" height="12" x="225.72" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="226.16" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="107.44" height="12" x="234.56" y="0" class="todo"><title>486 · 31.42%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">66.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1020</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">487</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1021</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">486</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="98.20" height="12" x="0" y="0" class="named"><title>178 KB · 28.71%</title></rect>
-<rect width="0.12" height="12" x="98.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="98.32" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="233.52" height="12" x="108.48" y="0" class="todo"><title>424 KB · 68.28%</title></rect>
+<rect width="98.38" height="12" x="0" y="0" class="named"><title>178 KB · 28.77%</title></rect>
+<rect width="0.12" height="12" x="98.38" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="98.50" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="233.34" height="12" x="108.66" y="0" class="todo"><title>423 KB · 68.23%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">28.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">178 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">424 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">28.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">178 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">423 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -254,7 +254,7 @@
 <rect width="12" height="12" x="525" y="45" class="todo"><title>0x0041c6e0 WraithControl (2337 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="45" class="todo"><title>0x0041d010 CalcLaraMatrices (304 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="45" class="todo"><title>0x0041d140 DrawLara (2131 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="45" class="todo"><title>0x0041d9a0 GetLaraJointPos (324 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="45" class="named"><title>0x0041d9a0 GetLaraJointPos (324 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="45" class="todo"><title>0x0041daf0 Rich_CalcLaraMatrices_Normal (2835 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="45" class="todo"><title>0x0041e630 Rich_CalcLaraMatrices_Interpolated (3076 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="45" class="todo"><title>0x0041f260 SetLaraUnderwaterNodes (289 bytes)</title></rect>
@@ -2145,7 +2145,7 @@
 <rect width="11.15" height="11.33" x="428.86" y="436.35" class="named"><title>0x004451c0 mgLOS (327 bytes)</title></rect>
 <rect width="11.15" height="11.33" x="428.86" y="450.67" class="named"><title>0x0046dd00 ACMClose (327 bytes)</title></rect>
 <rect width="11" height="11.45" x="443.02" y="158.22" class="named"><title>0x00480700 DDCopyBitmap (326 bytes)</title></rect>
-<rect width="11" height="11.38" x="443.02" y="172.66" class="todo"><title>0x0041d9a0 GetLaraJointPos (324 bytes)</title></rect>
+<rect width="11" height="11.38" x="443.02" y="172.66" class="named"><title>0x0041d9a0 GetLaraJointPos (324 bytes)</title></rect>
 <rect width="11" height="11.34" x="443.02" y="187.04" class="nonmatching"><title>0x004332c0 UpdateDebris (323 bytes)</title></rect>
 <rect width="11" height="11.24" x="443.02" y="201.38" class="named"><title>0x00436060 TriggerExplosionBubble (320 bytes)</title></rect>
 <rect width="11" height="11.20" x="443.02" y="215.62" class="named"><title>0x00438180 TriggerGlobalFireSmoke (319 bytes)</title></rect>

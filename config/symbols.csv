@@ -2776,6 +2776,7 @@ address,size,name,symbol
 0x0080e700,15,LaraNodeUnderwater,_LaraNodeUnderwater
 0x0080e710,4,GLaraShadowframe,_GLaraShadowframe
 0x0080e9f0,8,LaraNodeAmbient,_LaraNodeAmbient
+0x0080ea00,720,lara_joint_matrices,_lara_joint_matrices
 0x0080ecd0,1,bLaraInWater,_bLaraInWater
 0x0080ecd4,4,actualRoomNumber,_actualRoomNumber
 0x0080ecd8,4,actualFOV,_actualFOV
