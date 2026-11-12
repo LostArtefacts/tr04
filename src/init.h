@@ -11,5 +11,6 @@ void InitialiseBurningFloor(sint16 item_number);
 void InitialiseFlameEmitter(sint16 item_number);
 void InitialiseFlameEmitter2(sint16 item_number);
 void InitialiseFlameEmitter3(sint16 item_number);
+void InitialiseSlicerDicer(sint16 item_number);
 
 #endif

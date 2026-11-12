@@ -139,6 +139,19 @@ void InitialiseTwoBlockPlatform(sint16 item_number)
     item->item_flags[1] = 1;
 }
 
+void InitialiseSlicerDicer(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->pos.z_pos += phd_cos(item->pos.y_rot + 0x4000) >> 5;
+    item->pos.x_pos += phd_sin(item->pos.y_rot + 0x4000) >> 5;
+    item->item_flags[0] = (sint16)(item->pos.x_pos >> 8);
+    item->item_flags[1] = (sint16)((item->pos.y_pos - 4608) >> 8);
+    item->item_flags[3] = 50;
+    item->item_flags[2] = (sint16)(item->pos.z_pos >> 8);
+}
+
 void InitialiseBurningFloor(sint16 item_number)
 {
     items[item_number].required_anim_state = 127;
