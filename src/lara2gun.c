@@ -118,3 +118,11 @@ void undraw_pistol_mesh_left(sint32 weapon_type)
             lara.holster = LARA_HOLSTERS_PISTOLS;
     }
 }
+
+void undraw_pistol_mesh_right(sint32 weapon_type)
+{
+    WeaponObject(weapon_type);
+    lara.mesh_ptrs[LM_RHAND] = meshes[objects[LARA].mesh_index + LM_RHAND * 2];
+    if (weapon_type == WEAPON_PISTOLS)
+        lara.holster = LARA_HOLSTERS_PISTOLS;
+}

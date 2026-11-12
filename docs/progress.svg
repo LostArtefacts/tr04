@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="154.97" height="12" x="0" y="0" class="named"><title>701 · 45.31%</title></rect>
-<rect width="0.44" height="12" x="154.97" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="155.41" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="181.94" height="12" x="160.06" y="0" class="todo"><title>823 · 53.20%</title></rect>
+<rect width="155.19" height="12" x="0" y="0" class="named"><title>702 · 45.38%</title></rect>
+<rect width="0.44" height="12" x="155.19" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="155.64" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="181.72" height="12" x="160.28" y="0" class="todo"><title>822 · 53.14%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">45.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">701</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">823</tspan></text>
+<text text-anchor="end" x="522" y="7.50">45.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">702</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">822</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="64.18" height="12" x="0" y="0" class="named"><title>116 KB · 18.77%</title></rect>
-<rect width="0.12" height="12" x="64.18" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="64.30" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="270.45" height="12" x="71.55" y="0" class="todo"><title>491 KB · 79.08%</title></rect>
+<rect width="64.21" height="12" x="0" y="0" class="named"><title>116 KB · 18.78%</title></rect>
+<rect width="0.12" height="12" x="64.21" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="64.33" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="270.42" height="12" x="71.58" y="0" class="todo"><title>491 KB · 79.07%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">18.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">116 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">491 KB</tspan></text>
@@ -455,7 +455,7 @@
 <rect width="12" height="12" x="540" y="105" class="named"><title>0x0042bab0 ready_pistols (109 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="105" class="todo"><title>0x0042bb20 draw_pistol_meshes (65 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="105" class="named"><title>0x0042bb70 undraw_pistol_mesh_left (58 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="105" class="todo"><title>0x0042bbb0 undraw_pistol_mesh_right (53 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="105" class="named"><title>0x0042bbb0 undraw_pistol_mesh_right (53 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="105" class="todo"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="105" class="todo"><title>0x0042be40 AnimatePistols (1407 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="105" class="named"><title>0x0042c3c0 LaraTestClimbPos (176 bytes)</title></rect>
@@ -2869,7 +2869,7 @@
 <rect width="4.81" height="4.33" x="639.87" y="421.35" class="named"><title>0x00442d30 CreatureYRot (54 bytes)</title></rect>
 <rect width="4.81" height="4.33" x="639.87" y="428.68" class="named"><title>0x00490f40 init_game_malloc (54 bytes)</title></rect>
 <rect width="4.81" height="4.25" x="639.87" y="436.01" class="named"><title>0x004275a0 lara_as_swandive (53 bytes)</title></rect>
-<rect width="4.81" height="4.25" x="639.87" y="443.25" class="todo"><title>0x0042bbb0 undraw_pistol_mesh_right (53 bytes)</title></rect>
+<rect width="4.81" height="4.25" x="639.87" y="443.25" class="named"><title>0x0042bbb0 undraw_pistol_mesh_right (53 bytes)</title></rect>
 <rect width="4.81" height="4.25" x="639.87" y="450.50" class="named"><title>0x00441ee0 CreatureTilt (53 bytes)</title></rect>
 <rect width="4.81" height="4.25" x="639.87" y="457.75" class="named"><title>0x00455f80 BridgeTilt1Ceiling (53 bytes)</title></rect>
 <rect width="4.40" height="4.65" x="647.68" y="355.04" class="named"><title>0x0045bd80 ReadSG (53 bytes)</title></rect>
