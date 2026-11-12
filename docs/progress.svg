@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="239.64" height="12" x="0" y="0" class="named"><title>1084 · 70.07%</title></rect>
-<rect width="0.44" height="12" x="239.64" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="12.82" height="12" x="240.09" y="0" class="nonmatching"><title>58 · 3.75%</title></rect>
-<rect width="89.09" height="12" x="252.91" y="0" class="todo"><title>403 · 26.05%</title></rect>
+<rect width="239.86" height="12" x="0" y="0" class="named"><title>1085 · 70.14%</title></rect>
+<rect width="0.44" height="12" x="239.86" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="12.82" height="12" x="240.31" y="0" class="nonmatching"><title>58 · 3.75%</title></rect>
+<rect width="88.87" height="12" x="253.13" y="0" class="todo"><title>402 · 25.99%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">70.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1084</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">58</tspan> · <tspan class="todo">403</tspan></text>
+<text text-anchor="end" x="522" y="7.50">70.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1085</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">58</tspan> · <tspan class="todo">402</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="115.60" height="12" x="0" y="0" class="named"><title>210 KB · 33.80%</title></rect>
-<rect width="0.12" height="12" x="115.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="22.70" height="12" x="115.72" y="0" class="nonmatching"><title>41 KB · 6.64%</title></rect>
-<rect width="203.57" height="12" x="138.43" y="0" class="todo"><title>370 KB · 59.52%</title></rect>
+<rect width="115.87" height="12" x="0" y="0" class="named"><title>210 KB · 33.88%</title></rect>
+<rect width="0.12" height="12" x="115.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="22.70" height="12" x="115.99" y="0" class="nonmatching"><title>41 KB · 6.64%</title></rect>
+<rect width="203.31" height="12" x="138.69" y="0" class="todo"><title>369 KB · 59.45%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">33.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">210 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">41 KB</tspan> · <tspan class="todo">370 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">33.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">210 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">41 KB</tspan> · <tspan class="todo">369 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -140,7 +140,7 @@
 <rect width="12" height="12" x="315" y="15" class="named"><title>0x0040b050 GunShot (5 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="15" class="named"><title>0x0040b060 GunHit (182 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="15" class="named"><title>0x0040b120 GunMiss (161 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="15" class="todo"><title>0x0040b1d0 ShotLara (486 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="15" class="named"><title>0x0040b1d0 ShotLara (486 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="15" class="todo"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="15" class="todo"><title>0x0040b600 RagheadControl (6498 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="15" class="named"><title>0x0040d040 InitialiseSas (90 bytes)</title></rect>
@@ -1991,7 +1991,7 @@
 <rect width="13.93" height="13.57" x="381.14" y="366.11" class="named"><title>0x00427a40 lara_col_walk (490 bytes)</title></rect>
 <rect width="13.93" height="13.57" x="381.14" y="382.69" class="named"><title>0x00490820 phd_RotYXZ (490 bytes)</title></rect>
 <rect width="13.93" height="13.52" x="381.14" y="399.26" class="named"><title>0x00494080 DXSaveScreen (488 bytes)</title></rect>
-<rect width="13.93" height="13.46" x="381.14" y="415.78" class="todo"><title>0x0040b1d0 ShotLara (486 bytes)</title></rect>
+<rect width="13.93" height="13.46" x="381.14" y="415.78" class="named"><title>0x0040b1d0 ShotLara (486 bytes)</title></rect>
 <rect width="13.93" height="13.38" x="381.14" y="432.24" class="todo"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
 <rect width="13.93" height="13.38" x="381.14" y="448.62" class="named"><title>0x0046bce0 eleventh_cutseq_control (483 bytes)</title></rect>
 <rect width="14.17" height="13.15" x="398.07" y="96.35" class="nonmatching"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>

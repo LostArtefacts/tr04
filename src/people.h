@@ -8,5 +8,6 @@ sint16 GunMiss(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 r
 sint32 TargetVisible(ITEM_INFO *item, AI_INFO *info);
 sint32 Targetable(ITEM_INFO *item, AI_INFO *info);
 sint16 GunHit(sint32 x, sint32 y, sint32 z, sint16 speed, sint16 yrot, sint16 room_number);
+sint32 ShotLara(ITEM_INFO *item, AI_INFO *info, BITE_INFO *gun, sint16 extra_rotation, sint32 damage);
 
 #endif
