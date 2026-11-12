@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="247.22" height="12" x="0" y="0" class="named"><title>1119 · 72.29%</title></rect>
-<rect width="0.66" height="12" x="247.22" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.01" height="12" x="247.88" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
-<rect width="77.10" height="12" x="264.90" y="0" class="todo"><title>349 · 22.55%</title></rect>
+<rect width="247.44" height="12" x="0" y="0" class="named"><title>1120 · 72.35%</title></rect>
+<rect width="0.66" height="12" x="247.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.01" height="12" x="248.10" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
+<rect width="76.88" height="12" x="265.12" y="0" class="todo"><title>348 · 22.48%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1119</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">349</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1120</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">348</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="128.86" height="12" x="0" y="0" class="named"><title>235 KB · 37.68%</title></rect>
-<rect width="0.13" height="12" x="128.86" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="30.52" height="12" x="128.99" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
-<rect width="182.49" height="12" x="159.51" y="0" class="todo"><title>332 KB · 53.36%</title></rect>
+<rect width="129.12" height="12" x="0" y="0" class="named"><title>235 KB · 37.75%</title></rect>
+<rect width="0.13" height="12" x="129.12" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="30.52" height="12" x="129.25" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
+<rect width="182.23" height="12" x="159.77" y="0" class="todo"><title>332 KB · 53.28%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">37.7%</text>
+<text text-anchor="end" x="522" y="24.50">37.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">332 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -724,7 +724,7 @@
 <rect width="12" height="12" x="75" y="195" class="named"><title>0x0043f180 draw_compass (82 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="195" class="todo"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="195" class="named"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="195" class="todo"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="195" class="named"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="named"><title>0x0043f7a0 InitialiseAutogun (59 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="195" class="todo"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="195" class="named"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
@@ -2001,7 +2001,7 @@
 <rect width="13.99" height="13.13" x="449.59" y="96.63" class="named"><title>0x0042f510 DoFlareLight (477 bytes)</title></rect>
 <rect width="13.96" height="13.13" x="466.57" y="96.63" class="todo"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>
 <rect width="13.90" height="13.13" x="483.53" y="96.63" class="named"><title>0x00485600 setXY4 (474 bytes)</title></rect>
-<rect width="13.87" height="13.13" x="500.43" y="96.63" class="todo"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
+<rect width="13.87" height="13.13" x="500.43" y="96.63" class="named"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="13.84" height="13.13" x="517.30" y="96.63" class="named"><title>0x004570f0 StatuePlinthCollision (472 bytes)</title></rect>
 <rect width="13.81" height="13.13" x="534.15" y="96.63" class="nonmatching"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
 <rect width="13.75" height="13.13" x="550.96" y="96.63" class="named"><title>0x00434dc0 TriggerExplosionSmokeEnd (469 bytes)</title></rect>

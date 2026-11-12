@@ -4,5 +4,6 @@
 #include "items.h"
 
 void InitialiseAutogun(sint16 item_number);
+void TriggerAutogunFlamethrower(ITEM_INFO *item);
 
 #endif
