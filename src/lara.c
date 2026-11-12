@@ -8,6 +8,7 @@
 #include "camera.h"
 #include "sound.h"
 #include "rope.h"
+#include "delstuff.h"
 #include "specific/input.h"
 
 #define DAMAGE_START 140
@@ -2206,6 +2207,28 @@ void lara_as_deathslide(ITEM_INFO *item, COLL_INFO *coll)
         lara_item->speed = 100;
         lara_item->fallspeed = 40;
         lara.move_angle = item->pos.y_rot;
+    }
+}
+
+void lara_as_controlled(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.look = 0;
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    if (item->anim_number == ANIM_PLAYHARP && item->frame_number == anims[ANIM_PLAYHARP].frame_base + 120)
+        S_CDPlay(6, 0);
+    if (item->anim_number == ANIM_MINEDETECT) {
+        if (item->frame_number == anims[ANIM_MINEDETECT].frame_base + 16)
+            lara.mesh_ptrs[LM_RHAND] = meshes[objects[MESHSWAP3].mesh_index + 2 * LM_RHAND];
+        else if (item->frame_number == anims[ANIM_MINEDETECT].frame_base + 118)
+            lara.mesh_ptrs[LM_RHAND] = meshes[objects[LARA_SKIN].mesh_index + 2 * LM_RHAND];
+    }
+    if (item->frame_number == anims[item->anim_number].frame_end - 1) {
+        if (item->anim_number == ANIM_PLAYHARP)
+            S_CDPlay(19, 0);
+        lara.gun_status = LG_NO_ARMS;
+        if (UseForcedFixedCamera)
+            UseForcedFixedCamera = 0;
     }
 }
 
