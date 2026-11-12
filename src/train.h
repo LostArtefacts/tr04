@@ -5,5 +5,6 @@
 
 void DrawTrainObjects(void);
 void DrawTrainFloor(void);
+void InitialiseTrainJeep(sint16 item_number);
 
 #endif

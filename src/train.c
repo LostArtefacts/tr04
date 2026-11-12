@@ -23,3 +23,22 @@ void DrawTrainFloor(void)
     DrawTrainObjects();
     lara_item->pos.x_pos = x;
 }
+
+void InitialiseTrainJeep(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *item2;
+    sint16 i;
+
+    item = &items[item_number];
+    item->item_flags[0] = -80;
+    item2 = items;
+    for (i = 0; i < level_items; i++, item2++) {
+        if (item != item2 && item2->trigger_flags == item->trigger_flags) {
+            item->item_flags[1] = i;
+            item2->pos.y_pos = item->pos.y_pos - 1024;
+            item2->item_flags[0] = -80;
+            return;
+        }
+    }
+}

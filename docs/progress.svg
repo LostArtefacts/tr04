@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="229.25" height="12" x="0" y="0" class="named"><title>1037 · 67.03%</title></rect>
-<rect width="0.44" height="12" x="229.25" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="229.69" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="103.90" height="12" x="238.10" y="0" class="todo"><title>470 · 30.38%</title></rect>
+<rect width="229.47" height="12" x="0" y="0" class="named"><title>1038 · 67.10%</title></rect>
+<rect width="0.44" height="12" x="229.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="229.92" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="103.68" height="12" x="238.32" y="0" class="todo"><title>469 · 30.32%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">67.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1037</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">470</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1038</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">469</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="100.53" height="12" x="0" y="0" class="named"><title>182 KB · 29.39%</title></rect>
-<rect width="0.12" height="12" x="100.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="100.65" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="231.20" height="12" x="110.80" y="0" class="todo"><title>419 KB · 67.60%</title></rect>
+<rect width="100.59" height="12" x="0" y="0" class="named"><title>182 KB · 29.41%</title></rect>
+<rect width="0.12" height="12" x="100.59" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="100.71" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="231.13" height="12" x="110.87" y="0" class="todo"><title>419 KB · 67.58%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">29.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">182 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">419 KB</tspan></text>
@@ -1052,7 +1052,7 @@
 <rect width="12" height="12" x="495" y="285" class="todo"><title>0x00463de0 DrawChar (591 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="285" class="named"><title>0x00464030 DrawTrainFloor (97 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="285" class="todo"><title>0x004640a0 DrawTrainObjects (1032 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="285" class="todo"><title>0x004644b0 InitialiseTrainJeep (109 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="285" class="named"><title>0x004644b0 InitialiseTrainJeep (109 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="285" class="todo"><title>0x00464520 TrainJeepControl (238 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="285" class="nonmatching"><title>0x00464610 InitialiseBike (106 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="285" class="named"><title>0x00464680 BikeCollision (463 bytes)</title></rect>
@@ -2616,7 +2616,7 @@
 <rect width="6.53" height="6.45" x="570.78" y="295.44" class="named"><title>0x00428ea0 ready_shotgun (109 bytes)</title></rect>
 <rect width="6.53" height="6.45" x="570.78" y="304.89" class="named"><title>0x0042bab0 ready_pistols (109 bytes)</title></rect>
 <rect width="6.53" height="6.45" x="570.78" y="314.34" class="named"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
-<rect width="6.53" height="6.45" x="570.78" y="323.79" class="todo"><title>0x004644b0 InitialiseTrainJeep (109 bytes)</title></rect>
+<rect width="6.53" height="6.45" x="570.78" y="323.79" class="named"><title>0x004644b0 InitialiseTrainJeep (109 bytes)</title></rect>
 <rect width="6.53" height="6.45" x="570.78" y="333.24" class="nonmatching"><title>0x00465770 DoDynamics_bike (109 bytes)</title></rect>
 <rect width="6.53" height="6.45" x="570.78" y="342.69" class="named"><title>0x0046cc40 cutseq_kill_item (109 bytes)</title></rect>
 <rect width="6.53" height="6.45" x="570.78" y="352.14" class="named"><title>0x0046ccb0 cutseq_restore_item (109 bytes)</title></rect>
