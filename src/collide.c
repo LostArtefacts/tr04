@@ -629,6 +629,60 @@ sint32 MoveLaraPosition(PHD_VECTOR *v, ITEM_INFO *item, ITEM_INFO *l)
     return Move3DPosTo3DPos(&l->pos, &pos, 12, 364);
 }
 
+void GenericSphereBoxCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    SPHERE *sptr;
+    sint32 TouchBits, DeadlyBits, dx, dy, dz;
+    sint16 y_rot;
+
+    item = &items[item_number];
+    if (item->status != ITEM_INVISIBLE && TestBoundsCollide(item, l, coll->radius)) {
+        TouchBits = TestCollision(item, l);
+        if (TouchBits) {
+            y_rot = item->pos.y_rot;
+            item->pos.y_rot = 0;
+            GetSpheres(item, Slist, 1);
+            item->pos.y_rot = y_rot;
+            DeadlyBits = *(sint32 *)&item->item_flags[0];
+            if (item->item_flags[2])
+                TouchBits &= ~0x1;
+            if (TouchBits) {
+                sptr = Slist;
+                do {
+                    if (TouchBits & 0x1) {
+                        GlobalCollisionBounds[0] = (sint16)(sptr->x - item->pos.x_pos - sptr->r);
+                        GlobalCollisionBounds[2] = (sint16)(sptr->y - item->pos.y_pos - sptr->r);
+                        GlobalCollisionBounds[4] = (sint16)(sptr->z - item->pos.z_pos - sptr->r);
+                        GlobalCollisionBounds[1] = (sint16)(sptr->x - item->pos.x_pos + sptr->r);
+                        GlobalCollisionBounds[3] = (sint16)(sptr->y - item->pos.y_pos + sptr->r);
+                        GlobalCollisionBounds[5] = (sint16)(sptr->z - item->pos.z_pos + sptr->r);
+                        dx = lara_item->pos.x_pos;
+                        dy = lara_item->pos.y_pos;
+                        dz = lara_item->pos.z_pos;
+                        if (ItemPushLara(item, l, coll, DeadlyBits & 0x1, 3) && DeadlyBits & 0x1) {
+                            lara_item->hit_points -= item->item_flags[3];
+                            dx -= lara_item->pos.x_pos;
+                            dy -= lara_item->pos.y_pos;
+                            dz -= lara_item->pos.z_pos;
+                            if ((dx || dy || dz) && TriggerActive(item))
+                                DoBloodSplat(l->pos.x_pos + (GetRandomControl() & 0x3F) - 32, sptr->y + (GetRandomControl() & 0x1F) - 16, l->pos.z_pos + (GetRandomControl() & 0x3F) - 32, (item->item_flags[3] >> 5) + (GetRandomControl() & 0x3) + 2, (sint16)(2 * GetRandomControl()), l->room_number);
+                            if (!coll->enable_baddie_push) {
+                                lara_item->pos.x_pos += dx;
+                                lara_item->pos.y_pos += dy;
+                                lara_item->pos.z_pos += dz;
+                            }
+                        }
+                    }
+                    TouchBits >>= 1;
+                    sptr++;
+                    DeadlyBits >>= 1;
+                } while (TouchBits);
+            }
+        }
+    }
+}
+
 void GenericDeadlyBoundingBoxCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
 {
     ITEM_INFO *item;

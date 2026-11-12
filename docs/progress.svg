@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="247" height="12" x="0" y="0" class="named"><title>1118 · 72.22%</title></rect>
 <rect width="0.44" height="12" x="247" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="16.57" height="12" x="247.44" y="0" class="nonmatching"><title>75 · 4.84%</title></rect>
-<rect width="77.99" height="12" x="264.01" y="0" class="todo"><title>353 · 22.80%</title></rect>
+<rect width="16.79" height="12" x="247.44" y="0" class="nonmatching"><title>76 · 4.91%</title></rect>
+<rect width="77.77" height="12" x="264.23" y="0" class="todo"><title>352 · 22.74%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">75</tspan> · <tspan class="todo">353</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">76</tspan> · <tspan class="todo">352</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="128.85" height="12" x="0" y="0" class="named"><title>235 KB · 37.67%</title></rect>
 <rect width="0.12" height="12" x="128.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="29.87" height="12" x="128.97" y="0" class="nonmatching"><title>54 KB · 8.73%</title></rect>
-<rect width="183.17" height="12" x="158.83" y="0" class="todo"><title>333 KB · 53.56%</title></rect>
+<rect width="30.23" height="12" x="128.97" y="0" class="nonmatching"><title>55 KB · 8.84%</title></rect>
+<rect width="182.80" height="12" x="159.20" y="0" class="todo"><title>333 KB · 53.45%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">37.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">54 KB</tspan> · <tspan class="todo">333 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">55 KB</tspan> · <tspan class="todo">333 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -792,7 +792,7 @@
 <rect width="12" height="12" x="345" y="210" class="named"><title>0x00448070 AlignLaraPosition (208 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="210" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="210" class="nonmatching"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="210" class="todo"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="210" class="nonmatching"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="named"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="210" class="nonmatching"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="210" class="named"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
@@ -1869,7 +1869,7 @@
 <rect width="16.28" height="16.16" x="365.60" y="42.37" class="named"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>
 <rect width="16.02" height="16.16" x="384.87" y="42.37" class="named"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
 <rect width="15.82" height="16.16" x="403.89" y="42.37" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
-<rect width="15.75" height="16.16" x="422.71" y="42.37" class="todo"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
+<rect width="15.75" height="16.16" x="422.71" y="42.37" class="nonmatching"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="15.63" height="16.16" x="441.47" y="42.37" class="named"><title>0x0047fa10 S_OutputPolyList (656 bytes)</title></rect>
 <rect width="15.61" height="16.16" x="460.10" y="42.37" class="named"><title>0x00463b50 PrintString (655 bytes)</title></rect>
 <rect width="15.59" height="16.16" x="478.71" y="42.37" class="named"><title>0x00429480 FireGrenade (654 bytes)</title></rect>
