@@ -16,5 +16,6 @@ void InitialiseScaledSpike(sint16 item_number);
 void InitialiseRaisingBlock(sint16 item_number);
 void InitialiseSethBlade(sint16 item_number);
 void InitialiseMineHelicopter(sint16 item_number);
+void InitialiseSmashObject(sint16 item_number);
 
 #endif

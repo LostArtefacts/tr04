@@ -237,3 +237,18 @@ void InitialiseMineHelicopter(sint16 item_number)
     if (!item->trigger_flags)
         item->mesh_bits = 0;
 }
+
+void InitialiseSmashObject(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ROOM_INFO *rinfo;
+    FLOOR_INFO *floor;
+
+    item = &items[item_number];
+    item->flags = 0;
+    item->mesh_bits = 1;
+    rinfo = &room[item->room_number];
+    floor = &rinfo->floor[((item->pos.z_pos - rinfo->z) >> 10) + ((item->pos.x_pos - rinfo->x) >> 10) * rinfo->x_size];
+    if (boxes[floor->box].overlap_index & 0x8000)
+        boxes[floor->box].overlap_index |= 0x4000;
+}
