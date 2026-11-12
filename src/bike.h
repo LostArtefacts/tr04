@@ -22,6 +22,7 @@ typedef struct bikeinfo {
 void DrawBikeBeam(ITEM_INFO *item);
 void BikeStart(ITEM_INFO *item, ITEM_INFO *l);
 void DrawBikeExtras(ITEM_INFO *item);
+void BikeExplode(ITEM_INFO *item);
 
 extern ITEM_INFO *GlobalBikeItem;
 

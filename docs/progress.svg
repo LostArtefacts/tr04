@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="161.83" height="12" x="0" y="0" class="named"><title>732 · 47.32%</title></rect>
-<rect width="0.44" height="12" x="161.83" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.86" height="12" x="162.27" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
-<rect width="174.87" height="12" x="167.13" y="0" class="todo"><title>791 · 51.13%</title></rect>
+<rect width="162.05" height="12" x="0" y="0" class="named"><title>733 · 47.38%</title></rect>
+<rect width="0.44" height="12" x="162.05" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.86" height="12" x="162.49" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
+<rect width="174.65" height="12" x="167.35" y="0" class="todo"><title>790 · 51.07%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">47.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">732</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">791</tspan></text>
+<text text-anchor="end" x="522" y="7.50">47.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">733</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">790</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="69.39" height="12" x="0" y="0" class="named"><title>126 KB · 20.29%</title></rect>
-<rect width="0.12" height="12" x="69.39" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="69.51" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
-<rect width="265.13" height="12" x="76.87" y="0" class="todo"><title>481 KB · 77.52%</title></rect>
+<rect width="69.50" height="12" x="0" y="0" class="named"><title>126 KB · 20.32%</title></rect>
+<rect width="0.12" height="12" x="69.50" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="69.62" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
+<rect width="265.02" height="12" x="76.98" y="0" class="todo"><title>481 KB · 77.49%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">20.3%</text>
+<text text-anchor="end" x="522" y="24.50">20.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">126 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">481 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1062,7 +1062,7 @@
 <rect width="12" height="12" x="645" y="285" class="named"><title>0x00464c20 DrawBikeExtras (76 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="285" class="todo"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="285" class="todo"><title>0x00465220 TriggerExhaustSmoke_bike (417 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="285" class="todo"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="285" class="named"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="285" class="todo"><title>0x004654a0 BikeCheckGetOff (439 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="285" class="todo"><title>0x00465660 TestHeight (269 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="285" class="todo"><title>0x00465770 DoDynamics_bike (109 bytes)</title></rect>
@@ -2352,7 +2352,7 @@
 <rect width="8.92" height="8.58" x="495.56" y="349.74" class="todo"><title>0x0046b600 CalculateObjectLightingLaraCutSeq (198 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.56" y="361.32" class="todo"><title>0x004768c0 S_LoadLevelFile (198 bytes)</title></rect>
 <rect width="8.92" height="8.54" x="495.56" y="372.89" class="named"><title>0x004237b0 TestMonkeyRight (197 bytes)</title></rect>
-<rect width="8.92" height="8.54" x="495.56" y="384.43" class="todo"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
+<rect width="8.92" height="8.54" x="495.56" y="384.43" class="named"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
 <rect width="8.92" height="8.54" x="495.56" y="395.96" class="named"><title>0x00467ac0 JeepExplode (197 bytes)</title></rect>
 <rect width="8.92" height="8.54" x="495.56" y="407.50" class="todo"><title>0x00487b60 InitTarget_2 (197 bytes)</title></rect>
 <rect width="8.92" height="8.54" x="495.56" y="419.03" class="todo"><title>0x00487c30 InitBinoculars (197 bytes)</title></rect>
