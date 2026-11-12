@@ -24,3 +24,18 @@ void InitialiseSas(sint16 item_number)
     item->frame_number = anims[item->anim_number].frame_base;
     item->current_anim_state = item->goal_anim_state = 1;
 }
+
+void InitialiseInjuredSas(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (item->trigger_flags) {
+        item->anim_number = objects[SAS_DYING].anim_index;
+        item->current_anim_state = item->goal_anim_state = 1;
+    } else {
+        item->anim_number = objects[SAS_DYING].anim_index + 3;
+        item->current_anim_state = item->goal_anim_state = 4;
+    }
+    item->frame_number = anims[item->anim_number].frame_base;
+}
