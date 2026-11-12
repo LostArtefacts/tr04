@@ -15,6 +15,7 @@
 #include "objnums.h"
 #include "draw.h"
 #include "specific/output.h"
+#include "effects.h"
 
 sint32 GetFreeFireSpark(void)
 {
@@ -779,6 +780,114 @@ void TriggerLaraDrips(void)
             lara.wet[i] -= 4;
         }
     }
+}
+
+sint32 ExplodingDeath2(sint16 item_number, sint32 mesh_bits, sint16 Flags)
+{
+    ITEM_INFO *item;
+    OBJECT_INFO *obj;
+    FX_INFO *fx;
+    sint32 *bone, i;
+    sint16 *rotation;
+    sint16 *frame;
+    sint16 *extra_rotation;
+    sint32 bit, poppush;
+    sint16 fx_number;
+
+    item = &items[item_number];
+    obj = &objects[item->object_number];
+    frame = GetBestFrame(item);
+    phd_PushUnitMatrix();
+    phd_mxptr[M03] = 0;
+    phd_mxptr[M13] = 0;
+    phd_mxptr[M23] = 0;
+    phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    phd_TranslateRel(frame[6], frame[7], frame[8]);
+    rotation = frame + 9;
+    gar_RotYXZsuperpack(&rotation, 0);
+    bone = &bones[obj->bone_index];
+    extra_rotation = (sint16 *)item->data;
+    bit = 1;
+    if (mesh_bits & 1 && item->mesh_bits & 1) {
+        if (Flags & 0x100 || !(GetRandomControl() & 3)) {
+            fx_number = CreateEffect(item->room_number);
+            if (fx_number != NO_ITEM) {
+                fx = &effects[fx_number];
+                fx->pos.x_pos = item->pos.x_pos + (phd_mxptr[M03] >> W2V_SHIFT);
+                fx->pos.y_pos = item->pos.y_pos + (phd_mxptr[M13] >> W2V_SHIFT);
+                fx->pos.z_pos = item->pos.z_pos + (phd_mxptr[M23] >> W2V_SHIFT);
+                fx->room_number = item->room_number;
+                fx->pos.y_rot = (sint16)(GetRandomControl() << 1);
+                fx->pos.x_rot = 0;
+                if (Flags & 0x10)
+                    fx->speed = 0;
+                else if (Flags & 0x20)
+                    fx->speed = (sint16)(GetRandomControl() >> 12);
+                else
+                    fx->speed = (sint16)(GetRandomControl() >> 8);
+                if (Flags & 0x40)
+                    fx->fallspeed = 0;
+                else if (Flags & 0x80)
+                    fx->fallspeed = (sint16)(-(GetRandomControl() >> 12));
+                else
+                    fx->fallspeed = (sint16)(-(GetRandomControl() >> 8));
+                fx->frame_number = obj->mesh_index;
+                fx->object_number = BODY_PART;
+                fx->shade = 0x4210;
+                fx->flag2 = Flags;
+            }
+            item->mesh_bits--;
+        }
+    }
+    for (i = 1; i < obj->nmeshes; i++, bone += 3) {
+        poppush = *bone++;
+        if (poppush & 1)
+            phd_PopMatrix();
+        if (poppush & 2)
+            phd_PushMatrix();
+        phd_TranslateRel(bone[0], bone[1], bone[2]);
+        gar_RotYXZsuperpack(&rotation, 0);
+        if (poppush & 28) {
+            if (poppush & 8)
+                phd_RotY(*extra_rotation++);
+            if (poppush & 4)
+                phd_RotX(*extra_rotation++);
+            if (poppush & 16)
+                phd_RotZ(*extra_rotation++);
+        }
+        bit <<= 1;
+        if (bit & mesh_bits && bit & item->mesh_bits && (Flags & 0x100 || !(GetRandomControl() & 3))) {
+            fx_number = CreateEffect(item->room_number);
+            if (fx_number != NO_ITEM) {
+                fx = &effects[fx_number];
+                fx->pos.x_pos = item->pos.x_pos + (phd_mxptr[M03] >> W2V_SHIFT);
+                fx->pos.y_pos = item->pos.y_pos + (phd_mxptr[M13] >> W2V_SHIFT);
+                fx->pos.z_pos = item->pos.z_pos + (phd_mxptr[M23] >> W2V_SHIFT);
+                fx->room_number = item->room_number;
+                fx->pos.y_rot = (sint16)(GetRandomControl() << 1);
+                fx->pos.x_rot = 0;
+                if (Flags & 0x10)
+                    fx->speed = 0;
+                else if (Flags & 0x20)
+                    fx->speed = (sint16)(GetRandomControl() >> 12);
+                else
+                    fx->speed = (sint16)(GetRandomControl() >> 8);
+                if (Flags & 0x40)
+                    fx->fallspeed = 0;
+                else if (Flags & 0x80)
+                    fx->fallspeed = (sint16)(-(GetRandomControl() >> 12));
+                else
+                    fx->fallspeed = (sint16)(-(GetRandomControl() >> 8));
+                fx->frame_number = obj->mesh_index + 2 * i;
+                fx->object_number = BODY_PART;
+                fx->shade = 0x4210;
+                fx->flag2 = Flags;
+            }
+            item->mesh_bits -= bit;
+        }
+    }
+    phd_PopMatrix();
+    return !item->mesh_bits;
 }
 
 sint32 GetFreeShockwave(void)

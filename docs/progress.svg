@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="257.38" height="12" x="0" y="0" class="named"><title>1165 · 75.26%</title></rect>
-<rect width="0.66" height="12" x="257.38" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="20.33" height="12" x="258.05" y="0" class="nonmatching"><title>92 · 5.94%</title></rect>
-<rect width="63.63" height="12" x="278.37" y="0" class="todo"><title>288 · 18.60%</title></rect>
+<rect width="257.60" height="12" x="0" y="0" class="named"><title>1166 · 75.32%</title></rect>
+<rect width="0.66" height="12" x="257.60" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="20.33" height="12" x="258.27" y="0" class="nonmatching"><title>92 · 5.94%</title></rect>
+<rect width="63.41" height="12" x="278.59" y="0" class="todo"><title>287 · 18.54%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1165</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">92</tspan> · <tspan class="todo">288</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1166</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">92</tspan> · <tspan class="todo">287</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="144.55" height="12" x="0" y="0" class="named"><title>263 KB · 42.27%</title></rect>
-<rect width="0.13" height="12" x="144.55" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="39.64" height="12" x="144.68" y="0" class="nonmatching"><title>72 KB · 11.59%</title></rect>
-<rect width="157.68" height="12" x="184.32" y="0" class="todo"><title>287 KB · 46.11%</title></rect>
+<rect width="145.09" height="12" x="0" y="0" class="named"><title>264 KB · 42.42%</title></rect>
+<rect width="0.13" height="12" x="145.09" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="39.64" height="12" x="145.22" y="0" class="nonmatching"><title>72 KB · 11.59%</title></rect>
+<rect width="157.14" height="12" x="184.86" y="0" class="todo"><title>286 KB · 45.95%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">42.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">263 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">72 KB</tspan> · <tspan class="todo">287 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">42.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">264 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">72 KB</tspan> · <tspan class="todo">286 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -651,7 +651,7 @@
 <rect width="12" height="12" x="480" y="165" class="todo"><title>0x00439f80 UpdateDrips (254 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="165" class="named"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="165" class="todo"><title>0x0043a1b0 S_DrawSparks (1240 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="165" class="todo"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="165" class="named"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="165" class="named"><title>0x0043aa70 GetFreeShockwave (25 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="165" class="named"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="165" class="named"><title>0x0043ab00 TriggerShockwaveHitEffect (520 bytes)</title></rect>
@@ -1773,7 +1773,7 @@
 <rect width="20.15" height="19.18" x="283.44" y="203.37" class="todo"><title>0x0048e2f0 CreateTexturePage (1004 bytes)</title></rect>
 <rect width="20.15" height="19.10" x="283.44" y="225.55" class="named"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
 <rect width="20.15" height="18.97" x="283.44" y="247.65" class="named"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
-<rect width="20.15" height="18.93" x="283.44" y="269.62" class="todo"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
+<rect width="20.15" height="18.93" x="283.44" y="269.62" class="named"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
 <rect width="20.15" height="18.89" x="283.44" y="291.55" class="todo"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
 <rect width="20.15" height="18.85" x="283.44" y="313.44" class="named"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="20.15" height="18.74" x="283.44" y="335.29" class="todo"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
