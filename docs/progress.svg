@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="230.36" height="12" x="0" y="0" class="named"><title>1042 · 67.36%</title></rect>
-<rect width="0.44" height="12" x="230.36" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.62" height="12" x="230.80" y="0" class="nonmatching"><title>39 · 2.52%</title></rect>
-<rect width="102.58" height="12" x="239.42" y="0" class="todo"><title>464 · 29.99%</title></rect>
+<rect width="230.58" height="12" x="0" y="0" class="named"><title>1043 · 67.42%</title></rect>
+<rect width="0.44" height="12" x="230.58" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.62" height="12" x="231.02" y="0" class="nonmatching"><title>39 · 2.52%</title></rect>
+<rect width="102.36" height="12" x="239.64" y="0" class="todo"><title>463 · 29.93%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">67.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1042</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">39</tspan> · <tspan class="todo">464</tspan></text>
+<text text-anchor="end" x="522" y="7.50">67.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1043</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">39</tspan> · <tspan class="todo">463</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="100.93" height="12" x="0" y="0" class="named"><title>183 KB · 29.51%</title></rect>
-<rect width="0.12" height="12" x="100.93" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.38" height="12" x="101.05" y="0" class="nonmatching"><title>19 KB · 3.04%</title></rect>
-<rect width="230.57" height="12" x="111.43" y="0" class="todo"><title>418 KB · 67.42%</title></rect>
+<rect width="101.11" height="12" x="0" y="0" class="named"><title>183 KB · 29.57%</title></rect>
+<rect width="0.12" height="12" x="101.11" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.38" height="12" x="101.23" y="0" class="nonmatching"><title>19 KB · 3.04%</title></rect>
+<rect width="230.38" height="12" x="111.62" y="0" class="todo"><title>418 KB · 67.36%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">29.5%</text>
+<text text-anchor="end" x="522" y="24.50">29.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">183 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">19 KB</tspan> · <tspan class="todo">418 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -249,7 +249,7 @@
 <rect width="12" height="12" x="450" y="45" class="named"><title>0x0041bf00 InitialiseWildboar (90 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="45" class="nonmatching"><title>0x0041bf60 WildboarControl (888 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="45" class="named"><title>0x0041c2e0 InitialiseWraith (120 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="45" class="todo"><title>0x0041c360 TriggerWraithFlame (337 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="45" class="named"><title>0x0041c360 TriggerWraithFlame (337 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="45" class="todo"><title>0x0041c4c0 TriggerWraithEffect (536 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="45" class="todo"><title>0x0041c6e0 WraithControl (2337 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="45" class="named"><title>0x0041d010 CalcLaraMatrices (304 bytes)</title></rect>
@@ -2131,7 +2131,7 @@
 <rect width="11.15" height="11.78" x="428.88" y="232.30" class="todo"><title>0x0047d900 PrelightVerts (340 bytes)</title></rect>
 <rect width="11.15" height="11.74" x="428.88" y="247.08" class="named"><title>0x004357c0 TriggerRocketSmoke (339 bytes)</title></rect>
 <rect width="11.15" height="11.71" x="428.88" y="261.82" class="named"><title>0x00420920 DrawHair (338 bytes)</title></rect>
-<rect width="11.15" height="11.67" x="428.88" y="276.53" class="todo"><title>0x0041c360 TriggerWraithFlame (337 bytes)</title></rect>
+<rect width="11.15" height="11.67" x="428.88" y="276.53" class="named"><title>0x0041c360 TriggerWraithFlame (337 bytes)</title></rect>
 <rect width="11.15" height="11.64" x="428.88" y="291.20" class="named"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
 <rect width="11.15" height="11.64" x="428.88" y="305.84" class="todo"><title>0x00499ac0 Func499ac0 (336 bytes)</title></rect>
 <rect width="11.15" height="11.60" x="428.88" y="320.48" class="named"><title>0x004328e0 LaraSwimCollision (335 bytes)</title></rect>
