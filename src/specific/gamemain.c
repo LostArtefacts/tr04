@@ -5,6 +5,31 @@
 #include "3dmath.h"
 #include "../savegame.h"
 #include "../gameflow.h"
+#include "audio.h"
+#include "file.h"
+#include "output.h"
+#include "function_stubs.h"
+
+void GameClose(void)
+{
+    Log(2, "GameClose");
+    ACMClose();
+    FreeLevel();
+    if (DestVB) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Dest VB", DestVB, IDirect3DVertexBuffer_Release(DestVB));
+        DestVB = 0;
+    } else {
+        Log(1, "%s Attempt To Release NULL Ptr", "Dest VB");
+    }
+    free(clipflags);
+    if (wav_file_buffer)
+        free(wav_file_buffer);
+    if (ADPCMBuffer)
+        free(ADPCMBuffer);
+    free(malloc_buffer);
+    free(gfScriptFile);
+    free(gfLanguageFile);
+}
 
 void init_water_table(void)
 {

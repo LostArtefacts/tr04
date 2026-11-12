@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="232.35" height="12" x="0" y="0" class="named"><title>1051 · 67.94%</title></rect>
-<rect width="0.44" height="12" x="232.35" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="9.51" height="12" x="232.79" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
-<rect width="99.70" height="12" x="242.30" y="0" class="todo"><title>451 · 29.15%</title></rect>
+<rect width="232.57" height="12" x="0" y="0" class="named"><title>1052 · 68%</title></rect>
+<rect width="0.44" height="12" x="232.57" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="9.51" height="12" x="233.01" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
+<rect width="99.48" height="12" x="242.52" y="0" class="todo"><title>450 · 29.09%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">68.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1051</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">451</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1052</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">450</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="102.68" height="12" x="0" y="0" class="named"><title>186 KB · 30.02%</title></rect>
-<rect width="0.12" height="12" x="102.68" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="13.36" height="12" x="102.80" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
-<rect width="225.84" height="12" x="116.16" y="0" class="todo"><title>410 KB · 66.04%</title></rect>
+<rect width="102.79" height="12" x="0" y="0" class="named"><title>187 KB · 30.05%</title></rect>
+<rect width="0.12" height="12" x="102.79" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="13.36" height="12" x="102.91" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
+<rect width="225.74" height="12" x="116.26" y="0" class="todo"><title>410 KB · 66%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">30.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">186 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">24 KB</tspan> · <tspan class="todo">410 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">187 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">24 KB</tspan> · <tspan class="todo">410 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1287,7 +1287,7 @@
 <rect width="12" height="12" x="270" y="360" class="todo"><title>0x00476e80 SetFogColor (51 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="360" class="todo"><title>0x00476ec0 GameMain (210 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="360" class="todo"><title>0x00476fa0 GameInitialise (287 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="360" class="todo"><title>0x004770c0 GameClose (189 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="360" class="named"><title>0x004770c0 GameClose (189 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="360" class="named"><title>0x00477180 init_water_table (620 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="360" class="named"><title>0x004773f0 GetRandom (55 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="360" class="named"><title>0x00477430 S_SaveGame (458 bytes)</title></rect>
@@ -2379,7 +2379,7 @@
 <rect width="8.48" height="8.65" x="704.20" y="221.67" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="8.44" height="8.65" x="715.68" y="221.67" class="named"><title>0x00413dc0 ControlSmashableBikeWall (189 bytes)</title></rect>
 <rect width="8.44" height="8.65" x="727.12" y="221.67" class="named"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>
-<rect width="8.44" height="8.65" x="738.56" y="221.67" class="todo"><title>0x004770c0 GameClose (189 bytes)</title></rect>
+<rect width="8.44" height="8.65" x="738.56" y="221.67" class="named"><title>0x004770c0 GameClose (189 bytes)</title></rect>
 <rect width="8.27" height="8.77" x="507.46" y="233.32" class="named"><title>0x00452de0 DrawHealthBar (188 bytes)</title></rect>
 <rect width="8.27" height="8.73" x="507.46" y="245.10" class="named"><title>0x00421ff0 TestHangSwingIn (187 bytes)</title></rect>
 <rect width="8.27" height="8.73" x="507.46" y="256.83" class="named"><title>0x00424820 JumpOffRope (187 bytes)</title></rect>

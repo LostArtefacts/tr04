@@ -435,5 +435,7 @@ extern char *gfStringWad;
 extern uint8 bDoCredits;
 extern char Chris_Menu;
 extern char title_controls_locked_out;
+extern uint8 *gfScriptFile;
+extern uint8 *gfLanguageFile;
 
 #endif
