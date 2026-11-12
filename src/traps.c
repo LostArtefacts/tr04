@@ -602,6 +602,163 @@ void LavaBurn(ITEM_INFO *item)
     }
 }
 
+void ControlRollingBall(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    uint16 tyrot, destyrot;
+    sint16 room_number, velnotadjusted;
+    sint32 fx, fz, h, fh, fhf, bh, bhf, rx, rh, rhf, lx, lh, lhf;
+
+    item = &items[item_number];
+    if (!TriggerActive(item))
+        return;
+    item->fallspeed += 6;
+    item->pos.x_pos += item->item_flags[0] >> 5;
+    item->pos.z_pos += item->item_flags[1] >> 5;
+    item->pos.y_pos += item->fallspeed;
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos) - 512;
+    if (item->pos.y_pos > h) {
+        if (abs(item->fallspeed) > 16) {
+            fz = phd_sqrt(SQUARE(camera.pos.z - item->pos.z_pos) + SQUARE(camera.pos.y - item->pos.y_pos) + SQUARE(camera.pos.x - item->pos.x_pos));
+            if (fz < 0x4000)
+                camera.bounce = -(((0x4000 - fz) * abs(item->fallspeed)) >> W2V_SHIFT);
+            SoundEffect(SFX_BOULDER_FALL, &item->pos, SFX_DEFAULT);
+        }
+        if (item->pos.y_pos - h < 512)
+            item->pos.y_pos = h;
+        if (item->fallspeed > 64)
+            item->fallspeed = -(item->fallspeed >> 2);
+        else {
+            if (abs(item->speed) > 512 && !(GetRandomControl() & 0x1F))
+                item->fallspeed = -(GetRandomControl() % (item->speed >> 3));
+            else
+                item->fallspeed = 0;
+        }
+    }
+    fx = item->pos.x_pos;
+    fz = item->pos.z_pos;
+    rx = fx + 128;
+    lx = fx - 128;
+    floor = GetFloor(fx, item->pos.y_pos, fz + 128, &room_number);
+    fh = GetHeight(floor, fx, item->pos.y_pos, fz + 128) - 512;
+    floor = GetFloor(fx, item->pos.y_pos, fz - 128, &room_number);
+    bh = GetHeight(floor, fx, item->pos.y_pos, fz - 128) - 512;
+    floor = GetFloor(rx, item->pos.y_pos, fz, &room_number);
+    rh = GetHeight(floor, rx, item->pos.y_pos, fz) - 512;
+    floor = GetFloor(lx, item->pos.y_pos, fz, &room_number);
+    lh = GetHeight(floor, lx, item->pos.y_pos, fz) - 512;
+    fx = item->pos.x_pos;
+    fz = item->pos.z_pos;
+    rx = fx + 512;
+    lx = fx - 512;
+    floor = GetFloor(fx, item->pos.y_pos, fz + 512, &room_number);
+    fhf = GetHeight(floor, fx, item->pos.y_pos, fz + 512) - 512;
+    floor = GetFloor(fx, item->pos.y_pos, fz - 512, &room_number);
+    bhf = GetHeight(floor, fx, item->pos.y_pos, fz - 512) - 512;
+    floor = GetFloor(rx, item->pos.y_pos, fz, &room_number);
+    rhf = GetHeight(floor, rx, item->pos.y_pos, fz) - 512;
+    floor = GetFloor(lx, item->pos.y_pos, fz, &room_number);
+    lhf = GetHeight(floor, lx, item->pos.y_pos, fz) - 512;
+    if (item->pos.y_pos - h > -256 || item->pos.y_pos - fhf >= 512 || item->pos.y_pos - rhf >= 512 ||
+        item->pos.y_pos - bhf >= 512 || item->pos.y_pos - lhf >= 512) {
+        velnotadjusted = 0;
+        if (fh - h <= 256) {
+            if (fhf - h < -1024 || fh - h < -256) {
+                if (item->item_flags[1] > 0) {
+                    item->item_flags[1] = -item->item_flags[1] >> 1;
+                    item->pos.z_pos = (item->pos.z_pos & -512) | 512;
+                } else if (!item->item_flags[1] && item->item_flags[0])
+                    item->pos.z_pos = (item->pos.z_pos & -512) | 512;
+            } else if (fh != h)
+                item->item_flags[1] += (sint16)((fh - h) >> 1);
+            else
+                velnotadjusted++;
+        }
+        if (bh - h > 256)
+            velnotadjusted++;
+        else if (bhf - h < -1024 || bh - h < -256) {
+            if (item->item_flags[1] < 0) {
+                item->item_flags[1] = -item->item_flags[1] >> 1;
+                item->pos.z_pos = (item->pos.z_pos & -512) | 512;
+            } else if (!item->item_flags[1] && item->item_flags[0])
+                item->pos.z_pos = (item->pos.z_pos & -512) | 512;
+        } else if (bh != h)
+            item->item_flags[1] -= (sint16)((bh - h) >> 1);
+        else
+            velnotadjusted++;
+        if (velnotadjusted == 2) {
+            if (abs(item->item_flags[1]) > 64)
+                item->item_flags[1] -= item->item_flags[1] >> 6;
+            else
+                item->item_flags[1] = 0;
+        }
+        velnotadjusted = 0;
+        if (lh - h <= 256) {
+            if (lhf - h < -1024 || lh - h < -256) {
+                if (item->item_flags[0] < 0) {
+                    item->item_flags[0] = -item->item_flags[0] >> 1;
+                    item->pos.x_pos = (item->pos.x_pos & -512) | 512;
+                } else if (!item->item_flags[0] && item->item_flags[1])
+                    item->pos.x_pos = (item->pos.x_pos & -512) | 512;
+            } else if (lh != h)
+                item->item_flags[0] -= (sint16)((lh - h) >> 1);
+            else
+                velnotadjusted++;
+        }
+        if (rh - h <= 256) {
+            if (rhf - h < -1024 || rh - h < -256) {
+                if (item->item_flags[0] > 0) {
+                    item->item_flags[0] = -item->item_flags[0] >> 1;
+                    item->pos.x_pos = (item->pos.x_pos & -512) | 512;
+                } else if (!item->item_flags[0] && item->item_flags[1])
+                    item->pos.x_pos = (item->pos.x_pos & -512) | 512;
+            } else if (rh != h)
+                item->item_flags[0] += (sint16)((rh - h) >> 1);
+            else
+                velnotadjusted++;
+        }
+        if (velnotadjusted == 2) {
+            if (abs(item->item_flags[0]) > 64)
+                item->item_flags[0] -= item->item_flags[0] >> 6;
+            else
+                item->item_flags[0] = 0;
+        }
+    }
+    GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (item->room_number != room_number)
+        ItemNewRoom(item_number, room_number);
+    if (item->item_flags[0] > 3072)
+        item->item_flags[0] = 3072;
+    else if (item->item_flags[0] < -3072)
+        item->item_flags[0] = -3072;
+    if (item->item_flags[1] > 3072)
+        item->item_flags[1] = 3072;
+    else if (item->item_flags[1] < -3072)
+        item->item_flags[1] = -3072;
+    tyrot = item->pos.y_rot;
+    if (item->item_flags[1] || item->item_flags[0])
+        destyrot = (uint16)phd_atan(item->item_flags[1], item->item_flags[0]);
+    else
+        destyrot = item->pos.y_rot;
+    if (tyrot != destyrot) {
+        if (((uint16)(destyrot - tyrot) & 0x7FFF) < 512)
+            tyrot = destyrot;
+        else if (destyrot > tyrot && destyrot - tyrot < 32768)
+            tyrot += 512;
+        else
+            tyrot -= 512;
+        item->pos.y_rot = tyrot;
+    }
+    item->pos.x_rot -= (abs(item->item_flags[1]) + abs(item->item_flags[0])) >> 1;
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    TestTriggers(trigger_index, 1, 0);
+}
+
 void RollingBallCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
 {
     ITEM_INFO *item;

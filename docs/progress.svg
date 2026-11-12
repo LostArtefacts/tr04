@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="256.94" height="12" x="0" y="0" class="named"><title>1163 · 75.13%</title></rect>
 <rect width="0.66" height="12" x="256.94" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="19.66" height="12" x="257.60" y="0" class="nonmatching"><title>89 · 5.75%</title></rect>
-<rect width="64.73" height="12" x="277.27" y="0" class="todo"><title>293 · 18.93%</title></rect>
+<rect width="19.88" height="12" x="257.60" y="0" class="nonmatching"><title>90 · 5.81%</title></rect>
+<rect width="64.51" height="12" x="277.49" y="0" class="todo"><title>292 · 18.86%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1163</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">89</tspan> · <tspan class="todo">293</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1163</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">90</tspan> · <tspan class="todo">292</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="143.49" height="12" x="0" y="0" class="named"><title>261 KB · 41.96%</title></rect>
 <rect width="0.13" height="12" x="143.49" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="36.33" height="12" x="143.62" y="0" class="nonmatching"><title>66 KB · 10.62%</title></rect>
-<rect width="162.05" height="12" x="179.95" y="0" class="todo"><title>295 KB · 47.38%</title></rect>
+<rect width="37.29" height="12" x="143.62" y="0" class="nonmatching"><title>68 KB · 10.90%</title></rect>
+<rect width="161.09" height="12" x="180.91" y="0" class="todo"><title>293 KB · 47.10%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">42.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">261 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">66 KB</tspan> · <tspan class="todo">295 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">261 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">68 KB</tspan> · <tspan class="todo">293 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -206,7 +206,7 @@
 <rect width="12" height="12" x="555" y="30" class="todo"><title>0x00414d80 FlameControl (340 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="30" class="named"><title>0x00414ee0 LaraBurn (69 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="30" class="named"><title>0x00414f30 LavaBurn (108 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="30" class="todo"><title>0x00414fa0 ControlRollingBall (1753 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="30" class="nonmatching"><title>0x00414fa0 ControlRollingBall (1753 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="30" class="named"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="30" class="todo"><title>0x00415750 ControlJobySpike (389 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="30" class="named"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
@@ -1683,7 +1683,7 @@
 <rect width="26.93" height="25.78" x="150.56" y="268.73" class="todo"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
 <rect width="26.93" height="25.61" x="150.56" y="297.52" class="todo"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
 <rect width="26.93" height="25.12" x="150.56" y="326.12" class="todo"><title>0x00410530 DoSethEffects (1758 bytes)</title></rect>
-<rect width="26.93" height="25.05" x="150.56" y="354.25" class="todo"><title>0x00414fa0 ControlRollingBall (1753 bytes)</title></rect>
+<rect width="26.93" height="25.05" x="150.56" y="354.25" class="nonmatching"><title>0x00414fa0 ControlRollingBall (1753 bytes)</title></rect>
 <rect width="26.93" height="24.63" x="150.56" y="382.30" class="named"><title>0x0044ec10 DrawRooms (1724 bytes)</title></rect>
 <rect width="26.93" height="24.53" x="150.56" y="409.93" class="todo"><title>0x00496ae0 SW_TriSetupGA (1717 bytes)</title></rect>
 <rect width="26.93" height="24.53" x="150.56" y="437.47" class="todo"><title>0x004984e0 SW_TriSetupGTA (1717 bytes)</title></rect>
