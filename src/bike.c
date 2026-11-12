@@ -16,6 +16,8 @@
 #include "newinv.h"
 #include "savegame.h"
 #include "effects.h"
+#include "debris.h"
+#include "draw.h"
 #include "specific/input.h"
 #include "specific/3dmath.h"
 #include "specific/audio.h"
@@ -334,6 +336,89 @@ sint32 DoDynamics_bike(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
             return fallspeed;
     }
     return fallspeed;
+}
+
+void BikeCollideStaticObjects(sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 height)
+{
+    MESH_INFO *mesh;
+    STATIC_INFO *sinfo;
+    ROOM_INFO *r;
+    PHD_VECTOR pos;
+    sint16 *doors;
+    sint32 i, j;
+    sint16 room_count;
+
+    pos.x = x;
+    pos.y = y;
+    pos.z = z;
+    BikeBounds[1] = x - 256;
+    BikeBounds[0] = x + 256;
+    BikeBounds[3] = y - height;
+    BikeBounds[2] = y;
+    BikeBounds[5] = z - 256;
+    BikeBounds[4] = z + 256;
+    room_count = 1;
+    broomies[0] = room_number;
+    doors = room[room_number].door;
+    if (doors) {
+        for (i = *doors++; i > 0; i--, doors += 16) {
+            for (j = 0; j < room_count; j++) {
+                if (broomies[j] == *doors)
+                    break;
+            }
+            if (j == room_count) {
+                broomies[room_count] = *doors;
+                room_count++;
+            }
+        }
+    }
+    for (i = 0; i < room_count; i++) {
+        r = &room[broomies[i]];
+        mesh = r->mesh;
+        for (j = r->num_meshes; j > 0; j--, mesh++) {
+            sinfo = &static_objects[mesh->static_number];
+            if (mesh->Flags & 1) {
+                if (mesh->static_number >= SHATTER0 && mesh->static_number <= SHATTER9) {
+                    CollidedStaticBounds[3] = mesh->y + sinfo->y_minc;
+                    CollidedStaticBounds[2] = mesh->y + sinfo->y_maxc;
+                    switch (mesh->y_rot) {
+                    case -0x8000:
+                        CollidedStaticBounds[1] = mesh->x - sinfo->x_maxc;
+                        CollidedStaticBounds[0] = mesh->x - sinfo->x_minc;
+                        CollidedStaticBounds[5] = mesh->z - sinfo->z_maxc;
+                        CollidedStaticBounds[4] = mesh->z - sinfo->z_minc;
+                        break;
+                    case -0x4000:
+                        CollidedStaticBounds[1] = mesh->x - sinfo->z_maxc;
+                        CollidedStaticBounds[0] = mesh->x - sinfo->z_minc;
+                        CollidedStaticBounds[5] = mesh->z + sinfo->x_minc;
+                        CollidedStaticBounds[4] = mesh->z + sinfo->x_maxc;
+                        break;
+                    case 0x4000:
+                        CollidedStaticBounds[1] = mesh->x + sinfo->z_minc;
+                        CollidedStaticBounds[0] = mesh->x + sinfo->z_maxc;
+                        CollidedStaticBounds[5] = mesh->z - sinfo->x_maxc;
+                        CollidedStaticBounds[4] = mesh->z - sinfo->x_minc;
+                        break;
+                    default:
+                        CollidedStaticBounds[1] = mesh->x + sinfo->x_minc;
+                        CollidedStaticBounds[0] = mesh->x + sinfo->x_maxc;
+                        CollidedStaticBounds[5] = mesh->z + sinfo->z_minc;
+                        CollidedStaticBounds[4] = mesh->z + sinfo->z_maxc;
+                        break;
+                    }
+                    if (BikeBounds[0] > CollidedStaticBounds[1] && BikeBounds[1] < CollidedStaticBounds[0] && BikeBounds[2] > CollidedStaticBounds[3] && BikeBounds[3] < CollidedStaticBounds[2] && BikeBounds[4] > CollidedStaticBounds[5] && BikeBounds[5] < CollidedStaticBounds[4]) {
+                        ShatterObject(0, mesh, -128, broomies[i], 0);
+                        SoundEffect(SFX_HIT_ROCK, (PHD_3DPOS *)&pos, SFX_DEFAULT);
+                        SmashedMeshRoom[SmashedMeshCount] = broomies[i];
+                        SmashedMesh[SmashedMeshCount] = mesh;
+                        SmashedMeshCount++;
+                        mesh->Flags &= ~1;
+                    }
+                }
+            }
+        }
+    }
 }
 
 sint32 BikeBaddieCollision(ITEM_INFO *bike)

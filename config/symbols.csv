@@ -2232,7 +2232,9 @@ address,size,name,symbol
 0x004bfc04,1,ScaleFlag,_ScaleFlag
 0x004bfc05,1,PulseCnt,_PulseCnt
 0x004bfc08,4,bikefspeed,_bikefspeed
+0x004bfc0c,24,CollidedStaticBounds,_CollidedStaticBounds
 0x004bfc24,1,dont_exit_bike,_dont_exit_bike
+0x004bfc28,24,BikeBounds,_BikeBounds
 0x004bfc68,1,dont_exit_jeep,_dont_exit_jeep
 0x004bfc78,4,cutseq_num,_cutseq_num
 0x004bfc7c,4,cutseq_trig,_cutseq_trig
@@ -2595,9 +2597,11 @@ address,size,name,symbol
 0x007fe2e8,4,OutsideRoomOffsets,_OutsideRoomOffsets
 0x007fe300,40,flip_stats,_flip_stats
 0x007fe330,,ClosestCoord,_ClosestCoord
+0x007fe360,32,SmashedMeshRoom,_SmashedMeshRoom
 0x007fe380,4,ClosestDist,_ClosestDist
 0x007fe384,4,OutsideRoomTable,_OutsideRoomTable
 0x007fe3a0,1024,ItemNewRooms,_ItemNewRooms
+0x007fe7a0,64,SmashedMesh,_SmashedMesh
 0x007fe7e0,2,FXType,_FXType
 0x007fe7e2,2,IsRoomOutsideNo,_IsRoomOutsideNo
 0x007fe7e4,4,CutSceneTriggered,_CutSceneTriggered

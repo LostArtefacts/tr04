@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="164.70" height="12" x="0" y="0" class="named"><title>745 · 48.16%</title></rect>
-<rect width="0.44" height="12" x="164.70" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="5.97" height="12" x="165.14" y="0" class="nonmatching"><title>27 · 1.75%</title></rect>
-<rect width="170.89" height="12" x="171.11" y="0" class="todo"><title>773 · 49.97%</title></rect>
+<rect width="164.92" height="12" x="0" y="0" class="named"><title>746 · 48.22%</title></rect>
+<rect width="0.44" height="12" x="164.92" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="5.97" height="12" x="165.36" y="0" class="nonmatching"><title>27 · 1.75%</title></rect>
+<rect width="170.67" height="12" x="171.33" y="0" class="todo"><title>772 · 49.90%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">48.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">745</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">27</tspan> · <tspan class="todo">773</tspan></text>
+<text text-anchor="end" x="522" y="7.50">48.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">746</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">27</tspan> · <tspan class="todo">772</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="72.16" height="12" x="0" y="0" class="named"><title>131 KB · 21.10%</title></rect>
-<rect width="0.12" height="12" x="72.16" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.93" height="12" x="72.28" y="0" class="nonmatching"><title>14 KB · 2.32%</title></rect>
-<rect width="261.79" height="12" x="80.21" y="0" class="todo"><title>475 KB · 76.55%</title></rect>
+<rect width="72.59" height="12" x="0" y="0" class="named"><title>132 KB · 21.22%</title></rect>
+<rect width="0.12" height="12" x="72.59" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.93" height="12" x="72.71" y="0" class="nonmatching"><title>14 KB · 2.32%</title></rect>
+<rect width="261.36" height="12" x="80.64" y="0" class="todo"><title>474 KB · 76.42%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">21.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">131 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">475 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">21.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">132 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">474 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1067,7 +1067,7 @@
 <rect width="12" height="12" x="720" y="285" class="nonmatching"><title>0x00465660 TestHeight (269 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="285" class="nonmatching"><title>0x00465770 DoDynamics_bike (109 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="300" class="todo"><title>0x004657e0 BikeDynamics (1940 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="300" class="todo"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="300" class="named"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="300" class="named"><title>0x00466290 BikeBaddieCollision (529 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="300" class="todo"><title>0x004664b0 AnimateBike (1004 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="300" class="named"><title>0x004668e0 CanGetOff_bike (460 bytes)</title></rect>
@@ -1836,7 +1836,7 @@
 <rect width="17.16" height="17.57" x="551.57" y="21.42" class="todo"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
 <rect width="17.05" height="17.57" x="571.73" y="21.42" class="todo"><title>0x00409d20 TestBlockPull (775 bytes)</title></rect>
 <rect width="17.05" height="17.57" x="591.77" y="21.42" class="todo"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
-<rect width="16.96" height="17.57" x="611.82" y="21.42" class="todo"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>
+<rect width="16.96" height="17.57" x="611.82" y="21.42" class="named"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>
 <rect width="16.87" height="17.57" x="631.78" y="21.42" class="todo"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
 <rect width="16.83" height="17.57" x="651.65" y="21.42" class="todo"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
 <rect width="16.72" height="17.57" x="671.47" y="21.42" class="nonmatching"><title>0x004317a0 OptomiseSkinningData (760 bytes)</title></rect>

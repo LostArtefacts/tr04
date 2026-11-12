@@ -2,6 +2,8 @@
 #define DEBRIS_H
 
 #include "3dglodef.h"
+#include "sphere.h"
+#include "room.h"
 
 typedef struct debris_struct {
     void *TextInfo;
@@ -30,7 +32,17 @@ typedef struct debris_struct {
     sint32 flags;
 } DEBRIS_STRUCT;
 
+typedef struct shatter_item {
+    SPHERE Sphere;
+    ITEM_LIGHT *il;
+    sint16 *meshp;
+    sint32 Bit;
+    sint16 YRot;
+    sint16 Flags;
+} SHATTER_ITEM;
+
 sint32 GetFreeDebris(void);
+void ShatterObject(SHATTER_ITEM *shatter_item, MESH_INFO *StaticMesh, sint16 Num, sint16 RoomNumber, sint32 NoXZVel);
 void UpdateDebris(void);
 void TriggerDebris(GAME_VECTOR *pos, void *TextInfo, sint16 *Offsets, sint32 *Vels, sint16 rgb);
 

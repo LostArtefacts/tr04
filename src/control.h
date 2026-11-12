@@ -94,4 +94,8 @@ extern sint16 ItemNewRooms[256][2];
 extern sint16 SkyPos;
 extern sint16 SkyPos2;
 
+extern MESH_INFO *SmashedMesh[16];
+extern sint16 SmashedMeshRoom[16];
+extern sint16 SmashedMeshCount;
+
 #endif
