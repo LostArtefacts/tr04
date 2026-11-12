@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="164.92" height="12" x="0" y="0" class="named"><title>746 · 48.22%</title></rect>
-<rect width="0.44" height="12" x="164.92" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="5.97" height="12" x="165.36" y="0" class="nonmatching"><title>27 · 1.75%</title></rect>
-<rect width="170.67" height="12" x="171.33" y="0" class="todo"><title>772 · 49.90%</title></rect>
+<rect width="165.14" height="12" x="0" y="0" class="named"><title>747 · 48.29%</title></rect>
+<rect width="0.44" height="12" x="165.14" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="5.97" height="12" x="165.58" y="0" class="nonmatching"><title>27 · 1.75%</title></rect>
+<rect width="170.45" height="12" x="171.55" y="0" class="todo"><title>771 · 49.84%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">48.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">746</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">27</tspan> · <tspan class="todo">772</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">747</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">27</tspan> · <tspan class="todo">771</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="72.59" height="12" x="0" y="0" class="named"><title>132 KB · 21.22%</title></rect>
-<rect width="0.12" height="12" x="72.59" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.93" height="12" x="72.71" y="0" class="nonmatching"><title>14 KB · 2.32%</title></rect>
-<rect width="261.36" height="12" x="80.64" y="0" class="todo"><title>474 KB · 76.42%</title></rect>
+<rect width="73.02" height="12" x="0" y="0" class="named"><title>132 KB · 21.35%</title></rect>
+<rect width="0.12" height="12" x="73.02" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.93" height="12" x="73.14" y="0" class="nonmatching"><title>14 KB · 2.32%</title></rect>
+<rect width="260.93" height="12" x="81.07" y="0" class="todo"><title>473 KB · 76.30%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">21.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">132 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">474 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">21.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">132 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">473 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1083,7 +1083,7 @@
 <rect width="12" height="12" x="210" y="300" class="named"><title>0x00467b90 JeepCheckGetOut (203 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="300" class="named"><title>0x00467c60 DoDynamics_jeep (139 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="300" class="todo"><title>0x00467cf0 JeepDynamics (2010 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="300" class="todo"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="300" class="named"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="300" class="named"><title>0x004687e0 JeepBaddieCollision (754 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="300" class="named"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="300" class="named"><title>0x00468b80 DoShift (634 bytes)</title></rect>
@@ -1832,7 +1832,7 @@
 <rect width="17.40" height="17.57" x="470.35" y="21.42" class="todo"><title>0x0045ed30 BuildOutsideTable (791 bytes)</title></rect>
 <rect width="17.31" height="17.57" x="490.75" y="21.42" class="todo"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
 <rect width="17.31" height="17.57" x="511.06" y="21.42" class="todo"><title>0x00478b50 SetupLight (787 bytes)</title></rect>
-<rect width="17.20" height="17.57" x="531.37" y="21.42" class="todo"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>
+<rect width="17.20" height="17.57" x="531.37" y="21.42" class="named"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>
 <rect width="17.16" height="17.57" x="551.57" y="21.42" class="todo"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
 <rect width="17.05" height="17.57" x="571.73" y="21.42" class="todo"><title>0x00409d20 TestBlockPull (775 bytes)</title></rect>
 <rect width="17.05" height="17.57" x="591.77" y="21.42" class="todo"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>

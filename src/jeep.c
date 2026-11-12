@@ -14,6 +14,8 @@
 #include "laramisc.h"
 #include "traps.h"
 #include "effects.h"
+#include "debris.h"
+#include "draw.h"
 #include "specific/3dmath.h"
 #include "specific/audio.h"
 #include "specific/function_stubs.h"
@@ -225,6 +227,89 @@ sint32 DoDynamics_jeep(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
             return fallspeed;
     }
     return fallspeed;
+}
+
+void JeepCollideStaticObjects(sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 height)
+{
+    MESH_INFO *mesh;
+    STATIC_INFO *sinfo;
+    ROOM_INFO *r;
+    PHD_VECTOR pos;
+    sint16 *doors;
+    sint32 i, j;
+    sint16 room_count;
+
+    pos.x = x;
+    pos.y = y;
+    pos.z = z;
+    JeepBounds1 = x - 256;
+    JeepBounds0 = x + 256;
+    JeepBounds3 = y - height;
+    JeepBounds2 = y;
+    JeepBounds5 = z - 256;
+    JeepBounds4 = z + 256;
+    room_count = 1;
+    jroomies[0] = room_number;
+    doors = room[room_number].door;
+    if (doors) {
+        for (i = *doors++; i > 0; i--, doors += 16) {
+            for (j = 0; j < room_count; j++) {
+                if (jroomies[j] == *doors)
+                    break;
+            }
+            if (j == room_count) {
+                jroomies[room_count] = *doors;
+                room_count++;
+            }
+        }
+    }
+    for (i = 0; i < room_count; i++) {
+        r = &room[jroomies[i]];
+        mesh = r->mesh;
+        for (j = r->num_meshes; j > 0; j--, mesh++) {
+            if (mesh->Flags & 1) {
+                if (mesh->static_number >= SHATTER0 && mesh->static_number <= SHATTER9) {
+                    sinfo = &static_objects[mesh->static_number];
+                    JeepStaticBounds3 = mesh->y + sinfo->y_minc;
+                    JeepStaticBounds2 = mesh->y + sinfo->y_maxc;
+                    switch (mesh->y_rot) {
+                    case -0x8000:
+                        JeepStaticBounds1 = mesh->x - sinfo->x_maxc;
+                        JeepStaticBounds0 = mesh->x - sinfo->x_minc;
+                        JeepStaticBounds5 = mesh->z - sinfo->z_maxc;
+                        JeepStaticBounds4 = mesh->z - sinfo->z_minc;
+                        break;
+                    case -0x4000:
+                        JeepStaticBounds1 = mesh->x - sinfo->z_maxc;
+                        JeepStaticBounds0 = mesh->x - sinfo->z_minc;
+                        JeepStaticBounds5 = mesh->z + sinfo->x_minc;
+                        JeepStaticBounds4 = mesh->z + sinfo->x_maxc;
+                        break;
+                    case 0x4000:
+                        JeepStaticBounds1 = mesh->x + sinfo->z_minc;
+                        JeepStaticBounds0 = mesh->x + sinfo->z_maxc;
+                        JeepStaticBounds5 = mesh->z - sinfo->x_maxc;
+                        JeepStaticBounds4 = mesh->z - sinfo->x_minc;
+                        break;
+                    default:
+                        JeepStaticBounds1 = mesh->x + sinfo->x_minc;
+                        JeepStaticBounds0 = mesh->x + sinfo->x_maxc;
+                        JeepStaticBounds5 = mesh->z + sinfo->z_minc;
+                        JeepStaticBounds4 = mesh->z + sinfo->z_maxc;
+                        break;
+                    }
+                    if (JeepBounds0 > JeepStaticBounds1 && JeepBounds1 < JeepStaticBounds0 && JeepBounds2 > JeepStaticBounds3 && JeepBounds3 < JeepStaticBounds2 && JeepBounds4 > JeepStaticBounds5 && JeepBounds5 < JeepStaticBounds4) {
+                        ShatterObject(0, mesh, -128, jroomies[i], 0);
+                        SoundEffect(SFX_HIT_ROCK, (PHD_3DPOS *)&pos, SFX_DEFAULT);
+                        SmashedMeshRoom[SmashedMeshCount] = jroomies[i];
+                        SmashedMesh[SmashedMeshCount] = mesh;
+                        SmashedMeshCount++;
+                        mesh->Flags &= ~1;
+                    }
+                }
+            }
+        }
+    }
 }
 
 void JeepBaddieCollision(ITEM_INFO *item)
