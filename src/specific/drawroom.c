@@ -3,6 +3,8 @@
 #include "3dmath.h"
 #include "gamemain.h"
 #include "../effect2.h"
+#include "winmain.h"
+#include "dxshell.h"
 
 void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
 {
@@ -169,6 +171,64 @@ void FindBucket(sint32 tpage, D3DTLBUMPVERTEX **Vpp, sint32 **nVtxpp)
     Bucket[biggest].nVtx = 0;
     *Vpp = Bucket[biggest].vtx;
     *nVtxpp = &Bucket[biggest].nVtx;
+}
+
+void DrawBuckets(void)
+{
+    TEXTUREBUCKET *bucket;
+    sint32 i;
+
+    if (!App.BumpMapping) {
+        for (i = 0; i < 20; i++) {
+            bucket = &Bucket[i];
+            DrawBucket(bucket);
+        }
+    } else {
+        IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_FOGENABLE, 0);
+        IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ALPHABLENDENABLE, 0);
+        IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_SRCBLEND, D3DBLEND_ONE);
+        IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_DESTBLEND, D3DBLEND_ZERO);
+        IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_COLOROP, D3DTOP_SELECTARG1);
+        IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_COLORARG2, D3DTA_CURRENT);
+        IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_ALPHAOP, D3DTOP_SELECTARG1);
+        IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_ALPHAARG2, D3DTA_CURRENT);
+        for (i = 0; i < 20; i++) {
+            bucket = &Bucket[i];
+            if (Textures[bucket->tpage].bump && bucket->nVtx) {
+                DXAttempt(IDirect3DDevice3_SetTexture(App.dx.lpD3DDevice, 0, Textures[Textures[bucket->tpage].bumptpage].tex));
+                IDirect3DDevice3_DrawPrimitive(App.dx.lpD3DDevice, D3DPT_TRIANGLELIST, FVF, bucket->vtx, bucket->nVtx, D3DDP_DONOTCLIP);
+                DrawPrimitiveCnt++;
+            }
+        }
+        IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_FOGENABLE, 1);
+        IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ALPHABLENDENABLE, 1);
+        IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_SRCBLEND, D3DBLEND_DESTCOLOR);
+        IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_DESTBLEND, D3DBLEND_SRCCOLOR);
+        IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_COLOROP, D3DTOP_MODULATE);
+        IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_COLORARG2, D3DTA_DIFFUSE);
+        IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_ALPHAARG2, D3DTA_DIFFUSE);
+        for (i = 0; i < 20; i++) {
+            bucket = &Bucket[i];
+            if (Textures[bucket->tpage].bump && bucket->nVtx) {
+                DXAttempt(IDirect3DDevice3_SetTexture(App.dx.lpD3DDevice, 0, Textures[bucket->tpage].tex));
+                IDirect3DDevice3_DrawPrimitive(App.dx.lpD3DDevice, D3DPT_TRIANGLELIST, FVF, bucket->vtx, bucket->nVtx, D3DDP_DONOTUPDATEEXTENTS | D3DDP_DONOTCLIP);
+                bucket->nVtx = 0;
+                bucket->tpage = -1;
+                DrawPrimitiveCnt++;
+            }
+        }
+        IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ALPHABLENDENABLE, 0);
+        for (i = 0; i < 20; i++) {
+            bucket = &Bucket[i];
+            if (!Textures[bucket->tpage].bump && bucket->nVtx) {
+                DXAttempt(IDirect3DDevice3_SetTexture(App.dx.lpD3DDevice, 0, Textures[bucket->tpage].tex));
+                IDirect3DDevice3_DrawPrimitive(App.dx.lpD3DDevice, D3DPT_TRIANGLELIST, FVF, bucket->vtx, bucket->nVtx, D3DDP_DONOTUPDATEEXTENTS | D3DDP_DONOTCLIP);
+                bucket->nVtx = 0;
+                bucket->tpage = -1;
+                DrawPrimitiveCnt++;
+            }
+        }
+    }
 }
 
 void CalcTriFaceNormal(D3DVECTOR *p1, D3DVECTOR *p2, D3DVECTOR *p3, D3DVECTOR *N)

@@ -25,7 +25,23 @@ typedef struct texturebucket {
     D3DTLBUMPVERTEX vtx[544];
 } TEXTUREBUCKET;
 
+typedef struct TEXTURE {
+    LPDIRECT3DTEXTURE2 tex;
+    LPDIRECTDRAWSURFACE4 surface;
+    uint32 xoff;
+    uint32 yoff;
+    uint32 width;
+    uint32 height;
+    sint32 tpage;
+    uint8 bump;
+    sint32 bumptpage;
+} TEXTURE;
+
 extern TEXTUREBUCKET Bucket[20];
+#define FVF (D3DFVF_TEX2 | D3DFVF_SPECULAR | D3DFVF_DIFFUSE | D3DFVF_XYZRHW)
+
+extern TEXTURE *Textures;
+extern sint32 nTextures;
 extern float clip_left;
 extern float clip_top;
 extern float clip_right;
