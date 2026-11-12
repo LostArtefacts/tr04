@@ -897,6 +897,61 @@ sint32 Load_and_Init_Cutseq(sint32 num)
     return 0;
 }
 
+void init_cutseq_actors(char *data, sint32 resident)
+{
+    char *packed;
+    char *resident_addr;
+    sint32 pda_nodes, offset;
+    sint32 i;
+
+    resident_addr = GLOBAL_resident_depack_buffers;
+    lastcamnum = -1;
+    GLOBAL_playing_cutseq = 0;
+    GLOBAL_numcutseq_frames = GLOBAL_cutme->numframes;
+    for (i = 0; i < GLOBAL_cutme->numactors; i++) {
+        offset = GLOBAL_cutme->actor_data[i].offset;
+        packed = &data[offset];
+        pda_nodes = GLOBAL_cutme->actor_data[i].nodes;
+        if (resident) {
+            actor_pnodes[i] = (PACKNODE *)resident_addr;
+            resident_addr += (pda_nodes + 1) * sizeof(PACKNODE);
+        } else
+            actor_pnodes[i] = (PACKNODE *)cutseq_malloc((pda_nodes + 1) * sizeof(PACKNODE));
+        InitPackNodes((NODELOADHEADER *)packed, actor_pnodes[i], packed, pda_nodes + 1);
+        memset(&duff_item[i], 0, sizeof(ITEM_INFO));
+        duff_item[i].il.ambient = lara_item->il.ambient;
+        duff_item[i].il.fcnt = -1;
+        duff_item[i].il.room_number = -1;
+        duff_item[i].il.RoomChange = 0;
+        duff_item[i].il.nCurrentLights = 0;
+        duff_item[i].il.nPrevLights = 0;
+        duff_item[i].il.pCurrentLights = &duff_item[i].il.CurrentLights;
+        duff_item[i].il.pPrevLights = &duff_item[i].il.PrevLights;
+        duff_item[i].pos.x_pos = GLOBAL_cutme->orgx;
+        duff_item[i].pos.y_pos = GLOBAL_cutme->orgy;
+        duff_item[i].pos.z_pos = GLOBAL_cutme->orgz;
+        duff_item[i].pos.x_rot = 0;
+        duff_item[i].pos.y_rot = 0;
+        duff_item[i].pos.z_rot = 0;
+        duff_item[i].room_number = 0;
+    }
+    offset = GLOBAL_cutme->camera_offset;
+    packed = &data[offset];
+    if (resident)
+        camera_pnodes = (PACKNODE *)resident_addr;
+    else
+        camera_pnodes = (PACKNODE *)cutseq_malloc(2 * sizeof(PACKNODE));
+    InitPackNodes((NODELOADHEADER *)packed, camera_pnodes, packed, 2);
+    GLOBAL_playing_cutseq = 1;
+    GLOBAL_cutseq_frame = 0;
+    DelsHandyTeleportLara(GLOBAL_cutme->orgx, GLOBAL_cutme->orgy, GLOBAL_cutme->orgz, 0);
+    camera.pos.x = lara_item->pos.x_pos;
+    camera.pos.y = lara_item->pos.y_pos;
+    camera.pos.z = lara_item->pos.z_pos;
+    camera.pos.room_number = lara_item->room_number;
+    InitialiseHair();
+}
+
 void init_voncroy_meshbits(sint32 num)
 {
     cutseq_meshswapbits[num] = 0x240080;

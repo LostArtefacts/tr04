@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="248.77" height="12" x="0" y="0" class="named"><title>1126 · 72.74%</title></rect>
-<rect width="0.66" height="12" x="248.77" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.45" height="12" x="249.43" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
-<rect width="75.12" height="12" x="266.88" y="0" class="todo"><title>340 · 21.96%</title></rect>
+<rect width="248.99" height="12" x="0" y="0" class="named"><title>1127 · 72.80%</title></rect>
+<rect width="0.66" height="12" x="248.99" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.45" height="12" x="249.65" y="0" class="nonmatching"><title>79 · 5.10%</title></rect>
+<rect width="74.90" height="12" x="267.10" y="0" class="todo"><title>339 · 21.90%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">72.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1126</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">340</tspan></text>
+<text text-anchor="end" x="522" y="7.50">73.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1127</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">79</tspan> · <tspan class="todo">339</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="131.14" height="12" x="0" y="0" class="named"><title>239 KB · 38.34%</title></rect>
-<rect width="0.13" height="12" x="131.14" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.18" height="12" x="131.27" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
-<rect width="179.54" height="12" x="162.46" y="0" class="todo"><title>327 KB · 52.50%</title></rect>
+<rect width="131.42" height="12" x="0" y="0" class="named"><title>239 KB · 38.43%</title></rect>
+<rect width="0.13" height="12" x="131.42" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="31.18" height="12" x="131.55" y="0" class="nonmatching"><title>57 KB · 9.12%</title></rect>
+<rect width="179.26" height="12" x="162.74" y="0" class="todo"><title>326 KB · 52.42%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">38.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">239 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">327 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">38.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">239 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">57 KB</tspan> · <tspan class="todo">326 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1174,7 +1174,7 @@
 <rect width="12" height="12" x="75" y="330" class="named"><title>0x0046cc40 cutseq_kill_item (109 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="330" class="named"><title>0x0046ccb0 cutseq_restore_item (109 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="330" class="named"><title>0x0046cd20 Load_and_Init_Cutseq (260 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="330" class="todo"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="330" class="named"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="330" class="named"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="330" class="named"><title>0x0046d040 DelsHandyTeleportLara (279 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="330" class="named"><title>0x0046d160 nail_intelligent_object (82 bytes)</title></rect>
@@ -1970,7 +1970,7 @@
 <rect width="13.80" height="14.34" x="364.57" y="361.38" class="named"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
 <rect width="13.80" height="14.32" x="364.57" y="378.72" class="todo"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
 <rect width="13.80" height="14.32" x="364.57" y="396.04" class="todo"><title>0x0049bdb0 Func49bdb0 (513 bytes)</title></rect>
-<rect width="13.80" height="14.23" x="364.57" y="413.36" class="todo"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
+<rect width="13.80" height="14.23" x="364.57" y="413.36" class="named"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
 <rect width="13.80" height="14.21" x="364.57" y="430.59" class="named"><title>0x00456580 ControlMapper (509 bytes)</title></rect>
 <rect width="13.80" height="14.21" x="364.57" y="447.79" class="named"><title>0x004622c0 PulleyCollision (509 bytes)</title></rect>
 <rect width="13.91" height="14.08" x="381.36" y="96.69" class="todo"><title>0x0049a4e0 Func49a4e0 (509 bytes)</title></rect>
