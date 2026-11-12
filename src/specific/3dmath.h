@@ -53,6 +53,7 @@ void phd_RotYXZ(PHD_ANGLE ry, PHD_ANGLE rx, PHD_ANGLE rz);
 void phd_TranslateAbs(sint32 x, sint32 y, sint32 z);
 void phd_GetVectorAngles(sint32 x, sint32 y, sint32 z, PHD_ANGLE *dest);
 void nullsub_14(void);
+void j_nullsub_14(void);
 
 extern sint32 phdtan2[8];
 extern sint16 phdtantab[2050];
