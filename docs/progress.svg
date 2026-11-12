@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="155.41" height="12" x="0" y="0" class="named"><title>703 · 45.44%</title></rect>
-<rect width="0.44" height="12" x="155.41" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="155.86" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="181.50" height="12" x="160.50" y="0" class="todo"><title>821 · 53.07%</title></rect>
+<rect width="155.64" height="12" x="0" y="0" class="named"><title>704 · 45.51%</title></rect>
+<rect width="0.44" height="12" x="155.64" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="156.08" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="181.28" height="12" x="160.72" y="0" class="todo"><title>820 · 53.01%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">45.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">703</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">821</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">704</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">820</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="64.25" height="12" x="0" y="0" class="named"><title>117 KB · 18.79%</title></rect>
-<rect width="0.12" height="12" x="64.25" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="64.37" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="270.39" height="12" x="71.61" y="0" class="todo"><title>490 KB · 79.06%</title></rect>
+<rect width="64.35" height="12" x="0" y="0" class="named"><title>117 KB · 18.82%</title></rect>
+<rect width="0.12" height="12" x="64.35" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="64.47" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="270.28" height="12" x="71.72" y="0" class="todo"><title>490 KB · 79.03%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">18.8%</text>
+<text text-anchor="end" x="522" y="24.50">18.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">117 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">490 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -482,7 +482,7 @@
 <rect width="12" height="12" x="195" y="120" class="named"><title>0x0042ddf0 InitialiseNewWeapon (308 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="120" class="todo"><title>0x0042df30 LaraTargetInfo (414 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="120" class="todo"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="120" class="todo"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="120" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="120" class="todo"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="120" class="todo"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="120" class="todo"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
@@ -2372,7 +2372,7 @@
 <rect width="8.50" height="8.64" x="623.75" y="221.72" class="nonmatching"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
 <rect width="8.50" height="8.64" x="635.25" y="221.72" class="named"><title>0x00421a10 lara_as_crawlb (190 bytes)</title></rect>
 <rect width="8.50" height="8.64" x="646.75" y="221.72" class="named"><title>0x00422810 LaraTestClimbStance (190 bytes)</title></rect>
-<rect width="8.50" height="8.64" x="658.24" y="221.72" class="todo"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
+<rect width="8.50" height="8.64" x="658.24" y="221.72" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
 <rect width="8.50" height="8.64" x="669.74" y="221.72" class="todo"><title>0x00435920 SetupSplash (190 bytes)</title></rect>
 <rect width="8.50" height="8.64" x="681.24" y="221.72" class="todo"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
 <rect width="8.50" height="8.64" x="692.74" y="221.72" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>

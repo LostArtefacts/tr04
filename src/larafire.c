@@ -4,6 +4,9 @@
 #include "lara1gun.h"
 #include "lara2gun.h"
 #include "laraflar.h"
+#include "specific/3dmath.h"
+#include "box.h"
+#include "sound.h"
 
 sint32 CheckForHoldingState(sint32 state)
 {
@@ -49,6 +52,23 @@ void InitialiseNewWeapon(void)
         lara.left_arm.frame_base = lara.right_arm.frame_base = anims[lara_item->anim_number].frame_ptr;
         break;
     }
+}
+
+void find_target_point(ITEM_INFO *item, GAME_VECTOR *target)
+{
+    sint32 x, y, z, c, s;
+    sint16 *bounds;
+
+    bounds = GetBestFrame(item);
+    x = (bounds[0] + bounds[1]) / 2;
+    y = (bounds[2] + (bounds[3] - bounds[2]) / 3);
+    z = (bounds[4] + bounds[5]) / 2;
+    c = phd_cos(item->pos.y_rot);
+    s = phd_sin(item->pos.y_rot);
+    target->x = item->pos.x_pos + ((x * c + z * s) >> W2V_SHIFT);
+    target->y = item->pos.y_pos + y;
+    target->z = item->pos.z_pos + ((z * c - x * s) >> W2V_SHIFT);
+    target->room_number = item->room_number;
 }
 
 sint32 WeaponObject(sint32 weapon_type)
