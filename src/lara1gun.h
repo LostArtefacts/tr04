@@ -11,5 +11,6 @@ void TriggerUnderwaterExplosion(ITEM_INFO *item, sint32 vehicle);
 void DoGrenadeDamageOnBaddie(ITEM_INFO *baddie, ITEM_INFO *item);
 void draw_shotgun(sint32 weapon_type);
 void FireShotgun(void);
+void FireGrenade(void);
 
 #endif

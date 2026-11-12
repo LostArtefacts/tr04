@@ -11,6 +11,7 @@
 #include "savegame.h"
 #include "specific/function_stubs.h"
 #include "sound.h"
+#include "specific/3dmath.h"
 
 void draw_shotgun_meshes(sint32 weapon_type)
 {
@@ -87,6 +88,76 @@ void FireShotgun(void)
         SoundEffect(weapons[WEAPON_SHOTGUN].sample_num, &lara_item->pos, SFX_DEFAULT);
         savegame.Game.AmmoUsed++;
     }
+}
+
+void FireGrenade(void)
+{
+    ITEM_INFO *item;
+    PHD_VECTOR pos;
+    sint16 *ammo;
+    FLOOR_INFO *floor;
+    sint32 x, y, z, lp;
+    sint16 item_number;
+
+    ammo = get_current_ammo_pointer(WEAPON_GRENADE);
+    if (!*ammo)
+        return;
+    lara.has_fired = 1;
+    item_number = CreateItem();
+    if (item_number == NO_ITEM)
+        return;
+    item = &items[item_number];
+    item->shade = -0x3df0;
+    item->object_number = GRENADE;
+    item->room_number = lara_item->room_number;
+    pos.x = 0;
+    pos.y = 276;
+    pos.z = 80;
+    GetLaraJointPos(&pos, 11);
+    item->pos.x_pos = x = pos.x;
+    item->pos.y_pos = y = pos.y;
+    item->pos.z_pos = z = pos.z;
+    floor = GetFloor(pos.x, pos.y, pos.z, &item->room_number);
+    if (GetHeight(floor, pos.x, pos.y, pos.z) < pos.y) {
+        item->pos.x_pos = lara_item->pos.x_pos;
+        item->pos.y_pos = pos.y;
+        item->pos.z_pos = lara_item->pos.z_pos;
+        item->room_number = lara_item->room_number;
+    }
+    pos.x = 0;
+    pos.y = 1204;
+    pos.z = 80;
+    GetLaraJointPos(&pos, 11);
+    SmokeCountL = 32;
+    SmokeWeapon = WEAPON_GRENADE;
+    if (lara_item->mesh_bits) {
+        for (lp = 0; lp < 5; lp++)
+            TriggerGunSmoke(x, y, z, pos.x - x, pos.y - y, pos.z - z, 1, WEAPON_GRENADE, 32);
+    }
+    InitialiseItem(item_number);
+    item->pos.x_rot = lara_item->pos.x_rot + lara.left_arm.x_rot;
+    item->pos.y_rot = lara_item->pos.y_rot + lara.left_arm.y_rot;
+    item->pos.z_rot = 0;
+    if (!lara.left_arm.lock) {
+        item->pos.x_rot += lara.torso_x_rot;
+        item->pos.y_rot += lara.torso_y_rot;
+    }
+    item->speed = 128;
+    item->fallspeed = (-128 * phd_sin(item->pos.x_rot)) >> W2V_SHIFT;
+    item->current_anim_state = item->pos.x_rot;
+    item->goal_anim_state = item->pos.y_rot;
+    item->required_anim_state = 0;
+    item->hit_points = 120;
+    AddActiveItem(item_number);
+    if (*ammo != -1)
+        (*ammo)--;
+    if (lara.grenade_type_carried & 8)
+        item->item_flags[0] = 1;
+    else if (lara.grenade_type_carried & 0x10)
+        item->item_flags[0] = 2;
+    else
+        item->item_flags[0] = 3;
+    savegame.Game.AmmoUsed++;
 }
 
 void draw_shotgun(sint32 weapon_type)
