@@ -417,6 +417,9 @@ enum gf_strings {
 
 extern uint32 GameTimer;
 extern uint16 gfLevelFlags;
+extern PHD_VECTOR load_cam;
+extern PHD_VECTOR load_target;
+extern uint8 load_roomnum;
 extern char gfLayer1Vel;
 extern char gfLayer2Vel;
 extern char gfUVRotate;

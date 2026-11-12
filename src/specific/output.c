@@ -17,6 +17,8 @@
 #include "../camera.h"
 #include "../health.h"
 #include "../deltapak.h"
+#include "../draw.h"
+#include "../lara.h"
 
 void S_InitialisePolyList(void)
 {
@@ -221,6 +223,47 @@ void ProjectTrainVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip, sint32 x)
         clip++;
         v++;
     }
+}
+
+void RenderLoadPic(sint32 unused)
+{
+    sint32 poisoned;
+
+    camera.pos.y = load_cam.y;
+    camera.pos.x = load_cam.x;
+    camera.pos.z = load_cam.z;
+    lara_item->pos.x_pos = camera.pos.x;
+    lara_item->pos.y_pos = camera.pos.y;
+    lara_item->pos.z_pos = camera.pos.z;
+    camera.target.x = load_target.x;
+    camera.target.y = load_target.y;
+    camera.target.z = load_target.z;
+    camera.pos.room_number = load_roomnum;
+    if (camera.pos.room_number == 255)
+        return;
+    KillActiveBaddies((ITEM_INFO *)0xABCDEF);
+    SetFade(255, 0);
+    poisoned = lara.poisoned;
+    FadeScreenHeight = 0;
+    lara.poisoned = 0;
+    GlobalFogOff = 1;
+    BinocularRange = 0;
+    if (App.dx.InScene)
+        _EndScene();
+    do {
+        phd_LookAt(camera.pos.x, camera.pos.y, camera.pos.z, camera.target.x, camera.target.y, camera.target.z, 0);
+        S_InitialisePolyList();
+        RenderIt(camera.pos.room_number);
+        S_OutputPolyList();
+        S_DumpScreen();
+    } while (DoFade != 2);
+    phd_LookAt(camera.pos.x, camera.pos.y, camera.pos.z, camera.target.x, camera.target.y, camera.target.z, 0);
+    S_InitialisePolyList();
+    RenderIt(camera.pos.room_number);
+    S_OutputPolyList();
+    S_DumpScreen();
+    lara.poisoned = poisoned;
+    GlobalFogOff = 0;
 }
 
 HRESULT DDCopyBitmap(LPDIRECTDRAWSURFACE4 surf, HBITMAP hbm, sint32 x, sint32 y, sint32 dx, sint32 dy)

@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="243.47" height="12" x="0" y="0" class="named"><title>1102 · 71.19%</title></rect>
 <rect width="0.44" height="12" x="243.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="14.58" height="12" x="243.91" y="0" class="nonmatching"><title>66 · 4.26%</title></rect>
-<rect width="83.51" height="12" x="258.49" y="0" class="todo"><title>378 · 24.42%</title></rect>
+<rect width="14.80" height="12" x="243.91" y="0" class="nonmatching"><title>67 · 4.33%</title></rect>
+<rect width="83.29" height="12" x="258.71" y="0" class="todo"><title>377 · 24.35%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">71.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1102</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">66</tspan> · <tspan class="todo">378</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1102</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">67</tspan> · <tspan class="todo">377</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="121.09" height="12" x="0" y="0" class="named"><title>220 KB · 35.41%</title></rect>
 <rect width="0.12" height="12" x="121.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="26.12" height="12" x="121.21" y="0" class="nonmatching"><title>47 KB · 7.64%</title></rect>
-<rect width="194.67" height="12" x="147.33" y="0" class="todo"><title>353 KB · 56.92%</title></rect>
+<rect width="26.33" height="12" x="121.21" y="0" class="nonmatching"><title>48 KB · 7.70%</title></rect>
+<rect width="194.46" height="12" x="147.54" y="0" class="todo"><title>353 KB · 56.86%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">35.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">220 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">47 KB</tspan> · <tspan class="todo">353 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">220 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">48 KB</tspan> · <tspan class="todo">353 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1350,7 +1350,7 @@
 <rect width="12" height="12" x="465" y="375" class="named"><title>0x00480070 S_AnimateTextures (429 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="375" class="nonmatching"><title>0x00480220 ProjectTrainVerts (237 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="375" class="todo"><title>0x00480310 phd_PutPolygons_train (596 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="375" class="todo"><title>0x00480570 RenderLoadPic (388 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="375" class="nonmatching"><title>0x00480570 RenderLoadPic (388 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="375" class="named"><title>0x00480700 DDCopyBitmap (326 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="375" class="named"><title>0x00480850 _LoadBitmap (132 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="375" class="named"><title>0x004808e0 do_boot_screen (364 bytes)</title></rect>
@@ -2080,7 +2080,7 @@
 <rect width="12.47" height="12.04" x="413.49" y="404.88" class="todo"><title>0x00415750 ControlJobySpike (389 bytes)</title></rect>
 <rect width="12.47" height="12.04" x="413.49" y="419.92" class="todo"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
 <rect width="12.47" height="12.04" x="413.49" y="434.96" class="named"><title>0x0046e340 ACMHandleNotifications (389 bytes)</title></rect>
-<rect width="12.47" height="12.01" x="413.49" y="449.99" class="todo"><title>0x00480570 RenderLoadPic (388 bytes)</title></rect>
+<rect width="12.47" height="12.01" x="413.49" y="449.99" class="nonmatching"><title>0x00480570 RenderLoadPic (388 bytes)</title></rect>
 <rect width="12.66" height="11.79" x="428.97" y="128.58" class="named"><title>0x004078a0 TriggerHarpyFlame (387 bytes)</title></rect>
 <rect width="12.66" height="11.79" x="444.63" y="128.58" class="named"><title>0x00494270 DXInitKeyboard (387 bytes)</title></rect>
 <rect width="12.50" height="11.79" x="460.29" y="128.58" class="named"><title>0x0045fb10 TestCollision (382 bytes)</title></rect>

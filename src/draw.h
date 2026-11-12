@@ -22,6 +22,7 @@ typedef struct static_info {
 } STATIC_INFO;
 
 void DrawAnimatingItem(ITEM_INFO *item);
+void RenderIt(sint16 CurrentRoom);
 void phd_PopMatrix_I(void);
 void phd_PushMatrix_I(void);
 void phd_RotY_I(sint16 ang);

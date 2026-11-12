@@ -25,6 +25,8 @@ extern OBJECT_VECTOR *sound_effects;
 extern sint32 number_sound_effects;
 extern void (*effect_routines[47])(ITEM_INFO *item);
 
+void KillActiveBaddies(ITEM_INFO *item);
+
 #define UNFLIPFLAG 0x80
 #define FLIPFLAG 0x40
 
