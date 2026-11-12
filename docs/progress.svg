@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.49" height="12" x="0" y="0" class="named"><title>1170 · 75.58%</title></rect>
 <rect width="0.66" height="12" x="258.49" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="22.31" height="12" x="259.15" y="0" class="nonmatching"><title>101 · 6.52%</title></rect>
-<rect width="60.53" height="12" x="281.47" y="0" class="todo"><title>274 · 17.70%</title></rect>
+<rect width="22.53" height="12" x="259.15" y="0" class="nonmatching"><title>102 · 6.59%</title></rect>
+<rect width="60.31" height="12" x="281.69" y="0" class="todo"><title>273 · 17.64%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1170</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">101</tspan> · <tspan class="todo">274</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1170</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">102</tspan> · <tspan class="todo">273</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="147.53" height="12" x="0" y="0" class="named"><title>269 KB · 43.14%</title></rect>
 <rect width="0.13" height="12" x="147.53" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="47.28" height="12" x="147.66" y="0" class="nonmatching"><title>86 KB · 13.82%</title></rect>
-<rect width="147.06" height="12" x="194.94" y="0" class="todo"><title>268 KB · 43%</title></rect>
+<rect width="48.26" height="12" x="147.66" y="0" class="nonmatching"><title>88 KB · 14.11%</title></rect>
+<rect width="146.08" height="12" x="195.92" y="0" class="todo"><title>266 KB · 42.71%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">43.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">269 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">86 KB</tspan> · <tspan class="todo">268 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">269 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">88 KB</tspan> · <tspan class="todo">266 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -982,7 +982,7 @@
 <rect width="12" height="12" x="195" y="270" class="named"><title>0x00459640 ModelRigidRope (246 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="270" class="named"><title>0x00459740 SetPendulumPoint (142 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="270" class="named"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="270" class="todo"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="270" class="nonmatching"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="270" class="todo"><title>0x00459f90 ProjectRopePoints (334 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="270" class="named"><title>0x0045a0e0 CheckSumValid (31 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="270" class="named"><title>0x0045a100 sgInitialiseHub (163 bytes)</title></rect>
@@ -1681,7 +1681,7 @@
 <rect width="26.97" height="26.16" x="150.54" y="210.72" class="todo"><title>0x00460420 InitialiseSpotCam (1833 bytes)</title></rect>
 <rect width="26.97" height="26.10" x="150.54" y="239.88" class="todo"><title>0x004963a0 SW_TriSetupG (1829 bytes)</title></rect>
 <rect width="26.97" height="25.75" x="150.54" y="268.98" class="nonmatching"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
-<rect width="26.97" height="25.57" x="150.54" y="297.73" class="todo"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
+<rect width="26.97" height="25.57" x="150.54" y="297.73" class="nonmatching"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
 <rect width="26.97" height="25.09" x="150.54" y="326.30" class="todo"><title>0x00410530 DoSethEffects (1758 bytes)</title></rect>
 <rect width="26.97" height="25.02" x="150.54" y="354.39" class="nonmatching"><title>0x00414fa0 ControlRollingBall (1753 bytes)</title></rect>
 <rect width="26.97" height="24.60" x="150.54" y="382.40" class="named"><title>0x0044ec10 DrawRooms (1724 bytes)</title></rect>

@@ -43,5 +43,6 @@ void init_all_ropes(void);
 extern ROPE_STRUCT RopeList[5];
 extern sint32 nRope;
 extern PENDULUM CurrentPendulum;
+extern PENDULUM NullPendulum;
 
 #endif

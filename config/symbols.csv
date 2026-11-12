@@ -2322,6 +2322,7 @@ address,size,name,symbol
 0x004bf690,4,slots_used,_slots_used
 0x004bf698,12,PolePosR,_PolePosR
 0x004bf6a8,4,nRope,_nRope
+0x004bf6b0,32,NullPendulum,_NullPendulum
 0x004bf6d4,4,SGpoint,_SGpoint
 0x004bf6d8,4,SGcount,_SGcount
 0x004bf6dc,4,sound_active,_sound_active
