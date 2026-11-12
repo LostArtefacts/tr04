@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="227.26" height="12" x="0" y="0" class="named"><title>1028 · 66.45%</title></rect>
-<rect width="0.44" height="12" x="227.26" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="227.71" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="105.89" height="12" x="236.11" y="0" class="todo"><title>479 · 30.96%</title></rect>
+<rect width="227.48" height="12" x="0" y="0" class="named"><title>1029 · 66.52%</title></rect>
+<rect width="0.44" height="12" x="227.48" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="227.93" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="105.67" height="12" x="236.33" y="0" class="todo"><title>478 · 30.90%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">66.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1028</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">479</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1029</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">478</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="99.45" height="12" x="0" y="0" class="named"><title>180 KB · 29.08%</title></rect>
-<rect width="0.12" height="12" x="99.45" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="99.57" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="232.28" height="12" x="109.72" y="0" class="todo"><title>421 KB · 67.92%</title></rect>
+<rect width="99.55" height="12" x="0" y="0" class="named"><title>181 KB · 29.11%</title></rect>
+<rect width="0.12" height="12" x="99.55" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="99.67" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="232.18" height="12" x="109.82" y="0" class="todo"><title>421 KB · 67.89%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">29.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">180 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">421 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">181 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">421 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -870,7 +870,7 @@
 <rect width="12" height="12" x="15" y="240" class="named"><title>0x00450e60 GetBoundsAccurate (124 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="240" class="named"><title>0x00450ee0 GetBestFrame (48 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="240" class="todo"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="240" class="todo"><title>0x00451180 UpdateSkyLightning (181 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="240" class="named"><title>0x00451180 UpdateSkyLightning (181 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="240" class="todo"><title>0x00451240 RenderIt (711 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="240" class="todo"><title>0x00451510 LoadGameflow (525 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="240" class="todo"><title>0x00451770 DoGameflow (1624 bytes)</title></rect>
@@ -2397,7 +2397,7 @@
 <rect width="8.28" height="8.50" x="507.42" y="396.31" class="todo"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
 <rect width="8.28" height="8.50" x="507.42" y="407.80" class="named"><title>0x00456420 AnimateWaterfalls (182 bytes)</title></rect>
 <rect width="8.28" height="8.45" x="507.42" y="419.30" class="named"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
-<rect width="8.28" height="8.45" x="507.42" y="430.75" class="todo"><title>0x00451180 UpdateSkyLightning (181 bytes)</title></rect>
+<rect width="8.28" height="8.45" x="507.42" y="430.75" class="named"><title>0x00451180 UpdateSkyLightning (181 bytes)</title></rect>
 <rect width="8.28" height="8.40" x="507.42" y="442.20" class="named"><title>0x00433c70 DetatchSpark (180 bytes)</title></rect>
 <rect width="8.28" height="8.40" x="507.42" y="453.60" class="named"><title>0x00456360 ControlTriggerTriggerer (180 bytes)</title></rect>
 <rect width="8.17" height="8.47" x="518.69" y="233.33" class="named"><title>0x0042f6f0 DoFlareInHand (179 bytes)</title></rect>

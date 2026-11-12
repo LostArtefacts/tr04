@@ -2611,6 +2611,7 @@ address,size,name,symbol
 0x007fd2e9,1,gfUVRotate,_gfUVRotate
 0x007fd2ec,4,gfFilenameOffset,_gfFilenameOffset
 0x007fd2f0,4,trainmappos,_trainmappos
+0x007fd2f8,6,LightningRGB,_LightningRGB
 0x007fd300,4,outside,_outside
 0x007fd304,4,number_draw_rooms,_number_draw_rooms
 0x007fd320,3072,IMstack,_IMstack
@@ -2631,6 +2632,7 @@ address,size,name,symbol
 0x007fe124,4,IMptr,_IMptr
 0x007fe128,2,SkyPos,_SkyPos
 0x007fe12c,4,camera_underwater,_camera_underwater
+0x007fe130,6,LightningRGBs,_LightningRGBs
 0x007fe138,4,outside_right,_outside_right
 0x007fe140,12,interpolated_bounds,_interpolated_bounds
 0x007fe14c,2,dLightningRand,_dLightningRand

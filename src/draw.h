@@ -46,10 +46,14 @@ void GetRoomBounds(void);
 void S_InsertRoom(sint16 room_number);
 void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame);
 void CalculateObjectLightingLara(void);
+void UpdateSkyLightning(void);
 
 extern STATIC_INFO static_objects[60];
 extern sint16 LightningCount;
 extern sint16 dLightningRand;
+extern sint16 LightningRand;
+extern uint16 LightningRGB[3];
+extern uint16 LightningRGBs[3];
 extern sint32 *IMptr;
 extern sint16 interpolated_bounds[6];
 extern sint32 IM_rate;

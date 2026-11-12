@@ -397,3 +397,29 @@ sint16 *GetBestFrame(ITEM_INFO *item)
     else
         return frmptr[1];
 }
+
+void UpdateSkyLightning(void)
+{
+    sint32 i;
+
+    if (LightningCount > 0) {
+        LightningCount--;
+        if (!LightningCount) {
+            LightningRand = (GetRandomDraw() & 0x7F) + 400;
+            dLightningRand = 0;
+        } else {
+            dLightningRand = GetRandomDraw() & 0x1FF;
+            LightningRand += (dLightningRand - LightningRand) >> 1;
+        }
+    } else {
+        if (LightningRand >= 4)
+            LightningRand -= LightningRand >> 2;
+        else
+            LightningRand = 0;
+    }
+    for (i = 0; i < 3; i++) {
+        LightningRGB[i] = LightningRGBs[i] + ((LightningRGBs[i] * LightningRand) >> 8);
+        if (LightningRGB[i] > 255)
+            LightningRGB[i] = 255;
+    }
+}
