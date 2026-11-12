@@ -123,3 +123,9 @@ void combine_KeyItem7(sint32 flag)
     lara.keyitems |= 0x40;
     lara.keyitemscombo &= ~0x3000;
 }
+
+void combine_KeyItem8(sint32 flag)
+{
+    lara.keyitems |= 0x80;
+    lara.keyitemscombo &= ~0xC000;
+}
