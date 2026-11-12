@@ -88,6 +88,24 @@ sint32 do_these_objects_combine(sint32 obj1, sint32 obj2)
     return 0;
 }
 
+void combine_these_two_objects(sint16 obj1, sint16 obj2)
+{
+    sint32 i;
+    sint16 obj;
+
+    for (i = 0; i < 23; i++) {
+        if (dels_handy_combine_table[i].item1 == obj1 && dels_handy_combine_table[i].item2 == obj2)
+            break;
+        if (dels_handy_combine_table[i].item1 == obj2 && dels_handy_combine_table[i].item2 == obj1)
+            break;
+    }
+    obj = dels_handy_combine_table[i].combined_item;
+    dels_handy_combine_table[i].combine_routine(0);
+    construct_object_list();
+    setup_objectlist_startposition(obj);
+    handle_object_changeover(RING_INVENTORY);
+}
+
 void combine_revolver_lasersight(sint32 flag)
 {
     if (!flag) {
