@@ -64,6 +64,7 @@ extern sint32 GLOBAL_playing_cutseq;
 extern NEW_CUTSCENE *GLOBAL_cutme;
 extern PACKNODE *camera_pnodes;
 extern sint32 cutseq_num;
+extern sint32 cutseq_trig;
 extern sint32 GLOBAL_cutseq_frame;
 extern sint16 old_lara_holster;
 extern ITEM_INFO *horus_item_thing;

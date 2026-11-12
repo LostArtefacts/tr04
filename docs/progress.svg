@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="207.15" height="12" x="0" y="0" class="named"><title>937 · 60.57%</title></rect>
-<rect width="0.44" height="12" x="207.15" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="207.59" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="127.34" height="12" x="214.66" y="0" class="todo"><title>576 · 37.23%</title></rect>
+<rect width="207.37" height="12" x="0" y="0" class="named"><title>938 · 60.63%</title></rect>
+<rect width="0.44" height="12" x="207.37" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="207.81" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="127.12" height="12" x="214.88" y="0" class="todo"><title>575 · 37.17%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">60.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">937</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">576</tspan></text>
+<text text-anchor="end" x="522" y="7.50">60.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">938</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">575</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="89.71" height="12" x="0" y="0" class="named"><title>163 KB · 26.23%</title></rect>
-<rect width="0.12" height="12" x="89.71" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="89.83" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="242.78" height="12" x="99.22" y="0" class="todo"><title>440 KB · 70.99%</title></rect>
+<rect width="89.73" height="12" x="0" y="0" class="named"><title>163 KB · 26.24%</title></rect>
+<rect width="0.12" height="12" x="89.73" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="89.85" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="242.77" height="12" x="99.23" y="0" class="todo"><title>440 KB · 70.98%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">163 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">440 KB</tspan></text>
@@ -1011,7 +1011,7 @@
 <rect width="12" height="12" x="630" y="270" class="todo"><title>0x0045f0a0 SetupGame (99 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="270" class="todo"><title>0x0045f110 InitTarget (132 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="270" class="named"><title>0x0045f1a0 ClearFootPrints (31 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="270" class="todo"><title>0x0045f1c0 reset_cutseq_vars (34 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="270" class="named"><title>0x0045f1c0 reset_cutseq_vars (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="270" class="named"><title>0x0045f1f0 SoundEffect (1524 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="270" class="named"><title>0x0045f7f0 GetPanVolume (365 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="270" class="decompiled"><title>0x0045f960 Func45f960 (170 bytes)</title></rect>
@@ -2984,7 +2984,7 @@
 <rect width="3.72" height="3.53" x="709.66" y="384.26" class="named"><title>0x00450560 phd_PopMatrix_I (34 bytes)</title></rect>
 <rect width="3.72" height="3.53" x="716.39" y="384.26" class="named"><title>0x004535c0 InitialiseBurningFloor (34 bytes)</title></rect>
 <rect width="3.72" height="3.53" x="723.11" y="384.26" class="named"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
-<rect width="3.72" height="3.53" x="729.83" y="384.26" class="todo"><title>0x0045f1c0 reset_cutseq_vars (34 bytes)</title></rect>
+<rect width="3.72" height="3.53" x="729.83" y="384.26" class="named"><title>0x0045f1c0 reset_cutseq_vars (34 bytes)</title></rect>
 <rect width="3.72" height="3.53" x="736.55" y="384.26" class="named"><title>0x0046c5e0 twentyone_end (34 bytes)</title></rect>
 <rect width="3.72" height="3.53" x="743.28" y="384.26" class="named"><title>0x0046c9f0 do_spade_meshswap (34 bytes)</title></rect>
 <rect width="3.32" height="3.94" x="675.72" y="390.79" class="named"><title>0x0046ca20 do_backpack_meshswap (34 bytes)</title></rect>

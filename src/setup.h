@@ -5,5 +5,6 @@
 
 void InitialiseGameFlags(void);
 void ClearFootPrints(void);
+void reset_cutseq_vars(void);
 
 #endif

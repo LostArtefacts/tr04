@@ -27,3 +27,12 @@ void ClearFootPrints(void)
         FootPrint[i].Active = 0;
     FootPrintNum = 0;
 }
+
+void reset_cutseq_vars(void)
+{
+    cutseq_num = 0;
+    cutseq_trig = 0;
+    GLOBAL_playing_cutseq = 0;
+    GLOBAL_cutseq_frame = 0;
+    SetFadeClip(0, 1);
+}
