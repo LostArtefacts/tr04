@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="166.25" height="12" x="0" y="0" class="named"><title>752 · 48.61%</title></rect>
-<rect width="0.44" height="12" x="166.25" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="166.69" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="168.90" height="12" x="173.10" y="0" class="todo"><title>764 · 49.39%</title></rect>
+<rect width="166.47" height="12" x="0" y="0" class="named"><title>753 · 48.67%</title></rect>
+<rect width="0.44" height="12" x="166.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="166.91" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="168.68" height="12" x="173.32" y="0" class="todo"><title>763 · 49.32%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">48.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">752</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">764</tspan></text>
+<text text-anchor="end" x="522" y="7.50">48.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">753</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">763</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="74.33" height="12" x="0" y="0" class="named"><title>135 KB · 21.73%</title></rect>
-<rect width="0.12" height="12" x="74.33" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="74.45" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="258.90" height="12" x="83.10" y="0" class="todo"><title>470 KB · 75.70%</title></rect>
+<rect width="74.53" height="12" x="0" y="0" class="named"><title>135 KB · 21.79%</title></rect>
+<rect width="0.12" height="12" x="74.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="74.66" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="258.69" height="12" x="83.31" y="0" class="todo"><title>469 KB · 75.64%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">21.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">135 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">470 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">135 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">469 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -780,7 +780,7 @@
 <rect width="12" height="12" x="165" y="210" class="named"><title>0x00446fb0 UpdateLaraRoom (94 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="210" class="named"><title>0x00447010 GetTiltType (412 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="210" class="todo"><title>0x004471b0 LaraBaddieCollision (689 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="210" class="todo"><title>0x00447470 CreatureCollision (377 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="210" class="named"><title>0x00447470 CreatureCollision (377 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="210" class="named"><title>0x004475f0 ObjectCollision (100 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="210" class="named"><title>0x00447660 ObjectCollisionNoBigPush (100 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="210" class="named"><title>0x004476d0 TrapCollision (117 bytes)</title></rect>
@@ -2090,7 +2090,7 @@
 <rect width="12.44" height="11.80" x="537.63" y="128.63" class="todo"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
 <rect width="12.44" height="11.80" x="553.07" y="128.63" class="todo"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12.41" height="11.80" x="568.51" y="128.63" class="todo"><title>0x0048c280 DoScreenFade (379 bytes)</title></rect>
-<rect width="12.34" height="11.80" x="583.92" y="128.63" class="todo"><title>0x00447470 CreatureCollision (377 bytes)</title></rect>
+<rect width="12.34" height="11.80" x="583.92" y="128.63" class="named"><title>0x00447470 CreatureCollision (377 bytes)</title></rect>
 <rect width="12.31" height="11.80" x="599.26" y="128.63" class="named"><title>0x00423d60 lara_col_polestat (376 bytes)</title></rect>
 <rect width="12.24" height="11.80" x="614.57" y="128.63" class="todo"><title>0x0043c420 construct_combine_object_list (374 bytes)</title></rect>
 <rect width="12.21" height="11.80" x="629.81" y="128.63" class="todo"><title>0x004103b0 TriggerSethMissileFlame (373 bytes)</title></rect>
