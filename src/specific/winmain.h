@@ -161,6 +161,7 @@ sint32 DXToggleFullScreen(void);
 void WinDisplayString(sint32 x, sint32 y, char *string, ...);
 uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex);
 void WinClose(void);
+sint32 CheckMMXTechnology(void);
 
 extern WINAPP App;
 extern DXINFO *G_dxinfo;

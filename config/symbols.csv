@@ -1380,7 +1380,7 @@ address,size,name,symbol
 0x0048e860,105,Sync,_Sync
 0x0048e8d0,229,ClearSurfaces,_ClearSurfaces
 0x0048e9c0,1117,WinMain,_WinMain@16
-0x0048ee50,136,CheckMMXTechnology,_CheckMMXTechnology
+0x0048ee50,196,CheckMMXTechnology,_CheckMMXTechnology
 0x0048ef20,68,WinClose,_WinClose
 0x0048ef70,121,WinProcMsg,_WinProcMsg
 0x0048eff0,1078,WinProcessCommands,_WinProcessCommands
