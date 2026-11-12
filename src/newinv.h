@@ -241,6 +241,7 @@ void dels_give_lara_items_cheat(void);
 void construct_combine_object_list(void);
 void do_debounced_joystick_poo(void);
 
+extern sint32 InventoryActive;
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];
 extern sint16 options_table[NUM_INVOBJ];

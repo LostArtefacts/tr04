@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="201.18" height="12" x="0" y="0" class="named"><title>910 · 58.82%</title></rect>
-<rect width="0.44" height="12" x="201.18" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="201.62" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="133.75" height="12" x="208.25" y="0" class="todo"><title>605 · 39.11%</title></rect>
+<rect width="201.40" height="12" x="0" y="0" class="named"><title>911 · 58.89%</title></rect>
+<rect width="0.44" height="12" x="201.40" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="201.84" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="133.53" height="12" x="208.47" y="0" class="todo"><title>604 · 39.04%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">59.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">910</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">605</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">911</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">604</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="87" height="12" x="0" y="0" class="named"><title>158 KB · 25.44%</title></rect>
-<rect width="0.12" height="12" x="87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="87.12" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="245.96" height="12" x="96.04" y="0" class="todo"><title>446 KB · 71.92%</title></rect>
+<rect width="87.10" height="12" x="0" y="0" class="named"><title>158 KB · 25.47%</title></rect>
+<rect width="0.12" height="12" x="87.10" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="87.22" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="245.87" height="12" x="96.13" y="0" class="todo"><title>446 KB · 71.89%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">158 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">446 KB</tspan></text>
@@ -1323,7 +1323,7 @@
 <rect width="12" height="12" x="60" y="375" class="todo"><title>0x0047b170 DoOptions (5429 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="375" class="todo"><title>0x0047c6b0 DoStatScreen (868 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="375" class="todo"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="375" class="todo"><title>0x0047cc60 S_PauseMenu (178 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="375" class="named"><title>0x0047cc60 S_PauseMenu (178 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="375" class="todo"><title>0x0047cd20 S_LoadSave (238 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="375" class="todo"><title>0x0047ce10 DoBar (1479 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="375" class="named"><title>0x0047d3e0 S_DrawDashBar (57 bytes)</title></rect>
@@ -2402,7 +2402,7 @@
 <rect width="8.26" height="8.37" x="507.48" y="453.63" class="named"><title>0x0042f6f0 DoFlareInHand (179 bytes)</title></rect>
 <rect width="8.18" height="8.45" x="518.74" y="233.36" class="named"><title>0x00459450 Normalise (179 bytes)</title></rect>
 <rect width="8.14" height="8.45" x="529.92" y="233.36" class="named"><title>0x0044bb20 GetDoor (178 bytes)</title></rect>
-<rect width="8.14" height="8.45" x="541.06" y="233.36" class="todo"><title>0x0047cc60 S_PauseMenu (178 bytes)</title></rect>
+<rect width="8.14" height="8.45" x="541.06" y="233.36" class="named"><title>0x0047cc60 S_PauseMenu (178 bytes)</title></rect>
 <rect width="8.09" height="8.45" x="552.19" y="233.36" class="named"><title>0x004397f0 CreateBubble (177 bytes)</title></rect>
 <rect width="8.09" height="8.45" x="563.28" y="233.36" class="named"><title>0x00458ad0 phd_GetMatrixAngles (177 bytes)</title></rect>
 <rect width="8.09" height="8.45" x="574.37" y="233.36" class="named"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>

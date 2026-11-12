@@ -162,5 +162,6 @@ extern DXINFO *G_dxinfo;
 extern DXPTR *G_dxptr;
 extern HWND G_hwnd;
 extern sint16 FPCW;
+extern sint32 thread_ended;
 
 #endif

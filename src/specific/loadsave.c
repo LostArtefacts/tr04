@@ -12,6 +12,10 @@
 #include "polyinsert.h"
 #include "output.h"
 #include "3dmath.h"
+#include "specificfx.h"
+#include "time.h"
+#include "../newinv.h"
+#include "../control.h"
 
 void CreateMonoScreen(void)
 {
@@ -35,6 +39,47 @@ void CheckKeyConflicts(void)
             }
         }
     }
+}
+
+sint32 S_PauseMenu(void)
+{
+    sint32 fade;
+    sint32 ret;
+
+    fade = 0;
+    CreateMonoScreen();
+    S_DisplayPauseMenu(1);
+    InventoryActive = 1;
+    while (1) {
+        S_InitialisePolyList();
+        if (!fade)
+            S_UpdateInput();
+        else
+            dbinput = 0;
+        SetDebounce = 1;
+        S_DisplayMonoScreen();
+        ret = S_DisplayPauseMenu(0);
+        UpdatePulseColour();
+        S_OutputPolyList();
+        S_DumpScreen();
+        if (ret == 1)
+            break;
+        if (ret == 8) {
+            fade = 8;
+            ret = 0;
+            SetFade(0, 255);
+        }
+        if (fade && DoFade == 2) {
+            ret = fade;
+            break;
+        }
+        if (thread_ended)
+            break;
+    }
+    TIME_Init();
+    FreeMonoScreen();
+    InventoryActive = 0;
+    return ret;
 }
 
 void S_DrawDashBar(sint32 pos)
