@@ -1038,6 +1038,55 @@ void lara_col_monkey180(ITEM_INFO *item, COLL_INFO *coll)
     lara_col_monkeyswing(item, coll);
 }
 
+void lara_col_polestat(ITEM_INFO *item, COLL_INFO *coll)
+{
+    FLOOR_INFO *floor;
+    sint16 room_num;
+
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_FASTFALL;
+        return;
+    }
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    if (item->anim_number != ANIM_POLESTAT)
+        return;
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -384;
+    coll->bad_ceiling = 192;
+    coll->facing = lara.move_angle = item->pos.y_rot;
+    coll->radius = 100;
+    coll->slopes_are_walls = 1;
+    GetLaraCollisionInfo(item, coll);
+    if (!(input & IN_ACTION)) {
+        if (coll->mid_floor > 0) {
+            item->goal_anim_state = AS_FASTFALL;
+            item->pos.x_pos -= (64 * phd_sin(item->pos.y_rot)) >> W2V_SHIFT;
+            item->pos.z_pos -= (64 * phd_cos(item->pos.y_rot)) >> W2V_SHIFT;
+        } else
+            item->goal_anim_state = AS_STOP;
+    } else {
+        item->goal_anim_state = AS_POLESTAT;
+        if (input & IN_LEFT)
+            item->goal_anim_state = AS_POLELEFT;
+        else if (input & IN_RIGHT)
+            item->goal_anim_state = AS_POLERIGHT;
+        if (input & IN_LOOK)
+            LookUpDown();
+        if (input & IN_FORWARD) {
+            room_num = item->room_number;
+            floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_num);
+            if (item->pos.y_pos - GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos) > 1024)
+                item->goal_anim_state = AS_POLEUP;
+        } else if (input & IN_BACK && coll->mid_floor > 0) {
+            item->goal_anim_state = AS_POLEDOWN;
+            item->item_flags[2] = 0;
+        }
+        if (input & IN_JUMP)
+            item->goal_anim_state = AS_BACKJUMP;
+    }
+}
+
 void lara_as_poleleft(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->enable_baddie_push = 0;
