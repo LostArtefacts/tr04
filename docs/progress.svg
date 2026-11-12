@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="245.45" height="12" x="0" y="0" class="named"><title>1111 · 71.77%</title></rect>
-<rect width="0.44" height="12" x="245.45" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="16.13" height="12" x="245.90" y="0" class="nonmatching"><title>73 · 4.72%</title></rect>
-<rect width="79.98" height="12" x="262.02" y="0" class="todo"><title>362 · 23.39%</title></rect>
+<rect width="245.67" height="12" x="0" y="0" class="named"><title>1112 · 71.83%</title></rect>
+<rect width="0.44" height="12" x="245.67" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="16.13" height="12" x="246.12" y="0" class="nonmatching"><title>73 · 4.72%</title></rect>
+<rect width="79.76" height="12" x="262.24" y="0" class="todo"><title>361 · 23.32%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">71.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1111</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">73</tspan> · <tspan class="todo">362</tspan></text>
+<text text-anchor="end" x="522" y="7.50">72.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1112</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">73</tspan> · <tspan class="todo">361</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="126.95" height="12" x="0" y="0" class="named"><title>231 KB · 37.12%</title></rect>
-<rect width="0.12" height="12" x="126.95" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="29.29" height="12" x="127.07" y="0" class="nonmatching"><title>53 KB · 8.56%</title></rect>
-<rect width="185.64" height="12" x="156.36" y="0" class="todo"><title>338 KB · 54.28%</title></rect>
+<rect width="127.14" height="12" x="0" y="0" class="named"><title>231 KB · 37.18%</title></rect>
+<rect width="0.12" height="12" x="127.14" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="29.29" height="12" x="127.26" y="0" class="nonmatching"><title>53 KB · 8.56%</title></rect>
+<rect width="185.44" height="12" x="156.56" y="0" class="todo"><title>338 KB · 54.22%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">37.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">231 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">53 KB</tspan> · <tspan class="todo">338 KB</tspan></text>
@@ -793,7 +793,7 @@
 <rect width="12" height="12" x="360" y="210" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="210" class="nonmatching"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="210" class="todo"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="210" class="todo"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="210" class="named"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="210" class="nonmatching"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="210" class="todo"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="210" class="named"><title>0x00448cc0 CogCollision (217 bytes)</title></rect>
@@ -2119,7 +2119,7 @@
 <rect width="11.51" height="11.81" x="634.56" y="143.63" class="named"><title>0x004572d0 ControlPulseLight (353 bytes)</title></rect>
 <rect width="11.51" height="11.81" x="649.08" y="143.63" class="named"><title>0x0046c250 sixteen_control (353 bytes)</title></rect>
 <rect width="11.48" height="11.81" x="663.59" y="143.63" class="named"><title>0x00423ff0 lara_col_poledown (352 bytes)</title></rect>
-<rect width="11.48" height="11.81" x="678.07" y="143.63" class="todo"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
+<rect width="11.48" height="11.81" x="678.07" y="143.63" class="named"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="11.45" height="11.81" x="692.54" y="143.63" class="named"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
 <rect width="11.41" height="11.81" x="706.99" y="143.63" class="named"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
 <rect width="11.31" height="11.81" x="721.40" y="143.63" class="todo"><title>0x00499670 Func499670 (347 bytes)</title></rect>

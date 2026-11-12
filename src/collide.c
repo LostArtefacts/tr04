@@ -628,6 +628,32 @@ sint32 MoveLaraPosition(PHD_VECTOR *v, ITEM_INFO *item, ITEM_INFO *l)
     return Move3DPosTo3DPos(&l->pos, &pos, 12, 364);
 }
 
+void GenericDeadlyBoundingBoxCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint32 dx, dy, dz;
+
+    item = &items[item_number];
+    if (item->status != ITEM_INVISIBLE && item->item_flags[3] && TestBoundsCollide(item, l, coll->radius)) {
+        dx = lara_item->pos.x_pos;
+        dy = lara_item->pos.y_pos;
+        dz = lara_item->pos.z_pos;
+        if (ItemPushLara(item, l, coll, 1, 1)) {
+            lara_item->hit_points -= item->item_flags[3];
+            dx -= lara_item->pos.x_pos;
+            dy -= lara_item->pos.y_pos;
+            dz -= lara_item->pos.z_pos;
+            if ((dx || dy || dz) && TriggerActive(item))
+                DoBloodSplat(l->pos.x_pos + (GetRandomControl() & 0x3F) - 32, l->pos.y_pos - (GetRandomControl() & 0x1FF) - 256, l->pos.z_pos + (GetRandomControl() & 0x3F) - 32, (item->item_flags[3] >> 5) + (GetRandomControl() & 0x3) + 2, (sint16)(2 * GetRandomControl()), l->room_number);
+            if (!coll->enable_baddie_push) {
+                lara_item->pos.x_pos += dx;
+                lara_item->pos.y_pos += dy;
+                lara_item->pos.z_pos += dz;
+            }
+        }
+    }
+}
+
 sint32 TestBoundsCollide2(ITEM_INFO *item, ITEM_INFO *l, sint32 rad)
 {
     sint16 *bounds;
