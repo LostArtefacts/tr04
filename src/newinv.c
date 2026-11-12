@@ -37,6 +37,14 @@ sint32 go_and_save_game(void)
     return SaveGame();
 }
 
+void insert_object_into_list(sint16 num)
+{
+    rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->numobjectsinlist].invitem = num;
+    rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->numobjectsinlist].yrot = 0;
+    rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->numobjectsinlist].bright = 32;
+    rings[RING_INVENTORY]->numobjectsinlist++;
+}
+
 void handle_object_changeover(sint32 ringnum)
 {
     current_selected_option = 0;

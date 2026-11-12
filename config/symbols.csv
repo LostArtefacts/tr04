@@ -2010,6 +2010,8 @@ address,size,name,symbol
 0x004ae068,4,GLOBAL_enterinventory,_GLOBAL_enterinventory
 0x004ae06c,4,GLOBAL_inventoryitemchosen,_GLOBAL_inventoryitemchosen
 0x004ae070,2380,inventry_objects_list,_inventry_objects_list
+0x004ae9bc,238,options_table,_options_table
+0x004aeac0,230,dels_handy_combine_table,_dels_handy_combine_table
 0x004aebf8,1,piece_moving,_piece_moving
 0x004aebfc,4,flipeffect,_flipeffect
 0x004aec00,2,cdtrack,_cdtrack

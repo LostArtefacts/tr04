@@ -224,9 +224,12 @@ void handle_object_changeover(sint32 ringnum);
 void setup_objectlist_startposition(sint16 newobj);
 void setup_objectlist_startposition2(sint16 newobj);
 sint32 convert_obj_to_invobj(sint16 obj);
+void insert_object_into_list(sint16 num);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];
+extern sint16 options_table[NUM_INVOBJ];
+extern COMBINELIST dels_handy_combine_table[23];
 extern uint8 current_selected_option;
 extern sint8 menu_active;
 extern sint32 GLOBAL_enterinventory;
