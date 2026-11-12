@@ -235,6 +235,57 @@ void phd_PutPolygons_I(sint16 *ptr, sint32 clip)
     phd_PopMatrix();
 }
 
+void InterpolateMatrix(void)
+{
+    sint32 *mptr, *iptr;
+    sint32 frac, rate;
+
+    mptr = phd_mxptr;
+    iptr = IMptr;
+    frac = IM_frac;
+    rate = IM_rate;
+    if (rate == 2 || (frac == 2 && rate == 4)) {
+        mptr[0] = (iptr[0] + mptr[0]) >> 1;
+        mptr[1] = (iptr[1] + mptr[1]) >> 1;
+        mptr[2] = (iptr[2] + mptr[2]) >> 1;
+        mptr[3] = (iptr[3] + mptr[3]) >> 1;
+        mptr[4] = (iptr[4] + mptr[4]) >> 1;
+        mptr[5] = (iptr[5] + mptr[5]) >> 1;
+        mptr[6] = (iptr[6] + mptr[6]) >> 1;
+        mptr[7] = (iptr[7] + mptr[7]) >> 1;
+        mptr[8] = (iptr[8] + mptr[8]) >> 1;
+        mptr[9] = (iptr[9] + mptr[9]) >> 1;
+        mptr[10] = (iptr[10] + mptr[10]) >> 1;
+        mptr[11] = (iptr[11] + mptr[11]) >> 1;
+    } else if (frac == 1) {
+        mptr[0] += (iptr[0] - mptr[0]) >> 2;
+        mptr[1] += (iptr[1] - mptr[1]) >> 2;
+        mptr[2] += (iptr[2] - mptr[2]) >> 2;
+        mptr[3] += (iptr[3] - mptr[3]) >> 2;
+        mptr[4] += (iptr[4] - mptr[4]) >> 2;
+        mptr[5] += (iptr[5] - mptr[5]) >> 2;
+        mptr[6] += (iptr[6] - mptr[6]) >> 2;
+        mptr[7] += (iptr[7] - mptr[7]) >> 2;
+        mptr[8] += (iptr[8] - mptr[8]) >> 2;
+        mptr[9] += (iptr[9] - mptr[9]) >> 2;
+        mptr[10] += (iptr[10] - mptr[10]) >> 2;
+        mptr[11] += (iptr[11] - mptr[11]) >> 2;
+    } else {
+        mptr[0] = iptr[0] - ((iptr[0] - mptr[0]) >> 2);
+        mptr[1] = iptr[1] - ((iptr[1] - mptr[1]) >> 2);
+        mptr[2] = iptr[2] - ((iptr[2] - mptr[2]) >> 2);
+        mptr[3] = iptr[3] - ((iptr[3] - mptr[3]) >> 2);
+        mptr[4] = iptr[4] - ((iptr[4] - mptr[4]) >> 2);
+        mptr[5] = iptr[5] - ((iptr[5] - mptr[5]) >> 2);
+        mptr[6] = iptr[6] - ((iptr[6] - mptr[6]) >> 2);
+        mptr[7] = iptr[7] - ((iptr[7] - mptr[7]) >> 2);
+        mptr[8] = iptr[8] - ((iptr[8] - mptr[8]) >> 2);
+        mptr[9] = iptr[9] - ((iptr[9] - mptr[9]) >> 2);
+        mptr[10] = iptr[10] - ((iptr[10] - mptr[10]) >> 2);
+        mptr[11] = iptr[11] - ((iptr[11] - mptr[11]) >> 2);
+    }
+}
+
 void CalculateObjectLighting(ITEM_INFO *item, sint16 *frame)
 {
     sint32 *mptr;

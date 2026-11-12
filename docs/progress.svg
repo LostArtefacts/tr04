@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="166.47" height="12" x="0" y="0" class="named"><title>753 · 48.67%</title></rect>
-<rect width="0.44" height="12" x="166.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="166.91" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="168.68" height="12" x="173.32" y="0" class="todo"><title>763 · 49.32%</title></rect>
+<rect width="166.69" height="12" x="0" y="0" class="named"><title>754 · 48.74%</title></rect>
+<rect width="0.44" height="12" x="166.69" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="167.13" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="168.46" height="12" x="173.54" y="0" class="todo"><title>762 · 49.26%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">48.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">753</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">763</tspan></text>
+<text text-anchor="end" x="522" y="7.50">48.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">754</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">762</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="74.53" height="12" x="0" y="0" class="named"><title>135 KB · 21.79%</title></rect>
-<rect width="0.12" height="12" x="74.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="74.66" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="258.69" height="12" x="83.31" y="0" class="todo"><title>469 KB · 75.64%</title></rect>
+<rect width="74.88" height="12" x="0" y="0" class="named"><title>136 KB · 21.89%</title></rect>
+<rect width="0.12" height="12" x="74.88" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="75" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="258.35" height="12" x="83.65" y="0" class="todo"><title>469 KB · 75.54%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">21.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">135 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">469 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">21.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">136 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">469 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -862,7 +862,7 @@
 <rect width="12" height="12" x="645" y="225" class="named"><title>0x00450720 gar_RotYXZsuperpack_I (58 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="225" class="named"><title>0x00450760 gar_RotYXZsuperpack (162 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="225" class="named"><title>0x00450810 phd_PutPolygons_I (42 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="225" class="todo"><title>0x00450840 InterpolateMatrix (623 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="225" class="named"><title>0x00450840 InterpolateMatrix (623 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="225" class="todo"><title>0x00450ab0 InterpolateArmMatrix (255 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="225" class="named"><title>0x00450bb0 CalculateObjectLighting (248 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="225" class="named"><title>0x00450cb0 CalculateObjectLightingLara (271 bytes)</title></rect>
@@ -1883,7 +1883,7 @@
 <rect width="14.98" height="16.19" x="642.57" y="41.99" class="todo"><title>0x00441c60 CreatureTurn (628 bytes)</title></rect>
 <rect width="14.96" height="16.19" x="660.55" y="41.99" class="todo"><title>0x0042f880 CreateFlare (627 bytes)</title></rect>
 <rect width="14.96" height="16.19" x="678.51" y="41.99" class="todo"><title>0x00434770 TriggerFlareSparks (627 bytes)</title></rect>
-<rect width="14.86" height="16.19" x="696.46" y="41.99" class="todo"><title>0x00450840 InterpolateMatrix (623 bytes)</title></rect>
+<rect width="14.86" height="16.19" x="696.46" y="41.99" class="named"><title>0x00450840 InterpolateMatrix (623 bytes)</title></rect>
 <rect width="14.84" height="16.19" x="714.33" y="41.99" class="named"><title>0x0044e930 SequenceDoorControl (622 bytes)</title></rect>
 <rect width="14.84" height="16.19" x="732.16" y="41.99" class="todo"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
 <rect width="15.30" height="15.71" x="345.91" y="61.18" class="todo"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
