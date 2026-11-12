@@ -62,5 +62,6 @@ void InitialiseCamera(void);
 void FixedCamera(void);
 sint32 mgLOS(GAME_VECTOR *start, GAME_VECTOR *target, sint32 push);
 void ChaseCamera(ITEM_INFO *item);
+void CombatCamera(ITEM_INFO *item);
 
 #endif
