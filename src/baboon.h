@@ -1,6 +1,7 @@
 #ifndef BABOON_H
 #define BABOON_H
 
+#include "box.h"
 #include "items.h"
 
 void InitialiseBaboon(sint16 item_number);
@@ -8,5 +9,7 @@ void FindCrowbarSwitch(ITEM_INFO *item, sint16 switch_index);
 void ExplodeBaboon(ITEM_INFO *item);
 void ReTriggerBaboon(sint16 item_number);
 void BaboonControl(sint16 item_number);
+
+extern BITE_INFO baboon_hit;
 
 #endif

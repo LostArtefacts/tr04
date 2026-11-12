@@ -6,7 +6,7 @@ address,size,name,symbol
 0x00401990,302,ReTriggerAhmet,_ReTriggerAhmet
 0x00401ac0,737,ScalesCollision,_ScalesCollision
 0x00401db0,146,InitialiseBaboon,_InitialiseBaboon
-0x00401e50,2389,BaboonControl,_BaboonControl
+0x00401e50,2444,BaboonControl,_BaboonControl
 0x004027e0,110,FindCrowbarSwitch,_FindCrowbarSwitch
 0x00402850,282,ReTriggerBaboon,_ReTriggerBaboon
 0x00402970,160,ExplodeBaboon,_ExplodeBaboon
@@ -1996,6 +1996,7 @@ address,size,name,symbol
 0x004ad060,16,ahmet_left_claw,_ahmet_left_claw
 0x004ad070,16,ahmet_right_claw,_ahmet_right_claw
 0x004ad080,24,ScalesBounds,_ScalesBounds
+0x004ad098,16,baboon_hit,_baboon_hit
 0x004ad0a8,16,bat_bite,_bat_bite
 0x004ad0b8,16,croc_bite,_croc_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
