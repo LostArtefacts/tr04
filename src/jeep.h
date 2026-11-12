@@ -27,5 +27,6 @@ sint32 DoShift(ITEM_INFO *item, PHD_VECTOR *pos, PHD_VECTOR *old);
 void DrawJeepExtras(ITEM_INFO *item);
 sint32 JeepCheckGetOut(void);
 void JeepExplode(ITEM_INFO *item);
+sint32 DoDynamics_jeep(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero);
 
 #endif

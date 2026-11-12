@@ -63,6 +63,35 @@ sint32 JeepCheckGetOut(void)
     return 1;
 }
 
+sint32 DoDynamics_jeep(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
+{
+    sint32 kick;
+
+    if (height > *y) {
+        *y += fallspeed;
+        if (*y > height - 32) {
+            *y = height;
+            if (fallspeed > 150)
+                lara_item->hit_points += 150 - fallspeed;
+            fallspeed = 0;
+        } else if (zero)
+            fallspeed += zero + (zero >> 1);
+        else
+            fallspeed += 9;
+    } else {
+        if (!zero) {
+            kick = height - *y;
+            if (kick < -80)
+                kick = -80;
+            fallspeed += (kick - fallspeed) >> 4;
+            if (*y > height)
+                *y = height;
+        } else
+            return fallspeed;
+    }
+    return fallspeed;
+}
+
 sint32 DoShift(ITEM_INFO *item, PHD_VECTOR *pos, PHD_VECTOR *old)
 {
     sint32 x, z, x_old, z_old, shift_x, shift_z;
