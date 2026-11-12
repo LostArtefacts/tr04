@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="245.45" height="12" x="0" y="0" class="named"><title>1111 · 71.77%</title></rect>
 <rect width="0.44" height="12" x="245.45" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="15.91" height="12" x="245.90" y="0" class="nonmatching"><title>72 · 4.65%</title></rect>
-<rect width="80.20" height="12" x="261.80" y="0" class="todo"><title>363 · 23.45%</title></rect>
+<rect width="16.13" height="12" x="245.90" y="0" class="nonmatching"><title>73 · 4.72%</title></rect>
+<rect width="79.98" height="12" x="262.02" y="0" class="todo"><title>362 · 23.39%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">71.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1111</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">72</tspan> · <tspan class="todo">363</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1111</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">73</tspan> · <tspan class="todo">362</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="126.95" height="12" x="0" y="0" class="named"><title>231 KB · 37.12%</title></rect>
 <rect width="0.12" height="12" x="126.95" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="28.87" height="12" x="127.07" y="0" class="nonmatching"><title>53 KB · 8.44%</title></rect>
-<rect width="186.05" height="12" x="155.95" y="0" class="todo"><title>339 KB · 54.40%</title></rect>
+<rect width="29.29" height="12" x="127.07" y="0" class="nonmatching"><title>53 KB · 8.56%</title></rect>
+<rect width="185.64" height="12" x="156.36" y="0" class="todo"><title>338 KB · 54.28%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">37.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">231 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">53 KB</tspan> · <tspan class="todo">339 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">231 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">53 KB</tspan> · <tspan class="todo">338 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1609,7 +1609,7 @@
 <rect width="12" height="12" x="600" y="450" class="todo"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="450" class="todo"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="450" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="450" class="todo"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="450" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="450" class="todo"><title>0x0049c6e0 DBLog_MapView (23 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="450" class="todo"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="450" class="todo"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
@@ -1841,7 +1841,7 @@
 <rect width="17.58" height="16.80" x="306.57" y="347.19" class="nonmatching"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
 <rect width="17.58" height="16.76" x="306.57" y="366.99" class="todo"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
 <rect width="17.58" height="16.65" x="306.57" y="386.74" class="nonmatching"><title>0x004317a0 OptomiseSkinningData (760 bytes)</title></rect>
-<rect width="17.58" height="16.60" x="306.57" y="406.39" class="todo"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
+<rect width="17.58" height="16.60" x="306.57" y="406.39" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
 <rect width="17.58" height="16.51" x="306.57" y="425.99" class="named"><title>0x004687e0 JeepBaddieCollision (754 bytes)</title></rect>
 <rect width="17.58" height="16.49" x="306.57" y="445.51" class="named"><title>0x0047a880 DoLoadSave (753 bytes)</title></rect>
 <rect width="16.17" height="17.74" x="327.15" y="42.37" class="todo"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
