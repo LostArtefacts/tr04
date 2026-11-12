@@ -64,6 +64,35 @@ void handle_object_changeover(sint32 ringnum)
     Func43dbf0();
 }
 
+void spinback(uint16 *cock)
+{
+    uint16 val, val2;
+
+    val = *cock;
+    if (val) {
+        if (val > 32768) {
+            val2 = -val;
+            if (val2 < 1022)
+                val = 1022;
+            if (val2 > 16384)
+                val2 = 16384;
+            val += val2 >> 3;
+            if (val < 32768)
+                val = 0;
+        } else {
+            val2 = val;
+            if (val2 < 1022)
+                val = 1022;
+            if (val2 > 16384)
+                val2 = 16384;
+            val -= val2 >> 3;
+            if (val > 32768)
+                val = 0;
+        }
+        *cock = val;
+    }
+}
+
 sint32 is_item_currently_combinable(sint16 obj)
 {
     sint32 i;

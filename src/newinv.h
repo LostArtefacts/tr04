@@ -231,6 +231,7 @@ sint32 do_these_objects_combine(sint32 obj1, sint32 obj2);
 void combine_these_two_objects(sint16 obj1, sint16 obj2);
 void seperate_object(sint16 obj);
 sint32 is_item_currently_combinable(sint16 obj);
+void spinback(uint16 *cock);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];
