@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="194.54" height="12" x="0" y="0" class="named"><title>880 · 56.88%</title></rect>
-<rect width="0.44" height="12" x="194.54" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="194.99" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="140.60" height="12" x="201.40" y="0" class="todo"><title>636 · 41.11%</title></rect>
+<rect width="194.77" height="12" x="0" y="0" class="named"><title>881 · 56.95%</title></rect>
+<rect width="0.44" height="12" x="194.77" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="195.21" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="140.38" height="12" x="201.62" y="0" class="todo"><title>635 · 41.05%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">57.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">880</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">636</tspan></text>
+<text text-anchor="end" x="522" y="7.50">57.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">881</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">635</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="83.27" height="12" x="0" y="0" class="named"><title>151 KB · 24.35%</title></rect>
-<rect width="0.12" height="12" x="83.27" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="83.39" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="249.96" height="12" x="92.04" y="0" class="todo"><title>453 KB · 73.09%</title></rect>
+<rect width="83.30" height="12" x="0" y="0" class="named"><title>151 KB · 24.36%</title></rect>
+<rect width="0.12" height="12" x="83.30" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="83.42" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="249.93" height="12" x="92.07" y="0" class="todo"><title>453 KB · 73.08%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">24.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">151 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">453 KB</tspan></text>
@@ -1426,7 +1426,7 @@
 <rect width="12" height="12" x="105" y="405" class="todo"><title>0x0048b990 DrawTrainStrips (280 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="405" class="todo"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="405" class="todo"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="405" class="todo"><title>0x0048c240 SetFade (53 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="405" class="named"><title>0x0048c240 SetFade (53 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="405" class="todo"><title>0x0048c280 DoScreenFade (379 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="405" class="todo"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="405" class="todo"><title>0x0048c5f0 DrawFlash (194 bytes)</title></rect>
@@ -2874,7 +2874,7 @@
 <rect width="4.81" height="4.25" x="639.87" y="457.75" class="named"><title>0x00455f80 BridgeTilt1Ceiling (53 bytes)</title></rect>
 <rect width="4.40" height="4.65" x="647.68" y="355.04" class="named"><title>0x0045bd80 ReadSG (53 bytes)</title></rect>
 <rect width="4.40" height="4.65" x="655.08" y="355.04" class="named"><title>0x00473bb0 S_SoundSetPanAndVolume (53 bytes)</title></rect>
-<rect width="4.40" height="4.65" x="662.48" y="355.04" class="todo"><title>0x0048c240 SetFade (53 bytes)</title></rect>
+<rect width="4.40" height="4.65" x="662.48" y="355.04" class="named"><title>0x0048c240 SetFade (53 bytes)</title></rect>
 <rect width="4.31" height="4.65" x="669.88" y="355.04" class="named"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
 <rect width="4.31" height="4.65" x="677.19" y="355.04" class="named"><title>0x00450520 InitInterpolate (52 bytes)</title></rect>
 <rect width="4.31" height="4.65" x="684.51" y="355.04" class="named"><title>0x00452f40 InitialisePickUpDisplay (52 bytes)</title></rect>
