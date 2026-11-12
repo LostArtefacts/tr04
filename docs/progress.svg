@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="259.59" height="12" x="0" y="0" class="named"><title>1175 · 75.90%</title></rect>
-<rect width="0.66" height="12" x="259.59" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="23.20" height="12" x="260.26" y="0" class="nonmatching"><title>105 · 6.78%</title></rect>
-<rect width="58.55" height="12" x="283.45" y="0" class="todo"><title>265 · 17.12%</title></rect>
+<rect width="259.81" height="12" x="0" y="0" class="named"><title>1176 · 75.97%</title></rect>
+<rect width="0.66" height="12" x="259.81" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="23.20" height="12" x="260.48" y="0" class="nonmatching"><title>105 · 6.78%</title></rect>
+<rect width="58.33" height="12" x="283.67" y="0" class="todo"><title>264 · 17.05%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">76.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1175</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">105</tspan> · <tspan class="todo">265</tspan></text>
+<text text-anchor="end" x="522" y="7.50">76.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1176</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">105</tspan> · <tspan class="todo">264</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="153.20" height="12" x="0" y="0" class="named"><title>279 KB · 44.80%</title></rect>
-<rect width="0.13" height="12" x="153.20" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="51.41" height="12" x="153.34" y="0" class="nonmatching"><title>94 KB · 15.03%</title></rect>
-<rect width="137.26" height="12" x="204.74" y="0" class="todo"><title>250 KB · 40.13%</title></rect>
+<rect width="156.88" height="12" x="0" y="0" class="named"><title>286 KB · 45.87%</title></rect>
+<rect width="0.13" height="12" x="156.88" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="51.41" height="12" x="157.01" y="0" class="nonmatching"><title>94 KB · 15.03%</title></rect>
+<rect width="133.59" height="12" x="208.41" y="0" class="todo"><title>243 KB · 39.06%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">44.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">279 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">94 KB</tspan> · <tspan class="todo">250 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">45.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">286 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">94 KB</tspan> · <tspan class="todo">243 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1001,7 +1001,7 @@
 <rect width="12" height="12" x="480" y="270" class="named"><title>0x0045bdf0 sgRestoreLevel (440 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="270" class="named"><title>0x0045bfb0 InitialiseLara (286 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="270" class="named"><title>0x0045c0d0 InitialiseObjects (268 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="270" class="todo"><title>0x0045c1e0 BaddyObjects (6689 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="270" class="named"><title>0x0045c1e0 BaddyObjects (6689 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="270" class="nonmatching"><title>0x0045dc10 TrapObjects (1503 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="270" class="nonmatching"><title>0x0045e1f0 ObjectObjects (2380 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="270" class="named"><title>0x0045eb40 GetCarriedItems (259 bytes)</title></rect>
@@ -1619,7 +1619,7 @@
 <g transform="translate(0 574)">
 <text text-anchor="start" x="0" y="7.50">By function size</text>
 <g transform="translate(0 20)">
-<rect width="43.95" height="58.49" x="0" y="0" class="todo"><title>0x0045c1e0 BaddyObjects (6689 bytes)</title></rect>
+<rect width="43.95" height="58.49" x="0" y="0" class="named"><title>0x0045c1e0 BaddyObjects (6689 bytes)</title></rect>
 <rect width="43.95" height="56.83" x="0" y="61.49" class="todo"><title>0x0040b600 RagheadControl (6498 bytes)</title></rect>
 <rect width="43.95" height="52.28" x="0" y="121.31" class="todo"><title>0x004195e0 VoncroyControl (5975 bytes)</title></rect>
 <rect width="43.95" height="47.52" x="0" y="176.59" class="todo"><title>0x0047b170 DoOptions (5429 bytes)</title></rect>

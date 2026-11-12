@@ -26,5 +26,7 @@ void ClearCutSceneCamera(void);
 void SetCutSceneCamera(ITEM_INFO *item);
 void GetAIEnemy(CREATURE_INFO *info, sint32 tfl);
 void DoVonCroyCutscene(ITEM_INFO *item, CREATURE_INFO *info);
+void VoncroyControl(sint16 item_number);
+void VoncroyRaceControl(sint16 item_number);
 
 #endif

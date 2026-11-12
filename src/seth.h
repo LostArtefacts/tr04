@@ -8,5 +8,6 @@ void TriggerSethSparks(sint32 x, sint32 y, sint32 z, sint16 xv, sint16 yv, sint1
 void TriggerSethFlame(sint16 item_number, uint8 NodeNumber, sint32 size);
 void TriggerSethMissileFlame(sint16 fx_number, sint32 xv, sint32 yv, sint32 zv);
 void InitialiseSeth(sint16 item_number);
+void SethControl(sint16 item_number);
 
 #endif

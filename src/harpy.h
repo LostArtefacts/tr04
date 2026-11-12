@@ -23,5 +23,6 @@ void DoHarpyEffects(ITEM_INFO *item, sint16 item_number);
 
 extern HARPY_HAND harpy_left_hand;
 extern HARPY_HAND harpy_right_hand;
+void HarpyControl(sint16 item_number);
 
 #endif

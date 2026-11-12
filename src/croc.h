@@ -28,5 +28,7 @@ void TriggerCrocgodMissileFlame(sint16 fx_number, sint32 xv, sint32 yv, sint32 z
 
 extern LOCUST_STRUCT Locusts[64];
 extern sint32 next_locust;
+void CrocControl(sint16 item_number);
+void CrocgodControl(sint16 item_number);
 
 #endif

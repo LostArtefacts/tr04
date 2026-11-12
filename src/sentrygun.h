@@ -5,5 +5,6 @@
 
 void InitialiseAutogun(sint16 item_number);
 void TriggerAutogunFlamethrower(ITEM_INFO *item);
+void AutogunControl(sint16 item_number);
 
 #endif

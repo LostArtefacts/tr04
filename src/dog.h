@@ -4,5 +4,6 @@
 #include "box.h"
 
 void InitialiseDog(sint16 item_number);
+void DogControl(sint16 item_number);
 
 #endif
