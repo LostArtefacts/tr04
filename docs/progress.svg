@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="225.72" height="12" x="0" y="0" class="named"><title>1021 · 66%</title></rect>
-<rect width="0.44" height="12" x="225.72" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="226.16" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="107.44" height="12" x="234.56" y="0" class="todo"><title>486 · 31.42%</title></rect>
+<rect width="225.94" height="12" x="0" y="0" class="named"><title>1022 · 66.06%</title></rect>
+<rect width="0.44" height="12" x="225.94" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="226.38" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="107.22" height="12" x="234.78" y="0" class="todo"><title>485 · 31.35%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">66.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1021</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">486</tspan></text>
+<text text-anchor="end" x="522" y="7.50">66.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1022</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">485</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="98.38" height="12" x="0" y="0" class="named"><title>178 KB · 28.77%</title></rect>
-<rect width="0.12" height="12" x="98.38" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="98.50" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="233.34" height="12" x="108.66" y="0" class="todo"><title>423 KB · 68.23%</title></rect>
+<rect width="98.54" height="12" x="0" y="0" class="named"><title>179 KB · 28.81%</title></rect>
+<rect width="0.12" height="12" x="98.54" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="98.66" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="233.18" height="12" x="108.82" y="0" class="todo"><title>423 KB · 68.18%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">178 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">423 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">179 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">423 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -257,7 +257,7 @@
 <rect width="12" height="12" x="570" y="45" class="named"><title>0x0041d9a0 GetLaraJointPos (324 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="45" class="todo"><title>0x0041daf0 Rich_CalcLaraMatrices_Normal (2835 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="45" class="todo"><title>0x0041e630 Rich_CalcLaraMatrices_Interpolated (3076 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="45" class="todo"><title>0x0041f260 SetLaraUnderwaterNodes (289 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="45" class="named"><title>0x0041f260 SetLaraUnderwaterNodes (289 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="45" class="todo"><title>0x0041f390 TriggerTorchFlame (381 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="45" class="todo"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="45" class="todo"><title>0x0041f7c0 DoFlameTorch (793 bytes)</title></rect>
@@ -2180,7 +2180,7 @@
 <rect width="10.28" height="10.94" x="605.29" y="158.22" class="todo"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
 <rect width="10.28" height="10.94" x="618.57" y="158.22" class="todo"><title>0x0049c750 Log (291 bytes)</title></rect>
 <rect width="10.24" height="10.94" x="631.84" y="158.22" class="named"><title>0x0045a1b0 SaveLaraData (290 bytes)</title></rect>
-<rect width="10.21" height="10.94" x="645.09" y="158.22" class="todo"><title>0x0041f260 SetLaraUnderwaterNodes (289 bytes)</title></rect>
+<rect width="10.21" height="10.94" x="645.09" y="158.22" class="named"><title>0x0041f260 SetLaraUnderwaterNodes (289 bytes)</title></rect>
 <rect width="10.14" height="10.94" x="658.30" y="158.22" class="todo"><title>0x004210f0 lara_col_duck (287 bytes)</title></rect>
 <rect width="10.14" height="10.94" x="671.43" y="158.22" class="named"><title>0x00426c50 SetCornerAnim (287 bytes)</title></rect>
 <rect width="10.14" height="10.94" x="684.57" y="158.22" class="todo"><title>0x00476fa0 GameInitialise (287 bytes)</title></rect>

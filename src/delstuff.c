@@ -1,5 +1,7 @@
 #include "delstuff.h"
+#include "control.h"
 #include "lara.h"
+#include "room.h"
 #include "specific/3dmath.h"
 
 void GetLaraJointPos(PHD_VECTOR *pos, sint32 node)
@@ -25,4 +27,44 @@ void GetLaraJointPos(PHD_VECTOR *pos, sint32 node)
     pos->y += lara_item->pos.y_pos;
     pos->z += lara_item->pos.z_pos;
     phd_PopMatrix();
+}
+
+void SetLaraUnderwaterNodes(void)
+{
+    PHD_VECTOR pos;
+    ROOM_INFO *r;
+    sint32 bit, i;
+    sint16 room_num;
+
+    pos.x = lara_item->pos.x_pos;
+    pos.y = lara_item->pos.y_pos;
+    pos.z = lara_item->pos.z_pos;
+    room_num = lara_item->room_number;
+    GetFloor(pos.x, pos.y, pos.z, &room_num);
+    bLaraInWater = room[room_num].flags & ROOM_UNDERWATER;
+    bit = 0;
+    for (i = 14; i >= 0; i--) {
+        pos.x = 0;
+        pos.y = 0;
+        pos.z = 0;
+        GetLaraJointPos(&pos, i);
+        if (lara_mesh_sweetness_table[i] == 7)
+            pos.y -= 120;
+        if (lara_mesh_sweetness_table[i] == 14)
+            pos.y -= 60;
+        room_num = lara_item->room_number;
+        GetFloor(pos.x, pos.y, pos.z, &room_num);
+        r = &room[room_num];
+        LaraNodeUnderwater[i] = r->flags & ROOM_UNDERWATER;
+        if (LaraNodeUnderwater[i]) {
+            lara.wet[i] = 252;
+            if (!(bit & 1)) {
+                LaraNodeAmbient[1] = r->ambient;
+                bit |= 1;
+            }
+        } else if (!(bit & 2)) {
+            LaraNodeAmbient[0] = r->ambient;
+            bit |= 2;
+        }
+    }
 }

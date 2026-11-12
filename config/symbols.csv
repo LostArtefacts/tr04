@@ -2000,6 +2000,7 @@ address,size,name,symbol
 0x004ad3b4,16,SPDETyoffs,_SPDETyoffs
 0x004ad6c0,16,wildboar_bite,_wildboar_bite
 0x004ad6d0,2,WraithSpeed,_WraithSpeed
+0x004ad784,60,lara_mesh_sweetness_table,_lara_mesh_sweetness_table
 0x004ad7d4,4,GlobalAlpha,_GlobalAlpha
 0x004ad7f4,4,hair_wind_angle,_hair_wind_angle
 0x004ad7f8,4,hair_dwind_angle,_hair_dwind_angle
