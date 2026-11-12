@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="149.45" height="12" x="0" y="0" class="named"><title>676 · 43.70%</title></rect>
-<rect width="0.44" height="12" x="149.45" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="149.89" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="187.47" height="12" x="154.53" y="0" class="todo"><title>848 · 54.82%</title></rect>
+<rect width="149.67" height="12" x="0" y="0" class="named"><title>677 · 43.76%</title></rect>
+<rect width="0.44" height="12" x="149.67" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="150.11" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="187.25" height="12" x="154.75" y="0" class="todo"><title>847 · 54.75%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">43.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">676</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">848</tspan></text>
+<text text-anchor="end" x="522" y="7.50">43.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">677</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">847</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="60.48" height="12" x="0" y="0" class="named"><title>110 KB · 17.69%</title></rect>
-<rect width="0.12" height="12" x="60.48" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="60.60" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="274.15" height="12" x="67.85" y="0" class="todo"><title>497 KB · 80.16%</title></rect>
+<rect width="60.58" height="12" x="0" y="0" class="named"><title>110 KB · 17.71%</title></rect>
+<rect width="0.12" height="12" x="60.58" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="60.70" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="274.05" height="12" x="67.95" y="0" class="todo"><title>497 KB · 80.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">110 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">497 KB</tspan></text>
@@ -308,7 +308,7 @@
 <rect width="12" height="12" x="585" y="60" class="named"><title>0x00422e50 MonkeySwingFall (91 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="60" class="named"><title>0x00422eb0 lara_col_hang2 (559 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="60" class="todo"><title>0x004230e0 LaraHangTest (1191 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="60" class="todo"><title>0x004235b0 SnapLaraToEdgeOfBlock (172 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="60" class="named"><title>0x004235b0 SnapLaraToEdgeOfBlock (172 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="60" class="named"><title>0x00423660 MonkeySwingSnap (66 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="60" class="named"><title>0x004236b0 TestMonkeyLeft (201 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="60" class="named"><title>0x00423780 GetDirOctant (42 bytes)</title></rect>
@@ -2418,7 +2418,7 @@
 <rect width="8.46" height="7.90" x="518.42" y="399.72" class="named"><title>0x00428040 lara_col_fastfall (173 bytes)</title></rect>
 <rect width="8.46" height="7.90" x="518.42" y="410.63" class="named"><title>0x00436900 ControlColouredLights (173 bytes)</title></rect>
 <rect width="8.46" height="7.90" x="518.42" y="421.53" class="named"><title>0x004732e0 DXChangeOutputFormat (173 bytes)</title></rect>
-<rect width="8.46" height="7.86" x="518.42" y="432.43" class="todo"><title>0x004235b0 SnapLaraToEdgeOfBlock (172 bytes)</title></rect>
+<rect width="8.46" height="7.86" x="518.42" y="432.43" class="named"><title>0x004235b0 SnapLaraToEdgeOfBlock (172 bytes)</title></rect>
 <rect width="8.46" height="7.86" x="518.42" y="443.29" class="named"><title>0x00437ab0 SetFog (172 bytes)</title></rect>
 <rect width="8.46" height="7.86" x="518.42" y="454.14" class="named"><title>0x004904b0 phd_RotY (172 bytes)</title></rect>
 <rect width="8.23" height="8.08" x="529.88" y="233.80" class="named"><title>0x00490560 phd_RotZ (172 bytes)</title></rect>

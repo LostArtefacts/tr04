@@ -747,6 +747,41 @@ void lara_col_hang2(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void SnapLaraToEdgeOfBlock(ITEM_INFO *item, COLL_INFO *coll, sint16 angle)
+{
+    if (item->current_anim_state == AS_HANGRIGHT) {
+        switch (angle) {
+        case NORTH:
+            item->pos.x_pos = coll->old.x & ~0x3FF | 0x390;
+            break;
+        case EAST:
+            item->pos.z_pos = coll->old.z & ~0x3FF | 0x70;
+            break;
+        case SOUTH:
+            item->pos.x_pos = coll->old.x & ~0x3FF | 0x70;
+            break;
+        default:
+            item->pos.z_pos = coll->old.z & ~0x3FF | 0x390;
+            break;
+        }
+    } else if (item->current_anim_state == AS_HANGLEFT) {
+        switch (angle) {
+        case NORTH:
+            item->pos.x_pos = coll->old.x & ~0x3FF | 0x70;
+            break;
+        case EAST:
+            item->pos.z_pos = coll->old.z & ~0x3FF | 0x390;
+            break;
+        case SOUTH:
+            item->pos.x_pos = coll->old.x & ~0x3FF | 0x390;
+            break;
+        default:
+            item->pos.z_pos = coll->old.z & ~0x3FF | 0x70;
+            break;
+        }
+    }
+}
+
 void MonkeySwingSnap(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint16 room_num;
