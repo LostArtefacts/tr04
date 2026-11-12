@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="214.88" height="12" x="0" y="0" class="named"><title>972 · 62.83%</title></rect>
-<rect width="0.44" height="12" x="214.88" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="215.33" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="119.38" height="12" x="222.62" y="0" class="todo"><title>540 · 34.91%</title></rect>
+<rect width="215.10" height="12" x="0" y="0" class="named"><title>973 · 62.90%</title></rect>
+<rect width="0.44" height="12" x="215.10" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="215.55" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="119.16" height="12" x="222.84" y="0" class="todo"><title>539 · 34.84%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">63.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">972</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">540</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">973</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">539</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="92.84" height="12" x="0" y="0" class="named"><title>168 KB · 27.15%</title></rect>
-<rect width="0.12" height="12" x="92.84" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="92.96" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="239.61" height="12" x="102.39" y="0" class="todo"><title>435 KB · 70.06%</title></rect>
+<rect width="92.89" height="12" x="0" y="0" class="named"><title>169 KB · 27.16%</title></rect>
+<rect width="0.12" height="12" x="92.89" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="93.01" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="239.56" height="12" x="102.44" y="0" class="todo"><title>435 KB · 70.05%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">27.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">168 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">435 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">169 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">435 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -143,7 +143,7 @@
 <rect width="12" height="12" x="360" y="15" class="todo"><title>0x0040b1d0 ShotLara (486 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="15" class="todo"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="15" class="todo"><title>0x0040b600 RagheadControl (6498 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="15" class="todo"><title>0x0040d040 InitialiseSas (90 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="15" class="named"><title>0x0040d040 InitialiseSas (90 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="15" class="todo"><title>0x0040d0a0 SasControl (2319 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="15" class="todo"><title>0x0040da00 InitialiseInjuredSas (106 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="15" class="todo"><title>0x0040da70 InjuredSasControl (121 bytes)</title></rect>
@@ -2701,7 +2701,7 @@
 <rect width="6.01" height="5.85" x="589.64" y="438.58" class="named"><title>0x00478010 MallocD3DLights (91 bytes)</title></rect>
 <rect width="6.01" height="5.79" x="589.64" y="447.43" class="named"><title>0x00402a10 InitialiseBat (90 bytes)</title></rect>
 <rect width="6.01" height="5.79" x="589.64" y="456.21" class="named"><title>0x00407a30 InitialiseHarpy (90 bytes)</title></rect>
-<rect width="5.85" height="5.95" x="598.65" y="313.69" class="todo"><title>0x0040d040 InitialiseSas (90 bytes)</title></rect>
+<rect width="5.85" height="5.95" x="598.65" y="313.69" class="named"><title>0x0040d040 InitialiseSas (90 bytes)</title></rect>
 <rect width="5.85" height="5.95" x="598.65" y="322.64" class="todo"><title>0x0040efd0 InitialiseSmlscorp (90 bytes)</title></rect>
 <rect width="5.85" height="5.95" x="598.65" y="331.59" class="named"><title>0x00410c30 InitialiseSeth (90 bytes)</title></rect>
 <rect width="5.85" height="5.95" x="598.65" y="340.53" class="named"><title>0x0041bf00 InitialiseWildboar (90 bytes)</title></rect>
