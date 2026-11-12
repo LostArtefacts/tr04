@@ -54,6 +54,40 @@ void ClearScarabs(void)
     flipeffect = -1;
 }
 
+void TriggerScarab(sint16 item_number)
+{
+    SCARAB_STRUCT *fx;
+    ITEM_INFO *item;
+    sint16 fx_num;
+
+    item = &items[item_number];
+    if (item->trigger_flags && (!item->item_flags[2] || !(GetRandomControl() & 0xF))) {
+        item->trigger_flags--;
+        if (item->item_flags[2] && GetRandomControl() & 1)
+            item->item_flags[2]--;
+        fx_num = (sint16)GetFreeScarab();
+        if (fx_num != -1) {
+            fx = &Scarabs[fx_num];
+            fx->pos.x_pos = item->pos.x_pos;
+            fx->pos.y_pos = item->pos.y_pos;
+            fx->pos.z_pos = item->pos.z_pos;
+            fx->room_number = item->room_number;
+            if (item->item_flags[0]) {
+                fx->pos.y_rot = (sint16)(GetRandomControl() << 1);
+                fx->fallspeed = -16 - (GetRandomControl() & 0x1F);
+            } else {
+                fx->pos.y_rot = (GetRandomControl() & 0x3FFF) + item->pos.y_rot - 8192;
+                fx->fallspeed = 0;
+            }
+            fx->pos.x_rot = 0;
+            fx->pos.z_rot = 0;
+            fx->On = 1;
+            fx->flags = 0;
+            fx->speed = (GetRandomControl() & 0x1F) + 1;
+        }
+    }
+}
+
 void InitialiseScarabGenerator(sint16 item_number)
 {
     ITEM_INFO *item;
