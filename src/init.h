@@ -2,6 +2,8 @@
 #define INIT_H
 
 #include "types.h"
+#include "items.h"
+#include "rope.h"
 
 void Func403620(void);
 
@@ -26,5 +28,6 @@ void InitialiseLightningConductor(sint16 item_number);
 void InitialiseSmokeEmitter(sint16 item_number);
 void InitialisePickUp(sint16 item_number);
 void InitialiseEffects(void);
+void init_all_ropes(void);
 
 #endif

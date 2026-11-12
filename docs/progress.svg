@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="182.83" height="12" x="0" y="0" class="named"><title>827 · 53.46%</title></rect>
-<rect width="0.44" height="12" x="182.83" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="183.27" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="152.32" height="12" x="189.68" y="0" class="todo"><title>689 · 44.54%</title></rect>
+<rect width="183.05" height="12" x="0" y="0" class="named"><title>828 · 53.52%</title></rect>
+<rect width="0.44" height="12" x="183.05" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="183.49" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="152.10" height="12" x="189.90" y="0" class="todo"><title>688 · 44.47%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">53.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">827</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">689</tspan></text>
+<text text-anchor="end" x="522" y="7.50">53.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">828</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">688</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.15" height="12" x="0" y="0" class="named"><title>144 KB · 23.14%</title></rect>
-<rect width="0.12" height="12" x="79.15" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="79.27" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="254.07" height="12" x="87.93" y="0" class="todo"><title>461 KB · 74.29%</title></rect>
+<rect width="79.17" height="12" x="0" y="0" class="named"><title>144 KB · 23.15%</title></rect>
+<rect width="0.12" height="12" x="79.17" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="79.29" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="254.06" height="12" x="87.94" y="0" class="todo"><title>461 KB · 74.29%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">144 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">461 KB</tspan></text>
@@ -907,7 +907,7 @@
 <rect width="12" height="12" x="570" y="240" class="todo"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="240" class="named"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="240" class="named"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="240" class="todo"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="240" class="named"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="240" class="todo"><title>0x00453f60 CreateRope (270 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="240" class="todo"><title>0x00454070 InitialiseRope (203 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="240" class="named"><title>0x00454140 InitialiseItemArray (100 bytes)</title></rect>
@@ -2983,7 +2983,7 @@
 <rect width="3.53" height="3.72" x="669.26" y="417.94" class="named"><title>0x00437ef0 keep_those_fires_burning (34 bytes)</title></rect>
 <rect width="3.53" height="3.72" x="669.26" y="424.66" class="named"><title>0x00450560 phd_PopMatrix_I (34 bytes)</title></rect>
 <rect width="3.53" height="3.72" x="669.26" y="431.39" class="named"><title>0x004535c0 InitialiseBurningFloor (34 bytes)</title></rect>
-<rect width="3.53" height="3.72" x="669.26" y="438.11" class="todo"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
+<rect width="3.53" height="3.72" x="669.26" y="438.11" class="named"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
 <rect width="3.53" height="3.72" x="669.26" y="444.83" class="todo"><title>0x0045f1c0 reset_cutseq_vars (34 bytes)</title></rect>
 <rect width="3.53" height="3.72" x="669.26" y="451.55" class="named"><title>0x0046c5e0 twentyone_end (34 bytes)</title></rect>
 <rect width="3.53" height="3.72" x="669.26" y="458.28" class="named"><title>0x0046c9f0 do_spade_meshswap (34 bytes)</title></rect>

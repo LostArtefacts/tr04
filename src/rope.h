@@ -21,7 +21,10 @@ typedef struct {
     ROPE_STRUCT *Rope;
 } PENDULUM;
 
+void Normalise(PHD_VECTOR *v);
+
 extern ROPE_STRUCT RopeList[5];
+extern sint32 nRope;
 extern PENDULUM CurrentPendulum;
 
 #endif

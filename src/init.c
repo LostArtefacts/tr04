@@ -375,3 +375,12 @@ void InitialisePickUp(sint16 item_number)
     if (item->status == ITEM_INVISIBLE)
         item->flags |= IFL_TRIGGERED;
 }
+
+void init_all_ropes(void)
+{
+    sint32 i;
+
+    for (i = 0; i < 5; i++)
+        RopeList[i].Active = 0;
+    nRope = 0;
+}
