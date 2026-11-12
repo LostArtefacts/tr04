@@ -1,6 +1,7 @@
 #include <string.h>
 
 #include "senet.h"
+#include "room.h"
 #include "objects.h"
 #include "items.h"
 #include "deltapak.h"
@@ -137,4 +138,48 @@ void ControlGodHead(sint16 item_number)
             KillItem(item_number);
         }
     }
+}
+
+void DrawGodHead(ITEM_INFO *item)
+{
+    ROOM_INFO *r;
+    PHD_VECTOR scalar;
+    sint16 **meshpp;
+    sint32 rate, clip, oldAlpha;
+    sint16 *frm[2];
+
+    r = &room[item->room_number];
+    phd_left = r->left;
+    phd_right = r->right;
+    phd_top = r->top;
+    phd_bottom = r->bottom;
+    GetFrames(item, frm, &rate);
+    phd_PushMatrix();
+    phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    phd_RotX(item->pos.x_rot);
+    phd_RotZ(item->pos.z_rot);
+    phd_RotY(item->pos.y_rot);
+    clip = S_GetObjectBounds(frm[0]);
+    if (clip) {
+        meshpp = &meshes[objects[item->object_number].mesh_index];
+        scalar.y = 0x4000;
+        scalar.x = 0x4000;
+        scalar.z = item->item_flags[1] << 2;
+        ScaleCurrentMatrix(&scalar);
+        CalculateObjectLighting(item, frm[0]);
+        rate = item->item_flags[1] >> 5;
+        oldAlpha = GlobalAlpha;
+        if (rate >= 128)
+            rate = 255;
+        else
+            rate <<= 1;
+        GlobalAlpha = rate << 24;
+        phd_PutPolygons(*meshpp, clip);
+        GlobalAlpha = oldAlpha;
+    }
+    phd_left = 0;
+    phd_right = phd_winwidth;
+    phd_top = 0;
+    phd_bottom = phd_winheight;
+    phd_PopMatrix();
 }
