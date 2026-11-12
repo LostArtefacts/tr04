@@ -51,6 +51,17 @@ void GetRopePos(ROPE_STRUCT *rope, sint32 pos, sint32 *x, sint32 *y, sint32 *z)
     *z = (rope->NormalisedSegment[segment].z * pos >> (W2V_SHIFT + 2)) + (rope->MeshSegment[segment].z >> (W2V_SHIFT + 2)) + rope->Position.z;
 }
 
+void DrawRopeList(void)
+{
+    sint32 i;
+
+    for (i = 0; i < nRope; i++) {
+        if (RopeList[i].Active) {
+            DrawRope(&RopeList[i]);
+        }
+    }
+}
+
 PHD_VECTOR *Normalise(PHD_VECTOR *v)
 {
     sint32 mod, a, b, c, d, e;

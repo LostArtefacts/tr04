@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="189.90" height="12" x="0" y="0" class="named"><title>859 · 55.53%</title></rect>
-<rect width="0.44" height="12" x="189.90" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="190.34" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="145.24" height="12" x="196.76" y="0" class="todo"><title>657 · 42.47%</title></rect>
+<rect width="190.12" height="12" x="0" y="0" class="named"><title>860 · 55.59%</title></rect>
+<rect width="0.44" height="12" x="190.12" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="190.56" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="145.02" height="12" x="196.98" y="0" class="todo"><title>656 · 42.40%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">55.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">859</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">657</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">860</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">656</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="81.38" height="12" x="0" y="0" class="named"><title>148 KB · 23.80%</title></rect>
-<rect width="0.12" height="12" x="81.38" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="81.50" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="251.85" height="12" x="90.15" y="0" class="todo"><title>457 KB · 73.64%</title></rect>
+<rect width="81.41" height="12" x="0" y="0" class="named"><title>148 KB · 23.80%</title></rect>
+<rect width="0.12" height="12" x="81.41" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="81.53" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="251.82" height="12" x="90.18" y="0" class="todo"><title>457 KB · 73.63%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">148 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">457 KB</tspan></text>
@@ -976,7 +976,7 @@
 <rect width="12" height="12" x="105" y="270" class="todo"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="270" class="todo"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="270" class="todo"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="270" class="todo"><title>0x00459410 DrawRopeList (56 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="270" class="named"><title>0x00459410 DrawRopeList (56 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="270" class="named"><title>0x00459450 Normalise (179 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="270" class="todo"><title>0x00459510 ModelRigid (302 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="270" class="todo"><title>0x00459640 ModelRigidRope (246 bytes)</title></rect>
@@ -2855,7 +2855,7 @@
 <rect width="4.88" height="4.51" x="710.86" y="347.53" class="named"><title>0x004769d0 _Visible (57 bytes)</title></rect>
 <rect width="4.88" height="4.51" x="718.74" y="347.53" class="todo"><title>0x0047d3e0 S_DrawDashBar (57 bytes)</title></rect>
 <rect width="4.79" height="4.51" x="726.62" y="347.53" class="todo"><title>0x00409460 InitialiseMovingBlock (56 bytes)</title></rect>
-<rect width="4.79" height="4.51" x="734.41" y="347.53" class="todo"><title>0x00459410 DrawRopeList (56 bytes)</title></rect>
+<rect width="4.79" height="4.51" x="734.41" y="347.53" class="named"><title>0x00459410 DrawRopeList (56 bytes)</title></rect>
 <rect width="4.79" height="4.51" x="742.21" y="347.53" class="named"><title>0x0045b000 WriteSG (56 bytes)</title></rect>
 <rect width="4.81" height="4.41" x="639.87" y="355.04" class="named"><title>0x00446f70 ShiftItem (55 bytes)</title></rect>
 <rect width="4.81" height="4.41" x="639.87" y="362.46" class="named"><title>0x004773f0 GetRandom (55 bytes)</title></rect>
