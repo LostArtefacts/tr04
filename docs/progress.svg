@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="251.86" height="12" x="0" y="0" class="named"><title>1140 · 73.64%</title></rect>
-<rect width="0.66" height="12" x="251.86" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="18.56" height="12" x="252.52" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
-<rect width="70.92" height="12" x="271.08" y="0" class="todo"><title>321 · 20.74%</title></rect>
+<rect width="252.08" height="12" x="0" y="0" class="named"><title>1141 · 73.71%</title></rect>
+<rect width="0.66" height="12" x="252.08" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="18.56" height="12" x="252.74" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
+<rect width="70.70" height="12" x="271.30" y="0" class="todo"><title>320 · 20.67%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">73.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1140</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">321</tspan></text>
+<text text-anchor="end" x="522" y="7.50">73.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1141</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">320</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="136.98" height="12" x="0" y="0" class="named"><title>249 KB · 40.05%</title></rect>
 <rect width="0.13" height="12" x="136.98" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
 <rect width="33.36" height="12" x="137.11" y="0" class="nonmatching"><title>61 KB · 9.76%</title></rect>
-<rect width="171.53" height="12" x="170.47" y="0" class="todo"><title>312 KB · 50.15%</title></rect>
+<rect width="171.52" height="12" x="170.48" y="0" class="todo"><title>312 KB · 50.15%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">40.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">249 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">61 KB</tspan> · <tspan class="todo">312 KB</tspan></text>
@@ -1333,7 +1333,7 @@
 <rect width="12" height="12" x="210" y="375" class="named"><title>0x0047d4b0 S_InitLoadBar (20 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="375" class="named"><title>0x0047d4d0 S_LoadBar (212 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="375" class="named"><title>0x0047d5b0 S_InitialisePolyList (217 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="375" class="todo"><title>0x0047d690 j_nullsub_9 (5 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="375" class="named"><title>0x0047d690 j_nullsub_9 (5 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="375" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="375" class="todo"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="375" class="todo"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
@@ -3152,7 +3152,7 @@
 <rect width="1.46" height="1.32" x="736.63" y="446.89" class="named"><title>0x00437cf0 ClearScarabsPatch (5 bytes)</title></rect>
 <rect width="1.46" height="1.32" x="741.09" y="446.89" class="named"><title>0x0043c400 go_and_load_game (5 bytes)</title></rect>
 <rect width="1.46" height="1.32" x="745.54" y="446.89" class="named"><title>0x0043c410 go_and_save_game (5 bytes)</title></rect>
-<rect width="1.19" height="1.60" x="732.18" y="451.21" class="todo"><title>0x0047d690 j_nullsub_9 (5 bytes)</title></rect>
+<rect width="1.19" height="1.60" x="732.18" y="451.21" class="named"><title>0x0047d690 j_nullsub_9 (5 bytes)</title></rect>
 <rect width="1.19" height="1.60" x="732.18" y="455.81" class="todo"><title>0x00481880 j_nullsub_10 (5 bytes)</title></rect>
 <rect width="1.19" height="1.60" x="732.18" y="460.40" class="named"><title>0x00484cc0 CloseRegistry (5 bytes)</title></rect>
 <rect width="1.54" height="1.24" x="736.37" y="451.21" class="todo"><title>0x0048f970 j_nullsub_11 (5 bytes)</title></rect>

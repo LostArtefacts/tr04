@@ -45,6 +45,11 @@ void S_InitialisePolyList(void)
     InitialiseSortList();
 }
 
+void j_nullsub_9(void)
+{
+    nullsub_9();
+}
+
 void nullsub_9(void)
 {
 }
