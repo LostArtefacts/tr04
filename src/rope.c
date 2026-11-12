@@ -50,3 +50,25 @@ void GetRopePos(ROPE_STRUCT *rope, sint32 pos, sint32 *x, sint32 *y, sint32 *z)
     *y = (rope->NormalisedSegment[segment].y * pos >> (W2V_SHIFT + 2)) + (rope->MeshSegment[segment].y >> (W2V_SHIFT + 2)) + rope->Position.y;
     *z = (rope->NormalisedSegment[segment].z * pos >> (W2V_SHIFT + 2)) + (rope->MeshSegment[segment].z >> (W2V_SHIFT + 2)) + rope->Position.z;
 }
+
+PHD_VECTOR *Normalise(PHD_VECTOR *v)
+{
+    sint32 mod, a, b, c, d, e;
+
+    a = v->x >> 16;
+    b = v->y >> 16;
+    c = v->z >> 16;
+    if (!a && !b && !c) {
+        return v;
+    }
+    d = SQUARE(c) + SQUARE(b) + SQUARE(a);
+    if (d < 0) {
+        d = -d;
+    }
+    e = phd_sqrt(d);
+    mod = (0x1000000 / ((e << 16) >> 8)) << 8 >> 8;
+    v->x = (__int64)mod * v->x >> 16;
+    v->y = (__int64)mod * v->y >> 16;
+    v->z = (__int64)mod * v->z >> 16;
+    return v;
+}

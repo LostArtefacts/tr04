@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="189.68" height="12" x="0" y="0" class="named"><title>858 · 55.46%</title></rect>
-<rect width="0.44" height="12" x="189.68" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="190.12" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="145.47" height="12" x="196.53" y="0" class="todo"><title>658 · 42.53%</title></rect>
+<rect width="189.90" height="12" x="0" y="0" class="named"><title>859 · 55.53%</title></rect>
+<rect width="0.44" height="12" x="189.90" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="190.34" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="145.24" height="12" x="196.76" y="0" class="todo"><title>657 · 42.47%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">55.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">858</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">658</tspan></text>
+<text text-anchor="end" x="522" y="7.50">55.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">859</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">657</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="81.28" height="12" x="0" y="0" class="named"><title>147 KB · 23.77%</title></rect>
-<rect width="0.12" height="12" x="81.28" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="81.40" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="251.94" height="12" x="90.06" y="0" class="todo"><title>457 KB · 73.67%</title></rect>
+<rect width="81.38" height="12" x="0" y="0" class="named"><title>148 KB · 23.80%</title></rect>
+<rect width="0.12" height="12" x="81.38" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="81.50" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="251.85" height="12" x="90.15" y="0" class="todo"><title>457 KB · 73.64%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">147 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">457 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">148 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">457 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -977,7 +977,7 @@
 <rect width="12" height="12" x="120" y="270" class="todo"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="270" class="todo"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="270" class="todo"><title>0x00459410 DrawRopeList (56 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="270" class="todo"><title>0x00459450 Normalise (179 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="270" class="named"><title>0x00459450 Normalise (179 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="270" class="todo"><title>0x00459510 ModelRigid (302 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="270" class="todo"><title>0x00459640 ModelRigidRope (246 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="270" class="todo"><title>0x00459740 SetPendulumPoint (142 bytes)</title></rect>
@@ -2400,7 +2400,7 @@
 <rect width="8.26" height="8.42" x="507.48" y="430.78" class="named"><title>0x00433c70 DetatchSpark (180 bytes)</title></rect>
 <rect width="8.26" height="8.42" x="507.48" y="442.20" class="named"><title>0x00456360 ControlTriggerTriggerer (180 bytes)</title></rect>
 <rect width="8.26" height="8.37" x="507.48" y="453.63" class="named"><title>0x0042f6f0 DoFlareInHand (179 bytes)</title></rect>
-<rect width="8.18" height="8.45" x="518.74" y="233.36" class="todo"><title>0x00459450 Normalise (179 bytes)</title></rect>
+<rect width="8.18" height="8.45" x="518.74" y="233.36" class="named"><title>0x00459450 Normalise (179 bytes)</title></rect>
 <rect width="8.14" height="8.45" x="529.92" y="233.36" class="named"><title>0x0044bb20 GetDoor (178 bytes)</title></rect>
 <rect width="8.14" height="8.45" x="541.06" y="233.36" class="todo"><title>0x0047cc60 S_PauseMenu (178 bytes)</title></rect>
 <rect width="8.09" height="8.45" x="552.19" y="233.36" class="named"><title>0x004397f0 CreateBubble (177 bytes)</title></rect>
