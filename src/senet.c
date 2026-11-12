@@ -28,3 +28,12 @@ void SenetControl(sint16 item_number)
         MakeMove(item->object_number - GAME_PIECE1, last_throw);
     RemoveActiveItem(item_number);
 }
+
+void InitialiseGameStix(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->trigger_flags = NO_ITEM;
+    item->data = item->item_flags;
+}
