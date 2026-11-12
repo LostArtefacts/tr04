@@ -119,7 +119,7 @@ address,size,name,symbol
 0x00412a60,88,InitialiseSphinx,_InitialiseSphinx
 0x00412ac0,1364,SphinxControl,_SphinxControl
 0x00413020,99,InitialiseTemplar,_InitialiseTemplar
-0x00413090,1270,TemplarControl,_TemplarControl
+0x00413090,1296,TemplarControl,_TemplarControl
 0x004135a0,285,CloseTrapDoor,_CloseTrapDoor
 0x004136c0,137,TrapDoorControl,_TrapDoorControl
 0x00413750,237,OpenTrapDoor,_OpenTrapDoor
@@ -1992,6 +1992,7 @@ address,size,name,symbol
 0x004ad2b0,24,GameStixBounds,_GameStixBounds
 0x004ad2c8,12,GameStixPos,_GameStixPos
 0x004ad308,16,sphinx_bite,_sphinx_bite
+0x004ad318,16,templar_hit,_templar_hit
 0x004ad328,12,FloorTrapDoorPos,_FloorTrapDoorPos
 0x004ad334,24,FloorTrapDoorBounds,_FloorTrapDoorBounds
 0x004ad350,12,CeilingTrapDoorPos,_CeilingTrapDoorPos
