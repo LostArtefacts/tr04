@@ -83,6 +83,9 @@ extern sint16 SkyPos;
 extern sint16 SkyPos2;
 extern sint16 LightningSFXDelay;
 extern char LaserSightActive;
+extern sint32 LaserSightX;
+extern sint32 LaserSightY;
+extern sint32 LaserSightZ;
 extern sint16 ClipRoomNum;
 extern PHD_VECTOR vbufdoor[4];
 

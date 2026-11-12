@@ -13,6 +13,10 @@
 #include "debris.h"
 #include "effects.h"
 #include "lara.h"
+#include "switch.h"
+#include "larafire.h"
+#include "effect2.h"
+#include "draw.h"
 
 void KillMoveItems(void)
 {
@@ -1133,7 +1137,6 @@ sint32 IsRoomOutside(sint32 x, sint32 y, sint32 z)
     sint32 c;
     sint16 offset;
 
-
     if (x < 0 || z < 0)
         return -2;
     offset = OutsideRoomOffsets[27 * (x >> 12) + (z >> 12)];
@@ -1282,6 +1285,110 @@ void FireCrossBowFromLaserSight(GAME_VECTOR *start, GAME_VECTOR *target)
     pos.y_rot = angles[0];
     pos.z_rot = 0;
     FireCrossbow(&pos);
+}
+
+sint32 GetTargetOnLOS(GAME_VECTOR *src, GAME_VECTOR *dest, sint32 DrawTarget, sint32 firing)
+{
+    ITEM_INFO *shotitem;
+    MESH_INFO *Mesh;
+    FLOOR_INFO *floor;
+    GAME_VECTOR target;
+    PHD_VECTOR v;
+    sint16 item_no, hit, ricochet, room_number, TriggerItems[8], NumTrigs;
+    sint16 i;
+
+    hit = 0;
+    target.x = dest->x;
+    target.y = dest->y;
+    target.z = dest->z;
+    ricochet = LOS(src, &target);
+    GetFloor(target.x, target.y, target.z, &target.room_number);
+    if (firing && LaserSight) {
+        if (lara.gun_type == WEAPON_REVOLVER)
+            SoundEffect(SFX_DESERT_EAGLE_FIRE, 0, SFX_DEFAULT);
+    }
+    item_no = ObjectOnLOS2(src, dest, &v, &Mesh);
+    if (item_no != 999) {
+        target.x = v.x - ((v.x - src->x) >> 5);
+        target.y = v.y - ((v.y - src->y) >> 5);
+        target.z = v.z - ((v.z - src->z) >> 5);
+        if (firing) {
+            if (lara.gun_type != WEAPON_CROSSBOW) {
+                if (item_no < 0) {
+                    if (Mesh->static_number >= SHATTER0 && Mesh->static_number < SHATTER8) {
+                        ShatterObject(0, Mesh, 128, target.room_number, 0);
+                        SmashedMeshRoom[SmashedMeshCount] = target.room_number;
+                        SmashedMesh[SmashedMeshCount++] = Mesh;
+                        Mesh->Flags &= ~1;
+                        SoundEffect(SFX_HIT_ROCK, (PHD_3DPOS *)Mesh, SFX_DEFAULT);
+                    }
+                    TriggerRicochetSpark(&target, lara_item->pos.y_rot, 3, 0);
+                    TriggerRicochetSpark(&target, lara_item->pos.y_rot, 3, 0);
+                } else {
+                    shotitem = &items[item_no];
+                    if (shotitem->object_number != SWITCH_TYPE7 && shotitem->object_number != SWITCH_TYPE8) {
+                        if (objects[items[item_no].object_number].explodable_meshbits & ShatterItem.Bit && LaserSight) {
+                            ShatterObject(&ShatterItem, 0, 128, target.room_number, 0);
+                            items[item_no].mesh_bits &= ~ShatterItem.Bit;
+                            TriggerRicochetSpark(&target, lara_item->pos.y_rot, 3, 0);
+                        } else if (DrawTarget && lara.gun_type == WEAPON_REVOLVER) {
+                            if (objects[items[item_no].object_number].intelligent)
+                                HitTarget(shotitem, &target, weapons[lara.gun_type].damage, 0);
+                        } else {
+                            if (objects[items[item_no].object_number].HitEffect == 1)
+                                DoBloodSplat(target.x, target.y, target.z, (GetRandomControl() & 3) + 3, shotitem->pos.y_rot, shotitem->room_number);
+                            else if (objects[items[item_no].object_number].HitEffect == 3)
+                                TriggerRicochetSpark(&target, lara_item->pos.y_rot, 3, 0);
+                            else if (objects[items[item_no].object_number].HitEffect == 2)
+                                TriggerRicochetSpark(&target, lara_item->pos.y_rot, 3, -5);
+                            items[item_no].hit_status = 1;
+                            if (!objects[items[item_no].object_number].undead)
+                                items[item_no].hit_points -= weapons[lara.gun_type].damage;
+                        }
+                    } else {
+                        if (ShatterItem.Bit == 1 << (objects[shotitem->object_number].nmeshes - 1) && !(shotitem->flags & IFL_SWITCH_ONESHOT)) {
+                            if (shotitem->object_number == SWITCH_TYPE7)
+                                ExplodeItemNode(shotitem, objects[shotitem->object_number].nmeshes - 1, 0, 64);
+                            if (shotitem->flags & IFL_CODEBITS && (shotitem->flags & IFL_CODEBITS) != IFL_CODEBITS) {
+                                room_number = shotitem->room_number;
+                                floor = GetFloor(shotitem->pos.x_pos, shotitem->pos.y_pos - 256, shotitem->pos.z_pos, &room_number);
+                                GetHeight(floor, shotitem->pos.x_pos, shotitem->pos.y_pos - 256, shotitem->pos.z_pos);
+                                TestTriggers(trigger_index, 1, shotitem->flags & IFL_CODEBITS);
+                            } else {
+                                NumTrigs = GetSwitchTrigger(shotitem, TriggerItems, 1);
+                                for (i = NumTrigs; i > 0; i--) {
+                                    AddActiveItem(TriggerItems[i - 1]);
+                                    items[TriggerItems[i - 1]].status = ITEM_ACTIVE;
+                                    items[TriggerItems[i - 1]].flags |= IFL_CODEBITS;
+                                }
+                            }
+                            AddActiveItem(item_no);
+                            shotitem->status = ITEM_ACTIVE;
+                            shotitem->flags |= IFL_SWITCH_ONESHOT | IFL_CODEBITS;
+                        }
+                        TriggerRicochetSpark(&target, lara_item->pos.y_rot, 3, 0);
+                    }
+                }
+            } else if (LaserSight)
+                FireCrossBowFromLaserSight(src, &target);
+        }
+        hit = 1;
+    } else if (lara.gun_type != WEAPON_CROSSBOW) {
+        target.x -= (target.x - src->x) >> 5;
+        target.y -= (target.y - src->y) >> 5;
+        target.z -= (target.z - src->z) >> 5;
+        if (firing && !ricochet)
+            TriggerRicochetSpark(&target, lara_item->pos.y_rot, 8, 0);
+    } else if (firing && LaserSight)
+        FireCrossBowFromLaserSight(src, &target);
+    if (DrawTarget && (hit || !ricochet)) {
+        LaserSightActive = 1;
+        LaserSightX = target.x;
+        LaserSightY = target.y;
+        LaserSightZ = target.z;
+        TriggerDynamic(target.x, target.y, target.z, 16, 32, 0, 0);
+    }
+    return hit;
 }
 
 sint32 ExplodeItemNode(ITEM_INFO *item, sint32 Node, sint32 NoXZVel, sint32 bits)

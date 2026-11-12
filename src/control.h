@@ -97,6 +97,7 @@ void FlipMap(sint32 FlipNumber);
 void RefreshCamera(sint16 type, sint16 *data);
 sint32 ExplodeItemNode(ITEM_INFO *item, sint32 Node, sint32 NoXZVel, sint32 bits);
 sint32 IsRoomOutside(sint32 x, sint32 y, sint32 z);
+sint32 ObjectOnLOS2(GAME_VECTOR *start, GAME_VECTOR *target, PHD_VECTOR *Coord, MESH_INFO **StaticMesh);
 void FireCrossBowFromLaserSight(GAME_VECTOR *start, GAME_VECTOR *target);
 void KillMoveItems(void);
 void KillMoveEffects(void);
