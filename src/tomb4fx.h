@@ -9,8 +9,8 @@ typedef struct fire_list {
     sint32 x;
     sint32 y;
     sint32 z;
-    sint8 on;
-    sint8 size;
+    uint8 on;
+    uint8 size;
     sint16 room_number;
 } FIRE_LIST;
 
@@ -221,6 +221,7 @@ void DrawGunshells(void);
 void UpdateLightning(void);
 void TriggerLightning(PHD_VECTOR *s, PHD_VECTOR *d, sint8 variation, sint32 rgb, uint8 flags, uint8 size, uint8 segments);
 void DrawWeaponMissile(ITEM_INFO *item);
+void DrawGunflashes(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
@@ -251,5 +252,6 @@ extern sint32 next_drip;
 extern GUNFLASH_STRUCT Gunflashes[4];
 extern SHOCKWAVE_STRUCT ShockWaves[16];
 extern LIGHTNING_STRUCT Lightning[16];
+extern char scratchpad[1024];
 
 #endif

@@ -34,4 +34,6 @@ void DrawSprite(sint32 x, sint32 y, sint32 slot, sint32 col, sint32 size, sint32
 void Draw2DSprite(sint32 x, sint32 y, sint32 slot, sint32 unused, sint32 unused2);
 void DrawTrainStrips(void);
 
+void S_DrawFireSparks(sint32 size, sint32 life);
+
 #endif

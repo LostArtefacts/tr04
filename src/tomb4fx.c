@@ -14,6 +14,7 @@
 #include "anim.h"
 #include "objnums.h"
 #include "draw.h"
+#include "specific/output.h"
 
 sint32 GetFreeFireSpark(void)
 {
@@ -606,6 +607,46 @@ void SetGunFlash(sint32 weapon)
     }
     pos.x = 0;
     TriggerGunflash(&pos);
+}
+
+void DrawGunflashes(void)
+{
+    GUNFLASH_STRUCT *flash;
+    sint32 i;
+
+    if (!Gunflashes[0].on)
+        return;
+    phd_top = 0;
+    phd_left = 0;
+    phd_right = phd_winwidth;
+    phd_bottom = phd_winheight;
+    phd_PushMatrix();
+    GetRandomDraw();
+    GetRandomDraw();
+    GetRandomDraw();
+    GetRandomDraw();
+    flash = Gunflashes;
+    for (i = 0; i < 4; flash++, i++) {
+        if (!flash->on)
+            break;
+        phd_mxptr[M00] = flash->mx[M00];
+        phd_mxptr[M01] = flash->mx[M01];
+        phd_mxptr[M02] = flash->mx[M02];
+        phd_mxptr[M03] = flash->mx[M03];
+        phd_mxptr[M10] = flash->mx[M10];
+        phd_mxptr[M11] = flash->mx[M11];
+        phd_mxptr[M12] = flash->mx[M12];
+        phd_mxptr[M13] = flash->mx[M13];
+        phd_mxptr[M20] = flash->mx[M20];
+        phd_mxptr[M21] = flash->mx[M21];
+        phd_mxptr[M22] = flash->mx[M22];
+        phd_mxptr[M23] = flash->mx[M23];
+        phd_RotZ((sint16)(GetRandomDraw() << 1));
+        GlobalAmbient = 0xFF2F2F00;
+        phd_PutPolygons(meshes[objects[GUN_FLASH].mesh_index], -1);
+        flash->on = 0;
+    }
+    phd_PopMatrix();
 }
 
 void SetFadeClip(sint16 height, sint16 speed)

@@ -2740,6 +2740,7 @@ address,size,name,symbol
 0x0080d7a0,4,DebrisMeshC2,_DebrisMeshC2
 0x0080d7a4,4,DebrisMeshC1,_DebrisMeshC1
 0x0080d7a8,4,DebrisMeshC3,_DebrisMeshC3
+0x0080d7c0,1024,scratchpad,_scratchpad
 0x0080dbc0,,AboveMeshXYZ,_AboveMeshXYZ
 0x0080dbcc,4,SkinXYZPtr,_SkinXYZPtr
 0x0080dbd0,,JointMeshXYZ,_JointMeshXYZ
