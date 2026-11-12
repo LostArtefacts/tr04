@@ -246,6 +246,41 @@ void DrawTrainStrips(void)
     DrawTrainFloorStrip(-20480, 0, &textinfo[ar[0]], 0);
 }
 
+void DrawSprite(sint32 x, sint32 y, sint32 slot, sint32 col, sint32 size, sint32 z)
+{
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    sint32 s;
+
+    s = (sint32)((float)(phd_winwidth / 640.0F) * (size << 1));
+    if (z)
+        setXY4(v, x - s, y - s, s + x, y - s, x - s, s + y, s + x, s + y, (sint32)(z + f_mznear), clipflags);
+    else
+        setXY4(v, x - s, y - s, s + x, y - s, x - s, s + y, s + x, s + y, (sint32)f_mzfar, clipflags);
+    sprite = &spriteinfo[slot + objects[DEFAULT_SPRITES].mesh_index];
+    v[0].specular = 0xFF000000;
+    v[3].specular = 0xFF000000;
+    v[2].specular = 0xFF000000;
+    v[1].specular = 0xFF000000;
+    CalcColorSplit(col, &v[0].color);
+    v[3].color = v[0].color | 0xFF000000;
+    v[2].color = v[0].color | 0xFF000000;
+    v[1].color = v[0].color | 0xFF000000;
+    tex.drawtype = 2;
+    tex.flag = 0;
+    tex.tpage = sprite->tpage;
+    tex.u1 = sprite->x1;
+    tex.v1 = sprite->y1;
+    tex.u2 = sprite->x2;
+    tex.v2 = sprite->y1;
+    tex.u3 = sprite->x2;
+    tex.v3 = sprite->y2;
+    tex.u4 = sprite->x1;
+    tex.v4 = sprite->y2;
+    AddQuadSorted(v, 0, 1, 3, 2, &tex, 0);
+}
+
 void SetFade(sint32 start, sint32 end)
 {
     DoFade = 1;
