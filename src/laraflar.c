@@ -11,6 +11,58 @@
 #include "effect2.h"
 #include "room.h"
 #include "sound.h"
+#include "specific/function_stubs.h"
+
+sint32 DoFlareLight(PHD_VECTOR *pos, sint32 flare_age)
+{
+    sint32 x, y, z, random;
+    sint32 r, g, b, falloff;
+
+    if (flare_age >= 900 || !flare_age)
+        return 0;
+    random = GetRandomControl();
+    x = pos->x + ((random & 0xf) << 3);
+    z = pos->z + ((random >> 5) & 0x78);
+    y = pos->y + ((random >> 1) & 0x78) - 256;
+    if (flare_age < 4) {
+        g = (random & 0x1f) + ((flare_age + 10) << 4);
+        r = ((random >> 4) & 0x1f) + (flare_age << 3) + 32;
+        b = (flare_age << 4) + ((random >> 8) & 0x1f);
+        falloff = (random & 3) + 4 + (flare_age << 2);
+        if (falloff > 16)
+            falloff -= (random >> 12) & 3;
+        TriggerDynamic(x, y, z, falloff, r, g, b);
+    } else if (flare_age < 16) {
+        r = ((random >> 4) & 0x1f) + (flare_age << 2) + 64;
+        g = (random & 0x3f) + (flare_age << 2) + 128;
+        b = ((random >> 8) & 0x1f) + (flare_age << 2) + 16;
+        falloff = (random & 1) + flare_age + 2;
+        TriggerDynamic(x, y, z, falloff, r, g, b);
+    } else if (flare_age < 810) {
+        r = ((random >> 4) & 0x1f) + 128;
+        g = (random & 0x3f) + 192;
+        b = ((random >> 8) & 0x3f) + (((random >> 6) & 0x80) >> 2);
+        falloff = 16;
+        TriggerDynamic(x, y, z, falloff, r, g, b);
+    } else if (flare_age < 876) {
+        if (random > 0x2000) {
+            r = ((random >> 4) & 0x1f) + 128;
+            g = (random & 0x3f) + 192;
+            b = ((random >> 8) & 0x3f) + (((random >> 6) & 0x80) >> 2);
+            falloff = 16;
+            TriggerDynamic(x, y, z, falloff, r, g, b);
+        } else {
+            TriggerDynamic(x, y, z, (GetRandomControl() & 6) + 8, (GetRandomControl() & 0x3f) + 64,
+                           (GetRandomControl() & 0x3f) + 192, GetRandomControl() & 0x7f);
+            return 0;
+        }
+    } else {
+        TriggerDynamic(x, y, z, 16 - ((flare_age - 876) >> 1), (GetRandomControl() & 0x3f) + 64,
+                       (GetRandomControl() & 0x3f) + 192, GetRandomControl() & 0x1f);
+        return random & 1;
+    }
+    return 1;
+}
 
 void DoFlareInHand(sint32 flare_age)
 {
