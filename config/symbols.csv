@@ -1197,7 +1197,7 @@ address,size,name,symbol
 0x00473f20,2716,LoadTextures,_LoadTextures
 0x004749c0,1099,LoadRooms,_LoadRooms
 0x00474e10,1156,LoadObjects,_LoadObjects
-0x004752a0,1121,AdjustUV,_AdjustUV
+0x004752a0,1156,AdjustUV,_AdjustUV
 0x00475730,572,LoadSprites,_LoadSprites
 0x00475970,187,LoadCameras,_LoadCameras
 0x00475a30,139,LoadSoundEffects,_LoadSoundEffects

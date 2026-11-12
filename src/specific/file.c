@@ -328,6 +328,119 @@ uint8 LoadObjects(void)
     return 1;
 }
 
+void AdjustUV(sint32 num)
+{
+    float u, v;
+    uint16 type;
+    sint32 i;
+
+    Log(2, "AdjustUV");
+    for (i = 0; i < num; i++) {
+        Textures[textinfo[i].tpage].tpage++;
+        textinfo[i].tpage++;
+        u = 1.0F / (float)(Textures[textinfo[i].tpage].width << 1);
+        v = 1.0F / (float)(Textures[textinfo[i].tpage].height << 1);
+        type = textinfo[i].flag & 7;
+        if (textinfo[i].flag & 0x8000) {
+            switch (type) {
+            case 0:
+                textinfo[i].u1 += u;
+                textinfo[i].v1 += v;
+                textinfo[i].u2 -= u;
+                textinfo[i].v2 += v;
+                textinfo[i].u3 += u;
+                textinfo[i].v3 -= v;
+                break;
+            case 1:
+                textinfo[i].u1 -= u;
+                textinfo[i].v1 += v;
+                textinfo[i].u2 -= u;
+                textinfo[i].v2 -= v;
+                textinfo[i].u3 += u;
+                textinfo[i].v3 += v;
+                break;
+            case 2:
+                textinfo[i].u1 -= u;
+                textinfo[i].v1 -= v;
+                textinfo[i].u2 += u;
+                textinfo[i].v2 -= v;
+                textinfo[i].u3 -= u;
+                textinfo[i].v3 += v;
+                break;
+            case 3:
+                textinfo[i].u1 += u;
+                textinfo[i].v1 -= v;
+                textinfo[i].u2 += u;
+                textinfo[i].v2 += v;
+                textinfo[i].u3 -= u;
+                textinfo[i].v3 -= v;
+                break;
+            case 4:
+                textinfo[i].u1 -= u;
+                textinfo[i].v1 += v;
+                textinfo[i].u2 += u;
+                textinfo[i].v2 += v;
+                textinfo[i].u3 -= u;
+                textinfo[i].v3 -= v;
+                break;
+            case 5:
+                textinfo[i].u1 += u;
+                textinfo[i].v1 += v;
+                textinfo[i].u2 += u;
+                textinfo[i].v2 -= v;
+                textinfo[i].u3 -= u;
+                textinfo[i].v3 += v;
+                break;
+            case 6:
+                textinfo[i].u1 += u;
+                textinfo[i].v1 -= v;
+                textinfo[i].u2 -= u;
+                textinfo[i].v2 -= v;
+                textinfo[i].u3 += u;
+                textinfo[i].v3 += v;
+                break;
+            case 7:
+                textinfo[i].u1 -= u;
+                textinfo[i].v1 -= v;
+                textinfo[i].u2 -= u;
+                textinfo[i].v2 += v;
+                textinfo[i].u3 += u;
+                textinfo[i].v3 -= v;
+                break;
+            default:
+                Log(1, "TextureInfo Type %d Not Found", type);
+                break;
+            }
+        } else {
+            switch (type) {
+            case 0:
+                textinfo[i].u1 += u;
+                textinfo[i].v1 += v;
+                textinfo[i].u2 -= u;
+                textinfo[i].v2 += v;
+                textinfo[i].u3 -= u;
+                textinfo[i].v3 -= v;
+                textinfo[i].u4 += u;
+                textinfo[i].v4 -= v;
+                break;
+            case 1:
+                textinfo[i].u2 += u;
+                textinfo[i].v2 += v;
+                textinfo[i].u1 -= u;
+                textinfo[i].v1 += v;
+                textinfo[i].u4 -= u;
+                textinfo[i].v4 -= v;
+                textinfo[i].u3 += u;
+                textinfo[i].v3 -= v;
+                break;
+            default:
+                Log(1, "TextureInfo Type %d Not Found", type);
+                break;
+            }
+        }
+    }
+}
+
 uint8 LoadSprites(void)
 {
     PHDSPRITESTRUCT sprite;
