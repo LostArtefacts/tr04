@@ -20,6 +20,8 @@
 #include "../control.h"
 #include "../savegame.h"
 #include "gamemain.h"
+#include "dxshell.h"
+#include "../sound.h"
 
 void RGBM_Mono(uint8 *r, uint8 *g, uint8 *b)
 {
@@ -123,6 +125,60 @@ void CheckKeyConflicts(void)
             }
         }
     }
+}
+
+sint32 S_DisplayPauseMenu(sint32 reset)
+{
+    sint32 y;
+
+    if (!pause_menu) {
+        if (reset) {
+            pause_selection = reset;
+            pause_menu = 0;
+        } else {
+            y = phd_centery - font_height;
+            PrintString((uint16)phd_centerx, (uint16)(y - ((3 * font_height) >> 1)), 6, SCRIPT_TEXT(TXT_Paused), FF_CENTER);
+            PrintString((uint16)phd_centerx, (uint16)y, pause_selection & 1 ? 1 : 2, SCRIPT_TEXT(TXT_Statistics), FF_CENTER);
+            PrintString((uint16)phd_centerx, (uint16)(y + font_height), pause_selection & 2 ? 1 : 2, SCRIPT_TEXT(TXT_Options), FF_CENTER);
+            PrintString((uint16)phd_centerx, (uint16)(y + 2 * font_height), pause_selection & 4 ? 1 : 2, SCRIPT_TEXT(TXT_Exit_to_Title), FF_CENTER);
+            if (dbinput & IN_FORWARD) {
+                if (pause_selection > 1)
+                    pause_selection >>= 1;
+                SoundEffect(SFX_MENU_CHOOSE, 0, SFX_ALWAYS);
+            }
+            if (dbinput & IN_BACK) {
+                if (pause_selection < 4)
+                    pause_selection <<= 1;
+                SoundEffect(SFX_MENU_CHOOSE, 0, SFX_ALWAYS);
+            }
+            if (dbinput & IN_DESELECT) {
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+                return 1;
+            }
+            if (dbinput & IN_SELECT && !keymap[DIK_LALT]) {
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_DEFAULT);
+                if (pause_selection & 1)
+                    pause_menu = 2;
+                else if (pause_selection & 2)
+                    pause_menu = 1;
+                else if (pause_selection & 4)
+                    return 8;
+            }
+        }
+    } else if (pause_menu == 1) {
+        DoOptions();
+        if (dbinput & IN_DESELECT) {
+            pause_menu = 0;
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+        }
+    } else if (pause_menu == 2) {
+        DoStatScreen();
+        if (dbinput & IN_DESELECT) {
+            pause_menu = 0;
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+        }
+    }
+    return 0;
 }
 
 sint32 S_PauseMenu(void)

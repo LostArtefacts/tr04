@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="243.24" height="12" x="0" y="0" class="named"><title>1101 · 71.12%</title></rect>
-<rect width="0.44" height="12" x="243.24" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="14.14" height="12" x="243.69" y="0" class="nonmatching"><title>64 · 4.13%</title></rect>
-<rect width="84.17" height="12" x="257.83" y="0" class="todo"><title>381 · 24.61%</title></rect>
+<rect width="243.47" height="12" x="0" y="0" class="named"><title>1102 · 71.19%</title></rect>
+<rect width="0.44" height="12" x="243.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="14.14" height="12" x="243.91" y="0" class="nonmatching"><title>64 · 4.13%</title></rect>
+<rect width="83.95" height="12" x="258.05" y="0" class="todo"><title>380 · 24.55%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">71.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1101</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">64</tspan> · <tspan class="todo">381</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1102</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">64</tspan> · <tspan class="todo">380</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="120.78" height="12" x="0" y="0" class="named"><title>219 KB · 35.32%</title></rect>
-<rect width="0.12" height="12" x="120.78" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="25.21" height="12" x="120.90" y="0" class="nonmatching"><title>46 KB · 7.37%</title></rect>
-<rect width="195.90" height="12" x="146.10" y="0" class="todo"><title>356 KB · 57.28%</title></rect>
+<rect width="121.09" height="12" x="0" y="0" class="named"><title>220 KB · 35.41%</title></rect>
+<rect width="0.12" height="12" x="121.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="25.21" height="12" x="121.21" y="0" class="nonmatching"><title>46 KB · 7.37%</title></rect>
+<rect width="195.58" height="12" x="146.42" y="0" class="todo"><title>355 KB · 57.19%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">35.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">219 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">46 KB</tspan> · <tspan class="todo">356 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">220 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">46 KB</tspan> · <tspan class="todo">355 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1323,7 +1323,7 @@
 <rect width="12" height="12" x="60" y="375" class="named"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="375" class="todo"><title>0x0047b170 DoOptions (5429 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="375" class="todo"><title>0x0047c6b0 DoStatScreen (868 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="375" class="todo"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="375" class="named"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="375" class="named"><title>0x0047cc60 S_PauseMenu (178 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="375" class="named"><title>0x0047cd20 S_LoadSave (238 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="375" class="todo"><title>0x0047ce10 DoBar (1479 bytes)</title></rect>
@@ -1923,7 +1923,7 @@
 <rect width="15.44" height="14.62" x="568.32" y="61.19" class="named"><title>0x00463400 CogSwitchCollision (585 bytes)</title></rect>
 <rect width="15.42" height="14.62" x="586.77" y="61.19" class="todo"><title>0x0041fb80 FlameTorchControl (584 bytes)</title></rect>
 <rect width="15.21" height="14.62" x="605.18" y="61.19" class="named"><title>0x004403e0 GetCreatureMood (576 bytes)</title></rect>
-<rect width="15.21" height="14.62" x="623.39" y="61.19" class="todo"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
+<rect width="15.21" height="14.62" x="623.39" y="61.19" class="named"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
 <rect width="15.13" height="14.62" x="641.60" y="61.19" class="nonmatching"><title>0x00414670 FlameEmitter2Control (573 bytes)</title></rect>
 <rect width="15.10" height="14.62" x="659.73" y="61.19" class="todo"><title>0x00435570 TriggerSuperJetFlame (572 bytes)</title></rect>
 <rect width="15.10" height="14.62" x="677.83" y="61.19" class="named"><title>0x00475730 LoadSprites (572 bytes)</title></rect>

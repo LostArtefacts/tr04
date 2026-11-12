@@ -2159,6 +2159,7 @@ address,size,name,symbol
 0x004b38ac,4,MusicVolume,_MusicVolume
 0x004b38b0,4,SFXVolume,_SFXVolume
 0x004b38b4,4,SoundQuality,_SoundQuality
+0x004b38c8,4,pause_selection,_pause_selection
 0x004b39e0,4,rgb80h,_rgb80h
 0x004b39e4,4,rgbmask,_rgbmask
 0x004b4670,4,FogStart,_FogStart
@@ -2440,6 +2441,7 @@ address,size,name,symbol
 0x00577460,40,MonoScreen,_MonoScreen
 0x00577488,4,loadbar_pos,_loadbar_pos
 0x005b7494,4,ControlMethod,_ControlMethod
+0x005b74a4,4,pause_menu,_pause_menu
 0x005b74b0,4,current_item,_current_item
 0x005bc4b8,15360,SkinVerts,_SkinVerts
 0x005c00b8,960,SkinClip,_SkinClip
