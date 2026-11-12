@@ -32,6 +32,37 @@ typedef struct gameflow {
     uint16 ScriptLen;
 } GAMEFLOW;
 
+typedef struct stringheader {
+    uint16 nStrings;
+    uint16 nPSXStrings;
+    uint16 nPCStrings;
+    uint16 StringWadLen;
+    uint16 PSXStringWadLen;
+    uint16 PCStringWadLen;
+} STRINGHEADER;
+
+enum gf_commands {
+    CMD_FMV = 0x80,
+    CMD_LEVEL,
+    CMD_TITLE,
+    CMD_ENDSEQ,
+    CMD_PLAYCUT,
+    CMD_CUT1,
+    CMD_CUT2,
+    CMD_CUT3,
+    CMD_CUT4,
+    CMD_LAYER1,
+    CMD_LAYER2,
+    CMD_UVROT,
+    CMD_LEGEND,
+    CMD_LENSFLARE,
+    CMD_MIRROR,
+    CMD_FOG,
+    CMD_ANIMATINGMIP,
+    CMD_CAMERA,
+    CMD_RESETHUB
+};
+
 enum gf_level_options {
     GF_YOUNGLARA = 0x1,
     GF_WEATHER = 0x2,
@@ -441,6 +472,11 @@ extern char Chris_Menu;
 extern char title_controls_locked_out;
 extern uint8 *gfScriptFile;
 extern uint8 *gfLanguageFile;
+extern char *gfExtensions;
+extern uint16 *gfFilenameOffset;
+extern char *gfFilenameWad;
+extern uint16 *gfScriptOffset;
+extern uint8 *gfScriptWad;
 
 extern sint16 CreditGroups[18];
 extern char CreditsTable[71][22];

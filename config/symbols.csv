@@ -808,7 +808,7 @@ address,size,name,symbol
 0x00450f10,613,mRotBoundingBoxNoPersp,_mRotBoundingBoxNoPersp
 0x00451180,181,UpdateSkyLightning,_UpdateSkyLightning
 0x00451240,711,RenderIt,_RenderIt
-0x00451510,525,LoadGameflow,_LoadGameflow
+0x00451510,604,LoadGameflow,_LoadGameflow
 0x00451770,1624,DoGameflow,_DoGameflow
 0x00451e30,2096,DoTitle,_DoTitle
 0x00452710,1133,DoLevel,_DoLevel
