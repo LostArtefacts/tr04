@@ -12,6 +12,9 @@
 #include "room.h"
 #include "sound.h"
 #include "specific/function_stubs.h"
+#include "debris.h"
+#include "collide.h"
+#include "control.h"
 
 sint32 DoFlareLight(PHD_VECTOR *pos, sint32 flare_age)
 {
@@ -99,6 +102,70 @@ void DrawFlareInAir(ITEM_INFO *item)
             phd_PutPolygons_train(meshes[objects[FLARE_ITEM].mesh_index], 0);
             phd_PopMatrix();
         }
+    }
+}
+
+void CreateFlare(sint16 object, sint32 thrown)
+{
+    ITEM_INFO **itemlist;
+    MESH_INFO **meshlist;
+    ITEM_INFO *flare;
+    FLOOR_INFO *floor;
+    PHD_VECTOR pos;
+    sint32 collided;
+    sint16 flare_item, room_number;
+
+    flare_item = CreateItem();
+    if (flare_item != NO_ITEM) {
+        collided = 0;
+        flare = &items[flare_item];
+        flare->object_number = object;
+        flare->room_number = room_number = lara_item->room_number;
+        pos.x = -16;
+        pos.y = 32;
+        pos.z = 42;
+        GetLaraJointPos(&pos, 14);
+        flare->pos.x_pos = pos.x;
+        flare->pos.y_pos = pos.y;
+        flare->pos.z_pos = pos.z;
+        floor = GetFloor(pos.x, pos.y, pos.z, &room_number);
+        itemlist = (ITEM_INFO **)&tsv_buffer[0];
+        meshlist = (MESH_INFO **)&tsv_buffer[1024];
+        if (GetCollidedObjects(flare, 0, 1, itemlist, meshlist, 0) || GetHeight(floor, pos.x, pos.y, pos.z) < pos.y) {
+            collided = 1;
+            flare->pos.y_rot = lara_item->pos.y_rot - 0x8000;
+            flare->pos.x_pos = lara_item->pos.x_pos + (80 * phd_sin(flare->pos.y_rot) >> W2V_SHIFT);
+            flare->pos.z_pos = lara_item->pos.z_pos + (80 * phd_cos(flare->pos.y_rot) >> W2V_SHIFT);
+            flare->room_number = lara_item->room_number;
+        } else {
+            if (thrown)
+                flare->pos.y_rot = lara_item->pos.y_rot;
+            else
+                flare->pos.y_rot = lara_item->pos.y_rot - 0x2000;
+            flare->room_number = room_number;
+        }
+        InitialiseItem(flare_item);
+        flare->pos.z_rot = 0;
+        flare->pos.x_rot = 0;
+        flare->shade = -1;
+        if (thrown) {
+            flare->speed = lara_item->speed + 50;
+            flare->fallspeed = lara_item->fallspeed - 50;
+        } else {
+            flare->speed = lara_item->speed + 10;
+            flare->fallspeed = lara_item->fallspeed + 50;
+        }
+        if (collided)
+            flare->speed >>= 1;
+        if (object == FLARE_ITEM) {
+            if (DoFlareLight((PHD_VECTOR *)&flare->pos, lara.flare_age))
+                flare->data = (void *)(lara.flare_age | 0x8000);
+            else
+                flare->data = (void *)(lara.flare_age & 0x7fff);
+        } else
+            flare->item_flags[3] = lara.LitTorch;
+        AddActiveItem(flare_item);
+        flare->status = ITEM_ACTIVE;
     }
 }
 

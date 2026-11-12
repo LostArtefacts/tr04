@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="238.10" height="12" x="0" y="0" class="named"><title>1077 · 69.62%</title></rect>
-<rect width="0.44" height="12" x="238.10" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="11.94" height="12" x="238.54" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
-<rect width="91.52" height="12" x="250.48" y="0" class="todo"><title>414 · 26.76%</title></rect>
+<rect width="238.32" height="12" x="0" y="0" class="named"><title>1078 · 69.68%</title></rect>
+<rect width="0.44" height="12" x="238.32" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="11.94" height="12" x="238.76" y="0" class="nonmatching"><title>54 · 3.49%</title></rect>
+<rect width="91.30" height="12" x="250.70" y="0" class="todo"><title>413 · 26.70%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">69.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1077</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">414</tspan></text>
+<text text-anchor="end" x="522" y="7.50">69.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1078</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">54</tspan> · <tspan class="todo">413</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="112.65" height="12" x="0" y="0" class="named"><title>205 KB · 32.94%</title></rect>
-<rect width="0.12" height="12" x="112.65" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="20.70" height="12" x="112.77" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
-<rect width="208.53" height="12" x="133.47" y="0" class="todo"><title>379 KB · 60.97%</title></rect>
+<rect width="113" height="12" x="0" y="0" class="named"><title>205 KB · 33.04%</title></rect>
+<rect width="0.12" height="12" x="113" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="20.70" height="12" x="113.12" y="0" class="nonmatching"><title>38 KB · 6.05%</title></rect>
+<rect width="208.18" height="12" x="133.82" y="0" class="todo"><title>378 KB · 60.87%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">33.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">205 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">379 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">33.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">205 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">38 KB</tspan> · <tspan class="todo">378 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -493,7 +493,7 @@
 <rect width="12" height="12" x="360" y="120" class="named"><title>0x0042f510 DoFlareLight (477 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="120" class="named"><title>0x0042f6f0 DoFlareInHand (179 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="120" class="named"><title>0x0042f7b0 DrawFlareInAir (207 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="120" class="todo"><title>0x0042f880 CreateFlare (627 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="120" class="named"><title>0x0042f880 CreateFlare (627 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="120" class="named"><title>0x0042fb00 set_flare_arm (75 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="120" class="named"><title>0x0042fb50 draw_flare (270 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="120" class="named"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>
@@ -1881,7 +1881,7 @@
 <rect width="15.05" height="16.19" x="606.56" y="41.97" class="todo"><title>0x00432da0 LaraWaterCurrent (631 bytes)</title></rect>
 <rect width="15" height="16.19" x="624.61" y="41.97" class="named"><title>0x004323a0 LaraUnderWater (629 bytes)</title></rect>
 <rect width="14.97" height="16.19" x="642.61" y="41.97" class="todo"><title>0x00441c60 CreatureTurn (628 bytes)</title></rect>
-<rect width="14.95" height="16.19" x="660.58" y="41.97" class="todo"><title>0x0042f880 CreateFlare (627 bytes)</title></rect>
+<rect width="14.95" height="16.19" x="660.58" y="41.97" class="named"><title>0x0042f880 CreateFlare (627 bytes)</title></rect>
 <rect width="14.95" height="16.19" x="678.53" y="41.97" class="todo"><title>0x00434770 TriggerFlareSparks (627 bytes)</title></rect>
 <rect width="14.85" height="16.19" x="696.48" y="41.97" class="named"><title>0x00450840 InterpolateMatrix (623 bytes)</title></rect>
 <rect width="14.83" height="16.19" x="714.34" y="41.97" class="named"><title>0x0044e930 SequenceDoorControl (622 bytes)</title></rect>
