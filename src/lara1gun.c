@@ -37,6 +37,38 @@ void ready_shotgun(int weapon_type)
     lara.left_arm.frame_base = lara.right_arm.frame_base = objects[WeaponObject(weapon_type)].frame_base;
 }
 
+void draw_shotgun(sint32 weapon_type)
+{
+    ITEM_INFO *item;
+
+    if (lara.weapon_item == NO_ITEM) {
+        lara.weapon_item = CreateItem();
+        item = &items[lara.weapon_item];
+        item->object_number = (sint16)WeaponObject(weapon_type);
+        if (weapon_type == WEAPON_GRENADE)
+            item->anim_number = objects[GRENADE_GUN_ANIM].anim_index;
+        else
+            item->anim_number = objects[item->object_number].anim_index + 1;
+        item->frame_number = anims[item->anim_number].frame_base;
+        item->current_anim_state = item->goal_anim_state = 1;
+        item->status = ITEM_ACTIVE;
+        item->room_number = 255;
+        lara.left_arm.frame_base = lara.right_arm.frame_base = objects[item->object_number].frame_base;
+    } else {
+        item = &items[lara.weapon_item];
+    }
+    AnimateItem(item);
+    if (!item->current_anim_state || item->current_anim_state == 6)
+        ready_shotgun(weapon_type);
+    else if (item->frame_number - anims[item->anim_number].frame_base == weapons[weapon_type].draw_frame)
+        draw_shotgun_meshes(weapon_type);
+    else if (lara.water_status == LW_UNDERWATER)
+        item->goal_anim_state = 6;
+    lara.left_arm.frame_base = lara.right_arm.frame_base = anims[item->anim_number].frame_ptr;
+    lara.left_arm.frame_number = lara.right_arm.frame_number = item->frame_number - anims[item->anim_number].frame_base;
+    lara.left_arm.anim_number = lara.right_arm.anim_number = item->anim_number;
+}
+
 void undraw_shotgun(sint32 weapon_type)
 {
     ITEM_INFO *item;

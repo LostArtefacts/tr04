@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="233.90" height="12" x="0" y="0" class="named"><title>1058 · 68.39%</title></rect>
-<rect width="0.44" height="12" x="233.90" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="9.51" height="12" x="234.34" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
-<rect width="98.16" height="12" x="243.84" y="0" class="todo"><title>444 · 28.70%</title></rect>
+<rect width="234.12" height="12" x="0" y="0" class="named"><title>1059 · 68.46%</title></rect>
+<rect width="0.44" height="12" x="234.12" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="9.51" height="12" x="234.56" y="0" class="nonmatching"><title>43 · 2.78%</title></rect>
+<rect width="97.94" height="12" x="244.06" y="0" class="todo"><title>443 · 28.64%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">68.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1058</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">444</tspan></text>
+<text text-anchor="end" x="522" y="7.50">68.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1059</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">43</tspan> · <tspan class="todo">443</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="103.59" height="12" x="0" y="0" class="named"><title>188 KB · 30.29%</title></rect>
-<rect width="0.12" height="12" x="103.59" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="13.36" height="12" x="103.71" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
-<rect width="224.93" height="12" x="117.07" y="0" class="todo"><title>408 KB · 65.77%</title></rect>
+<rect width="103.81" height="12" x="0" y="0" class="named"><title>188 KB · 30.35%</title></rect>
+<rect width="0.12" height="12" x="103.81" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="13.36" height="12" x="103.93" y="0" class="nonmatching"><title>24 KB · 3.91%</title></rect>
+<rect width="224.72" height="12" x="117.28" y="0" class="todo"><title>408 KB · 65.71%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">30.3%</text>
+<text text-anchor="end" x="522" y="24.50">30.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">188 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">24 KB</tspan> · <tspan class="todo">408 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -444,7 +444,7 @@
 <rect width="12" height="12" x="375" y="105" class="todo"><title>0x0042a270 FireCrossbow (531 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="105" class="todo"><title>0x0042a490 CrossbowHitSwitchType78 (946 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="105" class="todo"><title>0x0042a850 ControlCrossbow (1524 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="105" class="todo"><title>0x0042ae50 draw_shotgun (390 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="105" class="named"><title>0x0042ae50 draw_shotgun (390 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="105" class="named"><title>0x0042afe0 undraw_shotgun (275 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="105" class="todo"><title>0x0042b100 AnimateShotgun (802 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="105" class="named"><title>0x0042b430 TriggerUnderwaterExplosion (449 bytes)</title></rect>
@@ -2072,7 +2072,7 @@
 <rect width="12.48" height="12.25" x="413.44" y="299.10" class="named"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
 <rect width="12.48" height="12.16" x="413.44" y="314.35" class="named"><title>0x00434fa0 TriggerExplosionSmoke (393 bytes)</title></rect>
 <rect width="12.48" height="12.16" x="413.44" y="329.51" class="todo"><title>0x0043bd80 DrawThreeDeeObject2D (393 bytes)</title></rect>
-<rect width="12.48" height="12.07" x="413.44" y="344.67" class="todo"><title>0x0042ae50 draw_shotgun (390 bytes)</title></rect>
+<rect width="12.48" height="12.07" x="413.44" y="344.67" class="named"><title>0x0042ae50 draw_shotgun (390 bytes)</title></rect>
 <rect width="12.48" height="12.07" x="413.44" y="359.74" class="named"><title>0x00456780 TriggerRopeFlame (390 bytes)</title></rect>
 <rect width="12.48" height="12.04" x="413.44" y="374.81" class="named"><title>0x00410220 TriggerSethFlame (389 bytes)</title></rect>
 <rect width="12.48" height="12.04" x="413.44" y="389.85" class="named"><title>0x004139f0 CeilingTrapDoorCollision (389 bytes)</title></rect>
