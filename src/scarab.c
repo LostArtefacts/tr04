@@ -41,3 +41,15 @@ sint32 GetFreeScarab(void)
     }
     return -1;
 }
+
+void ClearScarabs(void)
+{
+    SCARAB_STRUCT *fx;
+    sint32 i;
+
+    fx = Scarabs;
+    for (i = 128; i > 0; i--, fx++)
+        fx->On = 0;
+    next_scarab = 0;
+    flipeffect = -1;
+}
