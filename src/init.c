@@ -252,3 +252,8 @@ void InitialiseSmashObject(sint16 item_number)
     if (boxes[floor->box].overlap_index & 0x8000)
         boxes[floor->box].overlap_index |= 0x4000;
 }
+
+void InitialiseMapper(sint16 item_number)
+{
+    items[item_number].mesh_bits = 0xFFFFFFFD;    
+}

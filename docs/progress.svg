@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="181.28" height="12" x="0" y="0" class="named"><title>820 · 53.01%</title></rect>
-<rect width="0.44" height="12" x="181.28" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="181.72" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="153.87" height="12" x="188.13" y="0" class="todo"><title>696 · 44.99%</title></rect>
+<rect width="181.50" height="12" x="0" y="0" class="named"><title>821 · 53.07%</title></rect>
+<rect width="0.44" height="12" x="181.50" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="181.94" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="153.65" height="12" x="188.35" y="0" class="todo"><title>695 · 44.93%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">53.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">820</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">696</tspan></text>
+<text text-anchor="end" x="522" y="7.50">53.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">821</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">695</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="78.71" height="12" x="0" y="0" class="named"><title>143 KB · 23.01%</title></rect>
-<rect width="0.12" height="12" x="78.71" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="78.83" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="254.52" height="12" x="87.48" y="0" class="todo"><title>462 KB · 74.42%</title></rect>
+<rect width="78.73" height="12" x="0" y="0" class="named"><title>143 KB · 23.02%</title></rect>
+<rect width="0.12" height="12" x="78.73" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="78.85" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="254.50" height="12" x="87.50" y="0" class="todo"><title>462 KB · 74.41%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">23.0%</text>
+<text text-anchor="end" x="522" y="24.50">23.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">143 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">462 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -899,7 +899,7 @@
 <rect width="12" height="12" x="450" y="240" class="todo"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="240" class="named"><title>0x00453710 InitialiseMineHelicopter (45 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="240" class="named"><title>0x00453740 InitialiseSmashObject (141 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="240" class="todo"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="240" class="named"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="240" class="todo"><title>0x00453800 InitialiseLightningConductor (103 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="240" class="todo"><title>0x00453870 InitialiseStatuePlinth (45 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="240" class="todo"><title>0x004538a0 InitialiseEffects (218 bytes)</title></rect>
@@ -2976,7 +2976,7 @@
 <rect width="3.71" height="3.64" x="729.87" y="384.08" class="named"><title>0x00437820 ExplosionFX (35 bytes)</title></rect>
 <rect width="3.71" height="3.64" x="736.58" y="384.08" class="named"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
 <rect width="3.71" height="3.64" x="743.29" y="384.08" class="named"><title>0x004530a0 InitialiseFallingBlock2 (35 bytes)</title></rect>
-<rect width="3.53" height="3.83" x="669.26" y="390.72" class="todo"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
+<rect width="3.53" height="3.83" x="669.26" y="390.72" class="named"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
 <rect width="3.53" height="3.83" x="669.26" y="397.56" class="named"><title>0x0045a340 CreateCheckSum (35 bytes)</title></rect>
 <rect width="3.53" height="3.83" x="669.26" y="404.39" class="named"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
 <rect width="3.53" height="3.72" x="669.26" y="411.22" class="named"><title>0x00437d00 MeshSwapToPour (34 bytes)</title></rect>
