@@ -17,3 +17,8 @@ void ClearFXFogBulbs(void)
     }
     NumFXFogBulbs = 0;
 }
+
+sint32 IsVolumetric(void)
+{
+    return App.Volumetric;
+}

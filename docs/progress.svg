@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="185.70" height="12" x="0" y="0" class="named"><title>840 · 54.30%</title></rect>
-<rect width="0.44" height="12" x="185.70" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="186.14" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="149.45" height="12" x="192.55" y="0" class="todo"><title>676 · 43.70%</title></rect>
+<rect width="185.92" height="12" x="0" y="0" class="named"><title>841 · 54.36%</title></rect>
+<rect width="0.44" height="12" x="185.92" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="186.36" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="149.22" height="12" x="192.78" y="0" class="todo"><title>675 · 43.63%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">54.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">840</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">676</tspan></text>
+<text text-anchor="end" x="522" y="7.50">54.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">841</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">675</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.79" height="12" x="0" y="0" class="named"><title>145 KB · 23.33%</title></rect>
-<rect width="0.12" height="12" x="79.79" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="79.80" height="12" x="0" y="0" class="named"><title>145 KB · 23.33%</title></rect>
+<rect width="0.12" height="12" x="79.80" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
 <rect width="8.65" height="12" x="79.92" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
 <rect width="253.43" height="12" x="88.57" y="0" class="todo"><title>460 KB · 74.10%</title></rect>
 </g>
@@ -1364,7 +1364,7 @@
 <rect width="12" height="12" x="675" y="375" class="todo"><title>0x004818c0 ControlFXBulb (232 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="375" class="todo"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="375" class="todo"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="375" class="todo"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="375" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="375" class="todo"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="390" class="todo"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="390" class="todo"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
@@ -3141,7 +3141,7 @@
 <rect width="1.50" height="2.03" x="731.98" y="441.85" class="named"><title>0x004377e0 ActivateKey (8 bytes)</title></rect>
 <rect width="1.50" height="2.03" x="736.49" y="441.85" class="named"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
 <rect width="1.50" height="2.03" x="740.99" y="441.85" class="named"><title>0x0046c190 fifteen_end (8 bytes)</title></rect>
-<rect width="1.50" height="2.03" x="745.50" y="441.85" class="todo"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
+<rect width="1.50" height="2.03" x="745.50" y="441.85" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="1.69" height="1.83" x="727.48" y="446.88" class="todo"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="1.69" height="1.83" x="727.48" y="451.71" class="todo"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
 <rect width="1.69" height="1.36" x="727.48" y="456.53" class="todo"><title>0x00494e90 Func494e90 (6 bytes)</title></rect>
