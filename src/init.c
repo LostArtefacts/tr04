@@ -286,6 +286,35 @@ void InitialiseStatuePlinth(sint16 item_number)
         item->mesh_bits = 1;
 }
 
+void InitialiseSmokeEmitter(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (item->object_number != STEAM_EMITTER)
+        return;
+    if (item->trigger_flags & 8) {
+        item->item_flags[0] = item->trigger_flags >> 4;
+        switch (item->pos.y_rot) {
+        case 0:
+            item->pos.z_pos += 320;
+            break;
+        case 0x4000:
+            item->pos.x_pos += 320;
+            break;
+        case -0x4000:
+            item->pos.x_pos -= 320;
+            break;
+        case -0x8000:
+            item->pos.z_pos -= 320;
+            break;
+        }
+    } else if (room[item->room_number].flags & ROOM_UNDERWATER && item->trigger_flags == 1) {
+        item->item_flags[0] = 20;
+        item->item_flags[1] = 1;
+    }
+}
+
 void InitialisePulley(sint16 item_number)
 {
     ITEM_INFO *item;

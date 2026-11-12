@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="182.16" height="12" x="0" y="0" class="named"><title>824 · 53.26%</title></rect>
-<rect width="0.44" height="12" x="182.16" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="182.61" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="152.98" height="12" x="189.02" y="0" class="todo"><title>692 · 44.73%</title></rect>
+<rect width="182.39" height="12" x="0" y="0" class="named"><title>825 · 53.33%</title></rect>
+<rect width="0.44" height="12" x="182.39" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="182.83" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="152.76" height="12" x="189.24" y="0" class="todo"><title>691 · 44.67%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">53.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">824</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">692</tspan></text>
+<text text-anchor="end" x="522" y="7.50">53.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">825</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">691</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="78.85" height="12" x="0" y="0" class="named"><title>143 KB · 23.06%</title></rect>
-<rect width="0.12" height="12" x="78.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="78.98" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="254.37" height="12" x="87.63" y="0" class="todo"><title>461 KB · 74.38%</title></rect>
+<rect width="78.95" height="12" x="0" y="0" class="named"><title>143 KB · 23.09%</title></rect>
+<rect width="0.12" height="12" x="78.95" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="79.07" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="254.28" height="12" x="87.72" y="0" class="todo"><title>461 KB · 74.35%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">143 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">461 KB</tspan></text>
@@ -903,7 +903,7 @@
 <rect width="12" height="12" x="510" y="240" class="named"><title>0x00453800 InitialiseLightningConductor (103 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="240" class="named"><title>0x00453870 InitialiseStatuePlinth (45 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="240" class="todo"><title>0x004538a0 InitialiseEffects (218 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="240" class="todo"><title>0x00453980 InitialiseSmokeEmitter (176 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="240" class="named"><title>0x00453980 InitialiseSmokeEmitter (176 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="240" class="todo"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="240" class="named"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="240" class="todo"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
@@ -2409,7 +2409,7 @@
 <rect width="8.04" height="8.45" x="585.46" y="233.36" class="todo"><title>0x00420870 GetCorrectStashPoints (176 bytes)</title></rect>
 <rect width="8.04" height="8.45" x="596.50" y="233.36" class="named"><title>0x00428160 lara_col_compress (176 bytes)</title></rect>
 <rect width="8.04" height="8.45" x="607.54" y="233.36" class="named"><title>0x0042c3c0 LaraTestClimbPos (176 bytes)</title></rect>
-<rect width="8.04" height="8.45" x="618.59" y="233.36" class="todo"><title>0x00453980 InitialiseSmokeEmitter (176 bytes)</title></rect>
+<rect width="8.04" height="8.45" x="618.59" y="233.36" class="named"><title>0x00453980 InitialiseSmokeEmitter (176 bytes)</title></rect>
 <rect width="8.04" height="8.45" x="629.63" y="233.36" class="named"><title>0x004545f0 RemoveActiveItem (176 bytes)</title></rect>
 <rect width="8.04" height="8.45" x="640.67" y="233.36" class="named"><title>0x00466e90 BikeStart (176 bytes)</title></rect>
 <rect width="8.04" height="8.45" x="651.72" y="233.36" class="todo"><title>0x00481760 DoSort (176 bytes)</title></rect>
