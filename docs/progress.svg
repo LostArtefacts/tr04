@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="174.87" height="12" x="0" y="0" class="named"><title>791 · 51.13%</title></rect>
-<rect width="0.44" height="12" x="174.87" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="175.31" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="160.28" height="12" x="181.72" y="0" class="todo"><title>725 · 46.86%</title></rect>
+<rect width="175.09" height="12" x="0" y="0" class="named"><title>792 · 51.20%</title></rect>
+<rect width="0.44" height="12" x="175.09" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="175.53" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="160.06" height="12" x="181.94" y="0" class="todo"><title>724 · 46.80%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">51.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">791</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">725</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">792</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">724</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.60" height="12" x="0" y="0" class="named"><title>139 KB · 22.40%</title></rect>
-<rect width="0.12" height="12" x="76.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.72" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.63" height="12" x="85.37" y="0" class="todo"><title>465 KB · 75.04%</title></rect>
+<rect width="76.62" height="12" x="0" y="0" class="named"><title>139 KB · 22.40%</title></rect>
+<rect width="0.12" height="12" x="76.62" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.74" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.61" height="12" x="85.39" y="0" class="todo"><title>465 KB · 75.03%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">139 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">465 KB</tspan></text>
@@ -720,7 +720,7 @@
 <rect width="12" height="12" x="15" y="195" class="todo"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="195" class="named"><title>0x0043ef60 have_i_got_object (237 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="195" class="named"><title>0x0043f050 remove_inventory_item (252 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="195" class="todo"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="195" class="named"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="195" class="todo"><title>0x0043f180 draw_compass (82 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="195" class="todo"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="195" class="todo"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
@@ -2974,7 +2974,7 @@
 <rect width="3.71" height="3.64" x="716.45" y="384.08" class="named"><title>0x004322e0 lara_col_surfleft (35 bytes)</title></rect>
 <rect width="3.71" height="3.64" x="723.16" y="384.08" class="named"><title>0x00432310 lara_col_surfright (35 bytes)</title></rect>
 <rect width="3.71" height="3.64" x="729.87" y="384.08" class="named"><title>0x00437820 ExplosionFX (35 bytes)</title></rect>
-<rect width="3.71" height="3.64" x="736.58" y="384.08" class="todo"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
+<rect width="3.71" height="3.64" x="736.58" y="384.08" class="named"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
 <rect width="3.71" height="3.64" x="743.29" y="384.08" class="todo"><title>0x004530a0 InitialiseFallingBlock2 (35 bytes)</title></rect>
 <rect width="3.53" height="3.83" x="669.26" y="390.72" class="todo"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
 <rect width="3.53" height="3.83" x="669.26" y="397.56" class="named"><title>0x0045a340 CreateCheckSum (35 bytes)</title></rect>

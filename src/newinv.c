@@ -269,3 +269,14 @@ void remove_inventory_item(sint16 object_number)
     else if (object_number >= QUEST_ITEM1 && object_number <= QUEST_ITEM6)
         lara.questitems &= ~(1 << (object_number - QUEST_ITEM1));
 }
+
+sint32 convert_obj_to_invobj(sint16 obj)
+{
+    sint32 i;
+
+    for (i = 0; i < NUM_INVOBJ; i++) {
+        if (obj == inventry_objects_list[i].object_number)
+            return i;
+    }
+    return INV_MEMCARD_LOAD_ITEM;
+}
