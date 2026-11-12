@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="225.27" height="12" x="0" y="0" class="named"><title>1019 · 65.87%</title></rect>
-<rect width="0.44" height="12" x="225.27" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="225.72" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="107.88" height="12" x="234.12" y="0" class="todo"><title>488 · 31.54%</title></rect>
+<rect width="225.49" height="12" x="0" y="0" class="named"><title>1020 · 65.93%</title></rect>
+<rect width="0.44" height="12" x="225.49" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="225.94" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="107.66" height="12" x="234.34" y="0" class="todo"><title>487 · 31.48%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">66.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1019</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">488</tspan></text>
+<text text-anchor="end" x="522" y="7.50">66.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1020</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">487</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="98.04" height="12" x="0" y="0" class="named"><title>178 KB · 28.67%</title></rect>
-<rect width="0.12" height="12" x="98.04" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="98.16" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="233.69" height="12" x="108.31" y="0" class="todo"><title>424 KB · 68.33%</title></rect>
+<rect width="98.20" height="12" x="0" y="0" class="named"><title>178 KB · 28.71%</title></rect>
+<rect width="0.12" height="12" x="98.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="98.32" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="233.52" height="12" x="108.48" y="0" class="todo"><title>424 KB · 68.28%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">178 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">424 KB</tspan></text>
@@ -164,7 +164,7 @@
 <rect width="12" height="12" x="675" y="15" class="todo"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="15" class="named"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="15" class="named"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="15" class="todo"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="15" class="named"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="15" class="named"><title>0x0040f600 InitialiseGameStix (42 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="30" class="todo"><title>0x0040f630 GameStixControl (1436 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="30" class="named"><title>0x0040fbd0 ShockwaveExplosion (138 bytes)</title></rect>
@@ -2163,7 +2163,7 @@
 <rect width="11" height="10.74" x="443.02" y="383.21" class="todo"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
 <rect width="11" height="10.67" x="443.02" y="396.95" class="todo"><title>0x0041d010 CalcLaraMatrices (304 bytes)</title></rect>
 <rect width="11" height="10.60" x="443.02" y="410.62" class="named"><title>0x00401990 ReTriggerAhmet (302 bytes)</title></rect>
-<rect width="11" height="10.60" x="443.02" y="424.23" class="todo"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
+<rect width="11" height="10.60" x="443.02" y="424.23" class="named"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
 <rect width="11" height="10.60" x="443.02" y="437.83" class="named"><title>0x00459510 ModelRigid (302 bytes)</title></rect>
 <rect width="11" height="10.57" x="443.02" y="451.43" class="named"><title>0x00423930 lara_col_monkeyswing (301 bytes)</title></rect>
 <rect width="10.63" height="10.94" x="457.02" y="158.22" class="named"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>

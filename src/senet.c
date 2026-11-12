@@ -56,6 +56,50 @@ void SenetControl(sint16 item_number)
     RemoveActiveItem(item_number);
 }
 
+void MakeMove(sint32 piece, sint32 displacement)
+{
+    sint32 num;
+    sint8 last;
+    sint16 pos, i, n;
+
+    pos = senet_piece[piece] + displacement;
+    num = (piece >= 3) + 1;
+    if (senet_piece[piece] == NO_ITEM || !displacement || pos > 16 || (sint16)(senet_board[pos] & num))
+        return;
+    senet_board[senet_piece[piece]] &= ~num;
+    if (!senet_piece[piece]) {
+        n = 3 * num - 3;
+        for (i = n; i < n + 3; i++) {
+            if (i != piece && !senet_piece[i])
+                senet_board[senet_piece[piece]] |= num;
+        }
+    }
+    piece_moving = (sint8)piece;
+    senet_piece[piece] = (sint8)pos;
+    if (pos > 4) {
+        senet_board[pos] = 0;
+        n = 3 * (2 - num);
+        for (i = n; i < n + 3; i++) {
+            if (senet_piece[i] == pos) {
+                senet_piece[i] = 0;
+                senet_board[0] |= 3 - num;
+            }
+        }
+    }
+    if (pos < 16)
+        senet_board[pos] |= num;
+    else
+        senet_piece[piece] = -1;
+    if (!(pos & 3)) {
+        last_throw = 0;
+    } else {
+        last = last_throw;
+        last_throw = -1;
+        if (last == 6)
+            last_throw = 0;
+    }
+}
+
 void InitialiseGameStix(sint16 item_number)
 {
     ITEM_INFO *item;
