@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="212.45" height="12" x="0" y="0" class="named"><title>961 · 62.12%</title></rect>
-<rect width="0.44" height="12" x="212.45" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="212.89" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="121.81" height="12" x="220.19" y="0" class="todo"><title>551 · 35.62%</title></rect>
+<rect width="212.67" height="12" x="0" y="0" class="named"><title>962 · 62.18%</title></rect>
+<rect width="0.44" height="12" x="212.67" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="213.11" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="121.59" height="12" x="220.41" y="0" class="todo"><title>550 · 35.55%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">62.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">961</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">551</tspan></text>
+<text text-anchor="end" x="522" y="7.50">62.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">962</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">550</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="91.40" height="12" x="0" y="0" class="named"><title>166 KB · 26.72%</title></rect>
-<rect width="0.12" height="12" x="91.40" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="91.52" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="241.06" height="12" x="100.94" y="0" class="todo"><title>437 KB · 70.48%</title></rect>
+<rect width="91.47" height="12" x="0" y="0" class="named"><title>166 KB · 26.74%</title></rect>
+<rect width="0.12" height="12" x="91.47" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="91.59" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="240.99" height="12" x="101.01" y="0" class="todo"><title>437 KB · 70.46%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">166 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">437 KB</tspan></text>
@@ -155,7 +155,7 @@
 <rect width="12" height="12" x="540" y="15" class="named"><title>0x0040e2a0 ClearScarabs (40 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="15" class="named"><title>0x0040e2d0 TriggerScarab (240 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="15" class="todo"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="15" class="todo"><title>0x0040e630 DrawScarabs (126 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="15" class="named"><title>0x0040e630 DrawScarabs (126 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="15" class="named"><title>0x0040e6b0 InitialiseScarabGenerator (208 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="15" class="todo"><title>0x0040e780 InitialiseScorpion (120 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="15" class="todo"><title>0x0040e800 ScorpionControl (1963 bytes)</title></rect>
@@ -2555,7 +2555,7 @@
 <rect width="6.84" height="7.17" x="700.95" y="266.08" class="named"><title>0x004168d0 ControlChain (127 bytes)</title></rect>
 <rect width="6.84" height="7.17" x="710.79" y="266.08" class="todo"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
 <rect width="6.79" height="7.17" x="720.63" y="266.08" class="named"><title>0x00403c10 DrawLocusts (126 bytes)</title></rect>
-<rect width="6.79" height="7.17" x="730.42" y="266.08" class="todo"><title>0x0040e630 DrawScarabs (126 bytes)</title></rect>
+<rect width="6.79" height="7.17" x="730.42" y="266.08" class="named"><title>0x0040e630 DrawScarabs (126 bytes)</title></rect>
 <rect width="6.79" height="7.17" x="740.21" y="266.08" class="todo"><title>0x0041fdd0 InitialiseHair (126 bytes)</title></rect>
 <rect width="6.85" height="7.10" x="560.92" y="276.24" class="named"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="6.85" height="7.10" x="560.92" y="286.35" class="named"><title>0x00490a90 phd_GetVectorAngles (126 bytes)</title></rect>

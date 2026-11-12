@@ -88,6 +88,25 @@ void TriggerScarab(sint16 item_number)
     }
 }
 
+void DrawScarabs(void)
+{
+    SCARAB_STRUCT *fx;
+    sint16 **meshpp;
+    sint32 i;
+
+    meshpp = &meshes[objects[LITTLE_BEETLE].mesh_index + (wibble >> 2 & 2)];
+    fx = Scarabs;
+    for (i = 128; i > 0; i--, fx++) {
+        if (fx->On) {
+            phd_PushMatrix();
+            phd_TranslateAbs(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
+            phd_RotYXZ(fx->pos.y_rot, fx->pos.x_rot, fx->pos.z_rot);
+            phd_PutPolygons_train(*meshpp, 0);
+            phd_PopMatrix();
+        }
+    }
+}
+
 void InitialiseScarabGenerator(sint16 item_number)
 {
     ITEM_INFO *item;
