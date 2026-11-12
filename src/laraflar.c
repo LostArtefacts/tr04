@@ -9,6 +9,8 @@
 #include "specific/3dmath.h"
 #include "draw.h"
 #include "effect2.h"
+#include "room.h"
+#include "sound.h"
 
 void DoFlareInHand(sint32 flare_age)
 {
@@ -65,6 +67,42 @@ void set_flare_arm(sint32 frame)
     }
     lara.left_arm.anim_number = anim_base;
     lara.left_arm.frame_base = anims[lara.left_arm.anim_number].frame_ptr;
+}
+
+void draw_flare(void)
+{
+    sint16 ani;
+
+    if (lara_item->current_anim_state == AS_FLAREPICKUP || lara_item->current_anim_state == AS_PICKUP) {
+        DoFlareInHand(lara.flare_age);
+        lara.flare_control_left = 0;
+        lara.left_arm.frame_number = 93;
+        set_flare_arm(93);
+        return;
+    } else {
+        lara.flare_control_left = 1;
+        ani = lara.left_arm.frame_number + 1;
+        if (ani < 33 || ani > 94)
+            ani = 33;
+        else if (ani == 46)
+            draw_flare_meshes();
+        else if (ani >= 72 && ani <= 93) {
+            if (ani == 72) {
+                if (room[lara_item->room_number].flags & ROOM_UNDERWATER)
+                    SoundEffect(SFX_OBJ_GEM_SMASH, &lara_item->pos, SFX_WATER);
+                else
+                    SoundEffect(SFX_OBJ_GEM_SMASH, &lara_item->pos, SFX_DEFAULT);
+                lara.flare_age = 1;
+            }
+            DoFlareInHand(lara.flare_age);
+        } else if (ani == 94) {
+            ready_flare();
+            ani = 0;
+            DoFlareInHand(lara.flare_age);
+        }
+    }
+    lara.left_arm.frame_number = ani;
+    set_flare_arm(ani);
 }
 
 void undraw_flare(void)

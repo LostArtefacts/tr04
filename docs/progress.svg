@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="226.82" height="12" x="0" y="0" class="named"><title>1026 · 66.32%</title></rect>
-<rect width="0.44" height="12" x="226.82" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="227.26" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="106.34" height="12" x="235.66" y="0" class="todo"><title>481 · 31.09%</title></rect>
+<rect width="227.04" height="12" x="0" y="0" class="named"><title>1027 · 66.39%</title></rect>
+<rect width="0.44" height="12" x="227.04" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="227.48" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="106.12" height="12" x="235.88" y="0" class="todo"><title>480 · 31.03%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">66.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1026</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">481</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1027</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">480</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="99.06" height="12" x="0" y="0" class="named"><title>180 KB · 28.97%</title></rect>
-<rect width="0.12" height="12" x="99.06" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="99.18" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="232.66" height="12" x="109.34" y="0" class="todo"><title>422 KB · 68.03%</title></rect>
+<rect width="99.21" height="12" x="0" y="0" class="named"><title>180 KB · 29.01%</title></rect>
+<rect width="0.12" height="12" x="99.21" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="99.33" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="232.52" height="12" x="109.48" y="0" class="todo"><title>422 KB · 67.99%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">29.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">180 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">422 KB</tspan></text>
@@ -495,7 +495,7 @@
 <rect width="12" height="12" x="390" y="120" class="named"><title>0x0042f7b0 DrawFlareInAir (207 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="120" class="todo"><title>0x0042f880 CreateFlare (627 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="120" class="named"><title>0x0042fb00 set_flare_arm (75 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="120" class="todo"><title>0x0042fb50 draw_flare (270 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="120" class="named"><title>0x0042fb50 draw_flare (270 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="120" class="named"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="120" class="named"><title>0x0042ff10 draw_flare_meshes (24 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="120" class="named"><title>0x0042ff30 undraw_flare_meshes (24 bytes)</title></rect>
@@ -2208,7 +2208,7 @@
 <rect width="10.37" height="10.10" x="457.02" y="399.62" class="named"><title>0x00450cb0 CalculateObjectLightingLara (271 bytes)</title></rect>
 <rect width="10.37" height="10.10" x="457.02" y="412.72" class="named"><title>0x004632f0 CogSwitchControl (271 bytes)</title></rect>
 <rect width="10.37" height="10.06" x="457.02" y="425.81" class="named"><title>0x00415ec0 TestBoundsCollideTeethSpikes (270 bytes)</title></rect>
-<rect width="10.37" height="10.06" x="457.02" y="438.88" class="todo"><title>0x0042fb50 draw_flare (270 bytes)</title></rect>
+<rect width="10.37" height="10.06" x="457.02" y="438.88" class="named"><title>0x0042fb50 draw_flare (270 bytes)</title></rect>
 <rect width="10.37" height="10.06" x="457.02" y="451.94" class="named"><title>0x00437d50 AddFootPrint (270 bytes)</title></rect>
 <rect width="10.57" height="9.86" x="470.39" y="172.16" class="named"><title>0x00453f60 CreateRope (270 bytes)</title></rect>
 <rect width="10.53" height="9.86" x="483.96" y="172.16" class="named"><title>0x00415db0 ControlSlicerDicer (269 bytes)</title></rect>

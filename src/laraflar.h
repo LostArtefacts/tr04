@@ -11,5 +11,6 @@ void DoFlareInHand(sint32 flare_age);
 void CreateFlare(sint16 object, sint32 thrown);
 void undraw_flare(void);
 void DrawFlareInAir(ITEM_INFO *item);
+void draw_flare(void);
 
 #endif
