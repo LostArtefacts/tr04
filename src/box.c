@@ -630,6 +630,55 @@ void CreatureDie(sint16 item_number, sint32 explode)
     }
 }
 
+sint16 CreatureTurn(ITEM_INFO *item, sint16 maximum_turn)
+{
+    CREATURE_INFO *creature;
+    ROOM_INFO *r;
+    sint32 x, z, feelxplus, feelzplus, feelxminus, feelzminus, feelxmid, feelzmid, feelplus, feelminus, feelmid;
+    sint16 angle;
+
+    creature = (CREATURE_INFO *)item->data;
+    if (!creature)
+        return 0;
+    if (!maximum_turn)
+        return 0;
+    x = item->pos.x_pos;
+    z = item->pos.z_pos;
+    r = &room[item->room_number];
+    feelxplus = x + (512 * phd_sin(item->pos.y_rot + 8190) >> W2V_SHIFT);
+    feelzplus = z + (512 * phd_cos(item->pos.y_rot + 8190) >> W2V_SHIFT);
+    feelplus = r->floor[((feelzplus - r->z) >> 10) + r->x_size * ((feelxplus - r->x) >> 10)].stopper;
+    feelxminus = x + (512 * phd_sin(item->pos.y_rot - 8190) >> W2V_SHIFT);
+    feelzminus = z + (512 * phd_cos(item->pos.y_rot - 8190) >> W2V_SHIFT);
+    feelminus = r->floor[((feelzminus - r->z) >> 10) + r->x_size * ((feelxminus - r->x) >> 10)].stopper;
+    feelxmid = x + (512 * phd_sin(item->pos.y_rot) >> W2V_SHIFT);
+    feelzmid = z + (512 * phd_cos(item->pos.y_rot) >> W2V_SHIFT);
+    feelmid = r->floor[((feelzmid - r->z) >> 10) + r->x_size * ((feelxmid - r->x) >> 10)].stopper;
+    if (feelminus && feelmid) {
+        creature->target.x = feelxplus;
+        creature->target.z = feelzplus;
+    } else if (feelplus && feelmid) {
+        creature->target.x = feelxminus;
+        creature->target.z = feelzminus;
+    } else if (feelplus || feelminus) {
+        creature->target.x = feelxmid;
+        creature->target.z = feelzmid;
+    }
+    x = creature->target.x - item->pos.x_pos;
+    z = creature->target.z - item->pos.z_pos;
+    angle = (sint16)(phd_atan(z, x) - item->pos.y_rot);
+    if (angle > 0x4000 || angle < -0x4000) {
+        if (SQUARE(x) + SQUARE(z) < SQUARE((item->speed << 14) / maximum_turn))
+            maximum_turn >>= 1;
+    }
+    if (angle > maximum_turn)
+        angle = maximum_turn;
+    else if (angle < -maximum_turn)
+        angle = -maximum_turn;
+    item->pos.y_rot += angle;
+    return angle;
+}
+
 void CreatureTilt(ITEM_INFO *item, sint16 angle)
 {
     angle = (angle << 2) - item->pos.z_rot;

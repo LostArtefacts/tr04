@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="241.92" height="12" x="0" y="0" class="named"><title>1095 · 70.74%</title></rect>
 <rect width="0.44" height="12" x="241.92" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="13.92" height="12" x="242.36" y="0" class="nonmatching"><title>63 · 4.07%</title></rect>
-<rect width="85.72" height="12" x="256.28" y="0" class="todo"><title>388 · 25.06%</title></rect>
+<rect width="14.14" height="12" x="242.36" y="0" class="nonmatching"><title>64 · 4.13%</title></rect>
+<rect width="85.50" height="12" x="256.50" y="0" class="todo"><title>387 · 25%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">70.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1095</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">63</tspan> · <tspan class="todo">388</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1095</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">64</tspan> · <tspan class="todo">387</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="118.92" height="12" x="0" y="0" class="named"><title>216 KB · 34.77%</title></rect>
 <rect width="0.12" height="12" x="118.92" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="24.85" height="12" x="119.04" y="0" class="nonmatching"><title>45 KB · 7.26%</title></rect>
-<rect width="198.12" height="12" x="143.88" y="0" class="todo"><title>360 KB · 57.93%</title></rect>
+<rect width="25.19" height="12" x="119.04" y="0" class="nonmatching"><title>46 KB · 7.37%</title></rect>
+<rect width="197.77" height="12" x="144.23" y="0" class="todo"><title>359 KB · 57.83%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">34.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">216 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">45 KB</tspan> · <tspan class="todo">360 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">216 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">46 KB</tspan> · <tspan class="todo">359 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -743,7 +743,7 @@
 <rect width="12" height="12" x="360" y="195" class="named"><title>0x00440fd0 BadFloor (163 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="195" class="named"><title>0x00441080 CreatureDie (422 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="195" class="todo"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="195" class="todo"><title>0x00441c60 CreatureTurn (628 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="195" class="nonmatching"><title>0x00441c60 CreatureTurn (628 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="named"><title>0x00441ee0 CreatureTilt (53 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="195" class="named"><title>0x00441f20 CreatureJoint (81 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="195" class="todo"><title>0x00441f80 CreatureFloat (247 bytes)</title></rect>
@@ -1881,7 +1881,7 @@
 <rect width="15.05" height="16.18" x="588.49" y="42.01" class="named"><title>0x0042cee0 LaraClimbLeftCornerTest (631 bytes)</title></rect>
 <rect width="15.05" height="16.18" x="606.54" y="42.01" class="todo"><title>0x00432da0 LaraWaterCurrent (631 bytes)</title></rect>
 <rect width="15" height="16.18" x="624.59" y="42.01" class="named"><title>0x004323a0 LaraUnderWater (629 bytes)</title></rect>
-<rect width="14.98" height="16.18" x="642.59" y="42.01" class="todo"><title>0x00441c60 CreatureTurn (628 bytes)</title></rect>
+<rect width="14.98" height="16.18" x="642.59" y="42.01" class="nonmatching"><title>0x00441c60 CreatureTurn (628 bytes)</title></rect>
 <rect width="14.95" height="16.18" x="660.57" y="42.01" class="named"><title>0x0042f880 CreateFlare (627 bytes)</title></rect>
 <rect width="14.95" height="16.18" x="678.52" y="42.01" class="todo"><title>0x00434770 TriggerFlareSparks (627 bytes)</title></rect>
 <rect width="14.86" height="16.18" x="696.48" y="42.01" class="named"><title>0x00450840 InterpolateMatrix (623 bytes)</title></rect>
