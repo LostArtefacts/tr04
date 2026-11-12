@@ -574,6 +574,67 @@ void TriggerFireFlame(sint32 x, sint32 y, sint32 z, sint32 body_part, sint32 typ
         sptr->dSize = size >> 2;
 }
 
+void TriggerSuperJetFlame(ITEM_INFO *item, sint32 yvel, sint32 deadly)
+{
+    SPARKS *sptr;
+    sint32 dx, dy, dz;
+
+    dx = lara_item->pos.x_pos - item->pos.x_pos;
+    dz = lara_item->pos.z_pos - item->pos.z_pos;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    dy = (GetRandomControl() & 0x1FF) - yvel;
+    if (dy < 512)
+        dy = 512;
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sR = (GetRandomControl() & 0x1F) + 48;
+    sptr->sG = sptr->sR;
+    sptr->sB = (GetRandomControl() & 0x3F) + 192;
+    sptr->dR = (GetRandomControl() & 0x3F) + 192;
+    sptr->dG = (GetRandomControl() & 0x3F) + 128;
+    sptr->dB = 32;
+    sptr->ColFadeSpeed = 8;
+    sptr->FadeToBlack = 8;
+    sptr->Life = (uint8)((dy >> 9) + (GetRandomControl() & 7) + 16);
+    sptr->TransType = 2;
+    sptr->sLife = sptr->Life;
+    sptr->x = (GetRandomControl() & 0x1F) + item->pos.x_pos - 16;
+    sptr->y = (GetRandomControl() & 0x1F) + item->pos.y_pos - 16;
+    sptr->z = (GetRandomControl() & 0x1F) + item->pos.z_pos - 16;
+    sptr->Friction = 51;
+    sptr->MaxYvel = 0;
+    sptr->Flags = 538;
+    if (deadly)
+        sptr->Flags = 539;
+    sptr->Scalar = 2;
+    dz = (GetRandomControl() & 0xF) + 16 + (dy >> 6);
+    sptr->Size = sptr->sSize = (uint8)(dz >> 1);
+    sptr->dSize = (uint8)dz;
+    if ((-item->trigger_flags & 7) == 1) {
+        sptr->Gravity = -16 - (GetRandomControl() & 0x1F);
+        sptr->Xvel = (GetRandomControl() & 0xFF) - 128;
+        sptr->Yvel = (sint16)-dy;
+        sptr->Zvel = (GetRandomControl() & 0xFF) - 128;
+        sptr->dSize += sptr->dSize >> 2;
+        return;
+    }
+    sptr->Gravity = (sint16)(-((dy >> 9) + GetRandomControl() % (dy >> 8)));
+    sptr->y -= 64;
+    sptr->Yvel = (GetRandomControl() & 0xFF) - 128;
+    sptr->Xvel = (GetRandomControl() & 0xFF) - 128;
+    sptr->Zvel = (GetRandomControl() & 0xFF) - 128;
+    dy -= dy >> 2;
+    if (!item->pos.y_rot)
+        sptr->Zvel = (sint16)-dy;
+    else if (item->pos.y_rot == 0x4000)
+        sptr->Xvel = (sint16)-dy;
+    else if (item->pos.y_rot == -0x8000)
+        sptr->Zvel = (sint16)dy;
+    else
+        sptr->Xvel = (sint16)dy;
+}
+
 void TriggerRocketSmoke(sint32 x, sint32 y, sint32 z, sint32 col)
 {
     SPARKS *sptr;

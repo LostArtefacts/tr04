@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="247.44" height="12" x="0" y="0" class="named"><title>1120 · 72.35%</title></rect>
-<rect width="0.66" height="12" x="247.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.01" height="12" x="248.10" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
-<rect width="76.88" height="12" x="265.12" y="0" class="todo"><title>348 · 22.48%</title></rect>
+<rect width="247.66" height="12" x="0" y="0" class="named"><title>1121 · 72.42%</title></rect>
+<rect width="0.66" height="12" x="247.66" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.01" height="12" x="248.33" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
+<rect width="76.66" height="12" x="265.34" y="0" class="todo"><title>347 · 22.42%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">72.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1120</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">348</tspan></text>
+<text text-anchor="end" x="522" y="7.50">72.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1121</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">347</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="129.12" height="12" x="0" y="0" class="named"><title>235 KB · 37.75%</title></rect>
-<rect width="0.13" height="12" x="129.12" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="30.52" height="12" x="129.25" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
-<rect width="182.23" height="12" x="159.77" y="0" class="todo"><title>332 KB · 53.28%</title></rect>
+<rect width="129.43" height="12" x="0" y="0" class="named"><title>236 KB · 37.85%</title></rect>
+<rect width="0.13" height="12" x="129.43" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="30.52" height="12" x="129.56" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
+<rect width="181.92" height="12" x="160.08" y="0" class="todo"><title>331 KB · 53.19%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">37.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">332 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">37.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">236 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">331 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -558,7 +558,7 @@
 <rect width="12" height="12" x="585" y="135" class="named"><title>0x00434dc0 TriggerExplosionSmokeEnd (469 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="135" class="named"><title>0x00434fa0 TriggerExplosionSmoke (393 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="135" class="nonmatching"><title>0x00435130 TriggerFireFlame (1077 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="135" class="todo"><title>0x00435570 TriggerSuperJetFlame (572 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="135" class="named"><title>0x00435570 TriggerSuperJetFlame (572 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="135" class="todo"><title>0x004357b0 nullsub_1 (1 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="135" class="named"><title>0x004357c0 TriggerRocketSmoke (339 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="135" class="todo"><title>0x00435920 SetupSplash (190 bytes)</title></rect>
@@ -1925,7 +1925,7 @@
 <rect width="15.19" height="14.60" x="605.30" y="61.53" class="named"><title>0x004403e0 GetCreatureMood (576 bytes)</title></rect>
 <rect width="15.19" height="14.60" x="623.50" y="61.53" class="named"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
 <rect width="15.11" height="14.60" x="641.69" y="61.53" class="nonmatching"><title>0x00414670 FlameEmitter2Control (573 bytes)</title></rect>
-<rect width="15.09" height="14.60" x="659.80" y="61.53" class="todo"><title>0x00435570 TriggerSuperJetFlame (572 bytes)</title></rect>
+<rect width="15.09" height="14.60" x="659.80" y="61.53" class="named"><title>0x00435570 TriggerSuperJetFlame (572 bytes)</title></rect>
 <rect width="15.09" height="14.60" x="677.89" y="61.53" class="named"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
 <rect width="15.06" height="14.60" x="695.98" y="61.53" class="named"><title>0x00420b10 LaraAboveWater (571 bytes)</title></rect>
 <rect width="15.03" height="14.60" x="714.04" y="61.53" class="named"><title>0x00456120 PoleCollision (570 bytes)</title></rect>
