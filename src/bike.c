@@ -144,6 +144,30 @@ sint32 BikeCheckGetOff(void)
     return 1;
 }
 
+sint32 TestHeight(ITEM_INFO *item, sint32 z, sint32 x, PHD_VECTOR *pos)
+{
+    FLOOR_INFO *floor;
+    sint32 sx, sz, sy, cy, c, h;
+    sint16 room_number;
+
+    sz = z * phd_sin(item->pos.x_rot) >> W2V_SHIFT;
+    sx = x * phd_sin(item->pos.z_rot) >> W2V_SHIFT;
+    pos->y = item->pos.y_pos + sx - sz;
+    cy = phd_cos(item->pos.y_rot);
+    sy = phd_sin(item->pos.y_rot);
+    pos->z = item->pos.z_pos + ((z * cy - x * sy) >> W2V_SHIFT);
+    pos->x = item->pos.x_pos + ((x * cy + z * sy) >> W2V_SHIFT);
+    room_number = item->room_number;
+    floor = GetFloor(pos->x, pos->y, pos->z, &room_number);
+    c = GetCeiling(floor, pos->x, pos->y, pos->z);
+    if (pos->y < c || c == NO_HEIGHT)
+        return NO_HEIGHT;
+    h = GetHeight(floor, pos->x, pos->y, pos->z);
+    if (pos->y > h)
+        pos->y = h;
+    return h;
+}
+
 sint32 CanGetOff_bike(sint16 num)
 {
     ITEM_INFO *item;
