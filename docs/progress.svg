@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="187.47" height="12" x="0" y="0" class="named"><title>848 · 54.82%</title></rect>
-<rect width="0.44" height="12" x="187.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="187.91" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="147.68" height="12" x="194.32" y="0" class="todo"><title>668 · 43.18%</title></rect>
+<rect width="187.69" height="12" x="0" y="0" class="named"><title>849 · 54.88%</title></rect>
+<rect width="0.44" height="12" x="187.69" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="188.13" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="147.46" height="12" x="194.54" y="0" class="todo"><title>667 · 43.12%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">54.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">848</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">668</tspan></text>
+<text text-anchor="end" x="522" y="7.50">55.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">849</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">667</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="80.39" height="12" x="0" y="0" class="named"><title>146 KB · 23.50%</title></rect>
-<rect width="0.12" height="12" x="80.39" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="80.51" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="252.84" height="12" x="89.16" y="0" class="todo"><title>459 KB · 73.93%</title></rect>
+<rect width="80.49" height="12" x="0" y="0" class="named"><title>146 KB · 23.54%</title></rect>
+<rect width="0.12" height="12" x="80.49" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="80.61" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="252.74" height="12" x="89.26" y="0" class="todo"><title>458 KB · 73.90%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">23.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">146 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">459 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">23.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">146 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">458 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1381,7 +1381,7 @@
 <rect width="12" height="12" x="180" y="390" class="todo"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="390" class="todo"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="390" class="todo"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="390" class="todo"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="390" class="named"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="390" class="todo"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="390" class="todo"><title>0x004849a0 AddPrelitMMX (122 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="390" class="todo"><title>0x00484a20 CalcColorSplit (217 bytes)</title></rect>
@@ -2365,7 +2365,7 @@
 <rect width="8.63" height="8.64" x="542.55" y="221.72" class="named"><title>0x0040aeb0 TargetVisible (193 bytes)</title></rect>
 <rect width="8.63" height="8.64" x="554.19" y="221.72" class="named"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
 <rect width="8.63" height="8.64" x="565.82" y="221.72" class="named"><title>0x0044a0d0 AlterFloorHeight (193 bytes)</title></rect>
-<rect width="8.63" height="8.64" x="577.45" y="221.72" class="todo"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
+<rect width="8.63" height="8.64" x="577.45" y="221.72" class="named"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
 <rect width="8.59" height="8.64" x="589.08" y="221.72" class="todo"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
 <rect width="8.54" height="8.64" x="600.67" y="221.72" class="named"><title>0x00427ef0 lara_col_turn_r (191 bytes)</title></rect>
 <rect width="8.54" height="8.64" x="612.21" y="221.72" class="named"><title>0x004398b0 LaraBubbles (191 bytes)</title></rect>

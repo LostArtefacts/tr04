@@ -4,6 +4,8 @@
 #include "../camera.h"
 #include "../tomb4fx.h"
 #include "function_stubs.h"
+#include "drawroom.h"
+#include "3dmath.h"
 
 void DoSort(sint32 left, sint32 right, SORTLIST **list)
 {
@@ -188,4 +190,34 @@ void InitialiseFogBulbs(void)
             }
         }
     }
+}
+
+void AddLineClippedSorted(D3DTLVERTEX *v0, D3DTLVERTEX *v1, sint16 drawtype)
+{
+    D3DTLBUMPVERTEX *v;
+    SORTLIST *sl;
+
+    v = (D3DTLBUMPVERTEX *)(sizeof(SORTLIST) + pSortBuffer);
+    sl = (SORTLIST *)pSortBuffer;
+    sl->tpage = 0;
+    sl->drawtype = drawtype;
+    sl->nVtx = 2;
+    pSortBuffer += sl->nVtx * sizeof(D3DTLBUMPVERTEX) + sizeof(SORTLIST);
+    *pSortList = sl;
+    pSortList++;
+    sl->zVal = v0->sz;
+    SortCount++;
+    v->sx = v0->sx;
+    v->sy = v0->sy;
+    v->sz = f_a - f_boo * v0->rhw;
+    v->rhw = v0->rhw;
+    v->color = v0->color;
+    v->specular = v0->specular;
+    v++;
+    v->sx = v1->sx;
+    v->sy = v1->sy;
+    v->sz = f_a - f_boo * v1->rhw;
+    v->rhw = v1->rhw;
+    v->color = v1->color;
+    v->specular = v1->specular;
 }
