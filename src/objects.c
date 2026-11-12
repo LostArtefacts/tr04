@@ -18,6 +18,9 @@
 #include "newinv.h"
 #include "camera.h"
 #include "specific/file.h"
+#include "traps.h"
+#include "text.h"
+#include "specific/function_stubs.h"
 
 void EarthQuake(sint16 item_number)
 {
@@ -543,6 +546,82 @@ void ControlBurningRope(sint16 item_number)
         }
     }
     DebrisFlags = 0;
+}
+
+void ControlLightningConductor(sint16 item_number)
+{
+    ITEM_INFO *item;
+    PHD_VECTOR pos, pos2;
+    sint16 r, g, b, room_number;
+
+    item = &items[item_number];
+    if (!TriggerActive(item))
+        return;
+    if (item->trigger_flags == 2) {
+        if (!flip_stats[1])
+            return;
+        if (item->item_flags[3] < 120) {
+            item->item_flags[0] = 0;
+            item->item_flags[3]++;
+            return;
+        }
+        if (!item->item_flags[0]) {
+            item->item_flags[0] = (GetRandomControl() & 3) + 4;
+            item->item_flags[1] = (GetRandomControl() & 0x3FF) - 512;
+        }
+    } else if (item->trigger_flags == 1 && flip_stats[1]) {
+        KillItem(item_number);
+        return;
+    }
+    if (item->item_flags[0]) {
+        SoundEffect(SFX_ELEC_ARCING_LOOP, &item->pos, SFX_DEFAULT);
+        item->item_flags[0]--;
+        b = (GetRandomControl() & 0x3F) + 192;
+        g = b - (GetRandomControl() & 0x1F);
+        r = g - (GetRandomControl() & 0xFF);
+        if (r < 0)
+            r = 0;
+        pos.x = (GetRandomControl() & 0x1FF) + item->pos.x_pos - 256;
+        pos.y = item->pos.y_pos;
+        pos.z = (GetRandomControl() & 0x1FF) + item->pos.z_pos - 256;
+        TriggerLightning((PHD_VECTOR *)&item->pos, &pos, (GetRandomControl() & 0xF) + 16, RGBA(r, g, b, 24), 3, 24, 3);
+        pos2.x = item->pos.x_pos + item->item_flags[1];
+        pos2.y = item->pos.y_pos - 4096;
+        pos2.z = item->pos.z_pos + item->item_flags[1];
+        if (GetRandomControl() & 7 && item->item_flags[0])
+            TriggerLightning(&pos2, (PHD_VECTOR *)&item->pos, (GetRandomControl() & 0x1F) + 16, RGBA(r, g, b, 32), 0, 48, 3);
+        else
+            TriggerLightning(&pos2, (PHD_VECTOR *)&item->pos, (GetRandomControl() & 0x1F) + 48, RGBA(r, g, b, 32), 1, 48, 3);
+        room_number = lara_item->room_number;
+        if (room_number == 87 || room_number == 22 || room_number == 10 || room_number == 15) {
+            if (GlobalCounter & 1) {
+                FlashFadeR = r >> 1;
+                FlashFadeG = g >> 1;
+                FlashFadeB = b >> 1;
+            } else {
+                FlashFadeR = r >> 2;
+                FlashFadeG = g >> 2;
+                FlashFadeB = b >> 2;
+            }
+            FlashFader = 32;
+        }
+        TriggerLightningGlow(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, RGBA(r, g, b, 64));
+        if (item->trigger_flags == 2 && !item->item_flags[0]) {
+            ExplodeItemNode(&items[item->item_flags[2] & 0xFF], 0, 0, -128);
+            KillItem(item->item_flags[2] & 0xFF);
+            ExplodeItemNode(&items[item->item_flags[2] >> 8], 0, 0, -128);
+            KillItem(item->item_flags[2] >> 8);
+            KillItem(item_number);
+        } else if (item->trigger_flags == 1 && !lara.burn && !((lara_item->pos.x_pos ^ item->pos.x_pos) & -1024) &&
+            !((lara_item->pos.z_pos ^ item->pos.z_pos) & -1024) && lara_item->pos.y_pos <= item->pos.y_pos) {
+            LaraBurn();
+            lara_item->hit_points = 0;
+        }
+    } else if (!(GetRandomControl() & 0x3F)) {
+        SoundEffect(SFX_THUNDER_CRACK, &item->pos, SFX_DEFAULT);
+        item->item_flags[0] = (GetRandomControl() & 3) + 4;
+        item->item_flags[1] = (GetRandomControl() & 0x3FF) - 512;
+    }
 }
 
 void StatuePlinthCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
