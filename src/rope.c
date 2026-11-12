@@ -83,3 +83,17 @@ PHD_VECTOR *Normalise(PHD_VECTOR *v)
     v->z = (__int64)mod * v->z >> 16;
     return v;
 }
+
+void SetPendulumPoint(ROPE_STRUCT *Rope, sint32 node)
+{
+    CurrentPendulum.Position.x = Rope->Segment[node].x;
+    CurrentPendulum.Position.y = Rope->Segment[node].y;
+    CurrentPendulum.Position.z = Rope->Segment[node].z;
+    if (CurrentPendulum.node == -1) {
+        CurrentPendulum.Velocity.x += Rope->Velocity[node].x;
+        CurrentPendulum.Velocity.y += Rope->Velocity[node].y;
+        CurrentPendulum.Velocity.z += Rope->Velocity[node].z;
+    }
+    CurrentPendulum.Rope = Rope;
+    CurrentPendulum.node = node;
+}
