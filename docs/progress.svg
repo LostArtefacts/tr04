@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="202.28" height="12" x="0" y="0" class="named"><title>915 · 59.15%</title></rect>
-<rect width="0.44" height="12" x="202.28" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="202.72" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="132.64" height="12" x="209.36" y="0" class="todo"><title>600 · 38.78%</title></rect>
+<rect width="202.50" height="12" x="0" y="0" class="named"><title>916 · 59.21%</title></rect>
+<rect width="0.44" height="12" x="202.50" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="202.95" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="132.42" height="12" x="209.58" y="0" class="todo"><title>599 · 38.72%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">59.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">915</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">600</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">916</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">599</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="87.41" height="12" x="0" y="0" class="named"><title>159 KB · 25.56%</title></rect>
-<rect width="0.12" height="12" x="87.41" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="87.53" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="245.56" height="12" x="96.44" y="0" class="todo"><title>445 KB · 71.80%</title></rect>
+<rect width="87.49" height="12" x="0" y="0" class="named"><title>159 KB · 25.58%</title></rect>
+<rect width="0.12" height="12" x="87.49" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="87.61" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="245.48" height="12" x="96.52" y="0" class="todo"><title>445 KB · 71.78%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">159 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">445 KB</tspan></text>
@@ -168,7 +168,7 @@
 <rect width="12" height="12" x="735" y="15" class="named"><title>0x0040f600 InitialiseGameStix (42 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="30" class="todo"><title>0x0040f630 GameStixControl (1436 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="30" class="todo"><title>0x0040fbd0 ShockwaveExplosion (138 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="30" class="todo"><title>0x0040fc60 ThrowSticks (142 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="30" class="named"><title>0x0040fc60 ThrowSticks (142 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="30" class="todo"><title>0x0040fcf0 ControlGodHead (219 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="30" class="todo"><title>0x0040fdd0 DrawGodHead (354 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="30" class="todo"><title>0x0040ff40 GameStixCollision (299 bytes)</title></rect>
@@ -2506,7 +2506,7 @@
 <rect width="7.66" height="7.32" x="583.08" y="255.62" class="named"><title>0x00439ae0 TriggerGunflash (145 bytes)</title></rect>
 <rect width="7.60" height="7.32" x="593.74" y="255.62" class="named"><title>0x0046d800 ACMEnumCallBack (144 bytes)</title></rect>
 <rect width="7.55" height="7.32" x="604.34" y="255.62" class="named"><title>0x0046e0f0 GetADPCMData (143 bytes)</title></rect>
-<rect width="7.50" height="7.32" x="614.89" y="255.62" class="todo"><title>0x0040fc60 ThrowSticks (142 bytes)</title></rect>
+<rect width="7.50" height="7.32" x="614.89" y="255.62" class="named"><title>0x0040fc60 ThrowSticks (142 bytes)</title></rect>
 <rect width="7.50" height="7.32" x="625.39" y="255.62" class="named"><title>0x00459740 SetPendulumPoint (142 bytes)</title></rect>
 <rect width="7.45" height="7.32" x="635.89" y="255.62" class="named"><title>0x00426fd0 lara_as_back (141 bytes)</title></rect>
 <rect width="7.45" height="7.32" x="646.34" y="255.62" class="named"><title>0x00453740 InitialiseSmashObject (141 bytes)</title></rect>

@@ -63,3 +63,24 @@ void InitialiseGameStix(sint16 item_number)
     item->trigger_flags = NO_ITEM;
     item->data = item->item_flags;
 }
+
+void ThrowSticks(ITEM_INFO *item)
+{
+    sint16 rnd;
+    sint16 i;
+
+    i = 0;
+    last_throw = 0;
+    item->trigger_flags = 0;
+    for (; i < 4; i++) {
+        rnd = GetRandomControl() & 1;
+        last_throw += rnd;
+        if (rnd)
+            item->trigger_flags |= 1 << i;
+    }
+    if (!last_throw)
+        last_throw = 6;
+    item->hit_points = 120;
+    for (i = 0; i < 3; i++)
+        items[senet_item[i]].trigger_flags = 1;
+}
