@@ -2115,6 +2115,8 @@ address,size,name,symbol
 0x004b38ac,4,MusicVolume,_MusicVolume
 0x004b38b0,4,SFXVolume,_SFXVolume
 0x004b38b4,4,SoundQuality,_SoundQuality
+0x004b39e0,4,rgb80h,_rgb80h
+0x004b39e4,4,rgbmask,_rgbmask
 0x004b4670,4,FogStart,_FogStart
 0x004b4674,4,FogEnd,_FogEnd
 0x004b4678,4,one,_one
@@ -2391,6 +2393,7 @@ address,size,name,symbol
 0x00670cac,4,NumActiveFogBulbs,_NumActiveFogBulbs
 0x00670cb4,4,NumFogBulbsInRange,_NumFogBulbsInRange
 0x00670cb8,4,NumFXFogBulbs,_NumFXFogBulbs
+0x00670cbc,4,zero,_zero
 0x00670e3c,4,phkResult,_phkResult
 0x00670e40,4,dwDisposition,_dwDisposition
 0x00670e44,1,REG_Setup,_REG_Setup

@@ -49,6 +49,9 @@ extern FOGBULB_STRUCT FogBulbs[20];
 extern sint32 NumLevelFogBulbs;
 extern FOGBULB_STRUCT *ActiveFogBulbs[5];
 extern sint32 NumActiveFogBulbs;
+extern sint32 rgb80h;
+extern sint32 rgbmask;
+extern sint32 zero;
 
 int DistCompare(const void *a, const void *b);
 
@@ -64,5 +67,6 @@ void TriggerFXFogBulb(sint32 x, sint32 y, sint32 z, sint32 FXRad, sint32 density
 void InitialiseFogBulbs(void);
 void AddLineClippedSorted(D3DTLVERTEX *v0, D3DTLVERTEX *v1, sint16 drawtype);
 void CalcColorSplit(D3DCOLOR s, D3DCOLOR *d);
+void CalcColorSplitMMX(D3DCOLOR s, D3DCOLOR *d);
 
 #endif
