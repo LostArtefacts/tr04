@@ -50,6 +50,32 @@ void lara_as_duckr(ITEM_INFO *item, COLL_INFO *coll)
     item->pos.y_rot += 273;
 }
 
+void lara_col_ducklr(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.IsDucked = 1;
+    if (input & IN_LOOK)
+        LookUpDown();
+    item->gravity_status = 0;
+    item->fallspeed = 0;
+    coll->facing = lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = 384;
+    coll->bad_neg = -384;
+    coll->bad_ceiling = 0;
+    coll->slopes_are_walls = 1;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 400);
+    if (LaraFallen(item, coll))
+        lara.gun_status = LG_NO_ARMS;
+    else if (!TestLaraSlide(item, coll)) {
+        if (coll->mid_ceiling >= -362)
+            lara.keep_ducked = 1;
+        else
+            lara.keep_ducked = 0;
+        ShiftItem(item, coll);
+        if (coll->mid_floor != NO_HEIGHT)
+            item->pos.y_pos += coll->mid_floor;
+    }
+}
+
 sint32 LaraFallen(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (lara.water_status != LW_WADE && coll->mid_floor > STEPUP_HEIGHT) {
