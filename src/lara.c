@@ -1658,6 +1658,43 @@ void lara_col_hangright(ITEM_INFO *item, COLL_INFO *coll)
     lara.move_angle = item->pos.y_rot + 16384;
 }
 
+void SetCornerAnim(ITEM_INFO *item, COLL_INFO *coll, sint16 rot, sint16 flip)
+{
+    lara.look = 0;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    if (input & IN_ACTION && item->hit_points > 0) {
+        if (flip) {
+            if (lara.IsClimbing) {
+                item->anim_number = ANIM_CLIMBSTNC;
+                item->frame_number = anims[ANIM_CLIMBSTNC].frame_base;
+                item->goal_anim_state = AS_CLIMBSTNC;
+                item->current_anim_state = AS_CLIMBSTNC;
+            } else {
+                item->anim_number = ANIM_GRABLEDGE;
+                item->frame_number = anims[ANIM_GRABLEDGE].frame_base + 21;
+                item->goal_anim_state = AS_HANG;
+                item->current_anim_state = AS_HANG;
+            }
+            coll->old.x = lara.CornerX;
+            item->pos.x_pos = lara.CornerX;
+            coll->old.z = lara.CornerZ;
+            item->pos.z_pos = lara.CornerZ;
+            item->pos.y_rot += rot;
+        }
+    } else {
+        item->anim_number = ANIM_FALLDOWN;
+        item->current_anim_state = item->goal_anim_state = AS_FORWARDJUMP;
+        item->frame_number = anims[ANIM_FALLDOWN].frame_base;
+        item->pos.y_pos += 256;
+        item->speed = 2;
+        item->fallspeed = 1;
+        item->gravity_status = 1;
+        lara.gun_status = LG_NO_ARMS;
+        item->pos.y_rot += rot / 2;
+    }
+}
+
 void lara_as_extcornerl(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint32 flip;

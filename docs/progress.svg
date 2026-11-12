@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="151.66" height="12" x="0" y="0" class="named"><title>686 · 44.34%</title></rect>
-<rect width="0.44" height="12" x="151.66" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="152.10" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="185.26" height="12" x="156.74" y="0" class="todo"><title>838 · 54.17%</title></rect>
+<rect width="151.88" height="12" x="0" y="0" class="named"><title>687 · 44.41%</title></rect>
+<rect width="0.44" height="12" x="151.88" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="152.32" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="185.04" height="12" x="156.96" y="0" class="todo"><title>837 · 54.10%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">44.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">686</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">838</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">687</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">837</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="62.04" height="12" x="0" y="0" class="named"><title>113 KB · 18.14%</title></rect>
-<rect width="0.12" height="12" x="62.04" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="62.16" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="272.59" height="12" x="69.41" y="0" class="todo"><title>494 KB · 79.71%</title></rect>
+<rect width="62.20" height="12" x="0" y="0" class="named"><title>113 KB · 18.19%</title></rect>
+<rect width="0.12" height="12" x="62.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="62.32" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="272.43" height="12" x="69.57" y="0" class="todo"><title>494 KB · 79.66%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">18.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">113 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">494 KB</tspan></text>
@@ -367,7 +367,7 @@
 <rect width="12" height="12" x="720" y="75" class="named"><title>0x00426b90 lara_col_hangleft (58 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="75" class="named"><title>0x00426bd0 lara_as_hangright (54 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="90" class="named"><title>0x00426c10 lara_col_hangright (58 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="90" class="todo"><title>0x00426c50 SetCornerAnim (287 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="90" class="named"><title>0x00426c50 SetCornerAnim (287 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="90" class="named"><title>0x00426d70 lara_as_extcornerl (68 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="90" class="named"><title>0x00426dc0 lara_as_extcornerr (68 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="90" class="named"><title>0x00426e10 lara_as_intcornerl (68 bytes)</title></rect>
@@ -2182,7 +2182,7 @@
 <rect width="10.24" height="10.95" x="631.90" y="158.23" class="named"><title>0x0045a1b0 SaveLaraData (290 bytes)</title></rect>
 <rect width="10.20" height="10.95" x="645.13" y="158.23" class="todo"><title>0x0041f260 SetLaraUnderwaterNodes (289 bytes)</title></rect>
 <rect width="10.13" height="10.95" x="658.34" y="158.23" class="todo"><title>0x004210f0 lara_col_duck (287 bytes)</title></rect>
-<rect width="10.13" height="10.95" x="671.47" y="158.23" class="todo"><title>0x00426c50 SetCornerAnim (287 bytes)</title></rect>
+<rect width="10.13" height="10.95" x="671.47" y="158.23" class="named"><title>0x00426c50 SetCornerAnim (287 bytes)</title></rect>
 <rect width="10.13" height="10.95" x="684.60" y="158.23" class="todo"><title>0x00476fa0 GameInitialise (287 bytes)</title></rect>
 <rect width="10.09" height="10.95" x="697.73" y="158.23" class="todo"><title>0x0045bfb0 InitialiseLara (286 bytes)</title></rect>
 <rect width="10.06" height="10.95" x="710.82" y="158.23" class="todo"><title>0x004135a0 CloseTrapDoor (285 bytes)</title></rect>
