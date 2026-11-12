@@ -6,6 +6,16 @@
 
 extern uint8 RPickups[16];
 extern uint8 NumRPickups;
+extern sint16 PickUpBounds[12];
+extern PHD_VECTOR PickUpPosition;
+extern sint16 HiddenPickUpBounds[12];
+extern PHD_VECTOR HiddenPickUpPosition;
+extern sint16 CrowbarPickUpBounds[12];
+extern PHD_VECTOR CrowbarPickUpPosition;
+extern sint16 PlinthPickUpBounds[12];
+extern PHD_VECTOR PlinthPickUpPosition;
+extern sint16 PickUpBoundsUW[12];
+extern PHD_VECTOR PickUpPositionUW;
 extern sint16 KeyHoleBounds[12];
 extern PHD_VECTOR KeyHolePosition;
 extern sint16 PuzzleBounds[12];

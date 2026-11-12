@@ -12,6 +12,9 @@
 #include "specific/input.h"
 #include "camera.h"
 #include "deltapak.h"
+#include "larafire.h"
+#include "laraflar.h"
+#include "flmtorch.h"
 
 void AnimatingPickUp(sint16 item_number)
 {
@@ -49,6 +52,235 @@ void RegeneratePickups(void)
             }
         }
     }
+}
+
+void PickUpCollision(sint16 item_num, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint16 *bounds;
+    sint32 flag, i;
+    sint16 rotx, roty, rotz, ocb;
+
+    item = &items[item_num];
+    if (item->status == ITEM_INVISIBLE || (item->object_number == CLOCKWORK_BEETLE && item->item_flags[0] == 1 && item->item_flags[2] != 5) ||
+        (item->object_number == FLARE_ITEM && lara.gun_type == WEAPON_FLARE))
+        return;
+    rotx = item->pos.x_rot;
+    roty = item->pos.y_rot;
+    rotz = item->pos.z_rot;
+    ocb = item->trigger_flags & 0x3F;
+    item->pos.y_rot = l->pos.y_rot;
+    item->pos.z_rot = 0;
+    if (lara.water_status == LW_ABOVE_WATER || lara.water_status == LW_WADE) {
+        if ((input & IN_ACTION || (GLOBAL_inventoryitemchosen != NO_ITEM && ocb == 2)) && !BinocularRange &&
+            ((l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && lara.gun_status == LG_NO_ARMS) ||
+             (l->current_anim_state == AS_DUCK && l->anim_number == ANIM_DUCKBREATHE && lara.gun_status == LG_NO_ARMS) ||
+             (l->current_anim_state == AS_ALL4S && l->anim_number == ANIM_ALL4S)) ||
+            (lara.IsMoving && lara.GeneralPtr == (void *)item_num)) {
+            flag = 0;
+            item->pos.x_rot = 0;
+            switch (ocb) {
+            case 2:
+                item->pos.y_rot = roty;
+                if (!lara.IsDucked && TestLaraPosition(CrowbarPickUpBounds, item, l)) {
+                    if (!lara.IsMoving) {
+                        if (GLOBAL_inventoryitemchosen == NO_ITEM) {
+                            if (have_i_got_object(CROWBAR_ITEM))
+                                GLOBAL_enterinventory = CROWBAR_ITEM;
+                            break;
+                        }
+                        if (GLOBAL_inventoryitemchosen != CROWBAR_ITEM)
+                            break;
+                        GLOBAL_inventoryitemchosen = NO_ITEM;
+                    }
+                    if (MoveLaraPosition(&CrowbarPickUpPosition, item, l)) {
+                        l->anim_number = ANIM_CROWBAR;
+                        l->current_anim_state = AS_PICKUP;
+                        item->status = ITEM_ACTIVE;
+                        AddActiveItem(item_num);
+                        AnimateItem(item);
+                        flag = 1;
+                    }
+                    lara.GeneralPtr = (void *)item_num;
+                } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+                    lara.IsMoving = 0;
+                    lara.gun_status = LG_NO_ARMS;
+                }
+                break;
+            case 1:
+                item->pos.y_rot = roty;
+                if (!lara.IsDucked && TestLaraPosition(HiddenPickUpBounds, item, l)) {
+                    if (MoveLaraPosition(&HiddenPickUpPosition, item, l)) {
+                        l->anim_number = ANIM_HIDDENPICKUP;
+                        l->current_anim_state = AS_HIDDENPICKUP;
+                        flag = 1;
+                    }
+                    lara.GeneralPtr = (void *)item_num;
+                } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+                    lara.IsMoving = 0;
+                    lara.gun_status = LG_NO_ARMS;
+                }
+                break;
+            case 3:
+            case 4:
+                bounds = FindPlinth(item);
+                if (bounds) {
+                    PlinthPickUpBounds[0] = bounds[0];
+                    PlinthPickUpBounds[1] = bounds[1];
+                    PlinthPickUpBounds[5] = bounds[5] + 320;
+                    PlinthPickUpPosition.z = -200 - bounds[5];
+                }
+                PlinthPickUpBounds[3] = (sint16)(l->pos.y_pos - item->pos.y_pos + 100);
+                if (TestLaraPosition(PlinthPickUpBounds, item, l) && !lara.IsDucked) {
+                    if (item->pos.y_pos == l->pos.y_pos)
+                        PlinthPickUpPosition.y = 0;
+                    else
+                        PlinthPickUpPosition.y = l->pos.y_pos - item->pos.y_pos;
+                    if (MoveLaraPosition(&PlinthPickUpPosition, item, l)) {
+                        if (ocb == 3)
+                            l->anim_number = ANIM_PLINTHHI;
+                        else
+                            l->anim_number = ANIM_PLINTHLO;
+                        l->current_anim_state = AS_PICKUP;
+                        flag = 1;
+                    }
+                    lara.GeneralPtr = (void *)item_num;
+                } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+                    lara.IsMoving = 0;
+                    lara.gun_status = LG_NO_ARMS;
+                }
+                break;
+            default:
+                if (TestLaraPosition(PickUpBounds, item, l)) {
+                    PickUpPosition.y = l->pos.y_pos - item->pos.y_pos;
+                    if (l->current_anim_state == AS_DUCK) {
+                        AlignLaraPosition(&PickUpPosition, item, l);
+                        if (item->object_number == FLARE_ITEM) {
+                            l->anim_number = ANIM_DUCKPICKUPF;
+                            l->current_anim_state = AS_FLAREPICKUP;
+                        } else {
+                            l->anim_number = ANIM_DUCKPICKUP;
+                            l->current_anim_state = AS_PICKUP;
+                        }
+                        flag = 1;
+                    } else if (l->current_anim_state == AS_ALL4S)
+                        l->goal_anim_state = AS_DUCK;
+                    else if (MoveLaraPosition(&PickUpPosition, item, l)) {
+                        if (item->object_number == FLARE_ITEM) {
+                            l->anim_number = ANIM_PICKUPF;
+                            l->current_anim_state = AS_FLAREPICKUP;
+                        } else {
+                            l->anim_number = ANIM_PICKUP;
+                            l->current_anim_state = AS_PICKUP;
+                        }
+                        flag = 1;
+                    }
+                    lara.GeneralPtr = (void *)item_num;
+                } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+                    lara.IsMoving = 0;
+                    lara.gun_status = LG_NO_ARMS;
+                }
+                break;
+            }
+            if (flag) {
+                lara.head_y_rot = 0;
+                lara.head_x_rot = 0;
+                lara.torso_y_rot = 0;
+                lara.torso_x_rot = 0;
+                l->frame_number = anims[l->anim_number].frame_base;
+                lara.IsMoving = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+            }
+        } else if (lara.GeneralPtr == (void *)item_num && (l->current_anim_state == AS_PICKUP || l->current_anim_state == AS_HIDDENPICKUP)) {
+            if (l->frame_number == anims[ANIM_PICKUP].frame_base + 15 ||
+                l->frame_number == anims[ANIM_DUCKPICKUP].frame_base + 22 ||
+                l->frame_number == anims[ANIM_DUCKPICKUP].frame_base + 20 ||
+                l->frame_number == anims[ANIM_PLINTHLO].frame_base + 29 ||
+                l->frame_number == anims[ANIM_PLINTHHI].frame_base + 45 ||
+                l->frame_number == anims[ANIM_HIDDENPICKUP].frame_base + 42 ||
+                (l->anim_number == ANIM_CROWBAR && l->frame_number == anims[ANIM_CROWBAR].frame_base + 123)) {
+                if (item->object_number == BURNING_TORCH_ITEM) {
+                    AddDisplayPickup(BURNING_TORCH_ITEM);
+                    GetFlameTorch();
+                    lara.LitTorch = item->item_flags[3] & 1;
+                    KillItem(item_num);
+                } else {
+                    if (item->object_number != FLARE_ITEM) {
+                        AddDisplayPickup(item->object_number);
+                        if (item->trigger_flags & 0x100) {
+                            for (i = 0; i < level_items; i++) {
+                                if (items[i].object_number == item->object_number)
+                                    KillItem(i);
+                            }
+                        }
+                    }
+                    if (!(item->trigger_flags & 0xC0))
+                        KillItem(item_num);
+                    else {
+                        item->item_flags[3] = 1;
+                        item->status = ITEM_INVISIBLE;
+                        item->flags |= IFL_TRIGGERED;
+                    }
+                }
+            }
+        } else if (lara.GeneralPtr == (void *)item_num && l->current_anim_state == AS_FLAREPICKUP) {
+            if ((l->anim_number == ANIM_DUCKPICKUPF && l->frame_number == anims[ANIM_DUCKPICKUPF].frame_base + 22) ||
+                l->frame_number == anims[ANIM_PICKUPF].frame_base + 58) {
+                lara.gun_type = lara.request_gun_type = WEAPON_FLARE;
+                InitialiseNewWeapon();
+                lara.gun_status = LG_FLARE;
+                lara.flare_age = (sint32)item->data & 0x7FFF;
+                KillItem(item_num);
+            }
+        }
+    } else if (lara.water_status == LW_UNDERWATER) {
+        item->pos.x_rot = -4550;
+        if ((input & IN_ACTION && item->object_number != BURNING_TORCH_ITEM && l->current_anim_state == AS_TREAD &&
+             lara.gun_status == LG_NO_ARMS && TestLaraPosition(PickUpBoundsUW, item, l)) ||
+            (lara.IsMoving && lara.GeneralPtr == (void *)item_num)) {
+            if (TestLaraPosition(PickUpBoundsUW, item, l)) {
+                if (MoveLaraPosition(&PickUpPositionUW, item, l)) {
+                    if (item->object_number == FLARE_ITEM) {
+                        l->anim_number = ANIM_PICKUPF_UW;
+                        l->current_anim_state = AS_FLAREPICKUP;
+                        l->fallspeed = 0;
+                    } else {
+                        l->anim_number = ANIM_PICKUP_UW;
+                        l->current_anim_state = AS_PICKUP;
+                    }
+                    l->frame_number = anims[l->anim_number].frame_base;
+                    l->goal_anim_state = AS_TREAD;
+                    lara.IsMoving = 0;
+                    lara.gun_status = LG_HANDS_BUSY;
+                }
+                lara.GeneralPtr = (void *)item_num;
+            } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_num) {
+                lara.IsMoving = 0;
+                lara.gun_status = LG_NO_ARMS;
+            }
+        } else if (lara.GeneralPtr == (void *)item_num && l->current_anim_state == AS_PICKUP &&
+                   l->frame_number == anims[ANIM_PICKUP_UW].frame_base + 18) {
+            AddDisplayPickup(item->object_number);
+            if (!(item->trigger_flags & 0xC0))
+                KillItem(item_num);
+            else {
+                item->item_flags[3] = 1;
+                item->status = ITEM_INVISIBLE;
+                item->flags |= IFL_TRIGGERED;
+            }
+        } else if (lara.GeneralPtr == (void *)item_num && l->current_anim_state == AS_FLAREPICKUP &&
+                   l->frame_number == anims[ANIM_PICKUPF_UW].frame_base + 20) {
+            lara.gun_type = lara.request_gun_type = WEAPON_FLARE;
+            InitialiseNewWeapon();
+            lara.gun_status = LG_FLARE;
+            lara.flare_age = (sint32)item->data & 0x7FFF;
+            draw_flare_meshes();
+            KillItem(item_num);
+        }
+    }
+    item->pos.x_rot = rotx;
+    item->pos.y_rot = roty;
+    item->pos.z_rot = rotz;
 }
 
 sint16 *FindPlinth(ITEM_INFO *item)

@@ -894,7 +894,7 @@ address,size,name,symbol
 0x00457560,168,ControlBlinker,_ControlBlinker
 0x00457610,49,AnimatingPickUp,_AnimatingPickUp
 0x00457650,208,RegeneratePickups,_RegeneratePickups
-0x00457720,2047,PickUpCollision,_PickUpCollision
+0x00457720,2064,PickUpCollision,_PickUpCollision
 0x00457f30,344,FindPlinth,_FindPlinth
 0x00458090,462,KeyHoleCollision,_KeyHoleCollision
 0x00458260,57,PuzzleDoneCollision,_PuzzleDoneCollision
@@ -2088,6 +2088,16 @@ address,size,name,symbol
 0x004afae8,12,PolePos,_PolePos
 0x004afaf4,24,PoleBounds,_PoleBounds
 0x004afb0c,24,StatuePlinthBounds,_StatuePlinthBounds
+0x004afb28,24,PickUpBounds,_PickUpBounds
+0x004afb40,12,PickUpPosition,_PickUpPosition
+0x004afb4c,24,HiddenPickUpBounds,_HiddenPickUpBounds
+0x004afb68,12,HiddenPickUpPosition,_HiddenPickUpPosition
+0x004afb74,24,CrowbarPickUpBounds,_CrowbarPickUpBounds
+0x004afb90,12,CrowbarPickUpPosition,_CrowbarPickUpPosition
+0x004afb9c,24,PlinthPickUpBounds,_PlinthPickUpBounds
+0x004afbb8,12,PlinthPickUpPosition,_PlinthPickUpPosition
+0x004afbc4,24,PickUpBoundsUW,_PickUpBoundsUW
+0x004afbe0,12,PickUpPositionUW,_PickUpPositionUW
 0x004afbec,24,KeyHoleBounds,_KeyHoleBounds
 0x004afc08,12,KeyHolePosition,_KeyHolePosition
 0x004afc14,24,PuzzleBounds,_PuzzleBounds
