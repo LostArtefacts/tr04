@@ -4,6 +4,7 @@
 #include <ddraw.h>
 
 #include "dxshell.h"
+#include "winmain.h"
 #include "function_stubs.h"
 
 sint32 DXAttempt(HRESULT r)
@@ -57,5 +58,17 @@ sint32 BPPToDDBD(sint32 BPP)
         return DDBD_32;
     default:
         return 0;
+    }
+}
+
+void DXReadKeyboard(char *KeyMap)
+{
+    HRESULT state;
+
+    state = IDirectInputDevice2_GetDeviceState(G_dxptr->Keyboard, 256, KeyMap);
+    if (FAILED(state)) {
+        if (state == DIERR_INPUTLOST)
+            IDirectInputDevice2_Acquire(G_dxptr->Keyboard);
+        IDirectInputDevice2_GetDeviceState(G_dxptr->Keyboard, 256, KeyMap);
     }
 }
