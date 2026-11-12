@@ -4,6 +4,15 @@
 #include "../room.h"
 #include "../draw.h"
 
+void MallocD3DLights(void)
+{
+    if (MaxRoomLights > 21)
+        Log(1, "MAX Room Lights of %d Exceeded - %d", 21, MaxRoomLights);
+    MaxRoomLights *= 2;
+    D3DLights = (D3DLIGHT_STRUCT *)game_malloc(sizeof(D3DLIGHT_STRUCT) * MaxRoomLights, 0);
+    D3DDynamics = (D3DLIGHT_STRUCT *)game_malloc(sizeof(D3DLIGHT_STRUCT) * 32, 0);
+}
+
 void ApplyMatrix(sint32 *matrix, PHD_VECTOR *start, PHD_VECTOR *dest)
 {
     dest->x = (start->x * matrix[M00] + start->y * matrix[M01] + start->z * matrix[M02]) >> W2V_SHIFT;
