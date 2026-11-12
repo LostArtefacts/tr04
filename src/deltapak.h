@@ -62,6 +62,7 @@ typedef struct nodeloadheader {
 
 extern sint32 GLOBAL_playing_cutseq;
 extern NEW_CUTSCENE *GLOBAL_cutme;
+extern char *cutseqpakPtr;
 extern PACKNODE *actor_pnodes[10];
 extern sint16 temp_rotation_buffer[160];
 extern sint16 frig_shadow_bbox[6];
@@ -192,7 +193,9 @@ void eleventh_cutseq_control(void);
 void GetJointAbsPositionCutSeq(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot, PHD_VECTOR *pos);
 void CalcActorLighting(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot);
 sint16 GetTrackWord(sint32 off, char *packed, sint32 packmethod);
+void init_cutseq_actors(char *data, sint32 resident);
 void updateAnimFrame(PACKNODE *node, sint32 flags, sint16 *frame);
 void CalculateObjectLightingLaraCutSeq(void);
+sint32 Load_and_Init_Cutseq(sint32 num);
 
 #endif

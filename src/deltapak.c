@@ -814,6 +814,32 @@ void cutseq_restore_item(sint32 num)
     }
 }
 
+sint32 Load_and_Init_Cutseq(sint32 num)
+{
+    sint32 *headerbuf;
+    char *packed;
+    sint32 Offset, Length, numactors, i;
+
+    Log(5, "Initialising Cut Scene");
+    CutSceneTriggered |= 1 << num;
+    headerbuf = (sint32 *)cutseqpakPtr + 2 * num;
+    Offset = headerbuf[0];
+    Length = headerbuf[1];
+    Log(5, "Offset=%d, Length=%d\n", Offset, Length);
+    packed = &cutseqpakPtr[Offset];
+    GLOBAL_cutme = (NEW_CUTSCENE *)packed;
+    Log(5, "Loaded cutscene data...\n");
+    numactors = GLOBAL_cutme->numactors;
+    Log(5, "num actors = %d\n", numactors);
+    Log(5, "num frames = %d\n", GLOBAL_cutme->numframes);
+    Log(5, "OrgX=%d,OrgY=%d,OrgZ=%d\n", GLOBAL_cutme->orgx, GLOBAL_cutme->orgy, GLOBAL_cutme->orgz);
+    Log(5, "CameraOffset=%d\n", GLOBAL_cutme->camera_offset);
+    for (i = 0; i < numactors; i++)
+        Log(5, "Actor %d --- offset=%d,slot=%d,nodes=%d\n", i, GLOBAL_cutme->actor_data[i].offset, GLOBAL_cutme->actor_data[i].objslot, GLOBAL_cutme->actor_data[i].nodes);
+    init_cutseq_actors(packed, 0);
+    return 0;
+}
+
 void init_voncroy_meshbits(sint32 num)
 {
     cutseq_meshswapbits[num] = 0x240080;
