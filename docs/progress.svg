@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="207.81" height="12" x="0" y="0" class="named"><title>940 · 60.76%</title></rect>
-<rect width="0.44" height="12" x="207.81" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="208.25" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="126.67" height="12" x="215.33" y="0" class="todo"><title>573 · 37.04%</title></rect>
+<rect width="208.03" height="12" x="0" y="0" class="named"><title>941 · 60.83%</title></rect>
+<rect width="0.44" height="12" x="208.03" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="208.47" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="126.45" height="12" x="215.55" y="0" class="todo"><title>572 · 36.97%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">60.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">940</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">573</tspan></text>
+<text text-anchor="end" x="522" y="7.50">61.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">941</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">572</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="89.85" height="12" x="0" y="0" class="named"><title>163 KB · 26.27%</title></rect>
-<rect width="0.12" height="12" x="89.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="89.97" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="242.64" height="12" x="99.36" y="0" class="todo"><title>440 KB · 70.95%</title></rect>
+<rect width="89.86" height="12" x="0" y="0" class="named"><title>163 KB · 26.27%</title></rect>
+<rect width="0.12" height="12" x="89.86" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="89.98" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="242.63" height="12" x="99.37" y="0" class="todo"><title>440 KB · 70.95%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">163 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">440 KB</tspan></text>
@@ -1453,7 +1453,7 @@
 <rect width="12" height="12" x="510" y="405" class="todo"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="405" class="todo"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="405" class="todo"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="405" class="todo"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="405" class="named"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="405" class="todo"><title>0x0048f970 j_nullsub_11 (5 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="405" class="todo"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="405" class="todo"><title>0x0048f981 Func48f981 (13 bytes)</title></rect>
@@ -3142,7 +3142,7 @@
 <rect width="2.03" height="1.50" x="726.85" y="451.49" class="named"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
 <rect width="2.03" height="1.50" x="726.85" y="455.99" class="named"><title>0x0046c190 fifteen_end (8 bytes)</title></rect>
 <rect width="2.03" height="1.50" x="726.85" y="460.50" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
-<rect width="1.83" height="1.69" x="731.88" y="442.48" class="todo"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
+<rect width="1.83" height="1.69" x="731.88" y="442.48" class="named"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="1.83" height="1.69" x="736.71" y="442.48" class="todo"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
 <rect width="1.36" height="1.69" x="741.53" y="442.48" class="todo"><title>0x00494e90 Func494e90 (6 bytes)</title></rect>
 <rect width="1.11" height="1.69" x="745.89" y="442.48" class="named"><title>0x0040b050 GunShot (5 bytes)</title></rect>
