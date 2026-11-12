@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="247" height="12" x="0" y="0" class="named"><title>1118 · 72.22%</title></rect>
-<rect width="0.66" height="12" x="247" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.01" height="12" x="247.66" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
-<rect width="77.33" height="12" x="264.67" y="0" class="todo"><title>350 · 22.61%</title></rect>
+<rect width="247.22" height="12" x="0" y="0" class="named"><title>1119 · 72.29%</title></rect>
+<rect width="0.66" height="12" x="247.22" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.01" height="12" x="247.88" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
+<rect width="77.10" height="12" x="264.90" y="0" class="todo"><title>349 · 22.55%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">72.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">350</tspan></text>
+<text text-anchor="end" x="522" y="7.50">72.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1119</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">349</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="128.85" height="12" x="0" y="0" class="named"><title>235 KB · 37.67%</title></rect>
-<rect width="0.13" height="12" x="128.85" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="30.52" height="12" x="128.98" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
-<rect width="182.50" height="12" x="159.50" y="0" class="todo"><title>332 KB · 53.36%</title></rect>
+<rect width="128.86" height="12" x="0" y="0" class="named"><title>235 KB · 37.68%</title></rect>
+<rect width="0.13" height="12" x="128.86" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="30.52" height="12" x="128.99" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
+<rect width="182.49" height="12" x="159.51" y="0" class="todo"><title>332 KB · 53.36%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">37.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">332 KB</tspan></text>
@@ -414,7 +414,7 @@
 <rect width="12" height="12" x="675" y="90" class="named"><title>0x004280f0 lara_col_splat (105 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="90" class="named"><title>0x00428160 lara_col_compress (176 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="90" class="named"><title>0x00428210 lara_col_back (278 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="90" class="todo"><title>0x00428330 j_lara_default_col (19 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="90" class="named"><title>0x00428330 j_lara_default_col (19 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="90" class="named"><title>0x00428350 lara_col_stepright (218 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="105" class="named"><title>0x00428430 lara_col_stepleft (19 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="105" class="named"><title>0x00428450 lara_col_slide (30 bytes)</title></rect>
@@ -3060,7 +3060,7 @@
 <rect width="2.47" height="2.95" x="722.65" y="409.42" class="named"><title>0x00425110 lara_as_upjump (19 bytes)</title></rect>
 <rect width="2.47" height="2.95" x="728.12" y="409.42" class="named"><title>0x00427de0 lara_col_pose (19 bytes)</title></rect>
 <rect width="2.47" height="2.95" x="733.59" y="409.42" class="named"><title>0x00427fb0 lara_col_turn_l (19 bytes)</title></rect>
-<rect width="2.47" height="2.95" x="739.06" y="409.42" class="todo"><title>0x00428330 j_lara_default_col (19 bytes)</title></rect>
+<rect width="2.47" height="2.95" x="739.06" y="409.42" class="named"><title>0x00428330 j_lara_default_col (19 bytes)</title></rect>
 <rect width="2.47" height="2.95" x="744.53" y="409.42" class="named"><title>0x00428430 lara_col_stepleft (19 bytes)</title></rect>
 <rect width="2.89" height="2.53" x="694.76" y="415.37" class="named"><title>0x004328c0 lara_col_swim (19 bytes)</title></rect>
 <rect width="2.89" height="2.53" x="694.76" y="420.90" class="named"><title>0x00432b10 lara_col_glide (19 bytes)</title></rect>

@@ -3408,6 +3408,11 @@ void lara_col_back(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_pos += coll->mid_floor;
 }
 
+void j_lara_default_col(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara_default_col(item, coll);
+}
+
 void lara_col_stepright(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->current_anim_state == AS_STEPRIGHT)
