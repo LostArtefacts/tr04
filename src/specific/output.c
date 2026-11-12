@@ -11,6 +11,12 @@
 #include "../effects.h"
 #include "../gameflow.h"
 #include "file.h"
+#include "specificfx.h"
+#include "loadsave.h"
+#include "../tomb4fx.h"
+#include "../camera.h"
+#include "../health.h"
+#include "../deltapak.h"
 
 void S_InitialisePolyList(void)
 {
@@ -41,6 +47,77 @@ void _InsertRoom(ROOM_INFO *r)
 {
     SetD3DViewMatrix();
     InsertRoom(r);
+}
+
+void S_OutputPolyList(void)
+{
+    D3DRECT r;
+    sint32 h;
+
+    RestoreFPCW(FPCW);
+    WinFrameRate();
+    nPolys = 0;
+    nClippedPolys = 0;
+    DrawPrimitiveCnt = 0;
+    Unk5c0478 = 0;
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_SRCBLEND, D3DBLEND_SRCALPHA);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_DESTBLEND, D3DBLEND_INVSRCALPHA);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ALPHABLENDENABLE, 0);
+    if (resChangeCounter) {
+        WinDisplayString(8, App.dx.dwRenderHeight - 8, "%dx%d", App.dx.dwRenderWidth, App.dx.dwRenderHeight);
+        resChangeCounter -= 30.0F / App.fps;
+        if (resChangeCounter < 0)
+            resChangeCounter = 0;
+    }
+    if (App.dx.lpZBuffer)
+        DrawBuckets();
+    if (!gfCurrentLevel) {
+        Fade();
+        if (App.dx.lpZBuffer)
+            DrawSortList();
+    }
+    SortPolyList(SortCount, SortList);
+    DrawSortList();
+    if (App.dx.lpZBuffer) {
+        r.x1 = App.dx.rViewport.left;
+        r.y1 = App.dx.rViewport.top;
+        r.x2 = App.dx.rViewport.left + App.dx.rViewport.right;
+        r.y2 = App.dx.rViewport.top + App.dx.rViewport.bottom;
+        DXAttempt(IDirect3DViewport3_Clear2(App.dx.lpViewport, 1, &r, D3DCLEAR_ZBUFFER, 0, 1.0F, 0));
+    }
+    if (BinocularRange && !MonoScreenOn) {
+        InitialiseSortList();
+        DrawBinoculars();
+        DrawSortList();
+    }
+    if (pickups[CurrentPickup].life != -1 && !MonoScreenOn && !GLOBAL_playing_cutseq) {
+        bWaterEffect = 0;
+        InitialiseSortList();
+        S_DrawPickup(pickups[CurrentPickup].object_number);
+        SortPolyList(SortCount, SortList);
+        DrawSortList();
+    }
+    InitialiseSortList();
+    if (FadeScreenHeight) {
+        h = (sint32)(FadeScreenHeight * ((float)phd_winymax / 256.0F));
+        DrawPsxTile(0, phd_winwidth | (h << 16), 0x62FFFFFF, 0, 0);
+        DrawPsxTile(phd_winheight - h, phd_winwidth | (h << 16), 0x62FFFFFF, 0, 0);
+    }
+    if (gfCurrentLevel) {
+        Fade();
+        if (FlashFader) {
+            DrawFlash();
+            if (FlashFader)
+                FlashFader -= 2;
+        }
+        DrawSortList();
+    }
+    if (DoFade == 1) {
+        InitialiseSortList();
+        DoScreenFade();
+        DrawSortList();
+    }
+    MungeFPCW(&FPCW);
 }
 
 sint32 S_DumpScreen(void)

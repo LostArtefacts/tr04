@@ -159,6 +159,7 @@ HRESULT CALLBACK DXEnumDisplayModes(LPDDSURFACEDESC2 lpDDSurfaceDesc2, LPVOID lp
 HRESULT CALLBACK DXEnumTextureFormats(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext);
 sint32 DXChangeVideoMode(void);
 sint32 DXToggleFullScreen(void);
+float WinFrameRate(void);
 void WinDisplayString(sint32 x, sint32 y, char *string, ...);
 uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex);
 void WinClose(void);
@@ -167,6 +168,7 @@ void WinProcMsg(void);
 void ClearSurfaces(void);
 
 extern WINAPP App;
+extern sint32 resChangeCounter;
 extern DXINFO *G_dxinfo;
 extern DXPTR *G_dxptr;
 extern HWND G_hwnd;

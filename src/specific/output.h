@@ -17,6 +17,7 @@ extern LPDIRECT3DVERTEXBUFFER DestVB;
 extern sint16 *clipflags;
 
 void S_AnimateTextures(sint32 n);
+void S_DrawPickup(sint16 object_number);
 sint32 S_DumpScreen(void);
 void S_InitialisePolyList(void);
 void S_OutputPolyList(void);

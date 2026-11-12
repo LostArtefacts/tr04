@@ -27,6 +27,7 @@ void setXY3(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 x
 void InitTarget_2(void);
 void InitBinoculars(void);
 void DrawFlash(void);
+void DrawBinoculars(void);
 void DoScreenFade(void);
 void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip);
 void OutputSky(void);

@@ -2435,6 +2435,7 @@ address,size,name,symbol
 0x005b74b0,4,current_item,_current_item
 0x005bc4b8,15360,SkinVerts,_SkinVerts
 0x005c00b8,960,SkinClip,_SkinClip
+0x005c0478,4,Unk5c0478,_Unk5c0478
 0x005c047c,4,GlobalAmbient,_GlobalAmbient
 0x005c07a8,4,pSortList,_pSortList
 0x005c07ac,655360,SortBuffer,_SortBuffer
