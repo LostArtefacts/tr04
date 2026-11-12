@@ -92,6 +92,31 @@ sint32 DoDynamics_jeep(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
     return fallspeed;
 }
 
+sint32 GetCollisionAnim(ITEM_INFO *item, PHD_VECTOR *moved, JEEPINFO *jeep)
+{
+    sint32 c, s, front, side;
+
+    moved->x = item->pos.x_pos - moved->x;
+    moved->z = item->pos.z_pos - moved->z;
+    if (!moved->x && !moved->z)
+        return 0;
+    c = phd_cos(item->pos.y_rot);
+    s = phd_sin(item->pos.y_rot);
+    front = (moved->z * c + moved->x * s) >> W2V_SHIFT;
+    side = (moved->x * c - moved->z * s) >> W2V_SHIFT;
+    if (ABS(front) > ABS(side)) {
+        if (front > 0)
+            return 14;
+        else
+            return 13;
+    } else {
+        if (side > 0)
+            return 11;
+        else
+            return 12;
+    }
+}
+
 sint32 DoShift(ITEM_INFO *item, PHD_VECTOR *pos, PHD_VECTOR *old)
 {
     sint32 x, z, x_old, z_old, shift_x, shift_z;

@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="160.72" height="12" x="0" y="0" class="named"><title>727 · 46.99%</title></rect>
-<rect width="0.44" height="12" x="160.72" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.86" height="12" x="161.16" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
-<rect width="175.97" height="12" x="166.03" y="0" class="todo"><title>796 · 51.45%</title></rect>
+<rect width="160.94" height="12" x="0" y="0" class="named"><title>728 · 47.06%</title></rect>
+<rect width="0.44" height="12" x="160.94" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.86" height="12" x="161.38" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
+<rect width="175.75" height="12" x="166.25" y="0" class="todo"><title>795 · 51.39%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">47.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">727</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">796</tspan></text>
+<text text-anchor="end" x="522" y="7.50">47.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">728</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">795</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="68.96" height="12" x="0" y="0" class="named"><title>125 KB · 20.16%</title></rect>
-<rect width="0.12" height="12" x="68.96" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="69.08" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
-<rect width="265.55" height="12" x="76.45" y="0" class="todo"><title>482 KB · 77.65%</title></rect>
+<rect width="69.04" height="12" x="0" y="0" class="named"><title>125 KB · 20.19%</title></rect>
+<rect width="0.12" height="12" x="69.04" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="69.16" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
+<rect width="265.47" height="12" x="76.53" y="0" class="todo"><title>482 KB · 77.62%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">20.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">125 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">482 KB</tspan></text>
@@ -1085,7 +1085,7 @@
 <rect width="12" height="12" x="240" y="300" class="todo"><title>0x00467cf0 JeepDynamics (2010 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="300" class="todo"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="300" class="todo"><title>0x004687e0 JeepBaddieCollision (754 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="300" class="todo"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="300" class="named"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="300" class="named"><title>0x00468b80 DoShift (634 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="300" class="todo"><title>0x00468e00 AnimateJeep (2335 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="300" class="todo"><title>0x00469770 CanGetOff_jeep (251 bytes)</title></rect>
@@ -2477,7 +2477,7 @@
 <rect width="7.51" height="7.92" x="529.82" y="399.72" class="todo"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
 <rect width="7.51" height="7.87" x="529.82" y="410.64" class="named"><title>0x0042b720 draw_pistols (153 bytes)</title></rect>
 <rect width="7.51" height="7.87" x="529.82" y="421.51" class="named"><title>0x004546a0 RemoveDrawnItem (153 bytes)</title></rect>
-<rect width="7.51" height="7.87" x="529.82" y="432.38" class="todo"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
+<rect width="7.51" height="7.87" x="529.82" y="432.38" class="named"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
 <rect width="7.51" height="7.87" x="529.82" y="443.26" class="named"><title>0x0046b4c0 CalcActorLighting (153 bytes)</title></rect>
 <rect width="7.51" height="7.87" x="529.82" y="454.13" class="todo"><title>0x00473ce0 FileOpen (153 bytes)</title></rect>
 <rect width="7.74" height="7.59" x="540.32" y="255.62" class="named"><title>0x00425ac0 lara_as_walk (152 bytes)</title></rect>
