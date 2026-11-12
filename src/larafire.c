@@ -7,6 +7,8 @@
 #include "specific/3dmath.h"
 #include "box.h"
 #include "sound.h"
+#include "savegame.h"
+#include "effects.h"
 
 sint32 CheckForHoldingState(sint32 state)
 {
@@ -69,6 +71,34 @@ void find_target_point(ITEM_INFO *item, GAME_VECTOR *target)
     target->y = item->pos.y_pos + y;
     target->z = item->pos.z_pos + ((z * c - x * s) >> W2V_SHIFT);
     target->room_number = item->room_number;
+}
+
+void HitTarget(ITEM_INFO *item, GAME_VECTOR *hitpos, sint32 damage, sint32 grenade)
+{
+    OBJECT_INFO *obj;
+
+    obj = &objects[item->object_number];
+    item->hit_status = 1;
+    if (item->data && item != lara_item)
+        ((CREATURE_INFO *)item->data)->hurt_by_lara = 1;
+    if (hitpos && obj->HitEffect) {
+        if (obj->HitEffect == 1) {
+            if (item->object_number == SUPER_RAGHEAD && (item->current_anim_state == 8 || GetRandomControl() & 1) && (lara.gun_type == WEAPON_PISTOLS || lara.gun_type == WEAPON_SHOTGUN || lara.gun_type == WEAPON_UZI)) {
+                SoundEffect(SFX_BAD_SWORD_RICO, &item->pos, SFX_DEFAULT);
+                TriggerRicochetSpark(hitpos, lara_item->pos.y_rot, 3, 0);
+                return;
+            }
+            DoBloodSplat(hitpos->x, hitpos->y, hitpos->z, (GetRandomControl() & 3) + 3, item->pos.y_rot, item->room_number);
+        } else if (obj->HitEffect == 3)
+            TriggerRicochetSpark(hitpos, lara_item->pos.y_rot, 3, 0);
+        else if (obj->HitEffect == 2)
+            TriggerRicochetSpark(hitpos, lara_item->pos.y_rot, 3, -5);
+    }
+    if (!obj->undead || grenade || item->hit_points == -16384) {
+        if (item->hit_points > 0 && item->hit_points <= damage)
+            savegame.Level.Kills++;
+        item->hit_points -= (sint16)damage;
+    }
 }
 
 sint32 WeaponObject(sint32 weapon_type)

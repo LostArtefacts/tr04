@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="155.64" height="12" x="0" y="0" class="named"><title>704 · 45.51%</title></rect>
-<rect width="0.44" height="12" x="155.64" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="156.08" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="181.28" height="12" x="160.72" y="0" class="todo"><title>820 · 53.01%</title></rect>
+<rect width="155.86" height="12" x="0" y="0" class="named"><title>705 · 45.57%</title></rect>
+<rect width="0.44" height="12" x="155.86" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="156.30" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="181.06" height="12" x="160.94" y="0" class="todo"><title>819 · 52.94%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">45.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">704</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">820</tspan></text>
+<text text-anchor="end" x="522" y="7.50">45.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">705</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">819</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="64.35" height="12" x="0" y="0" class="named"><title>117 KB · 18.82%</title></rect>
-<rect width="0.12" height="12" x="64.35" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="64.47" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="270.28" height="12" x="71.72" y="0" class="todo"><title>490 KB · 79.03%</title></rect>
+<rect width="64.54" height="12" x="0" y="0" class="named"><title>117 KB · 18.87%</title></rect>
+<rect width="0.12" height="12" x="64.54" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="64.66" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="270.10" height="12" x="71.90" y="0" class="todo"><title>490 KB · 78.98%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">18.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">117 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">490 KB</tspan></text>
@@ -485,7 +485,7 @@
 <rect width="12" height="12" x="240" y="120" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="120" class="todo"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="120" class="todo"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="120" class="todo"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="120" class="named"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="120" class="named"><title>0x0042ea70 WeaponObject (76 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="120" class="named"><title>0x0042eac0 WeaponObjectMesh (100 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="120" class="todo"><title>0x0042eb30 DoProperDetection (2381 bytes)</title></rect>
@@ -2131,7 +2131,7 @@
 <rect width="11.13" height="11.76" x="428.93" y="232.29" class="named"><title>0x004357c0 TriggerRocketSmoke (339 bytes)</title></rect>
 <rect width="11.13" height="11.73" x="428.93" y="247.05" class="todo"><title>0x00420920 DrawHair (338 bytes)</title></rect>
 <rect width="11.13" height="11.69" x="428.93" y="261.78" class="todo"><title>0x0041c360 TriggerWraithFlame (337 bytes)</title></rect>
-<rect width="11.13" height="11.66" x="428.93" y="276.47" class="todo"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
+<rect width="11.13" height="11.66" x="428.93" y="276.47" class="named"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
 <rect width="11.13" height="11.66" x="428.93" y="291.13" class="todo"><title>0x00499ac0 Func499ac0 (336 bytes)</title></rect>
 <rect width="11.13" height="11.62" x="428.93" y="305.79" class="named"><title>0x004328e0 LaraSwimCollision (335 bytes)</title></rect>
 <rect width="11.13" height="11.59" x="428.93" y="320.42" class="todo"><title>0x0043bc30 do_debounced_joystick_poo (334 bytes)</title></rect>
