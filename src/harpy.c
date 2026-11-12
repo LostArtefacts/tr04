@@ -52,6 +52,79 @@ void TriggerHarpyMissileFlame(sint16 fx_number, sint32 xv, sint32 yv, sint32 zv)
     sptr->dSize = size >> 5;
 }
 
+void DoHarpyEffects(ITEM_INFO *item, sint16 item_number)
+{
+    PHD_VECTOR pos;
+    PHD_VECTOR rh;
+    PHD_VECTOR lh;
+    PHD_3DPOS mPos;
+    sint32 i;
+    sint16 xv, yv, zv, size;
+    sint16 angles[2];
+
+    item->item_flags[0]++;
+    rh.x = harpy_right_hand.x;
+    rh.y = harpy_right_hand.y;
+    rh.z = harpy_right_hand.z;
+    GetJointAbsPosition(item, &rh, harpy_right_hand.mesh_num);
+    lh.x = harpy_left_hand.x;
+    lh.y = harpy_left_hand.y;
+    lh.z = harpy_left_hand.z;
+    GetJointAbsPosition(item, &lh, harpy_left_hand.mesh_num);
+    if (item->item_flags[0] >= 24 && item->item_flags[0] <= 47 && (GetRandomControl() & 0x1F) < item->item_flags[0]) {
+        for (i = 0; i < 2; i++) {
+            pos.x = (GetRandomControl() & 0x7FF) + rh.x - 1024;
+            pos.y = (GetRandomControl() & 0x7FF) + rh.y - 1024;
+            pos.z = (GetRandomControl() & 0x7FF) + rh.z - 1024;
+            xv = (sint16)((rh.x - pos.x) << 3);
+            yv = (sint16)((rh.y - pos.y) << 3);
+            zv = (sint16)((rh.z - pos.z) << 3);
+            TriggerHarpySparks(pos.x, pos.y, pos.z, xv, yv, zv);
+            pos.x = (GetRandomControl() & 0x7FF) + lh.x - 1024;
+            pos.y = (GetRandomControl() & 0x7FF) + lh.y - 1024;
+            pos.z = (GetRandomControl() & 0x7FF) + lh.z - 1024;
+            xv = (sint16)((lh.x - pos.x) << 3);
+            yv = (sint16)((lh.y - pos.y) << 3);
+            zv = (sint16)((lh.z - pos.z) << 3);
+            TriggerHarpySparks(pos.x, pos.y, pos.z, xv, yv, zv);
+        }
+    }
+    size = item->item_flags[0] * 2;
+    if (size > 64)
+        size = 64;
+    if (item->item_flags[0] < 80) {
+        if ((wibble & 0xF) == 8)
+            TriggerHarpyFlame(item_number, 4, size);
+        else if (!(wibble & 0xF))
+            TriggerHarpyFlame(item_number, 5, size);
+    }
+    if (item->item_flags[0] >= 61 && item->item_flags[0] <= 65 && GlobalCounter & 1) {
+        pos.x = harpy_right_hand.x;
+        pos.y = harpy_right_hand.y << 1;
+        pos.z = harpy_right_hand.z;
+        GetJointAbsPosition(item, &pos, harpy_right_hand.mesh_num);
+        mPos.x_pos = rh.x;
+        mPos.y_pos = rh.y;
+        mPos.z_pos = rh.z;
+        phd_GetVectorAngles(pos.x - mPos.x_pos, pos.y - mPos.y_pos, pos.z - mPos.z_pos, angles);
+        mPos.y_rot = angles[0];
+        mPos.x_rot = angles[1];
+        TriggerHarpyMissile(&mPos, item->room_number, 2);
+    } else if (item->item_flags[0] >= 61 && item->item_flags[0] <= 65 && !(GlobalCounter & 1)) {
+        pos.x = harpy_left_hand.x;
+        pos.y = harpy_left_hand.y << 1;
+        pos.z = harpy_left_hand.z;
+        GetJointAbsPosition(item, &pos, harpy_left_hand.mesh_num);
+        mPos.x_pos = lh.x;
+        mPos.y_pos = lh.y;
+        mPos.z_pos = lh.z;
+        phd_GetVectorAngles(pos.x - mPos.x_pos, pos.y - mPos.y_pos, pos.z - mPos.z_pos, angles);
+        mPos.y_rot = angles[0];
+        mPos.x_rot = angles[1];
+        TriggerHarpyMissile(&mPos, item->room_number, 2);
+    }
+}
+
 void TriggerHarpyMissile(PHD_3DPOS *pos, sint16 room_number, sint16 mesh)
 {
     FX_INFO *fx;

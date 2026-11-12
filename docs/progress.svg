@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="231.46" height="12" x="0" y="0" class="named"><title>1047 · 67.68%</title></rect>
-<rect width="0.44" height="12" x="231.46" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="9.06" height="12" x="231.91" y="0" class="nonmatching"><title>41 · 2.65%</title></rect>
-<rect width="101.03" height="12" x="240.97" y="0" class="todo"><title>457 · 29.54%</title></rect>
+<rect width="231.68" height="12" x="0" y="0" class="named"><title>1048 · 67.74%</title></rect>
+<rect width="0.44" height="12" x="231.68" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="9.06" height="12" x="232.13" y="0" class="nonmatching"><title>41 · 2.65%</title></rect>
+<rect width="100.81" height="12" x="241.19" y="0" class="todo"><title>456 · 29.48%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">67.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1047</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">41</tspan> · <tspan class="todo">457</tspan></text>
+<text text-anchor="end" x="522" y="7.50">67.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1048</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">41</tspan> · <tspan class="todo">456</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="102.02" height="12" x="0" y="0" class="named"><title>185 KB · 29.83%</title></rect>
-<rect width="0.12" height="12" x="102.02" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="11.85" height="12" x="102.14" y="0" class="nonmatching"><title>21 KB · 3.46%</title></rect>
-<rect width="228.01" height="12" x="113.99" y="0" class="todo"><title>414 KB · 66.67%</title></rect>
+<rect width="102.45" height="12" x="0" y="0" class="named"><title>186 KB · 29.96%</title></rect>
+<rect width="0.12" height="12" x="102.45" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="11.85" height="12" x="102.57" y="0" class="nonmatching"><title>21 KB · 3.46%</title></rect>
+<rect width="227.58" height="12" x="114.42" y="0" class="todo"><title>413 KB · 66.54%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">29.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">185 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">21 KB</tspan> · <tspan class="todo">414 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">30.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">186 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">21 KB</tspan> · <tspan class="todo">413 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -110,7 +110,7 @@
 <rect width="12" height="12" x="615" y="0" class="named"><title>0x00407000 InitialiseHammerhead (87 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="0" class="todo"><title>0x00407060 HammerheadControl (535 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="0" class="named"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="0" class="todo"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="0" class="named"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="0" class="named"><title>0x00407700 TriggerHarpyMissile (162 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="0" class="named"><title>0x004077b0 TriggerHarpySparks (235 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="0" class="named"><title>0x004078a0 TriggerHarpyFlame (387 bytes)</title></rect>
@@ -1833,7 +1833,7 @@
 <rect width="17.31" height="17.56" x="490.73" y="21.42" class="todo"><title>0x00476470 LoadLevel (787 bytes)</title></rect>
 <rect width="17.31" height="17.56" x="511.04" y="21.42" class="todo"><title>0x00478b50 SetupLight (787 bytes)</title></rect>
 <rect width="17.20" height="17.56" x="531.36" y="21.42" class="named"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>
-<rect width="17.16" height="17.56" x="551.56" y="21.42" class="todo"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
+<rect width="17.16" height="17.56" x="551.56" y="21.42" class="named"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
 <rect width="17.05" height="17.56" x="571.72" y="21.42" class="todo"><title>0x00409d20 TestBlockPull (775 bytes)</title></rect>
 <rect width="17.05" height="17.56" x="591.76" y="21.42" class="todo"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
 <rect width="16.96" height="17.56" x="611.81" y="21.42" class="named"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>

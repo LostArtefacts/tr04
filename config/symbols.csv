@@ -2020,6 +2020,8 @@ address,size,name,symbol
 0x004adf48,14,footsounds,_footsounds
 0x004adf58,2,ScreenFadeSpeed,_ScreenFadeSpeed
 0x004adf5c,4,next_fire_spark,_next_fire_spark
+0x004adf80,8,harpy_left_hand,_harpy_left_hand
+0x004adf88,8,harpy_right_hand,_harpy_right_hand
 0x004ae060,4,pcbright,_pcbright
 0x004ae064,4,GLOBAL_lastinvitem,_GLOBAL_lastinvitem
 0x004ae068,4,GLOBAL_enterinventory,_GLOBAL_enterinventory
