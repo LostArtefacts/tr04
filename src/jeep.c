@@ -22,6 +22,25 @@ void DrawJeepExtras(ITEM_INFO *item)
     DrawJeepSpeedo(phd_winwidth - 64, phd_winheight - 16, jeep->velocity, 0x6000, 0x8000, 32, jeep->gear);
 }
 
+void JeepExplode(ITEM_INFO *item)
+{
+    sint32 i;
+
+    if (room[item->room_number].flags & ROOM_UNDERWATER)
+        TriggerUnderwaterExplosion(item, 1);
+    else {
+        TriggerExplosionSparks(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 3, -2, 0, item->room_number);
+        for (i = 0; i < 3; i++)
+            TriggerExplosionSparks(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 3, -1, 0, item->room_number);
+    }
+    ExplodingDeath2(lara.vehicle, -1, 256);
+    KillItem(lara.vehicle);
+    item->status = ITEM_DEACTIVATED;
+    SoundEffect(SFX_EXPLOSION1, 0, SFX_DEFAULT);
+    SoundEffect(SFX_EXPLOSION2, 0, SFX_DEFAULT);
+    lara.vehicle = NO_ITEM;
+}
+
 sint32 JeepCheckGetOut(void)
 {
     ITEM_INFO *item;
