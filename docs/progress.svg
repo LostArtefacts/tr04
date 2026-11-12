@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="220.41" height="12" x="0" y="0" class="named"><title>997 · 64.45%</title></rect>
-<rect width="0.44" height="12" x="220.41" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="220.85" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="113.85" height="12" x="228.15" y="0" class="todo"><title>515 · 33.29%</title></rect>
+<rect width="220.63" height="12" x="0" y="0" class="named"><title>998 · 64.51%</title></rect>
+<rect width="0.44" height="12" x="220.63" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="221.07" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="113.63" height="12" x="228.37" y="0" class="todo"><title>514 · 33.23%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">64.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">997</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">515</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">998</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">514</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="95.90" height="12" x="0" y="0" class="named"><title>174 KB · 28.04%</title></rect>
-<rect width="0.12" height="12" x="95.90" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="96.02" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="236.56" height="12" x="105.44" y="0" class="todo"><title>429 KB · 69.17%</title></rect>
+<rect width="96.02" height="12" x="0" y="0" class="named"><title>174 KB · 28.08%</title></rect>
+<rect width="0.12" height="12" x="96.02" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="96.14" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="236.44" height="12" x="105.56" y="0" class="todo"><title>429 KB · 69.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">174 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">429 KB</tspan></text>
@@ -1005,7 +1005,7 @@
 <rect width="12" height="12" x="540" y="270" class="todo"><title>0x0045dc10 TrapObjects (1503 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="270" class="todo"><title>0x0045e1f0 ObjectObjects (2380 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="270" class="todo"><title>0x0045eb40 GetCarriedItems (259 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="270" class="todo"><title>0x0045ec50 GetAIPickups (215 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="270" class="named"><title>0x0045ec50 GetAIPickups (215 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="270" class="todo"><title>0x0045ed30 BuildOutsideTable (791 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="270" class="named"><title>0x0045f050 InitialiseGameFlags (71 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="270" class="named"><title>0x0045f0a0 SetupGame (99 bytes)</title></rect>
@@ -2303,7 +2303,7 @@
 <rect width="9.24" height="9.03" x="544.63" y="198" class="named"><title>0x004277d0 lara_as_controlled (216 bytes)</title></rect>
 <rect width="9.24" height="9.03" x="556.87" y="198" class="named"><title>0x00447b00 TestBoundsCollide (216 bytes)</title></rect>
 <rect width="9.24" height="9.03" x="569.10" y="198" class="named"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
-<rect width="9.20" height="9.03" x="581.34" y="198" class="todo"><title>0x0045ec50 GetAIPickups (215 bytes)</title></rect>
+<rect width="9.20" height="9.03" x="581.34" y="198" class="named"><title>0x0045ec50 GetAIPickups (215 bytes)</title></rect>
 <rect width="9.15" height="9.03" x="593.54" y="198" class="named"><title>0x00453400 InitialiseScaledSpike (214 bytes)</title></rect>
 <rect width="9.15" height="9.03" x="605.69" y="198" class="named"><title>0x0046d6b0 S_CDStop (214 bytes)</title></rect>
 <rect width="9.11" height="9.03" x="617.85" y="198" class="named"><title>0x0042c980 LaraCheckForLetGo (213 bytes)</title></rect>

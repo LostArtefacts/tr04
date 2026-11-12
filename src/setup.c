@@ -13,6 +13,30 @@
 #include "specific/3dmath.h"
 #include "anim.h"
 #include "objnums.h"
+#include "box.h"
+#include "items.h"
+
+void GetAIPickups(void)
+{
+    ITEM_INFO *item;
+    AIOBJECT *aiObj;
+    sint32 i;
+    sint16 aiObjNum;
+
+    for (i = 0, item = items; i < level_items; i++, item++) {
+        if (objects[item->object_number].intelligent) {
+            item->ai_bits = 0;
+            for (aiObjNum = 0; aiObjNum < nAIObjects; aiObjNum++) {
+                aiObj = &AIObjects[aiObjNum];
+                if (aiObj->x == item->pos.x_pos && aiObj->z == item->pos.z_pos && aiObj->room_number == item->room_number && aiObj->object_number < AI_PATROL2) {
+                    item->ai_bits |= 1 << (aiObj->object_number - AI_GUARD);
+                    item->item_flags[3] = aiObj->trigger_flags;
+                    aiObj->room_number = 255;
+                }
+            }
+        }
+    }
+}
 
 void InitialiseGameFlags(void)
 {
