@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <dinput.h>
 
 #include "newinv.h"
 #include "items.h"
@@ -20,6 +21,8 @@
 #include "control.h"
 #include "health.h"
 #include "specific/output.h"
+#include "specific/dxshell.h"
+#include "draw.h"
 #include "specific/gamemain.h"
 
 sint32 LoadGame(void)
@@ -272,6 +275,131 @@ void do_debounced_joystick_poo(void)
         deselect_debounce = 0;
         friggrimmer2 = 0;
     }
+}
+
+void DrawInventoryItemMe(ITEM_INFO *item, sint32 shade, sint32 overlay, sint32 shagflag)
+{
+    ANIM_STRUCT *anim;
+    OBJECT_INFO *object;
+    PHD_VECTOR vec;
+    sint16 **meshpp;
+    sint32 *bone, i;
+    sint16 *rotation1;
+    sint16 *frmptr;
+    uint32 bit;
+    sint32 poppush, alpha, compass;
+
+    anim = &anims[item->anim_number];
+    frmptr = anim->frame_ptr;
+    object = &objects[item->object_number];
+    phd_PushMatrix();
+    phd_TranslateRel(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    if (item->object_number >= EXAMINE1 && item->object_number <= EXAMINE3 && examine_mode) {
+        if (item->object_number == EXAMINE1) {
+            vec.x = 7168;
+            vec.y = 4608;
+            vec.z = 4096;
+            ScaleCurrentMatrix(&vec);
+        } else if (item->object_number == EXAMINE2) {
+            vec.x = 5760;
+            vec.y = 5120;
+            vec.z = 4096;
+            ScaleCurrentMatrix(&vec);
+        }
+    }
+    bit = 1;
+    meshpp = &meshes[object->mesh_index];
+    bone = &bones[object->bone_index];
+    if (!shagflag)
+        phd_TranslateRel(frmptr[6], frmptr[7], frmptr[8]);
+    rotation1 = frmptr + 9;
+    gar_RotYXZsuperpack(&rotation1, 0);
+    if (item->mesh_bits & 1) {
+        if (overlay)
+            phd_PutPolygonsPickup(*meshpp, (float)xoffset, (float)yoffset, pcbright);
+        else {
+            alpha = GlobalAlpha;
+            if (shade > 127)
+                shade = 0xFF;
+            else
+                shade <<= 1;
+            GlobalAlpha = shade << 24;
+            phd_PutPolygonsPickup(*meshpp, (float)xoffset, (float)yoffset, pcbright);
+            GlobalAlpha = alpha;
+        }
+    }
+    meshpp += 2;
+    for (i = 0; i < object->nmeshes - 1; i++, bone += 4, meshpp += 2) {
+        poppush = *bone;
+        if (poppush & 1)
+            phd_PopMatrix();
+        if (poppush & 2)
+            phd_PushMatrix();
+        phd_TranslateRel(bone[1], bone[2], bone[3]);
+        gar_RotYXZsuperpack(&rotation1, 0);
+        if (item->object_number == COMPASS_ITEM) {
+            compass = ((rcossin_tbl[((GnFrameCounter & 0x3F) << 10) >> 3] << 2) * compass_settle_thang) >> W2V_SHIFT;
+            compass += lara_item->pos.y_rot;
+            phd_RotY((sint16)(compass - 0x8000));
+            if (lara_item->pos.y_rot > -48 && lara_item->pos.y_rot <= 48) {
+                shade = 96;
+                if (rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem == INV_SMALLMEDI_ITEM) {
+                    if (keymap[DIK_G] && keymap[DIK_U] && keymap[DIK_N] && keymap[DIK_S]) {
+                        lara.num_large_medipack = -1;
+                        lara.num_small_medipack = -1;
+                        lara.num_revolver_ammo = -1;
+                        lara.num_uzi_ammo = -1;
+                        lara.num_crossbow_ammo3 = -1;
+                        lara.num_crossbow_ammo2 = -1;
+                        lara.num_crossbow_ammo1 = -1;
+                        lara.num_grenade_ammo3 = -1;
+                        lara.num_grenade_ammo2 = -1;
+                        lara.num_grenade_ammo1 = -1;
+                        lara.num_flares = -1;
+                        lara.num_shotgun_ammo2 = -1;
+                        lara.num_shotgun_ammo1 = -1;
+                        if (!(gfLevelFlags & GF_YOUNGLARA)) {
+                            lara.pistols_type_carried |= 1;
+                            lara.uzis_type_carried |= 1;
+                            lara.shotgun_type_carried |= 1;
+                            lara.crossbow_type_carried |= 1;
+                            lara.grenade_type_carried |= 1;
+                            lara.sixshooter_type_carried |= 1;
+                        }
+                    }
+                }
+                if (rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem == INV_BIGMEDI_ITEM) {
+                    if (keymap[DIK_B] && keymap[DIK_I] && keymap[DIK_T] && keymap[DIK_S])
+                        dels_give_lara_items_cheat();
+                }
+                if (rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem == INV_MEMCARD_LOAD_ITEM) {
+                    if (keymap[DIK_H] && keymap[DIK_E] && keymap[DIK_L] && keymap[DIK_P]) {
+                        if (gfCurrentLevel == 2 || gfCurrentLevel == 6 || gfCurrentLevel == 13 || gfCurrentLevel == 21 || gfCurrentLevel == 27)
+                            skipped_level = 1;
+                        gfRequiredStartPos = 0;
+                        gfLevelComplete = gfCurrentLevel + 1;
+                    }
+                }
+            }
+        }
+        bit <<= 1;
+        if (bit & item->mesh_bits) {
+            if (overlay)
+                phd_PutPolygonsPickup(*meshpp, (float)xoffset, (float)yoffset, pcbright);
+            else {
+                alpha = GlobalAlpha;
+                if (shade > 127)
+                    shade = 0xFF;
+                else
+                    shade <<= 1;
+                GlobalAlpha = shade << 25;
+                phd_PutPolygonsPickup(*meshpp, (float)xoffset, (float)yoffset, pcbright);
+                GlobalAlpha = alpha;
+            }
+        }
+    }
+    phd_PopMatrix();
 }
 
 sint32 go_and_load_game(void)

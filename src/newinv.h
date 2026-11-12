@@ -2,6 +2,7 @@
 #define NEWINV_H
 
 #include "types.h"
+#include "items.h"
 
 enum ring_types {
     RING_INVENTORY,
@@ -247,6 +248,7 @@ void draw_current_object_list(sint32 ringnum);
 void handle_inventry_menu(void);
 void do_examine_mode(void);
 sint32 S_CallInventory2(void);
+void DrawInventoryItemMe(ITEM_INFO *item, sint32 shade, sint32 overlay, sint32 shagflag);
 
 extern sint32 InventoryActive;
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
@@ -297,6 +299,10 @@ extern AMMOLIST ammo_object_list[3];
 extern sint32 OBJLIST_SPACING;
 extern sint32 compass_settle_thang;
 extern sint16 examine_mode;
+extern sint32 xoffset;
+extern sint32 yoffset;
+extern sint32 pcbright;
+extern uint8 skipped_level;
 extern sint16 stats_mode;
 extern char loading_or_saving;
 extern char use_the_bitch;
