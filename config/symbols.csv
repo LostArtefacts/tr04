@@ -239,7 +239,7 @@ address,size,name,symbol
 0x00422a90,41,lara_as_dashdive,_lara_as_dashdive
 0x00422ac0,280,lara_col_dashdive,_lara_col_dashdive
 0x00422be0,98,LaraLandedBad,_LaraLandedBad
-0x00422c50,337,LaraDeflectEdgeJump,_LaraDeflectEdgeJump
+0x00422c50,397,LaraDeflectEdgeJump,_LaraDeflectEdgeJump
 0x00422de0,106,lara_as_hang2,_lara_as_hang2
 0x00422e50,91,MonkeySwingFall,_MonkeySwingFall
 0x00422eb0,559,lara_col_hang2,_lara_col_hang2

@@ -718,6 +718,49 @@ sint32 LaraLandedBad(ITEM_INFO *item, COLL_INFO *coll)
     return item->hit_points <= 0;
 }
 
+void LaraDeflectEdgeJump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    ShiftItem(item, coll);
+    switch (coll->coll_type) {
+    case COLL_FRONT:
+    case COLL_TOPFRONT:
+        if (!lara.climb_status || item->speed != 2) {
+            if (coll->mid_floor > 512) {
+                item->current_anim_state = item->goal_anim_state = AS_FASTFALL;
+                item->frame_number = anims[ANIM_FASTSPLAT].frame_base + 1;
+                item->anim_number = ANIM_FASTSPLAT;
+            } else if (coll->mid_floor <= 128) {
+                item->current_anim_state = item->goal_anim_state = AS_LAND;
+                item->frame_number = anims[ANIM_LAND].frame_base;
+                item->anim_number = ANIM_LAND;
+            }
+            item->speed /= 4;
+            lara.move_angle += 0x8000;
+            if (item->fallspeed <= 0)
+                item->fallspeed = 1;
+        }
+        break;
+    case COLL_LEFT:
+        item->pos.y_rot += 910;
+        break;
+    case COLL_RIGHT:
+        item->pos.y_rot -= 910;
+        break;
+    case COLL_TOP:
+        if (item->fallspeed <= 0)
+            item->fallspeed = 1;
+        break;
+    case COLL_CLAMP:
+        item->pos.z_pos -= (100 * phd_cos(coll->facing)) >> W2V_SHIFT;
+        item->pos.x_pos -= (100 * phd_sin(coll->facing)) >> W2V_SHIFT;
+        item->speed = 0;
+        coll->mid_floor = 0;
+        if (item->fallspeed <= 0)
+            item->fallspeed = 16;
+        break;
+    }
+}
+
 void lara_as_hang2(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
