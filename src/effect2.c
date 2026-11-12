@@ -635,6 +635,10 @@ void TriggerSuperJetFlame(ITEM_INFO *item, sint32 yvel, sint32 deadly)
         sptr->Xvel = (sint16)dy;
 }
 
+void nullsub_1()
+{
+}
+
 void TriggerRocketSmoke(sint32 x, sint32 y, sint32 z, sint32 col)
 {
     SPARKS *sptr;
