@@ -22,3 +22,8 @@ void InitialiseTrapDoor(sint16 item_number)
 {
     CloseTrapDoor(&items[item_number]);
 }
+
+void InitialiseFallingBlock2(sint16 item_number)
+{
+    items[item_number].mesh_bits = 1;
+}
