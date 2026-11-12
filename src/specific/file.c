@@ -85,6 +85,22 @@ uint8 LoadSoundEffects(void)
     return 1;
 }
 
+uint8 LoadAnimatedTextures(void)
+{
+    sint32 num_anim_ranges;
+    uint8 n;
+
+    num_anim_ranges = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    aranges = (sint16 *)game_malloc(num_anim_ranges * 2, 0);
+    memcpy(aranges, FileData, num_anim_ranges * 2);
+    FileData += num_anim_ranges * sizeof(sint16);
+    n = *(uint8 *)FileData;
+    FileData += sizeof(char);
+    nAnimUVRanges = n;
+    return 1;
+}
+
 uint8 LoadCinematic(void)
 {
     FileData += sizeof(sint16);

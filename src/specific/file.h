@@ -9,6 +9,8 @@ extern sint32 AnimatingWaterfallsV[3];
 
 extern char *FileData;
 extern sint32 number_cameras;
+extern sint16 *aranges;
+extern sint32 nAnimUVRanges;
 
 FILE *FileOpen(const char *name);
 void FileClose(FILE *file);
@@ -17,5 +19,6 @@ uint8 LoadCinematic(void);
 sint32 LoadFile(const char *name, char **dest);
 uint8 LoadSoundEffects(void);
 uint8 LoadCameras(void);
+uint8 LoadAnimatedTextures(void);
 
 #endif

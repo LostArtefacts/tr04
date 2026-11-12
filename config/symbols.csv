@@ -2521,7 +2521,7 @@ address,size,name,symbol
 0x007f5948,2,InitialCameraRoom,_InitialCameraRoom
 0x007f5a68,4,LaraAir,_LaraAir
 0x007f5a6c,2,last_camera,_last_camera
-0x007f5a80,10240,SpotCam,_SpotCam
+0x007f5a80,5120,SpotCam,_SpotCam
 0x007f6ed0,4,LaraHealth,_LaraHealth
 0x007f6ed4,2,first_camera,_first_camera
 0x007f6ed8,4,current_spline_position,_current_spline_position
