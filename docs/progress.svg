@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="256.94" height="12" x="0" y="0" class="named"><title>1163 · 75.13%</title></rect>
 <rect width="0.66" height="12" x="256.94" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="19.88" height="12" x="257.60" y="0" class="nonmatching"><title>90 · 5.81%</title></rect>
-<rect width="64.51" height="12" x="277.49" y="0" class="todo"><title>292 · 18.86%</title></rect>
+<rect width="20.10" height="12" x="257.60" y="0" class="nonmatching"><title>91 · 5.88%</title></rect>
+<rect width="64.29" height="12" x="277.71" y="0" class="todo"><title>291 · 18.80%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">75.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1163</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">90</tspan> · <tspan class="todo">292</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1163</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">91</tspan> · <tspan class="todo">291</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="143.49" height="12" x="0" y="0" class="named"><title>261 KB · 41.96%</title></rect>
 <rect width="0.13" height="12" x="143.49" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="37.29" height="12" x="143.62" y="0" class="nonmatching"><title>68 KB · 10.90%</title></rect>
-<rect width="161.09" height="12" x="180.91" y="0" class="todo"><title>293 KB · 47.10%</title></rect>
+<rect width="38.72" height="12" x="143.62" y="0" class="nonmatching"><title>71 KB · 11.32%</title></rect>
+<rect width="159.66" height="12" x="182.34" y="0" class="todo"><title>291 KB · 46.69%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">42.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">261 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">68 KB</tspan> · <tspan class="todo">293 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">261 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">71 KB</tspan> · <tspan class="todo">291 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -742,7 +742,7 @@
 <rect width="12" height="12" x="345" y="195" class="named"><title>0x00440e90 CreatureCreature (310 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="195" class="named"><title>0x00440fd0 BadFloor (163 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="195" class="named"><title>0x00441080 CreatureDie (422 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="195" class="todo"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="195" class="nonmatching"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="195" class="nonmatching"><title>0x00441c60 CreatureTurn (628 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="195" class="named"><title>0x00441ee0 CreatureTilt (53 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="195" class="named"><title>0x00441f20 CreatureJoint (81 bytes)</title></rect>
@@ -1641,7 +1641,7 @@
 <rect width="34.38" height="31.18" x="46.98" y="332.64" class="todo"><title>0x004971b0 SW_TriSetupGTLit (2786 bytes)</title></rect>
 <rect width="34.38" height="30.40" x="46.98" y="366.83" class="todo"><title>0x00473f20 LoadTextures (2716 bytes)</title></rect>
 <rect width="34.38" height="29.75" x="46.98" y="400.22" class="todo"><title>0x0044ab50 TestTriggers (2659 bytes)</title></rect>
-<rect width="34.38" height="29.02" x="46.98" y="432.98" class="todo"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
+<rect width="34.38" height="29.02" x="46.98" y="432.98" class="nonmatching"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
 <rect width="30.94" height="32.25" x="84.36" y="0" class="named"><title>0x0041fe50 HairControl (2592 bytes)</title></rect>
 <rect width="30.94" height="31.95" x="84.36" y="35.25" class="todo"><title>0x00488950 DrawFlatSky (2568 bytes)</title></rect>
 <rect width="30.94" height="31.41" x="84.36" y="70.20" class="todo"><title>0x004959b0 SW_TriSetupGT (2524 bytes)</title></rect>
