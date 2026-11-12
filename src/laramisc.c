@@ -7,6 +7,28 @@
 #include "objnums.h"
 #include "room.h"
 
+void LaraInitialiseMeshes(void)
+{
+    sint32 i;
+
+    for (i = 0; i < 15; i++) {
+        meshes[objects[LARA].mesh_index + i * 2] = meshes[objects[LARA_SKIN].mesh_index + i * 2];
+        lara.mesh_ptrs[i] = meshes[objects[LARA].mesh_index + i * 2];
+    }
+    if (lara.gun_type == WEAPON_GRENADE)
+        lara.back_gun = GRENADE_GUN_ANIM;
+    else if (lara.shotgun_type_carried)
+        lara.back_gun = SHOTGUN_ANIM;
+    else if (lara.grenade_type_carried)
+        lara.back_gun = GRENADE_GUN_ANIM;
+    lara.gun_status = LG_NO_ARMS;
+    lara.left_arm.frame_number = 0;
+    lara.right_arm.frame_number = 0;
+    lara.target = 0;
+    lara.right_arm.lock = 0;
+    lara.left_arm.lock = 0;
+}
+
 void LaraCheatGetStuff(void)
 {
     lara.num_flares = -1;
