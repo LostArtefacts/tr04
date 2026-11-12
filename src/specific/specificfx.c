@@ -8,6 +8,7 @@
 #include "../tomb4fx.h"
 #include "function_table.h"
 #include "polyinsert.h"
+#include "../gameflow.h"
 
 void InitTarget_2(void)
 {
@@ -55,6 +56,38 @@ void InitBinoculars(void)
         v[i].rhw = f_mpersp / f_mznear * f_moneopersp;
     }
     IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
+}
+
+void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip)
+{
+    float perspz;
+    sint16 clipdistance;
+
+    clipdistance = 0;
+    v->tu = x;
+    v->tv = y;
+    v->sz = z;
+    if (!(v->sz < f_mznear)) {
+        perspz = f_mpersp / v->sz;
+        if (v->sz > FogEnd) {
+            v->sz = f_zfar;
+            clipdistance = 256;
+        }
+        v->sx = perspz * v->tu + f_centerx;
+        v->sy = perspz * v->tv + f_centery;
+        v->rhw = perspz * f_moneopersp;
+        if (v->sx < phd_winxmin)
+            clipdistance++;
+        else if (phd_winxmax < v->sx)
+            clipdistance += 2;
+        if (v->sy < phd_winymin)
+            clipdistance += 4;
+        else if (v->sy > phd_winymax)
+            clipdistance += 8;
+    } else {
+        clipdistance = -128;
+    }
+    clip[0] = clipdistance;
 }
 
 void SetFade(sint32 start, sint32 end)

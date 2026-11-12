@@ -1,6 +1,9 @@
 #ifndef SPECIFIC_SPECIFICFX_H
 #define SPECIFIC_SPECIFICFX_H
 
+#include <windows.h>
+#include <d3d.h>
+
 #include "../types.h"
 #include "../3dglodef.h"
 
@@ -22,5 +25,6 @@ void InitTarget_2(void);
 void InitBinoculars(void);
 void DrawFlash(void);
 void DoScreenFade(void);
+void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip);
 
 #endif
