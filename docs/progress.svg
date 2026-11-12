@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="200.51" height="12" x="0" y="0" class="named"><title>907 · 58.63%</title></rect>
-<rect width="0.44" height="12" x="200.51" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="200.96" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="134.41" height="12" x="207.59" y="0" class="todo"><title>608 · 39.30%</title></rect>
+<rect width="200.73" height="12" x="0" y="0" class="named"><title>908 · 58.69%</title></rect>
+<rect width="0.44" height="12" x="200.73" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="201.18" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="134.19" height="12" x="207.81" y="0" class="todo"><title>607 · 39.24%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">58.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">907</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">608</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">908</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">607</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="86.84" height="12" x="0" y="0" class="named"><title>158 KB · 25.39%</title></rect>
-<rect width="0.12" height="12" x="86.84" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="86.96" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="246.13" height="12" x="95.87" y="0" class="todo"><title>446 KB · 71.97%</title></rect>
+<rect width="86.88" height="12" x="0" y="0" class="named"><title>158 KB · 25.40%</title></rect>
+<rect width="0.12" height="12" x="86.88" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="87" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="246.09" height="12" x="95.91" y="0" class="todo"><title>446 KB · 71.96%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">158 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">446 KB</tspan></text>
@@ -1327,7 +1327,7 @@
 <rect width="12" height="12" x="120" y="375" class="todo"><title>0x0047cd20 S_LoadSave (238 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="375" class="todo"><title>0x0047ce10 DoBar (1479 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="375" class="named"><title>0x0047d3e0 S_DrawDashBar (57 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="375" class="todo"><title>0x0047d420 S_DrawAirBar (63 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="375" class="named"><title>0x0047d420 S_DrawAirBar (63 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="375" class="todo"><title>0x0047d460 S_DrawHealthBar (68 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="375" class="todo"><title>0x0047d4b0 S_InitLoadBar (20 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="375" class="todo"><title>0x0047d4d0 S_LoadBar (212 bytes)</title></rect>
@@ -2823,7 +2823,7 @@
 <rect width="4.88" height="5.07" x="687.68" y="339.46" class="named"><title>0x00455270 DisableBaddieAI (64 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="695.56" y="339.46" class="named"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
 <rect width="4.80" height="5.07" x="703.43" y="339.46" class="named"><title>0x0045fad0 SayNo (63 bytes)</title></rect>
-<rect width="4.80" height="5.07" x="711.23" y="339.46" class="todo"><title>0x0047d420 S_DrawAirBar (63 bytes)</title></rect>
+<rect width="4.80" height="5.07" x="711.23" y="339.46" class="named"><title>0x0047d420 S_DrawAirBar (63 bytes)</title></rect>
 <rect width="4.80" height="5.07" x="719.03" y="339.46" class="todo"><title>0x00488650 Func488650 (63 bytes)</title></rect>
 <rect width="4.72" height="5.07" x="726.83" y="339.46" class="named"><title>0x0042ff50 ready_flare (62 bytes)</title></rect>
 <rect width="4.72" height="5.07" x="734.56" y="339.46" class="named"><title>0x00450650 phd_TranslateRel_I (62 bytes)</title></rect>
