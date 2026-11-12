@@ -12,5 +12,7 @@ void DoGrenadeDamageOnBaddie(ITEM_INFO *baddie, ITEM_INFO *item);
 void draw_shotgun(sint32 weapon_type);
 void FireShotgun(void);
 void FireGrenade(void);
+void AnimateShotgun(sint32 weapon_type);
+void RifleHandler(sint32 weapon_type);
 
 #endif

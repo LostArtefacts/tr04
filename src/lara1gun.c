@@ -12,6 +12,10 @@
 #include "specific/function_stubs.h"
 #include "sound.h"
 #include "specific/3dmath.h"
+#include "camera.h"
+#include "lara2gun.h"
+#include "gameflow.h"
+#include "specific/input.h"
 
 void draw_shotgun_meshes(sint32 weapon_type)
 {
@@ -37,6 +41,53 @@ void ready_shotgun(int weapon_type)
     lara.left_arm.lock = lara.right_arm.lock = 0;
     lara.target = NULL;
     lara.left_arm.frame_base = lara.right_arm.frame_base = objects[WeaponObject(weapon_type)].frame_base;
+}
+
+void RifleHandler(sint32 weapon_type)
+{
+    WEAPON_INFO *winfo;
+    PHD_VECTOR pos;
+
+    winfo = &weapons[weapon_type];
+    LaraGetNewTarget(winfo);
+    if (input & IN_ACTION)
+        LaraTargetInfo(winfo);
+    AimWeapon(winfo, &lara.left_arm);
+    if (lara.left_arm.lock) {
+        lara.torso_y_rot = lara.left_arm.y_rot;
+        lara.torso_x_rot = lara.left_arm.x_rot;
+        if (camera.old_type != LOOK_CAMERA && !BinocularRange) {
+            lara.head_y_rot = 0;
+            lara.head_x_rot = 0;
+        }
+    }
+    if (weapon_type == WEAPON_REVOLVER)
+        AnimatePistols(weapon_type);
+    else
+        AnimateShotgun(weapon_type);
+    if (lara.right_arm.flash_gun) {
+        if (weapon_type == WEAPON_SHOTGUN) {
+            if (gfLevelFlags & GF_MIRROR && lara_item->room_number == gfMirrorRoom)
+                TriggerDynamic_MIRROR((GetRandomControl() & 0xFF) + ((rcossin_tbl[(lara_item->pos.y_rot >> 3) & 0x1FFE] << 2) >> 4) + lara_item->pos.x_pos - 128,
+                    (GetRandomControl() & 0x7F) + lara_item->pos.y_pos - 575,
+                    (GetRandomControl() & 0xFF) + ((rcossin_tbl[((lara_item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) >> 4) + lara_item->pos.z_pos - 128, 12,
+                    (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 128, GetRandomControl() & 0x3F);
+            else
+                TriggerDynamic((GetRandomControl() & 0xFF) + ((rcossin_tbl[(lara_item->pos.y_rot >> 3) & 0x1FFE] << 2) >> 4) + lara_item->pos.x_pos - 128,
+                    (GetRandomControl() & 0x7F) + lara_item->pos.y_pos - 575,
+                    (GetRandomControl() & 0xFF) + ((rcossin_tbl[((lara_item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) >> 4) + lara_item->pos.z_pos - 128, 12,
+                    (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 128, GetRandomControl() & 0x3F);
+        } else if (weapon_type == WEAPON_REVOLVER) {
+            pos.x = (GetRandomControl() & 0xFF) - 128;
+            pos.y = (GetRandomControl() & 0x7F) - 63;
+            pos.z = (GetRandomControl() & 0xFF) - 128;
+            GetLaraJointPos(&pos, 11);
+            if (gfLevelFlags & GF_MIRROR && lara_item->room_number == gfMirrorRoom)
+                TriggerDynamic_MIRROR(pos.x, pos.y, pos.z, 12, (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 128, GetRandomControl() & 0x3F);
+            else
+                TriggerDynamic(pos.x, pos.y, pos.z, 12, (GetRandomControl() & 0x3F) + 192, (GetRandomControl() & 0x1F) + 128, GetRandomControl() & 0x3F);
+        }
+    }
 }
 
 void FireShotgun(void)
