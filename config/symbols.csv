@@ -1023,7 +1023,7 @@ address,size,name,symbol
 0x004687e0,754,JeepBaddieCollision,_JeepBaddieCollision
 0x00468ae0,153,GetCollisionAnim,_GetCollisionAnim
 0x00468b80,634,DoShift,_DoShift
-0x00468e00,2335,AnimateJeep,_AnimateJeep
+0x00468e00,2408,AnimateJeep,_AnimateJeep
 0x00469770,251,CanGetOff_jeep,_CanGetOff_jeep
 0x00469870,792,UserControl_jeep,_UserControl_jeep
 0x00469b90,130,InitialiseEnemyJeep,_InitialiseEnemyJeep

@@ -58,5 +58,6 @@ void JeepFireGrenade(ITEM_INFO *item);
 void JeepControl(sint16 item_number);
 void EnemyJeepControl(sint16 item_number);
 sint32 JeepDynamics(ITEM_INFO *item);
+void AnimateJeep(ITEM_INFO *item, sint32 hitWall, sint32 killed);
 
 #endif

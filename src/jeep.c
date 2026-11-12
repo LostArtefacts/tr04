@@ -647,6 +647,275 @@ sint32 DoShift(ITEM_INFO *item, PHD_VECTOR *pos, PHD_VECTOR *old)
     return 0;
 }
 
+void AnimateJeep(ITEM_INFO *item, sint32 hitWall, sint32 killed)
+{
+    JEEPINFO *jeep;
+    ITEM_INFO *l;
+
+    jeep = (JEEPINFO *)item->data;
+    l = lara_item;
+    if (item->pos.y_pos != item->floor && l->current_anim_state != 11 && l->current_anim_state != 12 && !killed) {
+        if (jeep->gear == 1)
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 20;
+        else
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 6;
+        l->frame_number = anims[l->anim_number].frame_base;
+        l->goal_anim_state = 11;
+        l->current_anim_state = 11;
+    } else if (hitWall && l->current_anim_state != 4 && l->current_anim_state != 5 && l->current_anim_state != 2 && l->current_anim_state != 3 && l->current_anim_state != 11 && jeep->velocity > 10922 && !killed) {
+        if (hitWall == 13) {
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 11;
+            l->goal_anim_state = 4;
+            l->current_anim_state = 4;
+        } else if (hitWall == 14) {
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 10;
+            l->goal_anim_state = 5;
+            l->current_anim_state = 5;
+        } else if (hitWall == 11) {
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 12;
+            l->goal_anim_state = 2;
+            l->current_anim_state = 2;
+        } else {
+            l->anim_number = objects[VEHICLE_EXTRA].anim_index + 13;
+            l->goal_anim_state = 3;
+            l->current_anim_state = 3;
+        }
+        l->frame_number = anims[l->anim_number].frame_base;
+    } else {
+        switch (l->current_anim_state) {
+        case 0:
+            if (killed)
+                l->goal_anim_state = 16;
+            else if ((input & (IN_JUMP | IN_LEFT)) == (IN_JUMP | IN_LEFT) && !jeep->velocity && !dont_exit_jeep) {
+                if (CanGetOff_jeep(0))
+                    l->goal_anim_state = 10;
+            } else if (dbinput & IN_WALK) {
+                if (jeep->gear)
+                    jeep->gear--;
+            } else if (dbinput & IN_SPRINT) {
+                if (jeep->gear < 1) {
+                    jeep->gear++;
+                    if (jeep->gear == 1)
+                        l->goal_anim_state = 17;
+                }
+            } else if (input & IN_ACTION && !(input & IN_JUMP))
+                l->goal_anim_state = 1;
+            else if (input & (IN_LSTEP | IN_LEFT))
+                l->goal_anim_state = 7;
+            else if (input & (IN_RSTEP | IN_RIGHT))
+                l->goal_anim_state = 8;
+            break;
+        case 1:
+            if (killed)
+                l->goal_anim_state = 0;
+            else if (!(jeep->velocity & 0xFFFFFF00) && !(input & (IN_ACTION | IN_JUMP)))
+                l->goal_anim_state = 0;
+            else if (input & IN_JUMP) {
+                if (jeep->velocity > 21844)
+                    l->goal_anim_state = 6;
+                else
+                    l->goal_anim_state = 0;
+            } else if (input & (IN_LSTEP | IN_LEFT))
+                l->goal_anim_state = 7;
+            else if (input & (IN_RSTEP | IN_RIGHT))
+                l->goal_anim_state = 8;
+            break;
+        case 6:
+            if (killed)
+                l->goal_anim_state = 0;
+            else if (!(jeep->velocity & 0xFFFFFF00))
+                l->goal_anim_state = 0;
+            else if (input & (IN_LSTEP | IN_LEFT))
+                l->goal_anim_state = 7;
+            else if (input & (IN_RSTEP | IN_RIGHT))
+                l->goal_anim_state = 8;
+            break;
+        case 7:
+            if (killed)
+                l->goal_anim_state = 0;
+            else if (dbinput & IN_WALK) {
+                if (jeep->gear)
+                    jeep->gear--;
+            } else if (dbinput & IN_SPRINT) {
+                if (jeep->gear < 1) {
+                    jeep->gear++;
+                    if (jeep->gear == 1) {
+                        l->goal_anim_state = 15;
+                        l->current_anim_state = 15;
+                        l->anim_number = objects[VEHICLE_EXTRA].anim_index + 40;
+                        l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 40].frame_base;
+                        break;
+                    }
+                }
+            } else if (input & (IN_RSTEP | IN_RIGHT))
+                l->goal_anim_state = 1;
+            else if (!(input & (IN_LSTEP | IN_LEFT))) {
+                if (jeep->velocity)
+                    l->goal_anim_state = 1;
+                else
+                    l->goal_anim_state = 0;
+            } else
+                l->goal_anim_state = 7;
+            if (l->anim_number == objects[VEHICLE_EXTRA].anim_index + 4 && !jeep->velocity) {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 32;
+                l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 32].frame_base + 14;
+            }
+            if (l->anim_number == objects[VEHICLE_EXTRA].anim_index + 32 && jeep->velocity) {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 4;
+                l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 4].frame_base;
+            }
+            break;
+        case 8:
+            if (killed)
+                l->goal_anim_state = 0;
+            else if (dbinput & IN_WALK) {
+                if (jeep->gear)
+                    jeep->gear--;
+            } else if (dbinput & IN_SPRINT) {
+                if (jeep->gear < 1) {
+                    jeep->gear++;
+                    if (jeep->gear == 1) {
+                        l->goal_anim_state = 14;
+                        l->current_anim_state = 14;
+                        l->anim_number = objects[VEHICLE_EXTRA].anim_index + 41;
+                        l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 41].frame_base;
+                        break;
+                    }
+                }
+            } else if (input & (IN_LSTEP | IN_LEFT))
+                l->goal_anim_state = 1;
+            else if (!(input & (IN_RSTEP | IN_RIGHT))) {
+                if (jeep->velocity)
+                    l->goal_anim_state = 1;
+                else
+                    l->goal_anim_state = 0;
+            } else
+                l->goal_anim_state = 8;
+            if (l->anim_number == objects[VEHICLE_EXTRA].anim_index + 16 && !jeep->velocity) {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 33;
+                l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 33].frame_base + 14;
+            }
+            if (l->anim_number == objects[VEHICLE_EXTRA].anim_index + 33 && jeep->velocity) {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 16;
+                l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 16].frame_base;
+            }
+            break;
+        case 13:
+            if (killed)
+                l->goal_anim_state = 17;
+            else if (!(abs(jeep->velocity) & 0xFFFFFF00))
+                l->goal_anim_state = 17;
+            else if (input & (IN_LSTEP | IN_LEFT))
+                l->goal_anim_state = 15;
+            else if (input & (IN_RSTEP | IN_RIGHT))
+                l->goal_anim_state = 14;
+            break;
+        case 17:
+            if (killed)
+                l->goal_anim_state = 0;
+            if ((input & (IN_JUMP | IN_LEFT)) == (IN_JUMP | IN_LEFT) && !jeep->velocity && !dont_exit_jeep) {
+                if (CanGetOff_jeep(0))
+                    l->goal_anim_state = 10;
+            } else if (dbinput & IN_WALK) {
+                if (jeep->gear) {
+                    jeep->gear--;
+                    if (!jeep->gear)
+                        l->goal_anim_state = 0;
+                }
+            } else if (dbinput & IN_SPRINT) {
+                if (jeep->gear < 1)
+                    jeep->gear++;
+            } else if (input & IN_ACTION && !(input & IN_JUMP))
+                l->goal_anim_state = 13;
+            else if (input & (IN_LSTEP | IN_LEFT))
+                l->goal_anim_state = 15;
+            else if (input & (IN_RSTEP | IN_RIGHT))
+                l->goal_anim_state = 14;
+            break;
+        case 14:
+            if (killed)
+                l->goal_anim_state = 17;
+            else if (dbinput & IN_WALK) {
+                if (jeep->gear) {
+                    jeep->gear--;
+                    if (!jeep->gear) {
+                        l->goal_anim_state = 8;
+                        l->current_anim_state = 8;
+                        l->anim_number = objects[VEHICLE_EXTRA].anim_index + 44;
+                        l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 44].frame_base;
+                        break;
+                    }
+                }
+            } else if (dbinput & IN_SPRINT) {
+                if (jeep->gear < 1)
+                    jeep->gear++;
+            } else if (!(input & (IN_RSTEP | IN_RIGHT)))
+                l->goal_anim_state = 13;
+            else
+                l->goal_anim_state = 14;
+            if (l->anim_number == objects[VEHICLE_EXTRA].anim_index + 30 && !jeep->velocity) {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 37;
+                l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 37].frame_base + 14;
+            }
+            if (l->anim_number == objects[VEHICLE_EXTRA].anim_index + 37 && jeep->velocity) {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 30;
+                l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 30].frame_base;
+            }
+            break;
+        case 15:
+            if (killed)
+                l->goal_anim_state = 17;
+            else if (dbinput & IN_WALK) {
+                if (jeep->gear) {
+                    jeep->gear--;
+                    if (!jeep->gear) {
+                        l->goal_anim_state = 7;
+                        l->current_anim_state = 7;
+                        l->anim_number = objects[VEHICLE_EXTRA].anim_index + 44;
+                        l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 44].frame_base;
+                        break;
+                    }
+                }
+            } else if (dbinput & IN_SPRINT) {
+                if (jeep->gear < 1)
+                    jeep->gear++;
+            } else if (!(input & (IN_LSTEP | IN_LEFT)))
+                l->goal_anim_state = 13;
+            else
+                l->goal_anim_state = 15;
+            if (l->anim_number == objects[VEHICLE_EXTRA].anim_index + 27 && !jeep->velocity) {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 36;
+                l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 36].frame_base + 14;
+            }
+            if (l->anim_number == objects[VEHICLE_EXTRA].anim_index + 36 && jeep->velocity) {
+                l->anim_number = objects[VEHICLE_EXTRA].anim_index + 27;
+                l->frame_number = anims[objects[VEHICLE_EXTRA].anim_index + 27].frame_base;
+            }
+            break;
+        case 11:
+            if (item->pos.y_pos == item->floor)
+                l->goal_anim_state = 12;
+            else if (item->fallspeed > 300)
+                jeep->flags |= 0x40;
+            break;
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            if (killed)
+                l->goal_anim_state = 0;
+            else if (input & (IN_ACTION | IN_JUMP))
+                l->goal_anim_state = 1;
+            break;
+        }
+    }
+    if (room[item->room_number].flags & ROOM_UNDERWATER) {
+        l->goal_anim_state = 11;
+        l->hit_points = 0;
+        JeepExplode(item);
+    }
+}
+
 sint32 CanGetOff_jeep(sint16 num)
 {
     ITEM_INFO *item;
