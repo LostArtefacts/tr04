@@ -151,6 +151,8 @@ BOOL CALLBACK DXEnumDirectDraw(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
 BOOL CALLBACK DXEnumDirectSound(LPGUID lpGuid, LPCSTR lpcstrDescription, LPCSTR lpcstrModule, LPVOID lpContext);
 sint32 DXGetInfo(DXINFO *dxinfo, HWND hwnd);
 void DXFreeInfo(DXINFO *dxinfo);
+void DXClose(void);
+void Func494400(void);
 HRESULT CALLBACK DXEnumZBufferFormats(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext);
 HRESULT CALLBACK DXEnumDisplayModes(LPDDSURFACEDESC2 lpDDSurfaceDesc2, LPVOID lpContext);
 HRESULT CALLBACK DXEnumTextureFormats(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext);
@@ -158,6 +160,7 @@ sint32 DXChangeVideoMode(void);
 sint32 DXToggleFullScreen(void);
 void WinDisplayString(sint32 x, sint32 y, char *string, ...);
 uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex);
+void WinClose(void);
 
 extern WINAPP App;
 extern DXINFO *G_dxinfo;

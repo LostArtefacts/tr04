@@ -4,6 +4,18 @@
 #include "winmain.h"
 #include "../text.h"
 #include "function_stubs.h"
+#include "registry.h"
+
+void WinClose(void)
+{
+    Log(2, "WinClose");
+    SaveSettings();
+    CloseHandle(App.mutex);
+    DXFreeInfo(&App.DXInfo);
+    DestroyAcceleratorTable(App.hAccel);
+    DXClose();
+    Func494400();
+}
 
 uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex)
 {
