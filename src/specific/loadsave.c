@@ -70,6 +70,29 @@ void CreateMonoScreen(void)
     ConvertSurfaceToTextures(App.dx.lpPrimaryBuffer);
 }
 
+void S_DisplayMonoScreen(void)
+{
+    sint32 x[4];
+    sint32 y[4];
+    uint32 col;
+    sint32 i;
+
+    for (i = 0; i < 3; i++) {
+        x[i] = phd_winxmin + phd_winwidth * MonoScreenX[i] / 640;
+        y[i] = phd_winymin + phd_winheight * MonoScreenY[i] / 480;
+    }
+    x[3] = phd_winxmin + phd_winwidth * MonoScreenX[3] / 640;
+    RestoreFPCW(FPCW);
+    col = 0xFFFFFFFF;
+    S_DrawTile(x[0], y[0], x[1] - x[0], y[1] - y[0], MonoScreen[0].tex, 0, 0, 256, 256, col, col, col, col);
+    S_DrawTile(x[1], y[0], x[2] - x[1], y[1] - y[0], MonoScreen[1].tex, 0, 0, 256, 256, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF);
+    S_DrawTile(x[2], y[0], x[3] - x[2], y[1] - y[0], MonoScreen[2].tex, 0, 0, 128, 256, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF);
+    S_DrawTile(x[0], y[1], x[1] - x[0], y[2] - y[1], MonoScreen[3].tex, 0, 0, 256, 224, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF);
+    S_DrawTile(x[1], y[1], x[2] - x[1], y[2] - y[1], MonoScreen[4].tex, 0, 0, 256, 224, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF);
+    S_DrawTile(x[2], y[1], x[3] - x[2], y[2] - y[1], MonoScreen[2].tex, 128, 0, 128, 224, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF);
+    MungeFPCW(&FPCW);
+}
+
 sint32 GetSaveLoadFiles(void)
 {
     FILE *file;

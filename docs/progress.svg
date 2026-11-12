@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="243.47" height="12" x="0" y="0" class="named"><title>1102 · 71.19%</title></rect>
 <rect width="0.44" height="12" x="243.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="14.36" height="12" x="243.91" y="0" class="nonmatching"><title>65 · 4.20%</title></rect>
-<rect width="83.73" height="12" x="258.27" y="0" class="todo"><title>379 · 24.48%</title></rect>
+<rect width="14.58" height="12" x="243.91" y="0" class="nonmatching"><title>66 · 4.26%</title></rect>
+<rect width="83.51" height="12" x="258.49" y="0" class="todo"><title>378 · 24.42%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">71.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1102</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">65</tspan> · <tspan class="todo">379</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1102</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">66</tspan> · <tspan class="todo">378</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="121.09" height="12" x="0" y="0" class="named"><title>220 KB · 35.41%</title></rect>
 <rect width="0.12" height="12" x="121.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="25.84" height="12" x="121.21" y="0" class="nonmatching"><title>47 KB · 7.56%</title></rect>
-<rect width="194.94" height="12" x="147.06" y="0" class="todo"><title>354 KB · 57%</title></rect>
+<rect width="26.12" height="12" x="121.21" y="0" class="nonmatching"><title>47 KB · 7.64%</title></rect>
+<rect width="194.67" height="12" x="147.33" y="0" class="todo"><title>353 KB · 56.92%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">35.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">220 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">47 KB</tspan> · <tspan class="todo">354 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">220 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">47 KB</tspan> · <tspan class="todo">353 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1316,7 +1316,7 @@
 <rect width="12" height="12" x="705" y="360" class="named"><title>0x00479f20 CreateMonoScreen (20 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="360" class="todo"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="360" class="todo"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="375" class="todo"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="375" class="nonmatching"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="375" class="named"><title>0x0047a6f0 GetSaveLoadFiles (398 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="375" class="todo"><title>0x0047a880 DoLoadSave (753 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="375" class="todo"><title>0x0047ab80 DoSlider (1449 bytes)</title></rect>
@@ -1986,7 +1986,7 @@
 <rect width="13.93" height="13.82" x="381.08" y="265.88" class="todo"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
 <rect width="13.93" height="13.71" x="381.08" y="282.70" class="todo"><title>0x00499ef0 Func499ef0 (495 bytes)</title></rect>
 <rect width="13.93" height="13.69" x="381.08" y="299.42" class="todo"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
-<rect width="13.93" height="13.69" x="381.08" y="316.10" class="todo"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
+<rect width="13.93" height="13.69" x="381.08" y="316.10" class="nonmatching"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
 <rect width="13.93" height="13.66" x="381.08" y="332.79" class="named"><title>0x00421bf0 lara_col_crawl2hang (493 bytes)</title></rect>
 <rect width="13.93" height="13.66" x="381.08" y="349.45" class="named"><title>0x0044a1a0 GetFloor (493 bytes)</title></rect>
 <rect width="13.93" height="13.57" x="381.08" y="366.11" class="named"><title>0x00427a40 lara_col_walk (490 bytes)</title></rect>
