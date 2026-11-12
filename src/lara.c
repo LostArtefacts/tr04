@@ -1642,6 +1642,21 @@ void lara_as_usekey(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_distance = WALL_L;
 }
 
+void lara_as_usepuzzle(ITEM_INFO *item, COLL_INFO *coll)
+{
+    lara.look = 0;
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    camera.target_angle = -14560;
+    camera.target_elevation = -4550;
+    camera.target_distance = 1024;
+    if (item->frame_number == anims[item->anim_number].frame_end && item->item_flags[0]) {
+        item->anim_number = item->item_flags[0];
+        item->frame_number = anims[item->anim_number].frame_base;
+        item->current_anim_state = AS_CONTROLLED;
+    }
+}
+
 void lara_as_special(ITEM_INFO *item, COLL_INFO *coll)
 {
     camera.flags = FOLLOW_CENTRE;

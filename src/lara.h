@@ -320,6 +320,7 @@ void lara_as_extcornerr(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_intcornerl(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_intcornerr(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_death(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_usepuzzle(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
