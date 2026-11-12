@@ -636,6 +636,73 @@ sint16 *GetBestFrame(ITEM_INFO *item)
         return frmptr[1];
 }
 
+void mRotBoundingBoxNoPersp(sint16 *bounds, sint16 *rotatedBounds)
+{
+    SVECTOR pos[8];
+    sint32 x, y, z, i;
+    sint16 xMin, xMax, yMin, yMax, zMin, zMax;
+
+    xMin = bounds[0];
+    xMax = bounds[1];
+    yMin = bounds[2];
+    yMax = bounds[3];
+    zMin = bounds[4];
+    zMax = bounds[5];
+    pos[0].x = xMin;
+    pos[0].y = yMin;
+    pos[0].z = zMin;
+    pos[1].x = xMax;
+    pos[1].y = yMin;
+    pos[1].z = zMin;
+    pos[2].x = xMax;
+    pos[2].y = yMax;
+    pos[2].z = zMin;
+    pos[3].x = xMin;
+    pos[3].y = yMax;
+    pos[3].z = zMin;
+    pos[4].x = xMin;
+    pos[4].y = yMin;
+    pos[4].z = zMax;
+    pos[5].x = xMax;
+    pos[5].y = yMin;
+    pos[5].z = zMax;
+    pos[6].x = xMax;
+    pos[6].y = yMax;
+    pos[6].z = zMax;
+    pos[7].x = xMin;
+    pos[7].y = yMax;
+    pos[7].z = zMax;
+    xMin = 0x7FFF;
+    yMin = 0x7FFF;
+    zMin = 0x7FFF;
+    xMax = -0x7FFF;
+    yMax = -0x7FFF;
+    zMax = -0x7FFF;
+    for (i = 0; i < 8; i++) {
+        x = pos[i].x * phd_mxptr[M00] + pos[i].y * phd_mxptr[M01] + pos[i].z * phd_mxptr[M02] + phd_mxptr[M03];
+        y = pos[i].x * phd_mxptr[M10] + pos[i].y * phd_mxptr[M11] + pos[i].z * phd_mxptr[M12] + phd_mxptr[M13];
+        z = pos[i].x * phd_mxptr[M20] + pos[i].y * phd_mxptr[M21] + pos[i].z * phd_mxptr[M22] + phd_mxptr[M23];
+        if (x < xMin)
+            xMin = (sint16)x;
+        if (x > xMax)
+            xMax = (sint16)x;
+        if (y < yMin)
+            yMin = (sint16)y;
+        if (y > yMax)
+            yMax = (sint16)y;
+        if (z < zMin)
+            zMin = (sint16)z;
+        if (z > zMax)
+            zMax = (sint16)z;
+    }
+    rotatedBounds[0] = xMin;
+    rotatedBounds[1] = xMax;
+    rotatedBounds[2] = yMin;
+    rotatedBounds[3] = yMax;
+    rotatedBounds[4] = zMin;
+    rotatedBounds[5] = zMax;
+}
+
 void UpdateSkyLightning(void)
 {
     sint32 i;

@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="248.33" height="12" x="0" y="0" class="named"><title>1124 · 72.61%</title></rect>
 <rect width="0.66" height="12" x="248.33" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.01" height="12" x="248.99" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
-<rect width="76" height="12" x="266" y="0" class="todo"><title>344 · 22.22%</title></rect>
+<rect width="17.23" height="12" x="248.99" y="0" class="nonmatching"><title>78 · 5.04%</title></rect>
+<rect width="75.78" height="12" x="266.22" y="0" class="todo"><title>343 · 22.16%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1124</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">344</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1124</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">78</tspan> · <tspan class="todo">343</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="130.59" height="12" x="0" y="0" class="named"><title>238 KB · 38.18%</title></rect>
 <rect width="0.13" height="12" x="130.59" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="30.52" height="12" x="130.72" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
-<rect width="180.76" height="12" x="161.24" y="0" class="todo"><title>329 KB · 52.85%</title></rect>
+<rect width="30.86" height="12" x="130.72" y="0" class="nonmatching"><title>56 KB · 9.02%</title></rect>
+<rect width="180.43" height="12" x="161.57" y="0" class="todo"><title>328 KB · 52.76%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">38.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">238 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">329 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">238 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">328 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -869,7 +869,7 @@
 <rect width="12" height="12" x="0" y="240" class="named"><title>0x00450dc0 GetFrames (147 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="240" class="named"><title>0x00450e60 GetBoundsAccurate (124 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="240" class="named"><title>0x00450ee0 GetBestFrame (48 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="240" class="todo"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="240" class="nonmatching"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="240" class="named"><title>0x00451180 UpdateSkyLightning (181 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="240" class="todo"><title>0x00451240 RenderIt (711 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="240" class="todo"><title>0x00451510 LoadGameflow (525 bytes)</title></rect>
@@ -1895,7 +1895,7 @@
 <rect width="15.28" height="15.58" x="346.32" y="154.63" class="todo"><title>0x0049a6e0 Func49a6e0 (618 bytes)</title></rect>
 <rect width="15.28" height="15.50" x="346.32" y="173.21" class="todo"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
 <rect width="15.28" height="15.47" x="346.32" y="191.71" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>
-<rect width="15.28" height="15.45" x="346.32" y="210.18" class="todo"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
+<rect width="15.28" height="15.45" x="346.32" y="210.18" class="nonmatching"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
 <rect width="15.28" height="15.42" x="346.32" y="228.63" class="todo"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
 <rect width="15.28" height="15.40" x="346.32" y="247.06" class="todo"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
 <rect width="15.28" height="15.40" x="346.32" y="265.46" class="todo"><title>0x0049a950 Func49a950 (611 bytes)</title></rect>

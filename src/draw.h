@@ -51,6 +51,7 @@ void UpdateSkyLightning(void);
 void DrawEffect(sint16 fx_num);
 void InterpolateArmMatrix(sint32 *mx);
 void PrintObjects(sint16 room_number);
+void mRotBoundingBoxNoPersp(sint16 *bounds, sint16 *rotatedBounds);
 
 extern STATIC_INFO static_objects[60];
 extern sint16 LightningCount;
