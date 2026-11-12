@@ -81,6 +81,26 @@ void *AddStruct(void *p, sint32 num, sint32 size)
     return ptr;
 }
 
+sint32 DXDDCreate(LPGUID pGuid, void **pDD4)
+{
+    LPDIRECTDRAW pDD;
+
+    Log(2, "DXDDCreate");
+    if (DXAttempt(DirectDrawCreate(pGuid, &pDD, 0)) == DD_OK) {
+        DXAttempt(IDirectDraw_QueryInterface(pDD, &IID_IDirectDraw4, pDD4));
+        if (pDD) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "DirectDraw", pDD, IDirectDraw_Release(pDD));
+            pDD = 0;
+        } else {
+            Log(1, "%s Attempt To Release NULL Ptr", "DirectDraw");
+        }
+        Log(5, "DXDDCreate Successful");
+        return 1;
+    }
+    Log(1, "DXDDCreate Failed");
+    return 0;
+}
+
 sint32 DXD3DCreate(LPDIRECTDRAW4 pDD4, void **pD3D)
 {
     Log(2, "DXD3DCreate");

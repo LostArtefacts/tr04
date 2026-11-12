@@ -1552,7 +1552,7 @@ address,size,name,symbol
 0x0049c710,61,DBLog_Post,_DBLog_Post
 0x0049c750,291,Log,_Log
 0x0049c880,6,DirectDrawEnumerateA,_DirectDrawEnumerateA@8
-0x0049c886,6,DirectDrawCreate,_DirectDrawCreate
+0x0049c886,6,DirectDrawCreate,_DirectDrawCreate@12
 0x0049d4b4,3,nullsub_4,_nullsub_4
 0x0049d4c4,1,nullsub_5,_nullsub_5
 0x0049d534,3,nullsub_6,_nullsub_6
@@ -1975,6 +1975,7 @@ address,size,name,symbol
 0x004a9240,4,LoadImageA,__imp__LoadImageA@24
 0x004a9248,4,joyGetDevCapsA,__imp__joyGetDevCapsA@12
 0x004a924c,4,joyGetPosEx,__imp__joyGetPosEx@8
+0x004a9460,16,IID_IDirectDraw4,_IID_IDirectDraw4
 0x004a9780,16,IID_IDirect3D3,_IID_IDirect3D3
 0x004ad0a8,16,bat_bite,_bat_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
