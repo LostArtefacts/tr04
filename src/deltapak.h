@@ -65,6 +65,7 @@ extern NEW_CUTSCENE *GLOBAL_cutme;
 extern char *cutseqpakPtr;
 extern PACKNODE *actor_pnodes[10];
 extern sint16 temp_rotation_buffer[160];
+extern ITEM_INFO duff_item[10];
 extern sint16 frig_shadow_bbox[6];
 extern sint16 frig_jeep_shadow_bbox[6];
 extern PACKNODE *camera_pnodes;

@@ -12,6 +12,7 @@
 #include "specific/lighting.h"
 #include "lara.h"
 #include "lara_states.h"
+#include "sound.h"
 
 #define S_LongMemCpy(d, s, n) memcpy(d, s, (n) * sizeof(sint32))
 
@@ -90,6 +91,30 @@ void GetRoomBounds(void)
                 if (door[0] * (r->x + door[3] - w2v_matrix[M03]) + door[1] * (r->y + door[4] - w2v_matrix[M13]) + door[2] * (r->z + door[5] - w2v_matrix[M23]) < 0)
                     SetRoomBounds(door, rn, r);
                 door += 15;
+            }
+        }
+        phd_PopMatrix();
+    }
+}
+
+void DrawEffect(sint16 fx_num)
+{
+    FX_INFO *fx;
+    OBJECT_INFO *obj;
+
+    fx = &effects[fx_num];
+    obj = &objects[fx->object_number];
+    if (obj->draw_routine && obj->loaded) {
+        phd_PushMatrix();
+        phd_TranslateAbs(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
+        if (phd_mxptr[M23] > phd_znear && phd_mxptr[M23] < phd_zfar) {
+            phd_RotYXZ(fx->pos.y_rot, fx->pos.x_rot, fx->pos.z_rot);
+            if (obj->nmeshes) {
+                nullsub_1(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, fx->room_number, &duff_item[0].il);
+                phd_PutPolygons(meshes[obj->mesh_index], -1);
+            } else {
+                nullsub_1(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, fx->room_number, &duff_item[0].il);
+                phd_PutPolygons(meshes[fx->frame_number], -1);
             }
         }
         phd_PopMatrix();

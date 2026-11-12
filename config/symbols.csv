@@ -2517,6 +2517,7 @@ address,size,name,symbol
 0x007e722c,4,GLOBAL_oldcamtype,_GLOBAL_oldcamtype
 0x007e7230,4,GLOBAL_cutme,_GLOBAL_cutme
 0x007e7240,320,temp_rotation_buffer,_temp_rotation_buffer
+0x007e7380,56220,duff_item,_duff_item
 0x007f4f1c,4,cutseqpakPtr,_cutseqpakPtr
 0x007f4f20,4,camera_pnodes,_camera_pnodes
 0x007f4f40,40,cutseq_meshbits,_cutseq_meshbits
