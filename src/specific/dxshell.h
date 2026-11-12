@@ -27,5 +27,6 @@ extern uint8 keymap[256];
 extern uint8 keymap2[256];
 extern sint32 DXUnk754124[16];
 extern sint32 DXUnk7541ac;
+extern uint8 tga_header[18];
 
 #endif

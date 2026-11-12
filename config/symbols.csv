@@ -1649,8 +1649,8 @@ address,size,name,symbol
 0x004a13db,67,_clock,_clock
 0x004a141e,53,___inittime,___inittime
 0x004a1453,312,_realloc,_realloc
-0x004a158b,47,Func4a158b,
-0x004a15ba,266,_fwrite,_fwrite
+0x004a158b,47,_fwrite,_fwrite
+0x004a15ba,266,__fwrite_lk,__fwrite_lk
 0x004a16c4,253,start,_start
 0x004a17cc,34,__amsg_exit,__amsg_exit
 0x004a17f1,35,_fast_error_exit,_fast_error_exit
@@ -2131,6 +2131,7 @@ address,size,name,symbol
 0x004b56a4,16384,rcossin_tbl,_rcossin_tbl
 0x004b96a4,4,rand_1,_rand_1
 0x004b96a8,4,rand_2,_rand_2
+0x004bc508,18,tga_header,_tga_header
 0x004bf2e0,4,next_locust,_next_locust
 0x004bf2f8,4,next_scarab,_next_scarab
 0x004bf338,4,TorchItem,_TorchItem

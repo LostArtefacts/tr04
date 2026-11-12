@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="197.42" height="12" x="0" y="0" class="named"><title>893 · 57.72%</title></rect>
-<rect width="0.44" height="12" x="197.42" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="197.86" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="137.51" height="12" x="204.49" y="0" class="todo"><title>622 · 40.21%</title></rect>
+<rect width="197.64" height="12" x="0" y="0" class="named"><title>894 · 57.79%</title></rect>
+<rect width="0.44" height="12" x="197.64" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="198.08" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="137.29" height="12" x="204.71" y="0" class="todo"><title>621 · 40.14%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">57.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">893</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">622</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">894</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">621</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="84.86" height="12" x="0" y="0" class="named"><title>154 KB · 24.81%</title></rect>
-<rect width="0.12" height="12" x="84.86" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="84.98" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="248.11" height="12" x="93.89" y="0" class="todo"><title>450 KB · 72.55%</title></rect>
+<rect width="85.13" height="12" x="0" y="0" class="named"><title>154 KB · 24.89%</title></rect>
+<rect width="0.12" height="12" x="85.13" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="85.25" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="247.84" height="12" x="94.16" y="0" class="todo"><title>450 KB · 72.47%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">24.8%</text>
+<text text-anchor="end" x="522" y="24.50">24.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">154 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">450 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1528,7 +1528,7 @@
 <rect width="12" height="12" x="135" y="435" class="named"><title>0x00493e70 DXCreateViewport (238 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="435" class="named"><title>0x00493f60 DXShowFrame (201 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="435" class="named"><title>0x00494030 DXMove (69 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="435" class="todo"><title>0x00494080 DXSaveScreen (488 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="435" class="named"><title>0x00494080 DXSaveScreen (488 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="435" class="named"><title>0x00494270 DXInitKeyboard (387 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="435" class="todo"><title>0x00494400 Func494400 (201 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="435" class="named"><title>0x004944d0 DXReadKeyboard (74 bytes)</title></rect>
@@ -1990,7 +1990,7 @@
 <rect width="13.95" height="13.66" x="381.03" y="349.45" class="named"><title>0x0044a1a0 GetFloor (493 bytes)</title></rect>
 <rect width="13.95" height="13.57" x="381.03" y="366.11" class="named"><title>0x00427a40 lara_col_walk (490 bytes)</title></rect>
 <rect width="13.95" height="13.57" x="381.03" y="382.69" class="named"><title>0x00490820 phd_RotYXZ (490 bytes)</title></rect>
-<rect width="13.95" height="13.52" x="381.03" y="399.26" class="todo"><title>0x00494080 DXSaveScreen (488 bytes)</title></rect>
+<rect width="13.95" height="13.52" x="381.03" y="399.26" class="named"><title>0x00494080 DXSaveScreen (488 bytes)</title></rect>
 <rect width="13.95" height="13.46" x="381.03" y="415.78" class="todo"><title>0x0040b1d0 ShotLara (486 bytes)</title></rect>
 <rect width="13.95" height="13.38" x="381.03" y="432.24" class="todo"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
 <rect width="13.95" height="13.38" x="381.03" y="448.62" class="named"><title>0x0046bce0 eleventh_cutseq_control (483 bytes)</title></rect>

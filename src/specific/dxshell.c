@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 #include <windows.h>
 #include <ddraw.h>
@@ -353,6 +354,62 @@ void DXMove(sint32 x, sint32 y)
     Log(2, "DXMove : x %d y %d", x, y);
     if (G_dxptr && !(G_dxptr->Flags & 1))
         SetRect(&G_dxptr->rScreen, x, y, x + G_dxptr->dwRenderWidth, y + G_dxptr->dwRenderHeight);
+}
+
+void DXSaveScreen(LPDIRECTDRAWSURFACE4 surf, const char *name)
+{
+    FILE *file;
+    DDSURFACEDESC2 desc;
+    sint16 *pSurf;
+    sint16 *pDest;
+    char *pM;
+    uint32 val;
+    static sint32 num = 0;
+    sint32 r;
+    sint32 g;
+    sint32 b;
+    char buf[16];
+    uint32 h;
+    uint32 w;
+
+    memset(&desc, 0, sizeof(DDSURFACEDESC2));
+    desc.dwSize = sizeof(DDSURFACEDESC2);
+    DXAttempt(IDirectDrawSurface4_GetSurfaceDesc(surf, &desc));
+    DXAttempt(IDirectDrawSurface4_Lock(surf, 0, &desc, DDLOCK_WAIT, 0));
+    pSurf = (sint16 *)desc.lpSurface;
+    sprintf(buf, "%s%04d.tga", name, num++);
+    file = fopen(buf, "wb");
+    if (file) {
+        *(sint16 *)&tga_header[12] = (sint16)desc.dwWidth;
+        *(sint16 *)&tga_header[14] = (sint16)desc.dwHeight;
+        fwrite(tga_header, sizeof(tga_header), 1, file);
+        pM = (char *)malloc(2 * desc.dwWidth * desc.dwHeight);
+        pDest = (sint16 *)pM;
+        pSurf += desc.dwHeight * (desc.lPitch / 2);
+        for (h = 0; h < desc.dwHeight; h++) {
+            for (w = 0; w < desc.dwWidth; w++) {
+                val = pSurf[w];
+                if (desc.ddpfPixelFormat.dwRBitMask == 0xF800) {
+                    r = (val >> 11) & 0x1F;
+                    g = (val >> 6) & 0x1F;
+                    b = val & 0x1F;
+                    *pDest++ = (sint16)((r << 10) + (g << 5) + b);
+                } else {
+                    *pDest++ = (sint16)val;
+                }
+            }
+            pSurf -= desc.lPitch / 2;
+        }
+        fwrite(pM, 2 * desc.dwWidth * desc.dwHeight, 1, file);
+        fclose(file);
+        free(pM);
+        buf[7]++;
+        if ((uint8)buf[7] > '9') {
+            buf[7] = '0';
+            buf[6]++;
+        }
+    }
+    DXAttempt(IDirectDrawSurface4_Unlock(surf, 0));
 }
 
 void DXInitKeyboard(HWND hwnd, HINSTANCE hinstance)
