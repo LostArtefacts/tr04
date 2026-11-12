@@ -12,6 +12,8 @@
 #include "../delstuff.h"
 #include "../lara.h"
 #include "../objnums.h"
+#include "../effect2.h"
+#include "../camera.h"
 
 void MallocD3DLights(void)
 {
@@ -132,6 +134,60 @@ void ClearObjectLighting(void)
             D3DLights[i].D3DLightx.dltType = D3DLIGHT_POINT;
             IDirect3DLight_SetLight(D3DLights[i].D3DLight, (LPD3DLIGHT)&D3DLights[i].D3DLightx);
         }
+    }
+}
+
+void InitDynamicLighting(void)
+{
+    DYNAMIC *dptr;
+    float f;
+    sint32 last_off, i;
+
+    last_off = -1;
+    ClearObjectLighting();
+    IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_AMBIENT, 0);
+    for (i = 0; i < MAX_DYNAMICS; i++) {
+        dptr = &dynamics[i];
+        if (dptr->on) {
+            D3DDynamics[i].D3DLightx.dcvColor.r = dptr->r / 255.0F;
+            D3DDynamics[i].D3DLightx.dcvColor.g = dptr->g / 255.0F;
+            D3DDynamics[i].D3DLightx.dcvColor.b = dptr->b / 255.0F;
+            D3DDynamics[i].D3DLightx.dvPosition.x = (float)dptr->x;
+            D3DDynamics[i].D3DLightx.dvPosition.y = (float)dptr->y;
+            D3DDynamics[i].D3DLightx.dvPosition.z = (float)dptr->z;
+            D3DDynamics[i].D3DLightx.dwFlags = D3DLIGHT_ACTIVE | D3DLIGHT_NO_SPECULAR;
+            D3DDynamics[i].D3DLightx.dltType = D3DLIGHT_POINT;
+            D3DDynamics[i].D3DLightx.dvAttenuation1 = 1;
+            D3DDynamics[i].D3DLightx.dvRange = (float)((dptr->falloff >> 1) + (dptr->falloff >> 3));
+            IDirect3DLight_SetLight(D3DDynamics[i].D3DLight, (LPD3DLIGHT)&D3DDynamics[i].D3DLightx);
+        } else {
+            if (D3DDynamics[i].D3DLightx.dwFlags & D3DLIGHT_ACTIVE) {
+                D3DDynamics[i].D3DLightx.dwFlags = D3DLIGHT_NO_SPECULAR;
+                D3DDynamics[i].D3DLightx.dltType = D3DLIGHT_POINT;
+                IDirect3DLight_SetLight(D3DDynamics[i].D3DLight, (LPD3DLIGHT)&D3DDynamics[i].D3DLightx);
+            }
+            last_off = i;
+        }
+    }
+    if (last_off >= 0 && bLaraTorch) {
+        f = LaraTorchIntensity / 255.0F;
+        D3DDynamics[last_off].D3DLightx.dcvColor.r = f;
+        D3DDynamics[last_off].D3DLightx.dcvColor.g = f;
+        D3DDynamics[last_off].D3DLightx.dcvColor.b = 0;
+        D3DDynamics[last_off].D3DLightx.dvPosition.x = (float)LaraTorchStart.x;
+        D3DDynamics[last_off].D3DLightx.dvPosition.y = (float)LaraTorchStart.y;
+        D3DDynamics[last_off].D3DLightx.dvPosition.z = (float)LaraTorchStart.z;
+        D3DDynamics[last_off].D3DLightx.dvDirection.x = (float)(LaraTorchEnd.x - LaraTorchStart.x);
+        D3DDynamics[last_off].D3DLightx.dvDirection.y = (float)(LaraTorchEnd.y - LaraTorchStart.y);
+        D3DDynamics[last_off].D3DLightx.dvDirection.z = (float)(LaraTorchEnd.z - LaraTorchStart.z);
+        D3DDynamics[last_off].D3DLightx.dwFlags = D3DLIGHT_ACTIVE | D3DLIGHT_NO_SPECULAR;
+        D3DDynamics[last_off].D3DLightx.dltType = D3DLIGHT_SPOT;
+        D3DDynamics[last_off].D3DLightx.dvAttenuation1 = 1;
+        D3DDynamics[last_off].D3DLightx.dvFalloff = 1;
+        D3DDynamics[last_off].D3DLightx.dvRange = 20480;
+        D3DDynamics[last_off].D3DLightx.dvTheta = 0.25F;
+        D3DDynamics[last_off].D3DLightx.dvPhi = 1.25F;
+        IDirect3DLight_SetLight(D3DDynamics[last_off].D3DLight, (LPD3DLIGHT)&D3DDynamics[last_off].D3DLightx);
     }
 }
 

@@ -39,6 +39,7 @@ void ApplyTransposeMatrix(sint32 *matrix, PHD_VECTOR *start, PHD_VECTOR *dest);
 void S_CalculateStaticMeshLight(sint32 x, sint32 y, sint32 z, sint32 shade, ROOM_INFO *r);
 void MallocD3DLights(void);
 void ClearObjectLighting(void);
+void InitDynamicLighting(void);
 void ClearDynamicLighting(void);
 void CreateD3DLights(void);
 
