@@ -43,3 +43,9 @@ void S_DrawAirBar(sint32 pos)
     if (gfCurrentLevel)
         DoBar(490 - (font_height >> 2), (font_height >> 2) + (font_height >> 1), 150, 12, pos, 0xFF000000, 0xFF0000FF);
 }
+
+void S_InitLoadBar(sint32 maxpos)
+{
+    loadbar_pos = 0;
+    loadbar_maxpos = maxpos;
+}
