@@ -3,6 +3,48 @@
 
 #include "../types.h"
 
+typedef struct FVECTOR {
+    float x;
+    float y;
+    float z;
+} FVECTOR;
+
+typedef struct FOGBULB_STRUCT {
+    FVECTOR WorldPos;
+    FVECTOR pos;
+    FVECTOR vec;
+    float rad;
+    float sqrad;
+    float inv_sqrad;
+    float dist;
+    sint32 density;
+    sint32 inRange;
+    sint32 timer;
+    sint32 active;
+    sint32 FXRad;
+    sint32 room_number;
+    sint32 r;
+    sint32 g;
+    sint32 b;
+} FOGBULB_STRUCT;
+
+typedef struct SORTLIST {
+    float zVal;
+    sint16 drawtype;
+    sint16 tpage;
+    sint16 nVtx;
+    sint16 polytype;
+} SORTLIST;
+
+extern char SortBuffer[655360];
+extern char *pSortBuffer;
+extern SORTLIST *SortList[16384];
+extern SORTLIST **pSortList;
+extern sint32 SortCount;
+extern FOGBULB_STRUCT FXFogBulbs[5];
+extern sint32 NumFXFogBulbs;
+
+void InitialiseSortList(void);
 sint32 IsVolumetric(void);
 
 #endif
