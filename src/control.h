@@ -65,6 +65,7 @@ extern sint32 height_type;
 extern sint32 tiltxoff, tiltyoff;
 extern sint16 *floor_data;
 extern sint32 flipeffect;
+extern sint32 fliptimer;
 extern uint8 KeyTriggerActive;
 extern char TriggerTimer;
 extern sint32 SetDebounce;
