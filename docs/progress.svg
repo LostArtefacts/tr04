@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="209.36" height="12" x="0" y="0" class="named"><title>947 · 61.22%</title></rect>
-<rect width="0.44" height="12" x="209.36" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="209.80" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="124.91" height="12" x="217.09" y="0" class="todo"><title>565 · 36.52%</title></rect>
+<rect width="209.58" height="12" x="0" y="0" class="named"><title>948 · 61.28%</title></rect>
+<rect width="0.44" height="12" x="209.58" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="210.02" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="124.69" height="12" x="217.31" y="0" class="todo"><title>564 · 36.46%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">61.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">947</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">565</tspan></text>
+<text text-anchor="end" x="522" y="7.50">61.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">948</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">564</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="90.19" height="12" x="0" y="0" class="named"><title>164 KB · 26.37%</title></rect>
-<rect width="0.12" height="12" x="90.19" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="90.31" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="242.27" height="12" x="99.73" y="0" class="todo"><title>440 KB · 70.84%</title></rect>
+<rect width="90.28" height="12" x="0" y="0" class="named"><title>164 KB · 26.40%</title></rect>
+<rect width="0.12" height="12" x="90.28" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="90.40" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="242.18" height="12" x="99.82" y="0" class="todo"><title>439 KB · 70.81%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">164 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">440 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">164 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">439 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -79,7 +79,7 @@
 <rect width="12" height="12" x="150" y="0" class="todo"><title>0x00402970 ExplodeBaboon (160 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="0" class="named"><title>0x00402a10 InitialiseBat (90 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="0" class="named"><title>0x00402a70 BatControl (797 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="0" class="todo"><title>0x00402d90 InitialiseCroc (157 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="0" class="named"><title>0x00402d90 InitialiseCroc (157 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="0" class="todo"><title>0x00402e30 CrocControl (1913 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="0" class="todo"><title>0x004035d0 GetFreeLocust (71 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="0" class="todo"><title>0x00403620 Func403620 (20 bytes)</title></rect>
@@ -2468,7 +2468,7 @@
 <rect width="8.11" height="7.52" x="585.26" y="244.80" class="named"><title>0x00425e20 lara_as_turn_l (158 bytes)</title></rect>
 <rect width="8.11" height="7.52" x="596.37" y="244.80" class="named"><title>0x00427730 lara_as_deathslide (158 bytes)</title></rect>
 <rect width="8.11" height="7.52" x="607.48" y="244.80" class="todo"><title>0x004447f0 FixedCamera (158 bytes)</title></rect>
-<rect width="8.06" height="7.52" x="618.59" y="244.80" class="todo"><title>0x00402d90 InitialiseCroc (157 bytes)</title></rect>
+<rect width="8.06" height="7.52" x="618.59" y="244.80" class="named"><title>0x00402d90 InitialiseCroc (157 bytes)</title></rect>
 <rect width="8.06" height="7.52" x="629.65" y="244.80" class="named"><title>0x00425070 lara_col_stop (157 bytes)</title></rect>
 <rect width="8.06" height="7.52" x="640.71" y="244.80" class="named"><title>0x004286d0 lara_col_roll (157 bytes)</title></rect>
 <rect width="8.01" height="7.52" x="651.78" y="244.80" class="named"><title>0x00473e80 Decompress (156 bytes)</title></rect>
