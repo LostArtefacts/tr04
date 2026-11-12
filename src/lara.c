@@ -717,6 +717,29 @@ sint32 LaraLandedBad(ITEM_INFO *item, COLL_INFO *coll)
     return item->hit_points <= 0;
 }
 
+void lara_as_hang2(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_STOP;
+        return;
+    }
+    coll->enable_baddie_push = 0;
+    coll->enable_spaz = 0;
+    lara.torso_y_rot = 0;
+    lara.torso_x_rot = 0;
+    if (lara.CanMonkeySwing) {
+        if (input & IN_ACTION && item->hit_points > 0) {
+            camera.target_angle = 0;
+            camera.target_elevation = -10920;
+        } else {
+            MonkeySwingFall(item);
+            return;
+        }
+    }
+    if (input & IN_LOOK)
+        LookUpDown();
+}
+
 void MonkeySwingFall(ITEM_INFO *item)
 {
     item->goal_anim_state = AS_UPJUMP;
