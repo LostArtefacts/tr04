@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="178.63" height="12" x="0" y="0" class="named"><title>808 · 52.23%</title></rect>
-<rect width="0.44" height="12" x="178.63" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="179.07" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="156.52" height="12" x="185.48" y="0" class="todo"><title>708 · 45.77%</title></rect>
+<rect width="178.85" height="12" x="0" y="0" class="named"><title>809 · 52.29%</title></rect>
+<rect width="0.44" height="12" x="178.85" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="179.29" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="156.30" height="12" x="185.70" y="0" class="todo"><title>707 · 45.70%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">52.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">808</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">708</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">809</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">707</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="77.87" height="12" x="0" y="0" class="named"><title>141 KB · 22.77%</title></rect>
-<rect width="0.12" height="12" x="77.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="77.99" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="255.36" height="12" x="86.64" y="0" class="todo"><title>463 KB · 74.67%</title></rect>
+<rect width="77.96" height="12" x="0" y="0" class="named"><title>141 KB · 22.79%</title></rect>
+<rect width="0.12" height="12" x="77.96" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="78.08" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="255.27" height="12" x="86.73" y="0" class="todo"><title>463 KB · 74.64%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">141 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">463 KB</tspan></text>
@@ -889,7 +889,7 @@
 <rect width="12" height="12" x="300" y="240" class="todo"><title>0x004530d0 InitialiseFlameEmitter (152 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="240" class="todo"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="240" class="todo"><title>0x00453230 InitialiseFlameEmitter3 (108 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="240" class="todo"><title>0x004532a0 InitialiseJobySpike (159 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="240" class="named"><title>0x004532a0 InitialiseJobySpike (159 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="240" class="todo"><title>0x00453340 InitialiseTwoBlockPlatform (45 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="240" class="todo"><title>0x00453370 InitialiseSlicerDicer (135 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="240" class="todo"><title>0x00453400 InitialiseScaledSpike (214 bytes)</title></rect>
@@ -2462,7 +2462,7 @@
 <rect width="7.87" height="7.81" x="728.27" y="244.81" class="todo"><title>0x00403c90 TriggerCrocgodMissile (159 bytes)</title></rect>
 <rect width="7.87" height="7.81" x="739.13" y="244.81" class="named"><title>0x00440340 ValidBox (159 bytes)</title></rect>
 <rect width="7.51" height="8.18" x="529.82" y="255.62" class="named"><title>0x00449fc0 GetChange (159 bytes)</title></rect>
-<rect width="7.51" height="8.18" x="529.82" y="266.80" class="todo"><title>0x004532a0 InitialiseJobySpike (159 bytes)</title></rect>
+<rect width="7.51" height="8.18" x="529.82" y="266.80" class="named"><title>0x004532a0 InitialiseJobySpike (159 bytes)</title></rect>
 <rect width="7.51" height="8.18" x="529.82" y="277.98" class="named"><title>0x00473460 DXSetOutputFormat (159 bytes)</title></rect>
 <rect width="7.51" height="8.13" x="529.82" y="289.16" class="named"><title>0x00425e20 lara_as_turn_l (158 bytes)</title></rect>
 <rect width="7.51" height="8.13" x="529.82" y="300.29" class="named"><title>0x00427730 lara_as_deathslide (158 bytes)</title></rect>

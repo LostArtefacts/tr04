@@ -27,3 +27,20 @@ void InitialiseFallingBlock2(sint16 item_number)
 {
     items[item_number].mesh_bits = 1;
 }
+
+void InitialiseJobySpike(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint32 h, c;
+    sint16 room_number;
+
+    item = &items[item_number];
+    item->pos.y_rot = (sint16)(GetRandomControl() << 10);
+    item->item_flags[2] = GetRandomControl() & 1;
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    c = GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    item->item_flags[3] = (sint16)((4096 * (h - c)) / 3328);
+}

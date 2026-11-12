@@ -5,5 +5,6 @@
 
 void InitialiseTrapDoor(sint16 item_number);
 void InitialiseFallingBlock2(sint16 item_number);
+void InitialiseJobySpike(sint16 item_number);
 
 #endif
