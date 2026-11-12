@@ -8,6 +8,10 @@
 #include "sound.h"
 #include "specific/3dmath.h"
 #include "specific/specificfx.h"
+#include "specific/output.h"
+#include "gameflow.h"
+#include "draw.h"
+#include "setup.h"
 
 void DrawTrainFloor(void)
 {
@@ -22,6 +26,59 @@ void DrawTrainFloor(void)
     phd_PopMatrix();
     DrawTrainObjects();
     lara_item->pos.x_pos = x;
+}
+
+void DrawTrainObjects(void)
+{
+    TRAIN_STATIC *p;
+    sint16 *obj;
+    sint32 x, i;
+
+    trainmappos = (trainmappos + (gfUVRotate << 5)) % 0x60000;
+    obj = &dels_handy_train_map[96 - ((trainmappos / 6144 - lara_item->pos.x_pos / 6144) & 0x1F)];
+    x = trainmappos % 6144 - 24576;
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos / 6144 * 6144, 256, 47168);
+    for (i = 8; i > 0; i--) {
+        phd_PutPolygons_train(meshes[static_objects[*obj++].mesh_number], x);
+        x += 6144;
+    }
+    phd_PopMatrix();
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos / 6144 * 6144 + x, 256, 47168);
+    phd_PutPolygons_train(meshes[static_objects[*obj].mesh_number], 0);
+    phd_PopMatrix();
+    obj = &dels_handy_train_map[32 - ((trainmappos / 6144 - lara_item->pos.x_pos / 6144 + 8) & 0x1F)];
+    x = trainmappos % 6144 - 24576;
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos / 6144 * 6144, 256, 58304);
+    phd_RotY(32760);
+    for (i = 8; i > 0; i--) {
+        phd_PutPolygons_train(meshes[static_objects[*obj++].mesh_number], -x);
+        x += 6144;
+    }
+    phd_PopMatrix();
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos / 6144 * 6144 + x, 256, 58304);
+    phd_RotY(32760);
+    phd_PutPolygons_train(meshes[static_objects[*obj].mesh_number], 0);
+    phd_PopMatrix();
+    p = &dels_handy_train_map2[32 - ((trainmappos / 6144 - lara_item->pos.x_pos / 6144) & 0x1F)];
+    x = trainmappos % 6144 - 24576;
+    phd_PushMatrix();
+    for (i = 8; i > 0; i--) {
+        if (p->type != 0xFFFF) {
+            phd_TranslateAbs(lara_item->pos.x_pos / 6144 * 6144, 256, p->zoff + 52224);
+            phd_PutPolygons_train(meshes[static_objects[p->type].mesh_number], x);
+        }
+        x += 6144;
+        p++;
+    }
+    if (p->type != 0xFFFF) {
+        phd_TranslateAbs(lara_item->pos.x_pos / 6144 * 6144 + x, 256, p->zoff + 52224);
+        phd_PutPolygons_train(meshes[static_objects[p->type].mesh_number], 0);
+    }
+    phd_PopMatrix();
 }
 
 void InitialiseTrainJeep(sint16 item_number)

@@ -2156,6 +2156,8 @@ address,size,name,symbol
 0x004afeec,92,AccentTable,_AccentTable
 0x004aff48,80,ShadeFromTo,_ShadeFromTo
 0x004aff98,4,font_init,_font_init
+0x004aff9c,256,dels_handy_train_map,_dels_handy_train_map
+0x004b009c,256,dels_handy_train_map2,_dels_handy_train_map2
 0x004b01a0,12,frig_shadow_bbox,_frig_shadow_bbox
 0x004b01b0,372,cutseq_control_routines,_cutseq_control_routines
 0x004b0324,28,troop_chat_ranges4,_troop_chat_ranges4
