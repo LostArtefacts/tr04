@@ -815,6 +815,37 @@ void TriggerShockwave(PHD_VECTOR *pos, sint32 InnerOuterRads, sint32 speed, sint
     }
 }
 
+void UpdateShockwaves(void)
+{
+    SHOCKWAVE_STRUCT *sw;
+    sint16 *bounds;
+    sint32 dx, dz, dist, i, dir;
+
+    sw = ShockWaves;
+    for (i = 16; i > 0; i--, sw++) {
+        if (sw->life) {
+            sw->life--;
+            if (sw->life) {
+                sw->OuterRad += sw->Speed;
+                sw->InnerRad += sw->Speed >> 1;
+                sw->Speed -= sw->Speed >> 4;
+                if (lara_item->hit_points > 0 && sw->Flags & 3) {
+                    bounds = GetBestFrame(lara_item);
+                    dx = lara_item->pos.x_pos - sw->x;
+                    dz = lara_item->pos.z_pos - sw->z;
+                    dist = phd_sqrt(SQUARE(dx) + SQUARE(dz));
+                    if (sw->y > lara_item->pos.y_pos + bounds[2] && sw->y < bounds[3] + lara_item->pos.y_pos + 256 && dist > sw->InnerRad && dist < sw->OuterRad) {
+                        dir = phd_atan(dz, dx);
+                        TriggerShockwaveHitEffect(lara_item->pos.x_pos, sw->y, lara_item->pos.z_pos, *(sint32 *)&sw->r, dir, sw->Speed);
+                        lara_item->hit_points -= sw->Speed >> (((sw->Flags & 2) != 0) + 2);
+                    } else
+                        sw->Temp = 0;
+                }
+            }
+        }
+    }
+}
+
 void TriggerLightning(PHD_VECTOR *s, PHD_VECTOR *d, sint8 variation, sint32 rgb, uint8 flags, uint8 size, uint8 segments)
 {
     LIGHTNING_STRUCT *lptr;
