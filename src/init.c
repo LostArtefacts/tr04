@@ -385,7 +385,7 @@ void init_all_ropes(void)
     nRope = 0;
 }
 
-void CreateRope(ROPE_STRUCT *rope, PHD_VECTOR *pos, PHD_VECTOR *dir, sint32 slength, ITEM_INFO *item)
+void CreateRope(ROPE_STRUCT *rope, PHD_VECTOR *pos, PHD_VECTOR *dir, sint32 slength)
 {
     sint32 n, l;
 
@@ -407,4 +407,27 @@ void CreateRope(ROPE_STRUCT *rope, PHD_VECTOR *pos, PHD_VECTOR *dir, sint32 slen
         rope->Velocity[n].z = 0;
     }
     rope->Active = 0;
+}
+
+void InitialiseRope(sint16 item_number)
+{
+    PHD_VECTOR RopePos, RopeDir;
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint16 room_number;
+
+    item = &items[item_number];
+    room_number = item->room_number;
+    RopePos.x = item->pos.x_pos;
+    RopePos.z = item->pos.z_pos;
+    RopePos.y = item->pos.y_pos;
+    floor = GetFloor(RopePos.x, RopePos.y, RopePos.z, &room_number);
+    RopePos.y = GetCeiling(floor, RopePos.x, RopePos.y, RopePos.z);
+    RopeDir.x = 0;
+    RopeDir.y = 0x4000;
+    RopeDir.z = 0;
+    CreateRope(&RopeList[nRope], &RopePos, &RopeDir, 128);
+    item->trigger_flags = (sint16)nRope;
+    AddActiveItem(item_number);
+    nRope++;
 }
