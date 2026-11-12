@@ -1186,6 +1186,41 @@ void lara_as_roper(ITEM_INFO *item, COLL_INFO *coll)
         FallFromRope(item);
 }
 
+void lara_col_ropefwd(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 Vel;
+
+    camera.target_distance = 2048;
+    UpdateRopeSwing(item);
+    if (item->anim_number == ANIM_SWINGFWD) {
+        if (input & IN_SPRINT) {
+            if (abs(lara.RopeLastX) >= 9000)
+                Vel = 0;
+            else
+                Vel = 192 * (9000 - abs(lara.RopeLastX)) / 9000;
+            ApplyVelocityToRope(lara.RopeSegment - 2, item->pos.y_rot + (!lara.RopeDirection ? 32760 : 0), (uint16)(Vel >> 5));
+        }
+        if (lara.RopeFrame < lara.RopeDFrame) {
+            lara.RopeFrame += lara.RopeFrameRate;
+            if (lara.RopeFrame > lara.RopeDFrame)
+                lara.RopeFrame = lara.RopeDFrame;
+        } else if (lara.RopeFrame > lara.RopeDFrame) {
+            lara.RopeFrame -= lara.RopeFrameRate;
+            if (lara.RopeFrame < lara.RopeDFrame)
+                lara.RopeFrame = lara.RopeDFrame;
+        }
+        item->frame_number = (sint16)(lara.RopeFrame >> 8);
+        if (!(input & IN_SPRINT) && lara.RopeFrame >> 8 == anims[ANIM_SWINGFWD].frame_base + 32 && lara.RopeMaxXBackward < 6750 && lara.RopeMaxXForward < 6750) {
+            item->anim_number = ANIM_SWING2HANG;
+            item->frame_number = anims[ANIM_SWING2HANG].frame_base;
+            item->goal_anim_state = item->current_anim_state = AS_ROPE;
+        }
+        if (input & IN_JUMP)
+            JumpOffRope(item);
+    } else if (item->frame_number == anims[ANIM_ROPEKICK].frame_base + 15)
+        ApplyVelocityToRope(lara.RopeSegment, item->pos.y_rot, 256);
+}
+
 void JumpOffRope(ITEM_INFO *item)
 {
     if (lara.RopePtr != -1) {
