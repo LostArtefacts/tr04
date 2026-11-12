@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="177.30" height="12" x="0" y="0" class="named"><title>802 · 51.84%</title></rect>
-<rect width="0.44" height="12" x="177.30" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="177.74" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="157.85" height="12" x="184.15" y="0" class="todo"><title>714 · 46.15%</title></rect>
+<rect width="177.52" height="12" x="0" y="0" class="named"><title>803 · 51.91%</title></rect>
+<rect width="0.44" height="12" x="177.52" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="177.96" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="157.63" height="12" x="184.37" y="0" class="todo"><title>713 · 46.09%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">52.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">802</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">714</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">803</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">713</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="77.20" height="12" x="0" y="0" class="named"><title>140 KB · 22.57%</title></rect>
-<rect width="0.12" height="12" x="77.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="77.32" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.03" height="12" x="85.97" y="0" class="todo"><title>464 KB · 74.86%</title></rect>
+<rect width="77.30" height="12" x="0" y="0" class="named"><title>140 KB · 22.60%</title></rect>
+<rect width="0.12" height="12" x="77.30" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="77.42" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="255.93" height="12" x="86.07" y="0" class="todo"><title>464 KB · 74.83%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">140 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">464 KB</tspan></text>
@@ -713,7 +713,7 @@
 <rect width="12" height="12" x="660" y="180" class="named"><title>0x0043e720 combine_PickupItem3 (17 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="180" class="named"><title>0x0043e740 combine_PickupItem4 (17 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="180" class="named"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="180" class="todo"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="180" class="named"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="180" class="named"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="180" class="named"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="195" class="todo"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>
@@ -2395,7 +2395,7 @@
 <rect width="8.26" height="8.51" x="507.48" y="373.30" class="todo"><title>0x00410070 TriggerSethMissile (182 bytes)</title></rect>
 <rect width="8.26" height="8.51" x="507.48" y="384.82" class="todo"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
 <rect width="8.26" height="8.51" x="507.48" y="396.33" class="named"><title>0x00456420 AnimateWaterfalls (182 bytes)</title></rect>
-<rect width="8.26" height="8.47" x="507.48" y="407.85" class="todo"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
+<rect width="8.26" height="8.47" x="507.48" y="407.85" class="named"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
 <rect width="8.26" height="8.47" x="507.48" y="419.31" class="todo"><title>0x00451180 UpdateSkyLightning (181 bytes)</title></rect>
 <rect width="8.26" height="8.42" x="507.48" y="430.78" class="named"><title>0x00433c70 DetatchSpark (180 bytes)</title></rect>
 <rect width="8.26" height="8.42" x="507.48" y="442.20" class="named"><title>0x00456360 ControlTriggerTriggerer (180 bytes)</title></rect>

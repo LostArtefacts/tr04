@@ -236,6 +236,7 @@ void spinback(uint16 *cock);
 void fade_ammo_selector(void);
 void update_laras_weapons_status(void);
 void draw_compass(void);
+sint32 do_special_waterskin_combine_bullshit(sint32 flag);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];
@@ -252,6 +253,8 @@ extern sint8 CurrentGrenadeGunAmmoType;
 extern sint8 CurrentCrossBowAmmoType;
 extern sint16 inventry_xpos;
 extern sint16 inventry_ypos;
+extern sint32 combine_obj1;
+extern sint32 combine_obj2;
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
 

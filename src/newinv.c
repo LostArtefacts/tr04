@@ -381,6 +381,54 @@ void combine_ClockWorkBeetle(sint32 flag)
     lara.mechanical_scarab = 1;
 }
 
+sint32 do_special_waterskin_combine_bullshit(sint32 flag)
+{
+    sint32 n;
+    sint32 small_liters, big_liters, small_capacity, big_capacity;
+
+    small_liters = lara.small_water_skin - 1;
+    big_liters = lara.big_water_skin - 1;
+    small_capacity = 3 - small_liters;
+    big_capacity = 5 - big_liters;
+    if (!flag) {
+        if (!small_liters)
+            return 0;
+        if (!big_capacity)
+            return 0;
+        n = small_liters;
+        do {
+            if (big_capacity) {
+                small_liters--;
+                big_liters++;
+                big_capacity--;
+            }
+            n--;
+        } while (n);
+        lara.small_water_skin = small_liters + 1;
+        lara.big_water_skin = big_liters + 1;
+        combine_obj1 = lara.big_water_skin + INV_WATERSKIN2_EMPTY_ITEM - 1;
+        return 1;
+    } else {
+        if (!big_liters)
+            return 0;
+        if (!small_capacity)
+            return 0;
+        n = big_liters;
+        do {
+            if (small_capacity) {
+                big_liters--;
+                small_liters++;
+                small_capacity--;
+            }
+            n--;
+        } while (n);
+        lara.small_water_skin = small_liters + 1;
+        lara.big_water_skin = big_liters + 1;
+        combine_obj1 = lara.small_water_skin + INV_WATERSKIN1_EMPTY_ITEM - 1;
+        return 1;
+    }
+}
+
 void setup_objectlist_startposition(sint16 newobj)
 {
     sint32 i;
