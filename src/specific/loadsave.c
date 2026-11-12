@@ -29,6 +29,37 @@ void RGBM_Mono(uint8 *r, uint8 *g, uint8 *b)
     *b = (uint8)c;
 }
 
+void ConvertSurfaceToTextures(LPDIRECTDRAWSURFACE4 surface)
+{
+    DDSURFACEDESC2 tSurf;
+    uint16 *pTexture;
+    uint16 *pSrc;
+
+    memset(&tSurf, 0, sizeof(tSurf));
+    tSurf.dwSize = sizeof(DDSURFACEDESC2);
+    IDirectDrawSurface4_Lock(surface, 0, &tSurf, DDLOCK_WAIT | DDLOCK_NOSYSLOCK, 0);
+    pSrc = (uint16 *)tSurf.lpSurface;
+    pTexture = (uint16 *)malloc(0x40000);
+    MemBltSurf(pTexture, 0, 0, 256, 256, 256, pSrc, 0, 0, tSurf, 1.0F, 1.0F);
+    MonoScreen[0].surface = CreateTexturePage(256, 256, 0, (sint32 *)pTexture, RGBM_Mono, 0);
+    DXAttempt(IDirectDrawSurface4_QueryInterface(MonoScreen[0].surface, &IID_IDirect3DTexture2, (void **)&MonoScreen[0].tex));
+    MemBltSurf(pTexture, 0, 0, 256, 256, 256, pSrc, 256, 0, tSurf, 1.0F, 1.0F);
+    MonoScreen[1].surface = CreateTexturePage(256, 256, 0, (sint32 *)pTexture, RGBM_Mono, 0);
+    DXAttempt(IDirectDrawSurface4_QueryInterface(MonoScreen[1].surface, &IID_IDirect3DTexture2, (void **)&MonoScreen[1].tex));
+    MemBltSurf(pTexture, 0, 0, 128, 256, 256, pSrc, 512, 0, tSurf, 1.0F, 1.0F);
+    MemBltSurf(pTexture, 128, 0, 128, 224, 256, pSrc, 512, 256, tSurf, 1.0F, 1.0F);
+    MonoScreen[2].surface = CreateTexturePage(256, 256, 0, (sint32 *)pTexture, RGBM_Mono, 0);
+    DXAttempt(IDirectDrawSurface4_QueryInterface(MonoScreen[2].surface, &IID_IDirect3DTexture2, (void **)&MonoScreen[2].tex));
+    MemBltSurf(pTexture, 0, 0, 256, 224, 256, pSrc, 0, 256, tSurf, 1.0F, 1.0F);
+    MonoScreen[3].surface = CreateTexturePage(256, 256, 0, (sint32 *)pTexture, RGBM_Mono, 0);
+    DXAttempt(IDirectDrawSurface4_QueryInterface(MonoScreen[3].surface, &IID_IDirect3DTexture2, (void **)&MonoScreen[3].tex));
+    MemBltSurf(pTexture, 0, 0, 256, 224, 256, pSrc, 256, 256, tSurf, 1.0F, 1.0F);
+    MonoScreen[4].surface = CreateTexturePage(256, 256, 0, (sint32 *)pTexture, RGBM_Mono, 0);
+    DXAttempt(IDirectDrawSurface4_QueryInterface(MonoScreen[4].surface, &IID_IDirect3DTexture2, (void **)&MonoScreen[4].tex));
+    IDirectDrawSurface4_Unlock(surface, 0);
+    free(pTexture);
+}
+
 void CreateMonoScreen(void)
 {
     MonoScreenOn = 1;

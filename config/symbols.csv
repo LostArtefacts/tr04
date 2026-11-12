@@ -1988,6 +1988,7 @@ address,size,name,symbol
 0x004a9274,4,BinkOpenDirectSound,__imp__BinkOpenDirectSound@4
 0x004a9460,16,IID_IDirectDraw4,_IID_IDirectDraw4
 0x004a9780,16,IID_IDirect3D3,_IID_IDirect3D3
+0x004a9830,16,IID_IDirect3DTexture2,_IID_IDirect3DTexture2
 0x004aa150,16,IID_IDirectInput2A,_IID_IDirectInput2A
 0x004aa190,16,IID_IDirectInputDevice2A,_IID_IDirectInputDevice2A
 0x004aa280,16,GUID_SysKeyboard,_GUID_SysKeyboard
@@ -2431,6 +2432,7 @@ address,size,name,symbol
 0x00536f14,4,bLaraUnderWater,_bLaraUnderWater
 0x00536f1c,1,MonoScreenOn,_MonoScreenOn
 0x00577458,4,loadbar_maxpos,_loadbar_maxpos
+0x00577460,40,MonoScreen,_MonoScreen
 0x00577488,4,loadbar_pos,_loadbar_pos
 0x005b7494,4,ControlMethod,_ControlMethod
 0x005b74b0,4,current_item,_current_item

@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="241.70" height="12" x="0" y="0" class="named"><title>1094 · 70.67%</title></rect>
-<rect width="0.44" height="12" x="241.70" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="13.70" height="12" x="242.14" y="0" class="nonmatching"><title>62 · 4.01%</title></rect>
-<rect width="86.16" height="12" x="255.84" y="0" class="todo"><title>390 · 25.19%</title></rect>
+<rect width="241.92" height="12" x="0" y="0" class="named"><title>1095 · 70.74%</title></rect>
+<rect width="0.44" height="12" x="241.92" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="13.70" height="12" x="242.36" y="0" class="nonmatching"><title>62 · 4.01%</title></rect>
+<rect width="85.94" height="12" x="256.06" y="0" class="todo"><title>389 · 25.13%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">70.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1094</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">62</tspan> · <tspan class="todo">390</tspan></text>
+<text text-anchor="end" x="522" y="7.50">70.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1095</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">62</tspan> · <tspan class="todo">389</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="118.49" height="12" x="0" y="0" class="named"><title>215 KB · 34.65%</title></rect>
-<rect width="0.12" height="12" x="118.49" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="24.44" height="12" x="118.61" y="0" class="nonmatching"><title>44 KB · 7.15%</title></rect>
-<rect width="198.95" height="12" x="143.05" y="0" class="todo"><title>361 KB · 58.17%</title></rect>
+<rect width="118.92" height="12" x="0" y="0" class="named"><title>216 KB · 34.77%</title></rect>
+<rect width="0.12" height="12" x="118.92" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="24.44" height="12" x="119.04" y="0" class="nonmatching"><title>44 KB · 7.15%</title></rect>
+<rect width="198.53" height="12" x="143.47" y="0" class="todo"><title>360 KB · 58.05%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">34.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">215 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">44 KB</tspan> · <tspan class="todo">361 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">34.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">216 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">44 KB</tspan> · <tspan class="todo">360 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1312,7 +1312,7 @@
 <rect width="12" height="12" x="645" y="360" class="named"><title>0x00479760 ClearDynamicLighting (92 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="360" class="todo"><title>0x004797c0 MemBltSurf (1053 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="360" class="named"><title>0x00479be0 RGBM_Mono (35 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="360" class="todo"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="360" class="named"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="360" class="named"><title>0x00479f20 CreateMonoScreen (20 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="360" class="todo"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="360" class="todo"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
@@ -1836,7 +1836,7 @@
 <rect width="17.27" height="17.59" x="531.58" y="21.42" class="todo"><title>0x00478b50 SetupLight (787 bytes)</title></rect>
 <rect width="17.16" height="17.59" x="551.85" y="21.42" class="named"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>
 <rect width="17.11" height="17.59" x="572" y="21.42" class="named"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
-<rect width="17" height="17.59" x="592.12" y="21.42" class="todo"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
+<rect width="17" height="17.59" x="592.12" y="21.42" class="named"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
 <rect width="16.91" height="17.59" x="612.12" y="21.42" class="named"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>
 <rect width="16.83" height="17.59" x="632.03" y="21.42" class="todo"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
 <rect width="16.78" height="17.59" x="651.86" y="21.42" class="todo"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
