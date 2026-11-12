@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="224.61" height="12" x="0" y="0" class="named"><title>1016 · 65.68%</title></rect>
-<rect width="0.44" height="12" x="224.61" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="225.05" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="108.55" height="12" x="233.45" y="0" class="todo"><title>491 · 31.74%</title></rect>
+<rect width="224.83" height="12" x="0" y="0" class="named"><title>1017 · 65.74%</title></rect>
+<rect width="0.44" height="12" x="224.83" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="225.27" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="108.33" height="12" x="233.67" y="0" class="todo"><title>490 · 31.67%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">65.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1016</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">491</tspan></text>
+<text text-anchor="end" x="522" y="7.50">65.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1017</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">490</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="97.50" height="12" x="0" y="0" class="named"><title>177 KB · 28.51%</title></rect>
-<rect width="0.12" height="12" x="97.50" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="97.62" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="234.22" height="12" x="107.78" y="0" class="todo"><title>425 KB · 68.49%</title></rect>
+<rect width="97.68" height="12" x="0" y="0" class="named"><title>177 KB · 28.56%</title></rect>
+<rect width="0.12" height="12" x="97.68" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="97.80" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="234.05" height="12" x="107.95" y="0" class="todo"><title>425 KB · 68.44%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">28.5%</text>
+<text text-anchor="end" x="522" y="24.50">28.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">177 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">425 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -132,7 +132,7 @@
 <rect width="12" height="12" x="195" y="15" class="todo"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="15" class="todo"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="15" class="todo"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="15" class="todo"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="15" class="named"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="15" class="named"><title>0x0040a930 InitialiseMummy (147 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="15" class="nonmatching"><title>0x0040a9d0 MummyControl (1244 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="15" class="named"><title>0x0040aeb0 TargetVisible (193 bytes)</title></rect>
@@ -2151,7 +2151,7 @@
 <rect width="11" height="11.20" x="443.02" y="215.62" class="named"><title>0x00438180 TriggerGlobalFireSmoke (319 bytes)</title></rect>
 <rect width="11" height="11.13" x="443.02" y="229.82" class="todo"><title>0x00495460 SW_DrawPrimitives (317 bytes)</title></rect>
 <rect width="11" height="11.06" x="443.02" y="243.95" class="named"><title>0x00439c00 DrawGunflashes (315 bytes)</title></rect>
-<rect width="11" height="11.02" x="443.02" y="258" class="todo"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
+<rect width="11" height="11.02" x="443.02" y="258" class="named"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
 <rect width="11" height="10.99" x="443.02" y="272.03" class="named"><title>0x004648f0 GetOnBike (313 bytes)</title></rect>
 <rect width="11" height="10.99" x="443.02" y="286.02" class="nonmatching"><title>0x00471e00 ProjectVerts (313 bytes)</title></rect>
 <rect width="11" height="10.95" x="443.02" y="300.01" class="named"><title>0x0043ad10 UpdateShockwaves (312 bytes)</title></rect>
