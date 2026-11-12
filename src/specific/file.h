@@ -41,6 +41,7 @@ extern FILE *level_fp;
 extern sint16 *aranges;
 extern sint32 nAnimUVRanges;
 extern TEXTURESTRUCT *textinfo;
+extern SPRITESTRUCT *spriteinfo;
 extern float AnimatingTexturesV[16][8][3];
 
 FILE *FileOpen(const char *name);

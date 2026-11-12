@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="198.74" height="12" x="0" y="0" class="named"><title>899 · 58.11%</title></rect>
-<rect width="0.44" height="12" x="198.74" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="199.19" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="136.18" height="12" x="205.82" y="0" class="todo"><title>616 · 39.82%</title></rect>
+<rect width="198.97" height="12" x="0" y="0" class="named"><title>900 · 58.18%</title></rect>
+<rect width="0.44" height="12" x="198.97" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="199.41" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="135.96" height="12" x="206.04" y="0" class="todo"><title>615 · 39.75%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">58.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">899</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">616</tspan></text>
+<text text-anchor="end" x="522" y="7.50">58.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">900</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">615</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="85.81" height="12" x="0" y="0" class="named"><title>156 KB · 25.09%</title></rect>
-<rect width="0.12" height="12" x="85.81" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="85.93" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="247.16" height="12" x="94.84" y="0" class="todo"><title>448 KB · 72.27%</title></rect>
+<rect width="85.91" height="12" x="0" y="0" class="named"><title>156 KB · 25.12%</title></rect>
+<rect width="0.12" height="12" x="85.91" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="86.03" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="247.05" height="12" x="94.95" y="0" class="todo"><title>448 KB · 72.24%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">25.1%</text>
+<text text-anchor="end" x="522" y="24.50">25.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">156 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">448 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1413,7 +1413,7 @@
 <rect width="12" height="12" x="660" y="390" class="todo"><title>0x00488690 ClipLine (689 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="390" class="todo"><title>0x00488950 DrawFlatSky (2568 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="390" class="named"><title>0x00489360 ClipCheckPoint (278 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="390" class="todo"><title>0x00489480 OutputSky (184 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="390" class="named"><title>0x00489480 OutputSky (184 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="390" class="todo"><title>0x00489540 DrawRope (1032 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="390" class="todo"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="405" class="todo"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
@@ -2389,7 +2389,7 @@
 <rect width="8.26" height="8.65" x="507.48" y="303.70" class="named"><title>0x00431da0 lara_as_surftread (185 bytes)</title></rect>
 <rect width="8.26" height="8.65" x="507.48" y="315.36" class="named"><title>0x00491ea0 DXDDCreate (185 bytes)</title></rect>
 <rect width="8.26" height="8.61" x="507.48" y="327.01" class="named"><title>0x00477600 S_LoadGame (184 bytes)</title></rect>
-<rect width="8.26" height="8.61" x="507.48" y="338.62" class="todo"><title>0x00489480 OutputSky (184 bytes)</title></rect>
+<rect width="8.26" height="8.61" x="507.48" y="338.62" class="named"><title>0x00489480 OutputSky (184 bytes)</title></rect>
 <rect width="8.26" height="8.56" x="507.48" y="350.23" class="named"><title>0x004229d0 LaraCollideStop (183 bytes)</title></rect>
 <rect width="8.26" height="8.51" x="507.48" y="361.79" class="named"><title>0x0040b060 GunHit (182 bytes)</title></rect>
 <rect width="8.26" height="8.51" x="507.48" y="373.30" class="todo"><title>0x00410070 TriggerSethMissile (182 bytes)</title></rect>

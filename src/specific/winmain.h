@@ -144,6 +144,8 @@ typedef struct WINAPP {
 } WINAPP;
 
 void DXSaveScreen(LPDIRECTDRAWSURFACE4 surf, const char *name);
+sint32 MungeFPCW(sint16 *fpcw);
+void RestoreFPCW(sint16 fpcw);
 sint32 DXCreate(sint32 w, sint32 h, sint32 bpp, sint32 Flags, DXPTR *dxptr, HWND hWnd, sint32 WindowStyle);
 BOOL CALLBACK DXEnumDirectDraw(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext);
 BOOL CALLBACK DXEnumDirectSound(LPGUID lpGuid, LPCSTR lpcstrDescription, LPCSTR lpcstrModule, LPVOID lpContext);
@@ -159,5 +161,6 @@ extern WINAPP App;
 extern DXINFO *G_dxinfo;
 extern DXPTR *G_dxptr;
 extern HWND G_hwnd;
+extern sint16 FPCW;
 
 #endif

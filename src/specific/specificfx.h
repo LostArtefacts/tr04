@@ -26,5 +26,6 @@ void InitBinoculars(void);
 void DrawFlash(void);
 void DoScreenFade(void);
 void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip);
+void OutputSky(void);
 
 #endif

@@ -28,5 +28,6 @@ extern TEXTUREBUCKET Bucket[20];
 void InsertRoom(ROOM_INFO *r);
 
 void InitBuckets(void);
+void DrawBuckets(void);
 
 #endif

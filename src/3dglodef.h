@@ -70,6 +70,17 @@ typedef struct mesh_data {
     void *Normals;
 } MESH_DATA;
 
+typedef struct SPRITESTRUCT {
+    uint16 tpage;
+    uint16 offset;
+    uint16 width;
+    uint16 height;
+    float x1;
+    float y1;
+    float x2;
+    float y2;
+} SPRITESTRUCT;
+
 typedef struct texture_struct {
     uint16 drawtype;
     uint16 tpage;

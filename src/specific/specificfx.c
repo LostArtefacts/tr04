@@ -9,6 +9,9 @@
 #include "function_table.h"
 #include "polyinsert.h"
 #include "../gameflow.h"
+#include "winmain.h"
+#include "file.h"
+#include "drawroom.h"
 
 void InitTarget_2(void)
 {
@@ -88,6 +91,26 @@ void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip)
         clipdistance = -128;
     }
     clip[0] = clipdistance;
+}
+
+void OutputSky(void)
+{
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_SRCBLEND, D3DBLEND_SRCALPHA);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_DESTBLEND, D3DBLEND_INVSRCALPHA);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ALPHABLENDENABLE, 0);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ZENABLE, 0);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ZWRITEENABLE, 0);
+    DrawBuckets();
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ZENABLE, 1);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ZWRITEENABLE, 1);
+    SortPolyList(SortCount, SortList);
+    RestoreFPCW(FPCW);
+    SW_SetZLimit(0);
+    DrawSortList();
+    SW_SetZLimit(0.6F);
+    MungeFPCW(&FPCW);
+    InitBuckets();
+    InitialiseSortList();
 }
 
 void SetFade(sint32 start, sint32 end)
