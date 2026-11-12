@@ -17,5 +17,6 @@ void RifleHandler(sint32 weapon_type);
 void FireCrossbow(PHD_3DPOS *pos);
 void CrossbowHitSwitchType78(ITEM_INFO *item, ITEM_INFO *target, sint32 MustHitLastNode);
 void ControlCrossbow(sint16 item_number);
+void ControlGrenade(sint16 item_number);
 
 #endif

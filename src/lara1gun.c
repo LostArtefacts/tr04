@@ -18,6 +18,8 @@
 #include "specific/input.h"
 #include "objects.h"
 #include "debris.h"
+#include "switch.h"
+#include "specific/polyinsert.h"
 
 void draw_shotgun_meshes(sint32 weapon_type)
 {
@@ -211,6 +213,263 @@ void FireGrenade(void)
     else
         item->item_flags[0] = 3;
     savegame.Game.AmmoUsed++;
+}
+
+void ControlGrenade(sint16 item_number)
+{
+    ITEM_INFO **itemlist;
+    MESH_INFO **meshlist;
+    ITEM_INFO *item, *item2, *target;
+    MESH_INFO *mesh;
+    FLOOR_INFO *floor;
+    PHD_VECTOR pos;
+    sint32 abovewater, xv, yv, zv, exploded, rad, i, ox, oy, oz, yrot;
+    sint16 new_num, room_number, NumTrigs, j;
+    sint16 TriggerItems[8];
+
+    item = &items[item_number];
+    if (item->item_flags[1]) {
+        if (!--item->item_flags[1]) {
+            KillItem(item_number);
+            return;
+        }
+        if (item->item_flags[0] == 3) {
+            if (item->item_flags[1] == 1) {
+                FlashFader = 32;
+                FlashFadeR = 255;
+                FlashFadeG = 255;
+                FlashFadeB = 255;
+                lara.blindTimer = 120;
+            } else {
+                FlashFadeR = (GetRandomControl() & 0x1F) + 224;
+                FlashFadeB = FlashFadeG = FlashFadeR - (GetRandomControl() & 0x1F);
+                FlashFader = 32;
+            }
+            if (IsVolumetric())
+                FlashFader = 0;
+            TriggerFlashSmoke(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number);
+            TriggerFlashSmoke(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number);
+        } else {
+            new_num = CreateItem();
+            if (new_num != NO_ITEM) {
+                item2 = &items[new_num];
+                item2->shade = -0x3DF0;
+                item2->object_number = GRENADE;
+                item2->room_number = item->room_number;
+                item2->pos.x_pos = (GetRandomControl() & 0x1FF) + item->pos.x_pos - 256;
+                item2->pos.y_pos = item->pos.y_pos - 256;
+                item2->pos.z_pos = (GetRandomControl() & 0x1FF) + item->pos.z_pos - 256;
+                InitialiseItem(new_num);
+                item2->pos.x_rot = (GetRandomControl() & 0x3FFF) + 0x2000;
+                item2->pos.y_rot = GetRandomControl() << 1;
+                item2->pos.z_rot = 0;
+                item2->speed = 64;
+                item2->fallspeed = (-64 * (rcossin_tbl[(item2->pos.x_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+                item2->current_anim_state = item2->pos.x_rot;
+                item2->goal_anim_state = item2->pos.y_rot;
+                item2->required_anim_state = 0;
+                AddActiveItem(new_num);
+                item2->status = ITEM_INVISIBLE;
+                item2->item_flags[0] = 4;
+                item2->item_flags[2] = item->item_flags[2];
+                item2->hit_points = 3000;
+                if (room[item2->room_number].flags & ROOM_UNDERWATER)
+                    item2->hit_points = 1;
+            }
+        }
+        return;
+    }
+    ox = item->pos.x_pos;
+    oy = item->pos.y_pos;
+    oz = item->pos.z_pos;
+    item->shade = -0x3DF0;
+    if (room[item->room_number].flags & ROOM_UNDERWATER) {
+        abovewater = 0;
+        item->fallspeed += (5 - item->fallspeed) >> 1;
+        item->speed -= item->speed >> 2;
+        if (item->speed) {
+            item->pos.z_rot += 182 * ((item->speed >> 4) + 3);
+            if (item->required_anim_state)
+                item->pos.y_rot += 182 * ((item->speed >> 2) + 3);
+            else
+                item->pos.x_rot += 182 * ((item->speed >> 2) + 3);
+        }
+    } else {
+        abovewater = 1;
+        item->fallspeed += 3;
+        if (item->speed) {
+            item->pos.z_rot += 182 * ((item->speed >> 2) + 7);
+            if (item->required_anim_state)
+                item->pos.y_rot += 182 * ((item->speed >> 1) + 7);
+            else
+                item->pos.x_rot += 182 * ((item->speed >> 1) + 7);
+        }
+    }
+    if (item->speed && abovewater) {
+        phd_PushUnitMatrix();
+        phd_mxptr[M03] = 0;
+        phd_mxptr[M13] = 0;
+        phd_mxptr[M23] = 0;
+        phd_RotYXZ(item->pos.y_rot + 0x8000, item->pos.x_rot, item->pos.z_rot);
+        phd_TranslateRel(0, 0, -64);
+        pos.x = phd_mxptr[M03] >> W2V_SHIFT;
+        pos.y = phd_mxptr[M13] >> W2V_SHIFT;
+        pos.z = phd_mxptr[M23] >> W2V_SHIFT;
+        phd_PopMatrix();
+        TriggerRocketSmoke(item->pos.x_pos + pos.x, item->pos.y_pos + pos.y, item->pos.z_pos + pos.z, -1);
+    }
+    zv = ((rcossin_tbl[((item->goal_anim_state >> 3) & 0x1FFE) + 1] << 2) * item->speed) >> W2V_SHIFT;
+    item->pos.z_pos += zv;
+    xv = ((rcossin_tbl[(item->goal_anim_state >> 3) & 0x1FFE] << 2) * item->speed) >> W2V_SHIFT;
+    item->pos.x_pos += xv;
+    yv = item->fallspeed;
+    item->pos.y_pos += yv;
+    if (item->item_flags[0] == 4) {
+        room_number = item->room_number;
+        floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+        if (GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos) < item->pos.y_pos ||
+            GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos) > item->pos.y_pos)
+            item->hit_points = 1;
+    } else {
+        yrot = item->pos.y_rot;
+        item->pos.y_rot = item->goal_anim_state;
+        DoProperDetection(item_number, ox, oy, oz, xv, yv, zv);
+        item->goal_anim_state = item->pos.y_rot;
+        item->pos.y_rot = yrot;
+    }
+    room_number = item->room_number;
+    GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    if (room[room_number].flags & ROOM_UNDERWATER && abovewater) {
+        splash_setup.x = item->pos.x_pos;
+        splash_setup.y = room[room_number].maxceiling;
+        splash_setup.z = item->pos.z_pos;
+        splash_setup.InnerRad = 32;
+        splash_setup.InnerSize = 8;
+        splash_setup.InnerRadVel = 320;
+        splash_setup.InnerYVel = -40 * item->fallspeed;
+        splash_setup.pad1 = 48;
+        splash_setup.MiddleRad = 32;
+        splash_setup.MiddleSize = 480;
+        splash_setup.MiddleRadVel = -20 * item->fallspeed;
+        splash_setup.MiddleYVel = 32;
+        splash_setup.pad2 = 128;
+        splash_setup.OuterRad = 544;
+        SetupSplash(&splash_setup);
+        if (item->item_flags[0] == 4)
+            item->hit_points = 1;
+    }
+    if (item->item_flags[0] == 4)
+        TriggerFireFlame(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, -1, 1);
+    exploded = 0;
+    rad = 0;
+    if (item->hit_points) {
+        if (!--item->hit_points) {
+            rad = 2048;
+            exploded = 1;
+        } else if (item->hit_points > 118)
+            return;
+    }
+    if (item->item_flags[0] != 3 || !exploded) {
+        for (i = 0; i < 2; i++) {
+            itemlist = (ITEM_INFO **)&tsv_buffer[0x2000];
+            meshlist = (MESH_INFO **)&tsv_buffer[0x3000];
+            GetCollidedObjects(item, rad, 1, itemlist, meshlist, 1);
+            if (!exploded) {
+                if (!*itemlist && !*meshlist)
+                    return;
+                exploded = 1;
+                if (item->item_flags[0] == 3)
+                    break;
+                rad = 2048;
+                continue;
+            }
+            target = *itemlist;
+            while (target) {
+                if (target->object_number >= SMASH_OBJECT1 && target->object_number <= SMASH_OBJECT8) {
+                    TriggerExplosionSparks(target->pos.x_pos, target->pos.y_pos, target->pos.z_pos, 3, -2, 0, target->room_number);
+                    target->pos.y_pos -= 128;
+                    TriggerShockwave((PHD_VECTOR *)&target->pos, 0x1300030, 96, 0x18806000, 0);
+                    target->pos.y_pos += 128;
+                    ExplodeItemNode(target, 0, 0, 128);
+                    SmashObject(target - items);
+                    KillItem(target - items);
+                } else if ((target->object_number == SWITCH_TYPE7 || target->object_number == SWITCH_TYPE8) && !(target->flags & IFL_SWITCH_ONESHOT)) {
+                    if (!(target->flags & IFL_CODEBITS) || (target->flags & IFL_CODEBITS) == IFL_CODEBITS) {
+                        NumTrigs = (sint16)GetSwitchTrigger(target, TriggerItems, 1);
+                        for (j = NumTrigs; j > 0; j--) {
+                            AddActiveItem(TriggerItems[j - 1]);
+                            items[TriggerItems[j - 1]].status = ITEM_ACTIVE;
+                            items[TriggerItems[j - 1]].flags |= IFL_CODEBITS;
+                        }
+                    } else {
+                        sint16 rn;
+
+                        rn = target->room_number;
+                        floor = GetFloor(target->pos.x_pos, target->pos.y_pos - 256, target->pos.z_pos, &rn);
+                        GetHeight(floor, target->pos.x_pos, target->pos.y_pos - 256, target->pos.z_pos);
+                        TestTriggers(trigger_index, 1, target->flags & IFL_CODEBITS);
+                    }
+                    if (target->object_number == SWITCH_TYPE7)
+                        ExplodeItemNode(target, objects[SWITCH_TYPE7].nmeshes - 1, 0, 64);
+                    AddActiveItem(target - items);
+                    target->status = ITEM_ACTIVE;
+                    target->flags |= IFL_SWITCH_ONESHOT | IFL_CODEBITS;
+                } else if (objects[target->object_number].intelligent || target->object_number == LARA)
+                    DoGrenadeDamageOnBaddie(target, item);
+                itemlist++;
+                target = *itemlist;
+            }
+            mesh = *meshlist;
+            while (mesh) {
+                if (mesh->static_number >= SHATTER0 && mesh->static_number < SHATTER8) {
+                    Log(0, "Shatter");
+                    TriggerExplosionSparks(mesh->x, mesh->y, mesh->z, 3, -2, 0, item->room_number);
+                    mesh->y -= 128;
+                    TriggerShockwave((PHD_VECTOR *)&mesh->x, 0xB00028, 64, 0x10806000, 0);
+                    mesh->y += 128;
+                    ShatterObject(0, mesh, -128, item->room_number, 0);
+                    SmashedMeshRoom[SmashedMeshCount] = item->room_number;
+                    SmashedMesh[SmashedMeshCount] = mesh;
+                    SmashedMeshCount++;
+                    mesh->Flags &= ~1;
+                }
+                meshlist++;
+                mesh = *meshlist;
+            }
+        }
+    }
+    if (exploded) {
+        if (item->item_flags[0] == 3) {
+            FlashFader = 32;
+            FlashFadeR = 255;
+            FlashFadeG = 255;
+            FlashFadeB = 255;
+            if (IsVolumetric()) {
+                FlashFader = 0;
+                TriggerFXFogBulb(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 4096, 255, 255, 255, 255, item->room_number);
+            }
+            TriggerFlashSmoke(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number);
+            TriggerFlashSmoke(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number);
+        } else if (room[item->room_number].flags & ROOM_UNDERWATER)
+            TriggerUnderwaterExplosion(item, 0);
+        else {
+            item->pos.y_pos -= 128;
+            TriggerShockwave((PHD_VECTOR *)&item->pos, 0x1300030, 96, 0x18806000, 0);
+            item->pos.y_pos += 128;
+            TriggerExplosionSparks(ox, oy, oz, 3, -2, 0, item->room_number);
+            for (i = 0; i < 2; i++)
+                TriggerExplosionSparks(ox, oy, oz, 3, -1, 0, item->room_number);
+        }
+        AlertNearbyGuards(item);
+        SoundEffect(SFX_EXPLOSION1, &item->pos, 0x1800000 | SFX_SETPITCH);
+        SoundEffect(SFX_EXPLOSION2, &item->pos, SFX_DEFAULT);
+        if (item->item_flags[0] == 1 || item->item_flags[0] == 4)
+            KillItem(item_number);
+        else {
+            item->mesh_bits = 0;
+            item->item_flags[1] = item->item_flags[0] == 2 ? 4 : 16;
+        }
+    }
 }
 
 void FireCrossbow(PHD_3DPOS *pos)
