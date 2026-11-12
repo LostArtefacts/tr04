@@ -12,6 +12,7 @@ void DXBitMask2ShiftCnt(uint32 mask, uint8 *shift, uint8 *count);
 HRESULT DXShowFrame(void);
 sint32 BPPToDDBD(sint32 BPP);
 void *AddStruct(void *p, sint32 num, sint32 size);
+void DXMove(sint32 x, sint32 y);
 
 extern uint8 keymap[256];
 

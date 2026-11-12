@@ -61,6 +61,13 @@ sint32 BPPToDDBD(sint32 BPP)
     }
 }
 
+void DXMove(sint32 x, sint32 y)
+{
+    Log(2, "DXMove : x %d y %d", x, y);
+    if (G_dxptr && !(G_dxptr->Flags & 1))
+        SetRect(&G_dxptr->rScreen, x, y, x + G_dxptr->dwRenderWidth, y + G_dxptr->dwRenderHeight);
+}
+
 void DXReadKeyboard(char *KeyMap)
 {
     HRESULT state;
