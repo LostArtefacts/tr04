@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="254.95" height="12" x="0" y="0" class="named"><title>1154 · 74.55%</title></rect>
 <rect width="0.66" height="12" x="254.95" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="19" height="12" x="255.62" y="0" class="nonmatching"><title>86 · 5.56%</title></rect>
-<rect width="67.38" height="12" x="274.62" y="0" class="todo"><title>305 · 19.70%</title></rect>
+<rect width="19.22" height="12" x="255.62" y="0" class="nonmatching"><title>87 · 5.62%</title></rect>
+<rect width="67.16" height="12" x="274.84" y="0" class="todo"><title>304 · 19.64%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">74.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1154</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">86</tspan> · <tspan class="todo">305</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1154</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">87</tspan> · <tspan class="todo">304</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="138.73" height="12" x="0" y="0" class="named"><title>253 KB · 40.56%</title></rect>
 <rect width="0.13" height="12" x="138.73" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="34.34" height="12" x="138.86" y="0" class="nonmatching"><title>63 KB · 10.04%</title></rect>
-<rect width="168.80" height="12" x="173.20" y="0" class="todo"><title>307 KB · 49.36%</title></rect>
+<rect width="34.87" height="12" x="138.86" y="0" class="nonmatching"><title>63 KB · 10.20%</title></rect>
+<rect width="168.26" height="12" x="173.74" y="0" class="todo"><title>306 KB · 49.20%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">40.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">253 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">63 KB</tspan> · <tspan class="todo">307 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">253 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">63 KB</tspan> · <tspan class="todo">306 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -481,7 +481,7 @@
 <rect width="12" height="12" x="180" y="120" class="named"><title>0x0042ddc0 CheckForHoldingState (47 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="120" class="named"><title>0x0042ddf0 InitialiseNewWeapon (308 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="120" class="named"><title>0x0042df30 LaraTargetInfo (414 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="120" class="todo"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="120" class="nonmatching"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="120" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="120" class="todo"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="120" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
@@ -1778,7 +1778,7 @@
 <rect width="20.12" height="18.88" x="283.46" y="313.85" class="named"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="20.12" height="18.77" x="283.46" y="335.73" class="todo"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
 <rect width="20.12" height="18.75" x="283.46" y="357.50" class="nonmatching"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>
-<rect width="20.12" height="18.63" x="283.46" y="379.25" class="todo"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
+<rect width="20.12" height="18.63" x="283.46" y="379.25" class="nonmatching"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
 <rect width="20.12" height="18.40" x="283.46" y="400.88" class="todo"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
 <rect width="20.12" height="18.38" x="283.46" y="422.28" class="todo"><title>0x004349f0 TriggerExplosionSparks (961 bytes)</title></rect>
 <rect width="20.12" height="18.34" x="283.46" y="443.66" class="named"><title>0x00462720 TurnSwitchCollision (959 bytes)</title></rect>

@@ -2883,6 +2883,8 @@ address,size,name,symbol
 0x0080df50,16,bum_vdest,_bum_vdest
 0x0080df60,18,bum_view,_bum_view
 0x0080df80,16,bum_vsrc,_bum_vsrc
+0x0080dfa0,32,TargetList,_TargetList
+0x0080dfc0,32,LastTargets,_LastTargets
 0x0080dfe0,4,lara,_lara
 0x0080e13a,2,DashTimer,_DashTimer
 0x0080e13c,4,lara_item,_lara_item

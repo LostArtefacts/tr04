@@ -282,6 +282,143 @@ void LaraTargetInfo(WEAPON_INFO *winfo)
     lara.target_angles[1] = ang[1];
 }
 
+void LaraGetNewTarget(WEAPON_INFO *winfo)
+{
+    ITEM_INFO *item, *bestitem;
+    CREATURE_INFO *creature;
+    GAME_VECTOR src, target;
+    sint32 x, y, z, slot, match, dist, maxdist, maxdist2, bestdist;
+    sint16 ang[2];
+    sint16 bestyrot, yrot, targets;
+
+    if (BinocularRange) {
+        lara.target = 0;
+        return;
+    }
+    bestitem = 0;
+    src.x = lara_item->pos.x_pos;
+    src.y = lara_item->pos.y_pos - 650;
+    src.z = lara_item->pos.z_pos;
+    src.room_number = lara_item->room_number;
+    bestyrot = 0x7FFF;
+    bestdist = 0x7FFFFFFF;
+    maxdist = winfo->target_dist;
+    maxdist2 = maxdist * maxdist;
+    creature = baddie_slots;
+    targets = 0;
+    for (slot = 0; slot < 5; slot++, creature++) {
+        if (creature->item_num != NO_ITEM) {
+            item = &items[creature->item_num];
+            if (item->hit_points > 0) {
+                x = item->pos.x_pos - src.x;
+                y = item->pos.y_pos - src.y;
+                z = item->pos.z_pos - src.z;
+                if (ABS(x) <= maxdist && ABS(y) <= maxdist && ABS(z) <= maxdist) {
+                    dist = z * z + y * y + x * x;
+                    if (dist < maxdist2) {
+                        find_target_point(item, &target);
+                        if (LOS(&src, &target)) {
+                            phd_GetVectorAngles(target.x - src.x, target.y - src.y, target.z - src.z, ang);
+                            ang[0] -= lara_item->pos.y_rot + lara.torso_y_rot;
+                            ang[1] -= lara_item->pos.x_rot + lara.torso_x_rot;
+                            if (ang[0] >= winfo->lock_angles[0] && ang[0] <= winfo->lock_angles[1] && ang[1] >= winfo->lock_angles[2] && ang[1] <= winfo->lock_angles[3]) {
+                                TargetList[targets] = item;
+                                targets++;
+                                yrot = ABS(ang[0]);
+                                if (yrot < bestyrot + 2730 && dist < bestdist) {
+                                    bestdist = dist;
+                                    bestyrot = yrot;
+                                    bestitem = item;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    TargetList[targets] = 0;
+    if (!TargetList[0]) {
+        lara.target = 0;
+    } else {
+        if (savegame.AutoTarget) {
+            for (slot = 0; slot < 8; slot++) {
+                if (!TargetList[slot])
+                    lara.target = 0;
+                if (TargetList[slot] == lara.target)
+                    break;
+            }
+            if (!lara.target) {
+                lara.target = bestitem;
+                LastTargets[0] = 0;
+            } else if (input & IN_TARGET) {
+                lara.target = 0;
+                for (match = 0; match < 8; match++) {
+                    if (!TargetList[match])
+                        break;
+                    slot = 0;
+                    do {
+                        if (!LastTargets[slot])
+                            break;
+                        if (LastTargets[slot] == TargetList[match])
+                            goto next1;
+                        slot++;
+                    } while (slot < 8);
+                    lara.target = TargetList[match];
+                    break;
+next1:
+                    ;
+                }
+                if (!lara.target) {
+                    lara.target = bestitem;
+                    LastTargets[0] = 0;
+                }
+            }
+        } else {
+            for (slot = 0; slot < 8; slot++) {
+                if (!TargetList[slot])
+                    lara.target = 0;
+                if (TargetList[slot] == lara.target)
+                    break;
+            }
+            if (input & IN_TARGET) {
+                if (!lara.target) {
+                    lara.target = bestitem;
+                    LastTargets[0] = 0;
+                } else {
+                    lara.target = 0;
+                    for (match = 0; match < 8; match++) {
+                        if (!TargetList[match])
+                            break;
+                        slot = 0;
+                        do {
+                            if (!LastTargets[slot])
+                                break;
+                            if (LastTargets[slot] == TargetList[match])
+                                goto next2;
+                            slot++;
+                        } while (slot < 8);
+                        lara.target = TargetList[match];
+                        break;
+next2:
+                        ;
+                    }
+                    if (!lara.target) {
+                        lara.target = bestitem;
+                        LastTargets[0] = 0;
+                    }
+                }
+            }
+        }
+    }
+    if (lara.target != LastTargets[0]) {
+        for (slot = 7; slot > 0; slot--)
+            LastTargets[slot] = LastTargets[slot - 1];
+        LastTargets[0] = lara.target;
+    }
+    LaraTargetInfo(winfo);
+}
+
 void find_target_point(ITEM_INFO *item, GAME_VECTOR *target)
 {
     sint32 x, y, z, c, s;

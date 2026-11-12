@@ -37,5 +37,7 @@ extern sint16 HoldStates[18];
 extern GAME_VECTOR bum_vdest;
 extern PHD_3DPOS bum_view;
 extern GAME_VECTOR bum_vsrc;
+extern ITEM_INFO *TargetList[8];
+extern ITEM_INFO *LastTargets[8];
 
 #endif
