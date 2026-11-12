@@ -124,6 +124,34 @@ void DXBitMask2ShiftCnt(uint32 mask, uint8 *shift, uint8 *count)
     *count = i;
 }
 
+HRESULT CALLBACK DXEnumDisplayModes(LPDDSURFACEDESC2 lpDDSurfaceDesc2, LPVOID lpContext)
+{
+    DXDIRECTDRAWINFO *DDInfo;
+    DXDISPLAYMODE *DM;
+    sint32 nDisplayModes;
+
+    DDInfo = (DXDIRECTDRAWINFO *)lpContext;
+    nDisplayModes = DDInfo->nDisplayModes;
+    DDInfo->DisplayModes = (DXDISPLAYMODE *)AddStruct(DDInfo->DisplayModes, nDisplayModes, sizeof(DXDISPLAYMODE));
+    DM = &DDInfo->DisplayModes[nDisplayModes];
+    DM->w = lpDDSurfaceDesc2->dwWidth;
+    DM->h = lpDDSurfaceDesc2->dwHeight;
+    DM->bpp = lpDDSurfaceDesc2->ddpfPixelFormat.dwRGBBitCount;
+    DM->bPalette = (lpDDSurfaceDesc2->ddpfPixelFormat.dwFlags & DDPF_PALETTEINDEXED8) >> 5;
+    DM->RefreshRate = lpDDSurfaceDesc2->dwRefreshRate;
+    memcpy(&DM->ddsd, lpDDSurfaceDesc2, sizeof(DM->ddsd));
+    if (!DM->bPalette) {
+        DXBitMask2ShiftCnt(lpDDSurfaceDesc2->ddpfPixelFormat.dwRBitMask, &DM->rshift, &DM->rbpp);
+        DXBitMask2ShiftCnt(lpDDSurfaceDesc2->ddpfPixelFormat.dwGBitMask, &DM->gshift, &DM->gbpp);
+        DXBitMask2ShiftCnt(lpDDSurfaceDesc2->ddpfPixelFormat.dwBBitMask, &DM->bshift, &DM->bbpp);
+        Log(3, "%d x %d - %d Bit - %d%d%d", DM->w, DM->h, DM->bpp, DM->rbpp, DM->gbpp, DM->bbpp);
+    } else {
+        Log(3, "%d x %d - %d Bit - Palette", DM->w, DM->h, DM->bpp);
+    }
+    DDInfo->nDisplayModes++;
+    return DDENUMRET_OK;
+}
+
 sint32 BPPToDDBD(sint32 BPP)
 {
     switch (BPP) {

@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="195.87" height="12" x="0" y="0" class="named"><title>886 · 57.27%</title></rect>
-<rect width="0.44" height="12" x="195.87" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="196.31" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="139.05" height="12" x="202.95" y="0" class="todo"><title>629 · 40.66%</title></rect>
+<rect width="196.09" height="12" x="0" y="0" class="named"><title>887 · 57.34%</title></rect>
+<rect width="0.44" height="12" x="196.09" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="196.53" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="138.83" height="12" x="203.17" y="0" class="todo"><title>628 · 40.59%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">57.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">886</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">629</tspan></text>
+<text text-anchor="end" x="522" y="7.50">57.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">887</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">628</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="83.72" height="12" x="0" y="0" class="named"><title>152 KB · 24.48%</title></rect>
-<rect width="0.12" height="12" x="83.72" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="83.84" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="249.25" height="12" x="92.75" y="0" class="todo"><title>452 KB · 72.88%</title></rect>
+<rect width="83.88" height="12" x="0" y="0" class="named"><title>152 KB · 24.53%</title></rect>
+<rect width="0.12" height="12" x="83.88" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="84" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="249.09" height="12" x="92.91" y="0" class="todo"><title>452 KB · 72.83%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">24.5%</text>
+<text text-anchor="end" x="522" y="24.50">24.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">152 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">452 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1511,7 +1511,7 @@
 <rect width="12" height="12" x="630" y="420" class="named"><title>0x00491f60 DXD3DCreate (86 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="420" class="todo"><title>0x00491fc0 DXEnumDirectDraw (633 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="420" class="named"><title>0x00492240 DXBitMask2ShiftCnt (52 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="420" class="todo"><title>0x00492280 DXEnumDisplayModes (281 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="420" class="named"><title>0x00492280 DXEnumDisplayModes (281 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="420" class="named"><title>0x004923a0 BPPToDDBD (136 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="420" class="todo"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="420" class="todo"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
@@ -2192,7 +2192,7 @@
 <rect width="10.37" height="10.58" x="457.07" y="185.80" class="named"><title>0x004776c0 Key (284 bytes)</title></rect>
 <rect width="10.37" height="10.55" x="457.07" y="199.38" class="todo"><title>0x0048e6e0 FreeTextures (283 bytes)</title></rect>
 <rect width="10.37" height="10.51" x="457.07" y="212.92" class="todo"><title>0x00402850 ReTriggerBaboon (282 bytes)</title></rect>
-<rect width="10.37" height="10.47" x="457.07" y="226.43" class="todo"><title>0x00492280 DXEnumDisplayModes (281 bytes)</title></rect>
+<rect width="10.37" height="10.47" x="457.07" y="226.43" class="named"><title>0x00492280 DXEnumDisplayModes (281 bytes)</title></rect>
 <rect width="10.37" height="10.43" x="457.07" y="239.90" class="named"><title>0x00422ac0 lara_col_dashdive (280 bytes)</title></rect>
 <rect width="10.37" height="10.43" x="457.07" y="253.34" class="todo"><title>0x0042b600 DoGrenadeDamageOnBaddie (280 bytes)</title></rect>
 <rect width="10.37" height="10.43" x="457.07" y="266.77" class="todo"><title>0x0048b990 DrawTrainStrips (280 bytes)</title></rect>
