@@ -37,6 +37,18 @@ sint32 go_and_save_game(void)
     return SaveGame();
 }
 
+void insert_object_into_list_v2(sint32 num)
+{
+    if (options_table[num] & (OPT_UNUSED | OPT_COMBINE)) {
+        if (rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem != num) {
+            rings[RING_AMMO]->current_object_list[rings[RING_AMMO]->numobjectsinlist].invitem = num;
+            rings[RING_AMMO]->current_object_list[rings[RING_AMMO]->numobjectsinlist].yrot = 0;
+            rings[RING_AMMO]->current_object_list[rings[RING_AMMO]->numobjectsinlist].bright = 32;
+            rings[RING_AMMO]->numobjectsinlist++;
+        }
+    }
+}
+
 void insert_object_into_list(sint16 num)
 {
     rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->numobjectsinlist].invitem = num;
