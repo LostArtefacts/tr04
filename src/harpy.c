@@ -32,3 +32,14 @@ void TriggerHarpyMissile(PHD_3DPOS *pos, sint16 room_number, sint16 mesh)
         fx->frame_number = objects[BUBBLES].mesh_index + mesh * 2;
     }
 }
+
+void InitialiseHarpy(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    InitialiseCreature(item_number);
+    item->anim_number = objects[HARPY].anim_index + 4;
+    item->frame_number = anims[item->anim_number].frame_base;
+    item->current_anim_state = item->goal_anim_state = 1;
+}
