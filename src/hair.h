@@ -15,5 +15,8 @@ void DrawHair(void);
 
 extern sint32 first_hair[2];
 extern HAIR_STRUCT hairs[2][7];
+extern sint32 hair_wind;
+extern sint32 hair_wind_angle;
+extern sint32 hair_dwind_angle;
 
 #endif

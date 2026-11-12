@@ -200,7 +200,7 @@ address,size,name,symbol
 0x0041faf0,133,GetFlameTorch,_GetFlameTorch
 0x0041fb80,584,FlameTorchControl,_FlameTorchControl
 0x0041fdd0,126,InitialiseHair,_InitialiseHair
-0x0041fe50,2569,HairControl,_HairControl
+0x0041fe50,2592,HairControl,_HairControl
 0x00420870,176,GetCorrectStashPoints,_GetCorrectStashPoints
 0x00420920,338,DrawHair,_DrawHair
 0x00420a80,133,LaraCeilingFront,_LaraCeilingFront
