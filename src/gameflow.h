@@ -453,6 +453,8 @@ extern PHD_VECTOR load_target;
 extern uint8 load_roomnum;
 extern char gfLayer1Vel;
 extern char gfLayer2Vel;
+extern CVECTOR gfLayer1Col;
+extern CVECTOR gfLayer2Col;
 extern char gfUVRotate;
 extern char gfGameMode;
 extern uint8 gfCurrentLevel;

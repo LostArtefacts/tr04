@@ -15,6 +15,9 @@
 #include "sound.h"
 #include "gameflow.h"
 #include "specific/polyinsert.h"
+#include "specific/specificfx.h"
+#include "train.h"
+#include "objnums.h"
 
 #define S_LongMemCpy(d, s, n) memcpy(d, s, (n) * sizeof(sint32))
 
@@ -833,4 +836,92 @@ void UpdateSkyLightning(void)
         if (LightningRGB[i] > 255)
             LightningRGB[i] = 255;
     }
+}
+
+void RenderIt(sint16 CurrentRoom)
+{
+    ROOM_INFO *r;
+    sint32 i;
+
+    current_room = CurrentRoom;
+    r = &room[CurrentRoom];
+    r->test_left = 0;
+    phd_left = 0;
+    r->test_top = 0;
+    phd_top = 0;
+    r->test_right = phd_winxmax;
+    phd_right = phd_winxmax;
+    r->test_bottom = phd_winymax;
+    phd_bottom = phd_winymax;
+    outside = r->flags & ROOM_OUTSIDE;
+    camera_underwater = r->flags & ROOM_UNDERWATER;
+    r->bound_active = 2;
+    draw_room_list[0] = CurrentRoom;
+    room_list_start = 0;
+    room_list_end = 1;
+    number_draw_rooms = 0;
+
+    if (outside) {
+        outside_top = 0;
+        outside_left = 0;
+        outside_right = phd_winxmax;
+        outside_bottom = phd_winymax;
+    } else {
+        outside_left = phd_winxmax;
+        outside_top = phd_winymax;
+        outside_bottom = 0;
+        outside_right = 0;
+    }
+
+    GetRoomBounds();
+    InitialiseFogBulbs();
+    CreateFXBulbs();
+
+    if (outside) {
+        if (objects[HORIZON].loaded) {
+            if (BinocularRange)
+                AlterFOV(14560 - BinocularRange);
+
+            phd_PushMatrix();
+            phd_TranslateAbs(camera.pos.x, camera.pos.y, camera.pos.z);
+            nPolyType = 6;
+            phd_PushMatrix();
+
+            if (gfLevelFlags & GF_LAYER1) {
+                phd_RotY(32760);
+                if (gfLevelFlags & GF_LIGHTNING)
+                    DrawFlatSky((((LightningRGB[0] | (44 << 8)) << 8 | LightningRGB[1]) << 8) | LightningRGB[2], SkyPos, -1536, 4);
+                else
+                    DrawFlatSky(*(uint32 *)&gfLayer1Col, SkyPos, -1536, 4);
+            }
+
+            if (gfLevelFlags & GF_LAYER2)
+                DrawFlatSky(0xFF000000 | *(uint32 *)&gfLayer2Col, SkyPos2, -1536, 2);
+
+            if (gfLevelFlags & (GF_LAYER1 | GF_LAYER2))
+                OutputSky();
+
+            phd_PopMatrix();
+
+            if (gfLevelFlags & GF_HORIZON) {
+                phd_PutPolygonSkyMesh(meshes[objects[HORIZON].mesh_index], -1);
+                OutputSky();
+            }
+
+            phd_PopMatrix();
+        } else
+            outside = -1;
+    }
+
+    InitDynamicLighting();
+    nPolyType = 0;
+
+    for (i = 0; i < number_draw_rooms; i++)
+        S_InsertRoom(draw_rooms[i]);
+
+    if (gfLevelFlags & GF_TRAIN)
+        DrawTrainFloor();
+
+    for (i = 0; i < number_draw_rooms; i++)
+        PrintObjects(draw_rooms[i]);
 }

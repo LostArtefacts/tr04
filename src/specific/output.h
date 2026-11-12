@@ -25,6 +25,7 @@ void S_OutputPolyList(void);
 sint32 S_GetObjectBounds(sint16 *bounds);
 void _InsertRoom();
 void phd_PutPolygons_train(sint16 *objptr, sint32 clip);
+void phd_PutPolygonSkyMesh(sint16 *objptr, sint32 clipstatus);
 void StashSkinVertices(sint32 node);
 void SkinVerticesToScratch(sint32 node);
 HRESULT DDCopyBitmap(LPDIRECTDRAWSURFACE4 surf, HBITMAP hbm, sint32 x, sint32 y, sint32 dx, sint32 dy);
