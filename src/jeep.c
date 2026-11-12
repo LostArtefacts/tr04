@@ -1,4 +1,5 @@
 #include "jeep.h"
+#include "bike.h"
 #include "control.h"
 #include "lara.h"
 #include "lara1gun.h"
@@ -229,6 +230,175 @@ sint32 DoDynamics_jeep(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
             return fallspeed;
     }
     return fallspeed;
+}
+
+sint32 JeepDynamics(ITEM_INFO *item)
+{
+    JEEPINFO *jeep;
+    FLOOR_INFO *floor;
+    PHD_VECTOR pos, newPos;
+    PHD_VECTOR flPos, frPos, blPos, brPos, fmPos, flPos2, frPos2, blPos2, brPos2, fmPos2;
+    sint32 front_left, front_right, back_left, back_right, front_mid;
+    sint32 h, speed, anim, s, s2;
+    sint16 ang, vel, shift, shift2, room_number;
+
+    dont_exit_jeep = 0;
+    jeep = (JEEPINFO *)item->data;
+    front_left = TestHeight(item, 550, -256, &flPos);
+    front_right = TestHeight(item, 550, 256, &frPos);
+    back_left = TestHeight(item, -600, -256, &blPos);
+    back_right = TestHeight(item, -600, 256, &brPos);
+    front_mid = TestHeight(item, -600, 0, &fmPos);
+    pos.x = item->pos.x_pos;
+    pos.y = item->pos.y_pos;
+    pos.z = item->pos.z_pos;
+    if (blPos.y > back_left)
+        blPos.y = back_left;
+    if (brPos.y > back_right)
+        brPos.y = back_right;
+    if (flPos.y > front_left)
+        flPos.y = front_left;
+    if (frPos.y > front_right)
+        frPos.y = front_right;
+    if (fmPos.y > front_mid)
+        fmPos.y = front_mid;
+    if (item->pos.y_pos > item->floor - 8) {
+        if (jeep->turn_rate < -182)
+            jeep->turn_rate += 182;
+        else if (jeep->turn_rate > 182)
+            jeep->turn_rate -= 182;
+        else
+            jeep->turn_rate = 0;
+        item->pos.y_rot += (sint16)(jeep->extra_rotation + jeep->turn_rate);
+        ang = item->pos.y_rot - jeep->move_angle;
+        vel = (sint16)(728 - ((3 * jeep->velocity) >> 11));
+        if (!(input & IN_ACTION) && jeep->velocity > 0)
+            vel -= vel >> 2;
+        if (ang < -273) {
+            if (ang < -13650) {
+                item->pos.y_pos -= 41;
+                item->fallspeed = -6 - (GetRandomControl() & 3);
+                jeep->turn_rate = 0;
+                jeep->velocity -= jeep->velocity >> 3;
+            }
+            if (ang < -16380)
+                jeep->move_angle = item->pos.y_rot + 0x3FFC;
+            else
+                jeep->move_angle -= vel;
+        } else if (ang > 273) {
+            if (ang > 13650) {
+                item->pos.y_pos -= 41;
+                item->fallspeed = -6 - (GetRandomControl() & 3);
+                jeep->turn_rate = 0;
+                jeep->velocity -= jeep->velocity >> 3;
+            }
+            if (ang > 16380)
+                jeep->move_angle = item->pos.y_rot - 0x3FFC;
+            else
+                jeep->move_angle += vel;
+        } else
+            jeep->move_angle = item->pos.y_rot;
+    } else {
+        if (jeep->turn_rate < -91)
+            jeep->turn_rate += 91;
+        else if (jeep->turn_rate > 91)
+            jeep->turn_rate -= 91;
+        else
+            jeep->turn_rate = 0;
+        item->pos.y_rot += (sint16)(jeep->extra_rotation + jeep->turn_rate);
+        jeep->move_angle += (sint16)(item->pos.y_rot - jeep->move_angle) >> 5;
+    }
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (item->pos.y_pos >= h)
+        speed = (item->speed * (rcossin_tbl[((item->pos.x_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+    else
+        speed = item->speed;
+    item->pos.z_pos += (speed * (rcossin_tbl[((jeep->move_angle >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+    item->pos.x_pos += (speed * (rcossin_tbl[(jeep->move_angle >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+    if (item->pos.y_pos >= h) {
+        s = (100 * (rcossin_tbl[(item->pos.x_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+        if (ABS(s) > 16) {
+            dont_exit_jeep = 1;
+            if (s < 0)
+                jeep->velocity += ((s + 16) * (s + 16)) >> 1;
+            else
+                jeep->velocity -= ((s - 16) * (s - 16)) >> 1;
+        }
+        s = (128 * (rcossin_tbl[(item->pos.z_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+        if (ABS(s) > 32) {
+            dont_exit_jeep = 1;
+            if (s < 0) {
+                item->pos.x_pos += ((abs(s) - 24) * (rcossin_tbl[((item->pos.y_rot - 0x4000) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+                item->pos.z_pos += ((abs(s) - 24) * (rcossin_tbl[(((item->pos.y_rot - 0x4000) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+            } else {
+                item->pos.x_pos += ((abs(s) - 24) * (rcossin_tbl[((item->pos.y_rot + 0x4000) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+                item->pos.z_pos += ((abs(s) - 24) * (rcossin_tbl[(((item->pos.y_rot + 0x4000) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+            }
+        }
+    }
+    if (jeep->velocity > 0x8000)
+        jeep->velocity = 0x8000;
+    else if (jeep->velocity < -0x4000)
+        jeep->velocity = -0x4000;
+    newPos.x = item->pos.x_pos;
+    newPos.z = item->pos.z_pos;
+    if (!(sint16)(item->flags & 0x100)) {
+        JeepBaddieCollision(item);
+        JeepCollideStaticObjects(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 512);
+    }
+    shift2 = 0;
+    shift = 0;
+    if (TestHeight(item, 550, -256, &flPos2) < flPos.y - 256)
+        shift = abs(DoShift(item, &flPos2, &flPos) << 2);
+    if (TestHeight(item, -600, -256, &blPos2) < blPos.y - 256) {
+        if (shift)
+            shift += abs(DoShift(item, &blPos2, &blPos) << 2);
+        else
+            shift = -abs(DoShift(item, &blPos2, &blPos) << 2);
+    }
+    if (TestHeight(item, 550, 256, &frPos2) < frPos.y - 256)
+        shift2 = -abs(DoShift(item, &frPos2, &frPos) << 2);
+    if (TestHeight(item, -600, 0, &fmPos2) < fmPos.y - 256)
+        DoShift(item, &fmPos2, &fmPos);
+    if (TestHeight(item, -600, 256, &brPos2) < brPos.y - 256) {
+        if (shift2)
+            shift2 -= abs(DoShift(item, &brPos2, &brPos) << 2);
+        else
+            shift2 = abs(DoShift(item, &brPos2, &brPos) << 2);
+    }
+    if (!shift)
+        shift = shift2;
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (h < item->pos.y_pos - 256)
+        DoShift(item, (PHD_VECTOR *)&item->pos, &pos);
+    if (!jeep->velocity)
+        shift = 0;
+    jeep->rot_thing = (sint16)((jeep->rot_thing + shift) >> 1);
+    if (abs(jeep->rot_thing) < 2)
+        jeep->rot_thing = 0;
+    if (abs(jeep->rot_thing - jeep->extra_rotation) < 4)
+        jeep->extra_rotation = jeep->rot_thing;
+    else
+        jeep->extra_rotation += (jeep->rot_thing - jeep->extra_rotation) >> 2;
+    anim = GetCollisionAnim(item, &newPos);
+    if (anim) {
+        speed = ((((item->pos.z_pos - pos.z) * (rcossin_tbl[((jeep->move_angle >> 3) & 0x1FFE) + 1] << 2)) + ((item->pos.x_pos - pos.x) * (rcossin_tbl[(jeep->move_angle >> 3) & 0x1FFE] << 2))) >> W2V_SHIFT) << 8;
+        if (&items[lara.vehicle] == item && jeep->velocity == 0x8000 && speed < 0x7FF6) {
+            lara_item->hit_points -= (sint16)((0x8000 - speed) >> 7);
+            lara_item->hit_status = 1;
+        }
+        if (jeep->velocity > 0 && speed < jeep->velocity)
+            jeep->velocity = speed < 0 ? 0 : speed;
+        else if (jeep->velocity < 0 && speed > jeep->velocity)
+            jeep->velocity = speed > 0 ? 0 : speed;
+        if (jeep->velocity < -0x4000)
+            jeep->velocity = -0x4000;
+    }
+    return anim;
 }
 
 void JeepCollideStaticObjects(sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 height)

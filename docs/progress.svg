@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="256.34" height="12" x="0" y="0" class="named"><title>1181 · 76.29%</title></rect>
 <rect width="0.65" height="12" x="256.34" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="23.66" height="12" x="256.99" y="0" class="nonmatching"><title>109 · 7.04%</title></rect>
-<rect width="55.35" height="12" x="280.65" y="0" class="todo"><title>255 · 16.47%</title></rect>
+<rect width="23.88" height="12" x="256.99" y="0" class="nonmatching"><title>110 · 7.11%</title></rect>
+<rect width="55.13" height="12" x="280.87" y="0" class="todo"><title>254 · 16.41%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">76.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1181</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">109</tspan> · <tspan class="todo">255</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1181</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">110</tspan> · <tspan class="todo">254</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="158.95" height="12" x="0" y="0" class="named"><title>295 KB · 47.31%</title></rect>
 <rect width="0.13" height="12" x="158.95" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="55.41" height="12" x="159.08" y="0" class="nonmatching"><title>103 KB · 16.49%</title></rect>
-<rect width="121.51" height="12" x="214.49" y="0" class="todo"><title>226 KB · 36.16%</title></rect>
+<rect width="56.49" height="12" x="159.08" y="0" class="nonmatching"><title>105 KB · 16.81%</title></rect>
+<rect width="120.43" height="12" x="215.57" y="0" class="todo"><title>224 KB · 35.84%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">47.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">295 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">103 KB</tspan> · <tspan class="todo">226 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">295 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">105 KB</tspan> · <tspan class="todo">224 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1082,7 +1082,7 @@
 <rect width="12" height="12" x="195" y="300" class="named"><title>0x00467ac0 JeepExplode (197 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="300" class="named"><title>0x00467b90 JeepCheckGetOut (203 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="300" class="named"><title>0x00467c60 DoDynamics_jeep (139 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="300" class="todo"><title>0x00467cf0 JeepDynamics (2010 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="300" class="nonmatching"><title>0x00467cf0 JeepDynamics (2010 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="300" class="named"><title>0x004684d0 JeepCollideStaticObjects (782 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="300" class="named"><title>0x004687e0 JeepBaddieCollision (754 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="300" class="named"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
@@ -1668,7 +1668,7 @@
 <rect width="29.42" height="27.16" x="118.32" y="288.12" class="todo"><title>0x00497cb0 SW_TriSetupGALit (2079 bytes)</title></rect>
 <rect width="29.42" height="26.97" x="118.32" y="318.29" class="named"><title>0x00457720 PickUpCollision (2064 bytes)</title></rect>
 <rect width="29.42" height="26.48" x="118.32" y="348.25" class="todo"><title>0x00430f70 CreateSkinningData (2027 bytes)</title></rect>
-<rect width="29.42" height="26.26" x="118.32" y="377.73" class="todo"><title>0x00467cf0 JeepDynamics (2010 bytes)</title></rect>
+<rect width="29.42" height="26.26" x="118.32" y="377.73" class="nonmatching"><title>0x00467cf0 JeepDynamics (2010 bytes)</title></rect>
 <rect width="29.42" height="26.07" x="118.32" y="406.99" class="nonmatching"><title>0x0040e800 ScorpionControl (1996 bytes)</title></rect>
 <rect width="29.42" height="25.94" x="118.32" y="436.06" class="todo"><title>0x00470830 DXSetupDlgProc (1986 bytes)</title></rect>
 <rect width="27" height="27.80" x="150.74" y="0" class="named"><title>0x00402e30 CrocControl (1952 bytes)</title></rect>

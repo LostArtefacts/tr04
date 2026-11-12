@@ -25,6 +25,7 @@ typedef struct jeepinfo {
 
 sint32 GetOnJeep(sint16 item_number, COLL_INFO *coll);
 extern sint16 jroomies[22];
+extern char dont_exit_jeep;
 extern sint32 JeepBounds0;
 extern sint32 JeepBounds1;
 extern sint32 JeepBounds2;
@@ -44,7 +45,7 @@ void DrawJeepExtras(ITEM_INFO *item);
 sint32 JeepCheckGetOut(void);
 void JeepExplode(ITEM_INFO *item);
 sint32 DoDynamics_jeep(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero);
-sint32 GetCollisionAnim(ITEM_INFO *item, PHD_VECTOR *moved, JEEPINFO *jeep);
+sint32 GetCollisionAnim();
 void InitialiseEnemyJeep(sint16 item_number);
 sint32 CanGetOff_jeep(sint16 num);
 void InitialiseJeep(sint16 item_number);
@@ -56,5 +57,6 @@ sint32 UserControl_jeep(ITEM_INFO *item, sint32 height, sint32 *pitch);
 void JeepFireGrenade(ITEM_INFO *item);
 void JeepControl(sint16 item_number);
 void EnemyJeepControl(sint16 item_number);
+sint32 JeepDynamics(ITEM_INFO *item);
 
 #endif
