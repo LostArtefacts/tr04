@@ -2393,8 +2393,11 @@ address,size,name,symbol
 0x00533ac0,4,textinfo,_textinfo
 0x00533ac4,4,spriteinfo,_spriteinfo
 0x00533ac8,2,AnimatingTexturesVOffset,_AnimatingTexturesVOffset
+0x00533acc,4,AddTriSorted,_AddTriSorted
 0x00533ad4,4,AddQuadSorted,_AddQuadSorted
+0x00533ad8,4,AddQuadZBuffer,_AddQuadZBuffer
 0x00533adc,4,_EndScene,__EndScene
+0x00533ae0,4,AddTriZBuffer,_AddTriZBuffer
 0x00533ae4,4,IsVisible,_IsVisible
 0x00533ae8,4,_BeginScene,__BeginScene
 0x00533aec,4,CurrentFog,_CurrentFog

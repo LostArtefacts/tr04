@@ -5,6 +5,10 @@
 #include "../effect2.h"
 #include "winmain.h"
 #include "dxshell.h"
+#include "output.h"
+#include "file.h"
+#include "function_table.h"
+#include "../camera.h"
 
 void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
 {
@@ -117,6 +121,61 @@ void PrelightVertsNonMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
         v->color = (c & 0xFF000000) | cB | cG | cR;
         CalcColorSplit(v->color, &v->color);
         v++;
+    }
+}
+
+void InsertRoom(ROOM_INFO *r)
+{
+    TEXTURESTRUCT *pTex;
+    D3DTLVERTEX *v;
+    sint16 *data;
+    sint32 numQuads, numTris, i, doublesided;
+
+    clip_left = r->left;
+    clip_top = r->top;
+    clip_right = r->right;
+    clip_bottom = r->bottom;
+    if (r->nVerts) {
+        DXAttempt(IDirect3DVertexBuffer_ProcessVertices(DestVB, D3DVOP_LIGHT | D3DVOP_TRANSFORM, 0, r->nVerts, r->SourceVB, 0, App.dx._lpD3DDevice, 0));
+        data = r->FaceData;
+        numQuads = *data++;
+        IDirect3DVertexBuffer_Lock(DestVB, DDLOCK_READONLY, (void **)&v, 0);
+        bWaterEffect = camera.underwater != 0;
+        ProjectWaterVerts(r->nWaterVerts, v, clipflags);
+        ProjectShoreVerts(r->nShoreVerts, &v[r->nWaterVerts], &clipflags[r->nWaterVerts]);
+        ProjectVerts(r->nVerts - r->nWaterVerts - r->nShoreVerts, &v[r->nWaterVerts + r->nShoreVerts], &clipflags[r->nWaterVerts + r->nShoreVerts]);
+        if (App.mmx)
+            PrelightVertsMMX(r->nVerts, v, r);
+        else
+            PrelightVertsNonMMX(r->nVerts, v, r);
+        for (i = 0; i < numQuads; i++, data += 5) {
+            pTex = &textinfo[data[4] & 0x3FFF];
+            doublesided = (data[4] >> 15) & 1;
+            switch (pTex->drawtype) {
+            case 1:
+            case 2:
+                AddQuadSorted(v, data[0], data[1], data[2], data[3], pTex, doublesided);
+                break;
+            case 0:
+                AddQuadZBuffer(v, data[0], data[1], data[2], data[3], pTex, doublesided);
+                break;
+            }
+        }
+        numTris = *data++;
+        for (i = 0; i < numTris; i++, data += 4) {
+            pTex = &textinfo[data[3] & 0x3FFF];
+            doublesided = (data[3] >> 15) & 1;
+            switch (pTex->drawtype) {
+            case 1:
+            case 2:
+                AddTriSorted(v, data[0], data[1], data[2], pTex, doublesided);
+                break;
+            case 0:
+                AddTriZBuffer(v, data[0], data[1], data[2], pTex, doublesided);
+                break;
+            }
+        }
+        IDirect3DVertexBuffer_Unlock(DestVB);
     }
 }
 

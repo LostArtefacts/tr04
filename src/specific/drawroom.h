@@ -58,5 +58,7 @@ void FindBucket(sint32 tpage, D3DTLBUMPVERTEX **Vpp, sint32 **nVtxpp);
 void PrelightVertsMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r);
 void PrelightVertsNonMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r);
 void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip);
+void ProjectWaterVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip);
+void ProjectShoreVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip);
 
 #endif
