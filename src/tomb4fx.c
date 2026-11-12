@@ -224,6 +224,63 @@ sint32 GetFreeSmokeSpark(void)
     return min_life_num;
 }
 
+void UpdateSmokeSparks(void)
+{
+    SMOKE_SPARKS *sptr;
+    sint32 fade, i;
+
+    sptr = smoke_spark;
+    for (i = 32; i > 0; i--, sptr++) {
+        if (!sptr->On)
+            continue;
+        sptr->Life -= 2;
+        if (sptr->Life <= 0) {
+            sptr->On = 0;
+            continue;
+        }
+        if (sptr->sLife - sptr->Life < sptr->ColFadeSpeed) {
+            fade = ((sptr->sLife - sptr->Life) << 16) / sptr->ColFadeSpeed;
+            sptr->Shade = (uint8)(sptr->sShade + (((sptr->dShade - sptr->sShade) * fade) >> 16));
+        } else if (sptr->Life < sptr->FadeToBlack) {
+            fade = ((sptr->Life - sptr->FadeToBlack) << 16) / sptr->FadeToBlack + 0x10000;
+            sptr->Shade = (uint8)((sptr->dShade * fade) >> 16);
+            if (sptr->Shade < 8) {
+                sptr->On = 0;
+                continue;
+            }
+        } else
+            sptr->Shade = sptr->dShade;
+        if (sptr->Shade < 24)
+            sptr->Def = (uint8)(objects[DEFAULT_SPRITES].mesh_index + 2);
+        else if (sptr->Shade < 80)
+            sptr->Def = (uint8)(objects[DEFAULT_SPRITES].mesh_index + 1);
+        else
+            sptr->Def = (uint8)objects[DEFAULT_SPRITES].mesh_index;
+        if (sptr->Flags & 0x10)
+            sptr->RotAng = (sptr->RotAng + sptr->RotAdd) & 0xFFF;
+        fade = ((sptr->sLife - sptr->Life) << 16) / sptr->sLife;
+        sptr->Yvel += sptr->Gravity;
+        if (sptr->MaxYvel) {
+            if (sptr->Yvel < 0 && sptr->Yvel < sptr->MaxYvel << 5 || sptr->Yvel > 0 && sptr->Yvel > sptr->MaxYvel << 5)
+                sptr->Yvel = sptr->MaxYvel << 5;
+        }
+        if (sptr->Friction & 0xF) {
+            sptr->Xvel -= sptr->Xvel >> (sptr->Friction & 0xF);
+            sptr->Zvel -= sptr->Zvel >> (sptr->Friction & 0xF);
+        }
+        if (sptr->Friction & 0xF0)
+            sptr->Yvel -= sptr->Yvel >> (sptr->Friction >> 4);
+        sptr->x += sptr->Xvel >> 5;
+        sptr->y += sptr->Yvel >> 5;
+        sptr->z += sptr->Zvel >> 5;
+        if (sptr->Flags & 0x100) {
+            sptr->x += SmokeWindX >> 1;
+            sptr->z += SmokeWindZ >> 1;
+        }
+        sptr->Size = (uint8)(sptr->sSize + ((fade * (sptr->dSize - sptr->sSize)) >> 16));
+    }
+}
+
 void TriggerGunSmoke(sint32 x, sint32 y, sint32 z, sint32 xVel, sint32 yVel, sint32 zVel, sint32 notLara, sint32 weaponType, sint32 shade)
 {
     SMOKE_SPARKS *sptr;

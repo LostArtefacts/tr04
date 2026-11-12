@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="257.86" height="12" x="0" y="0" class="named"><title>1188 · 76.74%</title></rect>
 <rect width="0.65" height="12" x="257.86" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="26.48" height="12" x="258.51" y="0" class="nonmatching"><title>122 · 7.88%</title></rect>
-<rect width="51.01" height="12" x="284.99" y="0" class="todo"><title>235 · 15.18%</title></rect>
+<rect width="26.70" height="12" x="258.51" y="0" class="nonmatching"><title>123 · 7.95%</title></rect>
+<rect width="50.79" height="12" x="285.21" y="0" class="todo"><title>234 · 15.12%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">76.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1188</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">122</tspan> · <tspan class="todo">235</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1188</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">123</tspan> · <tspan class="todo">234</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="166.37" height="12" x="0" y="0" class="named"><title>309 KB · 49.51%</title></rect>
 <rect width="0.13" height="12" x="166.37" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="79.13" height="12" x="166.50" y="0" class="nonmatching"><title>147 KB · 23.55%</title></rect>
-<rect width="90.37" height="12" x="245.63" y="0" class="todo"><title>168 KB · 26.90%</title></rect>
+<rect width="79.44" height="12" x="166.50" y="0" class="nonmatching"><title>148 KB · 23.64%</title></rect>
+<rect width="90.07" height="12" x="245.93" y="0" class="todo"><title>168 KB · 26.81%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">309 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">147 KB</tspan> · <tspan class="todo">168 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">309 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">148 KB</tspan> · <tspan class="todo">168 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -624,7 +624,7 @@
 <rect width="12" height="12" x="75" y="165" class="named"><title>0x00438510 AddFire (80 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="165" class="todo"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="165" class="named"><title>0x00438690 GetFreeSmokeSpark (107 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="165" class="todo"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="165" class="nonmatching"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="165" class="named"><title>0x00438940 TriggerGunSmoke (597 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="165" class="named"><title>0x00438ba0 TriggerShatterSmoke (369 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="165" class="named"><title>0x00438d20 GetFreeBlood (103 bytes)</title></rect>
@@ -1932,7 +1932,7 @@
 <rect width="14.59" height="14.99" x="347.30" y="447.01" class="named"><title>0x00456120 PoleCollision (570 bytes)</title></rect>
 <rect width="14.97" height="14.50" x="364.89" y="79.82" class="nonmatching"><title>0x0043dbf0 Func43dbf0 (566 bytes)</title></rect>
 <rect width="14.95" height="14.50" x="382.86" y="79.82" class="todo"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
-<rect width="14.89" height="14.50" x="400.81" y="79.82" class="todo"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
+<rect width="14.89" height="14.50" x="400.81" y="79.82" class="nonmatching"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
 <rect width="14.84" height="14.50" x="418.71" y="79.82" class="named"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
 <rect width="14.84" height="14.50" x="436.55" y="79.82" class="named"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
 <rect width="14.84" height="14.50" x="454.39" y="79.82" class="named"><title>0x004543b0 InitialiseItem (561 bytes)</title></rect>
