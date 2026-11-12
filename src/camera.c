@@ -278,6 +278,76 @@ void FixedCamera(void)
     }
 }
 
+sint32 CameraCollisionBounds(GAME_VECTOR *ideal, sint32 push, sint32 yfirst)
+{
+    FLOOR_INFO *floor;
+    sint32 wx, wy, wz, h, c;
+    sint16 room_number;
+
+    wx = ideal->x;
+    wy = ideal->y;
+    wz = ideal->z;
+    if (yfirst) {
+        room_number = ideal->room_number;
+        floor = GetFloor(wx, wy, wz, &room_number);
+        h = GetHeight(floor, wx, wy, wz);
+        c = GetCeiling(floor, wx, wy, wz);
+        if (wy - 255 < c && wy + 255 > h && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
+            wy = (c + h) >> 1;
+        else if (wy + 255 > h && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
+            wy = h - 255;
+        else if (wy - 255 < c && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
+            wy = c + 255;
+    }
+    room_number = ideal->room_number;
+    floor = GetFloor(wx - push, wy, wz, &room_number);
+    h = GetHeight(floor, wx - push, wy, wz);
+    c = GetCeiling(floor, wx - push, wy, wz);
+    if (wy > h || h == NO_HEIGHT || c == NO_HEIGHT || c >= h || wy < c)
+        wx = push + (wx & ~0x3FF);
+    room_number = ideal->room_number;
+    floor = GetFloor(wx, wy, wz - push, &room_number);
+    h = GetHeight(floor, wx, wy, wz - push);
+    c = GetCeiling(floor, wx, wy, wz - push);
+    if (wy > h || h == NO_HEIGHT || c == NO_HEIGHT || c >= h || wy < c)
+        wz = push + (wz & ~0x3FF);
+    room_number = ideal->room_number;
+    floor = GetFloor(wx + push, wy, wz, &room_number);
+    h = GetHeight(floor, wx + push, wy, wz);
+    c = GetCeiling(floor, wx + push, wy, wz);
+    if (wy > h || h == NO_HEIGHT || c == NO_HEIGHT || c >= h || wy < c)
+        wx = (wx | 0x3FF) - push;
+    room_number = ideal->room_number;
+    floor = GetFloor(wx, wy, wz + push, &room_number);
+    h = GetHeight(floor, wx, wy, wz + push);
+    c = GetCeiling(floor, wx, wy, wz + push);
+    if (wy > h || h == NO_HEIGHT || c == NO_HEIGHT || c >= h || wy < c)
+        wz = (wz | 0x3FF) - push;
+    if (!yfirst) {
+        room_number = ideal->room_number;
+        floor = GetFloor(wx, wy, wz, &room_number);
+        h = GetHeight(floor, wx, wy, wz);
+        c = GetCeiling(floor, wx, wy, wz);
+        if (wy - 255 < c && wy + 255 > h && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
+            wy = (c + h) >> 1;
+        else if (wy + 255 > h && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
+            wy = h - 255;
+        else if (wy - 255 < c && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
+            wy = c + 255;
+    }
+    room_number = ideal->room_number;
+    floor = GetFloor(wx, wy, wz, &room_number);
+    h = GetHeight(floor, wx, wy, wz);
+    c = GetCeiling(floor, wx, wy, wz);
+    if (wy > h || wy < c || h == NO_HEIGHT || c == NO_HEIGHT || c >= h)
+        return 1;
+    GetFloor(wx, wy, wz, &ideal->room_number);
+    ideal->x = wx;
+    ideal->y = wy;
+    ideal->z = wz;
+    return 0;
+}
+
 sint32 mgLOS(GAME_VECTOR *start, GAME_VECTOR *target, sint32 push)
 {
     FLOOR_INFO *floor;
