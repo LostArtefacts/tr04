@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <stdlib.h>
+#include <process.h>
 
 #include "gamemain.h"
 #include "3dmath.h"
@@ -9,6 +10,40 @@
 #include "file.h"
 #include "output.h"
 #include "function_stubs.h"
+#include "function_table.h"
+#include "winmain.h"
+#include "time.h"
+#include "../text.h"
+#include "../sound.h"
+
+uint32 __stdcall GameMain(void *ptr)
+{
+    sint32 fpcw;
+
+    Log(2, "GameMain");
+    if (GameInitialise()) {
+        InitialiseFunctionTable();
+        HWInitialise();
+        InitWindow(0, 0, App.dx.dwRenderWidth, App.dx.dwRenderHeight, 20, 20480, 80, App.dx.dwRenderWidth, App.dx.dwRenderHeight);
+        InitFont();
+        TIME_Init();
+        App.SetupComplete = 1;
+        fpcw = MungeFPCW(&FPCW);
+        S_CDStop();
+        ClearSurfaces();
+        if (!App.SoundDisabled)
+            SOUND_Init();
+        DoGameflow();
+        GameClose();
+        S_CDStop();
+        if (fpcw)
+            RestoreFPCW(FPCW);
+        PostMessage(App.hWnd, WM_CLOSE, 0, 0);
+        MainThread.active = 0;
+        _endthreadex(1);
+    }
+    return 1;
+}
 
 void GameClose(void)
 {

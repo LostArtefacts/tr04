@@ -2,6 +2,7 @@
 #define SPECIFIC_GAMEMAIN_H
 
 #include "../types.h"
+#include "file.h"
 
 typedef struct watertab {
     char shimmer;
@@ -14,8 +15,11 @@ uint16 GetRandom(WATERTAB *w, sint32 n);
 void init_water_table(void);
 sint32 S_LoadGame(sint32 slot_num);
 sint32 S_SaveGame(sint32 slot_num);
+uint32 __stdcall GameMain(void *ptr);
+uint8 GameInitialise(void);
 void GameClose(void);
 
+extern THREAD MainThread;
 extern sint32 SaveCounter;
 extern WATERTAB WaterTable[22][64];
 extern float vert_wibble_table[32];

@@ -12,6 +12,8 @@ uint8 _Visible(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2);
 void SetCullCW(void);
 void SetCullCCW(void);
 void SetFogColor(sint32 r, sint32 g, sint32 b);
+void InitialiseFunctionTable(void);
+void HWInitialise(void);
 void SW_ClearBuffer(LPDIRECT3DDEVICE3 dev, DWORD count, D3DRECT *rect, DWORD flags, D3DCOLOR col, D3DVALUE z, DWORD stencil);
 
 extern uint8 (*IsVisible)(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2);

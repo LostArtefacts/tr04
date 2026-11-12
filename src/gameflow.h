@@ -438,4 +438,6 @@ extern char title_controls_locked_out;
 extern uint8 *gfScriptFile;
 extern uint8 *gfLanguageFile;
 
+void DoGameflow(void);
+
 #endif
