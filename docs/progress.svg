@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="165.80" height="12" x="0" y="0" class="named"><title>750 · 48.48%</title></rect>
 <rect width="0.44" height="12" x="165.80" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.19" height="12" x="166.25" y="0" class="nonmatching"><title>28 · 1.81%</title></rect>
-<rect width="169.56" height="12" x="172.44" y="0" class="todo"><title>767 · 49.58%</title></rect>
+<rect width="6.41" height="12" x="166.25" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="169.34" height="12" x="172.66" y="0" class="todo"><title>766 · 49.52%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">48.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">750</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">28</tspan> · <tspan class="todo">767</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">750</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">766</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="73.81" height="12" x="0" y="0" class="named"><title>134 KB · 21.58%</title></rect>
 <rect width="0.12" height="12" x="73.81" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.47" height="12" x="73.93" y="0" class="nonmatching"><title>15 KB · 2.48%</title></rect>
-<rect width="259.60" height="12" x="82.40" y="0" class="todo"><title>471 KB · 75.91%</title></rect>
+<rect width="8.65" height="12" x="73.93" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="259.42" height="12" x="82.58" y="0" class="todo"><title>471 KB · 75.85%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">21.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">134 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">15 KB</tspan> · <tspan class="todo">471 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">134 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">471 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1092,7 +1092,7 @@
 <rect width="12" height="12" x="345" y="300" class="named"><title>0x00469870 UserControl_jeep (792 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="300" class="named"><title>0x00469b90 InitialiseEnemyJeep (130 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="300" class="todo"><title>0x00469c20 EnemyJeepControl (2188 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="300" class="todo"><title>0x0046a4d0 JeepFireGrenade (333 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="300" class="nonmatching"><title>0x0046a4d0 JeepFireGrenade (333 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="300" class="named"><title>0x0046a620 JeepStart (167 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="300" class="todo"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="300" class="todo"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
@@ -2136,7 +2136,7 @@
 <rect width="11.13" height="11.62" x="428.93" y="305.79" class="named"><title>0x004328e0 LaraSwimCollision (335 bytes)</title></rect>
 <rect width="11.13" height="11.59" x="428.93" y="320.42" class="todo"><title>0x0043bc30 do_debounced_joystick_poo (334 bytes)</title></rect>
 <rect width="11.13" height="11.59" x="428.93" y="335.01" class="todo"><title>0x00459f90 ProjectRopePoints (334 bytes)</title></rect>
-<rect width="11.13" height="11.56" x="428.93" y="349.60" class="todo"><title>0x0046a4d0 JeepFireGrenade (333 bytes)</title></rect>
+<rect width="11.13" height="11.56" x="428.93" y="349.60" class="nonmatching"><title>0x0046a4d0 JeepFireGrenade (333 bytes)</title></rect>
 <rect width="11.13" height="11.52" x="428.93" y="364.15" class="named"><title>0x00422200 lara_col_dash (332 bytes)</title></rect>
 <rect width="11.13" height="11.49" x="428.93" y="378.67" class="todo"><title>0x004808e0 do_boot_screen (331 bytes)</title></rect>
 <rect width="11.13" height="11.42" x="428.93" y="393.16" class="named"><title>0x0042d490 lara_col_climbing (329 bytes)</title></rect>
