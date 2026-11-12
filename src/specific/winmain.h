@@ -156,6 +156,7 @@ HRESULT CALLBACK DXEnumDisplayModes(LPDDSURFACEDESC2 lpDDSurfaceDesc2, LPVOID lp
 HRESULT CALLBACK DXEnumTextureFormats(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext);
 sint32 DXChangeVideoMode(void);
 sint32 DXToggleFullScreen(void);
+void WinDisplayString(sint32 x, sint32 y, char *string, ...);
 
 extern WINAPP App;
 extern DXINFO *G_dxinfo;

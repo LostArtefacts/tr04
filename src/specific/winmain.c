@@ -4,6 +4,16 @@
 #include "winmain.h"
 #include "../text.h"
 
+void WinDisplayString(sint32 x, sint32 y, char *string, ...)
+{
+    va_list list;
+    char buf[4096];
+
+    va_start(list, string);
+    vsprintf(buf, string, list);
+    PrintString((uint16)x, (uint16)y, 6, buf, 0);
+}
+
 sint32 MungeFPCW(sint16 *fpcw)
 {
     sint32 ret;

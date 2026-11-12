@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="208.25" height="12" x="0" y="0" class="named"><title>942 · 60.89%</title></rect>
-<rect width="0.44" height="12" x="208.25" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="208.69" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="126.23" height="12" x="215.77" y="0" class="todo"><title>571 · 36.91%</title></rect>
+<rect width="208.47" height="12" x="0" y="0" class="named"><title>943 · 60.96%</title></rect>
+<rect width="0.44" height="12" x="208.47" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="208.91" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="126.01" height="12" x="215.99" y="0" class="todo"><title>570 · 36.85%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">61.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">942</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">571</tspan></text>
+<text text-anchor="end" x="522" y="7.50">61.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">943</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">570</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="89.90" height="12" x="0" y="0" class="named"><title>163 KB · 26.29%</title></rect>
-<rect width="0.12" height="12" x="89.90" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="90.02" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="242.59" height="12" x="99.41" y="0" class="todo"><title>440 KB · 70.93%</title></rect>
+<rect width="89.94" height="12" x="0" y="0" class="named"><title>163 KB · 26.30%</title></rect>
+<rect width="0.12" height="12" x="89.94" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="90.06" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="242.55" height="12" x="99.45" y="0" class="todo"><title>440 KB · 70.92%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">163 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">440 KB</tspan></text>
@@ -1451,7 +1451,7 @@
 <rect width="12" height="12" x="480" y="405" class="todo"><title>0x0048f6a0 WinRunCheck (87 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="405" class="todo"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="405" class="todo"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="405" class="todo"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="405" class="named"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="405" class="named"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="405" class="named"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="405" class="todo"><title>0x0048f970 j_nullsub_11 (5 bytes)</title></rect>
@@ -2784,7 +2784,7 @@
 <rect width="5.37" height="5.33" x="616.09" y="448.34" class="named"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
 <rect width="5.37" height="5.33" x="616.09" y="456.67" class="named"><title>0x004944d0 DXReadKeyboard (74 bytes)</title></rect>
 <rect width="5.55" height="5.07" x="624.46" y="331.18" class="named"><title>0x00428ad0 lara_default_col (73 bytes)</title></rect>
-<rect width="5.55" height="5.07" x="633.02" y="331.18" class="todo"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
+<rect width="5.55" height="5.07" x="633.02" y="331.18" class="named"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
 <rect width="5.55" height="5.07" x="641.57" y="331.18" class="named"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
 <rect width="5.48" height="5.07" x="650.13" y="331.18" class="named"><title>0x00439d60 UpdateFadeClip (72 bytes)</title></rect>
 <rect width="5.40" height="5.07" x="658.61" y="331.18" class="todo"><title>0x004035d0 GetFreeLocust (71 bytes)</title></rect>
