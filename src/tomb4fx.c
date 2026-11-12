@@ -851,3 +851,19 @@ void DrawLensFlares(ITEM_INFO *item)
     sun.room_number = item->room_number;
     SetUpLensFlare(0, 0, 0, &sun);
 }
+
+void DrawWeaponMissile(ITEM_INFO *item)
+{
+    phd_PushMatrix();
+    phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    phd_PutPolygons_train(meshes[objects[item->object_number].mesh_index], 0);
+    phd_PopMatrix();
+    if (gfLevelFlags & GF_MIRROR && item->room_number == gfMirrorRoom) {
+        phd_PushMatrix();
+        phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, 2 * gfMirrorZPlane - item->pos.z_pos);
+        phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+        phd_PutPolygons_train(meshes[objects[item->object_number].mesh_index], 0);
+        phd_PopMatrix();
+    }
+}
