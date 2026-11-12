@@ -100,6 +100,41 @@ PHD_VECTOR *Normalise(PHD_VECTOR *v)
     return v;
 }
 
+void ModelRigid(PHD_VECTOR *pa, PHD_VECTOR *pb, PHD_VECTOR *va, PHD_VECTOR *vb, sint32 rlength)
+{
+    PHD_VECTOR d, a, b;
+    sint32 length, scale;
+
+    a.x = pa->x + va->x;
+    a.y = pa->y + va->y;
+    a.z = pa->z + va->z;
+    b.x = pb->x + vb->x;
+    b.y = pb->y + vb->y;
+    b.z = pb->z + vb->z;
+    d.x = b.x - a.x;
+    d.y = b.y - a.y;
+    d.z = b.z - a.z;
+    a.x = d.x >> 16;
+    a.y = d.y >> 16;
+    a.z = d.z >> 16;
+    length = SQUARE(a.z) + SQUARE(a.y) + SQUARE(a.x);
+    if (length < 0) {
+        length = -length;
+    }
+    length = phd_sqrt(length);
+    scale = ((length << 16) - rlength) >> 1;
+    Normalise(&d);
+    d.x = (__int64)scale * d.x >> 16;
+    d.y = (__int64)scale * d.y >> 16;
+    d.z = (__int64)scale * d.z >> 16;
+    va->x += d.x;
+    va->y += d.y;
+    va->z += d.z;
+    vb->x -= d.x;
+    vb->y -= d.y;
+    vb->z -= d.z;
+}
+
 void SetPendulumPoint(ROPE_STRUCT *Rope, sint32 node)
 {
     CurrentPendulum.Position.x = Rope->Segment[node].x;
