@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="199.63" height="12" x="0" y="0" class="named"><title>903 · 58.37%</title></rect>
-<rect width="0.44" height="12" x="199.63" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="200.07" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="135.30" height="12" x="206.70" y="0" class="todo"><title>612 · 39.56%</title></rect>
+<rect width="199.85" height="12" x="0" y="0" class="named"><title>904 · 58.44%</title></rect>
+<rect width="0.44" height="12" x="199.85" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="200.29" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="135.08" height="12" x="206.92" y="0" class="todo"><title>611 · 39.50%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">58.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">903</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">612</tspan></text>
+<text text-anchor="end" x="522" y="7.50">58.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">904</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">611</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="86.50" height="12" x="0" y="0" class="named"><title>157 KB · 25.29%</title></rect>
-<rect width="0.12" height="12" x="86.50" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="86.62" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="246.47" height="12" x="95.53" y="0" class="todo"><title>447 KB · 72.07%</title></rect>
+<rect width="86.76" height="12" x="0" y="0" class="named"><title>157 KB · 25.37%</title></rect>
+<rect width="0.12" height="12" x="86.76" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="86.88" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="246.21" height="12" x="95.79" y="0" class="todo"><title>447 KB · 71.99%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">25.3%</text>
+<text text-anchor="end" x="522" y="24.50">25.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">157 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">447 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1396,7 +1396,7 @@
 <rect width="12" height="12" x="405" y="390" class="named"><title>0x00484cd0 LoadSettings (1201 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="390" class="named"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="390" class="named"><title>0x004853f0 SaveSettings (527 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="390" class="todo"><title>0x00485600 setXY4 (474 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="390" class="named"><title>0x00485600 setXY4 (474 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="390" class="named"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="390" class="todo"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="390" class="todo"><title>0x00485d90 setXYZ3 (820 bytes)</title></rect>
@@ -1999,7 +1999,7 @@
 <rect width="14.06" height="13.16" x="432.25" y="96.35" class="named"><title>0x0044e480 PushPullKickDoorCollision (479 bytes)</title></rect>
 <rect width="14" height="13.16" x="449.31" y="96.35" class="todo"><title>0x0042f510 DoFlareLight (477 bytes)</title></rect>
 <rect width="13.97" height="13.16" x="466.31" y="96.35" class="todo"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>
-<rect width="13.92" height="13.16" x="483.29" y="96.35" class="todo"><title>0x00485600 setXY4 (474 bytes)</title></rect>
+<rect width="13.92" height="13.16" x="483.29" y="96.35" class="named"><title>0x00485600 setXY4 (474 bytes)</title></rect>
 <rect width="13.89" height="13.16" x="500.20" y="96.35" class="todo"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="13.86" height="13.16" x="517.09" y="96.35" class="named"><title>0x004570f0 StatuePlinthCollision (472 bytes)</title></rect>
 <rect width="13.83" height="13.16" x="533.95" y="96.35" class="nonmatching"><title>0x00459100 RopeCollision (471 bytes)</title></rect>

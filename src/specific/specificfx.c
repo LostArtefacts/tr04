@@ -13,6 +13,73 @@
 #include "file.h"
 #include "drawroom.h"
 
+void setXY4(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 x3, sint32 y3, sint32 x4, sint32 y4, sint32 z, sint16 *clip)
+{
+    float zv;
+    sint32 clip_distance;
+
+    clip_distance = 0;
+    zv = f_mpersp / (float)z;
+    v->sx = (float)x1;
+    v->sy = (float)y1;
+    v->sz = (float)z;
+    v->rhw = f_moneopersp * zv;
+    if (x1 < phd_winxmin)
+        clip_distance = 1;
+    else if (x1 > phd_winxmax)
+        clip_distance = 2;
+    if (y1 < phd_winymin)
+        clip_distance += 4;
+    else if (y1 > phd_winymax)
+        clip_distance += 8;
+    *clip++ = clip_distance;
+    v++;
+    clip_distance = 0;
+    v->sx = (float)x2;
+    v->sy = (float)y2;
+    v->sz = (float)z;
+    v->rhw = f_moneopersp * zv;
+    if (x2 < phd_winxmin)
+        clip_distance = 1;
+    else if (x2 > phd_winxmax)
+        clip_distance = 2;
+    if (y2 < phd_winymin)
+        clip_distance += 4;
+    else if (y2 > phd_winymax)
+        clip_distance += 8;
+    *clip++ = clip_distance;
+    v++;
+    clip_distance = 0;
+    v->sx = (float)x3;
+    v->sy = (float)y3;
+    v->sz = (float)z;
+    v->rhw = f_moneopersp * zv;
+    if (x3 < phd_winxmin)
+        clip_distance = 1;
+    else if (x3 > phd_winxmax)
+        clip_distance = 2;
+    if (y3 < phd_winymin)
+        clip_distance += 4;
+    else if (y3 > phd_winymax)
+        clip_distance += 8;
+    *clip++ = clip_distance;
+    v++;
+    v->sx = (float)x4;
+    v->sy = (float)y4;
+    v->sz = (float)z;
+    v->rhw = zv * f_moneopersp;
+    clip_distance = 0;
+    if (x4 < phd_winxmin)
+        clip_distance = 1;
+    else if (x4 > phd_winxmax)
+        clip_distance = 2;
+    if (y4 < phd_winymin)
+        clip_distance += 4;
+    else if (y4 > phd_winymax)
+        clip_distance += 8;
+    *clip = clip_distance;
+}
+
 void setXY3(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 x3, sint32 y3, sint32 z, sint16 *clip)
 {
     float zv;
