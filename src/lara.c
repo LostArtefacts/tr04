@@ -973,6 +973,17 @@ void lara_as_rope(ITEM_INFO *item, COLL_INFO *coll)
         LookUpDown();
 }
 
+void lara_as_ropel(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (input & IN_ACTION) {
+        if (input & IN_LEFT)
+            lara.RopeY += 256;
+        else
+            item->goal_anim_state = AS_ROPE;
+    } else
+        FallFromRope(item);
+}
+
 void lara_col_stop(ITEM_INFO *item, COLL_INFO *coll)
 {
     item->gravity_status = item->fallspeed = 0;

@@ -308,6 +308,7 @@ void lara_col_all4turnlr(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_poleleft(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_poleright(ITEM_INFO *item, COLL_INFO *coll);
 void lara_as_rope(ITEM_INFO *item, COLL_INFO *coll);
+void lara_as_ropel(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
