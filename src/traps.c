@@ -451,6 +451,64 @@ void RollingBallCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
         ObjectCollision(item_number, l, coll);
 }
 
+void DrawScaledSpike(ITEM_INFO *item)
+{
+    PHD_VECTOR scale;
+    ROOM_INFO *r;
+    sint16 **meshpp;
+    sint16 *frm[2];
+    sint32 rate, clip, lp;
+
+    if (item->object_number != TEETH_SPIKES || item->item_flags[1]) {
+        if ((item->object_number == RAISING_BLOCK1 || item->object_number == RAISING_BLOCK2) && item->trigger_flags && !item->item_flags[0]) {
+            for (lp = 1; lp < 8; lp++) {
+                if (!LibraryTab[lp])
+                    break;
+            }
+            if (lp == 8) {
+                item->item_flags[0] = 1;
+                item->touch_bits = 0;
+                AddActiveItem(item - items);
+                item->status = ITEM_ACTIVE;
+                item->flags |= IFL_CODEBITS;
+            }
+        }
+        r = &room[item->room_number];
+        phd_left = r->left;
+        phd_right = r->right;
+        phd_top = r->top;
+        phd_bottom = r->bottom;
+        GetFrames(item, frm, &rate);
+        phd_PushMatrix();
+        phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+        phd_RotX(item->pos.x_rot);
+        phd_RotZ(item->pos.z_rot);
+        phd_RotY(item->pos.y_rot);
+        clip = S_GetObjectBounds(frm[0]);
+        if (clip) {
+            meshpp = &meshes[objects[item->object_number].mesh_index];
+            if (item->object_number == EXPANDING_PLATFORM) {
+                scale.x = scale.y = 16384;
+                scale.z = item->item_flags[1] << 2;
+            } else {
+                if (item->object_number == JOBY_SPIKES)
+                    scale.x = scale.z = 12288;
+                else
+                    scale.x = scale.z = 16384;
+                scale.y = item->item_flags[1] << 2;
+            }
+            ScaleCurrentMatrix(&scale);
+            CalculateObjectLighting(item, frm[0]);
+            phd_PutPolygons(*meshpp, clip);
+        }
+        phd_left = 0;
+        phd_right = phd_winwidth;
+        phd_top = 0;
+        phd_bottom = phd_winheight;
+        phd_PopMatrix();
+    }
+}
+
 void TwoBlockPlatformFloor(ITEM_INFO *item, sint32 x, sint32 y, sint32 z, sint32 *height)
 {
     if (OnTwoBlockPlatform(item, x, z)) {

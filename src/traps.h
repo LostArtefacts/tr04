@@ -59,5 +59,6 @@ void ControlSprinkler(sint16 item_number);
 void FlameControl(sint16 fx_number);
 void FlameEmitter3Control(sint16 item_number);
 void FlameEmitterControl(sint16 item_number);
+void DrawScaledSpike(ITEM_INFO *item);
 
 #endif
