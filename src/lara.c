@@ -1149,6 +1149,49 @@ void lara_col_poleup(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_POLESTAT;
 }
 
+void lara_col_poledown(ITEM_INFO *item, COLL_INFO *coll)
+{
+    FLOOR_INFO *floor;
+    sint16 room_number;
+
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    if (input & IN_LOOK)
+        LookUpDown();
+    if (((input & (IN_BACK | IN_ACTION)) != (IN_BACK | IN_ACTION)) || item->hit_points <= 0)
+        item->goal_anim_state = AS_POLESTAT;
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -384;
+    coll->bad_ceiling = 0;
+    coll->facing = lara.move_angle = item->pos.y_rot;
+    coll->radius = 100;
+    coll->slopes_are_walls = 1;
+    GetLaraCollisionInfo(item, coll);
+    if (coll->mid_floor < 0) {
+        room_number = item->room_number;
+        floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+        item->floor = item->pos.y_pos = GetHeight(floor, item->pos.x_pos, item->pos.y_pos - 762, item->pos.z_pos);
+        item->goal_anim_state = AS_POLESTAT;
+        item->item_flags[2] = 0;
+    }
+    if (input & IN_LEFT)
+        item->pos.y_rot += 256;
+    else if (input & IN_RIGHT)
+        item->pos.y_rot -= 256;
+    if (item->anim_number == ANIM_POLESLIDEE) {
+        item->item_flags[2] -= 1024;
+        SoundEffect(SFX_LARA_POLE_LOOP, &item->pos, SFX_DEFAULT);
+    } else {
+        item->item_flags[2] += 256;
+        SoundEffect(SFX_LARA_POLE_LOOP, &item->pos, SFX_DEFAULT);
+    }
+    if (item->item_flags[2] > 16384)
+        item->item_flags[2] = 16384;
+    else if (item->item_flags[2] < 0)
+        item->item_flags[2] = 0;
+    item->pos.y_pos += item->item_flags[2] >> 8;
+}
+
 void ApplyVelocityToRope(sint32 node, uint16 angle, uint16 n)
 {
     sint32 xvel, zvel;
