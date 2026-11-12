@@ -153,8 +153,8 @@ void CombatCamera(ITEM_INFO *item)
         camera.target_angle = item->pos.y_rot + lara.target_angles[0];
         camera.target_elevation = item->pos.x_rot + lara.target_angles[1];
     } else {
-        camera.target_angle = item->pos.y_rot + lara.head_y_rot + lara.torso_y_rot;
-        camera.target_elevation = item->pos.x_rot + lara.head_x_rot + lara.torso_x_rot - 2730;
+        camera.target_angle = lara.head_y_rot + item->pos.y_rot + lara.torso_y_rot;
+        camera.target_elevation = lara.head_x_rot + item->pos.x_rot + lara.torso_x_rot - 2730;
     }
     floor = GetFloor(camera.target.x, camera.target.y, camera.target.z, &camera.target.room_number);
     h = GetHeight(floor, camera.target.x, camera.target.y, camera.target.z);
