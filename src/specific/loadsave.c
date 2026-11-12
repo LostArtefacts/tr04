@@ -70,6 +70,61 @@ void CreateMonoScreen(void)
     ConvertSurfaceToTextures(App.dx.lpPrimaryBuffer);
 }
 
+void FreeMonoScreen(void)
+{
+    if (MonoScreen[0].surface) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Surface", MonoScreen[0].surface, IDirectDrawSurface4_Release(MonoScreen[0].surface));
+        MonoScreen[0].surface = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Surface");
+    if (MonoScreen[1].surface) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Surface", MonoScreen[1].surface, IDirectDrawSurface4_Release(MonoScreen[1].surface));
+        MonoScreen[1].surface = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Surface");
+    if (MonoScreen[2].surface) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Surface", MonoScreen[2].surface, IDirectDrawSurface4_Release(MonoScreen[2].surface));
+        MonoScreen[2].surface = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Surface");
+    if (MonoScreen[3].surface) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Surface", MonoScreen[3].surface, IDirectDrawSurface4_Release(MonoScreen[3].surface));
+        MonoScreen[3].surface = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Surface");
+    if (MonoScreen[4].surface) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Surface", MonoScreen[4].surface, IDirectDrawSurface4_Release(MonoScreen[4].surface));
+        MonoScreen[4].surface = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Surface");
+    if (MonoScreen[0].tex) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Texture", MonoScreen[0].tex, IDirect3DTexture2_Release(MonoScreen[0].tex));
+        MonoScreen[0].tex = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Texture");
+    if (MonoScreen[1].tex) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Texture", MonoScreen[1].tex, IDirect3DTexture2_Release(MonoScreen[1].tex));
+        MonoScreen[1].tex = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Texture");
+    if (MonoScreen[2].tex) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Texture", MonoScreen[2].tex, IDirect3DTexture2_Release(MonoScreen[2].tex));
+        MonoScreen[2].tex = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Texture");
+    if (MonoScreen[3].tex) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Texture", MonoScreen[3].tex, IDirect3DTexture2_Release(MonoScreen[3].tex));
+        MonoScreen[3].tex = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Texture");
+    if (MonoScreen[4].tex) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Mono Screen Texture", MonoScreen[4].tex, IDirect3DTexture2_Release(MonoScreen[4].tex));
+        MonoScreen[4].tex = 0;
+    } else
+        Log(1, "%s Attempt To Release NULL Ptr", "Mono Screen Texture");
+    MonoScreenOn = 0;
+}
+
 void S_DisplayMonoScreen(void)
 {
     sint32 x[4];
