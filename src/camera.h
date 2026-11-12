@@ -61,5 +61,6 @@ void LaraTorch(PHD_VECTOR *Soffset, PHD_VECTOR *Eoffset, sint16 yrot, sint32 bri
 void InitialiseCamera(void);
 void FixedCamera(void);
 sint32 mgLOS(GAME_VECTOR *start, GAME_VECTOR *target, sint32 push);
+void ChaseCamera(ITEM_INFO *item);
 
 #endif

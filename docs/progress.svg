@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="250.53" height="12" x="0" y="0" class="named"><title>1134 · 73.26%</title></rect>
-<rect width="0.66" height="12" x="250.53" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.90" height="12" x="251.20" y="0" class="nonmatching"><title>81 · 5.23%</title></rect>
-<rect width="72.91" height="12" x="269.09" y="0" class="todo"><title>330 · 21.32%</title></rect>
+<rect width="250.76" height="12" x="0" y="0" class="named"><title>1135 · 73.32%</title></rect>
+<rect width="0.66" height="12" x="250.76" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.90" height="12" x="251.42" y="0" class="nonmatching"><title>81 · 5.23%</title></rect>
+<rect width="72.69" height="12" x="269.31" y="0" class="todo"><title>329 · 21.25%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">73.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1134</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">81</tspan> · <tspan class="todo">330</tspan></text>
+<text text-anchor="end" x="522" y="7.50">73.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1135</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">81</tspan> · <tspan class="todo">329</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="134.77" height="12" x="0" y="0" class="named"><title>245 KB · 39.40%</title></rect>
-<rect width="0.13" height="12" x="134.77" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.79" height="12" x="134.90" y="0" class="nonmatching"><title>58 KB · 9.30%</title></rect>
-<rect width="175.31" height="12" x="166.69" y="0" class="todo"><title>319 KB · 51.26%</title></rect>
+<rect width="135.38" height="12" x="0" y="0" class="named"><title>246 KB · 39.59%</title></rect>
+<rect width="0.13" height="12" x="135.38" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="31.79" height="12" x="135.51" y="0" class="nonmatching"><title>58 KB · 9.30%</title></rect>
+<rect width="174.69" height="12" x="167.31" y="0" class="todo"><title>318 KB · 51.08%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">39.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">245 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">58 KB</tspan> · <tspan class="todo">319 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">39.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">246 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">58 KB</tspan> · <tspan class="todo">318 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -762,7 +762,7 @@
 <rect width="12" height="12" x="645" y="195" class="named"><title>0x00442d70 MoveCreature3DPos (249 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="195" class="named"><title>0x00442e70 InitialiseCamera (200 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="195" class="todo"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="195" class="todo"><title>0x004435e0 ChaseCamera (1127 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="195" class="named"><title>0x004435e0 ChaseCamera (1127 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="todo"><title>0x00443a50 CombatCamera (1145 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="todo"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="named"><title>0x004447f0 FixedCamera (158 bytes)</title></rect>
@@ -1746,7 +1746,7 @@
 <rect width="20.88" height="21.12" x="259.53" y="48.45" class="todo"><title>0x00443a50 CombatCamera (1145 bytes)</title></rect>
 <rect width="20.88" height="20.89" x="259.53" y="72.57" class="todo"><title>0x00452710 DoLevel (1133 bytes)</title></rect>
 <rect width="20.88" height="20.86" x="259.53" y="96.46" class="todo"><title>0x004812d0 HWR_DrawSortList (1131 bytes)</title></rect>
-<rect width="20.88" height="20.78" x="259.53" y="120.32" class="todo"><title>0x004435e0 ChaseCamera (1127 bytes)</title></rect>
+<rect width="20.88" height="20.78" x="259.53" y="120.32" class="named"><title>0x004435e0 ChaseCamera (1127 bytes)</title></rect>
 <rect width="20.88" height="20.67" x="259.53" y="144.11" class="todo"><title>0x004752a0 AdjustUV (1121 bytes)</title></rect>
 <rect width="20.88" height="20.43" x="259.53" y="167.78" class="todo"><title>0x00487260 S_DrawSmokeSparks (1108 bytes)</title></rect>
 <rect width="20.88" height="20.32" x="259.53" y="191.21" class="nonmatching"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
