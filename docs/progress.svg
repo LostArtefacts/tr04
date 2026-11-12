@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="226.38" height="12" x="0" y="0" class="named"><title>1024 · 66.19%</title></rect>
-<rect width="0.44" height="12" x="226.38" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="226.82" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="106.78" height="12" x="235.22" y="0" class="todo"><title>483 · 31.22%</title></rect>
+<rect width="226.60" height="12" x="0" y="0" class="named"><title>1025 · 66.26%</title></rect>
+<rect width="0.44" height="12" x="226.60" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="227.04" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="106.56" height="12" x="235.44" y="0" class="todo"><title>482 · 31.16%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">66.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1024</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">483</tspan></text>
+<text text-anchor="end" x="522" y="7.50">66.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1025</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">482</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="98.78" height="12" x="0" y="0" class="named"><title>179 KB · 28.88%</title></rect>
-<rect width="0.12" height="12" x="98.78" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="98.90" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="232.95" height="12" x="109.05" y="0" class="todo"><title>423 KB · 68.11%</title></rect>
+<rect width="98.87" height="12" x="0" y="0" class="named"><title>179 KB · 28.91%</title></rect>
+<rect width="0.12" height="12" x="98.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="98.99" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="232.85" height="12" x="109.15" y="0" class="todo"><title>422 KB · 68.08%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">179 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">423 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">179 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">422 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -265,7 +265,7 @@
 <rect width="12" height="12" x="690" y="45" class="todo"><title>0x0041fb80 FlameTorchControl (584 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="45" class="named"><title>0x0041fdd0 InitialiseHair (126 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="45" class="todo"><title>0x0041fe50 HairControl (2569 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="45" class="todo"><title>0x00420870 GetCorrectStashPoints (176 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="45" class="named"><title>0x00420870 GetCorrectStashPoints (176 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="60" class="todo"><title>0x00420920 DrawHair (338 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="60" class="named"><title>0x00420a80 LaraCeilingFront (133 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="60" class="todo"><title>0x00420b10 LaraAboveWater (571 bytes)</title></rect>
@@ -2407,7 +2407,7 @@
 <rect width="8.08" height="8.47" x="563.27" y="233.33" class="named"><title>0x004397f0 CreateBubble (177 bytes)</title></rect>
 <rect width="8.08" height="8.47" x="574.35" y="233.33" class="named"><title>0x00458ad0 phd_GetMatrixAngles (177 bytes)</title></rect>
 <rect width="8.08" height="8.47" x="585.42" y="233.33" class="named"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
-<rect width="8.03" height="8.47" x="596.50" y="233.33" class="todo"><title>0x00420870 GetCorrectStashPoints (176 bytes)</title></rect>
+<rect width="8.03" height="8.47" x="596.50" y="233.33" class="named"><title>0x00420870 GetCorrectStashPoints (176 bytes)</title></rect>
 <rect width="8.03" height="8.47" x="607.53" y="233.33" class="named"><title>0x00428160 lara_col_compress (176 bytes)</title></rect>
 <rect width="8.03" height="8.47" x="618.56" y="233.33" class="named"><title>0x0042c3c0 LaraTestClimbPos (176 bytes)</title></rect>
 <rect width="8.03" height="8.47" x="629.59" y="233.33" class="named"><title>0x00453980 InitialiseSmokeEmitter (176 bytes)</title></rect>

@@ -31,6 +31,7 @@ extern uint8 LaraNodeUnderwater[15];
 extern sint32 LaraNodeAmbient[2];
 extern sint32 lara_joint_matrices[180];
 extern sint32 lara_mesh_sweetness_table[15];
+extern char HairRotScratchVertNums[5][12];
 extern sint32 bLaraUnderWater;
 extern char bLaraInWater;
 extern sint16 *GLaraShadowframe;

@@ -1,6 +1,11 @@
+#include <stdlib.h>
+#include <string.h>
 #include "hair.h"
 #include "anim.h"
 #include "objnums.h"
+#include "delstuff.h"
+#include "specific/function_stubs.h"
+#include "specific/output.h"
 
 void InitialiseHair(void)
 {
@@ -27,4 +32,25 @@ void InitialiseHair(void)
             hptr++;
         }
     }
+}
+
+void GetCorrectStashPoints(sint32 pigtail, sint32 hair_node, sint32 skin_node)
+{
+    HAIR_STRUCT *hair;
+    uint16 num, rot1, rot2;
+    sint32 i;
+
+    num = 0;
+    hair = &hairs[pigtail][hair_node - 1];
+    if (!hair_node)
+        rot1 = (uint16)(0x8000 - (CamRot.y << 4));
+    else
+        rot1 = hair->pos.y_rot;
+    rot2 = hair[2].pos.y_rot;
+    while (abs(rot1 - rot2) > 0x2000 && abs(rot1 - rot2) < 0xE000) {
+        rot1 += 0x4000;
+        num++;
+    }
+    for (i = 0; i < 5; i++)
+        ScratchVertNums[skin_node][i] = HairRotScratchVertNums[num][i];
 }
