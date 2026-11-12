@@ -4,5 +4,6 @@
 #include "items.h"
 
 void InitialiseScorpion(sint16 item_number);
+void InitialiseSmlscorp(sint16 item_number);
 
 #endif

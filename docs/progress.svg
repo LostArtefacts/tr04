@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="223.50" height="12" x="0" y="0" class="named"><title>1011 · 65.35%</title></rect>
-<rect width="0.44" height="12" x="223.50" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="223.95" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="110.76" height="12" x="231.24" y="0" class="todo"><title>501 · 32.39%</title></rect>
+<rect width="223.73" height="12" x="0" y="0" class="named"><title>1012 · 65.42%</title></rect>
+<rect width="0.44" height="12" x="223.73" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="224.17" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="110.54" height="12" x="231.46" y="0" class="todo"><title>500 · 32.32%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">65.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1011</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">501</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1012</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">500</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="97.24" height="12" x="0" y="0" class="named"><title>176 KB · 28.43%</title></rect>
-<rect width="0.12" height="12" x="97.24" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="97.36" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="235.21" height="12" x="106.79" y="0" class="todo"><title>427 KB · 68.78%</title></rect>
+<rect width="97.29" height="12" x="0" y="0" class="named"><title>177 KB · 28.45%</title></rect>
+<rect width="0.12" height="12" x="97.29" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="97.41" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="235.16" height="12" x="106.84" y="0" class="todo"><title>427 KB · 68.76%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">176 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">427 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">177 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">427 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -159,7 +159,7 @@
 <rect width="12" height="12" x="600" y="15" class="named"><title>0x0040e6b0 InitialiseScarabGenerator (208 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="15" class="named"><title>0x0040e780 InitialiseScorpion (120 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="15" class="todo"><title>0x0040e800 ScorpionControl (1963 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="15" class="todo"><title>0x0040efd0 InitialiseSmlscorp (90 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="15" class="named"><title>0x0040efd0 InitialiseSmlscorp (90 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="15" class="todo"><title>0x0040f030 SmlscorpControl (717 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="15" class="todo"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="15" class="named"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
@@ -2702,7 +2702,7 @@
 <rect width="6.01" height="5.79" x="589.64" y="447.43" class="named"><title>0x00402a10 InitialiseBat (90 bytes)</title></rect>
 <rect width="6.01" height="5.79" x="589.64" y="456.21" class="named"><title>0x00407a30 InitialiseHarpy (90 bytes)</title></rect>
 <rect width="5.85" height="5.95" x="598.65" y="313.69" class="named"><title>0x0040d040 InitialiseSas (90 bytes)</title></rect>
-<rect width="5.85" height="5.95" x="598.65" y="322.64" class="todo"><title>0x0040efd0 InitialiseSmlscorp (90 bytes)</title></rect>
+<rect width="5.85" height="5.95" x="598.65" y="322.64" class="named"><title>0x0040efd0 InitialiseSmlscorp (90 bytes)</title></rect>
 <rect width="5.85" height="5.95" x="598.65" y="331.59" class="named"><title>0x00410c30 InitialiseSeth (90 bytes)</title></rect>
 <rect width="5.85" height="5.95" x="598.65" y="340.53" class="named"><title>0x0041bf00 InitialiseWildboar (90 bytes)</title></rect>
 <rect width="5.85" height="5.95" x="598.65" y="349.48" class="named"><title>0x004275e0 lara_as_fastdive (90 bytes)</title></rect>
