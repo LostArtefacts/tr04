@@ -30,6 +30,7 @@ void DrawRopeList(void);
 void SetPendulumPoint(ROPE_STRUCT *Rope, sint32 node);
 sint32 RopeNodeCollision(ROPE_STRUCT *rope, sint32 x, sint32 y, sint32 z, sint32 rad);
 void ModelRigid(PHD_VECTOR *pa, PHD_VECTOR *pb, PHD_VECTOR *va, PHD_VECTOR *vb, sint32 rlength);
+void ModelRigidRope(PHD_VECTOR *pa, PHD_VECTOR *pb, PHD_VECTOR *va, PHD_VECTOR *vb, sint32 rlength);
 
 extern ROPE_STRUCT RopeList[5];
 extern sint32 nRope;
