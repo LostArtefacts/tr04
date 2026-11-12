@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="180.62" height="12" x="0" y="0" class="named"><title>817 · 52.81%</title></rect>
-<rect width="0.44" height="12" x="180.62" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="181.06" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="154.53" height="12" x="187.47" y="0" class="todo"><title>699 · 45.18%</title></rect>
+<rect width="180.84" height="12" x="0" y="0" class="named"><title>818 · 52.88%</title></rect>
+<rect width="0.44" height="12" x="180.84" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="181.28" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="154.31" height="12" x="187.69" y="0" class="todo"><title>698 · 45.12%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">52.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">817</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">699</tspan></text>
+<text text-anchor="end" x="522" y="7.50">53.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">818</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">698</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="78.56" height="12" x="0" y="0" class="named"><title>142 KB · 22.97%</title></rect>
-<rect width="0.12" height="12" x="78.56" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="78.68" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="254.67" height="12" x="87.33" y="0" class="todo"><title>462 KB · 74.46%</title></rect>
+<rect width="78.61" height="12" x="0" y="0" class="named"><title>143 KB · 22.98%</title></rect>
+<rect width="0.12" height="12" x="78.61" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="78.73" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="254.62" height="12" x="87.38" y="0" class="todo"><title>462 KB · 74.45%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">142 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">462 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">143 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">462 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -895,7 +895,7 @@
 <rect width="12" height="12" x="390" y="240" class="named"><title>0x00453400 InitialiseScaledSpike (214 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="240" class="named"><title>0x004534e0 InitialiseRaisingBlock (212 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="240" class="named"><title>0x004535c0 InitialiseBurningFloor (34 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="240" class="todo"><title>0x004535f0 InitialiseSethBlade (88 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="240" class="named"><title>0x004535f0 InitialiseSethBlade (88 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="240" class="todo"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="240" class="todo"><title>0x00453710 InitialiseMineHelicopter (45 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="240" class="todo"><title>0x00453740 InitialiseSmashObject (141 bytes)</title></rect>
@@ -2721,7 +2721,7 @@
 <rect width="5.66" height="6.01" x="598.68" y="322.49" class="named"><title>0x004219b0 lara_as_all4turnr (88 bytes)</title></rect>
 <rect width="5.66" height="6.01" x="598.68" y="331.50" class="named"><title>0x00423a60 lara_as_monkeyl (88 bytes)</title></rect>
 <rect width="5.66" height="6.01" x="598.68" y="340.51" class="named"><title>0x0044f2d0 S_InsertRoom (88 bytes)</title></rect>
-<rect width="5.66" height="6.01" x="598.68" y="349.52" class="todo"><title>0x004535f0 InitialiseSethBlade (88 bytes)</title></rect>
+<rect width="5.66" height="6.01" x="598.68" y="349.52" class="named"><title>0x004535f0 InitialiseSethBlade (88 bytes)</title></rect>
 <rect width="5.66" height="5.94" x="598.68" y="358.52" class="named"><title>0x00407000 InitialiseHammerhead (87 bytes)</title></rect>
 <rect width="5.66" height="5.94" x="598.68" y="367.47" class="named"><title>0x00425d10 lara_as_fastback (87 bytes)</title></rect>
 <rect width="5.66" height="5.94" x="598.68" y="376.41" class="named"><title>0x00432340 lara_col_surftread (87 bytes)</title></rect>

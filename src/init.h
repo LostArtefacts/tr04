@@ -14,5 +14,6 @@ void InitialiseFlameEmitter3(sint16 item_number);
 void InitialiseSlicerDicer(sint16 item_number);
 void InitialiseScaledSpike(sint16 item_number);
 void InitialiseRaisingBlock(sint16 item_number);
+void InitialiseSethBlade(sint16 item_number);
 
 #endif

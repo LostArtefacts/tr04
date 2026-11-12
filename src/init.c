@@ -217,3 +217,14 @@ void InitialiseBurningFloor(sint16 item_number)
 {
     items[item_number].required_anim_state = 127;
 }
+
+void InitialiseSethBlade(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->anim_number = objects[SETH_BLADE].anim_index + 1;
+    item->frame_number = anims[item->anim_number].frame_base;
+    item->current_anim_state = item->goal_anim_state = 2;
+    item->item_flags[2] = abs(item->trigger_flags);
+}
