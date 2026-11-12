@@ -2706,6 +2706,7 @@ address,size,name,symbol
 0x007ff100,1408,smoke_spark,_smoke_spark
 0x007ff680,720,Gunshells,_Gunshells
 0x007ff960,448,ShockWaves,_ShockWaves
+0x007ffb20,1088,Lightning,_Lightning
 0x007fff60,512,fires,_fires
 0x00800160,4,LaserSightY,_LaserSightY
 0x00800164,4,LaserSightZ,_LaserSightZ

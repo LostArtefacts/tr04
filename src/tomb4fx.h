@@ -30,6 +30,28 @@ typedef struct shockwave_struct {
     sint16 Temp;
 } SHOCKWAVE_STRUCT;
 
+typedef struct {
+    PHD_VECTOR Point[4];
+    uint8 r;
+    uint8 g;
+    uint8 b;
+    uint8 Life;
+    sint8 Xvel1;
+    sint8 Yvel1;
+    sint8 Zvel1;
+    sint8 Xvel2;
+    sint8 Yvel2;
+    sint8 Zvel2;
+    sint8 Xvel3;
+    sint8 Yvel3;
+    sint8 Zvel3;
+    uint8 Size;
+    uint8 Flags;
+    uint8 Rand;
+    uint8 Segments;
+    uint8 Pad[3];
+} LIGHTNING_STRUCT;
+
 typedef struct smoke_sparks {
     sint32 x;
     sint32 y;
@@ -196,6 +218,7 @@ void Fade(void);
 void DrawLensFlares(ITEM_INFO *item);
 void TriggerLightningGlow(sint32 x, sint32 y, sint32 z, sint32 rgb);
 void DrawGunshells(void);
+void UpdateLightning(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
@@ -225,5 +248,6 @@ extern DRIP_STRUCT Drips[32];
 extern sint32 next_drip;
 extern GUNFLASH_STRUCT Gunflashes[4];
 extern SHOCKWAVE_STRUCT ShockWaves[16];
+extern LIGHTNING_STRUCT Lightning[16];
 
 #endif

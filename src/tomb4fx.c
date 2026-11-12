@@ -743,6 +743,30 @@ void TriggerShockwave(PHD_VECTOR *pos, sint32 InnerOuterRads, sint32 speed, sint
     }
 }
 
+void UpdateLightning(void)
+{
+    LIGHTNING_STRUCT *lptr;
+    sint32 *pPoint;
+    sint8 *pVel;
+    sint32 i, j;
+
+    lptr = Lightning;
+    for (i = 16; i > 0; i--, lptr++) {
+        if (lptr->Life) {
+            lptr->Life -= 2;
+            if (lptr->Life) {
+                pPoint = &lptr->Point[1].x;
+                pVel = &lptr->Xvel1;
+                for (j = 9; j > 0; j--) {
+                    *pPoint++ += *pVel << 1;
+                    *pVel -= *pVel >> 4;
+                    pVel++;
+                }
+            }
+        }
+    }
+}
+
 void TriggerLightningGlow(sint32 x, sint32 y, sint32 z, sint32 rgb)
 {
     sint32 dx, dz, size;
