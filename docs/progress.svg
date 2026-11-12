@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="145.69" height="12" x="0" y="0" class="named"><title>659 · 42.60%</title></rect>
-<rect width="0.44" height="12" x="145.69" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="146.13" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="191.23" height="12" x="150.77" y="0" class="todo"><title>865 · 55.91%</title></rect>
+<rect width="145.91" height="12" x="0" y="0" class="named"><title>660 · 42.66%</title></rect>
+<rect width="0.44" height="12" x="145.91" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="146.35" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="191.01" height="12" x="150.99" y="0" class="todo"><title>864 · 55.85%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">42.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">659</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">865</tspan></text>
+<text text-anchor="end" x="522" y="7.50">42.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">660</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">864</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="59.71" height="12" x="0" y="0" class="named"><title>108 KB · 17.46%</title></rect>
-<rect width="0.12" height="12" x="59.71" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="59.83" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="274.92" height="12" x="67.08" y="0" class="todo"><title>499 KB · 80.39%</title></rect>
+<rect width="59.73" height="12" x="0" y="0" class="named"><title>108 KB · 17.47%</title></rect>
+<rect width="0.12" height="12" x="59.73" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="59.85" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="274.90" height="12" x="67.10" y="0" class="todo"><title>499 KB · 80.38%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">17.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">108 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">499 KB</tspan></text>
@@ -330,7 +330,7 @@
 <rect width="12" height="12" x="165" y="75" class="todo"><title>0x00423f60 lara_col_poleup (130 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="75" class="todo"><title>0x00423ff0 lara_col_poledown (352 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="75" class="todo"><title>0x00424150 ApplyVelocityToRope (69 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="75" class="todo"><title>0x004241a0 lara_as_rope (38 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="75" class="named"><title>0x004241a0 lara_as_rope (38 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="75" class="todo"><title>0x004241d0 FallFromRope (149 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="75" class="todo"><title>0x00424270 lara_col_rope (163 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="75" class="todo"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
@@ -2953,7 +2953,7 @@
 <rect width="4.12" height="3.66" x="662.17" y="451.69" class="named"><title>0x0046c8d0 twentysix_control (39 bytes)</title></rect>
 <rect width="4.12" height="3.66" x="662.17" y="458.34" class="named"><title>0x0046d1c0 force_sky_lightning (39 bytes)</title></rect>
 <rect width="3.95" height="3.81" x="669.29" y="377.23" class="todo"><title>0x00491c30 DXAttempt (39 bytes)</title></rect>
-<rect width="3.85" height="3.81" x="676.24" y="377.23" class="todo"><title>0x004241a0 lara_as_rope (38 bytes)</title></rect>
+<rect width="3.85" height="3.81" x="676.24" y="377.23" class="named"><title>0x004241a0 lara_as_rope (38 bytes)</title></rect>
 <rect width="3.75" height="3.81" x="683.09" y="377.23" class="todo"><title>0x00453070 InitialiseTrapDoor (37 bytes)</title></rect>
 <rect width="3.75" height="3.81" x="689.85" y="377.23" class="todo"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>
 <rect width="3.75" height="3.81" x="696.60" y="377.23" class="named"><title>0x0046bf40 fourteen_control (37 bytes)</title></rect>

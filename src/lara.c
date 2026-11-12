@@ -965,6 +965,14 @@ void lara_as_poleright(ITEM_INFO *item, COLL_INFO *coll)
         item->pos.y_rot -= 256;
 }
 
+void lara_as_rope(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (!(input & IN_ACTION))
+        FallFromRope(item);
+    if (input & IN_LOOK)
+        LookUpDown();
+}
+
 void lara_col_stop(ITEM_INFO *item, COLL_INFO *coll)
 {
     item->gravity_status = item->fallspeed = 0;
