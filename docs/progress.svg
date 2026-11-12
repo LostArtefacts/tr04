@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="260.26" height="12" x="0" y="0" class="named"><title>1178 · 76.10%</title></rect>
-<rect width="0.66" height="12" x="260.26" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="23.20" height="12" x="260.92" y="0" class="nonmatching"><title>105 · 6.78%</title></rect>
+<rect width="260.48" height="12" x="0" y="0" class="named"><title>1179 · 76.16%</title></rect>
+<rect width="0.66" height="12" x="260.48" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="22.98" height="12" x="261.14" y="0" class="nonmatching"><title>104 · 6.72%</title></rect>
 <rect width="57.88" height="12" x="284.12" y="0" class="todo"><title>262 · 16.93%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">76.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1178</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">105</tspan> · <tspan class="todo">262</tspan></text>
+<text text-anchor="end" x="522" y="7.50">76.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1179</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">104</tspan> · <tspan class="todo">262</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="158.51" height="12" x="0" y="0" class="named"><title>289 KB · 46.35%</title></rect>
-<rect width="0.13" height="12" x="158.51" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="51.40" height="12" x="158.64" y="0" class="nonmatching"><title>94 KB · 15.03%</title></rect>
+<rect width="159.81" height="12" x="0" y="0" class="named"><title>291 KB · 46.73%</title></rect>
+<rect width="0.13" height="12" x="159.81" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="50.09" height="12" x="159.94" y="0" class="nonmatching"><title>91 KB · 14.65%</title></rect>
 <rect width="131.96" height="12" x="210.04" y="0" class="todo"><title>241 KB · 38.59%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">46.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">289 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">94 KB</tspan> · <tspan class="todo">241 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">46.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">291 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">91 KB</tspan> · <tspan class="todo">241 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1003,7 +1003,7 @@
 <rect width="12" height="12" x="510" y="270" class="named"><title>0x0045c0d0 InitialiseObjects (268 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="270" class="named"><title>0x0045c1e0 BaddyObjects (6689 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="270" class="nonmatching"><title>0x0045dc10 TrapObjects (1503 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="270" class="nonmatching"><title>0x0045e1f0 ObjectObjects (2380 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="270" class="named"><title>0x0045e1f0 ObjectObjects (2380 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="270" class="named"><title>0x0045eb40 GetCarriedItems (259 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="270" class="named"><title>0x0045ec50 GetAIPickups (215 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="270" class="nonmatching"><title>0x0045ed30 BuildOutsideTable (791 bytes)</title></rect>
@@ -1651,7 +1651,7 @@
 <rect width="30.91" height="29.72" x="84.29" y="205.48" class="todo"><title>0x00401e50 BaboonControl (2389 bytes)</title></rect>
 <rect width="30.91" height="29.71" x="84.29" y="238.21" class="nonmatching"><title>0x0040d0a0 SasControl (2388 bytes)</title></rect>
 <rect width="30.91" height="29.62" x="84.29" y="270.92" class="named"><title>0x0042eb30 DoProperDetection (2381 bytes)</title></rect>
-<rect width="30.91" height="29.61" x="84.29" y="303.55" class="nonmatching"><title>0x0045e1f0 ObjectObjects (2380 bytes)</title></rect>
+<rect width="30.91" height="29.61" x="84.29" y="303.55" class="named"><title>0x0045e1f0 ObjectObjects (2380 bytes)</title></rect>
 <rect width="30.91" height="29.39" x="84.29" y="336.16" class="todo"><title>0x00404ea0 DemigodControl (2362 bytes)</title></rect>
 <rect width="30.91" height="29.33" x="84.29" y="368.55" class="todo"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
 <rect width="30.91" height="29.08" x="84.29" y="400.87" class="todo"><title>0x0041c6e0 WraithControl (2337 bytes)</title></rect>
