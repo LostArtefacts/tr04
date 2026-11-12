@@ -616,7 +616,7 @@ address,size,name,symbol
 0x0043cae0,2405,draw_current_object_list,_draw_current_object_list
 0x0043d450,19,handle_object_changeover,_handle_object_changeover
 0x0043d470,1912,handle_inventry_menu,_handle_inventry_menu
-0x0043dbf0,566,Func43dbf0,
+0x0043dbf0,566,Func43dbf0,_Func43dbf0
 0x0043de30,147,fade_ammo_selector,_fade_ammo_selector
 0x0043ded0,611,draw_ammo_selector,_draw_ammo_selector
 0x0043e140,105,spinback,_spinback

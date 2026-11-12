@@ -188,6 +188,7 @@ typedef struct {
     sint16 combined_item;
 } COMBINELIST;
 
+void Func43dbf0(void);
 sint32 LoadGame(void);
 sint32 SaveGame(void);
 void DEL_picked_up_object(sint16 objnum);
@@ -219,9 +220,12 @@ void combine_revolver_lasersight(sint32 flag);
 void combine_crossbow_lasersight(sint32 flag);
 void remove_inventory_item(sint16 object_number);
 sint32 have_i_got_item(sint16 obj);
+void handle_object_changeover(sint32 ringnum);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];
+extern uint8 current_selected_option;
+extern sint8 menu_active;
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
 

@@ -37,6 +37,13 @@ sint32 go_and_save_game(void)
     return SaveGame();
 }
 
+void handle_object_changeover(sint32 ringnum)
+{
+    current_selected_option = 0;
+    menu_active = 1;
+    Func43dbf0();
+}
+
 sint32 have_i_got_item(sint16 obj)
 {
     sint32 i;

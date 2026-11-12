@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="174.21" height="12" x="0" y="0" class="named"><title>788 · 50.94%</title></rect>
-<rect width="0.44" height="12" x="174.21" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="174.65" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="160.94" height="12" x="181.06" y="0" class="todo"><title>728 · 47.06%</title></rect>
+<rect width="174.43" height="12" x="0" y="0" class="named"><title>789 · 51%</title></rect>
+<rect width="0.44" height="12" x="174.43" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="174.87" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="160.72" height="12" x="181.28" y="0" class="todo"><title>727 · 46.99%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">51.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">788</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">728</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">789</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">727</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="76.53" height="12" x="0" y="0" class="named"><title>139 KB · 22.38%</title></rect>
-<rect width="0.12" height="12" x="76.53" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.65" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.70" height="12" x="85.30" y="0" class="todo"><title>466 KB · 75.06%</title></rect>
+<rect width="76.54" height="12" x="0" y="0" class="named"><title>139 KB · 22.38%</title></rect>
+<rect width="0.12" height="12" x="76.54" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.66" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.69" height="12" x="85.31" y="0" class="todo"><title>466 KB · 75.06%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">139 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">466 KB</tspan></text>
@@ -678,7 +678,7 @@
 <rect width="12" height="12" x="135" y="180" class="todo"><title>0x0043c610 construct_object_list (1149 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="180" class="todo"><title>0x0043ca90 insert_object_into_list (80 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="180" class="todo"><title>0x0043cae0 draw_current_object_list (2405 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="180" class="todo"><title>0x0043d450 handle_object_changeover (19 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="180" class="named"><title>0x0043d450 handle_object_changeover (19 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="180" class="todo"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="180" class="todo"><title>0x0043dbf0 Func43dbf0 (566 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="180" class="todo"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
@@ -3065,7 +3065,7 @@
 <rect width="2.53" height="2.89" x="711.41" y="409.71" class="named"><title>0x00432b30 lara_col_tread (19 bytes)</title></rect>
 <rect width="2.53" height="2.89" x="716.94" y="409.71" class="named"><title>0x00432b50 lara_col_dive (19 bytes)</title></rect>
 <rect width="2.53" height="2.89" x="722.48" y="409.71" class="named"><title>0x00432bd0 lara_col_waterroll (19 bytes)</title></rect>
-<rect width="2.53" height="2.89" x="728.01" y="409.71" class="todo"><title>0x0043d450 handle_object_changeover (19 bytes)</title></rect>
+<rect width="2.53" height="2.89" x="728.01" y="409.71" class="named"><title>0x0043d450 handle_object_changeover (19 bytes)</title></rect>
 <rect width="2.53" height="2.89" x="733.54" y="409.71" class="named"><title>0x0046c610 twentythree_init (19 bytes)</title></rect>
 <rect width="2.53" height="2.89" x="739.07" y="409.71" class="todo"><title>0x0049458d SW_D3D_AddRef (19 bytes)</title></rect>
 <rect width="2.39" height="2.89" x="744.61" y="409.71" class="named"><title>0x0046b6d0 third_cutseq_control (18 bytes)</title></rect>
