@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <process.h>
 #include "file.h"
 #include "function_stubs.h"
 #include "../effects.h"
@@ -14,6 +15,25 @@
 #include "lighting.h"
 #include "dxsound.h"
 #include "../sound.h"
+
+#ifndef TR4_EXE
+FILE *FileOpen(const char *name)
+{
+    FILE *file;
+    char path_name[80];
+
+    memset(path_name, 0, 80);
+    path_name[0] = cd_drive;
+    path_name[1] = ':';
+    path_name[2] = '\\';
+    strcat(path_name, name);
+    Log(5, "FileOpen - %s", path_name);
+    file = fopen(path_name, "rb");
+    if (!file)
+        Log(1, "Unable To Open %s", path_name);
+    return file;
+}
+#endif
 
 void FileClose(FILE *file)
 {

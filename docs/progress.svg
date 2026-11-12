@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="224.39" height="12" x="0" y="0" class="named"><title>1015 · 65.61%</title></rect>
 <rect width="0.44" height="12" x="224.39" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.96" height="12" x="224.83" y="0" class="nonmatching"><title>36 · 2.33%</title></rect>
-<rect width="109.21" height="12" x="232.79" y="0" class="todo"><title>494 · 31.93%</title></rect>
+<rect width="8.18" height="12" x="224.83" y="0" class="nonmatching"><title>37 · 2.39%</title></rect>
+<rect width="108.99" height="12" x="233.01" y="0" class="todo"><title>493 · 31.87%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">65.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1015</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">36</tspan> · <tspan class="todo">494</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1015</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">37</tspan> · <tspan class="todo">493</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="97.43" height="12" x="0" y="0" class="named"><title>177 KB · 28.49%</title></rect>
 <rect width="0.12" height="12" x="97.43" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.96" height="12" x="97.55" y="0" class="nonmatching"><title>18 KB · 2.91%</title></rect>
-<rect width="234.48" height="12" x="107.52" y="0" class="todo"><title>425 KB · 68.56%</title></rect>
+<rect width="10.05" height="12" x="97.55" y="0" class="nonmatching"><title>18 KB · 2.94%</title></rect>
+<rect width="234.40" height="12" x="107.60" y="0" class="todo"><title>425 KB · 68.54%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">177 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">425 KB</tspan></text>
@@ -1253,7 +1253,7 @@
 <rect width="12" height="12" x="510" y="345" class="named"><title>0x00473bb0 S_SoundSetPanAndVolume (53 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="345" class="named"><title>0x00473bf0 S_SoundSetPitch (28 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="345" class="todo"><title>0x00473c10 FindCDDrive (203 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="345" class="todo"><title>0x00473ce0 FileOpen (153 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="345" class="nonmatching"><title>0x00473ce0 FileOpen (153 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="345" class="named"><title>0x00473d80 FileClose (26 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="345" class="named"><title>0x00473da0 FileSize (42 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="345" class="named"><title>0x00473dd0 LoadFile (169 bytes)</title></rect>
@@ -2480,7 +2480,7 @@
 <rect width="7.86" height="7.52" x="717.43" y="244.80" class="named"><title>0x004546a0 RemoveDrawnItem (153 bytes)</title></rect>
 <rect width="7.86" height="7.52" x="728.29" y="244.80" class="named"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
 <rect width="7.86" height="7.52" x="739.14" y="244.80" class="named"><title>0x0046b4c0 CalcActorLighting (153 bytes)</title></rect>
-<rect width="7.62" height="7.75" x="540.61" y="255.32" class="todo"><title>0x00473ce0 FileOpen (153 bytes)</title></rect>
+<rect width="7.62" height="7.75" x="540.61" y="255.32" class="nonmatching"><title>0x00473ce0 FileOpen (153 bytes)</title></rect>
 <rect width="7.57" height="7.75" x="551.23" y="255.32" class="named"><title>0x00425ac0 lara_as_walk (152 bytes)</title></rect>
 <rect width="7.57" height="7.75" x="561.80" y="255.32" class="named"><title>0x0043e250 is_item_currently_combinable (152 bytes)</title></rect>
 <rect width="7.57" height="7.75" x="572.37" y="255.32" class="named"><title>0x0044bbe0 LOS (152 bytes)</title></rect>

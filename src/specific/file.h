@@ -44,6 +44,8 @@ extern TEXTURESTRUCT *textinfo;
 extern SPRITESTRUCT *spriteinfo;
 extern float AnimatingTexturesV[16][8][3];
 
+extern char cd_drive;
+
 FILE *FileOpen(const char *name);
 void FreeTextures(void);
 void FileClose(FILE *file);
