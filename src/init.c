@@ -180,6 +180,39 @@ void InitialiseScaledSpike(sint16 item_number)
     item->item_flags[2] = 0;
 }
 
+void InitialiseRaisingBlock(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint16 room_num;
+
+    item = &items[item_number];
+    room_num = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_num);
+    boxes[floor->box].overlap_index &= 0xBFFF;
+    if (item->object_number == EXPANDING_PLATFORM) {
+        switch (item->pos.y_rot) {
+        case 0:
+            item->pos.z_pos += 511;
+            break;
+        case 0x4000:
+            item->pos.x_pos += 511;
+            break;
+        case -0x8000:
+            item->pos.z_pos -= 511;
+            break;
+        case -0x4000:
+            item->pos.x_pos -= 511;
+            break;
+        }
+    }
+    if (item->trigger_flags == 2) {
+        item->flags |= IFL_CODEBITS;
+        AddActiveItem(item_number);
+        item->status = ITEM_ACTIVE;
+    }
+}
+
 void InitialiseBurningFloor(sint16 item_number)
 {
     items[item_number].required_anim_state = 127;
