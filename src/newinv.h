@@ -9,6 +9,7 @@ void DEL_picked_up_object(sint16 objnum);
 sint32 have_i_got_object(sint16 object_number);
 sint32 go_and_load_game(void);
 sint32 go_and_save_game(void);
+void combine_PuzzleItem1(sint32 flag);
 
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;

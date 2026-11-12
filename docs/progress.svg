@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="168.46" height="12" x="0" y="0" class="named"><title>762 · 49.26%</title></rect>
-<rect width="0.44" height="12" x="168.46" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="168.90" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="166.69" height="12" x="175.31" y="0" class="todo"><title>754 · 48.74%</title></rect>
+<rect width="168.68" height="12" x="0" y="0" class="named"><title>763 · 49.32%</title></rect>
+<rect width="0.44" height="12" x="168.68" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="169.12" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="166.47" height="12" x="175.53" y="0" class="todo"><title>753 · 48.67%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">49.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">762</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">754</tspan></text>
+<text text-anchor="end" x="522" y="7.50">49.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">763</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">753</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="75.96" height="12" x="0" y="0" class="named"><title>138 KB · 22.21%</title></rect>
-<rect width="0.12" height="12" x="75.96" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="76.08" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="257.27" height="12" x="84.73" y="0" class="todo"><title>467 KB · 75.23%</title></rect>
+<rect width="75.97" height="12" x="0" y="0" class="named"><title>138 KB · 22.21%</title></rect>
+<rect width="0.12" height="12" x="75.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.09" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="257.26" height="12" x="84.74" y="0" class="todo"><title>467 KB · 75.22%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">138 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">467 KB</tspan></text>
@@ -692,7 +692,7 @@
 <rect width="12" height="12" x="345" y="180" class="todo"><title>0x0043e3d0 seperate_object (65 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="180" class="todo"><title>0x0043e420 combine_revolver_lasersight (81 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="180" class="todo"><title>0x0043e480 combine_crossbow_lasersight (81 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="180" class="todo"><title>0x0043e4e0 combine_PuzzleItem1 (17 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="180" class="named"><title>0x0043e4e0 combine_PuzzleItem1 (17 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="180" class="todo"><title>0x0043e500 combine_PuzzleItem2 (17 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="180" class="todo"><title>0x0043e520 combine_PuzzleItem3 (17 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="180" class="todo"><title>0x0043e540 combine_PuzzleItem4 (17 bytes)</title></rect>
@@ -3073,7 +3073,7 @@
 <rect width="2.71" height="2.57" x="700.34" y="421.17" class="named"><title>0x0046c5c0 twentyone_init (18 bytes)</title></rect>
 <rect width="2.71" height="2.57" x="700.34" y="426.74" class="todo"><title>0x004945f0 SW_D3D_GetCurrentViewport (18 bytes)</title></rect>
 <rect width="2.71" height="2.57" x="700.34" y="432.31" class="todo"><title>0x00494a90 SW_D3D_GetRenderTarget (18 bytes)</title></rect>
-<rect width="2.71" height="2.42" x="700.34" y="437.88" class="todo"><title>0x0043e4e0 combine_PuzzleItem1 (17 bytes)</title></rect>
+<rect width="2.71" height="2.42" x="700.34" y="437.88" class="named"><title>0x0043e4e0 combine_PuzzleItem1 (17 bytes)</title></rect>
 <rect width="2.71" height="2.42" x="700.34" y="443.30" class="todo"><title>0x0043e500 combine_PuzzleItem2 (17 bytes)</title></rect>
 <rect width="2.71" height="2.42" x="700.34" y="448.73" class="todo"><title>0x0043e520 combine_PuzzleItem3 (17 bytes)</title></rect>
 <rect width="2.71" height="2.42" x="700.34" y="454.15" class="todo"><title>0x0043e540 combine_PuzzleItem4 (17 bytes)</title></rect>

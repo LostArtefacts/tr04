@@ -33,3 +33,9 @@ sint32 go_and_save_game(void)
 {
     return SaveGame();
 }
+
+void combine_PuzzleItem1(sint32 flag)
+{
+    lara.puzzleitemscombo &= ~0x3;
+    lara.puzzleitems[0] = 1;
+}
