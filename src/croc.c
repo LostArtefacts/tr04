@@ -49,3 +49,18 @@ void InitialiseLocustEmitter(sint16 item_number)
         break;
     }
 }
+
+void ControlLocustEmitter(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (!TriggerActive(item))
+        return;
+    if (!item->trigger_flags) {
+        KillItem(item_number);
+    } else {
+        TriggerLocust(item);
+        item->trigger_flags--;
+    }
+}
