@@ -24,6 +24,7 @@ void ControlLocustEmitter(sint16 item_number);
 sint32 GetFreeLocust(void);
 void InitialiseCrocgod(sint16 item_number);
 void DrawLocusts(void);
+void UpdateLocusts(void);
 void TriggerCrocgodMissile(PHD_3DPOS *pos, sint16 room_number, sint16 num);
 void TriggerCrocgodMissileFlame(sint16 fx_number, sint32 xv, sint32 yv, sint32 zv);
 

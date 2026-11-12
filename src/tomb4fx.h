@@ -233,6 +233,12 @@ void DrawWeaponMissile(ITEM_INFO *item);
 void DrawGunflashes(void);
 void TriggerLaraDrips(void);
 void UpdateShockwaves(void);
+void UpdateFireSparks(void);
+void UpdateSmokeSparks(void);
+void UpdateBubbles(void);
+void UpdateBlood(void);
+void UpdateDrips(void);
+void UpdateGunShells(void);
 void S_DrawFires(void);
 void S_DrawSparks(void);
 

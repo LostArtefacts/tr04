@@ -19,6 +19,7 @@ sint32 GetFreeScarab(void);
 void InitialiseScarabGenerator(sint16 item_number);
 void TriggerScarab(sint16 item_number);
 void DrawScarabs(void);
+void UpdateScarabs(void);
 void ScarabControl(sint16 item_number);
 
 extern SCARAB_STRUCT Scarabs[128];

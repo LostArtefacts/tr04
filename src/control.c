@@ -25,8 +25,24 @@
 #include "lot.h"
 #include "specific/fmv.h"
 #include "lara_states.h"
+#include "specific/input.h"
+#include "specific/loadsave.h"
+#include "newinv.h"
+#include "tomb4fx.h"
+#include "laramisc.h"
+#include "hair.h"
+#include "voncroy.h"
+#include "objects.h"
+#include "text.h"
+#include "health.h"
+#include "scarab.h"
+#include "croc.h"
 
 extern uint8 HeavyTriggered;
+extern sint32 framecount;
+extern uint8 InItemControlLoop;
+extern sint16 cdtrack;
+extern volatile sint32 thread_ended;
 
 enum trigger_types {
     TRIGGER,
@@ -86,6 +102,228 @@ void UpdateSky(void)
         else if (SkyPos2 < 0)
             SkyPos2 += 0x2C00;
     }
+}
+
+sint32 ControlPhase(sint32 nframes, sint32 demo_mode)
+{
+    ITEM_INFO *item;
+    FX_INFO *fx;
+    FLOOR_INFO *floor;
+
+    RegeneratePickups();
+    if (nframes > 10)
+        nframes = 10;
+    if (bTrackCamInit)
+        bUseSpotCam = 0;
+    SetDebounce = 1;
+    for (framecount += nframes; framecount > 0; framecount -= 2) {
+        sint16 item_num, nex;
+
+        GlobalCounter++;
+        UpdateSky();
+        if (cdtrack > 0)
+            nullsub_1();
+        if (S_UpdateInput() == IN_ALL)
+            return 0;
+        if (bDisableLaraControl) {
+            if (gfCurrentLevel)
+                dbinput = 0;
+            input &= IN_LOOK;
+        }
+        if (cutseq_trig) {
+            input = 0;
+            if (cutseq_num == 27)
+                input = IN_ACTION;
+        }
+        SetDebounce = 0;
+        if (gfCurrentLevel && (dbinput & IN_OPTION || GLOBAL_enterinventory != -1) && !cutseq_trig && lara_item->hit_points > 0) {
+            if (S_CallInventory2())
+                return 2;
+        }
+        if (gfLevelComplete)
+            return 3;
+        if (reset_flag || lara.death_count > 300 || lara.death_count > 60 && input) {
+            if (Gameflow->DemoDisc && reset_flag) {
+                reset_flag = 0;
+                return 4;
+            }
+            reset_flag = 0;
+            return 1;
+        }
+        if (demo_mode && input == IN_ALL)
+            input = 0;
+        if (!FadeScreenHeight) {
+            if (input & IN_SAVE)
+                S_LoadSave(IN_SAVE, 0);
+            else if (input & IN_LOAD) {
+                if (S_LoadSave(IN_LOAD, 0) >= 0)
+                    return 2;
+            }
+            if (input & IN_PAUSE && gfGameMode == 0) {
+                if (S_PauseMenu() == 8)
+                    return 1;
+            }
+        }
+        if (thread_ended)
+            return 4;
+        if (input & IN_LOOK && (lara_item->current_anim_state == AS_STOP && lara_item->anim_number == ANIM_BREATH ||
+            (lara.IsDucked && !(input & IN_DUCK) && lara_item->anim_number == ANIM_DUCKBREATHE && lara_item->goal_anim_state == AS_DUCK))) {
+            if (!BinocularRange) {
+                switch (lara.gun_type) {
+                case WEAPON_REVOLVER:
+                    if (lara.sixshooter_type_carried & 4 && lara.gun_status == LG_READY) {
+                        BinocularRange = 128;
+                        BinocularOldCamera = camera.old_type;
+                        lara.Busy = 1;
+                        LaserSight = 1;
+                    }
+                    break;
+                case WEAPON_CROSSBOW:
+                    if (lara.crossbow_type_carried & 4 && lara.gun_status == LG_READY) {
+                        BinocularRange = 128;
+                        BinocularOldCamera = camera.old_type;
+                        lara.Busy = 1;
+                        LaserSight = 1;
+                    }
+                    break;
+                }
+            }
+        } else if (BinocularRange) {
+            if (LaserSight) {
+                BinocularRange = 0;
+                LaserSight = 0;
+                AlterFOV(14560);
+                lara_item->mesh_bits = -1;
+                lara.Busy = 0;
+                camera.type = BinocularOldCamera;
+                lara.head_y_rot = 0;
+                lara.head_x_rot = 0;
+                lara.torso_y_rot = 0;
+                lara.torso_x_rot = 0;
+                BinocularOn = -8;
+            } else
+                input |= IN_LOOK;
+        }
+        ClearDynamics();
+        ClearFires();
+        GotLaraSpheres = 0;
+        InItemControlLoop = 1;
+        item_num = next_item_active;
+        while (item_num != -1) {
+            item = &items[item_num];
+            nex = item->next_active;
+            if (item->after_death >= 128)
+                KillItem(item_num);
+            else if (objects[item->object_number].control)
+                objects[item->object_number].control(item_num);
+            item_num = nex;
+        }
+        InItemControlLoop = 0;
+        KillMoveItems();
+        InItemControlLoop = 1;
+        item_num = next_fx_active;
+        while (item_num != -1) {
+            fx = &effects[item_num];
+            nex = fx->next_active;
+            if (objects[fx->object_number].control)
+                objects[fx->object_number].control(item_num);
+            item_num = nex;
+        }
+        InItemControlLoop = 0;
+        KillMoveEffects();
+        if (KillEverythingFlag)
+            KillEverything();
+        if (SmokeCountL)
+            SmokeCountL--;
+        if (SmokeCountR)
+            SmokeCountR--;
+        if (SplashCount)
+            SplashCount--;
+        if (WeaponDelay)
+            WeaponDelay--;
+        if (lara.blindTimer)
+            lara.blindTimer--;
+        if (lara.has_fired && !(wibble & 0x7F)) {
+            AlertNearbyGuards(lara_item);
+            lara.has_fired = 0;
+        }
+        *(sint16 *)&XSoff1 += 150;
+        *(sint16 *)&YSoff1 += 230;
+        *(sint16 *)&ZSoff1 += 660;
+        *(sint16 *)&XSoff2 += 270;
+        *(sint16 *)&YSoff2 += 440;
+        *(sint16 *)&ZSoff2 += 160;
+        if (lara.poisoned && !GLOBAL_playing_cutseq) {
+            if (lara.poisoned > 4096)
+                lara.poisoned = 4096;
+            else if (lara.dpoisoned)
+                lara.dpoisoned++;
+            if (lara.poisoned >= 256 && !(wibble & 0xFF)) {
+                lara_item->hit_points -= lara.poisoned >> 8;
+                PoisonFlag = 16;
+            }
+        }
+        InItemControlLoop = 1;
+        if (!GLOBAL_playing_cutseq && !gfGameMode)
+            LaraControl(0);
+        InItemControlLoop = 0;
+        while (SmashedMeshCount) {
+            SmashedMeshCount--;
+            floor = GetFloor(SmashedMesh[SmashedMeshCount]->x, SmashedMesh[SmashedMeshCount]->y, SmashedMesh[SmashedMeshCount]->z, &SmashedMeshRoom[SmashedMeshCount]);
+            GetHeight(floor, SmashedMesh[SmashedMeshCount]->x, SmashedMesh[SmashedMeshCount]->y, SmashedMesh[SmashedMeshCount]->z);
+            TestTriggers(trigger_index, 1, 0);
+            floor->stopper = 0;
+            SmashedMesh[SmashedMeshCount] = 0;
+        }
+        KillMoveItems();
+        if (GLOBAL_inventoryitemchosen != -1) {
+            SayNo();
+            GLOBAL_inventoryitemchosen = -1;
+        }
+        if (!GLOBAL_playing_cutseq) {
+            HairControl(0, 0, 0);
+            if (gfLevelFlags & GF_YOUNGLARA)
+                HairControl(0, 1, 0);
+        }
+        if (!GLOBAL_playing_cutseq) {
+            if (bUseSpotCam)
+                CalculateSpotCams();
+            else if (!bVoncroyCutScene)
+                CalculateCamera();
+        } else {
+            camera.type = CINEMATIC_CAMERA;
+            CalculateCamera();
+        }
+        CamRot.y = (mGetAngle(camera.pos.z, camera.pos.x, camera.target.z, camera.target.x) >> 4) & 0xFFF;
+        wibble = (wibble + 4) & 0xFC;
+        TriggerLaraDrips();
+        UpdateSparks();
+        UpdateFireSparks();
+        UpdateSmokeSparks();
+        UpdateBubbles();
+        UpdateSplashes();
+        UpdateDebris();
+        UpdateBlood();
+        UpdateDrips();
+        UpdateGunShells();
+        UpdateScarabs();
+        UpdateLocusts();
+        UpdateShockwaves();
+        UpdateLightning();
+        AnimateWaterfalls();
+        UpdatePulseColour();
+        SoundEffects();
+        health_bar_timer--;
+        if (!gfGameMode) {
+            GameTimer++;
+            if (savegame.Level.Timer) {
+                if (!GLOBAL_playing_cutseq)
+                    savegame.Level.Timer++;
+            }
+        }
+        UpdateFadeClip();
+    }
+    return 0;
 }
 
 void AnimateItem(ITEM_INFO *item)

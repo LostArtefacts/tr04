@@ -45,5 +45,6 @@ extern sint32 camera_speed[18];
 void InitialiseSpotCam(sint16 Sequence);
 void InitSpotCamSequences(void);
 void SetSplineData(sint32 num, sint32 cam);
+void CalculateSpotCams(void);
 
 #endif
