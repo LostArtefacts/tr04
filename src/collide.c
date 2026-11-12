@@ -168,3 +168,21 @@ void AlignLaraPosition(PHD_VECTOR *pos, ITEM_INFO *item, ITEM_INFO *l)
     l->pos.y_pos = y;
     l->pos.z_pos = z;
 }
+
+sint32 TestBoundsCollide2(ITEM_INFO *item, ITEM_INFO *l, sint32 rad)
+{
+    sint16 *bounds;
+    sint32 s, c, dx, dz, x, z;
+
+    bounds = GetBestFrame(l);
+    if (item->pos.y_pos + GlobalCollisionBounds[3] <= l->pos.y_pos + bounds[2] ||
+        item->pos.y_pos + GlobalCollisionBounds[2] >= l->pos.y_pos + bounds[3])
+        return 0;
+    c = phd_cos(item->pos.y_rot);
+    s = phd_sin(item->pos.y_rot);
+    dx = l->pos.x_pos - item->pos.x_pos;
+    dz = l->pos.z_pos - item->pos.z_pos;
+    x = (c * dx - s * dz) >> W2V_SHIFT;
+    z = (c * dz + s * dx) >> W2V_SHIFT;
+    return x >= GlobalCollisionBounds[0] - rad && x <= rad + GlobalCollisionBounds[1] && z >= GlobalCollisionBounds[4] - rad && z <= rad + GlobalCollisionBounds[5];
+}
