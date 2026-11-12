@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="166.69" height="12" x="0" y="0" class="named"><title>754 · 48.74%</title></rect>
-<rect width="0.44" height="12" x="166.69" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="167.13" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="168.46" height="12" x="173.54" y="0" class="todo"><title>762 · 49.26%</title></rect>
+<rect width="166.91" height="12" x="0" y="0" class="named"><title>755 · 48.80%</title></rect>
+<rect width="0.44" height="12" x="166.91" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="167.35" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="168.24" height="12" x="173.76" y="0" class="todo"><title>761 · 49.19%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">48.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">754</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">762</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">755</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">761</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="74.88" height="12" x="0" y="0" class="named"><title>136 KB · 21.89%</title></rect>
-<rect width="0.12" height="12" x="74.88" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="75" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="258.35" height="12" x="83.65" y="0" class="todo"><title>469 KB · 75.54%</title></rect>
+<rect width="75.20" height="12" x="0" y="0" class="named"><title>136 KB · 21.99%</title></rect>
+<rect width="0.12" height="12" x="75.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="75.32" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="258.03" height="12" x="83.97" y="0" class="todo"><title>468 KB · 75.45%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">21.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">136 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">469 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">22.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">136 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">468 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -817,7 +817,7 @@
 <rect width="12" height="12" x="720" y="210" class="named"><title>0x0044bbe0 LOS (152 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="210" class="todo"><title>0x0044bc80 zLOS (841 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="225" class="todo"><title>0x0044bfd0 xLOS (842 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="225" class="todo"><title>0x0044c320 ClipTarget (588 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="225" class="named"><title>0x0044c320 ClipTarget (588 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="225" class="named"><title>0x0044c570 FlipMap (248 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="225" class="named"><title>0x0044c670 RemoveRoomFlipItems (119 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="225" class="named"><title>0x0044c6f0 AddRoomFlipItems (123 bytes)</title></rect>
@@ -1916,7 +1916,7 @@
 <rect width="15.53" height="14.63" x="457.21" y="61.18" class="todo"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
 <rect width="15.53" height="14.63" x="475.73" y="61.18" class="todo"><title>0x0042c470 LaraTestClimb (588 bytes)</title></rect>
 <rect width="15.53" height="14.63" x="494.26" y="61.18" class="todo"><title>0x004390f0 TriggerGunShell (588 bytes)</title></rect>
-<rect width="15.53" height="14.63" x="512.79" y="61.18" class="todo"><title>0x0044c320 ClipTarget (588 bytes)</title></rect>
+<rect width="15.53" height="14.63" x="512.79" y="61.18" class="named"><title>0x0044c320 ClipTarget (588 bytes)</title></rect>
 <rect width="15.53" height="14.63" x="531.31" y="61.18" class="todo"><title>0x00471f40 ProjectWaterVerts (588 bytes)</title></rect>
 <rect width="15.45" height="14.63" x="549.84" y="61.18" class="todo"><title>0x00446d20 CollideStaticObjects (585 bytes)</title></rect>
 <rect width="15.45" height="14.63" x="568.29" y="61.18" class="named"><title>0x00463400 CogSwitchCollision (585 bytes)</title></rect>
