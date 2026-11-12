@@ -174,6 +174,7 @@ void j_nullsub_11(void);
 void nullsub_12(void);
 void j_nullsub_12(void);
 void nullsub_13(void);
+void j_nullsub_13(void);
 
 extern WINAPP App;
 extern sint32 resChangeCounter;

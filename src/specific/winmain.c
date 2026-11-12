@@ -450,6 +450,11 @@ void nullsub_12(void)
 {
 }
 
+void j_nullsub_13(void)
+{
+    nullsub_13();
+}
+
 void nullsub_13(void)
 {
 }

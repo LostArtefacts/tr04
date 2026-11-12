@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="254.07" height="12" x="0" y="0" class="named"><title>1150 · 74.29%</title></rect>
-<rect width="0.66" height="12" x="254.07" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="18.56" height="12" x="254.73" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
-<rect width="68.71" height="12" x="273.29" y="0" class="todo"><title>311 · 20.09%</title></rect>
+<rect width="254.29" height="12" x="0" y="0" class="named"><title>1151 · 74.35%</title></rect>
+<rect width="0.66" height="12" x="254.29" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="18.56" height="12" x="254.95" y="0" class="nonmatching"><title>84 · 5.43%</title></rect>
+<rect width="68.49" height="12" x="273.51" y="0" class="todo"><title>310 · 20.03%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">74.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1150</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">311</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1151</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">84</tspan> · <tspan class="todo">310</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="136.99" height="12" x="0" y="0" class="named"><title>249 KB · 40.06%</title></rect>
-<rect width="0.13" height="12" x="136.99" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="33.36" height="12" x="137.12" y="0" class="nonmatching"><title>61 KB · 9.76%</title></rect>
+<rect width="137" height="12" x="0" y="0" class="named"><title>249 KB · 40.06%</title></rect>
+<rect width="0.13" height="12" x="137" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="33.36" height="12" x="137.13" y="0" class="nonmatching"><title>61 KB · 9.76%</title></rect>
 <rect width="171.51" height="12" x="170.49" y="0" class="todo"><title>312 KB · 50.15%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">40.1%</text>
@@ -1461,7 +1461,7 @@
 <rect width="12" height="12" x="630" y="405" class="named"><title>0x0048f990 j_nullsub_12 (5 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="405" class="named"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="405" class="todo"><title>0x0048f9a1 Func48f9a1 (13 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="405" class="todo"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="405" class="named"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="405" class="named"><title>0x0048f9c0 nullsub_13 (1 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="405" class="todo"><title>0x0048f9c1 Func48f9c1 (13 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="405" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
@@ -3157,7 +3157,7 @@
 <rect width="1.19" height="1.60" x="732.18" y="460.40" class="named"><title>0x00484cc0 CloseRegistry (5 bytes)</title></rect>
 <rect width="1.54" height="1.24" x="736.37" y="451.21" class="named"><title>0x0048f970 j_nullsub_11 (5 bytes)</title></rect>
 <rect width="1.54" height="1.24" x="740.91" y="451.21" class="named"><title>0x0048f990 j_nullsub_12 (5 bytes)</title></rect>
-<rect width="1.54" height="1.24" x="745.46" y="451.21" class="todo"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
+<rect width="1.54" height="1.24" x="745.46" y="451.21" class="named"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
 <rect width="1.03" height="1.78" x="736.37" y="455.45" class="named"><title>0x00490b10 j_nullsub_14 (5 bytes)</title></rect>
 <rect width="1.03" height="1.78" x="736.37" y="460.22" class="todo"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="455.45" class="named"><title>0x004357b0 nullsub_1 (1 bytes)</title></rect>
