@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="144.36" height="12" x="0" y="0" class="named"><title>653 · 42.21%</title></rect>
-<rect width="0.44" height="12" x="144.36" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.64" height="12" x="144.80" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
-<rect width="192.55" height="12" x="149.45" y="0" class="todo"><title>871 · 56.30%</title></rect>
+<rect width="144.58" height="12" x="0" y="0" class="named"><title>654 · 42.28%</title></rect>
+<rect width="0.44" height="12" x="144.58" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.64" height="12" x="145.02" y="0" class="nonmatching"><title>21 · 1.36%</title></rect>
+<rect width="192.33" height="12" x="149.67" y="0" class="todo"><title>870 · 56.24%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">42.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">653</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">871</tspan></text>
+<text text-anchor="end" x="522" y="7.50">42.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">654</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">21</tspan> · <tspan class="todo">870</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="59.46" height="12" x="0" y="0" class="named"><title>108 KB · 17.38%</title></rect>
-<rect width="0.12" height="12" x="59.46" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.25" height="12" x="59.58" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
-<rect width="275.18" height="12" x="66.82" y="0" class="todo"><title>499 KB · 80.46%</title></rect>
+<rect width="59.56" height="12" x="0" y="0" class="named"><title>108 KB · 17.42%</title></rect>
+<rect width="0.12" height="12" x="59.56" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.25" height="12" x="59.68" y="0" class="nonmatching"><title>13 KB · 2.12%</title></rect>
+<rect width="275.07" height="12" x="66.93" y="0" class="todo"><title>499 KB · 80.43%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">17.4%</text>
+<text text-anchor="end" x="522" y="24.50">17.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">108 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">499 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1029,7 +1029,7 @@
 <rect width="12" height="12" x="150" y="285" class="todo"><title>0x00460b50 SetSplineData (285 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="285" class="todo"><title>0x00460c70 CalculateSpotCams (3744 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="285" class="todo"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="285" class="todo"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="285" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="285" class="named"><title>0x00461ca0 TestTriggersAtXYZ (67 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="285" class="named"><title>0x00461cf0 SwitchControl (111 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="285" class="named"><title>0x00461d60 SwitchCollision (653 bytes)</title></rect>
@@ -2358,7 +2358,7 @@
 <rect width="8.50" height="8.91" x="704.08" y="210.62" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
 <rect width="8.50" height="8.91" x="715.58" y="210.62" class="todo"><title>0x0049ac70 Func49ac70 (196 bytes)</title></rect>
 <rect width="8.46" height="8.91" x="727.08" y="210.62" class="todo"><title>0x00426600 IsValidHangPos (195 bytes)</title></rect>
-<rect width="8.46" height="8.91" x="738.54" y="210.62" class="todo"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
+<rect width="8.46" height="8.91" x="738.54" y="210.62" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="8.64" height="8.72" x="506.77" y="222.53" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
 <rect width="8.64" height="8.67" x="506.77" y="234.25" class="named"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>
 <rect width="8.64" height="8.67" x="506.77" y="245.92" class="todo"><title>0x0048c5f0 DrawFlash (194 bytes)</title></rect>

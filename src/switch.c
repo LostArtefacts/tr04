@@ -13,6 +13,39 @@
 #include "lara_states.h"
 #include "specific/input.h"
 
+sint32 GetSwitchTrigger(ITEM_INFO *item, sint16 *ItemNos, sint32 AttatchedToSwitch)
+{
+    FLOOR_INFO *floor;
+    sint16 *data;
+    sint16 num;
+    sint16 trig;
+    sint32 value;
+
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &item->room_number);
+    GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (!trigger_index)
+        return 0;
+    data = trigger_index;
+    while ((*data & 0x1F) != TRIGGER_TYPE && !(*data & 0x8000))
+        data++;
+    if (!(*data & TRIGGER_TYPE))
+        return 0;
+    data += 2;
+    num = 0;
+    while (1) {
+        trig = *data;
+        value = trig;
+        if (!(value & 0x3C00) && item != &items[value & 0x3FF]) {
+            *ItemNos++ = trig & 0x3FF;
+            num++;
+        }
+        if (*data & 0x8000)
+            break;
+        data++;
+    }
+    return num;
+}
+
 void TestTriggersAtXYZ(sint32 x, sint32 y, sint32 z, sint16 room_number, sint16 heavy, sint16 flags)
 {
     FLOOR_INFO *floor;
