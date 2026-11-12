@@ -3,6 +3,10 @@
 #include <string.h>
 #include "file.h"
 #include "function_stubs.h"
+#include "../effects.h"
+#include "../camera.h"
+#include "../box.h"
+#include "../spotcam.h"
 
 void FileClose(FILE *file)
 {
@@ -45,6 +49,21 @@ sint32 LoadFile(const char *name, char **dest)
         }
     }
     return 0;
+}
+
+uint8 LoadSoundEffects(void)
+{
+    Log(2, "LoadSoundEffects");
+    number_sound_effects = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    Log(8, "Number of SFX %d", number_sound_effects);
+    if (!number_sound_effects) {
+        return 1;
+    }
+    sound_effects = (OBJECT_VECTOR *)game_malloc(number_sound_effects * sizeof(OBJECT_VECTOR), 0);
+    memcpy(sound_effects, FileData, number_sound_effects * sizeof(OBJECT_VECTOR));
+    FileData += number_sound_effects * sizeof(OBJECT_VECTOR);
+    return 1;
 }
 
 uint8 LoadCinematic(void)

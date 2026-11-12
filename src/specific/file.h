@@ -14,5 +14,6 @@ void FileClose(FILE *file);
 sint32 FileSize(FILE *file);
 uint8 LoadCinematic(void);
 sint32 LoadFile(const char *name, char **dest);
+uint8 LoadSoundEffects(void);
 
 #endif

@@ -13,7 +13,7 @@ sint32 GetRandomDraw(void);
 void SeedRandomControl(sint32 seed);
 void SeedRandomDraw(sint32 seed);
 void init_game_malloc(void);
-void *game_malloc(int size);
+void *game_malloc();
 
 extern char *malloc_buffer;
 extern PHD_VECTOR CamPos;
