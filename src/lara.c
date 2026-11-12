@@ -1360,6 +1360,16 @@ void lara_as_extcornerl(ITEM_INFO *item, COLL_INFO *coll)
     SetCornerAnim(item, coll, 0x4000, flip);
 }
 
+void lara_as_extcornerr(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint32 flip;
+
+    camera.target_angle = -0x4000;
+    camera.target_elevation = -6144;
+    flip = item->anim_number == ANIM_EXTCORNERR_END || item->anim_number == ANIM_EXTCLIMBR_END;
+    SetCornerAnim(item, coll, -0x4000, flip);
+}
+
 void lara_as_splat(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.look = 0;
