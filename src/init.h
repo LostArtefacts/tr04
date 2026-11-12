@@ -9,5 +9,6 @@ void InitialiseJobySpike(sint16 item_number);
 void InitialiseTwoBlockPlatform(sint16 item_number);
 void InitialiseBurningFloor(sint16 item_number);
 void InitialiseFlameEmitter(sint16 item_number);
+void InitialiseFlameEmitter2(sint16 item_number);
 
 #endif

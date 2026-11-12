@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="179.51" height="12" x="0" y="0" class="named"><title>812 · 52.49%</title></rect>
-<rect width="0.44" height="12" x="179.51" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="179.95" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="155.64" height="12" x="186.36" y="0" class="todo"><title>704 · 45.51%</title></rect>
+<rect width="179.73" height="12" x="0" y="0" class="named"><title>813 · 52.55%</title></rect>
+<rect width="0.44" height="12" x="179.73" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="180.17" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="155.41" height="12" x="186.59" y="0" class="todo"><title>703 · 45.44%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">52.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">812</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">704</tspan></text>
+<text text-anchor="end" x="522" y="7.50">52.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">813</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">703</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="78.09" height="12" x="0" y="0" class="named"><title>142 KB · 22.83%</title></rect>
-<rect width="0.12" height="12" x="78.09" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="78.21" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="255.14" height="12" x="86.86" y="0" class="todo"><title>463 KB · 74.60%</title></rect>
+<rect width="78.19" height="12" x="0" y="0" class="named"><title>142 KB · 22.86%</title></rect>
+<rect width="0.12" height="12" x="78.19" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="78.31" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="255.04" height="12" x="86.96" y="0" class="todo"><title>463 KB · 74.57%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">142 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">463 KB</tspan></text>
@@ -887,7 +887,7 @@
 <rect width="12" height="12" x="270" y="240" class="named"><title>0x00453070 InitialiseTrapDoor (37 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="240" class="named"><title>0x004530a0 InitialiseFallingBlock2 (35 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="240" class="named"><title>0x004530d0 InitialiseFlameEmitter (152 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="240" class="todo"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="240" class="named"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="240" class="todo"><title>0x00453230 InitialiseFlameEmitter3 (108 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="240" class="named"><title>0x004532a0 InitialiseJobySpike (159 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="240" class="named"><title>0x00453340 InitialiseTwoBlockPlatform (45 bytes)</title></rect>
@@ -2374,7 +2374,7 @@
 <rect width="8.50" height="8.64" x="646.75" y="221.72" class="named"><title>0x00422810 LaraTestClimbStance (190 bytes)</title></rect>
 <rect width="8.50" height="8.64" x="658.24" y="221.72" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
 <rect width="8.50" height="8.64" x="669.74" y="221.72" class="todo"><title>0x00435920 SetupSplash (190 bytes)</title></rect>
-<rect width="8.50" height="8.64" x="681.24" y="221.72" class="todo"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
+<rect width="8.50" height="8.64" x="681.24" y="221.72" class="named"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
 <rect width="8.50" height="8.64" x="692.74" y="221.72" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="8.45" height="8.64" x="704.23" y="221.72" class="named"><title>0x00413dc0 ControlSmashableBikeWall (189 bytes)</title></rect>
 <rect width="8.45" height="8.64" x="715.69" y="221.72" class="todo"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>

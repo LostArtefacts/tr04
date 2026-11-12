@@ -55,6 +55,42 @@ void InitialiseFlameEmitter(sint16 item_number)
     }
 }
 
+void InitialiseFlameEmitter2(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->pos.y_pos -= 64;
+    if (item->trigger_flags != 123) {
+        switch (item->pos.y_rot) {
+        case 0:
+            if (item->trigger_flags == 2)
+                item->pos.z_pos += 80;
+            else
+                item->pos.z_pos += 256;
+            break;
+        case 0x4000:
+            if (item->trigger_flags == 2)
+                item->pos.x_pos += 80;
+            else
+                item->pos.x_pos += 256;
+            break;
+        case -0x8000:
+            if (item->trigger_flags == 2)
+                item->pos.z_pos -= 80;
+            else
+                item->pos.z_pos -= 256;
+            break;
+        case -0x4000:
+            if (item->trigger_flags == 2)
+                item->pos.x_pos -= 80;
+            else
+                item->pos.x_pos -= 256;
+            break;
+        }
+    }
+}
+
 void InitialiseJobySpike(sint16 item_number)
 {
     ITEM_INFO *item;
