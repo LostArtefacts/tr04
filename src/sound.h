@@ -15,6 +15,7 @@ enum sfx_options {
 #define SFX_LANDANDWATER 0
 
 #define SFX_LARA_NO 2
+#define SFX_LARA_SLIPPING 3
 #define SFX_ROCK_FALL_CRUMBLE 66
 #define SFX_BIKE_HIT_OBJECTS 366
 #define SFX_STARGATE_SWIRL 23
