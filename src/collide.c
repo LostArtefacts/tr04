@@ -4,6 +4,7 @@
 #include "control.h"
 #include "lara.h"
 #include "sphere.h"
+#include "effects.h"
 
 void Func488650(void);
 
@@ -185,4 +186,21 @@ sint32 TestBoundsCollide2(ITEM_INFO *item, ITEM_INFO *l, sint32 rad)
     x = (c * dx - s * dz) >> W2V_SHIFT;
     z = (c * dz + s * dx) >> W2V_SHIFT;
     return x >= GlobalCollisionBounds[0] - rad && x <= rad + GlobalCollisionBounds[1] && z >= GlobalCollisionBounds[4] - rad && z <= rad + GlobalCollisionBounds[5];
+}
+
+void CogCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (item->status == ITEM_INVISIBLE)
+        return;
+    if (!TestBoundsCollide(item, l, coll->radius))
+        return;
+    if (TriggerActive(item)) {
+        DoBloodSplat(l->pos.x_pos + (GetRandomControl() & 0x3F) - 32, item->pos.y_pos + (GetRandomControl() & 0x1F) - 16, l->pos.z_pos + (GetRandomControl() & 0x3F) - 32, (GetRandomControl() & 3) + 2, GetRandomControl() << 1, l->room_number);
+        lara_item->hit_points -= 10;
+    } else if (coll->enable_baddie_push) {
+        ItemPushLara(item, l, coll, 0, 0);
+    }
 }
