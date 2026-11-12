@@ -39,7 +39,7 @@ address,size,name,symbol
 0x00405ea0,12,InitialiseLaraDouble,_InitialiseLaraDouble
 0x00405eb0,104,LaraDoubleControl,_LaraDoubleControl
 0x00405f20,128,InitialiseGuide,_InitialiseGuide
-0x00405fa0,4092,GuideControl,_GuideControl
+0x00405fa0,4191,GuideControl,_GuideControl
 0x00406f9c,,jpt_4063A7,_jpt_4063A7
 0x00407000,87,InitialiseHammerhead,_InitialiseHammerhead
 0x00407060,535,HammerheadControl,_HammerheadControl
@@ -2001,6 +2001,8 @@ address,size,name,symbol
 0x004ad0b8,16,croc_bite,_croc_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
 0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition
+0x004ad108,16,guide_hit,_guide_hit
+0x004ad118,16,guide_lighter,_guide_lighter
 0x004ad170,16,horseman_axe,_horseman_axe
 0x004ad180,16,horseman_lfoot,_horseman_lfoot
 0x004ad190,16,horseman_shield,_horseman_shield
