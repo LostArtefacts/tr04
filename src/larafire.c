@@ -57,6 +57,61 @@ void InitialiseNewWeapon(void)
     }
 }
 
+void LaraTargetInfo(WEAPON_INFO *winfo)
+{
+    GAME_VECTOR src, target;
+    ITEM_INFO *item;
+    sint16 ang[2];
+
+    item = lara.target;
+    if (!item) {
+        lara.right_arm.lock = 0;
+        lara.left_arm.lock = 0;
+        lara.target_angles[1] = 0;
+        lara.target_angles[0] = 0;
+        return;
+    }
+    src.x = 0;
+    src.y = 0;
+    src.z = 0;
+    GetLaraJointPos((PHD_VECTOR *)&src, 11);
+    src.x = lara_item->pos.x_pos;
+    src.z = lara_item->pos.z_pos;
+    src.room_number = lara_item->room_number;
+    find_target_point(item, &target);
+    phd_GetVectorAngles(target.x - src.x, target.y - src.y, target.z - src.z, ang);
+    ang[0] -= lara_item->pos.y_rot;
+    ang[1] -= lara_item->pos.x_rot;
+    if (LOS(&src, &target)) {
+        if (ang[0] >= winfo->lock_angles[0] && ang[0] <= winfo->lock_angles[1] && ang[1] >= winfo->lock_angles[2] && ang[1] <= winfo->lock_angles[3]) {
+            lara.right_arm.lock = 1;
+            lara.left_arm.lock = 1;
+            lara.target_angles[0] = ang[0];
+            lara.target_angles[1] = ang[1];
+            return;
+        }
+        if (lara.left_arm.lock) {
+            if (ang[0] < winfo->left_angles[0] || ang[0] > winfo->left_angles[1] ||
+                ang[1] < winfo->left_angles[2] || ang[1] > winfo->left_angles[3])
+                lara.left_arm.lock = 0;
+        }
+        if (lara.right_arm.lock) {
+            if (ang[0] < winfo->right_angles[0] || ang[0] > winfo->right_angles[1] ||
+                ang[1] < winfo->right_angles[2] || ang[1] > winfo->right_angles[3]) {
+                lara.right_arm.lock = 0;
+                lara.target_angles[0] = ang[0];
+                lara.target_angles[1] = ang[1];
+                return;
+            }
+        }
+    } else {
+        lara.right_arm.lock = 0;
+        lara.left_arm.lock = 0;
+    }
+    lara.target_angles[0] = ang[0];
+    lara.target_angles[1] = ang[1];
+}
+
 void find_target_point(ITEM_INFO *item, GAME_VECTOR *target)
 {
     sint32 x, y, z, c, s;

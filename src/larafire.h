@@ -27,6 +27,7 @@ void find_target_point(ITEM_INFO *item, GAME_VECTOR *target);
 void HitTarget(ITEM_INFO *item, GAME_VECTOR *hitpos, sint32 damage, sint32 grenade);
 sint32 FireWeapon(sint32 weapon_type, ITEM_INFO *target, ITEM_INFO *src, sint16 *angles);
 void DoProperDetection(sint16 item_number, sint32 x, sint32 y, sint32 z, sint32 xv, sint32 yv, sint32 zv);
+void LaraTargetInfo(WEAPON_INFO *winfo);
 
 extern WEAPON_INFO weapons[9];
 extern sint16 HoldStates[18];
