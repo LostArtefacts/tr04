@@ -1,5 +1,7 @@
 #include "newinv.h"
 #include "lara.h"
+#include "lara1gun.h"
+#include "lara2gun.h"
 #include "specific/input.h"
 #include "specific/loadsave.h"
 
@@ -32,6 +34,21 @@ sint32 go_and_load_game(void)
 sint32 go_and_save_game(void)
 {
     return SaveGame();
+}
+
+void combine_revolver_lasersight(sint32 flag)
+{
+    if (!flag) {
+        lara.lasersight = 0;
+        lara.sixshooter_type_carried |= 4;
+    } else {
+        lara.lasersight = 1;
+        lara.sixshooter_type_carried &= ~4;
+    }
+    if (lara.gun_status && lara.gun_type == WEAPON_REVOLVER) {
+        undraw_pistol_mesh_right(WEAPON_REVOLVER);
+        draw_pistol_meshes(WEAPON_REVOLVER);
+    }
 }
 
 void combine_PuzzleItem1(sint32 flag)

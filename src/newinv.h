@@ -30,6 +30,7 @@ void combine_PickupItem2(sint32 flag);
 void combine_PickupItem3(sint32 flag);
 void combine_PickupItem4(sint32 flag);
 void combine_ClockWorkBeetle(sint32 flag);
+void combine_revolver_lasersight(sint32 flag);
 
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
