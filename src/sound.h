@@ -53,6 +53,8 @@ enum sfx_options {
 #define SFX_BIKE_HIT_ENEMIES 367
 #define SFX_OBJ_GEM_SMASH 285
 #define SFX_JEEP_MOVE 155
+#define SFX_LOOP_FOR_SMALL_FIRES 150
+#define SFX_JOBY_WIND 362
 
 typedef struct sample_info {
     sint16 number;

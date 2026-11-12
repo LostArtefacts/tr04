@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="247.66" height="12" x="0" y="0" class="named"><title>1121 · 72.42%</title></rect>
-<rect width="0.66" height="12" x="247.66" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.01" height="12" x="248.33" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
-<rect width="76.66" height="12" x="265.34" y="0" class="todo"><title>347 · 22.42%</title></rect>
+<rect width="247.88" height="12" x="0" y="0" class="named"><title>1122 · 72.48%</title></rect>
+<rect width="0.66" height="12" x="247.88" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.01" height="12" x="248.55" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
+<rect width="76.44" height="12" x="265.56" y="0" class="todo"><title>346 · 22.35%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">72.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1121</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">347</tspan></text>
+<text text-anchor="end" x="522" y="7.50">72.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1122</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">346</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="129.43" height="12" x="0" y="0" class="named"><title>236 KB · 37.85%</title></rect>
-<rect width="0.13" height="12" x="129.43" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="30.52" height="12" x="129.56" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
-<rect width="181.92" height="12" x="160.08" y="0" class="todo"><title>331 KB · 53.19%</title></rect>
+<rect width="129.81" height="12" x="0" y="0" class="named"><title>236 KB · 37.96%</title></rect>
+<rect width="0.13" height="12" x="129.81" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="30.52" height="12" x="129.94" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
+<rect width="181.54" height="12" x="160.46" y="0" class="todo"><title>330 KB · 53.08%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">37.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">236 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">331 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">38.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">236 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">330 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -924,7 +924,7 @@
 <rect width="12" height="12" x="75" y="255" class="named"><title>0x00454a90 EffectNewRoom (206 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="255" class="todo"><title>0x00454b60 ElementPuzzleCollision (908 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="255" class="named"><title>0x00454ef0 InitialiseElementPuzzle (82 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="255" class="todo"><title>0x00454f50 ControlElementPuzzle (685 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="255" class="named"><title>0x00454f50 ControlElementPuzzle (685 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="255" class="named"><title>0x00455200 InitialiseLOTarray (102 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="255" class="named"><title>0x00455270 DisableBaddieAI (64 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="255" class="named"><title>0x004552b0 EnableBaddieAI (447 bytes)</title></rect>
@@ -1864,7 +1864,7 @@
 <rect width="16.17" height="16.69" x="327.15" y="387.18" class="named"><title>0x004790f0 InitDynamicLighting (701 bytes)</title></rect>
 <rect width="16.17" height="16.41" x="327.15" y="406.87" class="nonmatching"><title>0x004471b0 LaraBaddieCollision (689 bytes)</title></rect>
 <rect width="16.17" height="16.41" x="327.15" y="426.28" class="named"><title>0x00488690 ClipLine (689 bytes)</title></rect>
-<rect width="16.17" height="16.31" x="327.15" y="445.69" class="todo"><title>0x00454f50 ControlElementPuzzle (685 bytes)</title></rect>
+<rect width="16.17" height="16.31" x="327.15" y="445.69" class="named"><title>0x00454f50 ControlElementPuzzle (685 bytes)</title></rect>
 <rect width="16.28" height="16.16" x="346.32" y="42.37" class="todo"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
 <rect width="16.28" height="16.16" x="365.60" y="42.37" class="named"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>
 <rect width="16.02" height="16.16" x="384.87" y="42.37" class="named"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
