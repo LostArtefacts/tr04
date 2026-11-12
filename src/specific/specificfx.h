@@ -19,5 +19,6 @@ void DrawBikeSpeedo(sint32 ux, sint32 uy, sint32 vel, sint32 maxVel, sint32 turb
 void DrawJeepSpeedo(sint32 ux, sint32 uy, sint32 vel, sint32 maxVel, sint32 turboVel, sint32 size, sint32 spriteSlot);
 void SetFade(sint32 start, sint32 end);
 void InitTarget_2(void);
+void InitBinoculars(void);
 
 #endif

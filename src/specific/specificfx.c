@@ -30,6 +30,30 @@ void InitTarget_2(void)
     IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
 }
 
+void InitBinoculars(void)
+{
+    OBJECT_INFO *obj;
+    MESH_DATA *mesh;
+    D3DTLVERTEX *v;
+    sint32 i;
+
+    obj = &objects[BINOCULAR_GRAPHICS];
+    if (!obj->loaded)
+        return;
+    mesh = (MESH_DATA *)meshes[obj->mesh_index];
+    binocsMeshP = mesh;
+    IDirect3DVertexBuffer_Lock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB, DDLOCK_READONLY, (void **)&v, 0);
+    for (i = 0; i < mesh->nVerts; i++) {
+        v[i].sx = (1.0F / 96.0F) * (v[i].sx * 32.0F);
+        v[i].sy = (1.0F / 224.0F) * (v[i].sy * 30.0F);
+        v[i].color = 0xFF000000;
+        v[i].specular = 0xFF000000;
+        v[i].sz = 0;
+        v[i].rhw = f_mpersp / f_mznear * f_moneopersp;
+    }
+    IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
+}
+
 void SetFade(sint32 start, sint32 end)
 {
     DoFade = 1;
