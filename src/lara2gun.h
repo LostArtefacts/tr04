@@ -21,5 +21,6 @@ extern PISTOL_DEF PistolTable[4];
 void ready_pistols(int weapon_type);
 void draw_pistols(sint32 weapon_type);
 void undraw_pistols(sint32 weapon_type);
+void AnimatePistols(sint32 weapon_type);
 
 #endif

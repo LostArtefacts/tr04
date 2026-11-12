@@ -181,6 +181,7 @@ sint32 GetFreeBlood(void);
 sint32 GetFreeGunshell(void);
 sint32 GetFreeBubble(void);
 sint32 GetFreeDrip(void);
+void TriggerGunShell(sint16 leftright, sint16 objnum, sint32 weapon);
 void TriggerGunSmoke(sint32 x, sint32 y, sint32 z, sint32 xVel, sint32 yVel, sint32 zVel, sint32 notLara, sint32 weaponType, sint32 shade);
 void TriggerGlobalStaticFlame(void);
 void TriggerGlobalFireSmoke(void);
