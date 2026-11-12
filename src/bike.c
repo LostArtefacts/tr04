@@ -168,7 +168,146 @@ void DrawBikeExtras(ITEM_INFO *item)
     DrawBikeBeam(GlobalBikeItem);
 }
 
-void TriggerExhaustSmoke_bike(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 velocity, sint32 thing)
+void BikeControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *l;
+    BIKEINFO *bike;
+    FLOOR_INFO *floor;
+    PHD_VECTOR flPos, frPos, fmPos;
+    PHD_VECTOR pos;
+    sint32 front_left, front_right, front_mid;
+    sint32 hitWall, h, driving, killed, pitch, oldY, smokeVel;
+    sint16 room_number, wheelRot, xRot, zRot;
+
+    l = lara_item;
+    driving = -1;
+    killed = 0;
+    item = &items[lara.vehicle];
+    bike = (BIKEINFO *)item->data;
+    hitWall = BikeDynamics(item);
+    if (hitWall == -888) {
+        ExplodingDeath2(lara.item_number, -1, 256);
+        lara_item->hit_points = 0;
+        lara_item->flags |= IFL_INVISIBLE;
+        BikeExplode(item);
+        return;
+    }
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    front_left = TestHeight(item, 500, -350, &flPos);
+    front_right = TestHeight(item, 500, 128, &frPos);
+    front_mid = TestHeight(item, -500, 0, &fmPos);
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    TestTriggers(trigger_index, 0, 0);
+    TestTriggers(trigger_index, 1, 0);
+    if (lara_item->hit_points <= 0) {
+        killed = 1;
+        input &= ~(IN_FORWARD | IN_BACK | IN_LEFT | IN_RIGHT);
+    }
+    if (bike->flags)
+        hitWall = 0;
+    else {
+        TriggerBikeBeam(item);
+        switch (lara_item->current_anim_state) {
+        case 9:
+        case 10:
+            driving = -1;
+            hitWall = 0;
+            break;
+        default:
+            driving = UserControl_bike(item, h, &pitch);
+            break;
+        }
+    }
+    if (bike->velocity > 0 || bike->unused1) {
+        bike->pitch2 = pitch;
+        if (pitch < -0x8000)
+            bike->pitch2 = -0x8000;
+        else if (pitch > 0xA000)
+            bike->pitch2 = 0xA000;
+        SoundEffect(SFX_BIKE_MOVING, &item->pos, (bike->pitch2 << 8) + 0x1000004);
+    } else {
+        if (driving != -1) {
+            SoundEffect(SFX_BIKE_IDLE, &item->pos, 0);
+            SoundEffect(SFX_BIKE_MOVING, &item->pos, (bike->pitch2 << 8) + 0x1000004);
+        }
+        bike->pitch2 = 0;
+    }
+    item->floor = h;
+    wheelRot = (sint16)(bike->velocity >> 2);
+    bike->right_front_wheelrot -= wheelRot;
+    bike->right_back_wheelrot -= wheelRot;
+    *(sint16 *)&bike->left_wheelrot -= wheelRot;
+    oldY = item->pos.y_pos;
+    *(sint16 *)&bikefspeed = item->fallspeed;
+    item->fallspeed = (sint16)DoDynamics_bike(h, item->fallspeed, &item->pos.y_pos, 0);
+    h = (flPos.y + frPos.y) >> 1;
+    if (fmPos.y < front_mid) {
+        if (h < (front_left + front_right) >> 1)
+            xRot = (sint16)phd_atan(125, oldY - item->pos.y_pos);
+        else
+            xRot = (sint16)phd_atan(500, item->pos.y_pos - h);
+    } else if (h >= (front_left + front_right) >> 1)
+        xRot = (sint16)phd_atan(1000, front_mid - h);
+    else
+        xRot = (sint16)phd_atan(500, front_mid - item->pos.y_pos);
+    zRot = (sint16)phd_atan(350, h - flPos.y);
+    item->pos.x_rot += (xRot - item->pos.x_rot) >> 2;
+    item->pos.z_rot += (zRot - item->pos.z_rot) >> 2;
+    if (!(bike->flags & 0x80)) {
+        if (room_number != item->room_number) {
+            ItemNewRoom(lara.vehicle, room_number);
+            ItemNewRoom(lara.item_number, room_number);
+        }
+        l->pos.x_pos = item->pos.x_pos;
+        l->pos.y_pos = item->pos.y_pos;
+        l->pos.z_pos = item->pos.z_pos;
+        l->pos.y_rot = item->pos.y_rot;
+        l->pos.x_rot = item->pos.x_rot;
+        l->pos.z_rot = item->pos.z_rot;
+        AnimateBike(item, hitWall, killed);
+        AnimateItem(l);
+        item->anim_number = l->anim_number + objects[MOTORBIKE].anim_index - objects[VEHICLE_EXTRA].anim_index;
+        item->frame_number = anims[item->anim_number].frame_base - anims[l->anim_number].frame_base + l->frame_number;
+        camera.target_elevation = -5460;
+        if (bike->flags & 0x40 && item->pos.y_pos == item->floor) {
+            ExplodingDeath2(lara.item_number, -1, 256);
+            lara_item->hit_points = 0;
+            lara_item->flags |= IFL_INVISIBLE;
+            BikeExplode(item);
+            return;
+        }
+    }
+    if (l->current_anim_state == 9 || l->current_anim_state == 10)
+        ExhaustSmokeVel = 0;
+    else {
+        pos.x = 56;
+        pos.y = -144;
+        pos.z = -500;
+        GetJointAbsPosition(item, &pos, 0);
+        if (item->speed > 32) {
+            if (item->speed < 64)
+                TriggerExhaustSmoke_bike(pos.x, pos.y, pos.z, item->pos.y_rot + 0x8000, 64 - item->speed, 1);
+        } else {
+            if (ExhaustSmokeVel < 16) {
+                smokeVel = ((GetRandomControl() & 0x10) + (GetRandomControl() & 7) + 2 * ExhaustSmokeVel) << 6;
+                ExhaustSmokeVel++;
+            } else if (!(GetRandomControl() & 3))
+                smokeVel = ((GetRandomControl() & 0x10) + (GetRandomControl() & 0xF)) << 6;
+            else
+                smokeVel = 0;
+            TriggerExhaustSmoke_bike(pos.x, pos.y, pos.z, item->pos.y_rot + 0x8000, smokeVel, 0);
+        }
+    }
+    BikeCheckGetOff();
+}
+
+void TriggerExhaustSmoke_bike(sint32 x, sint32 y, sint32 z, sint16 angle, sint32 velocity, sint32 thing)
 {
     SPARKS *sptr;
     sint32 size, zv;

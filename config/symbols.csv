@@ -2378,6 +2378,7 @@ address,size,name,symbol
 0x004bfc08,4,bikefspeed,_bikefspeed
 0x004bfc0c,24,CollidedStaticBounds,_CollidedStaticBounds
 0x004bfc24,1,dont_exit_bike,_dont_exit_bike
+0x004bfc25,1,ExhaustSmokeVel,_ExhaustSmokeVel
 0x004bfc28,24,BikeBounds,_BikeBounds
 0x004bfc40,4,JeepStaticBounds0,_JeepStaticBounds0
 0x004bfc44,4,JeepStaticBounds1,_JeepStaticBounds1

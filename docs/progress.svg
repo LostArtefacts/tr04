@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="257.43" height="12" x="0" y="0" class="named"><title>1186 · 76.61%</title></rect>
-<rect width="0.65" height="12" x="257.43" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="26.26" height="12" x="258.08" y="0" class="nonmatching"><title>121 · 7.82%</title></rect>
-<rect width="51.66" height="12" x="284.34" y="0" class="todo"><title>238 · 15.37%</title></rect>
+<rect width="257.64" height="12" x="0" y="0" class="named"><title>1187 · 76.68%</title></rect>
+<rect width="0.65" height="12" x="257.64" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="26.26" height="12" x="258.29" y="0" class="nonmatching"><title>121 · 7.82%</title></rect>
+<rect width="51.44" height="12" x="284.56" y="0" class="todo"><title>237 · 15.31%</title></rect>
 </g>
-<text text-anchor="end" x="516" y="7.50">76.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1186</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">121</tspan> · <tspan class="todo">238</tspan></text>
+<text text-anchor="end" x="516" y="7.50">76.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1187</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">121</tspan> · <tspan class="todo">237</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="165.27" height="12" x="0" y="0" class="named"><title>307 KB · 49.19%</title></rect>
-<rect width="0.13" height="12" x="165.27" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="78.64" height="12" x="165.40" y="0" class="nonmatching"><title>146 KB · 23.40%</title></rect>
-<rect width="91.96" height="12" x="244.04" y="0" class="todo"><title>171 KB · 27.37%</title></rect>
+<rect width="166.05" height="12" x="0" y="0" class="named"><title>309 KB · 49.42%</title></rect>
+<rect width="0.13" height="12" x="166.05" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="78.64" height="12" x="166.18" y="0" class="nonmatching"><title>146 KB · 23.40%</title></rect>
+<rect width="91.19" height="12" x="244.81" y="0" class="todo"><title>170 KB · 27.14%</title></rect>
 </g>
-<text text-anchor="end" x="516" y="24.50">49.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">307 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">146 KB</tspan> · <tspan class="todo">171 KB</tspan></text>
+<text text-anchor="end" x="516" y="24.50">49.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">309 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">146 KB</tspan> · <tspan class="todo">170 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1060,7 +1060,7 @@
 <rect width="12" height="12" x="615" y="285" class="named"><title>0x004648f0 GetOnBike (313 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="285" class="todo"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="285" class="named"><title>0x00464c20 DrawBikeExtras (76 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="285" class="todo"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="285" class="named"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="285" class="named"><title>0x00465220 TriggerExhaustSmoke_bike (417 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="285" class="named"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="285" class="nonmatching"><title>0x004654a0 BikeCheckGetOff (439 bytes)</title></rect>
@@ -1707,7 +1707,7 @@
 <rect width="23.23" height="24" x="209.46" y="0" class="todo"><title>0x00407a90 HarpyControl (1453 bytes)</title></rect>
 <rect width="23.23" height="23.93" x="209.46" y="27" class="todo"><title>0x0047ab80 DoSlider (1449 bytes)</title></rect>
 <rect width="23.23" height="23.90" x="209.46" y="53.93" class="todo"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
-<rect width="23.23" height="23.85" x="209.46" y="80.84" class="todo"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
+<rect width="23.23" height="23.85" x="209.46" y="80.84" class="named"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
 <rect width="23.23" height="23.72" x="209.46" y="107.69" class="nonmatching"><title>0x0040f630 GameStixControl (1436 bytes)</title></rect>
 <rect width="23.23" height="23.57" x="209.46" y="134.41" class="nonmatching"><title>0x00467380 JeepControl (1427 bytes)</title></rect>
 <rect width="23.23" height="23.26" x="209.46" y="160.98" class="named"><title>0x0042d840 LaraGun (1408 bytes)</title></rect>
