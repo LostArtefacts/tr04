@@ -6,6 +6,7 @@
 #include "collide.h"
 
 void SwitchControl(sint16 item_number);
+sint32 SwitchTrigger(sint16 item_num, sint16 timer);
 sint32 GetSwitchTrigger(ITEM_INFO *item, sint16 *ItemNos, sint32 AttatchedToSwitch);
 
 extern uint8 CurrentSequence;

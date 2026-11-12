@@ -3,6 +3,8 @@
 
 #include "3dglodef.h"
 
+#define SP_FLYBYONESHOT 0x8000
+
 typedef struct SPOTCAM {
     sint32 x;
     sint32 y;
@@ -23,6 +25,7 @@ typedef struct SPOTCAM {
 
 extern sint32 bDisableLaraControl;
 extern sint32 bUseSpotCam;
+extern sint16 LastSequence;
 extern SPOTCAM SpotCam[128];
 extern sint16 number_spotcams;
 extern sint32 bTrackCamInit;

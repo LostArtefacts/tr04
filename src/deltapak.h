@@ -78,6 +78,7 @@ extern sint16 frig_jeep_shadow_bbox[6];
 extern PACKNODE *camera_pnodes;
 extern sint32 cutseq_num;
 extern sint32 cutseq_trig;
+extern uint8 DEL_playingamefmv;
 extern sint32 GLOBAL_cutseq_frame;
 extern sint32 lastcamnum;
 extern char *GLOBAL_resident_depack_buffers;
