@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="222.18" height="12" x="0" y="0" class="named"><title>1005 · 64.96%</title></rect>
-<rect width="0.44" height="12" x="222.18" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="222.62" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="112.08" height="12" x="229.92" y="0" class="todo"><title>507 · 32.77%</title></rect>
+<rect width="222.40" height="12" x="0" y="0" class="named"><title>1006 · 65.03%</title></rect>
+<rect width="0.44" height="12" x="222.40" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="222.84" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="111.86" height="12" x="230.14" y="0" class="todo"><title>506 · 32.71%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">65.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1005</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">507</tspan></text>
+<text text-anchor="end" x="522" y="7.50">65.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1006</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">506</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="96.89" height="12" x="0" y="0" class="named"><title>176 KB · 28.33%</title></rect>
-<rect width="0.12" height="12" x="96.89" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="97.01" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="235.57" height="12" x="106.43" y="0" class="todo"><title>427 KB · 68.88%</title></rect>
+<rect width="96.94" height="12" x="0" y="0" class="named"><title>176 KB · 28.35%</title></rect>
+<rect width="0.12" height="12" x="96.94" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="97.06" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="235.51" height="12" x="106.49" y="0" class="todo"><title>427 KB · 68.86%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">28.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">176 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">427 KB</tspan></text>
@@ -184,7 +184,7 @@
 <rect width="12" height="12" x="225" y="30" class="todo"><title>0x004118d0 SkeletonControl (4402 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="30" class="named"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="30" class="todo"><title>0x00412ac0 SphinxControl (1327 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="30" class="todo"><title>0x00413020 InitialiseTemplar (99 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="30" class="named"><title>0x00413020 InitialiseTemplar (99 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="30" class="todo"><title>0x00413090 TemplarControl (1270 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="30" class="todo"><title>0x004135a0 CloseTrapDoor (285 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="30" class="named"><title>0x004136c0 TrapDoorControl (137 bytes)</title></rect>
@@ -2660,7 +2660,7 @@
 <rect width="6.43" height="6.01" x="665.74" y="295.44" class="named"><title>0x004475f0 ObjectCollision (100 bytes)</title></rect>
 <rect width="6.43" height="6.01" x="675.17" y="295.44" class="named"><title>0x00447660 ObjectCollisionNoBigPush (100 bytes)</title></rect>
 <rect width="6.43" height="6.01" x="684.59" y="295.44" class="named"><title>0x00454140 InitialiseItemArray (100 bytes)</title></rect>
-<rect width="6.36" height="6.01" x="694.02" y="295.44" class="todo"><title>0x00413020 InitialiseTemplar (99 bytes)</title></rect>
+<rect width="6.36" height="6.01" x="694.02" y="295.44" class="named"><title>0x00413020 InitialiseTemplar (99 bytes)</title></rect>
 <rect width="6.36" height="6.01" x="703.38" y="295.44" class="named"><title>0x0045f0a0 SetupGame (99 bytes)</title></rect>
 <rect width="6.36" height="6.01" x="712.74" y="295.44" class="todo"><title>0x00494830 SW_D3D_BeginScene (99 bytes)</title></rect>
 <rect width="6.30" height="6.01" x="722.11" y="295.44" class="named"><title>0x00422be0 LaraLandedBad (98 bytes)</title></rect>
