@@ -243,7 +243,7 @@ address,size,name,symbol
 0x00422de0,106,lara_as_hang2,_lara_as_hang2
 0x00422e50,91,MonkeySwingFall,_MonkeySwingFall
 0x00422eb0,559,lara_col_hang2,_lara_col_hang2
-0x004230e0,1191,LaraHangTest,_LaraHangTest
+0x004230e0,1224,LaraHangTest,_LaraHangTest
 0x004235b0,172,SnapLaraToEdgeOfBlock,_SnapLaraToEdgeOfBlock
 0x00423660,66,MonkeySwingSnap,_MonkeySwingSnap
 0x004236b0,201,TestMonkeyLeft,_TestMonkeyLeft
