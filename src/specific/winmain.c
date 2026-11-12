@@ -3,6 +3,22 @@
 
 #include "winmain.h"
 #include "../text.h"
+#include "function_stubs.h"
+
+uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex)
+{
+    HWND window;
+
+    Log(2, "WinRunCheck");
+    *mutex = CreateMutex(0, 1, WindowName);
+    if (GetLastError() == ERROR_ALREADY_EXISTS) {
+        window = FindWindow(ClassName, WindowName);
+        if (window)
+            SendMessage(window, WM_ACTIVATE, 0, 0);
+        return 1;
+    }
+    return 0;
+}
 
 void WinDisplayString(sint32 x, sint32 y, char *string, ...)
 {
