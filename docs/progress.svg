@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="202.06" height="12" x="0" y="0" class="named"><title>914 · 59.08%</title></rect>
-<rect width="0.44" height="12" x="202.06" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="202.50" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="132.86" height="12" x="209.14" y="0" class="todo"><title>601 · 38.85%</title></rect>
+<rect width="202.28" height="12" x="0" y="0" class="named"><title>915 · 59.15%</title></rect>
+<rect width="0.44" height="12" x="202.28" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="202.72" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="132.64" height="12" x="209.36" y="0" class="todo"><title>600 · 38.78%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">59.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">914</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">601</tspan></text>
+<text text-anchor="end" x="522" y="7.50">59.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">915</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">600</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="87.30" height="12" x="0" y="0" class="named"><title>158 KB · 25.53%</title></rect>
-<rect width="0.12" height="12" x="87.30" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="87.42" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="245.67" height="12" x="96.33" y="0" class="todo"><title>446 KB · 71.83%</title></rect>
+<rect width="87.41" height="12" x="0" y="0" class="named"><title>159 KB · 25.56%</title></rect>
+<rect width="0.12" height="12" x="87.41" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="87.53" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="245.56" height="12" x="96.44" y="0" class="todo"><title>445 KB · 71.80%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">158 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">446 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">159 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">445 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -162,7 +162,7 @@
 <rect width="12" height="12" x="645" y="15" class="todo"><title>0x0040efd0 InitialiseSmlscorp (90 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="15" class="todo"><title>0x0040f030 SmlscorpControl (717 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="15" class="todo"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="15" class="todo"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="15" class="named"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="15" class="named"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="15" class="todo"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="15" class="named"><title>0x0040f600 InitialiseGameStix (42 bytes)</title></rect>
@@ -2343,7 +2343,7 @@
 <rect width="8.92" height="8.67" x="495.56" y="245.09" class="named"><title>0x00415b60 OnTwoBlockPlatform (200 bytes)</title></rect>
 <rect width="8.92" height="8.67" x="495.56" y="256.76" class="todo"><title>0x00442e70 InitialiseCamera (200 bytes)</title></rect>
 <rect width="8.92" height="8.67" x="495.56" y="268.43" class="named"><title>0x0048fa90 SetupZRange (200 bytes)</title></rect>
-<rect width="8.92" height="8.62" x="495.56" y="280.09" class="todo"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
+<rect width="8.92" height="8.62" x="495.56" y="280.09" class="named"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
 <rect width="8.92" height="8.62" x="495.56" y="291.71" class="todo"><title>0x00418fa0 GetAIEnemy (199 bytes)</title></rect>
 <rect width="8.92" height="8.62" x="495.56" y="303.34" class="named"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
 <rect width="8.92" height="8.62" x="495.56" y="314.96" class="named"><title>0x00481d20 DistCompare (199 bytes)</title></rect>

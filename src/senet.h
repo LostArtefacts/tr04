@@ -15,5 +15,6 @@ extern sint8 senet_piece[6];
 
 void SenetControl(sint16 item_number);
 void InitialiseGameStix(sint16 item_number);
+void InitialiseSenet(sint16 item_number);
 
 #endif
