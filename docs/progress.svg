@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="260.48" height="12" x="0" y="0" class="named"><title>1179 · 76.16%</title></rect>
-<rect width="0.66" height="12" x="260.48" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="23.64" height="12" x="261.14" y="0" class="nonmatching"><title>107 · 6.91%</title></rect>
-<rect width="57.22" height="12" x="284.78" y="0" class="todo"><title>259 · 16.73%</title></rect>
+<rect width="255.91" height="12" x="0" y="0" class="named"><title>1179 · 76.16%</title></rect>
+<rect width="0.65" height="12" x="255.91" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="23.44" height="12" x="256.56" y="0" class="nonmatching"><title>108 · 6.98%</title></rect>
+<rect width="56" height="12" x="280" y="0" class="todo"><title>258 · 16.67%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">76.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1179</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">107</tspan> · <tspan class="todo">259</tspan></text>
+<text text-anchor="end" x="516" y="7.50">76.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1179</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">108</tspan> · <tspan class="todo">258</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="159.77" height="12" x="0" y="0" class="named"><title>291 KB · 46.72%</title></rect>
-<rect width="0.13" height="12" x="159.77" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="54.05" height="12" x="159.90" y="0" class="nonmatching"><title>99 KB · 15.81%</title></rect>
-<rect width="128.05" height="12" x="213.95" y="0" class="todo"><title>233 KB · 37.44%</title></rect>
+<rect width="156.96" height="12" x="0" y="0" class="named"><title>291 KB · 46.72%</title></rect>
+<rect width="0.13" height="12" x="156.96" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="54.37" height="12" x="157.09" y="0" class="nonmatching"><title>101 KB · 16.18%</title></rect>
+<rect width="124.54" height="12" x="211.46" y="0" class="todo"><title>231 KB · 37.07%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">46.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">291 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">99 KB</tspan> · <tspan class="todo">233 KB</tspan></text>
+<text text-anchor="end" x="516" y="24.50">46.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">291 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">101 KB</tspan> · <tspan class="todo">231 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -251,7 +251,7 @@
 <rect width="12" height="12" x="480" y="45" class="named"><title>0x0041c2e0 InitialiseWraith (120 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="45" class="named"><title>0x0041c360 TriggerWraithFlame (337 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="45" class="todo"><title>0x0041c4c0 TriggerWraithEffect (536 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="45" class="todo"><title>0x0041c6e0 WraithControl (2337 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="45" class="nonmatching"><title>0x0041c6e0 WraithControl (2337 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="45" class="named"><title>0x0041d010 CalcLaraMatrices (304 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="45" class="todo"><title>0x0041d140 DrawLara (2131 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="45" class="named"><title>0x0041d9a0 GetLaraJointPos (324 bytes)</title></rect>
@@ -1655,7 +1655,7 @@
 <rect width="31.05" height="29.47" x="84.27" y="335.93" class="nonmatching"><title>0x00410c90 SethControl (2380 bytes)</title></rect>
 <rect width="31.05" height="29.47" x="84.27" y="368.40" class="named"><title>0x0045e1f0 ObjectObjects (2380 bytes)</title></rect>
 <rect width="31.05" height="29.19" x="84.27" y="400.88" class="todo"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
-<rect width="31.05" height="28.94" x="84.27" y="433.06" class="todo"><title>0x0041c6e0 WraithControl (2337 bytes)</title></rect>
+<rect width="31.05" height="28.94" x="84.27" y="433.06" class="nonmatching"><title>0x0041c6e0 WraithControl (2337 bytes)</title></rect>
 <rect width="29.43" height="30.51" x="118.32" y="0" class="todo"><title>0x00468e00 AnimateJeep (2335 bytes)</title></rect>
 <rect width="29.43" height="30.33" x="118.32" y="33.51" class="nonmatching"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
 <rect width="29.43" height="29.69" x="118.32" y="66.84" class="named"><title>0x00451e30 DoTitle (2272 bytes)</title></rect>
