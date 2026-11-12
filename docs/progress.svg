@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="183.49" height="12" x="0" y="0" class="named"><title>830 · 53.65%</title></rect>
-<rect width="0.44" height="12" x="183.49" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="183.93" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="151.66" height="12" x="190.34" y="0" class="todo"><title>686 · 44.34%</title></rect>
+<rect width="183.71" height="12" x="0" y="0" class="named"><title>831 · 53.72%</title></rect>
+<rect width="0.44" height="12" x="183.71" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="184.15" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="151.44" height="12" x="190.56" y="0" class="todo"><title>685 · 44.28%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">53.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">830</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">686</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">831</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">685</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.43" height="12" x="0" y="0" class="named"><title>144 KB · 23.23%</title></rect>
-<rect width="0.12" height="12" x="79.43" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="79.55" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="253.79" height="12" x="88.21" y="0" class="todo"><title>460 KB · 74.21%</title></rect>
+<rect width="79.45" height="12" x="0" y="0" class="named"><title>144 KB · 23.23%</title></rect>
+<rect width="0.12" height="12" x="79.45" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="79.57" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="253.77" height="12" x="88.23" y="0" class="todo"><title>460 KB · 74.20%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">144 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">460 KB</tspan></text>
@@ -1502,7 +1502,7 @@
 <rect width="12" height="12" x="495" y="420" class="named"><title>0x00490f40 init_game_malloc (54 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="420" class="named"><title>0x00490f80 game_malloc (104 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="420" class="todo"><title>0x00490ff0 DXGetErrorString (1672 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="420" class="todo"><title>0x00491c30 DXAttempt (39 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="420" class="named"><title>0x00491c30 DXAttempt (39 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="420" class="todo"><title>0x00491c60 DXGetInfo (94 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="420" class="todo"><title>0x00491cc0 DXEnumDirectSound (160 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="420" class="todo"><title>0x00491d60 DXFreeInfo (232 bytes)</title></rect>
@@ -2952,7 +2952,7 @@
 <rect width="3.64" height="4.14" x="730.09" y="376.94" class="named"><title>0x0046bc00 tenth_cutseq_end (39 bytes)</title></rect>
 <rect width="3.64" height="4.14" x="736.72" y="376.94" class="named"><title>0x0046c8d0 twentysix_control (39 bytes)</title></rect>
 <rect width="3.64" height="4.14" x="743.36" y="376.94" class="named"><title>0x0046d1c0 force_sky_lightning (39 bytes)</title></rect>
-<rect width="3.79" height="3.97" x="662.47" y="384.08" class="todo"><title>0x00491c30 DXAttempt (39 bytes)</title></rect>
+<rect width="3.79" height="3.97" x="662.47" y="384.08" class="named"><title>0x00491c30 DXAttempt (39 bytes)</title></rect>
 <rect width="3.79" height="3.87" x="662.47" y="391.05" class="named"><title>0x004241a0 lara_as_rope (38 bytes)</title></rect>
 <rect width="3.79" height="3.77" x="662.47" y="397.92" class="named"><title>0x00453070 InitialiseTrapDoor (37 bytes)</title></rect>
 <rect width="3.79" height="3.77" x="662.47" y="404.69" class="todo"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>

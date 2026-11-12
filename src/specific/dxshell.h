@@ -6,6 +6,7 @@
 #include "../types.h"
 
 void DXReadKeyboard(char *KeyMap);
+char *DXGetErrorString(HRESULT hr);
 sint32 DXAttempt(HRESULT r);
 void DXBitMask2ShiftCnt(uint32 mask, uint8 *shift, uint8 *count);
 HRESULT DXShowFrame(void);

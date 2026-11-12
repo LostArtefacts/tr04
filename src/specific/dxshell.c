@@ -2,6 +2,15 @@
 #include <ddraw.h>
 
 #include "dxshell.h"
+#include "function_stubs.h"
+
+sint32 DXAttempt(HRESULT r)
+{
+    if (SUCCEEDED(r))
+        return DD_OK;
+    Log(1, "ERROR : %s", DXGetErrorString(r));
+    return DD_FALSE;
+}
 
 void DXBitMask2ShiftCnt(uint32 mask, uint8 *shift, uint8 *count)
 {
