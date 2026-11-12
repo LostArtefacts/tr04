@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="249.87" height="12" x="0" y="0" class="named"><title>1131 · 73.06%</title></rect>
-<rect width="0.66" height="12" x="249.87" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="17.90" height="12" x="250.53" y="0" class="nonmatching"><title>81 · 5.23%</title></rect>
-<rect width="73.57" height="12" x="268.43" y="0" class="todo"><title>333 · 21.51%</title></rect>
+<rect width="250.09" height="12" x="0" y="0" class="named"><title>1132 · 73.13%</title></rect>
+<rect width="0.66" height="12" x="250.09" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="17.90" height="12" x="250.76" y="0" class="nonmatching"><title>81 · 5.23%</title></rect>
+<rect width="73.35" height="12" x="268.65" y="0" class="todo"><title>332 · 21.45%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">73.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1131</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">81</tspan> · <tspan class="todo">333</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1132</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">81</tspan> · <tspan class="todo">332</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="132.90" height="12" x="0" y="0" class="named"><title>242 KB · 38.86%</title></rect>
-<rect width="0.13" height="12" x="132.90" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="31.79" height="12" x="133.03" y="0" class="nonmatching"><title>58 KB · 9.30%</title></rect>
-<rect width="177.17" height="12" x="164.83" y="0" class="todo"><title>323 KB · 51.80%</title></rect>
+<rect width="133.45" height="12" x="0" y="0" class="named"><title>243 KB · 39.02%</title></rect>
+<rect width="0.13" height="12" x="133.45" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="31.79" height="12" x="133.58" y="0" class="nonmatching"><title>58 KB · 9.30%</title></rect>
+<rect width="176.63" height="12" x="165.37" y="0" class="todo"><title>322 KB · 51.65%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">38.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">242 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">58 KB</tspan> · <tspan class="todo">323 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">39.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">243 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">58 KB</tspan> · <tspan class="todo">322 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -717,7 +717,7 @@
 <rect width="12" height="12" x="720" y="180" class="named"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="180" class="named"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="195" class="named"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="195" class="todo"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="195" class="named"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="195" class="named"><title>0x0043ef60 have_i_got_object (237 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="195" class="named"><title>0x0043f050 remove_inventory_item (252 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="195" class="named"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
@@ -1775,7 +1775,7 @@
 <rect width="20.13" height="19" x="283.41" y="247.98" class="todo"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
 <rect width="20.13" height="18.96" x="283.41" y="269.98" class="todo"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
 <rect width="20.13" height="18.92" x="283.41" y="291.93" class="todo"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
-<rect width="20.13" height="18.88" x="283.41" y="313.85" class="todo"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
+<rect width="20.13" height="18.88" x="283.41" y="313.85" class="named"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="20.13" height="18.77" x="283.41" y="335.73" class="todo"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
 <rect width="20.13" height="18.75" x="283.41" y="357.50" class="nonmatching"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>
 <rect width="20.13" height="18.63" x="283.41" y="379.25" class="todo"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
