@@ -2,6 +2,10 @@
 #include "control.h"
 #include "lara.h"
 #include "specific/3dmath.h"
+#include "sound.h"
+#include "draw.h"
+#include "deltapak.h"
+#include "room.h"
 
 void InitialiseCamera(void)
 {
@@ -275,6 +279,153 @@ void FixedCamera(void)
         camera.timer--;
         if (!camera.timer)
             camera.timer = -1;
+    }
+}
+
+void CalculateCamera(void)
+{
+    ITEM_INFO *item;
+    sint16 *bounds;
+    sint32 shift, fixed_camera, y, dx, dz;
+    sint16 gotit, change, tilt;
+
+    if (BinocularRange) {
+        BinocularOn = 1;
+        BinocularCamera(lara_item);
+        if (BinocularRange)
+            return;
+    }
+    if (BinocularOn == 1)
+        BinocularOn = -8;
+    old_cam.t.z = camera.target.z;
+    old_cam.t.x = camera.target.x;
+    old_cam.t.y = camera.target.y;
+    if (UseForcedFixedCamera) {
+        camera.type = FIXED_CAMERA;
+        if (camera.old_type != FIXED_CAMERA)
+            camera.speed = 1;
+    }
+    if (room[camera.pos.room_number].flags & ROOM_UNDERWATER) {
+        SoundEffect(60, 0, SFX_ALWAYS);
+        if (!camera.underwater) {
+            nullsub_1(0);
+            camera.underwater = 1;
+        }
+    } else if (camera.underwater) {
+        if (Unk7e71cc)
+            nullsub_1(Unk7e71cc * 25 + 5);
+        camera.underwater = 0;
+    }
+    if (camera.type == CINEMATIC_CAMERA) {
+        do_new_cutscene_camera();
+        return;
+    }
+    item = camera.item;
+    if (camera.item && (camera.type == FIXED_CAMERA || camera.type == HEAVY_CAMERA))
+        fixed_camera = 1;
+    else {
+        item = lara_item;
+        fixed_camera = 0;
+    }
+    bounds = GetBoundsAccurate(item);
+    y = item->pos.y_pos;
+    if (!fixed_camera)
+        y += bounds[3] + ((3 * (bounds[2] - bounds[3])) >> 2);
+    else
+        y += (bounds[2] + bounds[3]) / 2;
+    if (camera.item && !fixed_camera) {
+        dx = camera.item->pos.x_pos - item->pos.x_pos;
+        dz = camera.item->pos.z_pos - item->pos.z_pos;
+        shift = phd_sqrt(SQUARE(dx) + SQUARE(dz));
+        gotit = (sint16)(phd_atan(camera.item->pos.z_pos - item->pos.z_pos, camera.item->pos.x_pos - item->pos.x_pos) - item->pos.y_rot);
+        gotit >>= 1;
+        bounds = GetBoundsAccurate(camera.item);
+        tilt = (sint16)phd_atan(shift, y - (bounds[2] + bounds[3]) / 2 - camera.item->pos.y_pos) >> 1;
+        if (gotit > -9100 && gotit < 9100 && tilt > -15470 && tilt < 15470) {
+            change = gotit - lara.head_y_rot;
+            if (change > 728)
+                lara.head_y_rot += 728;
+            else if (change < -728)
+                lara.head_y_rot -= 728;
+            else
+                lara.head_y_rot += change;
+            lara.torso_y_rot = lara.head_y_rot;
+            change = tilt - lara.head_x_rot;
+            if (change > 728)
+                lara.head_x_rot += 728;
+            else if (change < -728)
+                lara.head_x_rot -= 728;
+            else
+                lara.head_x_rot += change;
+            lara.torso_x_rot = lara.head_x_rot;
+            camera.type = LOOK_CAMERA;
+            camera.item->looked_at = 1;
+        }
+    }
+    if (camera.type != LOOK_CAMERA && camera.type != COMBAT_CAMERA) {
+        last_target.x = camera.target.x;
+        last_target.y = camera.target.y;
+        last_target.z = camera.target.z;
+        last_target.room_number = camera.target.room_number;
+        camera.target.x = item->pos.x_pos;
+        camera.target.z = item->pos.z_pos;
+        if (camera.flags == 1 || UseForcedFixedCamera) {
+            shift = (bounds[4] + bounds[5]) / 2;
+            camera.target.z += ((rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * shift) >> W2V_SHIFT;
+            camera.target.x += ((rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * shift) >> W2V_SHIFT;
+        }
+        camera.target.room_number = item->room_number;
+        camera.target.y = y;
+        if (camera.fixed_camera ^ fixed_camera) {
+            camera.fixed_camera = 1;
+            camera.speed = 1;
+        } else {
+            camera.fixed_camera = 0;
+            if (camera.speed != 1 && camera.old_type != LOOK_CAMERA && BinocularOn >= 0) {
+                camera.target.x = old_cam.t.x + ((camera.target.x - old_cam.t.x) >> 2);
+                camera.target.y = old_cam.t.y + ((camera.target.y - old_cam.t.y) >> 2);
+                camera.target.z = old_cam.t.z + ((camera.target.z - old_cam.t.z) >> 2);
+            }
+        }
+        GetFloor(camera.target.x, camera.target.y, camera.target.z, &camera.target.room_number);
+        if (camera.type != CHASE_CAMERA && camera.flags != 3)
+            FixedCamera();
+        else
+            ChaseCamera(item);
+    } else {
+        if (camera.type == COMBAT_CAMERA) {
+            last_target.x = camera.target.x;
+            last_target.y = camera.target.y;
+            last_target.z = camera.target.z;
+            last_target.room_number = camera.target.room_number;
+        }
+        y -= 256;
+        camera.target.room_number = item->room_number;
+        if (!camera.fixed_camera && BinocularOn >= 0) {
+            camera.target.y += (y - camera.target.y) >> 2;
+            camera.speed = camera.type != LOOK_CAMERA ? 8 : 4;
+        } else {
+            camera.target.y = y;
+            camera.speed = 1;
+        }
+        camera.fixed_camera = 0;
+        if (camera.type == LOOK_CAMERA)
+            LookCamera(item);
+        else
+            CombatCamera(item);
+    }
+    camera.fixed_camera = fixed_camera;
+    camera.last = camera.number;
+    if (camera.type != HEAVY_CAMERA || camera.timer == -1) {
+        camera.type = CHASE_CAMERA;
+        camera.speed = 10;
+        camera.number = -1;
+        camera.last_item = camera.item;
+        camera.item = 0;
+        camera.target_elevation = 0;
+        camera.target_angle = 0;
+        camera.target_distance = 1536;
+        camera.flags = 0;
     }
 }
 

@@ -42,12 +42,26 @@ typedef struct camera_info {
     PHD_VECTOR mike_pos;
 } CAMERA_INFO;
 
+typedef struct {
+    sint16 current_anim_state;
+    sint16 goal_anim_state;
+    sint32 target_distance;
+    sint16 target_angle;
+    sint16 target_elevation;
+    PHD_3DPOS pos;
+    PHD_3DPOS pos2;
+    PHD_VECTOR t;
+} OLD_CAMERA;
+
 extern CAMERA_INFO camera;
 extern GAME_VECTOR last_target;
 extern sint32 LaserSight;
 extern GAME_VECTOR ForcedFixedCamera;
 extern char UseForcedFixedCamera;
 extern sint32 BinocularRange;
+extern sint32 BinocularOn;
+extern OLD_CAMERA old_cam;
+extern sint32 Unk7e71cc;
 extern sint32 BinocularOldCamera;
 extern sint32 bLaraTorch;
 extern PHD_VECTOR LaraTorchStart;
@@ -64,5 +78,6 @@ sint32 mgLOS(GAME_VECTOR *start, GAME_VECTOR *target, sint32 push);
 void ChaseCamera(ITEM_INFO *item);
 void CombatCamera(ITEM_INFO *item);
 sint32 CameraCollisionBounds(GAME_VECTOR *ideal, sint32 push, sint32 yfirst);
+void BinocularCamera(ITEM_INFO *item);
 
 #endif

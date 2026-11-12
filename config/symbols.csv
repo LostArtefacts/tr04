@@ -2590,6 +2590,7 @@ address,size,name,symbol
 0x007e71b0,12,CamPos,_CamPos
 0x007e71bc,4,malloc_ptr,_malloc_ptr
 0x007e71c0,12,CamRot,_CamRot
+0x007e71cc,4,Unk7e71cc,_Unk7e71cc
 0x007e71d0,4,malloc_used,_malloc_used
 0x007e71d4,4,malloc_free,_malloc_free
 0x007e71d8,4,phd_mxptr,_phd_mxptr

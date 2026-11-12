@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="251.42" height="12" x="0" y="0" class="named"><title>1138 · 73.51%</title></rect>
 <rect width="0.66" height="12" x="251.42" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="18.12" height="12" x="252.08" y="0" class="nonmatching"><title>82 · 5.30%</title></rect>
-<rect width="71.80" height="12" x="270.20" y="0" class="todo"><title>325 · 20.99%</title></rect>
+<rect width="18.34" height="12" x="252.08" y="0" class="nonmatching"><title>83 · 5.36%</title></rect>
+<rect width="71.58" height="12" x="270.42" y="0" class="todo"><title>324 · 20.93%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">73.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1138</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">82</tspan> · <tspan class="todo">325</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1138</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">83</tspan> · <tspan class="todo">324</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="136.98" height="12" x="0" y="0" class="named"><title>249 KB · 40.05%</title></rect>
 <rect width="0.13" height="12" x="136.98" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="32.10" height="12" x="137.11" y="0" class="nonmatching"><title>58 KB · 9.39%</title></rect>
-<rect width="172.79" height="12" x="169.21" y="0" class="todo"><title>315 KB · 50.52%</title></rect>
+<rect width="32.87" height="12" x="137.11" y="0" class="nonmatching"><title>60 KB · 9.61%</title></rect>
+<rect width="172.03" height="12" x="169.97" y="0" class="todo"><title>313 KB · 50.30%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">40.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">249 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">58 KB</tspan> · <tspan class="todo">315 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">249 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">60 KB</tspan> · <tspan class="todo">313 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -766,7 +766,7 @@
 <rect width="12" height="12" x="705" y="195" class="named"><title>0x00443a50 CombatCamera (1145 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="todo"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="195" class="named"><title>0x004447f0 FixedCamera (158 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="210" class="todo"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="210" class="nonmatching"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="210" class="named"><title>0x00444e00 CameraCollisionBounds (948 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="210" class="named"><title>0x004451c0 mgLOS (327 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="210" class="todo"><title>0x00445310 BinocularCamera (1407 bytes)</title></rect>
@@ -1713,7 +1713,7 @@
 <rect width="23.21" height="23.34" x="208.30" y="161.58" class="named"><title>0x0042be40 AnimatePistols (1407 bytes)</title></rect>
 <rect width="23.21" height="23.34" x="208.30" y="187.92" class="todo"><title>0x00445310 BinocularCamera (1407 bytes)</title></rect>
 <rect width="23.21" height="23.11" x="208.30" y="214.26" class="todo"><title>0x00482390 AddQuadClippedZBuffer (1393 bytes)</title></rect>
-<rect width="23.21" height="23.04" x="208.30" y="240.37" class="todo"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
+<rect width="23.21" height="23.04" x="208.30" y="240.37" class="nonmatching"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
 <rect width="23.21" height="22.63" x="208.30" y="266.41" class="nonmatching"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>
 <rect width="23.21" height="21.98" x="208.30" y="292.04" class="todo"><title>0x00448da0 GetCollidedObjects (1325 bytes)</title></rect>
 <rect width="23.21" height="21.86" x="208.30" y="317.02" class="todo"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
