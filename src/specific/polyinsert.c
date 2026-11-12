@@ -63,6 +63,22 @@ void ClearFXFogBulbs(void)
     NumFXFogBulbs = 0;
 }
 
+void CreateFXBulbs(void)
+{
+    FOGBULB_STRUCT *FogBulb;
+    sint32 i;
+
+    NumFXFogBulbs = 0;
+    for (i = 0; i < 5; i++) {
+        FogBulb = &FXFogBulbs[i];
+        if (FogBulb->active) {
+            CreateFogPos(FogBulb);
+            ControlFXBulb(FogBulb);
+            NumFXFogBulbs++;
+        }
+    }
+}
+
 sint32 IsVolumetric(void)
 {
     return App.Volumetric;

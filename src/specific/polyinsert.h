@@ -44,10 +44,13 @@ extern sint32 SortCount;
 extern FOGBULB_STRUCT FXFogBulbs[5];
 extern sint32 NumFXFogBulbs;
 
+void CreateFogPos(FOGBULB_STRUCT *FogBulb);
+void ControlFXBulb(FOGBULB_STRUCT *FogBulb);
 void InitialiseSortList(void);
 sint32 IsVolumetric(void);
 void ClearFXFogBulbs(void);
 void DoSort(sint32 left, sint32 right, SORTLIST **list);
 void SortPolyList(sint32 count, SORTLIST **list);
+void CreateFXBulbs(void);
 
 #endif

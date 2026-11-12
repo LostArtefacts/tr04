@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="186.36" height="12" x="0" y="0" class="named"><title>843 · 54.49%</title></rect>
-<rect width="0.44" height="12" x="186.36" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="186.81" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="148.78" height="12" x="193.22" y="0" class="todo"><title>673 · 43.50%</title></rect>
+<rect width="186.59" height="12" x="0" y="0" class="named"><title>844 · 54.56%</title></rect>
+<rect width="0.44" height="12" x="186.59" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="187.03" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="148.56" height="12" x="193.44" y="0" class="todo"><title>672 · 43.44%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">54.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">843</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">673</tspan></text>
+<text text-anchor="end" x="522" y="7.50">54.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">844</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">672</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="79.93" height="12" x="0" y="0" class="named"><title>145 KB · 23.37%</title></rect>
-<rect width="0.12" height="12" x="79.93" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="80.06" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="253.29" height="12" x="88.71" y="0" class="todo"><title>459 KB · 74.06%</title></rect>
+<rect width="79.97" height="12" x="0" y="0" class="named"><title>145 KB · 23.38%</title></rect>
+<rect width="0.12" height="12" x="79.97" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="80.09" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="253.26" height="12" x="88.74" y="0" class="todo"><title>459 KB · 74.05%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">145 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">459 KB</tspan></text>
@@ -1362,7 +1362,7 @@
 <rect width="12" height="12" x="645" y="375" class="todo"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="375" class="named"><title>0x004818a0 ClearFXFogBulbs (32 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="375" class="todo"><title>0x004818c0 ControlFXBulb (232 bytes)</title></rect>
-<rect width="12" height="12" x="690" y="375" class="todo"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
+<rect width="12" height="12" x="690" y="375" class="named"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="375" class="todo"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="375" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="375" class="todo"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
@@ -2828,7 +2828,7 @@
 <rect width="4.72" height="5.07" x="726.83" y="339.46" class="named"><title>0x0042ff50 ready_flare (62 bytes)</title></rect>
 <rect width="4.72" height="5.07" x="734.56" y="339.46" class="named"><title>0x00450650 phd_TranslateRel_I (62 bytes)</title></rect>
 <rect width="4.72" height="5.07" x="742.28" y="339.46" class="named"><title>0x004506e0 phd_RotYXZ_I (62 bytes)</title></rect>
-<rect width="4.78" height="5.01" x="632.09" y="347.53" class="todo"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
+<rect width="4.78" height="5.01" x="632.09" y="347.53" class="named"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
 <rect width="4.78" height="5.01" x="632.09" y="355.54" class="todo"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="4.78" height="4.93" x="632.09" y="363.55" class="named"><title>0x00413cf0 FallingBlockCeiling (61 bytes)</title></rect>
 <rect width="4.78" height="4.93" x="632.09" y="371.48" class="named"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
