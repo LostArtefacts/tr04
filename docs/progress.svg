@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="161.60" height="12" x="0" y="0" class="named"><title>731 · 47.25%</title></rect>
-<rect width="0.44" height="12" x="161.60" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="4.86" height="12" x="162.05" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
-<rect width="175.09" height="12" x="166.91" y="0" class="todo"><title>792 · 51.20%</title></rect>
+<rect width="161.83" height="12" x="0" y="0" class="named"><title>732 · 47.32%</title></rect>
+<rect width="0.44" height="12" x="161.83" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="4.86" height="12" x="162.27" y="0" class="nonmatching"><title>22 · 1.42%</title></rect>
+<rect width="174.87" height="12" x="167.13" y="0" class="todo"><title>791 · 51.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">47.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">731</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">792</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">732</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">22</tspan> · <tspan class="todo">791</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="69.34" height="12" x="0" y="0" class="named"><title>126 KB · 20.28%</title></rect>
-<rect width="0.12" height="12" x="69.34" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.37" height="12" x="69.47" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
-<rect width="265.17" height="12" x="76.83" y="0" class="todo"><title>481 KB · 77.53%</title></rect>
+<rect width="69.39" height="12" x="0" y="0" class="named"><title>126 KB · 20.29%</title></rect>
+<rect width="0.12" height="12" x="69.39" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="7.37" height="12" x="69.51" y="0" class="nonmatching"><title>13 KB · 2.15%</title></rect>
+<rect width="265.13" height="12" x="76.87" y="0" class="todo"><title>481 KB · 77.52%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">20.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">126 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">13 KB</tspan> · <tspan class="todo">481 KB</tspan></text>
@@ -1059,7 +1059,7 @@
 <rect width="12" height="12" x="600" y="285" class="todo"><title>0x00464850 TriggerBikeBeam (155 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="285" class="todo"><title>0x004648f0 GetOnBike (313 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="285" class="todo"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="285" class="todo"><title>0x00464c20 DrawBikeExtras (76 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="285" class="named"><title>0x00464c20 DrawBikeExtras (76 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="285" class="todo"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="285" class="todo"><title>0x00465220 TriggerExhaustSmoke_bike (417 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="285" class="todo"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
@@ -2765,7 +2765,7 @@
 <rect width="5.24" height="5.60" x="708.81" y="322.49" class="named"><title>0x00413ca0 FallingBlockFloor (76 bytes)</title></rect>
 <rect width="5.24" height="5.60" x="717.05" y="322.49" class="named"><title>0x00416950 ControlPlough (76 bytes)</title></rect>
 <rect width="5.24" height="5.60" x="725.29" y="322.49" class="named"><title>0x0042ea70 WeaponObject (76 bytes)</title></rect>
-<rect width="5.24" height="5.60" x="733.52" y="322.49" class="todo"><title>0x00464c20 DrawBikeExtras (76 bytes)</title></rect>
+<rect width="5.24" height="5.60" x="733.52" y="322.49" class="named"><title>0x00464c20 DrawBikeExtras (76 bytes)</title></rect>
 <rect width="5.24" height="5.60" x="741.76" y="322.49" class="todo"><title>0x00478520 S_CalculateStaticMeshLight (76 bytes)</title></rect>
 <rect width="5.47" height="5.37" x="616.18" y="331.10" class="named"><title>0x0047fca0 S_DumpScreen (76 bytes)</title></rect>
 <rect width="5.40" height="5.37" x="624.65" y="331.10" class="named"><title>0x00409060 InitialiseJeanYves (75 bytes)</title></rect>
