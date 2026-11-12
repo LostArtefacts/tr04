@@ -2,6 +2,7 @@
 #define SENET_H
 
 #include "items.h"
+#include "collide.h"
 
 extern sint32 SenetTargetX;
 extern sint32 SenetTargetZ;
@@ -10,6 +11,8 @@ extern sint8 piece_moving;
 extern sint8 last_throw;
 extern sint8 senet_board[17];
 extern sint8 senet_piece[6];
+extern sint16 GameStixBounds[12];
+extern PHD_VECTOR GameStixPos;
 
 
 
@@ -20,5 +23,6 @@ void ThrowSticks(ITEM_INFO *item);
 void ShockwaveExplosion(ITEM_INFO *item, uint32 col, sint32 speed);
 void ControlGodHead(sint16 item_number);
 void DrawGodHead(ITEM_INFO *item);
+void GameStixCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 #endif

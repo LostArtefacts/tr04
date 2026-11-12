@@ -1989,6 +1989,8 @@ address,size,name,symbol
 0x004ad228,16,sas_fire,_sas_fire
 0x004ad238,24,DragSASBounds,_DragSASBounds
 0x004ad250,12,DragSASPos,_DragSASPos
+0x004ad2b0,24,GameStixBounds,_GameStixBounds
+0x004ad2c8,12,GameStixPos,_GameStixPos
 0x004ad328,12,FloorTrapDoorPos,_FloorTrapDoorPos
 0x004ad334,24,FloorTrapDoorBounds,_FloorTrapDoorBounds
 0x004ad350,12,CeilingTrapDoorPos,_CeilingTrapDoorPos

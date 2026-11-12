@@ -183,3 +183,32 @@ void DrawGodHead(ITEM_INFO *item)
     phd_bottom = phd_winheight;
     phd_PopMatrix();
 }
+
+void GameStixCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (input & IN_ACTION && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && lara.gun_status == LG_NO_ARMS && !item->active ||
+        lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+        l->pos.y_rot ^= 0x8000;
+        if (TestLaraPosition(GameStixBounds, item, l)) {
+            if (MoveLaraPosition(&GameStixPos, item, l)) {
+                l->anim_number = ANIM_THROWSTIX;
+                l->frame_number = anims[ANIM_THROWSTIX].frame_base;
+                l->current_anim_state = AS_CONTROLLED;
+                lara.IsMoving = 0;
+                lara.head_y_rot = 0;
+                lara.head_x_rot = 0;
+                lara.torso_y_rot = 0;
+                lara.torso_x_rot = 0;
+                lara.gun_status = LG_HANDS_BUSY;
+                item->status = ITEM_ACTIVE;
+                AddActiveItem(item_number);
+            } else
+                lara.GeneralPtr = (void *)item_number;
+        }
+        l->pos.y_rot ^= 0x8000;
+    } else
+        ObjectCollision(item_number, l, coll);
+}
