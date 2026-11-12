@@ -114,6 +114,35 @@ void spinback(uint16 *cock)
     }
 }
 
+void update_laras_weapons_status(void)
+{
+    if (lara.shotgun_type_carried & 1) {
+        lara.shotgun_type_carried &= 0xC7;
+        if (!CurrentShotGunAmmoType)
+            lara.shotgun_type_carried |= 0x8;
+        else
+            lara.shotgun_type_carried |= 0x10;
+    }
+    if (lara.grenade_type_carried & 1) {
+        lara.grenade_type_carried &= 0xC7;
+        if (!CurrentGrenadeGunAmmoType)
+            lara.grenade_type_carried |= 0x8;
+        else if (CurrentGrenadeGunAmmoType == 1)
+            lara.grenade_type_carried |= 0x10;
+        else if (CurrentGrenadeGunAmmoType == 2)
+            lara.grenade_type_carried |= 0x20;
+    }
+    if (lara.crossbow_type_carried & 1) {
+        lara.crossbow_type_carried &= 0xC7;
+        if (!CurrentCrossBowAmmoType)
+            lara.crossbow_type_carried |= 0x8;
+        else if (CurrentCrossBowAmmoType == 1)
+            lara.crossbow_type_carried |= 0x10;
+        else if (CurrentCrossBowAmmoType == 2)
+            lara.crossbow_type_carried |= 0x20;
+    }
+}
+
 sint32 is_item_currently_combinable(sint16 obj)
 {
     sint32 i;

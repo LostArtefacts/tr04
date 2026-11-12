@@ -233,6 +233,7 @@ void seperate_object(sint16 obj);
 sint32 is_item_currently_combinable(sint16 obj);
 void spinback(uint16 *cock);
 void fade_ammo_selector(void);
+void update_laras_weapons_status(void);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];
@@ -244,6 +245,9 @@ extern uint8 left_repeat;
 extern uint8 right_repeat;
 extern sint16 ammo_selector_fade_val;
 extern sint16 ammo_selector_fade_dir;
+extern sint8 CurrentShotGunAmmoType;
+extern sint8 CurrentGrenadeGunAmmoType;
+extern sint8 CurrentCrossBowAmmoType;
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
 
