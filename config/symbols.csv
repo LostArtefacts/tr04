@@ -112,7 +112,7 @@ address,size,name,symbol
 0x004103b0,373,TriggerSethMissileFlame,_TriggerSethMissileFlame
 0x00410530,1758,DoSethEffects,_DoSethEffects
 0x00410c30,90,InitialiseSeth,_InitialiseSeth
-0x00410c90,2320,SethControl,_SethControl
+0x00410c90,2380,SethControl,_SethControl
 0x004115e0,499,TriggerRiseEffect,_TriggerRiseEffect
 0x004117e0,231,InitialiseSkeleton,_InitialiseSkeleton
 0x004118d0,4402,SkeletonControl,_SkeletonControl
@@ -2014,6 +2014,8 @@ address,size,name,symbol
 0x004ad2a0,16,s_pincer,_s_pincer
 0x004ad2b0,24,GameStixBounds,_GameStixBounds
 0x004ad2c8,12,GameStixPos,_GameStixPos
+0x004ad2d8,16,seth_left_hand,_seth_left_hand
+0x004ad2e8,16,seth_right_hand,_seth_right_hand
 0x004ad308,16,sphinx_bite,_sphinx_bite
 0x004ad318,16,templar_hit,_templar_hit
 0x004ad328,12,FloorTrapDoorPos,_FloorTrapDoorPos
