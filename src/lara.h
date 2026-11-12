@@ -338,6 +338,7 @@ sint32 IsValidHangPos(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_polestat(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_ropefwd(ITEM_INFO *item, COLL_INFO *coll);
 void FallFromRope(ITEM_INFO *item);
+void lara_as_climbroped(ITEM_INFO *item, COLL_INFO *coll);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

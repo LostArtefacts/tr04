@@ -1266,6 +1266,35 @@ void JumpOffRope(ITEM_INFO *item)
     }
 }
 
+void lara_as_climbroped(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (!(input & IN_ACTION)) {
+        FallFromRope(item);
+        return;
+    }
+    camera.target_angle = 5460;
+    if (!lara.RopeCount && !lara.RopeFlag) {
+        lara.RopeOffset = 0;
+        lara.RopeCount = 1;
+        lara.RopeDownVel = (uint32)(RopeList[lara.RopePtr].MeshSegment[lara.RopeSegment + 1].y - RopeList[lara.RopePtr].MeshSegment[lara.RopeSegment].y) >> 17;
+    }
+    if (!lara.RopeFlag) {
+        lara.RopeCount--;
+        lara.RopeOffset += lara.RopeDownVel;
+        if (!lara.RopeCount)
+            lara.RopeFlag = 1;
+        return;
+    }
+    if (item->anim_number == ANIM_ROPESLIDEL && item->frame_number == anims[item->anim_number].frame_end) {
+        item->frame_number = anims[item->anim_number].frame_base;
+        lara.RopeFlag = 0;
+        lara.RopeSegment++;
+        lara.RopeOffset = 0;
+    }
+    if (!(input & IN_BACK) || lara.RopeSegment >= 21)
+        item->goal_anim_state = AS_ROPE;
+}
+
 void lara_col_stop(ITEM_INFO *item, COLL_INFO *coll)
 {
     item->gravity_status = item->fallspeed = 0;
