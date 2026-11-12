@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="241.92" height="12" x="0" y="0" class="named"><title>1095 · 70.74%</title></rect>
-<rect width="0.44" height="12" x="241.92" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="14.36" height="12" x="242.36" y="0" class="nonmatching"><title>65 · 4.20%</title></rect>
-<rect width="85.28" height="12" x="256.72" y="0" class="todo"><title>386 · 24.94%</title></rect>
+<rect width="242.36" height="12" x="0" y="0" class="named"><title>1097 · 70.87%</title></rect>
+<rect width="0.44" height="12" x="242.36" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="14.14" height="12" x="242.80" y="0" class="nonmatching"><title>64 · 4.13%</title></rect>
+<rect width="85.06" height="12" x="256.94" y="0" class="todo"><title>385 · 24.87%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">70.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1095</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">65</tspan> · <tspan class="todo">386</tspan></text>
+<text text-anchor="end" x="522" y="7.50">71.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1097</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">64</tspan> · <tspan class="todo">385</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="118.92" height="12" x="0" y="0" class="named"><title>216 KB · 34.77%</title></rect>
-<rect width="0.12" height="12" x="118.92" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="25.61" height="12" x="119.04" y="0" class="nonmatching"><title>47 KB · 7.49%</title></rect>
-<rect width="197.35" height="12" x="144.65" y="0" class="todo"><title>358 KB · 57.70%</title></rect>
+<rect width="119.60" height="12" x="0" y="0" class="named"><title>217 KB · 34.97%</title></rect>
+<rect width="0.12" height="12" x="119.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="25.21" height="12" x="119.72" y="0" class="nonmatching"><title>46 KB · 7.37%</title></rect>
+<rect width="197.07" height="12" x="144.93" y="0" class="todo"><title>358 KB · 57.62%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">34.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">216 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">47 KB</tspan> · <tspan class="todo">358 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">35.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">217 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">46 KB</tspan> · <tspan class="todo">358 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -484,7 +484,7 @@
 <rect width="12" height="12" x="225" y="120" class="todo"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="120" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="120" class="todo"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="120" class="nonmatching"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="120" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="120" class="named"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="120" class="named"><title>0x0042ea70 WeaponObject (76 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="120" class="named"><title>0x0042eac0 WeaponObjectMesh (100 bytes)</title></rect>
@@ -1267,7 +1267,7 @@
 <rect width="12" height="12" x="720" y="345" class="named"><title>0x00475a30 LoadSoundEffects (139 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="345" class="named"><title>0x00475ac0 LoadBoxes (430 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="360" class="named"><title>0x00475c70 LoadAnimatedTextures (109 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="360" class="todo"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="360" class="named"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="360" class="nonmatching"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="360" class="named"><title>0x004761e0 LoadCinematic (16 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="360" class="named"><title>0x004761f0 LoadAIInfo (97 bytes)</title></rect>
@@ -1847,7 +1847,7 @@
 <rect width="16.19" height="17.75" x="326.81" y="42.01" class="todo"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
 <rect width="16.19" height="17.66" x="326.81" y="62.77" class="nonmatching"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
 <rect width="16.19" height="17.63" x="326.81" y="83.43" class="nonmatching"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
-<rect width="16.19" height="17.61" x="326.81" y="104.06" class="nonmatching"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
+<rect width="16.19" height="17.61" x="326.81" y="104.06" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
 <rect width="16.19" height="17.59" x="326.81" y="124.67" class="nonmatching"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
 <rect width="16.19" height="17.56" x="326.81" y="145.26" class="todo"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
 <rect width="16.19" height="17.52" x="326.81" y="165.82" class="todo"><title>0x00455800 Draw_Mirror_Lara (735 bytes)</title></rect>
@@ -1976,7 +1976,7 @@
 <rect width="13.93" height="14.10" x="381.08" y="96.33" class="todo"><title>0x0049a4e0 Func49a4e0 (509 bytes)</title></rect>
 <rect width="13.93" height="14.10" x="381.08" y="113.43" class="todo"><title>0x0049b990 Func49b990 (509 bytes)</title></rect>
 <rect width="13.93" height="14.05" x="381.08" y="130.53" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
-<rect width="13.93" height="13.99" x="381.08" y="147.58" class="todo"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
+<rect width="13.93" height="13.99" x="381.08" y="147.58" class="named"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
 <rect width="13.93" height="13.96" x="381.08" y="164.57" class="todo"><title>0x0049a2e0 Func49a2e0 (504 bytes)</title></rect>
 <rect width="13.93" height="13.96" x="381.08" y="181.53" class="todo"><title>0x0049b790 Func49b790 (504 bytes)</title></rect>
 <rect width="13.93" height="13.85" x="381.08" y="198.50" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>

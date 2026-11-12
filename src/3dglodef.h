@@ -92,6 +92,24 @@ typedef struct PHDSPRITESTRUCT {
     sint16 y2;
 } PHDSPRITESTRUCT;
 
+typedef struct phdtexturestruct {
+    uint16 drawtype;
+    uint16 tpage;
+    uint16 flag;
+    uint16 u1;
+    uint16 v1;
+    uint16 u2;
+    uint16 v2;
+    uint16 u3;
+    uint16 v3;
+    uint16 u4;
+    uint16 v4;
+    uint32 xoff;
+    uint32 yoff;
+    uint32 width;
+    uint32 height;
+} PHDTEXTURESTRUCT;
+
 typedef struct texture_struct {
     uint16 drawtype;
     uint16 tpage;

@@ -78,5 +78,7 @@ sint32 S_LoadLevelFile(sint32 num);
 uint8 LoadSamples(void);
 uint8 LoadSprites(void);
 uint8 LoadItems(void);
+void AdjustUV(sint32 num);
+uint8 LoadTextureInfos(void);
 
 #endif

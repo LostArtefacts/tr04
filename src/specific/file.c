@@ -15,6 +15,7 @@
 #include "../anim.h"
 #include "../draw.h"
 #include "lighting.h"
+#include "drawroom.h"
 #include "dxsound.h"
 #include "../sound.h"
 
@@ -234,6 +235,37 @@ uint8 LoadAnimatedTextures(void)
     n = *(uint8 *)FileData;
     FileData += sizeof(char);
     nAnimUVRanges = n;
+    return 1;
+}
+
+uint8 LoadTextureInfos(void)
+{
+    PHDTEXTURESTRUCT tex;
+    sint32 val, i;
+
+    Log(2, "LoadTextureInfos");
+    FileData += 3;
+    val = *(sint32 *)FileData;
+    FileData += sizeof(sint32);
+    Log(5, "Texture Infos : %d", val);
+    textinfo = (TEXTURESTRUCT *)game_malloc(val * sizeof(TEXTURESTRUCT), 0);
+    for (i = 0; i < val; i++) {
+        memcpy(&tex, FileData, sizeof(PHDTEXTURESTRUCT));
+        FileData += sizeof(PHDTEXTURESTRUCT);
+        textinfo[i].drawtype = tex.drawtype;
+        textinfo[i].tpage = tex.tpage & 0x7FFF;
+        textinfo[i].flag = tex.tpage ^ (tex.tpage ^ tex.flag) & 0x7FFF;
+        textinfo[i].u1 = (float)tex.u1 * (1.0F / 65535.0F);
+        textinfo[i].v1 = (float)tex.v1 * (1.0F / 65535.0F);
+        textinfo[i].u2 = (float)tex.u2 * (1.0F / 65535.0F);
+        textinfo[i].v2 = (float)tex.v2 * (1.0F / 65535.0F);
+        textinfo[i].u3 = (float)tex.u3 * (1.0F / 65535.0F);
+        textinfo[i].v3 = (float)tex.v3 * (1.0F / 65535.0F);
+        textinfo[i].u4 = (float)tex.u4 * (1.0F / 65535.0F);
+        textinfo[i].v4 = (float)tex.v4 * (1.0F / 65535.0F);
+    }
+    AdjustUV(val);
+    Log(5, "Created %d Texture Pages", nTextures - 1);
     return 1;
 }
 
