@@ -75,6 +75,7 @@ sint32 MoveLaraPosition(PHD_VECTOR *v, ITEM_INFO *item, ITEM_INFO *l);
 void AlignLaraPosition(PHD_VECTOR *vec, ITEM_INFO *item, ITEM_INFO *laraitem);
 void ObjectCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll);
 void TrapCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
+void ObjectCollisionNoBigPush(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 
 extern sint16 GlobalCollisionBounds[6];
 

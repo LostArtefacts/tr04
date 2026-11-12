@@ -61,6 +61,15 @@ void ObjectCollision(sint16 item_num, ITEM_INFO *laraitem, COLL_INFO *coll)
         ItemPushLara(item, laraitem, coll, 0, 1);
 }
 
+void ObjectCollisionNoBigPush(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (TestBoundsCollide(item, l, coll->radius) && TestCollision(item, l) && coll->enable_baddie_push)
+        ItemPushLara(item, l, coll, 0, 0);
+}
+
 void TrapCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
 {
     ITEM_INFO *item;
