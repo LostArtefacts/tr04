@@ -1558,6 +1558,37 @@ void lara_as_hang(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_elevation = -10920;
 }
 
+sint32 IsValidHangPos(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint16 angle;
+
+    if (LaraFloorFront(item, lara.move_angle, 100) >= 200) {
+        angle = (uint16)(item->pos.y_rot + 0x2000) / 0x4000;
+        switch (angle) {
+        case NORTH:
+            item->pos.z_pos += 4;
+            break;
+        case WEST:
+            item->pos.x_pos -= 4;
+            break;
+        case SOUTH:
+            item->pos.z_pos -= 4;
+            break;
+        case EAST:
+            item->pos.x_pos += 4;
+            break;
+        }
+        coll->bad_pos = -NO_HEIGHT;
+        coll->bad_neg = -512;
+        coll->bad_ceiling = 0;
+        lara.move_angle = item->pos.y_rot;
+        GetLaraCollisionInfo(item, coll);
+        if (coll->mid_ceiling < 0 && coll->coll_type == COLL_FRONT && !coll->hit_static && ABS(coll->front_floor - coll->right_floor2) < 60)
+            return 1;
+    }
+    return 0;
+}
+
 sint32 CanLaraHangSideways(ITEM_INFO *item, COLL_INFO *coll, sint16 angle)
 {
     sint32 oldx, oldz, x, z, res;
