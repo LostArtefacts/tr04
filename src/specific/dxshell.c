@@ -146,6 +146,23 @@ sint32 BPPToDDBD(sint32 BPP)
     }
 }
 
+HRESULT CALLBACK DXEnumZBufferFormats(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext)
+{
+    DXD3DDEVICE *d3d;
+    DXZBUFFERINFO *zbuffer;
+    sint32 nZBufferInfos;
+
+    d3d = (DXD3DDEVICE *)lpContext;
+    nZBufferInfos = d3d->nZBufferInfos;
+    d3d->ZBufferInfos = (DXZBUFFERINFO *)AddStruct(d3d->ZBufferInfos, nZBufferInfos, sizeof(DXZBUFFERINFO));
+    zbuffer = &d3d->ZBufferInfos[nZBufferInfos];
+    memcpy(&zbuffer->ddpf, lpDDPixFmt, sizeof(DDPIXELFORMAT));
+    zbuffer->bpp = lpDDPixFmt->dwRGBBitCount;
+    Log(3, "%d Bit", zbuffer->bpp);
+    d3d->nZBufferInfos++;
+    return D3DENUMRET_OK;
+}
+
 sint32 DXCreateSurface(LPDIRECTDRAW4 dd, LPDDSURFACEDESC2 desc, LPDIRECTDRAWSURFACE4 *surf)
 {
     Log(2, "DXCreateSurface");

@@ -148,6 +148,7 @@ BOOL CALLBACK DXEnumDirectDraw(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lp
 BOOL CALLBACK DXEnumDirectSound(LPGUID lpGuid, LPCSTR lpcstrDescription, LPCSTR lpcstrModule, LPVOID lpContext);
 sint32 DXGetInfo(DXINFO *dxinfo, HWND hwnd);
 void DXFreeInfo(DXINFO *dxinfo);
+HRESULT CALLBACK DXEnumZBufferFormats(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext);
 
 extern WINAPP App;
 extern DXINFO *G_dxinfo;
