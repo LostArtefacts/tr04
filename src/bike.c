@@ -168,6 +168,33 @@ sint32 TestHeight(ITEM_INFO *item, sint32 z, sint32 x, PHD_VECTOR *pos)
     return h;
 }
 
+sint32 DoDynamics_bike(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
+{
+    sint32 kick;
+
+    if (height > *y) {
+        *y += fallspeed;
+        if (*y > height - 32) {
+            *y = height;
+            fallspeed = 0;
+        } else if (zero)
+            fallspeed += zero;
+        else
+            fallspeed += 6;
+    } else {
+        if (!zero) {
+            kick = height - *y;
+            if (kick < -80)
+                kick = -80;
+            fallspeed += (kick - fallspeed) >> 4;
+            if (*y > height)
+                *y = height;
+        } else
+            return fallspeed;
+    }
+    return fallspeed;
+}
+
 sint32 CanGetOff_bike(sint16 num)
 {
     ITEM_INFO *item;

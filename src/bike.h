@@ -29,6 +29,7 @@ sint32 CanGetOff_bike(sint16 num);
 void InitialiseBike(sint16 item_number);
 sint32 BikeCheckGetOff(void);
 sint32 TestHeight(ITEM_INFO *item, sint32 z, sint32 x, PHD_VECTOR *pos);
+sint32 DoDynamics_bike(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero);
 
 extern ITEM_INFO *GlobalBikeItem;
 

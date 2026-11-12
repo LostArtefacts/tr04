@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="163.15" height="12" x="0" y="0" class="named"><title>738 · 47.71%</title></rect>
 <rect width="0.44" height="12" x="163.15" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="5.53" height="12" x="163.59" y="0" class="nonmatching"><title>25 · 1.62%</title></rect>
-<rect width="172.88" height="12" x="169.12" y="0" class="todo"><title>782 · 50.55%</title></rect>
+<rect width="5.75" height="12" x="163.59" y="0" class="nonmatching"><title>26 · 1.68%</title></rect>
+<rect width="172.66" height="12" x="169.34" y="0" class="todo"><title>781 · 50.48%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">47.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">738</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">25</tspan> · <tspan class="todo">782</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">738</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">26</tspan> · <tspan class="todo">781</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="70.29" height="12" x="0" y="0" class="named"><title>127 KB · 20.55%</title></rect>
 <rect width="0.12" height="12" x="70.29" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.82" height="12" x="70.41" y="0" class="nonmatching"><title>14 KB · 2.29%</title></rect>
-<rect width="263.78" height="12" x="78.22" y="0" class="todo"><title>478 KB · 77.13%</title></rect>
+<rect width="7.88" height="12" x="70.41" y="0" class="nonmatching"><title>14 KB · 2.30%</title></rect>
+<rect width="263.72" height="12" x="78.28" y="0" class="todo"><title>478 KB · 77.11%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">20.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">127 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">478 KB</tspan></text>
@@ -1065,7 +1065,7 @@
 <rect width="12" height="12" x="690" y="285" class="named"><title>0x004653d0 BikeExplode (197 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="285" class="nonmatching"><title>0x004654a0 BikeCheckGetOff (439 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="285" class="nonmatching"><title>0x00465660 TestHeight (269 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="285" class="todo"><title>0x00465770 DoDynamics_bike (109 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="285" class="nonmatching"><title>0x00465770 DoDynamics_bike (109 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="300" class="todo"><title>0x004657e0 BikeDynamics (1940 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="300" class="todo"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="300" class="todo"><title>0x00466290 BikeBaddieCollision (529 bytes)</title></rect>
@@ -2617,7 +2617,7 @@
 <rect width="6.45" height="6.53" x="589.88" y="285.77" class="named"><title>0x0042bab0 ready_pistols (109 bytes)</title></rect>
 <rect width="6.45" height="6.53" x="599.33" y="285.77" class="named"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
 <rect width="6.45" height="6.53" x="608.78" y="285.77" class="todo"><title>0x004644b0 InitialiseTrainJeep (109 bytes)</title></rect>
-<rect width="6.45" height="6.53" x="618.23" y="285.77" class="todo"><title>0x00465770 DoDynamics_bike (109 bytes)</title></rect>
+<rect width="6.45" height="6.53" x="618.23" y="285.77" class="nonmatching"><title>0x00465770 DoDynamics_bike (109 bytes)</title></rect>
 <rect width="6.45" height="6.53" x="627.68" y="285.77" class="named"><title>0x0046cc40 cutseq_kill_item (109 bytes)</title></rect>
 <rect width="6.45" height="6.53" x="637.13" y="285.77" class="named"><title>0x0046ccb0 cutseq_restore_item (109 bytes)</title></rect>
 <rect width="6.45" height="6.53" x="646.58" y="285.77" class="todo"><title>0x00472ee0 CalcTriFaceNormal (109 bytes)</title></rect>
