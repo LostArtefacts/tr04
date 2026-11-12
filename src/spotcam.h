@@ -24,7 +24,11 @@ typedef struct SPOTCAM {
 extern sint32 bDisableLaraControl;
 extern SPOTCAM SpotCam[128];
 extern sint16 number_spotcams;
+extern sint32 bTrackCamInit;
+extern uint8 SpotRemap[8];
+extern uint8 CameraCnt[8];
 
 void InitialiseSpotCam(sint16 Sequence);
+void InitSpotCamSequences(void);
 
 #endif

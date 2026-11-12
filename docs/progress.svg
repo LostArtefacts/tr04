@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="228.59" height="12" x="0" y="0" class="named"><title>1034 · 66.84%</title></rect>
-<rect width="0.44" height="12" x="228.59" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="8.40" height="12" x="229.03" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
-<rect width="104.57" height="12" x="237.43" y="0" class="todo"><title>473 · 30.58%</title></rect>
+<rect width="228.81" height="12" x="0" y="0" class="named"><title>1035 · 66.90%</title></rect>
+<rect width="0.44" height="12" x="228.81" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="8.40" height="12" x="229.25" y="0" class="nonmatching"><title>38 · 2.46%</title></rect>
+<rect width="104.35" height="12" x="237.65" y="0" class="todo"><title>472 · 30.51%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">67.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1034</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">473</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1035</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">38</tspan> · <tspan class="todo">472</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="100.26" height="12" x="0" y="0" class="named"><title>182 KB · 29.32%</title></rect>
-<rect width="0.12" height="12" x="100.26" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="10.16" height="12" x="100.38" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
-<rect width="231.47" height="12" x="110.53" y="0" class="todo"><title>420 KB · 67.68%</title></rect>
+<rect width="100.32" height="12" x="0" y="0" class="named"><title>182 KB · 29.33%</title></rect>
+<rect width="0.12" height="12" x="100.32" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="10.16" height="12" x="100.44" y="0" class="nonmatching"><title>18 KB · 2.97%</title></rect>
+<rect width="231.41" height="12" x="110.59" y="0" class="todo"><title>420 KB · 67.66%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">29.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">182 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">18 KB</tspan> · <tspan class="todo">420 KB</tspan></text>
@@ -1023,7 +1023,7 @@
 <rect width="12" height="12" x="60" y="285" class="nonmatching"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="285" class="nonmatching"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="285" class="named"><title>0x00460270 InitInterpolate2 (52 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="285" class="todo"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="285" class="named"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="285" class="todo"><title>0x00460320 Spline (249 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="285" class="todo"><title>0x00460420 InitialiseSpotCam (1833 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="285" class="todo"><title>0x00460b50 SetSplineData (285 bytes)</title></rect>
@@ -2611,7 +2611,7 @@
 <rect width="6.35" height="6.69" x="703.25" y="285.75" class="named"><title>0x0044a060 TranslateItem (110 bytes)</title></rect>
 <rect width="6.35" height="6.69" x="712.60" y="285.75" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
 <rect width="6.35" height="6.69" x="721.95" y="285.75" class="named"><title>0x00454900 CreateEffect (110 bytes)</title></rect>
-<rect width="6.35" height="6.69" x="731.30" y="285.75" class="todo"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>
+<rect width="6.35" height="6.69" x="731.30" y="285.75" class="named"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>
 <rect width="6.35" height="6.69" x="740.65" y="285.75" class="todo"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
 <rect width="6.53" height="6.45" x="570.78" y="295.44" class="named"><title>0x00428ea0 ready_shotgun (109 bytes)</title></rect>
 <rect width="6.53" height="6.45" x="570.78" y="304.89" class="named"><title>0x0042bab0 ready_pistols (109 bytes)</title></rect>

@@ -2547,6 +2547,7 @@ address,size,name,symbol
 0x007f5828,2,number_spotcams,_number_spotcams
 0x007f5888,2,spotcam_loopcnt,_spotcam_loopcnt
 0x007f588c,4,spline_to_camera,_spline_to_camera
+0x007f58e8,8,SpotRemap,_SpotRemap
 0x007f58f0,2,current_spline_camera,_current_spline_camera
 0x007f58f2,2,current_sequence,_current_sequence
 0x007f58f4,2,CurrentFov,_CurrentFov
@@ -2555,6 +2556,7 @@ address,size,name,symbol
 0x007f5a68,4,LaraAir,_LaraAir
 0x007f5a6c,2,last_camera,_last_camera
 0x007f5a80,5120,SpotCam,_SpotCam
+0x007f6ec8,8,CameraCnt,_CameraCnt
 0x007f6ed0,4,LaraHealth,_LaraHealth
 0x007f6ed4,2,first_camera,_first_camera
 0x007f6ed8,4,current_spline_position,_current_spline_position
