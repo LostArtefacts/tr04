@@ -2033,6 +2033,7 @@ address,size,name,symbol
 0x004aec9c,24,PushPullKickDoorBounds,_PushPullKickDoorBounds
 0x004aecb4,24,UnderwaterDoorBounds,_UnderwaterDoorBounds
 0x004aeccc,24,CrowbarDoorBounds,_CrowbarDoorBounds
+0x004aecf4,12,frig_jeep_shadow_bbox,_frig_jeep_shadow_bbox
 0x004aedb0,1696,CharDef,_CharDef
 0x004af451,1,gfGameMode,_gfGameMode
 0x004af452,,gfInitialiseGame,_gfInitialiseGame
@@ -2076,6 +2077,7 @@ address,size,name,symbol
 0x004afeec,92,AccentTable,_AccentTable
 0x004aff48,80,ShadeFromTo,_ShadeFromTo
 0x004aff98,4,font_init,_font_init
+0x004b01a0,12,frig_shadow_bbox,_frig_shadow_bbox
 0x004b0324,28,troop_chat_ranges4,_troop_chat_ranges4
 0x004b0340,8,lara_chat_ranges6,_lara_chat_ranges6
 0x004b0348,8,voncroy_chat_ranges6,_voncroy_chat_ranges6
@@ -2501,9 +2503,11 @@ address,size,name,symbol
 0x007e71e0,4,nPolyType,_nPolyType
 0x007e71e4,4,malloc_buffer,_malloc_buffer
 0x007e71e8,4,numnailed,_numnailed
+0x007e7200,40,actor_pnodes,_actor_pnodes
 0x007e7228,4,lastcamnum,_lastcamnum
 0x007e722c,4,GLOBAL_oldcamtype,_GLOBAL_oldcamtype
 0x007e7230,4,GLOBAL_cutme,_GLOBAL_cutme
+0x007e7240,320,temp_rotation_buffer,_temp_rotation_buffer
 0x007f4f1c,4,cutseqpakPtr,_cutseqpakPtr
 0x007f4f20,4,camera_pnodes,_camera_pnodes
 0x007f4f40,40,cutseq_meshbits,_cutseq_meshbits

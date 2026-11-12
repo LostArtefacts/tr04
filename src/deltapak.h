@@ -62,6 +62,10 @@ typedef struct nodeloadheader {
 
 extern sint32 GLOBAL_playing_cutseq;
 extern NEW_CUTSCENE *GLOBAL_cutme;
+extern PACKNODE *actor_pnodes[10];
+extern sint16 temp_rotation_buffer[160];
+extern sint16 frig_shadow_bbox[6];
+extern sint16 frig_jeep_shadow_bbox[6];
 extern PACKNODE *camera_pnodes;
 extern sint32 cutseq_num;
 extern sint32 cutseq_trig;
