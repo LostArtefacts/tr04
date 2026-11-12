@@ -3,6 +3,7 @@
 #include "objnums.h"
 #include "lara1gun.h"
 #include "lara2gun.h"
+#include "specific/3dmath.h"
 #include "specific/input.h"
 #include "specific/loadsave.h"
 
@@ -449,4 +450,9 @@ sint32 convert_obj_to_invobj(sint16 obj)
             return i;
     }
     return INV_MEMCARD_LOAD_ITEM;
+}
+
+void draw_compass(void)
+{
+    DrawThreeDeeObject2D((sint32)(60.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos), phd_centery + inventry_ypos, INV_COMPASS_ITEM, 128, 0, 0, 0, 0, 0);
 }

@@ -190,6 +190,7 @@ typedef struct {
 
 void construct_object_list(void);
 void Func43dbf0(void);
+void DrawThreeDeeObject2D(sint32 x, sint32 y, sint32 num, sint32 shade, sint32 xrot, sint32 yrot, sint32 zrot, sint32 bright, sint32 overlay);
 sint32 LoadGame(void);
 sint32 SaveGame(void);
 void DEL_picked_up_object(sint16 objnum);
@@ -234,6 +235,7 @@ sint32 is_item_currently_combinable(sint16 obj);
 void spinback(uint16 *cock);
 void fade_ammo_selector(void);
 void update_laras_weapons_status(void);
+void draw_compass(void);
 
 extern INVOBJ inventry_objects_list[NUM_INVOBJ];
 extern RINGME *rings[2];
@@ -248,6 +250,8 @@ extern sint16 ammo_selector_fade_dir;
 extern sint8 CurrentShotGunAmmoType;
 extern sint8 CurrentGrenadeGunAmmoType;
 extern sint8 CurrentCrossBowAmmoType;
+extern sint16 inventry_xpos;
+extern sint16 inventry_ypos;
 extern sint32 GLOBAL_enterinventory;
 extern sint32 GLOBAL_inventoryitemchosen;
 

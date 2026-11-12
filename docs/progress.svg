@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="177.08" height="12" x="0" y="0" class="named"><title>801 · 51.78%</title></rect>
-<rect width="0.44" height="12" x="177.08" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="177.52" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="158.07" height="12" x="183.93" y="0" class="todo"><title>715 · 46.22%</title></rect>
+<rect width="177.30" height="12" x="0" y="0" class="named"><title>802 · 51.84%</title></rect>
+<rect width="0.44" height="12" x="177.30" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="177.74" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="157.85" height="12" x="184.15" y="0" class="todo"><title>714 · 46.15%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">51.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">801</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">715</tspan></text>
+<text text-anchor="end" x="522" y="7.50">52.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">802</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">714</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="77.16" height="12" x="0" y="0" class="named"><title>140 KB · 22.56%</title></rect>
-<rect width="0.12" height="12" x="77.16" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="77.28" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="256.07" height="12" x="85.93" y="0" class="todo"><title>464 KB · 74.87%</title></rect>
+<rect width="77.20" height="12" x="0" y="0" class="named"><title>140 KB · 22.57%</title></rect>
+<rect width="0.12" height="12" x="77.20" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="77.32" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="256.03" height="12" x="85.97" y="0" class="todo"><title>464 KB · 74.86%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">140 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">464 KB</tspan></text>
@@ -721,7 +721,7 @@
 <rect width="12" height="12" x="30" y="195" class="named"><title>0x0043ef60 have_i_got_object (237 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="195" class="named"><title>0x0043f050 remove_inventory_item (252 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="195" class="named"><title>0x0043f150 convert_obj_to_invobj (35 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="195" class="todo"><title>0x0043f180 draw_compass (82 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="195" class="named"><title>0x0043f180 draw_compass (82 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="195" class="todo"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="195" class="todo"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="195" class="todo"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
@@ -2737,7 +2737,7 @@
 <rect width="5.84" height="5.56" x="607.34" y="322.49" class="named"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
 <rect width="5.84" height="5.49" x="607.34" y="331.05" class="named"><title>0x00417020 ControlMovingBlade (83 bytes)</title></rect>
 <rect width="5.84" height="5.49" x="607.34" y="339.54" class="named"><title>0x00432850 lara_as_uwdeath (83 bytes)</title></rect>
-<rect width="5.84" height="5.43" x="607.34" y="348.04" class="todo"><title>0x0043f180 draw_compass (82 bytes)</title></rect>
+<rect width="5.84" height="5.43" x="607.34" y="348.04" class="named"><title>0x0043f180 draw_compass (82 bytes)</title></rect>
 <rect width="5.84" height="5.43" x="607.34" y="356.46" class="todo"><title>0x00454ef0 InitialiseElementPuzzle (82 bytes)</title></rect>
 <rect width="5.84" height="5.43" x="607.34" y="364.89" class="named"><title>0x0046d160 nail_intelligent_object (82 bytes)</title></rect>
 <rect width="5.84" height="5.43" x="607.34" y="373.32" class="named"><title>0x00473400 DSAdjustPan (82 bytes)</title></rect>
