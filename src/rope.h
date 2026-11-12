@@ -28,6 +28,7 @@ void GetRopePos(ROPE_STRUCT *rope, sint32 pos, sint32 *x, sint32 *y, sint32 *z);
 void phd_GetMatrixAngles(sint32 *m, sint16 *dest);
 void DrawRopeList(void);
 void SetPendulumPoint(ROPE_STRUCT *Rope, sint32 node);
+sint32 RopeNodeCollision(ROPE_STRUCT *rope, sint32 x, sint32 y, sint32 z, sint32 rad);
 
 extern ROPE_STRUCT RopeList[5];
 extern sint32 nRope;

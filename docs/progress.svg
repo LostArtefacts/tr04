@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="190.34" height="12" x="0" y="0" class="named"><title>861 · 55.66%</title></rect>
-<rect width="0.44" height="12" x="190.34" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="190.79" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="144.80" height="12" x="197.20" y="0" class="todo"><title>655 · 42.34%</title></rect>
+<rect width="190.56" height="12" x="0" y="0" class="named"><title>862 · 55.72%</title></rect>
+<rect width="0.44" height="12" x="190.56" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="191.01" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="144.58" height="12" x="197.42" y="0" class="todo"><title>654 · 42.28%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">55.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">861</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">655</tspan></text>
+<text text-anchor="end" x="522" y="7.50">55.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">862</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">654</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="81.49" height="12" x="0" y="0" class="named"><title>148 KB · 23.83%</title></rect>
-<rect width="0.12" height="12" x="81.49" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="81.61" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="251.74" height="12" x="90.26" y="0" class="todo"><title>457 KB · 73.61%</title></rect>
+<rect width="81.60" height="12" x="0" y="0" class="named"><title>148 KB · 23.86%</title></rect>
+<rect width="0.12" height="12" x="81.60" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="81.72" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="251.63" height="12" x="90.37" y="0" class="todo"><title>456 KB · 73.58%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">148 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">457 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">148 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">456 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -974,7 +974,7 @@
 <rect width="12" height="12" x="75" y="270" class="todo"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="270" class="named"><title>0x00459060 GetRopePos (146 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="270" class="todo"><title>0x00459100 RopeCollision (471 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="270" class="todo"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="270" class="named"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="270" class="todo"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="270" class="named"><title>0x00459410 DrawRopeList (56 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="270" class="named"><title>0x00459450 Normalise (179 bytes)</title></rect>
@@ -2345,7 +2345,7 @@
 <rect width="8.92" height="8.67" x="495.56" y="268.43" class="named"><title>0x0048fa90 SetupZRange (200 bytes)</title></rect>
 <rect width="8.92" height="8.62" x="495.56" y="280.09" class="todo"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
 <rect width="8.92" height="8.62" x="495.56" y="291.71" class="todo"><title>0x00418fa0 GetAIEnemy (199 bytes)</title></rect>
-<rect width="8.92" height="8.62" x="495.56" y="303.34" class="todo"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
+<rect width="8.92" height="8.62" x="495.56" y="303.34" class="named"><title>0x004592e0 RopeNodeCollision (199 bytes)</title></rect>
 <rect width="8.92" height="8.62" x="495.56" y="314.96" class="named"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.56" y="326.58" class="named"><title>0x00436250 TriggerDynamic_MIRROR (198 bytes)</title></rect>
 <rect width="8.92" height="8.58" x="495.56" y="338.16" class="named"><title>0x00439e40 Fade (198 bytes)</title></rect>

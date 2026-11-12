@@ -51,6 +51,22 @@ void GetRopePos(ROPE_STRUCT *rope, sint32 pos, sint32 *x, sint32 *y, sint32 *z)
     *z = (rope->NormalisedSegment[segment].z * pos >> (W2V_SHIFT + 2)) + (rope->MeshSegment[segment].z >> (W2V_SHIFT + 2)) + rope->Position.z;
 }
 
+sint32 RopeNodeCollision(ROPE_STRUCT *rope, sint32 x, sint32 y, sint32 z, sint32 rad)
+{
+    sint32 rx, ry, rz, i;
+
+    for (i = 0; i < 22; ++i) {
+        if (y > rope->Position.y + (rope->MeshSegment[i].y >> (W2V_SHIFT + 2)) && y < rope->Position.y + (rope->MeshSegment[i + 1].y >> (W2V_SHIFT + 2))) {
+            rx = x - ((rope->MeshSegment[i + 1].x + rope->MeshSegment[i].x) >> 17) - rope->Position.x;
+            ry = y - ((rope->MeshSegment[i + 1].y + rope->MeshSegment[i].y) >> 17) - rope->Position.y;
+            rz = z - ((rope->MeshSegment[i + 1].z + rope->MeshSegment[i].z) >> 17) - rope->Position.z;
+            if (SQUARE(rx) + SQUARE(ry) + SQUARE(rz) < SQUARE(rad + 64))
+                return i;
+        }
+    }
+    return -1;
+}
+
 void DrawRopeList(void)
 {
     sint32 i;
