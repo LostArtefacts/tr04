@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="200.07" height="12" x="0" y="0" class="named"><title>905 · 58.50%</title></rect>
-<rect width="0.44" height="12" x="200.07" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.63" height="12" x="200.51" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
-<rect width="134.85" height="12" x="207.15" y="0" class="todo"><title>610 · 39.43%</title></rect>
+<rect width="200.29" height="12" x="0" y="0" class="named"><title>906 · 58.56%</title></rect>
+<rect width="0.44" height="12" x="200.29" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.63" height="12" x="200.73" y="0" class="nonmatching"><title>30 · 1.94%</title></rect>
+<rect width="134.63" height="12" x="207.37" y="0" class="todo"><title>609 · 39.37%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">58.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">905</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">610</tspan></text>
+<text text-anchor="end" x="522" y="7.50">58.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">906</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">30</tspan> · <tspan class="todo">609</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="86.77" height="12" x="0" y="0" class="named"><title>157 KB · 25.37%</title></rect>
-<rect width="0.12" height="12" x="86.77" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.91" height="12" x="86.89" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
-<rect width="246.19" height="12" x="95.81" y="0" class="todo"><title>447 KB · 71.99%</title></rect>
+<rect width="86.81" height="12" x="0" y="0" class="named"><title>157 KB · 25.38%</title></rect>
+<rect width="0.12" height="12" x="86.81" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.91" height="12" x="86.93" y="0" class="nonmatching"><title>16 KB · 2.61%</title></rect>
+<rect width="246.16" height="12" x="95.84" y="0" class="todo"><title>447 KB · 71.98%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">157 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">447 KB</tspan></text>
@@ -1319,7 +1319,7 @@
 <rect width="12" height="12" x="0" y="375" class="todo"><title>0x0047a6f0 GetSaveLoadFiles (398 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="375" class="todo"><title>0x0047a880 DoLoadSave (753 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="375" class="todo"><title>0x0047ab80 DoSlider (1449 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="375" class="todo"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="375" class="named"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="375" class="todo"><title>0x0047b170 DoOptions (5429 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="375" class="todo"><title>0x0047c6b0 DoStatScreen (868 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="375" class="todo"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
@@ -2821,7 +2821,7 @@
 <rect width="4.88" height="5.07" x="671.93" y="339.46" class="named"><title>0x00437140 Richochet (64 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="679.81" y="339.46" class="named"><title>0x0043e320 do_these_objects_combine (64 bytes)</title></rect>
 <rect width="4.88" height="5.07" x="687.68" y="339.46" class="named"><title>0x00455270 DisableBaddieAI (64 bytes)</title></rect>
-<rect width="4.88" height="5.07" x="695.56" y="339.46" class="todo"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
+<rect width="4.88" height="5.07" x="695.56" y="339.46" class="named"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
 <rect width="4.80" height="5.07" x="703.43" y="339.46" class="named"><title>0x0045fad0 SayNo (63 bytes)</title></rect>
 <rect width="4.80" height="5.07" x="711.23" y="339.46" class="todo"><title>0x0047d420 S_DrawAirBar (63 bytes)</title></rect>
 <rect width="4.80" height="5.07" x="719.03" y="339.46" class="todo"><title>0x00488650 Func488650 (63 bytes)</title></rect>
