@@ -258,6 +258,25 @@ void InitialiseMapper(sint16 item_number)
     items[item_number].mesh_bits = 0xFFFFFFFD;    
 }
 
+void InitialiseLightningConductor(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *item2;
+    sint32 pack, i;
+
+    item = &items[item_number];
+    if (item->trigger_flags == 2) {
+        pack = 0;
+        item2 = items;
+        for (i = 0; i < level_items; i++, item2++) {
+            if (item2->object_number == ANIMATING8) {
+                item->item_flags[2] |= i << (pack != 0 ? 8 : 0);
+                pack++;
+            }
+        }
+    }
+}
+
 void InitialiseStatuePlinth(sint16 item_number)
 {
     ITEM_INFO *item;

@@ -20,5 +20,6 @@ void InitialiseSmashObject(sint16 item_number);
 void InitialiseMapper(sint16 item_number);
 void InitialiseStatuePlinth(sint16 item_number);
 void InitialisePulley(sint16 item_number);
+void InitialiseLightningConductor(sint16 item_number);
 
 #endif
