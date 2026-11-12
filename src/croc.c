@@ -29,6 +29,29 @@ void InitialiseCroc(sint16 item_number)
     }
 }
 
+sint32 GetFreeLocust(void)
+{
+    LOCUST_STRUCT *fx;
+    sint32 free, i;
+
+    free = next_locust;
+    fx = &Locusts[free];
+    for (i = 0; i < 64; i++) {
+        if (!fx->On) {
+            next_locust = (free + 1) & 0x3F;
+            return free;
+        }
+        if (free == 63) {
+            fx = Locusts;
+            free = 0;
+        } else {
+            free++;
+            fx++;
+        }
+    }
+    return NO_ITEM;
+}
+
 void InitialiseLocustEmitter(sint16 item_number)
 {
     ITEM_INFO *item;

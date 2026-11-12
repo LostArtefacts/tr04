@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="210.24" height="12" x="0" y="0" class="named"><title>951 · 61.47%</title></rect>
-<rect width="0.44" height="12" x="210.24" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.30" height="12" x="210.68" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
-<rect width="124.02" height="12" x="217.98" y="0" class="todo"><title>561 · 36.26%</title></rect>
+<rect width="210.46" height="12" x="0" y="0" class="named"><title>952 · 61.54%</title></rect>
+<rect width="0.44" height="12" x="210.46" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.30" height="12" x="210.90" y="0" class="nonmatching"><title>33 · 2.13%</title></rect>
+<rect width="123.80" height="12" x="218.20" y="0" class="todo"><title>560 · 36.20%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">61.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">951</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">561</tspan></text>
+<text text-anchor="end" x="522" y="7.50">61.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">952</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">33</tspan> · <tspan class="todo">560</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="90.42" height="12" x="0" y="0" class="named"><title>164 KB · 26.44%</title></rect>
-<rect width="0.12" height="12" x="90.42" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.42" height="12" x="90.54" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
-<rect width="242.03" height="12" x="99.97" y="0" class="todo"><title>439 KB · 70.77%</title></rect>
+<rect width="90.46" height="12" x="0" y="0" class="named"><title>164 KB · 26.45%</title></rect>
+<rect width="0.12" height="12" x="90.46" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.42" height="12" x="90.58" y="0" class="nonmatching"><title>17 KB · 2.76%</title></rect>
+<rect width="241.99" height="12" x="100.01" y="0" class="todo"><title>439 KB · 70.76%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">164 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">439 KB</tspan></text>
@@ -81,7 +81,7 @@
 <rect width="12" height="12" x="180" y="0" class="named"><title>0x00402a70 BatControl (797 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="0" class="named"><title>0x00402d90 InitialiseCroc (157 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="0" class="todo"><title>0x00402e30 CrocControl (1913 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="0" class="todo"><title>0x004035d0 GetFreeLocust (71 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="0" class="named"><title>0x004035d0 GetFreeLocust (71 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="0" class="todo"><title>0x00403620 Func403620 (20 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="0" class="todo"><title>0x00403640 TriggerLocust (353 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="0" class="named"><title>0x004037b0 InitialiseLocustEmitter (95 bytes)</title></rect>
@@ -2787,7 +2787,7 @@
 <rect width="5.55" height="5.07" x="633.02" y="331.19" class="named"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
 <rect width="5.55" height="5.07" x="641.58" y="331.19" class="named"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
 <rect width="5.48" height="5.07" x="650.13" y="331.19" class="named"><title>0x00439d60 UpdateFadeClip (72 bytes)</title></rect>
-<rect width="5.40" height="5.07" x="658.61" y="331.19" class="todo"><title>0x004035d0 GetFreeLocust (71 bytes)</title></rect>
+<rect width="5.40" height="5.07" x="658.61" y="331.19" class="named"><title>0x004035d0 GetFreeLocust (71 bytes)</title></rect>
 <rect width="5.40" height="5.07" x="667.01" y="331.19" class="named"><title>0x0045f050 InitialiseGameFlags (71 bytes)</title></rect>
 <rect width="5.40" height="5.07" x="675.42" y="331.19" class="named"><title>0x0046c3c0 sixteen_end (71 bytes)</title></rect>
 <rect width="5.40" height="5.07" x="683.82" y="331.19" class="named"><title>0x0046c950 twentyseven_end (71 bytes)</title></rect>

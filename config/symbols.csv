@@ -2764,3 +2764,4 @@ address,size,name,symbol
 0x0080ecd8,4,actualFOV,_actualFOV
 0x0080ece0,,actualCameraTarget,_actualCameraTarget
 0x0080ecf0,,actualCameraPos,_actualCameraPos
+0x0080fa00,1920,Locusts,_Locusts
