@@ -173,6 +173,53 @@ void TriggerCrocgodMissile(PHD_3DPOS *pos, sint16 room_number, sint16 num)
     }
 }
 
+void TriggerCrocgodMissileFlame(sint16 fx_number, sint32 xv, sint32 yv, sint32 zv)
+{
+    SPARKS *sptr;
+    sint32 dx, dz, size;
+
+    dx = lara_item->pos.x_pos - effects[fx_number].pos.x_pos;
+    dz = lara_item->pos.z_pos - effects[fx_number].pos.z_pos;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sR = (GetRandomControl() & 0x3F) + 128;
+    sptr->sG = sptr->sR >> 1;
+    sptr->sB = 0;
+    sptr->dR = (GetRandomControl() & 0x3F) + 128;
+    sptr->dG = sptr->dR >> 1;
+    sptr->dB = 0;
+    sptr->ColFadeSpeed = (GetRandomControl() & 3) + 8;
+    sptr->FadeToBlack = 8;
+    sptr->sLife = sptr->Life = (GetRandomControl() & 7) + 32;
+    sptr->TransType = 2;
+    sptr->Dynamic = -1;
+    sptr->x = (GetRandomControl() & 0xF) - 8;
+    sptr->y = 0;
+    sptr->z = (GetRandomControl() & 0xF) - 8;
+    sptr->x += effects[fx_number].pos.x_pos;
+    sptr->y += effects[fx_number].pos.y_pos;
+    sptr->z += effects[fx_number].pos.z_pos;
+    sptr->Xvel = (sint16)xv;
+    sptr->Yvel = (sint16)yv;
+    sptr->Zvel = (sint16)zv;
+    sptr->Friction = 34;
+    sptr->Flags = 538;
+    sptr->RotAng = GetRandomControl() & 0xFFF;
+    if (GetRandomControl() & 1)
+        sptr->RotAdd = -32 - (GetRandomControl() & 0x1F);
+    else
+        sptr->RotAdd = (GetRandomControl() & 0x1F) + 32;
+    sptr->Gravity = 0;
+    sptr->MaxYvel = 0;
+    sptr->FxObj = (uint8)fx_number;
+    sptr->Scalar = 2;
+    size = (GetRandomControl() & 0xF) + 128;
+    sptr->Size = sptr->sSize = size;
+    sptr->dSize = size >> 2;
+}
+
 void InitialiseCrocgod(sint16 item_number)
 {
     ITEM_INFO *item;
