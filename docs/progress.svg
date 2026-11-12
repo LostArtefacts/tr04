@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="257.60" height="12" x="0" y="0" class="named"><title>1166 · 75.32%</title></rect>
-<rect width="0.66" height="12" x="257.60" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="20.33" height="12" x="258.27" y="0" class="nonmatching"><title>92 · 5.94%</title></rect>
-<rect width="63.41" height="12" x="278.59" y="0" class="todo"><title>287 · 18.54%</title></rect>
+<rect width="257.83" height="12" x="0" y="0" class="named"><title>1167 · 75.39%</title></rect>
+<rect width="0.66" height="12" x="257.83" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="20.33" height="12" x="258.49" y="0" class="nonmatching"><title>92 · 5.94%</title></rect>
+<rect width="63.19" height="12" x="278.81" y="0" class="todo"><title>286 · 18.48%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">75.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1166</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">92</tspan> · <tspan class="todo">287</tspan></text>
+<text text-anchor="end" x="522" y="7.50">75.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1167</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">92</tspan> · <tspan class="todo">286</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="145.09" height="12" x="0" y="0" class="named"><title>264 KB · 42.42%</title></rect>
-<rect width="0.13" height="12" x="145.09" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="39.64" height="12" x="145.22" y="0" class="nonmatching"><title>72 KB · 11.59%</title></rect>
-<rect width="157.14" height="12" x="184.86" y="0" class="todo"><title>286 KB · 45.95%</title></rect>
+<rect width="145.51" height="12" x="0" y="0" class="named"><title>265 KB · 42.55%</title></rect>
+<rect width="0.13" height="12" x="145.51" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="39.64" height="12" x="145.64" y="0" class="nonmatching"><title>72 KB · 11.59%</title></rect>
+<rect width="156.72" height="12" x="185.28" y="0" class="todo"><title>285 KB · 45.82%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">42.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">264 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">72 KB</tspan> · <tspan class="todo">286 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">42.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">265 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">72 KB</tspan> · <tspan class="todo">285 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -333,7 +333,7 @@
 <rect width="12" height="12" x="210" y="75" class="named"><title>0x004241a0 lara_as_rope (38 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="75" class="named"><title>0x004241d0 FallFromRope (149 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="75" class="named"><title>0x00424270 lara_col_rope (163 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="75" class="todo"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="75" class="named"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="75" class="named"><title>0x00424620 lara_as_ropel (46 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="75" class="named"><title>0x00424650 lara_as_roper (46 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="75" class="named"><title>0x00424680 lara_col_ropefwd (402 bytes)</title></rect>
@@ -1839,7 +1839,7 @@
 <rect width="17.59" height="16.95" x="306.59" y="307.49" class="named"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
 <rect width="17.59" height="16.87" x="306.59" y="327.45" class="named"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>
 <rect width="17.59" height="16.78" x="306.59" y="347.31" class="nonmatching"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
-<rect width="17.59" height="16.74" x="306.59" y="367.09" class="todo"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
+<rect width="17.59" height="16.74" x="306.59" y="367.09" class="named"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
 <rect width="17.59" height="16.63" x="306.59" y="386.83" class="nonmatching"><title>0x004317a0 OptomiseSkinningData (760 bytes)</title></rect>
 <rect width="17.59" height="16.58" x="306.59" y="406.45" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
 <rect width="17.59" height="16.49" x="306.59" y="426.04" class="named"><title>0x004687e0 JeepBaddieCollision (754 bytes)</title></rect>

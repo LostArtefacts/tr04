@@ -1684,6 +1684,70 @@ void lara_col_rope(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void UpdateRopeSwing(ITEM_INFO *item)
+{
+    sint32 temp;
+    sint16 xr;
+    static uint8 LegsSwinging;
+
+    if (lara.RopeMaxXForward > 9000)
+        lara.RopeMaxXForward = 9000;
+    if (lara.RopeMaxXBackward > 9000)
+        lara.RopeMaxXBackward = 9000;
+    if (lara.RopeDirection && item->pos.x_rot > 0 && item->pos.x_rot - lara.RopeLastX < -100) {
+        lara.RopeArcFront = lara.RopeLastX;
+        lara.RopeDirection = 0;
+        lara.RopeMaxXBackward = 0;
+        temp = (15 * lara.RopeMaxXForward / 18000 + anims[ANIM_SWINGFWD].frame_base + 47) << 8;
+        if (temp > lara.RopeDFrame) {
+            lara.RopeDFrame = temp;
+            LegsSwinging = 1;
+        } else
+            LegsSwinging = 0;
+        SoundEffect(SFX_LARA_ROPE_CREAK, &item->pos, 0);
+    } else if (!lara.RopeDirection && item->pos.x_rot < 0 && item->pos.x_rot - lara.RopeLastX > 100) {
+        lara.RopeArcBack = lara.RopeLastX;
+        lara.RopeDirection = 1;
+        lara.RopeMaxXForward = 0;
+        temp = (anims[ANIM_SWINGFWD].frame_base - 15 * lara.RopeMaxXBackward / 18000 + 17) << 8;
+        if (temp < lara.RopeDFrame) {
+            lara.RopeDFrame = temp;
+            LegsSwinging = 1;
+        } else
+            LegsSwinging = 0;
+        SoundEffect(SFX_LARA_ROPE_CREAK, &item->pos, 0);
+    } else if (lara.RopeDirection) {
+        if (lara.RopeLastX < 0 && lara.RopeFrame == lara.RopeDFrame) {
+            lara.RopeDFrame = (15 * lara.RopeMaxXBackward / 18000 + anims[ANIM_SWINGFWD].frame_base + 47) << 8;
+            LegsSwinging = 0;
+            lara.RopeFrameRate = 15 * lara.RopeMaxXBackward / 9000 + 1;
+        } else if (lara.RopeFrameRate < 512) {
+            if (LegsSwinging)
+                lara.RopeFrameRate += 31 * lara.RopeMaxXBackward / 9000 + 1;
+            else
+                lara.RopeFrameRate += 7 * lara.RopeMaxXBackward / 9000 + 1;
+        }
+    } else {
+        if (lara.RopeLastX > 0 && lara.RopeFrame == lara.RopeDFrame) {
+            lara.RopeDFrame = (anims[ANIM_SWINGFWD].frame_base - 15 * lara.RopeMaxXForward / 18000 + 17) << 8;
+            LegsSwinging = 0;
+            lara.RopeFrameRate = 15 * lara.RopeMaxXForward / 9000 + 1;
+        } else if (lara.RopeFrameRate < 512) {
+            if (LegsSwinging)
+                lara.RopeFrameRate += 31 * lara.RopeMaxXForward / 9000 + 1;
+            else
+                lara.RopeFrameRate += 7 * lara.RopeMaxXForward / 9000 + 1;
+        }
+    }
+    xr = item->pos.x_rot;
+    lara.RopeLastX = xr;
+    if (lara.RopeDirection) {
+        if (xr > lara.RopeMaxXForward)
+            lara.RopeMaxXForward = xr;
+    } else if (xr < -lara.RopeMaxXBackward)
+        lara.RopeMaxXBackward = abs(xr);
+}
+
 void lara_as_ropel(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (input & IN_ACTION) {

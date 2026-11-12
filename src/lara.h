@@ -353,6 +353,7 @@ void lara_col_all4s(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_hang(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraHangRightCornerTest(ITEM_INFO *item, COLL_INFO *coll);
 sint32 LaraHangLeftCornerTest(ITEM_INFO *item, COLL_INFO *coll);
+void UpdateRopeSwing(ITEM_INFO *item);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
