@@ -14,6 +14,28 @@
 #include "specific/function_stubs.h"
 #include "specific/specificfx.h"
 
+void InitialiseJeep(sint16 item_number)
+{
+    ITEM_INFO *item;
+    JEEPINFO *jeep;
+
+    item = &items[item_number];
+    item->data = game_malloc(sizeof(JEEPINFO));
+    jeep = (JEEPINFO *)item->data;
+    jeep->velocity = 0;
+    jeep->unused1 = 0;
+    jeep->turn_rate = 0;
+    jeep->camera_angle = 0;
+    jeep->extra_rotation = 0;
+    jeep->move_angle = item->pos.y_rot;
+    jeep->pitch2 = 0;
+    jeep->flags = 0;
+    jeep->gear = 0;
+    *(sint32 *)&jeep->right_front_wheelrot = 0;
+    *(sint32 *)&jeep->left_back_wheelrot = 0;
+    item->mesh_bits = 0x1BFFF;
+}
+
 void DrawJeepExtras(ITEM_INFO *item)
 {
     JEEPINFO *jeep;
