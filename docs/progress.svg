@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="204.71" height="12" x="0" y="0" class="named"><title>926 · 59.86%</title></rect>
-<rect width="0.44" height="12" x="204.71" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="205.16" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="129.77" height="12" x="212.23" y="0" class="todo"><title>587 · 37.94%</title></rect>
+<rect width="204.93" height="12" x="0" y="0" class="named"><title>927 · 59.92%</title></rect>
+<rect width="0.44" height="12" x="204.93" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="205.38" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="129.55" height="12" x="212.45" y="0" class="todo"><title>586 · 37.88%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">60.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">926</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">587</tspan></text>
+<text text-anchor="end" x="522" y="7.50">60.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">927</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">586</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="88.67" height="12" x="0" y="0" class="named"><title>161 KB · 25.93%</title></rect>
-<rect width="0.12" height="12" x="88.67" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="88.79" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="243.82" height="12" x="98.18" y="0" class="todo"><title>442 KB · 71.29%</title></rect>
+<rect width="88.73" height="12" x="0" y="0" class="named"><title>161 KB · 25.94%</title></rect>
+<rect width="0.12" height="12" x="88.73" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="88.85" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="243.77" height="12" x="98.23" y="0" class="todo"><title>442 KB · 71.28%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">161 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">442 KB</tspan></text>
@@ -1299,7 +1299,7 @@
 <rect width="12" height="12" x="450" y="360" class="todo"><title>0x00478070 CreateD3DLights (597 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="360" class="todo"><title>0x004782d0 FreeD3DLights (354 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="360" class="named"><title>0x00478440 ApplyMatrix (105 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="360" class="todo"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="360" class="named"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="360" class="todo"><title>0x00478520 S_CalculateStaticMeshLight (76 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="360" class="todo"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="360" class="todo"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
@@ -2643,7 +2643,7 @@
 <rect width="6.40" height="6.34" x="665.61" y="295.30" class="named"><title>0x0044eba0 DrawPhaseGame (105 bytes)</title></rect>
 <rect width="6.40" height="6.34" x="675.01" y="295.30" class="named"><title>0x00473500 DXDSCreate (105 bytes)</title></rect>
 <rect width="6.40" height="6.34" x="684.42" y="295.30" class="named"><title>0x00478440 ApplyMatrix (105 bytes)</title></rect>
-<rect width="6.40" height="6.34" x="693.82" y="295.30" class="todo"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
+<rect width="6.40" height="6.34" x="693.82" y="295.30" class="named"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
 <rect width="6.40" height="6.34" x="703.22" y="295.30" class="named"><title>0x0048e860 Sync (105 bytes)</title></rect>
 <rect width="6.34" height="6.34" x="712.63" y="295.30" class="named"><title>0x00405eb0 LaraDoubleControl (104 bytes)</title></rect>
 <rect width="6.34" height="6.34" x="721.97" y="295.30" class="named"><title>0x0042d7d0 GetClimbTrigger (104 bytes)</title></rect>
