@@ -17,6 +17,7 @@
 #include "effects.h"
 #include "debris.h"
 #include "draw.h"
+#include "camera.h"
 #include "sphere.h"
 #include "specific/input.h"
 #include "specific/3dmath.h"
@@ -114,6 +115,138 @@ void DrawJeepExtras(ITEM_INFO *item)
         return;
     jeep = (JEEPINFO *)item->data;
     DrawJeepSpeedo(phd_winwidth - 64, phd_winheight - 16, jeep->velocity, 0x6000, 0x8000, 32, jeep->gear);
+}
+
+void JeepControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *l;
+    JEEPINFO *jeep;
+    FLOOR_INFO *floor;
+    PHD_VECTOR flPos, frPos, fmPos;
+    PHD_VECTOR pos;
+    sint32 front_left, front_right, front_mid;
+    sint32 hitWall, h, driving, killed, pitch, oldY, smokeVel;
+    sint16 room_number, wheelRot, xRot, zRot;
+    static uint8 ExhaustSmokeVel;
+
+    l = lara_item;
+    driving = -1;
+    killed = 0;
+    item = &items[lara.vehicle];
+    jeep = (JEEPINFO *)item->data;
+    hitWall = JeepDynamics(item);
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    front_left = TestHeight(item, 550, -256, &flPos);
+    front_right = TestHeight(item, 550, 256, &frPos);
+    front_mid = TestHeight(item, -600, 0, &fmPos);
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    TestTriggers(trigger_index, 1, 0);
+    TestTriggers(trigger_index, 0, 0);
+    if (lara_item->hit_points <= 0) {
+        killed = 1;
+        input &= ~(IN_FORWARD | IN_BACK | IN_LEFT | IN_RIGHT | IN_LSTEP | IN_RSTEP);
+    }
+    if (jeep->flags)
+        hitWall = 0;
+    else if (lara_item->current_anim_state != 9)
+        driving = UserControl_jeep(item, h, &pitch);
+    else {
+        driving = -1;
+        hitWall = 0;
+    }
+    if (!jeep->velocity && !jeep->unused1) {
+        if (driving != -1)
+            SoundEffect(SFX_JEEP_IDLE, &item->pos, 0);
+        jeep->pitch2 = 0;
+    } else {
+        jeep->pitch2 = pitch;
+        if (pitch < -0x8000)
+            jeep->pitch2 = -0x8000;
+        else if (pitch > 0xA000)
+            jeep->pitch2 = 0xA000;
+        SoundEffect(SFX_JEEP_MOVE, &item->pos, (jeep->pitch2 << 8) + 0x1000004);
+    }
+    item->floor = h;
+    wheelRot = (sint16)(jeep->velocity >> 2);
+    jeep->right_front_wheelrot -= wheelRot;
+    jeep->left_front_wheelrot -= wheelRot;
+    jeep->left_back_wheelrot -= wheelRot;
+    jeep->right_back_wheelrot -= wheelRot;
+    oldY = item->pos.y_pos;
+    item->fallspeed = (sint16)DoDynamics_jeep(h, item->fallspeed, &item->pos.y_pos, 0);
+    h = (frPos.y + flPos.y) >> 1;
+    if (fmPos.y < front_mid) {
+        if (h < (front_left + front_right) >> 1) {
+            xRot = (sint16)phd_atan(137, oldY - item->pos.y_pos);
+            if (jeep->velocity < 0)
+                xRot = -xRot;
+        } else
+            xRot = (sint16)phd_atan(550, item->pos.y_pos - h);
+    } else if (h >= (front_left + front_right) >> 1)
+        xRot = (sint16)phd_atan(1100, front_mid - h);
+    else
+        xRot = (sint16)phd_atan(550, front_mid - item->pos.y_pos);
+    zRot = (sint16)phd_atan(256, h - flPos.y);
+    item->pos.x_rot += (xRot - item->pos.x_rot) >> 2;
+    item->pos.z_rot += (zRot - item->pos.z_rot) >> 2;
+    if (!(jeep->flags & 0x80)) {
+        if (room_number != item->room_number) {
+            ItemNewRoom(lara.vehicle, room_number);
+            ItemNewRoom(lara.item_number, room_number);
+        }
+        l->pos.x_pos = item->pos.x_pos;
+        l->pos.y_pos = item->pos.y_pos;
+        l->pos.z_pos = item->pos.z_pos;
+        l->pos.y_rot = item->pos.y_rot;
+        l->pos.x_rot = item->pos.x_rot;
+        l->pos.z_rot = item->pos.z_rot;
+        AnimateJeep(item, hitWall, killed);
+        AnimateItem(l);
+        item->anim_number = l->anim_number - objects[VEHICLE_EXTRA].anim_index + objects[JEEP].anim_index;
+        item->frame_number = anims[item->anim_number].frame_base - anims[l->anim_number].frame_base + l->frame_number;
+        camera.target_elevation = -5460;
+        camera.target_distance = 2048;
+        if (!jeep->gear)
+            jeep->camera_angle -= jeep->camera_angle >> 3;
+        else if (jeep->gear == 1)
+            jeep->camera_angle += (0x7F42 - jeep->camera_angle) >> 3;
+        camera.target_angle = (sint16)jeep->camera_angle;
+        if (jeep->flags & 0x40 && item->pos.y_pos == item->floor) {
+            lara_item->mesh_bits = 0;
+            lara_item->hit_points = 0;
+            lara_item->flags |= IFL_INVISIBLE;
+            JeepExplode(item);
+            return;
+        }
+    }
+    if (l->current_anim_state == 9 || l->current_anim_state == 10)
+        ExhaustSmokeVel = 0;
+    else {
+        pos.x = 80;
+        pos.y = 0;
+        pos.z = -500;
+        GetJointAbsPosition(item, &pos, 11);
+        if (item->speed > 32) {
+            if (item->speed < 64)
+                TriggerExhaustSmoke_jeep(pos.x, pos.y, pos.z, (uint16)(item->pos.y_rot + 0x8000), 64 - item->speed, 1);
+        } else {
+            if (ExhaustSmokeVel < 16) {
+                smokeVel = ((GetRandomControl() & 0x10) + (GetRandomControl() & 7) + 2 * ExhaustSmokeVel) << 6;
+                ExhaustSmokeVel++;
+            } else if (!(GetRandomControl() & 3))
+                smokeVel = ((GetRandomControl() & 0x10) + (GetRandomControl() & 0xF)) << 6;
+            else
+                smokeVel = 0;
+            TriggerExhaustSmoke_jeep(pos.x, pos.y, pos.z, (uint16)(item->pos.y_rot + 0x8000), smokeVel, 0);
+        }
+    }
+    JeepCheckGetOut();
 }
 
 void TriggerExhaustSmoke_jeep(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 velocity, sint32 thing)
