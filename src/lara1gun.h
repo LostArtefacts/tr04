@@ -14,5 +14,6 @@ void FireShotgun(void);
 void FireGrenade(void);
 void AnimateShotgun(sint32 weapon_type);
 void RifleHandler(sint32 weapon_type);
+void FireCrossbow(PHD_3DPOS *pos);
 
 #endif
