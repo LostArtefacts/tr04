@@ -49,6 +49,7 @@ void CalculateObjectLightingLara(void);
 void UpdateSkyLightning(void);
 void DrawEffect(sint16 fx_num);
 void InterpolateArmMatrix(sint32 *mx);
+void PrintObjects(sint16 room_number);
 
 extern STATIC_INFO static_objects[60];
 extern sint16 LightningCount;
@@ -73,6 +74,7 @@ extern sint32 outside_right;
 extern sint32 outside_top;
 extern sint32 outside_bottom;
 extern sint32 current_room;
+extern sint16 ClipRoomNum;
 extern PHD_VECTOR vbufdoor[4];
 
 #endif

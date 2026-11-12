@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="238.76" height="12" x="0" y="0" class="named"><title>1080 · 69.81%</title></rect>
-<rect width="0.44" height="12" x="238.76" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="12.82" height="12" x="239.20" y="0" class="nonmatching"><title>58 · 3.75%</title></rect>
-<rect width="89.98" height="12" x="252.02" y="0" class="todo"><title>407 · 26.31%</title></rect>
+<rect width="238.98" height="12" x="0" y="0" class="named"><title>1081 · 69.88%</title></rect>
+<rect width="0.44" height="12" x="238.98" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="12.82" height="12" x="239.42" y="0" class="nonmatching"><title>58 · 3.75%</title></rect>
+<rect width="89.76" height="12" x="252.24" y="0" class="todo"><title>406 · 26.24%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">69.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1080</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">58</tspan> · <tspan class="todo">407</tspan></text>
+<text text-anchor="end" x="522" y="7.50">70.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1081</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">58</tspan> · <tspan class="todo">406</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="113.87" height="12" x="0" y="0" class="named"><title>207 KB · 33.30%</title></rect>
-<rect width="0.12" height="12" x="113.87" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="22.71" height="12" x="113.99" y="0" class="nonmatching"><title>41 KB · 6.64%</title></rect>
-<rect width="205.30" height="12" x="136.70" y="0" class="todo"><title>373 KB · 60.03%</title></rect>
+<rect width="114.24" height="12" x="0" y="0" class="named"><title>207 KB · 33.40%</title></rect>
+<rect width="0.12" height="12" x="114.24" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="22.71" height="12" x="114.36" y="0" class="nonmatching"><title>41 KB · 6.64%</title></rect>
+<rect width="204.93" height="12" x="137.07" y="0" class="todo"><title>372 KB · 59.92%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">33.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">207 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">41 KB</tspan> · <tspan class="todo">373 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">33.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">207 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">41 KB</tspan> · <tspan class="todo">372 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -844,7 +844,7 @@
 <rect width="12" height="12" x="375" y="225" class="named"><title>0x0044eba0 DrawPhaseGame (105 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="225" class="todo"><title>0x0044ec10 DrawRooms (1724 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="225" class="named"><title>0x0044f2d0 S_InsertRoom (88 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="225" class="todo"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="225" class="named"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="225" class="named"><title>0x0044f5d0 GetRoomBounds (448 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="225" class="named"><title>0x0044f790 SetRoomBounds (886 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="225" class="named"><title>0x0044fb10 DrawEffect (232 bytes)</title></rect>
@@ -1866,7 +1866,7 @@
 <rect width="16.19" height="16.33" x="326.85" y="445.67" class="todo"><title>0x00454f50 ControlElementPuzzle (685 bytes)</title></rect>
 <rect width="16.29" height="16.19" x="346.04" y="42" class="todo"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
 <rect width="16.29" height="16.19" x="365.33" y="42" class="named"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>
-<rect width="16.03" height="16.19" x="384.63" y="42" class="todo"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
+<rect width="16.03" height="16.19" x="384.63" y="42" class="named"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
 <rect width="15.84" height="16.19" x="403.65" y="42" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
 <rect width="15.77" height="16.19" x="422.49" y="42" class="todo"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="15.65" height="16.19" x="441.26" y="42" class="todo"><title>0x0047fa10 S_OutputPolyList (656 bytes)</title></rect>

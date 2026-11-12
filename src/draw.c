@@ -13,6 +13,8 @@
 #include "lara.h"
 #include "lara_states.h"
 #include "sound.h"
+#include "gameflow.h"
+#include "specific/polyinsert.h"
 
 #define S_LongMemCpy(d, s, n) memcpy(d, s, (n) * sizeof(sint32))
 
@@ -45,6 +47,76 @@ void S_InsertRoom(sint16 room_number)
     phd_top = r->top;
     phd_bottom = r->bottom;
     _InsertRoom(r, 1);
+}
+
+void PrintObjects(sint16 room_number)
+{
+    ROOM_INFO *r;
+    MESH_INFO *mesh;
+    sint32 clip, i;
+    ITEM_INFO *item;
+    sint32 item_number, fx_number;
+
+    current_room = room_number;
+    nPolyType = 1;
+    r = &room[room_number];
+    r->bound_active = 0;
+    phd_PushMatrix();
+    phd_TranslateAbs(r->x, r->y, r->z);
+    phd_left = r->left;
+    phd_right = r->right;
+    phd_top = r->top;
+    phd_bottom = r->bottom;
+    if (gfLevelFlags & GF_TRAIN) {
+        phd_left = 0;
+        phd_top = 0;
+        phd_right = phd_winxmax + 1;
+        phd_bottom = phd_winymax + 1;
+    }
+    mesh = r->mesh;
+    for (i = r->num_meshes; i > 0; i--, mesh++) {
+        if (mesh->Flags & 1) {
+            phd_PushMatrix();
+            phd_TranslateAbs(mesh->x, mesh->y, mesh->z);
+            phd_RotY(mesh->y_rot);
+            clip = S_GetObjectBounds(&static_objects[mesh->static_number].x_minp);
+            if (clip) {
+                S_CalculateStaticMeshLight(mesh->x, mesh->y, mesh->z, mesh->shade, r);
+                phd_PutPolygons(meshes[static_objects[mesh->static_number].mesh_number], clip);
+            }
+            phd_PopMatrix();
+        }
+    }
+    nPolyType = 2;
+    phd_left = 0;
+    phd_top = 0;
+    phd_right = phd_winxmax + 1;
+    phd_bottom = phd_winymax + 1;
+    for (item_number = r->item_number; item_number != NO_ITEM; item_number = items[item_number].next_item) {
+        item = &items[item_number];
+        ClipRoomNum = room_number;
+        if (item->status != ITEM_INVISIBLE) {
+            if (item->after_death)
+                GlobalAlpha = 0xFE000000 * item->after_death;
+            if (objects[item->object_number].draw_routine)
+                objects[item->object_number].draw_routine(item);
+            if (objects[item->object_number].draw_routine_extra)
+                objects[item->object_number].draw_routine_extra(item);
+            GlobalAlpha = 0xFF000000;
+        }
+        if (item->after_death < 128 && item->after_death > 0)
+            item->after_death++;
+        if (item->after_death == 128)
+            KillItem(item_number);
+    }
+    nPolyType = 3;
+    for (fx_number = r->fx_number; fx_number != NO_ITEM; fx_number = effects[fx_number].next_fx)
+        DrawEffect(fx_number);
+    phd_PopMatrix();
+    r->left = phd_winxmax;
+    r->top = phd_winymax;
+    r->right = 0;
+    r->bottom = 0;
 }
 
 void GetRoomBounds(void)
