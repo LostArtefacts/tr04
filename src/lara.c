@@ -1558,6 +1558,39 @@ void lara_as_hang(ITEM_INFO *item, COLL_INFO *coll)
     camera.target_elevation = -10920;
 }
 
+sint32 CanLaraHangSideways(ITEM_INFO *item, COLL_INFO *coll, sint16 angle)
+{
+    sint32 oldx, oldz, x, z, res;
+
+    oldx = item->pos.x_pos;
+    oldz = item->pos.z_pos;
+    lara.move_angle = angle + item->pos.y_rot;
+    x = item->pos.x_pos;
+    z = item->pos.z_pos;
+    switch ((uint16)(lara.move_angle + 0x2000) / 0x4000) {
+    case NORTH:
+        z += 16;
+        break;
+    case EAST:
+        x += 16;
+        break;
+    case SOUTH:
+        z -= 16;
+        break;
+    default:
+        x -= 16;
+        break;
+    }
+    item->pos.x_pos = x;
+    item->pos.z_pos = z;
+    coll->old.y = item->pos.y_pos;
+    res = LaraHangTest(item, coll);
+    item->pos.x_pos = oldx;
+    item->pos.z_pos = oldz;
+    lara.move_angle = angle + item->pos.y_rot;
+    return !res;
+}
+
 void lara_as_hangleft(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->enable_spaz = 0;

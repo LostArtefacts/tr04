@@ -332,6 +332,7 @@ void JumpOffRope(ITEM_INFO *item);
 void lara_col_poleup(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_ducklr(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_rope(ITEM_INFO *item, COLL_INFO *coll);
+sint32 CanLaraHangSideways(ITEM_INFO *item, COLL_INFO *coll, sint16 angle);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;
