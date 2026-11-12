@@ -180,7 +180,7 @@ address,size,name,symbol
 0x00419070,1262,DoVonCroyCutscene,_DoVonCroyCutscene
 0x00419560,116,InitialiseVoncroy,_InitialiseVoncroy
 0x004195e0,5975,VoncroyControl,_VoncroyControl
-0x0041af00,3869,VoncroyRaceControl,_VoncroyRaceControl
+0x0041af00,4092,VoncroyRaceControl,_VoncroyRaceControl
 0x0041bf00,90,InitialiseWildboar,_InitialiseWildboar
 0x0041bf60,888,WildboarControl,_WildboarControl
 0x0041c2e0,120,InitialiseWraith,_InitialiseWraith
@@ -2038,6 +2038,7 @@ address,size,name,symbol
 0x004ad3c4,96,floor_fires,_floor_fires
 0x004ad424,16,deadly_floor_fires,_deadly_floor_fires
 0x004ad438,16,troop_gun,_troop_gun
+0x004ad448,16,voncroy_hit,_voncroy_hit
 0x004ad458,124,VonCroyCutTracks,_VonCroyCutTracks
 0x004ad4d4,64,VonCroyCutIndices,_VonCroyCutIndices
 0x004ad518,420,VonCroyCutscenes,_VonCroyCutscenes

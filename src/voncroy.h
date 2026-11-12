@@ -17,6 +17,7 @@ extern sint32 actualRoomNumber;
 extern sint32 actualFOV;
 extern PHD_VECTOR actualCameraTarget;
 extern PHD_VECTOR actualCameraPos;
+extern BITE_INFO voncroy_hit;
 extern uint8 VonCroyCutIndices[64];
 extern sint16 VonCroyCutTracks[64];
 extern VONCROY_CUT_DATA VonCroyCutscenes[15];

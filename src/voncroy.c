@@ -16,6 +16,9 @@
 #include "sound.h"
 #include "lara_states.h"
 #include "items.h"
+#include "effects.h"
+#include "lot.h"
+#include "savegame.h"
 
 void SetCutSceneCamera(ITEM_INFO *item)
 {
@@ -277,4 +280,423 @@ void InitialiseVoncroy(sint16 item_number)
     item->current_anim_state = item->goal_anim_state = 6;
     item->meshswap_meshbits = 0x40080;
     memset(VonCroyCutFlags, 0, 64);
+}
+
+void VoncroyRaceControl(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *oEnemy;
+    CREATURE_INFO *VonCroy;
+    FLOOR_INFO *floor;
+    AI_INFO info;
+    sint32 Xoffset, Zoffset, x, y, z, nearheight, midheight, farheight, dx, dz, distance, ahead, h, c;
+    sint16 angle, tilt, torso_x, torso_y, head_y, room_number, jump_ahead, long_jump_ahead, ifl3, iAngle;
+
+    if (!CreatureActive(item_number))
+        return;
+    item = &items[item_number];
+    VonCroy = (CREATURE_INFO *)item->data;
+    tilt = 0;
+    head_y = 0;
+    torso_x = 0;
+    torso_y = 0;
+    ifl3 = 0;
+    room_number = item->room_number;
+    Xoffset = (808 * (rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+    Zoffset = (808 * (rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
+    x = item->pos.x_pos + Xoffset;
+    y = item->pos.y_pos;
+    z = item->pos.z_pos + Zoffset;
+    floor = GetFloor(x, y, z, &room_number);
+    nearheight = GetHeight(floor, x, y, z);
+    room_number = item->room_number;
+    x += Xoffset;
+    z += Zoffset;
+    floor = GetFloor(x, y, z, &room_number);
+    midheight = GetHeight(floor, x, y, z);
+    room_number = item->room_number;
+    x += Xoffset;
+    z += Zoffset;
+    floor = GetFloor(x, y, z, &room_number);
+    farheight = GetHeight(floor, x, y, z);
+    if (y >= nearheight - 384 || y >= midheight + 256 || y <= midheight - 256)
+        jump_ahead = 0;
+    else
+        jump_ahead = 1;
+    if (y >= nearheight - 384 || y >= midheight - 384 || y >= farheight + 256 || y <= farheight - 256)
+        long_jump_ahead = 0;
+    else
+        long_jump_ahead = 1;
+    GetAITarget(VonCroy);
+    oEnemy = VonCroy->enemy;
+    if (item->anim_number == objects[VON_CROY].anim_index + 36 || item->anim_number == objects[VON_CROY].anim_index + 52) {
+        item->pos.x_pos += Xoffset;
+        item->pos.z_pos += Zoffset;
+        room_number = item->room_number;
+        GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &item->room_number);
+        if (item->frame_number == anims[item->anim_number].frame_base + 1)
+            CreateZone(item);
+        CreatureAIInfo(item, &info);
+        item->room_number = room_number;
+        item->pos.x_pos -= Xoffset;
+        item->pos.z_pos -= Zoffset;
+    } else
+        CreatureAIInfo(item, &info);
+    GetCreatureMood(item, &info, 1);
+    CreatureMood(item, &info, 1);
+    if (VonCroy->enemy == lara_item) {
+        iAngle = info.angle;
+        distance = info.distance;
+    } else {
+        dx = lara_item->pos.x_pos - item->pos.x_pos;
+        dz = lara_item->pos.z_pos - item->pos.z_pos;
+        iAngle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+        if (iAngle > -0x4000 && iAngle < 0x4000)
+            ahead = 1;
+        else
+            ahead = 0;
+        distance = SQUARE(dx) + SQUARE(dz);
+    }
+    angle = CreatureTurn(item, VonCroy->maximum_turn);
+    switch (item->current_anim_state) {
+    case 1:
+        VonCroy->LOT.is_jumping = 0;
+        VonCroy->LOT.is_monkeying = 0;
+        VonCroy->flags = 0;
+        VonCroy->maximum_turn = 0;
+        head_y = info.angle >> 1;
+        if (info.ahead) {
+            torso_y = info.angle >> 1;
+            torso_x = info.x_angle >> 1;
+        }
+        if (lara.location < item->item_flags[3] || (XATrack == 80 && (XAFlag == 6 || XAFlag == 5))) {
+            item->goal_anim_state = 1;
+            break;
+        }
+        if (VonCroy->reached_goal) {
+            if ((!oEnemy || !oEnemy->flags || (distance >= 0x900000 && objects[BAT].loaded)) && lara.location <= item->item_flags[3]) {
+                ifl3 = 1;
+                goto reset;
+            }
+            if (item->item_flags[2] != 6)
+                item->item_flags[2] = 0;
+            switch (oEnemy->flags) {
+            case 34:
+                if (lara.location > item->item_flags[3]) {
+                    ifl3 = 2;
+                    goto reset;
+                }
+                item->goal_anim_state = 32;
+                break;
+            case 36:
+                if (lara.location > item->item_flags[3]) {
+                    ifl3 = 1;
+                    goto reset;
+                }
+                item->goal_anim_state = 11;
+                break;
+            case 6:
+                if (lara.location > item->item_flags[3]) {
+                    ifl3 = 1;
+                    goto reset;
+                }
+                if (item->meshswap_meshbits & 0x40080)
+                    item->goal_anim_state = 6;
+                else
+                    item->goal_anim_state = 31;
+                break;
+            case 10:
+                if (lara.location > item->item_flags[3]) {
+                    ifl3 = 1;
+                    goto reset;
+                }
+                item->goal_anim_state = 7;
+                break;
+            case 8:
+                if (lara.location > item->item_flags[3]) {
+                    ifl3 = 1;
+                    goto reset;
+                }
+                item->goal_anim_state = 20;
+                break;
+            case 0:
+            case 32:
+                ifl3 = -1;
+                goto trig;
+            case 2:
+                item->current_anim_state = 29;
+                item->anim_number = objects[VON_CROY].anim_index + 37;
+                item->frame_number = anims[item->anim_number].frame_base;
+                item->pos = oEnemy->pos;
+                ifl3 = 1;
+                goto reset;
+            case 4:
+                item->current_anim_state = 26;
+                item->anim_number = objects[VON_CROY].anim_index + 36;
+                item->frame_number = anims[item->anim_number].frame_base;
+                VonCroy->LOT.is_jumping = 1;
+                item->pos = oEnemy->pos;
+                ifl3 = 1;
+                goto reset;
+            case 40:
+                if (item->item_flags[2] == 6)
+                    item->goal_anim_state = 3;
+                else {
+                    item->goal_anim_state = 34;
+                    item->pos = oEnemy->pos;
+                }
+                break;
+            }
+        } else if (jump_ahead || long_jump_ahead) {
+            VonCroy->maximum_turn = 0;
+            item->anim_number = objects[VON_CROY].anim_index + 22;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = 15;
+            if (long_jump_ahead)
+                item->goal_anim_state = 16;
+            else
+                item->goal_anim_state = 15;
+            VonCroy->LOT.is_jumping = 1;
+        } else if (VonCroy->monkey_ahead) {
+            floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+            h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+            c = GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+            if (c == h - 1536)
+                item->goal_anim_state = 4;
+            else
+                item->goal_anim_state = 2;
+        } else if (oEnemy != lara_item || info.distance > 0x64000)
+            item->goal_anim_state = 2;
+        break;
+    case 2:
+        VonCroy->LOT.is_jumping = 0;
+        VonCroy->LOT.is_monkeying = 0;
+        VonCroy->maximum_turn = 1092;
+        if (ahead)
+            head_y = iAngle;
+        else if (info.ahead)
+            head_y = info.angle;
+        if (!savegame.Level.Timer)
+            savegame.Level.Timer = 1;
+        if (lara.location < item->item_flags[3])
+            item->goal_anim_state = 1;
+        else if (jump_ahead || long_jump_ahead) {
+            VonCroy->maximum_turn = 0;
+            item->goal_anim_state = 1;
+        } else if (VonCroy->monkey_ahead)
+            item->goal_anim_state = 1;
+        else if (VonCroy->reached_goal) {
+            if (oEnemy->flags == 32) {
+                ifl3 = -1;
+                goto trig;
+            }
+            item->goal_anim_state = 1;
+        } else if (info.distance < 0x64000 && oEnemy->flags != 32)
+            item->goal_anim_state = 1;
+        else if (info.distance > 0x900000)
+            item->goal_anim_state = 3;
+        break;
+    case 3:
+        if (info.ahead)
+            head_y = info.angle;
+        if (item->frame_number == anims[item->anim_number].frame_base) {
+            VonCroy->LOT.is_jumping = 0;
+            VonCroy->maximum_turn = 1456;
+        }
+        tilt = angle >> 1;
+        if (item->item_flags[2] == 6) {
+            VonCroy->maximum_turn = 0;
+            item->goal_anim_state = 16;
+        } else if (lara.location < item->item_flags[3] || jump_ahead)
+            item->goal_anim_state = 1;
+        else if (long_jump_ahead) {
+            VonCroy->maximum_turn = 0;
+            item->goal_anim_state = 16;
+        } else if (VonCroy->monkey_ahead)
+            item->goal_anim_state = 1;
+        else if (VonCroy->reached_goal) {
+            if (oEnemy->flags == 32) {
+                ifl3 = -1;
+                goto trig;
+            }
+            if (info.distance < 0x4000) {
+                if (oEnemy->flags == 40) {
+                    VonCroy->maximum_turn = 0;
+                    item->pos.y_rot = oEnemy->pos.y_rot;
+                    item->goal_anim_state = 16;
+                    item->item_flags[2] = 6;
+                }
+            } else
+                item->goal_anim_state = 1;
+        } else if (info.distance < 0x64000) {
+            if (oEnemy->flags != 32 && oEnemy->flags != 40)
+                item->goal_anim_state = 1;
+        }
+        break;
+    case 31:
+        if (info.ahead) {
+            head_y = torso_y = info.angle >> 1;
+            torso_x = info.x_angle >> 1;
+        }
+        VonCroy->maximum_turn = 0;
+        if (abs(info.angle) < 1092)
+            item->pos.y_rot += info.angle;
+        else if (info.angle < 0)
+            item->pos.y_rot -= 1092;
+        else
+            item->pos.y_rot += 1092;
+        if (oEnemy && oEnemy->flags == 6 && item->frame_number > anims[item->anim_number].frame_base + 21) {
+            ifl3 = -1;
+            goto trig;
+        }
+        if (!VonCroy->flags && oEnemy) {
+            if (item->frame_number > anims[item->anim_number].frame_base + 15 && item->frame_number < anims[item->anim_number].frame_base + 26) {
+                if (abs(oEnemy->pos.x_pos - item->pos.x_pos) < 512 && abs(oEnemy->pos.y_pos - item->pos.y_pos) <= 512 && abs(oEnemy->pos.z_pos - item->pos.z_pos) < 512) {
+                    oEnemy->hit_points -= 20;
+                    oEnemy->hit_status = 1;
+                    VonCroy->flags = 1;
+                    CreatureEffectT(item, &voncroy_hit, 8, -1, DoBloodSplat);
+                }
+            }
+        }
+        break;
+    case 6:
+        if (item->frame_number == anims[item->anim_number].frame_base + 28) {
+            if (item->meshswap_meshbits & 0x40080)
+                item->meshswap_meshbits &= ~0x40080;
+            else
+                item->meshswap_meshbits |= 0x40080;
+        }
+        break;
+    case 15:
+        if (item->anim_number == objects[VON_CROY].anim_index + 23)
+            item->goal_anim_state = 3;
+        break;
+    case 16:
+        if (item->anim_number == objects[VON_CROY].anim_index + 25 || item->frame_number > anims[item->anim_number].frame_base + 7)
+            VonCroy->LOT.is_jumping = 1;
+        else if (jump_ahead)
+            item->goal_anim_state = 15;
+        else if (!objects[BAT].loaded)
+            item->goal_anim_state = 3;
+        if (item->item_flags[2] == 6)
+            item->goal_anim_state = 33;
+        break;
+    case 34:
+        item->item_flags[2] = 6;
+        break;
+    case 33:
+        if (item->anim_number == objects[VON_CROY].anim_index + 52 && item->frame_number == anims[item->anim_number].frame_base)
+            ifl3 = 1;
+        item->goal_anim_state = 2;
+        item->item_flags[2] = 0;
+        if (ifl3 == -1) {
+        trig:
+            if (oEnemy) {
+                room_number = oEnemy->room_number;
+                floor = GetFloor(oEnemy->pos.x_pos, oEnemy->pos.y_pos, oEnemy->pos.z_pos, &room_number);
+                GetHeight(floor, oEnemy->pos.x_pos, oEnemy->pos.y_pos, oEnemy->pos.z_pos);
+                TestTriggers(trigger_index, 1, 0);
+                ifl3 = 1;
+            }
+        } else if (!ifl3)
+            break;
+    reset:
+        VonCroy->reached_goal = 0;
+        VonCroy->enemy = 0;
+        item->item_flags[3] += ifl3;
+        item->ai_bits = FOLLOW;
+        break;
+    case 4:
+        VonCroy->maximum_turn = 0;
+        if (item->box_number == VonCroy->LOT.target_box || !VonCroy->monkey_ahead) {
+            floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+            h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+            c = GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+            if (c == h - 1536)
+                item->goal_anim_state = 1;
+        } else
+            item->goal_anim_state = 5;
+        break;
+    case 5:
+        VonCroy->LOT.is_jumping = 1;
+        VonCroy->LOT.is_monkeying = 1;
+        VonCroy->maximum_turn = 1092;
+        if (item->box_number == VonCroy->LOT.target_box || !VonCroy->monkey_ahead) {
+            floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+            h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+            c = GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+            if (c == h - 1536)
+                item->goal_anim_state = 4;
+        }
+        break;
+    case 20:
+        if (item->frame_number == anims[item->anim_number].frame_base)
+            item->pos = oEnemy->pos;
+        else if (item->frame_number == anims[item->anim_number].frame_base + 120) {
+            ifl3 = -1;
+            goto trig;
+        }
+        break;
+    case 22:
+    case 35:
+        VonCroy->maximum_turn = 0;
+        if (item->item_flags[2])
+            CreatureYRot(&item->pos, oEnemy->pos.y_rot - item->pos.y_rot, 512);
+        else
+            CreatureYRot(&item->pos, iAngle, 512);
+        break;
+    case 36:
+    case 37:
+        VonCroy->maximum_turn = 0;
+        MoveCreature3DPos(&item->pos, &oEnemy->pos, 8, oEnemy->pos.y_rot - item->pos.y_rot, 512);
+        break;
+    }
+    CreatureTilt(item, tilt);
+    CreatureJoint(item, 0, torso_y);
+    CreatureJoint(item, 1, torso_x);
+    CreatureJoint(item, 2, head_y);
+    CreatureJoint(item, 3, torso_x);
+    if (item->current_anim_state >= 15 || item->current_anim_state == 5)
+        CreatureAnimation(item_number, angle, 0);
+    else {
+        switch (CreatureVault(item_number, angle, 2, 260)) {
+        case 2:
+            VonCroy->maximum_turn = 0;
+            item->anim_number = objects[VON_CROY].anim_index + 29;
+            item->current_anim_state = 19;
+            item->frame_number = anims[item->anim_number].frame_base;
+            break;
+        case 3:
+            VonCroy->maximum_turn = 0;
+            item->anim_number = objects[VON_CROY].anim_index + 28;
+            item->current_anim_state = 18;
+            item->frame_number = anims[item->anim_number].frame_base;
+            break;
+        case 4:
+            VonCroy->maximum_turn = 0;
+            item->anim_number = objects[VON_CROY].anim_index + 27;
+            item->current_anim_state = 17;
+            item->frame_number = anims[item->anim_number].frame_base;
+            break;
+        case -2:
+            VonCroy->maximum_turn = 0;
+            item->anim_number = objects[VON_CROY].anim_index + 42;
+            item->current_anim_state = 23;
+            item->frame_number = anims[item->anim_number].frame_base;
+            break;
+        case -3:
+            VonCroy->maximum_turn = 0;
+            item->anim_number = objects[VON_CROY].anim_index + 41;
+            item->current_anim_state = 24;
+            item->frame_number = anims[item->anim_number].frame_base;
+            break;
+        case -4:
+            VonCroy->maximum_turn = 0;
+            item->anim_number = objects[VON_CROY].anim_index + 35;
+            item->current_anim_state = 25;
+            item->frame_number = anims[item->anim_number].frame_base;
+            break;
+        }
+    }
 }
