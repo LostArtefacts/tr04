@@ -337,6 +337,7 @@ void SetCornerAnim(ITEM_INFO *item, COLL_INFO *coll, sint16 rot, sint16 flip);
 sint32 IsValidHangPos(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_polestat(ITEM_INFO *item, COLL_INFO *coll);
 void lara_col_ropefwd(ITEM_INFO *item, COLL_INFO *coll);
+void FallFromRope(ITEM_INFO *item);
 
 extern LARA_INFO lara;
 extern ITEM_INFO *lara_item;

@@ -7,6 +7,7 @@
 #include "specific/3dmath.h"
 #include "camera.h"
 #include "sound.h"
+#include "rope.h"
 #include "specific/input.h"
 
 #define DAMAGE_START 140
@@ -1139,6 +1140,24 @@ void lara_as_rope(ITEM_INFO *item, COLL_INFO *coll)
         FallFromRope(item);
     if (input & IN_LOOK)
         LookUpDown();
+}
+
+void FallFromRope(ITEM_INFO *item)
+{
+    sint32 l;
+
+    l = ABS(CurrentPendulum.Velocity.x >> 16) + ABS(CurrentPendulum.Velocity.z >> 16);
+    item->speed = (sint16)(l >> 1);
+    item->pos.x_rot = 0;
+    item->pos.y_pos += 320;
+    item->anim_number = ANIM_FALLDOWN;
+    item->frame_number = anims[ANIM_FALLDOWN].frame_base;
+    item->current_anim_state = AS_FORWARDJUMP;
+    item->goal_anim_state = AS_FORWARDJUMP;
+    item->fallspeed = 0;
+    item->gravity_status = 1;
+    lara.gun_status = LG_NO_ARMS;
+    lara.RopePtr = -1;
 }
 
 void lara_col_rope(ITEM_INFO *item, COLL_INFO *coll)
