@@ -143,7 +143,7 @@ typedef struct lara_info {
     sint32 RopeOffset;
     uint32 RopeDownVel;
     sint8 RopeFlag;
-    sint8 MoveCount;
+    uint8 MoveCount;
     sint32 RopeCount;
     sint8 pistols_type_carried;
     sint8 uzis_type_carried;

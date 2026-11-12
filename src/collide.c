@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 #include "collide.h"
 #include "anim.h"
 #include "draw.h"
@@ -389,6 +391,68 @@ sint32 TestBoundsCollideStatic(sint16 *bounds, PHD_3DPOS *pos, sint32 rad)
     x = (dx * c - dz * s) >> W2V_SHIFT;
     z = (dx * s + dz * c) >> W2V_SHIFT;
     return x >= bounds[0] - rad && x <= rad + bounds[1] && z >= bounds[4] - rad && z <= rad + bounds[5];
+}
+
+sint32 ItemPushLaraStatic(ITEM_INFO *l, sint16 *bounds, PHD_3DPOS *pos, COLL_INFO *coll)
+{
+    sint32 dx, dz, s, c, x, z;
+    sint32 xmin, xmax, zmin, zmax, left, top, right, bottom;
+    sint16 facing;
+
+    dx = l->pos.x_pos - pos->x_pos;
+    dz = l->pos.z_pos - pos->z_pos;
+    s = phd_sin(pos->y_rot);
+    c = phd_cos(pos->y_rot);
+    x = (dx * c - dz * s) >> W2V_SHIFT;
+    z = (dx * s + dz * c) >> W2V_SHIFT;
+    xmin = bounds[0] - coll->radius;
+    xmax = bounds[1] + coll->radius;
+    zmin = bounds[4] - coll->radius;
+    zmax = bounds[5] + coll->radius;
+
+    if (abs(dx) > 4608 || abs(dz) > 4608 || x <= xmin || x >= xmax || z <= zmin || z >= zmax)
+        return 0;
+
+    left = x - xmin;
+    top = zmax - z;
+    right = xmax - x;
+    bottom = z - zmin;
+
+    if (left <= right && left <= top && left <= bottom)
+        x -= left;
+    else if (right <= left && right <= top && right <= bottom)
+        x += right;
+    else if (top <= left && top <= right && top <= bottom)
+        z += top;
+    else
+        z -= bottom;
+
+    l->pos.x_pos = pos->x_pos + ((c * x + s * z) >> W2V_SHIFT);
+    l->pos.z_pos = pos->z_pos + ((c * z - s * x) >> W2V_SHIFT);
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -384;
+    coll->bad_ceiling = 0;
+    facing = coll->facing;
+    coll->facing = (sint16)phd_atan(l->pos.z_pos - coll->old.z, l->pos.x_pos - coll->old.x);
+    GetCollisionInfo(coll, l->pos.x_pos, l->pos.y_pos, l->pos.z_pos, l->room_number, 762);
+    coll->facing = facing;
+
+    if (coll->coll_type == COLL_NONE) {
+        coll->old.x = l->pos.x_pos;
+        coll->old.y = l->pos.y_pos;
+        coll->old.z = l->pos.z_pos;
+        UpdateLaraRoom(l, -10);
+    } else {
+        l->pos.x_pos = coll->old.x;
+        l->pos.z_pos = coll->old.z;
+    }
+
+    if (l == lara_item && lara.IsMoving && lara.MoveCount > 15) {
+        lara.IsMoving = 0;
+        lara.gun_status = LG_NO_ARMS;
+    }
+
+    return 1;
 }
 
 sint32 TestLaraPosition(sint16 *bounds, ITEM_INFO *item, ITEM_INFO *laraitem)
