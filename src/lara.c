@@ -1775,6 +1775,69 @@ void lara_col_turnswitch(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void lara_col_walk(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->gravity_status = 0;
+    item->fallspeed = 0;
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = 384;
+    coll->bad_neg = -384;
+    coll->bad_ceiling = 0;
+    coll->slopes_are_walls = 1;
+    coll->slopes_are_pits = 1;
+    coll->lava_is_pit = 1;
+    GetLaraCollisionInfo(item, coll);
+    if (LaraHitCeiling(item, coll))
+        return;
+    if (TestLaraVault(item, coll))
+        return;
+    if (LaraDeflectEdge(item, coll)) {
+        if (item->frame_number >= 29 && item->frame_number <= 47) {
+            item->anim_number = ANIM_WALK_STOP_RIGHT;
+            item->frame_number = anims[ANIM_WALK_STOP_RIGHT].frame_base;
+        } else {
+            if (item->frame_number >= 22 && item->frame_number <= 28 ||
+                item->frame_number >= 48 && item->frame_number <= 57) {
+                item->anim_number = ANIM_WALK_STOP_LEFT;
+                item->frame_number = anims[ANIM_WALK_STOP_LEFT].frame_base;
+            } else
+                LaraCollideStop(item, coll);
+        }
+    }
+    if (LaraFallen(item, coll))
+        return;
+    if (coll->mid_floor > 128) {
+        if (coll->front_floor == NO_HEIGHT || coll->front_floor <= 128)
+            coll->mid_floor = 0;
+        else {
+            if (item->frame_number >= 28 && item->frame_number <= 45) {
+                item->anim_number = ANIM_WALKSTEPD_RIGHT;
+                item->frame_number = anims[ANIM_WALKSTEPD_RIGHT].frame_base;
+            } else {
+                item->anim_number = ANIM_WALKSTEPD_LEFT;
+                item->frame_number = anims[ANIM_WALKSTEPD_LEFT].frame_base;
+            }
+        }
+    }
+    if (coll->mid_floor >= -384 && coll->mid_floor < -128) {
+        if (coll->front_floor == NO_HEIGHT || coll->front_floor < -384 || coll->front_floor >= -128)
+            coll->mid_floor = 0;
+        else {
+            if (item->frame_number >= 27 && item->frame_number <= 44) {
+                item->anim_number = ANIM_WALKSTEPUP_RIGHT;
+                item->frame_number = anims[ANIM_WALKSTEPUP_RIGHT].frame_base;
+            } else {
+                item->anim_number = ANIM_WALKSTEPUP_LEFT;
+                item->frame_number = anims[ANIM_WALKSTEPUP_LEFT].frame_base;
+            }
+        }
+    }
+    if (TestLaraSlide(item, coll))
+        return;
+    if (coll->mid_floor != NO_HEIGHT)
+        item->pos.y_pos += coll->mid_floor;
+}
+
 void lara_col_run(ITEM_INFO *item, COLL_INFO *coll)
 {
     lara.move_angle = item->pos.y_rot;
