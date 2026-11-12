@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="167.35" height="12" x="0" y="0" class="named"><title>757 · 48.93%</title></rect>
-<rect width="0.44" height="12" x="167.35" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="167.79" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="167.79" height="12" x="174.21" y="0" class="todo"><title>759 · 49.06%</title></rect>
+<rect width="167.57" height="12" x="0" y="0" class="named"><title>758 · 49%</title></rect>
+<rect width="0.44" height="12" x="167.57" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="168.02" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="167.57" height="12" x="174.43" y="0" class="todo"><title>758 · 49%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">49.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">757</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">759</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">758</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">758</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="75.66" height="12" x="0" y="0" class="named"><title>137 KB · 22.12%</title></rect>
-<rect width="0.12" height="12" x="75.66" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="75.78" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="257.56" height="12" x="84.44" y="0" class="todo"><title>467 KB · 75.31%</title></rect>
+<rect width="75.91" height="12" x="0" y="0" class="named"><title>138 KB · 22.20%</title></rect>
+<rect width="0.12" height="12" x="75.91" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="76.03" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="257.32" height="12" x="84.68" y="0" class="todo"><title>467 KB · 75.24%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">22.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">137 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">467 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">138 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">467 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -447,7 +447,7 @@
 <rect width="12" height="12" x="420" y="105" class="todo"><title>0x0042ae50 draw_shotgun (390 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="105" class="named"><title>0x0042afe0 undraw_shotgun (275 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="105" class="todo"><title>0x0042b100 AnimateShotgun (802 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="105" class="todo"><title>0x0042b430 TriggerUnderwaterExplosion (449 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="105" class="named"><title>0x0042b430 TriggerUnderwaterExplosion (449 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="105" class="todo"><title>0x0042b600 DoGrenadeDamageOnBaddie (280 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="105" class="named"><title>0x0042b720 draw_pistols (153 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="105" class="named"><title>0x0042b7c0 set_arm_info (123 bytes)</title></rect>
@@ -2018,7 +2018,7 @@
 <rect width="13.49" height="13.12" x="397.98" y="112.51" class="named"><title>0x00477430 S_SaveGame (458 bytes)</title></rect>
 <rect width="13.31" height="13.12" x="414.47" y="112.51" class="todo"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
 <rect width="13.25" height="13.12" x="430.78" y="112.51" class="named"><title>0x00442380 CreatureKill (450 bytes)</title></rect>
-<rect width="13.22" height="13.12" x="447.03" y="112.51" class="todo"><title>0x0042b430 TriggerUnderwaterExplosion (449 bytes)</title></rect>
+<rect width="13.22" height="13.12" x="447.03" y="112.51" class="named"><title>0x0042b430 TriggerUnderwaterExplosion (449 bytes)</title></rect>
 <rect width="13.20" height="13.12" x="463.26" y="112.51" class="named"><title>0x0044f5d0 GetRoomBounds (448 bytes)</title></rect>
 <rect width="13.17" height="13.12" x="479.45" y="112.51" class="named"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
 <rect width="13.17" height="13.12" x="495.62" y="112.51" class="named"><title>0x004552b0 EnableBaddieAI (447 bytes)</title></rect>
