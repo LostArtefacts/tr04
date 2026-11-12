@@ -9,6 +9,9 @@
 #include "draw.h"
 #include "specific/3dmath.h"
 #include "room.h"
+#include "lara_states.h"
+#include "delstuff.h"
+#include "specific/input.h"
 
 void InitialiseMovingBlock(sint16 item_number)
 {
@@ -203,6 +206,85 @@ sint32 TestBlockPull(ITEM_INFO *item, sint32 height, uint16 quadrant)
         return 0;
     }
     return 1;
+}
+
+void MovableBlockCollision(sint16 item_number, ITEM_INFO *laraitem, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    PHD_VECTOR pos;
+    sint16 *bounds;
+    sint16 room_number, yrot, quadrant;
+
+    item = &items[item_number];
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos - 256, item->pos.z_pos, &room_number);
+    item->pos.y_pos = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (item->room_number != room_number)
+        ItemNewRoom(item_number, room_number);
+    if (input & IN_ACTION && laraitem->current_anim_state == AS_STOP && laraitem->anim_number == ANIM_BREATH &&
+        !laraitem->gravity_status && lara.gun_status == LG_NO_ARMS && item->status == ITEM_INACTIVE &&
+        item->trigger_flags >= 0 || (lara.IsMoving && lara.GeneralPtr == (void *)item_number)) {
+        room_number = laraitem->room_number;
+        GetFloor(item->pos.x_pos, item->pos.y_pos - 256, item->pos.z_pos, &room_number);
+        if (room_number == item->room_number) {
+            bounds = GetBoundsAccurate(item);
+            MovingBlockBounds[0] = bounds[0] - 100;
+            MovingBlockBounds[1] = bounds[1] + 100;
+            MovingBlockBounds[4] = bounds[4] - 200;
+            MovingBlockBounds[5] = 0;
+            yrot = item->pos.y_rot;
+            item->pos.y_rot = (laraitem->pos.y_rot + 0x2000) & 0xC000;
+            if (TestLaraPosition(MovingBlockBounds, item, laraitem)) {
+                if (((uint16)(yrot + 0x2000) / 0x4000) + ((uint16)item->pos.y_rot / 0x4000) & 1)
+                    MovingBlockPos.z = bounds[0] - 35;
+                else
+                    MovingBlockPos.z = bounds[4] - 35;
+                if (MoveLaraPosition(&MovingBlockPos, item, laraitem)) {
+                    laraitem->anim_number = ANIM_PPREADY;
+                    laraitem->frame_number = anims[ANIM_PPREADY].frame_base;
+                    laraitem->current_anim_state = AS_PPREADY;
+                    laraitem->goal_anim_state = AS_PPREADY;
+                    lara.IsMoving = 0;
+                    lara.gun_status = LG_HANDS_BUSY;
+                    lara.CornerX = (sint32)item;
+                } else
+                    lara.GeneralPtr = (void *)item_number;
+            } else if (lara.IsMoving && lara.GeneralPtr == (void *)item_number) {
+                lara.IsMoving = 0;
+                lara.gun_status = LG_NO_ARMS;
+            }
+            item->pos.y_rot = yrot;
+        }
+    } else if (laraitem->current_anim_state == AS_PPREADY && laraitem->frame_number == anims[ANIM_PPREADY].frame_base + 19 &&
+        (ITEM_INFO *)lara.CornerX == item) {
+        pos.x = 0;
+        pos.y = 0;
+        pos.z = 0;
+        quadrant = (uint16)(laraitem->pos.y_rot + 8192) >> 14;
+        if (input & IN_FORWARD) {
+            if (!TestBlockPush(item, 1024, quadrant))
+                return;
+            laraitem->goal_anim_state = AS_PUSHBLOCK;
+        } else if (input & IN_BACK) {
+            if (!TestBlockPull(item, 1024, quadrant))
+                return;
+            laraitem->goal_anim_state = AS_PULLBLOCK;
+        } else
+            return;
+        AddActiveItem(item_number);
+        item->status = ITEM_ACTIVE;
+        lara.head_x_rot = 0;
+        lara.head_y_rot = 0;
+        lara.torso_x_rot = 0;
+        lara.torso_y_rot = 0;
+        GetLaraJointPos(&pos, 14);
+        *(sint32 *)&laraitem->item_flags[0] = pos.x;
+        *(sint32 *)&laraitem->item_flags[2] = pos.z;
+        *(sint32 *)&item->item_flags[0] = item->pos.x_pos;
+        *(sint32 *)&item->item_flags[2] = item->pos.z_pos;
+    } else
+        ObjectCollision(item_number, laraitem, coll);
 }
 
 void DrawPlanetEffect(ITEM_INFO *item)

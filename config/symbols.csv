@@ -1993,6 +1993,7 @@ address,size,name,symbol
 0x004ad0a8,16,bat_bite,_bat_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
 0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition
+0x004ad1d0,24,MovingBlockBounds,_MovingBlockBounds
 0x004ad1e8,16,left_hand,_left_hand
 0x004ad1f8,16,right_hand,_right_hand
 0x004ad228,16,sas_fire,_sas_fire
@@ -2169,6 +2170,7 @@ address,size,name,symbol
 0x004b96a8,4,rand_2,_rand_2
 0x004bc508,18,tga_header,_tga_header
 0x004bf2e0,4,next_locust,_next_locust
+0x004bf2e8,12,MovingBlockPos,_MovingBlockPos
 0x004bf2f8,4,next_scarab,_next_scarab
 0x004bf2fc,8,LibraryTab,_LibraryTab
 0x004bf338,4,TorchItem,_TorchItem
