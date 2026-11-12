@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="247" height="12" x="0" y="0" class="named"><title>1118 · 72.22%</title></rect>
 <rect width="0.44" height="12" x="247" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="16.79" height="12" x="247.44" y="0" class="nonmatching"><title>76 · 4.91%</title></rect>
-<rect width="77.77" height="12" x="264.23" y="0" class="todo"><title>352 · 22.74%</title></rect>
+<rect width="17.01" height="12" x="247.44" y="0" class="nonmatching"><title>77 · 4.97%</title></rect>
+<rect width="77.55" height="12" x="264.45" y="0" class="todo"><title>351 · 22.67%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">72.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">76</tspan> · <tspan class="todo">352</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1118</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">77</tspan> · <tspan class="todo">351</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="128.85" height="12" x="0" y="0" class="named"><title>235 KB · 37.67%</title></rect>
 <rect width="0.12" height="12" x="128.85" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="30.23" height="12" x="128.97" y="0" class="nonmatching"><title>55 KB · 8.84%</title></rect>
-<rect width="182.80" height="12" x="159.20" y="0" class="todo"><title>333 KB · 53.45%</title></rect>
+<rect width="30.52" height="12" x="128.97" y="0" class="nonmatching"><title>56 KB · 8.92%</title></rect>
+<rect width="182.51" height="12" x="159.49" y="0" class="todo"><title>332 KB · 53.37%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">37.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">55 KB</tspan> · <tspan class="todo">333 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">235 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">56 KB</tspan> · <tspan class="todo">332 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1104,7 +1104,7 @@
 <rect width="12" height="12" x="525" y="300" class="named"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="300" class="named"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="300" class="named"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="300" class="todo"><title>0x0046b2b0 DrawCutSeqActors (525 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="300" class="nonmatching"><title>0x0046b2b0 DrawCutSeqActors (525 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="300" class="named"><title>0x0046b4c0 CalcActorLighting (153 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="300" class="named"><title>0x0046b560 GetJointAbsPositionCutSeq (152 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="300" class="named"><title>0x0046b600 CalculateObjectLightingLaraCutSeq (198 bytes)</title></rect>
@@ -1958,7 +1958,7 @@
 <rect width="13.79" height="14.75" x="364.60" y="150.01" class="named"><title>0x00435e30 TriggerDartSmoke (528 bytes)</title></rect>
 <rect width="13.79" height="14.72" x="364.60" y="167.75" class="named"><title>0x004853f0 SaveSettings (527 bytes)</title></rect>
 <rect width="13.79" height="14.66" x="364.60" y="185.47" class="todo"><title>0x00451510 LoadGameflow (525 bytes)</title></rect>
-<rect width="13.79" height="14.66" x="364.60" y="203.13" class="todo"><title>0x0046b2b0 DrawCutSeqActors (525 bytes)</title></rect>
+<rect width="13.79" height="14.66" x="364.60" y="203.13" class="nonmatching"><title>0x0046b2b0 DrawCutSeqActors (525 bytes)</title></rect>
 <rect width="13.79" height="14.63" x="364.60" y="220.79" class="nonmatching"><title>0x00417db0 ControlMineHelicopter (524 bytes)</title></rect>
 <rect width="13.79" height="14.63" x="364.60" y="238.43" class="named"><title>0x00455ae0 EarthQuake (524 bytes)</title></rect>
 <rect width="13.79" height="14.61" x="364.60" y="256.06" class="named"><title>0x00466fa0 JeepCollision (523 bytes)</title></rect>

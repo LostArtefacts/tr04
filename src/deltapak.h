@@ -198,5 +198,6 @@ void init_cutseq_actors(char *data, sint32 resident);
 void updateAnimFrame(PACKNODE *node, sint32 flags, sint16 *frame);
 void CalculateObjectLightingLaraCutSeq(void);
 sint32 Load_and_Init_Cutseq(sint32 num);
+void DrawCutSeqActors(void);
 
 #endif

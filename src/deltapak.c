@@ -66,6 +66,63 @@ void finish_cutseq(void)
     InitialiseHair();
 }
 
+void DrawCutSeqActors(void)
+{
+    OBJECT_INFO *obj;
+    sint16 **mesh;
+    sint32 *bone, i, j;
+    sint16 *rot;
+    sint32 n, bits, swap, flags;
+
+    phd_PushMatrix();
+    for (i = 1; i < GLOBAL_cutme->numactors; i++) {
+        bits = cutseq_meshbits[i];
+        swap = cutseq_meshswapbits[i];
+        n = 1;
+        phd_PushMatrix();
+        if (!(bits & 0x80000000)) {
+            phd_PopMatrix();
+            continue;
+        }
+        {
+            updateAnimFrame(actor_pnodes[i], GLOBAL_cutme->actor_data[i].nodes + 1, temp_rotation_buffer);
+            obj = &objects[GLOBAL_cutme->actor_data[i].objslot];
+            phd_TranslateAbs(GLOBAL_cutme->orgx, GLOBAL_cutme->orgy, GLOBAL_cutme->orgz);
+            CalcActorLighting(&duff_item[i - 1], obj, temp_rotation_buffer);
+            mesh = &meshes[obj->mesh_index];
+            bone = &bones[obj->bone_index];
+            phd_TranslateRel(temp_rotation_buffer[6], temp_rotation_buffer[7], temp_rotation_buffer[8]);
+            rot = &temp_rotation_buffer[9];
+            gar_RotYXZsuperpack(&rot, 0);
+            if (bits & 1) {
+                if (swap & 1)
+                    phd_PutPolygons(mesh[1], -1);
+                else
+                    phd_PutPolygons(mesh[0], -1);
+            }
+            mesh += 2;
+            for (j = 0; j < obj->nmeshes - 1; j++, bone += 4, mesh += 2) {
+                flags = *bone;
+                if (flags & 1)
+                    phd_PopMatrix();
+                if (flags & 2)
+                    phd_PushMatrix();
+                phd_TranslateRel(bone[1], bone[2], bone[3]);
+                gar_RotYXZsuperpack(&rot, 0);
+                n <<= 1;
+                if (n & bits) {
+                    if (n & swap)
+                        phd_PutPolygons(mesh[1], -1);
+                    else
+                        phd_PutPolygons(mesh[0], -1);
+                }
+            }
+        }
+        phd_PopMatrix();
+    }
+    phd_PopMatrix();
+}
+
 void CalcActorLighting(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot)
 {
     PHD_VECTOR pos;
