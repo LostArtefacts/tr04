@@ -355,6 +355,36 @@ void DXMove(sint32 x, sint32 y)
         SetRect(&G_dxptr->rScreen, x, y, x + G_dxptr->dwRenderWidth, y + G_dxptr->dwRenderHeight);
 }
 
+void DXInitKeyboard(HWND hwnd, HINSTANCE hinstance)
+{
+    LPDIRECTINPUT dinput;
+    LPDIRECTINPUTDEVICE Keyboard;
+
+    DXAttempt(DirectInputCreate(hinstance, 0x500, &dinput, 0));
+    IDirectInput_QueryInterface(dinput, &IID_IDirectInput2, (void **)&G_dxptr->lpDirectInput);
+    if (dinput) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "DirectInput", dinput, IDirectInput_Release(dinput));
+        dinput = 0;
+    } else {
+        Log(1, "%s Attempt To Release NULL Ptr", "DirectInput");
+    }
+    DXAttempt(IDirectInput2_CreateDevice(G_dxptr->lpDirectInput, &GUID_SysKeyboard, &Keyboard, 0));
+    IDirectInputDevice_QueryInterface(Keyboard, &IID_IDirectInputDevice2, (void **)&G_dxptr->Keyboard);
+    if (Keyboard) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Keyboard", Keyboard, IDirectInputDevice_Release(Keyboard));
+        Keyboard = 0;
+    } else {
+        Log(1, "%s Attempt To Release NULL Ptr", "Keyboard");
+    }
+    DXAttempt(IDirectInputDevice2_SetCooperativeLevel(G_dxptr->Keyboard, hwnd, DISCL_NONEXCLUSIVE | DISCL_BACKGROUND));
+    DXAttempt(IDirectInputDevice2_SetDataFormat(G_dxptr->Keyboard, &c_dfDIKeyboard));
+    DXAttempt(IDirectInputDevice2_Acquire(G_dxptr->Keyboard));
+    memset(keymap, 0, sizeof(keymap));
+    memset(keymap2, 0, sizeof(keymap2));
+    memset(DXUnk754124, 0, sizeof(DXUnk754124));
+    DXUnk7541ac = 0;
+}
+
 void DXReadKeyboard(char *KeyMap)
 {
     HRESULT state;

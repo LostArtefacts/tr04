@@ -1557,7 +1557,8 @@ address,size,name,symbol
 0x0049d4c4,1,nullsub_5,_nullsub_5
 0x0049d534,3,nullsub_6,_nullsub_6
 0x0049d544,1,nullsub_7,_nullsub_7
-0x0049d8a8,6,DirectInputCreateA,_DirectInputCreateA
+0x0049d890,24,c_dfDIKeyboard,_c_dfDIKeyboard
+0x0049d8a8,6,DirectInputCreateA,_DirectInputCreateA@16
 0x0049d8b0,66,inflateReset,_inflateReset
 0x0049d900,72,inflateEnd,_inflateEnd
 0x0049d950,270,inflateInit2_,_inflateInit2_
@@ -1977,6 +1978,9 @@ address,size,name,symbol
 0x004a924c,4,joyGetPosEx,__imp__joyGetPosEx@8
 0x004a9460,16,IID_IDirectDraw4,_IID_IDirectDraw4
 0x004a9780,16,IID_IDirect3D3,_IID_IDirect3D3
+0x004aa150,16,IID_IDirectInput2A,_IID_IDirectInput2A
+0x004aa190,16,IID_IDirectInputDevice2A,_IID_IDirectInputDevice2A
+0x004aa280,16,GUID_SysKeyboard,_GUID_SysKeyboard
 0x004ad0a8,16,bat_bite,_bat_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
 0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition
@@ -2467,8 +2471,11 @@ address,size,name,symbol
 0x00754118,4,G_hwnd,_G_hwnd
 0x0075411c,4,G_ddraw,_G_ddraw
 0x00754120,4,G_dxinfo,_G_dxinfo
+0x00754124,64,DXUnk754124,_DXUnk754124
 0x007541a4,4,G_d3d,_G_d3d
+0x007541ac,4,DXUnk7541ac,_DXUnk7541ac
 0x007542ec,256,keymap,_keymap
+0x007543ec,256,keymap2,_keymap2
 0x007544f4,4,G_dxptr,_G_dxptr
 0x007e6e00,4,BinkSurfaceType,_BinkSurfaceType
 0x007e6e04,4,BinkSurface,_BinkSurface
