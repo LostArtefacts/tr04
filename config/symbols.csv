@@ -84,7 +84,7 @@ address,size,name,symbol
 0x0040daf0,465,SasFireGrenade,_SasFireGrenade
 0x0040dcd0,439,DragSASCollision,_DragSASCollision
 0x0040de90,92,InitialiseScarab,_InitialiseScarab
-0x0040def0,827,ScarabControl,_ScarabControl
+0x0040def0,864,ScarabControl,_ScarabControl
 0x0040e250,74,GetFreeScarab,_GetFreeScarab
 0x0040e2a0,40,ClearScarabs,_ClearScarabs
 0x0040e2d0,240,TriggerScarab,_TriggerScarab
@@ -2002,6 +2002,7 @@ address,size,name,symbol
 0x004ad228,16,sas_fire,_sas_fire
 0x004ad238,24,DragSASBounds,_DragSASBounds
 0x004ad250,12,DragSASPos,_DragSASPos
+0x004ad260,16,beetle_bite,_beetle_bite
 0x004ad270,16,stinger,_stinger
 0x004ad280,16,pincer,_pincer
 0x004ad290,16,s_stinger,_s_stinger
