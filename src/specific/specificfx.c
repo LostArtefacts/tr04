@@ -5,6 +5,7 @@
 #include "3dmath.h"
 #include "../anim.h"
 #include "../objnums.h"
+#include "../tomb4fx.h"
 
 void InitTarget_2(void)
 {
@@ -61,4 +62,17 @@ void SetFade(sint32 start, sint32 end)
     FadeStep = (end - start) >> 3;
     FadeCnt = 0;
     FadeEnd = end;
+}
+
+void DrawFlash(void)
+{
+    uint8 r;
+    uint8 g;
+    uint8 b;
+
+    r = (FlashFadeR * FlashFader) >> 5;
+    g = (FlashFadeG * FlashFader) >> 5;
+    b = (FlashFadeB * FlashFader) >> 5;
+    DrawPsxTile(0, phd_winwidth | (phd_winheight << 16), b | ((g | ((r | (0x62 << 8)) << 8)) << 8), 1, 0);
+    DrawPsxTile(0, phd_winwidth | (phd_winheight << 16), b | ((g | ((r | (0xFF << 8)) << 8)) << 8), 2, 0);
 }
