@@ -266,3 +266,16 @@ void InitialiseStatuePlinth(sint16 item_number)
     if (!item->trigger_flags)
         item->mesh_bits = 1;
 }
+
+void InitialisePulley(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    item->item_flags[3] = item->trigger_flags;
+    item->trigger_flags = abs(item->trigger_flags);
+    if (item->status == ITEM_INVISIBLE) {
+        item->item_flags[1] = 1;
+        item->status = ITEM_INACTIVE;
+    }
+}

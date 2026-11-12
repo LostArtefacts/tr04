@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="181.72" height="12" x="0" y="0" class="named"><title>822 · 53.14%</title></rect>
-<rect width="0.44" height="12" x="181.72" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="6.41" height="12" x="182.16" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
-<rect width="153.42" height="12" x="188.58" y="0" class="todo"><title>694 · 44.86%</title></rect>
+<rect width="181.94" height="12" x="0" y="0" class="named"><title>823 · 53.20%</title></rect>
+<rect width="0.44" height="12" x="181.94" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="6.41" height="12" x="182.39" y="0" class="nonmatching"><title>29 · 1.87%</title></rect>
+<rect width="153.20" height="12" x="188.80" y="0" class="todo"><title>693 · 44.80%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">53.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">822</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">694</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">823</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">29</tspan> · <tspan class="todo">693</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="78.75" height="12" x="0" y="0" class="named"><title>143 KB · 23.03%</title></rect>
-<rect width="0.12" height="12" x="78.75" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="8.65" height="12" x="78.87" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
-<rect width="254.47" height="12" x="87.53" y="0" class="todo"><title>462 KB · 74.41%</title></rect>
+<rect width="78.80" height="12" x="0" y="0" class="named"><title>143 KB · 23.04%</title></rect>
+<rect width="0.12" height="12" x="78.80" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="8.65" height="12" x="78.92" y="0" class="nonmatching"><title>16 KB · 2.53%</title></rect>
+<rect width="254.43" height="12" x="87.57" y="0" class="todo"><title>462 KB · 74.39%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">23.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">143 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">16 KB</tspan> · <tspan class="todo">462 KB</tspan></text>
@@ -905,7 +905,7 @@
 <rect width="12" height="12" x="540" y="240" class="todo"><title>0x004538a0 InitialiseEffects (218 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="240" class="todo"><title>0x00453980 InitialiseSmokeEmitter (176 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="240" class="todo"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="240" class="todo"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="240" class="named"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="240" class="todo"><title>0x00453e90 InitialisePickUp (148 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="240" class="todo"><title>0x00453f30 init_all_ropes (34 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="240" class="todo"><title>0x00453f60 CreateRope (270 bytes)</title></rect>
@@ -2750,7 +2750,7 @@
 <rect width="5.84" height="5.29" x="607.34" y="431.83" class="named"><title>0x00438510 AddFire (80 bytes)</title></rect>
 <rect width="5.84" height="5.29" x="607.34" y="440.12" class="todo"><title>0x0043af80 UpdateLightning (80 bytes)</title></rect>
 <rect width="5.84" height="5.29" x="607.34" y="448.42" class="named"><title>0x0043ca90 insert_object_into_list (80 bytes)</title></rect>
-<rect width="5.84" height="5.29" x="607.34" y="456.71" class="todo"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
+<rect width="5.84" height="5.29" x="607.34" y="456.71" class="named"><title>0x00453e40 InitialisePulley (80 bytes)</title></rect>
 <rect width="5.52" height="5.60" x="616.18" y="322.49" class="named"><title>0x004733b0 DSAdjustPitch (80 bytes)</title></rect>
 <rect width="5.52" height="5.60" x="624.69" y="322.49" class="named"><title>0x0048e810 TIME_Init (80 bytes)</title></rect>
 <rect width="5.52" height="5.60" x="633.21" y="322.49" class="todo"><title>0x00492b90 DXSetVideoMode (80 bytes)</title></rect>
