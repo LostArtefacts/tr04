@@ -508,6 +508,133 @@ sint32 CanGetOff_bike(sint16 num)
     return 1;
 }
 
+sint32 UserControl_bike(ITEM_INFO *item, sint32 height, sint32 *pitch)
+{
+    BIKEINFO *bike;
+    PHD_VECTOR pos;
+    sint32 turn, vel, frame, base;
+
+    bike = (BIKEINFO *)item->data;
+    if (bike->light_intensity < 127) {
+        bike->light_intensity += (GetRandomControl() & 7) + 3;
+        if (bike->light_intensity > 127)
+            bike->light_intensity = 127;
+    }
+    if (bike->unused1 > 16) {
+        bike->velocity += bike->unused1 >> 4;
+        bike->unused1 -= bike->unused1 >> 3;
+    } else {
+        bike->unused1 = 0;
+    }
+    if (input & IN_SPRINT && input & IN_ACTION && DashTimer && savegame.HaveBikeBooster) {
+        bike->flags2 |= 1;
+        DashTimer -= 2;
+        if (DashTimer > 0x8000) {
+            bike->flags2 &= ~1;
+            DashTimer = 0;
+        }
+    } else {
+        bike->flags2 &= ~1;
+    }
+    if (item->pos.y_pos >= height - 256) {
+        if (bike->velocity > 0x4000)
+            turn = 910;
+        else
+            turn = (910 * bike->velocity) >> W2V_SHIFT;
+        if (!bike->velocity && input & IN_LOOK)
+            LookUpDown();
+        if (bike->velocity > 0) {
+            if (input & IN_LEFT) {
+                if (bike->velocity > 0x4000)
+                    bike->bike_turn -= 273;
+                else
+                    bike->bike_turn -= 182 + ((91 * bike->velocity) >> W2V_SHIFT);
+                if (bike->bike_turn < -turn)
+                    bike->bike_turn = -turn;
+            } else if (input & IN_RIGHT) {
+                if (bike->velocity > 0x4000)
+                    bike->bike_turn += 273;
+                else
+                    bike->bike_turn += 182 + ((91 * bike->velocity) >> W2V_SHIFT);
+                if (bike->bike_turn > turn)
+                    bike->bike_turn = turn;
+            }
+        } else if (bike->velocity < 0) {
+            if (input & IN_RIGHT) {
+                bike->bike_turn -= 91;
+                if (bike->bike_turn < -910)
+                    bike->bike_turn = -910;
+            } else if (input & IN_LEFT) {
+                bike->bike_turn += 91;
+                if (bike->bike_turn > 910)
+                    bike->bike_turn = 910;
+            }
+        }
+        if (input & IN_JUMP) {
+            pos.x = 0;
+            pos.y = -144;
+            pos.z = -1024;
+            GetJointAbsPosition(item, &pos, 0);
+            TriggerDynamic(pos.x, pos.y, pos.z, 10, 64, 0, 0);
+            item->mesh_bits = 0x5F7;
+        } else {
+            item->mesh_bits = 0x3F7;
+        }
+        if (input & IN_JUMP) {
+            if (bike->velocity > 0) {
+                bike->velocity -= 0x300;
+                if (bike->velocity < 0)
+                    bike->velocity = 0;
+            } else if (bike->velocity < 0) {
+                bike->velocity += 0x300;
+                if (bike->velocity > 0)
+                    bike->velocity = 0;
+            }
+        } else if (input & IN_ACTION) {
+            if (bike->velocity < 0xC000) {
+                if (bike->velocity < 0x4000)
+                    bike->velocity += ((0x4800 - bike->velocity) >> 3) + 8;
+                else if (bike->velocity < 0x7000)
+                    bike->velocity += ((0x7800 - bike->velocity) >> 4) + 4;
+                else
+                    bike->velocity += ((0xC000 - bike->velocity) >> 4) + 2;
+                if (bike->flags2 & 1)
+                    bike->velocity += 0x100;
+            } else {
+                bike->velocity = 0xC000;
+            }
+            bike->velocity -= ABS(item->pos.y_rot - bike->move_angle) >> 6;
+        }
+        if (lara_item->current_anim_state == 3) {
+            base = anims[lara_item->anim_number].frame_base;
+            frame = lara_item->frame_number;
+            if (frame >= base + 24 && frame <= base + 29) {
+                if (bike->velocity > -0x3000)
+                    bike->velocity -= 0x600;
+            }
+        }
+        if (!(input & IN_ACTION)) {
+            if (bike->velocity > 384)
+                bike->velocity -= 384;
+            else if (bike->velocity < -384)
+                bike->velocity += 384;
+            else
+                bike->velocity = 0;
+        }
+        item->speed = (sint16)(bike->velocity >> 8);
+        if (bike->pitch1 > 0xC000)
+            bike->pitch1 = (GetRandomControl() & 0x1FF) + 0xBF00;
+        vel = bike->velocity;
+        if (vel < 0)
+            vel >>= 1;
+        bike->pitch1 += (abs(vel) - 0x2000 - bike->pitch1) >> 3;
+    } else if (bike->pitch1 < 0xFFFF) {
+        bike->pitch1 += (0xFFFF - bike->pitch1) >> 3;
+    }
+    *pitch = bike->pitch1;
+    return 0;
+}
+
 void BikeStart(ITEM_INFO *item, ITEM_INFO *l)
 {
     BIKEINFO *bike;

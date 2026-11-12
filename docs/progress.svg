@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="165.80" height="12" x="0" y="0" class="named"><title>750 · 48.48%</title></rect>
 <rect width="0.44" height="12" x="165.80" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="5.97" height="12" x="166.25" y="0" class="nonmatching"><title>27 · 1.75%</title></rect>
-<rect width="169.78" height="12" x="172.22" y="0" class="todo"><title>768 · 49.64%</title></rect>
+<rect width="6.19" height="12" x="166.25" y="0" class="nonmatching"><title>28 · 1.81%</title></rect>
+<rect width="169.56" height="12" x="172.44" y="0" class="todo"><title>767 · 49.58%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">48.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">750</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">27</tspan> · <tspan class="todo">768</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">750</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">28</tspan> · <tspan class="todo">767</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="73.81" height="12" x="0" y="0" class="named"><title>134 KB · 21.58%</title></rect>
 <rect width="0.12" height="12" x="73.81" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="7.93" height="12" x="73.93" y="0" class="nonmatching"><title>14 KB · 2.32%</title></rect>
-<rect width="260.14" height="12" x="81.86" y="0" class="todo"><title>472 KB · 76.07%</title></rect>
+<rect width="8.47" height="12" x="73.93" y="0" class="nonmatching"><title>15 KB · 2.48%</title></rect>
+<rect width="259.60" height="12" x="82.40" y="0" class="todo"><title>471 KB · 75.91%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">21.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">134 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">14 KB</tspan> · <tspan class="todo">472 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">134 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">15 KB</tspan> · <tspan class="todo">471 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1071,7 +1071,7 @@
 <rect width="12" height="12" x="30" y="300" class="named"><title>0x00466290 BikeBaddieCollision (529 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="300" class="todo"><title>0x004664b0 AnimateBike (1004 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="300" class="named"><title>0x004668e0 CanGetOff_bike (460 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="300" class="todo"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="300" class="nonmatching"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="300" class="named"><title>0x00466e90 BikeStart (176 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="300" class="nonmatching"><title>0x00466f40 InitialiseJeep (94 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="300" class="named"><title>0x00466fa0 JeepCollision (523 bytes)</title></rect>
@@ -1776,7 +1776,7 @@
 <rect width="20.16" height="18.95" x="282.59" y="291.66" class="todo"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
 <rect width="20.16" height="18.92" x="282.59" y="313.61" class="todo"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="20.16" height="18.80" x="282.59" y="335.53" class="todo"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
-<rect width="20.16" height="18.78" x="282.59" y="357.33" class="todo"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>
+<rect width="20.16" height="18.78" x="282.59" y="357.33" class="nonmatching"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>
 <rect width="20.16" height="18.67" x="282.59" y="379.11" class="todo"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
 <rect width="20.16" height="18.43" x="282.59" y="400.77" class="todo"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
 <rect width="20.16" height="18.42" x="282.59" y="422.21" class="todo"><title>0x004349f0 TriggerExplosionSparks (961 bytes)</title></rect>
