@@ -35,6 +35,7 @@ void DrawSprite(sint32 x, sint32 y, sint32 slot, sint32 col, sint32 size, sint32
 void Draw2DSprite(sint32 x, sint32 y, sint32 slot, sint32 unused, sint32 unused2);
 void DrawTrainStrips(void);
 void S_DrawDarts(struct item_info *item);
+void S_PrintShadow(sint32 size, sint16 *box, struct item_info *item, sint32 unknown);
 
 void S_DrawFireSparks(sint32 size, sint32 life);
 void DrawFlatSky(uint32 color, sint32 zpos, sint32 ypos, sint32 drawtype);

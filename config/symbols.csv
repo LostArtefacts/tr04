@@ -2072,6 +2072,7 @@ address,size,name,symbol
 0x004aecb4,24,UnderwaterDoorBounds,_UnderwaterDoorBounds
 0x004aeccc,24,CrowbarDoorBounds,_CrowbarDoorBounds
 0x004aecf4,12,frig_jeep_shadow_bbox,_frig_jeep_shadow_bbox
+0x004aed00,32,EnemyBites,_EnemyBites
 0x004aedb0,1696,CharDef,_CharDef
 0x004af451,1,gfGameMode,_gfGameMode
 0x004af452,,gfInitialiseGame,_gfInitialiseGame

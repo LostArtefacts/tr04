@@ -66,6 +66,7 @@ extern sint32 IM_rate;
 extern sint32 IM_frac;
 extern sint32 IMstack[768];
 extern sint16 no_rotation[12];
+extern struct bite_info EnemyBites[2];
 extern sint32 draw_room_list[128];
 extern sint32 room_list_start;
 extern sint32 room_list_end;
