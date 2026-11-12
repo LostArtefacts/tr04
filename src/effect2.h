@@ -59,6 +59,16 @@ typedef struct sparks {
     uint8 NodeNumber;
 } SPARKS;
 
+typedef struct sp_dynamic {
+    uint8 On;
+    uint8 Falloff;
+    uint8 R;
+    uint8 G;
+    uint8 B;
+    uint8 Flags;
+    uint8 Pad[2];
+} SP_DYNAMIC;
+
 typedef struct ripple_struct {
     sint32 x;
     sint32 y;
@@ -130,6 +140,7 @@ void TriggerFireFlame(sint32 x, sint32 y, sint32 z, sint32 body_part, sint32 typ
 void KillEverything(void);
 void TriggerDynamic_MIRROR(sint32 x, sint32 y, sint32 z, sint32 falloff, sint32 r, sint32 g, sint32 b);
 void UpdateSplashes(void);
+void UpdateSparks(void);
 void TriggerFlareSparks();
 void TriggerExplosionSparks(sint32 x, sint32 y, sint32 z, sint32 extras, sint32 dynamic, sint32 uw, sint16 room_number);
 
@@ -145,6 +156,8 @@ extern sint32 SplashCount;
 extern SPLASH_STRUCT splashes[4];
 extern sint32 next_spark;
 extern SPARKS spark[256];
+extern SP_DYNAMIC spark_dynamics[8];
+extern sint32 DeadlyBounds[6];
 extern sint32 SmokeCountL;
 extern sint32 SmokeCountR;
 extern sint32 SmokeWeapon;

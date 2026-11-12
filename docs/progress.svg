@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="235.22" height="12" x="0" y="0" class="named"><title>1064 · 68.78%</title></rect>
-<rect width="0.44" height="12" x="235.22" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="11.05" height="12" x="235.66" y="0" class="nonmatching"><title>50 · 3.23%</title></rect>
-<rect width="95.28" height="12" x="246.72" y="0" class="todo"><title>431 · 27.86%</title></rect>
+<rect width="235.44" height="12" x="0" y="0" class="named"><title>1065 · 68.84%</title></rect>
+<rect width="0.44" height="12" x="235.44" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="11.05" height="12" x="235.88" y="0" class="nonmatching"><title>50 · 3.23%</title></rect>
+<rect width="95.06" height="12" x="246.94" y="0" class="todo"><title>430 · 27.80%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">68.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1064</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">50</tspan> · <tspan class="todo">431</tspan></text>
+<text text-anchor="end" x="522" y="7.50">69.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1065</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">50</tspan> · <tspan class="todo">430</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="106.56" height="12" x="0" y="0" class="named"><title>193 KB · 31.16%</title></rect>
-<rect width="0.12" height="12" x="106.56" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="17.77" height="12" x="106.68" y="0" class="nonmatching"><title>32 KB · 5.20%</title></rect>
-<rect width="217.54" height="12" x="124.46" y="0" class="todo"><title>395 KB · 63.61%</title></rect>
+<rect width="107.43" height="12" x="0" y="0" class="named"><title>195 KB · 31.41%</title></rect>
+<rect width="0.12" height="12" x="107.43" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="17.77" height="12" x="107.55" y="0" class="nonmatching"><title>32 KB · 5.20%</title></rect>
+<rect width="216.68" height="12" x="125.32" y="0" class="todo"><title>393 KB · 63.36%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">31.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">193 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">32 KB</tspan> · <tspan class="todo">395 KB</tspan></text>
+<text text-anchor="end" x="522" y="24.50">31.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">195 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">32 KB</tspan> · <tspan class="todo">393 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -551,7 +551,7 @@
 <rect width="12" height="12" x="480" y="135" class="todo"><title>0x00433410 ShatterObject (2143 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="135" class="named"><title>0x00433c70 DetatchSpark (180 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="135" class="named"><title>0x00433d30 GetFreeSpark (219 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="135" class="todo"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="135" class="named"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="135" class="todo"><title>0x00434440 TriggerRicochetSpark (812 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="135" class="todo"><title>0x00434770 TriggerFlareSparks (627 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="135" class="todo"><title>0x004349f0 TriggerExplosionSparks (961 bytes)</title></rect>
@@ -1692,7 +1692,7 @@
 <rect width="24.78" height="26.05" x="179.68" y="87.68" class="todo"><title>0x00490ff0 DXGetErrorString (1672 bytes)</title></rect>
 <rect width="24.78" height="25.95" x="179.68" y="116.73" class="todo"><title>0x00445ad0 ControlClockworkBeetle (1666 bytes)</title></rect>
 <rect width="24.78" height="25.30" x="179.68" y="145.68" class="todo"><title>0x00451770 DoGameflow (1624 bytes)</title></rect>
-<rect width="24.78" height="24.46" x="179.68" y="173.98" class="todo"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
+<rect width="24.78" height="24.46" x="179.68" y="173.98" class="named"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
 <rect width="24.78" height="24.24" x="179.68" y="201.44" class="todo"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
 <rect width="24.78" height="24.07" x="179.68" y="228.68" class="todo"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
 <rect width="24.78" height="23.74" x="179.68" y="255.75" class="todo"><title>0x0042a850 ControlCrossbow (1524 bytes)</title></rect>

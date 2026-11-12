@@ -2786,6 +2786,8 @@ address,size,name,symbol
 0x008012f0,2,next_fx_active,_next_fx_active
 0x00801300,256,ripples,_ripples
 0x00801400,13312,spark,_spark
+0x00804800,64,spark_dynamics,_spark_dynamics
+0x00804840,24,DeadlyBounds,_DeadlyBounds
 0x00804860,1536,dynamics,_dynamics
 0x00804e60,4,SmokeWindX,_SmokeWindX
 0x00804e64,4,SmokeWindZ,_SmokeWindZ
