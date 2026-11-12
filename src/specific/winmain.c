@@ -47,6 +47,20 @@ void WinClose(void)
     Func494400();
 }
 
+void WinProcMsg(void)
+{
+    MSG msg;
+
+    Log(2, "WinProcMsg");
+    do {
+        GetMessage(&msg, 0, 0, 0);
+        if (!TranslateAccelerator(App.hWnd, App.hAccel, &msg)) {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        }
+    } while (!thread_ended && msg.message != WM_QUIT);
+}
+
 uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex)
 {
     HWND window;

@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="209.14" height="12" x="0" y="0" class="named"><title>946 · 61.15%</title></rect>
-<rect width="0.44" height="12" x="209.14" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="209.58" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="125.35" height="12" x="216.65" y="0" class="todo"><title>567 · 36.65%</title></rect>
+<rect width="209.36" height="12" x="0" y="0" class="named"><title>947 · 61.22%</title></rect>
+<rect width="0.44" height="12" x="209.36" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="209.80" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="125.13" height="12" x="216.87" y="0" class="todo"><title>566 · 36.59%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">61.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">946</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">567</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">947</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">566</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="90.12" height="12" x="0" y="0" class="named"><title>164 KB · 26.35%</title></rect>
-<rect width="0.12" height="12" x="90.12" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="90.24" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="242.37" height="12" x="99.63" y="0" class="todo"><title>440 KB · 70.87%</title></rect>
+<rect width="90.19" height="12" x="0" y="0" class="named"><title>164 KB · 26.37%</title></rect>
+<rect width="0.12" height="12" x="90.19" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="90.31" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="242.30" height="12" x="99.70" y="0" class="todo"><title>440 KB · 70.85%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">26.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">164 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">440 KB</tspan></text>
@@ -1445,7 +1445,7 @@
 <rect width="12" height="12" x="390" y="405" class="todo"><title>0x0048e9c0 WinMain (1117 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="405" class="named"><title>0x0048ee50 CheckMMXTechnology (196 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="405" class="named"><title>0x0048ef20 WinClose (68 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="405" class="todo"><title>0x0048ef70 WinProcMsg (121 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="405" class="named"><title>0x0048ef70 WinProcMsg (121 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="405" class="todo"><title>0x0048eff0 WinProcessCommands (1078 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="405" class="todo"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="405" class="named"><title>0x0048f6a0 WinRunCheck (87 bytes)</title></rect>
@@ -2575,7 +2575,7 @@
 <rect width="6.85" height="6.82" x="560.92" y="425.71" class="named"><title>0x00427500 lara_as_usepuzzle (121 bytes)</title></rect>
 <rect width="6.85" height="6.82" x="560.92" y="435.53" class="named"><title>0x0046d350 trigger_item_in_room (121 bytes)</title></rect>
 <rect width="6.85" height="6.82" x="560.92" y="445.36" class="named"><title>0x00473690 FreeSampleDecompress (121 bytes)</title></rect>
-<rect width="6.85" height="6.82" x="560.92" y="455.18" class="todo"><title>0x0048ef70 WinProcMsg (121 bytes)</title></rect>
+<rect width="6.85" height="6.82" x="560.92" y="455.18" class="named"><title>0x0048ef70 WinProcMsg (121 bytes)</title></rect>
 <rect width="7.13" height="6.50" x="570.78" y="276.24" class="todo"><title>0x0040e780 InitialiseScorpion (120 bytes)</title></rect>
 <rect width="7.13" height="6.50" x="580.90" y="276.24" class="todo"><title>0x004183b0 InitialiseTroop (120 bytes)</title></rect>
 <rect width="7.13" height="6.50" x="591.03" y="276.24" class="todo"><title>0x0041c2e0 InitialiseWraith (120 bytes)</title></rect>
