@@ -1098,6 +1098,100 @@ void lara_as_upjump(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_FASTFALL;
 }
 
+void lara_col_upjump(ITEM_INFO *item, COLL_INFO *coll)
+{
+    sint16 *bounds;
+    sint32 edge, edge_catch;
+    sint16 angle;
+
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_STOP;
+        return;
+    }
+    lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -384;
+    coll->bad_ceiling = 192;
+    coll->facing = item->speed >= 0 ? lara.move_angle : lara.move_angle - 32768;
+    coll->hit_ceiling = 0;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 870);
+    if (input & IN_ACTION && lara.gun_status == LG_NO_ARMS && !coll->hit_static) {
+        if (lara.CanMonkeySwing && coll->coll_type == COLL_TOP) {
+            item->goal_anim_state = AS_HANG2;
+            item->current_anim_state = AS_HANG2;
+            item->anim_number = ANIM_UPJUMPGRAB;
+            item->frame_number = anims[ANIM_UPJUMPGRAB].frame_base;
+            item->gravity_status = 0;
+            item->speed = 0;
+            item->fallspeed = 0;
+            lara.gun_status = LG_HANDS_BUSY;
+            MonkeySwingSnap(item, coll);
+            return;
+        }
+        if (coll->coll_type == COLL_FRONT && coll->mid_ceiling <= -384) {
+            edge_catch = LaraTestEdgeCatch(item, coll, &edge);
+            if (edge_catch && (edge_catch >= 0 || LaraTestHangOnClimbWall(item, coll))) {
+                angle = item->pos.y_rot;
+                if (angle >= -6370 && angle <= 6370)
+                    angle = 0;
+                else if (angle >= 10014 && angle <= 22754)
+                    angle = 16384;
+                else if (angle >= 26397 || angle <= -26397)
+                    angle = -32768;
+                else if (angle >= -22754 && angle <= -10014)
+                    angle = -16384;
+                if (!(angle & 0x3FFF)) {
+                    if (TestHangSwingIn(item, angle)) {
+                        item->anim_number = ANIM_UPJUMPGRAB;
+                        item->frame_number = anims[ANIM_UPJUMPGRAB].frame_base;
+                        item->current_anim_state = item->goal_anim_state = AS_HANG2;
+                    } else {
+                        item->anim_number = ANIM_GRABLEDGE;
+                        item->current_anim_state = item->goal_anim_state = AS_HANG;
+                        item->frame_number = anims[ANIM_GRABLEDGE].frame_base + 12;
+                    }
+                    bounds = GetBoundsAccurate(item);
+                    if (edge_catch > 0)
+                        item->pos.y_pos += coll->front_floor - bounds[2];
+                    else
+                        item->pos.y_pos = edge - bounds[2] + 4;
+                    item->pos.x_pos += coll->shift.x;
+                    item->pos.z_pos += coll->shift.z;
+                    item->pos.y_rot = angle;
+                    item->gravity_status = 0;
+                    item->speed = 0;
+                    item->fallspeed = 0;
+                    lara.gun_status = LG_HANDS_BUSY;
+                    lara.torso_y_rot = 0;
+                    lara.torso_x_rot = 0;
+                    return;
+                }
+            }
+        }
+    }
+    ShiftItem(item, coll);
+    if (coll->coll_type == COLL_CLAMP || coll->coll_type == COLL_TOP || coll->coll_type == COLL_TOPFRONT || coll->hit_ceiling)
+        item->fallspeed = 1;
+    if (coll->coll_type != COLL_NONE)
+        item->speed = item->speed > 0 ? 2 : -2;
+    else if (item->fallspeed < -70) {
+        if (input & IN_FORWARD && item->speed < 5)
+            item->speed++;
+        else if (input & IN_BACK && item->speed > -5)
+            item->speed -= 2;
+    }
+    if (item->fallspeed > 0 && coll->mid_floor <= 0) {
+        if (LaraLandedBad(item, coll))
+            item->goal_anim_state = AS_DEATH;
+        else
+            item->goal_anim_state = AS_STOP;
+        item->gravity_status = 0;
+        item->fallspeed = 0;
+        if (coll->mid_floor != NO_HEIGHT)
+            item->pos.y_pos += coll->mid_floor;
+    }
+}
+
 void lara_as_forwardjump(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->goal_anim_state == AS_SWANDIVE || item->goal_anim_state == AS_REACH)
