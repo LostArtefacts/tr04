@@ -10,6 +10,26 @@
 #include "draw.h"
 #include "effect2.h"
 
+void DoFlareInHand(sint32 flare_age)
+{
+    PHD_VECTOR pos;
+
+    pos.x = 11;
+    pos.y = 32;
+    pos.z = 41;
+    GetLaraJointPos(&pos, 14);
+    lara.left_arm.flash_gun = (sint16)DoFlareLight(&pos, flare_age);
+    if (gfLevelFlags & GF_MIRROR && lara_item->room_number == gfMirrorRoom) {
+        pos.z = 2 * gfMirrorZPlane - pos.z;
+        DoFlareLight(&pos, flare_age);
+    }
+    if (lara.flare_age < 900) {
+        if (lara.flare_age)
+            lara.flare_age++;
+    } else if (lara.gun_status == LG_NO_ARMS)
+        lara.gun_status = LG_UNDRAW_GUNS;
+}
+
 void DrawFlareInAir(ITEM_INFO *item)
 {
     phd_PushMatrix();
