@@ -809,7 +809,7 @@ address,size,name,symbol
 0x00451180,181,UpdateSkyLightning,_UpdateSkyLightning
 0x00451240,711,RenderIt,_RenderIt
 0x00451510,604,LoadGameflow,_LoadGameflow
-0x00451770,1624,DoGameflow,_DoGameflow
+0x00451770,1716,DoGameflow,_DoGameflow
 0x00451e30,2096,DoTitle,_DoTitle
 0x00452710,1133,DoLevel,_DoLevel
 0x00452b80,230,DoCredits,_DoCredits
@@ -2308,6 +2308,7 @@ address,size,name,symbol
 0x004bf658,4,gfScriptWad,_gfScriptWad
 0x004bf65c,1,DEL_playingamefmv,_DEL_playingamefmv
 0x004bf65d,1,num_fmvs,_num_fmvs
+0x004bf660,2,fmv_to_play,_fmv_to_play
 0x004bf664,4,gfFog,_gfFog
 0x004bf668,,gfLegendTime,_gfLegendTime
 0x004bf669,1,bDoCredits,_bDoCredits
@@ -2697,6 +2698,7 @@ address,size,name,symbol
 0x007fd250,1,gfMirrorRoom,_gfMirrorRoom
 0x007fd251,1,gfLayer2Vel,_gfLayer2Vel
 0x007fd252,1,gfLayer1Vel,_gfLayer1Vel
+0x007fd254,4,gfResidentCut,_gfResidentCut
 0x007fd258,4,GameTimer,_GameTimer
 0x007fd25c,4,gfLayer2Col,_gfLayer2Col
 0x007fd260,2,gfLevelFlags,_gfLevelFlags

@@ -468,6 +468,16 @@ extern uint8 gfLevelComplete;
 extern GAMEFLOW *Gameflow;
 extern uint8 gfNumMips;
 extern uint8 gfMips[8];
+extern char gfInitialiseGame;
+extern sint32 gfStatus;
+extern uint8 num_fmvs;
+extern uint8 fmv_to_play[2];
+extern uint8 gfLegendTime;
+extern uint8 gfLegend;
+extern uint8 gfCutNumber;
+extern uint8 gfResetHubDest;
+extern uint8 gfResidentCut[4];
+extern CVECTOR gfLensFlareColour;
 extern uint16 *gfStringOffset;
 extern char *gfStringWad;
 extern uint8 bDoCredits;
@@ -487,6 +497,8 @@ extern uint32 CreditsStartPos;
 extern sint32 CreditsInit;
 
 void DoGameflow(void);
+void DoLevel(uint8 Name, uint8 Audio);
+void DoTitle(uint8 Name, uint8 Audio);
 void LoadGameflow(void);
 sint32 DoCredits(void);
 
