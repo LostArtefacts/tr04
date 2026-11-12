@@ -448,6 +448,7 @@ extern uint32 CreditsStartPos;
 extern sint32 CreditsInit;
 
 void DoGameflow(void);
+void LoadGameflow(void);
 sint32 DoCredits(void);
 
 #endif

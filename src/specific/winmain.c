@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
+#include <process.h>
 
 #include "winmain.h"
 #include "../text.h"
@@ -8,6 +10,11 @@
 #include "dxshell.h"
 #include "function_table.h"
 #include "output.h"
+#include "../deltapak.h"
+#include "../gameflow.h"
+#include "audio.h"
+#include "dxsound.h"
+#include "cmdline.h"
 #include "d3dmatrix.h"
 #include "3dmath.h"
 #include "lighting.h"
@@ -33,6 +40,123 @@ void ClearSurfaces(void)
         SW_ClearBuffer(App.dx.lpD3DDevice, 1, &r, D3DCLEAR_TARGET, 0, 1.0F, 0);
     S_DumpScreen();
 }
+
+#ifndef TR4_EXE
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
+{
+    DXDISPLAYMODE *dm;
+    RECT r;
+    HWND desktop;
+    HDC hdc;
+    DEVMODE devmode;
+    char *buf;
+    sint32 size;
+    uint8 drive;
+
+    start_setup = 0;
+    App.mmx = CheckMMXTechnology() != 0;
+    App.SetupComplete = 0;
+    App.AutoTarget = 0;
+    if (WinRunCheck("Tomb Raider - The Last Revelation", "MainGameWindow", &App.mutex))
+        return 0;
+    if (!FindCDDrive()) {
+        drive = 0;
+        while (!drive) {
+            if (MessageBox(0, "Tomb Raider - The Last Revelation CD", "Tomb Raider", MB_RETRYCANCEL | MB_ICONQUESTION) == IDCANCEL)
+                return 0;
+            drive = FindCDDrive();
+        }
+    }
+    LoadGameflow();
+    WinProcessCommandLine(lpCmdLine);
+    App.hInstance = hInstance;
+    App.WindowClass.hIcon = 0;
+    App.WindowClass.lpszMenuName = 0;
+    App.WindowClass.lpszClassName = "MainGameWindow";
+    App.WindowClass.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
+    App.WindowClass.hInstance = hInstance;
+    App.WindowClass.style = CS_VREDRAW | CS_HREDRAW;
+    App.WindowClass.lpfnWndProc = WinMainWndProc;
+    App.WindowClass.cbClsExtra = 0;
+    App.WindowClass.cbWndExtra = 0;
+    App.WindowClass.hCursor = LoadCursor(App.hInstance, MAKEINTRESOURCE(104));
+    if (!RegisterClass(&App.WindowClass)) {
+        Log(1, "Unable To Register Window Class");
+        return 0;
+    }
+    r.left = 0;
+    r.top = 0;
+    r.right = 640;
+    r.bottom = 480;
+    AdjustWindowRect(&r, WS_CAPTION, 0);
+    App.hWnd = CreateWindowEx(WS_EX_APPWINDOW, "MainGameWindow", "Tomb Raider - The Last Revelation", WS_CAPTION, CW_USEDEFAULT, CW_USEDEFAULT, r.right - r.left, r.bottom - r.top, 0, 0, hInstance, 0);
+    if (!App.hWnd) {
+        Log(1, "Unable To Create Window");
+        return 0;
+    }
+    DXGetInfo(&App.DXInfo, App.hWnd);
+    if (start_setup || !LoadSettings()) {
+        if (!DXSetupDialog()) {
+            free(gfScriptFile);
+            free(gfLanguageFile);
+            WinClose();
+            return 0;
+        }
+        LoadSettings();
+    }
+    SetWindowPos(App.hWnd, 0, App.dx.rScreen.left, App.dx.rScreen.top, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+    desktop = GetDesktopWindow();
+    hdc = GetDC(desktop);
+    App.Desktopbpp = GetDeviceCaps(hdc, BITSPIXEL);
+    ReleaseDC(desktop, hdc);
+    App.dx.WaitAtBeginScene = 0;
+    App.dx.InScene = 0;
+    App.fmv = 0;
+    dm = &G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].DisplayModes[G_dxinfo->nDisplayMode];
+    if (!DXCreate(dm->w, dm->h, dm->bpp, App.StartFlags, &App.dx, App.hWnd, WS_CAPTION)) {
+        MessageBox(0, SCRIPT_TEXT(TXT_Failed_To_Setup_DirectX), "Tomb Raider IV", 0);
+        return 0;
+    }
+    UpdateWindow(App.hWnd);
+    ShowWindow(App.hWnd, nShowCmd);
+    if (App.dx.Flags & 1) {
+        SetCursor(0);
+        ShowCursor(0);
+    }
+    DXInitKeyboard(App.hWnd, App.hInstance);
+    App.hAccel = LoadAccelerators(hInstance, MAKEINTRESOURCE(101));
+    if (!App.SoundDisabled) {
+        DXDSCreate();
+        ACMInit();
+    }
+    cutseqpakPtr = 0;
+    buf = 0;
+    size = LoadFile("data\\cutseq.pak", &buf);
+    if (size) {
+        cutseqpakPtr = (char *)malloc(*(sint32 *)buf);
+        Decompress(cutseqpakPtr, buf + 4, size - 4, *(sint32 *)buf);
+        free(buf);
+    }
+    MainThread.active = 1;
+    MainThread.ended = 0;
+    MainThread.handle = _beginthreadex(0, 0, GameMain, 0, 0, (unsigned int *)&MainThread.address);
+    WinProcMsg();
+    MainThread.ended = 1;
+    while (MainThread.active) {
+    }
+    if (cutseqpakPtr)
+        free(cutseqpakPtr);
+    WinClose();
+    desktop = GetDesktopWindow();
+    hdc = GetDC(desktop);
+    devmode.dmSize = sizeof(DEVMODE);
+    devmode.dmBitsPerPel = App.Desktopbpp;
+    ReleaseDC(desktop, hdc);
+    devmode.dmFields = DM_BITSPERPEL;
+    ChangeDisplaySettings(&devmode, 0);
+    return 0;
+}
+#endif
 
 sint32 CheckMMXTechnology(void)
 {

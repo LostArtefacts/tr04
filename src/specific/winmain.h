@@ -165,6 +165,8 @@ uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex);
 void WinClose(void);
 sint32 CheckMMXTechnology(void);
 void WinProcMsg(void);
+void WinProcessCommandLine(LPSTR cmd);
+LRESULT CALLBACK WinMainWndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 void WinProcessCommands(sint32 cmd);
 void ClearSurfaces(void);
 
