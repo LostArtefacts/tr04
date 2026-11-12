@@ -1869,6 +1869,42 @@ void lara_col_turnswitch(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void lara_as_pulley(ITEM_INFO *item, COLL_INFO *coll)
+{
+    ITEM_INFO *p;
+
+    p = (ITEM_INFO *)lara.GeneralPtr;
+    lara.look = 0;
+    coll->enable_spaz = 0;
+    coll->enable_baddie_push = 0;
+    if (input & IN_ACTION && p->trigger_flags)
+        item->goal_anim_state = AS_PULLEY;
+    else
+        item->goal_anim_state = AS_STOP;
+    if (item->anim_number == ANIM_PULLEY && item->frame_number == anims[ANIM_PULLEY].frame_base + 44) {
+        if (p->trigger_flags) {
+            if (!p->item_flags[1]) {
+                p->trigger_flags--;
+                if (!p->trigger_flags) {
+                    p->status = ITEM_DEACTIVATED;
+                    p->item_flags[2] = 1;
+                    if (p->item_flags[3] < 0)
+                        p->item_flags[0] = 1;
+                    else
+                        p->trigger_flags = abs(p->item_flags[3]);
+                } else {
+                    if (p->item_flags[2]) {
+                        p->item_flags[2] = 0;
+                        p->status = ITEM_DEACTIVATED;
+                    }
+                }
+            }
+        }
+    }
+    if (item->anim_number == ANIM_PULLEY2STAT && item->frame_number == anims[ANIM_PULLEY2STAT].frame_end - 1)
+        lara.gun_status = LG_NO_ARMS;
+}
+
 void lara_col_walk(ITEM_INFO *item, COLL_INFO *coll)
 {
     item->gravity_status = 0;
