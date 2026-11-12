@@ -28,3 +28,24 @@ void InitialiseCroc(sint16 item_number)
         item->current_anim_state = item->goal_anim_state = 1;
     }
 }
+
+void InitialiseLocustEmitter(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    switch (item->pos.y_rot) {
+    case 0:
+        item->pos.z_pos += 512;
+        break;
+    case 16384:
+        item->pos.x_pos += 512;
+        break;
+    case -32768:
+        item->pos.z_pos -= 512;
+        break;
+    case -16384:
+        item->pos.x_pos -= 512;
+        break;
+    }
+}

@@ -8,5 +8,6 @@
 
 
 void InitialiseCroc(sint16 item_number);
+void InitialiseLocustEmitter(sint16 item_number);
 
 #endif
