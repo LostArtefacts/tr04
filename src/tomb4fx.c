@@ -13,6 +13,7 @@
 #include "specific/specificfx.h"
 #include "anim.h"
 #include "objnums.h"
+#include "draw.h"
 
 sint32 GetFreeFireSpark(void)
 {
@@ -419,6 +420,29 @@ sint32 GetFreeGunshell(void)
     if (next_gunshell >= 24)
         next_gunshell = 0;
     return min_life_num;
+}
+
+void DrawGunshells(void)
+{
+    GUNSHELL_STRUCT *p;
+    OBJECT_INFO *obj;
+    sint32 i;
+
+    phd_left = 0;
+    phd_right = phd_winwidth;
+    phd_top = 0;
+    phd_bottom = phd_winheight;
+    p = Gunshells;
+    for (i = 24; i > 0; i--, p++) {
+        if (p->counter) {
+            obj = &objects[p->object_number];
+            phd_PushMatrix();
+            phd_TranslateAbs(p->pos.x_pos, p->pos.y_pos, p->pos.z_pos);
+            phd_RotYXZ(p->pos.y_rot, p->pos.x_rot, p->pos.z_rot);
+            phd_PutPolygons(meshes[obj->mesh_index], -1);
+            phd_PopMatrix();
+        }
+    }
 }
 
 void TriggerSmallSplash(sint32 x, sint32 y, sint32 z, sint32 num)

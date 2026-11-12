@@ -195,6 +195,7 @@ void SetGunFlash(sint32 weapon);
 void Fade(void);
 void DrawLensFlares(ITEM_INFO *item);
 void TriggerLightningGlow(sint32 x, sint32 y, sint32 z, sint32 rgb);
+void DrawGunshells(void);
 
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;

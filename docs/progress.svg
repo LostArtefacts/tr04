@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="202.95" height="12" x="0" y="0" class="named"><title>918 · 59.34%</title></rect>
-<rect width="0.44" height="12" x="202.95" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
-<rect width="7.07" height="12" x="203.39" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
-<rect width="131.54" height="12" x="210.46" y="0" class="todo"><title>595 · 38.46%</title></rect>
+<rect width="203.17" height="12" x="0" y="0" class="named"><title>919 · 59.41%</title></rect>
+<rect width="0.44" height="12" x="203.17" y="0" class="decompiled"><title>2 · 0.13%</title></rect>
+<rect width="7.07" height="12" x="203.61" y="0" class="nonmatching"><title>32 · 2.07%</title></rect>
+<rect width="131.32" height="12" x="210.68" y="0" class="todo"><title>594 · 38.40%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">59.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">918</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">595</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">919</tspan> · <tspan class="decompiled">2</tspan> · <tspan class="nonmatching">32</tspan> · <tspan class="todo">594</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="87.68" height="12" x="0" y="0" class="named"><title>159 KB · 25.64%</title></rect>
-<rect width="0.12" height="12" x="87.68" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
-<rect width="9.39" height="12" x="87.80" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
-<rect width="244.81" height="12" x="97.19" y="0" class="todo"><title>444 KB · 71.58%</title></rect>
+<rect width="87.77" height="12" x="0" y="0" class="named"><title>159 KB · 25.66%</title></rect>
+<rect width="0.12" height="12" x="87.77" y="0" class="decompiled"><title>218 bytes · 0.04%</title></rect>
+<rect width="9.39" height="12" x="87.89" y="0" class="nonmatching"><title>17 KB · 2.74%</title></rect>
+<rect width="244.72" height="12" x="97.28" y="0" class="todo"><title>444 KB · 71.56%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">25.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">159 KB</tspan> · <tspan class="decompiled">218 bytes</tspan> · <tspan class="nonmatching">17 KB</tspan> · <tspan class="todo">444 KB</tspan></text>
@@ -633,7 +633,7 @@
 <rect width="12" height="12" x="210" y="165" class="named"><title>0x00439060 GetFreeGunshell (131 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="165" class="todo"><title>0x004390f0 TriggerGunShell (588 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="165" class="todo"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="165" class="todo"><title>0x004395b0 DrawGunshells (162 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="165" class="named"><title>0x004395b0 DrawGunshells (162 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="165" class="named"><title>0x00439660 TriggerSmallSplash (274 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="165" class="named"><title>0x00439780 GetFreeBubble (98 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="165" class="named"><title>0x004397f0 CreateBubble (177 bytes)</title></rect>
@@ -2452,7 +2452,7 @@
 <rect width="8.06" height="7.81" x="618.37" y="244.81" class="named"><title>0x0046c1a0 sixteen_init (163 bytes)</title></rect>
 <rect width="8.01" height="7.81" x="629.44" y="244.81" class="todo"><title>0x00407700 TriggerHarpyMissile (162 bytes)</title></rect>
 <rect width="8.01" height="7.81" x="640.45" y="244.81" class="named"><title>0x00425d70 lara_as_turn_r (162 bytes)</title></rect>
-<rect width="8.01" height="7.81" x="651.46" y="244.81" class="todo"><title>0x004395b0 DrawGunshells (162 bytes)</title></rect>
+<rect width="8.01" height="7.81" x="651.46" y="244.81" class="named"><title>0x004395b0 DrawGunshells (162 bytes)</title></rect>
 <rect width="8.01" height="7.81" x="662.48" y="244.81" class="named"><title>0x00442670 AIGuard (162 bytes)</title></rect>
 <rect width="8.01" height="7.81" x="673.49" y="244.81" class="named"><title>0x00450760 gar_RotYXZsuperpack (162 bytes)</title></rect>
 <rect width="7.96" height="7.81" x="684.51" y="244.81" class="named"><title>0x0040b120 GunMiss (161 bytes)</title></rect>
