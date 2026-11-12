@@ -100,3 +100,41 @@ void ThrowSticks(ITEM_INFO *item)
     for (i = 0; i < 3; i++)
         items[senet_item[i]].trigger_flags = 1;
 }
+
+void ControlGodHead(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        switch (item->pos.y_rot) {
+        case 0:
+            item->pos.z_pos &= ~1023;
+            break;
+        case 0x4000:
+            item->pos.x_pos &= ~1023;
+            break;
+        case -0x8000:
+            item->pos.z_pos |= 1023;
+            break;
+        case -0x4000:
+            item->pos.x_pos |= 1023;
+            break;
+        }
+        if (!item->item_flags[0]) {
+            if (item->item_flags[1] < 4096) {
+                item->item_flags[1] += 128;
+            } else {
+                item->item_flags[0] = 1;
+                item->item_flags[1] = 4096;
+                item->item_flags[2] = 210;
+            }
+        } else if (item->item_flags[2]) {
+            item->item_flags[2]--;
+        } else if (item->item_flags[1] >= 128) {
+            item->item_flags[1] -= 128;
+        } else {
+            KillItem(item_number);
+        }
+    }
+}
