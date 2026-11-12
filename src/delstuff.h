@@ -2,6 +2,7 @@
 #define DELSTUFF_H
 
 #include "3dglodef.h"
+#include "items.h"
 
 enum lara_mesh {
     LM_HIPS,
@@ -24,6 +25,7 @@ enum lara_mesh {
 void GetLaraJointPos(PHD_VECTOR *pos, sint32 node);
 void SetLaraUnderwaterNodes(void);
 void CalcLaraMatrices(sint32 flag);
+void DrawLara(ITEM_INFO *item, sint32 mirror);
 void Rich_CalcLaraMatrices_Normal(sint16 *frame, sint32 *bone, sint32 flag);
 void Rich_CalcLaraMatrices_Interpolated(sint16 *frame1, sint16 *frame2, sint32 frac, sint32 rate, sint32 *bone, sint32 flag);
 
@@ -35,5 +37,7 @@ extern char HairRotScratchVertNums[5][12];
 extern sint32 bLaraUnderWater;
 extern char bLaraInWater;
 extern sint16 *GLaraShadowframe;
+
+extern sint32 lara_matrices[180];
 
 #endif
