@@ -86,5 +86,6 @@ extern sint32 DrawPrimitiveCnt;
 extern sint32 Unk5c0478;
 void SubdivideEdge(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v, sint16 *c, float tu1, float tv1, float tu2, float tv2, float *tu, float *tv);
 void nullsub_10(void);
+void j_nullsub_10(void);
 
 #endif

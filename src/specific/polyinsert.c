@@ -61,6 +61,11 @@ void InitialiseSortList(void)
     SortCount = 0;
 }
 
+void j_nullsub_10(void)
+{
+    nullsub_10();
+}
+
 void nullsub_10(void)
 {
 }
