@@ -2300,6 +2300,7 @@ address,size,name,symbol
 0x0052a344,4,num_level_meshes,_num_level_meshes
 0x0052a348,4,NumLevelFogBulbs,_NumLevelFogBulbs
 0x0052a34c,4,clip_bottom,_clip_bottom
+0x0052a350,1760,FogBulbs,_FogBulbs
 0x0052aa30,4,clip_right,_clip_right
 0x0052aa34,4,clip_top,_clip_top
 0x0052aa38,4,clip_left,_clip_left
@@ -2386,6 +2387,7 @@ address,size,name,symbol
 0x00660c88,4,SortCount,_SortCount
 0x00660c8c,4,pSortBuffer,_pSortBuffer
 0x00660c94,65536,SortList,_SortList
+0x00670c94,20,ActiveFogBulbs,_ActiveFogBulbs
 0x00670cac,4,NumActiveFogBulbs,_NumActiveFogBulbs
 0x00670cb4,4,NumFogBulbsInRange,_NumFogBulbsInRange
 0x00670cb8,4,NumFXFogBulbs,_NumFXFogBulbs

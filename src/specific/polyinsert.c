@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "polyinsert.h"
 #include "winmain.h"
 
@@ -110,4 +111,24 @@ void TriggerFXFogBulb(sint32 x, sint32 y, sint32 z, sint32 FXRad, sint32 density
 sint32 IsVolumetric(void)
 {
     return App.Volumetric;
+}
+
+void InitialiseFogBulbs(void)
+{
+    FOGBULB_STRUCT *FogBulb;
+    sint32 i;
+
+    NumActiveFogBulbs = 0;
+    qsort(&FogBulbs, NumLevelFogBulbs, sizeof(FOGBULB_STRUCT), DistCompare);
+    for (i = 0; i < NumLevelFogBulbs; i++) {
+        FogBulb = &FogBulbs[i];
+        CreateFogPos(FogBulb);
+        if (FogBulb->inRange) {
+            ActiveFogBulbs[NumActiveFogBulbs] = FogBulb;
+            NumActiveFogBulbs++;
+            if (NumActiveFogBulbs >= 5) {
+                return;
+            }
+        }
+    }
 }

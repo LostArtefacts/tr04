@@ -43,6 +43,12 @@ extern SORTLIST **pSortList;
 extern sint32 SortCount;
 extern FOGBULB_STRUCT FXFogBulbs[5];
 extern sint32 NumFXFogBulbs;
+extern FOGBULB_STRUCT FogBulbs[20];
+extern sint32 NumLevelFogBulbs;
+extern FOGBULB_STRUCT *ActiveFogBulbs[5];
+extern sint32 NumActiveFogBulbs;
+
+int DistCompare(const void *a, const void *b);
 
 void CreateFogPos(FOGBULB_STRUCT *FogBulb);
 void ControlFXBulb(FOGBULB_STRUCT *FogBulb);
@@ -53,5 +59,6 @@ void DoSort(sint32 left, sint32 right, SORTLIST **list);
 void SortPolyList(sint32 count, SORTLIST **list);
 void CreateFXBulbs(void);
 void TriggerFXFogBulb(sint32 x, sint32 y, sint32 z, sint32 FXRad, sint32 density, sint32 r, sint32 g, sint32 b, sint32 room_number);
+void InitialiseFogBulbs(void);
 
 #endif
