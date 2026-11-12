@@ -42,6 +42,7 @@ void DrawRooms(sint16 CurrentRoom);
 void SetRoomBounds(sint16 *door, sint32 rn, ROOM_INFO *actualRoom);
 sint32 DrawPhaseGame(void);
 void GetRoomBounds(void);
+void S_InsertRoom(sint16 room_number);
 
 extern STATIC_INFO static_objects[60];
 extern sint16 LightningCount;
@@ -62,5 +63,6 @@ extern sint32 outside_left;
 extern sint32 outside_right;
 extern sint32 outside_top;
 extern sint32 outside_bottom;
+extern sint32 current_room;
 
 #endif

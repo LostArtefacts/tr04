@@ -28,6 +28,20 @@ sint32 DrawPhaseGame(void)
     return camera.number_frames;
 }
 
+void S_InsertRoom(sint16 room_number)
+{
+    ROOM_INFO *r;
+
+    current_room = room_number;
+    r = &room[room_number];
+    phd_TranslateAbs(0, 0, 0);
+    phd_left = r->left;
+    phd_right = r->right;
+    phd_top = r->top;
+    phd_bottom = r->bottom;
+    _InsertRoom(r, 1);
+}
+
 void GetRoomBounds(void)
 {
     ROOM_INFO *r;
