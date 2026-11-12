@@ -423,7 +423,7 @@ address,size,name,symbol
 0x0042e630,739,FireWeapon,_FireWeapon
 0x0042e920,336,HitTarget,_HitTarget
 0x0042ea70,76,WeaponObject,_WeaponObject
-0x0042eac0,79,WeaponObjectMesh,_WeaponObjectMesh
+0x0042eac0,100,WeaponObjectMesh,_WeaponObjectMesh
 0x0042eb30,2381,DoProperDetection,_DoProperDetection
 0x0042f480,120,get_current_ammo_pointer,_get_current_ammo_pointer
 0x0042f510,477,DoFlareLight,_DoFlareLight

@@ -68,3 +68,27 @@ sint32 WeaponObject(sint32 weapon_type)
         return PISTOLS_ANIM;
     }
 }
+
+sint32 WeaponObjectMesh(sint32 weapon_type)
+{
+    switch (weapon_type) {
+    case WEAPON_REVOLVER:
+        if (lara.sixshooter_type_carried & 4)
+            return LARA_REVOLVER_LASER;
+        else
+            return SIXSHOOTER_ANIM;
+    case WEAPON_UZI:
+        return UZI_ANIM;
+    case WEAPON_SHOTGUN:
+        return SHOTGUN_ANIM;
+    case WEAPON_GRENADE:
+        return GRENADE_GUN_ANIM;
+    case WEAPON_CROSSBOW:
+        if (lara.crossbow_type_carried & 4)
+            return LARA_CROSSBOW_LASER;
+        else
+            return CROSSBOW_ANIM;
+    default:
+        return PISTOLS_ANIM;
+    }
+}
