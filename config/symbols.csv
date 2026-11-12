@@ -1551,7 +1551,7 @@ address,size,name,symbol
 0x0049c700,16,DBLog_OpenMapping,_DBLog_OpenMapping
 0x0049c710,61,DBLog_Post,_DBLog_Post
 0x0049c750,291,Log,_Log
-0x0049c880,6,DirectDrawEnumerateA,_DirectDrawEnumerateA
+0x0049c880,6,DirectDrawEnumerateA,_DirectDrawEnumerateA@8
 0x0049c886,6,DirectDrawCreate,_DirectDrawCreate
 0x0049d4b4,3,nullsub_4,_nullsub_4
 0x0049d4c4,1,nullsub_5,_nullsub_5
@@ -1580,7 +1580,7 @@ address,size,name,symbol
 0x0049fdc0,306,inflate_flush,_inflate_flush
 0x0049ff00,911,inflate_fast,_inflate_fast
 0x004a0290,6,DirectSoundCreate,_DirectSoundCreate@12
-0x004a0296,6,DSOUND_2,_DSOUND_2
+0x004a0296,6,DirectSoundEnumerateA,_DirectSoundEnumerateA@8
 0x004a029c,6,acmDriverDetailsA,_acmDriverDetailsA@12
 0x004a02a2,6,acmStreamPrepareHeader,_acmStreamPrepareHeader@12
 0x004a02a8,6,acmStreamSize,_acmStreamSize@16

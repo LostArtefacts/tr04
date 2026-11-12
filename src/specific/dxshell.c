@@ -15,6 +15,17 @@ sint32 DXAttempt(HRESULT r)
     return DD_FALSE;
 }
 
+sint32 DXGetInfo(DXINFO *dxinfo, HWND hwnd)
+{
+    Log(2, "DXInitialise");
+    G_hwnd = hwnd;
+    Log(5, "Enumerating DirectDraw Devices");
+    DXAttempt(DirectDrawEnumerate(DXEnumDirectDraw, dxinfo));
+    DXAttempt(DirectSoundEnumerate(DXEnumDirectSound, dxinfo));
+    G_dxinfo = dxinfo;
+    return 1;
+}
+
 void *AddStruct(void *p, sint32 num, sint32 size)
 {
     void *ptr;
