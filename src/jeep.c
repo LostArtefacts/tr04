@@ -12,7 +12,6 @@
 #include "specific/function_stubs.h"
 #include "specific/specificfx.h"
 
-
 void DrawJeepExtras(ITEM_INFO *item)
 {
     JEEPINFO *jeep;
@@ -21,6 +20,28 @@ void DrawJeepExtras(ITEM_INFO *item)
         return;
     jeep = (JEEPINFO *)item->data;
     DrawJeepSpeedo(phd_winwidth - 64, phd_winheight - 16, jeep->velocity, 0x6000, 0x8000, 32, jeep->gear);
+}
+
+sint32 JeepCheckGetOut(void)
+{
+    ITEM_INFO *item;
+
+    item = lara_item;
+    if (item->current_anim_state == 10 && item->frame_number == anims[item->anim_number].frame_end) {
+        item->pos.y_rot += 0x4000;
+        item->anim_number = ANIM_STOP;
+        item->frame_number = anims[ANIM_STOP].frame_base;
+        item->current_anim_state = item->goal_anim_state = AS_STOP;
+        item->pos.x_pos -= 512 * phd_sin(item->pos.y_rot) >> W2V_SHIFT;
+        item->pos.z_pos -= 512 * phd_cos(item->pos.y_rot) >> W2V_SHIFT;
+        item->pos.x_rot = item->pos.z_rot = 0;
+        lara.vehicle = NO_ITEM;
+        lara.gun_status = LG_NO_ARMS;
+        CurrentAtmosphere = 110;
+        IsAtmospherePlaying = 1;
+        S_CDPlay(110, 1);
+    }
+    return 1;
 }
 
 sint32 DoShift(ITEM_INFO *item, PHD_VECTOR *pos, PHD_VECTOR *old)

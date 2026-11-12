@@ -25,5 +25,6 @@ typedef struct jeepinfo {
 void JeepStart(ITEM_INFO *item, ITEM_INFO *l);
 sint32 DoShift(ITEM_INFO *item, PHD_VECTOR *pos, PHD_VECTOR *old);
 void DrawJeepExtras(ITEM_INFO *item);
+sint32 JeepCheckGetOut(void);
 
 #endif
