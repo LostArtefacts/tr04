@@ -1695,6 +1695,49 @@ void SW_SpanGTAddInt(void)
     }
 }
 
+void SW_SpanGTKeyInt(void)
+{
+    SW_SPAN *s;
+    uint8 *row, *t;
+    uint32 *p, *tex;
+    uint32 u, v, mask, col;
+    uint16 c0, c1, c2;
+    sint32 n, sh;
+
+    s = (SW_SPAN *)SW_SpanBuffer;
+    if (s != SW_SpanEnd) {
+        row = (uint8 *)SW_Surface + SW_SpanY * SW_SurfacePitch;
+        sh = SW_TexShift;
+        mask = (0xFF0000 << sh) & 0xFF0000;
+        tex = (uint32 *)(SW_TextureBits + SW_MipOffsets[sh]);
+        do {
+            p = (uint32 *)row + s->x;
+            n = s->n;
+            if (n > 0) {
+                c0 = s->c[0];
+                c1 = s->c[1];
+                c2 = s->c[2];
+                u = s->tex[0];
+                v = s->tex[2];
+                do {
+                    t = (uint8 *)&tex[((u & mask) >> (sh + 16)) | ((v & mask) >> (sh * 2 + 8))];
+                    col = (SW_MulTable[(c2 & 0xFF00) + t[2]] << 16) | (SW_MulTable[(c1 & 0xFF00) + t[1]] << 8) | SW_MulTable[(c0 & 0xFF00) + t[0]];
+                    if (col)
+                        *p = col;
+                    p++;
+                    c0 += SW_SpanGrad[0];
+                    c2 += SW_SpanGrad[2];
+                    c1 += SW_SpanGrad[1];
+                    u += SW_SpanDU;
+                    v += SW_SpanDV;
+                } while (--n);
+            }
+            row += SW_SurfacePitch;
+            s++;
+        } while (s != SW_SpanEnd);
+    }
+}
+
 void SW_CopyBuffer(void *dst, void *src, sint32 width)
 {
     if (!SW_UseMMX)
