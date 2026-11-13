@@ -391,6 +391,54 @@ uint8 WinRunCheck(LPSTR WindowName, LPSTR ClassName, HANDLE *mutex)
     return 0;
 }
 
+void WinProcessCommandLine(char *cmd)
+{
+    COMMANDLINES *command;
+    char *pCommand;
+    char *p;
+    uint32 i, j, l, num;
+    char parameter[20];
+
+    Log(2, "WinProcessCommandLine");
+    num = sizeof(commandlines) / sizeof(commandlines[0]);
+    for (i = 0; i < num; i++) {
+        commandlines[i].code("_INIT");
+    }
+    for (i = 0; i < strlen(cmd); i++) {
+        if (toupper((uint8)cmd[i]))
+            cmd[i] = toupper((uint8)cmd[i]);
+    }
+    for (i = 0; i < num; i++) {
+        memset(parameter, 0, sizeof(parameter));
+        pCommand = strstr(cmd, commandlines[i].command);
+        if (pCommand) {
+            if (commandlines[i].needs_parameter) {
+                l = strlen(pCommand);
+                for (j = 0; j < l; j++, pCommand++) {
+                    if (*pCommand == '=') {
+                        p = pCommand + 1;
+                        l = strlen(p);
+                        for (j = 0; j < l; j++, p++) {
+                            if (*p != ' ')
+                                break;
+                        }
+                        l = strlen(p);
+                        for (j = 0; j < l; j++) {
+                            if (j[p] == ' ')
+                                break;
+                        }
+                        strncpy(parameter, p, j);
+                        break;
+                    }
+                }
+                commandlines[i].code(parameter);
+            } else {
+                commandlines[i].code(0);
+            }
+        }
+    }
+}
+
 void WinDisplayString(sint32 x, sint32 y, char *string, ...)
 {
     va_list list;

@@ -2196,6 +2196,7 @@ address,size,name,symbol
 0x004b22f8,4,XAFlag,_XAFlag
 0x004b2408,31,Var4b2408,_Var4b2408
 0x004b2428,31,Var4b2428,_Var4b2428
+0x004b24e0,90,commandlines,_commandlines
 0x004b253a,1,Filter,_Filter
 0x004b253c,14,ASCIIToANSITable,_ASCIIToANSITable
 0x004b25d0,4,water_color_R,_water_color_R

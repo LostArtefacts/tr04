@@ -143,6 +143,13 @@ typedef struct WINAPP {
     sint32 AutoTarget;
 } WINAPP;
 
+typedef struct COMMANDLINES {
+    char command[20];
+    uint8 needs_parameter;
+    void (*code)(char *);
+    char parameter[20];
+} COMMANDLINES;
+
 void DXSaveScreen(LPDIRECTDRAWSURFACE4 surf, const char *name);
 sint32 MungeFPCW(sint16 *fpcw);
 void RestoreFPCW(sint16 fpcw);
@@ -175,7 +182,9 @@ void nullsub_12(void);
 void j_nullsub_12(void);
 void nullsub_13(void);
 void j_nullsub_13(void);
+void WinProcessCommandLine(char *cmd);
 
+extern COMMANDLINES commandlines[2];
 extern WINAPP App;
 extern sint32 resChangeCounter;
 extern DXINFO *G_dxinfo;
