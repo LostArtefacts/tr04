@@ -1621,35 +1621,43 @@ void AddLineClippedSorted(D3DTLVERTEX *v0, D3DTLVERTEX *v1, sint16 drawtype)
 
 void CalcColorSplitMMX(D3DCOLOR s, D3DCOLOR *d)
 {
-    __asm {
-        xor eax, eax
-        mov ecx, s
-        movd mm3, rgbmask
-        movd mm0, ecx
-        movd mm1, rgb80h
-        psubusb mm0, mm1
-        movd mm2, eax
-        movd mm5, zero
-        punpcklbw mm5, mm0
-        psrlw mm5, 9
-        packuswb mm0, mm5
-        psrlq mm0, 0x20
-        movd ebx, mm0
-        pcmpgtb mm0, mm2
-        movd eax, mm0
-        pandn mm0, mm3
-        movd mm1, ecx
-        pand mm1, mm0
-        paddusb mm1, mm1
-        movd ecx, mm1
-        mov edx, d
-        or ecx, eax
-        mov [edx], ecx
-        mov ecx, [edx + 4]
-        and ebx, 0xFFFFFF
-        or ecx, ebx
-        mov [edx + 4], ecx
+    sint32 r, g, b, sr, sg, sb;
+
+    r = CLRR(s);
+    g = CLRG(s);
+    b = CLRB(s);
+    sr = 0;
+    sg = 0;
+    sb = 0;
+    if (r > 128)
+        sr = (r - 128) >> 1;
+    if (g > 128)
+        sg = (g - 128) >> 1;
+    if (b > 128)
+        sb = (b - 128) >> 1;
+    if (sr)
+        r = 255;
+    else {
+        r <<= 1;
+        if (r > 255)
+            r = 255;
     }
+    if (sg)
+        g = 255;
+    else {
+        g <<= 1;
+        if (g > 255)
+            g = 255;
+    }
+    if (sb)
+        b = 255;
+    else {
+        b <<= 1;
+        if (b > 255)
+            b = 255;
+    }
+    d[0] = RGBONLY(r, g, b);
+    d[1] |= RGBONLY(sr, sg, sb);
     d[0] &= 0xFFFFFF;
     d[0] |= GlobalAlpha;
 }

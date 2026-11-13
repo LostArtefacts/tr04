@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="339.21" height="12" x="0" y="0" class="named"><title>1270 · 81.94%</title></rect>
-<rect width="63.84" height="12" x="339.21" y="0" class="nonmatching"><title>239 · 15.42%</title></rect>
+<rect width="338.95" height="12" x="0" y="0" class="named"><title>1269 · 81.87%</title></rect>
+<rect width="64.10" height="12" x="338.95" y="0" class="nonmatching"><title>240 · 15.48%</title></rect>
 <rect width="10.95" height="12" x="403.05" y="0" class="todo"><title>41 · 2.65%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1270</tspan> · <tspan class="nonmatching">239</tspan> · <tspan class="todo">41</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1269</tspan> · <tspan class="nonmatching">240</tspan> · <tspan class="todo">41</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="227.10" height="12" x="0" y="0" class="named"><title>343 KB · 54.85%</title></rect>
-<rect width="167.38" height="12" x="227.10" y="0" class="nonmatching"><title>253 KB · 40.43%</title></rect>
+<rect width="227.02" height="12" x="0" y="0" class="named"><title>343 KB · 54.83%</title></rect>
+<rect width="167.47" height="12" x="227.02" y="0" class="nonmatching"><title>253 KB · 40.45%</title></rect>
 <rect width="19.52" height="12" x="394.48" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="24.50">54.9%</text>
+<text text-anchor="end" x="594" y="24.50">54.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">253 KB</tspan> · <tspan class="todo">29 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1381,7 +1381,7 @@
 <rect width="12" height="12" x="210" y="390" class="nonmatching"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="390" class="nonmatching"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="390" class="named"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="390" class="named"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="390" class="nonmatching"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="390" class="named"><title>0x004849a0 AddPrelitMMX (122 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="390" class="named"><title>0x00484a20 CalcColorSplit (217 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="390" class="named"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
@@ -2558,7 +2558,7 @@
 <rect width="6.78" height="7.12" x="720.66" y="266.39" class="named"><title>0x00403c10 DrawLocusts (126 bytes)</title></rect>
 <rect width="6.78" height="7.12" x="730.44" y="266.39" class="named"><title>0x0040e630 DrawScarabs (126 bytes)</title></rect>
 <rect width="6.78" height="7.12" x="740.22" y="266.39" class="named"><title>0x0041fdd0 InitialiseHair (126 bytes)</title></rect>
-<rect width="6.82" height="7.09" x="561.08" y="276.52" class="named"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
+<rect width="6.82" height="7.09" x="561.08" y="276.52" class="nonmatching"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="6.82" height="7.09" x="561.08" y="286.60" class="named"><title>0x00490a90 phd_GetVectorAngles (126 bytes)</title></rect>
 <rect width="6.82" height="7.03" x="561.08" y="296.69" class="named"><title>0x00409180 ExplodeFX (125 bytes)</title></rect>
 <rect width="6.82" height="7.03" x="561.08" y="306.72" class="named"><title>0x00421620 LaraFloorFront (125 bytes)</title></rect>
