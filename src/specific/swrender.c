@@ -2579,6 +2579,125 @@ void SW_SpanG(void)
 }
 #endif
 
+#ifndef FEAT_C_ASM
+extern uint32 SW_SpanGFogAddConst[2];
+extern uint32 SW_SpanGFogAddTmp[2];
+void SW_SpanGFogAdd(void)
+{
+    __asm {
+        mov esi, dword ptr [SW_SpanBuffer]
+        cmp esi, dword ptr [SW_SpanEnd]
+        je Done
+        cmp dword ptr [SW_FogColor], 0
+        je Done
+        push ebp
+        mov edi, dword ptr [SW_Surface]
+        mov eax, dword ptr [SW_SpanY]
+        imul eax, dword ptr [SW_SurfacePitch]
+        add edi, eax
+        movq mm4, qword ptr [SW_FogColor]
+        pxor mm5, mm5
+        punpcklbw mm5, mm4
+        psrlw mm5, 1
+        movq mm1, qword ptr [SW_SpanFogGrad]
+        pand mm1, qword ptr [SW_SpanGFogAddConst]
+        movq mm0, mm1
+        movq mm2, mm1
+        psllq mm1, 0x10
+        psllq mm2, 0x20
+        por mm0, mm1
+        por mm0, mm2
+        pmulhw mm0, mm5
+        psllw mm0, 1
+        movq qword ptr [SW_SpanGFogAddTmp], mm0
+    L0:
+        mov ebx, dword ptr [esi]
+        mov eax, dword ptr [esi + 4]
+        shl ebx, 2
+        push edi
+        add edi, ebx
+        or eax, eax
+        jle L6
+        movd mm0, dword ptr [esi + 0xc]
+        pand mm0, qword ptr [SW_SpanGFogAddConst]
+        pxor mm0, qword ptr [SW_SpanGFogAddConst]
+        movq mm2, mm0
+        psllq mm2, 0x10
+        por mm0, mm2
+        psllq mm2, 0x10
+        por mm0, mm2
+        movq mm4, qword ptr [SW_FogColor]
+        pxor mm5, mm5
+        punpcklbw mm5, mm4
+        psrlw mm5, 1
+        psrlw mm0, 1
+        pmulhw mm0, mm5
+        psllw mm0, 2
+        movq mm1, qword ptr [SW_SpanGFogAddTmp]
+        test edi, 7
+        je L1
+        movq mm7, mm0
+        add edi, 4
+        psrlw mm7, 8
+        psubw mm0, mm1
+        movd mm6, dword ptr [edi - 4]
+        packuswb mm7, mm7
+        paddusb mm7, mm6
+        dec eax
+        movd dword ptr [edi - 4], mm7
+        je L4
+    L1:
+        cmp eax, 2
+        jb L3
+        push eax
+        movq mm2, mm0
+        psubw mm2, mm1
+        shr eax, 1
+        psllw mm1, 1
+    L2:
+        add edi, 8
+        movq mm6, mm0
+        psrlw mm6, 8
+        movq mm7, mm2
+        movq mm5, qword ptr [edi - 8]
+        psrlw mm7, 8
+        packuswb mm6, mm7
+        psubw mm2, mm1
+        paddusb mm6, mm5
+        psubw mm0, mm1
+        movq qword ptr [edi - 8], mm6
+        dec eax
+        jne L2
+        pop eax
+        and eax, 1
+        je L4
+    L3:
+        movq mm4, mm0
+        psrlw mm4, 8
+        movd mm6, dword ptr [edi]
+        packuswb mm4, mm4
+        paddusb mm4, mm6
+        movd dword ptr [edi], mm4
+    L4:
+        mov eax, dword ptr [esi + 4]
+        add eax, 0xf
+        shr eax, 4
+        lea esi, [esi + eax*8 + 0x20]
+    L5:
+        pop edi
+        add edi, dword ptr [SW_SurfacePitch]
+        cmp dword ptr [SW_SpanEnd], esi
+        jne L0
+        emms
+        pop ebp
+        jmp Done
+    L6:
+        add esi, 0x28
+        jmp L5
+    Done:
+    }
+}
+#else
 void SW_SpanGFogAdd(void)
 {
     SW_SPAN *s;
@@ -2623,6 +2742,7 @@ void SW_SpanGFogAdd(void)
         } while (s != SW_SpanEnd);
     }
 }
+#endif
 
 #ifndef FEAT_C_ASM
 extern uint32 SW_SpanGFogConst[2];

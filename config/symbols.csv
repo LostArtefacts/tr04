@@ -2286,6 +2286,7 @@ address,size,name,symbol
 0x004bcca0,64,SW_TriPRecipTab,_SW_TriPRecipTab
 0x004bcce4,64,SW_TriPStepTab,_SW_TriPStepTab
 0x004bcd24,4,SW_ColorOpScale,_SW_ColorOpScale
+0x004bcd30,8,SW_SpanGFogAddConst,_SW_SpanGFogAddConst
 0x004bcd40,8,SW_SpanGFogConst,_SW_SpanGFogConst
 0x004bcd78,8,SW_SpanGTKeyConst,_SW_SpanGTKeyConst
 0x004bcd80,8,SW_SpanGTPKeyConst,_SW_SpanGTPKeyConst
@@ -2742,6 +2743,7 @@ address,size,name,symbol
 0x00765364,4,SW_TriTFogR2,_SW_TriTFogR2
 0x00765368,4,SW_TriPFDY02,_SW_TriPFDY02
 0x0076536c,4,SW_TriPRDX,_SW_TriPRDX
+0x00765370,8,SW_SpanGFogAddTmp,_SW_SpanGFogAddTmp
 0x00765378,4,SW_TriTRDY,_SW_TriTRDY
 0x0076537c,4,SW_TriFogG1,_SW_TriFogG1
 0x00765380,4,SW_TriTFogF2,_SW_TriTFogF2
