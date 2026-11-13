@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="381.52" height="12" x="0" y="0" class="named"><title>1280 · 82.58%</title></rect>
-<rect width="80.48" height="12" x="381.52" y="0" class="nonmatching"><title>270 · 17.42%</title></rect>
+<rect width="381.82" height="12" x="0" y="0" class="named"><title>1281 · 82.65%</title></rect>
+<rect width="80.18" height="12" x="381.82" y="0" class="nonmatching"><title>269 · 17.35%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">82.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1280</tspan> · <tspan class="nonmatching">270</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1281</tspan> · <tspan class="nonmatching">269</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="254.91" height="12" x="0" y="0" class="named"><title>345 KB · 55.17%</title></rect>
-<rect width="207.09" height="12" x="254.91" y="0" class="nonmatching"><title>280 KB · 44.83%</title></rect>
+<rect width="255.17" height="12" x="0" y="0" class="named"><title>345 KB · 55.23%</title></rect>
+<rect width="206.83" height="12" x="255.17" y="0" class="nonmatching"><title>280 KB · 44.77%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">55.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">345 KB</tspan> · <tspan class="nonmatching">280 KB</tspan></text>
@@ -1583,7 +1583,7 @@
 <rect width="12" height="12" x="270" y="450" class="named"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="450" class="named"><title>0x00499ac0 SW_SpanGTP (336 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="450" class="nonmatching"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="450" class="nonmatching"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="450" class="named"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="450" class="nonmatching"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="450" class="nonmatching"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="450" class="nonmatching"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
@@ -2107,7 +2107,7 @@
 <rect width="11.77" height="11.80" x="488.65" y="144.18" class="named"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
 <rect width="11.73" height="11.80" x="503.41" y="144.18" class="nonmatching"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
 <rect width="11.67" height="11.80" x="518.15" y="144.18" class="nonmatching"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>
-<rect width="11.64" height="11.80" x="532.81" y="144.18" class="nonmatching"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
+<rect width="11.64" height="11.80" x="532.81" y="144.18" class="named"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
 <rect width="11.60" height="11.80" x="547.45" y="144.18" class="named"><title>0x0046ba90 tenth_cutseq_control (357 bytes)</title></rect>
 <rect width="11.57" height="11.80" x="562.05" y="144.18" class="named"><title>0x0046c020 fifteen_control (356 bytes)</title></rect>
 <rect width="11.54" height="11.80" x="576.62" y="144.18" class="named"><title>0x004997d0 SW_SpanGTAdd (355 bytes)</title></rect>
