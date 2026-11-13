@@ -89,12 +89,12 @@ L47697d:
     ret
 _S_LoadLevelFile endp
 
-_Func48f981 proc public
+_SW_WaitLevelLoad proc public
     pusha
     mov ecx, offset _LevelLoadingThread
     call @SW_WaitWhileInScene@4
     popa
     ret
-_Func48f981 endp
+_SW_WaitLevelLoad endp
 
     end

@@ -178,10 +178,13 @@ void WinProcessCommands(sint32 cmd);
 void ClearSurfaces(void);
 void nullsub_11(void);
 void j_nullsub_11(void);
+void SW_WaitLevelLoad(void);
 void nullsub_12(void);
 void j_nullsub_12(void);
 void nullsub_13(void);
 void j_nullsub_13(void);
+void SW_WaitUntilDXInScene(void);
+void SW_WaitWhileDXInScene(void);
 void WinProcessCommandLine(char *cmd);
 
 extern COMMANDLINES commandlines[2];

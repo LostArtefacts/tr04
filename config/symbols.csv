@@ -1394,13 +1394,13 @@ address,size,name,symbol
 0x0048f960,8,RestoreFPCW,_RestoreFPCW
 0x0048f970,5,j_nullsub_11,_j_nullsub_11
 0x0048f980,1,nullsub_11,_nullsub_11
-0x0048f981,13,Func48f981,_Func48f981
+0x0048f981,13,SW_WaitLevelLoad,_SW_WaitLevelLoad
 0x0048f990,5,j_nullsub_12,_j_nullsub_12
 0x0048f9a0,1,nullsub_12,_nullsub_12
-0x0048f9a1,13,Func48f9a1,_Func48f9a1
+0x0048f9a1,13,SW_WaitUntilDXInScene,_SW_WaitUntilDXInScene
 0x0048f9b0,5,j_nullsub_13,_j_nullsub_13
 0x0048f9c0,1,nullsub_13,_nullsub_13
-0x0048f9c1,13,Func48f9c1,_Func48f9c1
+0x0048f9c1,13,SW_WaitWhileDXInScene,_SW_WaitWhileDXInScene
 0x0048f9d0,190,AlterFOV,_AlterFOV
 0x0048fa90,200,SetupZRange,_SetupZRange
 0x0048fb60,171,ScaleCurrentMatrix,_ScaleCurrentMatrix

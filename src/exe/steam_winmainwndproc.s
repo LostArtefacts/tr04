@@ -250,20 +250,20 @@ L48f68a:
     ret 010h
 _WinMainWndProc@16 endp
 
-_Func48f9a1 proc public
+_SW_WaitUntilDXInScene proc public
     pusha
     mov ecx, offset _App+189
     call @SW_WaitUntilInScene@4
     popa
     ret
-_Func48f9a1 endp
+_SW_WaitUntilDXInScene endp
 
-_Func48f9c1 proc public
+_SW_WaitWhileDXInScene proc public
     pusha
     mov ecx, offset _App+189
     call @SW_WaitWhileInScene@4
     popa
     ret
-_Func48f9c1 endp
+_SW_WaitWhileDXInScene endp
 
     end
