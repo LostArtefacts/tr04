@@ -46,20 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="317.03" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="72.72" height="12" x="317.03" y="0" class="nonmatching"><title>289 · 18.65%</title></rect>
-<rect width="0.25" height="12" x="389.75" y="0" class="todo"><title>1 · 0.06%</title></rect>
+<rect width="375.56" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
+<rect width="86.44" height="12" x="375.56" y="0" class="nonmatching"><title>290 · 18.71%</title></rect>
 </g>
-<text text-anchor="end" x="570" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="585" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">289</tspan> · <tspan class="todo">1</tspan></text>
+<text text-anchor="end" x="642" y="7.50">81.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">290</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="212.73" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
-<rect width="177.09" height="12" x="212.73" y="0" class="nonmatching"><title>284 KB · 45.41%</title></rect>
-<rect width="0.18" height="12" x="389.82" y="0" class="todo"><title>291 bytes · 0.05%</title></rect>
+<rect width="252" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
+<rect width="210" height="12" x="252" y="0" class="nonmatching"><title>284 KB · 45.45%</title></rect>
 </g>
-<text text-anchor="end" x="570" y="24.50">54.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="585" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">284 KB</tspan> · <tspan class="todo">291 bytes</tspan></text>
+<text text-anchor="end" x="642" y="24.50">54.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">284 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1613,7 +1611,7 @@
 <rect width="12" height="12" x="690" y="450" class="named"><title>0x0049c6e0 DBLog_MapView (23 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="450" class="named"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="450" class="nonmatching"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="450" class="todo"><title>0x0049c750 Log (291 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="450" class="nonmatching"><title>0x0049c750 Log (291 bytes)</title></rect>
 </g>
 </g>
 <g transform="translate(0 574)">
@@ -2179,7 +2177,7 @@
 <rect width="10.29" height="10.88" x="578.99" y="158.98" class="named"><title>0x0043ae50 TriggerLightning (292 bytes)</title></rect>
 <rect width="10.29" height="10.88" x="592.27" y="158.98" class="named"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
 <rect width="10.25" height="10.88" x="605.56" y="158.98" class="named"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
-<rect width="10.25" height="10.88" x="618.82" y="158.98" class="todo"><title>0x0049c750 Log (291 bytes)</title></rect>
+<rect width="10.25" height="10.88" x="618.82" y="158.98" class="nonmatching"><title>0x0049c750 Log (291 bytes)</title></rect>
 <rect width="10.22" height="10.88" x="632.07" y="158.98" class="named"><title>0x0045a1b0 SaveLaraData (290 bytes)</title></rect>
 <rect width="10.18" height="10.88" x="645.29" y="158.98" class="named"><title>0x0041f260 SetLaraUnderwaterNodes (289 bytes)</title></rect>
 <rect width="10.11" height="10.88" x="658.47" y="158.98" class="named"><title>0x004210f0 lara_col_duck (287 bytes)</title></rect>

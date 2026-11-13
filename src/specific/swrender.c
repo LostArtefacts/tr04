@@ -1,5 +1,7 @@
 #include <windows.h>
 #include <string.h>
+#include <stdarg.h>
+#include <stdio.h>
 #include "polyinsert.h"
 #include "swrender.h"
 #include "function_stubs.h"
@@ -66,6 +68,9 @@ extern sint16 SW_SpanGrad[4];
 void nullsub_1();
 void SW_DrawLineG(SW_VERTEX *v0, SW_VERTEX *v1);
 extern UINT DBLog_Message;
+extern HANDLE DBLog_Mapping;
+extern UINT DBLog_ResetMessage;
+extern sint32 DBLog_Offset;
 extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 extern LPDIRECT3DTEXTURE2 SW_LockedTextures[256];
 extern void *SW_LockedBits[256];
@@ -4036,4 +4041,49 @@ void DBLog_Post(HWND hwnd, LPARAM lparam)
         if (!FindWindowA("DBLogWindowClass", "DBLog Server"))
             return;
     }
+}
+
+void Log(unsigned int type, const char *fmt, ...)
+{
+    HWND hwnd;
+    char *dst;
+    char *src;
+    sint32 i;
+    sint32 count;
+    va_list args;
+    char buf[1024];
+
+    hwnd = FindWindowA("DBLogWindowClass", "DBLog Server");
+    if (!hwnd)
+        return;
+    DBLog_Mapping = DBLog_OpenMapping("DBLOGMAPMEM");
+    dst = DBLog_MapView(DBLog_Mapping);
+    if (!dst)
+        return;
+    va_start(args, fmt);
+    vsprintf(buf, fmt, args);
+    va_end(args);
+    dst += DBLog_Offset;
+    *dst++ = (char)type;
+    src = buf;
+    count = 1;
+    for (i = strlen(buf) + 1; i > 0; i--) {
+        if (*src == '\n' || !*src) {
+            if (count > 1) {
+                *dst++ = 0;
+                DBLog_Post(hwnd, DBLog_Offset);
+                DBLog_Offset += count + 1;
+                *dst++ = (char)type;
+            }
+            count = 0;
+        } else
+            *dst++ = *src;
+        count++;
+        src++;
+    }
+    if (DBLog_Offset > 0xFFC00) {
+        DBLog_Offset = 0;
+        SendMessageA(hwnd, DBLog_ResetMessage, 0, 0);
+    }
+    CloseHandle(DBLog_Mapping);
 }

@@ -3012,7 +3012,10 @@ address,size,name,symbol
 0x007e6e00,4,BinkSurfaceType,_BinkSurfaceType
 0x007e6e04,4,BinkSurface,_BinkSurface
 0x007e6e08,4,Bink,_Bink
+0x007e6e0c,4,DBLog_Mapping,_DBLog_Mapping
 0x007e6e10,4,DBLog_Message,_DBLog_Message
+0x007e6e14,4,DBLog_ResetMessage,_DBLog_ResetMessage
+0x007e6e20,4,DBLog_Offset,_DBLog_Offset
 0x007e71a8,4,malloc_size,_malloc_size
 0x007e71b0,12,CamPos,_CamPos
 0x007e71bc,4,malloc_ptr,_malloc_ptr
