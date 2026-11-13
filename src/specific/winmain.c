@@ -53,7 +53,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     DEVMODE devmode;
     char *buf;
     sint32 size;
-    uint8 drive;
 
     start_setup = 0;
     App.mmx = CheckMMXTechnology() != 0;
@@ -61,14 +60,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     App.AutoTarget = 0;
     if (WinRunCheck("Tomb Raider - The Last Revelation", "MainGameWindow", &App.mutex))
         return 0;
-    if (!FindCDDrive()) {
-        drive = 0;
-        while (!drive) {
-            if (MessageBox(0, "Tomb Raider - The Last Revelation CD", "Tomb Raider", MB_RETRYCANCEL | MB_ICONQUESTION) == IDCANCEL)
-                return 0;
-            drive = FindCDDrive();
-        }
-    }
+    FindCDDrive();
     LoadGameflow();
     WinProcessCommandLine(lpCmdLine);
     App.hInstance = hInstance;
