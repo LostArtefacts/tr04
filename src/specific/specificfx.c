@@ -1319,6 +1319,108 @@ void DrawRope(ROPE_STRUCT *rope)
     }
 }
 
+void DrawDebris(void)
+{
+    DEBRIS_STRUCT *dptr;
+    TEXTURESTRUCT *tex;
+    D3DTLVERTEX v[3];
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    sint32 i, r, g, b, c, amb, col;
+    uint16 drawbak;
+
+    XY = (sint16 *)&scratchpad[0];
+    Z = (sint32 *)&scratchpad[256];
+    offsets = (sint16 *)&scratchpad[512];
+    dptr = debris;
+    for (i = 256; i > 0; i--, dptr++) {
+        if (!dptr->On)
+            continue;
+        phd_PushMatrix();
+        phd_TranslateAbs(dptr->x, dptr->y, dptr->z);
+        offsets[0] = dptr->XYZOffsets1[0];
+        offsets[1] = dptr->XYZOffsets1[1];
+        offsets[2] = dptr->XYZOffsets1[2];
+        Z[0] = (phd_mxptr[M20] * offsets[0] + phd_mxptr[M21] * offsets[1] + phd_mxptr[M22] * offsets[2] + phd_mxptr[M23]) >> W2V_SHIFT;
+        XY[0] = (sint16)((phd_mxptr[M00] * offsets[0] + phd_mxptr[M01] * offsets[1] + phd_mxptr[M02] * offsets[2] + phd_mxptr[M03]) >> W2V_SHIFT);
+        XY[1] = (sint16)((phd_mxptr[M10] * offsets[0] + phd_mxptr[M11] * offsets[1] + phd_mxptr[M12] * offsets[2] + phd_mxptr[M13]) >> W2V_SHIFT);
+        offsets[0] = dptr->XYZOffsets2[0];
+        offsets[1] = dptr->XYZOffsets2[1];
+        offsets[2] = dptr->XYZOffsets2[2];
+        Z[1] = (phd_mxptr[M20] * offsets[0] + phd_mxptr[M21] * offsets[1] + phd_mxptr[M22] * offsets[2] + phd_mxptr[M23]) >> W2V_SHIFT;
+        XY[2] = (sint16)((phd_mxptr[M00] * offsets[0] + phd_mxptr[M01] * offsets[1] + phd_mxptr[M02] * offsets[2] + phd_mxptr[M03]) >> W2V_SHIFT);
+        XY[3] = (sint16)((phd_mxptr[M10] * offsets[0] + phd_mxptr[M11] * offsets[1] + phd_mxptr[M12] * offsets[2] + phd_mxptr[M13]) >> W2V_SHIFT);
+        offsets[0] = dptr->XYZOffsets3[0];
+        offsets[1] = dptr->XYZOffsets3[1];
+        offsets[2] = dptr->XYZOffsets3[2];
+        Z[2] = (phd_mxptr[M20] * offsets[0] + phd_mxptr[M21] * offsets[1] + phd_mxptr[M22] * offsets[2] + phd_mxptr[M23]) >> W2V_SHIFT;
+        XY[4] = (sint16)((phd_mxptr[M00] * offsets[0] + phd_mxptr[M01] * offsets[1] + phd_mxptr[M02] * offsets[2] + phd_mxptr[M03]) >> W2V_SHIFT);
+        XY[5] = (sint16)((phd_mxptr[M10] * offsets[0] + phd_mxptr[M11] * offsets[1] + phd_mxptr[M12] * offsets[2] + phd_mxptr[M13]) >> W2V_SHIFT);
+        setXYZ3(v, XY[0], XY[1], Z[0], XY[2], XY[3], Z[1], XY[4], XY[5], Z[2], clipflags);
+        phd_PopMatrix();
+        c = dptr->color1 & 0xFF;
+        col = ((c * dptr->r) >> 8 << 16) | ((c * dptr->g) >> 8 << 8) | ((c * dptr->b) >> 8);
+        amb = dptr->ambient;
+        r = CLRR(amb) + CLRR(col);
+        g = CLRG(amb) + CLRG(col);
+        b = CLRB(amb) + CLRB(col);
+        if (r > 255)
+            r = 255;
+        if (g > 255)
+            g = 255;
+        if (b > 255)
+            b = 255;
+        CalcColorSplit(RGBONLY(r, g, b), &v[0].color);
+        c = dptr->color2 & 0xFF;
+        col = ((c * dptr->r) >> 8 << 16) | ((c * dptr->g) >> 8 << 8) | ((c * dptr->b) >> 8);
+        amb = dptr->ambient;
+        r = CLRR(amb) + CLRR(col);
+        g = CLRG(amb) + CLRG(col);
+        b = CLRB(amb) + CLRB(col);
+        if (r > 255)
+            r = 255;
+        if (g > 255)
+            g = 255;
+        if (b > 255)
+            b = 255;
+        CalcColorSplit(RGBONLY(r, g, b), &v[1].color);
+        c = dptr->color3 & 0xFF;
+        col = ((c * dptr->r) >> 8 << 16) | ((c * dptr->g) >> 8 << 8) | ((c * dptr->b) >> 8);
+        amb = dptr->ambient;
+        r = CLRR(amb) + CLRR(col);
+        g = CLRG(amb) + CLRG(col);
+        b = CLRB(amb) + CLRB(col);
+        if (r > 255)
+            r = 255;
+        if (g > 255)
+            g = 255;
+        if (b > 255)
+            b = 255;
+        CalcColorSplit(RGBONLY(r, g, b), &v[2].color);
+        v[0].color |= 0xFF000000;
+        v[1].color |= 0xFF000000;
+        v[2].color |= 0xFF000000;
+        v[0].specular |= 0xFF000000;
+        v[1].specular |= 0xFF000000;
+        v[2].specular |= 0xFF000000;
+        tex = &textinfo[(sint32)dptr->TextInfo & 0x7FFF];
+        drawbak = tex->drawtype;
+        if (dptr->flags & 1)
+            tex->drawtype = 2;
+        switch (tex->drawtype) {
+        case 0:
+            AddTriZBuffer(v, 0, 1, 2, tex, 1);
+            break;
+        case 1:
+        case 2:
+            AddTriSorted(v, 0, 1, 2, tex, 1);
+            break;
+        }
+        tex->drawtype = drawbak;
+    }
+}
+
 void DrawBlood(void)
 {
     BLOOD_STRUCT *bptr;
