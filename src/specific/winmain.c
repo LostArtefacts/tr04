@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <process.h>
 #include <time.h>
+#include <float.h>
 
 #include "winmain.h"
 #include "../text.h"
@@ -469,25 +470,36 @@ void WinDisplayString(sint32 x, sint32 y, char *string, ...)
 
 sint32 MungeFPCW(sint16 *fpcw)
 {
+    uint32 cw;
+    uint16 hw;
     sint32 ret;
-    uint16 cw, temp;
 
     ret = 0;
-    __asm {
-        fstcw cw
-    }
-    if (cw & 0x300 || (cw & 0x3F) != 0x3F || cw & 0xC00) {
-        __asm {
-            mov ax, cw
-            and ax, not 0x300
-            or ax, 0x3F
-            and ax, not 0xC00
-            mov temp, ax
-            fldcw temp
-        }
+    cw = _control87(0, 0);
+    if ((cw & _MCW_PC) != _PC_24 || (cw & _MCW_EM) != _MCW_EM || (cw & _MCW_RC) != _RC_NEAR) {
+        _control87(_PC_24 | _MCW_EM | _RC_NEAR, _MCW_PC | _MCW_EM | _MCW_RC);
         ret = 1;
     }
-    *fpcw = cw;
+    hw = (uint16)((cw & _MCW_RC) << 2);
+    if (cw & _EM_INVALID)
+        hw |= 0x1;
+    if (cw & _EM_DENORMAL)
+        hw |= 0x2;
+    if (cw & _EM_ZERODIVIDE)
+        hw |= 0x4;
+    if (cw & _EM_OVERFLOW)
+        hw |= 0x8;
+    if (cw & _EM_UNDERFLOW)
+        hw |= 0x10;
+    if (cw & _EM_INEXACT)
+        hw |= 0x20;
+    if ((cw & _MCW_PC) == _PC_53)
+        hw |= 0x200;
+    else if ((cw & _MCW_PC) == _PC_64)
+        hw |= 0x300;
+    if (cw & _IC_AFFINE)
+        hw |= 0x1000;
+    *fpcw = hw;
     return ret;
 }
 
