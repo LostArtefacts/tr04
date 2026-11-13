@@ -508,6 +508,9 @@ void RestoreFPCW(sint16 fpcw)
     _control87(cw, _MCW_EM | _MCW_RC | _MCW_PC | _MCW_IC);
 }
 
+void __fastcall SW_WaitUntilInScene(volatile sint32 *flag);
+void __fastcall SW_WaitWhileInScene(volatile sint32 *flag);
+
 void j_nullsub_11(void)
 {
     nullsub_11();
@@ -516,6 +519,13 @@ void j_nullsub_11(void)
 void nullsub_11(void)
 {
 }
+
+#ifndef TR4_EXE
+void SW_WaitLevelLoad(void)
+{
+    SW_WaitWhileInScene(&LevelLoadingThread.active);
+}
+#endif
 
 void j_nullsub_12(void)
 {

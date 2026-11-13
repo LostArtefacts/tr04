@@ -72,6 +72,12 @@ extern void *SW_LockedBits[256];
 extern LPDIRECTDRAWSURFACE4 SW_TexSurface;
 extern sint32 SW_RecipTable[4096];
 extern uint8 SW_MulTable[65536];
+extern sint32 SW_TexShift;
+extern sint32 SW_SpanDU;
+extern sint32 SW_SpanDV;
+extern sint32 SW_MipOffsets[5];
+extern SW_VERTEX *SW_TriV0;
+extern sint32 SW_SpanFogGrad;
 
 #pragma data_seg(".text")
 char SW_Kernel32Name[] = "kernel32.dll";
