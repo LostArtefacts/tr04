@@ -1,7 +1,23 @@
 #include <windows.h>
 #include "polyinsert.h"
 
+typedef struct sw_device {
+    void *lpVtbl;
+    sint32 refcount;
+    void *viewport;
+    void *target;
+    HGLOBAL hmem;
+    void *buffer;
+    sint32 width;
+    sint32 height;
+} SW_DEVICE;
+
 extern float SW_ZLimit;
+
+HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
+{
+    return 0x887602C1;
+}
 
 HRESULT __stdcall SW_D3D_ViewportStub(void *iface, void *arg)
 {

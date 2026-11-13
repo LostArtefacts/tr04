@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="330.29" height="12" x="0" y="0" class="named"><title>1235 · 79.78%</title></rect>
-<rect width="61.24" height="12" x="330.29" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="22.47" height="12" x="391.53" y="0" class="todo"><title>84 · 5.43%</title></rect>
+<rect width="330.56" height="12" x="0" y="0" class="named"><title>1236 · 79.84%</title></rect>
+<rect width="61.24" height="12" x="330.56" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="22.20" height="12" x="391.80" y="0" class="todo"><title>83 · 5.36%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1235</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">84</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1236</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">83</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="223.38" height="12" x="0" y="0" class="named"><title>337 KB · 53.96%</title></rect>
 <rect width="166.37" height="12" x="223.38" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="24.25" height="12" x="389.75" y="0" class="todo"><title>37 KB · 5.86%</title></rect>
+<rect width="24.24" height="12" x="389.76" y="0" class="todo"><title>37 KB · 5.86%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">37 KB</tspan></text>
@@ -1531,7 +1531,7 @@
 <rect width="12" height="12" x="210" y="435" class="named"><title>0x00494270 DXInitKeyboard (387 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="435" class="todo"><title>0x00494400 Func494400 (201 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="435" class="named"><title>0x004944d0 DXReadKeyboard (74 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="435" class="todo"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="435" class="named"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="435" class="todo"><title>0x00494530 SW_D3D_GetCaps (93 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="435" class="todo"><title>0x0049458d SW_D3D_AddRef (19 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="435" class="todo"><title>0x004945a0 SW_D3D_Release (52 bytes)</title></rect>
@@ -3143,7 +3143,7 @@
 <rect width="1.50" height="2.02" x="741" y="441.88" class="named"><title>0x0046c190 fifteen_end (8 bytes)</title></rect>
 <rect width="1.50" height="2.02" x="745.50" y="441.88" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="1.68" height="1.82" x="727.50" y="446.90" class="named"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
-<rect width="1.68" height="1.82" x="727.50" y="451.72" class="todo"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
+<rect width="1.68" height="1.82" x="727.50" y="451.72" class="named"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
 <rect width="1.68" height="1.36" x="727.50" y="456.54" class="todo"><title>0x00494e90 Func494e90 (6 bytes)</title></rect>
 <rect width="1.68" height="1.10" x="727.50" y="460.90" class="named"><title>0x0040b050 GunShot (5 bytes)</title></rect>
 <rect width="1.45" height="1.32" x="732.19" y="446.90" class="named"><title>0x00437ce0 reset_hair (5 bytes)</title></rect>

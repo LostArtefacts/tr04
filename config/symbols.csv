@@ -1470,7 +1470,7 @@ address,size,name,symbol
 0x00494270,387,DXInitKeyboard,_DXInitKeyboard
 0x00494400,201,Func494400,_Func494400
 0x004944d0,74,DXReadKeyboard,_DXReadKeyboard
-0x00494520,8,SW_D3D_QueryInterface,_SW_D3D_QueryInterface@12
+0x00494520,8,SW_D3D_QueryInterface,_SW_D3D_QueryInterface@4
 0x00494530,93,SW_D3D_GetCaps,_SW_D3D_GetCaps@12
 0x0049458d,19,SW_D3D_AddRef,_SW_D3D_AddRef@4
 0x004945a0,52,SW_D3D_Release,_SW_D3D_Release@4
