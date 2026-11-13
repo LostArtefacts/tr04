@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="379.73" height="12" x="0" y="0" class="named"><title>1274 · 82.19%</title></rect>
-<rect width="82.27" height="12" x="379.73" y="0" class="nonmatching"><title>276 · 17.81%</title></rect>
+<rect width="380.03" height="12" x="0" y="0" class="named"><title>1275 · 82.26%</title></rect>
+<rect width="81.97" height="12" x="380.03" y="0" class="nonmatching"><title>275 · 17.74%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">82.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">276</tspan></text>
+<text text-anchor="end" x="642" y="7.50">82.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1275</tspan> · <tspan class="nonmatching">275</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="253.66" height="12" x="0" y="0" class="named"><title>343 KB · 54.91%</title></rect>
-<rect width="208.34" height="12" x="253.66" y="0" class="nonmatching"><title>282 KB · 45.09%</title></rect>
+<rect width="253.81" height="12" x="0" y="0" class="named"><title>344 KB · 54.94%</title></rect>
+<rect width="208.19" height="12" x="253.81" y="0" class="nonmatching"><title>282 KB · 45.06%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">54.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">282 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">344 KB</tspan> · <tspan class="nonmatching">282 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1574,7 +1574,7 @@
 <rect width="12" height="12" x="135" y="450" class="nonmatching"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="450" class="nonmatching"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="450" class="nonmatching"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="450" class="nonmatching"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="450" class="named"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="450" class="nonmatching"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="450" class="nonmatching"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="450" class="nonmatching"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
@@ -2324,7 +2324,7 @@
 <rect width="9.23" height="8.60" x="557.18" y="210.58" class="named"><title>0x0042f7b0 DrawFlareInAir (207 bytes)</title></rect>
 <rect width="9.18" height="8.60" x="569.41" y="210.58" class="named"><title>0x00454a90 EffectNewRoom (206 bytes)</title></rect>
 <rect width="9.18" height="8.60" x="581.59" y="210.58" class="named"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
-<rect width="9.09" height="8.60" x="593.77" y="210.58" class="nonmatching"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
+<rect width="9.09" height="8.60" x="593.77" y="210.58" class="named"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="9.05" height="8.60" x="605.86" y="210.58" class="named"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
 <rect width="9.05" height="8.60" x="617.91" y="210.58" class="nonmatching"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="9.05" height="8.60" x="629.96" y="210.58" class="named"><title>0x00454070 InitialiseRope (203 bytes)</title></rect>

@@ -2680,6 +2680,72 @@ void SW_SpanGAdd(void)
     }
 }
 
+#ifndef FEAT_C_ASM
+void SW_SpanGAlpha(void)
+{
+    uint32 amask[2];
+    uint32 cmask[2];
+
+    amask[0] = 0;
+    amask[1] = 0xFF000000;
+    cmask[0] = 0xFF00FF;
+    cmask[1] = 0xFF00FF;
+    __asm {
+        mov esi, dword ptr [SW_SpanBuffer]
+        cmp esi, dword ptr [SW_SpanEnd]
+        je Done
+        push ebp
+        mov edi, dword ptr [SW_Surface]
+        mov eax, dword ptr [SW_SpanY]
+        imul eax, dword ptr [SW_SurfacePitch]
+        add edi, eax
+        pxor mm4, mm4
+    L0:
+        mov ebx, dword ptr [esi]
+        mov eax, dword ptr [esi + 4]
+        shl ebx, 2
+        push edi
+        add edi, ebx
+        or eax, eax
+        jle L2
+        movq mm0, qword ptr [esi + 0x18]
+        movq mm1, qword ptr [SW_SpanGrad]
+    L1:
+        movd mm6, dword ptr [edi]
+        movq mm5, mm0
+        movq mm3, mm0
+        pand mm5, qword ptr [amask]
+        movq mm7, mm5
+        psrlq mm5, 0x28
+        psrlq mm7, 0x38
+        punpcklbw mm6, mm4
+        por mm7, mm5
+        psllq mm5, 0x10
+        psrlw mm3, 8
+        por mm7, mm5
+        pmullw mm3, mm7
+        pxor mm7, qword ptr [cmask]
+        pmullw mm6, mm7
+        paddw mm0, mm1
+        add edi, 4
+        paddw mm6, mm3
+        psrlw mm6, 8
+        packuswb mm6, mm6
+        dec eax
+        movd dword ptr [edi - 4], mm6
+        jne L1
+    L2:
+        pop edi
+        add edi, dword ptr [SW_SurfacePitch]
+        add esi, 0x20
+        cmp dword ptr [SW_SpanEnd], esi
+        jne L0
+        emms
+        pop ebp
+    Done:
+    }
+}
+#else
 void SW_SpanGAlpha(void)
 {
     SW_SPAN *s;
@@ -2716,6 +2782,7 @@ void SW_SpanGAlpha(void)
         } while (s != SW_SpanEnd);
     }
 }
+#endif
 
 void SW_SpanGTAlpha(void)
 {
