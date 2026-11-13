@@ -505,9 +505,30 @@ sint32 MungeFPCW(sint16 *fpcw)
 
 void RestoreFPCW(sint16 fpcw)
 {
-    __asm {
-        fldcw fpcw
-    }
+    uint32 cw;
+
+    cw = (fpcw & 0xC00) >> 2;
+    if (fpcw & 0x1)
+        cw |= _EM_INVALID;
+    if (fpcw & 0x2)
+        cw |= _EM_DENORMAL;
+    if (fpcw & 0x4)
+        cw |= _EM_ZERODIVIDE;
+    if (fpcw & 0x8)
+        cw |= _EM_OVERFLOW;
+    if (fpcw & 0x10)
+        cw |= _EM_UNDERFLOW;
+    if (fpcw & 0x20)
+        cw |= _EM_INEXACT;
+    if ((fpcw & 0x300) == 0x200)
+        cw |= _PC_53;
+    else if ((fpcw & 0x300) == 0x300)
+        cw |= _PC_64;
+    else
+        cw |= _PC_24;
+    if (fpcw & 0x1000)
+        cw |= _IC_AFFINE;
+    _control87(cw, _MCW_EM | _MCW_RC | _MCW_PC | _MCW_IC);
 }
 
 void j_nullsub_11(void)
