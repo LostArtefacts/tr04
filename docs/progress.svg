@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="388.38" height="12" x="0" y="0" class="named"><title>1303 · 84.06%</title></rect>
-<rect width="73.62" height="12" x="388.38" y="0" class="nonmatching"><title>247 · 15.94%</title></rect>
+<rect width="388.68" height="12" x="0" y="0" class="named"><title>1304 · 84.13%</title></rect>
+<rect width="73.32" height="12" x="388.68" y="0" class="nonmatching"><title>246 · 15.87%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">84.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1303</tspan> · <tspan class="nonmatching">247</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1304</tspan> · <tspan class="nonmatching">246</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="266.35" height="12" x="0" y="0" class="named"><title>361 KB · 57.65%</title></rect>
-<rect width="195.65" height="12" x="266.35" y="0" class="nonmatching"><title>265 KB · 42.35%</title></rect>
+<rect width="267.71" height="12" x="0" y="0" class="named"><title>362 KB · 57.95%</title></rect>
+<rect width="194.29" height="12" x="267.71" y="0" class="nonmatching"><title>263 KB · 42.05%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">57.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">361 KB</tspan> · <tspan class="nonmatching">265 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">57.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">362 KB</tspan> · <tspan class="nonmatching">263 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1563,7 +1563,7 @@
 <rect width="12" height="12" x="720" y="435" class="nonmatching"><title>0x004955c0 SW_DrawLineG (953 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="435" class="named"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="450" class="named"><title>0x004959b0 SW_TriSetupGTP (2539 bytes)</title></rect>
-<rect width="12" height="12" x="15" y="450" class="nonmatching"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
+<rect width="12" height="12" x="15" y="450" class="named"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="450" class="named"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="450" class="nonmatching"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="450" class="nonmatching"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
@@ -1676,7 +1676,7 @@
 <rect width="26.98" height="26.83" x="151.71" y="121.60" class="nonmatching"><title>0x004778b0 S_UpdateInput (1888 bytes)</title></rect>
 <rect width="26.98" height="26.66" x="151.71" y="151.43" class="nonmatching"><title>0x00430250 LaraControl (1876 bytes)</title></rect>
 <rect width="26.98" height="26.36" x="151.71" y="181.09" class="nonmatching"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
-<rect width="26.98" height="26.25" x="151.71" y="210.45" class="nonmatching"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
+<rect width="26.98" height="26.25" x="151.71" y="210.45" class="named"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
 <rect width="26.98" height="26.05" x="151.71" y="239.70" class="nonmatching"><title>0x00460420 InitialiseSpotCam (1833 bytes)</title></rect>
 <rect width="26.98" height="25.63" x="151.71" y="268.74" class="nonmatching"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
 <rect width="26.98" height="25.46" x="151.71" y="297.38" class="nonmatching"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
