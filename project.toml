@@ -16,6 +16,7 @@ search = ["~/data.local/work/ghidra_*", "~/opt/ghidra_*"]
 functions = "build/functions_tomb4.csv"
 
 [build]
+hook = "config/exe_layout.py"  # the standalone exe in the original's layout, through tools/orig_layout.py
 cflags = ["/G5", "/Zp1", "/W3", "/O2", "/DNDEBUG", "/DWIN32", "/D_WINDOWS"]
 crlf = true
 ml = 'C:\masm613\bin\ml.exe'
