@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="328.15" height="12" x="0" y="0" class="named"><title>1227 · 79.26%</title></rect>
-<rect width="60.44" height="12" x="328.15" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
+<rect width="328.42" height="12" x="0" y="0" class="named"><title>1228 · 79.33%</title></rect>
+<rect width="60.17" height="12" x="328.42" y="0" class="nonmatching"><title>225 · 14.53%</title></rect>
 <rect width="25.41" height="12" x="388.59" y="0" class="todo"><title>95 · 6.14%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1227</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">95</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1228</tspan> · <tspan class="nonmatching">225</tspan> · <tspan class="todo">95</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="222.02" height="12" x="0" y="0" class="named"><title>335 KB · 53.63%</title></rect>
-<rect width="160.86" height="12" x="222.02" y="0" class="nonmatching"><title>243 KB · 38.86%</title></rect>
+<rect width="222.19" height="12" x="0" y="0" class="named"><title>336 KB · 53.67%</title></rect>
+<rect width="160.68" height="12" x="222.19" y="0" class="nonmatching"><title>243 KB · 38.81%</title></rect>
 <rect width="31.12" height="12" x="382.88" y="0" class="todo"><title>47 KB · 7.52%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="24.50">53.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">335 KB</tspan> · <tspan class="nonmatching">243 KB</tspan> · <tspan class="todo">47 KB</tspan></text>
+<text text-anchor="end" x="594" y="24.50">53.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">336 KB</tspan> · <tspan class="nonmatching">243 KB</tspan> · <tspan class="todo">47 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -927,7 +927,7 @@
 <rect width="12" height="12" x="150" y="255" class="named"><title>0x00455270 DisableBaddieAI (64 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="255" class="named"><title>0x004552b0 EnableBaddieAI (447 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="255" class="named"><title>0x00455470 InitialiseSlot (556 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="255" class="nonmatching"><title>0x004556a0 CreateZone (267 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="255" class="named"><title>0x004556a0 CreateZone (267 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="255" class="named"><title>0x004557b0 ClearLOT (75 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="255" class="named"><title>0x00455800 Draw_Mirror_Lara (735 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="255" class="named"><title>0x00455ae0 EarthQuake (524 bytes)</title></rect>
@@ -2216,7 +2216,7 @@
 <rect width="10.47" height="9.82" x="524.96" y="172.88" class="named"><title>0x0045c0d0 InitialiseObjects (268 bytes)</title></rect>
 <rect width="10.47" height="9.82" x="538.42" y="172.88" class="named"><title>0x004728d0 FindBucket (268 bytes)</title></rect>
 <rect width="10.43" height="9.82" x="551.89" y="172.88" class="named"><title>0x00421770 lara_col_crawl (267 bytes)</title></rect>
-<rect width="10.43" height="9.82" x="565.32" y="172.88" class="nonmatching"><title>0x004556a0 CreateZone (267 bytes)</title></rect>
+<rect width="10.43" height="9.82" x="565.32" y="172.88" class="named"><title>0x004556a0 CreateZone (267 bytes)</title></rect>
 <rect width="10.39" height="9.82" x="578.75" y="172.88" class="nonmatching"><title>0x00417200 ControlLRSquishyBlock (266 bytes)</title></rect>
 <rect width="10.35" height="9.82" x="592.14" y="172.88" class="named"><title>0x00424950 lara_as_climbroped (265 bytes)</title></rect>
 <rect width="10.35" height="9.82" x="605.50" y="172.88" class="named"><title>0x00428470 lara_slide_slope (265 bytes)</title></rect>

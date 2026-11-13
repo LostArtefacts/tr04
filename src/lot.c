@@ -212,8 +212,9 @@ void CreateZone(ITEM_INFO *item)
         zone_number = zone[item->box_number];
         flip_number = flip[item->box_number];
         node = creature->LOT.node;
+        i = 0;
         creature->LOT.zone_count = 0;
-        for (i = 0; i < num_boxes; i++, zone++, flip++) {
+        for (; i < num_boxes; i++, zone++, flip++) {
             if (*zone == zone_number || *flip == flip_number) {
                 node->box_number = i;
                 node++;
