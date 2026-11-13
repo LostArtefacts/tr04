@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="329.49" height="12" x="0" y="0" class="named"><title>1232 · 79.59%</title></rect>
-<rect width="60.44" height="12" x="329.49" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
-<rect width="24.07" height="12" x="389.93" y="0" class="todo"><title>90 · 5.81%</title></rect>
+<rect width="329.76" height="12" x="0" y="0" class="named"><title>1233 · 79.65%</title></rect>
+<rect width="60.44" height="12" x="329.76" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
+<rect width="23.80" height="12" x="390.20" y="0" class="todo"><title>89 · 5.75%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">79.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1232</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">90</tspan></text>
+<text text-anchor="end" x="594" y="7.50">79.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1233</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">89</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.36" height="12" x="0" y="0" class="named"><title>337 KB · 53.95%</title></rect>
-<rect width="162.98" height="12" x="223.36" y="0" class="nonmatching"><title>246 KB · 39.37%</title></rect>
-<rect width="27.67" height="12" x="386.33" y="0" class="todo"><title>42 KB · 6.68%</title></rect>
+<rect width="223.37" height="12" x="0" y="0" class="named"><title>337 KB · 53.95%</title></rect>
+<rect width="162.98" height="12" x="223.37" y="0" class="nonmatching"><title>246 KB · 39.37%</title></rect>
+<rect width="27.66" height="12" x="386.34" y="0" class="todo"><title>42 KB · 6.68%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">246 KB</tspan> · <tspan class="todo">42 KB</tspan></text>
@@ -1609,7 +1609,7 @@
 <rect width="12" height="12" x="630" y="450" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="450" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="450" class="named"><title>0x0049c6e0 DBLog_MapView (23 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="450" class="todo"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="450" class="named"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="450" class="todo"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="450" class="todo"><title>0x0049c750 Log (291 bytes)</title></rect>
 </g>
@@ -3099,7 +3099,7 @@
 <rect width="2.49" height="2.47" x="722.73" y="421.31" class="named"><title>0x004761e0 LoadCinematic (16 bytes)</title></rect>
 <rect width="2.49" height="2.47" x="728.21" y="421.31" class="todo"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
 <rect width="2.49" height="2.47" x="733.70" y="421.31" class="todo"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
-<rect width="2.49" height="2.47" x="739.18" y="421.31" class="todo"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
+<rect width="2.49" height="2.47" x="739.18" y="421.31" class="named"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
 <rect width="2.33" height="2.47" x="744.67" y="421.31" class="named"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
 <rect width="2.13" height="2.68" x="711.75" y="426.77" class="todo"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="2.13" height="2.51" x="711.75" y="432.45" class="named"><title>0x00427060 lara_as_null (14 bytes)</title></rect>
