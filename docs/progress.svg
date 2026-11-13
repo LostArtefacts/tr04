@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="388.97" height="12" x="0" y="0" class="named"><title>1305 · 84.19%</title></rect>
-<rect width="73.03" height="12" x="388.97" y="0" class="nonmatching"><title>245 · 15.81%</title></rect>
+<rect width="389.27" height="12" x="0" y="0" class="named"><title>1306 · 84.26%</title></rect>
+<rect width="72.73" height="12" x="389.27" y="0" class="nonmatching"><title>244 · 15.74%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">84.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1305</tspan> · <tspan class="nonmatching">245</tspan></text>
+<text text-anchor="end" x="642" y="7.50">84.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1306</tspan> · <tspan class="nonmatching">244</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="269.26" height="12" x="0" y="0" class="named"><title>365 KB · 58.28%</title></rect>
-<rect width="192.74" height="12" x="269.26" y="0" class="nonmatching"><title>261 KB · 41.72%</title></rect>
+<rect width="271.33" height="12" x="0" y="0" class="named"><title>367 KB · 58.73%</title></rect>
+<rect width="190.67" height="12" x="271.33" y="0" class="nonmatching"><title>258 KB · 41.27%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">58.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">365 KB</tspan> · <tspan class="nonmatching">261 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">58.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">367 KB</tspan> · <tspan class="nonmatching">258 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1565,7 +1565,7 @@
 <rect width="12" height="12" x="0" y="450" class="named"><title>0x004959b0 SW_TriSetupGTP (2539 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="450" class="named"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="450" class="named"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="450" class="nonmatching"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="450" class="named"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="450" class="named"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="450" class="named"><title>0x004984e0 SW_TriSetupGFog (1741 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="450" class="named"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
@@ -1636,7 +1636,7 @@
 <rect width="34.49" height="32.02" x="47.74" y="227.26" class="nonmatching"><title>0x0045b230 RestoreLevelData (2881 bytes)</title></rect>
 <rect width="34.49" height="31.92" x="47.74" y="262.28" class="named"><title>0x0041daf0 Rich_CalcLaraMatrices_Normal (2872 bytes)</title></rect>
 <rect width="34.49" height="31.86" x="47.74" y="297.20" class="nonmatching"><title>0x00446170 GetCollisionInfo (2867 bytes)</title></rect>
-<rect width="34.49" height="31.24" x="47.74" y="332.06" class="nonmatching"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
+<rect width="34.49" height="31.24" x="47.74" y="332.06" class="named"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
 <rect width="34.49" height="30.71" x="47.74" y="366.30" class="nonmatching"><title>0x0044ab50 TestTriggers (2764 bytes)</title></rect>
 <rect width="34.49" height="30.18" x="47.74" y="400.01" class="named"><title>0x00473f20 LoadTextures (2716 bytes)</title></rect>
 <rect width="34.49" height="28.81" x="47.74" y="433.19" class="nonmatching"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
