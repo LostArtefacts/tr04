@@ -20,6 +20,30 @@
 #include "anim.h"
 #include "effect2.h"
 
+sint32 CheckSenetWinner(sint16 ourPiece)
+{
+    sint16 num;
+
+    if (ourPiece == 1) {
+        for (num = 0; num < 3; num++) {
+            if (senet_piece[num] != NO_ITEM)
+                return 0;
+        }
+        trigger_item_in_room(0, RAISING_BLOCK2);
+        trigger_item_in_room(19, RAISING_BLOCK2);
+    } else {
+        for (num = 3; num < 6; num++) {
+            if (senet_piece[num] != NO_ITEM)
+                return 0;
+        }
+        trigger_item_in_room(20, TRAPDOOR1);
+        trigger_item_in_room(21, TRAPDOOR1);
+        trigger_item_in_room(22, TRAPDOOR1);
+        trigger_item_in_room(81, TRAPDOOR1);
+    }
+    return 1;
+}
+
 void InitialiseSenet(sint16 item_number)
 {
     ITEM_INFO *item;

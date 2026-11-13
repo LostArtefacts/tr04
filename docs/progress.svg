@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="38" height="12" x="267.10" y="0" class="nonmatching"><title>172 · 11.11%</title></rect>
-<rect width="36.90" height="12" x="305.10" y="0" class="todo"><title>167 · 10.79%</title></rect>
+<rect width="38.22" height="12" x="267.10" y="0" class="nonmatching"><title>173 · 11.18%</title></rect>
+<rect width="36.67" height="12" x="305.33" y="0" class="todo"><title>166 · 10.72%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">172</tspan> · <tspan class="todo">167</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">173</tspan> · <tspan class="todo">166</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.93" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.48%</title></rect>
-<rect width="45.18" height="12" x="296.82" y="0" class="todo"><title>83 KB · 13.21%</title></rect>
+<rect width="118" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.50%</title></rect>
+<rect width="45.11" height="12" x="296.89" y="0" class="todo"><title>82 KB · 13.19%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">216 KB</tspan> · <tspan class="todo">83 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">216 KB</tspan> · <tspan class="todo">82 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -161,7 +161,7 @@
 <rect width="12" height="12" x="630" y="15" class="nonmatching"><title>0x0040e800 ScorpionControl (1996 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="15" class="named"><title>0x0040efd0 InitialiseSmlscorp (90 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="15" class="nonmatching"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="15" class="todo"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="15" class="nonmatching"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="15" class="named"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="15" class="named"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="15" class="named"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>
@@ -2520,7 +2520,7 @@
 <rect width="7.31" height="7.30" x="540.89" y="434.11" class="named"><title>0x00467c60 DoDynamics_jeep (139 bytes)</title></rect>
 <rect width="7.31" height="7.30" x="540.89" y="444.40" class="named"><title>0x00475a30 LoadSoundEffects (139 bytes)</title></rect>
 <rect width="7.31" height="7.30" x="540.89" y="454.70" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
-<rect width="6.95" height="7.61" x="551.20" y="266.46" class="todo"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
+<rect width="6.95" height="7.61" x="551.20" y="266.46" class="nonmatching"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
 <rect width="6.95" height="7.61" x="551.20" y="277.07" class="named"><title>0x0040fbd0 ShockwaveExplosion (138 bytes)</title></rect>
 <rect width="6.95" height="7.56" x="551.20" y="287.69" class="named"><title>0x004136c0 TrapDoorControl (137 bytes)</title></rect>
 <rect width="6.95" height="7.56" x="551.20" y="298.24" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
