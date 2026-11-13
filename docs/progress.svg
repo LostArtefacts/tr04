@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="379.44" height="12" x="0" y="0" class="named"><title>1273 · 82.13%</title></rect>
-<rect width="82.56" height="12" x="379.44" y="0" class="nonmatching"><title>277 · 17.87%</title></rect>
+<rect width="379.73" height="12" x="0" y="0" class="named"><title>1274 · 82.19%</title></rect>
+<rect width="82.27" height="12" x="379.73" y="0" class="nonmatching"><title>276 · 17.81%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">82.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1273</tspan> · <tspan class="nonmatching">277</tspan></text>
+<text text-anchor="end" x="642" y="7.50">82.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">276</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="253.52" height="12" x="0" y="0" class="named"><title>343 KB · 54.87%</title></rect>
-<rect width="208.48" height="12" x="253.52" y="0" class="nonmatching"><title>282 KB · 45.13%</title></rect>
+<rect width="253.66" height="12" x="0" y="0" class="named"><title>343 KB · 54.91%</title></rect>
+<rect width="208.34" height="12" x="253.66" y="0" class="nonmatching"><title>282 KB · 45.09%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">54.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">282 KB</tspan></text>
@@ -1591,7 +1591,7 @@
 <rect width="12" height="12" x="390" y="450" class="nonmatching"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="450" class="nonmatching"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="450" class="named"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="450" class="nonmatching"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="450" class="named"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="450" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="450" class="nonmatching"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="450" class="nonmatching"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
@@ -2357,7 +2357,7 @@
 <rect width="8.87" height="8.51" x="495.92" y="419.09" class="named"><title>0x00487c30 InitBinoculars (197 bytes)</title></rect>
 <rect width="8.87" height="8.47" x="495.92" y="430.60" class="named"><title>0x0048ee50 CheckMMXTechnology (196 bytes)</title></rect>
 <rect width="8.87" height="8.47" x="495.92" y="442.06" class="nonmatching"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
-<rect width="8.87" height="8.47" x="495.92" y="453.53" class="nonmatching"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
+<rect width="8.87" height="8.47" x="495.92" y="453.53" class="named"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="8.69" height="8.60" x="507.80" y="222.18" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="8.69" height="8.60" x="519.49" y="222.18" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
 <rect width="8.65" height="8.60" x="531.18" y="222.18" class="named"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>

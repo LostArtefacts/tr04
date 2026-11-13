@@ -3568,6 +3568,75 @@ void SW_SpanGInt(void)
 }
 #endif
 
+#ifndef FEAT_C_ASM
+void SW_SpanGAddInt(void)
+{
+    __asm {
+        mov esi, dword ptr [SW_SpanBuffer]
+        cmp esi, dword ptr [SW_SpanEnd]
+        je Done
+        push ebp
+        mov edi, dword ptr [SW_Surface]
+        mov eax, dword ptr [SW_SpanY]
+        imul eax, dword ptr [SW_SurfacePitch]
+        add edi, eax
+        mov ax, word ptr [SW_SpanGrad + 4]
+        shl eax, 0x10
+        mov ax, word ptr [SW_SpanGrad]
+        mov dword ptr [P0 + 2], eax
+    L0:
+        mov ebx, dword ptr [esi]
+        mov eax, dword ptr [esi + 4]
+        shl ebx, 2
+        push edi
+        add edi, ebx
+        or eax, eax
+        jle L2
+        mov bx, word ptr [esi + 0x1c]
+        shl ebx, 0x10
+        mov bx, word ptr [esi + 0x18]
+        mov ecx, dword ptr [esi + 0x1a]
+        mov edx, dword ptr [SW_SpanGrad + 2]
+        push esi
+    L1:
+        mov ebp, ebx
+        mov esi, ecx
+        shr ebp, 8
+        add ecx, edx
+    P0:
+        add ebx, 0x12345678
+        and esi, 0xfe00
+        and ebp, 0xfe00ff
+        add edi, 4
+        push edx
+        or ebp, esi
+        push ecx
+        mov edx, dword ptr [edi - 4]
+        and edx, 0xfefeff
+        add ebp, edx
+        mov edx, ebp
+        and edx, 0x1010100
+        mov ecx, edx
+        shr edx, 8
+        sub ecx, edx
+        or ebp, ecx
+        pop ecx
+        pop edx
+        dec eax
+        mov dword ptr [edi - 4], ebp
+        jne L1
+        pop esi
+    L2:
+        pop edi
+        add edi, dword ptr [SW_SurfacePitch]
+        add esi, 0x20
+        cmp dword ptr [SW_SpanEnd], esi
+        jne L0
+        pop ebp
+    Done:
+    }
+}
+#else
 void SW_SpanGAddInt(void)
 {
     SW_SPAN *s;
@@ -3599,6 +3668,7 @@ void SW_SpanGAddInt(void)
         } while (s != SW_SpanEnd);
     }
 }
+#endif
 
 void SW_SpanGLit(void)
 {
