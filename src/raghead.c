@@ -365,17 +365,22 @@ void RagheadControl(sint16 item_number)
                 head = info.angle;
             if (Targetable(item, &info) && item->item_flags[2] > 0) {
                 item->goal_anim_state = 0;
+                goto animate_raghead;
             } else if (jump_ahead || long_jump_ahead) {
                 raghead->maximum_turn = 0;
                 item->goal_anim_state = 0;
+                goto animate_raghead;
             } else if (raghead->reached_goal || raghead->monkey_ahead) {
                 item->goal_anim_state = 0;
             } else if (item->item_flags[2] < 1 && item->meshswap_meshbits != 0x7E0880 && item->meshswap_meshbits != 0x880) {
                 item->goal_anim_state = 0;
+                goto animate_raghead;
             } else if (info.ahead && info.distance < 0x40000) {
                 item->goal_anim_state = 0;
+                goto animate_raghead;
             } else if (info.bite && info.distance < 0x718E4) {
                 item->goal_anim_state = 0;
+                goto animate_raghead;
             } else if (info.bite && info.distance < 0x100000) {
                 item->goal_anim_state = 29;
             } else if (can_roll || can_jump) {
@@ -392,9 +397,20 @@ void RagheadControl(sint16 item_number)
             if (item->object_number == SUPER_RAGHEAD && item->frame_number == anims[item->anim_number].frame_base + 11 && farheight == nearheight && abs(nearheight - y) < 384 && ((info.angle > -4096 && info.angle < 4096 && info.distance < 0x900000) || midheight >= nearheight + 512)) {
                 item->goal_anim_state = 30;
                 raghead->maximum_turn = 0;
-            } else if ((Targetable(item, &info) && item->item_flags[2] > 0) || jump_ahead || long_jump_ahead || raghead->monkey_ahead || item->ai_bits == GUARD || info.distance < 0x5C0A4 || raghead->jump_ahead) {
+                break;
+            }
+            if (Targetable(item, &info) && item->item_flags[2] > 0) {
                 item->goal_anim_state = 0;
-            } else if (info.distance < 0x100000) {
+                break;
+            }
+            if (jump_ahead || long_jump_ahead || raghead->monkey_ahead) {
+                item->goal_anim_state = 0;
+                break;
+            } else if (item->ai_bits == GUARD || info.distance < 0x5C0A4 || raghead->jump_ahead) {
+                item->goal_anim_state = 0;
+                break;
+            }
+            if (info.distance < 0x100000) {
                 item->goal_anim_state = 1;
             }
             break;
@@ -547,7 +563,7 @@ void RagheadControl(sint16 item_number)
         case 11:
             if (item->frame_number == anims[item->anim_number].frame_base + 20)
                 item->meshswap_meshbits = 0x7FC800;
-            break;
+            goto mesh_swap_done;
         case 10:
             if (item->frame_number == anims[item->anim_number].frame_base + 21)
                 item->meshswap_meshbits = 0x7FC010;
@@ -563,6 +579,7 @@ void RagheadControl(sint16 item_number)
                 else
                     item->meshswap_meshbits = 0x880;
             }
+        mesh_swap_done:
             break;
         case 8:
             raghead->maximum_turn = 0;
@@ -587,6 +604,7 @@ void RagheadControl(sint16 item_number)
             break;
         }
     }
+animate_raghead:
     CreatureTilt(item, tilt);
     CreatureJoint(item, 0, torso_y);
     CreatureJoint(item, 1, torso_x);
