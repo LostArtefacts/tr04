@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="324.41" height="12" x="0" y="0" class="named"><title>1213 · 78.36%</title></rect>
-<rect width="50.28" height="12" x="324.41" y="0" class="nonmatching"><title>188 · 12.14%</title></rect>
-<rect width="39.31" height="12" x="374.69" y="0" class="todo"><title>147 · 9.50%</title></rect>
+<rect width="50.55" height="12" x="324.41" y="0" class="nonmatching"><title>189 · 12.21%</title></rect>
+<rect width="39.05" height="12" x="374.95" y="0" class="todo"><title>146 · 9.43%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">188</tspan> · <tspan class="todo">147</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">189</tspan> · <tspan class="todo">146</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="217.20" height="12" x="0" y="0" class="named"><title>328 KB · 52.46%</title></rect>
-<rect width="144.89" height="12" x="217.20" y="0" class="nonmatching"><title>219 KB · 35%</title></rect>
-<rect width="51.90" height="12" x="362.10" y="0" class="todo"><title>78 KB · 12.54%</title></rect>
+<rect width="145.09" height="12" x="217.20" y="0" class="nonmatching"><title>219 KB · 35.05%</title></rect>
+<rect width="51.71" height="12" x="362.29" y="0" class="todo"><title>78 KB · 12.49%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">219 KB</tspan> · <tspan class="todo">78 KB</tspan></text>
@@ -620,7 +620,7 @@
 <rect width="12" height="12" x="45" y="165" class="named"><title>0x00438420 TriggerGlobalStaticFlame (201 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="165" class="named"><title>0x004384f0 ClearFires (20 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="165" class="named"><title>0x00438510 AddFire (80 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="165" class="todo"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="165" class="nonmatching"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="165" class="named"><title>0x00438690 GetFreeSmokeSpark (107 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="165" class="nonmatching"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="165" class="named"><title>0x00438940 TriggerGunSmoke (597 bytes)</title></rect>
@@ -2173,7 +2173,7 @@
 <rect width="10.43" height="10.89" x="525.38" y="158.99" class="named"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
 <rect width="10.40" height="10.89" x="538.81" y="158.99" class="nonmatching"><title>0x0044aa20 RefreshCamera (295 bytes)</title></rect>
 <rect width="10.40" height="10.89" x="552.21" y="158.99" class="nonmatching"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
-<rect width="10.36" height="10.89" x="565.60" y="158.99" class="todo"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>
+<rect width="10.36" height="10.89" x="565.60" y="158.99" class="nonmatching"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>
 <rect width="10.29" height="10.89" x="578.97" y="158.99" class="named"><title>0x0043ae50 TriggerLightning (292 bytes)</title></rect>
 <rect width="10.29" height="10.89" x="592.26" y="158.99" class="named"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
 <rect width="10.25" height="10.89" x="605.55" y="158.99" class="todo"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>

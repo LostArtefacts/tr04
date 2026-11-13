@@ -194,6 +194,47 @@ void AddFire(sint32 x, sint32 y, sint32 z, sint32 size, sint16 room_number, sint
     }
 }
 
+void S_DrawFires(void)
+{
+    FIRE_LIST *fire;
+    ROOM_INFO *r;
+    sint16 *bounds;
+    sint16 size;
+    sint32 i;
+
+    bounds = (sint16 *)&scratchpad[0];
+    fire = fires;
+    for (i = 32; i > 0; i--, fire++) {
+        if (fire->on) {
+            size = fire->size == 2 ? 256 : 128;
+            bounds[0] = -size;
+            bounds[1] = size;
+            bounds[2] = -size * 6;
+            bounds[3] = size;
+            bounds[4] = -size;
+            bounds[5] = size;
+            r = &room[fire->room_number];
+            phd_left = r->left;
+            phd_right = r->right;
+            phd_top = r->top;
+            phd_bottom = r->bottom;
+            phd_PushMatrix();
+            phd_TranslateAbs(fire->x, fire->y, fire->z);
+            if (S_GetObjectBounds(bounds)) {
+                if (fire->on == 1)
+                    S_DrawFireSparks(fire->size, 255);
+                else
+                    S_DrawFireSparks(fire->size, fire->on & 0xFF);
+            }
+            phd_PopMatrix();
+        }
+    }
+    phd_top = 0;
+    phd_left = 0;
+    phd_right = phd_winwidth;
+    phd_bottom = phd_winheight;
+}
+
 sint32 GetFreeSmokeSpark(void)
 {
     SMOKE_SPARKS *sptr;

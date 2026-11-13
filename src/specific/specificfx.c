@@ -760,7 +760,7 @@ void S_DrawSplashes(void)
     }
 }
 
-void S_DrawFireSparks(sint16 size, sint32 life)
+void S_DrawFireSparks(sint32 size, sint32 life)
 {
     FIRE_SPARKS *sptr;
     SPRITESTRUCT *sprite;
@@ -785,9 +785,9 @@ void S_DrawFireSparks(sint16 size, sint32 life)
     for (i = 0; i < 20; i++, sptr++) {
         if (!sptr->On)
             continue;
-        dx = sptr->x >> (2 - size);
-        dy = sptr->y >> (2 - size);
-        dz = sptr->z >> (2 - size);
+        dx = sptr->x >> (2 - (sint16)size);
+        dy = sptr->y >> (2 - (sint16)size);
+        dz = sptr->z >> (2 - (sint16)size);
         if (dx < -0x5000 || dx > 0x5000 || dy < -0x5000 || dy > 0x5000 || dz < -0x5000 || dz > 0x5000)
             continue;
         offsets[0] = (sint16)dx;
@@ -803,7 +803,7 @@ void S_DrawFireSparks(sint16 size, sint32 life)
         if (Z[0] <= 0 || Z[0] >= 0x5000)
             continue;
         newSize = ((phd_persp * sptr->Size) << 2) / Z[0];
-        newSize >>= 2 - size;
+        newSize >>= 2 - (sint16)size;
         if (newSize > (sptr->Size << 2))
             newSize = sptr->Size << 2;
         else if (newSize < 4)
