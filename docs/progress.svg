@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="385.10" height="12" x="0" y="0" class="named"><title>1292 · 83.35%</title></rect>
-<rect width="76.90" height="12" x="385.10" y="0" class="nonmatching"><title>258 · 16.65%</title></rect>
+<rect width="385.40" height="12" x="0" y="0" class="named"><title>1293 · 83.42%</title></rect>
+<rect width="76.60" height="12" x="385.40" y="0" class="nonmatching"><title>257 · 16.58%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">83.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1292</tspan> · <tspan class="nonmatching">258</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1293</tspan> · <tspan class="nonmatching">257</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="258.70" height="12" x="0" y="0" class="named"><title>350 KB · 56%</title></rect>
-<rect width="203.30" height="12" x="258.70" y="0" class="nonmatching"><title>275 KB · 44%</title></rect>
+<rect width="259.07" height="12" x="0" y="0" class="named"><title>351 KB · 56.08%</title></rect>
+<rect width="202.93" height="12" x="259.07" y="0" class="nonmatching"><title>275 KB · 43.92%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">56.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">350 KB</tspan> · <tspan class="nonmatching">275 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">56.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">351 KB</tspan> · <tspan class="nonmatching">275 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1597,7 +1597,7 @@
 <rect width="12" height="12" x="480" y="450" class="nonmatching"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="450" class="named"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="450" class="nonmatching"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="450" class="nonmatching"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="450" class="named"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="450" class="nonmatching"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="450" class="nonmatching"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="450" class="nonmatching"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
@@ -1976,7 +1976,7 @@
 <rect width="13.88" height="14" x="381.70" y="131.40" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="13.88" height="13.95" x="381.70" y="148.40" class="named"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
 <rect width="13.88" height="13.92" x="381.70" y="165.35" class="named"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
-<rect width="13.88" height="13.92" x="381.70" y="182.27" class="nonmatching"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
+<rect width="13.88" height="13.92" x="381.70" y="182.27" class="named"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
 <rect width="13.88" height="13.81" x="381.70" y="199.19" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>
 <rect width="13.88" height="13.81" x="381.70" y="215.99" class="named"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
 <rect width="13.88" height="13.81" x="381.70" y="232.80" class="named"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
