@@ -481,3 +481,31 @@ void CalculateRope(ROPE_STRUCT *Rope)
         }
     }
 }
+
+void ProjectRopePoints(ROPE_STRUCT *Rope)
+{
+    struct {
+        float x, y, z;
+    } Output;
+    PHD_VECTOR t;
+    float zv;
+    sint32 i, w, h;
+
+    w = phd_winwidth >> 1;
+    h = phd_winheight >> 1;
+    phd_PushMatrix();
+    phd_TranslateAbs(Rope->Position.x, Rope->Position.y, Rope->Position.z);
+    for (i = 0; i < 24; i++) {
+        t.x = Rope->MeshSegment[i].x >> (W2V_SHIFT + 2);
+        t.y = Rope->MeshSegment[i].y >> (W2V_SHIFT + 2);
+        t.z = Rope->MeshSegment[i].z >> (W2V_SHIFT + 2);
+        Output.x = (float)(t.x * phd_mxptr[M00] + t.y * phd_mxptr[M01] + t.z * phd_mxptr[M02] + phd_mxptr[M03]);
+        Output.y = (float)(t.x * phd_mxptr[M10] + t.y * phd_mxptr[M11] + t.z * phd_mxptr[M12] + phd_mxptr[M13]);
+        Output.z = (float)(t.x * phd_mxptr[M20] + t.y * phd_mxptr[M21] + t.z * phd_mxptr[M22] + phd_mxptr[M23]);
+        zv = phd_persp / Output.z;
+        Rope->Coords[i][0] = (sint32)(Output.x * zv + w);
+        Rope->Coords[i][1] = (sint32)(Output.y * zv + h);
+        Rope->Coords[i][2] = (sint32)Output.z;
+    }
+    phd_PopMatrix();
+}
