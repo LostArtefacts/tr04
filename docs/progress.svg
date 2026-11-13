@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="328.95" height="12" x="0" y="0" class="named"><title>1230 · 79.46%</title></rect>
-<rect width="60.17" height="12" x="328.95" y="0" class="nonmatching"><title>225 · 14.53%</title></rect>
-<rect width="24.87" height="12" x="389.13" y="0" class="todo"><title>93 · 6.01%</title></rect>
+<rect width="60.44" height="12" x="328.95" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
+<rect width="24.60" height="12" x="389.40" y="0" class="todo"><title>92 · 5.94%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1230</tspan> · <tspan class="nonmatching">225</tspan> · <tspan class="todo">93</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1230</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">92</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="223.30" height="12" x="0" y="0" class="named"><title>337 KB · 53.94%</title></rect>
-<rect width="162.14" height="12" x="223.30" y="0" class="nonmatching"><title>245 KB · 39.16%</title></rect>
-<rect width="28.56" height="12" x="385.44" y="0" class="todo"><title>43 KB · 6.90%</title></rect>
+<rect width="162.98" height="12" x="223.30" y="0" class="nonmatching"><title>246 KB · 39.37%</title></rect>
+<rect width="27.73" height="12" x="386.27" y="0" class="todo"><title>42 KB · 6.70%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">245 KB</tspan> · <tspan class="todo">43 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">246 KB</tspan> · <tspan class="todo">42 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1512,7 +1512,7 @@
 <rect width="12" height="12" x="675" y="420" class="named"><title>0x00492240 DXBitMask2ShiftCnt (52 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="420" class="named"><title>0x00492280 DXEnumDisplayModes (281 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="420" class="named"><title>0x004923a0 BPPToDDBD (136 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="420" class="todo"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="420" class="nonmatching"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="420" class="named"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="435" class="named"><title>0x00492ad0 DXEnumZBufferFormats (101 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="435" class="named"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
@@ -1724,7 +1724,7 @@
 <rect width="21.97" height="22.56" x="235.77" y="25.61" class="nonmatching"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
 <rect width="21.97" height="22.40" x="235.77" y="51.17" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
 <rect width="21.97" height="22.04" x="235.77" y="76.57" class="named"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
-<rect width="21.97" height="22.04" x="235.77" y="101.61" class="todo"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
+<rect width="21.97" height="22.04" x="235.77" y="101.61" class="nonmatching"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
 <rect width="21.97" height="22.02" x="235.77" y="126.64" class="named"><title>0x0044a530 GetHeight (1261 bytes)</title></rect>
 <rect width="21.97" height="21.90" x="235.77" y="151.66" class="named"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
 <rect width="21.97" height="21.86" x="235.77" y="176.56" class="named"><title>0x0043bf10 DrawInventoryItemMe (1252 bytes)</title></rect>

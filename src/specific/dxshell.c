@@ -631,6 +631,103 @@ sint32 BPPToDDBD(sint32 BPP)
     }
 }
 
+HRESULT CALLBACK DXEnumDirect3D(LPGUID lpGuid, LPSTR lpDeviceDescription, LPSTR lpDeviceName, LPD3DDEVICEDESC lpHWDesc, LPD3DDEVICEDESC lpHELDesc, LPVOID lpContext)
+{
+    DXDIRECTDRAWINFO *ddi;
+    DXD3DDEVICE *device;
+    LPDIRECT3DDEVICE3 d3dDevice;
+    DXDISPLAYMODE *dm;
+    LPDIRECTDRAWSURFACE4 surf;
+    DDSURFACEDESC2 desc;
+    sint32 nD3DDevices, i;
+    char *str;
+
+    ddi = (DXDIRECTDRAWINFO *)lpContext;
+    nD3DDevices = ddi->nD3DDevices;
+    ddi->D3DDevices = (DXD3DDEVICE *)AddStruct(ddi->D3DDevices, nD3DDevices, sizeof(DXD3DDEVICE));
+    device = &ddi->D3DDevices[nD3DDevices];
+    if (!lpGuid)
+        device->lpGuid = 0;
+    else {
+        device->lpGuid = &device->Guid;
+        device->Guid = *lpGuid;
+    }
+    lstrcpy(device->About, lpDeviceDescription);
+    lstrcpy(device->Name, lpDeviceName);
+    Log(5, "Found - %s", lpDeviceDescription);
+    if (lpHWDesc->dwFlags) {
+        device->bHardware = 1;
+        memcpy(&device->DeviceDesc, lpHWDesc, sizeof(D3DDEVICEDESC));
+    } else {
+        device->bHardware = 0;
+        memcpy(&device->DeviceDesc, lpHELDesc, sizeof(D3DDEVICEDESC));
+        if (App.mmx) {
+            str = "Core Design MMX Hardware Card Emulation";
+            strcpy(device->About, str);
+        } else {
+            str = "Core Design Hardware Card Emulation";
+            strcpy(device->About, str);
+        }
+    }
+    Log(5, "Finding Compatible Display Modes");
+    device->nDisplayModes = 0;
+    for (i = 0; i < ddi->nDisplayModes; i++) {
+        if (BPPToDDBD(ddi->DisplayModes[i].bpp) & device->DeviceDesc.dwDeviceRenderBitDepth) {
+            device->DisplayModes = (DXDISPLAYMODE *)AddStruct(device->DisplayModes, ddi->nDisplayModes, sizeof(DXDISPLAYMODE));
+            dm = &device->DisplayModes[device->nDisplayModes];
+            memcpy(dm, &ddi->DisplayModes[i], sizeof(DXDISPLAYMODE));
+            if (!dm->bPalette)
+                Log(3, "%d x %d - %d Bit - %d%d%d", dm->w, dm->h, dm->bpp, dm->rbpp, dm->gbpp, dm->bbpp);
+            else
+                Log(3, "%d x %d - %d Bit - Palette", dm->w, dm->h, dm->bpp);
+            device->nDisplayModes++;
+        }
+    }
+    Log(5, "Enumerate Texture Formats");
+    memset(&desc, 0, sizeof(DDSURFACEDESC2));
+    desc.dwSize = sizeof(DDSURFACEDESC2);
+    desc.dwFlags = DDSD_CAPS;
+    desc.ddsCaps.dwCaps = DDSCAPS_PRIMARYSURFACE | DDSCAPS_3DDEVICE;
+    DXSetCooperativeLevel(G_ddraw, G_hwnd, DDSCL_FULLSCREEN | DDSCL_NOWINDOWCHANGES | DDSCL_EXCLUSIVE);
+    DXCreateSurface(G_ddraw, &desc, &surf);
+    if (surf) {
+        DXCreateD3DDevice(G_d3d, device->Guid, surf, &d3dDevice);
+        if (!d3dDevice) {
+            Log(1, "Create D3DDevice Failed");
+            if (surf) {
+                Log(4, "Released %s @ %x - RefCnt = %d", "DirectDrawSurface", surf, IDirectDrawSurface4_Release(surf));
+                surf = 0;
+            } else
+                Log(1, "%s Attempt To Release NULL Ptr", "DirectDrawSurface");
+            DXSetVideoMode(G_ddraw, device->DisplayModes->w, device->DisplayModes->h, device->DisplayModes->bpp);
+            DXCreateSurface(G_ddraw, &desc, &surf);
+            if (surf)
+                DXCreateD3DDevice(G_d3d, device->Guid, surf, &d3dDevice);
+        }
+        if (d3dDevice) {
+            device->nTextureInfos = 0;
+            Log(2, "DXEnumTextureFormats");
+            DXAttempt(IDirect3DDevice3_EnumTextureFormats(d3dDevice, DXEnumTextureFormats, (void *)device));
+            if (d3dDevice) {
+                Log(4, "Released %s @ %x - RefCnt = %d", "D3DDevice", d3dDevice, IDirect3DDevice3_Release(d3dDevice));
+                d3dDevice = 0;
+            } else
+                Log(1, "%s Attempt To Release NULL Ptr", "D3DDevice");
+        }
+        if (surf) {
+            Log(4, "Released %s @ %x - RefCnt = %d", "DirectDrawSurface", surf, IDirectDrawSurface4_Release(surf));
+            surf = 0;
+        } else
+            Log(1, "%s Attempt To Release NULL Ptr", "DirectDrawSurface");
+    }
+    DXSetCooperativeLevel(G_ddraw, G_hwnd, DDSCL_NORMAL);
+    Log(5, "Enumerating ZBuffer Formats");
+    Log(2, "DXEnumZBufferFormats");
+    DXAttempt(IDirect3D3_EnumZBufferFormats(G_d3d, &device->Guid, DXEnumZBufferFormats, (void *)device));
+    ddi->nD3DDevices++;
+    return D3DENUMRET_OK;
+}
+
 HRESULT CALLBACK DXEnumTextureFormats(LPDDPIXELFORMAT lpDDPixFmt, LPVOID lpContext)
 {
     DXD3DDEVICE *d3d;
