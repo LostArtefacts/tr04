@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="337.78" height="12" x="0" y="0" class="named"><title>1263 · 81.59%</title></rect>
-<rect width="61.24" height="12" x="337.78" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="14.98" height="12" x="399.02" y="0" class="todo"><title>56 · 3.62%</title></rect>
+<rect width="338.05" height="12" x="0" y="0" class="named"><title>1264 · 81.65%</title></rect>
+<rect width="61.24" height="12" x="338.05" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="14.71" height="12" x="399.29" y="0" class="todo"><title>55 · 3.55%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1263</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">56</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1264</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">55</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="225.13" height="12" x="0" y="0" class="named"><title>340 KB · 54.38%</title></rect>
-<rect width="166.38" height="12" x="225.13" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="22.49" height="12" x="391.51" y="0" class="todo"><title>34 KB · 5.43%</title></rect>
+<rect width="225.14" height="12" x="0" y="0" class="named"><title>340 KB · 54.38%</title></rect>
+<rect width="166.38" height="12" x="225.14" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="22.48" height="12" x="391.52" y="0" class="todo"><title>34 KB · 5.43%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">340 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">34 KB</tspan></text>
@@ -1541,7 +1541,7 @@
 <rect width="12" height="12" x="360" y="435" class="named"><title>0x00494620 SW_D3D_SetRenderState (44 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="435" class="named"><title>0x00494650 SW_D3D_DrawPrimitive (36 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="435" class="named"><title>0x00494680 SW_D3D_SetTextureStageState (113 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="435" class="todo"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="435" class="named"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="435" class="named"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="435" class="named"><title>0x00494830 SW_D3D_BeginScene (99 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="435" class="todo"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
@@ -3120,7 +3120,7 @@
 <rect width="2.52" height="1.80" x="733.44" y="431.69" class="named"><title>0x00473ad0 S_SoundStopSample (12 bytes)</title></rect>
 <rect width="2.52" height="1.80" x="738.96" y="431.69" class="named"><title>0x0048e800 TIME_Reset (12 bytes)</title></rect>
 <rect width="2.52" height="1.80" x="744.48" y="431.69" class="named"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
-<rect width="2.47" height="1.84" x="716.87" y="436.49" class="todo"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
+<rect width="2.47" height="1.84" x="716.87" y="436.49" class="named"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
 <rect width="2.47" height="1.84" x="716.87" y="441.32" class="named"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
 <rect width="2.47" height="1.84" x="716.87" y="446.16" class="named"><title>0x004952a0 SW_SetColorOpScale (12 bytes)</title></rect>
 <rect width="2.47" height="1.67" x="716.87" y="451" class="named"><title>0x004328b0 lara_as_waterroll (11 bytes)</title></rect>

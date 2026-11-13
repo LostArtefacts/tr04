@@ -34,6 +34,8 @@ extern DDSURFACEDESC2 SW_SurfDesc;
 extern sint32 SW_NumLocked;
 extern sint32 SW_UseMMX;
 extern UINT DBLog_Message;
+
+static char SW_Kernel32Name[] = "kernel32.dll";
 extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 extern LPDIRECT3DTEXTURE2 SW_LockedTextures[256];
 extern void *SW_LockedBits[256];
@@ -136,6 +138,15 @@ HRESULT __stdcall SW_D3D_SetTextureStageState(SW_DEVICE *dev, DWORD stage, D3DTE
         return 0;
     }
     return 0;
+}
+
+__declspec(naked) HMODULE SW_GetKernelModule(void)
+{
+    __asm {
+        push offset SW_Kernel32Name
+        call dword ptr GetModuleHandleA
+        ret
+    }
 }
 
 HRESULT __stdcall SW_D3D_SetTexture(SW_DEVICE *dev, DWORD stage, LPDIRECT3DTEXTURE2 tex)
