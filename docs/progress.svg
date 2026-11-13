@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="383.91" height="12" x="0" y="0" class="named"><title>1288 · 83.10%</title></rect>
-<rect width="78.09" height="12" x="383.91" y="0" class="nonmatching"><title>262 · 16.90%</title></rect>
+<rect width="384.21" height="12" x="0" y="0" class="named"><title>1289 · 83.16%</title></rect>
+<rect width="77.79" height="12" x="384.21" y="0" class="nonmatching"><title>261 · 16.84%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">83.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1288</tspan> · <tspan class="nonmatching">262</tspan></text>
+<text text-anchor="end" x="642" y="7.50">83.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1289</tspan> · <tspan class="nonmatching">261</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="257.22" height="12" x="0" y="0" class="named"><title>348 KB · 55.68%</title></rect>
-<rect width="204.78" height="12" x="257.22" y="0" class="nonmatching"><title>277 KB · 44.32%</title></rect>
+<rect width="257.59" height="12" x="0" y="0" class="named"><title>349 KB · 55.75%</title></rect>
+<rect width="204.41" height="12" x="257.59" y="0" class="nonmatching"><title>277 KB · 44.25%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">55.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">348 KB</tspan> · <tspan class="nonmatching">277 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">55.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">349 KB</tspan> · <tspan class="nonmatching">277 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1584,7 +1584,7 @@
 <rect width="12" height="12" x="285" y="450" class="named"><title>0x00499ac0 SW_SpanGTP (336 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="450" class="named"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="450" class="named"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="450" class="nonmatching"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="450" class="named"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="450" class="nonmatching"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="450" class="nonmatching"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="450" class="nonmatching"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
@@ -1982,7 +1982,7 @@
 <rect width="13.88" height="13.81" x="381.70" y="232.80" class="nonmatching"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
 <rect width="13.88" height="13.78" x="381.70" y="249.61" class="named"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
 <rect width="13.88" height="13.78" x="381.70" y="266.39" class="nonmatching"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
-<rect width="13.88" height="13.67" x="381.70" y="283.17" class="nonmatching"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
+<rect width="13.88" height="13.67" x="381.70" y="283.17" class="named"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="13.88" height="13.64" x="381.70" y="299.84" class="named"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
 <rect width="13.88" height="13.64" x="381.70" y="316.49" class="nonmatching"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
 <rect width="13.88" height="13.62" x="381.70" y="333.13" class="named"><title>0x00421bf0 lara_col_crawl2hang (493 bytes)</title></rect>
