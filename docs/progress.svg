@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="74.52" height="12" x="336.54" y="0" class="nonmatching"><title>279 · 18%</title></rect>
-<rect width="2.94" height="12" x="411.06" y="0" class="todo"><title>11 · 0.71%</title></rect>
+<rect width="74.79" height="12" x="336.54" y="0" class="nonmatching"><title>280 · 18.06%</title></rect>
+<rect width="2.67" height="12" x="411.33" y="0" class="todo"><title>10 · 0.65%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">279</tspan> · <tspan class="todo">11</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">280</tspan> · <tspan class="todo">10</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.56%</title></rect>
-<rect width="175.88" height="12" x="225.86" y="0" class="nonmatching"><title>266 KB · 42.48%</title></rect>
-<rect width="12.26" height="12" x="401.74" y="0" class="todo"><title>19 KB · 2.96%</title></rect>
+<rect width="176.25" height="12" x="225.86" y="0" class="nonmatching"><title>266 KB · 42.57%</title></rect>
+<rect width="11.89" height="12" x="402.11" y="0" class="todo"><title>18 KB · 2.87%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">266 KB</tspan> · <tspan class="todo">19 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">266 KB</tspan> · <tspan class="todo">18 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1595,7 +1595,7 @@
 <rect width="12" height="12" x="420" y="450" class="nonmatching"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="450" class="nonmatching"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="450" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="450" class="todo"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="450" class="nonmatching"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="450" class="todo"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="450" class="nonmatching"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="450" class="nonmatching"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
@@ -1940,7 +1940,7 @@
 <rect width="14.69" height="14.51" x="489.87" y="79.77" class="named"><title>0x00455470 InitialiseSlot (556 bytes)</title></rect>
 <rect width="14.58" height="14.51" x="507.56" y="79.77" class="nonmatching"><title>0x00407060 HammerheadControl (552 bytes)</title></rect>
 <rect width="14.53" height="14.51" x="525.15" y="79.77" class="named"><title>0x00482f90 SubdivideEdge (550 bytes)</title></rect>
-<rect width="14.50" height="14.51" x="542.68" y="79.77" class="todo"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
+<rect width="14.50" height="14.51" x="542.68" y="79.77" class="nonmatching"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
 <rect width="14.48" height="14.51" x="560.18" y="79.77" class="named"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>
 <rect width="14.48" height="14.51" x="577.66" y="79.77" class="named"><title>0x004729e0 DrawBucket (548 bytes)</title></rect>
 <rect width="14.42" height="14.51" x="595.14" y="79.77" class="named"><title>0x004094a0 ClearMovableBlockSplitters (546 bytes)</title></rect>

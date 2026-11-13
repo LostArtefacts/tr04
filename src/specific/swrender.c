@@ -1957,6 +1957,56 @@ void SW_SpanGLit(void)
     }
 }
 
+void SW_SpanGTLit(void)
+{
+    SW_SPAN *s;
+    uint32 *row, *p;
+    uint32 u, v, texel, d;
+    uint32 c0, c1, c2, dc0, dc1, dc2, du, dv;
+    sint32 n, a, ia;
+
+    row = (uint32 *)SW_Surface + (SW_SurfacePitch * SW_SpanY >> 2);
+    dc2 = (uint16)SW_SpanGrad[2];
+    a = SW_TriV0->color >> 24;
+    dc1 = (uint16)SW_SpanGrad[1];
+    dc0 = (uint16)SW_SpanGrad[0];
+    du = SW_SpanDU;
+    dv = SW_SpanDV;
+    ia = 255 - a;
+    a <<= 8;
+    if (SW_SpanBuffer != SW_SpanEnd) {
+        s = SW_SpanBuffer;
+        do {
+            p = row + s->x;
+            n = s->n;
+            c2 = s->c[2];
+            c1 = s->c[1];
+            c0 = s->c[0];
+            u = s->tex[0];
+            v = s->tex[2];
+            if (n > 0) {
+                do {
+                    texel = ((uint32 *)SW_TextureBits)[(uint8)(u >> 16) | ((v >> 8) & 0xFF00)];
+                    if (texel) {
+                        d = *p;
+                        *p = ((SW_MulTable[SW_MulTable[(c2 & 0xFF00) | ((texel >> 16) & 0xFF)] + a] + SW_MulTable[((d >> 8) & 0xFF00) + ia]) << 16)
+                            | ((SW_MulTable[SW_MulTable[(c1 & 0xFF00) | ((texel >> 8) & 0xFF)] + a] + SW_MulTable[(d & 0xFF00) + ia]) << 8)
+                            | (SW_MulTable[SW_MulTable[(c0 & 0xFF00) | (texel & 0xFF)] + a] + SW_MulTable[((d & 0xFF) << 8) + ia]);
+                    }
+                    p++;
+                    c2 += dc2;
+                    c1 += dc1;
+                    c0 += dc0;
+                    u += du;
+                    v += dv;
+                } while (--n);
+            }
+            row += SW_SurfacePitch >> 2;
+            s++;
+        } while (s != SW_SpanEnd);
+    }
+}
+
 void SW_SpanGTInt(void)
 {
     SW_SPAN *s;
