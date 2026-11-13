@@ -87,6 +87,11 @@ HRESULT __stdcall SW_D3D_SetLightState(SW_DEVICE *dev, D3DLIGHTSTATETYPE type, D
     return IDirect3DDevice3_SetLightState(SW_RealD3DDevice, type, state);
 }
 
+HRESULT __stdcall SW_D3D_SetTransform(SW_DEVICE *dev, D3DTRANSFORMSTATETYPE type, LPD3DMATRIX matrix)
+{
+    return IDirect3DDevice3_SetTransform(SW_RealD3DDevice, type, matrix);
+}
+
 sint32 SW_SetZLimit(float limit)
 {
     SW_ZLimit = limit;

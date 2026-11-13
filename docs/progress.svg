@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="332.70" height="12" x="0" y="0" class="named"><title>1244 · 80.36%</title></rect>
-<rect width="61.24" height="12" x="332.70" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="20.06" height="12" x="393.94" y="0" class="todo"><title>75 · 4.84%</title></rect>
+<rect width="332.97" height="12" x="0" y="0" class="named"><title>1245 · 80.43%</title></rect>
+<rect width="61.24" height="12" x="332.97" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="19.79" height="12" x="394.21" y="0" class="todo"><title>74 · 4.78%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">80.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1244</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">75</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1245</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">74</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.55" height="12" x="0" y="0" class="named"><title>338 KB · 54%</title></rect>
-<rect width="166.38" height="12" x="223.55" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="24.07" height="12" x="389.93" y="0" class="todo"><title>36 KB · 5.81%</title></rect>
+<rect width="223.57" height="12" x="0" y="0" class="named"><title>338 KB · 54%</title></rect>
+<rect width="166.38" height="12" x="223.57" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="24.06" height="12" x="389.94" y="0" class="todo"><title>36 KB · 5.81%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1549,7 +1549,7 @@
 <rect width="12" height="12" x="480" y="435" class="named"><title>0x00494a90 SW_D3D_GetRenderTarget (18 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="435" class="todo"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="435" class="named"><title>0x00494b10 SW_D3D_SetLightState (24 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="435" class="todo"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="435" class="named"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="435" class="todo"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="435" class="todo"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="435" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
@@ -3033,7 +3033,7 @@
 <rect width="2.86" height="3.21" x="688.62" y="403.67" class="named"><title>0x00437d30 MeshSwapFromPour (24 bytes)</title></rect>
 <rect width="2.86" height="3.21" x="688.62" y="409.88" class="named"><title>0x00439d40 SetFadeClip (24 bytes)</title></rect>
 <rect width="2.86" height="3.21" x="688.62" y="416.09" class="named"><title>0x00494b10 SW_D3D_SetLightState (24 bytes)</title></rect>
-<rect width="2.86" height="3.21" x="688.62" y="422.30" class="todo"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
+<rect width="2.86" height="3.21" x="688.62" y="422.30" class="named"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
 <rect width="2.86" height="3.08" x="688.62" y="428.51" class="named"><title>0x004278b0 lara_as_controlledl (23 bytes)</title></rect>
 <rect width="2.86" height="3.08" x="688.62" y="434.59" class="named"><title>0x0042d470 lara_as_climbing (23 bytes)</title></rect>
 <rect width="2.86" height="3.08" x="688.62" y="440.68" class="named"><title>0x0042d5e0 lara_as_climbdown (23 bytes)</title></rect>
