@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="72.65" height="12" x="336.54" y="0" class="nonmatching"><title>272 · 17.55%</title></rect>
-<rect width="4.81" height="12" x="409.19" y="0" class="todo"><title>18 · 1.16%</title></rect>
+<rect width="72.92" height="12" x="336.54" y="0" class="nonmatching"><title>273 · 17.61%</title></rect>
+<rect width="4.54" height="12" x="409.46" y="0" class="todo"><title>17 · 1.10%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">272</tspan> · <tspan class="todo">18</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">273</tspan> · <tspan class="todo">17</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.56%</title></rect>
-<rect width="173.61" height="12" x="225.86" y="0" class="nonmatching"><title>262 KB · 41.93%</title></rect>
-<rect width="14.53" height="12" x="399.47" y="0" class="todo"><title>22 KB · 3.51%</title></rect>
+<rect width="173.74" height="12" x="225.86" y="0" class="nonmatching"><title>262 KB · 41.97%</title></rect>
+<rect width="14.40" height="12" x="399.60" y="0" class="todo"><title>22 KB · 3.48%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">262 KB</tspan> · <tspan class="todo">22 KB</tspan></text>
@@ -1552,7 +1552,7 @@
 <rect width="12" height="12" x="525" y="435" class="named"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="435" class="named"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="435" class="nonmatching"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="435" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="435" class="nonmatching"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="435" class="named"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="435" class="named"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="435" class="named"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
@@ -2358,7 +2358,7 @@
 <rect width="8.87" height="8.51" x="495.89" y="407.58" class="named"><title>0x00487b60 InitTarget_2 (197 bytes)</title></rect>
 <rect width="8.87" height="8.51" x="495.89" y="419.09" class="named"><title>0x00487c30 InitBinoculars (197 bytes)</title></rect>
 <rect width="8.87" height="8.47" x="495.89" y="430.60" class="nonmatching"><title>0x0048ee50 CheckMMXTechnology (196 bytes)</title></rect>
-<rect width="8.87" height="8.47" x="495.89" y="442.07" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
+<rect width="8.87" height="8.47" x="495.89" y="442.07" class="nonmatching"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
 <rect width="8.87" height="8.47" x="495.89" y="453.53" class="nonmatching"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="8.69" height="8.60" x="507.77" y="222.19" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="8.69" height="8.60" x="519.46" y="222.19" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>

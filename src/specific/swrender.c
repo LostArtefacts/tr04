@@ -420,6 +420,34 @@ HRESULT SW_ClearBuffer(SW_DEVICE *dev, DWORD count, D3DRECT *rect, DWORD flags, 
     return 0;
 }
 
+void SW_D3D_SetupSurface(sint32 w, sint32 h, sint32 mmx)
+{
+    sint32 *p;
+    sint32 i, j, k, v;
+    uint8 *row;
+    float f;
+
+    SW_RecipTable[0] = 0xFF800000;
+    SW_UseMMX = mmx;
+    p = &SW_RecipTable[1];
+    i = 1;
+    do {
+        f = 1.0F / (1.0F + (float)i * (1.0F / 4096.0F));
+        i++;
+        *p++ = (*(sint32 *)&f & 0x7FFFFF) - 0x1000000;
+    } while (i < 4096);
+    for (k = 0, row = SW_MulTable; (sint32)row < (sint32)&SW_MulTable[65536]; row += 256, k++) {
+        for (j = 0, v = 0; j < 256; j++) {
+            row[j] = (uint8)(v >> 8);
+            v += k;
+        }
+    }
+    if (!SW_SpanBuffer) {
+        SW_SpanBufferHandle = GlobalAlloc(0, (sint32)((float)(((w >> 1) + 32) * h) * 0.75F));
+        SW_SpanBuffer = (void *)(((sint32)SW_SpanBufferHandle + 32) & ~0x1F);
+    }
+}
+
 void SW_FreeBuffer(void)
 {
     GlobalFree(SW_SpanBufferHandle);
