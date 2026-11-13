@@ -123,6 +123,42 @@ void S_CalculateStaticMeshLight(sint32 x, sint32 y, sint32 z, sint32 shade, ROOM
     current_item = &StaticMeshLightItem;
 }
 
+void CalcAmbientLight(ITEM_INFO *item)
+{
+    sint32 amb;
+    sint16 room_number;
+
+    room_number = item->room_number;
+    GetFloor(item->il.item_pos.x, item->il.item_pos.y, item->il.item_pos.z, &room_number);
+    if (item->il.ambient != room[room_number].ambient) {
+        if (item->il.fcnt == -1) {
+            item->il.ambient = room[room_number].ambient;
+            item->il.fcnt = 0;
+        } else {
+            if (!item->il.fcnt) {
+                item->il.r = CLRR(item->il.ambient);
+                item->il.g = CLRG(item->il.ambient);
+                item->il.b = CLRB(item->il.ambient);
+                amb = room[room_number].ambient;
+                item->il.gs = CLRG(amb) - item->il.g;
+                item->il.bs = CLRB(amb) - item->il.b;
+                item->il.rs = CLRR(amb) - item->il.r;
+                item->il.r <<= 3;
+                item->il.g <<= 3;
+                item->il.b <<= 3;
+                item->il.fcnt = 8;
+            }
+            if (item->il.fcnt) {
+                item->il.r += item->il.rs;
+                item->il.g += item->il.gs;
+                item->il.b += item->il.bs;
+                item->il.ambient = RGBONLY(item->il.r >> 3, item->il.g >> 3, item->il.b >> 3);
+                item->il.fcnt--;
+            }
+        }
+    }
+}
+
 void FadeLightList(PCLIGHT *lights, sint32 nLights)
 {
     sint32 i;

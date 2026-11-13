@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="324.41" height="12" x="0" y="0" class="named"><title>1213 · 78.36%</title></rect>
-<rect width="49.48" height="12" x="324.41" y="0" class="nonmatching"><title>185 · 11.95%</title></rect>
-<rect width="40.12" height="12" x="373.88" y="0" class="todo"><title>150 · 9.69%</title></rect>
+<rect width="49.74" height="12" x="324.41" y="0" class="nonmatching"><title>186 · 12.02%</title></rect>
+<rect width="39.85" height="12" x="374.15" y="0" class="todo"><title>149 · 9.63%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">185</tspan> · <tspan class="todo">150</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">186</tspan> · <tspan class="todo">149</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="217.20" height="12" x="0" y="0" class="named"><title>328 KB · 52.46%</title></rect>
-<rect width="144.38" height="12" x="217.20" y="0" class="nonmatching"><title>218 KB · 34.87%</title></rect>
-<rect width="52.42" height="12" x="361.58" y="0" class="todo"><title>79 KB · 12.66%</title></rect>
+<rect width="144.58" height="12" x="217.20" y="0" class="nonmatching"><title>218 KB · 34.92%</title></rect>
+<rect width="52.22" height="12" x="361.78" y="0" class="todo"><title>79 KB · 12.61%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">218 KB</tspan> · <tspan class="todo">79 KB</tspan></text>
@@ -1299,7 +1299,7 @@
 <rect width="12" height="12" x="480" y="360" class="named"><title>0x00478440 ApplyMatrix (105 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="360" class="named"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="360" class="named"><title>0x00478520 S_CalculateStaticMeshLight (76 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="360" class="todo"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="360" class="nonmatching"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="360" class="nonmatching"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="360" class="nonmatching"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="360" class="todo"><title>0x00478b50 SetupLight (787 bytes)</title></rect>
@@ -2166,7 +2166,7 @@
 <rect width="10.96" height="10.57" x="443.58" y="437.90" class="named"><title>0x00459510 ModelRigid (302 bytes)</title></rect>
 <rect width="10.96" height="10.53" x="443.58" y="451.47" class="named"><title>0x00423930 lara_col_monkeyswing (301 bytes)</title></rect>
 <rect width="10.61" height="10.89" x="457.55" y="158.99" class="named"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>
-<rect width="10.61" height="10.89" x="471.16" y="158.99" class="todo"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
+<rect width="10.61" height="10.89" x="471.16" y="158.99" class="nonmatching"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
 <rect width="10.54" height="10.89" x="484.76" y="158.99" class="named"><title>0x0040ff40 GameStixCollision (299 bytes)</title></rect>
 <rect width="10.54" height="10.89" x="498.30" y="158.99" class="named"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
 <rect width="10.54" height="10.89" x="511.84" y="158.99" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
