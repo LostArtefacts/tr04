@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="339.48" height="12" x="0" y="0" class="named"><title>1271 · 82%</title></rect>
-<rect width="61.17" height="12" x="339.48" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
-<rect width="13.35" height="12" x="400.65" y="0" class="todo"><title>50 · 3.23%</title></rect>
+<rect width="339.75" height="12" x="0" y="0" class="named"><title>1272 · 82.06%</title></rect>
+<rect width="61.17" height="12" x="339.75" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
+<rect width="13.09" height="12" x="400.91" y="0" class="todo"><title>49 · 3.16%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">82.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1271</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">50</tspan></text>
+<text text-anchor="end" x="594" y="7.50">82.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1272</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">49</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="226.22" height="12" x="0" y="0" class="named"><title>342 KB · 54.64%</title></rect>
-<rect width="165.91" height="12" x="226.22" y="0" class="nonmatching"><title>251 KB · 40.07%</title></rect>
-<rect width="21.87" height="12" x="392.13" y="0" class="todo"><title>33 KB · 5.28%</title></rect>
+<rect width="226.90" height="12" x="0" y="0" class="named"><title>343 KB · 54.81%</title></rect>
+<rect width="165.91" height="12" x="226.90" y="0" class="nonmatching"><title>251 KB · 40.07%</title></rect>
+<rect width="21.19" height="12" x="392.81" y="0" class="todo"><title>32 KB · 5.12%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="24.50">54.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">342 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">33 KB</tspan></text>
+<text text-anchor="end" x="594" y="24.50">54.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">32 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1558,7 +1558,7 @@
 <rect width="12" height="12" x="615" y="435" class="named"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="435" class="named"><title>0x00494e80 SW_BeginFrame (13 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="435" class="named"><title>0x00494e90 SW_EndFrame (6 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="435" class="todo"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="435" class="named"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="435" class="named"><title>0x004952a0 SW_SetColorOpScale (12 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="435" class="named"><title>0x004952b0 SW_SetRenderStateFlags (418 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="435" class="todo"><title>0x00495460 SW_DrawPrimitives (317 bytes)</title></rect>
@@ -1574,35 +1574,35 @@
 <rect width="12" height="12" x="105" y="450" class="named"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="450" class="todo"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="450" class="todo"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="450" class="todo"><title>0x00498f80 Func498f80 (435 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="450" class="todo"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="450" class="todo"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="450" class="todo"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="450" class="todo"><title>0x00499300 Func499300 (428 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="450" class="todo"><title>0x004994b0 Func4994b0 (437 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="450" class="todo"><title>0x00499670 Func499670 (347 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="450" class="todo"><title>0x004997d0 Func4997d0 (355 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="450" class="todo"><title>0x00499940 Func499940 (368 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="450" class="todo"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="450" class="todo"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="450" class="todo"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="450" class="todo"><title>0x004997d0 SW_SpanGTAdd (355 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="450" class="todo"><title>0x00499940 SW_SpanGTKey (368 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="450" class="todo"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="450" class="todo"><title>0x00499ac0 Func499ac0 (336 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="450" class="todo"><title>0x00499c10 Func499c10 (361 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="450" class="todo"><title>0x00499d80 Func499d80 (358 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="450" class="todo"><title>0x00499ef0 Func499ef0 (495 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="450" class="todo"><title>0x0049a0e0 Func49a0e0 (500 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="450" class="todo"><title>0x0049a2e0 Func49a2e0 (504 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="450" class="todo"><title>0x0049a4e0 Func49a4e0 (509 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="450" class="todo"><title>0x0049a6e0 Func49a6e0 (618 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="450" class="todo"><title>0x0049a950 Func49a950 (611 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="450" class="todo"><title>0x0049abc0 Func49abc0 (164 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="450" class="todo"><title>0x0049ac70 Func49ac70 (196 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="450" class="todo"><title>0x00499ac0 SW_SpanGTP (336 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="450" class="todo"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="450" class="todo"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="450" class="todo"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="450" class="todo"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="450" class="todo"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="450" class="todo"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="450" class="todo"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="450" class="todo"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="450" class="todo"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="450" class="todo"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="450" class="todo"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="450" class="todo"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="450" class="todo"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="450" class="todo"><title>0x0049b370 Func49b370 (500 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="450" class="todo"><title>0x0049b570 Func49b570 (533 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="450" class="todo"><title>0x0049b790 Func49b790 (504 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="450" class="todo"><title>0x0049b990 Func49b990 (509 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="450" class="todo"><title>0x0049bb90 Func49bb90 (542 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="450" class="todo"><title>0x0049bdb0 Func49bdb0 (513 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="450" class="todo"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="450" class="todo"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="450" class="todo"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="450" class="todo"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="450" class="todo"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="450" class="todo"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="450" class="todo"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="named"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="450" class="named"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
@@ -1768,7 +1768,7 @@
 <rect width="20.12" height="19.67" x="284.56" y="91.55" class="named"><title>0x004640a0 DrawTrainObjects (1032 bytes)</title></rect>
 <rect width="20.12" height="19.67" x="284.56" y="114.22" class="named"><title>0x00489540 DrawRope (1032 bytes)</title></rect>
 <rect width="20.12" height="19.44" x="284.56" y="136.89" class="nonmatching"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
-<rect width="20.12" height="19.34" x="284.56" y="159.33" class="todo"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
+<rect width="20.12" height="19.34" x="284.56" y="159.33" class="named"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
 <rect width="20.12" height="19.23" x="284.56" y="181.67" class="nonmatching"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
 <rect width="20.12" height="19.13" x="284.56" y="203.90" class="nonmatching"><title>0x0048e2f0 CreateTexturePage (1004 bytes)</title></rect>
 <rect width="20.12" height="19.06" x="284.56" y="226.03" class="named"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
@@ -1892,13 +1892,13 @@
 <rect width="15.58" height="15.26" x="384.56" y="61.52" class="named"><title>0x00477180 init_water_table (620 bytes)</title></rect>
 <rect width="15.53" height="15.26" x="403.14" y="61.52" class="named"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>
 <rect width="15.53" height="15.26" x="421.67" y="61.52" class="nonmatching"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
-<rect width="15.53" height="15.26" x="440.20" y="61.52" class="todo"><title>0x0049a6e0 Func49a6e0 (618 bytes)</title></rect>
+<rect width="15.53" height="15.26" x="440.20" y="61.52" class="todo"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
 <rect width="15.45" height="15.26" x="458.73" y="61.52" class="nonmatching"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
 <rect width="15.43" height="15.26" x="477.18" y="61.52" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>
 <rect width="15.40" height="15.26" x="495.61" y="61.52" class="named"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
 <rect width="15.38" height="15.26" x="514.02" y="61.52" class="named"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
 <rect width="15.35" height="15.26" x="532.39" y="61.52" class="named"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
-<rect width="15.35" height="15.26" x="550.75" y="61.52" class="todo"><title>0x0049a950 Func49a950 (611 bytes)</title></rect>
+<rect width="15.35" height="15.26" x="550.75" y="61.52" class="todo"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="15.25" height="15.26" x="569.10" y="61.52" class="nonmatching"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
 <rect width="15.23" height="15.26" x="587.35" y="61.52" class="named"><title>0x004624c0 TurnSwitchControl (606 bytes)</title></rect>
 <rect width="15.18" height="15.26" x="605.58" y="61.52" class="nonmatching"><title>0x00451510 LoadGameflow (604 bytes)</title></rect>
@@ -1944,14 +1944,14 @@
 <rect width="14.48" height="14.52" x="560.19" y="79.78" class="named"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>
 <rect width="14.48" height="14.52" x="577.66" y="79.78" class="named"><title>0x004729e0 DrawBucket (548 bytes)</title></rect>
 <rect width="14.42" height="14.52" x="595.14" y="79.78" class="named"><title>0x004094a0 ClearMovableBlockSplitters (546 bytes)</title></rect>
-<rect width="14.32" height="14.52" x="612.57" y="79.78" class="todo"><title>0x0049bb90 Func49bb90 (542 bytes)</title></rect>
+<rect width="14.32" height="14.52" x="612.57" y="79.78" class="todo"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="14.24" height="14.52" x="629.88" y="79.78" class="named"><title>0x00431e90 LaraTestWaterClimbOut (539 bytes)</title></rect>
 <rect width="14.24" height="14.52" x="647.12" y="79.78" class="nonmatching"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
 <rect width="14.19" height="14.52" x="664.36" y="79.78" class="named"><title>0x0044c9c0 IsRoomOutside (537 bytes)</title></rect>
 <rect width="14.16" height="14.52" x="681.55" y="79.78" class="named"><title>0x0041c4c0 TriggerWraithEffect (536 bytes)</title></rect>
 <rect width="14.13" height="14.52" x="698.71" y="79.78" class="named"><title>0x0042ca60 LaraTestClimbUpPos (535 bytes)</title></rect>
 <rect width="14.08" height="14.52" x="715.84" y="79.78" class="named"><title>0x004330a0 TriggerDebris (533 bytes)</title></rect>
-<rect width="14.08" height="14.52" x="732.92" y="79.78" class="todo"><title>0x0049b570 Func49b570 (533 bytes)</title></rect>
+<rect width="14.08" height="14.52" x="732.92" y="79.78" class="todo"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
 <rect width="13.77" height="14.81" x="364.91" y="97.29" class="named"><title>0x00429260 FireShotgun (532 bytes)</title></rect>
 <rect width="13.77" height="14.79" x="364.91" y="115.11" class="named"><title>0x0042a270 FireCrossbow (531 bytes)</title></rect>
 <rect width="13.77" height="14.73" x="364.91" y="132.89" class="named"><title>0x004587e0 SarcophagusCollision (529 bytes)</title></rect>
@@ -1969,22 +1969,22 @@
 <rect width="13.77" height="14.45" x="364.91" y="344.09" class="named"><title>0x0042c770 lara_col_climbstnc (519 bytes)</title></rect>
 <rect width="13.77" height="14.32" x="364.91" y="361.55" class="named"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
 <rect width="13.77" height="14.29" x="364.91" y="378.86" class="named"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
-<rect width="13.77" height="14.29" x="364.91" y="396.15" class="todo"><title>0x0049bdb0 Func49bdb0 (513 bytes)</title></rect>
+<rect width="13.77" height="14.29" x="364.91" y="396.15" class="todo"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
 <rect width="13.77" height="14.20" x="364.91" y="413.44" class="named"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
 <rect width="13.77" height="14.18" x="364.91" y="430.65" class="named"><title>0x00456580 ControlMapper (509 bytes)</title></rect>
 <rect width="13.77" height="14.18" x="364.91" y="447.82" class="named"><title>0x004622c0 PulleyCollision (509 bytes)</title></rect>
-<rect width="13.88" height="14.06" x="381.67" y="97.29" class="todo"><title>0x0049a4e0 Func49a4e0 (509 bytes)</title></rect>
-<rect width="13.88" height="14.06" x="381.67" y="114.35" class="todo"><title>0x0049b990 Func49b990 (509 bytes)</title></rect>
+<rect width="13.88" height="14.06" x="381.67" y="97.29" class="todo"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
+<rect width="13.88" height="14.06" x="381.67" y="114.35" class="todo"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="13.88" height="14" x="381.67" y="131.41" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="13.88" height="13.95" x="381.67" y="148.41" class="named"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
-<rect width="13.88" height="13.92" x="381.67" y="165.35" class="todo"><title>0x0049a2e0 Func49a2e0 (504 bytes)</title></rect>
-<rect width="13.88" height="13.92" x="381.67" y="182.27" class="todo"><title>0x0049b790 Func49b790 (504 bytes)</title></rect>
+<rect width="13.88" height="13.92" x="381.67" y="165.35" class="todo"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
+<rect width="13.88" height="13.92" x="381.67" y="182.27" class="todo"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
 <rect width="13.88" height="13.81" x="381.67" y="199.19" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>
-<rect width="13.88" height="13.81" x="381.67" y="216" class="todo"><title>0x0049a0e0 Func49a0e0 (500 bytes)</title></rect>
-<rect width="13.88" height="13.81" x="381.67" y="232.81" class="todo"><title>0x0049b370 Func49b370 (500 bytes)</title></rect>
+<rect width="13.88" height="13.81" x="381.67" y="216" class="todo"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
+<rect width="13.88" height="13.81" x="381.67" y="232.81" class="todo"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
 <rect width="13.88" height="13.78" x="381.67" y="249.62" class="named"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
 <rect width="13.88" height="13.78" x="381.67" y="266.40" class="nonmatching"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
-<rect width="13.88" height="13.67" x="381.67" y="283.18" class="todo"><title>0x00499ef0 Func499ef0 (495 bytes)</title></rect>
+<rect width="13.88" height="13.67" x="381.67" y="283.18" class="todo"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="13.88" height="13.64" x="381.67" y="299.85" class="named"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
 <rect width="13.88" height="13.64" x="381.67" y="316.49" class="nonmatching"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
 <rect width="13.88" height="13.61" x="381.67" y="333.13" class="named"><title>0x00421bf0 lara_col_crawl2hang (493 bytes)</title></rect>
@@ -2032,15 +2032,15 @@
 <rect width="12.90" height="13.05" x="608.13" y="113.38" class="nonmatching"><title>0x004654a0 BikeCheckGetOff (439 bytes)</title></rect>
 <rect width="12.85" height="13.05" x="624.03" y="113.38" class="named"><title>0x00404840 TriggerDemigodMissileFlame (437 bytes)</title></rect>
 <rect width="12.85" height="13.05" x="639.88" y="113.38" class="named"><title>0x00462100 UnderwaterSwitchCollision (437 bytes)</title></rect>
-<rect width="12.85" height="13.05" x="655.72" y="113.38" class="todo"><title>0x004994b0 Func4994b0 (437 bytes)</title></rect>
-<rect width="12.79" height="13.05" x="671.57" y="113.38" class="todo"><title>0x00498f80 Func498f80 (435 bytes)</title></rect>
+<rect width="12.85" height="13.05" x="655.72" y="113.38" class="todo"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
+<rect width="12.79" height="13.05" x="671.57" y="113.38" class="todo"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
 <rect width="12.70" height="13.05" x="687.36" y="113.38" class="named"><title>0x0044e010 DoorControl (432 bytes)</title></rect>
 <rect width="12.67" height="13.05" x="703.05" y="113.38" class="named"><title>0x00413840 FloorTrapDoorCollision (431 bytes)</title></rect>
 <rect width="12.64" height="13.05" x="718.72" y="113.38" class="named"><title>0x00427c30 lara_col_run (430 bytes)</title></rect>
 <rect width="12.64" height="13.05" x="734.36" y="113.38" class="named"><title>0x00475ac0 LoadBoxes (430 bytes)</title></rect>
 <rect width="12.44" height="13.22" x="398.56" y="129.42" class="named"><title>0x0042ff90 FlareControl (429 bytes)</title></rect>
 <rect width="12.44" height="13.22" x="398.56" y="145.64" class="named"><title>0x00480070 S_AnimateTextures (429 bytes)</title></rect>
-<rect width="12.44" height="13.19" x="398.56" y="161.86" class="todo"><title>0x00499300 Func499300 (428 bytes)</title></rect>
+<rect width="12.44" height="13.19" x="398.56" y="161.86" class="todo"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
 <rect width="12.44" height="13.16" x="398.56" y="178.05" class="todo"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
 <rect width="12.44" height="13.13" x="398.56" y="194.20" class="nonmatching"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
 <rect width="12.44" height="13.13" x="398.56" y="210.33" class="named"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
@@ -2098,7 +2098,7 @@
 <rect width="12.15" height="11.77" x="645.13" y="129.42" class="named"><title>0x004103b0 TriggerSethMissileFlame (373 bytes)</title></rect>
 <rect width="12.02" height="11.77" x="660.28" y="129.42" class="named"><title>0x00438ba0 TriggerShatterSmoke (369 bytes)</title></rect>
 <rect width="11.99" height="11.77" x="675.30" y="129.42" class="named"><title>0x004639e0 GetStringLength (368 bytes)</title></rect>
-<rect width="11.99" height="11.77" x="690.29" y="129.42" class="todo"><title>0x00499940 Func499940 (368 bytes)</title></rect>
+<rect width="11.99" height="11.77" x="690.29" y="129.42" class="todo"><title>0x00499940 SW_SpanGTKey (368 bytes)</title></rect>
 <rect width="11.95" height="11.77" x="705.27" y="129.42" class="named"><title>0x00431aa0 LaraSurface (367 bytes)</title></rect>
 <rect width="11.89" height="11.77" x="720.22" y="129.42" class="named"><title>0x0045f7f0 GetPanVolume (365 bytes)</title></rect>
 <rect width="11.89" height="11.77" x="735.11" y="129.42" class="todo"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
@@ -2107,12 +2107,12 @@
 <rect width="11.77" height="11.80" x="459.10" y="144.20" class="nonmatching"><title>0x00438d90 UpdateBlood (362 bytes)</title></rect>
 <rect width="11.77" height="11.80" x="473.86" y="144.20" class="named"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
 <rect width="11.77" height="11.80" x="488.63" y="144.20" class="named"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
-<rect width="11.73" height="11.80" x="503.40" y="144.20" class="todo"><title>0x00499c10 Func499c10 (361 bytes)</title></rect>
+<rect width="11.73" height="11.80" x="503.40" y="144.20" class="todo"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
 <rect width="11.67" height="11.80" x="518.13" y="144.20" class="nonmatching"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>
-<rect width="11.64" height="11.80" x="532.80" y="144.20" class="todo"><title>0x00499d80 Func499d80 (358 bytes)</title></rect>
+<rect width="11.64" height="11.80" x="532.80" y="144.20" class="todo"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
 <rect width="11.60" height="11.80" x="547.44" y="144.20" class="named"><title>0x0046ba90 tenth_cutseq_control (357 bytes)</title></rect>
 <rect width="11.57" height="11.80" x="562.04" y="144.20" class="named"><title>0x0046c020 fifteen_control (356 bytes)</title></rect>
-<rect width="11.54" height="11.80" x="576.61" y="144.20" class="todo"><title>0x004997d0 Func4997d0 (355 bytes)</title></rect>
+<rect width="11.54" height="11.80" x="576.61" y="144.20" class="todo"><title>0x004997d0 SW_SpanGTAdd (355 bytes)</title></rect>
 <rect width="11.51" height="11.80" x="591.15" y="144.20" class="named"><title>0x0040fdd0 DrawGodHead (354 bytes)</title></rect>
 <rect width="11.51" height="11.80" x="605.66" y="144.20" class="named"><title>0x004782d0 FreeD3DLights (354 bytes)</title></rect>
 <rect width="11.47" height="11.80" x="620.16" y="144.20" class="named"><title>0x00403640 TriggerLocust (353 bytes)</title></rect>
@@ -2123,7 +2123,7 @@
 <rect width="11.44" height="11.80" x="692.50" y="144.20" class="named"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="11.41" height="11.80" x="706.94" y="144.20" class="named"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
 <rect width="11.38" height="11.80" x="721.35" y="144.20" class="named"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
-<rect width="11.28" height="11.80" x="735.72" y="144.20" class="todo"><title>0x00499670 Func499670 (347 bytes)</title></rect>
+<rect width="11.28" height="11.80" x="735.72" y="144.20" class="todo"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
 <rect width="11.10" height="11.88" x="429.47" y="158.99" class="named"><title>0x00457f30 FindPlinth (344 bytes)</title></rect>
 <rect width="11.10" height="11.77" x="429.47" y="173.87" class="named"><title>0x004382c0 TriggerGlobalFireFlame (341 bytes)</title></rect>
 <rect width="11.10" height="11.77" x="429.47" y="188.64" class="named"><title>0x0044e660 DoubleDoorCollision (341 bytes)</title></rect>
@@ -2134,7 +2134,7 @@
 <rect width="11.10" height="11.67" x="429.47" y="262.34" class="named"><title>0x00420920 DrawHair (338 bytes)</title></rect>
 <rect width="11.10" height="11.64" x="429.47" y="277.01" class="named"><title>0x0041c360 TriggerWraithFlame (337 bytes)</title></rect>
 <rect width="11.10" height="11.60" x="429.47" y="291.64" class="named"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
-<rect width="11.10" height="11.60" x="429.47" y="306.24" class="todo"><title>0x00499ac0 Func499ac0 (336 bytes)</title></rect>
+<rect width="11.10" height="11.60" x="429.47" y="306.24" class="todo"><title>0x00499ac0 SW_SpanGTP (336 bytes)</title></rect>
 <rect width="11.10" height="11.57" x="429.47" y="320.84" class="named"><title>0x004328e0 LaraSwimCollision (335 bytes)</title></rect>
 <rect width="11.10" height="11.53" x="429.47" y="335.41" class="named"><title>0x0043bc30 do_debounced_joystick_poo (334 bytes)</title></rect>
 <rect width="11.10" height="11.53" x="429.47" y="349.94" class="nonmatching"><title>0x00459f90 ProjectRopePoints (334 bytes)</title></rect>
@@ -2359,7 +2359,7 @@
 <rect width="8.88" height="8.51" x="495.88" y="419.09" class="named"><title>0x00487c30 InitBinoculars (197 bytes)</title></rect>
 <rect width="8.88" height="8.47" x="495.88" y="430.60" class="named"><title>0x0048ee50 CheckMMXTechnology (196 bytes)</title></rect>
 <rect width="8.88" height="8.47" x="495.88" y="442.07" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
-<rect width="8.88" height="8.47" x="495.88" y="453.53" class="todo"><title>0x0049ac70 Func49ac70 (196 bytes)</title></rect>
+<rect width="8.88" height="8.47" x="495.88" y="453.53" class="todo"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="8.69" height="8.60" x="507.75" y="222.19" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="8.69" height="8.60" x="519.44" y="222.19" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
 <rect width="8.65" height="8.60" x="531.14" y="222.19" class="named"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>
@@ -2443,7 +2443,7 @@
 <rect width="8.05" height="7.81" x="518.99" y="443.38" class="named"><title>0x004371f0 DoLotsOfBlood (164 bytes)</title></rect>
 <rect width="8.05" height="7.81" x="518.99" y="454.19" class="named"><title>0x00440290 EscapeBox (164 bytes)</title></rect>
 <rect width="7.78" height="8.08" x="530.04" y="245.21" class="named"><title>0x0046bc30 eleventh_cutseq_init (164 bytes)</title></rect>
-<rect width="7.78" height="8.08" x="530.04" y="256.29" class="todo"><title>0x0049abc0 Func49abc0 (164 bytes)</title></rect>
+<rect width="7.78" height="8.08" x="530.04" y="256.29" class="todo"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
 <rect width="7.78" height="8.03" x="530.04" y="267.37" class="named"><title>0x00424270 lara_col_rope (163 bytes)</title></rect>
 <rect width="7.78" height="8.03" x="530.04" y="278.41" class="named"><title>0x0042c6c0 lara_as_climbstnc (163 bytes)</title></rect>
 <rect width="7.78" height="8.03" x="530.04" y="289.44" class="named"><title>0x004361a0 TriggerDynamic (163 bytes)</title></rect>

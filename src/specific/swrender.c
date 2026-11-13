@@ -36,6 +36,11 @@ extern sint32 SW_UseMMX;
 extern sint32 SW_RenderFlags;
 extern DWORD SW_TextureBits;
 extern DWORD SW_FogColor;
+extern sint32 SW_ActiveFlags;
+extern sint32 (*SW_TriSetupFunc)(void *v0, void *v1, void *v2);
+extern void (*SW_SpanFunc)(void);
+extern void (*SW_SpanFogFunc)(void);
+void nullsub_1();
 extern UINT DBLog_Message;
 extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 extern LPDIRECT3DTEXTURE2 SW_LockedTextures[256];
@@ -436,6 +441,120 @@ sint32 SW_BeginFrame(void)
 sint32 SW_EndFrame(void)
 {
     return 1;
+}
+
+sint32 SW_SelectRasterizer(void *v0, void *v1, void *v2)
+{
+    sint32 f;
+
+    f = SW_RenderFlags;
+    if (SW_ActiveFlags != f) {
+        SW_ActiveFlags = f;
+        if (!SW_TextureBits && (f & 0x200)) {
+            f &= ~0x200;
+            SW_ActiveFlags = f;
+        }
+        if (SW_UseMMX) {
+            if (f & 0x200) {
+                if (f & 0x100) {
+                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTLit : SW_TriSetupGT;
+                    if ((f & 0x80) && (f & 0x2)) {
+                        SW_SpanFunc = (f & 0x1) ? SW_SpanGTPAddBilinear : SW_SpanGTPAdd;
+                        SW_SpanFogFunc = SW_SpanGFogAdd;
+                    } else if ((f & 0x8) && (f & 0x2)) {
+                        SW_SpanFunc = (f & 0x1) ? SW_SpanGTPAlphaBilinear : SW_SpanGTPAlpha;
+                        SW_SpanFogFunc = SW_SpanGFogAdd;
+                    } else if ((f & 0x4) && (f & 0x2)) {
+                        SW_SpanFunc = (f & 0x1) ? SW_SpanGTPAlphaBilinear : SW_SpanGTPKey;
+                        SW_SpanFogFunc = SW_SpanGFogAdd;
+                    } else {
+                        SW_SpanFunc = (f & 0x1) ? SW_SpanGTPBilinear : SW_SpanGTP;
+                        SW_SpanFogFunc = SW_SpanGFogAdd;
+                    }
+                } else {
+                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGALit : SW_TriSetupG;
+                    if ((f & 0x80) && (f & 0x2)) {
+                        SW_SpanFunc = (f & 0x1) ? SW_SpanGTAddBilinear : SW_SpanGTAdd;
+                        SW_SpanFogFunc = SW_SpanGFog;
+                    } else if ((f & 0x8) && (f & 0x2)) {
+                        SW_SpanFunc = (f & 0x1) ? SW_SpanGTAlphaBilinear : SW_SpanGTAlpha;
+                        SW_SpanFogFunc = SW_SpanGFogAlpha;
+                    } else if ((f & 0x4) && (f & 0x2)) {
+                        SW_SpanFunc = (f & 0x1) ? SW_SpanGTAlphaBilinear : SW_SpanGTKey;
+                        SW_SpanFogFunc = SW_SpanGFogAlpha;
+                    } else {
+                        SW_SpanFunc = (f & 0x1) ? SW_SpanGTBilinear : SW_SpanGT;
+                        SW_SpanFogFunc = SW_SpanGFog;
+                    }
+                }
+            } else {
+                SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTA : SW_TriSetupGA;
+                if (f & 0x2) {
+                    if (f & 0x80) {
+                        SW_SpanFunc = SW_SpanGAdd;
+                        SW_SpanFogFunc = SW_SpanGFog;
+                    } else {
+                        SW_SpanFunc = SW_SpanGAlpha;
+                        SW_SpanFogFunc = SW_SpanGFog;
+                    }
+                } else {
+                    SW_SpanFunc = SW_SpanG;
+                    SW_SpanFogFunc = SW_SpanGFog;
+                }
+            }
+        } else {
+            if (f & 0x200) {
+                if (f & 0x100) {
+                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTLit : SW_TriSetupGT;
+                    if ((f & 0x80) && (f & 0x2)) {
+                        SW_SpanFunc = SW_SpanGTPAddInt;
+                        SW_SpanFogFunc = nullsub_1;
+                    } else if ((f & 0x8) && (f & 0x2)) {
+                        SW_SpanFunc = SW_SpanGTLitPersp;
+                        SW_SpanFogFunc = nullsub_1;
+                    } else if ((f & 0x4) && (f & 0x2)) {
+                        SW_SpanFunc = SW_SpanGTPKeyInt;
+                        SW_SpanFogFunc = nullsub_1;
+                    } else {
+                        SW_SpanFunc = SW_SpanGTPInt;
+                        SW_SpanFogFunc = nullsub_1;
+                    }
+                } else {
+                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGALit : SW_TriSetupG;
+                    if ((f & 0x80) && (f & 0x2)) {
+                        SW_SpanFunc = SW_SpanGTAddInt;
+                        SW_SpanFogFunc = nullsub_1;
+                    } else if ((f & 0x8) && (f & 0x2)) {
+                        SW_SpanFunc = SW_SpanGTLit;
+                        SW_SpanFogFunc = nullsub_1;
+                    } else if ((f & 0x4) && (f & 0x2)) {
+                        SW_SpanFunc = SW_SpanGTKeyInt;
+                        SW_SpanFogFunc = nullsub_1;
+                    } else {
+                        SW_SpanFunc = SW_SpanGTInt;
+                        SW_SpanFogFunc = nullsub_1;
+                    }
+                }
+            } else {
+                SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTA : SW_TriSetupGA;
+                if (f & 0x2) {
+                    if (f & 0x80) {
+                        SW_SpanFunc = SW_SpanGAddInt;
+                        SW_SpanFogFunc = nullsub_1;
+                    } else {
+                        SW_SpanFunc = SW_SpanGLit;
+                        SW_SpanFogFunc = nullsub_1;
+                    }
+                } else {
+                    SW_SpanFunc = SW_SpanGInt;
+                    SW_SpanFogFunc = nullsub_1;
+                }
+            }
+        }
+    }
+    if (SW_TriSetupFunc)
+        SW_TriSetupFunc(v0, v1, v2);
+    return 0;
 }
 
 sint32 SW_SetColorOpScale(sint32 scale)
