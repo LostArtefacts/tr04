@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="330.29" height="12" x="0" y="0" class="named"><title>1235 · 79.78%</title></rect>
-<rect width="60.44" height="12" x="330.29" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
-<rect width="23.27" height="12" x="390.73" y="0" class="todo"><title>87 · 5.62%</title></rect>
+<rect width="60.71" height="12" x="330.29" y="0" class="nonmatching"><title>227 · 14.66%</title></rect>
+<rect width="23" height="12" x="391" y="0" class="todo"><title>86 · 5.56%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1235</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">87</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1235</tspan> · <tspan class="nonmatching">227</tspan> · <tspan class="todo">86</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="223.38" height="12" x="0" y="0" class="named"><title>337 KB · 53.96%</title></rect>
-<rect width="162.98" height="12" x="223.38" y="0" class="nonmatching"><title>246 KB · 39.37%</title></rect>
-<rect width="27.65" height="12" x="386.35" y="0" class="todo"><title>42 KB · 6.68%</title></rect>
+<rect width="164.40" height="12" x="223.38" y="0" class="nonmatching"><title>248 KB · 39.71%</title></rect>
+<rect width="26.23" height="12" x="387.77" y="0" class="todo"><title>40 KB · 6.34%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">246 KB</tspan> · <tspan class="todo">42 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">248 KB</tspan> · <tspan class="todo">40 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -546,7 +546,7 @@
 <rect width="12" height="12" x="435" y="135" class="named"><title>0x00433020 GetFreeDebris (113 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="135" class="named"><title>0x004330a0 TriggerDebris (533 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="135" class="nonmatching"><title>0x004332c0 UpdateDebris (323 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="135" class="todo"><title>0x00433410 ShatterObject (2143 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="135" class="nonmatching"><title>0x00433410 ShatterObject (2143 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="135" class="named"><title>0x00433c70 DetatchSpark (180 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="135" class="named"><title>0x00433d30 GetFreeSpark (219 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="135" class="named"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
@@ -1661,7 +1661,7 @@
 <rect width="29.45" height="28.84" x="119.28" y="131.55" class="named"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
 <rect width="29.45" height="28.81" x="119.28" y="163.39" class="nonmatching"><title>0x00469c20 EnemyJeepControl (2212 bytes)</title></rect>
 <rect width="29.45" height="28.19" x="119.28" y="195.20" class="named"><title>0x00480a50 DrawSortList (2164 bytes)</title></rect>
-<rect width="29.45" height="27.91" x="119.28" y="226.39" class="todo"><title>0x00433410 ShatterObject (2143 bytes)</title></rect>
+<rect width="29.45" height="27.91" x="119.28" y="226.39" class="nonmatching"><title>0x00433410 ShatterObject (2143 bytes)</title></rect>
 <rect width="29.45" height="27.76" x="119.28" y="257.30" class="named"><title>0x0041d140 DrawLara (2131 bytes)</title></rect>
 <rect width="29.45" height="27.08" x="119.28" y="288.05" class="todo"><title>0x00497cb0 SW_TriSetupGALit (2079 bytes)</title></rect>
 <rect width="29.45" height="26.88" x="119.28" y="318.13" class="named"><title>0x00457720 PickUpCollision (2064 bytes)</title></rect>
