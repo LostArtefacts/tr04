@@ -2488,6 +2488,7 @@ address,size,name,symbol
 0x00533ac4,4,spriteinfo,_spriteinfo
 0x00533ac8,2,AnimatingTexturesVOffset,_AnimatingTexturesVOffset
 0x00533acc,4,AddTriSorted,_AddTriSorted
+0x00533ad0,4,AddLineSorted,_AddLineSorted
 0x00533ad4,4,AddQuadSorted,_AddQuadSorted
 0x00533ad8,4,AddQuadZBuffer,_AddQuadZBuffer
 0x00533adc,4,_EndScene,__EndScene

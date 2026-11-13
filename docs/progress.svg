@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.08" height="12" x="0" y="0" class="named"><title>1189 · 76.81%</title></rect>
 <rect width="0.65" height="12" x="258.08" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="27.57" height="12" x="258.73" y="0" class="nonmatching"><title>127 · 8.20%</title></rect>
-<rect width="49.71" height="12" x="286.29" y="0" class="todo"><title>229 · 14.79%</title></rect>
+<rect width="27.78" height="12" x="258.73" y="0" class="nonmatching"><title>128 · 8.27%</title></rect>
+<rect width="49.49" height="12" x="286.51" y="0" class="todo"><title>228 · 14.73%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1189</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">127</tspan> · <tspan class="todo">229</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1189</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">128</tspan> · <tspan class="todo">228</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="166.92" height="12" x="0" y="0" class="named"><title>310 KB · 49.68%</title></rect>
 <rect width="0.13" height="12" x="166.92" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="83.79" height="12" x="167.05" y="0" class="nonmatching"><title>156 KB · 24.94%</title></rect>
-<rect width="85.16" height="12" x="250.84" y="0" class="todo"><title>158 KB · 25.34%</title></rect>
+<rect width="84.32" height="12" x="167.05" y="0" class="nonmatching"><title>157 KB · 25.09%</title></rect>
+<rect width="84.63" height="12" x="251.37" y="0" class="todo"><title>157 KB · 25.19%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">310 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">156 KB</tspan> · <tspan class="todo">158 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">310 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">157 KB</tspan> · <tspan class="todo">157 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1431,7 +1431,7 @@
 <rect width="12" height="12" x="180" y="405" class="named"><title>0x0048c280 DoScreenFade (379 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="405" class="nonmatching"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="405" class="named"><title>0x0048c5f0 DrawFlash (194 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="405" class="todo"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="405" class="nonmatching"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="405" class="todo"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="405" class="todo"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="405" class="named"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
@@ -1776,7 +1776,7 @@
 <rect width="20.13" height="18.88" x="284.52" y="270.01" class="named"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
 <rect width="20.13" height="18.85" x="284.52" y="291.90" class="todo"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
 <rect width="20.13" height="18.81" x="284.52" y="313.74" class="named"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
-<rect width="20.13" height="18.69" x="284.52" y="335.55" class="todo"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
+<rect width="20.13" height="18.69" x="284.52" y="335.55" class="nonmatching"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
 <rect width="20.13" height="18.67" x="284.52" y="357.24" class="nonmatching"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>
 <rect width="20.13" height="18.60" x="284.52" y="378.92" class="named"><title>0x00426230 LaraHangRightCornerTest (976 bytes)</title></rect>
 <rect width="20.13" height="18.60" x="284.52" y="400.51" class="named"><title>0x004266e0 LaraHangLeftCornerTest (976 bytes)</title></rect>
