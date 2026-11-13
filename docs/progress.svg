@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="380.93" height="12" x="0" y="0" class="named"><title>1278 · 82.45%</title></rect>
-<rect width="81.07" height="12" x="380.93" y="0" class="nonmatching"><title>272 · 17.55%</title></rect>
+<rect width="381.22" height="12" x="0" y="0" class="named"><title>1279 · 82.52%</title></rect>
+<rect width="80.78" height="12" x="381.22" y="0" class="nonmatching"><title>271 · 17.48%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">82.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1278</tspan> · <tspan class="nonmatching">272</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1279</tspan> · <tspan class="nonmatching">271</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="254.39" height="12" x="0" y="0" class="named"><title>344 KB · 55.06%</title></rect>
-<rect width="207.61" height="12" x="254.39" y="0" class="nonmatching"><title>281 KB · 44.94%</title></rect>
+<rect width="254.64" height="12" x="0" y="0" class="named"><title>345 KB · 55.12%</title></rect>
+<rect width="207.36" height="12" x="254.64" y="0" class="nonmatching"><title>281 KB · 44.88%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">55.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">344 KB</tspan> · <tspan class="nonmatching">281 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">345 KB</tspan> · <tspan class="nonmatching">281 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1577,7 +1577,7 @@
 <rect width="12" height="12" x="180" y="450" class="named"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="450" class="nonmatching"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="450" class="nonmatching"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="450" class="nonmatching"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="450" class="named"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="450" class="nonmatching"><title>0x004997d0 SW_SpanGTAdd (355 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="450" class="nonmatching"><title>0x00499940 SW_SpanGTKey (368 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="450" class="named"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
@@ -2121,7 +2121,7 @@
 <rect width="11.44" height="11.80" x="692.50" y="144.18" class="named"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="11.41" height="11.80" x="706.94" y="144.18" class="named"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
 <rect width="11.37" height="11.80" x="721.35" y="144.18" class="named"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
-<rect width="11.28" height="11.80" x="735.72" y="144.18" class="nonmatching"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
+<rect width="11.28" height="11.80" x="735.72" y="144.18" class="named"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
 <rect width="11.12" height="11.85" x="429.49" y="158.98" class="named"><title>0x00457f30 FindPlinth (344 bytes)</title></rect>
 <rect width="11.12" height="11.75" x="429.49" y="173.83" class="named"><title>0x004382c0 TriggerGlobalFireFlame (341 bytes)</title></rect>
 <rect width="11.12" height="11.75" x="429.49" y="188.59" class="named"><title>0x0044e660 DoubleDoorCollision (341 bytes)</title></rect>

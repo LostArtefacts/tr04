@@ -3049,6 +3049,121 @@ void SW_SpanGTPAlpha(void)
     }
 }
 
+#ifndef FEAT_C_ASM
+extern uint32 SW_SpanGTMask;
+void SW_SpanGT(void)
+{
+    __asm {
+        mov esi, dword ptr [SW_SpanBuffer]
+        cmp esi, dword ptr [SW_SpanEnd]
+        je Done
+        push ebp
+        mov edi, dword ptr [SW_Surface]
+        mov eax, dword ptr [SW_SpanY]
+        imul eax, dword ptr [SW_SurfacePitch]
+        add edi, eax
+        mov ecx, dword ptr [SW_TexShift]
+        mov eax, 0xff0000
+        shl eax, cl
+        and eax, 0xff0000
+        mov dword ptr [SW_SpanGTMask], eax
+        mov dword ptr [P3 + 2], eax
+        mov dword ptr [P6 + 2], eax
+        mov al, cl
+        add al, 8
+        add al, cl
+        mov byte ptr [P0 + 2], al
+        mov byte ptr [P5 + 2], al
+        mov al, cl
+        add al, 0x10
+        mov byte ptr [P1 + 2], al
+        mov byte ptr [P7 + 2], al
+        mov ebx, dword ptr [SW_SpanDU]
+        mov eax, dword ptr [SW_SpanDV]
+        mov edx, dword ptr [SW_TextureBits]
+        add edx, dword ptr [ecx*4 + SW_MipOffsets]
+        mov dword ptr [P8 + 2], ebx
+        mov dword ptr [P4 + 2], eax
+        mov dword ptr [P2 + 4], edx
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x8d
+        _emit 0x64
+        _emit 0x24
+        _emit 0x00
+    L0:
+        mov ebx, dword ptr [esi]
+        mov eax, dword ptr [esi + 4]
+        push edi
+        lea edi, [edi + ebx*4]
+        or eax, eax
+        jle L1
+        mov ebx, dword ptr [esi + 8]
+        mov ecx, dword ptr [esi + 0x10]
+        mov edx, ecx
+        mov ebp, ebx
+        and edx, dword ptr [SW_SpanGTMask]
+        and ebp, dword ptr [SW_SpanGTMask]
+    P0:
+        shr edx, 8
+        pxor mm5, mm5
+    P1:
+        shr ebp, 0x10
+        movq mm1, qword ptr [SW_SpanGrad]
+        or edx, ebp
+        movq mm0, qword ptr [esi + 0x18]
+        movq mm6, mm0
+        add ecx, dword ptr [SW_SpanDV]
+        add ebx, dword ptr [SW_SpanDU]
+        _emit 0x8d
+        _emit 0x64
+        _emit 0x24
+        _emit 0x00
+    P2:
+        movd mm7, dword ptr [edx*4 + 0x12345678]
+        psrlw mm6, 8
+        mov edx, ecx
+        punpcklbw mm7, mm5
+        pmullw mm7, mm6
+        mov ebp, ebx
+    P3:
+        and edx, 0xff0000
+    P4:
+        add ecx, 0x12345678
+    P5:
+        shr edx, 8
+    P6:
+        and ebp, 0xff0000
+    P7:
+        shr ebp, 0x10
+        psrlw mm7, 8
+        packuswb mm7, mm7
+        add edi, 4
+    P8:
+        add ebx, 0x12345678
+        or edx, ebp
+        movd dword ptr [edi - 4], mm7
+        paddw mm0, mm1
+        movq mm6, mm0
+        dec eax
+        jne P2
+    L1:
+        pop edi
+        add esi, 0x20
+        add edi, dword ptr [SW_SurfacePitch]
+        cmp dword ptr [SW_SpanEnd], esi
+        jne L0
+        emms
+        pop ebp
+    Done:
+    }
+}
+#else
 void SW_SpanGT(void)
 {
     SW_SPAN *s;
@@ -3094,6 +3209,7 @@ void SW_SpanGT(void)
         } while (s != SW_SpanEnd);
     }
 }
+#endif
 
 void SW_SpanGTAdd(void)
 {
