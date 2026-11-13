@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="260.03" height="12" x="0" y="0" class="named"><title>1198 · 77.39%</title></rect>
 <rect width="0.65" height="12" x="260.03" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="32.78" height="12" x="260.68" y="0" class="nonmatching"><title>151 · 9.75%</title></rect>
-<rect width="42.54" height="12" x="293.46" y="0" class="todo"><title>196 · 12.66%</title></rect>
+<rect width="32.99" height="12" x="260.68" y="0" class="nonmatching"><title>152 · 9.82%</title></rect>
+<rect width="42.33" height="12" x="293.67" y="0" class="todo"><title>195 · 12.60%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">151</tspan> · <tspan class="todo">196</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">152</tspan> · <tspan class="todo">195</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="173.45" height="12" x="0" y="0" class="named"><title>323 KB · 51.62%</title></rect>
 <rect width="0.13" height="12" x="173.45" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="101.46" height="12" x="173.58" y="0" class="nonmatching"><title>189 KB · 30.20%</title></rect>
-<rect width="60.96" height="12" x="275.04" y="0" class="todo"><title>113 KB · 18.14%</title></rect>
+<rect width="101.98" height="12" x="173.58" y="0" class="nonmatching"><title>190 KB · 30.35%</title></rect>
+<rect width="60.44" height="12" x="275.56" y="0" class="todo"><title>112 KB · 17.99%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">51.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">189 KB</tspan> · <tspan class="todo">113 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">190 KB</tspan> · <tspan class="todo">112 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1421,7 +1421,7 @@
 <rect width="12" height="12" x="30" y="405" class="nonmatching"><title>0x0048a0c0 DrawBlood (868 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="405" class="nonmatching"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="405" class="todo"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="405" class="todo"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="405" class="nonmatching"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="405" class="todo"><title>0x0048b130 ShowTitle (842 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="405" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="405" class="named"><title>0x0048b990 DrawTrainStrips (280 bytes)</title></rect>
@@ -1781,7 +1781,7 @@
 <rect width="20.13" height="18.60" x="284.55" y="378.92" class="named"><title>0x00426230 LaraHangRightCornerTest (976 bytes)</title></rect>
 <rect width="20.13" height="18.60" x="284.55" y="400.51" class="named"><title>0x004266e0 LaraHangLeftCornerTest (976 bytes)</title></rect>
 <rect width="20.13" height="18.56" x="284.55" y="422.11" class="nonmatching"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
-<rect width="20.13" height="18.33" x="284.55" y="443.67" class="todo"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
+<rect width="20.13" height="18.33" x="284.55" y="443.67" class="nonmatching"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
 <rect width="20.01" height="18.42" x="307.68" y="0" class="todo"><title>0x004349f0 TriggerExplosionSparks (961 bytes)</title></rect>
 <rect width="19.97" height="18.42" x="330.70" y="0" class="named"><title>0x00462720 TurnSwitchCollision (959 bytes)</title></rect>
 <rect width="19.85" height="18.42" x="353.67" y="0" class="todo"><title>0x00415fd0 ControlScaledSpike (953 bytes)</title></rect>

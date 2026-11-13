@@ -1121,6 +1121,90 @@ void DrawDrips(void)
     phd_PopMatrix();
 }
 
+void DrawWraithTrail(ITEM_INFO *item)
+{
+    WRAITH_STRUCT *wraith;
+    PHD_VECTOR pos;
+    D3DTLVERTEX v[2];
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    sint32 *mptr;
+    float perspz, zf0, zf1;
+    sint32 i, j, c0, c1, x0, y0, z0, x1, y1, z1;
+
+    phd_PushMatrix();
+    phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    mptr = phd_mxptr;
+    for (i = 0; i < 5; i++) {
+        if (!i)
+            phd_RotY(-1092);
+        else if (i == 2)
+            phd_RotY(1092);
+        else if (i == 3)
+            phd_RotZ(-1092);
+        else if (i == 4)
+            phd_RotZ(1092);
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[256];
+        offsets = (sint16 *)&scratchpad[512];
+        wraith = (WRAITH_STRUCT *)item->data;
+        for (j = 0; j < 8; XY += 2, Z += 2, wraith++, j++) {
+            offsets[0] = (sint16)(wraith->pos.x - item->pos.x_pos);
+            offsets[1] = (sint16)(wraith->pos.y - item->pos.y_pos);
+            offsets[2] = (sint16)(wraith->pos.z - item->pos.z_pos);
+            pos.x = offsets[0] * mptr[M00] + offsets[1] * mptr[M01] + offsets[2] * mptr[M02] + mptr[M03];
+            pos.y = offsets[0] * mptr[M10] + offsets[1] * mptr[M11] + offsets[2] * mptr[M12] + mptr[M13];
+            pos.z = offsets[0] * mptr[M20] + offsets[1] * mptr[M21] + offsets[2] * mptr[M22] + mptr[M23];
+            perspz = f_persp / (float)pos.z;
+            XY[0] = (sint16)(pos.x * perspz + f_centerx);
+            XY[1] = (sint16)(pos.y * perspz + f_centery);
+            Z[0] = pos.z >> W2V_SHIFT;
+            if (!j || j == 7)
+                Z[1] = 0;
+            else
+                Z[1] = RGBONLY(wraith->r, wraith->g, wraith->b);
+        }
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[256];
+        for (j = 7; j > 0; j--, XY += 2, Z += 2) {
+            if (Z[0] <= f_mznear || Z[0] >= 20480)
+                continue;
+            if (Z[0] > 12288) {
+                c0 = RGBA(((Z[1] & 0xFF) * (20480 - Z[0])) >> 13, (((Z[1] >> 8) & 0xFF) * (20480 - Z[0])) >> 13, (((Z[1] >> 16) & 0xFF) * (20480 - Z[0])) >> 13, 0xFF);
+                c1 = RGBA(((Z[3] & 0xFF) * (20480 - Z[0])) >> 13, (((Z[3] >> 8) & 0xFF) * (20480 - Z[0])) >> 13, (((Z[3] >> 16) & 0xFF) * (20480 - Z[0])) >> 13, 0xFF);
+            } else {
+                c0 = Z[1];
+                c1 = Z[3];
+            }
+            x0 = XY[0];
+            y0 = XY[1];
+            z0 = Z[0];
+            x1 = XY[2];
+            y1 = XY[3];
+            z1 = Z[2];
+            if (ClipLine(&x0, &y0, z0, &x1, &y1, z1, phd_winxmin, phd_winymin, phd_winxmax, phd_winymax)) {
+                v[0].specular = 0xFF000000;
+                v[1].specular = 0xFF000000;
+                v[0].sx = (float)x0;
+                v[0].sy = (float)y0;
+                v[0].color = c0;
+                v[1].color = c1;
+                v[1].sx = (float)x1;
+                v[1].sy = (float)y1;
+                zf0 = (float)Z[0];
+                v[0].sz = zf0;
+                zf1 = (float)Z[2];
+                v[1].sz = zf1;
+                v[0].rhw = f_mpersp / zf0 * f_moneopersp;
+                v[1].rhw = f_mpersp / zf1 * f_moneopersp;
+                AddLineSorted(v, &v[1], 6);
+            }
+        }
+    }
+    phd_PopMatrix();
+}
+
 void DrawTrainFloorStrip(sint32 x, sint32 z, TEXTURESTRUCT *tex, sint32 y_and_flags)
 {
     SVECTOR *offsets;
