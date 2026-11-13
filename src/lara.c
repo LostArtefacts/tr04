@@ -3357,6 +3357,38 @@ void lara_as_waterout(ITEM_INFO *item, COLL_INFO *coll)
     camera.flags = FOLLOW_CENTRE;
 }
 
+void lara_as_wade(ITEM_INFO *item, COLL_INFO *coll)
+{
+    if (item->hit_points <= 0) {
+        item->goal_anim_state = AS_STOP;
+        return;
+    }
+    camera.target_elevation = -4004;
+    if (input & IN_LEFT) {
+        lara.turn_rate -= 409;
+        if (lara.turn_rate < -1456)
+            lara.turn_rate = -1456;
+        item->pos.z_rot -= 273;
+        if (item->pos.z_rot < -2002)
+            item->pos.z_rot = -2002;
+    } else if (input & IN_RIGHT) {
+        lara.turn_rate += 409;
+        if (lara.turn_rate > 1456)
+            lara.turn_rate = 1456;
+        item->pos.z_rot += 273;
+        if (item->pos.z_rot > 2002)
+            item->pos.z_rot = 2002;
+    }
+    if (input & IN_FORWARD) {
+        if (lara.water_status == LW_ABOVE_WATER)
+            item->goal_anim_state = AS_RUN;
+        else
+            item->goal_anim_state = AS_WADE;
+    } else {
+        item->goal_anim_state = AS_STOP;
+    }
+}
+
 void lara_as_deathslide(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint16 room_number;
