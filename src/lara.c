@@ -191,6 +191,38 @@ void lara_as_duck(ITEM_INFO *item, COLL_INFO *coll)
     }
 }
 
+void lara_col_duck(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->gravity_status = item->fallspeed = 0;
+    coll->facing = lara.move_angle = item->pos.y_rot;
+    coll->bad_pos = 384;
+    coll->bad_neg = -384;
+    coll->bad_ceiling = 0;
+    coll->slopes_are_walls = 1;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 400);
+    if (LaraFallen(item, coll)) {
+        lara.gun_status = LG_NO_ARMS;
+        return;
+    }
+    if (TestLaraSlide(item, coll))
+        return;
+    if (coll->mid_ceiling >= -362)
+        lara.keep_ducked = 1;
+    else
+        lara.keep_ducked = 0;
+    ShiftItem(item, coll);
+    if (coll->mid_floor != NO_HEIGHT)
+        item->pos.y_pos += coll->mid_floor;
+    if ((input & IN_DUCK) && lara.water_status != LW_WADE || lara.keep_ducked || item->anim_number != ANIM_DUCKBREATHE) {
+        if (input & IN_LEFT)
+            item->goal_anim_state = AS_DUCKROTL;
+        else if (input & IN_RIGHT)
+            item->goal_anim_state = AS_DUCKROTR;
+    } else {
+        item->goal_anim_state = AS_STOP;
+    }
+}
+
 void lara_as_all4s(ITEM_INFO *item, COLL_INFO *coll)
 {
     if (item->hit_points <= 0) {
