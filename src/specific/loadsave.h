@@ -38,7 +38,7 @@ typedef struct savefile_info {
     sint32 num;
 } SAVEFILE_INFO;
 
-typedef void (*rgbfunc)(uint8 *, uint8 *, uint8 *);
+typedef void (*rgbfunc)(uint8 *, uint8 *, uint8 *, uint8 *);
 
 void RGBM_Mono(uint8 *r, uint8 *g, uint8 *b);
 void MemBltSurf(void *dest, sint32 x, sint32 y, sint32 w, sint32 h, sint32 dadd, void *source, sint32 x2, sint32 y2, DDSURFACEDESC2 surface, float xsize, float ysize);
