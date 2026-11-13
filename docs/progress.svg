@@ -609,7 +609,7 @@
 <rect width="12" height="12" x="660" y="150" class="named"><title>0x00437cf0 ClearScarabsPatch (5 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="150" class="named"><title>0x00437d00 MeshSwapToPour (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="150" class="named"><title>0x00437d30 MeshSwapFromPour (24 bytes)</title></rect>
-<rect width="12" height="12" x="705" y="150" class="named"><title>0x00437d50 AddFootPrint (270 bytes)</title></rect>
+<rect width="12" height="12" x="705" y="150" class="named"><title>0x00437d50 AddFootprint (270 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="150" class="named"><title>0x00437e60 GetFreeFireSpark (131 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="150" class="named"><title>0x00437ef0 keep_those_fires_burning (34 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="165" class="nonmatching"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
@@ -2208,7 +2208,7 @@
 <rect width="10.32" height="10.07" x="457.58" y="412.84" class="named"><title>0x004632f0 CogSwitchControl (271 bytes)</title></rect>
 <rect width="10.32" height="10.03" x="457.58" y="425.91" class="named"><title>0x00415ec0 TestBoundsCollideTeethSpikes (270 bytes)</title></rect>
 <rect width="10.32" height="10.03" x="457.58" y="438.94" class="named"><title>0x0042fb50 draw_flare (270 bytes)</title></rect>
-<rect width="10.32" height="10.03" x="457.58" y="451.97" class="named"><title>0x00437d50 AddFootPrint (270 bytes)</title></rect>
+<rect width="10.32" height="10.03" x="457.58" y="451.97" class="named"><title>0x00437d50 AddFootprint (270 bytes)</title></rect>
 <rect width="10.55" height="9.81" x="470.90" y="172.86" class="named"><title>0x00453f60 CreateRope (270 bytes)</title></rect>
 <rect width="10.51" height="9.81" x="484.45" y="172.86" class="named"><title>0x00415db0 ControlSlicerDicer (269 bytes)</title></rect>
 <rect width="10.51" height="9.81" x="497.96" y="172.86" class="nonmatching"><title>0x00465660 TestHeight (269 bytes)</title></rect>

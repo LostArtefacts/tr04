@@ -549,7 +549,7 @@ address,size,name,symbol
 0x00437cf0,5,ClearScarabsPatch,_ClearScarabsPatch
 0x00437d00,34,MeshSwapToPour,_MeshSwapToPour
 0x00437d30,24,MeshSwapFromPour,_MeshSwapFromPour
-0x00437d50,270,AddFootPrint,_AddFootPrint
+0x00437d50,270,AddFootprint,_AddFootprint
 0x00437e60,131,GetFreeFireSpark,_GetFreeFireSpark
 0x00437ef0,34,keep_those_fires_burning,_keep_those_fires_burning
 0x00437f20,597,UpdateFireSparks,_UpdateFireSparks

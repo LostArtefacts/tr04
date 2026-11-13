@@ -11,7 +11,7 @@ typedef struct footprint {
     sint16 Active;
 } FOOTPRINT;
 
-void AddFootPrint(ITEM_INFO *item);
+void AddFootprint(ITEM_INFO *item);
 
 extern uint8 footsounds[14];
 extern FOOTPRINT FootPrint[32];

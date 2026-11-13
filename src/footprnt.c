@@ -4,7 +4,7 @@
 #include "lara.h"
 #include "sound.h"
 
-void AddFootPrint(ITEM_INFO *item)
+void AddFootprint(ITEM_INFO *item)
 {
     FOOTPRINT *print;
     FLOOR_INFO *floor;
