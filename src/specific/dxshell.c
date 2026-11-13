@@ -693,7 +693,7 @@ HRESULT CALLBACK DXEnumDirect3D(LPGUID lpGuid, LPSTR lpDeviceDescription, LPSTR 
     if (surf) {
         DXCreateD3DDevice(G_d3d, device->Guid, surf, &d3dDevice);
         if (!d3dDevice) {
-            Log(1, "Create D3DDevice Failed");
+            Log(1, "Create D3DDevice Failed\nTrying Again With Compatible Video Mode");
             if (surf) {
                 Log(4, "Released %s @ %x - RefCnt = %d", "DirectDrawSurface", surf, IDirectDrawSurface4_Release(surf));
                 surf = 0;
