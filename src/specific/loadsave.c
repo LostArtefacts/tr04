@@ -735,7 +735,7 @@ void DoOptions(void)
                 }
             }
             if (ControlMethod == 1) {
-                joystick = ReadJoystick(&joystick_x, &joystick_y);
+                joystick = DI_ReadJoystick(&joystick_x, &joystick_y);
                 if (joystick) {
                     controls_selection >>= 2;
                     index = 0;
@@ -886,12 +886,12 @@ void DoOptions(void)
                 SFXVolume = 0;
             }
             if (SFXVolume != sfx_bak) {
-                if (sfx_breath_db == -1 || !DSIsChannelPlaying(0)) {
+                if (sfx_breath_db == -1 || !DS_IsChannelPlaying(0)) {
                     S_SoundStopAllSamples();
                     sfx_bak = SFXVolume;
                     sfx_breath_db = SoundEffect(SFX_LARA_BREATH, 0, SFX_DEFAULT);
                     DSChangeVolume(0, -100 * ((100 - SFXVolume) >> 1));
-                } else if (sfx_breath_db != -1 && DSIsChannelPlaying(0)) {
+                } else if (sfx_breath_db != -1 && DS_IsChannelPlaying(0)) {
                     DSChangeVolume(0, -100 * ((100 - SFXVolume) >> 1));
                 }
             }

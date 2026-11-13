@@ -7,7 +7,7 @@
 
 #include "../types.h"
 
-void DXReadKeyboard(char *KeyMap);
+void DI_ReadKeyboard(char *KeyMap);
 char *DXGetErrorString(HRESULT hr);
 sint32 DXAttempt(HRESULT r);
 void DXBitMask2ShiftCnt(uint32 mask, uint8 *shift, uint8 *count);
@@ -20,7 +20,7 @@ sint32 DXSetVideoMode(LPDIRECTDRAW4 dd, sint32 dwWidth, sint32 dwHeight, sint32 
 sint32 DXD3DCreate(LPDIRECTDRAW4 pDD4, void **pD3D);
 sint32 DXCreateD3DDevice(LPDIRECT3D3 d3d, GUID guid, LPDIRECTDRAWSURFACE4 surf, LPDIRECT3DDEVICE3 *device);
 sint32 DXDDCreate(LPGUID pGuid, void **pDD4);
-sint32 DXCreateViewport(LPDIRECT3D3 d3d, LPDIRECT3DDEVICE3 device, sint32 w, sint32 h, LPDIRECT3DVIEWPORT3 *viewport);
+sint32 DXCreateViewPort(LPDIRECT3D3 d3d, LPDIRECT3DDEVICE3 device, sint32 w, sint32 h, LPDIRECT3DVIEWPORT3 *viewport);
 void DXInitKeyboard(HWND hwnd, HINSTANCE hinstance);
 sint32 DXSetCooperativeLevel(LPDIRECTDRAW4 dd, HWND hwnd, sint32 flags);
 BOOL CALLBACK DXEnumDirectDraw(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext);

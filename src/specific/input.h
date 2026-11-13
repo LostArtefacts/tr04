@@ -44,7 +44,7 @@ enum input_buttons {
 };
 
 sint32 Key(sint32 number);
-sint32 ReadJoystick(sint32 *x, sint32 *y);
+sint32 DI_ReadJoystick(sint32 *x, sint32 *y);
 sint32 S_UpdateInput(void);
 
 extern sint16 layout[2][18];

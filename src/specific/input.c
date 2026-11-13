@@ -58,7 +58,7 @@ sint32 Key(sint32 number)
     return 0;
 }
 
-sint32 ReadJoystick(sint32 *x, sint32 *y)
+sint32 DI_ReadJoystick(sint32 *x, sint32 *y)
 {
     JOYINFOEX joystick;
 
@@ -90,9 +90,9 @@ sint32 S_UpdateInput(void)
     uint8 debounce;
 
     debounce = SetDebounce != 0;
-    DXReadKeyboard((char *)keymap);
+    DI_ReadKeyboard((char *)keymap);
     if (ControlMethod == 1)
-        joy_fire = ReadJoystick(&joy_x, &joy_y);
+        joy_fire = DI_ReadJoystick(&joy_x, &joy_y);
     linput = 0;
     if (ControlMethod == 1) {
         if (joy_x < -8)

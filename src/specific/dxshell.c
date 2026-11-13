@@ -985,7 +985,7 @@ sint32 DXCreate(sint32 w, sint32 h, sint32 bpp, sint32 Flags, DXPTR *dxptr, HWND
         return 0;
     }
     G_dxptr->_lpD3DDevice = G_dxptr->lpD3DDevice;
-    if (!DXCreateViewport(G_dxptr->lpD3D, G_dxptr->lpD3DDevice, G_dxptr->dwRenderWidth, G_dxptr->dwRenderHeight, &G_dxptr->lpViewport)) {
+    if (!DXCreateViewPort(G_dxptr->lpD3D, G_dxptr->lpD3DDevice, G_dxptr->dwRenderWidth, G_dxptr->dwRenderHeight, &G_dxptr->lpViewport)) {
         DXClose();
         return 0;
     }
@@ -1087,7 +1087,7 @@ void DXClose(void)
 }
 #endif
 
-sint32 DXCreateViewport(LPDIRECT3D3 d3d, LPDIRECT3DDEVICE3 device, sint32 w, sint32 h, LPDIRECT3DVIEWPORT3 *viewport)
+sint32 DXCreateViewPort(LPDIRECT3D3 d3d, LPDIRECT3DDEVICE3 device, sint32 w, sint32 h, LPDIRECT3DVIEWPORT3 *viewport)
 {
     D3DVIEWPORT2 vp2;
 
@@ -1244,7 +1244,7 @@ void DXReleaseInput(void)
     }
 }
 
-void DXReadKeyboard(char *KeyMap)
+void DI_ReadKeyboard(char *KeyMap)
 {
     HRESULT state;
 

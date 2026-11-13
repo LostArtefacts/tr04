@@ -36,7 +36,7 @@ void DSChangeVolume(sint32 num, sint32 volume)
         IDirectSoundBuffer_SetVolume(DS_Samples[num].buffer, volume);
 }
 
-void DSAdjustPitch(sint32 num, sint32 pitch)
+void DS_AdjustPitch(sint32 num, sint32 pitch)
 {
     uint32 frequency;
 
@@ -172,7 +172,7 @@ uint8 DXCreateSampleADPCM(char *data, sint32 comp_size, sint32 uncomp_size, sint
     return 1;
 }
 
-void DXStopSample(sint32 num)
+void DS_StopSample(sint32 num)
 {
     LPDIRECTSOUNDBUFFER buffer;
 
@@ -184,7 +184,7 @@ void DXStopSample(sint32 num)
     }
 }
 
-uint8 DSIsChannelPlaying(sint32 num)
+uint8 DS_IsChannelPlaying(sint32 num)
 {
     uint32 status;
 
@@ -192,36 +192,36 @@ uint8 DSIsChannelPlaying(sint32 num)
         if (DXAttempt(IDirectSoundBuffer_GetStatus(DS_Samples[num].buffer, &status)) == DS_OK) {
             if (status & DSBSTATUS_PLAYING)
                 return 1;
-            DXStopSample(num);
+            DS_StopSample(num);
         }
     }
     return 0;
 }
 
-sint32 DSGetFreeChannel(void)
+sint32 DS_GetFreeChannel(void)
 {
     int i;
 
     for (i = 0; i < 32; i++) {
-        if (!DSIsChannelPlaying(i))
+        if (!DS_IsChannelPlaying(i))
             return i;
     }
     return -1;
 }
 
-sint32 DXStartSample(sint32 num, sint32 volume, sint32 pitch, sint32 pan, uint32 flags)
+sint32 DS_StartSample(sint32 num, sint32 volume, sint32 pitch, sint32 pan, uint32 flags)
 {
     LPDIRECTSOUNDBUFFER buffer;
     sint32 channel;
 
-    channel = DSGetFreeChannel();
+    channel = DS_GetFreeChannel();
     if (channel < 0 || DXAttempt(App.dx.lpDS->lpVtbl->DuplicateSoundBuffer(App.dx.lpDS, DS_Buffers[num].buffer, &buffer)) != DS_OK)
         return -1;
     if (DXAttempt(IDirectSoundBuffer_SetVolume(buffer, volume)) != DS_OK || DXAttempt(IDirectSoundBuffer_SetCurrentPosition(buffer, 0)) != DS_OK)
         return -1;
     DS_Samples[channel].buffer = buffer;
     DS_Samples[channel].playing = num;
-    DSAdjustPitch(channel, pitch);
+    DS_AdjustPitch(channel, pitch);
     DSAdjustPan(channel, pan);
     IDirectSoundBuffer_Stop(buffer);
     DXAttempt(IDirectSoundBuffer_Play(buffer, 0, 0, flags));
@@ -250,22 +250,22 @@ void S_SoundStopAllSamples(void)
     int i;
 
     for (i = 0; i < 32; i++)
-        DXStopSample(i);
+        DS_StopSample(i);
 }
 
 void S_SoundStopSample(sint32 num)
 {
-    DXStopSample(num);
+    DS_StopSample(num);
 }
 
 sint32 S_SoundPlaySample(sint32 num, uint16 volume, sint32 pitch, sint16 pan)
 {
-    return DXStartSample(num, CalcVolume(volume), pitch, pan, 0);
+    return DS_StartSample(num, CalcVolume(volume), pitch, pan, 0);
 }
 
 sint32 S_SoundPlaySampleLooped(sint32 num, uint16 volume, sint32 pitch, sint16 pan)
 {
-    return DXStartSample(num, CalcVolume(volume), pitch, pan, DSBPLAY_LOOPING);
+    return DS_StartSample(num, CalcVolume(volume), pitch, pan, DSBPLAY_LOOPING);
 }
 
 void DXFreeSounds(void)
@@ -285,7 +285,7 @@ sint32 S_SoundSampleIsPlaying(sint32 num)
 {
     if (!sound_active)
         return 0;
-    return DSIsChannelPlaying(num);
+    return DS_IsChannelPlaying(num);
 }
 
 void S_SoundSetPanAndVolume(sint32 num, sint16 pan, uint16 volume)
@@ -299,5 +299,5 @@ void S_SoundSetPanAndVolume(sint32 num, sint16 pan, uint16 volume)
 void S_SoundSetPitch(sint32 num, sint32 pitch)
 {
     if (sound_active)
-        DSAdjustPitch(num, pitch);
+        DS_AdjustPitch(num, pitch);
 }

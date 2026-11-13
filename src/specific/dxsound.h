@@ -16,16 +16,16 @@ typedef struct ds_sample {
 
 uint8 DXChangeOutputFormat(sint32 nSamplesPerSec, uint8 force);
 void DSChangeVolume(sint32 num, sint32 volume);
-void DSAdjustPitch(sint32 num, sint32 pitch);
+void DS_AdjustPitch(sint32 num, sint32 pitch);
 void DSAdjustPan(sint32 num, sint32 pan);
 uint8 DXSetOutputFormat(void);
 uint8 DXDSCreate(void);
 uint8 InitSampleDecompress(void);
 uint8 FreeSampleDecompress(void);
 uint8 DXCreateSampleADPCM(char *data, sint32 comp_size, sint32 uncomp_size, sint32 num);
-void DXStopSample(sint32 num);
-uint8 DSIsChannelPlaying(sint32 num);
-sint32 DSGetFreeChannel(void);
+void DS_StopSample(sint32 num);
+uint8 DS_IsChannelPlaying(sint32 num);
+sint32 DS_GetFreeChannel(void);
 sint32 CalcVolume(sint32 volume);
 void S_SoundStopAllSamples(void);
 void S_SoundStopSample(sint32 num);
@@ -35,7 +35,7 @@ void DXFreeSounds(void);
 sint32 S_SoundSampleIsPlaying(sint32 num);
 void S_SoundSetPanAndVolume();
 void S_SoundSetPitch(sint32 num, sint32 pitch);
-sint32 DXStartSample(sint32 num, sint32 volume, sint32 pitch, sint32 pan, uint32 flags);
+sint32 DS_StartSample(sint32 num, sint32 volume, sint32 pitch, sint32 pan, uint32 flags);
 
 extern LPDIRECTSOUNDBUFFER G_DSPrimary;
 extern DS_SAMPLE DS_Samples[32];
