@@ -1625,6 +1625,476 @@ done:
     return 0;
 }
 
+#ifndef FEAT_C_ASM
+extern uint32 SW_TriMagic23[2];
+extern uint32 SW_TriMagic52[2];
+extern uint32 SW_TriYBias;
+extern uint32 SW_TriFloat16;
+sint32 SW_TriSetupG(void *p0, void *p1, void *p2)
+{
+    __asm {
+        push ebp
+        mov ebx, dword ptr [p0]
+        mov ecx, dword ptr [p1]
+        mov edx, dword ptr [p2]
+        mov dword ptr [SW_TriV0], ebx
+        fld dword ptr [ebx]
+        fsub dword ptr [ecx]
+        fld dword ptr [ebx + 4]
+        fsub dword ptr [edx + 4]
+        fxch st(1)
+        fst dword ptr [SW_TriDX01]
+        fxch st(1)
+        fst dword ptr [SW_TriDY02]
+        fmulp st(1), st
+        fld dword ptr [ebx]
+        fsub dword ptr [edx]
+        fld dword ptr [ebx + 4]
+        fsub dword ptr [ecx + 4]
+        fxch st(1)
+        fst dword ptr [SW_TriDX02]
+        fxch st(1)
+        fst dword ptr [SW_TriDY01]
+        fmulp st(1), st
+        fsubp st(1), st
+        fst dword ptr [SW_TriTemp]
+        fld1
+        test dword ptr [SW_TriTemp], 0x80000000
+        je L0
+        mov eax, ecx
+        mov ecx, edx
+        mov edx, eax
+        fchs
+        fld dword ptr [SW_TriDX01]
+        fld dword ptr [SW_TriDX02]
+        fstp dword ptr [SW_TriDX01]
+        fstp dword ptr [SW_TriDX02]
+        fld dword ptr [SW_TriDY01]
+        fld dword ptr [SW_TriDY02]
+        fstp dword ptr [SW_TriDY01]
+        fstp dword ptr [SW_TriDY02]
+    L0:
+        fdivrp st(1), st
+        mov dword ptr [ebx + 8], ecx
+        mov dword ptr [ecx + 8], edx
+        mov dword ptr [edx + 8], ebx
+        mov dword ptr [ebx + 0x14], edx
+        mov dword ptr [ecx + 0x14], ebx
+        mov dword ptr [edx + 0x14], ecx
+        mov esi, ebx
+        mov eax, dword ptr [ebx + 4]
+        cmp eax, dword ptr [ecx + 4]
+        jb L1
+        mov eax, dword ptr [ecx + 4]
+        mov esi, ecx
+    L1:
+        cmp eax, dword ptr [edx + 4]
+        jb L2
+        mov esi, edx
+    L2:
+        mov dword ptr [SW_TriEdgeA], esi
+        mov dword ptr [SW_TriEdgeB], esi
+        mov eax, dword ptr [ebx + 0x10]
+        mov dword ptr [SW_TriColor0], eax
+        mov esi, dword ptr [ebx + 0x10]
+        mov ebp, esi
+        mov edi, esi
+        mov eax, esi
+        shl esi, 8
+        and edi, 0xff00
+        shr eax, 8
+        and esi, 0xff00
+        shr ebp, 0x10
+        and eax, 0xff00
+        and ebp, 0xff00
+        add edi, 0x80
+        add esi, 0x80
+        add eax, 0x80
+        add ebp, 0x80
+        mov dword ptr [SW_TriG0], edi
+        mov dword ptr [SW_TriB0], esi
+        mov dword ptr [SW_TriR0], eax
+        mov dword ptr [SW_TriA0], ebp
+        mov esi, dword ptr [ecx + 0x10]
+        mov ebp, esi
+        mov edi, esi
+        mov eax, esi
+        shl esi, 8
+        and edi, 0xff00
+        shr eax, 8
+        and esi, 0xff00
+        shr ebp, 0x10
+        and eax, 0xff00
+        and esi, 0xff00
+        add edi, 0x80
+        add esi, 0x80
+        add eax, 0x80
+        add ebp, 0x80
+        mov dword ptr [SW_TriG1], edi
+        mov dword ptr [SW_TriB1], esi
+        mov dword ptr [SW_TriR1], eax
+        mov dword ptr [SW_TriA1], ebp
+        mov esi, dword ptr [edx + 0x10]
+        mov ebp, esi
+        mov edi, esi
+        mov eax, esi
+        shl esi, 8
+        and edi, 0xff00
+        shr eax, 8
+        and esi, 0xff00
+        shr ebp, 0x10
+        and eax, 0xff00
+        and esi, 0xff00
+        add edi, 0x80
+        add esi, 0x80
+        add eax, 0x80
+        add ebp, 0x80
+        mov dword ptr [SW_TriG2], edi
+        mov dword ptr [SW_TriB2], esi
+        mov dword ptr [SW_TriR2], eax
+        mov dword ptr [SW_TriA2], ebp
+        fild dword ptr [SW_TriR0]
+        fild dword ptr [SW_TriR1]
+        fild dword ptr [SW_TriR2]
+        fxch st(1)
+        fsubr st, st(2)
+        fxch st(2)
+        fsubrp st(1), st
+        fxch st(1)
+        fst dword ptr [SW_TriD01]
+        fmul dword ptr [SW_TriDY02]
+        fxch st(1)
+        fst dword ptr [SW_TriD02]
+        fmul dword ptr [SW_TriDY01]
+        fld dword ptr [SW_TriD01]
+        fmul dword ptr [SW_TriDX02]
+        fxch st(1)
+        fsubp st(2), st
+        fld dword ptr [SW_TriD02]
+        fmul dword ptr [SW_TriDX01]
+        fxch st(2)
+        fmul st, st(3)
+        fist word ptr [SW_SpanGrad + 4]
+        fxch st(1)
+        fsubp st(2), st
+        fstp dword ptr [SW_TriRDX]
+        fmul st, st(1)
+        fld dword ptr [ebx]
+        fmul dword ptr [SW_TriRDX]
+        fld dword ptr [ebx + 4]
+        fmul st, st(2)
+        fxch st(2)
+        fstp dword ptr [SW_TriRDY]
+        fild dword ptr [SW_TriR0]
+        fxch st(1)
+        faddp st(2), st
+        fadd qword ptr [SW_TriMagic23]
+        fsubrp st(1), st
+        fstp qword ptr [SW_TriROff]
+        fild dword ptr [SW_TriG0]
+        fild dword ptr [SW_TriG1]
+        fild dword ptr [SW_TriG2]
+        fxch st(1)
+        fsubr st, st(2)
+        fxch st(2)
+        fsubrp st(1), st
+        fxch st(1)
+        fst dword ptr [SW_TriD01]
+        fmul dword ptr [SW_TriDY02]
+        fxch st(1)
+        fst dword ptr [SW_TriD02]
+        fmul dword ptr [SW_TriDY01]
+        fld dword ptr [SW_TriD01]
+        fmul dword ptr [SW_TriDX02]
+        fxch st(1)
+        fsubp st(2), st
+        fld dword ptr [SW_TriD02]
+        fmul dword ptr [SW_TriDX01]
+        fxch st(2)
+        fmul st, st(3)
+        fist word ptr [SW_SpanGrad + 2]
+        fxch st(1)
+        fsubp st(2), st
+        fstp dword ptr [SW_TriGDX]
+        fmul st, st(1)
+        fld dword ptr [ebx]
+        fmul dword ptr [SW_TriGDX]
+        fld dword ptr [ebx + 4]
+        fmul st, st(2)
+        fxch st(2)
+        fstp dword ptr [SW_TriGDY]
+        fild dword ptr [SW_TriG0]
+        fxch st(1)
+        faddp st(2), st
+        fadd qword ptr [SW_TriMagic23]
+        fsubrp st(1), st
+        fstp qword ptr [SW_TriGOff]
+        fild dword ptr [SW_TriB0]
+        fild dword ptr [SW_TriB1]
+        fild dword ptr [SW_TriB2]
+        fxch st(1)
+        fsubr st, st(2)
+        fxch st(2)
+        fsubrp st(1), st
+        fxch st(1)
+        fst dword ptr [SW_TriD01]
+        fmul dword ptr [SW_TriDY02]
+        fxch st(1)
+        fst dword ptr [SW_TriD02]
+        fmul dword ptr [SW_TriDY01]
+        fld dword ptr [SW_TriD01]
+        fmul dword ptr [SW_TriDX02]
+        fxch st(1)
+        fsubp st(2), st
+        fld dword ptr [SW_TriD02]
+        fmul dword ptr [SW_TriDX01]
+        fxch st(2)
+        fmul st, st(3)
+        fist word ptr [SW_SpanGrad]
+        fxch st(1)
+        fsubp st(2), st
+        fstp dword ptr [SW_TriBDX]
+        fmul st, st(1)
+        fld dword ptr [ebx]
+        fmul dword ptr [SW_TriBDX]
+        fld dword ptr [ebx + 4]
+        fmul st, st(2)
+        fxch st(2)
+        fstp dword ptr [SW_TriBDY]
+        fild dword ptr [SW_TriB0]
+        fxch st(1)
+        faddp st(2), st
+        fadd qword ptr [SW_TriMagic23]
+        fsubrp st(1), st
+        fstp qword ptr [SW_TriBOff]
+        fild dword ptr [SW_TriA0]
+        fild dword ptr [SW_TriA1]
+        fild dword ptr [SW_TriA2]
+        fxch st(1)
+        fsubr st, st(2)
+        fxch st(2)
+        fsubrp st(1), st
+        fxch st(1)
+        fst dword ptr [SW_TriD01]
+        fmul dword ptr [SW_TriDY02]
+        fxch st(1)
+        fst dword ptr [SW_TriD02]
+        fmul dword ptr [SW_TriDY01]
+        fld dword ptr [SW_TriD01]
+        fmul dword ptr [SW_TriDX02]
+        fxch st(1)
+        fsubp st(2), st
+        fld dword ptr [SW_TriD02]
+        fmul dword ptr [SW_TriDX01]
+        fxch st(2)
+        fmul st, st(3)
+        fist word ptr [SW_SpanGrad + 6]
+        fxch st(1)
+        fsubp st(2), st
+        fstp dword ptr [SW_TriADX]
+        fmul st, st(1)
+        fld dword ptr [ebx]
+        fmul dword ptr [SW_TriADX]
+        fld dword ptr [ebx + 4]
+        fmul st, st(2)
+        fxch st(2)
+        fstp dword ptr [SW_TriADY]
+        fild dword ptr [SW_TriA0]
+        fxch st(1)
+        faddp st(2), st
+        fadd qword ptr [SW_TriMagic23]
+        fsubrp st(1), st
+        fstp qword ptr [SW_TriAOff]
+        faddp st(0), st
+        mov esi, dword ptr [SW_TriEdgeA]
+        mov eax, 3
+        mov dword ptr [SW_TriEdges], eax
+        mov edi, dword ptr [SW_SpanBuffer]
+        fld dword ptr [esi + 4]
+        fsub dword ptr [SW_TriYBias]
+        fadd qword ptr [SW_TriMagic52]
+        fstp qword ptr [SW_TriY]
+        inc dword ptr [SW_TriY]
+        mov eax, dword ptr [SW_TriY]
+        xor edx, edx
+        mov dword ptr [SW_SpanY], eax
+        jmp L5
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        mov edi, edi
+    L3:
+        mov eax, dword ptr [edi]
+        push ebx
+        shr ebx, 0x10
+        mov eax, esi
+        shr eax, 0x10
+        mov dword ptr [SW_TriTemp], ebx
+        sub eax, ebx
+        fild dword ptr [SW_TriY]
+        fild dword ptr [SW_TriTemp]
+        fld dword ptr [SW_TriADX]
+        fmul st, st(1)
+        fld dword ptr [SW_TriADY]
+        fmul st, st(3)
+        faddp st(1), st
+        fadd qword ptr [SW_TriAOff]
+        fstp dword ptr [SW_TriTemp]
+        mov dword ptr [edi + 4], eax
+        mov dword ptr [edi], ebx
+        fld dword ptr [SW_TriBDX]
+        fmul st, st(1)
+        fld dword ptr [SW_TriBDY]
+        fmul st, st(3)
+        fld dword ptr [SW_TriGDX]
+        fmul st, st(3)
+        fld dword ptr [SW_TriGDY]
+        fmul st, st(5)
+        fxch st(2)
+        faddp st(3), st
+        fld dword ptr [SW_TriRDX]
+        fmul st, st(4)
+        fld dword ptr [SW_TriRDY]
+        fmul st, st(6)
+        fxch st(2)
+        faddp st(3), st
+        fxch st(3)
+        fadd qword ptr [SW_TriBOff]
+        fxch st(3)
+        faddp st(1), st
+        fxch st(1)
+        fadd qword ptr [SW_TriGOff]
+        fxch st(3)
+        faddp st(0), st
+        fxch st(1)
+        fstp dword ptr [edi + 0x18]
+        fadd qword ptr [SW_TriROff]
+        fxch st(1)
+        fstp dword ptr [edi + 0x1a]
+        fxch st(1)
+        faddp st(0), st
+        fstp dword ptr [edi + 0x1c]
+        mov eax, dword ptr [SW_TriTemp]
+        mov word ptr [edi + 0x1e], ax
+        mov eax, dword ptr [SW_TriY]
+        add edi, 0x20
+        inc eax
+        pop ebx
+        mov dword ptr [SW_TriY], eax
+        mov eax, dword ptr [SW_TriStepB]
+        add ebx, eax
+        mov eax, dword ptr [SW_TriStepA]
+        add esi, eax
+        dec edx
+        dec ecx
+        je L5
+        test edx, edx
+        je L6
+        jmp L3
+    L4:
+        mov dword ptr [SW_SpanEnd], edi
+        call dword ptr [SW_SpanFunc]
+        pop ebp
+        jmp Done
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+    L5:
+        mov esi, dword ptr [SW_TriEdgeA]
+        mov eax, dword ptr [SW_TriEdges]
+        mov ecx, esi
+        dec eax
+        js L4
+        mov ecx, dword ptr [ecx + 8]
+        mov dword ptr [SW_TriEdges], eax
+        mov dword ptr [SW_TriEdgeA], ecx
+        fld dword ptr [esi]
+        fsub dword ptr [ecx]
+        fld dword ptr [esi + 4]
+        fsub dword ptr [ecx + 4]
+        fdivp st(1), st
+        fstp dword ptr [SW_TriSlopeA]
+        fild dword ptr [SW_TriY]
+        fsub dword ptr [esi + 4]
+        fmul dword ptr [SW_TriSlopeA]
+        fadd dword ptr [esi]
+        fstp dword ptr [SW_TriXA]
+        fld dword ptr [ecx + 4]
+        fsub dword ptr [SW_TriYBias]
+        fadd qword ptr [SW_TriMagic52]
+        fstp qword ptr [SW_TriEndY]
+        mov ecx, dword ptr [SW_TriEndY]
+        sub ecx, dword ptr [SW_TriY]
+        inc ecx
+        je L5
+        fld dword ptr [SW_TriSlopeA]
+        fmul dword ptr [SW_TriFloat16]
+        fistp dword ptr [SW_TriStepA]
+        fld dword ptr [SW_TriXA]
+        fmul dword ptr [SW_TriFloat16]
+        fistp dword ptr [SW_TriTemp]
+        mov esi, dword ptr [SW_TriTemp]
+        add esi, 0xffff
+        test edx, edx
+        jne L7
+    L6:
+        mov edx, dword ptr [SW_TriEdgeB]
+        mov eax, dword ptr [SW_TriEdges]
+        mov ebx, edx
+        dec eax
+        js L4
+        mov ebx, dword ptr [ebx + 0x14]
+        mov dword ptr [SW_TriEdges], eax
+        mov dword ptr [SW_TriEdgeB], ebx
+        fld dword ptr [edx]
+        fsub dword ptr [ebx]
+        fld dword ptr [edx + 4]
+        fsub dword ptr [ebx + 4]
+        fdivp st(1), st
+        fstp dword ptr [SW_TriSlopeB]
+        fild dword ptr [SW_TriY]
+        fsub dword ptr [edx + 4]
+        fmul dword ptr [SW_TriSlopeB]
+        fadd dword ptr [edx]
+        fstp dword ptr [SW_TriXB]
+        fld dword ptr [ebx + 4]
+        fsub dword ptr [SW_TriYBias]
+        fadd qword ptr [SW_TriMagic52]
+        fstp qword ptr [SW_TriEndY]
+        mov edx, dword ptr [SW_TriEndY]
+        sub edx, dword ptr [SW_TriY]
+        inc edx
+        je L6
+        fld dword ptr [SW_TriSlopeB]
+        fmul dword ptr [SW_TriFloat16]
+        fistp dword ptr [SW_TriStepB]
+        fld dword ptr [SW_TriXB]
+        fmul dword ptr [SW_TriFloat16]
+        fistp dword ptr [SW_TriTemp]
+        mov ebx, dword ptr [SW_TriTemp]
+        add ebx, 0xffff
+    L7:
+        jmp L3
+        pop ebp
+    Done:
+    }
+}
+#else
 sint32 SW_TriSetupG(void *p0, void *p1, void *p2)
 {
     SW_VERTEX *v0, *v1, *v2, *t, *n;
@@ -1807,6 +2277,7 @@ done:
     SW_SpanFunc();
     return 0;
 }
+#endif
 
 sint32 SW_TriSetupGTPFog(void *p0, void *p1, void *p2)
 {

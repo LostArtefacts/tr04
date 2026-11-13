@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="387.48" height="12" x="0" y="0" class="named"><title>1300 · 83.87%</title></rect>
-<rect width="74.52" height="12" x="387.48" y="0" class="nonmatching"><title>250 · 16.13%</title></rect>
+<rect width="387.78" height="12" x="0" y="0" class="named"><title>1301 · 83.94%</title></rect>
+<rect width="74.22" height="12" x="387.78" y="0" class="nonmatching"><title>249 · 16.06%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">83.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1300</tspan> · <tspan class="nonmatching">250</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1301</tspan> · <tspan class="nonmatching">249</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="261.90" height="12" x="0" y="0" class="named"><title>355 KB · 56.69%</title></rect>
-<rect width="200.10" height="12" x="261.90" y="0" class="nonmatching"><title>271 KB · 43.31%</title></rect>
+<rect width="263.19" height="12" x="0" y="0" class="named"><title>356 KB · 56.97%</title></rect>
+<rect width="198.81" height="12" x="263.19" y="0" class="nonmatching"><title>269 KB · 43.03%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">56.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">355 KB</tspan> · <tspan class="nonmatching">271 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">57.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">356 KB</tspan> · <tspan class="nonmatching">269 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1564,7 +1564,7 @@
 <rect width="12" height="12" x="735" y="435" class="named"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="450" class="nonmatching"><title>0x004959b0 SW_TriSetupGTP (2539 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="450" class="nonmatching"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="450" class="nonmatching"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="450" class="named"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="450" class="nonmatching"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="450" class="nonmatching"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="450" class="nonmatching"><title>0x004984e0 SW_TriSetupGFog (1741 bytes)</title></rect>
@@ -1682,7 +1682,7 @@
 <rect width="26.98" height="25.46" x="151.71" y="297.38" class="nonmatching"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
 <rect width="26.98" height="25.29" x="151.71" y="325.84" class="named"><title>0x00410530 DoSethEffects (1780 bytes)</title></rect>
 <rect width="26.98" height="24.91" x="151.71" y="354.13" class="nonmatching"><title>0x00414fa0 ControlRollingBall (1753 bytes)</title></rect>
-<rect width="26.98" height="24.74" x="151.71" y="382.04" class="nonmatching"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
+<rect width="26.98" height="24.74" x="151.71" y="382.04" class="named"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
 <rect width="26.98" height="24.74" x="151.71" y="409.77" class="nonmatching"><title>0x004984e0 SW_TriSetupGFog (1741 bytes)</title></rect>
 <rect width="26.98" height="24.49" x="151.71" y="437.51" class="named"><title>0x0044ec10 DrawRooms (1724 bytes)</title></rect>
 <rect width="24.87" height="26.45" x="181.69" y="0" class="nonmatching"><title>0x00451770 DoGameflow (1716 bytes)</title></rect>
