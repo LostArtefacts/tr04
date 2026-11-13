@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="39.55" height="12" x="267.10" y="0" class="nonmatching"><title>179 · 11.56%</title></rect>
-<rect width="35.35" height="12" x="306.65" y="0" class="todo"><title>160 · 10.34%</title></rect>
+<rect width="39.77" height="12" x="267.10" y="0" class="nonmatching"><title>180 · 11.63%</title></rect>
+<rect width="35.13" height="12" x="306.87" y="0" class="todo"><title>159 · 10.27%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">179</tspan> · <tspan class="todo">160</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">180</tspan> · <tspan class="todo">159</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="118.50" height="12" x="178.89" y="0" class="nonmatching"><title>217 KB · 34.65%</title></rect>
-<rect width="44.61" height="12" x="297.39" y="0" class="todo"><title>82 KB · 13.04%</title></rect>
+<rect width="118.56" height="12" x="178.89" y="0" class="nonmatching"><title>217 KB · 34.67%</title></rect>
+<rect width="44.55" height="12" x="297.45" y="0" class="todo"><title>81 KB · 13.03%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">217 KB</tspan> · <tspan class="todo">82 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">217 KB</tspan> · <tspan class="todo">81 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1493,7 +1493,7 @@
 <rect width="12" height="12" x="360" y="420" class="named"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="420" class="named"><title>0x00490d50 D3DNormalise (114 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="420" class="named"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="420" class="todo"><title>0x00490e10 D3DTransform (101 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="420" class="nonmatching"><title>0x00490e10 D3DTransform (101 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="420" class="named"><title>0x00490e80 other_log (55 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="420" class="named"><title>0x00490ec0 S_ExitSystem (21 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="420" class="named"><title>0x00490ee0 GetRandomControl (30 bytes)</title></rect>
@@ -2654,7 +2654,7 @@
 <rect width="5.98" height="6.60" x="580.63" y="314.46" class="named"><title>0x00453800 InitialiseLightningConductor (103 bytes)</title></rect>
 <rect width="5.98" height="6.54" x="580.63" y="324.06" class="named"><title>0x00455200 InitialiseLOTarray (102 bytes)</title></rect>
 <rect width="5.98" height="6.48" x="580.63" y="333.60" class="named"><title>0x00427fd0 lara_col_death (101 bytes)</title></rect>
-<rect width="5.98" height="6.48" x="580.63" y="343.08" class="todo"><title>0x00490e10 D3DTransform (101 bytes)</title></rect>
+<rect width="5.98" height="6.48" x="580.63" y="343.08" class="nonmatching"><title>0x00490e10 D3DTransform (101 bytes)</title></rect>
 <rect width="5.98" height="6.48" x="580.63" y="352.55" class="named"><title>0x00492ad0 DXEnumZBufferFormats (101 bytes)</title></rect>
 <rect width="5.98" height="6.41" x="580.63" y="362.03" class="named"><title>0x0042eac0 WeaponObjectMesh (100 bytes)</title></rect>
 <rect width="5.98" height="6.41" x="580.63" y="371.44" class="named"><title>0x00437180 DoBloodSplat (100 bytes)</title></rect>

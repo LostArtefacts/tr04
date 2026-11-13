@@ -85,3 +85,13 @@ D3DMATRIX *D3DIdentityMatrix(D3DMATRIX *mx)
     mx->_44 = 1;
     return mx;
 }
+
+void D3DTransform(D3DVECTOR *vec, D3DMATRIX *mx)
+{
+    D3DVECTOR t;
+
+    t.x = mx->_11 * vec->x + mx->_21 * vec->y + mx->_31 * vec->z;
+    t.y = mx->_22 * vec->y + (mx->_12 * vec->x + mx->_32 * vec->z);
+    t.z = mx->_23 * vec->y + (mx->_13 * vec->x + mx->_33 * vec->z);
+    *vec = t;
+}
