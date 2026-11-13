@@ -77,6 +77,11 @@ HRESULT __stdcall SW_D3D_SetRenderState(SW_DEVICE *dev, D3DRENDERSTATETYPE type,
     return SW_SetRenderStateFlags(type, state);
 }
 
+HRESULT __stdcall SW_D3D_DrawPrimitive(SW_DEVICE *dev, D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWORD count, DWORD flags)
+{
+    return j_SW_DrawPrimitives(type, fvf, verts, count, flags);
+}
+
 HRESULT __stdcall SW_D3D_SetRenderTarget(SW_DEVICE *dev, void *target, DWORD flags)
 {
     dev->target = target;

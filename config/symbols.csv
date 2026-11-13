@@ -1478,7 +1478,7 @@ address,size,name,symbol
 0x004945f0,18,SW_D3D_GetCurrentViewport,_SW_D3D_GetCurrentViewport@8
 0x00494610,5,SW_D3D_ViewportStub,_SW_D3D_ViewportStub@8
 0x00494620,44,SW_D3D_SetRenderState,_SW_D3D_SetRenderState@12
-0x0049464c,40,SW_D3D_DrawPrimitive,_SW_D3D_DrawPrimitive@24
+0x00494650,36,SW_D3D_DrawPrimitive,_SW_D3D_DrawPrimitive@24
 0x00494680,113,SW_D3D_SetTextureStageState,_SW_D3D_SetTextureStageState@16
 0x004946f1,12,SW_GetKernelModule,_SW_GetKernelModule
 0x00494700,291,SW_D3D_SetTexture,_SW_D3D_SetTexture@12
