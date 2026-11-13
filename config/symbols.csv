@@ -2832,6 +2832,7 @@ address,size,name,symbol
 0x007d94e8,4,SW_TriFogBDX,_SW_TriFogBDX
 0x007d94ec,4,SW_TriFogEdgeB,_SW_TriFogEdgeB
 0x007d94f0,4,SW_SpanGTPAddMask,_SW_SpanGTPAddMask
+0x007d94f4,4,SW_SpanGTPKeyIntTmp0,_SW_SpanGTPKeyIntTmp0
 0x007d94f8,4,SW_SpanGTAddBilinearTmp0,_SW_SpanGTAddBilinearTmp0
 0x007d94fc,4,SW_SpanGTAddMask,_SW_SpanGTAddMask
 0x007d9500,8,SW_TriPFStepA,_SW_TriPFStepA
@@ -2890,6 +2891,7 @@ address,size,name,symbol
 0x007d9630,8,SW_SpanGFogTmp,_SW_SpanGFogTmp
 0x007d9638,4,SW_TriTB2,_SW_TriTB2
 0x007d963c,4,SW_TriPFU2,_SW_TriPFU2
+0x007d9640,4,SW_SpanGTPKeyIntTmp1,_SW_SpanGTPKeyIntTmp1
 0x007d9644,4,SW_TriPD01,_SW_TriPD01
 0x007d9648,4,SW_TriPGDY,_SW_TriPGDY
 0x007d964c,4,SW_TriA0,_SW_TriA0
@@ -2925,6 +2927,7 @@ address,size,name,symbol
 0x007daad8,8,SW_TriPFTmp,_SW_TriPFTmp
 0x007daae0,4,SW_TriPFV2,_SW_TriPFV2
 0x007daae4,4,SW_TriTStepB,_SW_TriTStepB
+0x007daae8,4,SW_SpanGTPKeyIntTmp2,_SW_SpanGTPKeyIntTmp2
 0x007daaec,4,SW_SpanBufferHandle,_SW_SpanBufferHandle
 0x007daaf0,4,SW_TriRDX,_SW_TriRDX
 0x007daaf4,4,SW_TriTFogDY02,_SW_TriTFogDY02
@@ -2945,6 +2948,7 @@ address,size,name,symbol
 0x007dab44,4,SW_TriTFogD02,_SW_TriTFogD02
 0x007dab48,4,SW_TriTB0,_SW_TriTB0
 0x007dab50,8,SW_TriPGOff,_SW_TriPGOff
+0x007dab58,4,SW_SpanGTPKeyIntTmp3,_SW_SpanGTPKeyIntTmp3
 0x007dab5c,4,SW_TriPDY02,_SW_TriPDY02
 0x007dab60,8,SW_TriPROff,_SW_TriPROff
 0x007dab68,4,SW_TriTDY01,_SW_TriTDY01
@@ -2985,6 +2989,7 @@ address,size,name,symbol
 0x007e2c44,4,SW_TriTUDY,_SW_TriTUDY
 0x007e2c4c,4,SW_TriTR0,_SW_TriTR0
 0x007e2c54,4,SW_TriTEdgeA,_SW_TriTEdgeA
+0x007e2c58,4,SW_SpanGTPKeyIntTmp4,_SW_SpanGTPKeyIntTmp4
 0x007e2c5c,4,SW_SpanGTBilinearTmp1,_SW_SpanGTBilinearTmp1
 0x007e2c60,4,SW_TriFogA2,_SW_TriFogA2
 0x007e2c64,4,SW_TriPFU,_SW_TriPFU
@@ -3018,6 +3023,7 @@ address,size,name,symbol
 0x007e2d14,4,SW_TriTFogB1,_SW_TriTFogB1
 0x007e2d18,4,SW_TriPFB1,_SW_TriPFB1
 0x007e2d1c,4,SW_TriPFTemp,_SW_TriPFTemp
+0x007e2d20,4,SW_SpanGTPKeyIntTmp5,_SW_SpanGTPKeyIntTmp5
 0x007e2d24,4,SW_TriTVDY,_SW_TriTVDY
 0x007e2d28,4,SW_TriFogRDX,_SW_TriFogRDX
 0x007e2d2c,4,SW_TriPB0,_SW_TriPB0

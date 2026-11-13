@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="385.99" height="12" x="0" y="0" class="named"><title>1295 · 83.55%</title></rect>
-<rect width="76.01" height="12" x="385.99" y="0" class="nonmatching"><title>255 · 16.45%</title></rect>
+<rect width="386.29" height="12" x="0" y="0" class="named"><title>1296 · 83.61%</title></rect>
+<rect width="75.71" height="12" x="386.29" y="0" class="nonmatching"><title>254 · 16.39%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">83.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1295</tspan> · <tspan class="nonmatching">255</tspan></text>
+<text text-anchor="end" x="642" y="7.50">83.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1296</tspan> · <tspan class="nonmatching">254</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="259.82" height="12" x="0" y="0" class="named"><title>352 KB · 56.24%</title></rect>
-<rect width="202.18" height="12" x="259.82" y="0" class="nonmatching"><title>274 KB · 43.76%</title></rect>
+<rect width="260.20" height="12" x="0" y="0" class="named"><title>352 KB · 56.32%</title></rect>
+<rect width="201.80" height="12" x="260.20" y="0" class="nonmatching"><title>273 KB · 43.68%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">56.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">352 KB</tspan> · <tspan class="nonmatching">274 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">56.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">352 KB</tspan> · <tspan class="nonmatching">273 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1600,7 +1600,7 @@
 <rect width="12" height="12" x="525" y="450" class="named"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="450" class="named"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="450" class="nonmatching"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="450" class="nonmatching"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="450" class="named"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="450" class="named"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="named"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="450" class="named"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
@@ -1967,7 +1967,7 @@
 <rect width="13.76" height="14.45" x="364.94" y="344.09" class="named"><title>0x0042c770 lara_col_climbstnc (519 bytes)</title></rect>
 <rect width="13.76" height="14.32" x="364.94" y="361.55" class="named"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
 <rect width="13.76" height="14.29" x="364.94" y="378.86" class="named"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
-<rect width="13.76" height="14.29" x="364.94" y="396.15" class="nonmatching"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
+<rect width="13.76" height="14.29" x="364.94" y="396.15" class="named"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
 <rect width="13.76" height="14.21" x="364.94" y="413.44" class="named"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
 <rect width="13.76" height="14.18" x="364.94" y="430.65" class="named"><title>0x00456580 ControlMapper (509 bytes)</title></rect>
 <rect width="13.76" height="14.18" x="364.94" y="447.82" class="named"><title>0x004622c0 PulleyCollision (509 bytes)</title></rect>
