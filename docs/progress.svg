@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="324.41" height="12" x="0" y="0" class="named"><title>1213 · 78.36%</title></rect>
-<rect width="49.74" height="12" x="324.41" y="0" class="nonmatching"><title>186 · 12.02%</title></rect>
-<rect width="39.85" height="12" x="374.15" y="0" class="todo"><title>149 · 9.63%</title></rect>
+<rect width="50.01" height="12" x="324.41" y="0" class="nonmatching"><title>187 · 12.08%</title></rect>
+<rect width="39.58" height="12" x="374.42" y="0" class="todo"><title>148 · 9.56%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">186</tspan> · <tspan class="todo">149</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">187</tspan> · <tspan class="todo">148</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="217.20" height="12" x="0" y="0" class="named"><title>328 KB · 52.46%</title></rect>
-<rect width="144.58" height="12" x="217.20" y="0" class="nonmatching"><title>218 KB · 34.92%</title></rect>
-<rect width="52.22" height="12" x="361.78" y="0" class="todo"><title>79 KB · 12.61%</title></rect>
+<rect width="144.77" height="12" x="217.20" y="0" class="nonmatching"><title>219 KB · 34.97%</title></rect>
+<rect width="52.03" height="12" x="361.97" y="0" class="todo"><title>79 KB · 12.57%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">218 KB</tspan> · <tspan class="todo">79 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">219 KB</tspan> · <tspan class="todo">79 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -184,7 +184,7 @@
 <rect width="12" height="12" x="255" y="30" class="nonmatching"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="30" class="named"><title>0x00413020 InitialiseTemplar (99 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="30" class="nonmatching"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="30" class="todo"><title>0x004135a0 CloseTrapDoor (285 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="30" class="nonmatching"><title>0x004135a0 CloseTrapDoor (285 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="30" class="named"><title>0x004136c0 TrapDoorControl (137 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="30" class="named"><title>0x00413750 OpenTrapDoor (237 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="30" class="named"><title>0x00413840 FloorTrapDoorCollision (431 bytes)</title></rect>
@@ -2184,7 +2184,7 @@
 <rect width="10.11" height="10.89" x="671.57" y="158.99" class="named"><title>0x00426c50 SetCornerAnim (287 bytes)</title></rect>
 <rect width="10.11" height="10.89" x="684.68" y="158.99" class="named"><title>0x00476fa0 GameInitialise (287 bytes)</title></rect>
 <rect width="10.08" height="10.89" x="697.80" y="158.99" class="named"><title>0x0045bfb0 InitialiseLara (286 bytes)</title></rect>
-<rect width="10.04" height="10.89" x="710.87" y="158.99" class="todo"><title>0x004135a0 CloseTrapDoor (285 bytes)</title></rect>
+<rect width="10.04" height="10.89" x="710.87" y="158.99" class="nonmatching"><title>0x004135a0 CloseTrapDoor (285 bytes)</title></rect>
 <rect width="10.04" height="10.89" x="723.92" y="158.99" class="named"><title>0x00437530 WaterFall (285 bytes)</title></rect>
 <rect width="10.04" height="10.89" x="736.96" y="158.99" class="named"><title>0x00457440 ControlElectricalLight (285 bytes)</title></rect>
 <rect width="10.33" height="10.59" x="457.55" y="172.87" class="named"><title>0x00460b50 SetSplineData (285 bytes)</title></rect>

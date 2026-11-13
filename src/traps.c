@@ -22,6 +22,39 @@
 #include "deltapak.h"
 #include <stdlib.h>
 
+void CloseTrapDoor(ITEM_INFO *item)
+{
+    ROOM_INFO *r;
+    FLOOR_INFO *floor;
+    uint16 pitsky;
+
+    r = &room[item->room_number];
+    floor = &r->floor[((item->pos.z_pos - r->z) >> WALL_SHIFT) + r->x_size * ((item->pos.x_pos - r->x) >> WALL_SHIFT)];
+    if (item->pos.y_pos == r->minfloor) {
+        pitsky = floor->pit_room;
+        floor->pit_room = NO_ROOM;
+        r = &room[pitsky];
+        floor = &r->floor[((item->pos.z_pos - r->z) >> WALL_SHIFT) + r->x_size * ((item->pos.x_pos - r->x) >> WALL_SHIFT)];
+        pitsky |= floor->sky_room << 8;
+        floor->sky_room = NO_ROOM;
+        item->item_flags[2] = 1;
+        item->item_flags[3] = pitsky;
+    } else if (item->pos.y_pos == r->maxceiling) {
+        pitsky = floor->sky_room;
+        floor->sky_room = NO_ROOM;
+        r = &room[pitsky];
+        floor = &r->floor[((item->pos.z_pos - r->z) >> WALL_SHIFT) + r->x_size * ((item->pos.x_pos - r->x) >> WALL_SHIFT)];
+        pitsky <<= 8;
+        pitsky |= floor->pit_room;
+        floor->pit_room = NO_ROOM;
+        item->item_flags[2] = 1;
+        item->item_flags[3] = pitsky;
+    } else {
+        item->item_flags[2] = 1;
+        item->item_flags[3] = 0;
+    }
+}
+
 void TrapDoorControl(sint16 item_number)
 {
     ITEM_INFO *item;
