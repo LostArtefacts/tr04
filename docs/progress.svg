@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="377.65" height="12" x="0" y="0" class="named"><title>1267 · 81.74%</title></rect>
-<rect width="84.35" height="12" x="377.65" y="0" class="nonmatching"><title>283 · 18.26%</title></rect>
+<rect width="377.95" height="12" x="0" y="0" class="named"><title>1268 · 81.81%</title></rect>
+<rect width="84.05" height="12" x="377.95" y="0" class="nonmatching"><title>282 · 18.19%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">81.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1267</tspan> · <tspan class="nonmatching">283</tspan></text>
+<text text-anchor="end" x="642" y="7.50">81.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1268</tspan> · <tspan class="nonmatching">282</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="252.69" height="12" x="0" y="0" class="named"><title>342 KB · 54.70%</title></rect>
-<rect width="209.31" height="12" x="252.69" y="0" class="nonmatching"><title>283 KB · 45.30%</title></rect>
+<rect width="252.74" height="12" x="0" y="0" class="named"><title>342 KB · 54.70%</title></rect>
+<rect width="209.26" height="12" x="252.74" y="0" class="nonmatching"><title>283 KB · 45.30%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">54.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">342 KB</tspan> · <tspan class="nonmatching">283 KB</tspan></text>
@@ -1549,7 +1549,7 @@
 <rect width="12" height="12" x="510" y="435" class="named"><title>0x00494b10 SW_D3D_SetLightState (24 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="435" class="named"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="435" class="named"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="435" class="nonmatching"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="435" class="named"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="435" class="nonmatching"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="435" class="named"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="435" class="named"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
@@ -2859,7 +2859,7 @@
 <rect width="4.48" height="4.71" x="632.49" y="457.29" class="named"><title>0x00446f70 ShiftItem (55 bytes)</title></rect>
 <rect width="4.77" height="4.42" x="639.96" y="355.16" class="named"><title>0x004773f0 GetRandom (55 bytes)</title></rect>
 <rect width="4.77" height="4.42" x="639.96" y="362.58" class="named"><title>0x00490e80 other_log (55 bytes)</title></rect>
-<rect width="4.77" height="4.42" x="639.96" y="369.99" class="nonmatching"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
+<rect width="4.77" height="4.42" x="639.96" y="369.99" class="named"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
 <rect width="4.77" height="4.33" x="639.96" y="377.41" class="named"><title>0x00426b50 lara_as_hangleft (54 bytes)</title></rect>
 <rect width="4.77" height="4.33" x="639.96" y="384.74" class="named"><title>0x00426bd0 lara_as_hangright (54 bytes)</title></rect>
 <rect width="4.77" height="4.33" x="639.96" y="392.07" class="named"><title>0x0042cc80 lara_as_climbleft (54 bytes)</title></rect>

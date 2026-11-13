@@ -703,6 +703,24 @@ HRESULT SW_D3D_CreateDevice(void)
     return 0;
 }
 
+#ifndef FEAT_C_ASM
+HRESULT SW_ClearBuffer(SW_DEVICE *dev, DWORD count, D3DRECT *rect, DWORD flags, D3DCOLOR col, D3DVALUE z, DWORD stencil)
+{
+    if (!dev)
+        return 0;
+    if (flags & D3DCLEAR_TARGET) {
+        dev = dev->buffer;
+        flags = SW_SurfDesc.dwWidth * SW_SurfDesc.dwHeight;
+        __asm {
+            mov ecx, flags
+            mov edi, dev
+            mov eax, col
+            rep stosd
+        }
+    }
+    return 0;
+}
+#else
 HRESULT SW_ClearBuffer(SW_DEVICE *dev, DWORD count, D3DRECT *rect, DWORD flags, D3DCOLOR col, D3DVALUE z, DWORD stencil)
 {
     D3DCOLOR *p;
@@ -716,6 +734,7 @@ HRESULT SW_ClearBuffer(SW_DEVICE *dev, DWORD count, D3DRECT *rect, DWORD flags, 
     }
     return 0;
 }
+#endif
 
 void SW_D3D_SetupSurface(sint32 w, sint32 h, sint32 mmx)
 {
