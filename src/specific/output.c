@@ -145,6 +145,36 @@ void CalcVertsColorSplitMMX(sint32 nVerts, D3DTLVERTEX *v)
     }
 }
 
+void PrelightVerts(sint32 nVerts, D3DTLVERTEX *v, MESH_DATA *mesh)
+{
+    sint32 r, g, b, sr, sg, sb, i, p, c;
+
+    sr = (StaticMeshShade & 0x1F) << 3;
+    sg = ((StaticMeshShade >> 5) & 0x1F) << 3;
+    sb = ((StaticMeshShade >> 10) & 0x1F) << 3;
+    for (i = 0; i < nVerts; i++) {
+        p = mesh->prelight[i] & 0xFF;
+        c = v->color;
+        r = CLRR(c) + ((sr * p) >> 8);
+        g = CLRG(c) + ((sg * p) >> 8);
+        b = CLRB(c) + ((sb * p) >> 8);
+        if (r > 255)
+            r = 255;
+        if (g > 255)
+            g = 255;
+        if (b > 255)
+            b = 255;
+        if (!(room[current_item->room_number].flags & 1) && bWaterEffect) {
+            r = (r * water_color_R) >> 8;
+            g = (g * water_color_G) >> 8;
+            b = (b * water_color_B) >> 8;
+        }
+        v->color = RGBA(r, g, b, 0xFF);
+        CalcColorSplit(v->color, &v->color);
+        v++;
+    }
+}
+
 void phd_PutPolygons(sint16 *objptr, sint32 clip)
 {
     MESH_DATA *mesh;
