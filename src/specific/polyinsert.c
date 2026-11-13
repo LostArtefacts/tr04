@@ -361,6 +361,16 @@ sint32 IsVolumetric(void)
     return App.Volumetric;
 }
 
+void mD3DTransform(FVECTOR *vec, D3DMATRIX *mx)
+{
+    FVECTOR t;
+
+    t.x = mx->_11 * vec->x + mx->_21 * vec->y + mx->_31 * vec->z + mx->_41;
+    t.y = mx->_22 * vec->y + (mx->_12 * vec->x + mx->_32 * vec->z) + mx->_42;
+    t.z = mx->_23 * vec->y + (mx->_13 * vec->x + mx->_33 * vec->z) + mx->_43;
+    *vec = t;
+}
+
 int DistCompare(const void *a, const void *b)
 {
     FOGBULB_STRUCT *bulbA;

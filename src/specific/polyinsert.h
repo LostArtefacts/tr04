@@ -97,5 +97,6 @@ void OmniFog(D3DTLVERTEX *v);
 void AddTriClippedZBuffer(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided);
 void AddClippedPoly(D3DTLBUMPVERTEX *dest, sint32 nPoints, D3DTLBUMPVERTEX *v, TEXTURESTRUCT *pTex);
 void AddQuadClippedZBuffer(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint16 v3, TEXTURESTRUCT *tex, sint32 double_sided);
+void mD3DTransform(FVECTOR *vec, D3DMATRIX *mx);
 
 #endif

@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="39.33" height="12" x="267.10" y="0" class="nonmatching"><title>178 · 11.50%</title></rect>
-<rect width="35.57" height="12" x="306.43" y="0" class="todo"><title>161 · 10.40%</title></rect>
+<rect width="39.55" height="12" x="267.10" y="0" class="nonmatching"><title>179 · 11.56%</title></rect>
+<rect width="35.35" height="12" x="306.65" y="0" class="todo"><title>160 · 10.34%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">178</tspan> · <tspan class="todo">161</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">179</tspan> · <tspan class="todo">160</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="118.44" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.63%</title></rect>
-<rect width="44.67" height="12" x="297.33" y="0" class="todo"><title>82 KB · 13.06%</title></rect>
+<rect width="118.50" height="12" x="178.89" y="0" class="nonmatching"><title>217 KB · 34.65%</title></rect>
+<rect width="44.61" height="12" x="297.39" y="0" class="todo"><title>82 KB · 13.04%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">216 KB</tspan> · <tspan class="todo">82 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">217 KB</tspan> · <tspan class="todo">82 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1366,7 +1366,7 @@
 <rect width="12" height="12" x="705" y="375" class="named"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="375" class="named"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="375" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="390" class="todo"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="390" class="nonmatching"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="390" class="todo"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="390" class="named"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="390" class="named"><title>0x00481df0 InitialiseFogBulbs (109 bytes)</title></rect>
@@ -2613,7 +2613,7 @@
 <rect width="6.66" height="6.34" x="570.97" y="427.66" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
 <rect width="6.66" height="6.34" x="570.97" y="436.99" class="named"><title>0x00454900 CreateEffect (110 bytes)</title></rect>
 <rect width="6.66" height="6.34" x="570.97" y="446.33" class="named"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>
-<rect width="6.66" height="6.34" x="570.97" y="455.66" class="todo"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
+<rect width="6.66" height="6.34" x="570.97" y="455.66" class="nonmatching"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
 <rect width="6.44" height="6.49" x="580.63" y="286.06" class="named"><title>0x00428ea0 ready_shotgun (109 bytes)</title></rect>
 <rect width="6.44" height="6.49" x="590.07" y="286.06" class="named"><title>0x0042bab0 ready_pistols (109 bytes)</title></rect>
 <rect width="6.44" height="6.49" x="599.51" y="286.06" class="named"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
