@@ -29,7 +29,11 @@ extern sint32 SW_ColorOpScale;
 extern DDSURFACEDESC2 SW_SurfDesc;
 extern sint32 SW_NumLocked;
 extern sint32 SW_UseMMX;
+extern UINT DBLog_Message;
 extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
+extern LPDIRECT3DTEXTURE2 SW_LockedTextures[256];
+extern void *SW_LockedBits[256];
+extern LPDIRECTDRAWSURFACE4 SW_TexSurface;
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -119,6 +123,41 @@ HRESULT __stdcall SW_D3D_SetTextureStageState(SW_DEVICE *dev, DWORD stage, D3DTE
         }
         SW_SetRenderStateFlags(D3DRENDERSTATE_TEXTUREMAG, 1);
         return 0;
+    }
+    return 0;
+}
+
+HRESULT __stdcall SW_D3D_SetTexture(SW_DEVICE *dev, DWORD stage, LPDIRECT3DTEXTURE2 tex)
+{
+    DDSURFACEDESC2 desc;
+    HRESULT r;
+    sint32 i;
+
+    if (dev->in_scene) {
+        if (tex) {
+            for (i = 0; i < SW_NumLocked; i++) {
+                if (tex == SW_LockedTextures[i]) {
+                    SW_SetRenderStateFlags(D3DRENDERSTATE_TEXTUREHANDLE, (DWORD)SW_LockedBits[i]);
+                    return 0;
+                }
+            }
+            memset(&desc, 0, sizeof(DDSURFACEDESC2));
+            desc.dwSize = sizeof(DDSURFACEDESC2);
+            IDirect3DTexture2_QueryInterface(tex, &IID_IDirectDrawSurface4, (LPVOID *)&SW_TexSurface);
+            r = IDirectDrawSurface4_Lock(SW_TexSurface, 0, &desc, DDLOCK_NOSYSLOCK, 0);
+            if (r) {
+                other_log("D3DFAKE: Texture lock Failed! (%x) (%x,%i)\n", SW_TexSurface, r, r & 0xFFF);
+                SW_SetRenderStateFlags(D3DRENDERSTATE_TEXTUREHANDLE, 0);
+                return 0;
+            }
+            SW_LockedSurfaces[SW_NumLocked] = SW_TexSurface;
+            SW_LockedTextures[SW_NumLocked] = tex;
+            SW_LockedBits[SW_NumLocked] = desc.lpSurface;
+            SW_NumLocked++;
+            SW_SetRenderStateFlags(D3DRENDERSTATE_TEXTUREHANDLE, (DWORD)desc.lpSurface);
+            return 0;
+        }
+        SW_SetRenderStateFlags(D3DRENDERSTATE_TEXTUREHANDLE, 0);
     }
     return 0;
 }

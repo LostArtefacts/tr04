@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="337.24" height="12" x="0" y="0" class="named"><title>1261 · 81.46%</title></rect>
-<rect width="61.24" height="12" x="337.24" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="15.51" height="12" x="398.49" y="0" class="todo"><title>58 · 3.75%</title></rect>
+<rect width="337.51" height="12" x="0" y="0" class="named"><title>1262 · 81.52%</title></rect>
+<rect width="61.24" height="12" x="337.51" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="15.24" height="12" x="398.76" y="0" class="todo"><title>57 · 3.68%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1261</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">58</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1262</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">57</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="224.64" height="12" x="0" y="0" class="named"><title>339 KB · 54.26%</title></rect>
-<rect width="166.38" height="12" x="224.64" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="22.99" height="12" x="391.01" y="0" class="todo"><title>35 KB · 5.55%</title></rect>
+<rect width="224.83" height="12" x="0" y="0" class="named"><title>340 KB · 54.31%</title></rect>
+<rect width="166.38" height="12" x="224.83" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="22.79" height="12" x="391.21" y="0" class="todo"><title>34 KB · 5.51%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">339 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">35 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">340 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">34 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1542,7 +1542,7 @@
 <rect width="12" height="12" x="375" y="435" class="named"><title>0x00494650 SW_D3D_DrawPrimitive (36 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="435" class="named"><title>0x00494680 SW_D3D_SetTextureStageState (113 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="435" class="todo"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="435" class="todo"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="435" class="named"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="435" class="named"><title>0x00494830 SW_D3D_BeginScene (99 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="435" class="todo"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="435" class="named"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
@@ -2176,7 +2176,7 @@
 <rect width="10.36" height="10.89" x="565.65" y="159" class="nonmatching"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>
 <rect width="10.29" height="10.89" x="579" y="159" class="named"><title>0x0043ae50 TriggerLightning (292 bytes)</title></rect>
 <rect width="10.29" height="10.89" x="592.29" y="159" class="named"><title>0x00476790 FreeLevel (292 bytes)</title></rect>
-<rect width="10.25" height="10.89" x="605.58" y="159" class="todo"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
+<rect width="10.25" height="10.89" x="605.58" y="159" class="named"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
 <rect width="10.25" height="10.89" x="618.83" y="159" class="todo"><title>0x0049c750 Log (291 bytes)</title></rect>
 <rect width="10.22" height="10.89" x="632.08" y="159" class="named"><title>0x0045a1b0 SaveLaraData (290 bytes)</title></rect>
 <rect width="10.18" height="10.89" x="645.30" y="159" class="named"><title>0x0041f260 SetLaraUnderwaterNodes (289 bytes)</title></rect>

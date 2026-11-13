@@ -1987,6 +1987,7 @@ address,size,name,symbol
 0x004a9270,4,BinkSetSoundSystem,__imp__BinkSetSoundSystem@8
 0x004a9274,4,BinkOpenDirectSound,__imp__BinkOpenDirectSound@4
 0x004a9460,16,IID_IDirectDraw4,_IID_IDirectDraw4
+0x004a94a0,16,IID_IDirectDrawSurface4,_IID_IDirectDrawSurface4
 0x004a9780,16,IID_IDirect3D3,_IID_IDirect3D3
 0x004a9830,16,IID_IDirect3DTexture2,_IID_IDirect3DTexture2
 0x004aa150,16,IID_IDirectInput2A,_IID_IDirectInput2A
@@ -2678,9 +2679,12 @@ address,size,name,symbol
 0x007542ec,256,keymap,_keymap
 0x007543ec,256,keymap2,_keymap2
 0x007544f4,4,G_dxptr,_G_dxptr
+0x00754500,1024,SW_LockedBits,_SW_LockedBits
 0x00754900,4,SW_NumLocked,_SW_NumLocked
+0x007549dc,1024,SW_LockedTextures,_SW_LockedTextures
 0x00754ddc,1024,SW_LockedSurfaces,_SW_LockedSurfaces
 0x007551e0,124,SW_SurfDesc,_SW_SurfDesc
+0x0075525c,4,SW_TexSurface,_SW_TexSurface
 0x00755260,4,SW_RealD3DDevice,_SW_RealD3DDevice
 0x00755298,4,SW_SurfacePitch,_SW_SurfacePitch
 0x007d94a4,4,SW_Surface,_SW_Surface
@@ -2692,6 +2696,7 @@ address,size,name,symbol
 0x007e6e00,4,BinkSurfaceType,_BinkSurfaceType
 0x007e6e04,4,BinkSurface,_BinkSurface
 0x007e6e08,4,Bink,_Bink
+0x007e6e10,4,DBLog_Message,_DBLog_Message
 0x007e71a8,4,malloc_size,_malloc_size
 0x007e71b0,12,CamPos,_CamPos
 0x007e71bc,4,malloc_ptr,_malloc_ptr
