@@ -88,6 +88,33 @@ HRESULT __stdcall SW_D3D_DrawPrimitive(SW_DEVICE *dev, D3DPRIMITIVETYPE type, DW
     return j_SW_DrawPrimitives(type, fvf, verts, count, flags);
 }
 
+HRESULT __stdcall SW_D3D_SetTextureStageState(SW_DEVICE *dev, DWORD stage, D3DTEXTURESTAGESTATETYPE type, DWORD value)
+{
+    switch (type) {
+    case D3DTSS_COLOROP:
+        switch (value) {
+        case D3DTOP_MODULATE:
+            SW_SetColorOpScale(1);
+            return 0;
+        case D3DTOP_MODULATE2X:
+            SW_SetColorOpScale(2);
+            return 0;
+        case D3DTOP_MODULATE4X:
+            SW_SetColorOpScale(4);
+            return 0;
+        }
+        break;
+    case D3DTSS_MAGFILTER:
+        if (value == D3DTFG_LINEAR) {
+            SW_SetRenderStateFlags(D3DRENDERSTATE_TEXTUREMAG, 2);
+            return 0;
+        }
+        SW_SetRenderStateFlags(D3DRENDERSTATE_TEXTUREMAG, 1);
+        return 0;
+    }
+    return 0;
+}
+
 HRESULT __stdcall SW_D3D_SetRenderTarget(SW_DEVICE *dev, void *target, DWORD flags)
 {
     dev->target = target;

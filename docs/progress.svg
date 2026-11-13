@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="334.84" height="12" x="0" y="0" class="named"><title>1252 · 80.88%</title></rect>
-<rect width="61.24" height="12" x="334.84" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="17.92" height="12" x="396.08" y="0" class="todo"><title>67 · 4.33%</title></rect>
+<rect width="335.10" height="12" x="0" y="0" class="named"><title>1253 · 80.94%</title></rect>
+<rect width="61.24" height="12" x="335.10" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="17.65" height="12" x="396.35" y="0" class="todo"><title>66 · 4.26%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">80.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1252</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">67</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1253</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">66</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.67" height="12" x="0" y="0" class="named"><title>338 KB · 54.03%</title></rect>
-<rect width="166.38" height="12" x="223.67" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="23.95" height="12" x="390.05" y="0" class="todo"><title>36 KB · 5.79%</title></rect>
+<rect width="223.75" height="12" x="0" y="0" class="named"><title>338 KB · 54.05%</title></rect>
+<rect width="166.38" height="12" x="223.75" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="23.88" height="12" x="390.12" y="0" class="todo"><title>36 KB · 5.77%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1540,7 +1540,7 @@
 <rect width="12" height="12" x="345" y="435" class="named"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="435" class="named"><title>0x00494620 SW_D3D_SetRenderState (44 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="435" class="named"><title>0x00494650 SW_D3D_DrawPrimitive (36 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="435" class="todo"><title>0x00494680 SW_D3D_SetTextureStageState (113 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="435" class="named"><title>0x00494680 SW_D3D_SetTextureStageState (113 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="435" class="todo"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="435" class="todo"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="435" class="todo"><title>0x00494830 SW_D3D_BeginScene (99 bytes)</title></rect>
@@ -2595,7 +2595,7 @@
 <rect width="6.76" height="6.47" x="740.24" y="276.61" class="named"><title>0x00490d50 D3DNormalise (114 bytes)</title></rect>
 <rect width="6.66" height="6.51" x="571.02" y="286.08" class="named"><title>0x00433020 GetFreeDebris (113 bytes)</title></rect>
 <rect width="6.66" height="6.51" x="571.02" y="295.59" class="named"><title>0x0046d3d0 untrigger_item_in_room (113 bytes)</title></rect>
-<rect width="6.66" height="6.51" x="571.02" y="305.09" class="todo"><title>0x00494680 SW_D3D_SetTextureStageState (113 bytes)</title></rect>
+<rect width="6.66" height="6.51" x="571.02" y="305.09" class="named"><title>0x00494680 SW_D3D_SetTextureStageState (113 bytes)</title></rect>
 <rect width="6.66" height="6.45" x="571.02" y="314.60" class="named"><title>0x00422390 LaraHitCeiling (112 bytes)</title></rect>
 <rect width="6.66" height="6.45" x="571.02" y="324.05" class="named"><title>0x00423ac0 lara_col_monkeyl (112 bytes)</title></rect>
 <rect width="6.66" height="6.45" x="571.02" y="333.50" class="named"><title>0x00423b90 lara_col_monkeyr (112 bytes)</title></rect>
