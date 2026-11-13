@@ -277,6 +277,48 @@ void do_debounced_joystick_poo(void)
     }
 }
 
+void DrawThreeDeeObject2D(sint32 x, sint32 y, sint32 num, sint32 shade, sint32 xrot, sint32 yrot, sint32 zrot, sint32 bright, sint32 overlay)
+{
+    INVOBJ *objme;
+    ITEM_INFO item;
+
+    objme = &inventry_objects_list[num];
+    y += objme->yoff;
+    item.pos.y_rot = (sint16)yrot + objme->yrot;
+    item.pos.x_rot = (sint16)xrot + objme->xrot;
+    item.pos.z_rot = (sint16)zrot + objme->zrot;
+    item.object_number = objme->object_number;
+    phd_LookAt(0, 1024, 0, 0, 0, 0, 0);
+    if (!bright)
+        pcbright = 0x7F7F7F;
+    else if (bright == 1)
+        pcbright = 0x2F2F2F;
+    else
+        pcbright = bright | ((bright | (bright << 8)) << 8);
+    SetD3DViewMatrix();
+    phd_PushUnitMatrix();
+    phd_TranslateRel(0, 0, objme->scale1);
+    item.mesh_bits = objme->meshbits;
+    yoffset = y;
+    xoffset = x;
+    item.shade = -1;
+    item.pos.x_pos = 0;
+    item.pos.y_pos = 0;
+    item.pos.z_pos = 0;
+    item.room_number = 0;
+    item.il.nCurrentLights = 0;
+    item.il.nPrevLights = 0;
+    item.il.ambient = 0x7F7F7F;
+    item.anim_number = objects[item.object_number].anim_index;
+    if (!(objme->flags & 8))
+        DrawInventoryItemMe(&item, shade, overlay, 0);
+    else
+        DrawInventoryItemMe(&item, shade, overlay, 1);
+    phd_PopMatrix();
+    xoffset = phd_centerx;
+    yoffset = phd_centery;
+}
+
 void DrawInventoryItemMe(ITEM_INFO *item, sint32 shade, sint32 overlay, sint32 shagflag)
 {
     ANIM_STRUCT *anim;

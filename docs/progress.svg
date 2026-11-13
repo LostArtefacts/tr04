@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="325.48" height="12" x="0" y="0" class="named"><title>1217 · 78.62%</title></rect>
-<rect width="51.35" height="12" x="325.48" y="0" class="nonmatching"><title>192 · 12.40%</title></rect>
-<rect width="37.17" height="12" x="376.83" y="0" class="todo"><title>139 · 8.98%</title></rect>
+<rect width="51.62" height="12" x="325.48" y="0" class="nonmatching"><title>193 · 12.47%</title></rect>
+<rect width="36.91" height="12" x="377.09" y="0" class="todo"><title>138 · 8.91%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1217</tspan> · <tspan class="nonmatching">192</tspan> · <tspan class="todo">139</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1217</tspan> · <tspan class="nonmatching">193</tspan> · <tspan class="todo">138</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="218.21" height="12" x="0" y="0" class="named"><title>329 KB · 52.71%</title></rect>
-<rect width="145.74" height="12" x="218.21" y="0" class="nonmatching"><title>220 KB · 35.20%</title></rect>
-<rect width="50.05" height="12" x="363.95" y="0" class="todo"><title>76 KB · 12.09%</title></rect>
+<rect width="146.01" height="12" x="218.21" y="0" class="nonmatching"><title>220 KB · 35.27%</title></rect>
+<rect width="49.79" height="12" x="364.21" y="0" class="todo"><title>75 KB · 12.03%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">220 KB</tspan> · <tspan class="todo">76 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">220 KB</tspan> · <tspan class="todo">75 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -667,7 +667,7 @@
 <rect width="12" height="12" x="0" y="180" class="nonmatching"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="180" class="named"><title>0x0043b9b0 init_new_inventry (638 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="180" class="named"><title>0x0043bc30 do_debounced_joystick_poo (334 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="180" class="todo"><title>0x0043bd80 DrawThreeDeeObject2D (393 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="180" class="nonmatching"><title>0x0043bd80 DrawThreeDeeObject2D (393 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="180" class="named"><title>0x0043bf10 DrawInventoryItemMe (1252 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="180" class="named"><title>0x0043c400 go_and_load_game (5 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="180" class="named"><title>0x0043c410 go_and_save_game (5 bytes)</title></rect>
@@ -2070,7 +2070,7 @@
 <rect width="12.44" height="12.24" x="414.03" y="284.29" class="named"><title>0x00422c50 LaraDeflectEdgeJump (397 bytes)</title></rect>
 <rect width="12.44" height="12.21" x="414.03" y="299.53" class="named"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
 <rect width="12.44" height="12.12" x="414.03" y="314.75" class="named"><title>0x00434fa0 TriggerExplosionSmoke (393 bytes)</title></rect>
-<rect width="12.44" height="12.12" x="414.03" y="329.87" class="todo"><title>0x0043bd80 DrawThreeDeeObject2D (393 bytes)</title></rect>
+<rect width="12.44" height="12.12" x="414.03" y="329.87" class="nonmatching"><title>0x0043bd80 DrawThreeDeeObject2D (393 bytes)</title></rect>
 <rect width="12.44" height="12.03" x="414.03" y="344.99" class="named"><title>0x0042ae50 draw_shotgun (390 bytes)</title></rect>
 <rect width="12.44" height="12.03" x="414.03" y="360.02" class="named"><title>0x00456780 TriggerRopeFlame (390 bytes)</title></rect>
 <rect width="12.44" height="12" x="414.03" y="375.05" class="named"><title>0x00410220 TriggerSethFlame (389 bytes)</title></rect>
