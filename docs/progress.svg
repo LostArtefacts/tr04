@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="67.31" height="12" x="336.54" y="0" class="nonmatching"><title>252 · 16.26%</title></rect>
-<rect width="10.15" height="12" x="403.85" y="0" class="todo"><title>38 · 2.45%</title></rect>
+<rect width="67.58" height="12" x="336.54" y="0" class="nonmatching"><title>253 · 16.32%</title></rect>
+<rect width="9.88" height="12" x="404.12" y="0" class="todo"><title>37 · 2.39%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">252</tspan> · <tspan class="todo">38</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">253</tspan> · <tspan class="todo">37</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.56%</title></rect>
-<rect width="168.64" height="12" x="225.86" y="0" class="nonmatching"><title>255 KB · 40.74%</title></rect>
-<rect width="19.50" height="12" x="394.50" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
+<rect width="168.65" height="12" x="225.86" y="0" class="nonmatching"><title>255 KB · 40.74%</title></rect>
+<rect width="19.49" height="12" x="394.51" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">255 KB</tspan> · <tspan class="todo">29 KB</tspan></text>
@@ -1458,7 +1458,7 @@
 <rect width="12" height="12" x="615" y="405" class="nonmatching"><title>0x0048f981 SW_WaitLevelLoad (13 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="405" class="named"><title>0x0048f990 j_nullsub_12 (5 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="405" class="named"><title>0x0048f9a0 nullsub_12 (1 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="405" class="todo"><title>0x0048f9a1 SW_WaitUntilDXInScene (13 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="405" class="nonmatching"><title>0x0048f9a1 SW_WaitUntilDXInScene (13 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="405" class="named"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="405" class="named"><title>0x0048f9c0 nullsub_13 (1 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="405" class="todo"><title>0x0048f9c1 SW_WaitWhileDXInScene (13 bytes)</title></rect>
@@ -3110,7 +3110,7 @@
 <rect width="2.05" height="2.42" x="711.14" y="448.73" class="named"><title>0x00437650 finish_level_effect (13 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="454.15" class="named"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="459.58" class="nonmatching"><title>0x0048f981 SW_WaitLevelLoad (13 bytes)</title></rect>
-<rect width="2.67" height="1.83" x="716.18" y="426.16" class="todo"><title>0x0048f9a1 SW_WaitUntilDXInScene (13 bytes)</title></rect>
+<rect width="2.67" height="1.83" x="716.18" y="426.16" class="nonmatching"><title>0x0048f9a1 SW_WaitUntilDXInScene (13 bytes)</title></rect>
 <rect width="2.67" height="1.83" x="721.85" y="426.16" class="todo"><title>0x0048f9c1 SW_WaitWhileDXInScene (13 bytes)</title></rect>
 <rect width="2.67" height="1.83" x="727.52" y="426.16" class="named"><title>0x00494e80 SW_BeginFrame (13 bytes)</title></rect>
 <rect width="2.67" height="1.83" x="733.19" y="426.16" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>

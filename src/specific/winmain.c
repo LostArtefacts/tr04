@@ -536,6 +536,13 @@ void nullsub_12(void)
 {
 }
 
+#ifndef TR4_EXE
+void SW_WaitUntilDXInScene(void)
+{
+    SW_WaitUntilInScene(&App.dx.InScene);
+}
+#endif
+
 void j_nullsub_13(void)
 {
     nullsub_13();
