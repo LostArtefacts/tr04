@@ -2007,6 +2007,62 @@ void SW_SpanGTLit(void)
     }
 }
 
+void SW_SpanGTLitPersp(void)
+{
+    SW_SPAN *s;
+    uint32 *row, *p;
+    uint32 u, v, texel, d, du, dv;
+    uint32 c0, c1, c2, dc0, dc1, dc2;
+    sint32 n, m, a, ia;
+
+    row = (uint32 *)SW_Surface + (SW_SpanY * SW_SurfacePitch >> 2);
+    a = SW_TriV0->color >> 24;
+    s = SW_SpanBuffer;
+    dc2 = (uint16)SW_SpanGrad[2];
+    dc1 = (uint16)SW_SpanGrad[1];
+    dc0 = (uint16)SW_SpanGrad[0];
+    ia = 255 - a;
+    a <<= 8;
+    if (s != SW_SpanEnd) {
+        do {
+            c2 = s->c[2];
+            c1 = s->c[1];
+            n = s->n;
+            p = row + s->x;
+            c0 = s->c[0];
+            u = s->tex[0];
+            v = s->tex[2];
+            if (n > 0) {
+                do {
+                    du = ((sint32 *)(s + 1))[0];
+                    dv = ((sint32 *)(s + 1))[1];
+                    for (m = n > 16 ? 16 : n; m > 0; m--) {
+                        texel = ((uint32 *)SW_TextureBits)[(uint8)(u >> 16) | ((v >> 8) & 0xFF00)];
+                        if (texel) {
+                            d = *p;
+                            *p = ((SW_MulTable[SW_MulTable[(c2 & 0xFF00) | ((texel >> 16) & 0xFF)] + a] + SW_MulTable[((d >> 8) & 0xFF00) + ia]) << 16)
+                                | ((SW_MulTable[SW_MulTable[(c1 & 0xFF00) | ((texel >> 8) & 0xFF)] + a] + SW_MulTable[(d & 0xFF00) + ia]) << 8)
+                                | (SW_MulTable[SW_MulTable[(c0 & 0xFF00) | (texel & 0xFF)] + a] + SW_MulTable[((d & 0xFF) << 8) + ia]);
+                        }
+                        p++;
+                        c2 += dc2;
+                        c1 += dc1;
+                        c0 += dc0;
+                        u += du;
+                        v += dv;
+                    }
+                    n -= 16;
+                    s = (SW_SPAN *)((sint32 *)s + 2);
+                } while (n > 0);
+            } else {
+                s = (SW_SPAN *)((sint32 *)s + 2);
+            }
+            row += SW_SurfacePitch >> 2;
+            s++;
+        } while (s != SW_SpanEnd);
+    }
+}
+
 void SW_SpanGTInt(void)
 {
     SW_SPAN *s;
