@@ -2317,6 +2317,7 @@ address,size,name,symbol
 0x004bcdd8,8,SW_SpanGTPAlphaBilinearConst2,_SW_SpanGTPAlphaBilinearConst2
 0x004bcde0,8,SW_SpanGTPAlphaBilinearConst3,_SW_SpanGTPAlphaBilinearConst3
 0x004bcde8,16,Var4bcde8,_Var4bcde8
+0x004bcf0c,40,z_errmsg,_z_errmsg
 0x004bf2e0,4,next_locust,_next_locust
 0x004bf2e8,12,MovingBlockPos,_MovingBlockPos
 0x004bf2f8,4,next_scarab,_next_scarab
