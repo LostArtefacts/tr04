@@ -46,16 +46,16 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="330.02" height="12" x="0" y="0" class="named"><title>1234 · 79.72%</title></rect>
-<rect width="60.44" height="12" x="330.02" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
-<rect width="23.53" height="12" x="390.47" y="0" class="todo"><title>88 · 5.68%</title></rect>
+<rect width="330.29" height="12" x="0" y="0" class="named"><title>1235 · 79.78%</title></rect>
+<rect width="60.44" height="12" x="330.29" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
+<rect width="23.27" height="12" x="390.73" y="0" class="todo"><title>87 · 5.62%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">79.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1234</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">88</tspan></text>
+<text text-anchor="end" x="594" y="7.50">79.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1235</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">87</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.37" height="12" x="0" y="0" class="named"><title>337 KB · 53.95%</title></rect>
-<rect width="162.98" height="12" x="223.37" y="0" class="nonmatching"><title>246 KB · 39.37%</title></rect>
+<rect width="223.38" height="12" x="0" y="0" class="named"><title>337 KB · 53.96%</title></rect>
+<rect width="162.98" height="12" x="223.38" y="0" class="nonmatching"><title>246 KB · 39.37%</title></rect>
 <rect width="27.65" height="12" x="386.35" y="0" class="todo"><title>42 KB · 6.68%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
@@ -1555,7 +1555,7 @@
 <rect width="12" height="12" x="570" y="435" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="435" class="todo"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="435" class="todo"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="435" class="todo"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="435" class="named"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="435" class="todo"><title>0x00494e80 Func494e80 (13 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="435" class="todo"><title>0x00494e90 Func494e90 (6 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="435" class="todo"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
@@ -3121,7 +3121,7 @@
 <rect width="2.52" height="1.80" x="738.96" y="431.68" class="named"><title>0x0048e800 TIME_Reset (12 bytes)</title></rect>
 <rect width="2.52" height="1.80" x="744.48" y="431.68" class="named"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
 <rect width="2.47" height="1.84" x="716.88" y="436.48" class="todo"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
-<rect width="2.47" height="1.84" x="716.88" y="441.32" class="todo"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
+<rect width="2.47" height="1.84" x="716.88" y="441.32" class="named"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
 <rect width="2.47" height="1.84" x="716.88" y="446.16" class="todo"><title>0x004952a0 Func4952a0 (12 bytes)</title></rect>
 <rect width="2.47" height="1.67" x="716.88" y="450.99" class="named"><title>0x004328b0 lara_as_waterroll (11 bytes)</title></rect>
 <rect width="2.47" height="1.67" x="716.88" y="455.66" class="named"><title>0x00436040 KillAllCurrentItems (11 bytes)</title></rect>

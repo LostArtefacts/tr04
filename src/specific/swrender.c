@@ -1,7 +1,16 @@
 #include <windows.h>
+#include "polyinsert.h"
+
+extern float SW_ZLimit;
 
 HRESULT __stdcall SW_D3D_ViewportStub(void *iface, void *arg)
 {
+    return 0;
+}
+
+sint32 SW_SetZLimit(float limit)
+{
+    SW_ZLimit = limit;
     return 0;
 }
 
