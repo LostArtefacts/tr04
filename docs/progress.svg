@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="76.12" height="12" x="336.54" y="0" class="nonmatching"><title>285 · 18.39%</title></rect>
-<rect width="1.34" height="12" x="412.66" y="0" class="todo"><title>5 · 0.32%</title></rect>
+<rect width="341.42" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
+<rect width="77.50" height="12" x="341.42" y="0" class="nonmatching"><title>286 · 18.45%</title></rect>
+<rect width="1.08" height="12" x="418.92" y="0" class="todo"><title>4 · 0.26%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">285</tspan> · <tspan class="todo">5</tspan></text>
+<text text-anchor="end" x="600" y="7.50">81.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="615" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">286</tspan> · <tspan class="todo">4</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="225.83" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
-<rect width="181.52" height="12" x="225.83" y="0" class="nonmatching"><title>274 KB · 43.85%</title></rect>
-<rect width="6.64" height="12" x="407.36" y="0" class="todo"><title>10 KB · 1.60%</title></rect>
+<rect width="229.11" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
+<rect width="185.52" height="12" x="229.11" y="0" class="nonmatching"><title>276 KB · 44.17%</title></rect>
+<rect width="5.38" height="12" x="414.62" y="0" class="todo"><title>8 KB · 1.28%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="24.50">54.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">274 KB</tspan> · <tspan class="todo">10 KB</tspan></text>
+<text text-anchor="end" x="600" y="24.50">54.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="615" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">276 KB</tspan> · <tspan class="todo">8 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -507,7 +507,7 @@
 <rect width="12" height="12" x="600" y="120" class="named"><title>0x00430b60 AnimateLara (840 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="120" class="named"><title>0x00430eb0 InitialiseLaraLoad (45 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="120" class="named"><title>0x00430ee0 InitialiseLaraAnims (133 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="120" class="todo"><title>0x00430f70 CreateSkinningData (2027 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="120" class="nonmatching"><title>0x00430f70 CreateSkinningData (2027 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="120" class="named"><title>0x00431760 PushXYZ (46 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="120" class="named"><title>0x00431790 PopXYZ (8 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="120" class="nonmatching"><title>0x004317a0 OptomiseSkinningData (760 bytes)</title></rect>
@@ -1668,7 +1668,7 @@
 <rect width="29.44" height="27.17" x="119.24" y="287.99" class="nonmatching"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
 <rect width="29.44" height="26.87" x="119.24" y="318.16" class="named"><title>0x00457720 PickUpCollision (2064 bytes)</title></rect>
 <rect width="29.44" height="26.43" x="119.24" y="348.03" class="nonmatching"><title>0x00470830 DXSetupDlgProc (2030 bytes)</title></rect>
-<rect width="29.44" height="26.39" x="119.24" y="377.46" class="todo"><title>0x00430f70 CreateSkinningData (2027 bytes)</title></rect>
+<rect width="29.44" height="26.39" x="119.24" y="377.46" class="nonmatching"><title>0x00430f70 CreateSkinningData (2027 bytes)</title></rect>
 <rect width="29.44" height="26.17" x="119.24" y="406.85" class="nonmatching"><title>0x00467cf0 JeepDynamics (2010 bytes)</title></rect>
 <rect width="29.44" height="25.98" x="119.24" y="436.02" class="nonmatching"><title>0x0040e800 ScorpionControl (1996 bytes)</title></rect>
 <rect width="26.98" height="27.74" x="151.68" y="0" class="named"><title>0x00402e30 CrocControl (1952 bytes)</title></rect>

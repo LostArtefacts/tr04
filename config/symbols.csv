@@ -2079,6 +2079,8 @@ address,size,name,symbol
 0x004ad9c8,472,lara_control_routines,_lara_control_routines
 0x004adba0,472,lara_collision_routines,_lara_collision_routines
 0x004add78,56,SkinJoints,_SkinJoints
+0x004addb0,72,HairSkinVertNums,_HairSkinVertNums
+0x004addf8,36,HairScratchVertNums,_HairScratchVertNums
 0x004ade1c,112,FogTableColor,_FogTableColor
 0x004ade8c,188,effect_routines,_effect_routines
 0x004adf48,14,footsounds,_footsounds
@@ -3188,6 +3190,7 @@ address,size,name,symbol
 0x0080dbcc,4,SkinXYZPtr,_SkinXYZPtr
 0x0080dbd0,,JointMeshXYZ,_JointMeshXYZ
 0x0080dbe0,,BelowMeshXYZ,_BelowMeshXYZ
+0x0080dc00,384,XYZList,_XYZList
 0x0080dd80,312,PointsToCalc,_PointsToCalc
 0x0080deb8,2,cheat_hit_points,_cheat_hit_points
 0x0080dec0,,mycoll,_mycoll
