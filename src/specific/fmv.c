@@ -49,9 +49,6 @@ sint32 PlayFmvNow(sint32 num)
         return 0;
     sprintf(name, "fmv\\fmv%02d.bik", num);
     memset(path, 0, sizeof(path));
-    path[0] = cd_drive;
-    path[1] = ':';
-    path[2] = '\\';
     strcat(path, name);
     App.fmv = 1;
     modes = G_dxinfo->DDInfo[App.DXInfo.nDD].D3DDevices[App.DXInfo.nD3D].DisplayModes;
