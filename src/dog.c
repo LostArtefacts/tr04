@@ -102,9 +102,13 @@ void DogControl(sint16 item_number)
                     else
                         item->goal_anim_state = 1;
                 }
-            } else if (item->current_anim_state == 9 && random < 128) {
+                break;
+            }
+            if (item->current_anim_state == 9 && random < 128) {
                 item->goal_anim_state = 1;
-            } else if (item->ai_bits & PATROL1) {
+                break;
+            }
+            if (item->ai_bits & PATROL1) {
                 if (item->current_anim_state == 1)
                     item->goal_anim_state = 2;
                 else
