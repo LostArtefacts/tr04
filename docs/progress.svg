@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="260.03" height="12" x="0" y="0" class="named"><title>1198 · 77.39%</title></rect>
 <rect width="0.65" height="12" x="260.03" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="32.99" height="12" x="260.68" y="0" class="nonmatching"><title>152 · 9.82%</title></rect>
-<rect width="42.33" height="12" x="293.67" y="0" class="todo"><title>195 · 12.60%</title></rect>
+<rect width="33.21" height="12" x="260.68" y="0" class="nonmatching"><title>153 · 9.88%</title></rect>
+<rect width="42.11" height="12" x="293.89" y="0" class="todo"><title>194 · 12.53%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">152</tspan> · <tspan class="todo">195</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">153</tspan> · <tspan class="todo">194</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="173.45" height="12" x="0" y="0" class="named"><title>323 KB · 51.62%</title></rect>
 <rect width="0.13" height="12" x="173.45" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="101.98" height="12" x="173.58" y="0" class="nonmatching"><title>190 KB · 30.35%</title></rect>
-<rect width="60.44" height="12" x="275.56" y="0" class="todo"><title>112 KB · 17.99%</title></rect>
+<rect width="102.52" height="12" x="173.58" y="0" class="nonmatching"><title>191 KB · 30.51%</title></rect>
+<rect width="59.90" height="12" x="276.10" y="0" class="todo"><title>111 KB · 17.83%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">51.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">190 KB</tspan> · <tspan class="todo">112 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">191 KB</tspan> · <tspan class="todo">111 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1203,7 +1203,7 @@
 <rect width="12" height="12" x="510" y="330" class="named"><title>0x0046e0f0 GetADPCMData (143 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="330" class="named"><title>0x0046e180 ACMEmulateCDPlay (440 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="330" class="named"><title>0x0046e340 ACMHandleNotifications (389 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="330" class="todo"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="330" class="nonmatching"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="330" class="todo"><title>0x0046e8d0 XYUVGClipper (5386 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="330" class="todo"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="330" class="named"><title>0x0046fe40 CLSetup (30 bytes)</title></rect>
@@ -1769,7 +1769,7 @@
 <rect width="20.13" height="19.67" x="284.55" y="114.22" class="named"><title>0x00489540 DrawRope (1032 bytes)</title></rect>
 <rect width="20.13" height="19.44" x="284.55" y="136.89" class="nonmatching"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
 <rect width="20.13" height="19.34" x="284.55" y="159.33" class="todo"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
-<rect width="20.13" height="19.23" x="284.55" y="181.67" class="todo"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
+<rect width="20.13" height="19.23" x="284.55" y="181.67" class="nonmatching"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
 <rect width="20.13" height="19.13" x="284.55" y="203.90" class="todo"><title>0x0048e2f0 CreateTexturePage (1004 bytes)</title></rect>
 <rect width="20.13" height="19.06" x="284.55" y="226.03" class="named"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
 <rect width="20.13" height="18.92" x="284.55" y="248.09" class="named"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
