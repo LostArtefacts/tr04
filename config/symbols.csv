@@ -1520,7 +1520,7 @@ address,size,name,symbol
 0x004994b0,437,SW_SpanGTPAlpha,_SW_SpanGTPAlpha
 0x00499670,347,SW_SpanGT,_SW_SpanGT
 0x004997d0,355,SW_SpanGTAdd,_SW_SpanGTAdd
-0x00499940,368,SW_SpanGTKey,_SW_SpanGTKey
+0x00499940,369,SW_SpanGTKey,_SW_SpanGTKey
 0x00499a84,,nullsub_3,_nullsub_3
 0x00499ab1,13,SW_Kernel32Name,_SW_Kernel32Name
 0x00499ac0,336,SW_SpanGTP,_SW_SpanGTP
@@ -2287,6 +2287,7 @@ address,size,name,symbol
 0x004bcce4,64,SW_TriPStepTab,_SW_TriPStepTab
 0x004bcd24,4,SW_ColorOpScale,_SW_ColorOpScale
 0x004bcd40,8,SW_SpanGFogConst,_SW_SpanGFogConst
+0x004bcd78,8,SW_SpanGTKeyConst,_SW_SpanGTKeyConst
 0x004bcd80,8,SW_SpanGTPKeyConst,_SW_SpanGTPKeyConst
 0x004bcde8,16,Var4bcde8,_Var4bcde8
 0x004bf2e0,4,next_locust,_next_locust
@@ -2885,6 +2886,7 @@ address,size,name,symbol
 0x007d96a8,4,SW_TriBDX,_SW_TriBDX
 0x007d96ac,4,SW_TriFogXB,_SW_TriFogXB
 0x007d96b4,4,SW_TriTFogBDY,_SW_TriTFogBDY
+0x007d96b8,4,SW_SpanGTKeyMask,_SW_SpanGTKeyMask
 0x007d96bc,4,SW_TriFogTemp,_SW_TriFogTemp
 0x007d96c0,4,SW_TriXA,_SW_TriXA
 0x007d96c8,4,SW_TriPVOff,_SW_TriPVOff
