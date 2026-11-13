@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="37.78" height="12" x="267.10" y="0" class="nonmatching"><title>171 · 11.05%</title></rect>
-<rect width="37.12" height="12" x="304.88" y="0" class="todo"><title>168 · 10.85%</title></rect>
+<rect width="38" height="12" x="267.10" y="0" class="nonmatching"><title>172 · 11.11%</title></rect>
+<rect width="36.90" height="12" x="305.10" y="0" class="todo"><title>167 · 10.79%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">171</tspan> · <tspan class="todo">168</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">172</tspan> · <tspan class="todo">167</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.79" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.44%</title></rect>
-<rect width="45.32" height="12" x="296.68" y="0" class="todo"><title>83 KB · 13.25%</title></rect>
+<rect width="117.93" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.48%</title></rect>
+<rect width="45.18" height="12" x="296.82" y="0" class="todo"><title>83 KB · 13.21%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">215 KB</tspan> · <tspan class="todo">83 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">216 KB</tspan> · <tspan class="todo">83 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -130,7 +130,7 @@
 <rect width="12" height="12" x="165" y="15" class="nonmatching"><title>0x00409b80 TestBlockPush (416 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="15" class="nonmatching"><title>0x00409d20 TestBlockPull (792 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="15" class="nonmatching"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="15" class="todo"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="15" class="nonmatching"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="15" class="named"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="15" class="named"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="15" class="named"><title>0x0040a930 InitialiseMummy (147 bytes)</title></rect>
@@ -2257,7 +2257,7 @@
 <rect width="9.52" height="9.91" x="470.87" y="198.63" class="named"><title>0x004173a0 FallingSquishyBlockCollision (246 bytes)</title></rect>
 <rect width="9.52" height="9.91" x="470.87" y="211.54" class="named"><title>0x00459640 ModelRigidRope (246 bytes)</title></rect>
 <rect width="9.52" height="9.87" x="470.87" y="224.46" class="named"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
-<rect width="9.52" height="9.83" x="470.87" y="237.33" class="todo"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
+<rect width="9.52" height="9.83" x="470.87" y="237.33" class="nonmatching"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
 <rect width="9.52" height="9.83" x="470.87" y="250.17" class="named"><title>0x00447be0 TestBoundsCollideStatic (244 bytes)</title></rect>
 <rect width="9.52" height="9.79" x="470.87" y="263" class="named"><title>0x004321b0 LaraTestWaterStepOut (243 bytes)</title></rect>
 <rect width="9.52" height="9.79" x="470.87" y="275.79" class="named"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>

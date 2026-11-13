@@ -409,6 +409,44 @@ void MovableBlockCollision(sint16 item_number, ITEM_INFO *laraitem, COLL_INFO *c
         ObjectCollision(item_number, laraitem, coll);
 }
 
+void InitialisePlanetEffect(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *item2;
+    char *pifl;
+    uint8 others[4];
+    sint32 i, j;
+
+    item = &items[item_number];
+    item->mesh_bits = 0;
+    item2 = items;
+    for (i = 0; i < level_items; i++, item2++) {
+        if (item2->object_number >= PUSHABLE_OBJECT1 && item2->object_number <= PUSHABLE_OBJECT5 && item2->trigger_flags == item->trigger_flags) {
+            item->item_flags[0] = i;
+            break;
+        }
+    }
+    if (item->trigger_flags == 1) {
+        item2 = items;
+        for (i = 0, j = 0; i < level_items; i++, item2++) {
+            if (item2->object_number == PLANET_EFFECT && item_number != i) {
+                others[j] = i;
+                j++;
+            }
+        }
+        pifl = (char *)&item->item_flags[2];
+        for (i = 0; i < 4; i++) {
+            for (j = 0; j < 4; j++) {
+                item2 = &items[others[j]];
+                if (item2->trigger_flags == i + 2) {
+                    *pifl++ = others[j];
+                    break;
+                }
+            }
+        }
+    }
+}
+
 void ControlPlanetEffect(sint16 item_number)
 {
     ITEM_INFO *item, *item2;
