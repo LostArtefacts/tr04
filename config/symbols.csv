@@ -1522,6 +1522,7 @@ address,size,name,symbol
 0x004997d0,355,Func4997d0,
 0x00499940,368,Func499940,
 0x00499a84,,nullsub_3,_nullsub_3
+0x00499ab1,13,SW_Kernel32Name,_SW_Kernel32Name
 0x00499ac0,336,Func499ac0,
 0x00499c10,361,Func499c10,
 0x00499d80,358,Func499d80,
@@ -1542,6 +1543,7 @@ address,size,name,symbol
 0x0049b990,509,Func49b990,
 0x0049bb90,542,Func49bb90,
 0x0049bdb0,513,Func49bdb0,
+0x0049bfb1,6,SW_SleepName,_SW_SleepName
 0x0049bfc0,62,SW_CopyBuffer,_SW_CopyBuffer
 0x0049c000,381,SW_Convert32To555,_SW_Convert32To555
 0x0049c180,250,SW_Convert32To565,_SW_Convert32To565

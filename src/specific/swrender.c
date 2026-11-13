@@ -34,14 +34,15 @@ extern DDSURFACEDESC2 SW_SurfDesc;
 extern sint32 SW_NumLocked;
 extern sint32 SW_UseMMX;
 extern UINT DBLog_Message;
-
-static char SW_Kernel32Name[] = "kernel32.dll";
 extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 extern LPDIRECT3DTEXTURE2 SW_LockedTextures[256];
 extern void *SW_LockedBits[256];
 extern LPDIRECTDRAWSURFACE4 SW_TexSurface;
 extern sint32 SW_RecipTable[4096];
 extern uint8 SW_MulTable[65536];
+
+extern char SW_Kernel32Name[];
+extern char SW_SleepName[];
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -333,6 +334,16 @@ sint32 SW_SetColorOpScale(sint32 scale)
 {
     SW_ColorOpScale = scale;
     return 0;
+}
+
+__declspec(naked) FARPROC SW_GetSleepProc(void)
+{
+    __asm {
+        push offset SW_SleepName
+        push eax
+        call dword ptr GetProcAddress
+        ret
+    }
 }
 
 void SW_CopyBuffer(void *dst, void *src, sint32 width)
