@@ -1151,7 +1151,7 @@ address,size,name,symbol
 0x004705f0,186,InitD3DDevice,_InitD3DDevice
 0x004706b0,228,InitDDDevice,_InitDDDevice
 0x004707a0,136,MapASCIIToANSI,_MapASCIIToANSI
-0x00470830,1986,DXSetupDlgProc,_DXSetupDlgProc@16
+0x00470830,2030,DXSetupDlgProc,_DXSetupDlgProc@16
 0x00471040,989,ProcessMeshData,_ProcessMeshData
 0x00471420,2518,ProcessRoomData,_ProcessRoomData
 0x00471e00,313,ProjectVerts,_ProjectVerts
@@ -2460,6 +2460,7 @@ address,size,name,symbol
 0x004bfe94,1,TextLow,_TextLow
 0x004bfe95,1,BumpMap,_BumpMap
 0x004bfe96,1,volumetric_fx,_volumetric_fx
+0x004bfe98,4,hfont,_hfont
 0x004bfea0,435360,Bucket,_Bucket
 0x0052a340,4,mesh_vtxbuf,_mesh_vtxbuf
 0x0052a344,4,num_level_meshes,_num_level_meshes

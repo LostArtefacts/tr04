@@ -4,6 +4,7 @@
 #include "function_stubs.h"
 #include "winmain.h"
 #include "../gameflow.h"
+#include "registry.h"
 
 void CLSetup(char *cmd)
 {
@@ -238,4 +239,121 @@ char *MapASCIIToANSI(char *s, char *d)
     }
     *d = 0;
     return p;
+}
+
+BOOL CALLBACK DXSetupDlgProc(HWND dlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    HWND button;
+    HWND sound;
+    char d[256];
+
+    switch (message) {
+    case WM_COMMAND:
+        switch (LOWORD(wParam)) {
+        case IDCANCEL:
+            if (hfont)
+                DeleteObject(hfont);
+            EndDialog(dlg, 0);
+            return 1;
+        case IDOK:
+            if (hfont)
+                DeleteObject(hfont);
+            SaveSetup(dlg);
+            EndDialog(dlg, 1);
+            return 1;
+        case 1000:
+            if (HIWORD(wParam) == CBN_SELCHANGE) {
+                nDDDevice = SendMessage(GetDlgItem(dlg, 1000), CB_GETCURSEL, 0, 0);
+                InitD3DDevice(dlg, GetDlgItem(dlg, 1003));
+            }
+            break;
+        case 1010:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                nD3DDevice = 1;
+                SendMessage(GetDlgItem(dlg, 1003), CB_SETCURSEL, 1, 0);
+                InitResolution(dlg, GetDlgItem(dlg, 1004), 1);
+            }
+            break;
+        case 1003:
+            if (HIWORD(wParam) == CBN_SELCHANGE) {
+                nD3DDevice = SendMessage(GetDlgItem(dlg, 1003), CB_GETCURSEL, 0, 0);
+                InitResolution(dlg, GetDlgItem(dlg, 1004), 1);
+            }
+            break;
+        case 1011:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                nD3DDevice = 0;
+                SendMessage(GetDlgItem(dlg, 1003), CB_SETCURSEL, 0, 0);
+                InitResolution(dlg, GetDlgItem(dlg, 1004), 1);
+            }
+            break;
+        case 1018:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                button = GetDlgItem(dlg, LOWORD(wParam));
+                sound = GetDlgItem(dlg, 1005);
+                if (SendMessage(button, BM_GETCHECK, 0, 0))
+                    EnableWindow(sound, 0);
+                else
+                    EnableWindow(sound, 1);
+            }
+            break;
+        case 1014:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                TextLow = SendMessage(GetDlgItem(dlg, 1014), BM_GETCHECK, 0, 0) != 0;
+                InitResolution(dlg, GetDlgItem(dlg, 1004), 0);
+            }
+            break;
+        case 1016:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                BumpMap = SendMessage(GetDlgItem(dlg, 1016), BM_GETCHECK, 0, 0) != 0;
+                InitResolution(dlg, GetDlgItem(dlg, 1004), 0);
+            }
+            break;
+        case 1029:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                volumetric_fx = SendMessage(GetDlgItem(dlg, 1029), BM_GETCHECK, 0, 0) != 0;
+                InitResolution(dlg, GetDlgItem(dlg, 1004), 0);
+            }
+            break;
+        case 1012:
+            if (HIWORD(wParam) == BN_CLICKED) {
+                Filter = SendMessage(GetDlgItem(dlg, 1012), BM_GETCHECK, 0, 0) != 0;
+                InitResolution(dlg, GetDlgItem(dlg, 1004), 0);
+            }
+            break;
+        }
+        break;
+    case WM_INITDIALOG:
+        Log(6, "WM_INITDIALOG");
+        if (Gameflow->Language == JAPAN) {
+            hfont = GetStockObject(SYSTEM_FONT);
+            SendMessage(GetDlgItem(dlg, 1000), WM_SETFONT, 0, (LPARAM)hfont);
+            SendMessage(GetDlgItem(dlg, 1003), WM_SETFONT, 0, (LPARAM)hfont);
+            SendMessage(GetDlgItem(dlg, 1004), WM_SETFONT, 0, (LPARAM)hfont);
+            SendMessage(GetDlgItem(dlg, 1006), WM_SETFONT, 0, (LPARAM)hfont);
+            SendMessage(GetDlgItem(dlg, 1005), WM_SETFONT, 0, (LPARAM)hfont);
+        }
+        SendMessage(GetDlgItem(dlg, 1001), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Graphics_Adapter), d));
+        SendMessage(GetDlgItem(dlg, 1002), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Output_Settings), d));
+        SendMessage(GetDlgItem(dlg, 1), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_OK), d));
+        SendMessage(GetDlgItem(dlg, 2), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Cancel), d));
+        SendMessage(GetDlgItem(dlg, 1009), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Output_Resolution), d));
+        SendMessage(GetDlgItem(dlg, 1012), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Bilinear_Filtering), d));
+        SendMessage(GetDlgItem(dlg, 1016), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Bump_Mapping), d));
+        SendMessage(GetDlgItem(dlg, 1010), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Hardware_Acceleration), d));
+        SendMessage(GetDlgItem(dlg, 1011), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Software_Mode), d));
+        SendMessage(GetDlgItem(dlg, 1017), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Sound_Device), d));
+        SendMessage(GetDlgItem(dlg, 1018), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Disable), d));
+        SendMessage(GetDlgItem(dlg, 1014), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Low_Resolution_Textures), d));
+        SendMessage(GetDlgItem(dlg, 1015), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Low_Resolution_Bump_Maps), d));
+        SendMessage(GetDlgItem(dlg, 1013), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Texture_Bit_Depth), d));
+        SendMessage(GetDlgItem(dlg, 1025), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Windowed), d));
+        SendMessage(GetDlgItem(dlg, 1023), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Render_Options), d));
+        SendMessage(GetDlgItem(dlg, 1029), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_Volumetric_FX), d));
+        SendMessage(GetDlgItem(dlg, 1030), WM_SETTEXT, 0, (LPARAM)MapASCIIToANSI(SCRIPT_TEXT(TXT_No_FMV), d));
+        InitDDDevice(dlg, GetDlgItem(dlg, 1000));
+        InitDSDevice(dlg, GetDlgItem(dlg, 1005));
+        return 1;
+    }
+    return 0;
 }

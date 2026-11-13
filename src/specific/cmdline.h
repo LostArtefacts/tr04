@@ -28,5 +28,6 @@ extern uint8 Filter;
 extern uint8 TextLow;
 extern uint8 BumpMap;
 extern uint8 volumetric_fx;
+extern HGDIOBJ hfont;
 
 #endif
