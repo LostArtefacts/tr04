@@ -13,6 +13,31 @@
 #include "lara_states.h"
 #include "specific/input.h"
 
+sint32 SwitchTrigger(sint16 item_number, sint16 timer)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if (item->status == ITEM_DEACTIVATED) {
+        if ((item->current_anim_state || item->object_number == JUMP_SWITCH) &&
+            (item->current_anim_state != 1 || item->object_number != JUMP_SWITCH) || timer <= 0) {
+            RemoveActiveItem(item_number);
+            item->status = ITEM_INACTIVE;
+            if (item->item_flags[0])
+                item->flags |= IFL_INVISIBLE;
+        } else {
+            item->timer = timer;
+            item->status = ITEM_ACTIVE;
+            if (timer != 1)
+                item->timer *= 30;
+        }
+        return 1;
+    }
+    if (item->status == ITEM_INACTIVE)
+        return 0;
+    return (uint32)(item->flags & IFL_INVISIBLE) >> 8;
+}
+
 sint32 GetSwitchTrigger(ITEM_INFO *item, sint16 *ItemNos, sint32 AttatchedToSwitch)
 {
     FLOOR_INFO *floor;

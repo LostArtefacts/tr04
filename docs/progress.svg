@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="38.44" height="12" x="267.10" y="0" class="nonmatching"><title>174 · 11.24%</title></rect>
-<rect width="36.45" height="12" x="305.55" y="0" class="todo"><title>165 · 10.66%</title></rect>
+<rect width="38.66" height="12" x="267.10" y="0" class="nonmatching"><title>175 · 11.30%</title></rect>
+<rect width="36.23" height="12" x="305.77" y="0" class="todo"><title>164 · 10.59%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">174</tspan> · <tspan class="todo">165</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">175</tspan> · <tspan class="todo">164</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="118.11" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.54%</title></rect>
-<rect width="45" height="12" x="297" y="0" class="todo"><title>82 KB · 13.16%</title></rect>
+<rect width="118.22" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.57%</title></rect>
+<rect width="44.89" height="12" x="297.11" y="0" class="todo"><title>82 KB · 13.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">216 KB</tspan> · <tspan class="todo">82 KB</tspan></text>
@@ -1028,7 +1028,7 @@
 <rect width="12" height="12" x="135" y="285" class="nonmatching"><title>0x00460420 InitialiseSpotCam (1833 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="285" class="named"><title>0x00460b50 SetSplineData (285 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="285" class="nonmatching"><title>0x00460c70 CalculateSpotCams (3744 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="285" class="todo"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="285" class="nonmatching"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="285" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="285" class="named"><title>0x00461ca0 TestTriggersAtXYZ (67 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="285" class="named"><title>0x00461cf0 SwitchControl (111 bytes)</title></rect>
@@ -2368,7 +2368,7 @@
 <rect width="8.60" height="8.61" x="566.07" y="222.23" class="named"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
 <rect width="8.60" height="8.61" x="577.67" y="222.23" class="named"><title>0x0044a0d0 AlterFloorHeight (193 bytes)</title></rect>
 <rect width="8.60" height="8.61" x="589.27" y="222.23" class="named"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
-<rect width="8.56" height="8.61" x="600.88" y="222.23" class="todo"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
+<rect width="8.56" height="8.61" x="600.88" y="222.23" class="nonmatching"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
 <rect width="8.51" height="8.61" x="612.43" y="222.23" class="named"><title>0x00427ef0 lara_col_turn_r (191 bytes)</title></rect>
 <rect width="8.51" height="8.61" x="623.95" y="222.23" class="named"><title>0x004398b0 LaraBubbles (191 bytes)</title></rect>
 <rect width="8.47" height="8.61" x="635.46" y="222.23" class="nonmatching"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
