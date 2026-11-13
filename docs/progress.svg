@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="384.21" height="12" x="0" y="0" class="named"><title>1289 · 83.16%</title></rect>
-<rect width="77.79" height="12" x="384.21" y="0" class="nonmatching"><title>261 · 16.84%</title></rect>
+<rect width="384.50" height="12" x="0" y="0" class="named"><title>1290 · 83.23%</title></rect>
+<rect width="77.50" height="12" x="384.50" y="0" class="nonmatching"><title>260 · 16.77%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">83.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1289</tspan> · <tspan class="nonmatching">261</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1290</tspan> · <tspan class="nonmatching">260</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="257.59" height="12" x="0" y="0" class="named"><title>349 KB · 55.75%</title></rect>
-<rect width="204.41" height="12" x="257.59" y="0" class="nonmatching"><title>277 KB · 44.25%</title></rect>
+<rect width="257.96" height="12" x="0" y="0" class="named"><title>349 KB · 55.83%</title></rect>
+<rect width="204.04" height="12" x="257.96" y="0" class="nonmatching"><title>276 KB · 44.17%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">55.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">349 KB</tspan> · <tspan class="nonmatching">277 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">349 KB</tspan> · <tspan class="nonmatching">276 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1585,7 +1585,7 @@
 <rect width="12" height="12" x="300" y="450" class="named"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="450" class="named"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="450" class="named"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="450" class="nonmatching"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="450" class="named"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="450" class="nonmatching"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="450" class="nonmatching"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="450" class="nonmatching"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
@@ -1978,7 +1978,7 @@
 <rect width="13.88" height="13.92" x="381.70" y="165.35" class="nonmatching"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
 <rect width="13.88" height="13.92" x="381.70" y="182.27" class="nonmatching"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
 <rect width="13.88" height="13.81" x="381.70" y="199.19" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>
-<rect width="13.88" height="13.81" x="381.70" y="215.99" class="nonmatching"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
+<rect width="13.88" height="13.81" x="381.70" y="215.99" class="named"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
 <rect width="13.88" height="13.81" x="381.70" y="232.80" class="nonmatching"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
 <rect width="13.88" height="13.78" x="381.70" y="249.61" class="named"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
 <rect width="13.88" height="13.78" x="381.70" y="266.39" class="nonmatching"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>

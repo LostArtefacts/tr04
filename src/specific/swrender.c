@@ -4980,6 +4980,146 @@ void SW_SpanGTBilinear(void)
 }
 #endif
 
+#ifndef FEAT_C_ASM
+extern uint32 SW_SpanGTAddBilinearConst[2];
+extern uint32 SW_SpanGTAddBilinearTmp0;
+extern uint32 SW_SpanGTAddBilinearTmp1;
+void SW_SpanGTAddBilinear(void)
+{
+    __asm {
+        mov esi, dword ptr [SW_SpanBuffer]
+        cmp esi, dword ptr [SW_SpanEnd]
+        je Done
+        push ebp
+        mov edi, dword ptr [SW_Surface]
+        mov eax, dword ptr [SW_SpanY]
+        imul eax, dword ptr [SW_SurfacePitch]
+        add edi, eax
+        mov ebx, dword ptr [SW_SpanDU]
+        mov eax, dword ptr [SW_SpanDV]
+        mov edx, dword ptr [SW_TextureBits]
+        mov dword ptr [P5 + 2], ebx
+        mov dword ptr [P4 + 2], eax
+        mov dword ptr [P0 + 4], edx
+        add edx, 4
+        mov dword ptr [P1 + 4], edx
+        add edx, 0x3fc
+        mov dword ptr [P2 + 4], edx
+        add edx, 4
+        mov dword ptr [P3 + 4], edx
+        pxor mm5, mm5
+    L0:
+        mov ebx, dword ptr [esi]
+        mov eax, dword ptr [esi + 4]
+        push edi
+        lea edi, [edi + ebx*4]
+        or eax, eax
+        jle L1
+        mov ebx, dword ptr [esi + 8]
+        mov ecx, dword ptr [esi + 0x10]
+        sub ebx, 0x8000
+        sub ecx, 0x8000
+        movq mm1, qword ptr [SW_SpanGrad]
+        movq mm0, qword ptr [esi + 0x18]
+        mov edx, ecx
+        mov ebp, ebx
+        mov dword ptr [SW_SpanGTAddBilinearTmp0], edx
+        mov dword ptr [SW_SpanGTAddBilinearTmp1], ebp
+        movd mm2, dword ptr [SW_SpanGTAddBilinearTmp1]
+        and edx, 0xff0000
+        pand mm2, qword ptr [SW_SpanGTAddBilinearConst]
+        movq mm3, mm2
+        and ebp, 0xff0000
+        psllq mm3, 0x10
+        shr edx, 8
+        shr ebp, 0x10
+        por mm2, mm3
+        or edx, ebp
+        _emit 0x8d
+        _emit 0x9b
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+    P0:
+        movd mm7, dword ptr [edx*4 + 0x12345678]
+        movq mm3, mm2
+    P1:
+        movd mm4, dword ptr [edx*4 + 0x12345678]
+        punpcklbw mm7, mm5
+    P2:
+        movd mm6, dword ptr [edx*4 + 0x12345678]
+        punpcklbw mm4, mm5
+        psubw mm4, mm7
+        psllq mm2, 0x20
+        punpcklbw mm6, mm5
+        por mm2, mm3
+    P3:
+        movd mm3, dword ptr [edx*4 + 0x12345678]
+        psrlw mm2, 9
+        punpcklbw mm3, mm5
+        pmullw mm4, mm2
+        psubw mm3, mm6
+    P4:
+        add ecx, 0x12345678
+        pmullw mm3, mm2
+        movd mm2, dword ptr [SW_SpanGTAddBilinearTmp0]
+        pand mm2, qword ptr [SW_SpanGTAddBilinearConst]
+        psraw mm4, 7
+        psrlw mm2, 9
+        psraw mm3, 7
+        paddw mm6, mm3
+        movq mm3, mm2
+        paddw mm7, mm4
+        psllq mm3, 0x10
+        por mm2, mm3
+        psubw mm6, mm7
+        movq mm3, mm2
+    P5:
+        add ebx, 0x12345678
+        psllq mm3, 0x20
+        mov edx, ecx
+        por mm2, mm3
+        mov ebp, ebx
+        pmullw mm6, mm2
+        mov dword ptr [SW_SpanGTAddBilinearTmp0], edx
+        mov dword ptr [SW_SpanGTAddBilinearTmp1], ebp
+        movd mm2, dword ptr [SW_SpanGTAddBilinearTmp1]
+        psraw mm6, 7
+        and edx, 0xff0000
+        paddw mm7, mm6
+        movq mm6, mm0
+        psrlw mm6, 8
+        pand mm2, qword ptr [SW_SpanGTAddBilinearConst]
+        pmullw mm7, mm6
+        movq mm3, mm2
+        and ebp, 0xff0000
+        shr edx, 8
+        psllq mm3, 0x10
+        movd mm6, dword ptr [edi]
+        psrlw mm7, 8
+        shr ebp, 0x10
+        packuswb mm7, mm7
+        paddusb mm7, mm6
+        por mm2, mm3
+        or edx, ebp
+        dec eax
+        movd dword ptr [edi], mm7
+        paddw mm0, mm1
+        lea edi, [edi + 4]
+        jne P0
+    L1:
+        pop edi
+        add esi, 0x20
+        add edi, dword ptr [SW_SurfacePitch]
+        cmp dword ptr [SW_SpanEnd], esi
+        jne L0
+        emms
+        pop ebp
+    Done:
+    }
+}
+#else
 void SW_SpanGTAddBilinear(void)
 {
     SW_SPAN *s;
@@ -5026,6 +5166,7 @@ void SW_SpanGTAddBilinear(void)
         } while (s != SW_SpanEnd);
     }
 }
+#endif
 
 void SW_SpanGTPBilinear(void)
 {
