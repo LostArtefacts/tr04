@@ -1626,6 +1626,189 @@ done:
     return 0;
 }
 
+sint32 SW_TriSetupGFog(void *p0, void *p1, void *p2)
+{
+    SW_VERTEX *v0, *v1, *v2, *t, *n;
+    SW_SPAN *span;
+    double a, b, inv, d01, d02, g, h;
+    float f;
+    uint32 sy, c, xa, xb, x;
+    sint32 na, nb;
+
+    v0 = (SW_VERTEX *)p0;
+    v1 = (SW_VERTEX *)p1;
+    v2 = (SW_VERTEX *)p2;
+    SW_TriV0 = v0;
+    a = (double)v0->sx - v1->sx;
+    b = (double)v0->sy - v2->sy;
+    SW_TriFogDX01 = (float)a;
+    SW_TriFogDY02 = (float)b;
+    g = a * b;
+    a = (double)v0->sx - v2->sx;
+    b = (double)v0->sy - v1->sy;
+    SW_TriFogDX02 = (float)a;
+    SW_TriFogDY01 = (float)b;
+    g -= a * b;
+    SW_TriFogTemp = (float)g;
+    inv = 1.0;
+    if (*(uint32 *)&SW_TriFogTemp & 0x80000000) {
+        t = v1;
+        v1 = v2;
+        v2 = t;
+        inv = -1.0;
+        f = SW_TriFogDX01;
+        SW_TriFogDX01 = SW_TriFogDX02;
+        SW_TriFogDX02 = f;
+        f = SW_TriFogDY01;
+        SW_TriFogDY01 = SW_TriFogDY02;
+        SW_TriFogDY02 = f;
+    }
+    inv /= g;
+    *(SW_VERTEX **)&v0->sz = v1;
+    *(SW_VERTEX **)&v1->sz = v2;
+    *(SW_VERTEX **)&v2->sz = v0;
+    *(SW_VERTEX **)&v0->specular = v2;
+    *(SW_VERTEX **)&v1->specular = v0;
+    *(SW_VERTEX **)&v2->specular = v1;
+    t = v0;
+    sy = *(uint32 *)&v0->sy;
+    if (sy >= *(uint32 *)&v1->sy) {
+        sy = *(uint32 *)&v1->sy;
+        t = v1;
+    }
+    if (sy >= *(uint32 *)&v2->sy)
+        t = v2;
+    SW_TriFogEdgeA = t;
+    SW_TriFogEdgeB = t;
+    SW_TriColor0 = v0->color;
+    c = v0->color;
+    SW_TriFogG0 = (c & 0xFF00) + 0x80;
+    SW_TriFogB0 = ((c << 8) & 0xFF00) + 0x80;
+    SW_TriFogR0 = ((c >> 8) & 0xFF00) + 0x80;
+    SW_TriFogA0 = ((c >> 16) & 0xFF00) + 0x80;
+    c = v1->color;
+    SW_TriFogG1 = (c & 0xFF00) + 0x80;
+    SW_TriFogB1 = ((c << 8) & 0xFF00) + 0x80;
+    SW_TriFogR1 = ((c >> 8) & 0xFF00) + 0x80;
+    SW_TriFogA1 = (c >> 16) + 0x80;
+    c = v2->color;
+    SW_TriFogG2 = (c & 0xFF00) + 0x80;
+    SW_TriFogB2 = ((c << 8) & 0xFF00) + 0x80;
+    SW_TriFogR2 = ((c >> 8) & 0xFF00) + 0x80;
+    SW_TriFogA2 = (c >> 16) + 0x80;
+    d01 = (double)SW_TriFogR0 - SW_TriFogR1;
+    d02 = (double)SW_TriFogR0 - SW_TriFogR2;
+    SW_TriFogD01 = (float)d01;
+    SW_TriFogD02 = (float)d02;
+    g = (d01 * *(volatile float *)&SW_TriFogDY02 - d02 * *(volatile float *)&SW_TriFogDY01) * inv;
+    SW_SpanGrad[2] = SW_RoundW(g);
+    SW_TriFogRDX = (float)g;
+    h = (SW_TriFogD02 * *(volatile float *)&SW_TriFogDX01 - SW_TriFogD01 * *(volatile float *)&SW_TriFogDX02) * inv;
+    SW_TriFogRDY = (float)h;
+    SW_TriFogROff = ((double)SW_TriFogR0 + 12582912.0) - (v0->sy * h + v0->sx * *(volatile float *)&SW_TriFogRDX);
+    d01 = (double)SW_TriFogG0 - SW_TriFogG1;
+    d02 = (double)SW_TriFogG0 - SW_TriFogG2;
+    SW_TriFogD01 = (float)d01;
+    SW_TriFogD02 = (float)d02;
+    g = (d01 * *(volatile float *)&SW_TriFogDY02 - d02 * *(volatile float *)&SW_TriFogDY01) * inv;
+    SW_SpanGrad[1] = SW_RoundW(g);
+    SW_TriFogGDX = (float)g;
+    h = (SW_TriFogD02 * *(volatile float *)&SW_TriFogDX01 - SW_TriFogD01 * *(volatile float *)&SW_TriFogDX02) * inv;
+    SW_TriFogGDY = (float)h;
+    SW_TriFogGOff = ((double)SW_TriFogG0 + 12582912.0) - (v0->sy * h + v0->sx * *(volatile float *)&SW_TriFogGDX);
+    d01 = (double)SW_TriFogB0 - SW_TriFogB1;
+    d02 = (double)SW_TriFogB0 - SW_TriFogB2;
+    SW_TriFogD01 = (float)d01;
+    SW_TriFogD02 = (float)d02;
+    g = (d01 * *(volatile float *)&SW_TriFogDY02 - d02 * *(volatile float *)&SW_TriFogDY01) * inv;
+    SW_SpanGrad[0] = SW_RoundW(g);
+    SW_TriFogBDX = (float)g;
+    h = (SW_TriFogD02 * *(volatile float *)&SW_TriFogDX01 - SW_TriFogD01 * *(volatile float *)&SW_TriFogDX02) * inv;
+    SW_TriFogBDY = (float)h;
+    SW_TriFogBOff = ((double)SW_TriFogB0 + 12582912.0) - (v0->sy * h + v0->sx * *(volatile float *)&SW_TriFogBDX);
+    d01 = (double)SW_TriFogA0 - SW_TriFogA1;
+    d02 = (double)SW_TriFogA0 - SW_TriFogA2;
+    SW_TriFogD01 = (float)d01;
+    SW_TriFogD02 = (float)d02;
+    g = (d01 * *(volatile float *)&SW_TriFogDY02 - d02 * *(volatile float *)&SW_TriFogDY01) * inv;
+    SW_SpanGrad[3] = SW_RoundW(g);
+    SW_TriFogADX = (float)g;
+    h = (SW_TriFogD02 * *(volatile float *)&SW_TriFogDX01 - SW_TriFogD01 * *(volatile float *)&SW_TriFogDX02) * inv;
+    SW_TriFogADY = (float)h;
+    SW_TriFogAOff = ((double)SW_TriFogA0 + 12582912.0) - (v0->sy * h + v0->sx * *(volatile float *)&SW_TriFogADX);
+    SW_TriFogEdges = 3;
+    span = SW_SpanBuffer;
+    *(double *)SW_TriFogY = ((double)t->sy - 0.5001F) + 6755399441055744.0;
+    SW_TriFogY[0]++;
+    SW_SpanY = SW_TriFogY[0];
+    na = 0;
+    nb = 0;
+    xa = 0;
+    xb = 0;
+    for (;;) {
+        if (!na) {
+            do {
+                t = SW_TriFogEdgeA;
+                if (SW_TriFogEdges - 1 < 0)
+                    goto done;
+                n = *(SW_VERTEX **)&t->sz;
+                SW_TriFogEdges--;
+                SW_TriFogEdgeA = n;
+                SW_TriFogSlopeA = (float)(((double)t->sx - n->sx) / ((double)t->sy - n->sy));
+                SW_TriFogXA = (float)(((double)SW_TriFogY[0] - t->sy) * *(volatile float *)&SW_TriFogSlopeA + t->sx);
+                *(double *)SW_TriFogEndY = ((double)n->sy - 0.5001F) + 6755399441055744.0;
+                na = SW_TriFogEndY[0] - SW_TriFogY[0] + 1;
+            } while (!na);
+            SW_TriFogStepA = SW_RoundL(*(volatile float *)&SW_TriFogSlopeA * 65536.0F);
+            *(sint32 *)&SW_TriFogTemp = SW_RoundL(*(volatile float *)&SW_TriFogXA * 65536.0F);
+            xa = *(sint32 *)&SW_TriFogTemp + 0xFFFF;
+        }
+        if (!nb) {
+            do {
+                t = SW_TriFogEdgeB;
+                if (SW_TriFogEdges - 1 < 0)
+                    goto done;
+                n = *(SW_VERTEX **)&t->specular;
+                SW_TriFogEdges--;
+                SW_TriFogEdgeB = n;
+                SW_TriFogSlopeB = (float)(((double)t->sx - n->sx) / ((double)t->sy - n->sy));
+                SW_TriFogXB = (float)(((double)SW_TriFogY[0] - t->sy) * *(volatile float *)&SW_TriFogSlopeB + t->sx);
+                *(double *)SW_TriFogEndY = ((double)n->sy - 0.5001F) + 6755399441055744.0;
+                nb = SW_TriFogEndY[0] - SW_TriFogY[0] + 1;
+            } while (!nb);
+            SW_TriFogStepB = SW_RoundL(*(volatile float *)&SW_TriFogSlopeB * 65536.0F);
+            *(sint32 *)&SW_TriFogTemp = SW_RoundL(*(volatile float *)&SW_TriFogXB * 65536.0F);
+            xb = *(sint32 *)&SW_TriFogTemp + 0xFFFF;
+        }
+        do {
+            x = xb >> 16;
+            *(sint32 *)&SW_TriFogTemp = x;
+            a = (double)SW_TriFogY[0];
+            b = (double)(sint32)x;
+            SW_TriFogTemp = (float)((SW_TriFogADX * b + SW_TriFogADY * a) + SW_TriFogAOff);
+            span->n = (xa >> 16) - x;
+            span->x = x;
+            f = (float)((SW_TriFogBDX * b + SW_TriFogBDY * a) + SW_TriFogBOff);
+            span->c[0] = *(uint16 *)&f;
+            f = (float)((SW_TriFogGDX * b + SW_TriFogGDY * a) + SW_TriFogGOff);
+            span->c[1] = *(uint16 *)&f;
+            f = (float)((SW_TriFogRDX * b + SW_TriFogRDY * a) + SW_TriFogROff);
+            span->c[2] = *(uint16 *)&f;
+            span->c[3] = *(uint16 *)&SW_TriFogTemp;
+            span++;
+            SW_TriFogY[0]++;
+            xb += SW_TriFogStepB;
+            xa += SW_TriFogStepA;
+            nb--;
+            na--;
+        } while (na && nb);
+    }
+done:
+    SW_SpanEnd = span;
+    SW_SpanFunc();
+    return 0;
+}
+
 void SW_SpanG(void)
 {
     SW_SPAN *s;
