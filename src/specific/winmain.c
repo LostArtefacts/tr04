@@ -538,6 +538,14 @@ sint32 MungeFPCW(sint16 *fpcw)
 }
 #endif
 
+#ifndef FEAT_C_ASM
+void RestoreFPCW(sint16 fpcw)
+{
+    __asm {
+        fldcw fpcw
+    }
+}
+#else
 void RestoreFPCW(sint16 fpcw)
 {
     uint32 cw;
@@ -565,6 +573,7 @@ void RestoreFPCW(sint16 fpcw)
         cw |= _IC_AFFINE;
     _control87(cw, _MCW_EM | _MCW_RC | _MCW_PC | _MCW_IC);
 }
+#endif
 
 void __fastcall SW_WaitUntilInScene(volatile sint32 *flag);
 void __fastcall SW_WaitWhileInScene(volatile sint32 *flag);

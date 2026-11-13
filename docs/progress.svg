@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="377.35" height="12" x="0" y="0" class="named"><title>1266 · 81.68%</title></rect>
-<rect width="84.65" height="12" x="377.35" y="0" class="nonmatching"><title>284 · 18.32%</title></rect>
+<rect width="377.65" height="12" x="0" y="0" class="named"><title>1267 · 81.74%</title></rect>
+<rect width="84.35" height="12" x="377.65" y="0" class="nonmatching"><title>283 · 18.26%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">81.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1266</tspan> · <tspan class="nonmatching">284</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1267</tspan> · <tspan class="nonmatching">283</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="252.69" height="12" x="0" y="0" class="named"><title>342 KB · 54.69%</title></rect>
-<rect width="209.31" height="12" x="252.69" y="0" class="nonmatching"><title>283 KB · 45.31%</title></rect>
+<rect width="252.69" height="12" x="0" y="0" class="named"><title>342 KB · 54.70%</title></rect>
+<rect width="209.31" height="12" x="252.69" y="0" class="nonmatching"><title>283 KB · 45.30%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">54.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">342 KB</tspan> · <tspan class="nonmatching">283 KB</tspan></text>
@@ -1450,7 +1450,7 @@
 <rect width="12" height="12" x="525" y="405" class="named"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="405" class="named"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="405" class="named"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="405" class="nonmatching"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="405" class="named"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="405" class="named"><title>0x0048f970 j_nullsub_11 (5 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="405" class="named"><title>0x0048f980 nullsub_11 (1 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="405" class="nonmatching"><title>0x0048f981 SW_WaitLevelLoad (13 bytes)</title></rect>
@@ -3143,7 +3143,7 @@
 <rect width="1.65" height="1.86" x="736.06" y="441.74" class="named"><title>0x0043e760 combine_ClockWorkBeetle (8 bytes)</title></rect>
 <rect width="1.65" height="1.86" x="740.71" y="441.74" class="named"><title>0x0046c190 fifteen_end (8 bytes)</title></rect>
 <rect width="1.65" height="1.86" x="745.35" y="441.74" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
-<rect width="1.67" height="1.83" x="726.77" y="446.60" class="nonmatching"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
+<rect width="1.67" height="1.83" x="726.77" y="446.60" class="named"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="1.67" height="1.83" x="726.77" y="451.43" class="named"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
 <rect width="1.67" height="1.37" x="726.77" y="456.26" class="named"><title>0x00494e90 SW_EndFrame (6 bytes)</title></rect>
 <rect width="1.67" height="1.37" x="726.77" y="460.63" class="named"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
