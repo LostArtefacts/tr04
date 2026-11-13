@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="333.50" height="12" x="0" y="0" class="named"><title>1247 · 80.56%</title></rect>
-<rect width="61.24" height="12" x="333.50" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="19.26" height="12" x="394.74" y="0" class="todo"><title>72 · 4.65%</title></rect>
+<rect width="333.77" height="12" x="0" y="0" class="named"><title>1248 · 80.62%</title></rect>
+<rect width="61.24" height="12" x="333.77" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="18.99" height="12" x="395.01" y="0" class="todo"><title>71 · 4.59%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">80.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1247</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">72</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1248</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">71</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.62" height="12" x="0" y="0" class="named"><title>338 KB · 54.02%</title></rect>
-<rect width="166.38" height="12" x="223.62" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="24" height="12" x="390" y="0" class="todo"><title>36 KB · 5.80%</title></rect>
+<rect width="223.64" height="12" x="0" y="0" class="named"><title>338 KB · 54.02%</title></rect>
+<rect width="166.38" height="12" x="223.64" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="23.99" height="12" x="390.01" y="0" class="todo"><title>36 KB · 5.79%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1553,7 +1553,7 @@
 <rect width="12" height="12" x="540" y="435" class="todo"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="435" class="todo"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="435" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="435" class="todo"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="435" class="named"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="435" class="todo"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="435" class="named"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="435" class="todo"><title>0x00494e80 Func494e80 (13 bytes)</title></rect>
@@ -3039,7 +3039,7 @@
 <rect width="2.86" height="3.08" x="688.62" y="440.68" class="named"><title>0x0042d5e0 lara_as_climbdown (23 bytes)</title></rect>
 <rect width="2.86" height="3.08" x="688.62" y="446.76" class="named"><title>0x00437cc0 invisibility_off (23 bytes)</title></rect>
 <rect width="2.86" height="3.08" x="688.62" y="452.84" class="named"><title>0x0046b7e0 fourth_cutseq_end (23 bytes)</title></rect>
-<rect width="2.86" height="3.08" x="688.62" y="458.92" class="todo"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
+<rect width="2.86" height="3.08" x="688.62" y="458.92" class="named"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
 <rect width="2.78" height="3.17" x="694.48" y="403.67" class="named"><title>0x0049c6e0 DBLog_MapView (23 bytes)</title></rect>
 <rect width="2.65" height="3.17" x="700.26" y="403.67" class="named"><title>0x00437660 turn180_effect (22 bytes)</title></rect>
 <rect width="2.65" height="3.17" x="705.92" y="403.67" class="named"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
