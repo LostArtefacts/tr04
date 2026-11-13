@@ -46,16 +46,16 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="338.14" height="12" x="0" y="0" class="named"><title>1266 · 81.68%</title></rect>
-<rect width="61.17" height="12" x="338.14" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
-<rect width="14.69" height="12" x="399.31" y="0" class="todo"><title>55 · 3.55%</title></rect>
+<rect width="338.41" height="12" x="0" y="0" class="named"><title>1267 · 81.74%</title></rect>
+<rect width="61.17" height="12" x="338.41" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
+<rect width="14.42" height="12" x="399.58" y="0" class="todo"><title>54 · 3.48%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1266</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">55</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1267</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">54</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="225.15" height="12" x="0" y="0" class="named"><title>340 KB · 54.38%</title></rect>
-<rect width="166.37" height="12" x="225.15" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="225.16" height="12" x="0" y="0" class="named"><title>340 KB · 54.39%</title></rect>
+<rect width="166.37" height="12" x="225.16" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
 <rect width="22.47" height="12" x="391.53" y="0" class="todo"><title>34 KB · 5.43%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.4%</text>
@@ -1484,7 +1484,7 @@
 <rect width="12" height="12" x="255" y="420" class="named"><title>0x00490a90 phd_GetVectorAngles (126 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="420" class="named"><title>0x00490b10 j_nullsub_14 (5 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="420" class="named"><title>0x00490b20 nullsub_14 (1 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="420" class="todo"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="420" class="named"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="420" class="named"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="420" class="named"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="420" class="todo"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
@@ -3105,7 +3105,7 @@
 <rect width="2.42" height="2.38" x="744.58" y="420.77" class="named"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
 <rect width="2.05" height="2.77" x="711.14" y="426.15" class="named"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="431.93" class="named"><title>0x00427060 lara_as_null (14 bytes)</title></rect>
-<rect width="2.05" height="2.60" x="711.14" y="437.53" class="todo"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
+<rect width="2.05" height="2.60" x="711.14" y="437.53" class="named"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="443.13" class="todo"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="448.73" class="named"><title>0x00437650 finish_level_effect (13 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="454.15" class="named"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>

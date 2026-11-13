@@ -44,6 +44,20 @@ extern uint8 SW_MulTable[65536];
 extern char SW_Kernel32Name[];
 extern char SW_SleepName[];
 
+__declspec(naked) void __fastcall SW_WaitUntilInScene(volatile sint32 *flag)
+{
+    __asm {
+    spin:
+        push ecx
+        call SW_SleepTick
+        pop ecx
+        mov eax, [ecx]
+        test eax, eax
+        je spin
+        ret
+    }
+}
+
 __declspec(naked) void SW_SleepTick(void)
 {
     __asm {
