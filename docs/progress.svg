@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="382.12" height="12" x="0" y="0" class="named"><title>1282 · 82.71%</title></rect>
-<rect width="79.88" height="12" x="382.12" y="0" class="nonmatching"><title>268 · 17.29%</title></rect>
+<rect width="382.42" height="12" x="0" y="0" class="named"><title>1283 · 82.77%</title></rect>
+<rect width="79.58" height="12" x="382.42" y="0" class="nonmatching"><title>267 · 17.23%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">82.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1282</tspan> · <tspan class="nonmatching">268</tspan></text>
+<text text-anchor="end" x="642" y="7.50">82.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1283</tspan> · <tspan class="nonmatching">267</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="255.44" height="12" x="0" y="0" class="named"><title>346 KB · 55.29%</title></rect>
-<rect width="206.56" height="12" x="255.44" y="0" class="nonmatching"><title>280 KB · 44.71%</title></rect>
+<rect width="255.71" height="12" x="0" y="0" class="named"><title>346 KB · 55.35%</title></rect>
+<rect width="206.29" height="12" x="255.71" y="0" class="nonmatching"><title>279 KB · 44.65%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">55.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">346 KB</tspan> · <tspan class="nonmatching">280 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">346 KB</tspan> · <tspan class="nonmatching">279 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1571,7 +1571,7 @@
 <rect width="12" height="12" x="90" y="450" class="named"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="450" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="450" class="nonmatching"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="450" class="nonmatching"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="450" class="named"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="450" class="nonmatching"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="450" class="named"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="450" class="named"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
@@ -2099,7 +2099,7 @@
 <rect width="11.98" height="11.77" x="690.29" y="129.41" class="nonmatching"><title>0x00499940 SW_SpanGTKey (368 bytes)</title></rect>
 <rect width="11.95" height="11.77" x="705.27" y="129.41" class="named"><title>0x00431aa0 LaraSurface (367 bytes)</title></rect>
 <rect width="11.89" height="11.77" x="720.23" y="129.41" class="named"><title>0x0045f7f0 GetPanVolume (365 bytes)</title></rect>
-<rect width="11.89" height="11.77" x="735.11" y="129.41" class="nonmatching"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
+<rect width="11.89" height="11.77" x="735.11" y="129.41" class="named"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
 <rect width="11.83" height="11.80" x="429.49" y="144.18" class="named"><title>0x004808e0 do_boot_screen (364 bytes)</title></rect>
 <rect width="11.80" height="11.80" x="444.32" y="144.18" class="named"><title>0x00463180 FullBlockSwitchCollision (363 bytes)</title></rect>
 <rect width="11.77" height="11.80" x="459.12" y="144.18" class="nonmatching"><title>0x00438d90 UpdateBlood (362 bytes)</title></rect>
