@@ -776,6 +776,87 @@ sint32 S_DumpScreen(void)
     return n;
 }
 
+sint32 S_GetObjectBounds(sint16 *bounds)
+{
+    D3DVECTOR vtx[8];
+    float xMin, xMax, yMin, yMax, zMin, zMax, zv, m20, m21, m22, m23, znear;
+    sint32 numZ, xv, yv, i;
+
+    if (phd_mxptr[M23] >= phd_zfar && !outside)
+        return 0;
+    xMin = bounds[0];
+    xMax = bounds[1];
+    yMin = bounds[2];
+    yMax = bounds[3];
+    zMin = bounds[4];
+    zMax = bounds[5];
+    vtx[0].x = xMin;
+    vtx[0].y = yMin;
+    vtx[0].z = zMin;
+    vtx[1].x = xMax;
+    vtx[1].y = yMin;
+    vtx[1].z = zMin;
+    vtx[2].x = xMax;
+    vtx[2].y = yMax;
+    vtx[2].z = zMin;
+    vtx[3].x = xMin;
+    vtx[3].y = yMax;
+    vtx[3].z = zMin;
+    vtx[4].x = xMin;
+    vtx[4].y = yMin;
+    vtx[4].z = zMax;
+    vtx[5].x = xMax;
+    vtx[5].y = yMin;
+    vtx[5].z = zMax;
+    vtx[6].x = xMax;
+    vtx[6].y = yMax;
+    vtx[6].z = zMax;
+    vtx[7].x = xMin;
+    vtx[7].y = yMax;
+    vtx[7].z = zMax;
+    xMin = (float)0x3FFFFFFF;
+    xMax = (float)-0x3FFFFFFF;
+    yMin = (float)0x3FFFFFFF;
+    yMax = (float)-0x3FFFFFFF;
+    numZ = 0;
+    m22 = (float)phd_mxptr[M22];
+    m21 = (float)phd_mxptr[M21];
+    m20 = (float)phd_mxptr[M20];
+    m23 = (float)phd_mxptr[M23];
+    znear = (float)phd_znear;
+    for (i = 0; i < 8; i++) {
+        zv = vtx[i].x * m20 + vtx[i].z * m22 + vtx[i].y * m21 + m23;
+        if (zv > znear && phd_zfar > zv) {
+            numZ++;
+            zv /= phd_persp;
+            if (!zv)
+                zv = 1;
+            zv = 1 / zv;
+            xv = (sint32)(zv * (vtx[i].x * phd_mxptr[M00] + vtx[i].y * phd_mxptr[M01] + vtx[i].z * phd_mxptr[M02] + phd_mxptr[M03]));
+            if (xv < xMin)
+                xMin = (float)xv;
+            if (xv > xMax)
+                xMax = (float)xv;
+            yv = (sint32)(zv * (vtx[i].x * phd_mxptr[M10] + vtx[i].y * phd_mxptr[M11] + vtx[i].z * phd_mxptr[M12] + phd_mxptr[M13]));
+            if (yv < yMin)
+                yMin = (float)yv;
+            if (yv > yMax)
+                yMax = (float)yv;
+        }
+    }
+    xMin += phd_centerx;
+    xMax += phd_centerx;
+    yMin += phd_centery;
+    yMax += phd_centery;
+    if (numZ < 8)
+        return -1;
+    if (xMin < 0 || yMin < 0 || phd_winxmax < xMax || phd_winymax < yMax)
+        return -1;
+    if (numZ && phd_right >= xMin && phd_bottom >= yMin && phd_left <= xMax && phd_top <= yMax)
+        return 1;
+    return 0;
+}
+
 void S_AnimateTextures(sint32 n)
 {
     TEXTURESTRUCT *tex;

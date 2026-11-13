@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="328.15" height="12" x="0" y="0" class="named"><title>1227 · 79.26%</title></rect>
-<rect width="59.91" height="12" x="328.15" y="0" class="nonmatching"><title>224 · 14.47%</title></rect>
-<rect width="25.94" height="12" x="388.06" y="0" class="todo"><title>97 · 6.27%</title></rect>
+<rect width="60.17" height="12" x="328.15" y="0" class="nonmatching"><title>225 · 14.53%</title></rect>
+<rect width="25.67" height="12" x="388.33" y="0" class="todo"><title>96 · 6.20%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1227</tspan> · <tspan class="nonmatching">224</tspan> · <tspan class="todo">97</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1227</tspan> · <tspan class="nonmatching">225</tspan> · <tspan class="todo">96</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="222.02" height="12" x="0" y="0" class="named"><title>335 KB · 53.63%</title></rect>
-<rect width="159.72" height="12" x="222.02" y="0" class="nonmatching"><title>241 KB · 38.58%</title></rect>
-<rect width="32.27" height="12" x="381.73" y="0" class="todo"><title>49 KB · 7.79%</title></rect>
+<rect width="160.30" height="12" x="222.02" y="0" class="nonmatching"><title>242 KB · 38.72%</title></rect>
+<rect width="31.68" height="12" x="382.32" y="0" class="todo"><title>48 KB · 7.65%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">335 KB</tspan> · <tspan class="nonmatching">241 KB</tspan> · <tspan class="todo">49 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">335 KB</tspan> · <tspan class="nonmatching">242 KB</tspan> · <tspan class="todo">48 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1344,7 +1344,7 @@
 <rect width="12" height="12" x="405" y="375" class="nonmatching"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="375" class="named"><title>0x0047fa10 S_OutputPolyList (656 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="375" class="named"><title>0x0047fca0 S_DumpScreen (76 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="375" class="todo"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="375" class="nonmatching"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="375" class="named"><title>0x00480070 S_AnimateTextures (429 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="375" class="nonmatching"><title>0x00480220 ProjectTrainVerts (237 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="375" class="named"><title>0x00480310 phd_PutPolygons_train (596 bytes)</title></rect>
@@ -1797,7 +1797,7 @@
 <rect width="18.56" height="18.42" x="621.33" y="0" class="nonmatching"><title>0x00416550 ControlBurningFloor (891 bytes)</title></rect>
 <rect width="18.49" height="18.42" x="642.88" y="0" class="nonmatching"><title>0x0041bf60 WildboarControl (888 bytes)</title></rect>
 <rect width="18.45" height="18.42" x="664.38" y="0" class="named"><title>0x0044f790 SetRoomBounds (886 bytes)</title></rect>
-<rect width="18.45" height="18.42" x="685.83" y="0" class="todo"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
+<rect width="18.45" height="18.42" x="685.83" y="0" class="nonmatching"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
 <rect width="18.37" height="18.42" x="707.28" y="0" class="nonmatching"><title>0x00422480 TestLaraVault (882 bytes)</title></rect>
 <rect width="18.35" height="18.42" x="728.65" y="0" class="nonmatching"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
 <rect width="18.73" height="17.98" x="307.75" y="21.42" class="nonmatching"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
