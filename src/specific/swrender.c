@@ -58,6 +58,20 @@ __declspec(naked) void __fastcall SW_WaitUntilInScene(volatile sint32 *flag)
     }
 }
 
+__declspec(naked) void __fastcall SW_WaitWhileInScene(volatile sint32 *flag)
+{
+    __asm {
+    spin:
+        push ecx
+        call SW_SleepTick
+        pop ecx
+        mov eax, [ecx]
+        test eax, eax
+        jne spin
+        ret
+    }
+}
+
 __declspec(naked) void SW_SleepTick(void)
 {
     __asm {

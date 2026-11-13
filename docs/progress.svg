@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="338.41" height="12" x="0" y="0" class="named"><title>1267 · 81.74%</title></rect>
-<rect width="61.17" height="12" x="338.41" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
-<rect width="14.42" height="12" x="399.58" y="0" class="todo"><title>54 · 3.48%</title></rect>
+<rect width="338.68" height="12" x="0" y="0" class="named"><title>1268 · 81.81%</title></rect>
+<rect width="61.17" height="12" x="338.68" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
+<rect width="14.16" height="12" x="399.84" y="0" class="todo"><title>53 · 3.42%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1267</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">54</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1268</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">53</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="225.16" height="12" x="0" y="0" class="named"><title>340 KB · 54.39%</title></rect>
-<rect width="166.37" height="12" x="225.16" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="22.47" height="12" x="391.53" y="0" class="todo"><title>34 KB · 5.43%</title></rect>
+<rect width="225.17" height="12" x="0" y="0" class="named"><title>340 KB · 54.39%</title></rect>
+<rect width="166.37" height="12" x="225.17" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="22.46" height="12" x="391.54" y="0" class="todo"><title>34 KB · 5.42%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">340 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">34 KB</tspan></text>
@@ -1487,7 +1487,7 @@
 <rect width="12" height="12" x="300" y="420" class="named"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="420" class="named"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="420" class="named"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="420" class="todo"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="420" class="named"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="420" class="named"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="420" class="named"><title>0x00490d50 D3DNormalise (114 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="420" class="named"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
@@ -3106,7 +3106,7 @@
 <rect width="2.05" height="2.77" x="711.14" y="426.15" class="named"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="431.93" class="named"><title>0x00427060 lara_as_null (14 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="437.53" class="named"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
-<rect width="2.05" height="2.60" x="711.14" y="443.13" class="todo"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
+<rect width="2.05" height="2.60" x="711.14" y="443.13" class="named"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="448.73" class="named"><title>0x00437650 finish_level_effect (13 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="454.15" class="named"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="459.58" class="todo"><title>0x0048f981 SW_WaitLevelLoad (13 bytes)</title></rect>
