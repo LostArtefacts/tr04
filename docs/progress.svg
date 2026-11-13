@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="328.95" height="12" x="0" y="0" class="named"><title>1230 · 79.46%</title></rect>
-<rect width="60.44" height="12" x="328.95" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
-<rect width="24.60" height="12" x="389.40" y="0" class="todo"><title>92 · 5.94%</title></rect>
+<rect width="329.22" height="12" x="0" y="0" class="named"><title>1231 · 79.52%</title></rect>
+<rect width="60.44" height="12" x="329.22" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
+<rect width="24.34" height="12" x="389.66" y="0" class="todo"><title>91 · 5.88%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1230</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">92</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1231</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">91</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.30" height="12" x="0" y="0" class="named"><title>337 KB · 53.94%</title></rect>
-<rect width="162.98" height="12" x="223.30" y="0" class="nonmatching"><title>246 KB · 39.37%</title></rect>
-<rect width="27.73" height="12" x="386.27" y="0" class="todo"><title>42 KB · 6.70%</title></rect>
+<rect width="223.34" height="12" x="0" y="0" class="named"><title>337 KB · 53.95%</title></rect>
+<rect width="162.98" height="12" x="223.34" y="0" class="nonmatching"><title>246 KB · 39.37%</title></rect>
+<rect width="27.68" height="12" x="386.32" y="0" class="todo"><title>42 KB · 6.69%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">246 KB</tspan> · <tspan class="todo">42 KB</tspan></text>
@@ -1408,7 +1408,7 @@
 <rect width="12" height="12" x="615" y="390" class="named"><title>0x00487c30 InitBinoculars (197 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="390" class="named"><title>0x00487d00 DrawBinoculars (1074 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="390" class="nonmatching"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="390" class="todo"><title>0x00488650 Func488650 (63 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="390" class="named"><title>0x00488650 MarkLaraRoomVisited (63 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="390" class="named"><title>0x00488690 ClipLine (689 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="390" class="named"><title>0x00488950 DrawFlatSky (2568 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="390" class="named"><title>0x00489360 ClipCheckPoint (278 bytes)</title></rect>
@@ -2823,7 +2823,7 @@
 <rect width="4.86" height="5.05" x="687.97" y="339.55" class="named"><title>0x0047b130 CheckKeyConflicts (64 bytes)</title></rect>
 <rect width="4.78" height="5.05" x="695.83" y="339.55" class="named"><title>0x0045fad0 SayNo (63 bytes)</title></rect>
 <rect width="4.78" height="5.05" x="703.61" y="339.55" class="named"><title>0x0047d420 S_DrawAirBar (63 bytes)</title></rect>
-<rect width="4.78" height="5.05" x="711.39" y="339.55" class="todo"><title>0x00488650 Func488650 (63 bytes)</title></rect>
+<rect width="4.78" height="5.05" x="711.39" y="339.55" class="named"><title>0x00488650 MarkLaraRoomVisited (63 bytes)</title></rect>
 <rect width="4.71" height="5.05" x="719.17" y="339.55" class="named"><title>0x0042ff50 ready_flare (62 bytes)</title></rect>
 <rect width="4.71" height="5.05" x="726.88" y="339.55" class="named"><title>0x00450650 phd_TranslateRel_I (62 bytes)</title></rect>
 <rect width="4.71" height="5.05" x="734.59" y="339.55" class="named"><title>0x004506e0 phd_RotYXZ_I (62 bytes)</title></rect>

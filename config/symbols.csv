@@ -1347,7 +1347,7 @@ address,size,name,symbol
 0x00487c30,197,InitBinoculars,_InitBinoculars
 0x00487d00,1074,DrawBinoculars,_DrawBinoculars
 0x00488140,1292,S_DrawDrawSparks,_S_DrawDrawSparks
-0x00488650,63,Func488650,_Func488650
+0x00488650,63,MarkLaraRoomVisited,_MarkLaraRoomVisited
 0x00488690,689,ClipLine,_ClipLine
 0x00488950,2568,DrawFlatSky,_DrawFlatSky
 0x00489360,278,ClipCheckPoint,_ClipCheckPoint
@@ -2595,6 +2595,7 @@ address,size,name,symbol
 0x00670e58,4096,uwdust,_uwdust
 0x00672e58,4,FadeVal,_FadeVal
 0x00672e60,4,DoFade,_DoFade
+0x006742b0,3596,RoomVisitMarkers,_RoomVisitMarkers
 0x007538f0,4,nTextures,_nTextures
 0x007538f4,4,Textures,_Textures
 0x00753900,8,frequency,_frequency

@@ -24,6 +24,14 @@
 #include "../debris.h"
 #include "../draw.h"
 
+typedef struct room_visit_marker {
+    sint16 visited;
+    sint16 room_number;
+    char unused[3592];
+} ROOM_VISIT_MARKER;
+
+extern ROOM_VISIT_MARKER RoomVisitMarkers[255];
+
 sint8 flare_table[121] = {
     96, 80, 0, 6, 0, 31, 48, 32, 32, 10, -6, 31, 32, 24, 24, 18, -1, 31, 80, 104, 64, 5, -3, 30,
     64, 64, 64, 20, 0, 32, 96, 56, 56, 14, 0, 11, 80, 40, 32, 9, 0, 29, 16, 24, 40, 2, 5, 31,
@@ -1400,6 +1408,18 @@ void S_DrawDrawSparks(SPARKS *sptr, sint32 smallest_size, sint16 *xyptr, sint32 
             v[0].sz = sz;
             v[1].sz = sz;
             AddLineSorted(v, &v[1], 6);
+        }
+    }
+}
+
+void MarkLaraRoomVisited(void)
+{
+    sint32 i;
+
+    for (i = 0; i < 255; i++) {
+        if (RoomVisitMarkers[i].room_number == lara_item->room_number) {
+            RoomVisitMarkers[i].visited = 1;
+            return;
         }
     }
 }

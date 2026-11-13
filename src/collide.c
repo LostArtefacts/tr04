@@ -14,7 +14,7 @@
 #include "objnums.h"
 #include "sound.h"
 
-void Func488650(void);
+void MarkLaraRoomVisited(void);
 
 void GetCollisionInfo(COLL_INFO *coll, sint32 x, sint32 y, sint32 z, sint16 room_number, sint32 hite)
 {
@@ -415,7 +415,7 @@ void UpdateLaraRoom(ITEM_INFO *item, sint32 height)
     item->floor = GetHeight(floor, x, y, z);
     if (item->room_number != room_number)
         ItemNewRoom(lara.item_number, room_number);
-    Func488650();
+    MarkLaraRoomVisited();
 }
 
 sint16 GetTiltType(FLOOR_INFO *floor, sint32 x, sint32 y, sint32 z)
