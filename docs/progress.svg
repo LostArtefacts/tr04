@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="375.56" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="86.44" height="12" x="375.56" y="0" class="nonmatching"><title>290 · 18.71%</title></rect>
+<rect width="375.86" height="12" x="0" y="0" class="named"><title>1261 · 81.35%</title></rect>
+<rect width="86.14" height="12" x="375.86" y="0" class="nonmatching"><title>289 · 18.65%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">290</tspan></text>
+<text text-anchor="end" x="642" y="7.50">81.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1261</tspan> · <tspan class="nonmatching">289</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="252" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
-<rect width="210" height="12" x="252" y="0" class="nonmatching"><title>284 KB · 45.45%</title></rect>
+<rect width="252.10" height="12" x="0" y="0" class="named"><title>341 KB · 54.57%</title></rect>
+<rect width="209.90" height="12" x="252.10" y="0" class="nonmatching"><title>284 KB · 45.43%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">54.5%</text>
+<text text-anchor="end" x="642" y="24.50">54.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">284 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1379,7 +1379,7 @@
 <rect width="12" height="12" x="210" y="390" class="nonmatching"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="390" class="nonmatching"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="390" class="named"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="390" class="nonmatching"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="390" class="named"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="390" class="nonmatching"><title>0x004849a0 AddPrelitMMX (122 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="390" class="named"><title>0x00484a20 CalcColorSplit (217 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="390" class="named"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
@@ -2556,7 +2556,7 @@
 <rect width="6.78" height="7.12" x="720.66" y="266.39" class="named"><title>0x00403c10 DrawLocusts (126 bytes)</title></rect>
 <rect width="6.78" height="7.12" x="730.44" y="266.39" class="named"><title>0x0040e630 DrawScarabs (126 bytes)</title></rect>
 <rect width="6.78" height="7.12" x="740.22" y="266.39" class="named"><title>0x0041fdd0 InitialiseHair (126 bytes)</title></rect>
-<rect width="6.81" height="7.09" x="561.10" y="276.51" class="nonmatching"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
+<rect width="6.81" height="7.09" x="561.10" y="276.51" class="named"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="6.81" height="7.09" x="561.10" y="286.60" class="named"><title>0x00490a90 phd_GetVectorAngles (126 bytes)</title></rect>
 <rect width="6.81" height="7.03" x="561.10" y="296.69" class="named"><title>0x00409180 ExplodeFX (125 bytes)</title></rect>
 <rect width="6.81" height="7.03" x="561.10" y="306.72" class="named"><title>0x00421620 LaraFloorFront (125 bytes)</title></rect>
