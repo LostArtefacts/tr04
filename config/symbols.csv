@@ -2713,6 +2713,7 @@ address,size,name,symbol
 0x007652c8,4,SW_TriPFF0,_SW_TriPFF0
 0x007652cc,4,SW_TriTFogB0,_SW_TriTFogB0
 0x007652d4,4,SW_TriPRecip,_SW_TriPRecip
+0x007652d8,4,SW_SpanGTPMask,_SW_SpanGTPMask
 0x007652dc,4,SW_TriFogDX02,_SW_TriFogDX02
 0x007652e4,4,SW_TriPEdges,_SW_TriPEdges
 0x007652e8,8,SW_TriPFBOff,_SW_TriPFBOff
