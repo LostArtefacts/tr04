@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="324.41" height="12" x="0" y="0" class="named"><title>1213 · 78.36%</title></rect>
-<rect width="49.21" height="12" x="324.41" y="0" class="nonmatching"><title>184 · 11.89%</title></rect>
-<rect width="40.38" height="12" x="373.62" y="0" class="todo"><title>151 · 9.75%</title></rect>
+<rect width="49.48" height="12" x="324.41" y="0" class="nonmatching"><title>185 · 11.95%</title></rect>
+<rect width="40.12" height="12" x="373.88" y="0" class="todo"><title>150 · 9.69%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">184</tspan> · <tspan class="todo">151</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">185</tspan> · <tspan class="todo">150</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="217.20" height="12" x="0" y="0" class="named"><title>328 KB · 52.46%</title></rect>
-<rect width="144.18" height="12" x="217.20" y="0" class="nonmatching"><title>218 KB · 34.83%</title></rect>
-<rect width="52.61" height="12" x="361.39" y="0" class="todo"><title>79 KB · 12.71%</title></rect>
+<rect width="144.38" height="12" x="217.20" y="0" class="nonmatching"><title>218 KB · 34.87%</title></rect>
+<rect width="52.42" height="12" x="361.58" y="0" class="todo"><title>79 KB · 12.66%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">218 KB</tspan> · <tspan class="todo">79 KB</tspan></text>
@@ -1096,7 +1096,7 @@
 <rect width="12" height="12" x="435" y="300" class="todo"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="300" class="nonmatching"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="300" class="todo"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="300" class="todo"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="300" class="nonmatching"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="300" class="nonmatching"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="300" class="named"><title>0x0046b140 frigup_lara (218 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="300" class="named"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
@@ -2172,7 +2172,7 @@
 <rect width="10.54" height="10.89" x="511.84" y="158.99" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
 <rect width="10.43" height="10.89" x="525.38" y="158.99" class="named"><title>0x0043a080 TriggerLaraDrips (296 bytes)</title></rect>
 <rect width="10.40" height="10.89" x="538.81" y="158.99" class="nonmatching"><title>0x0044aa20 RefreshCamera (295 bytes)</title></rect>
-<rect width="10.40" height="10.89" x="552.21" y="158.99" class="todo"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
+<rect width="10.40" height="10.89" x="552.21" y="158.99" class="nonmatching"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
 <rect width="10.36" height="10.89" x="565.60" y="158.99" class="todo"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>
 <rect width="10.29" height="10.89" x="578.97" y="158.99" class="named"><title>0x0043ae50 TriggerLightning (292 bytes)</title></rect>
 <rect width="10.29" height="10.89" x="592.26" y="158.99" class="named"><title>0x00476790 FreeLevel (292 bytes)</title></rect>

@@ -215,6 +215,50 @@ void InitPackNodes(NODELOADHEADER *lnode, PACKNODE *pnode, sint8 *packed, sint32
     }
 }
 
+sint16 DecodeTrack(char *packed, RTDECODE *decode)
+{
+    sint16 word;
+
+    if (!decode->decodetype) {
+        word = GetTrackWord(decode->off, packed, decode->packmethod);
+        if (!(word & 0x20)) {
+            decode->decodetype = 2;
+            if (word & 0x10) {
+                decode->counter = ((word & 7) << 5) | (GetTrackWord(decode->off + 1, packed, decode->packmethod) & 0x1F);
+                decode->data = GetTrackWord(decode->off + 2, packed, decode->packmethod);
+                decode->off += 3;
+                decode->length -= 3;
+            } else {
+                decode->data = GetTrackWord(decode->off + 1, packed, decode->packmethod);
+                decode->counter = word & 0x7;
+                decode->off += 2;
+                decode->length -= 2;
+            }
+        } else {
+            decode->counter = word & 0xF;
+            if (!decode->counter)
+                decode->counter = 16;
+            decode->decodetype = 1;
+            decode->off++;
+            decode->length--;
+        }
+    }
+    if (decode->decodetype == 2) {
+        decode->counter--;
+        if (!decode->counter)
+            decode->decodetype = 0;
+        return decode->data;
+    } else {
+        word = GetTrackWord(decode->off, packed, decode->packmethod);
+        decode->off++;
+        decode->length--;
+        decode->counter--;
+        if (!decode->counter)
+            decode->decodetype = 0;
+        return word;
+    }
+}
+
 sint16 GetTrackWord(sint32 off, sint8 *packed, sint32 packmethod)
 {
     uint8 *p;
