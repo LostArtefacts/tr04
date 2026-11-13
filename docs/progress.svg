@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="327.08" height="12" x="0" y="0" class="named"><title>1223 · 79.01%</title></rect>
-<rect width="56.16" height="12" x="327.08" y="0" class="nonmatching"><title>210 · 13.57%</title></rect>
-<rect width="30.76" height="12" x="383.24" y="0" class="todo"><title>115 · 7.43%</title></rect>
+<rect width="56.43" height="12" x="327.08" y="0" class="nonmatching"><title>211 · 13.63%</title></rect>
+<rect width="30.49" height="12" x="383.51" y="0" class="todo"><title>114 · 7.36%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1223</tspan> · <tspan class="nonmatching">210</tspan> · <tspan class="todo">115</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1223</tspan> · <tspan class="nonmatching">211</tspan> · <tspan class="todo">114</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="219.96" height="12" x="0" y="0" class="named"><title>332 KB · 53.13%</title></rect>
-<rect width="151.15" height="12" x="219.96" y="0" class="nonmatching"><title>228 KB · 36.51%</title></rect>
-<rect width="42.89" height="12" x="371.11" y="0" class="todo"><title>65 KB · 10.36%</title></rect>
+<rect width="151.28" height="12" x="219.96" y="0" class="nonmatching"><title>228 KB · 36.54%</title></rect>
+<rect width="42.76" height="12" x="371.24" y="0" class="todo"><title>65 KB · 10.33%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">332 KB</tspan> · <tspan class="nonmatching">228 KB</tspan> · <tspan class="todo">65 KB</tspan></text>
@@ -1250,7 +1250,7 @@
 <rect width="12" height="12" x="495" y="345" class="named"><title>0x00473b90 S_SoundSampleIsPlaying (31 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="345" class="named"><title>0x00473bb0 S_SoundSetPanAndVolume (53 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="345" class="named"><title>0x00473bf0 S_SoundSetPitch (28 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="345" class="todo"><title>0x00473c10 FindCDDrive (203 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="345" class="nonmatching"><title>0x00473c10 FindCDDrive (203 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="345" class="nonmatching"><title>0x00473ce0 FileOpen (153 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="345" class="named"><title>0x00473d80 FileClose (26 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="345" class="named"><title>0x00473da0 FileSize (42 bytes)</title></rect>
@@ -2329,7 +2329,7 @@
 <rect width="9.05" height="8.61" x="617.90" y="210.63" class="nonmatching"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="9.05" height="8.61" x="629.95" y="210.63" class="named"><title>0x00454070 InitialiseRope (203 bytes)</title></rect>
 <rect width="9.05" height="8.61" x="642" y="210.63" class="named"><title>0x00467b90 JeepCheckGetOut (203 bytes)</title></rect>
-<rect width="9.05" height="8.61" x="654.05" y="210.63" class="todo"><title>0x00473c10 FindCDDrive (203 bytes)</title></rect>
+<rect width="9.05" height="8.61" x="654.05" y="210.63" class="nonmatching"><title>0x00473c10 FindCDDrive (203 bytes)</title></rect>
 <rect width="9.05" height="8.61" x="666.10" y="210.63" class="todo"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
 <rect width="9" height="8.61" x="678.15" y="210.63" class="named"><title>0x004216a0 lara_as_crawl (202 bytes)</title></rect>
 <rect width="9" height="8.61" x="690.15" y="210.63" class="named"><title>0x00427660 lara_as_wade (202 bytes)</title></rect>

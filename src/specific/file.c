@@ -33,6 +33,37 @@
 #include "polyinsert.h"
 
 #ifndef TR4_EXE
+uint8 FindCDDrive(void)
+{
+    HANDLE file;
+    uint32 drives;
+    char path[14];
+    char root[5];
+
+    strcpy(path, "c:\\script.dat");
+    drives = GetLogicalDrives();
+    cd_drive = 'A';
+    lstrcpy(root, "A:\\");
+    while (drives) {
+        if (drives & 1) {
+            root[0] = cd_drive;
+            if (GetDriveType(root) == DRIVE_CDROM) {
+                path[0] = cd_drive;
+                file = CreateFile(path, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+                if (file != INVALID_HANDLE_VALUE) {
+                    CloseHandle(file);
+                    return 1;
+                }
+            }
+        }
+        cd_drive++;
+        drives >>= 1;
+    }
+    return 0;
+}
+#endif
+
+#ifndef TR4_EXE
 FILE *FileOpen(const char *name)
 {
     FILE *file;

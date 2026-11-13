@@ -2204,6 +2204,8 @@ address,size,name,symbol
 0x004b25d8,4,water_color_B,_water_color_B
 0x004b263c,50,source_pcm_format,_source_pcm_format
 0x004b27a5,,load_roomnum,_load_roomnum
+0x004b27a8,4,Var4b27a8,_Var4b27a8
+0x004b27ac,14,Var4b27ac,_Var4b27ac
 0x004b27bc,18,Var4b27bc,_Var4b27bc
 0x004b27d0,3,Var4b27d0,_Var4b27d0
 0x004b27d4,14,Var4b27d4,_Var4b27d4
