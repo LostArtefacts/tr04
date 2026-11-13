@@ -700,6 +700,73 @@ void TriggerGunShell(sint16 leftright, sint16 objnum, sint32 weapon)
         shell->DirXrot = lara_item->pos.y_rot - (GetRandomControl() & 0xfff) + lara.left_arm.y_rot + 0x4800;
 }
 
+void UpdateGunShells(void)
+{
+    GUNSHELL_STRUCT *shell;
+    FLOOR_INFO *floor;
+    sint32 ox, oy, oz, c, h, i, oroom;
+
+    shell = Gunshells;
+    for (i = 24; i > 0; i--, shell++) {
+        if (!shell->counter)
+            continue;
+        ox = shell->pos.x_pos;
+        oy = shell->pos.y_pos;
+        oz = shell->pos.z_pos;
+        oroom = shell->room_number;
+        shell->counter--;
+        if (room[oroom].flags & ROOM_UNDERWATER) {
+            shell->fallspeed++;
+            if (shell->fallspeed > 8)
+                shell->fallspeed = 8;
+            else if (shell->fallspeed < 0)
+                shell->fallspeed >>= 1;
+            shell->speed -= shell->speed >> 1;
+        } else
+            shell->fallspeed += 6;
+        shell->pos.z_rot += 4186;
+        shell->pos.y_rot += 182 * shell->speed;
+        shell->pos.x_rot += 182 * ((shell->speed >> 1) + 7);
+        shell->pos.x_pos += (rcossin_tbl[(shell->DirXrot >> 3) & 0x1FFE] << 2) * shell->speed >> (W2V_SHIFT + 1);
+        shell->pos.y_pos += shell->fallspeed;
+        shell->pos.z_pos += (rcossin_tbl[((shell->DirXrot >> 3) & 0x1FFE) + 1] << 2) * shell->speed >> (W2V_SHIFT + 1);
+        floor = GetFloor(shell->pos.x_pos, shell->pos.y_pos, shell->pos.z_pos, &shell->room_number);
+        if (room[shell->room_number].flags & ROOM_UNDERWATER && !(room[oroom].flags & ROOM_UNDERWATER)) {
+            TriggerSmallSplash(shell->pos.x_pos, room[shell->room_number].maxceiling, shell->pos.z_pos, 8);
+            SetupRipple(shell->pos.x_pos, room[shell->room_number].maxceiling, shell->pos.z_pos, (GetRandomControl() & 3) + 8, 2);
+            shell->fallspeed >>= 5;
+            continue;
+        }
+        c = GetCeiling(floor, shell->pos.x_pos, shell->pos.y_pos, shell->pos.z_pos);
+        if (shell->pos.y_pos < c) {
+            SoundEffect(SFX_LARA_SHOTGUN_SHELL, &shell->pos, SFX_DEFAULT);
+            shell->speed -= 4;
+            if (shell->speed < 8) {
+                shell->counter = 0;
+                continue;
+            }
+            shell->pos.y_pos = c;
+            shell->fallspeed = -shell->fallspeed;
+        }
+        h = GetHeight(floor, shell->pos.x_pos, shell->pos.y_pos, shell->pos.z_pos);
+        if (shell->pos.y_pos >= h) {
+            SoundEffect(SFX_LARA_SHOTGUN_SHELL, &shell->pos, SFX_DEFAULT);
+            shell->speed -= 8;
+            if (shell->speed < 8) {
+                shell->counter = 0;
+                continue;
+            }
+            if (oy > h) {
+                shell->DirXrot += 0x8000;
+                shell->pos.x_pos = ox;
+                shell->pos.z_pos = oz;
+            } else
+                shell->fallspeed = -shell->fallspeed >> 1;
+            shell->pos.y_pos = oy;
+        }
+    }
+}
+
 void DrawGunshells(void)
 {
     GUNSHELL_STRUCT *p;
