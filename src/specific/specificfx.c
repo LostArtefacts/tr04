@@ -32,6 +32,11 @@ sint8 flare_table[121] = {
     -1
 };
 
+uint8 SplashLinks[32] = {
+    16, 18, 0, 2, 18, 20, 2, 4, 20, 22, 4, 6, 22, 24, 6, 8, 24, 26, 8, 10, 26, 28, 10, 12, 28, 30, 12, 14,
+    30, 16, 14, 0
+};
+
 sint32 ShadowTable[42] = {
     4, 1, 5, 5, 1, 6, 6, 1, 2, 6, 2, 7, 8, 4, 9, 9, 4, 5, 9, 5, 10, 10, 5, 6, 10, 6, 11, 11, 6, 7,
     13, 8, 9, 13, 9, 14, 14, 9, 10, 14, 10, 11
@@ -465,6 +470,294 @@ void DrawBubbles(void)
         bubble++;
     }
     phd_PopMatrix();
+}
+
+void S_DrawSplashes(void)
+{
+    SPLASH_STRUCT *splash;
+    RIPPLE_STRUCT *ripple;
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    uint8 *links;
+    uint32 c0, c1;
+    float u1, v1, u2, v2;
+    sint32 i, j, k, x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4, linkNum, size;
+    sint16 r, g, b;
+    sint32 rads[6];
+    sint32 yVals[6];
+
+    offsets = (sint16 *)&scratchpad[768];
+    splash = splashes;
+    for (i = 0; i < 4; i++) {
+        if (!(splash->flags & 1)) {
+            splash++;
+            continue;
+        }
+        phd_PushMatrix();
+        phd_TranslateAbs(splash->x, splash->y, splash->z);
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[256];
+        rads[0] = splash->InnerRad;
+        rads[1] = splash->InnerRad + splash->InnerSize;
+        rads[2] = splash->MiddleRad;
+        rads[3] = splash->MiddleRad + splash->MiddleSize;
+        rads[4] = splash->OuterRad;
+        rads[5] = splash->OuterRad + splash->OuterSize;
+        yVals[0] = 0;
+        yVals[1] = splash->InnerY;
+        yVals[2] = 0;
+        yVals[3] = splash->MiddleY;
+        yVals[4] = 0;
+        yVals[5] = 0;
+        for (j = 0; j < 6; j++) {
+            for (k = 0; k < 0x10000; k += 0x2000) {
+                offsets[0] = ((rcossin_tbl[(k >> 3) & 0x1FFE] << 2) * rads[j]) >> (W2V_SHIFT - 1);
+                offsets[1] = yVals[j] >> 3;
+                offsets[2] = ((rcossin_tbl[((k >> 3) & 0x1FFE) + 1] << 2) * rads[j]) >> (W2V_SHIFT - 1);
+                XY[0] = (sint16)((phd_mxptr[M00] * offsets[0] + phd_mxptr[M01] * offsets[1] + phd_mxptr[M02] * offsets[2] + phd_mxptr[M03]) >> W2V_SHIFT);
+                XY[1] = (sint16)((phd_mxptr[M10] * offsets[0] + phd_mxptr[M11] * offsets[1] + phd_mxptr[M12] * offsets[2] + phd_mxptr[M13]) >> W2V_SHIFT);
+                Z[0] = (phd_mxptr[M20] * offsets[0] + phd_mxptr[M21] * offsets[1] + phd_mxptr[M22] * offsets[2] + phd_mxptr[M23]) >> W2V_SHIFT;
+                XY += 2;
+                Z += 2;
+            }
+        }
+        phd_PopMatrix();
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[256];
+        for (j = 0; j < 3; j++) {
+            if (j == 2 || (!j && splash->flags & 4) || (j == 1 && splash->flags & 8))
+                sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 4 + ((wibble >> 4) & 3)];
+            else
+                sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 8];
+            links = SplashLinks;
+            linkNum = j << 5;
+            for (k = 0; k < 8; k++) {
+                x1 = XY[links[0] + linkNum];
+                y1 = XY[links[0] + linkNum + 1];
+                z1 = Z[links[0] + linkNum];
+                links++;
+                x2 = XY[links[0] + linkNum];
+                y2 = XY[links[0] + linkNum + 1];
+                z2 = Z[links[0] + linkNum];
+                links++;
+                x3 = XY[links[0] + linkNum];
+                y3 = XY[links[0] + linkNum + 1];
+                z3 = Z[links[0] + linkNum];
+                links++;
+                x4 = XY[links[0] + linkNum];
+                y4 = XY[links[0] + linkNum + 1];
+                z4 = Z[links[0] + linkNum];
+                links++;
+                setXYZ4(v, x1, y1, z1, x2, y2, z2, x4, y4, z4, x3, y3, z3, clipflags);
+                r = splash->life << 1;
+                g = splash->life << 1;
+                b = splash->life << 1;
+                if (r > 255)
+                    r = 255;
+                if (g > 255)
+                    g = 255;
+                if (b > 255)
+                    b = 255;
+                c0 = RGBA(r, g, b, 0xFF);
+                r = (splash->life - (splash->life >> 2)) << 1;
+                g = (splash->life - (splash->life >> 2)) << 1;
+                b = (splash->life - (splash->life >> 2)) << 1;
+                if (r > 255)
+                    r = 255;
+                if (g > 255)
+                    g = 255;
+                if (b > 255)
+                    b = 255;
+                c1 = RGBA(r, g, b, 0xFF);
+                v[0].color = c0;
+                v[1].color = c0;
+                v[2].color = c1;
+                v[3].color = c1;
+                v[0].specular = 0xFF000000;
+                v[1].specular = 0xFF000000;
+                v[2].specular = 0xFF000000;
+                v[3].specular = 0xFF000000;
+                u1 = sprite->x1;
+                u2 = sprite->x2;
+                v1 = sprite->y1;
+                v2 = sprite->y2;
+                tex.drawtype = 2;
+                tex.flag = 0;
+                tex.tpage = sprite->tpage;
+                tex.u1 = u1;
+                tex.v1 = v1;
+                tex.u2 = u2;
+                tex.v2 = v1;
+                tex.v3 = v2;
+                tex.u3 = u2;
+                tex.u4 = u1;
+                tex.v4 = v2;
+                AddQuadSorted(v, 0, 1, 2, 3, &tex, 1);
+            }
+        }
+        splash++;
+    }
+    ripple = ripples;
+    for (i = 0; i < 16; i++, ripple++) {
+        if (!(ripple->flags & 1))
+            continue;
+        size = ripple->size;
+        phd_PushMatrix();
+        phd_TranslateAbs(ripple->x, ripple->y, ripple->z);
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[256];
+        offsets[0] = -size;
+        offsets[1] = 0;
+        offsets[2] = -size;
+        *XY++ = (sint16)((phd_mxptr[M00] * offsets[0] + phd_mxptr[M01] * offsets[1] + phd_mxptr[M02] * offsets[2] + phd_mxptr[M03]) >> W2V_SHIFT);
+        *XY++ = (sint16)((phd_mxptr[M10] * offsets[0] + phd_mxptr[M11] * offsets[1] + phd_mxptr[M12] * offsets[2] + phd_mxptr[M13]) >> W2V_SHIFT);
+        *Z++ = (phd_mxptr[M20] * offsets[0] + phd_mxptr[M21] * offsets[1] + phd_mxptr[M22] * offsets[2] + phd_mxptr[M23]) >> W2V_SHIFT;
+        Z++;
+        offsets[0] = -size;
+        offsets[1] = 0;
+        offsets[2] = size;
+        *XY++ = (sint16)((phd_mxptr[M00] * offsets[0] + phd_mxptr[M01] * offsets[1] + phd_mxptr[M02] * offsets[2] + phd_mxptr[M03]) >> W2V_SHIFT);
+        *XY++ = (sint16)((phd_mxptr[M10] * offsets[0] + phd_mxptr[M11] * offsets[1] + phd_mxptr[M12] * offsets[2] + phd_mxptr[M13]) >> W2V_SHIFT);
+        *Z++ = (phd_mxptr[M20] * offsets[0] + phd_mxptr[M21] * offsets[1] + phd_mxptr[M22] * offsets[2] + phd_mxptr[M23]) >> W2V_SHIFT;
+        Z++;
+        offsets[0] = size;
+        offsets[1] = 0;
+        offsets[2] = size;
+        *XY++ = (sint16)((phd_mxptr[M00] * offsets[0] + phd_mxptr[M01] * offsets[1] + phd_mxptr[M02] * offsets[2] + phd_mxptr[M03]) >> W2V_SHIFT);
+        *XY++ = (sint16)((phd_mxptr[M10] * offsets[0] + phd_mxptr[M11] * offsets[1] + phd_mxptr[M12] * offsets[2] + phd_mxptr[M13]) >> W2V_SHIFT);
+        *Z++ = (phd_mxptr[M20] * offsets[0] + phd_mxptr[M21] * offsets[1] + phd_mxptr[M22] * offsets[2] + phd_mxptr[M23]) >> W2V_SHIFT;
+        Z++;
+        offsets[0] = size;
+        offsets[1] = 0;
+        offsets[2] = -size;
+        *XY++ = (sint16)((phd_mxptr[M00] * offsets[0] + phd_mxptr[M01] * offsets[1] + phd_mxptr[M02] * offsets[2] + phd_mxptr[M03]) >> W2V_SHIFT);
+        *XY++ = (sint16)((phd_mxptr[M10] * offsets[0] + phd_mxptr[M11] * offsets[1] + phd_mxptr[M12] * offsets[2] + phd_mxptr[M13]) >> W2V_SHIFT);
+        *Z++ = (phd_mxptr[M20] * offsets[0] + phd_mxptr[M21] * offsets[1] + phd_mxptr[M22] * offsets[2] + phd_mxptr[M23]) >> W2V_SHIFT;
+        Z++;
+        phd_PopMatrix();
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[256];
+        if (ripple->flags & 0x20)
+            sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index];
+        else
+            sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 9];
+        x1 = *XY++;
+        y1 = *XY++;
+        z1 = *Z++;
+        Z++;
+        x2 = *XY++;
+        y2 = *XY++;
+        z2 = *Z++;
+        Z++;
+        x3 = *XY++;
+        y3 = *XY++;
+        z3 = *Z++;
+        Z++;
+        x4 = *XY++;
+        y4 = *XY++;
+        z4 = *Z++;
+        Z++;
+        setXYZ4(v, x1, y1, z1, x2, y2, z2, x3, y3, z3, x4, y4, z4, clipflags);
+        if (ripple->flags & 0x10) {
+            if (ripple->flags & 0x20) {
+                if (ripple->init) {
+                    r = (ripple->init >> 1) * 2;
+                    g = 0;
+                    b = (ripple->init >> 4) * 2;
+                    if (r > 255)
+                        r = 255;
+                    if (b > 255)
+                        b = 255;
+                    c0 = RGBA(r, g, b, 0xFF);
+                } else {
+                    r = (ripple->life >> 1) * 2;
+                    g = 0;
+                    b = (ripple->life >> 4) * 2;
+                    if (r > 255)
+                        r = 255;
+                    if (b > 255)
+                        b = 255;
+                    c0 = RGBA(r, g, b, 0xFF);
+                }
+            } else {
+                if (ripple->init) {
+                    r = ripple->init << 1;
+                    g = ripple->init << 1;
+                    b = ripple->init << 1;
+                    if (r > 255)
+                        r = 255;
+                    if (g > 255)
+                        g = 255;
+                    if (b > 255)
+                        b = 255;
+                    c0 = RGBA(r, g, b, 0xFF);
+                } else {
+                    r = ripple->life << 1;
+                    g = ripple->life << 1;
+                    b = ripple->life << 1;
+                    if (r > 255)
+                        r = 255;
+                    if (g > 255)
+                        g = 255;
+                    if (b > 255)
+                        b = 255;
+                    c0 = RGBA(r, g, b, 0xFF);
+                }
+            }
+        } else {
+            if (ripple->init) {
+                r = ripple->init << 2;
+                g = ripple->init << 2;
+                b = ripple->init << 2;
+                if (r > 255)
+                    r = 255;
+                if (g > 255)
+                    g = 255;
+                if (b > 255)
+                    b = 255;
+                c0 = RGBA(r, g, b, 0xFF);
+            } else {
+                r = ripple->life << 2;
+                g = ripple->life << 2;
+                b = ripple->life << 2;
+                if (r > 255)
+                    r = 255;
+                if (g > 255)
+                    g = 255;
+                if (b > 255)
+                    b = 255;
+                c0 = RGBA(r, g, b, 0xFF);
+            }
+        }
+        v[0].color = c0;
+        v[1].color = c0;
+        v[2].color = c0;
+        v[3].color = c0;
+        v[0].specular = 0xFF000000;
+        v[1].specular = 0xFF000000;
+        v[2].specular = 0xFF000000;
+        v[3].specular = 0xFF000000;
+        u1 = sprite->x1;
+        u2 = sprite->x2;
+        v1 = sprite->y1;
+        v2 = sprite->y2;
+        tex.drawtype = 2;
+        tex.flag = 0;
+        tex.tpage = sprite->tpage;
+        tex.u1 = u1;
+        tex.v1 = v1;
+        tex.u2 = u2;
+        tex.v2 = v1;
+        tex.v3 = v2;
+        tex.u3 = u2;
+        tex.u4 = u1;
+        tex.v4 = v2;
+        AddQuadSorted(v, 0, 1, 2, 3, &tex, 1);
+    }
 }
 
 void S_DrawFireSparks(sint16 size, sint32 life)
