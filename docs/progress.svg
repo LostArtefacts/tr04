@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="265.12" height="12" x="0" y="0" class="named"><title>1200 · 77.52%</title></rect>
-<rect width="0.66" height="12" x="265.12" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.23" height="12" x="265.78" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
-<rect width="39.99" height="12" x="302.01" y="0" class="todo"><title>181 · 11.69%</title></rect>
+<rect width="265.34" height="12" x="0" y="0" class="named"><title>1201 · 77.58%</title></rect>
+<rect width="0.66" height="12" x="265.34" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="36.23" height="12" x="266" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
+<rect width="39.77" height="12" x="302.23" y="0" class="todo"><title>180 · 11.63%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">77.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1200</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">181</tspan></text>
+<text text-anchor="end" x="522" y="7.50">77.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1201</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">180</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="177.97" height="12" x="0" y="0" class="named"><title>325 KB · 52.04%</title></rect>
-<rect width="0.13" height="12" x="177.97" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.13" height="12" x="178.10" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
-<rect width="46.77" height="12" x="295.23" y="0" class="todo"><title>85 KB · 13.68%</title></rect>
+<rect width="178" height="12" x="0" y="0" class="named"><title>325 KB · 52.05%</title></rect>
+<rect width="0.13" height="12" x="178" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="117.13" height="12" x="178.13" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
+<rect width="46.74" height="12" x="295.26" y="0" class="todo"><title>85 KB · 13.67%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">85 KB</tspan></text>
@@ -1284,7 +1284,7 @@
 <rect width="12" height="12" x="225" y="360" class="todo"><title>0x00476ac0 HWBeginScene (74 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="360" class="named"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="360" class="todo"><title>0x00476b30 HWInitialise (833 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="360" class="todo"><title>0x00476e80 SetFogColor (51 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="360" class="named"><title>0x00476e80 SetFogColor (51 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="360" class="named"><title>0x00476ec0 GameMain (210 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="360" class="named"><title>0x00476fa0 GameInitialise (287 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="360" class="named"><title>0x004770c0 GameClose (189 bytes)</title></rect>
@@ -2890,7 +2890,7 @@
 <rect width="4.63" height="4.23" x="640.33" y="457.77" class="named"><title>0x004273e0 lara_as_pickup (51 bytes)</title></rect>
 <rect width="4.46" height="4.38" x="647.96" y="362.91" class="named"><title>0x004274c0 lara_as_usekey (51 bytes)</title></rect>
 <rect width="4.46" height="4.38" x="655.42" y="362.91" class="named"><title>0x0045a470 SaveHubData (51 bytes)</title></rect>
-<rect width="4.46" height="4.38" x="662.88" y="362.91" class="todo"><title>0x00476e80 SetFogColor (51 bytes)</title></rect>
+<rect width="4.46" height="4.38" x="662.88" y="362.91" class="named"><title>0x00476e80 SetFogColor (51 bytes)</title></rect>
 <rect width="4.38" height="4.38" x="670.35" y="362.91" class="named"><title>0x00422350 GetLaraCollisionInfo (50 bytes)</title></rect>
 <rect width="4.38" height="4.38" x="677.73" y="362.91" class="named"><title>0x0046d4d0 special3_end (50 bytes)</title></rect>
 <rect width="4.29" height="4.38" x="685.10" y="362.91" class="named"><title>0x00457610 AnimatingPickUp (49 bytes)</title></rect>

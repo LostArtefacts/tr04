@@ -32,3 +32,12 @@ HRESULT HWEndScene(void)
     App.dx.InScene = 0;
     return IDirect3DDevice3_EndScene(App.dx.lpD3DDevice);
 }
+
+void SetFogColor(sint32 r, sint32 g, sint32 b)
+{
+    sint32 c;
+
+    c = (r << 16) | (g << 8) | b | 0xFF000000;
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_FOGCOLOR, c);
+    CurrentFog = c;
+}
