@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.29" height="12" x="0" y="0" class="named"><title>1190 · 76.87%</title></rect>
 <rect width="0.65" height="12" x="258.29" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="29.30" height="12" x="258.95" y="0" class="nonmatching"><title>135 · 8.72%</title></rect>
-<rect width="47.75" height="12" x="288.25" y="0" class="todo"><title>220 · 14.21%</title></rect>
+<rect width="29.52" height="12" x="258.95" y="0" class="nonmatching"><title>136 · 8.79%</title></rect>
+<rect width="47.53" height="12" x="288.47" y="0" class="todo"><title>219 · 14.15%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1190</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">135</tspan> · <tspan class="todo">220</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1190</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">136</tspan> · <tspan class="todo">219</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="167.36" height="12" x="0" y="0" class="named"><title>311 KB · 49.81%</title></rect>
 <rect width="0.13" height="12" x="167.36" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="87.22" height="12" x="167.49" y="0" class="nonmatching"><title>162 KB · 25.96%</title></rect>
-<rect width="81.29" height="12" x="254.71" y="0" class="todo"><title>151 KB · 24.19%</title></rect>
+<rect width="87.81" height="12" x="167.49" y="0" class="nonmatching"><title>163 KB · 26.13%</title></rect>
+<rect width="80.71" height="12" x="255.29" y="0" class="todo"><title>150 KB · 24.02%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">311 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">162 KB</tspan> · <tspan class="todo">151 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">311 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">163 KB</tspan> · <tspan class="todo">150 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1399,7 +1399,7 @@
 <rect width="12" height="12" x="450" y="390" class="named"><title>0x004853f0 SaveSettings (527 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="390" class="named"><title>0x00485600 setXY4 (474 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="390" class="named"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="390" class="todo"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="390" class="nonmatching"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="390" class="todo"><title>0x00485d90 setXYZ3 (820 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="390" class="todo"><title>0x004860d0 DrawBubbles (853 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="390" class="todo"><title>0x00486430 S_DrawSplashes (2461 bytes)</title></rect>
@@ -1751,7 +1751,7 @@
 <rect width="20.86" height="20.39" x="260.66" y="168.04" class="todo"><title>0x00487260 S_DrawSmokeSparks (1108 bytes)</title></rect>
 <rect width="20.86" height="20.27" x="260.66" y="191.42" class="nonmatching"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
 <rect width="20.86" height="20.22" x="260.66" y="214.70" class="nonmatching"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
-<rect width="20.86" height="19.94" x="260.66" y="237.92" class="todo"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
+<rect width="20.86" height="19.94" x="260.66" y="237.92" class="nonmatching"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
 <rect width="20.86" height="19.83" x="260.66" y="260.86" class="named"><title>0x0048eff0 WinProcessCommands (1078 bytes)</title></rect>
 <rect width="20.86" height="19.81" x="260.66" y="283.69" class="nonmatching"><title>0x00435130 TriggerFireFlame (1077 bytes)</title></rect>
 <rect width="20.86" height="19.76" x="260.66" y="306.51" class="todo"><title>0x00487d00 DrawBinoculars (1074 bytes)</title></rect>
