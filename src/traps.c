@@ -810,6 +810,34 @@ void RollingBallCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
         ObjectCollision(item_number, l, coll);
 }
 
+void ControlJobySpike(sint16 item_number)
+{
+    ITEM_INFO *item;
+    sint16 *frm[2];
+    sint32 rate, y;
+
+    item = &items[item_number];
+    if (TriggerActive(item)) {
+        SoundEffect(SFX_METAL_SCRAPE_LOOP, &item->pos, SFX_DEFAULT);
+        GetFrames(lara_item, frm, &rate);
+        y = lara_item->pos.y_pos + frm[0][2];
+        rate = 3328 * item->item_flags[1] >> 12;
+        if (lara_item->hit_points > 0 && item->pos.y_pos + rate > y && abs(item->pos.x_pos - lara_item->pos.x_pos) < 512 && abs(item->pos.z_pos - lara_item->pos.z_pos) < 512) {
+            rate += item->pos.y_pos - y;
+            DoBloodSplat(lara_item->pos.x_pos + (GetRandomControl() & 0x7F) - 64, GetRandomControl() % rate + y, lara_item->pos.z_pos + (GetRandomControl() & 0x7F) - 64, (GetRandomControl() & 3) + 2, (sint16)(2 * GetRandomControl()), item->room_number);
+            lara_item->hit_points -= 8;
+        }
+        if (!item->item_flags[2]) {
+            if (item->item_flags[0] < 4096)
+                item->item_flags[0] += (item->item_flags[0] >> 6) + 2;
+        } else if (item->item_flags[0] > -4096)
+            item->item_flags[0] += (item->item_flags[0] >> 6) - 2;
+        if (item->item_flags[1] < item->item_flags[3])
+            item->item_flags[1] += 3;
+        item->pos.y_rot += item->item_flags[0];
+    }
+}
+
 void DrawScaledSpike(ITEM_INFO *item)
 {
     PHD_VECTOR scale;

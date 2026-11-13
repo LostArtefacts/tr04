@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="324.94" height="12" x="0" y="0" class="named"><title>1215 · 78.49%</title></rect>
-<rect width="51.08" height="12" x="324.94" y="0" class="nonmatching"><title>191 · 12.34%</title></rect>
-<rect width="37.98" height="12" x="376.02" y="0" class="todo"><title>142 · 9.17%</title></rect>
+<rect width="325.21" height="12" x="0" y="0" class="named"><title>1216 · 78.55%</title></rect>
+<rect width="51.08" height="12" x="325.21" y="0" class="nonmatching"><title>191 · 12.34%</title></rect>
+<rect width="37.71" height="12" x="376.29" y="0" class="todo"><title>141 · 9.11%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">78.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1215</tspan> · <tspan class="nonmatching">191</tspan> · <tspan class="todo">142</tspan></text>
+<text text-anchor="end" x="594" y="7.50">78.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1216</tspan> · <tspan class="nonmatching">191</tspan> · <tspan class="todo">141</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="217.61" height="12" x="0" y="0" class="named"><title>329 KB · 52.56%</title></rect>
-<rect width="145.44" height="12" x="217.61" y="0" class="nonmatching"><title>220 KB · 35.13%</title></rect>
-<rect width="50.95" height="12" x="363.05" y="0" class="todo"><title>77 KB · 12.31%</title></rect>
+<rect width="217.87" height="12" x="0" y="0" class="named"><title>329 KB · 52.62%</title></rect>
+<rect width="145.44" height="12" x="217.87" y="0" class="nonmatching"><title>220 KB · 35.13%</title></rect>
+<rect width="50.69" height="12" x="363.31" y="0" class="todo"><title>77 KB · 12.24%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">220 KB</tspan> · <tspan class="todo">77 KB</tspan></text>
@@ -206,7 +206,7 @@
 <rect width="12" height="12" x="585" y="30" class="named"><title>0x00414f30 LavaBurn (108 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="30" class="nonmatching"><title>0x00414fa0 ControlRollingBall (1753 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="30" class="named"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="30" class="todo"><title>0x00415750 ControlJobySpike (389 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="30" class="named"><title>0x00415750 ControlJobySpike (389 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="30" class="named"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="30" class="named"><title>0x00415ad0 TwoBlockPlatformFloor (74 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="30" class="named"><title>0x00415b20 TwoBlockPlatformCeiling (59 bytes)</title></rect>
@@ -2075,7 +2075,7 @@
 <rect width="12.44" height="12.03" x="414.03" y="360.02" class="named"><title>0x00456780 TriggerRopeFlame (390 bytes)</title></rect>
 <rect width="12.44" height="12" x="414.03" y="375.05" class="named"><title>0x00410220 TriggerSethFlame (389 bytes)</title></rect>
 <rect width="12.44" height="12" x="414.03" y="390.04" class="named"><title>0x004139f0 CeilingTrapDoorCollision (389 bytes)</title></rect>
-<rect width="12.44" height="12" x="414.03" y="405.04" class="todo"><title>0x00415750 ControlJobySpike (389 bytes)</title></rect>
+<rect width="12.44" height="12" x="414.03" y="405.04" class="named"><title>0x00415750 ControlJobySpike (389 bytes)</title></rect>
 <rect width="12.44" height="12" x="414.03" y="420.04" class="todo"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
 <rect width="12.44" height="12" x="414.03" y="435.04" class="named"><title>0x0046e340 ACMHandleNotifications (389 bytes)</title></rect>
 <rect width="12.44" height="11.97" x="414.03" y="450.03" class="nonmatching"><title>0x00480570 RenderLoadPic (388 bytes)</title></rect>
