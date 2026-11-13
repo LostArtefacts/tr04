@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="376.16" height="12" x="0" y="0" class="named"><title>1262 · 81.42%</title></rect>
-<rect width="85.84" height="12" x="376.16" y="0" class="nonmatching"><title>288 · 18.58%</title></rect>
+<rect width="376.46" height="12" x="0" y="0" class="named"><title>1263 · 81.48%</title></rect>
+<rect width="85.54" height="12" x="376.46" y="0" class="nonmatching"><title>287 · 18.52%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">81.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1262</tspan> · <tspan class="nonmatching">288</tspan></text>
+<text text-anchor="end" x="642" y="7.50">81.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1263</tspan> · <tspan class="nonmatching">287</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="252.19" height="12" x="0" y="0" class="named"><title>341 KB · 54.59%</title></rect>
-<rect width="209.81" height="12" x="252.19" y="0" class="nonmatching"><title>284 KB · 45.41%</title></rect>
+<rect width="252.35" height="12" x="0" y="0" class="named"><title>342 KB · 54.62%</title></rect>
+<rect width="209.65" height="12" x="252.35" y="0" class="nonmatching"><title>284 KB · 45.38%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">54.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">284 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">342 KB</tspan> · <tspan class="nonmatching">284 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1333,7 +1333,7 @@
 <rect width="12" height="12" x="270" y="375" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="375" class="nonmatching"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="375" class="nonmatching"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="375" class="nonmatching"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="375" class="named"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="375" class="nonmatching"><title>0x0047d900 PrelightVerts (340 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="375" class="nonmatching"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="375" class="nonmatching"><title>0x0047e8b0 phd_PutPolygonsPickup (3437 bytes)</title></rect>
@@ -2285,7 +2285,7 @@
 <rect width="9.51" height="9.23" x="483.41" y="309.43" class="named"><title>0x0043b330 TriggerLightningGlow (229 bytes)</title></rect>
 <rect width="9.51" height="9.23" x="483.41" y="321.66" class="named"><title>0x0048e8d0 ClearSurfaces (229 bytes)</title></rect>
 <rect width="9.51" height="9.19" x="483.41" y="333.89" class="named"><title>0x004706b0 InitDDDevice (228 bytes)</title></rect>
-<rect width="9.51" height="9.15" x="483.41" y="346.08" class="nonmatching"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
+<rect width="9.51" height="9.15" x="483.41" y="346.08" class="named"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
 <rect width="9.51" height="9.03" x="483.41" y="358.22" class="named"><title>0x00425550 lara_col_forwardjump (224 bytes)</title></rect>
 <rect width="9.51" height="8.95" x="483.41" y="370.25" class="named"><title>0x0043b630 DrawWeaponMissile (222 bytes)</title></rect>
 <rect width="9.51" height="8.95" x="483.41" y="382.20" class="nonmatching"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>

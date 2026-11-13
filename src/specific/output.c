@@ -116,6 +116,36 @@ void SkinVerticesToScratch(sint32 node)
     }
 }
 
+#ifndef FEAT_C_ASM
+void CalcVertsColorSplitMMX(sint32 nVerts, D3DTLVERTEX *v)
+{
+    D3DTLVERTEX *waterVtx;
+    sint16 r, g, b;
+    sint32 i;
+
+    if (bWaterEffect && !(room[current_item->room_number].flags & ROOM_UNDERWATER)) {
+        waterVtx = v;
+        for (i = 0; i < nVerts; i++, waterVtx++) {
+            r = (sint16)(water_color_R * CLRR(waterVtx->color)) >> 8;
+            g = (sint16)(water_color_G * CLRG(waterVtx->color)) >> 8;
+            b = (sint16)(water_color_B * CLRB(waterVtx->color)) >> 8;
+            waterVtx->color = (waterVtx->color & 0xFF000000) | RGBONLY(r, g, b);
+        }
+    }
+    if (App.mmx) {
+        for (i = 0; i < nVerts; i++, v++) {
+            CalcColorSplitMMX(v->color, &v->color);
+        }
+        __asm {
+            emms
+        }
+    } else {
+        for (i = 0; i < nVerts; i++, v++) {
+            CalcColorSplit(v->color, &v->color);
+        }
+    }
+}
+#else
 void CalcVertsColorSplitMMX(sint32 nVerts, D3DTLVERTEX *v)
 {
     D3DTLVERTEX *waterVtx;
@@ -141,6 +171,7 @@ void CalcVertsColorSplitMMX(sint32 nVerts, D3DTLVERTEX *v)
         }
     }
 }
+#endif
 
 void PrelightVerts(sint32 nVerts, D3DTLVERTEX *v, MESH_DATA *mesh)
 {
