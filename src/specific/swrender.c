@@ -1043,6 +1043,197 @@ sint16 SW_RoundW(double d)
     return -32768;
 }
 
+sint32 SW_TriSetupGT(void *p0, void *p1, void *p2)
+{
+    SW_VERTEX *v0, *v1, *v2, *t, *n;
+    SW_SPAN *span;
+    double a, b, inv, d01, d02, g, h;
+    float f;
+    uint32 sy, c, xa, xb, x;
+    sint32 na, nb;
+
+    v0 = (SW_VERTEX *)p0;
+    v1 = (SW_VERTEX *)p1;
+    v2 = (SW_VERTEX *)p2;
+    SW_TriV0 = v0;
+    a = (double)v0->sx - v1->sx;
+    b = (double)v0->sy - v2->sy;
+    SW_TriTDX01 = (float)a;
+    SW_TriTDY02 = (float)b;
+    g = a * b;
+    a = (double)v0->sx - v2->sx;
+    b = (double)v0->sy - v1->sy;
+    SW_TriTDX02 = (float)a;
+    SW_TriTDY01 = (float)b;
+    g -= a * b;
+    SW_TriTTemp = (float)g;
+    inv = 1.0;
+    if (*(uint32 *)&SW_TriTTemp & 0x80000000) {
+        t = v1;
+        v1 = v2;
+        v2 = t;
+        inv = -1.0;
+        f = SW_TriTDX01;
+        SW_TriTDX01 = SW_TriTDX02;
+        SW_TriTDX02 = f;
+        f = SW_TriTDY01;
+        SW_TriTDY01 = SW_TriTDY02;
+        SW_TriTDY02 = f;
+    }
+    inv /= g;
+    *(SW_VERTEX **)&v0->sz = v1;
+    *(SW_VERTEX **)&v1->sz = v2;
+    *(SW_VERTEX **)&v2->sz = v0;
+    *(SW_VERTEX **)&v0->specular = v2;
+    *(SW_VERTEX **)&v1->specular = v0;
+    *(SW_VERTEX **)&v2->specular = v1;
+    t = v0;
+    sy = *(uint32 *)&v0->sy;
+    if (sy >= *(uint32 *)&v1->sy) {
+        sy = *(uint32 *)&v1->sy;
+        t = v1;
+    }
+    if (sy >= *(uint32 *)&v2->sy)
+        t = v2;
+    SW_TriTEdgeA = t;
+    SW_TriTEdgeB = t;
+    SW_TriColor0 = v0->color;
+    c = v0->color;
+    SW_TriTG0 = (c & 0xFF00) + 0x80;
+    SW_TriTB0 = ((c << 8) & 0xFF00) + 0x80;
+    SW_TriTR0 = ((c >> 8) & 0xFF00) + 0x80;
+    c = v1->color;
+    SW_TriTG1 = (c & 0xFF00) + 0x80;
+    SW_TriTB1 = ((c << 8) & 0xFF00) + 0x80;
+    SW_TriTR1 = ((c >> 8) & 0xFF00) + 0x80;
+    c = v2->color;
+    SW_TriTG2 = (c & 0xFF00) + 0x80;
+    SW_TriTB2 = ((c << 8) & 0xFF00) + 0x80;
+    SW_TriTR2 = ((c >> 8) & 0xFF00) + 0x80;
+    d01 = (double)SW_TriTR0 - SW_TriTR1;
+    d02 = (double)SW_TriTR0 - SW_TriTR2;
+    SW_TriTD01 = (float)d01;
+    SW_TriTD02 = (float)d02;
+    g = (d01 * *(volatile float *)&SW_TriTDY02 - d02 * *(volatile float *)&SW_TriTDY01) * inv;
+    SW_SpanGrad[2] = SW_RoundW(g);
+    SW_TriTRDX = (float)g;
+    h = (*(volatile float *)&SW_TriTD02 * *(volatile float *)&SW_TriTDX01 - *(volatile float *)&SW_TriTD01 * *(volatile float *)&SW_TriTDX02) * inv;
+    SW_TriTRDY = (float)h;
+    SW_TriTROff = ((double)SW_TriTR0 + 12582912.0) - (v0->sy * h + v0->sx * *(volatile float *)&SW_TriTRDX);
+    d01 = (double)SW_TriTG0 - SW_TriTG1;
+    d02 = (double)SW_TriTG0 - SW_TriTG2;
+    SW_TriTD01 = (float)d01;
+    SW_TriTD02 = (float)d02;
+    g = (d01 * *(volatile float *)&SW_TriTDY02 - d02 * *(volatile float *)&SW_TriTDY01) * inv;
+    SW_SpanGrad[1] = SW_RoundW(g);
+    SW_TriTGDX = (float)g;
+    h = (*(volatile float *)&SW_TriTD02 * *(volatile float *)&SW_TriTDX01 - *(volatile float *)&SW_TriTD01 * *(volatile float *)&SW_TriTDX02) * inv;
+    SW_TriTGDY = (float)h;
+    SW_TriTGOff = ((double)SW_TriTG0 + 12582912.0) - (v0->sy * h + v0->sx * *(volatile float *)&SW_TriTGDX);
+    d01 = (double)SW_TriTB0 - SW_TriTB1;
+    d02 = (double)SW_TriTB0 - SW_TriTB2;
+    SW_TriTD01 = (float)d01;
+    SW_TriTD02 = (float)d02;
+    g = (d01 * *(volatile float *)&SW_TriTDY02 - d02 * *(volatile float *)&SW_TriTDY01) * inv;
+    SW_SpanGrad[0] = SW_RoundW(g);
+    SW_TriTBDX = (float)g;
+    h = (*(volatile float *)&SW_TriTD02 * *(volatile float *)&SW_TriTDX01 - *(volatile float *)&SW_TriTD01 * *(volatile float *)&SW_TriTDX02) * inv;
+    SW_TriTBDY = (float)h;
+    SW_TriTBOff = ((double)SW_TriTB0 + 12582912.0) - (v0->sy * h + v0->sx * *(volatile float *)&SW_TriTBDX);
+    d01 = (double)v0->tu - v1->tu;
+    d02 = (double)v0->tu - v2->tu;
+    SW_TriTD01 = (float)d01;
+    SW_TriTD02 = (float)d02;
+    g = (d01 * *(volatile float *)&SW_TriTDY02 - d02 * *(volatile float *)&SW_TriTDY01) * inv;
+    SW_TriTUDX = (float)g;
+    h = (*(volatile float *)&SW_TriTD02 * *(volatile float *)&SW_TriTDX01 - *(volatile float *)&SW_TriTD01 * *(volatile float *)&SW_TriTDX02) * inv;
+    SW_TriTUDY = (float)h;
+    *(double *)&SW_SpanDU = g + 402653184.0;
+    SW_TriTUOff = ((double)v0->tu + 402653184.0) - (v0->sx * *(volatile float *)&SW_TriTUDX + v0->sy * *(volatile float *)&SW_TriTUDY);
+    d01 = (double)v0->tv - v1->tv;
+    d02 = (double)v0->tv - v2->tv;
+    SW_TriTD01 = (float)d01;
+    SW_TriTD02 = (float)d02;
+    g = (d01 * *(volatile float *)&SW_TriTDY02 - d02 * *(volatile float *)&SW_TriTDY01) * inv;
+    SW_TriTVDX = (float)g;
+    h = (*(volatile float *)&SW_TriTD02 * *(volatile float *)&SW_TriTDX01 - *(volatile float *)&SW_TriTD01 * *(volatile float *)&SW_TriTDX02) * inv;
+    SW_TriTVDY = (float)h;
+    *(double *)&SW_SpanDV = g + 402653184.0;
+    SW_TriTVOff = ((double)v0->tv + 402653184.0) - (v0->sx * *(volatile float *)&SW_TriTVDX + v0->sy * *(volatile float *)&SW_TriTVDY);
+    SW_TriTEdges = 3;
+    span = SW_SpanBuffer;
+    *(double *)SW_TriTY = ((double)t->sy - 0.5001F) + 6755399441055744.0;
+    SW_TriTY[0]++;
+    SW_SpanY = SW_TriTY[0];
+    na = 0;
+    nb = 0;
+    xa = 0;
+    xb = 0;
+    for (;;) {
+        if (!na) {
+            do {
+                t = SW_TriTEdgeA;
+                if (SW_TriTEdges - 1 < 0)
+                    goto done;
+                n = *(SW_VERTEX **)&t->sz;
+                SW_TriTEdges--;
+                SW_TriTEdgeA = n;
+                SW_TriTSlopeA = (float)(((double)t->sx - n->sx) / ((double)t->sy - n->sy));
+                SW_TriTXA = (float)(((double)SW_TriTY[0] - t->sy) * *(volatile float *)&SW_TriTSlopeA + t->sx);
+                *(double *)SW_TriTEndY = ((double)n->sy - 0.5001F) + 6755399441055744.0;
+                na = SW_TriTEndY[0] - SW_TriTY[0] + 1;
+            } while (!na);
+            SW_TriTStepA = SW_RoundL(*(volatile float *)&SW_TriTSlopeA * 65536.0F);
+            *(sint32 *)&SW_TriTTemp = SW_RoundL(*(volatile float *)&SW_TriTXA * 65536.0F);
+            xa = *(sint32 *)&SW_TriTTemp + 0xFFFF;
+        }
+        if (!nb) {
+            do {
+                t = SW_TriTEdgeB;
+                if (SW_TriTEdges - 1 < 0)
+                    goto done;
+                n = *(SW_VERTEX **)&t->specular;
+                SW_TriTEdges--;
+                SW_TriTEdgeB = n;
+                SW_TriTSlopeB = (float)(((double)t->sx - n->sx) / ((double)t->sy - n->sy));
+                SW_TriTXB = (float)(((double)SW_TriTY[0] - t->sy) * *(volatile float *)&SW_TriTSlopeB + t->sx);
+                *(double *)SW_TriTEndY = ((double)n->sy - 0.5001F) + 6755399441055744.0;
+                nb = SW_TriTEndY[0] - SW_TriTY[0] + 1;
+            } while (!nb);
+            SW_TriTStepB = SW_RoundL(*(volatile float *)&SW_TriTSlopeB * 65536.0F);
+            *(sint32 *)&SW_TriTTemp = SW_RoundL(*(volatile float *)&SW_TriTXB * 65536.0F);
+            xb = *(sint32 *)&SW_TriTTemp + 0xFFFF;
+        }
+        do {
+            x = xb >> 16;
+            *(sint32 *)&SW_TriTTemp = x;
+            a = (double)SW_TriTY[0];
+            b = (double)(sint32)x;
+            span->n = (xa >> 16) - x;
+            span->x = x;
+            *(double *)&span->tex[0] = (SW_TriTUDX * b + SW_TriTUDY * a) + SW_TriTUOff;
+            *(double *)&span->tex[2] = (SW_TriTVDX * b + SW_TriTVDY * a) + SW_TriTVOff;
+            SW_TriTY[0]++;
+            f = (float)((SW_TriTBDX * b + SW_TriTBDY * a) + SW_TriTBOff);
+            span->c[0] = *(uint16 *)&f;
+            SW_TriTTemp = (float)((SW_TriTGDX * b + SW_TriTGDY * a) + SW_TriTGOff);
+            f = (float)((SW_TriTRDX * b + SW_TriTRDY * a) + SW_TriTROff);
+            span->c[1] = *(uint16 *)&SW_TriTTemp;
+            span->c[2] = ((uint16 *)&f)[0];
+            span->c[3] = ((uint16 *)&f)[1];
+            span++;
+            xb += SW_TriTStepB;
+            xa += SW_TriTStepA;
+            nb--;
+            na--;
+        } while (na && nb);
+    }
+done:
+    SW_SpanEnd = span;
+    SW_SpanFunc();
+    return 0;
+}
+
 void SW_SpanG(void)
 {
     SW_SPAN *s;
