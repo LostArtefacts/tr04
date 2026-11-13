@@ -679,6 +679,161 @@ void AddQuadClippedZBuffer(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint
     }
 }
 
+void AddTriClippedZBuffer(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided)
+{
+    D3DTLVERTEX *vtx;
+    D3DTLBUMPVERTEX *p;
+    D3DTLBUMPVERTEX *bp;
+    TEXTURESTRUCT tex2;
+    sint32 *nVtx;
+    sint32 nPoints, i;
+    sint32 cb0, cb1, cb2;
+    sint32 sb0, sb1, sb2;
+    sint8 clip, clipZ;
+
+    clipZ = 0;
+    if (clipflags[v0] & clipflags[v1] & clipflags[v2])
+        return;
+    if ((clipflags[v0] | clipflags[v1] | clipflags[v2]) < 0) {
+        if (!visible_zclip(&v[v0], &v[v1], &v[v2])) {
+            if (!double_sided)
+                return;
+            v1 ^= v2;
+            v2 ^= v1;
+            v1 ^= v2;
+            if (!visible_zclip(&v[v0], &v[v1], &v[v2]))
+                return;
+            tex2.drawtype = tex->drawtype;
+            tex2.flag = tex->flag;
+            tex2.tpage = tex->tpage;
+            tex2.u1 = tex->u1;
+            tex2.v1 = tex->v1;
+            tex2.u2 = tex->u3;
+            tex2.v2 = tex->v3;
+            tex2.u3 = tex->u2;
+            tex2.v3 = tex->v2;
+            tex = &tex2;
+        }
+        clipZ = 1;
+        p = zClipperBuffer;
+    } else {
+        if (IsVisible(&v[v0], &v[v1], &v[v2])) {
+            if (!double_sided)
+                return;
+            v1 ^= v2;
+            v2 ^= v1;
+            v1 ^= v2;
+            tex2.drawtype = tex->drawtype;
+            tex2.flag = tex->flag;
+            tex2.tpage = tex->tpage;
+            tex2.u1 = tex->u1;
+            tex2.v1 = tex->v1;
+            tex2.u2 = tex->u3;
+            tex2.v2 = tex->v3;
+            tex2.u3 = tex->u2;
+            tex2.v3 = tex->v2;
+            tex = &tex2;
+        }
+        if (!(clipflags[v0] | clipflags[v1] | clipflags[v2])) {
+            FindBucket(tex->tpage, &p, &nVtx);
+            clip = 0;
+            *nVtx += 3;
+            goto backup;
+        }
+        p = XYUVClipperBuffer;
+    }
+    clip = 1;
+backup:
+    sb0 = v[v0].specular;
+    sb1 = v[v1].specular;
+    sb2 = v[v2].specular;
+    cb0 = v[v0].color;
+    cb1 = v[v1].color;
+    cb2 = v[v2].color;
+    if (App.Volumetric) {
+        OmniFog(&v[v0]);
+        OmniFog(&v[v1]);
+        OmniFog(&v[v2]);
+    }
+    bp = p;
+    vtx = &v[v0];
+    p->sx = vtx->sx;
+    p->sy = vtx->sy;
+    p->sz = vtx->sz;
+    p->rhw = vtx->rhw;
+    p->color = vtx->color;
+    p->specular = vtx->specular;
+    p->tu = tex->u1;
+    p->tv = tex->v1;
+    p->tx = vtx->tu;
+    p->ty = vtx->tv;
+    p++;
+    vtx = &v[v1];
+    p->sx = vtx->sx;
+    p->sy = vtx->sy;
+    p->sz = vtx->sz;
+    p->rhw = vtx->rhw;
+    p->color = vtx->color;
+    p->specular = vtx->specular;
+    p->tu = tex->u2;
+    p->tv = tex->v2;
+    p->tx = vtx->tu;
+    p->ty = vtx->tv;
+    p++;
+    vtx = &v[v2];
+    p->sx = vtx->sx;
+    p->sy = vtx->sy;
+    p->sz = vtx->sz;
+    p->rhw = vtx->rhw;
+    p->color = vtx->color;
+    p->specular = vtx->specular;
+    p->tu = tex->u3;
+    p->tv = tex->v3;
+    p->tx = vtx->tu;
+    p->ty = vtx->tv;
+    if (clip) {
+        nPoints = 3;
+        if (clipZ) {
+            nPoints = ZClipper(3, zClipperBuffer, XYUVClipperBuffer);
+            if (!nPoints) {
+                v[v0].specular = sb0;
+                v[v1].specular = sb1;
+                v[v2].specular = sb2;
+                v[v0].color = cb0;
+                v[v1].color = cb1;
+                v[v2].color = cb2;
+                return;
+            }
+        } else {
+            p = XYUVClipperBuffer;
+            for (i = 3; i > 0; i--, p++) {
+                p->tu = p->rhw * p->tu;
+                p->tv = p->rhw * p->tv;
+            }
+        }
+        nPoints = XYUVGClipper(nPoints, XYUVClipperBuffer);
+        if (nPoints) {
+            FindBucket(tex->tpage, &p, &nVtx);
+            *nVtx += 3 * nPoints - 6;
+            AddClippedPoly(p, nPoints, XYUVClipperBuffer, tex);
+        }
+    } else {
+        p = bp;
+        p->sz = f_a - f_boo * p->rhw;
+        p++;
+        p->sz = f_a - f_boo * p->rhw;
+        p++;
+        p->sz = f_a - f_boo * p->rhw;
+        nPolys++;
+    }
+    v[v0].specular = sb0;
+    v[v1].specular = sb1;
+    v[v2].specular = sb2;
+    v[v0].color = cb0;
+    v[v1].color = cb1;
+    v[v2].color = cb2;
+}
+
 void SubdivideEdge(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v, sint16 *c, float tu1, float tv1, float tu2, float tv2, float *tu, float *tv)
 {
     float zv;
