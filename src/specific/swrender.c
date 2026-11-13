@@ -28,6 +28,7 @@ extern sint32 SW_FrameState;
 extern sint32 SW_ColorOpScale;
 extern DDSURFACEDESC2 SW_SurfDesc;
 extern sint32 SW_NumLocked;
+extern sint32 SW_UseMMX;
 extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
@@ -225,6 +226,33 @@ sint32 SW_SetColorOpScale(sint32 scale)
 {
     SW_ColorOpScale = scale;
     return 0;
+}
+
+void SW_CopyBuffer(void *dst, void *src, sint32 width)
+{
+    if (!SW_UseMMX) {
+        __asm {
+            mov esi, src
+            mov edi, dst
+            mov ecx, width
+            rep movsd
+        }
+    } else {
+        __asm {
+            mov esi, src
+            mov edi, dst
+            mov ecx, width
+            shr ecx, 1
+        copy:
+            movq mm0, [esi]
+            add esi, 8
+            movq [edi], mm0
+            add edi, 8
+            dec ecx
+            jne copy
+            emms
+        }
+    }
 }
 
 LPVOID DBLog_MapView(HANDLE hMap)

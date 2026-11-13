@@ -2688,6 +2688,7 @@ address,size,name,symbol
 0x007e2c6c,4,SW_FrameState,_SW_FrameState
 0x007e6dd0,4,SW_SpanBuffer,_SW_SpanBuffer
 0x007e6de4,4,SW_ZLimit,_SW_ZLimit
+0x007e6de8,4,SW_UseMMX,_SW_UseMMX
 0x007e6e00,4,BinkSurfaceType,_BinkSurfaceType
 0x007e6e04,4,BinkSurface,_BinkSurface
 0x007e6e08,4,Bink,_Bink
