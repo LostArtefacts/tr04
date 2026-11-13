@@ -13,6 +13,18 @@ typedef struct {
     sint32 num2;
 } BINK_STRUCT;
 
+#ifdef TR4_EXE
+#define BinkOpenDirectSound _BinkOpenDirectSound
+#define BinkSetSoundSystem _BinkSetSoundSystem
+#define BinkOpen _BinkOpen
+#define BinkDDSurfaceType _BinkDDSurfaceType
+#define BinkDoFrame _BinkDoFrame
+#define BinkNextFrame _BinkNextFrame
+#define BinkWait _BinkWait
+#define BinkClose _BinkClose
+#define BinkCopyToBuffer _BinkCopyToBuffer
+#endif
+
 __declspec(dllimport) void *__stdcall BinkOpenDirectSound(uint32 param);
 __declspec(dllimport) sint32 __stdcall BinkSetSoundSystem(void *open, uint32 param);
 __declspec(dllimport) BINK_STRUCT *__stdcall BinkOpen(char *name, uint32 flags);

@@ -27,14 +27,14 @@
     extern _sfx_frequencies:byte
     extern _sprintf:near
     extern _thread_ended:byte
-    extern __imp__BinkClose@4:dword
-    extern __imp__BinkDDSurfaceType@4:dword
-    extern __imp__BinkDoFrame@4:dword
-    extern __imp__BinkNextFrame@4:dword
-    extern __imp__BinkOpen@8:dword
-    extern __imp__BinkOpenDirectSound@4:dword
-    extern __imp__BinkSetSoundSystem@8:dword
-    extern __imp__BinkWait@4:dword
+    extern __imp___BinkClose@4:dword
+    extern __imp___BinkDDSurfaceType@4:dword
+    extern __imp___BinkDoFrame@4:dword
+    extern __imp___BinkNextFrame@4:dword
+    extern __imp___BinkOpen@8:dword
+    extern __imp___BinkOpenDirectSound@4:dword
+    extern __imp___BinkSetSoundSystem@8:dword
+    extern __imp___BinkWait@4:dword
 
     .code
 
@@ -174,16 +174,16 @@ L49c563:
     mov ebx, 01h
 L49c57c:
     mov edx, dword ptr [_App+121]
-    mov eax, dword ptr [__imp__BinkOpenDirectSound@4]
+    mov eax, dword ptr [__imp___BinkOpenDirectSound@4]
     xor esi, esi
     push edx
     push eax
     mov dword ptr [_Bink], esi
-    call dword ptr [__imp__BinkSetSoundSystem@8]
+    call dword ptr [__imp___BinkSetSoundSystem@8]
     lea ecx, [esp+010h]
     push esi
     push ecx
-    call dword ptr [__imp__BinkOpen@8]
+    call dword ptr [__imp___BinkOpen@8]
     mov dword ptr [_Bink], eax
     mov al, byte ptr [_App+165]
     test al, 02h
@@ -193,18 +193,18 @@ L49c57c:
 L49c5bb:
     push eax
     mov dword ptr [_BinkSurface], eax
-    call dword ptr [__imp__BinkDDSurfaceType@4]
+    call dword ptr [__imp___BinkDDSurfaceType@4]
     mov dword ptr [_BinkSurfaceType], eax
     mov eax, dword ptr [_Bink]
     cmp eax, esi
     je near ptr L49c65b
     push eax
-    call dword ptr [__imp__BinkDoFrame@4]
+    call dword ptr [__imp___BinkDoFrame@4]
     call _S_UpdateInput
     mov eax, dword ptr [_Bink]
     cmp dword ptr [eax+010h], esi
     je short L49c64c
-    mov edi, dword ptr [__imp__BinkWait@4]
+    mov edi, dword ptr [__imp___BinkWait@4]
 L49c5f5:
     mov ecx, dword ptr [_input]
     test ch, 01h
@@ -213,7 +213,7 @@ L49c5f5:
     test ecx, ecx
     jne short L49c64c
     push eax
-    call dword ptr [__imp__BinkNextFrame@4]
+    call dword ptr [__imp___BinkNextFrame@4]
     mov edx, dword ptr [_Bink]
     push edx
     call edi
@@ -230,14 +230,14 @@ L49c62a:
     mov ecx, dword ptr [_Bink]
     inc esi
     push ecx
-    call dword ptr [__imp__BinkDoFrame@4]
+    call dword ptr [__imp___BinkDoFrame@4]
     call _S_UpdateInput
     mov eax, dword ptr [_Bink]
     cmp esi, dword ptr [eax+010h]
     jne short L49c5f5
 L49c64c:
     push eax
-    call dword ptr [__imp__BinkClose@4]
+    call dword ptr [__imp___BinkClose@4]
     xor esi, esi
     mov dword ptr [_Bink], esi
 L49c65b:
