@@ -325,11 +325,11 @@ LRESULT CALLBACK WinMainWndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPar
                 Log(6, "WM_INACTIVE");
                 if (App.SetupComplete) {
                     Log(5, "HangGameThread");
-                    while (App.dx.InScene) {
-                    }
+                    if (App.dx.InScene)
+                        SW_WaitWhileDXInScene();
                     App.dx.WaitAtBeginScene = 1;
-                    while (!App.dx.InScene) {
-                    }
+                    if (!App.dx.InScene)
+                        SW_WaitUntilDXInScene();
                     SuspendThread((HANDLE)MainThread.handle);
                     Log(5, "Game Thread Suspended");
                 }
