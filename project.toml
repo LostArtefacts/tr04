@@ -31,6 +31,13 @@ import_libs = [".wine/drive_c/msvc6sp3/lib", ".wine/drive_c/dx6/lib"]
 source = "refs/tomb4-legacy/TOMB4"
 layout = { game = "", specific = "specific" }
 
+[dll]
+ldflags = ["/DLL", "/NODEFAULTLIB", "/ENTRY:DllMain", "/BASE:0x30000000", "/SECTION:.text,RWE"]  # as the original's: the software renderer's spans patch their own code
+
+[exe]
+ldflags = ["/SUBSYSTEM:WINDOWS", "/FIXED", "/SECTION:.text,RWE"]
+features = { c_asm = "FEAT_C_ASM" }  # FEAT=c_asm: the C versions of the original's hand-written assembly
+
 [hooks]
 progress = true  # every commit redraws docs/progress.svg
 compare = true  # every compiled function matches the original
