@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.90" height="12" x="267.10" y="0" class="nonmatching"><title>167 · 10.79%</title></rect>
-<rect width="38" height="12" x="304" y="0" class="todo"><title>172 · 11.11%</title></rect>
+<rect width="37.12" height="12" x="267.10" y="0" class="nonmatching"><title>168 · 10.85%</title></rect>
+<rect width="37.78" height="12" x="304.22" y="0" class="todo"><title>171 · 11.05%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">167</tspan> · <tspan class="todo">172</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">168</tspan> · <tspan class="todo">171</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.46" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.34%</title></rect>
-<rect width="45.65" height="12" x="296.35" y="0" class="todo"><title>83 KB · 13.35%</title></rect>
+<rect width="117.51" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.36%</title></rect>
+<rect width="45.60" height="12" x="296.40" y="0" class="todo"><title>83 KB · 13.33%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">215 KB</tspan> · <tspan class="todo">83 KB</tspan></text>
@@ -969,7 +969,7 @@
 <rect width="12" height="12" x="0" y="270" class="named"><title>0x004587e0 SarcophagusCollision (529 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="270" class="named"><title>0x00458a00 vMul (49 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="270" class="named"><title>0x00458a40 mDotProduct (37 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="270" class="todo"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="270" class="nonmatching"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="270" class="named"><title>0x00458ad0 phd_GetMatrixAngles (177 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="270" class="nonmatching"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="270" class="named"><title>0x00459060 GetRopePos (146 bytes)</title></rect>
@@ -2692,7 +2692,7 @@
 <rect width="5.91" height="5.97" x="634.78" y="304.85" class="named"><title>0x0040de90 InitialiseScarab (92 bytes)</title></rect>
 <rect width="5.91" height="5.97" x="643.69" y="304.85" class="named"><title>0x00420fe0 LaraFallen (92 bytes)</title></rect>
 <rect width="5.91" height="5.97" x="652.59" y="304.85" class="named"><title>0x004370e0 SoundEffects (92 bytes)</title></rect>
-<rect width="5.91" height="5.97" x="661.50" y="304.85" class="todo"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
+<rect width="5.91" height="5.97" x="661.50" y="304.85" class="nonmatching"><title>0x00458a70 mCrossProduct (92 bytes)</title></rect>
 <rect width="5.91" height="5.97" x="670.41" y="304.85" class="named"><title>0x004593b0 RopeControl (92 bytes)</title></rect>
 <rect width="5.91" height="5.97" x="679.32" y="304.85" class="named"><title>0x00479760 ClearDynamicLighting (92 bytes)</title></rect>
 <rect width="5.84" height="5.97" x="688.23" y="304.85" class="named"><title>0x00422e50 MonkeySwingFall (91 bytes)</title></rect>

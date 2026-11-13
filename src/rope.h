@@ -40,6 +40,7 @@ void ModelRigidRope(PHD_VECTOR *pa, PHD_VECTOR *pb, PHD_VECTOR *va, PHD_VECTOR *
 void SetPendulumVelocity(sint32 x, sint32 y, sint32 z);
 void RopeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll);
 void init_all_ropes(void);
+void mCrossProduct(PHD_VECTOR *a, PHD_VECTOR *b, PHD_VECTOR *n);
 
 extern ROPE_STRUCT RopeList[5];
 extern sint32 nRope;
