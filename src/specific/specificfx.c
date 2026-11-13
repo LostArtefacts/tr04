@@ -1030,6 +1030,97 @@ void DrawBlood(void)
     phd_PopMatrix();
 }
 
+void DrawDrips(void)
+{
+    DRIP_STRUCT *drip;
+    PHD_VECTOR vec;
+    D3DTLVERTEX v[2];
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *pos;
+    sint32 *mptr;
+    float perspz, zf0, zf1;
+    sint32 i, x, y, z, x0, y0, z0, x1, y1, z1, r, g, b;
+
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    mptr = phd_mxptr;
+    XY = (sint16 *)&scratchpad[0];
+    Z = (sint32 *)&scratchpad[256];
+    pos = (sint16 *)&scratchpad[512];
+    drip = Drips;
+    for (i = 0; i < 32; i++, drip++) {
+        if (!drip->On)
+            continue;
+        x = drip->x - lara_item->pos.x_pos;
+        pos[0] = x;
+        y = drip->y - lara_item->pos.y_pos;
+        pos[1] = y;
+        z = drip->z - lara_item->pos.z_pos;
+        pos[2] = z;
+        if (x < -20480 || x > 20480 || y < -20480 || y > 20480 || z < -20480 || z > 20480) {
+            drip->On = 0;
+            continue;
+        }
+        vec.x = pos[0] * mptr[M00] + pos[1] * mptr[M01] + pos[2] * mptr[M02] + mptr[M03];
+        vec.y = pos[0] * mptr[M10] + pos[1] * mptr[M11] + pos[2] * mptr[M12] + mptr[M13];
+        vec.z = pos[0] * mptr[M20] + pos[1] * mptr[M21] + pos[2] * mptr[M22] + mptr[M23];
+        perspz = f_persp / (float)vec.z;
+        XY[0] = (sint16)(vec.x * perspz + f_centerx);
+        XY[1] = (sint16)(vec.y * perspz + f_centery);
+        Z[0] = vec.z >> W2V_SHIFT;
+        pos[1] -= drip->Yvel >> 6;
+        if (room[drip->RoomNumber].flags & ROOM_NOT_INSIDE) {
+            pos[0] -= (sint16)(SmokeWindX >> 1);
+            pos[2] -= (sint16)(SmokeWindZ >> 1);
+        }
+        XY += 2;
+        Z++;
+        vec.x = pos[0] * mptr[M00] + pos[1] * mptr[M01] + pos[2] * mptr[M02] + mptr[M03];
+        vec.y = pos[0] * mptr[M10] + pos[1] * mptr[M11] + pos[2] * mptr[M12] + mptr[M13];
+        vec.z = pos[0] * mptr[M20] + pos[1] * mptr[M21] + pos[2] * mptr[M22] + mptr[M23];
+        perspz = f_persp / (float)vec.z;
+        XY[0] = (sint16)(vec.x * perspz + f_centerx);
+        XY[1] = (sint16)(vec.y * perspz + f_centery);
+        Z[0] = vec.z >> W2V_SHIFT;
+        XY -= 2;
+        Z--;
+        if (Z[0] && Z[0] < 20480) {
+            x0 = XY[0];
+            y0 = XY[1];
+            z0 = Z[0];
+            x1 = XY[2];
+            y1 = XY[3];
+            z1 = Z[1];
+            if (ClipLine(&x0, &y0, z0, &x1, &y1, z1, phd_winxmin, phd_winymin, phd_winxmax, phd_winymax)) {
+                r = drip->R << 2;
+                g = drip->G << 2;
+                b = drip->B << 2;
+                v[0].sx = (float)x0;
+                v[0].sy = (float)y0;
+                zf0 = (float)Z[0];
+                v[0].sz = zf0;
+                zf1 = (float)Z[1];
+                v[1].sz = zf1;
+                v[1].sx = (float)x1;
+                v[1].sy = (float)y1;
+                v[0].rhw = f_mpersp / zf0 * f_moneopersp;
+                v[0].color = RGBA(r, g, b, 0xFF);
+                v[0].specular = 0xFF000000;
+                r >>= 1;
+                g >>= 1;
+                b >>= 1;
+                v[1].rhw = f_mpersp / zf1 * f_moneopersp;
+                v[1].color = RGBA(r, g, b, 0xFF);
+                v[1].specular = 0xFF000000;
+                AddLineSorted(v, &v[1], 6);
+            }
+        } else if (Z[0] >= 20480)
+            drip->On = 0;
+    }
+    phd_PopMatrix();
+}
+
 void DrawTrainFloorStrip(sint32 x, sint32 z, TEXTURESTRUCT *tex, sint32 y_and_flags)
 {
     SVECTOR *offsets;

@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="260.03" height="12" x="0" y="0" class="named"><title>1198 · 77.39%</title></rect>
 <rect width="0.65" height="12" x="260.03" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="32.56" height="12" x="260.68" y="0" class="nonmatching"><title>150 · 9.69%</title></rect>
-<rect width="42.76" height="12" x="293.24" y="0" class="todo"><title>197 · 12.73%</title></rect>
+<rect width="32.78" height="12" x="260.68" y="0" class="nonmatching"><title>151 · 9.75%</title></rect>
+<rect width="42.54" height="12" x="293.46" y="0" class="todo"><title>196 · 12.66%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">150</tspan> · <tspan class="todo">197</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">151</tspan> · <tspan class="todo">196</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="173.45" height="12" x="0" y="0" class="named"><title>323 KB · 51.62%</title></rect>
 <rect width="0.13" height="12" x="173.45" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="100.90" height="12" x="173.58" y="0" class="nonmatching"><title>188 KB · 30.03%</title></rect>
-<rect width="61.52" height="12" x="274.48" y="0" class="todo"><title>114 KB · 18.31%</title></rect>
+<rect width="101.46" height="12" x="173.58" y="0" class="nonmatching"><title>189 KB · 30.20%</title></rect>
+<rect width="60.96" height="12" x="275.04" y="0" class="todo"><title>113 KB · 18.14%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">51.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">188 KB</tspan> · <tspan class="todo">114 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">189 KB</tspan> · <tspan class="todo">113 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1419,7 +1419,7 @@
 <rect width="12" height="12" x="0" y="405" class="todo"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="405" class="todo"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="405" class="nonmatching"><title>0x0048a0c0 DrawBlood (868 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="405" class="todo"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="405" class="nonmatching"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="405" class="todo"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="405" class="todo"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="405" class="todo"><title>0x0048b130 ShowTitle (842 bytes)</title></rect>
@@ -1763,7 +1763,7 @@
 <rect width="20.88" height="19.42" x="260.67" y="442.58" class="nonmatching"><title>0x004701c0 InitResolution (1057 bytes)</title></rect>
 <rect width="20.13" height="20.07" x="284.55" y="0" class="named"><title>0x004797c0 MemBltSurf (1053 bytes)</title></rect>
 <rect width="20.13" height="19.97" x="284.55" y="23.07" class="named"><title>0x00456cd0 ControlLightningConductor (1048 bytes)</title></rect>
-<rect width="20.13" height="19.78" x="284.55" y="46.04" class="todo"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>
+<rect width="20.13" height="19.78" x="284.55" y="46.04" class="nonmatching"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>
 <rect width="20.13" height="19.73" x="284.55" y="68.82" class="named"><title>0x00453a30 InitialiseDoor (1035 bytes)</title></rect>
 <rect width="20.13" height="19.67" x="284.55" y="91.55" class="named"><title>0x004640a0 DrawTrainObjects (1032 bytes)</title></rect>
 <rect width="20.13" height="19.67" x="284.55" y="114.22" class="named"><title>0x00489540 DrawRope (1032 bytes)</title></rect>
