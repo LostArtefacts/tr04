@@ -1292,7 +1292,7 @@ address,size,name,symbol
 0x004808e0,364,do_boot_screen,_do_boot_screen
 0x00480a50,2132,DrawSortList,_DrawSortList
 0x004812a4,,jpt_480BA7,_jpt_480BA7
-0x004812d0,1131,HWR_DrawSortList,_HWR_DrawSortList
+0x004812d0,1164,HWR_DrawSortList,_HWR_DrawSortList
 0x00481760,176,DoSort,_DoSort
 0x00481810,70,SortPolyList,_SortPolyList
 0x00481860,31,InitialiseSortList,_InitialiseSortList

@@ -5,6 +5,7 @@
 #include <d3d.h>
 #include "../types.h"
 #include "../3dglodef.h"
+#include "drawroom.h"
 
 typedef struct FVECTOR {
     float x;
@@ -88,5 +89,6 @@ void SubdivideEdge(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v, sint16 *c, 
 void nullsub_10(void);
 void j_nullsub_10(void);
 void OmniEffect(D3DTLVERTEX *v);
+void HWR_DrawSortList(D3DTLBUMPVERTEX *info, sint32 num_verts, sint32 texture, sint32 type);
 
 #endif
