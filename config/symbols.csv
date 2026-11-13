@@ -1487,7 +1487,7 @@ address,size,name,symbol
 0x00494a80,16,SW_D3D_SetRenderTarget,_SW_D3D_SetRenderTarget@12
 0x00494a90,18,SW_D3D_GetRenderTarget,_SW_D3D_GetRenderTarget@8
 0x00494ab0,93,SW_D3D_EnumTextureFormats,_SW_D3D_EnumTextureFormats@12
-0x00494b0d,27,SW_D3D_SetLightState,_SW_D3D_SetLightState@12
+0x00494b10,24,SW_D3D_SetLightState,_SW_D3D_SetLightState@12
 0x00494b30,24,SW_D3D_SetTransform,_SW_D3D_SetTransform@12
 0x00494b50,459,SW_D3D_CreateDevice,_SW_D3D_CreateDevice
 0x00494d20,55,SW_ClearBuffer,_SW_ClearBuffer
@@ -2677,6 +2677,7 @@ address,size,name,symbol
 0x007542ec,256,keymap,_keymap
 0x007543ec,256,keymap2,_keymap2
 0x007544f4,4,G_dxptr,_G_dxptr
+0x00755260,4,SW_RealD3DDevice,_SW_RealD3DDevice
 0x007e6de4,4,SW_ZLimit,_SW_ZLimit
 0x007e6e00,4,BinkSurfaceType,_BinkSurfaceType
 0x007e6e04,4,BinkSurface,_BinkSurface

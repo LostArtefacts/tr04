@@ -15,6 +15,7 @@ typedef struct sw_device {
 } SW_DEVICE;
 
 extern float SW_ZLimit;
+extern LPDIRECT3DDEVICE3 SW_RealD3DDevice;
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -79,6 +80,11 @@ HRESULT __stdcall SW_D3D_GetRenderTarget(SW_DEVICE *dev, void **target)
 {
     *target = dev->target;
     return 0;
+}
+
+HRESULT __stdcall SW_D3D_SetLightState(SW_DEVICE *dev, D3DLIGHTSTATETYPE type, DWORD state)
+{
+    return IDirect3DDevice3_SetLightState(SW_RealD3DDevice, type, state);
 }
 
 sint32 SW_SetZLimit(float limit)
