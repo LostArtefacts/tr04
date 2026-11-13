@@ -24,7 +24,7 @@ address,size,name,symbol
 0x00403c90,159,TriggerCrocgodMissile,_TriggerCrocgodMissile
 0x00403d30,405,TriggerCrocgodMissileFlame,_TriggerCrocgodMissileFlame
 0x00403ed0,88,InitialiseCrocgod,_InitialiseCrocgod
-0x00403f30,1073,CrocgodControl,_CrocgodControl
+0x00403f30,1092,CrocgodControl,_CrocgodControl
 0x00404380,70,InitialiseDeathSlide,_InitialiseDeathSlide
 0x004043d0,209,DeathSlideCollision,_DeathSlideCollision
 0x004044b0,702,ControlDeathSlide,_ControlDeathSlide
