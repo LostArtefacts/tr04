@@ -65,14 +65,14 @@ sint32 ReadJoystick(sint32 *x, sint32 *y)
     joystick.dwSize = sizeof(JOYINFOEX);
     joystick.dwFlags = JOY_RETURNX | JOY_RETURNY | JOY_RETURNBUTTONS;
     if (joyGetPosEx(0, &joystick) != JOYERR_NOERROR) {
-        joy_unavailable = 1;
+        no_joy = 1;
         *x = 0;
         *y = 0;
         return 0;
     }
-    if (joy_unavailable) {
+    if (no_joy) {
         if (joyGetDevCaps(JOYSTICKID1, &joy_caps, sizeof(joy_caps)) == JOYERR_NOERROR) {
-            joy_unavailable = 0;
+            no_joy = 0;
         } else {
             *y = 0;
             *x = 0;

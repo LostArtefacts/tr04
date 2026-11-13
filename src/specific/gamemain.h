@@ -24,7 +24,7 @@ extern float GameUnk753960;
 extern float GameUnk753a78;
 extern float GameUnk753a7c;
 extern float GameUnk753c20;
-extern sint32 SaveCounter;
+extern sint32 save_counter;
 extern WATERTAB WaterTable[22][64];
 extern float vert_wibble_table[32];
 extern float unused_vert_wibble_table[256];

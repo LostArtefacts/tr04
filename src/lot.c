@@ -20,7 +20,7 @@ void InitialiseLOTarray(int allocmem)
     for (i = 0; i < NUM_SLOTS; i++, creature++) {
         creature->item_num = NO_ITEM;
         if (allocmem)
-            creature->LOT.node = (BOX_NODE *)game_malloc(sizeof(BOX_NODE) * num_boxes);
+            creature->LOT.node = (BOX_NODE *)game_malloc(sizeof(BOX_NODE) * number_boxes);
     }
     slots_used = 0;
 }
@@ -214,7 +214,7 @@ void CreateZone(ITEM_INFO *item)
         node = creature->LOT.node;
         i = 0;
         creature->LOT.zone_count = 0;
-        for (; i < num_boxes; i++, zone++, flip++) {
+        for (; i < number_boxes; i++, zone++, flip++) {
             if (*zone == zone_number || *flip == flip_number) {
                 node->box_number = i;
                 node++;
@@ -224,7 +224,7 @@ void CreateZone(ITEM_INFO *item)
     } else {
         creature->LOT.zone_count = 0;
         node = creature->LOT.node;
-        for (i = 0; i < num_boxes; i++) {
+        for (i = 0; i < number_boxes; i++) {
             node->box_number = i;
             node++;
             creature->LOT.zone_count++;
@@ -243,7 +243,7 @@ void ClearLOT(LOT_INFO *lot)
     lot->target_box = 2047;
     lot->required_box = 2047;
     node = lot->node;
-    for (i = 0; i < num_boxes; i++, node++) {
+    for (i = 0; i < number_boxes; i++, node++) {
         node->next_expansion = 2047;
         node->exit_box = 2047;
         node->search_number = 0;

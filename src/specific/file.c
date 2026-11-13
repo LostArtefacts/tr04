@@ -763,11 +763,11 @@ uint8 LoadBoxes(void)
     sint32 size, i, j;
 
     Log(2, "LoadBoxes");
-    num_boxes = *(sint32 *)FileData;
+    number_boxes = *(sint32 *)FileData;
     FileData += sizeof(sint32);
-    boxes = (BOX_INFO *)game_malloc(sizeof(BOX_INFO) * num_boxes, 0);
-    memcpy(boxes, FileData, sizeof(BOX_INFO) * num_boxes);
-    FileData += sizeof(BOX_INFO) * num_boxes;
+    boxes = (BOX_INFO *)game_malloc(sizeof(BOX_INFO) * number_boxes, 0);
+    memcpy(boxes, FileData, sizeof(BOX_INFO) * number_boxes);
+    FileData += sizeof(BOX_INFO) * number_boxes;
     size = *(sint32 *)FileData;
     FileData += sizeof(sint32);
     overlap = (sint16 *)game_malloc(sizeof(uint16) * size, 0);
@@ -775,15 +775,15 @@ uint8 LoadBoxes(void)
     FileData += sizeof(uint16) * size;
     for (i = 0; i < 2; i++) {
         for (j = 0; j < 4; j++) {
-            ground_zone[j][i] = (sint16 *)game_malloc(sizeof(sint16) * num_boxes, 0);
-            memcpy(ground_zone[j][i], FileData, sizeof(sint16) * num_boxes);
-            FileData += sizeof(sint16) * num_boxes;
+            ground_zone[j][i] = (sint16 *)game_malloc(sizeof(sint16) * number_boxes, 0);
+            memcpy(ground_zone[j][i], FileData, sizeof(sint16) * number_boxes);
+            FileData += sizeof(sint16) * number_boxes;
         }
-        ground_zone[4][i] = (sint16 *)game_malloc(sizeof(sint16) * num_boxes, 0);
-        memcpy(ground_zone[4][i], FileData, sizeof(sint16) * num_boxes);
-        FileData += sizeof(sint16) * num_boxes;
+        ground_zone[4][i] = (sint16 *)game_malloc(sizeof(sint16) * number_boxes, 0);
+        memcpy(ground_zone[4][i], FileData, sizeof(sint16) * number_boxes);
+        FileData += sizeof(sint16) * number_boxes;
     }
-    for (i = 0; i < num_boxes; i++) {
+    for (i = 0; i < number_boxes; i++) {
         box = &boxes[i];
         if (box->overlap_index & 0x8000) {
             box->overlap_index |= 0x4000;

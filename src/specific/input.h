@@ -63,6 +63,6 @@ extern sint32 joy_x;
 extern sint32 joy_y;
 extern sint32 joy_fire;
 extern JOYCAPS joy_caps;
-extern sint32 joy_unavailable;
+extern sint32 no_joy;
 
 #endif

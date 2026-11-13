@@ -1163,9 +1163,9 @@ void DXSaveScreen(LPDIRECTDRAWSURFACE4 surf, const char *name)
     sprintf(buf, "%s%04d.tga", name, num++);
     file = fopen(buf, "wb");
     if (file) {
-        *(sint16 *)&tga_header[12] = (sint16)desc.dwWidth;
-        *(sint16 *)&tga_header[14] = (sint16)desc.dwHeight;
-        fwrite(tga_header, sizeof(tga_header), 1, file);
+        *(sint16 *)&TgaHeader[12] = (sint16)desc.dwWidth;
+        *(sint16 *)&TgaHeader[14] = (sint16)desc.dwHeight;
+        fwrite(TgaHeader, sizeof(TgaHeader), 1, file);
         pM = (char *)malloc(2 * desc.dwWidth * desc.dwHeight);
         pDest = (sint16 *)pM;
         pSurf += desc.dwHeight * (desc.lPitch / 2);

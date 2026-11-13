@@ -167,7 +167,7 @@ sint32 S_SaveGame(sint32 slot_num)
         memset(buffer, 0, sizeof(buffer));
         wsprintf(buffer, "%s", SCRIPT_TEXT(gfLevelNames[gfCurrentLevel]));
         WriteFile(file, buffer, 75, &bytes, 0);
-        WriteFile(file, &SaveCounter, sizeof(sint32), &bytes, 0);
+        WriteFile(file, &save_counter, sizeof(sint32), &bytes, 0);
         t = savegame.Game.Timer / 30;
         days = t / 86400;
         hours = t % 86400 / 3600;
@@ -179,8 +179,8 @@ sint32 S_SaveGame(sint32 slot_num)
         WriteFile(file, &seconds, 2, &bytes, 0);
         WriteFile(file, &savegame, sizeof(SAVEGAME_INFO), &bytes, 0);
         CloseHandle(file);
-        wsprintf(counter, "%d", SaveCounter);
-        SaveCounter++;
+        wsprintf(counter, "%d", save_counter);
+        save_counter++;
         return 1;
     }
     return 0;

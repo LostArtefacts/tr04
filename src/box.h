@@ -161,7 +161,7 @@ void FindAITargetObject(CREATURE_INFO *creature, sint16 obj_num);
 extern CREATURE_INFO *baddie_slots;
 
 extern BOX_INFO *boxes;
-extern int num_boxes;
+extern int number_boxes;
 extern sint16 *overlap;
 extern sint16 *ground_zone[5][2];
 

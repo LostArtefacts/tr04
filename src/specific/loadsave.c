@@ -299,7 +299,7 @@ sint32 GetSaveLoadFiles(void)
     char name[80];
     sint32 i;
 
-    SaveCounter = 0;
+    save_counter = 0;
     for (i = 0; i < 15; i++) {
         pSave = &SaveGames[i];
         wsprintf(name, "savegame.%d", i);
@@ -313,8 +313,8 @@ sint32 GetSaveLoadFiles(void)
             fread(&pSave->seconds, sizeof(sint16), 1, file);
             fread(&save_info, 1, sizeof(SAVEGAME_INFO), file);
             if (CheckSumValid((sint8 *)&save_info)) {
-                if (pSave->num > SaveCounter)
-                    SaveCounter = pSave->num;
+                if (pSave->num > save_counter)
+                    save_counter = pSave->num;
                 pSave->valid = 1;
                 fclose(file);
                 nSaves++;
@@ -326,7 +326,7 @@ sint32 GetSaveLoadFiles(void)
             strcpy(pSave->name, SCRIPT_TEXT(TXT_Empty_Slot));
         }
     }
-    SaveCounter++;
+    save_counter++;
     return nSaves;
 }
 
