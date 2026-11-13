@@ -2288,6 +2288,8 @@ address,size,name,symbol
 0x004bcd24,4,SW_ColorOpScale,_SW_ColorOpScale
 0x004bcd30,8,SW_SpanGFogAddConst,_SW_SpanGFogAddConst
 0x004bcd40,8,SW_SpanGFogConst,_SW_SpanGFogConst
+0x004bcd58,8,SW_SpanGTAlphaConst0,_SW_SpanGTAlphaConst0
+0x004bcd60,8,SW_SpanGTAlphaConst1,_SW_SpanGTAlphaConst1
 0x004bcd78,8,SW_SpanGTKeyConst,_SW_SpanGTKeyConst
 0x004bcd80,8,SW_SpanGTPKeyConst,_SW_SpanGTPKeyConst
 0x004bcde8,16,Var4bcde8,_Var4bcde8
@@ -2949,6 +2951,7 @@ address,size,name,symbol
 0x007e2c34,4,SW_TriFogA0,_SW_TriFogA0
 0x007e2c38,4,SW_TriDX01,_SW_TriDX01
 0x007e2c3c,4,SW_TriPDX01,_SW_TriPDX01
+0x007e2c40,4,SW_SpanGTAlphaTmp0,_SW_SpanGTAlphaTmp0
 0x007e2c44,4,SW_TriTUDY,_SW_TriTUDY
 0x007e2c4c,4,SW_TriTR0,_SW_TriTR0
 0x007e2c54,4,SW_TriTEdgeA,_SW_TriTEdgeA
@@ -2979,6 +2982,7 @@ address,size,name,symbol
 0x007e2cf4,4,SW_TriTUDX,_SW_TriTUDX
 0x007e2cf8,4,SW_TriTD01,_SW_TriTD01
 0x007e2d00,8,SW_TriPStepB,_SW_TriPStepB
+0x007e2d08,8,SW_SpanGTAlphaTmp1,_SW_SpanGTAlphaTmp1
 0x007e2d14,4,SW_TriTFogB1,_SW_TriTFogB1
 0x007e2d18,4,SW_TriPFB1,_SW_TriPFB1
 0x007e2d1c,4,SW_TriPFTemp,_SW_TriPFTemp

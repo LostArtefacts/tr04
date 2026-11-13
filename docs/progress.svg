@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="383.01" height="12" x="0" y="0" class="named"><title>1285 · 82.90%</title></rect>
-<rect width="78.99" height="12" x="383.01" y="0" class="nonmatching"><title>265 · 17.10%</title></rect>
+<rect width="383.31" height="12" x="0" y="0" class="named"><title>1286 · 82.97%</title></rect>
+<rect width="78.69" height="12" x="383.31" y="0" class="nonmatching"><title>264 · 17.03%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">82.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1285</tspan> · <tspan class="nonmatching">265</tspan></text>
+<text text-anchor="end" x="642" y="7.50">83.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1286</tspan> · <tspan class="nonmatching">264</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="256.26" height="12" x="0" y="0" class="named"><title>347 KB · 55.47%</title></rect>
-<rect width="205.74" height="12" x="256.26" y="0" class="nonmatching"><title>279 KB · 44.53%</title></rect>
+<rect width="256.58" height="12" x="0" y="0" class="named"><title>347 KB · 55.54%</title></rect>
+<rect width="205.42" height="12" x="256.58" y="0" class="nonmatching"><title>278 KB · 44.46%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">55.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">347 KB</tspan> · <tspan class="nonmatching">279 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">347 KB</tspan> · <tspan class="nonmatching">278 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1575,7 +1575,7 @@
 <rect width="12" height="12" x="150" y="450" class="nonmatching"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="450" class="named"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="450" class="named"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="450" class="nonmatching"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="450" class="named"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="450" class="nonmatching"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="450" class="named"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="450" class="named"><title>0x004997d0 SW_SpanGTAdd (355 bytes)</title></rect>
@@ -2038,7 +2038,7 @@
 <rect width="12.64" height="13.04" x="734.36" y="113.37" class="named"><title>0x00475ac0 LoadBoxes (430 bytes)</title></rect>
 <rect width="12.44" height="13.22" x="398.59" y="129.41" class="named"><title>0x0042ff90 FlareControl (429 bytes)</title></rect>
 <rect width="12.44" height="13.22" x="398.59" y="145.63" class="named"><title>0x00480070 S_AnimateTextures (429 bytes)</title></rect>
-<rect width="12.44" height="13.19" x="398.59" y="161.85" class="nonmatching"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
+<rect width="12.44" height="13.19" x="398.59" y="161.85" class="named"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
 <rect width="12.44" height="13.16" x="398.59" y="178.04" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
 <rect width="12.44" height="13.13" x="398.59" y="194.19" class="nonmatching"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
 <rect width="12.44" height="13.13" x="398.59" y="210.32" class="named"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
