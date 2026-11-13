@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="328.95" height="12" x="0" y="0" class="named"><title>1230 · 79.46%</title></rect>
-<rect width="59.64" height="12" x="328.95" y="0" class="nonmatching"><title>223 · 14.41%</title></rect>
-<rect width="25.41" height="12" x="388.59" y="0" class="todo"><title>95 · 6.14%</title></rect>
+<rect width="59.91" height="12" x="328.95" y="0" class="nonmatching"><title>224 · 14.47%</title></rect>
+<rect width="25.14" height="12" x="388.86" y="0" class="todo"><title>94 · 6.07%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1230</tspan> · <tspan class="nonmatching">223</tspan> · <tspan class="todo">95</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1230</tspan> · <tspan class="nonmatching">224</tspan> · <tspan class="todo">94</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="223.30" height="12" x="0" y="0" class="named"><title>337 KB · 53.94%</title></rect>
-<rect width="159.58" height="12" x="223.30" y="0" class="nonmatching"><title>241 KB · 38.55%</title></rect>
-<rect width="31.12" height="12" x="382.88" y="0" class="todo"><title>47 KB · 7.52%</title></rect>
+<rect width="161.48" height="12" x="223.30" y="0" class="nonmatching"><title>244 KB · 39%</title></rect>
+<rect width="29.23" height="12" x="384.77" y="0" class="todo"><title>44 KB · 7.06%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">241 KB</tspan> · <tspan class="todo">47 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">244 KB</tspan> · <tspan class="todo">44 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -771,7 +771,7 @@
 <rect width="12" height="12" x="60" y="210" class="named"><title>0x00445890 LaraTorch (90 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="210" class="named"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="210" class="nonmatching"><title>0x00445ad0 ControlClockworkBeetle (1688 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="210" class="todo"><title>0x00446170 GetCollisionInfo (2867 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="210" class="nonmatching"><title>0x00446170 GetCollisionInfo (2867 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="210" class="named"><title>0x00446cf0 FindGridShift (47 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="210" class="named"><title>0x00446d20 CollideStaticObjects (585 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="210" class="named"><title>0x00446f70 ShiftItem (55 bytes)</title></rect>
@@ -1635,7 +1635,7 @@
 <rect width="34.49" height="32.07" x="47.76" y="192.32" class="nonmatching"><title>0x0045a4b0 SaveLevelData (2884 bytes)</title></rect>
 <rect width="34.49" height="32.04" x="47.76" y="227.39" class="nonmatching"><title>0x0045b230 RestoreLevelData (2881 bytes)</title></rect>
 <rect width="34.49" height="31.94" x="47.76" y="262.43" class="named"><title>0x0041daf0 Rich_CalcLaraMatrices_Normal (2872 bytes)</title></rect>
-<rect width="34.49" height="31.88" x="47.76" y="297.37" class="todo"><title>0x00446170 GetCollisionInfo (2867 bytes)</title></rect>
+<rect width="34.49" height="31.88" x="47.76" y="297.37" class="nonmatching"><title>0x00446170 GetCollisionInfo (2867 bytes)</title></rect>
 <rect width="34.49" height="30.98" x="47.76" y="332.26" class="todo"><title>0x004971b0 SW_TriSetupGTLit (2786 bytes)</title></rect>
 <rect width="34.49" height="30.73" x="47.76" y="366.24" class="nonmatching"><title>0x0044ab50 TestTriggers (2764 bytes)</title></rect>
 <rect width="34.49" height="30.20" x="47.76" y="399.97" class="named"><title>0x00473f20 LoadTextures (2716 bytes)</title></rect>
