@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="326.28" height="12" x="0" y="0" class="named"><title>1220 · 78.81%</title></rect>
-<rect width="54.83" height="12" x="326.28" y="0" class="nonmatching"><title>205 · 13.24%</title></rect>
-<rect width="32.90" height="12" x="381.10" y="0" class="todo"><title>123 · 7.95%</title></rect>
+<rect width="55.09" height="12" x="326.28" y="0" class="nonmatching"><title>206 · 13.31%</title></rect>
+<rect width="32.63" height="12" x="381.37" y="0" class="todo"><title>122 · 7.88%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1220</tspan> · <tspan class="nonmatching">205</tspan> · <tspan class="todo">123</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1220</tspan> · <tspan class="nonmatching">206</tspan> · <tspan class="todo">122</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="219.30" height="12" x="0" y="0" class="named"><title>331 KB · 52.97%</title></rect>
-<rect width="149.18" height="12" x="219.30" y="0" class="nonmatching"><title>225 KB · 36.03%</title></rect>
-<rect width="45.52" height="12" x="368.48" y="0" class="todo"><title>69 KB · 11%</title></rect>
+<rect width="149.57" height="12" x="219.30" y="0" class="nonmatching"><title>226 KB · 36.13%</title></rect>
+<rect width="45.13" height="12" x="368.87" y="0" class="todo"><title>68 KB · 10.90%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">331 KB</tspan> · <tspan class="nonmatching">225 KB</tspan> · <tspan class="todo">69 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">331 KB</tspan> · <tspan class="nonmatching">226 KB</tspan> · <tspan class="todo">68 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -457,7 +457,7 @@
 <rect width="12" height="12" x="600" y="105" class="named"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="105" class="named"><title>0x0042be40 AnimatePistols (1407 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="105" class="named"><title>0x0042c3c0 LaraTestClimbPos (176 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="105" class="todo"><title>0x0042c470 LaraTestClimb (588 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="105" class="nonmatching"><title>0x0042c470 LaraTestClimb (588 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="105" class="named"><title>0x0042c6c0 lara_as_climbstnc (163 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="105" class="named"><title>0x0042c770 lara_col_climbstnc (519 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="105" class="named"><title>0x0042c980 LaraCheckForLetGo (213 bytes)</title></rect>
@@ -1914,7 +1914,7 @@
 <rect width="14.59" height="15.51" x="347.32" y="154.15" class="nonmatching"><title>0x00447ce0 ItemPushLaraStatic (590 bytes)</title></rect>
 <rect width="14.59" height="15.49" x="347.32" y="172.66" class="nonmatching"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
 <rect width="14.59" height="15.46" x="347.32" y="191.14" class="named"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
-<rect width="14.59" height="15.46" x="347.32" y="209.60" class="todo"><title>0x0042c470 LaraTestClimb (588 bytes)</title></rect>
+<rect width="14.59" height="15.46" x="347.32" y="209.60" class="nonmatching"><title>0x0042c470 LaraTestClimb (588 bytes)</title></rect>
 <rect width="14.59" height="15.46" x="347.32" y="228.06" class="named"><title>0x004390f0 TriggerGunShell (588 bytes)</title></rect>
 <rect width="14.59" height="15.46" x="347.32" y="246.52" class="named"><title>0x0044c320 ClipTarget (588 bytes)</title></rect>
 <rect width="14.59" height="15.46" x="347.32" y="264.98" class="nonmatching"><title>0x00471f40 ProjectWaterVerts (588 bytes)</title></rect>
