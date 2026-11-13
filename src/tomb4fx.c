@@ -1378,6 +1378,57 @@ void TriggerLightningGlow(sint32 x, sint32 y, sint32 z, sint32 rgb)
     sptr->Size = sptr->sSize = sptr->dSize = size;
 }
 
+void TriggerFlashSmoke(sint32 x, sint32 y, sint32 z, sint16 room_number)
+{
+    SMOKE_SPARKS *sptr;
+    sint32 uw, mirror;
+
+    mirror = 0;
+    if (room_number == gfMirrorRoom)
+        mirror = 1;
+    uw = 0;
+    if (room[room_number].flags & ROOM_UNDERWATER) {
+        TriggerExplosionBubble(x, y, z, room_number);
+        uw = 1;
+    }
+    sptr = &smoke_spark[GetFreeSmokeSpark()];
+    sptr->On = 1;
+    sptr->sShade = 0;
+    sptr->dShade = 128;
+    sptr->ColFadeSpeed = 4;
+    sptr->FadeToBlack = 16;
+    sptr->sLife = sptr->Life = (GetRandomControl() & 0xF) + 64;
+    sptr->TransType = 2;
+    sptr->x = (GetRandomControl() & 0x1F) + x - 16;
+    sptr->y = (GetRandomControl() & 0x1F) + y - 16;
+    sptr->z = (GetRandomControl() & 0x1F) + z - 16;
+    if (uw) {
+        sptr->Xvel = (GetRandomControl() & 0x3FF) - 512;
+        sptr->Yvel = (GetRandomControl() & 0x3FF) - 512;
+        sptr->Zvel = (GetRandomControl() & 0x3FF) - 512;
+        sptr->Friction = 68;
+    } else {
+        sptr->Xvel = 2 * (GetRandomControl() & 0x3FF) - 1024;
+        sptr->Yvel = -512 - (GetRandomControl() & 0x3FF);
+        sptr->Zvel = 2 * (GetRandomControl() & 0x3FF) - 1024;
+        sptr->Friction = 85;
+    }
+    if (room[room_number].flags & ROOM_NOT_INSIDE)
+        sptr->Flags = 272;
+    else
+        sptr->Flags = 16;
+    sptr->RotAng = GetRandomControl() & 0xFFF;
+    if (GetRandomControl() & 1)
+        sptr->RotAdd = -16 - (GetRandomControl() & 0xF);
+    else
+        sptr->RotAdd = (GetRandomControl() & 0xF) + 16;
+    sptr->MaxYvel = 0;
+    sptr->Gravity = 0;
+    sptr->Size = sptr->sSize = (GetRandomControl() & 0x1F) + 64;
+    sptr->dSize = (sptr->Size + 4) << 1;
+    sptr->mirror = mirror;
+}
+
 void DrawLensFlares(ITEM_INFO *item)
 {
     GAME_VECTOR sun;
