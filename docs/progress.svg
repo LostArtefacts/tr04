@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="37.34" height="12" x="267.10" y="0" class="nonmatching"><title>169 · 10.92%</title></rect>
-<rect width="37.56" height="12" x="304.44" y="0" class="todo"><title>170 · 10.98%</title></rect>
+<rect width="37.56" height="12" x="267.10" y="0" class="nonmatching"><title>170 · 10.98%</title></rect>
+<rect width="37.34" height="12" x="304.66" y="0" class="todo"><title>169 · 10.92%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">169</tspan> · <tspan class="todo">170</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">170</tspan> · <tspan class="todo">169</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.64" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.40%</title></rect>
-<rect width="45.47" height="12" x="296.53" y="0" class="todo"><title>83 KB · 13.29%</title></rect>
+<rect width="117.70" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.42%</title></rect>
+<rect width="45.41" height="12" x="296.59" y="0" class="todo"><title>83 KB · 13.28%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">215 KB</tspan> · <tspan class="todo">83 KB</tspan></text>
@@ -1099,7 +1099,7 @@
 <rect width="12" height="12" x="450" y="300" class="todo"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="300" class="todo"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="300" class="todo"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="300" class="todo"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="300" class="nonmatching"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="300" class="named"><title>0x0046b140 frigup_lara (218 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="300" class="named"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="300" class="named"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
@@ -2634,7 +2634,7 @@
 <rect width="6.32" height="6.49" x="740.68" y="286.06" class="named"><title>0x00432620 lara_as_swim (107 bytes)</title></rect>
 <rect width="6.51" height="6.30" x="580.63" y="295.55" class="named"><title>0x00438690 GetFreeSmokeSpark (107 bytes)</title></rect>
 <rect width="6.51" height="6.30" x="590.14" y="295.55" class="named"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
-<rect width="6.51" height="6.30" x="599.66" y="295.55" class="todo"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
+<rect width="6.51" height="6.30" x="599.66" y="295.55" class="nonmatching"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="6.45" height="6.30" x="609.17" y="295.55" class="named"><title>0x0040da00 InitialiseInjuredSas (106 bytes)</title></rect>
 <rect width="6.45" height="6.30" x="618.63" y="295.55" class="named"><title>0x00422de0 lara_as_hang2 (106 bytes)</title></rect>
 <rect width="6.45" height="6.30" x="628.08" y="295.55" class="nonmatching"><title>0x00464610 InitialiseBike (106 bytes)</title></rect>

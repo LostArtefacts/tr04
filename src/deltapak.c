@@ -188,6 +188,19 @@ void handle_cutseq_triggering(sint32 name)
     }
 }
 
+sint16 GetTrackWord(sint32 off, sint8 *packed, sint32 packmethod)
+{
+    uint8 *p;
+    sint32 offset, ret;
+
+    offset = packmethod * off;
+    p = (uint8 *)packed + (offset >> 3);
+    ret = ((uint32)((((p[3] << 8) | p[2]) << 8 | p[1]) << 8 | p[0]) >> (offset & 7)) & ((1 << packmethod) - 1);
+    if (ret & (1 << (packmethod - 1)))
+        return (sint16)(~((1 << packmethod) - 1) | ret);
+    return (sint16)ret;
+}
+
 void frigup_lara(void)
 {
     sint32 *bone;
