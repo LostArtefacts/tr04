@@ -471,6 +471,39 @@ void ProjectShoreVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
     }
 }
 
+#ifndef FEAT_C_ASM
+void PrelightVertsMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
+{
+    sint32 *prelight;
+    sint32 p, c, i;
+
+    if (bWaterEffect && !(r->flags & ROOM_UNDERWATER))
+        prelight = r->prelightwater;
+    else
+        prelight = r->prelight;
+    for (i = 0; i < r->nWaterVerts; i++) {
+        p = r->prelight[i];
+        c = v->color;
+        __asm {
+            movd mm0, p
+            movd mm1, c
+            paddusb mm1, mm0
+            mov edx, v
+            add edx, 0x10
+            movd [edx], mm1
+        }
+        v->specular &= 0xFF000000;
+        v++;
+    }
+    for (i = r->nWaterVerts; i < r->nVerts; i++) {
+        AddPrelitMMX(prelight[i], &v->color);
+        v++;
+    }
+    __asm {
+        emms
+    }
+}
+#else
 void PrelightVertsMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
 {
     sint32 *prelight;
@@ -504,6 +537,7 @@ void PrelightVertsMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
         v++;
     }
 }
+#endif
 
 void PrelightVertsNonMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
 {

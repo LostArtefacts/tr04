@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="376.46" height="12" x="0" y="0" class="named"><title>1263 · 81.48%</title></rect>
-<rect width="85.54" height="12" x="376.46" y="0" class="nonmatching"><title>287 · 18.52%</title></rect>
+<rect width="376.75" height="12" x="0" y="0" class="named"><title>1264 · 81.55%</title></rect>
+<rect width="85.25" height="12" x="376.75" y="0" class="nonmatching"><title>286 · 18.45%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">81.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1263</tspan> · <tspan class="nonmatching">287</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1264</tspan> · <tspan class="nonmatching">286</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="252.35" height="12" x="0" y="0" class="named"><title>342 KB · 54.62%</title></rect>
-<rect width="209.65" height="12" x="252.35" y="0" class="nonmatching"><title>284 KB · 45.38%</title></rect>
+<rect width="252.49" height="12" x="0" y="0" class="named"><title>342 KB · 54.65%</title></rect>
+<rect width="209.51" height="12" x="252.49" y="0" class="nonmatching"><title>284 KB · 45.35%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">54.6%</text>
+<text text-anchor="end" x="642" y="24.50">54.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">342 KB</tspan> · <tspan class="nonmatching">284 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1217,7 +1217,7 @@
 <rect width="12" height="12" x="30" y="345" class="nonmatching"><title>0x00471e00 ProjectVerts (313 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="345" class="nonmatching"><title>0x00471f40 ProjectWaterVerts (588 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="345" class="nonmatching"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="345" class="nonmatching"><title>0x00472400 PrelightVertsMMX (186 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="345" class="named"><title>0x00472400 PrelightVertsMMX (186 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="345" class="named"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="345" class="named"><title>0x00472650 InsertRoom (593 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="345" class="named"><title>0x004728b0 InitBuckets (30 bytes)</title></rect>
@@ -2385,7 +2385,7 @@
 <rect width="8.23" height="8.70" x="507.80" y="268.94" class="named"><title>0x00475970 LoadCameras (187 bytes)</title></rect>
 <rect width="8.23" height="8.66" x="507.80" y="280.65" class="named"><title>0x0046b980 ninth_control (186 bytes)</title></rect>
 <rect width="8.23" height="8.66" x="507.80" y="292.31" class="named"><title>0x004705f0 InitD3DDevice (186 bytes)</title></rect>
-<rect width="8.23" height="8.66" x="507.80" y="303.96" class="nonmatching"><title>0x00472400 PrelightVertsMMX (186 bytes)</title></rect>
+<rect width="8.23" height="8.66" x="507.80" y="303.96" class="named"><title>0x00472400 PrelightVertsMMX (186 bytes)</title></rect>
 <rect width="8.23" height="8.61" x="507.80" y="315.62" class="named"><title>0x00431da0 lara_as_surftread (185 bytes)</title></rect>
 <rect width="8.23" height="8.61" x="507.80" y="327.23" class="named"><title>0x00491ea0 DXDDCreate (185 bytes)</title></rect>
 <rect width="8.23" height="8.57" x="507.80" y="338.85" class="named"><title>0x00477600 S_LoadGame (184 bytes)</title></rect>
