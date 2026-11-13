@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="326.28" height="12" x="0" y="0" class="named"><title>1220 · 78.81%</title></rect>
-<rect width="55.09" height="12" x="326.28" y="0" class="nonmatching"><title>206 · 13.31%</title></rect>
-<rect width="32.63" height="12" x="381.37" y="0" class="todo"><title>122 · 7.88%</title></rect>
+<rect width="55.36" height="12" x="326.28" y="0" class="nonmatching"><title>207 · 13.37%</title></rect>
+<rect width="32.36" height="12" x="381.64" y="0" class="todo"><title>121 · 7.82%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1220</tspan> · <tspan class="nonmatching">206</tspan> · <tspan class="todo">122</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1220</tspan> · <tspan class="nonmatching">207</tspan> · <tspan class="todo">121</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="219.30" height="12" x="0" y="0" class="named"><title>331 KB · 52.97%</title></rect>
-<rect width="149.57" height="12" x="219.30" y="0" class="nonmatching"><title>226 KB · 36.13%</title></rect>
-<rect width="45.13" height="12" x="368.87" y="0" class="todo"><title>68 KB · 10.90%</title></rect>
+<rect width="149.94" height="12" x="219.30" y="0" class="nonmatching"><title>226 KB · 36.22%</title></rect>
+<rect width="44.76" height="12" x="369.24" y="0" class="todo"><title>68 KB · 10.81%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">331 KB</tspan> · <tspan class="nonmatching">226 KB</tspan> · <tspan class="todo">68 KB</tspan></text>
@@ -1414,7 +1414,7 @@
 <rect width="12" height="12" x="705" y="390" class="named"><title>0x00489360 ClipCheckPoint (278 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="390" class="named"><title>0x00489480 OutputSky (184 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="390" class="named"><title>0x00489540 DrawRope (1032 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="405" class="todo"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="405" class="nonmatching"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="405" class="nonmatching"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="405" class="nonmatching"><title>0x0048a0c0 DrawBlood (868 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="405" class="nonmatching"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>
@@ -1929,7 +1929,7 @@
 <rect width="14.59" height="15.01" x="347.32" y="429" class="named"><title>0x00420b10 LaraAboveWater (571 bytes)</title></rect>
 <rect width="14.59" height="14.99" x="347.32" y="447.01" class="named"><title>0x00456120 PoleCollision (570 bytes)</title></rect>
 <rect width="14.95" height="14.52" x="364.91" y="79.81" class="nonmatching"><title>0x0043dbf0 setup_ammo_selector (566 bytes)</title></rect>
-<rect width="14.93" height="14.52" x="382.86" y="79.81" class="todo"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
+<rect width="14.93" height="14.52" x="382.86" y="79.81" class="nonmatching"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
 <rect width="14.87" height="14.52" x="400.79" y="79.81" class="nonmatching"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
 <rect width="14.82" height="14.52" x="418.66" y="79.81" class="named"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
 <rect width="14.82" height="14.52" x="436.48" y="79.81" class="named"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>

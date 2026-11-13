@@ -22,6 +22,7 @@
 #include "../effect2.h"
 #include "../delstuff.h"
 #include "../debris.h"
+#include "../draw.h"
 
 sint8 flare_table[121] = {
     96, 80, 0, 6, 0, 31, 48, 32, 32, 10, -6, 31, 32, 24, 24, 18, -1, 31, 80, 104, 64, 5, -3, 30,
@@ -1707,6 +1708,61 @@ void DrawRope(ROPE_STRUCT *rope)
         x4 = x3;
         y4 = y3;
     }
+}
+
+void DrawLaserSightSprite(void)
+{
+    PHD_VECTOR vec;
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *pos;
+    float perspz, u1, v1, u2;
+
+    XY = (sint16 *)&scratchpad[0];
+    Z = (sint32 *)&scratchpad[256];
+    pos = (sint16 *)&scratchpad[512];
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    pos[0] = (sint16)(LaserSightX - lara_item->pos.x_pos);
+    pos[1] = (sint16)(LaserSightY - lara_item->pos.y_pos);
+    pos[2] = (sint16)(LaserSightZ - lara_item->pos.z_pos);
+    vec.x = phd_mxptr[M00] * pos[0] + phd_mxptr[M01] * pos[1] + phd_mxptr[M02] * pos[2] + phd_mxptr[M03];
+    vec.y = phd_mxptr[M10] * pos[0] + phd_mxptr[M11] * pos[1] + phd_mxptr[M12] * pos[2] + phd_mxptr[M13];
+    vec.z = phd_mxptr[M20] * pos[0] + phd_mxptr[M21] * pos[1] + phd_mxptr[M22] * pos[2] + phd_mxptr[M23];
+    perspz = f_persp / (float)vec.z;
+    XY[0] = (sint16)(float)(vec.x * perspz + f_centerx);
+    XY[1] = (sint16)(float)(vec.y * perspz + f_centery);
+    Z[0] = vec.z >> W2V_SHIFT;
+    phd_PopMatrix();
+    sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 14];
+    setXY4(v, XY[0] - 2, XY[1] - 2, XY[0] + 2, XY[1] - 2, XY[0] - 2, XY[1] + 2, XY[0] + 2, XY[1] + 2, (sint32)f_mznear, clipflags);
+    v[0].color = 0xFFFF0000;
+    v[1].color = 0xFFFF0000;
+    v[2].color = 0xFFFF0000;
+    v[3].color = 0xFFFF0000;
+    v[0].specular = 0xFF000000;
+    v[1].specular = 0xFF000000;
+    v[2].specular = 0xFF000000;
+    v[3].specular = 0xFF000000;
+    u1 = sprite->x1;
+    u2 = sprite->x2;
+    v1 = sprite->y1;
+    tex.drawtype = 2;
+    tex.flag = 0;
+    tex.tpage = sprite->tpage;
+    tex.u1 = u1;
+    tex.v1 = v1;
+    tex.u2 = u2;
+    tex.v3 = sprite->y2;
+    tex.v2 = v1;
+    tex.u3 = u2;
+    tex.u4 = u1;
+    tex.v4 = sprite->y2;
+    AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
+    LaserSightActive = 0;
 }
 
 void DrawDebris(void)
