@@ -115,6 +115,208 @@ uint8 Decompress(char *pDest, char *pCompressed, sint32 compressedSize, sint32 s
     return 1;
 }
 
+uint8 LoadTextures(sint32 RTPages, sint32 OTPages, sint32 BTPages)
+{
+    DXTEXTUREINFO *dxtex;
+    LPDIRECTDRAWSURFACE4 tSurf;
+    LPDIRECT3DTEXTURE2 pTex;
+    uint8 *TextureData;
+    sint32 *d;
+    char *pData;
+    char *pComp;
+    char *s;
+    sint32 format, skip, size, compressedSize, nTex, c, i, x, y, n;
+    uint8 r, g, b, a;
+
+    Log(2, "LoadTextures");
+    Var533a54 = FileData;
+    nTextures = 1;
+    format = 0;
+    skip = 4;
+    dxtex = &G_dxinfo->DDInfo[G_dxinfo->nDD].D3DDevices[G_dxinfo->nD3D].TextureInfos[G_dxinfo->nTexture];
+    if (dxtex->rbpp == 8 && dxtex->gbpp == 8 && dxtex->bbpp == 8 && dxtex->abpp == 8)
+        format = 1;
+    else if (dxtex->rbpp == 5 && dxtex->gbpp == 5 && dxtex->bbpp == 5 && dxtex->abpp == 1) {
+        format = 2;
+        skip = 2;
+    }
+    if (format <= 1) {
+        fread(&size, 1, 4, level_fp);
+        fread(&compressedSize, 1, 4, level_fp);
+        CompressedData = (char *)malloc(compressedSize);
+        FileData = (char *)malloc(size);
+        fread(CompressedData, compressedSize, 1, level_fp);
+        Decompress(FileData, CompressedData, compressedSize, size);
+        fread(&size, 1, 4, level_fp);
+        fread(&compressedSize, 1, 4, level_fp);
+        fseek(level_fp, compressedSize, SEEK_CUR);
+        free(CompressedData);
+    } else {
+        fread(&size, 1, 4, level_fp);
+        fread(&compressedSize, 1, 4, level_fp);
+        fseek(level_fp, compressedSize, SEEK_CUR);
+        fread(&size, 1, 4, level_fp);
+        fread(&compressedSize, 1, 4, level_fp);
+        CompressedData = (char *)malloc(compressedSize);
+        FileData = (char *)malloc(size);
+        fread(CompressedData, compressedSize, 1, level_fp);
+        Decompress(FileData, CompressedData, compressedSize, size);
+        free(CompressedData);
+    }
+    pData = FileData;
+    Log(5, "RTPages %d", RTPages);
+    n = RTPages * skip * 0x10000;
+    TextureData = (uint8 *)malloc(n);
+    memcpy(TextureData, FileData, n);
+    FileData += n;
+    S_LoadBar();
+    for (i = 0; i < RTPages; i++) {
+        Textures = (TEXTURE *)AddStruct(Textures, nTextures, sizeof(TEXTURE));
+        nTex = nTextures;
+        nTextures++;
+        tSurf = CreateTexturePage(App.TextureSize, App.TextureSize, 0, (sint32 *)(TextureData + i * skip * 0x10000), 0, format);
+        DXAttempt(IDirectDrawSurface4_QueryInterface(tSurf, &IID_IDirect3DTexture2, (void **)&pTex));
+        Textures[nTex].tex = pTex;
+        Textures[nTex].surface = tSurf;
+        Textures[nTex].width = App.TextureSize;
+        Textures[nTex].height = App.TextureSize;
+        Textures[nTex].bump = 0;
+        IDirect3DDevice3_SetTexture(App.dx.lpD3DDevice, 0, pTex);
+    }
+    free(TextureData);
+    Log(5, "OTPages %d", OTPages);
+    n = OTPages * skip * 0x10000;
+    TextureData = (uint8 *)malloc(n);
+    memcpy(TextureData, FileData, n);
+    FileData += n;
+    S_LoadBar();
+    for (i = 0; i < OTPages; i++) {
+        Textures = (TEXTURE *)AddStruct(Textures, nTextures, sizeof(TEXTURE));
+        nTex = nTextures;
+        nTextures++;
+        tSurf = CreateTexturePage(App.TextureSize, App.TextureSize, 0, (sint32 *)(TextureData + i * skip * 0x10000), 0, format);
+        DXAttempt(IDirectDrawSurface4_QueryInterface(tSurf, &IID_IDirect3DTexture2, (void **)&pTex));
+        Textures[nTex].tex = pTex;
+        Textures[nTex].surface = tSurf;
+        Textures[nTex].width = App.TextureSize;
+        Textures[nTex].height = App.TextureSize;
+        Textures[nTex].bump = 0;
+        IDirect3DDevice3_SetTexture(App.dx.lpD3DDevice, 0, pTex);
+    }
+    free(TextureData);
+    S_LoadBar();
+    Log(5, "BTPages %d", BTPages);
+    if (BTPages) {
+        n = BTPages * skip * 0x10000;
+        TextureData = (uint8 *)malloc(n);
+        memcpy(TextureData, FileData, n);
+        FileData += n;
+        for (i = 0; i < BTPages; i++) {
+            if (i >= (BTPages >> 1)) {
+                if (!App.BumpMapping)
+                    break;
+                tSurf = CreateTexturePage(App.BumpMapSize, App.BumpMapSize, 0, (sint32 *)(TextureData + i * skip * 0x10000), 0, format);
+            } else
+                tSurf = CreateTexturePage(App.TextureSize, App.TextureSize, 0, (sint32 *)(TextureData + i * skip * 0x10000), 0, format);
+            Textures = (TEXTURE *)AddStruct(Textures, nTextures, sizeof(TEXTURE));
+            nTex = nTextures;
+            nTextures++;
+            DXAttempt(IDirectDrawSurface4_QueryInterface(tSurf, &IID_IDirect3DTexture2, (void **)&pTex));
+            Textures[nTex].tex = pTex;
+            Textures[nTex].surface = tSurf;
+            if (i >= (BTPages >> 1)) {
+                Textures[nTex].width = App.BumpMapSize;
+                Textures[nTex].height = App.BumpMapSize;
+            } else {
+                Textures[nTex].width = App.TextureSize;
+                Textures[nTex].height = App.TextureSize;
+            }
+            Textures[nTex].bump = 1;
+            Textures[nTex].bumptpage = nTex + (BTPages >> 1);
+        }
+        free(TextureData);
+    }
+    free(pData);
+    fread(&size, 1, 4, level_fp);
+    fread(&compressedSize, 1, 4, level_fp);
+    CompressedData = (char *)malloc(compressedSize);
+    FileData = (char *)malloc(size);
+    fread(CompressedData, compressedSize, 1, level_fp);
+    Decompress(FileData, CompressedData, compressedSize, size);
+    free(CompressedData);
+    pData = FileData;
+    TextureData = (uint8 *)malloc(0x40000);
+    if (!gfCurrentLevel) {
+        pComp = 0;
+        CompressedData = 0;
+        if (Gameflow->Language == US)
+            n = LoadFile("data\\uslogo.pak", &CompressedData);
+        else if (Gameflow->Language == GERMAN)
+            n = LoadFile("data\\grlogo.pak", &CompressedData);
+        else if (Gameflow->Language == FRENCH)
+            n = LoadFile("data\\frlogo.pak", &CompressedData);
+        else
+            n = LoadFile("data\\uklogo.pak", &CompressedData);
+        pComp = (char *)malloc(*(sint32 *)CompressedData);
+        Decompress(pComp, CompressedData + 4, n - 4, *(sint32 *)CompressedData);
+        free(CompressedData);
+        for (i = 0; i < 2; i++) {
+            s = pComp + i * 768;
+            d = (sint32 *)TextureData;
+            for (y = 0; y < 256; y++) {
+                for (x = 0; x < 256; x++) {
+                    r = *(s + x * 3 + y * 1536);
+                    g = *(s + x * 3 + y * 1536 + 1);
+                    b = *(s + x * 3 + y * 1536 + 2);
+                    a = 0xFF;
+                    if (!r && !b && !g)
+                        a = 0;
+                    c = (b | ((g | (r << 8)) << 8)) | (a << 24);
+                    *d++ = c;
+                }
+            }
+            Textures = (TEXTURE *)AddStruct(Textures, nTextures, sizeof(TEXTURE));
+            nTex = nTextures;
+            nTextures++;
+            tSurf = CreateTexturePage(256, 256, 0, (sint32 *)TextureData, 0, 0);
+            DXAttempt(IDirectDrawSurface4_QueryInterface(tSurf, &IID_IDirect3DTexture2, (void **)&pTex));
+            Textures[nTex].tex = pTex;
+            Textures[nTex].surface = tSurf;
+            Textures[nTex].width = 256;
+            Textures[nTex].height = 256;
+            Textures[nTex].bump = 0;
+        }
+        free(pComp);
+    }
+    memcpy(TextureData, FileData, 0x40000);
+    FileData += 0x40000;
+    Textures = (TEXTURE *)AddStruct(Textures, nTextures, sizeof(TEXTURE));
+    nTex = nTextures;
+    nTextures++;
+    tSurf = CreateTexturePage(256, 256, 0, (sint32 *)TextureData, 0, 0);
+    DXAttempt(IDirectDrawSurface4_QueryInterface(tSurf, &IID_IDirect3DTexture2, (void **)&pTex));
+    Textures[nTex].tex = pTex;
+    Textures[nTex].surface = tSurf;
+    Textures[nTex].width = 256;
+    Textures[nTex].height = 256;
+    Textures[nTex].bump = 0;
+    memcpy(TextureData, FileData, 0x40000);
+    FileData += 0x40000;
+    Textures = (TEXTURE *)AddStruct(Textures, nTextures, sizeof(TEXTURE));
+    nTex = nTextures;
+    nTextures++;
+    tSurf = CreateTexturePage(256, 256, 0, (sint32 *)TextureData, 0, 0);
+    DXAttempt(IDirectDrawSurface4_QueryInterface(tSurf, &IID_IDirect3DTexture2, (void **)&pTex));
+    Textures[nTex].tex = pTex;
+    Textures[nTex].surface = tSurf;
+    Textures[nTex].width = 256;
+    Textures[nTex].height = 256;
+    Textures[nTex].bump = 0;
+    free(TextureData);
+    free(pData);
+    return 1;
+}
+
 uint8 LoadRooms(void)
 {
     ROOM_INFO *r;
