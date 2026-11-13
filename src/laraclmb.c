@@ -147,6 +147,75 @@ sint32 LaraCheckForLetGo(ITEM_INFO *item, COLL_INFO *coll)
     return 0;
 }
 
+sint32 LaraTestClimbUpPos(ITEM_INFO *item, sint32 front, sint32 right, sint32 *shift, sint32 *ledge)
+{
+    FLOOR_INFO *floor;
+    sint32 angle, x, y, z, xfront, zfront, h, c;
+    sint16 room_number;
+
+    xfront = 0;
+    zfront = 0;
+    y = item->pos.y_pos - 768;
+    angle = (uint16)(item->pos.y_rot + 0x2000) / 0x4000;
+    switch (angle) {
+    case NORTH:
+        z = front + item->pos.z_pos;
+        x = right + item->pos.x_pos;
+        zfront = 4;
+        break;
+    case EAST:
+        x = front + item->pos.x_pos;
+        z = item->pos.z_pos - right;
+        xfront = 4;
+        break;
+    case SOUTH:
+        z = item->pos.z_pos - front;
+        x = item->pos.x_pos - right;
+        zfront = -4;
+        break;
+    default:
+        x = item->pos.x_pos - front;
+        z = item->pos.z_pos + right;
+        xfront = -4;
+        break;
+    }
+    *shift = 0;
+    room_number = item->room_number;
+    floor = GetFloor(x, y, z, &room_number);
+    c = GetCeiling(floor, x, y, z) + (256 - y);
+    if (c > 70)
+        return 0;
+    if (c > 0)
+        *shift = c;
+    floor = GetFloor(x + xfront, y, z + zfront, &room_number);
+    h = GetHeight(floor, x + xfront, y, z + zfront);
+    if (h == NO_HEIGHT) {
+        *ledge = NO_HEIGHT;
+        return 1;
+    }
+    h -= y;
+    *ledge = h;
+    if (h > 128) {
+        c = GetCeiling(floor, x + xfront, y, z + zfront) - y;
+        if (c >= 512)
+            return 1;
+        if (h - c > 762) {
+            *shift = h;
+            return -1;
+        }
+        return 0;
+    }
+    if (h > 0 && h > *shift)
+        *shift = h;
+    room_number = item->room_number;
+    GetFloor(x, y + 512, z, &room_number);
+    floor = GetFloor(x + xfront, y + 512, z + zfront, &room_number);
+    c = GetCeiling(floor, x + xfront, y + 512, z + zfront) - y;
+    if (c <= h)
+        return 1;
+    return c >= 512;
+}
+
 void lara_as_climbleft(ITEM_INFO *item, COLL_INFO *coll)
 {
     coll->enable_baddie_push = 0;
