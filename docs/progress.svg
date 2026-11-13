@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="264.90" height="12" x="0" y="0" class="named"><title>1199 · 77.45%</title></rect>
 <rect width="0.66" height="12" x="264.90" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.01" height="12" x="265.56" y="0" class="nonmatching"><title>163 · 10.53%</title></rect>
-<rect width="40.43" height="12" x="301.57" y="0" class="todo"><title>183 · 11.82%</title></rect>
+<rect width="36.23" height="12" x="265.56" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
+<rect width="40.21" height="12" x="301.79" y="0" class="todo"><title>182 · 11.76%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1199</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">163</tspan> · <tspan class="todo">183</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1199</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">182</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="177.96" height="12" x="0" y="0" class="named"><title>325 KB · 52.03%</title></rect>
 <rect width="0.13" height="12" x="177.96" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="115.13" height="12" x="178.09" y="0" class="nonmatching"><title>210 KB · 33.66%</title></rect>
-<rect width="48.78" height="12" x="293.22" y="0" class="todo"><title>89 KB · 14.26%</title></rect>
+<rect width="117.13" height="12" x="178.09" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
+<rect width="46.78" height="12" x="295.22" y="0" class="todo"><title>86 KB · 13.68%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">210 KB</tspan> · <tspan class="todo">89 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">86 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1339,7 +1339,7 @@
 <rect width="12" height="12" x="300" y="375" class="todo"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="375" class="todo"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="375" class="todo"><title>0x0047d900 PrelightVerts (340 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="375" class="todo"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="375" class="nonmatching"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="375" class="nonmatching"><title>0x0047e8b0 phd_PutPolygonsPickup (3437 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="375" class="named"><title>0x0047f620 phd_PutPolygonSkyMesh (808 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="375" class="named"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
@@ -1628,7 +1628,7 @@
 <rect width="44.78" height="35.88" x="0" y="318.88" class="nonmatching"><title>0x00405fa0 GuideControl (4191 bytes)</title></rect>
 <rect width="44.78" height="35.03" x="0" y="357.76" class="nonmatching"><title>0x0041af00 VoncroyRaceControl (4092 bytes)</title></rect>
 <rect width="44.78" height="32.02" x="0" y="395.78" class="nonmatching"><title>0x00460c70 CalculateSpotCams (3744 bytes)</title></rect>
-<rect width="44.78" height="31.20" x="0" y="430.80" class="todo"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
+<rect width="44.78" height="31.20" x="0" y="430.80" class="nonmatching"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
 <rect width="34.50" height="38.22" x="47.78" y="0" class="nonmatching"><title>0x0047e8b0 phd_PutPolygonsPickup (3437 bytes)</title></rect>
 <rect width="34.50" height="37.32" x="47.78" y="41.22" class="nonmatching"><title>0x004080e0 HorsemanControl (3356 bytes)</title></rect>
 <rect width="34.50" height="34.79" x="47.78" y="81.54" class="named"><title>0x00490ff0 DXGetErrorString (3128 bytes)</title></rect>

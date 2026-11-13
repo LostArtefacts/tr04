@@ -31,6 +31,7 @@ extern D3DLIGHT_STRUCT *D3DDynamics;
 
 void FreeD3DLights(void);
 void SetupLight(D3DLIGHT_STRUCT *d3dlight, PCLIGHT *light, sint32 *ambient);
+void InitObjectLighting(ITEM_INFO *item);
 void InitItemDynamicLighting(ITEM_INFO *item);
 void CalcAmbientLight(ITEM_INFO *item);
 void CreateLightList(ITEM_INFO *item);

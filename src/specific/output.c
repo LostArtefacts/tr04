@@ -57,6 +57,233 @@ void nullsub_9(void)
 {
 }
 
+void phd_PutPolygons(sint16 *objptr, sint32 clip)
+{
+    MESH_DATA *mesh;
+    SPRITESTRUCT *envmap_sprite;
+    D3DTLVERTEX *v;
+    TEXTURESTRUCT *pTex;
+    D3DVECTOR n0, n1, n2, n3;
+    TEXTURESTRUCT envmap_texture;
+    sint16 *quad;
+    sint16 *tri;
+    float u1, v1, u2, v2, u3, v3, u4, v4;
+    sint32 c0, c1, c2, c3, s0, s1, s2, s3;
+    sint32 num, col, m, cr, cg, cb;
+    uint16 drawbak;
+    uint8 envmap;
+    sint32 i;
+
+    SetD3DViewMatrix();
+    mesh = (MESH_DATA *)objptr;
+    if (mesh) {
+        if ((sint16 *)mesh != meshes[objects[LARA_DOUBLE].mesh_index])
+            envmap_sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 11];
+        else
+            envmap_sprite = &spriteinfo[objects[SKY_GRAPHICS].mesh_index];
+        if (GlobalAmbient) {
+            ClearObjectLighting();
+            ClearDynamicLighting();
+            IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_AMBIENT, GlobalAmbient);
+            GlobalAmbient = 0;
+        } else if (!mesh->prelight)
+            InitObjectLighting(current_item);
+        else {
+            ClearObjectLighting();
+            InitItemDynamicLighting(current_item);
+        }
+        if (mesh->nVerts)
+            DXAttempt(IDirect3DVertexBuffer_ProcessVertices(DestVB, D3DVOP_LIGHT | D3DVOP_TRANSFORM, 0, mesh->nVerts, mesh->SourceVB, 0, App.dx._lpD3DDevice, 0));
+        IDirect3DVertexBuffer_Lock(DestVB, DDLOCK_READONLY, (void **)&v, 0);
+        clip_left = f_left;
+        clip_top = f_top;
+        clip_right = f_right;
+        clip_bottom = f_bottom;
+        if (mesh->nVerts) {
+            bWaterEffect = camera.underwater != 0;
+            ProjectVerts(mesh->nVerts, v, clipflags);
+            if (mesh->prelight)
+                PrelightVerts(mesh->nVerts, v, mesh);
+            else
+                CalcVertsColorSplitMMX(mesh->nVerts, v);
+        }
+        quad = mesh->gt4;
+        for (i = 0; i < mesh->ngt4; i++, quad += 6) {
+            pTex = &textinfo[quad[4] & 0x7FFF];
+            envmap = 0;
+            drawbak = pTex->drawtype;
+            if (quad[5] & 1)
+                pTex->drawtype = 2;
+            if (quad[5] & 2) {
+                envmap = 1;
+                num = (quad[5] >> 2) & 0x1F;
+                n0 = ((D3DVECTOR *)mesh->Normals)[quad[0]];
+                n1 = ((D3DVECTOR *)mesh->Normals)[quad[1]];
+                n2 = ((D3DVECTOR *)mesh->Normals)[quad[2]];
+                n3 = ((D3DVECTOR *)mesh->Normals)[quad[3]];
+                D3DTransform(&n0, &D3DMView);
+                D3DTransform(&n1, &D3DMView);
+                D3DTransform(&n2, &D3DMView);
+                D3DTransform(&n3, &D3DMView);
+                n0.x *= 0.125F;
+                n0.y *= 0.125F;
+                n0.z *= 0.125F;
+                n1.x *= 0.125F;
+                n1.y *= 0.125F;
+                n1.z *= 0.125F;
+                n2.x *= 0.125F;
+                n2.y *= 0.125F;
+                n2.z *= 0.125F;
+                n3.x *= 0.125F;
+                n3.y *= 0.125F;
+                n3.z *= 0.125F;
+                u1 = n0.x + envmap_sprite->x1 + 0.125F;
+                v1 = n0.y + envmap_sprite->y1 + 0.125F;
+                u2 = n1.x + envmap_sprite->x1 + 0.125F;
+                v2 = n1.y + envmap_sprite->y1 + 0.125F;
+                u3 = n2.x + envmap_sprite->x1 + 0.125F;
+                v3 = n2.y + envmap_sprite->y1 + 0.125F;
+                u4 = n3.x + envmap_sprite->x1 + 0.125F;
+                v4 = n3.y + envmap_sprite->y1 + 0.125F;
+                envmap_texture.drawtype = 2;
+                envmap_texture.flag = pTex->flag;
+                envmap_texture.tpage = envmap_sprite->tpage;
+                envmap_texture.u1 = u1;
+                envmap_texture.v1 = v1;
+                envmap_texture.u2 = u2;
+                envmap_texture.v2 = v2;
+                envmap_texture.u3 = u3;
+                envmap_texture.v3 = v3;
+                envmap_texture.u4 = u4;
+                envmap_texture.v4 = v4;
+            }
+            if (GlobalAlpha == (sint32)0xFF000000) {
+                switch (pTex->drawtype) {
+                case 1:
+                case 2:
+                    AddQuadSorted(v, quad[0], quad[1], quad[2], quad[3], pTex, 0);
+                    break;
+                case 0:
+                    AddQuadZBuffer(v, quad[0], quad[1], quad[2], quad[3], pTex, 0);
+                    break;
+                }
+                if (envmap) {
+                    c0 = v[quad[0]].color;
+                    c1 = v[quad[1]].color;
+                    c2 = v[quad[2]].color;
+                    c3 = v[quad[3]].color;
+                    s0 = v[quad[0]].specular;
+                    s1 = v[quad[1]].specular;
+                    s2 = v[quad[2]].specular;
+                    s3 = v[quad[3]].specular;
+                    m = num * 8;
+                    RGB_M(v[quad[0]].color, m);
+                    RGB_M(v[quad[1]].color, m);
+                    RGB_M(v[quad[2]].color, m);
+                    RGB_M(v[quad[3]].color, m);
+                    RGB_M(v[quad[0]].specular, m);
+                    RGB_M(v[quad[1]].specular, m);
+                    RGB_M(v[quad[2]].specular, m);
+                    RGB_M(v[quad[3]].specular, m);
+                    AddQuadSorted(v, quad[0], quad[1], quad[2], quad[3], &envmap_texture, 0);
+                    v[quad[0]].color = c0;
+                    v[quad[1]].color = c1;
+                    v[quad[2]].color = c2;
+                    v[quad[3]].color = c3;
+                    v[quad[0]].specular = s0;
+                    v[quad[1]].specular = s1;
+                    v[quad[2]].specular = s2;
+                    v[quad[3]].specular = s3;
+                }
+            } else {
+                pTex->drawtype = 7;
+                AddQuadSorted(v, quad[0], quad[1], quad[2], quad[3], pTex, 0);
+            }
+            pTex->drawtype = drawbak;
+        }
+        tri = mesh->gt3;
+        for (i = 0; i < mesh->ngt3; i++, tri += 5) {
+            pTex = &textinfo[tri[3] & 0x7FFF];
+            envmap = 0;
+            drawbak = pTex->drawtype;
+            if (tri[4] & 1)
+                pTex->drawtype = 2;
+            if (tri[4] & 2) {
+                envmap = 1;
+                num = (tri[4] >> 2) & 0x1F;
+                n0 = ((D3DVECTOR *)mesh->Normals)[tri[0]];
+                n1 = ((D3DVECTOR *)mesh->Normals)[tri[1]];
+                n2 = ((D3DVECTOR *)mesh->Normals)[tri[2]];
+                D3DTransform(&n0, &D3DMView);
+                D3DTransform(&n1, &D3DMView);
+                D3DTransform(&n2, &D3DMView);
+                n0.x *= 0.125F;
+                n0.y *= 0.125F;
+                n0.z *= 0.125F;
+                n1.x *= 0.125F;
+                n1.y *= 0.125F;
+                n1.z *= 0.125F;
+                n2.x *= 0.125F;
+                n2.y *= 0.125F;
+                n2.z *= 0.125F;
+                u1 = n0.x + envmap_sprite->x1 + 0.125F;
+                v1 = n0.y + envmap_sprite->y1 + 0.125F;
+                u2 = n1.x + envmap_sprite->x1 + 0.125F;
+                v2 = n1.y + envmap_sprite->y1 + 0.125F;
+                u3 = n2.x + envmap_sprite->x1 + 0.125F;
+                v3 = n2.y + envmap_sprite->y1 + 0.125F;
+                envmap_texture.drawtype = 2;
+                envmap_texture.flag = pTex->flag;
+                envmap_texture.tpage = envmap_sprite->tpage;
+                envmap_texture.u1 = u1;
+                envmap_texture.v1 = v1;
+                envmap_texture.u2 = u2;
+                envmap_texture.v2 = v2;
+                envmap_texture.u3 = u3;
+                envmap_texture.v3 = v3;
+            }
+            if (GlobalAlpha == (sint32)0xFF000000) {
+                switch (pTex->drawtype) {
+                case 1:
+                case 2:
+                    AddTriSorted(v, tri[0], tri[1], tri[2], pTex, 0);
+                    break;
+                case 0:
+                    AddTriZBuffer(v, tri[0], tri[1], tri[2], pTex, 0);
+                    break;
+                }
+                if (envmap) {
+                    c0 = v[tri[0]].color;
+                    c1 = v[tri[1]].color;
+                    c2 = v[tri[2]].color;
+                    s0 = v[tri[0]].specular;
+                    s1 = v[tri[1]].specular;
+                    s2 = v[tri[2]].specular;
+                    m = num * 8;
+                    RGB_M(v[tri[0]].color, m);
+                    RGB_M(v[tri[1]].color, m);
+                    RGB_M(v[tri[2]].color, m);
+                    RGB_M(v[tri[0]].specular, m);
+                    RGB_M(v[tri[1]].specular, m);
+                    RGB_M(v[tri[2]].specular, m);
+                    AddTriSorted(v, tri[0], tri[1], tri[2], &envmap_texture, 0);
+                    v[tri[0]].color = c0;
+                    v[tri[1]].color = c1;
+                    v[tri[2]].color = c2;
+                    v[tri[0]].specular = s0;
+                    v[tri[1]].specular = s1;
+                    v[tri[2]].specular = s2;
+                }
+            } else {
+                pTex->drawtype = 7;
+                AddTriSorted(v, tri[0], tri[1], tri[2], pTex, 0);
+            }
+            pTex->drawtype = drawbak;
+        }
+        IDirect3DVertexBuffer_Unlock(DestVB);
+    }
+}
+
 void phd_PutPolygonsPickup(sint16 *objptr, float x, float y, sint32 color)
 {
     MESH_DATA *mesh;
