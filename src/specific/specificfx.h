@@ -7,6 +7,19 @@
 #include "../types.h"
 #include "../3dglodef.h"
 
+typedef struct WATER_DUST {
+    sint32 x;
+    sint32 pad : 1;
+    sint32 on : 1;
+    sint32 y : 30;
+    sint32 z;
+    sint8 xvel;
+    uint8 yvel;
+    sint8 zvel;
+    uint8 life;
+} WATER_DUST;
+
+extern WATER_DUST uwdust[256];
 extern sint32 DoFade;
 extern sint32 FadeVal;
 extern sint32 FadeStep;

@@ -21,6 +21,16 @@
 #include "../wraith.h"
 #include "../effect2.h"
 #include "../delstuff.h"
+#include "../debris.h"
+
+sint8 flare_table[121] = {
+    96, 80, 0, 6, 0, 31, 48, 32, 32, 10, -6, 31, 32, 24, 24, 18, -1, 31, 80, 104, 64, 5, -3, 30,
+    64, 64, 64, 20, 0, 32, 96, 56, 56, 14, 0, 11, 80, 40, 32, 9, 0, 29, 16, 24, 40, 2, 5, 31,
+    8, 8, 24, 7, 8, 31, 8, 16, 32, 4, 10, 31, 48, 24, 0, 2, 13, 31, 40, 96, 72, 1, 16, 11,
+    40, 96, 72, 3, 20, 11, 32, 16, 0, 6, 22, 31, 32, 16, 0, 9, 23, 30, 32, 16, 0, 3, 24, 31,
+    32, 48, 24, 4, 26, 31, 8, 40, 112, 3, 27, 11, 8, 16, 0, 10, 29, 30, 16, 16, 24, 17, 31, 29,
+    -1
+};
 
 sint32 ShadowTable[42] = {
     4, 1, 5, 5, 1, 6, 6, 1, 2, 6, 2, 7, 8, 4, 9, 9, 4, 5, 9, 5, 10, 10, 5, 6, 10, 6, 11, 11, 6, 7,
@@ -1729,6 +1739,161 @@ void DrawSprite(sint32 x, sint32 y, sint32 slot, sint32 col, sint32 size, sint32
     tex.u4 = sprite->x1;
     tex.v4 = sprite->y2;
     AddQuadSorted(v, 0, 1, 3, 2, &tex, 0);
+}
+
+void SetUpLensFlare(sint32 x, sint32 y, sint32 z, GAME_VECTOR *lfobj)
+{
+    sint32 *mptr;
+    sint32 *Z;
+    sint16 *vec;
+    sint16 *XY;
+    float perspz;
+    sint32 px, py, pz, dx, dy, dz, r, g, b, r2, g2, b2, num, flash, i;
+    sint16 los, rn;
+
+    los = 0;
+    if (!lfobj) {
+        if (room[camera.pos.room_number].flags & ROOM_NO_LENSFLARE)
+            return;
+        r = gfLensFlareColour.r;
+        g = gfLensFlareColour.g;
+        b = gfLensFlareColour.b;
+        px = x;
+        py = y;
+        pz = z;
+        dx = (x - camera.pos.x) >> 4;
+        dy = (y - camera.pos.y) >> 4;
+        dz = (z - camera.pos.z) >> 4;
+        while (abs(px) > 0x36000 || abs(py) > 0x36000 || abs(pz) > 0x36000) {
+            px -= dx;
+            py -= dy;
+            pz -= dz;
+        }
+        dx = (px - camera.pos.x) >> 4;
+        dy = (py - camera.pos.y) >> 4;
+        dz = (pz - camera.pos.z) >> 4;
+        while (abs(px - camera.pos.x) > 0x8000 || abs(py - camera.pos.y) > 0x8000 || abs(pz - camera.pos.z) > 0x8000) {
+            px -= dx;
+            py -= dy;
+            pz -= dz;
+        }
+        dx = (px - camera.pos.x) >> 4;
+        dy = (py - camera.pos.y) >> 4;
+        dz = (pz - camera.pos.z) >> 4;
+        for (i = 0; i < 16; i++) {
+            IsRoomOutsideNo = 255;
+            IsRoomOutside(px, py, pz);
+            rn = IsRoomOutsideNo;
+            if (rn != 255)
+                break;
+            px -= dx;
+            py -= dy;
+            pz -= dz;
+        }
+    } else {
+        px = lfobj->x;
+        if (abs(px - lara_item->pos.x_pos) > 0x8000)
+            return;
+        py = lfobj->y;
+        if (abs(py - lara_item->pos.y_pos) > 0x8000)
+            return;
+        pz = lfobj->z;
+        if (abs(pz - lara_item->pos.z_pos) > 0x8000)
+            return;
+        r = g = b = 255;
+        rn = lfobj->room_number;
+    }
+    if (rn != 255) {
+        if (room[rn].flags & ROOM_NOT_INSIDE || lfobj) {
+            GAME_VECTOR start;
+            GAME_VECTOR target;
+
+            start.y = camera.pos.y;
+            start.z = camera.pos.z;
+            start.x = camera.pos.x;
+            start.room_number = camera.pos.room_number;
+            target.x = px;
+            target.y = py;
+            target.z = pz;
+            los = LOS(&start, &target);
+        }
+    }
+    if (!los && lfobj)
+        return;
+    vec = (sint16 *)&scratchpad[0];
+    XY = (sint16 *)&scratchpad[16];
+    Z = (sint32 *)&scratchpad[32];
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    mptr = phd_mxptr;
+    if (!lfobj) {
+        px = x - lara_item->pos.x_pos;
+        py = y - lara_item->pos.y_pos;
+        pz = z - lara_item->pos.z_pos;
+        while (px > 0x7F00 || px < -0x7F00 || py > 0x7F00 || py < -0x7F00 || pz > 0x7F00 || pz < -0x7F00) {
+            px >>= 1;
+            py >>= 1;
+            pz >>= 1;
+        }
+        vec[0] = (sint16)px;
+        vec[1] = (sint16)py;
+        vec[2] = (sint16)pz;
+    } else {
+        vec[0] = (sint16)(px - lara_item->pos.x_pos);
+        vec[1] = (sint16)(py - lara_item->pos.y_pos);
+        vec[2] = (sint16)(pz - lara_item->pos.z_pos);
+    }
+    {
+        PHD_VECTOR pos;
+
+        pos.x = mptr[M00] * vec[0] + mptr[M01] * vec[1] + mptr[M02] * vec[2] + mptr[M03];
+        pos.y = mptr[M10] * vec[0] + mptr[M11] * vec[1] + mptr[M12] * vec[2] + mptr[M13];
+        pos.z = mptr[M20] * vec[0] + mptr[M21] * vec[1] + mptr[M22] * vec[2] + mptr[M23];
+        perspz = f_persp / (float)pos.z;
+        XY[0] = (sint16)(pos.x * perspz + f_centerx);
+        XY[1] = (sint16)(pos.y * perspz + f_centery);
+        Z[0] = pos.z >> W2V_SHIFT;
+    }
+    phd_PopMatrix();
+    num = lfobj ? 6 : 0;
+    if (Z[0] > 0) {
+        dx = XY[0] - phd_centerx;
+        dy = XY[1] - phd_centery;
+        dz = phd_sqrt(SQUARE(dx) + SQUARE(dy));
+        if (dz < 640) {
+            dz = 640 - dz;
+            if (los) {
+                flash = dz - 544;
+                if (flash > 0) {
+                    FlashFader = 32;
+                    FlashFadeR = (sint16)(r * flash / 640);
+                    FlashFadeG = (sint16)(g * flash / 640);
+                    FlashFadeB = (sint16)(b * flash / 640);
+                }
+            }
+            while (flare_table[num] != -1) {
+                if (!num) {
+                    if (lfobj)
+                        continue;
+                    r2 = flare_table[0] + (GetRandomDraw() & 8);
+                    g2 = flare_table[1];
+                    b2 = flare_table[2] + (GetRandomDraw() & 8);
+                } else {
+                    r2 = dz * flare_table[num] / 640;
+                    g2 = dz * flare_table[num + 1] / 640;
+                    b2 = dz * flare_table[num + 2] / 640;
+                }
+                r2 = (r * r2) >> 8;
+                g2 = (g * g2) >> 8;
+                b2 = (b * b2) >> 8;
+                if (r2 | g2 | b2)
+                    DrawSprite(XY[0] - ((dx * flare_table[num + 4]) >> 4), XY[1] - ((dy * flare_table[num + 4]) >> 4), flare_table[num + 5], RGBONLY(r2, g2, b2), flare_table[num + 3] << 1, num);
+                if (!los)
+                    return;
+                num += 6;
+            }
+        }
+    }
 }
 
 void SetFade(sint32 start, sint32 end)

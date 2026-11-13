@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="260.03" height="12" x="0" y="0" class="named"><title>1198 · 77.39%</title></rect>
 <rect width="0.65" height="12" x="260.03" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="33.86" height="12" x="260.68" y="0" class="nonmatching"><title>156 · 10.08%</title></rect>
-<rect width="41.46" height="12" x="294.54" y="0" class="todo"><title>191 · 12.34%</title></rect>
+<rect width="34.08" height="12" x="260.68" y="0" class="nonmatching"><title>157 · 10.14%</title></rect>
+<rect width="41.24" height="12" x="294.76" y="0" class="todo"><title>190 · 12.27%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">156</tspan> · <tspan class="todo">191</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">157</tspan> · <tspan class="todo">190</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="173.45" height="12" x="0" y="0" class="named"><title>323 KB · 51.62%</title></rect>
 <rect width="0.13" height="12" x="173.45" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="104.47" height="12" x="173.58" y="0" class="nonmatching"><title>194 KB · 31.09%</title></rect>
-<rect width="57.95" height="12" x="278.05" y="0" class="todo"><title>108 KB · 17.25%</title></rect>
+<rect width="105.30" height="12" x="173.58" y="0" class="nonmatching"><title>196 KB · 31.34%</title></rect>
+<rect width="57.12" height="12" x="278.88" y="0" class="todo"><title>106 KB · 17%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">51.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">194 KB</tspan> · <tspan class="todo">108 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">196 KB</tspan> · <tspan class="todo">106 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1426,7 +1426,7 @@
 <rect width="12" height="12" x="105" y="405" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="405" class="named"><title>0x0048b990 DrawTrainStrips (280 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="405" class="nonmatching"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="405" class="todo"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="405" class="nonmatching"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="405" class="named"><title>0x0048c240 SetFade (53 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="405" class="named"><title>0x0048c280 DoScreenFade (379 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="405" class="nonmatching"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>
@@ -1695,7 +1695,7 @@
 <rect width="24.80" height="26.04" x="181.67" y="146.73" class="nonmatching"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
 <rect width="24.80" height="24.29" x="181.67" y="175.76" class="named"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
 <rect width="24.80" height="24.07" x="181.67" y="203.05" class="nonmatching"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
-<rect width="24.80" height="23.90" x="181.67" y="230.13" class="todo"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
+<rect width="24.80" height="23.90" x="181.67" y="230.13" class="nonmatching"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
 <rect width="24.80" height="23.58" x="181.67" y="257.03" class="named"><title>0x0042a850 ControlCrossbow (1524 bytes)</title></rect>
 <rect width="24.80" height="23.58" x="181.67" y="283.61" class="named"><title>0x0045f1f0 SoundEffect (1524 bytes)</title></rect>
 <rect width="24.80" height="23.25" x="181.67" y="310.18" class="nonmatching"><title>0x0045dc10 TrapObjects (1503 bytes)</title></rect>

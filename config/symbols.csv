@@ -2076,6 +2076,7 @@ address,size,name,symbol
 0x004adf60,32,NodeOffsets,_NodeOffsets
 0x004adf80,8,harpy_left_hand,_harpy_left_hand
 0x004adf88,8,harpy_right_hand,_harpy_right_hand
+0x004adfe0,121,flare_table,_flare_table
 0x004ae060,4,pcbright,_pcbright
 0x004ae064,4,GLOBAL_lastinvitem,_GLOBAL_lastinvitem
 0x004ae068,4,GLOBAL_enterinventory,_GLOBAL_enterinventory
@@ -2577,6 +2578,7 @@ address,size,name,symbol
 0x00670e48,4,FadeStep,_FadeStep
 0x00670e4c,4,FadeCnt,_FadeCnt
 0x00670e50,4,FadeEnd,_FadeEnd
+0x00670e58,4096,uwdust,_uwdust
 0x00672e58,4,FadeVal,_FadeVal
 0x00672e60,4,DoFade,_DoFade
 0x007538f0,4,nTextures,_nTextures
