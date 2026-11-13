@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="73.72" height="12" x="336.54" y="0" class="nonmatching"><title>276 · 17.81%</title></rect>
-<rect width="3.74" height="12" x="410.26" y="0" class="todo"><title>14 · 0.90%</title></rect>
+<rect width="73.99" height="12" x="336.54" y="0" class="nonmatching"><title>277 · 17.87%</title></rect>
+<rect width="3.47" height="12" x="410.53" y="0" class="todo"><title>13 · 0.84%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">276</tspan> · <tspan class="todo">14</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">277</tspan> · <tspan class="todo">13</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.56%</title></rect>
-<rect width="174.73" height="12" x="225.86" y="0" class="nonmatching"><title>264 KB · 42.21%</title></rect>
-<rect width="13.41" height="12" x="400.59" y="0" class="todo"><title>20 KB · 3.24%</title></rect>
+<rect width="175.07" height="12" x="225.86" y="0" class="nonmatching"><title>264 KB · 42.29%</title></rect>
+<rect width="13.07" height="12" x="400.93" y="0" class="todo"><title>20 KB · 3.16%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">264 KB</tspan> · <tspan class="todo">20 KB</tspan></text>
@@ -1589,7 +1589,7 @@
 <rect width="12" height="12" x="330" y="450" class="nonmatching"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="450" class="nonmatching"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="450" class="nonmatching"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="450" class="todo"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="450" class="nonmatching"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="450" class="todo"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="450" class="todo"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="450" class="nonmatching"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
@@ -1973,7 +1973,7 @@
 <rect width="13.77" height="14.21" x="364.89" y="413.44" class="named"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
 <rect width="13.77" height="14.18" x="364.89" y="430.65" class="named"><title>0x00456580 ControlMapper (509 bytes)</title></rect>
 <rect width="13.77" height="14.18" x="364.89" y="447.82" class="named"><title>0x004622c0 PulleyCollision (509 bytes)</title></rect>
-<rect width="13.88" height="14.06" x="381.66" y="97.29" class="todo"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
+<rect width="13.88" height="14.06" x="381.66" y="97.29" class="nonmatching"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
 <rect width="13.88" height="14.06" x="381.66" y="114.34" class="nonmatching"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="13.88" height="14" x="381.66" y="131.40" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="13.88" height="13.95" x="381.66" y="148.40" class="named"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>

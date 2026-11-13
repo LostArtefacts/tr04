@@ -1689,6 +1689,62 @@ void SW_SpanGTPBilinear(void)
     }
 }
 
+void SW_SpanGTPAddBilinear(void)
+{
+    SW_SPAN *s;
+    uint8 *row, *p, *t0, *t1, *t2, *t3;
+    uint32 *tex;
+    sint32 *d;
+    uint32 u, v, idx;
+    uint16 c[4];
+    sint32 n, m, i, fu, fv, top, bot, sum;
+
+    s = SW_SpanBuffer;
+    if (s != SW_SpanEnd) {
+        row = (uint8 *)SW_Surface + SW_SpanY * SW_SurfacePitch;
+        tex = (uint32 *)SW_TextureBits;
+        do {
+            p = row + (s->x << 2);
+            n = s->n;
+            d = (sint32 *)(s + 1);
+            if (n > 0) {
+                u = s->tex[0] - 0x8000;
+                v = s->tex[2] - 0x8000;
+                for (i = 0; i < 4; i++)
+                    c[i] = s->c[i];
+                do {
+                    m = n > 16 ? 16 : n;
+                    do {
+                        idx = ((v >> 8) & 0xFF00) | ((u >> 16) & 0xFF);
+                        t0 = (uint8 *)&tex[idx];
+                        t1 = (uint8 *)&tex[idx + 1];
+                        t2 = (uint8 *)&tex[idx + 256];
+                        t3 = (uint8 *)&tex[idx + 257];
+                        fu = (u & 0xFFFF) >> 9;
+                        fv = (v & 0xFFFF) >> 9;
+                        for (i = 0; i < 4; i++) {
+                            top = t0[i] + (((t1[i] - t0[i]) * fu) >> 7);
+                            bot = t2[i] + (((t3[i] - t2[i]) * fu) >> 7);
+                            sum = p[i] + (((top + (((bot - top) * fv) >> 7)) * (c[i] >> 8)) >> 8);
+                            p[i] = sum > 0xFF ? 0xFF : sum;
+                            c[i] += SW_SpanGrad[i];
+                        }
+                        u += d[0];
+                        v += d[1];
+                        p += 4;
+                    } while (--m);
+                    d += 2;
+                    n -= 16;
+                } while (n > 0);
+            } else {
+                d += 2;
+            }
+            row += SW_SurfacePitch;
+            s = (SW_SPAN *)d;
+        } while (s != SW_SpanEnd);
+    }
+}
+
 void SW_SpanGInt(void)
 {
     SW_SPAN *s;
