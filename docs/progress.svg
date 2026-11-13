@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.29" height="12" x="0" y="0" class="named"><title>1190 · 76.87%</title></rect>
 <rect width="0.65" height="12" x="258.29" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="28.65" height="12" x="258.95" y="0" class="nonmatching"><title>132 · 8.53%</title></rect>
-<rect width="48.40" height="12" x="287.60" y="0" class="todo"><title>223 · 14.41%</title></rect>
+<rect width="28.87" height="12" x="258.95" y="0" class="nonmatching"><title>133 · 8.59%</title></rect>
+<rect width="48.19" height="12" x="287.81" y="0" class="todo"><title>222 · 14.34%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1190</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">132</tspan> · <tspan class="todo">223</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1190</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">133</tspan> · <tspan class="todo">222</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="167.36" height="12" x="0" y="0" class="named"><title>311 KB · 49.81%</title></rect>
 <rect width="0.13" height="12" x="167.36" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="86.07" height="12" x="167.49" y="0" class="nonmatching"><title>160 KB · 25.62%</title></rect>
-<rect width="82.44" height="12" x="253.56" y="0" class="todo"><title>153 KB · 24.54%</title></rect>
+<rect width="86.41" height="12" x="167.49" y="0" class="nonmatching"><title>161 KB · 25.72%</title></rect>
+<rect width="82.11" height="12" x="253.89" y="0" class="todo"><title>153 KB · 24.44%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">311 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">160 KB</tspan> · <tspan class="todo">153 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">311 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">161 KB</tspan> · <tspan class="todo">153 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1220,7 +1220,7 @@
 <rect width="12" height="12" x="15" y="345" class="todo"><title>0x00471420 ProcessRoomData (2518 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="345" class="nonmatching"><title>0x00471e00 ProjectVerts (313 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="345" class="nonmatching"><title>0x00471f40 ProjectWaterVerts (588 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="345" class="todo"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="345" class="nonmatching"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="345" class="named"><title>0x00472400 PrelightVertsMMX (186 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="345" class="named"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="345" class="named"><title>0x00472650 InsertRoom (593 bytes)</title></rect>
@@ -1891,7 +1891,7 @@
 <rect width="15.61" height="15.27" x="365.93" y="61.55" class="nonmatching"><title>0x00493c00 DXClose (621 bytes)</title></rect>
 <rect width="15.58" height="15.27" x="384.54" y="61.55" class="named"><title>0x00477180 init_water_table (620 bytes)</title></rect>
 <rect width="15.53" height="15.27" x="403.12" y="61.55" class="named"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>
-<rect width="15.53" height="15.27" x="421.65" y="61.55" class="todo"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
+<rect width="15.53" height="15.27" x="421.65" y="61.55" class="nonmatching"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
 <rect width="15.53" height="15.27" x="440.18" y="61.55" class="todo"><title>0x0049a6e0 Func49a6e0 (618 bytes)</title></rect>
 <rect width="15.46" height="15.27" x="458.71" y="61.55" class="todo"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
 <rect width="15.43" height="15.27" x="477.16" y="61.55" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>
