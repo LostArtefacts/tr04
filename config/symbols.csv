@@ -1240,7 +1240,7 @@ address,size,name,symbol
 0x00478570,301,CalcAmbientLight,_CalcAmbientLight
 0x004786a0,166,FadeLightList,_FadeLightList
 0x00478750,1020,CreateLightList,_CreateLightList
-0x00478b50,787,SetupLight,_SetupLight
+0x00478b50,804,SetupLight,_SetupLight
 0x00478e80,499,InitObjectLighting,_InitObjectLighting
 0x00479080,108,ClearObjectLighting,_ClearObjectLighting
 0x004790f0,701,InitDynamicLighting,_InitDynamicLighting
