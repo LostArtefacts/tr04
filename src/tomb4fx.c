@@ -1626,6 +1626,47 @@ sint32 LSpline(sint32 x, sint32 *knots, sint32 nk)
     return (sint32)((c3 * xx) >> 16) + k[3];
 }
 
+void CalcLightningSpline(PHD_VECTOR *pos, SVECTOR *dest, LIGHTNING_STRUCT *lptr)
+{
+    sint32 segments, x, y, z, xadd, yadd, zadd, i;
+
+    dest->x = (sint16)pos->x;
+    dest->y = (sint16)pos->y;
+    dest->z = (sint16)pos->z;
+    dest++;
+    segments = lptr->Segments * 3;
+    if (lptr->Flags & 1) {
+        xadd = 0x10000 / (segments - 1);
+        x = xadd;
+        for (i = 0; i < segments - 2; i++) {
+            dest->x = (sint16)(LSpline(x, &pos->x, 6) + (GetRandomControl() & 0xF) - 8);
+            dest->y = (sint16)(LSpline(x, &pos->y, 6) + (GetRandomControl() & 0xF) - 8);
+            dest->z = (sint16)(LSpline(x, &pos->z, 6) + (GetRandomControl() & 0xF) - 8);
+            dest++;
+            x += xadd;
+        }
+    } else {
+        xadd = (pos[5].x - pos->x) / (segments - 1);
+        yadd = (pos[5].y - pos->y) / (segments - 1);
+        zadd = (pos[5].z - pos->z) / (segments - 1);
+        x = GetRandomControl() % (lptr->Rand << 1) - lptr->Rand + pos->x + xadd;
+        y = GetRandomControl() % (lptr->Rand << 1) - lptr->Rand + yadd + pos->y;
+        z = GetRandomControl() % (lptr->Rand << 1) - lptr->Rand + pos->z + zadd;
+        for (i = 0; i < segments - 2; i++) {
+            dest->x = (sint16)x;
+            dest->y = (sint16)y;
+            dest->z = (sint16)z;
+            dest++;
+            x += GetRandomControl() % (lptr->Rand << 1) - lptr->Rand + xadd;
+            y += GetRandomControl() % (lptr->Rand << 1) - lptr->Rand + yadd;
+            z += GetRandomControl() % (lptr->Rand << 1) - lptr->Rand + zadd;
+        }
+    }
+    dest->x = (sint16)pos[5].x;
+    dest->y = (sint16)pos[5].y;
+    dest->z = (sint16)pos[5].z;
+}
+
 void TriggerLightningGlow(sint32 x, sint32 y, sint32 z, sint32 rgb)
 {
     sint32 dx, dz, size;
