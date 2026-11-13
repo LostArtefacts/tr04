@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="330.29" height="12" x="0" y="0" class="named"><title>1235 · 79.78%</title></rect>
-<rect width="60.98" height="12" x="330.29" y="0" class="nonmatching"><title>228 · 14.73%</title></rect>
-<rect width="22.73" height="12" x="391.27" y="0" class="todo"><title>85 · 5.49%</title></rect>
+<rect width="61.24" height="12" x="330.29" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="22.47" height="12" x="391.53" y="0" class="todo"><title>84 · 5.43%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1235</tspan> · <tspan class="nonmatching">228</tspan> · <tspan class="todo">85</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1235</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">84</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="223.38" height="12" x="0" y="0" class="named"><title>337 KB · 53.96%</title></rect>
-<rect width="165.62" height="12" x="223.38" y="0" class="nonmatching"><title>250 KB · 40.01%</title></rect>
-<rect width="25" height="12" x="389" y="0" class="todo"><title>38 KB · 6.04%</title></rect>
+<rect width="166.37" height="12" x="223.38" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="24.25" height="12" x="389.75" y="0" class="todo"><title>37 KB · 5.86%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">250 KB</tspan> · <tspan class="todo">38 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">37 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -873,7 +873,7 @@
 <rect width="12" height="12" x="90" y="240" class="nonmatching"><title>0x00451510 LoadGameflow (604 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="240" class="nonmatching"><title>0x00451770 DoGameflow (1716 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="240" class="named"><title>0x00451e30 DoTitle (2272 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="240" class="todo"><title>0x00452710 DoLevel (1133 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="240" class="nonmatching"><title>0x00452710 DoLevel (1133 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="240" class="nonmatching"><title>0x00452b80 DoCredits (230 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="240" class="named"><title>0x00452c70 FlashIt (45 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="240" class="named"><title>0x00452ca0 DrawGameInfo (307 bytes)</title></rect>
@@ -1744,7 +1744,7 @@
 <rect width="20.89" height="21.17" x="260.74" y="48.42" class="named"><title>0x0044b690 GetCeiling (1153 bytes)</title></rect>
 <rect width="20.89" height="21.10" x="260.74" y="72.59" class="named"><title>0x0043c610 construct_object_list (1149 bytes)</title></rect>
 <rect width="20.89" height="21.02" x="260.74" y="96.68" class="named"><title>0x00443a50 CombatCamera (1145 bytes)</title></rect>
-<rect width="20.89" height="20.80" x="260.74" y="120.71" class="todo"><title>0x00452710 DoLevel (1133 bytes)</title></rect>
+<rect width="20.89" height="20.80" x="260.74" y="120.71" class="nonmatching"><title>0x00452710 DoLevel (1133 bytes)</title></rect>
 <rect width="20.89" height="20.69" x="260.74" y="144.51" class="named"><title>0x004435e0 ChaseCamera (1127 bytes)</title></rect>
 <rect width="20.89" height="20.34" x="260.74" y="168.21" class="nonmatching"><title>0x00487260 S_DrawSmokeSparks (1108 bytes)</title></rect>
 <rect width="20.89" height="20.23" x="260.74" y="191.55" class="nonmatching"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
