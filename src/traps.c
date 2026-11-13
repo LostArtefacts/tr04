@@ -608,6 +608,43 @@ void FlameEmitter3Control(sint16 item_number)
     }
 }
 
+void FlameControl(sint16 fx_number)
+{
+    FX_INFO *fx;
+    sint32 i;
+    sint32 r, g, wh;
+
+    fx = &effects[fx_number];
+    i = 14;
+    if (!(wibble & 0xC)) {
+        for (; i >= 0; i--) {
+            fx->pos.x_pos = 0;
+            fx->pos.y_pos = 0;
+            fx->pos.z_pos = 0;
+            GetLaraJointPos((PHD_VECTOR *)&fx->pos, i);
+            TriggerFireFlame(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, -1, 255 - lara.BurnGreen);
+        }
+    }
+    if (lara.BurnGreen) {
+        g = (GetRandomControl() & 0x3F) + 192;
+        TriggerDynamic(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos, 13, GetRandomControl() & 0x3F, g, (GetRandomControl() & 0x1F) + 96);
+    } else {
+        r = (GetRandomControl() & 0x3F) + 192;
+        TriggerDynamic(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos, 13, r, (GetRandomControl() & 0x1F) + 96, 0);
+    }
+    if (lara_item->room_number != fx->room_number)
+        EffectNewRoom(fx_number, lara_item->room_number);
+    wh = GetWaterHeight(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, fx->room_number);
+    if (wh != NO_HEIGHT && fx->pos.y_pos > wh) {
+        KillEffect(fx_number);
+        lara.burn = 0;
+        return;
+    }
+    SoundEffect(SFX_LOOP_FOR_SMALL_FIRES, &fx->pos, SFX_DEFAULT);
+    lara_item->hit_points -= 7;
+    lara_item->hit_status = 1;
+}
+
 void LaraBurn(void)
 {
     sint16 fx_number;
