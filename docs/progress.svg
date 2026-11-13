@@ -678,7 +678,7 @@
 <rect width="12" height="12" x="165" y="180" class="todo"><title>0x0043cae0 draw_current_object_list (2405 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="180" class="named"><title>0x0043d450 handle_object_changeover (19 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="180" class="named"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="180" class="nonmatching"><title>0x0043dbf0 Func43dbf0 (566 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="180" class="nonmatching"><title>0x0043dbf0 setup_ammo_selector (566 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="180" class="named"><title>0x0043de30 fade_ammo_selector (147 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="180" class="named"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="180" class="named"><title>0x0043e140 spinback (105 bytes)</title></rect>
@@ -1928,7 +1928,7 @@
 <rect width="14.59" height="15.04" x="347.33" y="410.96" class="named"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
 <rect width="14.59" height="15.01" x="347.33" y="429" class="named"><title>0x00420b10 LaraAboveWater (571 bytes)</title></rect>
 <rect width="14.59" height="14.99" x="347.33" y="447.01" class="named"><title>0x00456120 PoleCollision (570 bytes)</title></rect>
-<rect width="14.97" height="14.50" x="364.92" y="79.81" class="nonmatching"><title>0x0043dbf0 Func43dbf0 (566 bytes)</title></rect>
+<rect width="14.97" height="14.50" x="364.92" y="79.81" class="nonmatching"><title>0x0043dbf0 setup_ammo_selector (566 bytes)</title></rect>
 <rect width="14.95" height="14.50" x="382.89" y="79.81" class="todo"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
 <rect width="14.89" height="14.50" x="400.84" y="79.81" class="nonmatching"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
 <rect width="14.84" height="14.50" x="418.73" y="79.81" class="named"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>

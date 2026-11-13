@@ -623,7 +623,7 @@ void handle_object_changeover(sint32 ringnum)
 {
     current_selected_option = 0;
     menu_active = 1;
-    Func43dbf0();
+    setup_ammo_selector();
 }
 
 void handle_inventry_menu(void)
@@ -835,7 +835,7 @@ void handle_inventry_menu(void)
     }
 }
 
-void Func43dbf0(void)
+void setup_ammo_selector(void)
 {
     sint32 opts;
     uint8 num;

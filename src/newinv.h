@@ -195,7 +195,7 @@ typedef struct {
 } COMBINELIST;
 
 void construct_object_list(void);
-void Func43dbf0(void);
+void setup_ammo_selector(void);
 void DrawThreeDeeObject2D(sint32 x, sint32 y, sint32 num, sint32 shade, sint32 xrot, sint32 yrot, sint32 zrot, sint32 bright, sint32 overlay);
 sint32 LoadGame(void);
 sint32 SaveGame(void);
