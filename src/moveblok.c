@@ -182,7 +182,7 @@ sint32 TestBlockPush(ITEM_INFO *item, sint32 height, uint16 quadrant)
     ITEM_INFO **itemlist;
     FLOOR_INFO *floor;
     ROOM_INFO *r;
-    sint32 x, y, z, rx, rz;
+    sint32 x, y, z, rx, rz, yh;
     sint16 room_number;
 
     x = item->pos.x_pos;
@@ -215,8 +215,9 @@ sint32 TestBlockPush(ITEM_INFO *item, sint32 height, uint16 quadrant)
     GetHeight(floor, x, y, z);
     if (height_type != WALL)
         return 0;
-    floor = GetFloor(x, y - height + 100, z, &room_number);
-    if (GetCeiling(floor, x, y - height + 100, z) > y - height + 100)
+    yh = y - height + 100;
+    floor = GetFloor(x, yh, z, &room_number);
+    if (GetCeiling(floor, x, yh, z) > yh)
         return 0;
     rx = item->pos.x_pos;
     rz = item->pos.z_pos;

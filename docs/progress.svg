@@ -46,16 +46,16 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="328.69" height="12" x="0" y="0" class="named"><title>1229 · 79.39%</title></rect>
-<rect width="59.91" height="12" x="328.69" y="0" class="nonmatching"><title>224 · 14.47%</title></rect>
+<rect width="328.95" height="12" x="0" y="0" class="named"><title>1230 · 79.46%</title></rect>
+<rect width="59.64" height="12" x="328.95" y="0" class="nonmatching"><title>223 · 14.41%</title></rect>
 <rect width="25.41" height="12" x="388.59" y="0" class="todo"><title>95 · 6.14%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">79.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1229</tspan> · <tspan class="nonmatching">224</tspan> · <tspan class="todo">95</tspan></text>
+<text text-anchor="end" x="594" y="7.50">79.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1230</tspan> · <tspan class="nonmatching">223</tspan> · <tspan class="todo">95</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.02" height="12" x="0" y="0" class="named"><title>337 KB · 53.87%</title></rect>
-<rect width="159.85" height="12" x="223.02" y="0" class="nonmatching"><title>241 KB · 38.61%</title></rect>
+<rect width="223.30" height="12" x="0" y="0" class="named"><title>337 KB · 53.94%</title></rect>
+<rect width="159.58" height="12" x="223.30" y="0" class="nonmatching"><title>241 KB · 38.55%</title></rect>
 <rect width="31.12" height="12" x="382.88" y="0" class="todo"><title>47 KB · 7.52%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.9%</text>
@@ -125,7 +125,7 @@
 <rect width="12" height="12" x="120" y="15" class="named"><title>0x00409460 InitialiseMovingBlock (56 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="15" class="named"><title>0x004094a0 ClearMovableBlockSplitters (546 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="15" class="named"><title>0x004096d0 MovableBlock (1188 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="15" class="nonmatching"><title>0x00409b80 TestBlockPush (416 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="15" class="named"><title>0x00409b80 TestBlockPush (416 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="15" class="nonmatching"><title>0x00409d20 TestBlockPull (792 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="15" class="nonmatching"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="15" class="nonmatching"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
@@ -2053,7 +2053,7 @@
 <rect width="12.44" height="12.86" x="398.66" y="354.38" class="named"><title>0x0045b080 RestoreLaraData (417 bytes)</title></rect>
 <rect width="12.44" height="12.86" x="398.66" y="370.23" class="named"><title>0x00465220 TriggerExhaustSmoke_bike (417 bytes)</title></rect>
 <rect width="12.44" height="12.86" x="398.66" y="386.09" class="named"><title>0x00493a50 DXToggleFullScreen (417 bytes)</title></rect>
-<rect width="12.44" height="12.83" x="398.66" y="401.95" class="nonmatching"><title>0x00409b80 TestBlockPush (416 bytes)</title></rect>
+<rect width="12.44" height="12.83" x="398.66" y="401.95" class="named"><title>0x00409b80 TestBlockPush (416 bytes)</title></rect>
 <rect width="12.44" height="12.76" x="398.66" y="417.77" class="named"><title>0x00414150 DartsControl (414 bytes)</title></rect>
 <rect width="12.44" height="12.76" x="398.66" y="433.53" class="named"><title>0x0042df30 LaraTargetInfo (414 bytes)</title></rect>
 <rect width="12.44" height="12.70" x="398.66" y="449.30" class="named"><title>0x00447010 GetTiltType (412 bytes)</title></rect>

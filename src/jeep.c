@@ -30,6 +30,7 @@ void InitialiseJeep(sint16 item_number)
 {
     ITEM_INFO *item;
     JEEPINFO *jeep;
+    sint16 rot;
 
     item = &items[item_number];
     item->data = game_malloc(sizeof(JEEPINFO));
@@ -38,8 +39,9 @@ void InitialiseJeep(sint16 item_number)
     jeep->unused1 = 0;
     jeep->turn_rate = 0;
     jeep->camera_angle = 0;
+    rot = item->pos.y_rot;
     jeep->extra_rotation = 0;
-    jeep->move_angle = item->pos.y_rot;
+    jeep->move_angle = rot;
     jeep->pitch2 = 0;
     jeep->flags = 0;
     jeep->gear = 0;
