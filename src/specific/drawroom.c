@@ -9,6 +9,102 @@
 #include "file.h"
 #include "function_table.h"
 #include "../camera.h"
+#include "../anim.h"
+#include "function_stubs.h"
+#include "d3dmatrix.h"
+#include "../text.h"
+
+void ProcessMeshData(sint32 num_meshes)
+{
+    MESH_DATA *mesh;
+    D3DVERTEX *vtx;
+    D3DVERTEXBUFFERDESC buf;
+    sint16 *mesh_ptr;
+    sint16 *last_mesh_ptr;
+    sint32 lp, i, j;
+    sint16 c;
+
+    Log(2, "ProcessMeshData %d", num_meshes);
+    num_level_meshes = num_meshes;
+    mesh_vtxbuf = (MESH_DATA **)game_malloc(4 * num_meshes, 0);
+    mesh_base = (sint16 *)malloc_ptr;
+    last_mesh_ptr = 0;
+    mesh = (MESH_DATA *)num_meshes;
+    for (i = 0; i < num_meshes; i++) {
+        mesh_ptr = meshes[i];
+        if (last_mesh_ptr == mesh_ptr) {
+            meshes[i] = (sint16 *)mesh;
+            mesh_vtxbuf[i] = mesh;
+        } else {
+            last_mesh_ptr = mesh_ptr;
+            mesh = (MESH_DATA *)game_malloc(sizeof(MESH_DATA), 0);
+            memset(mesh, 0, sizeof(MESH_DATA));
+            meshes[i] = (sint16 *)mesh;
+            mesh_vtxbuf[i] = mesh;
+            mesh->x = *mesh_ptr++;
+            mesh->y = *mesh_ptr++;
+            mesh->z = *mesh_ptr++;
+            mesh->r = *mesh_ptr++;
+            mesh->flags = *mesh_ptr++;
+            mesh->nVerts = *mesh_ptr & 0xFF;
+            if (!mesh->nVerts)
+                lp = *mesh_ptr >> 8;
+            mesh_ptr++;
+            if (mesh->nVerts) {
+                memset(&buf, 0, sizeof(buf));
+                buf.dwNumVertices = mesh->nVerts;
+                buf.dwSize = sizeof(D3DVERTEXBUFFERDESC);
+                buf.dwCaps = 0;
+                buf.dwFVF = D3DFVF_TEX1 | D3DFVF_NORMAL | D3DFVF_XYZ;
+                DXAttempt(IDirect3D3_CreateVertexBuffer(App.dx.lpD3D, &buf, (LPDIRECT3DVERTEXBUFFER *)&mesh->SourceVB, 0, 0));
+                IDirect3DVertexBuffer_Lock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB, DDLOCK_WRITEONLY, (void **)&vtx, 0);
+                for (j = 0; j < mesh->nVerts; j++) {
+                    vtx[j].x = *mesh_ptr++;
+                    vtx[j].y = *mesh_ptr++;
+                    vtx[j].z = *mesh_ptr++;
+                }
+                mesh->nNorms = *mesh_ptr++;
+                if (!mesh->nNorms)
+                    mesh->nNorms = mesh->nVerts;
+                if (mesh->nNorms > 0) {
+                    mesh->Normals = game_malloc(mesh->nNorms * sizeof(D3DVECTOR), 0);
+                    for (j = 0; j < mesh->nVerts; j++) {
+                        vtx[j].nx = *mesh_ptr++;
+                        vtx[j].ny = *mesh_ptr++;
+                        vtx[j].nz = *mesh_ptr++;
+                        D3DNormalise((D3DVECTOR *)&vtx[j].nx);
+                        ((D3DVECTOR *)mesh->Normals)[j].x = vtx[j].nx;
+                        ((D3DVECTOR *)mesh->Normals)[j].y = vtx[j].ny;
+                        ((D3DVECTOR *)mesh->Normals)[j].z = vtx[j].nz;
+                    }
+                    mesh->prelight = 0;
+                    IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
+                } else {
+                    mesh->Normals = 0;
+                    mesh->prelight = (sint32 *)game_malloc(4 * mesh->nVerts, 0);
+                    for (j = 0; j < mesh->nVerts; j++) {
+                        c = 255 - (*mesh_ptr++ >> 5);
+                        mesh->prelight[j] = RGBONLY(c, c, c);
+                    }
+                    IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
+                }
+            } else
+                mesh_ptr += 6 * lp + 1;
+            mesh->ngt4 = *mesh_ptr++;
+            if (mesh->ngt4) {
+                mesh->gt4 = (sint16 *)game_malloc(12 * mesh->ngt4, 0);
+                memcpy(mesh->gt4, mesh_ptr, 12 * mesh->ngt4);
+                mesh_ptr += 6 * mesh->ngt4;
+            }
+            mesh->ngt3 = *mesh_ptr++;
+            if (mesh->ngt3) {
+                mesh->gt3 = (sint16 *)game_malloc(10 * mesh->ngt3, 0);
+                memcpy(mesh->gt3, mesh_ptr, 10 * mesh->ngt3);
+            }
+        }
+    }
+    Log(2, "End ProcessMeshData");
+}
 
 void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
 {

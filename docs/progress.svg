@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.29" height="12" x="0" y="0" class="named"><title>1190 · 76.87%</title></rect>
 <rect width="0.65" height="12" x="258.29" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="28.22" height="12" x="258.95" y="0" class="nonmatching"><title>130 · 8.40%</title></rect>
-<rect width="48.84" height="12" x="287.16" y="0" class="todo"><title>225 · 14.53%</title></rect>
+<rect width="28.43" height="12" x="258.95" y="0" class="nonmatching"><title>131 · 8.46%</title></rect>
+<rect width="48.62" height="12" x="287.38" y="0" class="todo"><title>224 · 14.47%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1190</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">130</tspan> · <tspan class="todo">225</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1190</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">131</tspan> · <tspan class="todo">224</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="167.36" height="12" x="0" y="0" class="named"><title>311 KB · 49.81%</title></rect>
 <rect width="0.13" height="12" x="167.36" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="85.23" height="12" x="167.49" y="0" class="nonmatching"><title>159 KB · 25.37%</title></rect>
-<rect width="83.29" height="12" x="252.71" y="0" class="todo"><title>155 KB · 24.79%</title></rect>
+<rect width="85.76" height="12" x="167.49" y="0" class="nonmatching"><title>160 KB · 25.52%</title></rect>
+<rect width="82.76" height="12" x="253.24" y="0" class="todo"><title>154 KB · 24.63%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">311 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">159 KB</tspan> · <tspan class="todo">155 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">311 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">160 KB</tspan> · <tspan class="todo">154 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1216,7 +1216,7 @@
 <rect width="12" height="12" x="705" y="330" class="named"><title>0x004706b0 InitDDDevice (228 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="330" class="named"><title>0x004707a0 MapASCIIToANSI (136 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="330" class="todo"><title>0x00470830 DXSetupDlgProc (1986 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="345" class="todo"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="345" class="nonmatching"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="345" class="todo"><title>0x00471420 ProcessRoomData (2518 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="345" class="nonmatching"><title>0x00471e00 ProjectVerts (313 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="345" class="todo"><title>0x00471f40 ProjectWaterVerts (588 bytes)</title></rect>
@@ -1774,7 +1774,7 @@
 <rect width="20.13" height="19.06" x="284.52" y="226.03" class="named"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
 <rect width="20.13" height="18.92" x="284.52" y="248.09" class="named"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
 <rect width="20.13" height="18.88" x="284.52" y="270.01" class="named"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
-<rect width="20.13" height="18.85" x="284.52" y="291.90" class="todo"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
+<rect width="20.13" height="18.85" x="284.52" y="291.90" class="nonmatching"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
 <rect width="20.13" height="18.81" x="284.52" y="313.74" class="named"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="20.13" height="18.69" x="284.52" y="335.55" class="nonmatching"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
 <rect width="20.13" height="18.67" x="284.52" y="357.24" class="nonmatching"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>
