@@ -1992,6 +1992,7 @@ address,size,name,symbol
 0x004aa150,16,IID_IDirectInput2A,_IID_IDirectInput2A
 0x004aa190,16,IID_IDirectInputDevice2A,_IID_IDirectInputDevice2A
 0x004aa280,16,GUID_SysKeyboard,_GUID_SysKeyboard
+0x004aa670,16,IID_IDirectSoundNotify,_IID_IDirectSoundNotify
 0x004ad050,16,ahmet_bite,_ahmet_bite
 0x004ad060,16,ahmet_left_claw,_ahmet_left_claw
 0x004ad070,16,ahmet_right_claw,_ahmet_right_claw
@@ -2196,7 +2197,7 @@ address,size,name,symbol
 0x004b05b4,52,troop_chat_ranges25,_troop_chat_ranges25
 0x004b05e8,8,troop_chat_ranges26,_troop_chat_ranges26
 0x004b06c0,7168,TrackFileNames,_TrackFileNames
-0x004b22c0,4,source_wav_format,_source_wav_format
+0x004b22c0,50,source_wav_format,_source_wav_format
 0x004b22f4,4,XATrack,_XATrack
 0x004b22f8,4,XAFlag,_XAFlag
 0x004b2408,31,Var4b2408,_Var4b2408
@@ -2423,7 +2424,7 @@ address,size,name,symbol
 0x004bfc85,1,lara_chat_cnt,_lara_chat_cnt
 0x004bfc86,1,actor_chat_cnt,_actor_chat_cnt
 0x004bfc88,4,auido_play_mode,_auido_play_mode
-0x004bfc90,4,wav_format,_wav_format
+0x004bfc90,18,wav_format,_wav_format
 0x004bfca4,4,CurrentNotify,_CurrentNotify
 0x004bfca8,336,StreamHeaders,_StreamHeaders
 0x004bfdf8,8,NotifyEventHandles,_NotifyEventHandles

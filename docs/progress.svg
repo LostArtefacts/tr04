@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="327.08" height="12" x="0" y="0" class="named"><title>1223 · 79.01%</title></rect>
-<rect width="57.77" height="12" x="327.08" y="0" class="nonmatching"><title>216 · 13.95%</title></rect>
-<rect width="29.15" height="12" x="384.85" y="0" class="todo"><title>109 · 7.04%</title></rect>
+<rect width="58.03" height="12" x="327.08" y="0" class="nonmatching"><title>217 · 14.02%</title></rect>
+<rect width="28.88" height="12" x="385.12" y="0" class="todo"><title>108 · 6.98%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1223</tspan> · <tspan class="nonmatching">216</tspan> · <tspan class="todo">109</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1223</tspan> · <tspan class="nonmatching">217</tspan> · <tspan class="todo">108</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="219.92" height="12" x="0" y="0" class="named"><title>332 KB · 53.12%</title></rect>
-<rect width="155.23" height="12" x="219.92" y="0" class="nonmatching"><title>234 KB · 37.50%</title></rect>
-<rect width="38.85" height="12" x="375.15" y="0" class="todo"><title>59 KB · 9.38%</title></rect>
+<rect width="155.78" height="12" x="219.92" y="0" class="nonmatching"><title>235 KB · 37.63%</title></rect>
+<rect width="38.31" height="12" x="375.69" y="0" class="todo"><title>58 KB · 9.25%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">332 KB</tspan> · <tspan class="nonmatching">234 KB</tspan> · <tspan class="todo">59 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">332 KB</tspan> · <tspan class="nonmatching">235 KB</tspan> · <tspan class="todo">58 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1194,7 +1194,7 @@
 <rect width="12" height="12" x="405" y="330" class="named"><title>0x0046d7b0 ACMSetVolume (77 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="330" class="named"><title>0x0046d800 ACMEnumCallBack (144 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="330" class="named"><title>0x0046d890 ACMSetupNotifications (301 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="330" class="todo"><title>0x0046d9c0 ACMInit (818 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="330" class="nonmatching"><title>0x0046d9c0 ACMInit (818 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="330" class="named"><title>0x0046dd00 ACMClose (327 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="330" class="named"><title>0x0046de50 OpenStreamFile (254 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="330" class="named"><title>0x0046df50 FillADPCMBuffer (405 bytes)</title></rect>
@@ -1819,7 +1819,7 @@
 <rect width="17.77" height="17.98" x="647.17" y="21.42" class="named"><title>0x00476b30 HWInitialise (833 bytes)</title></rect>
 <rect width="17.73" height="17.98" x="667.95" y="21.42" class="todo"><title>0x00442720 GetAITarget (831 bytes)</title></rect>
 <rect width="17.50" height="17.98" x="688.68" y="21.42" class="nonmatching"><title>0x00485d90 setXYZ3 (820 bytes)</title></rect>
-<rect width="17.45" height="17.98" x="709.18" y="21.42" class="todo"><title>0x0046d9c0 ACMInit (818 bytes)</title></rect>
+<rect width="17.45" height="17.98" x="709.18" y="21.42" class="nonmatching"><title>0x0046d9c0 ACMInit (818 bytes)</title></rect>
 <rect width="17.37" height="17.98" x="729.63" y="21.42" class="named"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
 <rect width="17.53" height="17.77" x="307.74" y="42.39" class="named"><title>0x0041f7c0 DoFlameTorch (812 bytes)</title></rect>
 <rect width="17.53" height="17.77" x="307.74" y="63.16" class="named"><title>0x00434440 TriggerRicochetSpark (812 bytes)</title></rect>

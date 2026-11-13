@@ -20,6 +20,7 @@ void ACMSetVolume(void);
 BOOL __stdcall ACMEnumCallBack(HACMDRIVERID hadid, DWORD dwInstance, DWORD fdwSupport);
 sint32 ACMSetupNotifications(void);
 sint32 ACMHandleNotifications(void);
+uint8 ACMInit(void);
 void ACMClose(void);
 void OpenStreamFile(char *name);
 void FillADPCMBuffer(char *p, sint32 track);
@@ -57,5 +58,8 @@ extern sint32 XAFlag;
 extern uint8 CurrentAtmosphere;
 extern sint32 MusicVolume;
 extern uint8 IsAtmospherePlaying;
+extern WAVEFORMATEX wav_format;
+extern DWORD StreamSize;
+extern char source_wav_format[50];
 
 #endif

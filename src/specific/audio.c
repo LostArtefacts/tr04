@@ -1,4 +1,8 @@
+#include <stdlib.h>
+#include <string.h>
+
 #include "audio.h"
+#include "winmain.h"
 
 void S_CDPlay(sint32 track, sint32 mode)
 {
@@ -102,6 +106,79 @@ sint32 ACMSetupNotifications(void)
         Log(8, "Setup Notifications OK");
     }
     return result;
+}
+
+uint8 ACMInit(void)
+{
+    DSBUFFERDESC desc;
+    DWORD version;
+    DWORD pMetric;
+
+    version = acmGetVersion();
+    InitializeCriticalSection(&audio_cs);
+    version >>= 16;
+    acm_ready = 0;
+    Log(8, "ACM Version %u.%.02u", version >> 8, version & 0xFF);
+    acmDriverEnum(ACMEnumCallBack, 0, 0);
+    if (!hACMDriverID) {
+        Log(1, "*** Unable To Locate MS-ADPCM Driver ***");
+        return 0;
+    }
+    if (acmDriverOpen(&hACMDriver, hACMDriverID, 0)) {
+        Log(1, "*** Failed To Open Driver MS-ADPCM Driver ***");
+        return 0;
+    }
+    ADPCMBuffer = malloc(0x5800);
+    wav_file_buffer = malloc(0x37000);
+    wav_format.wFormatTag = WAVE_FORMAT_PCM;
+    acmMetrics(0, ACM_METRIC_MAX_SIZE_FORMAT, &pMetric);
+    acmFormatSuggest(hACMDriver, (LPWAVEFORMATEX)source_wav_format, &wav_format, pMetric, ACM_FORMATSUGGESTF_WFORMATTAG);
+    audio_buffer_size = 0x577C0;
+    NotifySize = 0x15DF0;
+    memset(&desc, 0, sizeof(desc));
+    desc.dwBufferBytes = 0x577C0;
+    desc.dwReserved = 0;
+    desc.dwSize = 20;
+    desc.dwFlags = DSBCAPS_LOCSOFTWARE | DSBCAPS_CTRLFREQUENCY | DSBCAPS_CTRLPAN | DSBCAPS_CTRLVOLUME | DSBCAPS_CTRLPOSITIONNOTIFY | DSBCAPS_GETCURRENTPOSITION2;
+    desc.lpwfxFormat = &wav_format;
+    IDirectSound_CreateSoundBuffer(App.dx.lpDS, &desc, &G_DSBuffer, 0);
+    IDirectSoundBuffer_QueryInterface(G_DSBuffer, &IID_IDirectSoundNotify, (LPVOID *)&G_DSNotify);
+    ACMSetupNotifications();
+    acmStreamOpen(&hACMStream, hACMDriver, (LPWAVEFORMATEX)source_wav_format, &wav_format, 0, 0, 0, 0);
+    acmStreamSize(hACMStream, 0x5800, &StreamSize, 0);
+    DXAttempt(IDirectSoundBuffer_Lock(G_DSBuffer, 0, audio_buffer_size, (LPVOID *)&pAudioWrite, &AudioBytes, 0, 0, 0));
+    memset(pAudioWrite, 0, audio_buffer_size);
+    memset(&StreamHeaders[0], 0, sizeof(ACMSTREAMHEADER));
+    memset(&StreamHeaders[1], 0, sizeof(ACMSTREAMHEADER));
+    memset(&StreamHeaders[2], 0, sizeof(ACMSTREAMHEADER));
+    memset(&StreamHeaders[3], 0, sizeof(ACMSTREAMHEADER));
+    StreamHeaders[0].cbStruct = sizeof(ACMSTREAMHEADER);
+    StreamHeaders[0].pbSrc = ADPCMBuffer;
+    StreamHeaders[0].cbSrcLength = 0x5800;
+    StreamHeaders[0].cbDstLength = StreamSize;
+    StreamHeaders[0].pbDst = pAudioWrite;
+    StreamHeaders[1].cbStruct = sizeof(ACMSTREAMHEADER);
+    StreamHeaders[1].pbSrc = ADPCMBuffer;
+    StreamHeaders[1].cbSrcLength = 0x5800;
+    StreamHeaders[1].cbDstLength = StreamSize;
+    StreamHeaders[1].pbDst = pAudioWrite + NotifySize;
+    StreamHeaders[2].cbStruct = sizeof(ACMSTREAMHEADER);
+    StreamHeaders[2].pbSrc = ADPCMBuffer;
+    StreamHeaders[2].cbSrcLength = 0x5800;
+    StreamHeaders[2].cbDstLength = StreamSize;
+    StreamHeaders[2].pbDst = pAudioWrite + 2 * NotifySize;
+    StreamHeaders[3].cbStruct = sizeof(ACMSTREAMHEADER);
+    StreamHeaders[3].pbSrc = ADPCMBuffer;
+    StreamHeaders[3].cbSrcLength = 0x5800;
+    StreamHeaders[3].cbDstLength = StreamSize;
+    StreamHeaders[3].pbDst = pAudioWrite + 3 * NotifySize;
+    acmStreamPrepareHeader(hACMStream, &StreamHeaders[0], 0);
+    acmStreamPrepareHeader(hACMStream, &StreamHeaders[1], 0);
+    acmStreamPrepareHeader(hACMStream, &StreamHeaders[2], 0);
+    acmStreamPrepareHeader(hACMStream, &StreamHeaders[3], 0);
+    DXAttempt(IDirectSoundBuffer_Unlock(G_DSBuffer, pAudioWrite, audio_buffer_size, 0, 0));
+    acm_ready = 1;
+    return 1;
 }
 
 void ACMClose(void)
