@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="39.77" height="12" x="267.10" y="0" class="nonmatching"><title>180 · 11.63%</title></rect>
-<rect width="35.13" height="12" x="306.87" y="0" class="todo"><title>159 · 10.27%</title></rect>
+<rect width="39.99" height="12" x="267.10" y="0" class="nonmatching"><title>181 · 11.69%</title></rect>
+<rect width="34.91" height="12" x="307.09" y="0" class="todo"><title>158 · 10.21%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">180</tspan> · <tspan class="todo">159</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">181</tspan> · <tspan class="todo">158</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="118.56" height="12" x="178.89" y="0" class="nonmatching"><title>217 KB · 34.67%</title></rect>
-<rect width="44.55" height="12" x="297.45" y="0" class="todo"><title>81 KB · 13.03%</title></rect>
+<rect width="118.70" height="12" x="178.89" y="0" class="nonmatching"><title>217 KB · 34.71%</title></rect>
+<rect width="44.41" height="12" x="297.59" y="0" class="todo"><title>81 KB · 12.99%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">217 KB</tspan> · <tspan class="todo">81 KB</tspan></text>
@@ -1096,7 +1096,7 @@
 <rect width="12" height="12" x="405" y="300" class="named"><title>0x0046a620 JeepStart (167 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="300" class="named"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="300" class="todo"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="300" class="todo"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="300" class="nonmatching"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="300" class="todo"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="300" class="todo"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="300" class="nonmatching"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
@@ -2222,7 +2222,7 @@
 <rect width="10.39" height="9.82" x="578.72" y="172.87" class="todo"><title>0x00417200 ControlLRSquishyBlock (266 bytes)</title></rect>
 <rect width="10.35" height="9.82" x="592.12" y="172.87" class="named"><title>0x00424950 lara_as_climbroped (265 bytes)</title></rect>
 <rect width="10.35" height="9.82" x="605.47" y="172.87" class="named"><title>0x00428470 lara_slide_slope (265 bytes)</title></rect>
-<rect width="10.28" height="9.82" x="618.82" y="172.87" class="todo"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
+<rect width="10.28" height="9.82" x="618.82" y="172.87" class="nonmatching"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
 <rect width="10.20" height="9.82" x="632.10" y="172.87" class="named"><title>0x00461ff0 SwitchCollision2 (261 bytes)</title></rect>
 <rect width="10.20" height="9.82" x="645.30" y="172.87" class="named"><title>0x00483a40 AddTriSubdivide (261 bytes)</title></rect>
 <rect width="10.16" height="9.82" x="658.50" y="172.87" class="named"><title>0x0046cd20 Load_and_Init_Cutseq (260 bytes)</title></rect>

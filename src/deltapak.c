@@ -188,6 +188,33 @@ void handle_cutseq_triggering(sint32 name)
     }
 }
 
+void InitPackNodes(NODELOADHEADER *lnode, PACKNODE *pnode, sint8 *packed, sint32 numnodes)
+{
+    sint32 offset, xoff, yoff, zoff, i;
+
+    offset = ((numnodes << 3) - numnodes) << 1;
+    for (i = 0; i < numnodes; i++) {
+        pnode->xkey = (uint16)lnode->xkey;
+        pnode->ykey = (uint16)lnode->ykey;
+        pnode->zkey = (uint16)lnode->zkey;
+        pnode->decode_x.packmethod = (lnode->packmethod >> 10) & 0xF;
+        pnode->decode_y.packmethod = (lnode->packmethod >> 5) & 0xF;
+        pnode->decode_z.packmethod = (lnode->packmethod) & 0xF;
+        pnode->xlength = lnode->xlength;
+        pnode->ylength = lnode->ylength;
+        pnode->zlength = lnode->zlength;
+        xoff = ((lnode->xlength * pnode->decode_x.packmethod) >> 3) + 4;
+        yoff = ((lnode->ylength * pnode->decode_y.packmethod) >> 3) + 4;
+        zoff = ((lnode->zlength * pnode->decode_z.packmethod) >> 3) + 4;
+        lnode++;
+        pnode->xpacked = &packed[offset];
+        pnode->ypacked = &packed[offset + xoff];
+        pnode->zpacked = &packed[offset + xoff + yoff];
+        pnode++;
+        offset += xoff + yoff + zoff;
+    }
+}
+
 sint16 GetTrackWord(sint32 off, sint8 *packed, sint32 packmethod)
 {
     uint8 *p;
