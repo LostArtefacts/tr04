@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="328.15" height="12" x="0" y="0" class="named"><title>1227 · 79.26%</title></rect>
-<rect width="58.57" height="12" x="328.15" y="0" class="nonmatching"><title>219 · 14.15%</title></rect>
-<rect width="27.28" height="12" x="386.72" y="0" class="todo"><title>102 · 6.59%</title></rect>
+<rect width="58.84" height="12" x="328.15" y="0" class="nonmatching"><title>220 · 14.21%</title></rect>
+<rect width="27.01" height="12" x="386.99" y="0" class="todo"><title>101 · 6.52%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1227</tspan> · <tspan class="nonmatching">219</tspan> · <tspan class="todo">102</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1227</tspan> · <tspan class="nonmatching">220</tspan> · <tspan class="todo">101</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="222.02" height="12" x="0" y="0" class="named"><title>335 KB · 53.63%</title></rect>
-<rect width="157.25" height="12" x="222.02" y="0" class="nonmatching"><title>237 KB · 37.98%</title></rect>
-<rect width="34.73" height="12" x="379.27" y="0" class="todo"><title>52 KB · 8.39%</title></rect>
+<rect width="157.81" height="12" x="222.02" y="0" class="nonmatching"><title>238 KB · 38.12%</title></rect>
+<rect width="34.18" height="12" x="379.82" y="0" class="todo"><title>52 KB · 8.26%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">335 KB</tspan> · <tspan class="nonmatching">237 KB</tspan> · <tspan class="todo">52 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">335 KB</tspan> · <tspan class="nonmatching">238 KB</tspan> · <tspan class="todo">52 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -724,7 +724,7 @@
 <rect width="12" height="12" x="105" y="195" class="named"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="195" class="named"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="named"><title>0x0043f7a0 InitialiseAutogun (59 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="195" class="todo"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="195" class="nonmatching"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="195" class="named"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="named"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="nonmatching"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
@@ -1809,7 +1809,7 @@
 <rect width="18.37" height="17.98" x="437.05" y="21.42" class="named"><title>0x0044fc00 calc_animating_item_clip_window (861 bytes)</title></rect>
 <rect width="18.20" height="17.98" x="458.42" y="21.42" class="nonmatching"><title>0x004860d0 DrawBubbles (853 bytes)</title></rect>
 <rect width="18.07" height="17.98" x="479.62" y="21.42" class="named"><title>0x00425130 lara_col_upjump (847 bytes)</title></rect>
-<rect width="17.99" height="17.98" x="500.69" y="21.42" class="todo"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
+<rect width="17.99" height="17.98" x="500.69" y="21.42" class="nonmatching"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
 <rect width="17.97" height="17.98" x="521.68" y="21.42" class="named"><title>0x0044bfd0 xLOS (842 bytes)</title></rect>
 <rect width="17.97" height="17.98" x="542.64" y="21.42" class="todo"><title>0x0048b130 ShowTitle (842 bytes)</title></rect>
 <rect width="17.94" height="17.98" x="563.61" y="21.42" class="named"><title>0x0044bc80 zLOS (841 bytes)</title></rect>

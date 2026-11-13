@@ -2093,6 +2093,7 @@ address,size,name,symbol
 0x004ae9bc,238,options_table,_options_table
 0x004aeaac,18,optmessages,_optmessages
 0x004aeac0,230,dels_handy_combine_table,_dels_handy_combine_table
+0x004aebb0,16,AGOffsets,_AGOffsets
 0x004aebc8,48,StarGateBounds,_StarGateBounds
 0x004aebf8,1,piece_moving,_piece_moving
 0x004aebfc,4,flipeffect,_flipeffect
