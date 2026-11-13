@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="264.90" height="12" x="0" y="0" class="named"><title>1199 · 77.45%</title></rect>
-<rect width="0.66" height="12" x="264.90" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.23" height="12" x="265.56" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
-<rect width="40.21" height="12" x="301.79" y="0" class="todo"><title>182 · 11.76%</title></rect>
+<rect width="265.12" height="12" x="0" y="0" class="named"><title>1200 · 77.52%</title></rect>
+<rect width="0.66" height="12" x="265.12" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="36.23" height="12" x="265.78" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
+<rect width="39.99" height="12" x="302.01" y="0" class="todo"><title>181 · 11.69%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1199</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">182</tspan></text>
+<text text-anchor="end" x="522" y="7.50">77.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1200</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">181</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="177.96" height="12" x="0" y="0" class="named"><title>325 KB · 52.03%</title></rect>
-<rect width="0.13" height="12" x="177.96" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.13" height="12" x="178.09" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
-<rect width="46.78" height="12" x="295.22" y="0" class="todo"><title>86 KB · 13.68%</title></rect>
+<rect width="177.97" height="12" x="0" y="0" class="named"><title>325 KB · 52.04%</title></rect>
+<rect width="0.13" height="12" x="177.97" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="117.13" height="12" x="178.10" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
+<rect width="46.77" height="12" x="295.23" y="0" class="todo"><title>85 KB · 13.68%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">86 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">85 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1282,7 +1282,7 @@
 <rect width="12" height="12" x="195" y="360" class="named"><title>0x00476a20 SetCullCCW (11 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="360" class="todo"><title>0x00476a30 InitialiseFunctionTable (133 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="360" class="todo"><title>0x00476ac0 HWBeginScene (74 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="360" class="todo"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="360" class="named"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="360" class="todo"><title>0x00476b30 HWInitialise (833 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="360" class="todo"><title>0x00476e80 SetFogColor (51 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="360" class="named"><title>0x00476ec0 GameMain (210 bytes)</title></rect>
@@ -3044,7 +3044,7 @@
 <rect width="3.08" height="2.86" x="743.92" y="403.60" class="todo"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
 <rect width="3.17" height="2.78" x="688.64" y="409.46" class="todo"><title>0x0049c6e0 DBLog_MapView (23 bytes)</title></rect>
 <rect width="3.17" height="2.66" x="688.64" y="415.24" class="named"><title>0x00437660 turn180_effect (22 bytes)</title></rect>
-<rect width="3.17" height="2.66" x="688.64" y="420.90" class="todo"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
+<rect width="3.17" height="2.66" x="688.64" y="420.90" class="named"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
 <rect width="3.17" height="2.66" x="688.64" y="426.56" class="todo"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
 <rect width="3.17" height="2.53" x="688.64" y="432.21" class="named"><title>0x0046c4e0 nineteen_init (21 bytes)</title></rect>
 <rect width="3.17" height="2.53" x="688.64" y="437.74" class="named"><title>0x0046d790 S_StartSyncedAudio (21 bytes)</title></rect>

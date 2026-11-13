@@ -1,4 +1,7 @@
 #include "function_table.h"
+#include "function_stubs.h"
+#include "polyinsert.h"
+#include "winmain.h"
 
 uint8 _NVisible(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2)
 {
@@ -22,4 +25,10 @@ void SetCullCW(void)
 void SetCullCCW(void)
 {
     IsVisible = _NVisible;
+}
+
+HRESULT HWEndScene(void)
+{
+    App.dx.InScene = 0;
+    return IDirect3DDevice3_EndScene(App.dx.lpD3DDevice);
 }

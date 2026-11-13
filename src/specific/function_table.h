@@ -13,6 +13,8 @@ void SetCullCW(void);
 void SetCullCCW(void);
 void SetFogColor(sint32 r, sint32 g, sint32 b);
 void InitialiseFunctionTable(void);
+HRESULT HWBeginScene(void);
+HRESULT HWEndScene(void);
 void HWInitialise(void);
 void SW_ClearBuffer(LPDIRECT3DDEVICE3 dev, DWORD count, D3DRECT *rect, DWORD flags, D3DCOLOR col, D3DVALUE z, DWORD stencil);
 
