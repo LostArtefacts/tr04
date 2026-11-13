@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="265.56" height="12" x="0" y="0" class="named"><title>1202 · 77.65%</title></rect>
-<rect width="0.66" height="12" x="265.56" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.23" height="12" x="266.22" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
-<rect width="39.55" height="12" x="302.45" y="0" class="todo"><title>179 · 11.56%</title></rect>
+<rect width="265.78" height="12" x="0" y="0" class="named"><title>1203 · 77.71%</title></rect>
+<rect width="0.66" height="12" x="265.78" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="36.23" height="12" x="266.44" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
+<rect width="39.33" height="12" x="302.67" y="0" class="todo"><title>178 · 11.50%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">77.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1202</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">179</tspan></text>
+<text text-anchor="end" x="522" y="7.50">77.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1203</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">178</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="178.04" height="12" x="0" y="0" class="named"><title>325 KB · 52.06%</title></rect>
-<rect width="0.13" height="12" x="178.04" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.13" height="12" x="178.17" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
-<rect width="46.70" height="12" x="295.30" y="0" class="todo"><title>85 KB · 13.66%</title></rect>
+<rect width="178.11" height="12" x="0" y="0" class="named"><title>326 KB · 52.08%</title></rect>
+<rect width="0.13" height="12" x="178.11" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="117.13" height="12" x="178.24" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
+<rect width="46.63" height="12" x="295.37" y="0" class="todo"><title>85 KB · 13.63%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">85 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">326 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">85 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1280,7 +1280,7 @@
 <rect width="12" height="12" x="165" y="360" class="named"><title>0x004769d0 _Visible (57 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="360" class="named"><title>0x00476a10 SetCullCW (11 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="360" class="named"><title>0x00476a20 SetCullCCW (11 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="360" class="todo"><title>0x00476a30 InitialiseFunctionTable (133 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="360" class="named"><title>0x00476a30 InitialiseFunctionTable (133 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="360" class="named"><title>0x00476ac0 HWBeginScene (74 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="360" class="named"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="360" class="todo"><title>0x00476b30 HWInitialise (833 bytes)</title></rect>
@@ -2538,7 +2538,7 @@
 <rect width="6.95" height="7.34" x="551.20" y="423.64" class="named"><title>0x00427150 lara_as_stepleft (133 bytes)</title></rect>
 <rect width="6.95" height="7.34" x="551.20" y="433.98" class="named"><title>0x00430ee0 InitialiseLaraAnims (133 bytes)</title></rect>
 <rect width="6.95" height="7.34" x="551.20" y="444.32" class="named"><title>0x004327a0 lara_as_tread (133 bytes)</title></rect>
-<rect width="6.95" height="7.34" x="551.20" y="454.66" class="todo"><title>0x00476a30 InitialiseFunctionTable (133 bytes)</title></rect>
+<rect width="6.95" height="7.34" x="551.20" y="454.66" class="named"><title>0x00476a30 InitialiseFunctionTable (133 bytes)</title></rect>
 <rect width="7.10" height="7.13" x="561.15" y="266.46" class="named"><title>0x0045f110 InitTarget (132 bytes)</title></rect>
 <rect width="7.10" height="7.13" x="571.25" y="266.46" class="named"><title>0x00480850 _LoadBitmap (132 bytes)</title></rect>
 <rect width="7.05" height="7.13" x="581.35" y="266.46" class="named"><title>0x00437e60 GetFreeFireSpark (131 bytes)</title></rect>

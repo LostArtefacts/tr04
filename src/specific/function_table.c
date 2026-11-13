@@ -27,6 +27,25 @@ void SetCullCCW(void)
     IsVisible = _NVisible;
 }
 
+void InitialiseFunctionTable(void)
+{
+    _BeginScene = HWBeginScene;
+    _EndScene = HWEndScene;
+    IsVisible = _NVisible;
+    if (App.dx.lpZBuffer) {
+        AddQuadZBuffer = AddQuadClippedZBuffer;
+        AddTriZBuffer = AddTriClippedZBuffer;
+        AddQuadSorted = AddQuadClippedSorted;
+        AddTriSorted = AddTriClippedSorted;
+    } else {
+        AddQuadZBuffer = AddQuadSubdivide;
+        AddTriZBuffer = AddTriSubdivide;
+        AddQuadSorted = AddQuadSubdivide;
+        AddTriSorted = AddTriSubdivide;
+    }
+    AddLineSorted = AddLineClippedSorted;
+}
+
 HRESULT HWBeginScene(void)
 {
     if (App.dx.InScene)
