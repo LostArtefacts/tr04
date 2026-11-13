@@ -259,6 +259,47 @@ sint16 DecodeTrack(char *packed, RTDECODE *decode)
     }
 }
 
+void DecodeAnim(PACKNODE *node, sint32 num_nodes, sint32 frame, sint32 flags)
+{
+    sint32 i;
+
+    if (!frame) {
+        for (i = 0; i < num_nodes; i++, node++) {
+            node->xrot_run = node->xkey;
+            node->yrot_run = node->ykey;
+            node->zrot_run = node->zkey;
+            node->decode_x.length = node->xlength;
+            node->decode_y.length = node->ylength;
+            node->decode_z.length = node->zlength;
+            node->decode_x.off = 0;
+            node->decode_y.off = 0;
+            node->decode_z.off = 0;
+            node->decode_x.counter = 0;
+            node->decode_y.counter = 0;
+            node->decode_z.counter = 0;
+            node->decode_x.data = 0;
+            node->decode_y.data = 0;
+            node->decode_z.data = 0;
+            node->decode_x.decodetype = 0;
+            node->decode_y.decodetype = 0;
+            node->decode_z.decodetype = 0;
+        }
+    } else {
+        node->xrot_run += DecodeTrack(node->xpacked, &node->decode_x);
+        node->yrot_run += DecodeTrack(node->ypacked, &node->decode_y);
+        node->zrot_run += DecodeTrack(node->zpacked, &node->decode_z);
+        node++;
+        for (i = 1; i < num_nodes; i++, node++) {
+            node->xrot_run += DecodeTrack(node->xpacked, &node->decode_x);
+            node->yrot_run += DecodeTrack(node->ypacked, &node->decode_y);
+            node->zrot_run += DecodeTrack(node->zpacked, &node->decode_z);
+            node->xrot_run &= flags;
+            node->yrot_run &= flags;
+            node->zrot_run &= flags;
+        }
+    }
+}
+
 sint16 GetTrackWord(sint32 off, sint8 *packed, sint32 packmethod)
 {
     uint8 *p;

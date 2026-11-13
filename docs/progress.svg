@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="324.41" height="12" x="0" y="0" class="named"><title>1213 · 78.36%</title></rect>
-<rect width="50.81" height="12" x="324.41" y="0" class="nonmatching"><title>190 · 12.27%</title></rect>
-<rect width="38.78" height="12" x="375.22" y="0" class="todo"><title>145 · 9.37%</title></rect>
+<rect width="51.08" height="12" x="324.41" y="0" class="nonmatching"><title>191 · 12.34%</title></rect>
+<rect width="38.51" height="12" x="375.49" y="0" class="todo"><title>144 · 9.30%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">190</tspan> · <tspan class="todo">145</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">191</tspan> · <tspan class="todo">144</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="217.20" height="12" x="0" y="0" class="named"><title>328 KB · 52.46%</title></rect>
-<rect width="145.26" height="12" x="217.20" y="0" class="nonmatching"><title>219 KB · 35.09%</title></rect>
-<rect width="51.54" height="12" x="362.46" y="0" class="todo"><title>78 KB · 12.45%</title></rect>
+<rect width="145.44" height="12" x="217.20" y="0" class="nonmatching"><title>220 KB · 35.13%</title></rect>
+<rect width="51.36" height="12" x="362.64" y="0" class="todo"><title>78 KB · 12.40%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">219 KB</tspan> · <tspan class="todo">78 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">220 KB</tspan> · <tspan class="todo">78 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1095,7 +1095,7 @@
 <rect width="12" height="12" x="420" y="300" class="named"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="300" class="todo"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="300" class="nonmatching"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="300" class="todo"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="300" class="nonmatching"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="300" class="nonmatching"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="300" class="nonmatching"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="300" class="named"><title>0x0046b140 frigup_lara (218 bytes)</title></rect>
@@ -2198,7 +2198,7 @@
 <rect width="10.33" height="10.36" x="457.55" y="280.65" class="named"><title>0x0046d040 DelsHandyTeleportLara (279 bytes)</title></rect>
 <rect width="10.33" height="10.33" x="457.55" y="294.01" class="named"><title>0x00428210 lara_col_back (278 bytes)</title></rect>
 <rect width="10.33" height="10.33" x="457.55" y="307.34" class="named"><title>0x00489360 ClipCheckPoint (278 bytes)</title></rect>
-<rect width="10.33" height="10.29" x="457.55" y="320.67" class="todo"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
+<rect width="10.33" height="10.29" x="457.55" y="320.67" class="nonmatching"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
 <rect width="10.33" height="10.22" x="457.55" y="333.96" class="named"><title>0x0042afe0 undraw_shotgun (275 bytes)</title></rect>
 <rect width="10.33" height="10.18" x="457.55" y="347.17" class="named"><title>0x00439660 TriggerSmallSplash (274 bytes)</title></rect>
 <rect width="10.33" height="10.14" x="457.55" y="360.35" class="named"><title>0x00421ad0 lara_col_crawlb (273 bytes)</title></rect>
