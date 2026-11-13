@@ -80,7 +80,7 @@ void RagheadControl(sint16 item_number)
     AI_INFO larainfo;
     CREATURE_INFO *cinfo;
     sint32 x, y, z, Xoffset, Zoffset, nearheight, midheight, farheight;
-    sint32 dx, dz, h1, h2, h, c, i;
+    sint32 dx, dz, h1, h2, h, c, i, y_rot;
     sint16 jump_ahead, long_jump_ahead, can_jump, can_roll, obj_num, flag, angle, tilt, head, torso_x, torso_y, room_number, target_num, state;
 
     if (!CreatureActive(item_number))
@@ -91,8 +91,8 @@ void RagheadControl(sint16 item_number)
         obj_num = SUPER_RAGHEAD;
     else
         obj_num = RAGHEAD;
-    angle = 0;
     tilt = 0;
+    angle = 0;
     head = 0;
     torso_x = 0;
     torso_y = 0;
@@ -105,9 +105,10 @@ void RagheadControl(sint16 item_number)
         }
         item->trigger_flags = item->trigger_flags / 1000 * 1000;
     }
-    Xoffset = (942 * (rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
-    Zoffset = (942 * (rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
     room_number = item->room_number;
+    y_rot = item->pos.y_rot;
+    Xoffset = (942 * (rcossin_tbl[(y_rot >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT;
+    Zoffset = (942 * (rcossin_tbl[((y_rot >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT;
     x = item->pos.x_pos + Xoffset;
     y = item->pos.y_pos;
     z = item->pos.z_pos + Zoffset;
@@ -200,13 +201,11 @@ void RagheadControl(sint16 item_number)
                     target = &items[target_num];
                     if (target->trigger_flags / 1000 == flag + 1) {
                         target->touch_bits = 0;
-                        if (EnableBaddieAI(target_num, 0)) {
+                        if (EnableBaddieAI(target_num, 0))
                             target->status = ITEM_ACTIVE;
-                            AddActiveItem(target_num);
-                        } else {
+                        else
                             target->status = ITEM_INVISIBLE;
-                            AddActiveItem(target_num);
-                        }
+                        AddActiveItem(target_num);
                         break;
                     }
                 }
@@ -224,8 +223,8 @@ void RagheadControl(sint16 item_number)
             larainfo.ahead = info.ahead;
             larainfo.distance = info.distance;
         } else {
-            dx = lara_item->pos.x_pos - item->pos.x_pos;
             dz = lara_item->pos.z_pos - item->pos.z_pos;
+            dx = lara_item->pos.x_pos - item->pos.x_pos;
             larainfo.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
             if (larainfo.angle > -0x4000 && larainfo.angle < 0x4000)
                 larainfo.ahead = 1;
@@ -245,13 +244,13 @@ void RagheadControl(sint16 item_number)
         raghead->enemy = target;
         if (item == lara.target && larainfo.distance > 0x3AE && larainfo.angle > -0x2800 && larainfo.angle < 0x2800) {
             room_number = item->room_number;
-            x = item->pos.x_pos + ((942 * (rcossin_tbl[((item->pos.y_rot + 0x2000) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT);
-            z = item->pos.z_pos + ((942 * (rcossin_tbl[(((item->pos.y_rot + 0x2000) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT);
+            x = item->pos.x_pos + ((942 * (rcossin_tbl[((y_rot + 0x2000) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT);
+            z = item->pos.z_pos + ((942 * (rcossin_tbl[(((y_rot + 0x2000) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT);
             floor = GetFloor(x, y, z, &room_number);
             h1 = GetHeight(floor, x, y, z);
             room_number = item->room_number;
-            x = item->pos.x_pos + ((942 * (rcossin_tbl[((item->pos.y_rot + 0x3800) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT);
-            z = item->pos.z_pos + ((942 * (rcossin_tbl[(((item->pos.y_rot + 0x3800) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT);
+            x = item->pos.x_pos + ((942 * (rcossin_tbl[((y_rot + 0x3800) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT);
+            z = item->pos.z_pos + ((942 * (rcossin_tbl[(((y_rot + 0x3800) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT);
             floor = GetFloor(x, y, z, &room_number);
             h2 = GetHeight(floor, x, y, z);
             if (abs(h2 - y) > 256 || h1 + 512 >= y)
@@ -259,8 +258,8 @@ void RagheadControl(sint16 item_number)
             else
                 can_jump = 1;
             room_number = item->room_number;
-            x = item->pos.x_pos + ((942 * (rcossin_tbl[((item->pos.y_rot - 0x2000) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT);
-            z = item->pos.z_pos + ((942 * (rcossin_tbl[(((item->pos.y_rot - 0x2000) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT);
+            x = item->pos.x_pos + ((942 * (rcossin_tbl[((y_rot - 0x2000) >> 3) & 0x1FFE] << 2)) >> W2V_SHIFT);
+            z = item->pos.z_pos + ((942 * (rcossin_tbl[(((y_rot - 0x2000) >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT);
             floor = GetFloor(x, y, z, &room_number);
             h1 = GetHeight(floor, x, y, z);
             room_number = item->room_number;
@@ -313,7 +312,7 @@ void RagheadControl(sint16 item_number)
                 else
                     item->goal_anim_state = 33;
                 raghead->LOT.is_jumping = 1;
-            } else if (raghead->enemy && (raghead->enemy->object_number == SMALLMEDI_ITEM || raghead->enemy->object_number == UZI_AMMO_ITEM) && info.distance < 0x40000) {
+            } else if (target && (target->object_number == SMALLMEDI_ITEM || target->object_number == UZI_AMMO_ITEM) && info.distance < 0x40000) {
                 item->goal_anim_state = 25;
                 item->required_anim_state = 27;
             } else if (item->meshswap_meshbits == 0x7FC010 && item->item_flags[2] < 1) {
@@ -340,7 +339,7 @@ void RagheadControl(sint16 item_number)
                 item->goal_anim_state = 24;
             } else if (item->meshswap_meshbits == 0x7FC800) {
                 item->goal_anim_state = 12;
-            } else if (raghead->enemy && raghead->enemy->hit_points > 0 && info.distance < 0x718E4) {
+            } else if (target && target->hit_points > 0 && info.distance < 0x718E4) {
                 if (item->meshswap_meshbits == 0x7FC010)
                     item->goal_anim_state = 11;
                 else if (info.distance < 0x40000) {
@@ -463,8 +462,7 @@ void RagheadControl(sint16 item_number)
                 if (c == h - 0x600)
                     item->goal_anim_state = 19;
             }
-            state = lara_item->current_anim_state;
-            if (larainfo.ahead && larainfo.distance < 0x718E4 && ((state > AS_DASHDIVE && state < AS_ALL4S) || state == AS_HANGTURNL || state == AS_HANGTURNR))
+            if (larainfo.ahead && larainfo.distance < 0x718E4 && ((lara_item->current_anim_state > AS_DASHDIVE && lara_item->current_anim_state < AS_ALL4S) || lara_item->current_anim_state == AS_HANGTURNL || lara_item->current_anim_state == AS_HANGTURNR))
                 item->goal_anim_state = 19;
             break;
         case 21:
@@ -494,7 +492,7 @@ void RagheadControl(sint16 item_number)
                     item->goal_anim_state = 28;
                     raghead->enemy = NULL;
                 }
-            } else if (raghead->enemy && (raghead->enemy->object_number == SMALLMEDI_ITEM || raghead->enemy->object_number == UZI_AMMO_ITEM) && info.distance < 0x40000) {
+            } else if (target && (target->object_number == SMALLMEDI_ITEM || target->object_number == UZI_AMMO_ITEM) && info.distance < 0x40000) {
                 item->goal_anim_state = 27;
             } else if (raghead->alerted) {
                 item->goal_anim_state = 28;
@@ -502,13 +500,13 @@ void RagheadControl(sint16 item_number)
             break;
         case 27:
             CreatureYRot(&item->pos, info.angle, 2002);
-            if (item->frame_number == anims[item->anim_number].frame_base + 9 && raghead->enemy && (raghead->enemy->object_number == SMALLMEDI_ITEM || raghead->enemy->object_number == UZI_AMMO_ITEM)) {
-                if (raghead->enemy->room_number != 255 && raghead->enemy->status != ITEM_INVISIBLE && !(sint16)(raghead->enemy->flags & IFL_CLEARBODY) && (raghead->enemy->object_number == SMALLMEDI_ITEM || raghead->enemy->object_number == UZI_AMMO_ITEM)) {
-                    if (raghead->enemy->object_number == SMALLMEDI_ITEM)
+            if (item->frame_number == anims[item->anim_number].frame_base + 9 && target && (target->object_number == SMALLMEDI_ITEM || target->object_number == UZI_AMMO_ITEM)) {
+                if (target->room_number != 255 && target->status != ITEM_INVISIBLE && !(sint16)(target->flags & IFL_CLEARBODY) && (target->object_number == SMALLMEDI_ITEM || target->object_number == UZI_AMMO_ITEM)) {
+                    if (target->object_number == SMALLMEDI_ITEM)
                         item->hit_points += objects[item->object_number].hit_points >> 1;
                     else
                         item->item_flags[2] += 24;
-                    KillItem(raghead->enemy - items);
+                    KillItem(target - items);
                     cinfo = baddie_slots;
                     for (i = 0; i < 5; i++, cinfo++) {
                         if (cinfo->item_num != NO_ITEM && cinfo->item_num != item_number && cinfo->enemy == raghead->enemy)
