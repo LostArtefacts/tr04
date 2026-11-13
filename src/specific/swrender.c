@@ -34,6 +34,11 @@ HRESULT __stdcall SW_D3D_GetCaps(SW_DEVICE *dev, D3DDEVICEDESC *hal, D3DDEVICEDE
     return 0x887602C1;
 }
 
+ULONG __stdcall SW_D3D_AddRef(SW_DEVICE *dev)
+{
+    return ++dev->refcount;
+}
+
 HRESULT __stdcall SW_D3D_ViewportStub(void *iface, void *arg)
 {
     return 0;
