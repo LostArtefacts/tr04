@@ -849,6 +849,41 @@ sint32 GetFreeDrip(void)
     return min_life_num;
 }
 
+void UpdateDrips(void)
+{
+    DRIP_STRUCT *drip;
+    FLOOR_INFO *floor;
+    sint32 h, i;
+
+    drip = Drips;
+    for (i = 0; i < 32; i++, drip++) {
+        if (!drip->On)
+            continue;
+        drip->Life--;
+        if (!drip->Life) {
+            drip->On = 0;
+            continue;
+        }
+        if (drip->Life < 16) {
+            drip->R -= drip->R >> 3;
+            drip->G -= drip->G >> 3;
+            drip->B -= drip->B >> 3;
+        }
+        drip->Yvel += drip->Gravity;
+        if (room[drip->RoomNumber].flags & ROOM_NOT_INSIDE) {
+            drip->x += SmokeWindX >> 1;
+            drip->z += SmokeWindZ >> 1;
+        }
+        drip->y += drip->Yvel >> 5;
+        floor = GetFloor(drip->x, drip->y, drip->z, &drip->RoomNumber);
+        if (room[drip->RoomNumber].flags & ROOM_UNDERWATER)
+            drip->On = 0;
+        h = GetHeight(floor, drip->x, drip->y, drip->z);
+        if (drip->y > h)
+            drip->On = 0;
+    }
+}
+
 void TriggerLaraDrips(void)
 {
     DRIP_STRUCT *drip;
