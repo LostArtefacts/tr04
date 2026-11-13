@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <string.h>
 #include "polyinsert.h"
+#include "swrender.h"
 
 typedef struct sw_device {
     void *lpVtbl;
@@ -37,6 +38,18 @@ HRESULT __stdcall SW_D3D_GetCaps(SW_DEVICE *dev, D3DDEVICEDESC *hal, D3DDEVICEDE
 ULONG __stdcall SW_D3D_AddRef(SW_DEVICE *dev)
 {
     return ++dev->refcount;
+}
+
+ULONG __stdcall SW_D3D_Release(SW_DEVICE *dev)
+{
+    dev->refcount--;
+    if (dev->hmem) {
+        GlobalFree(dev->hmem);
+        dev->hmem = 0;
+    }
+    if (!dev->refcount)
+        SW_FreeBuffer();
+    return dev->refcount;
 }
 
 HRESULT __stdcall SW_D3D_ViewportStub(void *iface, void *arg)
