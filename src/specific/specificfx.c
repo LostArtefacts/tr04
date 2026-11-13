@@ -17,6 +17,12 @@
 #include "../lara.h"
 #include "function_stubs.h"
 #include "../rope.h"
+#include "../camera.h"
+
+uint8 TargetGraphColTab[48] = {
+    0, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 0,
+    0, 0, 255, 0, 0, 255, 0, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 0, 255, 255, 0, 255, 255, 0
+};
 
 void setXY4(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 x3, sint32 y3, sint32 x4, sint32 y4, sint32 z, sint16 *clip)
 {
@@ -489,6 +495,105 @@ void InitBinoculars(void)
         v[i].rhw = f_mpersp / f_mznear * f_moneopersp;
     }
     IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
+}
+
+void DrawBinoculars(void)
+{
+    MESH_DATA *mesh;
+    D3DTLVERTEX *v;
+    TEXTURESTRUCT *tex;
+    D3DTLVERTEX vtx[256];
+    sint16 *clip;
+    sint16 *quad;
+    sint16 *tri;
+    sint32 i, j;
+    uint16 drawbak;
+    sint16 clipdistance;
+
+    mesh = targetMeshP;
+    if (!LaserSight)
+        mesh = binocsMeshP;
+    IDirect3DVertexBuffer_Lock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB, DDLOCK_READONLY, (void **)&v, 0);
+    clip = clipflags;
+    for (i = 0; i < mesh->nVerts; i++) {
+        clipdistance = 0;
+        vtx[i] = v[i];
+        vtx[i].sx = vtx[i].sx * (float)(phd_winxmax / 512.0F);
+        vtx[i].sy = vtx[i].sy * (float)(phd_winymax / 240.0F);
+        vtx[i].sx = f_centerx + vtx[i].sx;
+        vtx[i].sy = f_centery + vtx[i].sy;
+        if (vtx[i].sx < f_left)
+            clipdistance = 1;
+        else if (vtx[i].sx > f_right)
+            clipdistance = 2;
+        if (vtx[i].sy < f_top)
+            clipdistance += 4;
+        else if (vtx[i].sy > f_bottom)
+            clipdistance += 8;
+        *clip++ = clipdistance;
+    }
+    IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
+    quad = mesh->gt4;
+    if (!LaserSight) {
+        for (i = 0; i < mesh->ngt4; i++, quad += 6) {
+            tex = &textinfo[quad[4] & 0x7FFF];
+            drawbak = tex->drawtype;
+            tex->drawtype = 0;
+            if (quad[5] & 1) {
+                vtx[quad[0]].color = 0xFF000000;
+                vtx[quad[1]].color = 0xFF000000;
+                vtx[quad[2]].color = 0;
+                vtx[quad[3]].color = 0;
+                tex->drawtype = 3;
+            }
+            AddQuadSorted(vtx, quad[0], quad[1], quad[2], quad[3], tex, 1);
+            tex->drawtype = drawbak;
+        }
+        tri = mesh->gt3;
+        for (i = 0; i < mesh->ngt3; i++, tri += 5) {
+            tex = &textinfo[tri[3] & 0x7FFF];
+            drawbak = tex->drawtype;
+            tex->drawtype = 0;
+            if (tri[4] & 1) {
+                vtx[tri[0]].color = 0;
+                vtx[tri[1]].color = 0xFF000000;
+                vtx[tri[2]].color = 0;
+                tex->drawtype = 3;
+            }
+            AddTriSorted(vtx, tri[0], tri[1], tri[2], tex, 1);
+            tex->drawtype = drawbak;
+        }
+    } else {
+        for (i = 0; i < mesh->ngt4; i++, quad += 6) {
+            tex = &textinfo[quad[4] & 0x7FFF];
+            drawbak = tex->drawtype;
+            tex->drawtype = 0;
+            if (quad[5] & 1) {
+                vtx[quad[0]].color = 0xFF000000;
+                vtx[quad[1]].color = 0xFF000000;
+                vtx[quad[2]].color = 0;
+                vtx[quad[3]].color = 0;
+                tex->drawtype = 3;
+            }
+            AddQuadSorted(vtx, quad[0], quad[1], quad[2], quad[3], tex, 1);
+            tex->drawtype = drawbak;
+        }
+        tri = mesh->gt3;
+        for (i = 0, j = 0; i < mesh->ngt3; i++, tri += 5) {
+            tex = &textinfo[tri[3] & 0x7FFF];
+            drawbak = tex->drawtype;
+            tex->drawtype = 0;
+            if (tri[4] & 1) {
+                vtx[tri[0]].color = TargetGraphColTab[j] << 24;
+                vtx[tri[1]].color = TargetGraphColTab[j + 1] << 24;
+                vtx[tri[2]].color = TargetGraphColTab[j + 2] << 24;
+                j += 3;
+                tex->drawtype = 3;
+            }
+            AddTriSorted(vtx, tri[0], tri[1], tri[2], tex, 1);
+            tex->drawtype = drawbak;
+        }
+    }
 }
 
 uint8 ClipLine(sint32 *x1, sint32 *y1, sint32 z1, sint32 *x2, sint32 *y2, sint32 z2, sint32 xMin, sint32 yMin, sint32 w, sint32 h)
