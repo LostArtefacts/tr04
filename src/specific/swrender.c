@@ -69,6 +69,12 @@ HRESULT __stdcall SW_D3D_ViewportStub(void *iface, void *arg)
     return 0;
 }
 
+HRESULT __stdcall SW_D3D_SetRenderTarget(SW_DEVICE *dev, void *target, DWORD flags)
+{
+    dev->target = target;
+    return 0;
+}
+
 sint32 SW_SetZLimit(float limit)
 {
     SW_ZLimit = limit;

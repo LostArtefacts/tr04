@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="331.90" height="12" x="0" y="0" class="named"><title>1241 · 80.17%</title></rect>
-<rect width="61.24" height="12" x="331.90" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="20.86" height="12" x="393.14" y="0" class="todo"><title>78 · 5.04%</title></rect>
+<rect width="332.16" height="12" x="0" y="0" class="named"><title>1242 · 80.23%</title></rect>
+<rect width="61.24" height="12" x="332.16" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="20.59" height="12" x="393.41" y="0" class="todo"><title>77 · 4.97%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">80.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1241</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">78</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1242</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">77</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.51" height="12" x="0" y="0" class="named"><title>338 KB · 53.99%</title></rect>
-<rect width="166.37" height="12" x="223.51" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="24.11" height="12" x="389.89" y="0" class="todo"><title>36 KB · 5.82%</title></rect>
+<rect width="223.52" height="12" x="0" y="0" class="named"><title>338 KB · 53.99%</title></rect>
+<rect width="166.37" height="12" x="223.52" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="24.10" height="12" x="389.90" y="0" class="todo"><title>36 KB · 5.82%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1545,7 +1545,7 @@
 <rect width="12" height="12" x="420" y="435" class="todo"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="435" class="todo"><title>0x00494830 SW_D3D_BeginScene (99 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="435" class="todo"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="435" class="todo"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="435" class="named"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="435" class="todo"><title>0x00494a90 SW_D3D_GetRenderTarget (18 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="435" class="todo"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="435" class="todo"><title>0x00494b0d SW_D3D_SetLightState (27 bytes)</title></rect>
@@ -3098,7 +3098,7 @@
 <rect width="2.49" height="2.47" x="717.23" y="421.32" class="named"><title>0x004761e0 LoadCinematic (16 bytes)</title></rect>
 <rect width="2.49" height="2.47" x="722.72" y="421.32" class="named"><title>0x00494590 SW_D3D_AddRef (16 bytes)</title></rect>
 <rect width="2.49" height="2.47" x="728.21" y="421.32" class="named"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
-<rect width="2.49" height="2.47" x="733.69" y="421.32" class="todo"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
+<rect width="2.49" height="2.47" x="733.69" y="421.32" class="named"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
 <rect width="2.49" height="2.47" x="739.18" y="421.32" class="named"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
 <rect width="2.33" height="2.47" x="744.67" y="421.32" class="named"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
 <rect width="2.13" height="2.68" x="711.75" y="426.78" class="todo"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
