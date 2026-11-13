@@ -1,4 +1,5 @@
 #include <windows.h>
+#include <string.h>
 #include "polyinsert.h"
 
 typedef struct sw_device {
@@ -16,6 +17,20 @@ extern float SW_ZLimit;
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
+    return 0x887602C1;
+}
+
+HRESULT __stdcall SW_D3D_GetCaps(SW_DEVICE *dev, D3DDEVICEDESC *hal, D3DDEVICEDESC *hel)
+{
+    memset(hel, 0, sizeof(D3DDEVICEDESC));
+    memset(hal, 0, sizeof(D3DDEVICEDESC));
+    hal->dwSize = sizeof(D3DDEVICEDESC);
+    hel->dwSize = sizeof(D3DDEVICEDESC);
+    hel->dwFlags = 0xC3;
+    hel->dwDeviceRenderBitDepth = DDBD_16 | DDBD_32;
+    hel->dcmColorModel = D3DCOLOR_RGB;
+    hel->dwTextureOpCaps = 0x1A;
+    hel->dpcTriCaps.dwRasterCaps = 0x80;
     return 0x887602C1;
 }
 
