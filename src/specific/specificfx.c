@@ -2971,3 +2971,182 @@ void DrawJeepSpeedo(sint32 ux, sint32 uy, sint32 vel, sint32 maxVel, sint32 turb
     v[1].specular = v[0].specular;
     AddLineSorted(v, &v[1], 6);
 }
+
+void DrawLightning(void)
+{
+    LIGHTNING_STRUCT *pL;
+    SPRITESTRUCT *sprite;
+    PHD_VECTOR *vec;
+    SVECTOR *offsets;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    PHD_VECTOR p1, p2, p3;
+    sint32 *mptr;
+    sint32 *Z;
+    sint16 *XY;
+    float perspz, zv, u1, u2, v1, v2;
+    sint32 i, j, c, xsize, ysize, r, g, b;
+    sint32 x1, y1, z1, x2, y2, z2;
+
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    mptr = phd_mxptr;
+    sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 28];
+    pL = Lightning;
+    for (i = 0; i < 16; i++, pL++) {
+        if (!pL->Life)
+            continue;
+        vec = (PHD_VECTOR *)&scratchpad[128];
+        memcpy(&vec[0], &pL->Point[0], sizeof(PHD_VECTOR));
+        memcpy(&vec[1], &pL->Point[0], 4 * sizeof(PHD_VECTOR));
+        memcpy(&vec[5], &pL->Point[3], sizeof(PHD_VECTOR));
+        for (j = 0; j < 6; j++) {
+            vec[j].x -= lara_item->pos.x_pos;
+            vec[j].y -= lara_item->pos.y_pos;
+            vec[j].z -= lara_item->pos.z_pos;
+        }
+        offsets = (SVECTOR *)&scratchpad[0];
+        XY = (sint16 *)&scratchpad[256];
+        Z = (sint32 *)&scratchpad[512];
+        CalcLightningSpline(vec, offsets, pL);
+        if (abs(vec[0].x) > 0x6000 || abs(vec[0].y) > 0x6000 || abs(vec[0].z) > 0x6000)
+            continue;
+        for (j = 0; j < pL->Segments; j++) {
+            p1.x = (offsets[0].x * mptr[M00] + offsets[0].y * mptr[M01] + offsets[0].z * mptr[M02] + mptr[M03]) >> W2V_SHIFT;
+            p1.y = (offsets[0].x * mptr[M10] + offsets[0].y * mptr[M11] + offsets[0].z * mptr[M12] + mptr[M13]) >> W2V_SHIFT;
+            p1.z = (offsets[0].x * mptr[M20] + offsets[0].y * mptr[M21] + offsets[0].z * mptr[M22] + mptr[M23]) >> W2V_SHIFT;
+            p2.x = (offsets[1].x * mptr[M00] + offsets[1].y * mptr[M01] + offsets[1].z * mptr[M02] + mptr[M03]) >> W2V_SHIFT;
+            p2.y = (offsets[1].x * mptr[M10] + offsets[1].y * mptr[M11] + offsets[1].z * mptr[M12] + mptr[M13]) >> W2V_SHIFT;
+            p2.z = (offsets[1].x * mptr[M20] + offsets[1].y * mptr[M21] + offsets[1].z * mptr[M22] + mptr[M23]) >> W2V_SHIFT;
+            p3.x = (offsets[2].x * mptr[M00] + offsets[2].y * mptr[M01] + offsets[2].z * mptr[M02] + mptr[M03]) >> W2V_SHIFT;
+            p3.y = (offsets[2].x * mptr[M10] + offsets[2].y * mptr[M11] + offsets[2].z * mptr[M12] + mptr[M13]) >> W2V_SHIFT;
+            p3.z = (offsets[2].x * mptr[M20] + offsets[2].y * mptr[M21] + offsets[2].z * mptr[M22] + mptr[M23]) >> W2V_SHIFT;
+            XY[0] = (sint16)p1.x;
+            XY[1] = (sint16)p1.y;
+            Z[0] = p1.z;
+            XY[2] = (sint16)p2.x;
+            XY[3] = (sint16)p2.y;
+            Z[1] = p2.z;
+            XY[4] = (sint16)p3.x;
+            XY[5] = (sint16)p3.y;
+            Z[2] = p3.z;
+            offsets += 3;
+            XY += 6;
+            Z += 3;
+        }
+        XY = (sint16 *)&scratchpad[256];
+        Z = (sint32 *)&scratchpad[512];
+        for (j = 0; j < 3 * pL->Segments - 1; j++) {
+            if (pL->Life < 16)
+                c = (pL->Life << 6) >> 4;
+            else
+                c = 64;
+            if (Z[0] > 0x3000)
+                c = (c * (0x5000 - Z[0])) >> 13;
+            c = RGBA(c, c, c, 66);
+            x1 = XY[0];
+            y1 = XY[1];
+            z1 = Z[0];
+            x2 = XY[2];
+            y2 = XY[3];
+            z2 = Z[1];
+            setXYZ4(v, x1, y1, z1, x2, y2, z2, x1, y1, z1, x2, y2, z2, clipflags);
+            x1 = (sint32)v[0].sx;
+            y1 = (sint32)v[0].sy;
+            z1 = (sint32)v[0].sz;
+            x2 = (sint32)v[1].sx;
+            y2 = (sint32)v[1].sy;
+            z2 = (sint32)v[1].sz;
+            if (ClipLine(&x1, &y1, z1, &x2, &y2, z2, phd_winxmin, phd_winymin, phd_winxmax, phd_winymax)) {
+                v[0].sx = (float)x1;
+                v[0].sy = (float)y1;
+                v[1].sx = (float)x2;
+                v[1].sy = (float)y2;
+                v[0].color = c;
+                v[0].specular = 0xFF000000;
+                v[1].color = c;
+                v[1].specular = 0xFF000000;
+                perspz = f_mpersp / Z[0] * f_moneopersp;
+                v[0].rhw = perspz;
+                v[1].rhw = perspz;
+                zv = f_a - perspz * f_boo;
+                v[0].sz = zv;
+                v[1].sz = zv;
+                AddLineSorted(&v[0], &v[1], 6);
+                if (Z[0] > 0x4000)
+                    xsize = 1;
+                else
+                    xsize = ((0x4000 - Z[0]) * pL->Size) >> 16;
+                if (xsize < 4)
+                    xsize = 4;
+                if (pL->Life < 16) {
+                    r = (pL->Life * pL->r) >> 4;
+                    g = (pL->Life * pL->g) >> 4;
+                    b = (pL->Life * pL->b) >> 4;
+                } else {
+                    r = pL->r;
+                    g = pL->g;
+                    b = pL->b;
+                }
+                if (Z[0] > 0x3000) {
+                    r = (r * (0x5000 - Z[0])) >> 13;
+                    g = (g * (0x5000 - Z[0])) >> 13;
+                    b = (b * (0x5000 - Z[0])) >> 13;
+                }
+                x1 = XY[0];
+                y1 = XY[1];
+                z1 = Z[0];
+                x2 = XY[2];
+                y2 = XY[3];
+                z2 = Z[1];
+                setXYZ4(v, x1, y1, z1, x2, y2, z2, x1, y1, z1, x2, y2, z2, clipflags);
+                x1 = (sint32)v[0].sx;
+                y1 = (sint32)v[0].sy;
+                z1 = (sint32)v[0].sz;
+                x2 = (sint32)v[1].sx;
+                y2 = (sint32)v[1].sy;
+                z2 = (sint32)v[1].sz;
+                vec[0].x = (x1 - x2) << 8;
+                vec[0].y = (y1 - y2) << 8;
+                vec[0].z = 0;
+                Normalise(vec);
+                vec[0].z = vec[0].x;
+                vec[0].x = -vec[0].y;
+                vec[0].y = vec[0].z;
+                ysize = (vec[0].y * xsize) >> 12;
+                xsize = (vec[0].x * xsize) >> 12;
+                if ((z1 + z2) >> 1 > 64) {
+                    setXY4(v, x1 + xsize, y1 + ysize, x2 + xsize, y2 + ysize, x1 - xsize, y1 - ysize, x2 - xsize, y2 - ysize, (z1 + z2) >> 1, clipflags);
+                    v[0].specular = 0xFF000000;
+                    v[1].specular = 0xFF000000;
+                    v[2].specular = 0xFF000000;
+                    v[3].specular = 0xFF000000;
+                    u1 = sprite->x1;
+                    u2 = sprite->x2;
+                    v2 = sprite->y2;
+                    v1 = sprite->y1;
+                    tex.tpage = sprite->tpage;
+                    tex.u1 = u1;
+                    tex.v1 = v2;
+                    tex.u2 = u2;
+                    tex.v2 = v2;
+                    tex.u3 = u2;
+                    tex.v3 = v1;
+                    tex.u4 = u1;
+                    tex.v4 = v1;
+                    c = RGBA(b, g, r, 0xFF);
+                    v[0].color = c;
+                    v[1].color = c;
+                    v[2].color = c;
+                    v[3].color = c;
+                    tex.drawtype = 2;
+                    tex.flag = 0;
+                    AddQuadClippedSorted(v, 0, 1, 3, 2, &tex, 0);
+                }
+            }
+            XY += 2;
+            Z++;
+        }
+    }
+    phd_PopMatrix();
+}

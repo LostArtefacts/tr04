@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="264.90" height="12" x="0" y="0" class="named"><title>1199 · 77.45%</title></rect>
 <rect width="0.66" height="12" x="264.90" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="35.57" height="12" x="265.56" y="0" class="nonmatching"><title>161 · 10.40%</title></rect>
-<rect width="40.87" height="12" x="301.13" y="0" class="todo"><title>185 · 11.95%</title></rect>
+<rect width="35.79" height="12" x="265.56" y="0" class="nonmatching"><title>162 · 10.47%</title></rect>
+<rect width="40.65" height="12" x="301.35" y="0" class="todo"><title>184 · 11.89%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1199</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">161</tspan> · <tspan class="todo">185</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1199</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">162</tspan> · <tspan class="todo">184</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="177.96" height="12" x="0" y="0" class="named"><title>325 KB · 52.03%</title></rect>
 <rect width="0.13" height="12" x="177.96" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="110.90" height="12" x="178.09" y="0" class="nonmatching"><title>203 KB · 32.43%</title></rect>
-<rect width="53.02" height="12" x="288.98" y="0" class="todo"><title>97 KB · 15.50%</title></rect>
+<rect width="112.19" height="12" x="178.09" y="0" class="nonmatching"><title>205 KB · 32.80%</title></rect>
+<rect width="51.73" height="12" x="290.27" y="0" class="todo"><title>95 KB · 15.13%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">203 KB</tspan> · <tspan class="todo">97 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">205 KB</tspan> · <tspan class="todo">95 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1436,7 +1436,7 @@
 <rect width="12" height="12" x="255" y="405" class="nonmatching"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="405" class="named"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="405" class="nonmatching"><title>0x0048d580 DrawJeepSpeedo (1067 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="405" class="todo"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="405" class="nonmatching"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="405" class="todo"><title>0x0048e2f0 CreateTexturePage (1004 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="405" class="todo"><title>0x0048e6e0 FreeTextures (283 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="405" class="named"><title>0x0048e800 TIME_Reset (12 bytes)</title></rect>
@@ -1655,7 +1655,7 @@
 <rect width="31.05" height="29.42" x="85.27" y="335.63" class="named"><title>0x0042eb30 DoProperDetection (2381 bytes)</title></rect>
 <rect width="31.05" height="29.41" x="85.27" y="368.05" class="nonmatching"><title>0x00410c90 SethControl (2380 bytes)</title></rect>
 <rect width="31.05" height="29.41" x="85.27" y="400.46" class="named"><title>0x0045e1f0 ObjectObjects (2380 bytes)</title></rect>
-<rect width="31.05" height="29.13" x="85.27" y="432.87" class="todo"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
+<rect width="31.05" height="29.13" x="85.27" y="432.87" class="nonmatching"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
 <rect width="29.42" height="30.48" x="119.32" y="0" class="nonmatching"><title>0x0041c6e0 WraithControl (2337 bytes)</title></rect>
 <rect width="29.42" height="30.27" x="119.32" y="33.48" class="nonmatching"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
 <rect width="29.42" height="29.63" x="119.32" y="66.76" class="named"><title>0x00451e30 DoTitle (2272 bytes)</title></rect>
