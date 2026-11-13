@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="383.31" height="12" x="0" y="0" class="named"><title>1286 · 82.97%</title></rect>
-<rect width="78.69" height="12" x="383.31" y="0" class="nonmatching"><title>264 · 17.03%</title></rect>
+<rect width="383.61" height="12" x="0" y="0" class="named"><title>1287 · 83.03%</title></rect>
+<rect width="78.39" height="12" x="383.61" y="0" class="nonmatching"><title>263 · 16.97%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">83.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1286</tspan> · <tspan class="nonmatching">264</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1287</tspan> · <tspan class="nonmatching">263</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="256.58" height="12" x="0" y="0" class="named"><title>347 KB · 55.54%</title></rect>
-<rect width="205.42" height="12" x="256.58" y="0" class="nonmatching"><title>278 KB · 44.46%</title></rect>
+<rect width="256.90" height="12" x="0" y="0" class="named"><title>348 KB · 55.61%</title></rect>
+<rect width="205.10" height="12" x="256.90" y="0" class="nonmatching"><title>278 KB · 44.39%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">55.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">347 KB</tspan> · <tspan class="nonmatching">278 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">55.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">348 KB</tspan> · <tspan class="nonmatching">278 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1572,7 +1572,7 @@
 <rect width="12" height="12" x="105" y="450" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="450" class="named"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="450" class="named"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="450" class="nonmatching"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="450" class="named"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="450" class="named"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="450" class="named"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="450" class="named"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
@@ -2031,7 +2031,7 @@
 <rect width="12.84" height="13.04" x="624.04" y="113.37" class="named"><title>0x00404840 TriggerDemigodMissileFlame (437 bytes)</title></rect>
 <rect width="12.84" height="13.04" x="639.89" y="113.37" class="named"><title>0x00462100 UnderwaterSwitchCollision (437 bytes)</title></rect>
 <rect width="12.84" height="13.04" x="655.73" y="113.37" class="nonmatching"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
-<rect width="12.78" height="13.04" x="671.58" y="113.37" class="nonmatching"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
+<rect width="12.78" height="13.04" x="671.58" y="113.37" class="named"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
 <rect width="12.70" height="13.04" x="687.36" y="113.37" class="named"><title>0x0044e010 DoorControl (432 bytes)</title></rect>
 <rect width="12.67" height="13.04" x="703.06" y="113.37" class="named"><title>0x00413840 FloorTrapDoorCollision (431 bytes)</title></rect>
 <rect width="12.64" height="13.04" x="718.72" y="113.37" class="named"><title>0x00427c30 lara_col_run (430 bytes)</title></rect>

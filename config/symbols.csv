@@ -2288,6 +2288,8 @@ address,size,name,symbol
 0x004bcd24,4,SW_ColorOpScale,_SW_ColorOpScale
 0x004bcd30,8,SW_SpanGFogAddConst,_SW_SpanGFogAddConst
 0x004bcd40,8,SW_SpanGFogConst,_SW_SpanGFogConst
+0x004bcd48,8,SW_SpanGFogAlphaConst0,_SW_SpanGFogAlphaConst0
+0x004bcd50,8,SW_SpanGFogAlphaConst1,_SW_SpanGFogAlphaConst1
 0x004bcd58,8,SW_SpanGTAlphaConst0,_SW_SpanGTAlphaConst0
 0x004bcd60,8,SW_SpanGTAlphaConst1,_SW_SpanGTAlphaConst1
 0x004bcd78,8,SW_SpanGTKeyConst,_SW_SpanGTKeyConst
@@ -2783,6 +2785,7 @@ address,size,name,symbol
 0x0076d430,8,SW_TriGOff,_SW_TriGOff
 0x0076d438,4,SW_TriTGDY,_SW_TriTGDY
 0x0076d440,4,SW_TriTFogDX02,_SW_TriTFogDX02
+0x007d9448,4,SW_SpanGFogAlphaMask,_SW_SpanGFogAlphaMask
 0x007d944c,4,SW_TriTFogUDX,_SW_TriTFogUDX
 0x007d9450,8,SW_TriFogGOff,_SW_TriFogGOff
 0x007d9458,4,SW_TriPFG2,_SW_TriPFG2
