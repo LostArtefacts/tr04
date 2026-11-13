@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="265.34" height="12" x="0" y="0" class="named"><title>1201 · 77.58%</title></rect>
-<rect width="0.66" height="12" x="265.34" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.23" height="12" x="266" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
-<rect width="39.77" height="12" x="302.23" y="0" class="todo"><title>180 · 11.63%</title></rect>
+<rect width="265.56" height="12" x="0" y="0" class="named"><title>1202 · 77.65%</title></rect>
+<rect width="0.66" height="12" x="265.56" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="36.23" height="12" x="266.22" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
+<rect width="39.55" height="12" x="302.45" y="0" class="todo"><title>179 · 11.56%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">77.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1201</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">180</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1202</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">179</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="178" height="12" x="0" y="0" class="named"><title>325 KB · 52.05%</title></rect>
-<rect width="0.13" height="12" x="178" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.13" height="12" x="178.13" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
-<rect width="46.74" height="12" x="295.26" y="0" class="todo"><title>85 KB · 13.67%</title></rect>
+<rect width="178.04" height="12" x="0" y="0" class="named"><title>325 KB · 52.06%</title></rect>
+<rect width="0.13" height="12" x="178.04" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="117.13" height="12" x="178.17" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
+<rect width="46.70" height="12" x="295.30" y="0" class="todo"><title>85 KB · 13.66%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">85 KB</tspan></text>
@@ -1281,7 +1281,7 @@
 <rect width="12" height="12" x="180" y="360" class="named"><title>0x00476a10 SetCullCW (11 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="360" class="named"><title>0x00476a20 SetCullCCW (11 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="360" class="todo"><title>0x00476a30 InitialiseFunctionTable (133 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="360" class="todo"><title>0x00476ac0 HWBeginScene (74 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="360" class="named"><title>0x00476ac0 HWBeginScene (74 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="360" class="named"><title>0x00476b10 HWEndScene (22 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="360" class="todo"><title>0x00476b30 HWInitialise (833 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="360" class="named"><title>0x00476e80 SetFogColor (51 bytes)</title></rect>
@@ -2781,7 +2781,7 @@
 <rect width="5.33" height="5.32" x="616.21" y="415.06" class="named"><title>0x00425f50 lara_as_hang (74 bytes)</title></rect>
 <rect width="5.33" height="5.32" x="616.21" y="423.39" class="named"><title>0x00427210 lara_as_backjump (74 bytes)</title></rect>
 <rect width="5.33" height="5.32" x="616.21" y="431.71" class="named"><title>0x004548b0 InitialiseFXArray (74 bytes)</title></rect>
-<rect width="5.33" height="5.32" x="616.21" y="440.03" class="todo"><title>0x00476ac0 HWBeginScene (74 bytes)</title></rect>
+<rect width="5.33" height="5.32" x="616.21" y="440.03" class="named"><title>0x00476ac0 HWBeginScene (74 bytes)</title></rect>
 <rect width="5.33" height="5.32" x="616.21" y="448.35" class="named"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
 <rect width="5.33" height="5.32" x="616.21" y="456.68" class="named"><title>0x004944d0 DXReadKeyboard (74 bytes)</title></rect>
 <rect width="5.55" height="5.04" x="624.55" y="331.26" class="named"><title>0x00428ad0 lara_default_col (73 bytes)</title></rect>

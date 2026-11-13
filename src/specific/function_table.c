@@ -27,6 +27,17 @@ void SetCullCCW(void)
     IsVisible = _NVisible;
 }
 
+HRESULT HWBeginScene(void)
+{
+    if (App.dx.InScene)
+        Log(1, "Already In Scene");
+    App.dx.InScene = 1;
+    App.dx.DoneBlit = 0;
+    while (App.dx.WaitAtBeginScene) {
+    }
+    return IDirect3DDevice3_BeginScene(App.dx.lpD3DDevice);
+}
+
 HRESULT HWEndScene(void)
 {
     App.dx.InScene = 0;
