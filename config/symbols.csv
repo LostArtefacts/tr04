@@ -2889,6 +2889,7 @@ address,size,name,symbol
 0x007ff020,1,combine_type_flag,_combine_type_flag
 0x007ff021,,left_repeat,_left_repeat
 0x007ff022,,go_select,_go_select
+0x007ff040,192,NodeVectors,_NodeVectors
 0x007ff100,1408,smoke_spark,_smoke_spark
 0x007ff680,720,Gunshells,_Gunshells
 0x007ff960,448,ShockWaves,_ShockWaves

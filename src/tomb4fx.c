@@ -839,6 +839,124 @@ void TriggerLaraDrips(void)
     }
 }
 
+void S_DrawSparks(void)
+{
+    SPARKS *sptr;
+    FX_INFO *fx;
+    ITEM_INFO *item;
+    PHD_VECTOR pos;
+    PHD_VECTOR v;
+    sint32 *mptr;
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    float perspz;
+    sint32 x, y, z, smallest_size, i;
+    sint16 mesh_num;
+
+    for (i = 0; i < 16; i++)
+        NodeOffsets[i].GotIt = 0;
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    mptr = phd_mxptr;
+    XY = (sint16 *)&scratchpad[0];
+    Z = (sint32 *)&scratchpad[256];
+    offsets = (sint16 *)&scratchpad[512];
+    sptr = spark;
+    for (i = 256; i > 0; i--, sptr++) {
+        if (!sptr->On)
+            continue;
+        if (sptr->Flags & 0x40) {
+            fx = &effects[sptr->FxObj];
+            x = fx->pos.x_pos + sptr->x;
+            y = sptr->y + fx->pos.y_pos;
+            z = sptr->z + fx->pos.z_pos;
+            if (sptr->sLife - sptr->Life > (GetRandomDraw() & 7) + 4) {
+                sptr->Flags &= ~0x40;
+                sptr->x = x;
+                sptr->y = y;
+                sptr->z = z;
+            }
+        } else if (sptr->Flags & 0x80) {
+            item = &items[sptr->FxObj];
+            if (sptr->Flags & 0x1000) {
+                if (NodeOffsets[sptr->NodeNumber].GotIt) {
+                    pos.x = NodeVectors[sptr->NodeNumber].x;
+                    pos.y = NodeVectors[sptr->NodeNumber].y;
+                    pos.z = NodeVectors[sptr->NodeNumber].z;
+                } else {
+                    pos.x = NodeOffsets[sptr->NodeNumber].x;
+                    pos.y = NodeOffsets[sptr->NodeNumber].y;
+                    pos.z = NodeOffsets[sptr->NodeNumber].z;
+                    mesh_num = NodeOffsets[sptr->NodeNumber].mesh_num;
+                    if (mesh_num < 0)
+                        GetLaraJointPos(&pos, -mesh_num);
+                    else
+                        GetJointAbsPosition(item, &pos, mesh_num);
+                    NodeOffsets[sptr->NodeNumber].GotIt = 1;
+                    NodeVectors[sptr->NodeNumber].x = pos.x;
+                    NodeVectors[sptr->NodeNumber].y = pos.y;
+                    NodeVectors[sptr->NodeNumber].z = pos.z;
+                }
+                x = sptr->x + pos.x;
+                y = sptr->y + pos.y;
+                z = sptr->z + pos.z;
+                if (sptr->sLife - sptr->Life > (GetRandomDraw() & 3) + 8) {
+                    sptr->Flags &= ~0x1080;
+                    sptr->x = x;
+                    sptr->y = y;
+                    sptr->z = z;
+                }
+            } else {
+                x = sptr->x + item->pos.x_pos;
+                y = sptr->y + item->pos.y_pos;
+                z = sptr->z + item->pos.z_pos;
+            }
+        } else {
+            x = sptr->x;
+            y = sptr->y;
+            z = sptr->z;
+        }
+        x -= lara_item->pos.x_pos;
+        y -= lara_item->pos.y_pos;
+        z -= lara_item->pos.z_pos;
+        if (x < -0x5000 || x > 0x5000 || y < -0x5000 || y > 0x5000 || z < -0x5000 || z > 0x5000) {
+            sptr->On = 0;
+            continue;
+        }
+        offsets[0] = (sint16)x;
+        offsets[1] = (sint16)y;
+        offsets[2] = (sint16)z;
+        v.x = mptr[M00] * offsets[0] + mptr[M01] * offsets[1] + mptr[M02] * offsets[2] + mptr[M03];
+        v.y = mptr[M10] * offsets[0] + mptr[M11] * offsets[1] + mptr[M12] * offsets[2] + mptr[M13];
+        v.z = mptr[M20] * offsets[0] + mptr[M21] * offsets[1] + mptr[M22] * offsets[2] + mptr[M23];
+        perspz = f_persp / (float)v.z;
+        XY[0] = (sint16)(v.x * perspz + f_centerx);
+        XY[1] = (sint16)(v.y * perspz + f_centery);
+        Z[0] = v.z >> W2V_SHIFT;
+        if (!(sptr->Flags & 8)) {
+            offsets[0] = (sint16)(x - (sptr->Xvel >> 4));
+            offsets[1] = (sint16)(y - (sptr->Yvel >> 4));
+            offsets[2] = (sint16)(z - (sptr->Zvel >> 4));
+            v.x = mptr[M00] * offsets[0] + mptr[M01] * offsets[1] + mptr[M02] * offsets[2] + mptr[M03];
+            v.y = mptr[M10] * offsets[0] + mptr[M11] * offsets[1] + mptr[M12] * offsets[2] + mptr[M13];
+            v.z = mptr[M20] * offsets[0] + mptr[M21] * offsets[1] + mptr[M22] * offsets[2] + mptr[M23];
+            XY += 2;
+            Z += 1;
+            perspz = f_persp / (float)v.z;
+            XY[0] = (sint16)(v.x * perspz + f_centerx);
+            XY[1] = (sint16)(v.y * perspz + f_centery);
+            Z[0] = v.z >> W2V_SHIFT;
+            Z -= 1;
+            XY -= 2;
+        }
+        if ((sptr->Flags & 8) && (sptr->Flags & 2))
+            smallest_size = 4;
+        S_DrawDrawSparks(sptr, smallest_size, XY, Z);
+    }
+    phd_PopMatrix();
+}
+
 sint32 ExplodingDeath2(sint16 item_number, sint32 mesh_bits, sint16 Flags)
 {
     ITEM_INFO *item;

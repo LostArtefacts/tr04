@@ -243,6 +243,7 @@ void S_DrawFires(void);
 void S_DrawSparks(void);
 
 extern NODEOFFSET_INFO NodeOffsets[];
+extern PHD_VECTOR NodeVectors[16];
 extern sint16 FlashFadeR;
 extern sint16 FlashFadeG;
 extern sint16 FlashFadeB;

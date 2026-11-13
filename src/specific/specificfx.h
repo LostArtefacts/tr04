@@ -15,6 +15,7 @@ extern sint32 FadeEnd;
 extern MESH_DATA *targetMeshP;
 extern MESH_DATA *binocsMeshP;
 
+void S_DrawDrawSparks(struct sparks *sptr, sint32 smallest_size, sint16 *xy, sint32 *z);
 void DrawRope(void *rope);
 void DrawPsxTile(sint32 x_y, sint32 height_width, sint32 color, sint32 u0, sint32 u1);
 void SetUpLensFlare(sint32 x, sint32 y, sint32 z, GAME_VECTOR *lfobj);
