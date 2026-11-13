@@ -4,6 +4,8 @@
 #include "../camera.h"
 #include "../tomb4fx.h"
 #include "function_stubs.h"
+#include "function_table.h"
+#include "clipping.h"
 #include "drawroom.h"
 #include "3dmath.h"
 #include "output.h"
@@ -531,6 +533,149 @@ void OmniFog(D3DTLVERTEX *v)
                 }
             }
         }
+    }
+}
+
+void AddQuadClippedZBuffer(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint16 v3, TEXTURESTRUCT *tex, sint32 double_sided)
+{
+    D3DTLBUMPVERTEX *p;
+    D3DTLVERTEX *vtx;
+    TEXTURESTRUCT tex2;
+    sint32 *nVtx;
+
+    if (clipflags[v0] & clipflags[v1] & clipflags[v2] & clipflags[v3])
+        return;
+    if ((clipflags[v0] | clipflags[v1] | clipflags[v2] | clipflags[v3]) < 0) {
+        AddTriClippedZBuffer(v, v0, v1, v2, tex, double_sided);
+        tex2.drawtype = tex->drawtype;
+        tex2.flag = tex->flag;
+        tex2.tpage = tex->tpage;
+        tex2.u1 = tex->u1;
+        tex2.v1 = tex->v1;
+        tex2.u2 = tex->u3;
+        tex2.v2 = tex->v3;
+        tex2.u3 = tex->u4;
+        tex2.v3 = tex->v4;
+        AddTriClippedZBuffer(v, v0, v2, v3, &tex2, double_sided);
+        return;
+    }
+    if (IsVisible(&v[v0], &v[v1], &v[v2])) {
+        if (!double_sided)
+            return;
+        v0 ^= v2;
+        v2 ^= v0;
+        v0 ^= v2;
+        tex2.drawtype = tex->drawtype;
+        tex2.flag = tex->flag;
+        tex2.tpage = tex->tpage;
+        tex2.u1 = tex->u3;
+        tex2.v1 = tex->v3;
+        tex2.u2 = tex->u2;
+        tex2.v2 = tex->v2;
+        tex2.u3 = tex->u1;
+        tex2.v3 = tex->v1;
+        tex2.u4 = tex->u4;
+        tex2.v4 = tex->v4;
+        tex = &tex2;
+    }
+    if (clipflags[v0] | clipflags[v1] | clipflags[v2] | clipflags[v3]) {
+        AddTriClippedZBuffer(v, v0, v1, v2, tex, double_sided);
+        tex2.drawtype = tex->drawtype;
+        tex2.flag = tex->flag;
+        tex2.tpage = tex->tpage;
+        tex2.u1 = tex->u1;
+        tex2.v1 = tex->v1;
+        tex2.u2 = tex->u3;
+        tex2.v2 = tex->v3;
+        tex2.u3 = tex->u4;
+        tex2.v3 = tex->v4;
+        AddTriClippedZBuffer(v, v0, v2, v3, &tex2, double_sided);
+        return;
+    }
+    {
+        sint32 cb0, cb1, cb2, cb3;
+        sint32 sb0, sb1, sb2, sb3;
+
+        FindBucket(tex->tpage, &p, &nVtx);
+        *nVtx += 6;
+        sb0 = v[v0].specular;
+        sb1 = v[v1].specular;
+        sb2 = v[v2].specular;
+        sb3 = v[v3].specular;
+        cb0 = v[v0].color;
+        cb1 = v[v1].color;
+        cb2 = v[v2].color;
+        cb3 = v[v3].color;
+        if (App.Volumetric) {
+            OmniFog(&v[v0]);
+            OmniFog(&v[v1]);
+            OmniFog(&v[v2]);
+            OmniFog(&v[v3]);
+        }
+        vtx = &v[v0];
+        p->sx = vtx->sx;
+        p->sy = vtx->sy;
+        p->sz = f_a - f_boo * vtx->rhw;
+        p->rhw = vtx->rhw;
+        p->color = vtx->color;
+        p->specular = vtx->specular;
+        p->tu = tex->u1;
+        p->tv = tex->v1;
+        p[3].sx = p->sx;
+        p[3].sy = p->sy;
+        p[3].sz = p->sz;
+        p[3].rhw = p->rhw;
+        p[3].color = p->color;
+        p[3].specular = p->specular;
+        p[3].tu = p->tu;
+        p[3].tv = p->tv;
+        p++;
+        vtx = &v[v1];
+        p->sx = vtx->sx;
+        p->sy = vtx->sy;
+        p->sz = f_a - f_boo * vtx->rhw;
+        p->rhw = vtx->rhw;
+        p->color = vtx->color;
+        p->specular = vtx->specular;
+        p->tu = tex->u2;
+        p->tv = tex->v2;
+        p++;
+        vtx = &v[v2];
+        p->sx = vtx->sx;
+        p->sy = vtx->sy;
+        p->sz = f_a - f_boo * vtx->rhw;
+        p->rhw = vtx->rhw;
+        p->color = vtx->color;
+        p->specular = vtx->specular;
+        p->tu = tex->u3;
+        p->tv = tex->v3;
+        p[2].sx = p->sx;
+        p[2].sy = p->sy;
+        p[2].sz = p->sz;
+        p[2].rhw = p->rhw;
+        p[2].color = p->color;
+        p[2].specular = p->specular;
+        p[2].tu = p->tu;
+        p[2].tv = p->tv;
+        p += 3;
+        vtx = &v[v3];
+        p->sx = vtx->sx;
+        p->sy = vtx->sy;
+        p->sz = f_a - f_boo * vtx->rhw;
+        p->rhw = vtx->rhw;
+        p->color = vtx->color;
+        p->specular = vtx->specular;
+        p->tu = tex->u4;
+        p->tv = tex->v4;
+        nPolys += 2;
+        v[v0].specular = sb0;
+        v[v1].specular = sb1;
+        v[v2].specular = sb2;
+        v[v3].specular = sb3;
+        v[v0].color = cb0;
+        v[v1].color = cb1;
+        v[v2].color = cb2;
+        v[v3].color = cb3;
     }
 }
 

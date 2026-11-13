@@ -57,6 +57,8 @@ extern sint32 rgbmask;
 extern sint32 zero;
 extern sint32 nPolyType;
 extern sint16 *clipflags;
+extern D3DTLBUMPVERTEX XYUVClipperBuffer[20];
+extern D3DTLBUMPVERTEX zClipperBuffer[20];
 
 void AddTriClippedSorted(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided);
 void AddQuadClippedSorted(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint16 v3, TEXTURESTRUCT *tex, sint32 double_sided);
@@ -92,5 +94,8 @@ void j_nullsub_10(void);
 void OmniEffect(D3DTLVERTEX *v);
 void HWR_DrawSortList(D3DTLBUMPVERTEX *info, sint32 num_verts, sint32 texture, sint32 type);
 void OmniFog(D3DTLVERTEX *v);
+void AddTriClippedZBuffer(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided);
+void AddClippedPoly(D3DTLBUMPVERTEX *dest, sint32 nPoints, D3DTLBUMPVERTEX *v, TEXTURESTRUCT *pTex);
+void AddQuadClippedZBuffer(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint16 v3, TEXTURESTRUCT *tex, sint32 double_sided);
 
 #endif
