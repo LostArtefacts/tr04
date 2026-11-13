@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="37.12" height="12" x="267.10" y="0" class="nonmatching"><title>168 · 10.85%</title></rect>
-<rect width="37.78" height="12" x="304.22" y="0" class="todo"><title>171 · 11.05%</title></rect>
+<rect width="37.34" height="12" x="267.10" y="0" class="nonmatching"><title>169 · 10.92%</title></rect>
+<rect width="37.56" height="12" x="304.44" y="0" class="todo"><title>170 · 10.98%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">168</tspan> · <tspan class="todo">171</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">169</tspan> · <tspan class="todo">170</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.51" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.36%</title></rect>
-<rect width="45.60" height="12" x="296.40" y="0" class="todo"><title>83 KB · 13.33%</title></rect>
+<rect width="117.64" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.40%</title></rect>
+<rect width="45.47" height="12" x="296.53" y="0" class="todo"><title>83 KB · 13.29%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">215 KB</tspan> · <tspan class="todo">83 KB</tspan></text>
@@ -1024,7 +1024,7 @@
 <rect width="12" height="12" x="75" y="285" class="nonmatching"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="285" class="named"><title>0x00460270 InitInterpolate2 (52 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="285" class="named"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="285" class="todo"><title>0x00460320 Spline (249 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="285" class="nonmatching"><title>0x00460320 Spline (249 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="285" class="nonmatching"><title>0x00460420 InitialiseSpotCam (1833 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="285" class="named"><title>0x00460b50 SetSplineData (285 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="285" class="nonmatching"><title>0x00460c70 CalculateSpotCams (3744 bytes)</title></rect>
@@ -2248,7 +2248,7 @@
 <rect width="9.65" height="9.94" x="636.76" y="185.69" class="todo"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="9.61" height="9.94" x="649.42" y="185.69" class="todo"><title>0x00440940 StalkBox (249 bytes)</title></rect>
 <rect width="9.61" height="9.94" x="662.03" y="185.69" class="named"><title>0x00442d70 MoveCreature3DPos (249 bytes)</title></rect>
-<rect width="9.61" height="9.94" x="674.64" y="185.69" class="todo"><title>0x00460320 Spline (249 bytes)</title></rect>
+<rect width="9.61" height="9.94" x="674.64" y="185.69" class="nonmatching"><title>0x00460320 Spline (249 bytes)</title></rect>
 <rect width="9.57" height="9.94" x="687.25" y="185.69" class="named"><title>0x0044c570 FlipMap (248 bytes)</title></rect>
 <rect width="9.57" height="9.94" x="699.82" y="185.69" class="named"><title>0x00450bb0 CalculateObjectLighting (248 bytes)</title></rect>
 <rect width="9.53" height="9.94" x="712.40" y="185.69" class="named"><title>0x004259c0 LaraSlideEdgeJump (247 bytes)</title></rect>

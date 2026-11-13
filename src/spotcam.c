@@ -87,6 +87,22 @@ static __inline void SetSplineData_inl(sint32 num, sint32 cam)
     camera_speed[num] = SpotCam[cam].speed;
 }
 
+sint32 Spline(sint32 x, sint32 *knots, sint32 nk)
+{
+    sint32 *k;
+    sint32 span, c1, c2;
+
+    x = (sint32)(((__int64)x * (nk - 3) << 16) >> 16);
+    span = x >> 16;
+    if (span >= nk - 3)
+        span = nk - 4;
+    k = &knots[span];
+    x -= span << 16;
+    c1 = (k[1] >> 1) - (k[2] >> 1) - k[2] + k[1] + (k[3] >> 1) + (~k[0] >> 1);
+    c2 = 2 * k[2] - 2 * k[1] - (k[1] >> 1) - (k[3] >> 1) + k[0];
+    return (sint32)(((__int64)x * ((((__int64)x * ((((__int64)x * c1) >> 16) + c2)) >> 16) + (k[2] >> 1) + (~k[0] >> 1))) >> 16) + k[1];
+}
+
 void InitialiseSpotCam(sint16 Sequence)
 {
     SPOTCAM *s;
