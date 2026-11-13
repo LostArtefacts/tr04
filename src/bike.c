@@ -11,6 +11,7 @@
 #include "delstuff.h"
 #include "sound.h"
 #include "effect2.h"
+#include "text.h"
 #include "tomb4fx.h"
 #include "laraflar.h"
 #include "newinv.h"
@@ -23,6 +24,7 @@
 #include "specific/3dmath.h"
 #include "specific/audio.h"
 #include "specific/function_stubs.h"
+#include "specific/output.h"
 #include "specific/specificfx.h"
 
 void InitialiseBike(sint16 item_number)
@@ -159,6 +161,62 @@ sint32 GetOnBike(sint16 item_number, COLL_INFO *coll)
     if (rot <= 40950 || rot >= 57330)
         return 0;
     return 1;
+}
+
+void DrawBikeBeam(ITEM_INFO *item)
+{
+    BIKEINFO *bike;
+    OBJECT_INFO *obj;
+    sint16 **meshpp;
+    sint32 *bone;
+    sint16 *frm[2];
+    sint16 *rot;
+    sint32 rate, clip, bit, i, flags;
+    uint8 l;
+    uint8 rgb[3];
+
+    bike = (BIKEINFO *)item->data;
+    if (!bike->light_intensity)
+        return;
+    GetFrames(item, frm, &rate);
+    phd_PushMatrix();
+    phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
+    clip = S_GetObjectBounds(frm[0]);
+    if (clip) {
+        CalculateObjectLighting(item, frm[0]);
+        bit = 1;
+        obj = &objects[item->object_number];
+        meshpp = &meshes[obj->mesh_index];
+        bone = &bones[obj->bone_index];
+        phd_TranslateRel(frm[0][6], frm[0][7], frm[0][8]);
+        rot = frm[0] + 9;
+        gar_RotYXZsuperpack(&rot, 0);
+        meshpp += 2;
+        for (i = 0; i < obj->nmeshes - 1; i++) {
+            flags = bone[0];
+            if (flags & 1)
+                phd_PopMatrix();
+            if (flags & 2)
+                phd_PushMatrix();
+            phd_TranslateRel(bone[1], bone[2], bone[3]);
+            gar_RotYXZsuperpack(&rot, 0);
+            bit <<= 1;
+            if (i == 2) {
+                l = (uint8)bike->light_intensity;
+                rgb[0] = l;
+                rgb[1] = l;
+                rgb[2] = l;
+                if (bike->light_intensity >= 127)
+                    rgb[0] = rgb[1] = rgb[2] = (GetRandomDraw() & 0xF) - 32 + l;
+                GlobalAmbient = RGBA(rgb[2], rgb[1], rgb[0], 0xFF);
+                phd_PutPolygons(meshpp[0], clip);
+            }
+            bone += 4;
+            meshpp += 2;
+        }
+    }
+    phd_PopMatrix();
 }
 
 void DrawBikeExtras(ITEM_INFO *item)

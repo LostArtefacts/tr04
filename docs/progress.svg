@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="325.74" height="12" x="0" y="0" class="named"><title>1218 · 78.68%</title></rect>
-<rect width="54.56" height="12" x="325.74" y="0" class="nonmatching"><title>204 · 13.18%</title></rect>
-<rect width="33.70" height="12" x="380.30" y="0" class="todo"><title>126 · 8.14%</title></rect>
+<rect width="54.83" height="12" x="325.74" y="0" class="nonmatching"><title>205 · 13.24%</title></rect>
+<rect width="33.43" height="12" x="380.57" y="0" class="todo"><title>125 · 8.07%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1218</tspan> · <tspan class="nonmatching">204</tspan> · <tspan class="todo">126</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1218</tspan> · <tspan class="nonmatching">205</tspan> · <tspan class="todo">125</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="218.55" height="12" x="0" y="0" class="named"><title>330 KB · 52.79%</title></rect>
-<rect width="148.86" height="12" x="218.55" y="0" class="nonmatching"><title>225 KB · 35.96%</title></rect>
-<rect width="46.59" height="12" x="367.41" y="0" class="todo"><title>70 KB · 11.25%</title></rect>
+<rect width="149.18" height="12" x="218.55" y="0" class="nonmatching"><title>225 KB · 36.03%</title></rect>
+<rect width="46.27" height="12" x="367.73" y="0" class="todo"><title>70 KB · 11.18%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">330 KB</tspan> · <tspan class="nonmatching">225 KB</tspan> · <tspan class="todo">70 KB</tspan></text>
@@ -1056,7 +1056,7 @@
 <rect width="12" height="12" x="585" y="285" class="named"><title>0x00464680 BikeCollision (463 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="285" class="named"><title>0x00464850 TriggerBikeBeam (155 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="285" class="named"><title>0x004648f0 GetOnBike (313 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="285" class="todo"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="285" class="nonmatching"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="285" class="named"><title>0x00464c20 DrawBikeExtras (76 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="285" class="named"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="285" class="named"><title>0x00465220 TriggerExhaustSmoke_bike (417 bytes)</title></rect>
@@ -1991,7 +1991,7 @@
 <rect width="13.89" height="13.53" x="381.69" y="382.90" class="named"><title>0x00490820 phd_RotYXZ (490 bytes)</title></rect>
 <rect width="13.89" height="13.47" x="381.69" y="399.43" class="named"><title>0x00494080 DXSaveScreen (488 bytes)</title></rect>
 <rect width="13.89" height="13.42" x="381.69" y="415.91" class="named"><title>0x0040b1d0 ShotLara (486 bytes)</title></rect>
-<rect width="13.89" height="13.34" x="381.69" y="432.33" class="todo"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
+<rect width="13.89" height="13.34" x="381.69" y="432.33" class="nonmatching"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
 <rect width="13.89" height="13.34" x="381.69" y="448.66" class="named"><title>0x0046bce0 eleventh_cutseq_control (483 bytes)</title></rect>
 <rect width="14.15" height="13.09" x="398.58" y="97.33" class="nonmatching"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>
 <rect width="14.06" height="13.09" x="415.73" y="97.33" class="todo"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
