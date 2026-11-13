@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="328.15" height="12" x="0" y="0" class="named"><title>1227 · 79.26%</title></rect>
-<rect width="58.84" height="12" x="328.15" y="0" class="nonmatching"><title>220 · 14.21%</title></rect>
-<rect width="27.01" height="12" x="386.99" y="0" class="todo"><title>101 · 6.52%</title></rect>
+<rect width="59.10" height="12" x="328.15" y="0" class="nonmatching"><title>221 · 14.28%</title></rect>
+<rect width="26.74" height="12" x="387.26" y="0" class="todo"><title>100 · 6.46%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1227</tspan> · <tspan class="nonmatching">220</tspan> · <tspan class="todo">101</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1227</tspan> · <tspan class="nonmatching">221</tspan> · <tspan class="todo">100</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="222.02" height="12" x="0" y="0" class="named"><title>335 KB · 53.63%</title></rect>
-<rect width="157.81" height="12" x="222.02" y="0" class="nonmatching"><title>238 KB · 38.12%</title></rect>
-<rect width="34.18" height="12" x="379.82" y="0" class="todo"><title>52 KB · 8.26%</title></rect>
+<rect width="158.43" height="12" x="222.02" y="0" class="nonmatching"><title>239 KB · 38.27%</title></rect>
+<rect width="33.55" height="12" x="380.45" y="0" class="todo"><title>51 KB · 8.10%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">335 KB</tspan> · <tspan class="nonmatching">238 KB</tspan> · <tspan class="todo">52 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">335 KB</tspan> · <tspan class="nonmatching">239 KB</tspan> · <tspan class="todo">51 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -440,7 +440,7 @@
 <rect width="12" height="12" x="345" y="105" class="named"><title>0x00429480 FireGrenade (654 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="105" class="named"><title>0x00429710 ControlGrenade (2911 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="105" class="named"><title>0x0042a270 FireCrossbow (531 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="105" class="todo"><title>0x0042a490 CrossbowHitSwitchType78 (946 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="105" class="nonmatching"><title>0x0042a490 CrossbowHitSwitchType78 (946 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="105" class="named"><title>0x0042a850 ControlCrossbow (1524 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="105" class="named"><title>0x0042ae50 draw_shotgun (390 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="105" class="named"><title>0x0042afe0 undraw_shotgun (275 bytes)</title></rect>
@@ -1785,7 +1785,7 @@
 <rect width="19.84" height="18.42" x="353.73" y="0" class="named"><title>0x00415fd0 ControlScaledSpike (953 bytes)</title></rect>
 <rect width="19.84" height="18.42" x="376.58" y="0" class="todo"><title>0x004955c0 SW_DrawLineG (953 bytes)</title></rect>
 <rect width="19.74" height="18.42" x="399.42" y="0" class="named"><title>0x00444e00 CameraCollisionBounds (948 bytes)</title></rect>
-<rect width="19.70" height="18.42" x="422.16" y="0" class="todo"><title>0x0042a490 CrossbowHitSwitchType78 (946 bytes)</title></rect>
+<rect width="19.70" height="18.42" x="422.16" y="0" class="nonmatching"><title>0x0042a490 CrossbowHitSwitchType78 (946 bytes)</title></rect>
 <rect width="19.55" height="18.42" x="444.86" y="0" class="named"><title>0x004793b0 InitItemDynamicLighting (939 bytes)</title></rect>
 <rect width="19.45" height="18.42" x="467.41" y="0" class="nonmatching"><title>0x00447750 ItemPushLara (934 bytes)</title></rect>
 <rect width="19.20" height="18.42" x="489.86" y="0" class="nonmatching"><title>0x00403870 UpdateLocusts (922 bytes)</title></rect>

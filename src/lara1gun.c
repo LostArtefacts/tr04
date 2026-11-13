@@ -16,6 +16,7 @@
 #include "lara2gun.h"
 #include "gameflow.h"
 #include "specific/input.h"
+#include "sphere.h"
 #include "objects.h"
 #include "debris.h"
 #include "switch.h"
@@ -538,6 +539,87 @@ void FireCrossbow(PHD_3DPOS *pos)
             item->item_flags[0] = 3;
         SoundEffect(SFX_LARA_CROSSBOW, 0, SFX_DEFAULT);
         savegame.Game.AmmoUsed++;
+    }
+}
+
+void CrossbowHitSwitchType78(ITEM_INFO *item, ITEM_INFO *target, sint32 MustHitLastNode)
+{
+    SPHERE *ptr1;
+    sint32 dx, dy, dz, num1, cs, cd, speed, i, j;
+    sint16 TriggerItems[8];
+    sint16 NumTrigs, room_number;
+
+    if (target->flags & IFL_SWITCH_ONESHOT && target->object_number != SKELETON)
+        return;
+    if (!MustHitLastNode) {
+        num1 = objects[target->object_number].nmeshes;
+        cs = num1 - 1;
+    } else {
+        num1 = GetSpheres(target, Slist, 1);
+        cs = -1;
+        cd = 0x7FFFFFFF;
+        if (target->object_number != SKELETON) {
+            ptr1 = Slist;
+            for (i = 0; i < num1; i++) {
+                dx = ptr1->x - item->pos.x_pos;
+                dy = ptr1->y - item->pos.y_pos;
+                dz = ptr1->z - item->pos.z_pos;
+                dy = SQUARE(dz) - SQUARE(ptr1->r) + SQUARE(dy) + SQUARE(dx);
+                if (dy < cd) {
+                    cd = dy;
+                    cs = i;
+                }
+                ptr1++;
+            }
+        } else {
+            for (i = 0; i < 8; i++) {
+                item->pos.y_pos += ((rcossin_tbl[(-item->pos.x_rot >> 3) & 0x1FFE] << 2) * item->speed) >> 17;
+                speed = ((rcossin_tbl[((item->pos.x_rot >> 3) & 0x1FFE) + 1] << 2) * item->speed) >> W2V_SHIFT;
+                item->pos.z_pos += ((rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * speed) >> 17;
+                item->pos.x_pos += ((rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * speed) >> 17;
+                ptr1 = Slist;
+                for (j = 0; j < num1; j++) {
+                    dx = ptr1->x - item->pos.x_pos;
+                    dy = ptr1->y - item->pos.y_pos;
+                    dz = ptr1->z - item->pos.z_pos;
+                    dy = SQUARE(dz) + SQUARE(dy) + SQUARE(dx);
+                    if (dy < SQUARE(ptr1->r)) {
+                        cs = j;
+                        break;
+                    }
+                    ptr1++;
+                }
+                if (cs != -1)
+                    break;
+            }
+        }
+    }
+    if (target->object_number == SKELETON) {
+        if (cs != -1 && objects[target->object_number].explodable_meshbits & 1 << cs) {
+            ExplodeItemNode(target, cs, 0, 64);
+            target->mesh_bits &= ~(1 << cs);
+        }
+    } else {
+        if (cs == num1 - 1) {
+            if (target->flags & IFL_CODEBITS && (target->flags & IFL_CODEBITS) != IFL_CODEBITS) {
+                room_number = target->room_number;
+                GetHeight(GetFloor(target->pos.x_pos, target->pos.y_pos - 256, target->pos.z_pos, &room_number),
+                    target->pos.x_pos, target->pos.y_pos - 256, target->pos.z_pos);
+                TestTriggers(trigger_index, 1, target->flags & IFL_CODEBITS);
+            } else {
+                NumTrigs = (sint16)GetSwitchTrigger(target, TriggerItems, 1);
+                for (i = 0; i < NumTrigs; i++) {
+                    AddActiveItem(TriggerItems[i]);
+                    items[TriggerItems[i]].status = ITEM_ACTIVE;
+                    items[TriggerItems[i]].flags |= IFL_CODEBITS;
+                }
+            }
+            if (target->object_number == SWITCH_TYPE7)
+                ExplodeItemNode(target, objects[SWITCH_TYPE7].nmeshes - 1, 0, 64);
+            AddActiveItem(target - items);
+            target->flags |= IFL_CODEBITS | IFL_SWITCH_ONESHOT;
+            target->status = ITEM_ACTIVE;
+        }
     }
 }
 
