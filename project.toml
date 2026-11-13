@@ -39,7 +39,7 @@ cflags = ["/Gy"]
 defines = ["TR4_EXE=1"]
 # The original's import order: KERNEL32, USER32, GDI32, ADVAPI32, DDRAW, DINPUT, DSOUND, MSACM32, BINKW32, WINMM.
 libs = ["dxguid.lib", "kernel32.lib", "user32.lib", "gdi32.lib", "advapi32.lib", "ddraw.lib", "dinput.lib",
-        "dsound.lib", "msacm32.lib", "binkw32.lib", "winmm.lib", "libc.lib"]
+        "dsound.lib", "msacm32.lib", "binkw32.lib", "winmm.lib", "libcmt.lib"]
 import_defs = ["config/binkw32.def"]  # binkw32.dll's 9 imports, from the original's import table
 ldflags = ["/SUBSYSTEM:WINDOWS", "/FIXED", "/SECTION:.text,RWE"]
 features = { c_asm = "FEAT_C_ASM" }  # FEAT=c_asm: the C versions of the original's hand-written assembly
