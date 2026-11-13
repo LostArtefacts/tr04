@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="258.51" height="12" x="0" y="0" class="named"><title>1191 · 76.94%</title></rect>
-<rect width="0.65" height="12" x="258.51" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="29.74" height="12" x="259.16" y="0" class="nonmatching"><title>137 · 8.85%</title></rect>
-<rect width="47.10" height="12" x="288.90" y="0" class="todo"><title>217 · 14.02%</title></rect>
+<rect width="258.73" height="12" x="0" y="0" class="named"><title>1192 · 77%</title></rect>
+<rect width="0.65" height="12" x="258.73" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="29.74" height="12" x="259.38" y="0" class="nonmatching"><title>137 · 8.85%</title></rect>
+<rect width="46.88" height="12" x="289.12" y="0" class="todo"><title>216 · 13.95%</title></rect>
 </g>
-<text text-anchor="end" x="516" y="7.50">77.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1191</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">137</tspan> · <tspan class="todo">217</tspan></text>
+<text text-anchor="end" x="516" y="7.50">77.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1192</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">137</tspan> · <tspan class="todo">216</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="167.82" height="12" x="0" y="0" class="named"><title>312 KB · 49.95%</title></rect>
-<rect width="0.13" height="12" x="167.82" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="88.25" height="12" x="167.95" y="0" class="nonmatching"><title>164 KB · 26.26%</title></rect>
-<rect width="79.80" height="12" x="256.20" y="0" class="todo"><title>148 KB · 23.75%</title></rect>
+<rect width="168.52" height="12" x="0" y="0" class="named"><title>313 KB · 50.16%</title></rect>
+<rect width="0.13" height="12" x="168.52" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="88.25" height="12" x="168.65" y="0" class="nonmatching"><title>164 KB · 26.26%</title></rect>
+<rect width="79.10" height="12" x="256.90" y="0" class="todo"><title>147 KB · 23.54%</title></rect>
 </g>
-<text text-anchor="end" x="516" y="24.50">50.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">312 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">164 KB</tspan> · <tspan class="todo">148 KB</tspan></text>
+<text text-anchor="end" x="516" y="24.50">50.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">313 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">164 KB</tspan> · <tspan class="todo">147 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1377,7 +1377,7 @@
 <rect width="12" height="12" x="120" y="390" class="todo"><title>0x00482e40 AddClippedPoly (328 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="390" class="named"><title>0x00482f90 SubdivideEdge (550 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="390" class="named"><title>0x004831c0 SubdivideTri (862 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="390" class="todo"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="390" class="named"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="390" class="named"><title>0x00483a40 AddTriSubdivide (261 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="390" class="named"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="390" class="todo"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
@@ -1719,7 +1719,7 @@
 <rect width="23.23" height="21.88" x="209.46" y="317.20" class="nonmatching"><title>0x00448da0 GetCollidedObjects (1325 bytes)</title></rect>
 <rect width="23.23" height="21.77" x="209.46" y="342.09" class="todo"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
 <rect width="23.23" height="21.69" x="209.46" y="366.86" class="todo"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
-<rect width="23.23" height="21.59" x="209.46" y="391.54" class="todo"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
+<rect width="23.23" height="21.59" x="209.46" y="391.54" class="named"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
 <rect width="23.23" height="21.47" x="209.46" y="416.13" class="todo"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
 <rect width="23.23" height="21.40" x="209.46" y="440.60" class="nonmatching"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
 <rect width="21.97" height="22.62" x="235.69" y="0" class="named"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>

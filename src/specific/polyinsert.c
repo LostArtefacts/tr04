@@ -386,6 +386,98 @@ void SubdivideTri(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2, TEXTURESTRU
     }
 }
 
+void SubdivideQuad(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2, D3DTLVERTEX *v3, TEXTURESTRUCT *tex, sint32 double_sided, sint32 steps, sint16 *c)
+{
+    D3DTLVERTEX v[5];
+    D3DTLVERTEX vb[4];
+    TEXTURESTRUCT tex2;
+    float uv[10];
+    sint16 aclip[5];
+    sint16 bclip[4];
+    sint16 c0, c1, c2, c3;
+
+    if (steps) {
+        tex2.drawtype = tex->drawtype;
+        tex2.tpage = tex->tpage;
+        tex2.flag = tex->flag;
+        SubdivideEdge(v0, v1, &v[0], &aclip[0], tex->u1, tex->v1, tex->u2, tex->v2, &uv[0], &uv[1]);
+        SubdivideEdge(v2, v3, &v[1], &aclip[1], tex->u3, tex->v3, tex->u4, tex->v4, &uv[2], &uv[3]);
+        SubdivideEdge(v0, v3, &v[2], &aclip[2], tex->u1, tex->v1, tex->u4, tex->v4, &uv[4], &uv[5]);
+        SubdivideEdge(v1, v2, &v[3], &aclip[3], tex->u2, tex->v2, tex->u3, tex->v3, &uv[6], &uv[7]);
+        SubdivideEdge(v0, v2, &v[4], &aclip[4], tex->u1, tex->v1, tex->u3, tex->v3, &uv[8], &uv[9]);
+        tex2.u1 = tex->u1;
+        tex2.v1 = tex->v1;
+        tex2.u2 = uv[0];
+        tex2.v2 = uv[1];
+        tex2.u3 = uv[8];
+        tex2.v3 = uv[9];
+        tex2.u4 = uv[4];
+        tex2.v4 = uv[5];
+        bclip[0] = c[0];
+        bclip[1] = aclip[0];
+        bclip[2] = aclip[4];
+        bclip[3] = aclip[2];
+        SubdivideQuad(v0, &v[0], &v[4], &v[2], &tex2, double_sided, steps - 1, bclip);
+        tex2.u1 = uv[0];
+        tex2.v1 = uv[1];
+        tex2.u2 = tex->u2;
+        tex2.v2 = tex->v2;
+        tex2.u3 = uv[6];
+        tex2.v3 = uv[7];
+        tex2.u4 = uv[8];
+        tex2.v4 = uv[9];
+        bclip[0] = aclip[0];
+        bclip[1] = c[1];
+        bclip[2] = aclip[3];
+        bclip[3] = aclip[4];
+        SubdivideQuad(&v[0], v1, &v[3], &v[4], &tex2, double_sided, steps - 1, bclip);
+        tex2.u1 = uv[8];
+        tex2.v1 = uv[9];
+        tex2.u2 = uv[6];
+        tex2.v2 = uv[7];
+        tex2.u3 = tex->u3;
+        tex2.v3 = tex->v3;
+        tex2.u4 = uv[2];
+        tex2.v4 = uv[3];
+        bclip[0] = aclip[4];
+        bclip[1] = aclip[3];
+        bclip[2] = c[2];
+        bclip[3] = aclip[1];
+        SubdivideQuad(&v[4], &v[3], v2, &v[1], &tex2, double_sided, steps - 1, bclip);
+        tex2.u1 = uv[4];
+        tex2.v1 = uv[5];
+        tex2.u2 = uv[8];
+        tex2.v2 = uv[9];
+        tex2.u3 = uv[2];
+        tex2.v3 = uv[3];
+        tex2.u4 = tex->u4;
+        tex2.v4 = tex->v4;
+        bclip[0] = aclip[2];
+        bclip[1] = aclip[4];
+        bclip[2] = aclip[1];
+        bclip[3] = c[3];
+        SubdivideQuad(&v[2], &v[4], &v[1], v3, &tex2, double_sided, steps - 1, bclip);
+    } else {
+        c0 = clipflags[0];
+        c1 = clipflags[1];
+        c2 = clipflags[2];
+        c3 = clipflags[3];
+        clipflags[0] = c[0];
+        clipflags[1] = c[1];
+        clipflags[2] = c[2];
+        clipflags[3] = c[3];
+        vb[0] = *v0;
+        vb[1] = *v1;
+        vb[2] = *v2;
+        vb[3] = *v3;
+        AddQuadClippedSorted(vb, 0, 1, 2, 3, tex, double_sided);
+        clipflags[0] = c0;
+        clipflags[1] = c1;
+        clipflags[2] = c2;
+        clipflags[3] = c3;
+    }
+}
+
 void AddTriSubdivide(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTURESTRUCT *tex, sint32 double_sided)
 {
     sint32 steps;
