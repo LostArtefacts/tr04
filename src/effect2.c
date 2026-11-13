@@ -330,6 +330,85 @@ void TriggerRicochetSpark(GAME_VECTOR *pos, sint32 ang, sint32 num, sint32 smoke
     }
 }
 
+void TriggerFlareSparks(sint32 x, sint32 y, sint32 z, sint32 xvel, sint32 yvel, sint32 zvel, sint32 smoke)
+{
+    SPARKS *sptr;
+    SPARKS *smokeSpark;
+    sint32 dx, dz, rnd, size;
+
+    dx = lara_item->pos.x_pos - x;
+    dz = lara_item->pos.z_pos - z;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    rnd = GetRandomDraw();
+    sptr = &spark[GetFreeSpark()];
+    sptr->On = 1;
+    sptr->sR = -1;
+    sptr->sG = -1;
+    sptr->sB = -1;
+    sptr->dR = -1;
+    sptr->dG = (rnd & 0x7F) + 64;
+    sptr->dB = -64 - sptr->dG;
+    sptr->Life = 10;
+    sptr->sLife = 10;
+    sptr->ColFadeSpeed = 3;
+    sptr->FadeToBlack = 5;
+    sptr->x = (rnd & 7) + x - 3;
+    sptr->y = ((rnd >> 3) & 7) + y - 3;
+    sptr->z = ((rnd >> 6) & 7) + z - 3;
+    sptr->Xvel = (sint16)(((rnd >> 2) & 0xFF) + xvel - 128);
+    sptr->Yvel = (sint16)(((rnd >> 4) & 0xFF) + yvel - 128);
+    sptr->Zvel = (sint16)(((rnd >> 6) & 0xFF) + zvel - 128);
+    sptr->TransType = 2;
+    sptr->Friction = 34;
+    sptr->Scalar = 1;
+    sptr->Flags = 2;
+    sptr->sSize = ((rnd >> 9) & 3) + 4;
+    sptr->Size = sptr->sSize;
+    sptr->dSize = ((rnd >> 12) & 1) + 1;
+    sptr->MaxYvel = 0;
+    sptr->Gravity = 0;
+    if (smoke) {
+        rnd = GetRandomDraw();
+        smokeSpark = &spark[GetFreeSpark()];
+        smokeSpark->On = 1;
+        smokeSpark->sR = sptr->dR >> 1;
+        smokeSpark->sG = sptr->dG >> 1;
+        smokeSpark->sB = sptr->dB >> 1;
+        smokeSpark->dR = 32;
+        smokeSpark->dG = 32;
+        smokeSpark->dB = 32;
+        smokeSpark->FadeToBlack = 4;
+        smokeSpark->TransType = 2;
+        smokeSpark->ColFadeSpeed = (rnd & 3) + 8;
+        smokeSpark->Life = ((rnd >> 3) & 7) + 13;
+        smokeSpark->sLife = smokeSpark->Life;
+        smokeSpark->x = x + (xvel >> 5);
+        smokeSpark->y = y + (yvel >> 5);
+        smokeSpark->z = z + (zvel >> 5);
+        smokeSpark->Xvel = (sint16)((rnd & 0x3F) + xvel - 32);
+        smokeSpark->Yvel = (sint16)yvel;
+        smokeSpark->Friction = 4;
+        smokeSpark->Zvel = (sint16)(((rnd >> 6) & 0x3F) + zvel - 32);
+        if (rnd & 1) {
+            smokeSpark->Flags = 538;
+            smokeSpark->RotAng = (sint16)(rnd >> 3);
+            if (rnd & 2)
+                smokeSpark->RotAdd = -16 - (rnd & 0xF);
+            else
+                smokeSpark->RotAdd = (rnd & 0xF) + 16;
+        } else
+            smokeSpark->Flags = 522;
+        smokeSpark->Gravity = -8 - ((rnd >> 3) & 3);
+        smokeSpark->Scalar = 2;
+        smokeSpark->MaxYvel = -4 - ((rnd >> 6) & 3);
+        size = ((rnd >> 8) & 0xF) + 24;
+        smokeSpark->sSize = size >> 3;
+        smokeSpark->Size = size >> 3;
+        smokeSpark->dSize = size;
+    }
+}
+
 void TriggerExplosionSmokeEnd(sint32 x, sint32 y, sint32 z, sint32 uw)
 {
     sint32 size;
