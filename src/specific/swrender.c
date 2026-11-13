@@ -398,17 +398,14 @@ HRESULT SW_D3D_CreateDevice(void)
 
 HRESULT SW_ClearBuffer(SW_DEVICE *dev, DWORD count, D3DRECT *rect, DWORD flags, D3DCOLOR col, D3DVALUE z, DWORD stencil)
 {
+    D3DCOLOR *p;
+
     if (!dev)
         return 0;
     if (flags & D3DCLEAR_TARGET) {
-        dev = dev->buffer;
-        flags = SW_SurfDesc.dwWidth * SW_SurfDesc.dwHeight;
-        __asm {
-            mov ecx, flags
-            mov edi, dev
-            mov eax, col
-            rep stosd
-        }
+        p = dev->buffer;
+        for (flags = SW_SurfDesc.dwWidth * SW_SurfDesc.dwHeight; flags; flags--)
+            *p++ = col;
     }
     return 0;
 }
