@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="376.75" height="12" x="0" y="0" class="named"><title>1264 · 81.55%</title></rect>
-<rect width="85.25" height="12" x="376.75" y="0" class="nonmatching"><title>286 · 18.45%</title></rect>
+<rect width="377.05" height="12" x="0" y="0" class="named"><title>1265 · 81.61%</title></rect>
+<rect width="84.95" height="12" x="377.05" y="0" class="nonmatching"><title>285 · 18.39%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">81.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1264</tspan> · <tspan class="nonmatching">286</tspan></text>
+<text text-anchor="end" x="642" y="7.50">81.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1265</tspan> · <tspan class="nonmatching">285</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="252.49" height="12" x="0" y="0" class="named"><title>342 KB · 54.65%</title></rect>
-<rect width="209.51" height="12" x="252.49" y="0" class="nonmatching"><title>284 KB · 45.35%</title></rect>
+<rect width="252.63" height="12" x="0" y="0" class="named"><title>342 KB · 54.68%</title></rect>
+<rect width="209.37" height="12" x="252.63" y="0" class="nonmatching"><title>283 KB · 45.32%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">54.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">342 KB</tspan> · <tspan class="nonmatching">284 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">342 KB</tspan> · <tspan class="nonmatching">283 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1440,7 +1440,7 @@
 <rect width="12" height="12" x="375" y="405" class="named"><title>0x0048e860 Sync (105 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="405" class="named"><title>0x0048e8d0 ClearSurfaces (229 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="405" class="nonmatching"><title>0x0048e9c0 WinMain (1154 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="405" class="nonmatching"><title>0x0048ee50 CheckMMXTechnology (196 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="405" class="named"><title>0x0048ee50 CheckMMXTechnology (196 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="405" class="named"><title>0x0048ef20 WinClose (68 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="405" class="named"><title>0x0048ef70 WinProcMsg (121 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="405" class="named"><title>0x0048eff0 WinProcessCommands (1078 bytes)</title></rect>
@@ -2355,7 +2355,7 @@
 <rect width="8.87" height="8.51" x="495.92" y="396.06" class="named"><title>0x00467ac0 JeepExplode (197 bytes)</title></rect>
 <rect width="8.87" height="8.51" x="495.92" y="407.58" class="named"><title>0x00487b60 InitTarget_2 (197 bytes)</title></rect>
 <rect width="8.87" height="8.51" x="495.92" y="419.09" class="named"><title>0x00487c30 InitBinoculars (197 bytes)</title></rect>
-<rect width="8.87" height="8.47" x="495.92" y="430.60" class="nonmatching"><title>0x0048ee50 CheckMMXTechnology (196 bytes)</title></rect>
+<rect width="8.87" height="8.47" x="495.92" y="430.60" class="named"><title>0x0048ee50 CheckMMXTechnology (196 bytes)</title></rect>
 <rect width="8.87" height="8.47" x="495.92" y="442.06" class="nonmatching"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
 <rect width="8.87" height="8.47" x="495.92" y="453.53" class="nonmatching"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="8.69" height="8.60" x="507.80" y="222.18" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
