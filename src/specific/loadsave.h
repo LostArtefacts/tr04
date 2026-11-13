@@ -46,6 +46,7 @@ LPDIRECTDRAWSURFACE4 CreateTexturePage(sint32 w, sint32 h, sint32 MipMapCount, s
 void ConvertSurfaceToTextures(LPDIRECTDRAWSURFACE4 surface);
 void S_LoadBar(void);
 sint32 S_PauseMenu(void);
+void DoSlider(sint32 x, sint32 y, sint32 width, sint32 height, sint32 pos, sint32 clr1, sint32 clr2, sint32 clr3);
 
 extern sint32 SoundQuality;
 extern sint32 ControlMethod;
