@@ -211,6 +211,7 @@ void GetJointAbsPositionCutSeq(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot, P
 void CalcActorLighting(ITEM_INFO *item, OBJECT_INFO *obj, sint16 *rot);
 sint16 GetTrackWord(sint32 off, char *packed, sint32 packmethod);
 void init_cutseq_actors(char *data, sint32 resident);
+void DecodeAnim(PACKNODE *node, sint32 num_nodes, sint32 frame, sint32 flags);
 void updateAnimFrame(PACKNODE *node, sint32 flags, sint16 *frame);
 void CalculateObjectLightingLaraCutSeq(void);
 sint32 Load_and_Init_Cutseq(sint32 num);
