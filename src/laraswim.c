@@ -6,6 +6,7 @@
 #include "specific/3dmath.h"
 #include "collide.h"
 #include "larafire.h"
+#include "camera.h"
 
 void LaraUnderWater(ITEM_INFO *item, COLL_INFO *coll)
 {
@@ -359,4 +360,68 @@ sint32 GetWaterDepth(sint32 x, sint32 y, sint32 z, sint16 room_number)
         }
         return NO_HEIGHT;
     }
+}
+
+void LaraWaterCurrent(COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    sint32 angle, speed, sinkval, shifter, absvel, x, y, z;
+
+    item = lara_item;
+    if (!lara.current_active) {
+        absvel = abs(lara.current_xvel);
+        if (absvel > 16)
+            shifter = 4;
+        else
+            shifter = (absvel > 8) + 2;
+        lara.current_xvel -= lara.current_xvel >> shifter;
+        if (abs(lara.current_xvel) < 4)
+            lara.current_xvel = 0;
+        absvel = abs(lara.current_zvel);
+        if (absvel > 16)
+            shifter = 4;
+        else
+            shifter = (absvel > 8) + 2;
+        lara.current_zvel -= lara.current_zvel >> shifter;
+        if (abs(lara.current_zvel) < 4)
+            lara.current_zvel = 0;
+        if (!lara.current_xvel && !lara.current_zvel)
+            return;
+    } else {
+        sinkval = lara.current_active - 1;
+        x = camera.fixed[sinkval].x;
+        y = camera.fixed[sinkval].y;
+        z = camera.fixed[sinkval].z;
+        angle = (((sint32)mGetAngle(x, z, item->pos.x_pos, item->pos.z_pos) - 0x4000) >> 4) & 0xFFF;
+        speed = camera.fixed[sinkval].data;
+        lara.current_xvel += (sint16)((((speed * rcossin_tbl[2 * angle]) >> 2) - lara.current_xvel) >> 4);
+        lara.current_zvel += (sint16)((((speed * rcossin_tbl[2 * angle + 1]) >> 2) - lara.current_zvel) >> 4);
+        lara_item->pos.y_pos += (y - lara_item->pos.y_pos) >> 4;
+    }
+    item->pos.x_pos += lara.current_xvel >> 8;
+    item->pos.z_pos += lara.current_zvel >> 8;
+    lara.current_active = 0;
+    coll->facing = (sint16)phd_atan(item->pos.z_pos - coll->old.z, item->pos.x_pos - coll->old.x);
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos + 200, item->pos.z_pos, item->room_number, 400);
+    if (coll->coll_type == COLL_FRONT) {
+        if (item->pos.x_rot > 6370)
+            item->pos.x_rot += 364;
+        else if (item->pos.x_rot < -6370)
+            item->pos.x_rot -= 364;
+        else
+            item->fallspeed = 0;
+    } else if (coll->coll_type == COLL_TOP)
+        item->pos.x_rot -= 364;
+    else if (coll->coll_type == COLL_TOPFRONT)
+        item->fallspeed = 0;
+    else if (coll->coll_type == COLL_LEFT)
+        item->pos.y_rot += 910;
+    else if (coll->coll_type == COLL_RIGHT)
+        item->pos.y_rot -= 910;
+    if (coll->mid_floor < 0 && coll->mid_floor != NO_HEIGHT)
+        item->pos.y_pos += coll->mid_floor;
+    ShiftItem(item, coll);
+    coll->old.x = item->pos.x_pos;
+    coll->old.y = item->pos.y_pos;
+    coll->old.z = item->pos.z_pos;
 }
