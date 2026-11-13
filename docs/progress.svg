@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="324.41" height="12" x="0" y="0" class="named"><title>1213 · 78.36%</title></rect>
-<rect width="50.01" height="12" x="324.41" y="0" class="nonmatching"><title>187 · 12.08%</title></rect>
-<rect width="39.58" height="12" x="374.42" y="0" class="todo"><title>148 · 9.56%</title></rect>
+<rect width="50.28" height="12" x="324.41" y="0" class="nonmatching"><title>188 · 12.14%</title></rect>
+<rect width="39.31" height="12" x="374.69" y="0" class="todo"><title>147 · 9.50%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">187</tspan> · <tspan class="todo">148</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">188</tspan> · <tspan class="todo">147</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="217.20" height="12" x="0" y="0" class="named"><title>328 KB · 52.46%</title></rect>
-<rect width="144.77" height="12" x="217.20" y="0" class="nonmatching"><title>219 KB · 34.97%</title></rect>
-<rect width="52.03" height="12" x="361.97" y="0" class="todo"><title>79 KB · 12.57%</title></rect>
+<rect width="144.89" height="12" x="217.20" y="0" class="nonmatching"><title>219 KB · 35%</title></rect>
+<rect width="51.90" height="12" x="362.10" y="0" class="todo"><title>78 KB · 12.54%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">219 KB</tspan> · <tspan class="todo">79 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">219 KB</tspan> · <tspan class="todo">78 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -559,7 +559,7 @@
 <rect width="12" height="12" x="630" y="135" class="named"><title>0x00435570 TriggerSuperJetFlame (572 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="135" class="named"><title>0x004357b0 nullsub_1 (1 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="135" class="named"><title>0x004357c0 TriggerRocketSmoke (339 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="135" class="todo"><title>0x00435920 SetupSplash (190 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="135" class="nonmatching"><title>0x00435920 SetupSplash (190 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="135" class="named"><title>0x004359e0 UpdateSplashes (399 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="135" class="named"><title>0x00435b70 SetupRipple (128 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="135" class="named"><title>0x00435bf0 TriggerUnderwaterBlood (98 bytes)</title></rect>
@@ -2373,7 +2373,7 @@
 <rect width="8.47" height="8.61" x="646.93" y="222.23" class="named"><title>0x00421a10 lara_as_crawlb (190 bytes)</title></rect>
 <rect width="8.47" height="8.61" x="658.39" y="222.23" class="named"><title>0x00422810 LaraTestClimbStance (190 bytes)</title></rect>
 <rect width="8.47" height="8.61" x="669.86" y="222.23" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
-<rect width="8.47" height="8.61" x="681.33" y="222.23" class="todo"><title>0x00435920 SetupSplash (190 bytes)</title></rect>
+<rect width="8.47" height="8.61" x="681.33" y="222.23" class="nonmatching"><title>0x00435920 SetupSplash (190 bytes)</title></rect>
 <rect width="8.47" height="8.61" x="692.80" y="222.23" class="named"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
 <rect width="8.47" height="8.61" x="704.26" y="222.23" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="8.42" height="8.61" x="715.73" y="222.23" class="named"><title>0x00413dc0 ControlSmashableBikeWall (189 bytes)</title></rect>

@@ -680,6 +680,40 @@ void TriggerRocketSmoke(sint32 x, sint32 y, sint32 z, sint32 col)
     sptr->dSize = size;
 }
 
+void SetupSplash(SPLASH_SETUP *setup)
+{
+    SPLASH_STRUCT *splash;
+    sint32 n;
+
+    splash = splashes;
+    for (n = 0; n < 4; splash++, n++) {
+        if (!(splash->flags & 1))
+            goto found;
+    }
+    SoundEffect(33, (PHD_3DPOS *)setup, 0);
+    return;
+found:
+    splash->flags = 1;
+    splash->x = setup->x;
+    splash->y = setup->y;
+    splash->z = setup->z;
+    splash->life = 62;
+    splash->InnerRad = setup->InnerRad;
+    splash->InnerSize = setup->InnerSize;
+    splash->InnerRadVel = setup->InnerRadVel;
+    splash->InnerYVel = setup->InnerYVel;
+    splash->InnerY = setup->InnerYVel >> 2;
+    splash->MiddleRad = setup->pad1;
+    splash->MiddleSize = setup->MiddleRad;
+    splash->MiddleRadVel = setup->MiddleSize;
+    splash->MiddleYVel = setup->MiddleRadVel;
+    splash->MiddleY = setup->MiddleRadVel >> 2;
+    splash->OuterRad = setup->MiddleYVel;
+    splash->OuterSize = setup->pad2;
+    splash->OuterRadVel = setup->OuterRad;
+    SoundEffect(33, (PHD_3DPOS *)setup, 0);
+}
+
 void UpdateSplashes(void)
 {
     SPLASH_STRUCT *splash;
