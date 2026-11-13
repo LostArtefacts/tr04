@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="340.28" height="12" x="0" y="0" class="named"><title>1274 · 82.19%</title></rect>
-<rect width="62.77" height="12" x="340.28" y="0" class="nonmatching"><title>235 · 15.16%</title></rect>
-<rect width="10.95" height="12" x="403.05" y="0" class="todo"><title>41 · 2.65%</title></rect>
+<rect width="340.01" height="12" x="0" y="0" class="named"><title>1273 · 82.13%</title></rect>
+<rect width="61.97" height="12" x="340.01" y="0" class="nonmatching"><title>232 · 14.97%</title></rect>
+<rect width="12.02" height="12" x="401.98" y="0" class="todo"><title>45 · 2.90%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">82.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">235</tspan> · <tspan class="todo">41</tspan></text>
+<text text-anchor="end" x="594" y="7.50">82.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1273</tspan> · <tspan class="nonmatching">232</tspan> · <tspan class="todo">45</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="227.14" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
-<rect width="167.35" height="12" x="227.14" y="0" class="nonmatching"><title>253 KB · 40.42%</title></rect>
-<rect width="19.52" height="12" x="394.48" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
+<rect width="227.13" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
+<rect width="166.82" height="12" x="227.13" y="0" class="nonmatching"><title>252 KB · 40.30%</title></rect>
+<rect width="20.05" height="12" x="393.95" y="0" class="todo"><title>30 KB · 4.84%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">253 KB</tspan> · <tspan class="todo">29 KB</tspan></text>
@@ -1570,8 +1570,8 @@
 <rect width="12" height="12" x="45" y="450" class="todo"><title>0x004971b0 SW_TriSetupGTLit (2786 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="450" class="todo"><title>0x00497cb0 SW_TriSetupGALit (2079 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="450" class="todo"><title>0x004984e0 SW_TriSetupGTA (1717 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="450" class="nonmatching"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="450" class="named"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="450" class="todo"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="450" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="450" class="todo"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="450" class="todo"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="450" class="todo"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
@@ -3113,7 +3113,7 @@
 <rect width="2.67" height="1.83" x="716.18" y="426.16" class="todo"><title>0x0048f9a1 SW_WaitUntilDXInScene (13 bytes)</title></rect>
 <rect width="2.67" height="1.83" x="721.85" y="426.16" class="todo"><title>0x0048f9c1 SW_WaitWhileDXInScene (13 bytes)</title></rect>
 <rect width="2.67" height="1.83" x="727.52" y="426.16" class="named"><title>0x00494e80 SW_BeginFrame (13 bytes)</title></rect>
-<rect width="2.67" height="1.83" x="733.19" y="426.16" class="named"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
+<rect width="2.67" height="1.83" x="733.19" y="426.16" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="2.67" height="1.83" x="738.85" y="426.16" class="todo"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
 <rect width="2.48" height="1.83" x="744.52" y="426.16" class="named"><title>0x00405ea0 InitialiseLaraDouble (12 bytes)</title></rect>
 <rect width="1.83" height="2.48" x="716.18" y="430.99" class="named"><title>0x00437cb0 invisibility_on (12 bytes)</title></rect>

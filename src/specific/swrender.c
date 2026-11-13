@@ -583,14 +583,9 @@ sint32 SW_SetColorOpScale(sint32 scale)
     return 0;
 }
 
-__declspec(naked) FARPROC SW_GetSleepProc(void)
+FARPROC SW_GetSleepProc(HMODULE module)
 {
-    __asm {
-        push offset SW_SleepName
-        push eax
-        call dword ptr GetProcAddress
-        ret
-    }
+    return GetProcAddress(module, SW_SleepName);
 }
 
 HRESULT SW_SetRenderStateFlags(D3DRENDERSTATETYPE type, DWORD state)

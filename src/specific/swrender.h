@@ -47,7 +47,7 @@ HRESULT SW_SetRenderStateFlags(D3DRENDERSTATETYPE type, DWORD state);
 HRESULT j_SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWORD count, DWORD flags);
 void SW_D3D_SetupSurface(sint32 w, sint32 h, sint32 mmx);
 HMODULE SW_GetKernelModule(void);
-FARPROC SW_GetSleepProc(void);
+FARPROC SW_GetSleepProc(HMODULE module);
 void SW_SleepTick(void);
 void SW_FreeBuffer(void);
 void SW_CopyBuffer(void *dst, void *src, sint32 width);
