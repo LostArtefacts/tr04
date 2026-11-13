@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="264.90" height="12" x="0" y="0" class="named"><title>1199 · 77.45%</title></rect>
 <rect width="0.66" height="12" x="264.90" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="35.79" height="12" x="265.56" y="0" class="nonmatching"><title>162 · 10.47%</title></rect>
-<rect width="40.65" height="12" x="301.35" y="0" class="todo"><title>184 · 11.89%</title></rect>
+<rect width="36.01" height="12" x="265.56" y="0" class="nonmatching"><title>163 · 10.53%</title></rect>
+<rect width="40.43" height="12" x="301.57" y="0" class="todo"><title>183 · 11.82%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1199</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">162</tspan> · <tspan class="todo">184</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1199</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">163</tspan> · <tspan class="todo">183</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="177.96" height="12" x="0" y="0" class="named"><title>325 KB · 52.03%</title></rect>
 <rect width="0.13" height="12" x="177.96" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="112.19" height="12" x="178.09" y="0" class="nonmatching"><title>205 KB · 32.80%</title></rect>
-<rect width="51.73" height="12" x="290.27" y="0" class="todo"><title>95 KB · 15.13%</title></rect>
+<rect width="115.13" height="12" x="178.09" y="0" class="nonmatching"><title>210 KB · 33.66%</title></rect>
+<rect width="48.78" height="12" x="293.22" y="0" class="todo"><title>89 KB · 14.26%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">205 KB</tspan> · <tspan class="todo">95 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">325 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">210 KB</tspan> · <tspan class="todo">89 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1204,7 +1204,7 @@
 <rect width="12" height="12" x="525" y="330" class="named"><title>0x0046e180 ACMEmulateCDPlay (440 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="330" class="named"><title>0x0046e340 ACMHandleNotifications (389 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="330" class="nonmatching"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="330" class="todo"><title>0x0046e8d0 XYUVGClipper (5386 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="330" class="nonmatching"><title>0x0046e8d0 XYUVGClipper (5386 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="330" class="todo"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="330" class="named"><title>0x0046fe40 CLSetup (30 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="330" class="named"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
@@ -1623,7 +1623,7 @@
 <rect width="44.78" height="57.27" x="0" y="60.50" class="named"><title>0x0045c1e0 BaddyObjects (6689 bytes)</title></rect>
 <rect width="44.78" height="54.98" x="0" y="120.77" class="nonmatching"><title>0x004195e0 VoncroyControl (6420 bytes)</title></rect>
 <rect width="44.78" height="46.52" x="0" y="178.75" class="nonmatching"><title>0x0047b170 DoOptions (5429 bytes)</title></rect>
-<rect width="44.78" height="46.15" x="0" y="228.27" class="todo"><title>0x0046e8d0 XYUVGClipper (5386 bytes)</title></rect>
+<rect width="44.78" height="46.15" x="0" y="228.27" class="nonmatching"><title>0x0046e8d0 XYUVGClipper (5386 bytes)</title></rect>
 <rect width="44.78" height="38.46" x="0" y="277.42" class="nonmatching"><title>0x004118d0 SkeletonControl (4490 bytes)</title></rect>
 <rect width="44.78" height="35.88" x="0" y="318.88" class="nonmatching"><title>0x00405fa0 GuideControl (4191 bytes)</title></rect>
 <rect width="44.78" height="35.03" x="0" y="357.76" class="nonmatching"><title>0x0041af00 VoncroyRaceControl (4092 bytes)</title></rect>
