@@ -86,6 +86,36 @@ void StashSkinVertices(sint32 node)
     }
 }
 
+void SkinVerticesToScratch(sint32 node)
+{
+    D3DTLVERTEX *d;
+    D3DTLVERTEX *s;
+    char *vns;
+    char n;
+    sint16 *cf;
+    D3DTLVERTEX *v;
+
+    d = SkinVerts[node];
+    vns = ScratchVertNums[node];
+    cf = SkinClip[node];
+    IDirect3DVertexBuffer_Lock(DestVB, DDLOCK_READONLY, (LPVOID *)&v, 0);
+    n = *vns++;
+    while (n >= 0) {
+        s = &v[n];
+        s->sx = d->sx;
+        s->sy = d->sy;
+        s->sz = d->sz;
+        s->rhw = d->rhw;
+        s->color = d->color;
+        s->specular = d->specular;
+        s->tu = d->tu;
+        s->tv = d->tv;
+        d++;
+        clipflags[n] = *cf++;
+        n = *vns++;
+    }
+}
+
 void phd_PutPolygons(sint16 *objptr, sint32 clip)
 {
     MESH_DATA *mesh;
