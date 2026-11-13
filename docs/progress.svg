@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="328.42" height="12" x="0" y="0" class="named"><title>1228 · 79.33%</title></rect>
-<rect width="60.17" height="12" x="328.42" y="0" class="nonmatching"><title>225 · 14.53%</title></rect>
+<rect width="328.69" height="12" x="0" y="0" class="named"><title>1229 · 79.39%</title></rect>
+<rect width="59.91" height="12" x="328.69" y="0" class="nonmatching"><title>224 · 14.47%</title></rect>
 <rect width="25.41" height="12" x="388.59" y="0" class="todo"><title>95 · 6.14%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">79.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1228</tspan> · <tspan class="nonmatching">225</tspan> · <tspan class="todo">95</tspan></text>
+<text text-anchor="end" x="594" y="7.50">79.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1229</tspan> · <tspan class="nonmatching">224</tspan> · <tspan class="todo">95</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="222.19" height="12" x="0" y="0" class="named"><title>336 KB · 53.67%</title></rect>
-<rect width="160.68" height="12" x="222.19" y="0" class="nonmatching"><title>243 KB · 38.81%</title></rect>
+<rect width="223.02" height="12" x="0" y="0" class="named"><title>337 KB · 53.87%</title></rect>
+<rect width="159.85" height="12" x="223.02" y="0" class="nonmatching"><title>241 KB · 38.61%</title></rect>
 <rect width="31.12" height="12" x="382.88" y="0" class="todo"><title>47 KB · 7.52%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="24.50">53.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">336 KB</tspan> · <tspan class="nonmatching">243 KB</tspan> · <tspan class="todo">47 KB</tspan></text>
+<text text-anchor="end" x="594" y="24.50">53.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">241 KB</tspan> · <tspan class="todo">47 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1517,7 +1517,7 @@
 <rect width="12" height="12" x="0" y="435" class="named"><title>0x00492ad0 DXEnumZBufferFormats (101 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="435" class="named"><title>0x00492b40 DXCreateSurface (74 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="435" class="named"><title>0x00492b90 DXSetVideoMode (80 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="435" class="nonmatching"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="435" class="named"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="435" class="named"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="435" class="named"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="435" class="named"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
@@ -1726,7 +1726,7 @@
 <rect width="21.97" height="22.04" x="235.77" y="76.57" class="named"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
 <rect width="21.97" height="22.04" x="235.77" y="101.61" class="todo"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
 <rect width="21.97" height="22.02" x="235.77" y="126.64" class="named"><title>0x0044a530 GetHeight (1261 bytes)</title></rect>
-<rect width="21.97" height="21.90" x="235.77" y="151.66" class="nonmatching"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
+<rect width="21.97" height="21.90" x="235.77" y="151.66" class="named"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
 <rect width="21.97" height="21.86" x="235.77" y="176.56" class="named"><title>0x0043bf10 DrawInventoryItemMe (1252 bytes)</title></rect>
 <rect width="21.97" height="21.72" x="235.77" y="201.42" class="nonmatching"><title>0x0040a9d0 MummyControl (1244 bytes)</title></rect>
 <rect width="21.97" height="21.65" x="235.77" y="226.14" class="nonmatching"><title>0x0043a1b0 S_DrawSparks (1240 bytes)</title></rect>

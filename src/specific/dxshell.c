@@ -721,13 +721,15 @@ sint32 DXSetCooperativeLevel(LPDIRECTDRAW4 dd, HWND hwnd, sint32 flags)
     ptr = "DXSetCooperativeLevel - ";
     strcpy(buf, ptr);
     ptr = &buf[strlen(buf)];
-    for (i = 0; i < 11; i++) {
+    i = 0;
+    while (11 > i) {
         if (cl[i] & flags) {
             strcpy(ptr, text[i]);
             ptr += strlen(text[i]);
             *ptr++ = ' ';
             *ptr = 0;
         }
+        i++;
     }
     *(ptr - 1) = 0;
     Log(2, buf);
