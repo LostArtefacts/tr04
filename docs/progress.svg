@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.29" height="12" x="0" y="0" class="named"><title>1190 · 76.87%</title></rect>
 <rect width="0.65" height="12" x="258.29" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="28.87" height="12" x="258.95" y="0" class="nonmatching"><title>133 · 8.59%</title></rect>
-<rect width="48.19" height="12" x="287.81" y="0" class="todo"><title>222 · 14.34%</title></rect>
+<rect width="29.09" height="12" x="258.95" y="0" class="nonmatching"><title>134 · 8.66%</title></rect>
+<rect width="47.97" height="12" x="288.03" y="0" class="todo"><title>221 · 14.28%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1190</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">133</tspan> · <tspan class="todo">222</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1190</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">134</tspan> · <tspan class="todo">221</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="167.36" height="12" x="0" y="0" class="named"><title>311 KB · 49.81%</title></rect>
 <rect width="0.13" height="12" x="167.36" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="86.41" height="12" x="167.49" y="0" class="nonmatching"><title>161 KB · 25.72%</title></rect>
-<rect width="82.11" height="12" x="253.89" y="0" class="todo"><title>153 KB · 24.44%</title></rect>
+<rect width="86.90" height="12" x="167.49" y="0" class="nonmatching"><title>162 KB · 25.86%</title></rect>
+<rect width="81.62" height="12" x="254.38" y="0" class="todo"><title>152 KB · 24.29%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">311 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">161 KB</tspan> · <tspan class="todo">153 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">311 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">162 KB</tspan> · <tspan class="todo">152 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1229,7 +1229,7 @@
 <rect width="12" height="12" x="150" y="345" class="named"><title>0x004729e0 DrawBucket (548 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="345" class="named"><title>0x00472c10 DrawBuckets (710 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="345" class="named"><title>0x00472ee0 CalcTriFaceNormal (109 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="345" class="todo"><title>0x00472f50 CreateVertexNormals (911 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="345" class="nonmatching"><title>0x00472f50 CreateVertexNormals (911 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="345" class="named"><title>0x004732e0 DXChangeOutputFormat (173 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="345" class="named"><title>0x00473390 DSChangeVolume (30 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="345" class="named"><title>0x004733b0 DSAdjustPitch (80 bytes)</title></rect>
@@ -1792,7 +1792,7 @@
 <rect width="19.46" height="18.42" x="467.35" y="0" class="todo"><title>0x00447750 ItemPushLara (934 bytes)</title></rect>
 <rect width="19.21" height="18.42" x="489.80" y="0" class="nonmatching"><title>0x00403870 UpdateLocusts (922 bytes)</title></rect>
 <rect width="19.08" height="18.42" x="512.01" y="0" class="named"><title>0x00421280 lara_col_all4s (916 bytes)</title></rect>
-<rect width="18.98" height="18.42" x="534.09" y="0" class="todo"><title>0x00472f50 CreateVertexNormals (911 bytes)</title></rect>
+<rect width="18.98" height="18.42" x="534.09" y="0" class="nonmatching"><title>0x00472f50 CreateVertexNormals (911 bytes)</title></rect>
 <rect width="18.92" height="18.42" x="556.07" y="0" class="nonmatching"><title>0x00454b60 ElementPuzzleCollision (908 bytes)</title></rect>
 <rect width="18.75" height="18.42" x="577.98" y="0" class="nonmatching"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
 <rect width="18.56" height="18.42" x="599.73" y="0" class="nonmatching"><title>0x004142f0 FlameEmitterControl (891 bytes)</title></rect>

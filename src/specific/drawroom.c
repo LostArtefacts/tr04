@@ -566,3 +566,68 @@ void CalcTriFaceNormal(D3DVECTOR *p1, D3DVECTOR *p2, D3DVECTOR *p3, D3DVECTOR *N
     N->y = vx * uz - vz * ux;
     N->z = vy * ux - vx * uy;
 }
+
+void CreateVertexNormals(ROOM_INFO *r)
+{
+    D3DVECTOR p1, p2, p3, n1, n2;
+    sint16 *data;
+    sint32 nQuads, nTris, i, j;
+
+    data = r->FaceData;
+    nQuads = *data++;
+    r->fnormals = (D3DVECTOR *)game_malloc(sizeof(D3DVECTOR) * (r->gt3cnt + r->gt4cnt), 0);
+    for (i = 0; i < nQuads; i++) {
+        p1 = r->verts[data[0]];
+        p2 = r->verts[data[1]];
+        p3 = r->verts[data[2]];
+        CalcTriFaceNormal(&p1, &p2, &p3, &n1);
+        p1 = r->verts[data[0]];
+        p2 = r->verts[data[2]];
+        p3 = r->verts[data[3]];
+        CalcTriFaceNormal(&p1, &p2, &p3, &n2);
+        n1.x += n2.x;
+        n1.y += n2.y;
+        n1.z += n2.z;
+        D3DNormalise(&n1);
+        r->fnormals[i] = n1;
+        data += 5;
+    }
+    nTris = *data++;
+    for (i = 0; i < nTris; i++) {
+        p1 = r->verts[data[0]];
+        p2 = r->verts[data[1]];
+        p3 = r->verts[data[2]];
+        CalcTriFaceNormal(&p1, &p2, &p3, &r->fnormals[nQuads + i]);
+        D3DNormalise(&r->fnormals[nQuads + i]);
+        data += 4;
+    }
+    data = r->FaceData;
+    nQuads = *data;
+    nTris = data[nQuads * 5 + 1];
+    r->vnormals = (D3DVECTOR *)game_malloc(sizeof(D3DVECTOR) * r->nVerts, 0);
+    for (i = 0; i < r->nVerts; i++) {
+        n1.x = 0;
+        n1.y = 0;
+        n1.z = 0;
+        data = r->FaceData + 1;
+        for (j = 0; j < nQuads; j++) {
+            if (data[0] == i || data[1] == i || data[2] == i || data[3] == i) {
+                n1.x += r->fnormals[j].x;
+                n1.y += r->fnormals[j].y;
+                n1.z += r->fnormals[j].z;
+            }
+            data += 5;
+        }
+        data++;
+        for (j = 0; j < nTris; j++) {
+            if (data[0] == i || data[1] == i || data[2] == i) {
+                n1.x += r->fnormals[nQuads + j].x;
+                n1.y += r->fnormals[nQuads + j].y;
+                n1.z += r->fnormals[nQuads + j].z;
+            }
+            data += 4;
+        }
+        D3DNormalise(&n1);
+        r->vnormals[i] = n1;
+    }
+}

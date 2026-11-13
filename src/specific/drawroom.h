@@ -62,5 +62,6 @@ void PrelightVertsNonMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r);
 void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip);
 void ProjectWaterVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip);
 void ProjectShoreVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip);
+void CreateVertexNormals(ROOM_INFO *r);
 
 #endif
