@@ -8,6 +8,7 @@
 #include "room.h"
 #include "senet.h"
 #include "sound.h"
+#include "text.h"
 #include "traps.h"
 #include "specific/3dmath.h"
 #include "specific/function_stubs.h"
@@ -83,6 +84,53 @@ void TriggerWraithFlame(sint32 x, sint32 y, sint32 z, sint16 xv, sint16 yv, sint
     size = (GetRandomControl() & 0x1F) + 48;
     sptr->dSize = 2;
     sptr->Size = sptr->sSize = size;
+}
+
+void TriggerWraithEffect(sint32 x, sint32 y, sint32 z, sint16 vel, sint32 objnum)
+{
+    SPARKS *sptr;
+    sint32 scol, dcol;
+    sint32 i, rad, ang;
+    sint32 col;
+
+    if (objnum == WRAITH1) {
+        scol = ((GetRandomControl() << 8 | GetRandomControl()) << 32) | 0x18000001;
+        dcol = RGBONLY((GetRandomControl() & 0x1F) + 128, (GetRandomControl() & 0x1F) + 48, 24);
+    } else if (objnum == WRAITH2) {
+        scol = (((GetRandomControl() & 0x1F) + 128) << 24) + 1 | (GetRandomControl() << 32) | 1;
+        dcol = RGBONLY(24, (GetRandomControl() & 0x1F) + 48, (GetRandomControl() & 0x1F) + 128);
+    } else {
+        col = (GetRandomControl() & 0xF) + 64;
+        scol = ((((col << 8) | col) << 8 | col) << 24) | 1;
+        dcol = RGBONLY(col, col, (GetRandomControl() & 0xF) + col);
+    }
+    dcol = RGBONLY(CLRB(dcol), CLRG(dcol), CLRR(dcol));
+    for (i = 15; i > 0; i--) {
+        sptr = &spark[GetFreeSpark()];
+        *(uint32 *)&sptr->On = scol;
+        *(uint32 *)&sptr->dR = dcol;
+        *(uint16 *)&sptr->ColFadeSpeed = 0x704;
+        sptr->sLife = sptr->Life = (GetRandomControl() & 7) + 32;
+        sptr->TransType = 2;
+        sptr->x = (GetRandomControl() & 0x1F) + x - 16;
+        sptr->y = (GetRandomControl() & 0x1F) + y - 16;
+        sptr->z = (GetRandomControl() & 0x1F) + z - 16;
+        ang = GetRandomControl() - 0x4000;
+        rad = (GetRandomControl() & 0x3FF) + 1024;
+        ang += vel;
+        sptr->Xvel = ((rcossin_tbl[(ang >> 3) & 0x1FFE] << 2) * rad) >> 14;
+        sptr->Yvel = (GetRandomControl() & 0x7F) - 64;
+        sptr->Zvel = ((rcossin_tbl[((ang >> 3) & 0x1FFE) + 1] << 2) * rad) >> 14;
+        sptr->Friction = 4;
+        sptr->Flags = 522;
+        sptr->Gravity = (GetRandomControl() & 0x7F) - 64;
+        sptr->MaxYvel = 0;
+        sptr->Scalar = 3;
+        col = (GetRandomControl() & 0x1F) + 48;
+        sptr->sSize = col;
+        sptr->Size = col;
+        sptr->dSize = col >> 2;
+    }
 }
 
 void WraithControl(sint16 item_number)
