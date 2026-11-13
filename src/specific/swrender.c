@@ -1029,6 +1029,43 @@ void SW_SpanGAdd(void)
     }
 }
 
+void SW_SpanGAlpha(void)
+{
+    SW_SPAN *s;
+    uint8 *row, *p;
+    uint16 c0, c1, c2, c3;
+    sint32 n, a;
+
+    s = (SW_SPAN *)SW_SpanBuffer;
+    if (s != SW_SpanEnd) {
+        row = (uint8 *)SW_Surface + SW_SpanY * SW_SurfacePitch;
+        do {
+            p = row + (s->x << 2);
+            n = s->n;
+            if (n > 0) {
+                c0 = s->c[0];
+                c1 = s->c[1];
+                c2 = s->c[2];
+                c3 = s->c[3];
+                do {
+                    a = c3 >> 8;
+                    p[0] = ((c0 >> 8) * a + p[0] * (255 - a)) >> 8;
+                    p[1] = ((c1 >> 8) * a + p[1] * (255 - a)) >> 8;
+                    p[2] = ((c2 >> 8) * a + p[2] * (255 - a)) >> 8;
+                    p[3] = (p[3] * 255) >> 8;
+                    c0 += SW_SpanGrad[0];
+                    c1 += SW_SpanGrad[1];
+                    c2 += SW_SpanGrad[2];
+                    c3 += SW_SpanGrad[3];
+                    p += 4;
+                } while (--n);
+            }
+            row += SW_SurfacePitch;
+            s++;
+        } while (s != SW_SpanEnd);
+    }
+}
+
 void SW_SpanGInt(void)
 {
     SW_SPAN *s;
