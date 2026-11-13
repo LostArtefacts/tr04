@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.08" height="12" x="0" y="0" class="named"><title>1189 · 76.81%</title></rect>
 <rect width="0.65" height="12" x="258.08" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="27.35" height="12" x="258.73" y="0" class="nonmatching"><title>126 · 8.14%</title></rect>
-<rect width="49.92" height="12" x="286.08" y="0" class="todo"><title>230 · 14.86%</title></rect>
+<rect width="27.57" height="12" x="258.73" y="0" class="nonmatching"><title>127 · 8.20%</title></rect>
+<rect width="49.71" height="12" x="286.29" y="0" class="todo"><title>229 · 14.79%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1189</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">126</tspan> · <tspan class="todo">230</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1189</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">127</tspan> · <tspan class="todo">229</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="166.92" height="12" x="0" y="0" class="named"><title>310 KB · 49.68%</title></rect>
 <rect width="0.13" height="12" x="166.92" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="83.10" height="12" x="167.05" y="0" class="nonmatching"><title>155 KB · 24.73%</title></rect>
-<rect width="85.85" height="12" x="250.15" y="0" class="todo"><title>160 KB · 25.55%</title></rect>
+<rect width="83.79" height="12" x="167.05" y="0" class="nonmatching"><title>156 KB · 24.94%</title></rect>
+<rect width="85.16" height="12" x="250.84" y="0" class="todo"><title>158 KB · 25.34%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">310 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">155 KB</tspan> · <tspan class="todo">160 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">310 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">156 KB</tspan> · <tspan class="todo">158 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1423,7 +1423,7 @@
 <rect width="12" height="12" x="60" y="405" class="todo"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="405" class="todo"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="405" class="todo"><title>0x0048b130 ShowTitle (842 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="405" class="todo"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="405" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="405" class="named"><title>0x0048b990 DrawTrainStrips (280 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="405" class="nonmatching"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="405" class="todo"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
@@ -1724,7 +1724,7 @@
 <rect width="23.23" height="21.40" x="209.46" y="440.60" class="nonmatching"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
 <rect width="21.97" height="22.62" x="235.69" y="0" class="named"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
 <rect width="21.97" height="22.57" x="235.69" y="25.62" class="todo"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
-<rect width="21.97" height="22.41" x="235.69" y="51.19" class="todo"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
+<rect width="21.97" height="22.41" x="235.69" y="51.19" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
 <rect width="21.97" height="22.04" x="235.69" y="76.59" class="named"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
 <rect width="21.97" height="22.04" x="235.69" y="101.64" class="todo"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
 <rect width="21.97" height="22.03" x="235.69" y="126.68" class="named"><title>0x0044a530 GetHeight (1261 bytes)</title></rect>

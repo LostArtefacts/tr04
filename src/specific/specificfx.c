@@ -285,6 +285,105 @@ void OutputSky(void)
     InitialiseSortList();
 }
 
+void DrawTrainFloorStrip(sint32 x, sint32 z, TEXTURESTRUCT *tex, sint32 y_and_flags)
+{
+    SVECTOR *offsets;
+    D3DTLVERTEX v[4];
+    PHD_VECTOR p1, p2, p3;
+    sint32 *mptr;
+    sint32 *Z;
+    sint16 *XY;
+    sint32 i, j, z1, z2, z3, z4, spec;
+    sint16 num, x1, y1, x2, y2, x3, y3, x4, y4;
+
+    mptr = phd_mxptr;
+    num = 0;
+    offsets = (SVECTOR *)&scratchpad[984];
+    offsets[0].z = (sint16)z;
+    offsets[1].z = (sint16)(z + 512);
+    offsets[2].z = (sint16)(z + 1024);
+    if (y_and_flags & 0x1000000) {
+        offsets[1].z += 1024;
+        offsets[2].z += 2048;
+    }
+    offsets[0].y = ((y_and_flags >> 16) & 0xFF) << 4;
+    offsets[1].y = ((y_and_flags >> 8) & 0xFF) << 4;
+    offsets[2].y = (y_and_flags & 0xFF) << 4;
+    offsets[0].x = (sint16)x;
+    offsets[1].x = (sint16)x;
+    offsets[2].x = (sint16)x;
+    for (i = 2; i > 0; i--) {
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[492];
+        XY -= 6;
+        Z -= 3;
+        for (j = 41; j > 0; j--) {
+            p1.x = (offsets[0].x * mptr[M00] + offsets[0].y * mptr[M01] + offsets[0].z * mptr[M02] + mptr[M03]) >> W2V_SHIFT;
+            p1.y = (offsets[0].x * mptr[M10] + offsets[0].y * mptr[M11] + offsets[0].z * mptr[M12] + mptr[M13]) >> W2V_SHIFT;
+            p1.z = (offsets[0].x * mptr[M20] + offsets[0].y * mptr[M21] + offsets[0].z * mptr[M22] + mptr[M23]) >> W2V_SHIFT;
+            p2.x = (offsets[1].x * mptr[M00] + offsets[1].y * mptr[M01] + offsets[1].z * mptr[M02] + mptr[M03]) >> W2V_SHIFT;
+            p2.y = (offsets[1].x * mptr[M10] + offsets[1].y * mptr[M11] + offsets[1].z * mptr[M12] + mptr[M13]) >> W2V_SHIFT;
+            p2.z = (offsets[1].x * mptr[M20] + offsets[1].y * mptr[M21] + offsets[1].z * mptr[M22] + mptr[M23]) >> W2V_SHIFT;
+            p3.x = (offsets[2].x * mptr[M00] + offsets[2].y * mptr[M01] + offsets[2].z * mptr[M02] + mptr[M03]) >> W2V_SHIFT;
+            p3.y = (offsets[2].x * mptr[M10] + offsets[2].y * mptr[M11] + offsets[2].z * mptr[M12] + mptr[M13]) >> W2V_SHIFT;
+            p3.z = (offsets[2].x * mptr[M20] + offsets[2].y * mptr[M21] + offsets[2].z * mptr[M22] + mptr[M23]) >> W2V_SHIFT;
+            offsets[0].x += 512;
+            offsets[1].x += 512;
+            offsets[2].x += 512;
+            XY += 6;
+            Z += 3;
+            XY[0] = (sint16)p1.x;
+            XY[1] = (sint16)p1.y;
+            Z[0] = p1.z;
+            XY[2] = (sint16)p2.x;
+            XY[3] = (sint16)p2.y;
+            Z[1] = p2.z;
+            XY[4] = (sint16)p3.x;
+            XY[5] = (sint16)p3.y;
+            Z[2] = p3.z;
+        }
+        offsets[0].x -= 512;
+        offsets[1].x -= 512;
+        offsets[2].x -= 512;
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[492];
+        for (j = num; j < num + 20; j++, XY += 12, Z += 6) {
+            z1 = Z[0];
+            z2 = Z[2];
+            z3 = Z[6];
+            z4 = Z[8];
+            if (!(z1 | z2 | z3 | z4))
+                continue;
+            x1 = XY[0];
+            y1 = XY[1];
+            x2 = XY[4];
+            y2 = XY[5];
+            x3 = XY[12];
+            y3 = XY[13];
+            x4 = XY[16];
+            y4 = XY[17];
+            if (j < 7)
+                spec = (j + 1) * 0x101010;
+            else if (j < 33)
+                spec = 0x808080;
+            else
+                spec = (40 - j) * 0x101010;
+            setXYZ4(v, x1, y1, z1, x2, y2, z2, x4, y4, z4, x3, y3, z3, clipflags);
+            spec = ((spec & 0xFF) - 1) << 25;
+            v[0].color = 0xFFFFFFFF;
+            v[1].color = 0xFFFFFFFF;
+            v[2].color = 0xFFFFFFFF;
+            v[3].color = 0xFFFFFFFF;
+            v[0].specular = spec;
+            v[1].specular = spec;
+            v[2].specular = spec;
+            v[3].specular = spec;
+            AddQuadSorted(v, 0, 1, 2, 3, tex, 0);
+        }
+        num += 20;
+    }
+}
+
 void DrawTrainStrips(void)
 {
     sint16 *ar;
