@@ -1031,69 +1031,33 @@ void SW_Convert32To565(void *dst, void *src, sint32 width)
 
 void SW_Convert32To24(void *dst, void *src, sint32 width)
 {
-    uint32 lomask[2];
-    uint32 midmask[2];
-    uint32 himask[2];
-    uint32 topmask[2];
+    uint32 *s;
+    uint8 *d;
+    uint32 c;
+    sint32 n, i;
 
-    lomask[0] = 0xFFFFFF;
-    lomask[1] = 0;
-    himask[0] = 0;
-    midmask[0] = 0xFFFF;
-    midmask[1] = 0;
-    himask[1] = 0xFFFFFF;
-    topmask[0] = 0xFF0000;
-    topmask[1] = 0;
+    s = src;
+    d = dst;
+    n = width;
     if (!SW_UseMMX) {
-        __asm {
-            mov edx, width
-            mov esi, src
-            mov edi, dst
-        plain:
-            mov eax, [esi]
-            mov ebx, [esi + 4]
-            mov [edi], ax
-            mov [edi + 3], bx
-            shr eax, 16
-            add edi, 4
-            shr ebx, 16
-            mov [edi + 2], al
-            mov [edi + 5], bl
-            add edi, 6
-            dec edx
-            jne plain
-        }
+        do {
+            *(uint16 *)d = (uint16)s[0];
+            *(uint16 *)(d + 3) = (uint16)s[1];
+            d[6] = (uint8)(s[0] >> 16);
+            d[9] = (uint8)(s[1] >> 16);
+            d += 10;
+        } while (--n);
     } else {
-        __asm {
-            mov esi, src
-            mov edi, dst
-            mov eax, width
-        mmx:
-            movq mm0, [esi]
-            movq mm1, [esi + 8]
-            movq mm2, mm0
-            movq mm3, mm1
-            sub eax, 4
-            movq mm4, mm1
-            pand mm0, lomask
-            pand mm1, midmask
-            pand mm2, himask
-            psrlq mm2, 8
-            psllq mm1, 48
-            por mm1, mm2
-            por mm0, mm1
-            pand mm3, topmask
-            pand mm4, himask
-            psrlq mm3, 16
-            psrlq mm4, 24
-            por mm3, mm4
-            lea esi, [esi + 16]
-            movq [edi], mm0
-            movd [edi + 8], mm3
-            lea edi, [edi + 12]
-            jne mmx
-            emms
-        }
+        do {
+            for (i = 0; i < 4; i++) {
+                c = *s++;
+                d[0] = (uint8)c;
+                d[1] = (uint8)(c >> 8);
+                d[2] = (uint8)(c >> 16);
+                d += 3;
+            }
+            n -= 4;
+        } while (n);
     }
 }
 

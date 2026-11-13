@@ -46,16 +46,16 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="336.27" height="12" x="0" y="0" class="named"><title>1259 · 81.23%</title></rect>
-<rect width="66.77" height="12" x="336.27" y="0" class="nonmatching"><title>250 · 16.13%</title></rect>
+<rect width="336.01" height="12" x="0" y="0" class="named"><title>1258 · 81.16%</title></rect>
+<rect width="67.04" height="12" x="336.01" y="0" class="nonmatching"><title>251 · 16.19%</title></rect>
 <rect width="10.95" height="12" x="403.05" y="0" class="todo"><title>41 · 2.65%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1259</tspan> · <tspan class="nonmatching">250</tspan> · <tspan class="todo">41</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1258</tspan> · <tspan class="nonmatching">251</tspan> · <tspan class="todo">41</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="225.98" height="12" x="0" y="0" class="named"><title>341 KB · 54.59%</title></rect>
-<rect width="168.50" height="12" x="225.98" y="0" class="nonmatching"><title>255 KB · 40.70%</title></rect>
+<rect width="225.85" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
+<rect width="168.63" height="12" x="225.85" y="0" class="nonmatching"><title>255 KB · 40.73%</title></rect>
 <rect width="19.52" height="12" x="394.48" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
@@ -1607,7 +1607,7 @@
 <rect width="12" height="12" x="600" y="450" class="nonmatching"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="450" class="nonmatching"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="450" class="nonmatching"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="450" class="named"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="450" class="nonmatching"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="450" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="450" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="450" class="named"><title>0x0049c6e0 DBLog_MapView (23 bytes)</title></rect>
@@ -2332,7 +2332,7 @@
 <rect width="9.05" height="8.60" x="629.94" y="210.59" class="named"><title>0x00454070 InitialiseRope (203 bytes)</title></rect>
 <rect width="9.05" height="8.60" x="641.99" y="210.59" class="named"><title>0x00467b90 JeepCheckGetOut (203 bytes)</title></rect>
 <rect width="9.05" height="8.60" x="654.04" y="210.59" class="nonmatching"><title>0x00473c10 FindCDDrive (203 bytes)</title></rect>
-<rect width="9.05" height="8.60" x="666.09" y="210.59" class="named"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
+<rect width="9.05" height="8.60" x="666.09" y="210.59" class="nonmatching"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
 <rect width="9.01" height="8.60" x="678.14" y="210.59" class="named"><title>0x004216a0 lara_as_crawl (202 bytes)</title></rect>
 <rect width="9.01" height="8.60" x="690.15" y="210.59" class="named"><title>0x00427660 lara_as_wade (202 bytes)</title></rect>
 <rect width="8.96" height="8.60" x="702.16" y="210.59" class="nonmatching"><title>0x00416d70 ControlSpikeball (201 bytes)</title></rect>
