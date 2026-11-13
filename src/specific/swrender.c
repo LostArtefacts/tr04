@@ -255,6 +255,86 @@ void SW_CopyBuffer(void *dst, void *src, sint32 width)
     }
 }
 
+void SW_Convert32To565(void *dst, void *src, sint32 width)
+{
+    uint32 rmask[2];
+    uint32 gmask[2];
+    uint32 bmask[2];
+
+    rmask[0] = 0xF80000;
+    rmask[1] = 0xF80000;
+    gmask[0] = 0xFC00;
+    gmask[1] = 0xFC00;
+    bmask[0] = 0xF8;
+    bmask[1] = 0xF8;
+    if (!SW_UseMMX) {
+        __asm {
+            mov edx, width
+            mov esi, src
+            mov edi, dst
+        plain:
+            mov eax, [esi]
+            mov ebx, eax
+            mov ecx, eax
+            and eax, 0xF8
+            and ebx, 0xFC00
+            shr eax, 3
+            and ecx, 0xF80000
+            shr ebx, 5
+            shr ecx, 8
+            or eax, ebx
+            or eax, ecx
+            add esi, 4
+            mov [edi], ax
+            add edi, 2
+            dec edx
+            jne plain
+        }
+    } else {
+        __asm {
+            mov eax, width
+            shr eax, 2
+            mov esi, src
+            mov edi, dst
+            movq mm3, rmask
+            movq mm7, gmask
+            align 16
+        mmx:
+            movq mm0, [esi]
+            movq mm4, [esi + 8]
+            movq mm1, mm0
+            movq mm2, mm0
+            movq mm5, mm4
+            movq mm6, mm4
+            pand mm0, mm3
+            pand mm1, mm7
+            pand mm2, bmask
+            pand mm4, mm3
+            pand mm5, mm7
+            pand mm6, bmask
+            pslld mm0, 8
+            pslld mm4, 8
+            psrad mm0, 16
+            psrld mm1, 5
+            psrld mm2, 3
+            psrad mm4, 16
+            psrld mm5, 5
+            psrld mm6, 3
+            por mm0, mm1
+            por mm4, mm5
+            por mm0, mm2
+            por mm4, mm6
+            packssdw mm0, mm4
+            movq [edi], mm0
+            add edi, 8
+            add esi, 16
+            dec eax
+            jne mmx
+            emms
+        }
+    }
+}
+
 LPVOID DBLog_MapView(HANDLE hMap)
 {
     return MapViewOfFile(hMap, FILE_MAP_READ | FILE_MAP_WRITE, 0, 0, 0x100000);
