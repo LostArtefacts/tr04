@@ -46,21 +46,21 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="266" height="12" x="0" y="0" class="named"><title>1204 · 77.78%</title></rect>
-<rect width="0.66" height="12" x="266" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.23" height="12" x="266.66" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
-<rect width="39.10" height="12" x="302.90" y="0" class="todo"><title>177 · 11.43%</title></rect>
+<rect width="266.22" height="12" x="0" y="0" class="named"><title>1205 · 77.84%</title></rect>
+<rect width="0.66" height="12" x="266.22" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="36.23" height="12" x="266.88" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
+<rect width="38.88" height="12" x="303.12" y="0" class="todo"><title>176 · 11.37%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1204</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">177</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1205</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">176</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="178.56" height="12" x="0" y="0" class="named"><title>326 KB · 52.21%</title></rect>
-<rect width="0.13" height="12" x="178.56" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.13" height="12" x="178.69" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
-<rect width="46.18" height="12" x="295.82" y="0" class="todo"><title>84 KB · 13.50%</title></rect>
+<rect width="178.62" height="12" x="0" y="0" class="named"><title>326 KB · 52.23%</title></rect>
+<rect width="0.13" height="12" x="178.62" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="117.13" height="12" x="178.75" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
+<rect width="46.12" height="12" x="295.88" y="0" class="todo"><title>84 KB · 13.48%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">52.2%</text>
+<text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">326 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">84 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -728,7 +728,7 @@
 <rect width="12" height="12" x="135" y="195" class="named"><title>0x0043f7a0 InitialiseAutogun (59 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="195" class="todo"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="195" class="named"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="195" class="todo"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="195" class="named"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="nonmatching"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="195" class="named"><title>0x0043ff70 UpdateLOT (114 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="195" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
@@ -2633,7 +2633,7 @@
 <rect width="6.32" height="6.49" x="731.36" y="286.06" class="named"><title>0x004248e0 lara_as_climbrope (107 bytes)</title></rect>
 <rect width="6.32" height="6.49" x="740.68" y="286.06" class="named"><title>0x00432620 lara_as_swim (107 bytes)</title></rect>
 <rect width="6.51" height="6.30" x="580.63" y="295.55" class="named"><title>0x00438690 GetFreeSmokeSpark (107 bytes)</title></rect>
-<rect width="6.51" height="6.30" x="590.14" y="295.55" class="todo"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
+<rect width="6.51" height="6.30" x="590.14" y="295.55" class="named"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
 <rect width="6.51" height="6.30" x="599.66" y="295.55" class="todo"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="6.45" height="6.30" x="609.17" y="295.55" class="named"><title>0x0040da00 InitialiseInjuredSas (106 bytes)</title></rect>
 <rect width="6.45" height="6.30" x="618.63" y="295.55" class="named"><title>0x00422de0 lara_as_hang2 (106 bytes)</title></rect>

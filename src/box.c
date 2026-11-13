@@ -28,6 +28,21 @@ void InitialiseCreature(sint16 item_number)
     item->data = 0;
 }
 
+sint32 CreatureActive(sint16 item_number)
+{
+    ITEM_INFO *item;
+
+    item = &items[item_number];
+    if ((sint16)(item->flags & IFL_CLEARBODY))
+        return 0;
+    if (item->status == ITEM_INVISIBLE) {
+        if (!EnableBaddieAI(item_number, 0))
+            return 0;
+        item->status = ITEM_ACTIVE;
+    }
+    return 1;
+}
+
 void CreatureAIInfo(ITEM_INFO *item, AI_INFO *info)
 {
     CREATURE_INFO *creature;
