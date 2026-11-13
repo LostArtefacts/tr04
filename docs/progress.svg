@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="340.28" height="12" x="0" y="0" class="named"><title>1274 · 82.19%</title></rect>
-<rect width="62.50" height="12" x="340.28" y="0" class="nonmatching"><title>234 · 15.10%</title></rect>
-<rect width="11.22" height="12" x="402.78" y="0" class="todo"><title>42 · 2.71%</title></rect>
+<rect width="62.77" height="12" x="340.28" y="0" class="nonmatching"><title>235 · 15.16%</title></rect>
+<rect width="10.95" height="12" x="403.05" y="0" class="todo"><title>41 · 2.65%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">82.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">234</tspan> · <tspan class="todo">42</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">235</tspan> · <tspan class="todo">41</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="227.14" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
-<rect width="167.22" height="12" x="227.14" y="0" class="nonmatching"><title>253 KB · 40.39%</title></rect>
-<rect width="19.65" height="12" x="394.35" y="0" class="todo"><title>30 KB · 4.75%</title></rect>
+<rect width="167.35" height="12" x="227.14" y="0" class="nonmatching"><title>253 KB · 40.42%</title></rect>
+<rect width="19.52" height="12" x="394.48" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">253 KB</tspan> · <tspan class="todo">30 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">253 KB</tspan> · <tspan class="todo">29 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1593,7 +1593,7 @@
 <rect width="12" height="12" x="390" y="450" class="todo"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="450" class="todo"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="450" class="nonmatching"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="450" class="todo"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="450" class="nonmatching"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="450" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="450" class="todo"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="450" class="todo"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
@@ -2359,7 +2359,7 @@
 <rect width="8.87" height="8.51" x="495.89" y="419.09" class="named"><title>0x00487c30 InitBinoculars (197 bytes)</title></rect>
 <rect width="8.87" height="8.47" x="495.89" y="430.60" class="named"><title>0x0048ee50 CheckMMXTechnology (196 bytes)</title></rect>
 <rect width="8.87" height="8.47" x="495.89" y="442.07" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
-<rect width="8.87" height="8.47" x="495.89" y="453.53" class="todo"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
+<rect width="8.87" height="8.47" x="495.89" y="453.53" class="nonmatching"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="8.69" height="8.60" x="507.77" y="222.19" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="8.69" height="8.60" x="519.46" y="222.19" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
 <rect width="8.65" height="8.60" x="531.15" y="222.19" class="named"><title>0x00456050 ControlAnimatingSlots (194 bytes)</title></rect>
