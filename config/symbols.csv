@@ -2679,6 +2679,7 @@ address,size,name,symbol
 0x007543ec,256,keymap2,_keymap2
 0x007544f4,4,G_dxptr,_G_dxptr
 0x00754900,4,SW_NumLocked,_SW_NumLocked
+0x00754ddc,1024,SW_LockedSurfaces,_SW_LockedSurfaces
 0x007551e0,124,SW_SurfDesc,_SW_SurfDesc
 0x00755260,4,SW_RealD3DDevice,_SW_RealD3DDevice
 0x00755298,4,SW_SurfacePitch,_SW_SurfacePitch

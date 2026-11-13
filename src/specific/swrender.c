@@ -3,6 +3,8 @@
 #include "polyinsert.h"
 #include "swrender.h"
 #include "function_stubs.h"
+#include "dxshell.h"
+#include "winmain.h"
 
 typedef struct sw_device {
     IDirect3DDevice3Vtbl *lpVtbl;
@@ -26,6 +28,7 @@ extern sint32 SW_FrameState;
 extern sint32 SW_ColorOpScale;
 extern DDSURFACEDESC2 SW_SurfDesc;
 extern sint32 SW_NumLocked;
+extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -142,6 +145,22 @@ HRESULT __stdcall SW_D3D_SetRenderTarget(SW_DEVICE *dev, void *target, DWORD fla
 HRESULT __stdcall SW_D3D_GetRenderTarget(SW_DEVICE *dev, void **target)
 {
     *target = dev->target;
+    return 0;
+}
+
+HRESULT __stdcall SW_D3D_EnumTextureFormats(SW_DEVICE *dev, LPD3DENUMPIXELFORMATSCALLBACK callback, LPVOID ctx)
+{
+    DDPIXELFORMAT pf;
+
+    memset(&pf, 0, sizeof(DDPIXELFORMAT));
+    pf.dwSize = sizeof(DDPIXELFORMAT);
+    pf.dwRGBBitCount = 32;
+    pf.dwFlags = DDPF_RGB | DDPF_ALPHAPIXELS;
+    pf.dwRGBAlphaBitMask = 0xFF000000;
+    pf.dwRBitMask = 0xFF0000;
+    pf.dwGBitMask = 0xFF00;
+    pf.dwBBitMask = 0xFF;
+    callback(&pf, ctx);
     return 0;
 }
 

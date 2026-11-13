@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="335.64" height="12" x="0" y="0" class="named"><title>1255 · 81.07%</title></rect>
-<rect width="61.24" height="12" x="335.64" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="17.12" height="12" x="396.88" y="0" class="todo"><title>64 · 4.13%</title></rect>
+<rect width="335.91" height="12" x="0" y="0" class="named"><title>1256 · 81.14%</title></rect>
+<rect width="61.24" height="12" x="335.91" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="16.85" height="12" x="397.15" y="0" class="todo"><title>63 · 4.07%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1255</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">64</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1256</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">63</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.85" height="12" x="0" y="0" class="named"><title>338 KB · 54.07%</title></rect>
-<rect width="166.38" height="12" x="223.85" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="23.77" height="12" x="390.23" y="0" class="todo"><title>36 KB · 5.74%</title></rect>
+<rect width="223.91" height="12" x="0" y="0" class="named"><title>338 KB · 54.08%</title></rect>
+<rect width="166.38" height="12" x="223.91" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="23.71" height="12" x="390.29" y="0" class="todo"><title>36 KB · 5.73%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1547,7 +1547,7 @@
 <rect width="12" height="12" x="450" y="435" class="todo"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="435" class="named"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="435" class="named"><title>0x00494a90 SW_D3D_GetRenderTarget (18 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="435" class="todo"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="435" class="named"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="435" class="named"><title>0x00494b10 SW_D3D_SetLightState (24 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="435" class="named"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="435" class="todo"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
@@ -2686,7 +2686,7 @@
 <rect width="6.03" height="5.98" x="598.88" y="304.88" class="named"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
 <rect width="5.97" height="5.98" x="607.91" y="304.88" class="named"><title>0x0046c760 twentyfour_control (93 bytes)</title></rect>
 <rect width="5.97" height="5.98" x="616.88" y="304.88" class="named"><title>0x00494530 SW_D3D_GetCaps (93 bytes)</title></rect>
-<rect width="5.97" height="5.98" x="625.85" y="304.88" class="todo"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>
+<rect width="5.97" height="5.98" x="625.85" y="304.88" class="named"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>
 <rect width="5.90" height="5.98" x="634.82" y="304.88" class="named"><title>0x0040de90 InitialiseScarab (92 bytes)</title></rect>
 <rect width="5.90" height="5.98" x="643.72" y="304.88" class="named"><title>0x00420fe0 LaraFallen (92 bytes)</title></rect>
 <rect width="5.90" height="5.98" x="652.63" y="304.88" class="named"><title>0x004370e0 SoundEffects (92 bytes)</title></rect>
