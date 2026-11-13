@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="325.21" height="12" x="0" y="0" class="named"><title>1216 · 78.55%</title></rect>
-<rect width="51.08" height="12" x="325.21" y="0" class="nonmatching"><title>191 · 12.34%</title></rect>
-<rect width="37.71" height="12" x="376.29" y="0" class="todo"><title>141 · 9.11%</title></rect>
+<rect width="325.48" height="12" x="0" y="0" class="named"><title>1217 · 78.62%</title></rect>
+<rect width="51.08" height="12" x="325.48" y="0" class="nonmatching"><title>191 · 12.34%</title></rect>
+<rect width="37.44" height="12" x="376.56" y="0" class="todo"><title>140 · 9.04%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1216</tspan> · <tspan class="nonmatching">191</tspan> · <tspan class="todo">141</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1217</tspan> · <tspan class="nonmatching">191</tspan> · <tspan class="todo">140</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="217.87" height="12" x="0" y="0" class="named"><title>329 KB · 52.62%</title></rect>
-<rect width="145.44" height="12" x="217.87" y="0" class="nonmatching"><title>220 KB · 35.13%</title></rect>
-<rect width="50.69" height="12" x="363.31" y="0" class="todo"><title>77 KB · 12.24%</title></rect>
+<rect width="218.21" height="12" x="0" y="0" class="named"><title>329 KB · 52.71%</title></rect>
+<rect width="145.44" height="12" x="218.21" y="0" class="nonmatching"><title>220 KB · 35.13%</title></rect>
+<rect width="50.35" height="12" x="363.65" y="0" class="todo"><title>76 KB · 12.16%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="24.50">52.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">220 KB</tspan> · <tspan class="todo">77 KB</tspan></text>
+<text text-anchor="end" x="594" y="24.50">52.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">220 KB</tspan> · <tspan class="todo">76 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -824,7 +824,7 @@
 <rect width="12" height="12" x="105" y="225" class="named"><title>0x0044c820 CheckNoColFloorTriangle (169 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="225" class="named"><title>0x0044c8d0 CheckNoColCeilingTriangle (231 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="225" class="named"><title>0x0044c9c0 IsRoomOutside (537 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="225" class="todo"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="225" class="named"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="225" class="todo"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="225" class="named"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
@@ -1966,7 +1966,7 @@
 <rect width="13.78" height="14.45" x="364.92" y="326.65" class="nonmatching"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
 <rect width="13.78" height="14.45" x="364.92" y="344.10" class="named"><title>0x0042c770 lara_col_climbstnc (519 bytes)</title></rect>
 <rect width="13.78" height="14.31" x="364.92" y="361.56" class="named"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
-<rect width="13.78" height="14.29" x="364.92" y="378.87" class="todo"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
+<rect width="13.78" height="14.29" x="364.92" y="378.87" class="named"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
 <rect width="13.78" height="14.29" x="364.92" y="396.16" class="todo"><title>0x0049bdb0 Func49bdb0 (513 bytes)</title></rect>
 <rect width="13.78" height="14.20" x="364.92" y="413.44" class="named"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
 <rect width="13.78" height="14.18" x="364.92" y="430.65" class="named"><title>0x00456580 ControlMapper (509 bytes)</title></rect>

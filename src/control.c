@@ -13,6 +13,7 @@
 #include "debris.h"
 #include "effects.h"
 #include "lara.h"
+#include "draw.h"
 #include "switch.h"
 #include "larafire.h"
 #include "effect2.h"
@@ -59,6 +60,12 @@ enum trigger_types {
     HEAVYANTITRIGGER,
     MONKEY
 };
+
+extern PHD_VECTOR ClosestCoord;
+extern sint32 ClosestItem;
+extern sint32 ClosestDist;
+
+sint32 DoRayBox(GAME_VECTOR *start, GAME_VECTOR *target, sint16 *bounds, PHD_3DPOS *ItemPos, PHD_VECTOR *Coord, sint16 item_number);
 
 void KillMoveItems(void)
 {
@@ -1756,6 +1763,57 @@ sint32 IsRoomOutside(sint32 x, sint32 y, sint32 z)
         }
     }
     return -2;
+}
+
+sint32 ObjectOnLOS2(GAME_VECTOR *start, GAME_VECTOR *target, PHD_VECTOR *Coord, MESH_INFO **StaticMesh)
+{
+    ITEM_INFO *item;
+    MESH_INFO *mesh;
+    ROOM_INFO *r;
+    PHD_3DPOS ItemPos;
+    sint16 *bounds;
+    sint32 dx, dy, dz;
+    sint16 item_number, i, j;
+
+    dx = target->x - start->x;
+    dy = target->y - start->y;
+    dz = target->z - start->z;
+    ClosestItem = 999;
+    ClosestDist = SQUARE(dz) + SQUARE(dy) + SQUARE(dx);
+    for (i = 0; i < number_los_rooms; i++) {
+        r = &room[los_rooms[i]];
+        for (item_number = r->item_number; item_number != NO_ITEM; item_number = items[item_number].next_item) {
+            item = &items[item_number];
+            if (item->status != ITEM_DEACTIVATED && item->status != ITEM_INVISIBLE && item->object_number != LARA) {
+                bounds = GetBoundsAccurate(item);
+                ItemPos.x_pos = item->pos.x_pos;
+                ItemPos.y_pos = item->pos.y_pos;
+                ItemPos.z_pos = item->pos.z_pos;
+                ItemPos.y_rot = item->pos.y_rot;
+                if (DoRayBox(start, target, bounds, &ItemPos, Coord, item_number))
+                    target->room_number = los_rooms[i];
+            }
+        }
+        mesh = r->mesh;
+        for (j = r->num_meshes; j > 0; j--, mesh++) {
+            if (mesh->Flags & 1) {
+                bounds = &static_objects[mesh->static_number].x_minc;
+                item_number = -1 - mesh->static_number;
+                ItemPos.x_pos = mesh->x;
+                ItemPos.y_pos = mesh->y;
+                ItemPos.z_pos = mesh->z;
+                ItemPos.y_rot = mesh->y_rot;
+                if (DoRayBox(start, target, bounds, &ItemPos, Coord, item_number)) {
+                    *StaticMesh = mesh;
+                    target->room_number = los_rooms[i];
+                }
+            }
+        }
+    }
+    Coord->x = ClosestCoord.x;
+    Coord->y = ClosestCoord.y;
+    Coord->z = ClosestCoord.z;
+    return ClosestItem;
 }
 
 sint32 RayBoxIntersect(PHD_VECTOR *min, PHD_VECTOR *max, PHD_VECTOR *origin, PHD_VECTOR *dir, PHD_VECTOR *Coord)
