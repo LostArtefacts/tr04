@@ -155,31 +155,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 sint32 CheckMMXTechnology(void)
 {
-    uint32 _edx;
-    sint32 mmx;
-
-    mmx = 1;
-    __try {
-        __asm {
-            pushad
-            mov eax, 1
-            cpuid
-            mov _edx, edx
-            popad
-        }
-    } __except (EXCEPTION_EXECUTE_HANDLER) {
-        mmx = 0;
-    }
-    if (mmx && _edx & 0x800000) {
-        __try {
-            __asm {
-                emms
-            }
-        } __except (EXCEPTION_EXECUTE_HANDLER) {
-            mmx = 0;
-        }
-        return mmx;
-    }
+    if (IsProcessorFeaturePresent(PF_MMX_INSTRUCTIONS_AVAILABLE))
+        return 1;
     return 0;
 }
 
