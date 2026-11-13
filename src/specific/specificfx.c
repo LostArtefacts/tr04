@@ -621,6 +621,59 @@ void DrawBikeSpeedo(sint32 ux, sint32 uy, sint32 vel, sint32 maxVel, sint32 turb
     AddLineSorted(v, &v[1], 6);
 }
 
+void S_DrawDarts(ITEM_INFO *item)
+{
+    D3DTLVERTEX v[2];
+    PHD_VECTOR pos;
+    sint32 x1, y1, z1, x2, y2, z2, num;
+    sint16 XY[2];
+    sint16 sx, sy, mxx, mxy, mxz;
+    float zv;
+
+    phd_PushMatrix();
+    phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    pos.z = phd_mxptr[M23];
+    pos.x = phd_mxptr[M03];
+    pos.y = phd_mxptr[M13];
+    zv = f_persp / (float)pos.z;
+    XY[0] = (sint16)(pos.x * zv + f_centerx);
+    XY[1] = (sint16)(pos.y * zv + f_centery);
+    z1 = pos.z >> W2V_SHIFT;
+    num = (-96 * phd_cos(item->pos.x_rot)) >> W2V_SHIFT;
+    mxx = ((rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * num) >> W2V_SHIFT;
+    mxy = (96 * phd_sin(item->pos.x_rot)) >> W2V_SHIFT;
+    mxz = ((rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * num) >> W2V_SHIFT;
+    pos.x = phd_mxptr[M00] * mxx + phd_mxptr[M01] * mxy + phd_mxptr[M02] * mxz + phd_mxptr[M03];
+    pos.y = phd_mxptr[M10] * mxx + phd_mxptr[M11] * mxy + phd_mxptr[M12] * mxz + phd_mxptr[M13];
+    pos.z = phd_mxptr[M20] * mxx + phd_mxptr[M21] * mxy + phd_mxptr[M22] * mxz + phd_mxptr[M23];
+    zv = f_persp / (float)pos.z;
+    sx = (sint16)(pos.x * zv + f_centerx);
+    sy = (sint16)(pos.y * zv + f_centery);
+    z2 = pos.z >> W2V_SHIFT;
+    x1 = XY[0];
+    y1 = XY[1];
+    x2 = sx;
+    y2 = sy;
+    if (ClipLine(&x1, &y1, z1, &x2, &y2, z2, phd_winxmin, phd_winymin, phd_winxmax, phd_winymax)) {
+        v[0].color = 0xFF000000;
+        v[0].specular = 0xFF000000;
+        v[1].color = 0xFF783C14;
+        v[1].specular = 0xFF000000;
+        v[0].sx = (float)x1;
+        v[0].sy = (float)y1;
+        v[1].sx = (float)x2;
+        v[1].sy = (float)y2;
+        zv = f_mpersp / (float)z1 * f_moneopersp;
+        v[0].rhw = zv;
+        v[1].rhw = zv;
+        zv = f_a - zv * f_boo;
+        v[0].sz = zv;
+        v[1].sz = zv;
+        AddLineSorted(v, &v[1], 6);
+    }
+    phd_PopMatrix();
+}
+
 void Draw2DSprite(sint32 x, sint32 y, sint32 slot, sint32 unused, sint32 unused2)
 {
     SPRITESTRUCT *sprite;

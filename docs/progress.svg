@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="258.08" height="12" x="0" y="0" class="named"><title>1189 · 76.81%</title></rect>
 <rect width="0.65" height="12" x="258.08" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="27.78" height="12" x="258.73" y="0" class="nonmatching"><title>128 · 8.27%</title></rect>
-<rect width="49.49" height="12" x="286.51" y="0" class="todo"><title>228 · 14.73%</title></rect>
+<rect width="28" height="12" x="258.73" y="0" class="nonmatching"><title>129 · 8.33%</title></rect>
+<rect width="49.27" height="12" x="286.73" y="0" class="todo"><title>227 · 14.66%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1189</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">128</tspan> · <tspan class="todo">228</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1189</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">129</tspan> · <tspan class="todo">227</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="166.92" height="12" x="0" y="0" class="named"><title>310 KB · 49.68%</title></rect>
 <rect width="0.13" height="12" x="166.92" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="84.32" height="12" x="167.05" y="0" class="nonmatching"><title>157 KB · 25.09%</title></rect>
-<rect width="84.63" height="12" x="251.37" y="0" class="todo"><title>157 KB · 25.19%</title></rect>
+<rect width="84.65" height="12" x="167.05" y="0" class="nonmatching"><title>157 KB · 25.19%</title></rect>
+<rect width="84.30" height="12" x="251.70" y="0" class="todo"><title>157 KB · 25.09%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">310 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">157 KB</tspan> · <tspan class="todo">157 KB</tspan></text>
@@ -1433,7 +1433,7 @@
 <rect width="12" height="12" x="210" y="405" class="named"><title>0x0048c5f0 DrawFlash (194 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="405" class="nonmatching"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="405" class="todo"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="405" class="todo"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="405" class="nonmatching"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="405" class="named"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="405" class="todo"><title>0x0048d580 DrawJeepSpeedo (1067 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="405" class="todo"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
@@ -1886,7 +1886,7 @@
 <rect width="16.11" height="14.93" x="328.19" y="393.62" class="todo"><title>0x00434770 TriggerFlareSparks (627 bytes)</title></rect>
 <rect width="16.11" height="14.83" x="328.19" y="411.55" class="named"><title>0x00450840 InterpolateMatrix (623 bytes)</title></rect>
 <rect width="16.11" height="14.81" x="328.19" y="429.38" class="named"><title>0x0044e930 SequenceDoorControl (622 bytes)</title></rect>
-<rect width="16.11" height="14.81" x="328.19" y="447.19" class="todo"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
+<rect width="16.11" height="14.81" x="328.19" y="447.19" class="nonmatching"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
 <rect width="15.63" height="15.27" x="347.30" y="61.55" class="nonmatching"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
 <rect width="15.61" height="15.27" x="365.93" y="61.55" class="nonmatching"><title>0x00493c00 DXClose (621 bytes)</title></rect>
 <rect width="15.58" height="15.27" x="384.54" y="61.55" class="named"><title>0x00477180 init_water_table (620 bytes)</title></rect>
