@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="324.41" height="12" x="0" y="0" class="named"><title>1213 · 78.36%</title></rect>
-<rect width="48.94" height="12" x="324.41" y="0" class="nonmatching"><title>183 · 11.82%</title></rect>
-<rect width="40.65" height="12" x="373.35" y="0" class="todo"><title>152 · 9.82%</title></rect>
+<rect width="49.21" height="12" x="324.41" y="0" class="nonmatching"><title>184 · 11.89%</title></rect>
+<rect width="40.38" height="12" x="373.62" y="0" class="todo"><title>151 · 9.75%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">183</tspan> · <tspan class="todo">152</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">184</tspan> · <tspan class="todo">151</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="217.20" height="12" x="0" y="0" class="named"><title>328 KB · 52.46%</title></rect>
-<rect width="143.98" height="12" x="217.20" y="0" class="nonmatching"><title>217 KB · 34.78%</title></rect>
-<rect width="52.82" height="12" x="361.18" y="0" class="todo"><title>80 KB · 12.76%</title></rect>
+<rect width="144.18" height="12" x="217.20" y="0" class="nonmatching"><title>218 KB · 34.83%</title></rect>
+<rect width="52.61" height="12" x="361.39" y="0" class="todo"><title>79 KB · 12.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">217 KB</tspan> · <tspan class="todo">80 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">218 KB</tspan> · <tspan class="todo">79 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -270,7 +270,7 @@
 <rect width="12" height="12" x="45" y="60" class="named"><title>0x00420d50 lara_as_duckl (41 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="60" class="named"><title>0x00420d80 lara_as_duckr (41 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="60" class="named"><title>0x00420db0 lara_col_ducklr (230 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="60" class="todo"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="60" class="nonmatching"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="60" class="named"><title>0x00420fe0 LaraFallen (92 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="60" class="named"><title>0x00421040 lara_as_duck (175 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="60" class="named"><title>0x004210f0 lara_col_duck (287 bytes)</title></rect>
@@ -2156,7 +2156,7 @@
 <rect width="10.96" height="10.92" x="443.58" y="300.42" class="named"><title>0x0043ad10 UpdateShockwaves (312 bytes)</title></rect>
 <rect width="10.96" height="10.88" x="443.58" y="314.34" class="named"><title>0x00447f30 TestLaraPosition (311 bytes)</title></rect>
 <rect width="10.96" height="10.85" x="443.58" y="328.22" class="named"><title>0x00440e90 CreatureCreature (310 bytes)</title></rect>
-<rect width="10.96" height="10.81" x="443.58" y="342.07" class="todo"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
+<rect width="10.96" height="10.81" x="443.58" y="342.07" class="nonmatching"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
 <rect width="10.96" height="10.78" x="443.58" y="355.89" class="named"><title>0x0042ddf0 InitialiseNewWeapon (308 bytes)</title></rect>
 <rect width="10.96" height="10.74" x="443.58" y="369.67" class="named"><title>0x00452ca0 DrawGameInfo (307 bytes)</title></rect>
 <rect width="10.96" height="10.71" x="443.58" y="383.41" class="todo"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
