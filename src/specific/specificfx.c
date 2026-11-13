@@ -959,6 +959,147 @@ void DrawBinoculars(void)
     }
 }
 
+void S_DrawDrawSparks(SPARKS *sptr, sint32 smallest_size, sint16 *xyptr, sint32 *zptr)
+{
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    sint32 x1, y1, z1, x2, y2, z2, x3, y3, x4, y4;
+    sint32 cR, cG, cB, c1, c2, s1, s2, s1h, s2h, scale;
+    sint32 sin, cos, sx1, sx2, sy1, sy2, cx1, cx2, cy1, cy2;
+    float u1, v1, u2, rhw, sz;
+
+    if (sptr->Flags & 8) {
+        z1 = zptr[0];
+        if (z1 <= 0 || z1 >= 0x5000) {
+            if (z1 >= 0x5000)
+                sptr->On = 0;
+            return;
+        }
+        if (sptr->Flags & 2) {
+            scale = sptr->Size << sptr->Scalar;
+            s1 = ((phd_persp * sptr->Size) << sptr->Scalar) / z1;
+            s2 = ((phd_persp * sptr->Size) << sptr->Scalar) / z1;
+            if (s1 > scale)
+                s1 = scale;
+            else if (s1 < smallest_size)
+                s1 = smallest_size;
+            if (s2 > scale)
+                s2 = scale;
+            else if (s2 < smallest_size)
+                s2 = smallest_size;
+        } else {
+            s1 = sptr->Size;
+            s2 = sptr->Size;
+        }
+        x1 = xyptr[0];
+        y1 = xyptr[1];
+        s1h = s1 >> 1;
+        s2h = s2 >> 1;
+        if (x1 + s1h >= phd_winxmin && x1 - s1h < phd_winxmax && y1 + s2h >= phd_winymin && y1 - s2h < phd_winymax) {
+            if (sptr->Flags & 0x10) {
+                sin = rcossin_tbl[sptr->RotAng << 1];
+                cos = rcossin_tbl[(sptr->RotAng << 1) + 1];
+                sx1 = (-s1h * sin) >> (W2V_SHIFT - 2);
+                sx2 = (s1h * sin) >> (W2V_SHIFT - 2);
+                sy1 = (-s2h * sin) >> (W2V_SHIFT - 2);
+                sy2 = (s2h * sin) >> (W2V_SHIFT - 2);
+                cx1 = (-s1h * cos) >> (W2V_SHIFT - 2);
+                cx2 = (s1h * cos) >> (W2V_SHIFT - 2);
+                cy1 = (-s2h * cos) >> (W2V_SHIFT - 2);
+                cy2 = (s2h * cos) >> (W2V_SHIFT - 2);
+                x1 = sx1 - cy1 + xyptr[0];
+                x2 = sx2 - cy1 + xyptr[0];
+                x3 = sx2 - cy2 + xyptr[0];
+                x4 = sx1 - cy2 + xyptr[0];
+                y1 = cx1 + sy1 + xyptr[1];
+                y2 = cx2 + sy1 + xyptr[1];
+                y3 = cx2 + sy2 + xyptr[1];
+                y4 = cx1 + sy2 + xyptr[1];
+                setXY4(v, x1, y1, x2, y2, x3, y3, x4, y4, zptr[0], clipflags);
+            } else {
+                x1 = xyptr[0] - s1h;
+                x2 = xyptr[0] + s1h;
+                y1 = xyptr[1] - s2h;
+                y2 = xyptr[1] + s2h;
+                setXY4(v, x1, y1, x2, y1, x2, y2, x1, y2, zptr[0], clipflags);
+            }
+            sprite = &spriteinfo[sptr->Def];
+            if (zptr[0] > 0x3000) {
+                cR = ((0x5000 - zptr[0]) * sptr->R) >> 13;
+                cG = ((0x5000 - zptr[0]) * sptr->G) >> 13;
+                cB = ((0x5000 - zptr[0]) * sptr->B) >> 13;
+            } else {
+                cR = sptr->R;
+                cG = sptr->G;
+                cB = sptr->B;
+            }
+            c1 = RGBA(cR, cG, cB, 0xFF);
+            v[0].color = c1;
+            v[1].color = c1;
+            v[2].color = c1;
+            v[3].color = c1;
+            v[0].specular = 0xFF000000;
+            v[1].specular = 0xFF000000;
+            v[2].specular = 0xFF000000;
+            v[3].specular = 0xFF000000;
+            u1 = sprite->x1;
+            u2 = sprite->x2;
+            v1 = sprite->y1;
+            if (sptr->TransType)
+                tex.drawtype = 2;
+            else
+                tex.drawtype = 1;
+            tex.flag = 0;
+            tex.tpage = sprite->tpage;
+            tex.u1 = u1;
+            tex.v1 = v1;
+            tex.u2 = u2;
+            tex.v3 = sprite->y2;
+            tex.v2 = v1;
+            tex.u3 = u2;
+            tex.u4 = u1;
+            tex.v4 = sprite->y2;
+            AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
+        }
+    } else {
+        z1 = zptr[0];
+        if (z1 > 0x3000) {
+            cR = ((0x5000 - z1) * sptr->R) >> 13;
+            cG = ((0x5000 - z1) * sptr->G) >> 13;
+            cB = ((0x5000 - z1) * sptr->B) >> 13;
+        } else {
+            cR = sptr->R;
+            cG = sptr->G;
+            cB = sptr->B;
+        }
+        c1 = RGBA(cR, cG, cB, 0xFF);
+        c2 = RGBA(cR >> 1, cG >> 1, cB >> 1, 0xFF);
+        x1 = xyptr[0];
+        y1 = xyptr[1];
+        x2 = xyptr[2];
+        y2 = xyptr[3];
+        z2 = zptr[1];
+        if (ClipLine(&x1, &y1, z1, &x2, &y2, z2, phd_winxmin, phd_winymin, phd_winxmax, phd_winymax)) {
+            v[0].sx = (float)x1;
+            v[0].sy = (float)y1;
+            v[0].color = c1;
+            v[0].specular = 0xFF000000;
+            v[1].sx = (float)x2;
+            v[1].sy = (float)y2;
+            v[1].color = c2;
+            v[1].specular = 0xFF000000;
+            rhw = f_mpersp / zptr[0] * f_moneopersp;
+            v[0].rhw = rhw;
+            v[1].rhw = rhw;
+            sz = f_a - rhw * f_boo;
+            v[0].sz = sz;
+            v[1].sz = sz;
+            AddLineSorted(v, &v[1], 6);
+        }
+    }
+}
+
 uint8 ClipLine(sint32 *x1, sint32 *y1, sint32 z1, sint32 *x2, sint32 *y2, sint32 z2, sint32 xMin, sint32 yMin, sint32 w, sint32 h)
 {
     float clip;

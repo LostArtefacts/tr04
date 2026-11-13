@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="260.03" height="12" x="0" y="0" class="named"><title>1198 · 77.39%</title></rect>
 <rect width="0.65" height="12" x="260.03" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="33.64" height="12" x="260.68" y="0" class="nonmatching"><title>155 · 10.01%</title></rect>
-<rect width="41.67" height="12" x="294.33" y="0" class="todo"><title>192 · 12.40%</title></rect>
+<rect width="33.86" height="12" x="260.68" y="0" class="nonmatching"><title>156 · 10.08%</title></rect>
+<rect width="41.46" height="12" x="294.54" y="0" class="todo"><title>191 · 12.34%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">155</tspan> · <tspan class="todo">192</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">156</tspan> · <tspan class="todo">191</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="173.45" height="12" x="0" y="0" class="named"><title>323 KB · 51.62%</title></rect>
 <rect width="0.13" height="12" x="173.45" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="103.77" height="12" x="173.58" y="0" class="nonmatching"><title>193 KB · 30.88%</title></rect>
-<rect width="58.65" height="12" x="277.35" y="0" class="todo"><title>109 KB · 17.45%</title></rect>
+<rect width="104.47" height="12" x="173.58" y="0" class="nonmatching"><title>194 KB · 31.09%</title></rect>
+<rect width="57.95" height="12" x="278.05" y="0" class="todo"><title>108 KB · 17.25%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">51.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">193 KB</tspan> · <tspan class="todo">109 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">194 KB</tspan> · <tspan class="todo">108 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1409,7 +1409,7 @@
 <rect width="12" height="12" x="600" y="390" class="named"><title>0x00487b60 InitTarget_2 (197 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="390" class="named"><title>0x00487c30 InitBinoculars (197 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="390" class="named"><title>0x00487d00 DrawBinoculars (1074 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="390" class="todo"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="390" class="nonmatching"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="390" class="todo"><title>0x00488650 Func488650 (63 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="390" class="named"><title>0x00488690 ClipLine (689 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="390" class="todo"><title>0x00488950 DrawFlatSky (2568 bytes)</title></rect>
@@ -1723,7 +1723,7 @@
 <rect width="23.23" height="21.47" x="209.47" y="416.13" class="todo"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
 <rect width="23.23" height="21.40" x="209.47" y="440.60" class="nonmatching"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
 <rect width="21.97" height="22.61" x="235.70" y="0" class="named"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
-<rect width="21.97" height="22.56" x="235.70" y="25.61" class="todo"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
+<rect width="21.97" height="22.56" x="235.70" y="25.61" class="nonmatching"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
 <rect width="21.97" height="22.40" x="235.70" y="51.17" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
 <rect width="21.97" height="22.04" x="235.70" y="76.57" class="named"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
 <rect width="21.97" height="22.04" x="235.70" y="101.61" class="todo"><title>0x00492430 DXEnumDirect3D (1262 bytes)</title></rect>
