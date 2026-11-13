@@ -75,6 +75,12 @@ HRESULT __stdcall SW_D3D_SetRenderTarget(SW_DEVICE *dev, void *target, DWORD fla
     return 0;
 }
 
+HRESULT __stdcall SW_D3D_GetRenderTarget(SW_DEVICE *dev, void **target)
+{
+    *target = dev->target;
+    return 0;
+}
+
 sint32 SW_SetZLimit(float limit)
 {
     SW_ZLimit = limit;
