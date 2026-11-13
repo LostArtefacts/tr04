@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="386.59" height="12" x="0" y="0" class="named"><title>1297 · 83.68%</title></rect>
-<rect width="75.41" height="12" x="386.59" y="0" class="nonmatching"><title>253 · 16.32%</title></rect>
+<rect width="386.89" height="12" x="0" y="0" class="named"><title>1298 · 83.74%</title></rect>
+<rect width="75.11" height="12" x="386.89" y="0" class="nonmatching"><title>252 · 16.26%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">83.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1297</tspan> · <tspan class="nonmatching">253</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1298</tspan> · <tspan class="nonmatching">252</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="260.59" height="12" x="0" y="0" class="named"><title>353 KB · 56.41%</title></rect>
-<rect width="201.41" height="12" x="260.59" y="0" class="nonmatching"><title>273 KB · 43.59%</title></rect>
+<rect width="260.99" height="12" x="0" y="0" class="named"><title>353 KB · 56.49%</title></rect>
+<rect width="201.01" height="12" x="260.99" y="0" class="nonmatching"><title>272 KB · 43.51%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">56.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">353 KB</tspan> · <tspan class="nonmatching">273 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">56.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">353 KB</tspan> · <tspan class="nonmatching">272 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1599,7 +1599,7 @@
 <rect width="12" height="12" x="510" y="450" class="named"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="450" class="named"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="450" class="named"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="450" class="nonmatching"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="450" class="named"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="450" class="named"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="450" class="named"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="named"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
@@ -1942,7 +1942,7 @@
 <rect width="14.48" height="14.51" x="560.20" y="79.77" class="named"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>
 <rect width="14.48" height="14.51" x="577.68" y="79.77" class="named"><title>0x004729e0 DrawBucket (548 bytes)</title></rect>
 <rect width="14.42" height="14.51" x="595.16" y="79.77" class="named"><title>0x004094a0 ClearMovableBlockSplitters (546 bytes)</title></rect>
-<rect width="14.32" height="14.51" x="612.58" y="79.77" class="nonmatching"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
+<rect width="14.32" height="14.51" x="612.58" y="79.77" class="named"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="14.24" height="14.51" x="629.89" y="79.77" class="named"><title>0x00431e90 LaraTestWaterClimbOut (539 bytes)</title></rect>
 <rect width="14.24" height="14.51" x="647.13" y="79.77" class="nonmatching"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
 <rect width="14.18" height="14.51" x="664.37" y="79.77" class="named"><title>0x0044c9c0 IsRoomOutside (537 bytes)</title></rect>

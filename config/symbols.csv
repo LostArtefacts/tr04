@@ -2718,6 +2718,7 @@ address,size,name,symbol
 0x00755290,8,SW_TriEndY,_SW_TriEndY
 0x00755298,4,SW_SurfacePitch,_SW_SurfacePitch
 0x0075529c,4,SW_TriPFFDY,_SW_TriPFFDY
+0x007552a0,4,SW_SpanGTPAddIntTmp0,_SW_SpanGTPAddIntTmp0
 0x007552a4,4,SW_SpanGTPAddBilinearTmp0,_SW_SpanGTPAddBilinearTmp0
 0x007552a8,65536,SW_MulTable,_SW_MulTable
 0x007652a8,4,SW_SpanGTPIntTmp0,_SW_SpanGTPIntTmp0
@@ -2898,6 +2899,7 @@ address,size,name,symbol
 0x007d9644,4,SW_TriPD01,_SW_TriPD01
 0x007d9648,4,SW_TriPGDY,_SW_TriPGDY
 0x007d964c,4,SW_TriA0,_SW_TriA0
+0x007d9650,4,SW_SpanGTPAddIntTmp1,_SW_SpanGTPAddIntTmp1
 0x007d9654,4,SW_TriPDX02,_SW_TriPDX02
 0x007d9658,8,SW_TriPFGOff,_SW_TriPFGOff
 0x007d9660,4,SW_TriTFogDY01,_SW_TriTFogDY01
@@ -2919,6 +2921,7 @@ address,size,name,symbol
 0x007d96a4,4,SW_TriTSlopeA,_SW_TriTSlopeA
 0x007d96a8,4,SW_TriBDX,_SW_TriBDX
 0x007d96ac,4,SW_TriFogXB,_SW_TriFogXB
+0x007d96b0,4,SW_SpanGTPAddIntTmp2,_SW_SpanGTPAddIntTmp2
 0x007d96b4,4,SW_TriTFogBDY,_SW_TriTFogBDY
 0x007d96b8,4,SW_SpanGTKeyMask,_SW_SpanGTKeyMask
 0x007d96bc,4,SW_TriFogTemp,_SW_TriFogTemp
@@ -2938,6 +2941,7 @@ address,size,name,symbol
 0x007dab00,4,SW_TriSlopeB,_SW_TriSlopeB
 0x007dab04,4,SW_TriPFUDX16,_SW_TriPFUDX16
 0x007dab08,8,SW_TriFogEndY,_SW_TriFogEndY
+0x007dab10,4,SW_SpanGTPAddIntTmp3,_SW_SpanGTPAddIntTmp3
 0x007dab18,8,SW_TriFogAOff,_SW_TriFogAOff
 0x007dab20,4,SW_TriDY01,_SW_TriDY01
 0x007dab24,4,SW_TriTFogStepA,_SW_TriTFogStepA
@@ -2977,6 +2981,7 @@ address,size,name,symbol
 0x007dabe4,4,SW_SpanGTAddIntTmp4,_SW_SpanGTAddIntTmp4
 0x007dabe8,4,SW_TriFogXA,_SW_TriFogXA
 0x007dabec,4,SW_TriTEdgeB,_SW_TriTEdgeB
+0x007dabf0,4,SW_SpanGTPAddIntTmp4,_SW_SpanGTPAddIntTmp4
 0x007dabf4,4,SW_TriPR2,_SW_TriPR2
 0x007dabf8,4,SW_TriTTemp,_SW_TriTTemp
 0x007dabfc,4,SW_TriFogGDX,_SW_TriFogGDX
@@ -2993,6 +2998,7 @@ address,size,name,symbol
 0x007e2c40,4,SW_SpanGTAlphaTmp0,_SW_SpanGTAlphaTmp0
 0x007e2c44,4,SW_TriTUDY,_SW_TriTUDY
 0x007e2c4c,4,SW_TriTR0,_SW_TriTR0
+0x007e2c50,4,SW_SpanGTPAddIntTmp5,_SW_SpanGTPAddIntTmp5
 0x007e2c54,4,SW_TriTEdgeA,_SW_TriTEdgeA
 0x007e2c58,4,SW_SpanGTPKeyIntTmp4,_SW_SpanGTPKeyIntTmp4
 0x007e2c5c,4,SW_SpanGTBilinearTmp1,_SW_SpanGTBilinearTmp1
