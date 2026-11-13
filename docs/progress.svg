@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="331.63" height="12" x="0" y="0" class="named"><title>1240 · 80.10%</title></rect>
-<rect width="61.24" height="12" x="331.63" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="21.13" height="12" x="392.87" y="0" class="todo"><title>79 · 5.10%</title></rect>
+<rect width="331.90" height="12" x="0" y="0" class="named"><title>1241 · 80.17%</title></rect>
+<rect width="61.24" height="12" x="331.90" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="20.86" height="12" x="393.14" y="0" class="todo"><title>78 · 5.04%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">80.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1240</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">79</tspan></text>
+<text text-anchor="end" x="594" y="7.50">80.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1241</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">78</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.50" height="12" x="0" y="0" class="named"><title>338 KB · 53.99%</title></rect>
-<rect width="166.37" height="12" x="223.50" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="24.12" height="12" x="389.88" y="0" class="todo"><title>36 KB · 5.83%</title></rect>
+<rect width="223.51" height="12" x="0" y="0" class="named"><title>338 KB · 53.99%</title></rect>
+<rect width="166.37" height="12" x="223.51" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="24.11" height="12" x="389.89" y="0" class="todo"><title>36 KB · 5.82%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1536,7 +1536,7 @@
 <rect width="12" height="12" x="285" y="435" class="named"><title>0x00494590 SW_D3D_AddRef (16 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="435" class="named"><title>0x004945a0 SW_D3D_Release (52 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="435" class="named"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="435" class="todo"><title>0x004945f0 SW_D3D_GetCurrentViewport (18 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="435" class="named"><title>0x004945f0 SW_D3D_GetCurrentViewport (18 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="435" class="named"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="435" class="todo"><title>0x00494620 SW_D3D_SetRenderState (44 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="435" class="todo"><title>0x0049464c SW_D3D_DrawPrimitive (40 bytes)</title></rect>
@@ -3070,7 +3070,7 @@
 <rect width="2.40" height="2.87" x="739.20" y="409.83" class="named"><title>0x0046b6d0 third_cutseq_control (18 bytes)</title></rect>
 <rect width="2.40" height="2.87" x="744.60" y="409.83" class="named"><title>0x0046b800 fifth_cutseq_control (18 bytes)</title></rect>
 <rect width="2.68" height="2.58" x="700.44" y="415.69" class="named"><title>0x0046c5c0 twentyone_init (18 bytes)</title></rect>
-<rect width="2.68" height="2.58" x="700.44" y="421.27" class="todo"><title>0x004945f0 SW_D3D_GetCurrentViewport (18 bytes)</title></rect>
+<rect width="2.68" height="2.58" x="700.44" y="421.27" class="named"><title>0x004945f0 SW_D3D_GetCurrentViewport (18 bytes)</title></rect>
 <rect width="2.68" height="2.58" x="700.44" y="426.84" class="todo"><title>0x00494a90 SW_D3D_GetRenderTarget (18 bytes)</title></rect>
 <rect width="2.68" height="2.43" x="700.44" y="432.42" class="named"><title>0x0043e4e0 combine_PuzzleItem1 (17 bytes)</title></rect>
 <rect width="2.68" height="2.43" x="700.44" y="437.85" class="named"><title>0x0043e500 combine_PuzzleItem2 (17 bytes)</title></rect>

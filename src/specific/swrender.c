@@ -58,6 +58,12 @@ HRESULT __stdcall SW_D3D_SetCurrentViewport(SW_DEVICE *dev, void *viewport)
     return 0;
 }
 
+HRESULT __stdcall SW_D3D_GetCurrentViewport(SW_DEVICE *dev, void **viewport)
+{
+    *viewport = dev->viewport;
+    return 0;
+}
+
 HRESULT __stdcall SW_D3D_ViewportStub(void *iface, void *arg)
 {
     return 0;
