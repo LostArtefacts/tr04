@@ -209,6 +209,25 @@ sint32 DSGetFreeChannel(void)
     return -1;
 }
 
+sint32 DXStartSample(sint32 num, sint32 volume, sint32 pitch, sint32 pan, uint32 flags)
+{
+    LPDIRECTSOUNDBUFFER buffer;
+    sint32 channel;
+
+    channel = DSGetFreeChannel();
+    if (channel < 0 || DXAttempt(App.dx.lpDS->lpVtbl->DuplicateSoundBuffer(App.dx.lpDS, DS_Buffers[num].buffer, &buffer)) != DS_OK)
+        return -1;
+    if (DXAttempt(IDirectSoundBuffer_SetVolume(buffer, volume)) != DS_OK || DXAttempt(IDirectSoundBuffer_SetCurrentPosition(buffer, 0)) != DS_OK)
+        return -1;
+    DS_Samples[channel].buffer = buffer;
+    DS_Samples[channel].playing = num;
+    DSAdjustPitch(channel, pitch);
+    DSAdjustPan(channel, pan);
+    IDirectSoundBuffer_Stop(buffer);
+    DXAttempt(IDirectSoundBuffer_Play(buffer, 0, 0, flags));
+    return channel;
+}
+
 sint32 CalcVolume(sint32 volume)
 {
     sint32 result;

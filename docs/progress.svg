@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="327.08" height="12" x="0" y="0" class="named"><title>1223 · 79.01%</title></rect>
-<rect width="58.30" height="12" x="327.08" y="0" class="nonmatching"><title>218 · 14.08%</title></rect>
-<rect width="28.62" height="12" x="385.38" y="0" class="todo"><title>107 · 6.91%</title></rect>
+<rect width="58.57" height="12" x="327.08" y="0" class="nonmatching"><title>219 · 14.15%</title></rect>
+<rect width="28.35" height="12" x="385.65" y="0" class="todo"><title>106 · 6.85%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1223</tspan> · <tspan class="nonmatching">218</tspan> · <tspan class="todo">107</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1223</tspan> · <tspan class="nonmatching">219</tspan> · <tspan class="todo">106</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="219.90" height="12" x="0" y="0" class="named"><title>332 KB · 53.12%</title></rect>
-<rect width="157.11" height="12" x="219.90" y="0" class="nonmatching"><title>237 KB · 37.95%</title></rect>
-<rect width="36.99" height="12" x="377.01" y="0" class="todo"><title>56 KB · 8.93%</title></rect>
+<rect width="157.25" height="12" x="219.90" y="0" class="nonmatching"><title>237 KB · 37.98%</title></rect>
+<rect width="36.84" height="12" x="377.16" y="0" class="todo"><title>56 KB · 8.90%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">332 KB</tspan> · <tspan class="nonmatching">237 KB</tspan> · <tspan class="todo">56 KB</tspan></text>
@@ -1240,7 +1240,7 @@
 <rect width="12" height="12" x="345" y="345" class="named"><title>0x004738b0 DXStopSample (79 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="345" class="named"><title>0x00473900 DSIsChannelPlaying (66 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="345" class="named"><title>0x00473950 DSGetFreeChannel (31 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="345" class="todo"><title>0x00473970 DXStartSample (220 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="345" class="nonmatching"><title>0x00473970 DXStartSample (220 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="345" class="named"><title>0x00473a50 CalcVolume (96 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="345" class="named"><title>0x00473ab0 S_SoundStopAllSamples (20 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="345" class="named"><title>0x00473ad0 S_SoundStopSample (12 bytes)</title></rect>
@@ -2289,7 +2289,7 @@
 <rect width="9.52" height="9.02" x="483.44" y="358.24" class="named"><title>0x00425550 lara_col_forwardjump (224 bytes)</title></rect>
 <rect width="9.52" height="8.94" x="483.44" y="370.26" class="named"><title>0x0043b630 DrawWeaponMissile (222 bytes)</title></rect>
 <rect width="9.52" height="8.94" x="483.44" y="382.21" class="nonmatching"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>
-<rect width="9.52" height="8.86" x="483.44" y="394.15" class="todo"><title>0x00473970 DXStartSample (220 bytes)</title></rect>
+<rect width="9.52" height="8.86" x="483.44" y="394.15" class="nonmatching"><title>0x00473970 DXStartSample (220 bytes)</title></rect>
 <rect width="9.52" height="8.82" x="483.44" y="406.01" class="named"><title>0x0040fcf0 ControlGodHead (219 bytes)</title></rect>
 <rect width="9.52" height="8.82" x="483.44" y="417.84" class="named"><title>0x00433d30 GetFreeSpark (219 bytes)</title></rect>
 <rect width="9.52" height="8.78" x="483.44" y="429.66" class="named"><title>0x00428350 lara_col_stepright (218 bytes)</title></rect>
