@@ -23,6 +23,84 @@
 #include "dxshell.h"
 #include "../sound.h"
 
+void MemBltSurf(void *dest, sint32 x, sint32 y, sint32 w, sint32 h, sint32 dadd, void *source, sint32 x2, sint32 y2, DDSURFACEDESC2 surface, float xsize, float ysize)
+{
+    uint32 *pDest;
+    sint16 *psSrc;
+    uint8 *pSrc;
+    sint32 xadd, yadd, rx2, ry2, xoff, yoff, curY, i, j;
+    sint16 andVal;
+    uint8 r, g, b, rshift, gshift, bshift, rcount, gcount, bcount;
+
+    xadd = (sint32)(((float)App.dx.dwRenderWidth / 640.0F) * xsize * 65536.0F);
+    yadd = (sint32)(((float)App.dx.dwRenderHeight / 480.0F) * ysize * 65536.0F);
+    rx2 = (sint32)((float)x2 * (float)App.dx.dwRenderWidth / 639.0F);
+    ry2 = (sint32)((float)y2 * (float)App.dx.dwRenderHeight / 479.0F);
+    if (App.dx.Flags & 2) {
+        rx2 += App.dx.rScreen.left;
+        ry2 += App.dx.rScreen.top;
+    }
+    DXBitMask2ShiftCnt(surface.ddpfPixelFormat.dwRBitMask, &rshift, &rcount);
+    DXBitMask2ShiftCnt(surface.ddpfPixelFormat.dwGBitMask, &gshift, &gcount);
+    DXBitMask2ShiftCnt(surface.ddpfPixelFormat.dwBBitMask, &bshift, &bcount);
+    pDest = (uint32 *)dest + 4 * h * y + x;
+    pSrc = (uint8 *)source + rx2 * (surface.ddpfPixelFormat.dwRGBBitCount >> 3) + ry2 * surface.lPitch;
+    psSrc = (sint16 *)pSrc;
+    curY = 0;
+    yoff = 0;
+    switch (surface.ddpfPixelFormat.dwRGBBitCount) {
+    case 16:
+        for (i = 0; i < h; i++) {
+            xoff = 0;
+            for (j = 0; j < w; j++) {
+                andVal = psSrc[curY + (xoff >> 16)];
+                r = (uint8)(((surface.ddpfPixelFormat.dwRBitMask & andVal) >> rshift) << (8 - rcount));
+                g = (uint8)(((surface.ddpfPixelFormat.dwGBitMask & andVal) >> gshift) << (8 - gcount));
+                b = (uint8)(((surface.ddpfPixelFormat.dwBBitMask & andVal) >> bshift) << (8 - bcount));
+                *pDest = RGBA(r, g, b, 0xFF);
+                pDest++;
+                xoff += xadd;
+            }
+            yoff += yadd;
+            curY = (surface.lPitch >> 1) * (yoff >> 16);
+            pDest += dadd - w;
+        }
+        break;
+    case 24:
+        for (i = 0; i < h; i++) {
+            xoff = 0;
+            for (j = 0; j < w; j++) {
+                r = pSrc[curY + (xoff >> 16)];
+                g = pSrc[curY + 1 + (xoff >> 16)];
+                b = pSrc[curY + 2 + (xoff >> 16)];
+                *pDest = RGBA(r, g, b, 0xFF);
+                pDest++;
+                xoff += 3 * xadd;
+            }
+            yoff += yadd;
+            curY = surface.lPitch * (yoff >> 16);
+            pDest += dadd - w;
+        }
+        break;
+    case 32:
+        for (i = 0; i < h; i++) {
+            xoff = 0;
+            for (j = 0; j < w; j++) {
+                r = pSrc[curY + (xoff >> 16)];
+                g = pSrc[curY + 1 + (xoff >> 16)];
+                b = pSrc[curY + 2 + (xoff >> 16)];
+                *pDest = RGBA(r, g, b, 0xFF);
+                pDest++;
+                xoff += xadd << 2;
+            }
+            yoff += yadd;
+            curY = surface.lPitch * (yoff >> 16);
+            pDest += dadd - w;
+        }
+        break;
+    }
+}
+
 void RGBM_Mono(uint8 *r, uint8 *g, uint8 *b)
 {
     sint16 c;
