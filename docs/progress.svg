@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="330.29" height="12" x="0" y="0" class="named"><title>1235 · 79.78%</title></rect>
-<rect width="60.71" height="12" x="330.29" y="0" class="nonmatching"><title>227 · 14.66%</title></rect>
-<rect width="23" height="12" x="391" y="0" class="todo"><title>86 · 5.56%</title></rect>
+<rect width="60.98" height="12" x="330.29" y="0" class="nonmatching"><title>228 · 14.73%</title></rect>
+<rect width="22.73" height="12" x="391.27" y="0" class="todo"><title>85 · 5.49%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1235</tspan> · <tspan class="nonmatching">227</tspan> · <tspan class="todo">86</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1235</tspan> · <tspan class="nonmatching">228</tspan> · <tspan class="todo">85</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="223.38" height="12" x="0" y="0" class="named"><title>337 KB · 53.96%</title></rect>
-<rect width="164.40" height="12" x="223.38" y="0" class="nonmatching"><title>248 KB · 39.71%</title></rect>
-<rect width="26.23" height="12" x="387.77" y="0" class="todo"><title>40 KB · 6.34%</title></rect>
+<rect width="165.62" height="12" x="223.38" y="0" class="nonmatching"><title>250 KB · 40.01%</title></rect>
+<rect width="25" height="12" x="389" y="0" class="todo"><title>38 KB · 6.04%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">248 KB</tspan> · <tspan class="todo">40 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">250 KB</tspan> · <tspan class="todo">38 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -825,7 +825,7 @@
 <rect width="12" height="12" x="120" y="225" class="named"><title>0x0044c8d0 CheckNoColCeilingTriangle (231 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="225" class="named"><title>0x0044c9c0 IsRoomOutside (537 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="225" class="named"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="225" class="todo"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="225" class="nonmatching"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="225" class="named"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="225" class="nonmatching"><title>0x0044d890 GetTargetOnLOS (1464 bytes)</title></rect>
@@ -1675,7 +1675,7 @@
 <rect width="26.93" height="27.19" x="151.73" y="91.66" class="named"><title>0x00449410 ControlPhase (1909 bytes)</title></rect>
 <rect width="26.93" height="26.89" x="151.73" y="121.85" class="nonmatching"><title>0x004778b0 S_UpdateInput (1888 bytes)</title></rect>
 <rect width="26.93" height="26.72" x="151.73" y="151.74" class="nonmatching"><title>0x00430250 LaraControl (1876 bytes)</title></rect>
-<rect width="26.93" height="26.42" x="151.73" y="181.46" class="todo"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
+<rect width="26.93" height="26.42" x="151.73" y="181.46" class="nonmatching"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
 <rect width="26.93" height="26.11" x="151.73" y="210.88" class="nonmatching"><title>0x00460420 InitialiseSpotCam (1833 bytes)</title></rect>
 <rect width="26.93" height="26.05" x="151.73" y="239.98" class="todo"><title>0x004963a0 SW_TriSetupG (1829 bytes)</title></rect>
 <rect width="26.93" height="25.69" x="151.73" y="269.03" class="nonmatching"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
