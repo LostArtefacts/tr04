@@ -56,7 +56,7 @@ void SoundEffects(void)
     }
     if (flipeffect != -1)
         (*effect_routines[flipeffect])(NULL);
-    Func45f960();
+    SOUND_EndScene();
 }
 
 void Richochet(GAME_VECTOR *pos)

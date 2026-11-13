@@ -15,7 +15,7 @@ address,size,name,symbol
 0x00402d90,157,InitialiseCroc,_InitialiseCroc
 0x00402e30,1952,CrocControl,_CrocControl
 0x004035d0,71,GetFreeLocust,_GetFreeLocust
-0x00403620,20,Func403620,_Func403620
+0x00403620,20,ClearLocusts,_ClearLocusts
 0x00403640,353,TriggerLocust,_TriggerLocust
 0x004037b0,95,InitialiseLocustEmitter,_InitialiseLocustEmitter
 0x00403810,81,ControlLocustEmitter,_ControlLocustEmitter
@@ -950,7 +950,7 @@ address,size,name,symbol
 0x0045f1c0,34,reset_cutseq_vars,_reset_cutseq_vars
 0x0045f1f0,1524,SoundEffect,_SoundEffect
 0x0045f7f0,365,GetPanVolume,_GetPanVolume
-0x0045f960,170,Func45f960,_Func45f960
+0x0045f960,170,SOUND_EndScene,_SOUND_EndScene
 0x0045fa10,96,StopSoundEffect,_StopSoundEffect
 0x0045fa70,36,SOUND_Stop,_SOUND_Stop
 0x0045faa0,42,SOUND_Init,_SOUND_Init
@@ -1412,7 +1412,7 @@ address,size,name,symbol
 0x00490280,35,phd_sqrt,_phd_sqrt
 0x004902b0,84,phd_PushMatrix,_phd_PushMatrix
 0x00490310,12,phd_PushUnitMatrix,_phd_PushUnitMatrix
-0x00490320,48,Func490320,_Func490320
+0x00490320,48,phd_UnitMatrix,_phd_UnitMatrix
 0x00490350,167,phd_TranslateRel,_phd_TranslateRel
 0x00490400,174,phd_RotX,_phd_RotX
 0x004904b0,172,phd_RotY,_phd_RotY

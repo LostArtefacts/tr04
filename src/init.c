@@ -337,7 +337,7 @@ void InitialiseEffects(void)
     next_debris = 0;
     next_blood = 0;
     ClearScarabs();
-    Func403620();
+    ClearLocusts();
 }
 
 void InitialiseSmokeEmitter(sint16 item_number)

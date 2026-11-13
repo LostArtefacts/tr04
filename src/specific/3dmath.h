@@ -43,7 +43,7 @@ sint32 phd_sqrt(sint32 num);
 
 void phd_PushMatrix(void);
 void phd_PushUnitMatrix(void);
-void Func490320(void);
+void phd_UnitMatrix(void);
 sint32 phd_TranslateRel(sint32 x, sint32 y, sint32 z);
 void phd_RotX(PHD_ANGLE rx);
 void phd_RotY(PHD_ANGLE ry);

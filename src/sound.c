@@ -231,7 +231,7 @@ void GetPanVolume(SoundSlot *slot)
     }
 }
 
-void Func45f960(void)
+void SOUND_EndScene(void)
 {
     SoundSlot *slot;
     sint32 i;

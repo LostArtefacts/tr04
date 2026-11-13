@@ -5,7 +5,7 @@
 #include "items.h"
 #include "rope.h"
 
-void Func403620(void);
+void ClearLocusts(void);
 
 void InitialiseTrapDoor(sint16 item_number);
 void InitialiseFallingBlock2(sint16 item_number);

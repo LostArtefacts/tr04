@@ -46,22 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="267.33" height="12" x="0" y="0" class="named"><title>1210 · 78.17%</title></rect>
-<rect width="0.66" height="12" x="267.33" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="40.21" height="12" x="267.99" y="0" class="nonmatching"><title>182 · 11.76%</title></rect>
-<rect width="33.80" height="12" x="308.20" y="0" class="todo"><title>153 · 9.88%</title></rect>
+<rect width="324.41" height="12" x="0" y="0" class="named"><title>1213 · 78.36%</title></rect>
+<rect width="48.67" height="12" x="324.41" y="0" class="nonmatching"><title>182 · 11.76%</title></rect>
+<rect width="40.92" height="12" x="373.08" y="0" class="todo"><title>153 · 9.88%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="7.50">78.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1210</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">182</tspan> · <tspan class="todo">153</tspan></text>
+<text text-anchor="end" x="594" y="7.50">78.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1213</tspan> · <tspan class="nonmatching">182</tspan> · <tspan class="todo">153</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="179.30" height="12" x="0" y="0" class="named"><title>328 KB · 52.43%</title></rect>
-<rect width="0.13" height="12" x="179.30" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="118.79" height="12" x="179.43" y="0" class="nonmatching"><title>217 KB · 34.73%</title></rect>
-<rect width="43.78" height="12" x="298.22" y="0" class="todo"><title>80 KB · 12.80%</title></rect>
+<rect width="217.20" height="12" x="0" y="0" class="named"><title>328 KB · 52.46%</title></rect>
+<rect width="143.80" height="12" x="217.20" y="0" class="nonmatching"><title>217 KB · 34.73%</title></rect>
+<rect width="52.99" height="12" x="361.01" y="0" class="todo"><title>80 KB · 12.80%</title></rect>
 </g>
-<text text-anchor="end" x="522" y="24.50">52.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">328 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">217 KB</tspan> · <tspan class="todo">80 KB</tspan></text>
+<text text-anchor="end" x="594" y="24.50">52.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">328 KB</tspan> · <tspan class="nonmatching">217 KB</tspan> · <tspan class="todo">80 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -82,7 +80,7 @@
 <rect width="12" height="12" x="195" y="0" class="named"><title>0x00402d90 InitialiseCroc (157 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="0" class="named"><title>0x00402e30 CrocControl (1952 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="0" class="named"><title>0x004035d0 GetFreeLocust (71 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="0" class="decompiled"><title>0x00403620 Func403620 (20 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="0" class="named"><title>0x00403620 ClearLocusts (20 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="0" class="named"><title>0x00403640 TriggerLocust (353 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="0" class="named"><title>0x004037b0 InitialiseLocustEmitter (95 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="0" class="named"><title>0x00403810 ControlLocustEmitter (81 bytes)</title></rect>
@@ -1014,7 +1012,7 @@
 <rect width="12" height="12" x="675" y="270" class="named"><title>0x0045f1c0 reset_cutseq_vars (34 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="270" class="named"><title>0x0045f1f0 SoundEffect (1524 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="270" class="named"><title>0x0045f7f0 GetPanVolume (365 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="270" class="decompiled"><title>0x0045f960 Func45f960 (170 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="270" class="named"><title>0x0045f960 SOUND_EndScene (170 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="270" class="named"><title>0x0045fa10 StopSoundEffect (96 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="285" class="named"><title>0x0045fa70 SOUND_Stop (36 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="285" class="named"><title>0x0045faa0 SOUND_Init (42 bytes)</title></rect>
@@ -1475,7 +1473,7 @@
 <rect width="12" height="12" x="90" y="420" class="named"><title>0x00490280 phd_sqrt (35 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="420" class="named"><title>0x004902b0 phd_PushMatrix (84 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="420" class="named"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="420" class="decompiled"><title>0x00490320 Func490320 (48 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="420" class="named"><title>0x00490320 phd_UnitMatrix (48 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="420" class="named"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="420" class="named"><title>0x00490400 phd_RotX (174 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="420" class="named"><title>0x004904b0 phd_RotY (172 bytes)</title></rect>
@@ -2426,7 +2424,7 @@
 <rect width="8.06" height="8.19" x="519.04" y="256.45" class="named"><title>0x00490560 phd_RotZ (172 bytes)</title></rect>
 <rect width="8.06" height="8.14" x="519.04" y="267.63" class="named"><title>0x0048fb60 ScaleCurrentMatrix (171 bytes)</title></rect>
 <rect width="8.06" height="8.09" x="519.04" y="278.77" class="named"><title>0x00430140 LaraInitialiseMeshes (170 bytes)</title></rect>
-<rect width="8.06" height="8.09" x="519.04" y="289.86" class="decompiled"><title>0x0045f960 Func45f960 (170 bytes)</title></rect>
+<rect width="8.06" height="8.09" x="519.04" y="289.86" class="named"><title>0x0045f960 SOUND_EndScene (170 bytes)</title></rect>
 <rect width="8.06" height="8.04" x="519.04" y="300.96" class="named"><title>0x00421de0 LaraTestEdgeCatch (169 bytes)</title></rect>
 <rect width="8.06" height="8.04" x="519.04" y="312" class="named"><title>0x0044c820 CheckNoColFloorTriangle (169 bytes)</title></rect>
 <rect width="8.06" height="8.04" x="519.04" y="323.05" class="named"><title>0x00473dd0 LoadFile (169 bytes)</title></rect>
@@ -2899,7 +2897,7 @@
 <rect width="4.20" height="4.38" x="706.97" y="362.91" class="named"><title>0x00428e40 draw_shotgun_meshes (48 bytes)</title></rect>
 <rect width="4.20" height="4.38" x="714.17" y="362.91" class="named"><title>0x00450ee0 GetBestFrame (48 bytes)</title></rect>
 <rect width="4.20" height="4.38" x="721.37" y="362.91" class="named"><title>0x00484b00 REG_OpenKey (48 bytes)</title></rect>
-<rect width="4.20" height="4.38" x="728.57" y="362.91" class="decompiled"><title>0x00490320 Func490320 (48 bytes)</title></rect>
+<rect width="4.20" height="4.38" x="728.57" y="362.91" class="named"><title>0x00490320 phd_UnitMatrix (48 bytes)</title></rect>
 <rect width="4.11" height="4.38" x="735.77" y="362.91" class="named"><title>0x0042ddc0 CheckForHoldingState (47 bytes)</title></rect>
 <rect width="4.11" height="4.38" x="742.89" y="362.91" class="named"><title>0x00431e60 lara_col_surfswim (47 bytes)</title></rect>
 <rect width="4.15" height="4.34" x="647.96" y="370.29" class="named"><title>0x0043e830 setup_objectlist_startposition (47 bytes)</title></rect>
@@ -3049,7 +3047,7 @@
 <rect width="3.17" height="2.53" x="688.64" y="432.21" class="named"><title>0x0046c4e0 nineteen_init (21 bytes)</title></rect>
 <rect width="3.17" height="2.53" x="688.64" y="437.74" class="named"><title>0x0046d790 S_StartSyncedAudio (21 bytes)</title></rect>
 <rect width="3.17" height="2.53" x="688.64" y="443.27" class="named"><title>0x00490ec0 S_ExitSystem (21 bytes)</title></rect>
-<rect width="3.17" height="2.40" x="688.64" y="448.80" class="decompiled"><title>0x00403620 Func403620 (20 bytes)</title></rect>
+<rect width="3.17" height="2.40" x="688.64" y="448.80" class="named"><title>0x00403620 ClearLocusts (20 bytes)</title></rect>
 <rect width="3.17" height="2.40" x="688.64" y="454.20" class="named"><title>0x00432830 lara_as_dive (20 bytes)</title></rect>
 <rect width="3.17" height="2.40" x="688.64" y="459.60" class="named"><title>0x004384f0 ClearFires (20 bytes)</title></rect>
 <rect width="2.60" height="2.94" x="694.81" y="409.46" class="named"><title>0x0046d4b0 special2_init (20 bytes)</title></rect>

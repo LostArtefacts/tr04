@@ -270,10 +270,10 @@ void phd_PushMatrix(void)
 void phd_PushUnitMatrix(void)
 {
     phd_mxptr += indices_count;
-    Func490320();
+    phd_UnitMatrix();
 }
 
-void Func490320(void)
+void phd_UnitMatrix(void)
 {
     sint32 *mx;
 
