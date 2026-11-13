@@ -2801,6 +2801,7 @@ address,size,name,symbol
 0x007d94dc,4,SW_TriPU,_SW_TriPU
 0x007d94e8,4,SW_TriFogBDX,_SW_TriFogBDX
 0x007d94ec,4,SW_TriFogEdgeB,_SW_TriFogEdgeB
+0x007d94fc,4,SW_SpanGTAddMask,_SW_SpanGTAddMask
 0x007d9500,8,SW_TriPFStepA,_SW_TriPFStepA
 0x007d9508,4,SW_SpanFogFunc,_SW_SpanFogFunc
 0x007d950c,4,SW_TriPTemp,_SW_TriPTemp
