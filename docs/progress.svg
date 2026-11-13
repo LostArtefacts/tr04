@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="381.82" height="12" x="0" y="0" class="named"><title>1281 · 82.65%</title></rect>
-<rect width="80.18" height="12" x="381.82" y="0" class="nonmatching"><title>269 · 17.35%</title></rect>
+<rect width="382.12" height="12" x="0" y="0" class="named"><title>1282 · 82.71%</title></rect>
+<rect width="79.88" height="12" x="382.12" y="0" class="nonmatching"><title>268 · 17.29%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">82.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1281</tspan> · <tspan class="nonmatching">269</tspan></text>
+<text text-anchor="end" x="642" y="7.50">82.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1282</tspan> · <tspan class="nonmatching">268</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="255.17" height="12" x="0" y="0" class="named"><title>345 KB · 55.23%</title></rect>
-<rect width="206.83" height="12" x="255.17" y="0" class="nonmatching"><title>280 KB · 44.77%</title></rect>
+<rect width="255.44" height="12" x="0" y="0" class="named"><title>346 KB · 55.29%</title></rect>
+<rect width="206.56" height="12" x="255.44" y="0" class="nonmatching"><title>280 KB · 44.71%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">55.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">345 KB</tspan> · <tspan class="nonmatching">280 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">55.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">346 KB</tspan> · <tspan class="nonmatching">280 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1582,7 +1582,7 @@
 <rect width="12" height="12" x="255" y="450" class="nonmatching"><title>0x00499940 SW_SpanGTKey (368 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="450" class="named"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="450" class="named"><title>0x00499ac0 SW_SpanGTP (336 bytes)</title></rect>
-<rect width="12" height="12" x="300" y="450" class="nonmatching"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
+<rect width="12" height="12" x="300" y="450" class="named"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="450" class="named"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="450" class="nonmatching"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="450" class="nonmatching"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
@@ -2105,7 +2105,7 @@
 <rect width="11.77" height="11.80" x="459.12" y="144.18" class="nonmatching"><title>0x00438d90 UpdateBlood (362 bytes)</title></rect>
 <rect width="11.77" height="11.80" x="473.88" y="144.18" class="named"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
 <rect width="11.77" height="11.80" x="488.65" y="144.18" class="named"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
-<rect width="11.73" height="11.80" x="503.41" y="144.18" class="nonmatching"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
+<rect width="11.73" height="11.80" x="503.41" y="144.18" class="named"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
 <rect width="11.67" height="11.80" x="518.15" y="144.18" class="nonmatching"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>
 <rect width="11.64" height="11.80" x="532.81" y="144.18" class="named"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
 <rect width="11.60" height="11.80" x="547.45" y="144.18" class="named"><title>0x0046ba90 tenth_cutseq_control (357 bytes)</title></rect>

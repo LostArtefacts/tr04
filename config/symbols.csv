@@ -2286,6 +2286,7 @@ address,size,name,symbol
 0x004bcca0,64,SW_TriPRecipTab,_SW_TriPRecipTab
 0x004bcce4,64,SW_TriPStepTab,_SW_TriPStepTab
 0x004bcd24,4,SW_ColorOpScale,_SW_ColorOpScale
+0x004bcd80,8,SW_SpanGTPKeyConst,_SW_SpanGTPKeyConst
 0x004bcde8,16,Var4bcde8,_Var4bcde8
 0x004bf2e0,4,next_locust,_next_locust
 0x004bf2e8,12,MovingBlockPos,_MovingBlockPos
@@ -2761,6 +2762,7 @@ address,size,name,symbol
 0x007653e4,4,SW_TriPD02,_SW_TriPD02
 0x007653e8,4,SW_TriPFF2,_SW_TriPFF2
 0x007653ec,4,SW_TriPWDX16,_SW_TriPWDX16
+0x007653f0,4,SW_SpanGTPKeyMask,_SW_SpanGTPKeyMask
 0x007653f4,4,SW_TriPEdgeA,_SW_TriPEdgeA
 0x007653f8,4,SW_TriPFVOff,_SW_TriPFVOff
 0x00765400,4,SW_TriTFogXA,_SW_TriTFogXA
