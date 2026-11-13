@@ -8,6 +8,8 @@
 #include "clipping.h"
 #include "drawroom.h"
 #include "3dmath.h"
+#include "d3dmatrix.h"
+#include "../effects.h"
 #include "output.h"
 #include "../text.h"
 #include "../gameflow.h"
@@ -369,6 +371,57 @@ void mD3DTransform(FVECTOR *vec, D3DMATRIX *mx)
     t.y = mx->_22 * vec->y + (mx->_12 * vec->x + mx->_32 * vec->z) + mx->_42;
     t.z = mx->_23 * vec->y + (mx->_13 * vec->x + mx->_33 * vec->z) + mx->_43;
     *vec = t;
+}
+
+void CreateFogPos(FOGBULB_STRUCT *FogBulb)
+{
+    FVECTOR d;
+    sint32 *mx;
+    float dist;
+    sint16 bounds[6];
+
+    if (GlobalFogOff) {
+        FogBulb->inRange = 0;
+        return;
+    }
+    d.x = FogBulb->WorldPos.x - camera.pos.x;
+    d.y = FogBulb->WorldPos.y - camera.pos.y;
+    d.z = FogBulb->WorldPos.z - camera.pos.z;
+    dist = d.x * d.x + d.y * d.y + d.z * d.z;
+    if (dist > 0x19000000) {
+        FogBulb->inRange = 0;
+        return;
+    }
+    FogBulb->inRange = 1;
+    bounds[0] = (sint16)(FogBulb->WorldPos.x - camera.pos.x + FogBulb->rad);
+    bounds[1] = (sint16)(FogBulb->WorldPos.x - camera.pos.x - FogBulb->rad);
+    bounds[2] = (sint16)(FogBulb->WorldPos.y - camera.pos.y + FogBulb->rad);
+    bounds[3] = (sint16)(FogBulb->WorldPos.y - camera.pos.y - FogBulb->rad);
+    bounds[4] = (sint16)(FogBulb->WorldPos.z - camera.pos.z + FogBulb->rad);
+    bounds[5] = (sint16)(FogBulb->WorldPos.z - camera.pos.z - FogBulb->rad);
+    mx = phd_mxptr;
+    phd_mxptr = w2v_matrix;
+    if (!S_GetObjectBounds(bounds)) {
+        FogBulb->inRange = 0;
+    } else {
+        NumFogBulbsInRange++;
+    }
+    phd_mxptr = mx;
+    if (FogBulb->inRange) {
+        FogBulb->vec.x = FogBulb->WorldPos.x - camera.pos.x;
+        FogBulb->vec.y = FogBulb->WorldPos.y - camera.pos.y;
+        FogBulb->vec.z = FogBulb->WorldPos.z - camera.pos.z;
+        SetD3DMatrix(&D3DMView, w2v_matrix);
+        mD3DTransform(&FogBulb->vec, &D3DMView);
+        FogBulb->pos.x = FogBulb->vec.x;
+        FogBulb->pos.y = FogBulb->vec.y;
+        FogBulb->pos.z = FogBulb->vec.z;
+        D3DNormalise((D3DVECTOR *)&FogBulb->vec);
+        FogBulb->vec.x = FogBulb->pos.x + FogBulb->rad * FogBulb->vec.x;
+        FogBulb->vec.y = FogBulb->pos.y + FogBulb->rad * FogBulb->vec.y;
+        FogBulb->vec.z = FogBulb->pos.z + FogBulb->rad * FogBulb->vec.z;
+        FogBulb->dist = (float)sqrt(FogBulb->pos.x * FogBulb->pos.x + FogBulb->pos.y * FogBulb->pos.y + FogBulb->pos.z * FogBulb->pos.z);
+    }
 }
 
 int DistCompare(const void *a, const void *b)
