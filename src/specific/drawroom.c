@@ -1,3 +1,5 @@
+#include <math.h>
+
 #include "drawroom.h"
 #include "polyinsert.h"
 #include "3dmath.h"
@@ -13,6 +15,7 @@
 #include "function_stubs.h"
 #include "d3dmatrix.h"
 #include "../text.h"
+#include "lighting.h"
 
 void ProcessMeshData(sint32 num_meshes)
 {
@@ -106,6 +109,198 @@ void ProcessMeshData(sint32 num_meshes)
     Log(2, "End ProcessMeshData");
 }
 #include "../draw.h"
+
+void ProcessRoomData(ROOM_INFO *r)
+{
+    D3DVERTEX *vptr;
+    D3DVERTEXBUFFERDESC vb;
+    sint16 *data_ptr;
+    sint16 *faces;
+    sint16 *prelight;
+    float intensity;
+    sint32 nWaterVerts, nShoreVerts, nRestOfVerts, nLights, gt4cnt, gt3cnt, i;
+    uint16 cR, cG, cB;
+
+    data_ptr = r->data;
+    r->nVerts = *data_ptr++;
+    if (!r->nVerts) {
+        r->num_lights = 0;
+        r->SourceVB = 0;
+        return;
+    }
+    data_ptr += r->nVerts * 6;
+    r->FaceData = data_ptr;
+    gt4cnt = *data_ptr++;
+    data_ptr += gt4cnt * 5;
+    gt3cnt = *data_ptr;
+    r->gt3cnt = gt3cnt;
+    r->gt4cnt = gt4cnt;
+    r->verts = (D3DVECTOR *)game_malloc(sizeof(D3DVECTOR) * r->nVerts, 0);
+    faces = (sint16 *)malloc(2 * r->nVerts);
+    prelight = (sint16 *)malloc(2 * r->nVerts);
+    data_ptr = r->data + 1;
+    nWaterVerts = 0;
+    for (i = 0; i < r->nVerts; i++) {
+        if ((sint16)(data_ptr[4] & 0x2000)) {
+            r->verts[nWaterVerts].x = (float)data_ptr[0];
+            r->verts[nWaterVerts].y = (float)data_ptr[1];
+            r->verts[nWaterVerts].z = (float)data_ptr[2];
+            prelight[nWaterVerts] = data_ptr[5];
+            faces[i] = (sint16)(nWaterVerts | 0x8000);
+            nWaterVerts++;
+        }
+        data_ptr += 6;
+    }
+    data_ptr = r->data + 1;
+    nShoreVerts = 0;
+    for (i = 0; i < r->nVerts; i++) {
+        if ((sint16)(data_ptr[4] & 0x4000) && !(sint16)(data_ptr[4] & 0x2000)) {
+            r->verts[nShoreVerts + nWaterVerts].x = (float)data_ptr[0];
+            r->verts[nShoreVerts + nWaterVerts].y = (float)data_ptr[1];
+            r->verts[nShoreVerts + nWaterVerts].z = (float)data_ptr[2];
+            prelight[nShoreVerts + nWaterVerts] = data_ptr[5];
+            faces[i] = (sint16)(nShoreVerts + nWaterVerts);
+            nShoreVerts++;
+        }
+        data_ptr += 6;
+    }
+    data_ptr = r->data + 1;
+    nRestOfVerts = 0;
+    for (i = 0; i < r->nVerts; i++) {
+        if (!(sint16)(data_ptr[4] & 0x2000) && !(sint16)(data_ptr[4] & 0x4000)) {
+            r->verts[nRestOfVerts + nShoreVerts + nWaterVerts].x = (float)data_ptr[0];
+            r->verts[nRestOfVerts + nShoreVerts + nWaterVerts].y = (float)data_ptr[1];
+            r->verts[nRestOfVerts + nShoreVerts + nWaterVerts].z = (float)data_ptr[2];
+            prelight[nRestOfVerts + nShoreVerts + nWaterVerts] = data_ptr[5];
+            faces[i] = (sint16)(nRestOfVerts + nShoreVerts + nWaterVerts);
+            nRestOfVerts++;
+        }
+        data_ptr += 6;
+    }
+    data_ptr = r->FaceData + 1;
+    r->nWaterVerts = nWaterVerts;
+    r->nShoreVerts = nShoreVerts;
+    for (i = 0; i < gt4cnt; i++) {
+        if (faces[data_ptr[0]] & 0x8000 || faces[data_ptr[1]] & 0x8000 || faces[data_ptr[2]] & 0x8000 || faces[data_ptr[3]] & 0x8000) {
+            data_ptr[4] |= 0x4000;
+        }
+        data_ptr[0] = faces[data_ptr[0]] & 0x7FFF;
+        data_ptr[1] = faces[data_ptr[1]] & 0x7FFF;
+        data_ptr[2] = faces[data_ptr[2]] & 0x7FFF;
+        data_ptr[3] = faces[data_ptr[3]] & 0x7FFF;
+        data_ptr += 5;
+    }
+    data_ptr++;
+    for (i = 0; i < gt3cnt; i++) {
+        data_ptr[0] = faces[data_ptr[0]] & 0x7FFF;
+        data_ptr[1] = faces[data_ptr[1]] & 0x7FFF;
+        data_ptr[2] = faces[data_ptr[2]] & 0x7FFF;
+        data_ptr += 4;
+    }
+    free(faces);
+    CreateVertexNormals(r);
+    r->prelight = (sint32 *)game_malloc(4 * r->nVerts, 0);
+    r->prelightwater = (sint32 *)game_malloc(4 * r->nVerts, 0);
+    memset(&vb, 0, sizeof(vb));
+    r->watercalc = 0;
+    vb.dwNumVertices = r->nVerts;
+    vb.dwSize = sizeof(D3DVERTEXBUFFERDESC);
+    vb.dwCaps = 0;
+    vb.dwFVF = D3DFVF_VERTEX;
+    DXAttempt(IDirect3D3_CreateVertexBuffer(App.dx.lpD3D, &vb, (LPDIRECT3DVERTEXBUFFER *)&r->SourceVB, D3DDP_DONOTCLIP, 0));
+    IDirect3DVertexBuffer_Lock((LPDIRECT3DVERTEXBUFFER)r->SourceVB, DDLOCK_WRITEONLY, (void **)&vptr, 0);
+    r->posx = (float)r->x;
+    r->posy = (float)r->y;
+    r->posz = (float)r->z;
+    data_ptr = r->data + 1;
+    for (i = 0; i < r->nVerts; i++) {
+        vptr->x = (float)r->x + r->verts[i].x;
+        vptr->y = (float)r->y + r->verts[i].y;
+        vptr->z = (float)r->z + r->verts[i].z;
+        vptr->nx = r->vnormals[i].x;
+        vptr->ny = r->vnormals[i].y;
+        vptr->nz = r->vnormals[i].z;
+        cR = ((prelight[i] & 0x7C00) >> 10) << 3;
+        cG = ((prelight[i] & 0x3E0) >> 5) << 3;
+        cB = (prelight[i] & 0x1F) << 3;
+        r->prelight[i] = RGBA(cR, cG, cB, 0xFF);
+        cR = (uint16)(cR * water_color_R) >> 8;
+        cG = (uint16)(cG * water_color_G) >> 8;
+        cB = (uint16)(cB * water_color_B) >> 8;
+        r->prelightwater[i] = RGBA(cR, cG, cB, 0xFF);
+        vptr++;
+        data_ptr += 6;
+    }
+    IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)r->SourceVB);
+    free(prelight);
+    r->pclight = 0;
+    if (r->num_lights) {
+        r->pclight = (PCLIGHT_INFO *)game_malloc(sizeof(PCLIGHT_INFO) * r->num_lights, 0);
+        nLights = 0;
+        for (i = 0; i < r->num_lights; i++) {
+            if (r->light[i].Type == LIGHT_FOG) {
+                if (NumLevelFogBulbs >= 20) {
+                    Log(1, "Fog Bulb Discarded - More Than %d", 20);
+                    continue;
+                }
+                FogBulbs[NumLevelFogBulbs].inRange = 0;
+                FogBulbs[NumLevelFogBulbs].density = r->light[i].r;
+                FogBulbs[NumLevelFogBulbs].WorldPos.x = (float)r->light[i].x;
+                FogBulbs[NumLevelFogBulbs].WorldPos.y = (float)r->light[i].y;
+                FogBulbs[NumLevelFogBulbs].WorldPos.z = (float)r->light[i].z;
+                FogBulbs[NumLevelFogBulbs].rad = r->light[i].Outer;
+                FogBulbs[NumLevelFogBulbs].sqrad = SQUARE(r->light[i].Outer);
+                FogBulbs[NumLevelFogBulbs].inv_sqrad = 1 / FogBulbs[NumLevelFogBulbs].sqrad;
+                NumLevelFogBulbs++;
+            } else {
+                if (!r->light[i].r && !r->light[i].g && !r->light[i].b && r->light[i].Type == LIGHT_SPOT) {
+                    continue;
+                }
+                r->pclight[nLights].r = r->light[i].r * (1.0F / 255.0F);
+                r->pclight[nLights].g = r->light[i].g * (1.0F / 255.0F);
+                r->pclight[nLights].b = r->light[i].b * (1.0F / 255.0F);
+                intensity = r->light[nLights].Intensity;
+                if (intensity < 0) {
+                    intensity = -intensity;
+                }
+                intensity *= 1.0F / 8191.0F;
+                r->pclight[nLights].r *= intensity;
+                r->pclight[nLights].g *= intensity;
+                r->pclight[nLights].b *= intensity;
+                if (r->light[nLights].Type == LIGHT_SHADOW) {
+                    r->pclight[nLights].shadow = (sint32)(intensity * 255);
+                }
+                r->pclight[nLights].x = (float)r->light[i].x;
+                r->pclight[nLights].y = (float)r->light[i].y;
+                r->pclight[nLights].z = (float)r->light[i].z;
+                r->pclight[nLights].ix = r->light[i].x;
+                r->pclight[nLights].iy = r->light[i].y;
+                r->pclight[nLights].iz = r->light[i].z;
+                r->pclight[nLights].nx = -r->light[i].nx;
+                r->pclight[nLights].ny = -r->light[i].ny;
+                r->pclight[nLights].nz = -r->light[i].nz;
+                r->pclight[nLights].inx = (sint32)(r->light[i].nx * -16384.0F);
+                r->pclight[nLights].iny = (sint32)(r->light[i].ny * -16384.0F);
+                r->pclight[nLights].inz = (sint32)(r->light[i].nz * -16384.0F);
+                r->pclight[nLights].Inner = r->light[i].Inner;
+                r->pclight[nLights].Outer = r->light[i].Outer;
+                r->pclight[nLights].InnerAngle = 2 * acos(r->light[i].Inner);
+                r->pclight[nLights].OuterAngle = 2 * acos(r->light[i].Outer);
+                if (r->light[nLights].Type == LIGHT_SPOT && r->pclight[nLights].OuterAngle > 3.1415927F) {
+                    Log(1, "SpotLight Corrected");
+                    r->pclight[nLights].OuterAngle = 3.1415927F;
+                }
+                r->pclight[nLights].Cutoff = r->light[i].Cutoff;
+                r->pclight[nLights].Type = r->light[i].Type;
+                nLights++;
+            }
+        }
+    }
+    if (r->num_lights > MaxRoomLights) {
+        MaxRoomLights = r->num_lights;
+    }
+    IDirect3DVertexBuffer_Optimize((LPDIRECT3DVERTEXBUFFER)r->SourceVB, App.dx._lpD3DDevice, 0);
+}
 
 void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
 {

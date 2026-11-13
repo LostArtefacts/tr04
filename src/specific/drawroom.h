@@ -47,6 +47,9 @@ extern float clip_top;
 extern float clip_right;
 extern float clip_bottom;
 extern sint32 bWaterEffect;
+extern sint32 water_color_R;
+extern sint32 water_color_G;
+extern sint32 water_color_B;
 
 void InsertRoom(ROOM_INFO *r);
 void ProcessMeshData(sint32 num_meshes);
