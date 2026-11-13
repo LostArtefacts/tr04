@@ -409,6 +409,137 @@ void TriggerFlareSparks(sint32 x, sint32 y, sint32 z, sint32 xvel, sint32 yvel, 
     }
 }
 
+void TriggerExplosionSparks(sint32 x, sint32 y, sint32 z, sint32 extras, sint32 dynamic, sint32 uw, sint16 room_number)
+{
+    SPARKS *sptr;
+    SP_DYNAMIC *pDL;
+    sint32 dx, dz, scalar, mirror, i;
+    uint8 extras_table[6] = {0, 4, 7, 10};
+    sint32 r, g, b;
+
+    dx = lara_item->pos.x_pos - x;
+    dz = lara_item->pos.z_pos - z;
+    scalar = 0;
+    mirror = 0;
+    if (dx < -0x4000 || dx > 0x4000 || dz < -0x4000 || dz > 0x4000)
+        return;
+    if (room_number < 0) {
+        room_number = -room_number;
+        scalar = 1;
+    }
+    if (room_number == gfMirrorRoom && gfLevelFlags & GF_MIRROR)
+        mirror = 1;
+    do {
+        sptr = &spark[GetFreeSpark()];
+        sptr->On = 1;
+        sptr->sR = 255;
+        if (uw == 1) {
+            sptr->sG = (GetRandomControl() & 0x3F) + 128;
+            sptr->sB = 32;
+            sptr->dR = 192;
+            sptr->dG = (GetRandomControl() & 0x1F) + 64;
+            sptr->dB = 0;
+            sptr->ColFadeSpeed = 7;
+            sptr->FadeToBlack = 8;
+            sptr->TransType = 2;
+            sptr->Life = (GetRandomControl() & 7) + 16;
+            sptr->sLife = sptr->Life;
+            sptr->RoomNumber = (uint8)room_number;
+        } else {
+            sptr->sG = (GetRandomControl() & 0xF) + 32;
+            sptr->sB = 0;
+            sptr->dR = (GetRandomControl() & 0x3F) + 192;
+            sptr->dG = (GetRandomControl() & 0x3F) + 128;
+            sptr->dB = 32;
+            sptr->ColFadeSpeed = 8;
+            sptr->FadeToBlack = 16;
+            sptr->TransType = 2;
+            sptr->Life = (GetRandomControl() & 7) + 24;
+            sptr->sLife = sptr->Life;
+        }
+        sptr->extras = (uint8)(extras | ((extras_table[extras] + (GetRandomControl() & 7) + 28) << 3));
+        sptr->Dynamic = (sint8)dynamic;
+        if (dynamic == -2) {
+            pDL = spark_dynamics;
+            for (i = 0; i < 8; i++, pDL++) {
+                if (!pDL->On) {
+                    pDL->On = 1;
+                    pDL->Falloff = 4;
+                    if (uw == 1)
+                        pDL->Flags = 2;
+                    else
+                        pDL->Flags = 1;
+                    sptr->Dynamic = (sint8)i;
+                    break;
+                }
+            }
+            if (i == 8)
+                sptr->Dynamic = -1;
+        }
+        sptr->x = (GetRandomControl() & 0x1F) + x - 16;
+        sptr->y = (GetRandomControl() & 0x1F) + y - 16;
+        sptr->z = (GetRandomControl() & 0x1F) + z - 16;
+        sptr->Xvel = (GetRandomControl() & 0xFFF) - 2048;
+        sptr->Yvel = (GetRandomControl() & 0xFFF) - 2048;
+        sptr->Zvel = (GetRandomControl() & 0xFFF) - 2048;
+        if (dynamic != -2 || uw == 1) {
+            sptr->x = (GetRandomControl() & 0x1F) + x - 16;
+            sptr->y = (GetRandomControl() & 0x1F) + y - 16;
+            sptr->z = (GetRandomControl() & 0x1F) + z - 16;
+        } else {
+            sptr->x = (GetRandomControl() & 0x1FF) + x - 256;
+            sptr->y = (GetRandomControl() & 0x1FF) + y - 256;
+            sptr->z = (GetRandomControl() & 0x1FF) + z - 256;
+        }
+        if (uw == 1)
+            sptr->Friction = 17;
+        else
+            sptr->Friction = 51;
+        if (GetRandomControl() & 1) {
+            if (uw == 1)
+                sptr->Flags = 2586;
+            else
+                sptr->Flags = 538;
+            sptr->RotAng = GetRandomControl() & 0xFFF;
+            sptr->RotAdd = (GetRandomControl() & 0xFF) + 128;
+        } else if (uw == 1)
+            sptr->Flags = 2570;
+        else
+            sptr->Flags = 522;
+        sptr->Scalar = 3;
+        sptr->Gravity = 0;
+        sptr->Size = (GetRandomControl() & 0xF) + 40;
+        sptr->sSize = sptr->Size << scalar;
+        sptr->dSize = sptr->Size << (scalar + 1);
+        sptr->Size <<= scalar;
+        GetRandomControl();
+        sptr->MaxYvel = 0;
+        if (uw != 2) {
+            if (!extras)
+                TriggerExplosionSmokeEnd(x, y, z, uw);
+            else
+                TriggerExplosionSmoke(x, y, z, uw);
+        } else {
+            r = sptr->sR;
+            g = sptr->sG;
+            b = sptr->sB;
+            sptr->sR = b;
+            sptr->sG = r;
+            sptr->sB = g;
+            r = sptr->dR;
+            g = sptr->dG;
+            b = sptr->dB;
+            sptr->dR = b;
+            sptr->dG = r;
+            sptr->dB = g;
+            sptr->Flags |= 0x2000;
+        }
+        z = 2 * gfMirrorZPlane - z;
+        mirror--;
+    }
+    while (mirror >= 0);
+}
+
 void TriggerExplosionSmokeEnd(sint32 x, sint32 y, sint32 z, sint32 uw)
 {
     sint32 size;
