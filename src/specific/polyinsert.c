@@ -203,6 +203,65 @@ void InitialiseFogBulbs(void)
     }
 }
 
+void OmniEffect(D3DTLVERTEX *v)
+{
+    FOGBULB_STRUCT *FogBulb;
+    FVECTOR pos, dP, dV, d;
+    float val, val2, inv;
+    sint32 i, r, g, b, lVal;
+
+    inv = 1.0F / v->sz;
+    for (i = 0; i < 5; i++) {
+        FogBulb = &FXFogBulbs[i];
+        if (FogBulb->active && FogBulb->inRange) {
+            pos.x = v->tu;
+            pos.y = v->tv;
+            pos.z = v->sz;
+            if (FogBulb->pos.z < pos.z) {
+                val = FogBulb->dist * inv;
+                pos.x *= val;
+                pos.y *= val;
+                pos.z *= val;
+            }
+            dP.x = pos.x - FogBulb->pos.x;
+            dP.y = pos.y - FogBulb->pos.y;
+            dP.z = pos.z - FogBulb->pos.z;
+            d = dP;
+            dV.x = FogBulb->vec.x - FogBulb->pos.x;
+            dV.y = FogBulb->vec.y - FogBulb->pos.y;
+            dV.z = FogBulb->vec.z - FogBulb->pos.z;
+            val = dV.z * dV.z + dV.y * dV.y + dV.x * dV.x;
+            if (val != 0) {
+                val2 = (dV.z * d.z + dV.y * d.y + dV.x * d.x) / val;
+                if (val2 >= -1.0F) {
+                    if (val2 < 0)
+                        val = dP.z * dP.z + dP.y * dP.y + dP.x * dP.x;
+                    else {
+                        dP.x = d.x - val2 * dV.x;
+                        dP.y = d.y - val2 * dV.y;
+                        dP.z = d.z - val2 * dV.z;
+                        val = dP.z * dP.z + dP.y * dP.y + dP.x * dP.x;
+                    }
+                    if (val != 0 && val < FogBulb->sqrad) {
+                        val2 = FogBulb->density * FogBulb->inv_sqrad * val + 12582912.0F;
+                        lVal = *(sint32 *)&val2 & 0x3FFFFF;
+                        r = CLRR(v->specular) + (((FogBulb->density - lVal) * FogBulb->r) >> 8);
+                        g = CLRG(v->specular) + (((FogBulb->density - lVal) * FogBulb->g) >> 8);
+                        b = CLRB(v->specular) + (((FogBulb->density - lVal) * FogBulb->b) >> 8);
+                        if (r > 255)
+                            r = 255;
+                        if (g > 255)
+                            g = 255;
+                        if (b > 255)
+                            b = 255;
+                        v->specular = b | v->specular & 0xFF000000 | ((g | ((r | (r << 8)) << 8)) << 8);
+                    }
+                }
+            }
+        }
+    }
+}
+
 void SubdivideEdge(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v, sint16 *c, float tu1, float tv1, float tu2, float tv2, float *tu, float *tv)
 {
     float zv;
