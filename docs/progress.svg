@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="75.59" height="12" x="336.54" y="0" class="nonmatching"><title>283 · 18.26%</title></rect>
-<rect width="1.87" height="12" x="412.13" y="0" class="todo"><title>7 · 0.45%</title></rect>
+<rect width="75.86" height="12" x="336.54" y="0" class="nonmatching"><title>284 · 18.32%</title></rect>
+<rect width="1.60" height="12" x="412.40" y="0" class="todo"><title>6 · 0.39%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">283</tspan> · <tspan class="todo">7</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">284</tspan> · <tspan class="todo">6</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.83" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
-<rect width="178.99" height="12" x="225.83" y="0" class="nonmatching"><title>270 KB · 43.23%</title></rect>
-<rect width="9.18" height="12" x="404.82" y="0" class="todo"><title>14 KB · 2.22%</title></rect>
+<rect width="180.37" height="12" x="225.83" y="0" class="nonmatching"><title>272 KB · 43.57%</title></rect>
+<rect width="7.79" height="12" x="406.21" y="0" class="todo"><title>12 KB · 1.88%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">270 KB</tspan> · <tspan class="todo">14 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">272 KB</tspan> · <tspan class="todo">12 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1568,7 +1568,7 @@
 <rect width="12" height="12" x="15" y="450" class="nonmatching"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="450" class="nonmatching"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="450" class="todo"><title>0x004971b0 SW_TriSetupGTPFog (2786 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="450" class="todo"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="450" class="nonmatching"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="450" class="todo"><title>0x004984e0 SW_TriSetupGFog (1741 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="450" class="nonmatching"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="450" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
@@ -1665,7 +1665,7 @@
 <rect width="29.44" height="28.18" x="119.24" y="195.16" class="named"><title>0x00480a50 DrawSortList (2164 bytes)</title></rect>
 <rect width="29.44" height="27.91" x="119.24" y="226.33" class="nonmatching"><title>0x00433410 ShatterObject (2143 bytes)</title></rect>
 <rect width="29.44" height="27.75" x="119.24" y="257.24" class="named"><title>0x0041d140 DrawLara (2131 bytes)</title></rect>
-<rect width="29.44" height="27.17" x="119.24" y="287.99" class="todo"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
+<rect width="29.44" height="27.17" x="119.24" y="287.99" class="nonmatching"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
 <rect width="29.44" height="26.87" x="119.24" y="318.16" class="named"><title>0x00457720 PickUpCollision (2064 bytes)</title></rect>
 <rect width="29.44" height="26.43" x="119.24" y="348.03" class="nonmatching"><title>0x00470830 DXSetupDlgProc (2030 bytes)</title></rect>
 <rect width="29.44" height="26.39" x="119.24" y="377.46" class="todo"><title>0x00430f70 CreateSkinningData (2027 bytes)</title></rect>
