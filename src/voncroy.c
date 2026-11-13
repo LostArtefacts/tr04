@@ -324,11 +324,11 @@ void VoncroyControl(sint16 item_number)
     z += Zoffset;
     floor = GetFloor(x, y, z, &room_number);
     farheight = GetHeight(floor, x, y, z);
-    if (y >= nearheight - 384 || y >= midheight + 256 || y <= midheight - 256)
+    if (item->pos.y_pos >= nearheight - 384 || item->pos.y_pos >= midheight + 256 || item->pos.y_pos <= midheight - 256)
         jump_ahead = 0;
     else
         jump_ahead = 1;
-    if (y >= nearheight - 384 || y >= midheight - 384 || y >= farheight + 256 || y <= farheight - 256)
+    if (item->pos.y_pos >= nearheight - 384 || item->pos.y_pos >= midheight - 384 || item->pos.y_pos >= farheight + 256 || item->pos.y_pos <= farheight - 256)
         long_jump_ahead = 0;
     else
         long_jump_ahead = 1;
@@ -378,8 +378,8 @@ void VoncroyControl(sint16 item_number)
     if (VonCroy->enemy == lara_item)
         VonCroyLaraAI = VonCroyAI;
     else {
-        dx = lara_item->pos.x_pos - item->pos.x_pos;
         dz = lara_item->pos.z_pos - item->pos.z_pos;
+        dx = lara_item->pos.x_pos - item->pos.x_pos;
         VonCroyLaraAI.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
         if (VonCroyLaraAI.angle > -0x4000 && VonCroyLaraAI.angle < 0x4000)
             VonCroyLaraAI.ahead = 1;
@@ -390,10 +390,12 @@ void VoncroyControl(sint16 item_number)
             VonCroyLaraAI.distance = 0x7FFFFFFF;
         else
             VonCroyLaraAI.distance = SQUARE(dx) + SQUARE(dz);
-        if (abs(dx) > abs(dz))
-            VonCroyLaraAI.x_angle = (sint16)phd_atan(abs(dx) + (abs(dz) >> 1), item->pos.y_pos - lara_item->pos.y_pos);
+        dx = abs(dx);
+        dz = abs(dz);
+        if (dx > dz)
+            VonCroyLaraAI.x_angle = (sint16)phd_atan(dx + (dz >> 1), item->pos.y_pos - lara_item->pos.y_pos);
         else
-            VonCroyLaraAI.x_angle = (sint16)phd_atan(abs(dz) + (abs(dx) >> 1), item->pos.y_pos - lara_item->pos.y_pos);
+            VonCroyLaraAI.x_angle = (sint16)phd_atan(dz + (dx >> 1), item->pos.y_pos - lara_item->pos.y_pos);
     }
     if (VonCroyLaraAI.angle > -6144 && VonCroyLaraAI.angle < 6144 && VonCroyLaraAI.distance < 0x100000)
         VonCroyLaraAI.bite = 1;
