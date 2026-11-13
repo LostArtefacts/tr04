@@ -1122,8 +1122,8 @@ sint32 S_LoadLevelFile(sint32 num)
     LevelLoadingThread.active = 1;
     LevelLoadingThread.ended = 0;
     LevelLoadingThread.handle = _beginthreadex(0, 0, LoadLevel, name, 0, &LevelLoadingThread.address);
-    while (LevelLoadingThread.active)
-        ;
+    if (LevelLoadingThread.active)
+        SW_WaitLevelLoad();
     return 1;
 }
 #endif
