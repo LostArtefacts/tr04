@@ -13,6 +13,8 @@
 #include "file.h"
 #include "drawroom.h"
 #include "../control.h"
+#include "../text.h"
+#include "function_stubs.h"
 
 void setXY4(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 x3, sint32 y3, sint32 x4, sint32 y4, sint32 z, sint16 *clip)
 {
@@ -714,4 +716,61 @@ void Draw2DSprite(sint32 x, sint32 y, sint32 slot, sint32 unused, sint32 unused2
     tex.u4 = u1;
     tex.v4 = v2;
     AddQuadClippedSorted(v, 0, 1, 2, 3, &tex, 0);
+}
+
+void DrawJeepSpeedo(sint32 ux, sint32 uy, sint32 vel, sint32 maxVel, sint32 turboVel, sint32 size, sint32 spriteSlot)
+{
+    D3DTLVERTEX v[2];
+    sint32 x0, y0, x1, y1;
+    sint32 rSize, i;
+
+    ux = (sint32)(448.0F * ((float)phd_winxmax * (1.0F / 512.0F)));
+    uy = (sint32)(224.0F * ((float)phd_winymax * (1.0F / 240.0F)));
+    Draw2DSprite(ux + 24, uy - 16, spriteSlot + 17, RGBONLY(GetRandomDraw() & 0xFF, GetRandomDraw() & 0xFF, GetRandomDraw() & 0xFF), 0);
+    rSize = (7 * size) >> 3;
+    vel = abs(vel >> 1);
+    if (vel) {
+        vel += (((rcossin_tbl[(((GlobalCounter & 7) << 13) >> 3) & 0x1FFE] << 2) * ((vel - 4096) >> 5)) >> W2V_SHIFT);
+        if (vel < 0)
+            vel = 0;
+    }
+    maxVel >>= 1;
+    turboVel >>= 1;
+    for (i = -0x4000; i + 0x4000 <= turboVel; i += 2048) {
+        x0 = (rSize * (rcossin_tbl[(i >> 3) & 0x1FFE] << 2)) >> (W2V_SHIFT - 1);
+        x1 = (size * (rcossin_tbl[(i >> 3) & 0x1FFE] << 2)) >> (W2V_SHIFT - 1);
+        x0 = (x0 - (x0 >> 2)) * ((float)phd_winxmax * (1.0F / 512.0F));
+        y0 = (-(rSize * (rcossin_tbl[((i >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT) * ((float)phd_winymax * (1.0F / 240.0F));
+        x1 = (x1 - (x1 >> 2)) * ((float)phd_winxmax * (1.0F / 512.0F));
+        y1 = (-(size * (rcossin_tbl[((i >> 3) & 0x1FFE) + 1] << 2)) >> W2V_SHIFT) * ((float)phd_winymax * (1.0F / 240.0F));
+        v[0].sx = (float)(ux + x0);
+        v[0].sy = (float)(uy + y0);
+        v[0].sz = f_mznear;
+        v[0].rhw = f_moneoznear;
+        v[1].sx = (float)(ux + x1);
+        v[1].sy = (float)(uy + y1);
+        v[1].sz = f_mznear;
+        v[1].rhw = f_moneoznear;
+        v[0].color = v[1].color = i + 0x4000 > maxVel ? 0xFFFF0000 : 0xFFFFFFFF;
+        v[1].specular = v[0].specular;
+        AddLineSorted(v, &v[1], 6);
+    }
+    size -= size >> 4;
+    x1 = (size * phd_sin(vel - 0x4000)) >> (W2V_SHIFT - 1);
+    x0 = (-4 * phd_sin(vel - 0x4000)) >> (W2V_SHIFT - 1);
+    x0 = (x0 - (x0 >> 2)) * ((float)phd_winxmax * (1.0F / 512.0F));
+    y0 = (-(-4 * phd_cos(vel - 0x4000)) >> W2V_SHIFT) * ((float)phd_winymax * (1.0F / 240.0F));
+    x1 = (x1 - (x1 >> 2)) * ((float)phd_winxmax * (1.0F / 512.0F));
+    y1 = (-(size * phd_cos(vel - 0x4000)) >> W2V_SHIFT) * ((float)phd_winymax * (1.0F / 240.0F));
+    v[0].sx = (float)(ux + x0);
+    v[0].sy = (float)(uy + y0);
+    v[0].sz = f_mznear;
+    v[0].rhw = f_moneoznear;
+    v[1].sx = (float)(ux + x1);
+    v[1].sy = (float)(uy + y1);
+    v[1].sz = f_mznear;
+    v[1].rhw = f_moneoznear;
+    v[1].color = v[0].color;
+    v[1].specular = v[0].specular;
+    AddLineSorted(v, &v[1], 6);
 }

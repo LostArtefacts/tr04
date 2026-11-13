@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.08" height="12" x="0" y="0" class="named"><title>1189 · 76.81%</title></rect>
 <rect width="0.65" height="12" x="258.08" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="28" height="12" x="258.73" y="0" class="nonmatching"><title>129 · 8.33%</title></rect>
-<rect width="49.27" height="12" x="286.73" y="0" class="todo"><title>227 · 14.66%</title></rect>
+<rect width="28.22" height="12" x="258.73" y="0" class="nonmatching"><title>130 · 8.40%</title></rect>
+<rect width="49.05" height="12" x="286.95" y="0" class="todo"><title>226 · 14.60%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1189</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">129</tspan> · <tspan class="todo">227</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1189</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">130</tspan> · <tspan class="todo">226</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="166.92" height="12" x="0" y="0" class="named"><title>310 KB · 49.68%</title></rect>
 <rect width="0.13" height="12" x="166.92" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="84.65" height="12" x="167.05" y="0" class="nonmatching"><title>157 KB · 25.19%</title></rect>
-<rect width="84.30" height="12" x="251.70" y="0" class="todo"><title>157 KB · 25.09%</title></rect>
+<rect width="85.23" height="12" x="167.05" y="0" class="nonmatching"><title>159 KB · 25.37%</title></rect>
+<rect width="83.72" height="12" x="252.28" y="0" class="todo"><title>156 KB · 24.92%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">49.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">310 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">157 KB</tspan> · <tspan class="todo">157 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">310 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">159 KB</tspan> · <tspan class="todo">156 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1435,7 +1435,7 @@
 <rect width="12" height="12" x="240" y="405" class="todo"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="405" class="nonmatching"><title>0x0048d160 S_DrawDarts (622 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="405" class="named"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="405" class="todo"><title>0x0048d580 DrawJeepSpeedo (1067 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="405" class="nonmatching"><title>0x0048d580 DrawJeepSpeedo (1067 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="405" class="todo"><title>0x0048d9b0 DrawLightning (2357 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="405" class="todo"><title>0x0048e2f0 CreateTexturePage (1004 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="405" class="todo"><title>0x0048e6e0 FreeTextures (283 bytes)</title></rect>
@@ -1758,7 +1758,7 @@
 <rect width="20.86" height="19.74" x="260.66" y="329.26" class="todo"><title>0x00403f30 CrocgodControl (1073 bytes)</title></rect>
 <rect width="20.86" height="19.72" x="260.66" y="352" class="named"><title>0x004664b0 AnimateBike (1072 bytes)</title></rect>
 <rect width="20.86" height="19.70" x="260.66" y="374.73" class="nonmatching"><title>0x00424a60 lara_as_stop (1071 bytes)</title></rect>
-<rect width="20.86" height="19.63" x="260.66" y="397.43" class="todo"><title>0x0048d580 DrawJeepSpeedo (1067 bytes)</title></rect>
+<rect width="20.86" height="19.63" x="260.66" y="397.43" class="nonmatching"><title>0x0048d580 DrawJeepSpeedo (1067 bytes)</title></rect>
 <rect width="20.86" height="19.50" x="260.66" y="420.06" class="named"><title>0x00449b90 AnimateItem (1060 bytes)</title></rect>
 <rect width="20.86" height="19.44" x="260.66" y="442.56" class="nonmatching"><title>0x004701c0 InitResolution (1057 bytes)</title></rect>
 <rect width="20.13" height="20.07" x="284.52" y="0" class="todo"><title>0x004797c0 MemBltSurf (1053 bytes)</title></rect>
