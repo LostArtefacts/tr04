@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="340.28" height="12" x="0" y="0" class="named"><title>1274 · 82.19%</title></rect>
-<rect width="61.70" height="12" x="340.28" y="0" class="nonmatching"><title>231 · 14.90%</title></rect>
-<rect width="12.02" height="12" x="401.98" y="0" class="todo"><title>45 · 2.90%</title></rect>
+<rect width="61.97" height="12" x="340.28" y="0" class="nonmatching"><title>232 · 14.97%</title></rect>
+<rect width="11.75" height="12" x="402.25" y="0" class="todo"><title>44 · 2.84%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">82.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">231</tspan> · <tspan class="todo">45</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">232</tspan> · <tspan class="todo">44</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="227.14" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
-<rect width="166.82" height="12" x="227.14" y="0" class="nonmatching"><title>252 KB · 40.29%</title></rect>
-<rect width="20.05" height="12" x="393.95" y="0" class="todo"><title>30 KB · 4.84%</title></rect>
+<rect width="166.95" height="12" x="227.14" y="0" class="nonmatching"><title>252 KB · 40.33%</title></rect>
+<rect width="19.91" height="12" x="394.09" y="0" class="todo"><title>30 KB · 4.81%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">252 KB</tspan> · <tspan class="todo">30 KB</tspan></text>
@@ -1570,7 +1570,7 @@
 <rect width="12" height="12" x="45" y="450" class="todo"><title>0x004971b0 SW_TriSetupGTLit (2786 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="450" class="todo"><title>0x00497cb0 SW_TriSetupGALit (2079 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="450" class="todo"><title>0x004984e0 SW_TriSetupGTA (1717 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="450" class="todo"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="450" class="nonmatching"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="450" class="named"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="450" class="todo"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="450" class="todo"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
@@ -2315,7 +2315,7 @@
 <rect width="9.05" height="8.98" x="678.38" y="198.60" class="named"><title>0x0047d4d0 S_LoadBar (212 bytes)</title></rect>
 <rect width="8.96" height="8.98" x="690.43" y="198.60" class="named"><title>0x00476ec0 GameMain (210 bytes)</title></rect>
 <rect width="8.92" height="8.98" x="702.40" y="198.60" class="named"><title>0x004043d0 DeathSlideCollision (209 bytes)</title></rect>
-<rect width="8.92" height="8.98" x="714.32" y="198.60" class="todo"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
+<rect width="8.92" height="8.98" x="714.32" y="198.60" class="nonmatching"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
 <rect width="8.88" height="8.98" x="726.24" y="198.60" class="named"><title>0x0040e6b0 InitialiseScarabGenerator (208 bytes)</title></rect>
 <rect width="8.88" height="8.98" x="738.12" y="198.60" class="named"><title>0x00448070 AlignLaraPosition (208 bytes)</title></rect>
 <rect width="9.27" height="8.60" x="495.89" y="210.59" class="named"><title>0x00457650 RegeneratePickups (208 bytes)</title></rect>

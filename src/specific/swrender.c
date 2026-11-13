@@ -840,6 +840,42 @@ HRESULT j_SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWOR
     return SW_DrawPrimitives(type, fvf, verts, count, flags);
 }
 
+void SW_SpanG(void)
+{
+    SW_SPAN *s;
+    uint8 *row, *p;
+    uint16 c0, c1, c2, c3;
+    sint32 n;
+
+    s = (SW_SPAN *)SW_SpanBuffer;
+    if (s != SW_SpanEnd) {
+        row = (uint8 *)SW_Surface + SW_SpanY * SW_SurfacePitch;
+        do {
+            p = row + (s->x << 2);
+            n = s->n;
+            if (n > 0) {
+                c0 = s->c[0];
+                c1 = s->c[1];
+                c2 = s->c[2];
+                c3 = s->c[3];
+                do {
+                    p[0] = c0 >> 8;
+                    p[1] = c1 >> 8;
+                    p[2] = c2 >> 8;
+                    p[3] = c3 >> 8;
+                    c0 += SW_SpanGrad[0];
+                    c1 += SW_SpanGrad[1];
+                    c2 += SW_SpanGrad[2];
+                    c3 += SW_SpanGrad[3];
+                    p += 4;
+                } while (--n);
+            }
+            row += SW_SurfacePitch;
+            s++;
+        } while (s != SW_SpanEnd);
+    }
+}
+
 void SW_SpanGLit(void)
 {
     SW_SPAN *s;
