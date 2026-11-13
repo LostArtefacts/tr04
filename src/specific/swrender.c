@@ -4,7 +4,7 @@
 #include "swrender.h"
 
 typedef struct sw_device {
-    void *lpVtbl;
+    IDirect3DDevice3Vtbl *lpVtbl;
     sint32 refcount;
     void *viewport;
     void *target;
@@ -12,6 +12,7 @@ typedef struct sw_device {
     void *buffer;
     sint32 width;
     sint32 height;
+    sint32 in_scene;
 } SW_DEVICE;
 
 extern float SW_ZLimit;
@@ -22,6 +23,7 @@ extern void *SW_Surface;
 extern sint32 SW_SurfacePitch;
 extern sint32 SW_FrameState;
 extern sint32 SW_ColorOpScale;
+extern DDSURFACEDESC2 SW_SurfDesc;
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -135,6 +137,23 @@ HRESULT __stdcall SW_D3D_SetLightState(SW_DEVICE *dev, D3DLIGHTSTATETYPE type, D
 HRESULT __stdcall SW_D3D_SetTransform(SW_DEVICE *dev, D3DTRANSFORMSTATETYPE type, LPD3DMATRIX matrix)
 {
     return IDirect3DDevice3_SetTransform(SW_RealD3DDevice, type, matrix);
+}
+
+HRESULT SW_ClearBuffer(SW_DEVICE *dev, DWORD count, D3DRECT *rect, DWORD flags, D3DCOLOR col, D3DVALUE z, DWORD stencil)
+{
+    if (!dev)
+        return 0;
+    if (flags & D3DCLEAR_TARGET) {
+        dev = dev->buffer;
+        flags = SW_SurfDesc.dwWidth * SW_SurfDesc.dwHeight;
+        __asm {
+            mov ecx, flags
+            mov edi, dev
+            mov eax, col
+            rep stosd
+        }
+    }
+    return 0;
 }
 
 void SW_FreeBuffer(void)

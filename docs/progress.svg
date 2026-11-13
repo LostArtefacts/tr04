@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="335.10" height="12" x="0" y="0" class="named"><title>1253 · 80.94%</title></rect>
-<rect width="61.24" height="12" x="335.10" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="17.65" height="12" x="396.35" y="0" class="todo"><title>66 · 4.26%</title></rect>
+<rect width="335.37" height="12" x="0" y="0" class="named"><title>1254 · 81.01%</title></rect>
+<rect width="61.24" height="12" x="335.37" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="17.38" height="12" x="396.62" y="0" class="todo"><title>65 · 4.20%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">80.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1253</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">66</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1254</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">65</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.75" height="12" x="0" y="0" class="named"><title>338 KB · 54.05%</title></rect>
-<rect width="166.38" height="12" x="223.75" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="23.88" height="12" x="390.12" y="0" class="todo"><title>36 KB · 5.77%</title></rect>
+<rect width="223.78" height="12" x="0" y="0" class="named"><title>338 KB · 54.05%</title></rect>
+<rect width="166.38" height="12" x="223.78" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="23.84" height="12" x="390.16" y="0" class="todo"><title>36 KB · 5.76%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="24.50">54.0%</text>
+<text text-anchor="end" x="594" y="24.50">54.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1551,7 +1551,7 @@
 <rect width="12" height="12" x="510" y="435" class="named"><title>0x00494b10 SW_D3D_SetLightState (24 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="435" class="named"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="435" class="todo"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="435" class="todo"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="435" class="named"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="435" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="435" class="named"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="435" class="named"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
@@ -2859,7 +2859,7 @@
 <rect width="4.49" height="4.69" x="632.67" y="457.31" class="named"><title>0x00446f70 ShiftItem (55 bytes)</title></rect>
 <rect width="4.79" height="4.40" x="640.17" y="355.36" class="named"><title>0x004773f0 GetRandom (55 bytes)</title></rect>
 <rect width="4.79" height="4.40" x="640.17" y="362.77" class="named"><title>0x00490e80 other_log (55 bytes)</title></rect>
-<rect width="4.79" height="4.40" x="640.17" y="370.17" class="todo"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
+<rect width="4.79" height="4.40" x="640.17" y="370.17" class="named"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
 <rect width="4.79" height="4.32" x="640.17" y="377.57" class="named"><title>0x00426b50 lara_as_hangleft (54 bytes)</title></rect>
 <rect width="4.79" height="4.32" x="640.17" y="384.89" class="named"><title>0x00426bd0 lara_as_hangright (54 bytes)</title></rect>
 <rect width="4.79" height="4.32" x="640.17" y="392.21" class="named"><title>0x0042cc80 lara_as_climbleft (54 bytes)</title></rect>
