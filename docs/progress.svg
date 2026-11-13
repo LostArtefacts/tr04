@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="325.48" height="12" x="0" y="0" class="named"><title>1217 · 78.62%</title></rect>
-<rect width="52.95" height="12" x="325.48" y="0" class="nonmatching"><title>198 · 12.79%</title></rect>
-<rect width="35.57" height="12" x="378.43" y="0" class="todo"><title>133 · 8.59%</title></rect>
+<rect width="53.22" height="12" x="325.48" y="0" class="nonmatching"><title>199 · 12.86%</title></rect>
+<rect width="35.30" height="12" x="378.70" y="0" class="todo"><title>132 · 8.53%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1217</tspan> · <tspan class="nonmatching">198</tspan> · <tspan class="todo">133</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1217</tspan> · <tspan class="nonmatching">199</tspan> · <tspan class="todo">132</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="218.20" height="12" x="0" y="0" class="named"><title>329 KB · 52.71%</title></rect>
-<rect width="147.30" height="12" x="218.20" y="0" class="nonmatching"><title>222 KB · 35.58%</title></rect>
-<rect width="48.50" height="12" x="365.50" y="0" class="todo"><title>73 KB · 11.72%</title></rect>
+<rect width="147.54" height="12" x="218.20" y="0" class="nonmatching"><title>223 KB · 35.64%</title></rect>
+<rect width="48.26" height="12" x="365.74" y="0" class="todo"><title>73 KB · 11.66%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">222 KB</tspan> · <tspan class="todo">73 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">223 KB</tspan> · <tspan class="todo">73 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -626,7 +626,7 @@
 <rect width="12" height="12" x="135" y="165" class="named"><title>0x00438940 TriggerGunSmoke (597 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="165" class="named"><title>0x00438ba0 TriggerShatterSmoke (369 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="165" class="named"><title>0x00438d20 GetFreeBlood (103 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="165" class="todo"><title>0x00438d90 UpdateBlood (362 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="165" class="nonmatching"><title>0x00438d90 UpdateBlood (362 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="165" class="named"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="165" class="named"><title>0x00439060 GetFreeGunshell (131 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="165" class="todo"><title>0x004390f0 TriggerGunShell (588 bytes)</title></rect>
@@ -2101,7 +2101,7 @@
 <rect width="11.92" height="11.74" x="720.18" y="129.48" class="todo"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
 <rect width="11.89" height="11.74" x="735.11" y="129.48" class="named"><title>0x004808e0 do_boot_screen (364 bytes)</title></rect>
 <rect width="11.83" height="11.78" x="429.46" y="144.23" class="named"><title>0x00463180 FullBlockSwitchCollision (363 bytes)</title></rect>
-<rect width="11.79" height="11.78" x="444.29" y="144.23" class="todo"><title>0x00438d90 UpdateBlood (362 bytes)</title></rect>
+<rect width="11.79" height="11.78" x="444.29" y="144.23" class="nonmatching"><title>0x00438d90 UpdateBlood (362 bytes)</title></rect>
 <rect width="11.79" height="11.78" x="459.08" y="144.23" class="named"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
 <rect width="11.79" height="11.78" x="473.88" y="144.23" class="named"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
 <rect width="11.76" height="11.78" x="488.67" y="144.23" class="todo"><title>0x00499c10 Func499c10 (361 bytes)</title></rect>

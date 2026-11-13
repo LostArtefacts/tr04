@@ -449,6 +449,48 @@ sint32 GetFreeBlood(void)
     return min_life_num;
 }
 
+void UpdateBlood(void)
+{
+    BLOOD_STRUCT *bptr;
+    sint32 fade, i;
+
+    bptr = blood;
+    for (i = 0; i < 32; i++, bptr++) {
+        if (bptr->On) {
+            bptr->Life--;
+            if (bptr->Life <= 0) {
+                bptr->On = 0;
+                continue;
+            }
+            if (bptr->sLife - bptr->Life < bptr->ColFadeSpeed) {
+                fade = ((bptr->sLife - bptr->Life) << 16) / bptr->ColFadeSpeed;
+                bptr->Shade = (uint8)(bptr->sShade + ((fade * (bptr->dShade - bptr->sShade)) >> 16));
+            } else {
+                if (bptr->Life < bptr->FadeToBlack) {
+                    fade = ((bptr->Life - bptr->FadeToBlack) << 16) / bptr->FadeToBlack + 0x10000;
+                    bptr->Shade = (uint8)((bptr->dShade * fade) >> 16);
+                    if (bptr->Shade < 8) {
+                        bptr->On = 0;
+                        continue;
+                    }
+                } else
+                    bptr->Shade = bptr->dShade;
+            }
+            bptr->RotAng = (bptr->RotAng + bptr->RotAdd) & 0xFFF;
+            bptr->Yvel += bptr->Gravity;
+            fade = ((bptr->sLife - bptr->Life) << 16) / bptr->sLife;
+            if (bptr->Friction & 0xF) {
+                bptr->Xvel -= bptr->Xvel >> (bptr->Friction & 0xF);
+                bptr->Zvel -= bptr->Zvel >> (bptr->Friction & 0xF);
+            }
+            bptr->x += bptr->Xvel >> 5;
+            bptr->y += bptr->Yvel >> 5;
+            bptr->z += bptr->Zvel >> 5;
+            bptr->Size = (uint8)(bptr->sSize + ((fade * (bptr->dSize - bptr->sSize)) >> 16));
+        }
+    }
+}
+
 void TriggerBlood(sint32 x, sint32 y, sint32 z, sint32 angle, sint32 num)
 {
     BLOOD_STRUCT *bptr;
