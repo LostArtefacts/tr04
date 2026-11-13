@@ -965,6 +965,37 @@ void CreatureJoint(ITEM_INFO *item, sint16 joint, sint16 required)
         creature->joint_rotation[joint] = -JOINT_ARC;
 }
 
+void CreatureFloat(sint16 item_number)
+{
+    ITEM_INFO *item;
+    FLOOR_INFO *floor;
+    sint32 water_level;
+    sint16 room_number;
+
+    item = &items[item_number];
+    item->hit_points = -16384;
+    item->pos.x_rot = 0;
+    water_level = GetWaterHeight(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number);
+    if (item->pos.y_pos > water_level)
+        item->pos.y_pos -= 32;
+    if (item->pos.y_pos < water_level)
+        item->pos.y_pos = water_level;
+    AnimateItem(item);
+    room_number = item->room_number;
+    floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+    item->floor = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+    if (room_number != item->room_number)
+        ItemNewRoom(item_number, room_number);
+    if (item->pos.y_pos <= water_level && item->frame_number == anims[item->anim_number].frame_base) {
+        item->status = ITEM_DEACTIVATED;
+        item->collidable = 0;
+        item->pos.y_pos = water_level;
+        DisableBaddieAI(item_number);
+        RemoveActiveItem(item_number);
+        item->after_death = 1;
+    }
+}
+
 void CreatureUnderwater(ITEM_INFO *item, sint32 depth)
 {
     sint32 water_level, floorheight;
