@@ -393,6 +393,36 @@ void CreatureMood(ITEM_INFO *item, AI_INFO *info, sint32 violent)
     }
 }
 
+sint32 StalkBox(ITEM_INFO *item, ITEM_INFO *enemy, sint16 box_number)
+{
+    BOX_INFO *box;
+    sint32 x, z, xrange, zrange, enemy_quad, box_quad, baddie_quad;
+
+    if (!enemy)
+        return 0;
+    box = &boxes[box_number];
+    z = (((uint32)box->left + (uint32)box->right) << 9) - enemy->pos.z_pos;
+    x = (((uint32)box->top + (uint32)box->bottom) << 9) - enemy->pos.x_pos;
+    xrange = ((uint32)box->bottom - (uint32)box->top + 3) << 10;
+    zrange = ((uint32)box->right - (uint32)box->left + 3) << 10;
+    if (x > xrange || x < -xrange || z > zrange || z < -zrange)
+        return 0;
+    enemy_quad = (enemy->pos.y_rot >> 14) + 2;
+    if (z > 0)
+        box_quad = (x > 0) + 1;
+    else
+        box_quad = x > 0 ? 3 : 0;
+    if (enemy_quad == box_quad)
+        return 0;
+    if (item->pos.z_pos > enemy->pos.z_pos)
+        baddie_quad = (item->pos.x_pos > enemy->pos.x_pos) + 1;
+    else
+        baddie_quad = item->pos.x_pos > enemy->pos.x_pos ? 3 : 0;
+    if (enemy_quad == baddie_quad && abs(enemy_quad - box_quad) == 2)
+        return 0;
+    return 1;
+}
+
 sint32 CalculateTarget(PHD_VECTOR *target, ITEM_INFO *item, LOT_INFO *LOT)
 {
     BOX_INFO *box;
