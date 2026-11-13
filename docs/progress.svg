@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="69.18" height="12" x="336.54" y="0" class="nonmatching"><title>259 · 16.71%</title></rect>
-<rect width="8.28" height="12" x="405.72" y="0" class="todo"><title>31 · 2%</title></rect>
+<rect width="69.45" height="12" x="336.54" y="0" class="nonmatching"><title>260 · 16.77%</title></rect>
+<rect width="8.01" height="12" x="405.99" y="0" class="todo"><title>30 · 1.94%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">259</tspan> · <tspan class="todo">31</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">260</tspan> · <tspan class="todo">30</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.56%</title></rect>
-<rect width="169.86" height="12" x="225.86" y="0" class="nonmatching"><title>257 KB · 41.03%</title></rect>
-<rect width="18.28" height="12" x="395.72" y="0" class="todo"><title>28 KB · 4.42%</title></rect>
+<rect width="170.15" height="12" x="225.86" y="0" class="nonmatching"><title>257 KB · 41.10%</title></rect>
+<rect width="17.99" height="12" x="396.01" y="0" class="todo"><title>27 KB · 4.35%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">257 KB</tspan> · <tspan class="todo">28 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">257 KB</tspan> · <tspan class="todo">27 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1578,7 +1578,7 @@
 <rect width="12" height="12" x="165" y="450" class="nonmatching"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="450" class="nonmatching"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="450" class="nonmatching"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="450" class="todo"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="450" class="nonmatching"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="450" class="todo"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="450" class="todo"><title>0x004997d0 SW_SpanGTAdd (355 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="450" class="todo"><title>0x00499940 SW_SpanGTKey (368 bytes)</title></rect>
@@ -2032,7 +2032,7 @@
 <rect width="12.90" height="13.04" x="608.12" y="113.37" class="nonmatching"><title>0x004654a0 BikeCheckGetOff (439 bytes)</title></rect>
 <rect width="12.85" height="13.04" x="624.03" y="113.37" class="named"><title>0x00404840 TriggerDemigodMissileFlame (437 bytes)</title></rect>
 <rect width="12.85" height="13.04" x="639.87" y="113.37" class="named"><title>0x00462100 UnderwaterSwitchCollision (437 bytes)</title></rect>
-<rect width="12.85" height="13.04" x="655.72" y="113.37" class="todo"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
+<rect width="12.85" height="13.04" x="655.72" y="113.37" class="nonmatching"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
 <rect width="12.79" height="13.04" x="671.57" y="113.37" class="nonmatching"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
 <rect width="12.70" height="13.04" x="687.35" y="113.37" class="named"><title>0x0044e010 DoorControl (432 bytes)</title></rect>
 <rect width="12.67" height="13.04" x="703.05" y="113.37" class="named"><title>0x00413840 FloorTrapDoorCollision (431 bytes)</title></rect>
