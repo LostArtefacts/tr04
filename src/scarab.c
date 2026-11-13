@@ -196,6 +196,77 @@ void TriggerScarab(sint16 item_number)
     }
 }
 
+void UpdateScarabs(void)
+{
+    SCARAB_STRUCT *fx;
+    FLOOR_INFO *floor;
+    sint32 h, dx, dy, dz, oldx, oldy, oldz, i;
+    sint16 angle;
+
+    fx = Scarabs;
+    for (i = 0; i < 128; i++, fx++) {
+        if (fx->On) {
+            oldx = fx->pos.x_pos;
+            oldy = fx->pos.y_pos;
+            oldz = fx->pos.z_pos;
+            fx->pos.x_pos += (rcossin_tbl[(fx->pos.y_rot >> 3) & 0x1FFE] << 2) * fx->speed >> 14;
+            fx->pos.y_pos += fx->fallspeed;
+            fx->pos.z_pos += (rcossin_tbl[((fx->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * fx->speed >> 14;
+            fx->fallspeed += 6;
+            dy = lara_item->pos.y_pos - fx->pos.y_pos;
+            dx = lara_item->pos.x_pos - fx->pos.x_pos;
+            dz = lara_item->pos.z_pos - fx->pos.z_pos;
+            angle = (sint16)phd_atan(dz, dx) - fx->pos.y_rot;
+            if (abs(dz) < 85 && abs(dy) < 85 && abs(dx) < 85) {
+                lara_item->hit_points--;
+                lara_item->hit_status = 1;
+            }
+            if (fx->flags) {
+                if (abs(dx) + abs(dz) > 1024) {
+                    if (fx->speed < (i & 0x1F) + 24)
+                        fx->speed++;
+                    if (abs(angle) < 4096)
+                        fx->pos.y_rot += (sint16)((wibble - i) << 3);
+                    else if (angle < 0)
+                        fx->pos.y_rot -= 1024;
+                    else
+                        fx->pos.y_rot += 1024;
+                } else {
+                    if (fx->speed & 1)
+                        fx->pos.y_rot += 512;
+                    else
+                        fx->pos.y_rot -= 512;
+                    fx->speed = 48 - (lara.LitTorch << 6) - (abs(angle) >> 7);
+                    if (fx->speed < -16)
+                        fx->speed = i & 0xF;
+                }
+            }
+            floor = GetFloor(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, &fx->room_number);
+            h = GetHeight(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
+            if (h < fx->pos.y_pos - 1280 || h == NO_HEIGHT) {
+                if (angle > 0)
+                    fx->pos.y_rot += 0x4000;
+                else
+                    fx->pos.y_rot -= 0x4000;
+                fx->pos.x_pos = oldx;
+                fx->pos.y_pos = oldy;
+                fx->pos.z_pos = oldz;
+                fx->fallspeed = 0;
+            } else if (fx->pos.y_pos > h) {
+                fx->pos.y_pos = h;
+                fx->fallspeed = 0;
+                fx->flags = 1;
+            }
+            if (fx->fallspeed < 500)
+                fx->pos.x_rot = -64 * fx->fallspeed;
+            else {
+                fx->On = 0;
+                next_scarab = 0;
+            }
+        }
+    }
+}
+
 void DrawScarabs(void)
 {
     SCARAB_STRUCT *fx;

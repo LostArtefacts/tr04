@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="327.08" height="12" x="0" y="0" class="named"><title>1223 · 79.01%</title></rect>
-<rect width="58.57" height="12" x="327.08" y="0" class="nonmatching"><title>219 · 14.15%</title></rect>
-<rect width="28.35" height="12" x="385.65" y="0" class="todo"><title>106 · 6.85%</title></rect>
+<rect width="327.35" height="12" x="0" y="0" class="named"><title>1224 · 79.07%</title></rect>
+<rect width="58.57" height="12" x="327.35" y="0" class="nonmatching"><title>219 · 14.15%</title></rect>
+<rect width="28.08" height="12" x="385.92" y="0" class="todo"><title>105 · 6.78%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">79.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1223</tspan> · <tspan class="nonmatching">219</tspan> · <tspan class="todo">106</tspan></text>
+<text text-anchor="end" x="594" y="7.50">79.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1224</tspan> · <tspan class="nonmatching">219</tspan> · <tspan class="todo">105</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="219.90" height="12" x="0" y="0" class="named"><title>332 KB · 53.12%</title></rect>
-<rect width="157.25" height="12" x="219.90" y="0" class="nonmatching"><title>237 KB · 37.98%</title></rect>
-<rect width="36.84" height="12" x="377.16" y="0" class="todo"><title>56 KB · 8.90%</title></rect>
+<rect width="220.31" height="12" x="0" y="0" class="named"><title>333 KB · 53.21%</title></rect>
+<rect width="157.25" height="12" x="220.31" y="0" class="nonmatching"><title>237 KB · 37.98%</title></rect>
+<rect width="36.44" height="12" x="377.56" y="0" class="todo"><title>55 KB · 8.80%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="24.50">53.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">332 KB</tspan> · <tspan class="nonmatching">237 KB</tspan> · <tspan class="todo">56 KB</tspan></text>
+<text text-anchor="end" x="594" y="24.50">53.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">333 KB</tspan> · <tspan class="nonmatching">237 KB</tspan> · <tspan class="todo">55 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -152,7 +152,7 @@
 <rect width="12" height="12" x="525" y="15" class="named"><title>0x0040e250 GetFreeScarab (74 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="15" class="named"><title>0x0040e2a0 ClearScarabs (40 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="15" class="named"><title>0x0040e2d0 TriggerScarab (240 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="15" class="todo"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="15" class="named"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="15" class="named"><title>0x0040e630 DrawScarabs (126 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="15" class="named"><title>0x0040e6b0 InitialiseScarabGenerator (208 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="15" class="named"><title>0x0040e780 InitialiseScorpion (120 bytes)</title></rect>
@@ -1894,7 +1894,7 @@
 <rect width="15.45" height="15.27" x="458.78" y="61.54" class="todo"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
 <rect width="15.43" height="15.27" x="477.23" y="61.54" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>
 <rect width="15.40" height="15.27" x="495.66" y="61.54" class="nonmatching"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
-<rect width="15.38" height="15.27" x="514.06" y="61.54" class="todo"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
+<rect width="15.38" height="15.27" x="514.06" y="61.54" class="named"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
 <rect width="15.35" height="15.27" x="532.43" y="61.54" class="named"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
 <rect width="15.35" height="15.27" x="550.78" y="61.54" class="todo"><title>0x0049a950 Func49a950 (611 bytes)</title></rect>
 <rect width="15.25" height="15.27" x="569.13" y="61.54" class="nonmatching"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
