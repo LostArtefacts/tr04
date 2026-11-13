@@ -2592,11 +2592,13 @@ address,size,name,symbol
 0x00753910,4,DestVB,_DestVB
 0x00753918,64,D3DMProjection,_D3DMProjection
 0x00753958,4,nClippedPolys,_nClippedPolys
+0x0075395c,4,WinFrameRate_time,_?time@?1??WinFrameRate@@9@9
 0x00753960,4,GameUnk753960,_GameUnk753960
 0x00753964,4,nPolys,_nPolys
 0x00753968,4,Var753968,_Var753968
 0x0075396c,4,Var75396c,_Var75396c
 0x00753970,4,Var753970,_Var753970
+0x00753974,1,WinFrameRate_first_time,_?first_time@?1??WinFrameRate@@9@9
 0x0075397c,4,clipflags,_clipflags
 0x00753980,248,App,_App
 0x00753a78,4,GameUnk753a78,_GameUnk753a78
@@ -2608,6 +2610,8 @@ address,size,name,symbol
 0x00753be0,64,D3DMWorld,_D3DMWorld
 0x00753c20,4,GameUnk753c20,_GameUnk753c20
 0x00753c24,1,Var753c24,_Var753c24
+0x00753c28,4,WinFrameRate_counter,_?counter@?1??WinFrameRate@@9@9
+0x00753c2c,4,WinFrameRate_fps,_?fps@?1??WinFrameRate@@9@9
 0x00753c30,4,phd_top,_phd_top
 0x00753c34,4,f_a,_f_a
 0x00753c38,4,f_b,_f_b

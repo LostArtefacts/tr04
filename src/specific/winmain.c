@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <process.h>
+#include <time.h>
 
 #include "winmain.h"
 #include "../text.h"
@@ -437,6 +438,31 @@ void WinProcessCommandLine(char *cmd)
             }
         }
     }
+}
+
+float WinFrameRate(void)
+{
+    static char first_time;
+    static sint32 time;
+    static sint32 counter;
+    static float fps;
+    double t;
+    sint32 now;
+
+    if (!(first_time & 1)) {
+        first_time |= 1;
+        time = clock();
+    }
+    counter++;
+    if (counter == 10) {
+        now = clock();
+        t = (double)(now - time) * 0.001;
+        time = now;
+        fps = (float)(counter / t);
+        counter = 0;
+    }
+    App.fps = fps;
+    return fps;
 }
 
 void WinDisplayString(sint32 x, sint32 y, char *string, ...)

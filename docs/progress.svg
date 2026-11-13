@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="326.55" height="12" x="0" y="0" class="named"><title>1221 · 78.88%</title></rect>
-<rect width="55.90" height="12" x="326.55" y="0" class="nonmatching"><title>209 · 13.50%</title></rect>
-<rect width="31.56" height="12" x="382.44" y="0" class="todo"><title>118 · 7.62%</title></rect>
+<rect width="326.81" height="12" x="0" y="0" class="named"><title>1222 · 78.94%</title></rect>
+<rect width="55.90" height="12" x="326.81" y="0" class="nonmatching"><title>209 · 13.50%</title></rect>
+<rect width="31.29" height="12" x="382.71" y="0" class="todo"><title>117 · 7.56%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1221</tspan> · <tspan class="nonmatching">209</tspan> · <tspan class="todo">118</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1222</tspan> · <tspan class="nonmatching">209</tspan> · <tspan class="todo">117</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="219.46" height="12" x="0" y="0" class="named"><title>331 KB · 53.01%</title></rect>
-<rect width="150.73" height="12" x="219.46" y="0" class="nonmatching"><title>228 KB · 36.41%</title></rect>
-<rect width="43.81" height="12" x="370.19" y="0" class="todo"><title>66 KB · 10.58%</title></rect>
+<rect width="219.55" height="12" x="0" y="0" class="named"><title>331 KB · 53.03%</title></rect>
+<rect width="150.73" height="12" x="219.55" y="0" class="nonmatching"><title>228 KB · 36.41%</title></rect>
+<rect width="43.72" height="12" x="370.28" y="0" class="todo"><title>66 KB · 10.56%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">331 KB</tspan> · <tspan class="nonmatching">228 KB</tspan> · <tspan class="todo">66 KB</tspan></text>
@@ -1449,7 +1449,7 @@
 <rect width="12" height="12" x="480" y="405" class="nonmatching"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="405" class="named"><title>0x0048f6a0 WinRunCheck (87 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="405" class="nonmatching"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="405" class="todo"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="405" class="named"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="405" class="named"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="405" class="named"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="405" class="named"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
@@ -2552,7 +2552,7 @@
 <rect width="6.89" height="7.13" x="681.23" y="266.47" class="named"><title>0x00422400 LaraDeflectEdge (128 bytes)</title></rect>
 <rect width="6.89" height="7.13" x="691.12" y="266.47" class="named"><title>0x00435b70 SetupRipple (128 bytes)</title></rect>
 <rect width="6.83" height="7.13" x="701" y="266.47" class="named"><title>0x004168d0 ControlChain (127 bytes)</title></rect>
-<rect width="6.83" height="7.13" x="710.84" y="266.47" class="todo"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
+<rect width="6.83" height="7.13" x="710.84" y="266.47" class="named"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
 <rect width="6.78" height="7.13" x="720.67" y="266.47" class="named"><title>0x00403c10 DrawLocusts (126 bytes)</title></rect>
 <rect width="6.78" height="7.13" x="730.44" y="266.47" class="named"><title>0x0040e630 DrawScarabs (126 bytes)</title></rect>
 <rect width="6.78" height="7.13" x="740.22" y="266.47" class="named"><title>0x0041fdd0 InitialiseHair (126 bytes)</title></rect>
