@@ -46,22 +46,22 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="258.08" height="12" x="0" y="0" class="named"><title>1189 · 76.81%</title></rect>
-<rect width="0.65" height="12" x="258.08" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="28.22" height="12" x="258.73" y="0" class="nonmatching"><title>130 · 8.40%</title></rect>
-<rect width="49.05" height="12" x="286.95" y="0" class="todo"><title>226 · 14.60%</title></rect>
+<rect width="258.29" height="12" x="0" y="0" class="named"><title>1190 · 76.87%</title></rect>
+<rect width="0.65" height="12" x="258.29" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
+<rect width="28.22" height="12" x="258.95" y="0" class="nonmatching"><title>130 · 8.40%</title></rect>
+<rect width="48.84" height="12" x="287.16" y="0" class="todo"><title>225 · 14.53%</title></rect>
 </g>
-<text text-anchor="end" x="516" y="7.50">77.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1189</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">130</tspan> · <tspan class="todo">226</tspan></text>
+<text text-anchor="end" x="516" y="7.50">77.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1190</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">130</tspan> · <tspan class="todo">225</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="166.92" height="12" x="0" y="0" class="named"><title>310 KB · 49.68%</title></rect>
-<rect width="0.13" height="12" x="166.92" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="85.23" height="12" x="167.05" y="0" class="nonmatching"><title>159 KB · 25.37%</title></rect>
-<rect width="83.72" height="12" x="252.28" y="0" class="todo"><title>156 KB · 24.92%</title></rect>
+<rect width="167.36" height="12" x="0" y="0" class="named"><title>311 KB · 49.81%</title></rect>
+<rect width="0.13" height="12" x="167.36" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
+<rect width="85.23" height="12" x="167.49" y="0" class="nonmatching"><title>159 KB · 25.37%</title></rect>
+<rect width="83.29" height="12" x="252.71" y="0" class="todo"><title>155 KB · 24.79%</title></rect>
 </g>
-<text text-anchor="end" x="516" y="24.50">49.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">310 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">159 KB</tspan> · <tspan class="todo">156 KB</tspan></text>
+<text text-anchor="end" x="516" y="24.50">49.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">311 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">159 KB</tspan> · <tspan class="todo">155 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1341,7 +1341,7 @@
 <rect width="12" height="12" x="330" y="375" class="todo"><title>0x0047d900 PrelightVerts (340 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="375" class="todo"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="375" class="todo"><title>0x0047e8b0 phd_PutPolygonsPickup (3437 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="375" class="todo"><title>0x0047f620 phd_PutPolygonSkyMesh (808 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="375" class="named"><title>0x0047f620 phd_PutPolygonSkyMesh (808 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="375" class="named"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="375" class="todo"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="375" class="named"><title>0x0047fa10 S_OutputPolyList (656 bytes)</title></rect>
@@ -1825,7 +1825,7 @@
 <rect width="17.37" height="17.98" x="729.63" y="21.42" class="named"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
 <rect width="17.54" height="17.77" x="307.65" y="42.40" class="named"><title>0x0041f7c0 DoFlameTorch (812 bytes)</title></rect>
 <rect width="17.54" height="17.77" x="307.65" y="63.16" class="named"><title>0x00434440 TriggerRicochetSpark (812 bytes)</title></rect>
-<rect width="17.54" height="17.68" x="307.65" y="83.93" class="todo"><title>0x0047f620 phd_PutPolygonSkyMesh (808 bytes)</title></rect>
+<rect width="17.54" height="17.68" x="307.65" y="83.93" class="named"><title>0x0047f620 phd_PutPolygonSkyMesh (808 bytes)</title></rect>
 <rect width="17.54" height="17.55" x="307.65" y="104.61" class="named"><title>0x0042b100 AnimateShotgun (802 bytes)</title></rect>
 <rect width="17.54" height="17.44" x="307.65" y="125.15" class="named"><title>0x00402a70 BatControl (797 bytes)</title></rect>
 <rect width="17.54" height="17.33" x="307.65" y="145.59" class="nonmatching"><title>0x00409d20 TestBlockPull (792 bytes)</title></rect>

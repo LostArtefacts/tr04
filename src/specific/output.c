@@ -55,6 +55,78 @@ void nullsub_9(void)
 {
 }
 
+void phd_PutPolygonSkyMesh(sint16 *objptr, sint32 clipstatus)
+{
+    D3DTLVERTEX *v;
+    TEXTURESTRUCT *pTex;
+    MESH_DATA *mesh;
+    sint16 *quad;
+    sint16 *tri;
+    sint32 i;
+    uint16 drawbak;
+
+    SetD3DViewMatrix();
+    mesh = (MESH_DATA *)objptr;
+    DXAttempt(IDirect3DVertexBuffer_ProcessVertices(DestVB, D3DVOP_TRANSFORM, 0, mesh->nVerts, mesh->SourceVB, 0, App.dx._lpD3DDevice, 0));
+    IDirect3DVertexBuffer_Lock(DestVB, DDLOCK_READONLY, (void **)&v, 0);
+    clip_left = f_left;
+    clip_right = f_right;
+    clip_bottom = f_bottom;
+    clip_top = f_top;
+    ProjectVerts(mesh->nVerts, v, clipflags);
+    quad = mesh->gt4;
+    for (i = 0; i < mesh->ngt4; i++, quad += 6) {
+        pTex = &textinfo[quad[4] & 0x7FFF];
+        drawbak = pTex->drawtype;
+        if (quad[5] & 1) {
+            if (gfLevelFlags & GF_HORIZONCOLADD)
+                pTex->drawtype = 2;
+            else if (App.dx.lpZBuffer) {
+                v[quad[0]].color = 0;
+                v[quad[1]].color = 0;
+                v[quad[2]].color = 0xFF000000;
+                v[quad[3]].color = 0xFF000000;
+                pTex->drawtype = 3;
+            } else {
+                v[quad[0]].color = 0;
+                v[quad[1]].color = 0;
+                v[quad[2]].color = 0;
+                v[quad[3]].color = 0;
+                pTex->drawtype = 0;
+            }
+        } else
+            pTex->drawtype = 4;
+        if (gfLevelFlags & GF_TRAIN || gfCurrentLevel == 5 || gfCurrentLevel == 6) {
+            if (i < 16) {
+                v[quad[0]].color = 0xFFFFFFFF;
+                v[quad[1]].color = 0xFFFFFFFF;
+                v[quad[2]].color = 0xFFFFFFFF;
+                v[quad[3]].color = 0xFFFFFFFF;
+                v[quad[0]].specular = 0x7F000000;
+                v[quad[1]].specular = 0x7F000000;
+                v[quad[2]].specular = 0;
+                v[quad[3]].specular = 0;
+            } else {
+                v[quad[0]].color = 0xFFFFFFFF;
+                v[quad[1]].color = 0xFFFFFFFF;
+                v[quad[2]].color = 0xFFFFFFFF;
+                v[quad[3]].color = 0xFFFFFFFF;
+            }
+        }
+        AddQuadSorted(v, quad[0], quad[1], quad[2], quad[3], pTex, 0);
+        pTex->drawtype = drawbak;
+    }
+    tri = mesh->gt3;
+    for (i = 0; i < mesh->ngt3; i++, tri += 5) {
+        pTex = &textinfo[tri[3] & 0x7FFF];
+        drawbak = pTex->drawtype;
+        pTex->drawtype = 4;
+        AddTriSorted(v, tri[0], tri[1], tri[2], pTex, 0);
+        pTex->drawtype = drawbak;
+    }
+    IDirect3DVertexBuffer_Unlock(DestVB);
+}
+
 void _InsertRoom(ROOM_INFO *r)
 {
     SetD3DViewMatrix();
