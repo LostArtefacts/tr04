@@ -104,15 +104,9 @@ __declspec(naked) void __fastcall SW_WaitWhileInScene(volatile sint32 *flag)
     }
 }
 
-__declspec(naked) void SW_SleepTick(void)
+void SW_SleepTick(void)
 {
-    __asm {
-        call SW_GetKernelModule
-        call SW_GetSleepProc
-        push 10
-        call eax
-        ret
-    }
+    ((void (WINAPI *)(DWORD))SW_GetSleepProc(SW_GetKernelModule()))(10);
 }
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)

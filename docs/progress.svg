@@ -46,16 +46,16 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="340.01" height="12" x="0" y="0" class="named"><title>1273 · 82.13%</title></rect>
-<rect width="61.97" height="12" x="340.01" y="0" class="nonmatching"><title>232 · 14.97%</title></rect>
+<rect width="339.75" height="12" x="0" y="0" class="named"><title>1272 · 82.06%</title></rect>
+<rect width="62.23" height="12" x="339.75" y="0" class="nonmatching"><title>233 · 15.03%</title></rect>
 <rect width="12.02" height="12" x="401.98" y="0" class="todo"><title>45 · 2.90%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">82.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1273</tspan> · <tspan class="nonmatching">232</tspan> · <tspan class="todo">45</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1272</tspan> · <tspan class="nonmatching">233</tspan> · <tspan class="todo">45</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="227.13" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
-<rect width="166.82" height="12" x="227.13" y="0" class="nonmatching"><title>252 KB · 40.30%</title></rect>
+<rect width="227.12" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
+<rect width="166.83" height="12" x="227.12" y="0" class="nonmatching"><title>252 KB · 40.30%</title></rect>
 <rect width="20.05" height="12" x="393.95" y="0" class="todo"><title>30 KB · 4.84%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.9%</text>
@@ -1522,7 +1522,7 @@
 <rect width="12" height="12" x="75" y="435" class="named"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="435" class="named"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="435" class="named"><title>0x00493a50 DXToggleFullScreen (417 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="435" class="named"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="435" class="nonmatching"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="435" class="nonmatching"><title>0x00493c00 DXClose (621 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="435" class="named"><title>0x00493e70 DXCreateViewport (238 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="435" class="named"><title>0x00493f60 DXShowFrame (201 bytes)</title></rect>
@@ -3103,7 +3103,7 @@
 <rect width="2.57" height="2.38" x="733.44" y="420.78" class="named"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
 <rect width="2.57" height="2.38" x="739.01" y="420.78" class="named"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
 <rect width="2.42" height="2.38" x="744.58" y="420.78" class="named"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
-<rect width="2.05" height="2.77" x="711.14" y="426.16" class="named"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
+<rect width="2.05" height="2.77" x="711.14" y="426.16" class="nonmatching"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="431.93" class="named"><title>0x00427060 lara_as_null (14 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="437.53" class="named"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="443.13" class="named"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
