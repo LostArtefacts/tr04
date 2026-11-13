@@ -294,7 +294,7 @@ void VoncroyControl(sint16 item_number)
     FLOOR_INFO *floor;
     static AI_INFO VonCroyAI;
     static AI_INFO VonCroyLaraAI;
-    sint32 Xoffset, Zoffset, x, y, z, nearheight, midheight, farheight, dx, dz, dist, max_dist, h, c, i;
+    sint32 Xoffset, Zoffset, x, y, z, nearheight, midheight, farheight, dx, dz, lara_dx, dist, max_dist, h, c, i;
     sint16 angle, tilt, torso_x, torso_y, head_y, room_number, jump_ahead, long_jump_ahead, ifl3;
 
     if (!CreatureActive(item_number))
@@ -379,23 +379,23 @@ void VoncroyControl(sint16 item_number)
         VonCroyLaraAI = VonCroyAI;
     else {
         dz = lara_item->pos.z_pos - item->pos.z_pos;
-        dx = lara_item->pos.x_pos - item->pos.x_pos;
-        VonCroyLaraAI.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+        lara_dx = lara_item->pos.x_pos - item->pos.x_pos;
+        VonCroyLaraAI.angle = (sint16)(phd_atan(dz, lara_dx) - item->pos.y_rot);
         if (VonCroyLaraAI.angle > -0x4000 && VonCroyLaraAI.angle < 0x4000)
             VonCroyLaraAI.ahead = 1;
         else
             VonCroyLaraAI.ahead = 0;
         VonCroyLaraAI.enemy_facing = VonCroyLaraAI.angle - lara_item->pos.y_rot + 0x8000;
-        if (dz > 32000 || dz < -32000 || dx > 32000 || dx < -32000)
+        if (dz > 32000 || dz < -32000 || lara_dx > 32000 || lara_dx < -32000)
             VonCroyLaraAI.distance = 0x7FFFFFFF;
         else
-            VonCroyLaraAI.distance = SQUARE(dx) + SQUARE(dz);
-        dx = abs(dx);
+            VonCroyLaraAI.distance = SQUARE(dz) + SQUARE(lara_dx);
+        lara_dx = abs(lara_dx);
         dz = abs(dz);
-        if (dx > dz)
-            VonCroyLaraAI.x_angle = (sint16)phd_atan(dx + (dz >> 1), item->pos.y_pos - lara_item->pos.y_pos);
+        if (lara_dx > dz)
+            VonCroyLaraAI.x_angle = (sint16)phd_atan(lara_dx + (dz >> 1), item->pos.y_pos - lara_item->pos.y_pos);
         else
-            VonCroyLaraAI.x_angle = (sint16)phd_atan(dz + (dx >> 1), item->pos.y_pos - lara_item->pos.y_pos);
+            VonCroyLaraAI.x_angle = (sint16)phd_atan(dz + (lara_dx >> 1), item->pos.y_pos - lara_item->pos.y_pos);
     }
     if (VonCroyLaraAI.angle > -6144 && VonCroyLaraAI.angle < 6144 && VonCroyLaraAI.distance < 0x100000)
         VonCroyLaraAI.bite = 1;
@@ -419,8 +419,7 @@ void VoncroyControl(sint16 item_number)
         lara.locationPad = (sint8)item->item_flags[3];
         item->item_flags[0] = 1;
     } else if (lara.locationPad == 43 && (item->item_flags[3] == 43 || item->item_flags[3] == 53)) {
-        lara.locationPad = (sint8)item->item_flags[3];
-        lara.location = (sint8)item->item_flags[3];
+        lara.location = lara.locationPad = (sint8)item->item_flags[3];
     } else if (lara.location == 43 && (item->item_flags[3] == 44 || item->item_flags[3] == 54))
         lara.location = (sint8)item->item_flags[3];
     if (!VonCroyCutFlags[item->item_flags[3]] && ((VonCroy->reached_goal && item->item_flags[3] == lara.locationPad && VonCroyCutTracks[item->item_flags[3]] != -1) || item->trigger_flags > 0 || (lara.locationPad >= item->item_flags[3] && !VonCroyCutFlags[lara.locationPad] && VonCroyCutTracks[lara.locationPad] != -1))) {
@@ -455,7 +454,7 @@ void VoncroyControl(sint16 item_number)
                 item->item_flags[2] = 0;
                 if (!oEnemy->flags) {
                     ifl3 = 1;
-                    goto reset;
+                    goto process_flags;
                 }
             }
         } else if (lara.location < item->item_flags[3] && VonCroy->reached_goal) {
@@ -490,7 +489,7 @@ void VoncroyControl(sint16 item_number)
                     item->frame_number = anims[item->anim_number].frame_base;
                     item->pos = oEnemy->pos;
                     ifl3 = 1;
-                    goto reset;
+                    goto process_flags;
                 case 4:
                     item->current_anim_state = 26;
                     item->anim_number = objects[VON_CROY].anim_index + 36;
@@ -498,7 +497,7 @@ void VoncroyControl(sint16 item_number)
                     VonCroy->LOT.is_jumping = 1;
                     item->pos = oEnemy->pos;
                     ifl3 = 1;
-                    goto reset;
+                    goto process_flags;
                 case 12:
                     VonCroy->maximum_turn = 0;
                     item->anim_number = objects[VON_CROY].anim_index + 22;
@@ -511,36 +510,36 @@ void VoncroyControl(sint16 item_number)
                     item->pos = oEnemy->pos;
                     VonCroy->LOT.is_jumping = 1;
                     ifl3 = 1;
-                    goto reset;
+                    goto process_flags;
                 case 34:
                     if (lara.location > item->item_flags[3]) {
                         ifl3 = 2;
-                        goto reset;
+                        goto process_flags;
                     }
                     item->goal_anim_state = 32;
                     break;
                 case 36:
                     if (lara.location > item->item_flags[3]) {
                         ifl3 = 1;
-                        goto reset;
+                        goto process_flags;
                     }
                     item->goal_anim_state = 1;
                     break;
                 case 255:
                     ifl3 = 1;
-                    goto reset;
+                    goto process_flags;
                 case 40:
-                    if (item->item_flags[2] == 6)
-                        item->goal_anim_state = 3;
-                    else {
+                    if (item->item_flags[2] != 6) {
                         item->goal_anim_state = 34;
                         item->pos = oEnemy->pos;
-                    }
+                    } else
+                        item->goal_anim_state = 3;
                     break;
                 case 0:
                 case 32:
                 case 48:
-                    goto trig;
+                    ifl3 = -1;
+                    goto process_flags;
                 }
             } else if (oEnemy && oEnemy->flags && VonCroyLaraAI.distance >= 0x900000) {
                 item->goal_anim_state = 1;
@@ -551,15 +550,18 @@ void VoncroyControl(sint16 item_number)
                     item->goal_anim_state = 22;
                 else
                     item->item_flags[2] = 1;
-            } else if (item->item_flags[2] != 1) {
+            } else if (item->item_flags[2] == 1) {
+                if (!(GetRandomControl() & 0xF)) {
+                    if (VonCroyLaraAI.distance < 0x900000)
+                        item->goal_anim_state = 14;
+                    else
+                        item->goal_anim_state = 13;
+                } else
+                    item->item_flags[2] = 0;
+            } else {
                 ifl3 = 1;
-                goto reset;
-            } else if (GetRandomControl() & 0xF)
-                item->item_flags[2] = 0;
-            else if (VonCroyLaraAI.distance < 0x900000)
-                item->goal_anim_state = 14;
-            else
-                item->goal_anim_state = 13;
+                goto process_flags;
+            }
         } else {
             if (VonCroyLaraAI.bite)
                 item->goal_anim_state = 1;
@@ -568,10 +570,10 @@ void VoncroyControl(sint16 item_number)
                 h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
                 c = GetCeiling(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
                 if (c == h - 1536) {
-                    if (item->meshswap_meshbits & 0x40080)
-                        item->goal_anim_state = 4;
-                    else
+                    if (!(item->meshswap_meshbits & 0x40080))
                         item->goal_anim_state = 6;
+                    else
+                        item->goal_anim_state = 4;
                 } else
                     item->goal_anim_state = 2;
             } else if (target && VonCroyAI.distance < 0x900000 && item->meshswap_meshbits & 0x40080) {
@@ -581,7 +583,7 @@ void VoncroyControl(sint16 item_number)
                     item->goal_anim_state = 31;
                 else if (oEnemy->hit_points > 0 && VonCroyAI.ahead && ABS(oEnemy->pos.y_pos - item->pos.y_pos + 512) < 512)
                     item->goal_anim_state = 21;
-            } else if ((VonCroyAI.distance > 0x64000 && VonCroyLaraAI.distance < 0x1900000) || lara.location < item->item_flags[3])
+            } else if ((VonCroyAI.distance > 0x64000 && VonCroyLaraAI.distance < 0x1900000) || lara.location >= item->item_flags[3])
                 item->goal_anim_state = 2;
         }
         break;
@@ -600,8 +602,10 @@ void VoncroyControl(sint16 item_number)
         else if (VonCroy->monkey_ahead)
             item->goal_anim_state = 1;
         else if (VonCroy->reached_goal) {
-            if (oEnemy->flags == 32)
-                goto trig;
+            if (oEnemy->flags == 32) {
+                ifl3 = -1;
+                goto process_flags;
+            }
             item->goal_anim_state = 1;
         } else if (target && (VonCroyAI.distance < 0x200000 || (!(item->meshswap_meshbits & 0x40080) && VonCroyAI.distance < 0x900000)))
             item->goal_anim_state = 1;
@@ -626,8 +630,10 @@ void VoncroyControl(sint16 item_number)
         else if (VonCroy->monkey_ahead)
             item->goal_anim_state = 1;
         else if (VonCroy->reached_goal) {
-            if (oEnemy->flags == 32)
-                goto trig;
+            if (oEnemy->flags == 32) {
+                ifl3 = -1;
+                goto process_flags;
+            }
             if (VonCroyAI.distance < 512) {
                 if (oEnemy->flags == 40) {
                     VonCroy->maximum_turn = 0;
@@ -649,7 +655,8 @@ void VoncroyControl(sint16 item_number)
         CreatureYRot(&item->pos, VonCroyAI.angle, 1092);
         if (oEnemy && oEnemy->flags == 6 && item->frame_number > anims[item->anim_number].frame_base + 21) {
             VonCroy->flags = 1;
-            goto trig;
+            ifl3 = -1;
+            goto process_flags;
         }
         if (!VonCroy->flags && oEnemy && item->frame_number > anims[item->anim_number].frame_base + 15 && item->frame_number < anims[item->anim_number].frame_base + 26 && ABS(oEnemy->pos.x_pos - item->pos.x_pos) < 512 && ABS(oEnemy->pos.y_pos - item->pos.y_pos) <= 512 && ABS(oEnemy->pos.z_pos - item->pos.z_pos) < 512) {
             oEnemy->hit_points -= 20;
@@ -694,12 +701,12 @@ void VoncroyControl(sint16 item_number)
         if (item->anim_number == objects[VON_CROY].anim_index + 47) {
             if (item->frame_number == anims[item->anim_number].frame_base) {
                 ifl3 = 1;
-                goto reset;
+                goto process_flags;
             }
         } else if (!(GetRandomControl() & 0x1F)) {
             item->goal_anim_state = 1;
             ifl3 = 1;
-            goto reset;
+            goto process_flags;
         }
         break;
     case 27:
@@ -708,7 +715,7 @@ void VoncroyControl(sint16 item_number)
         if (VonCroy->reached_goal) {
             item->goal_anim_state = 30;
             ifl3 = 1;
-            goto reset;
+            goto process_flags;
         }
         item->goal_anim_state = 28;
         break;
@@ -733,18 +740,6 @@ void VoncroyControl(sint16 item_number)
         item->goal_anim_state = 2;
         item->required_anim_state = 3;
         item->item_flags[2] = 0;
-        if (ifl3 == -1) {
-        trig:
-            TestTriggersAtXYZ(VonCroy->ai_target.pos.x_pos, VonCroy->ai_target.pos.y_pos, VonCroy->ai_target.pos.z_pos, VonCroy->ai_target.room_number, 1, 0);
-            ifl3 = 1;
-        }
-    reset:
-        if (ifl3) {
-            VonCroy->reached_goal = 0;
-            VonCroy->enemy = NULL;
-            item->item_flags[3] += ifl3;
-            item->ai_bits = FOLLOW;
-        }
         break;
     case 4:
         VonCroy->maximum_turn = 0;
@@ -772,22 +767,26 @@ void VoncroyControl(sint16 item_number)
     case 20:
         if (item->frame_number == anims[item->anim_number].frame_base)
             item->pos = oEnemy->pos;
-        else if (item->frame_number == anims[item->anim_number].frame_base + 120)
-            goto trig;
+        else if (item->frame_number == anims[item->anim_number].frame_base + 120) {
+            ifl3 = -1;
+            goto process_flags;
+        }
         break;
     case 7:
         if (item->frame_number == anims[item->anim_number].frame_base) {
             item->pos = oEnemy->pos;
-            if (item->item_flags[3] == 6) {
-                VonCroy->maximum_turn = 0;
-                item->anim_number = objects[VON_CROY].anim_index + 22;
-                item->frame_number = anims[item->anim_number].frame_base;
-                item->current_anim_state = 15;
-                item->goal_anim_state = 16;
-                VonCroy->LOT.is_jumping = 1;
+            if (item->item_flags[3] != 6) {
+                ifl3 = 1;
+                goto process_flags;
             }
+            VonCroy->maximum_turn = 0;
+            item->anim_number = objects[VON_CROY].anim_index + 22;
+            item->frame_number = anims[item->anim_number].frame_base;
+            item->current_anim_state = 15;
+            item->goal_anim_state = 16;
+            VonCroy->LOT.is_jumping = 1;
             ifl3 = 1;
-            goto reset;
+            goto process_flags;
         }
         break;
     case 22:
@@ -803,6 +802,17 @@ void VoncroyControl(sint16 item_number)
         VonCroy->maximum_turn = 0;
         MoveCreature3DPos(&item->pos, &oEnemy->pos, 15, oEnemy->pos.y_rot - item->pos.y_rot, 512);
         break;
+    }
+process_flags:
+    if (ifl3 == -1) {
+        TestTriggersAtXYZ(VonCroy->ai_target.pos.x_pos, VonCroy->ai_target.pos.y_pos, VonCroy->ai_target.pos.z_pos, VonCroy->ai_target.room_number, 1, 0);
+        ifl3 = 1;
+    }
+    if (ifl3) {
+        VonCroy->reached_goal = 0;
+        VonCroy->enemy = NULL;
+        item->ai_bits = FOLLOW;
+        item->item_flags[3] += ifl3;
     }
     CreatureTilt(item, tilt);
     CreatureJoint(item, 0, torso_y);
