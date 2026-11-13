@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="74.25" height="12" x="336.54" y="0" class="nonmatching"><title>278 · 17.94%</title></rect>
-<rect width="3.21" height="12" x="410.79" y="0" class="todo"><title>12 · 0.77%</title></rect>
+<rect width="74.52" height="12" x="336.54" y="0" class="nonmatching"><title>279 · 18%</title></rect>
+<rect width="2.94" height="12" x="411.06" y="0" class="todo"><title>11 · 0.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">278</tspan> · <tspan class="todo">12</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">279</tspan> · <tspan class="todo">11</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.56%</title></rect>
-<rect width="175.48" height="12" x="225.86" y="0" class="nonmatching"><title>265 KB · 42.39%</title></rect>
-<rect width="12.66" height="12" x="401.34" y="0" class="todo"><title>19 KB · 3.06%</title></rect>
+<rect width="175.88" height="12" x="225.86" y="0" class="nonmatching"><title>266 KB · 42.48%</title></rect>
+<rect width="12.26" height="12" x="401.74" y="0" class="todo"><title>19 KB · 2.96%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">265 KB</tspan> · <tspan class="todo">19 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">266 KB</tspan> · <tspan class="todo">19 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1591,7 +1591,7 @@
 <rect width="12" height="12" x="360" y="450" class="nonmatching"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="450" class="nonmatching"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="450" class="nonmatching"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="450" class="todo"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="450" class="nonmatching"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="450" class="nonmatching"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="450" class="nonmatching"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="450" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
@@ -1898,7 +1898,7 @@
 <rect width="15.40" height="15.26" x="495.60" y="61.51" class="named"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
 <rect width="15.38" height="15.26" x="514.01" y="61.51" class="named"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
 <rect width="15.35" height="15.26" x="532.39" y="61.51" class="named"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
-<rect width="15.35" height="15.26" x="550.74" y="61.51" class="todo"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
+<rect width="15.35" height="15.26" x="550.74" y="61.51" class="nonmatching"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="15.25" height="15.26" x="569.10" y="61.51" class="nonmatching"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
 <rect width="15.23" height="15.26" x="587.35" y="61.51" class="named"><title>0x004624c0 TurnSwitchControl (606 bytes)</title></rect>
 <rect width="15.18" height="15.26" x="605.58" y="61.51" class="nonmatching"><title>0x00451510 LoadGameflow (604 bytes)</title></rect>
