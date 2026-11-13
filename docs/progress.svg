@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="339.48" height="12" x="0" y="0" class="named"><title>1271 · 82%</title></rect>
-<rect width="62.50" height="12" x="339.48" y="0" class="nonmatching"><title>234 · 15.10%</title></rect>
-<rect width="12.02" height="12" x="401.98" y="0" class="todo"><title>45 · 2.90%</title></rect>
+<rect width="339.21" height="12" x="0" y="0" class="named"><title>1270 · 81.94%</title></rect>
+<rect width="63.84" height="12" x="339.21" y="0" class="nonmatching"><title>239 · 15.42%</title></rect>
+<rect width="10.95" height="12" x="403.05" y="0" class="todo"><title>41 · 2.65%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">82.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1271</tspan> · <tspan class="nonmatching">234</tspan> · <tspan class="todo">45</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1270</tspan> · <tspan class="nonmatching">239</tspan> · <tspan class="todo">41</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="227.11" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
-<rect width="166.84" height="12" x="227.11" y="0" class="nonmatching"><title>252 KB · 40.30%</title></rect>
-<rect width="20.05" height="12" x="393.95" y="0" class="todo"><title>30 KB · 4.84%</title></rect>
+<rect width="227.10" height="12" x="0" y="0" class="named"><title>343 KB · 54.85%</title></rect>
+<rect width="167.38" height="12" x="227.10" y="0" class="nonmatching"><title>253 KB · 40.43%</title></rect>
+<rect width="19.52" height="12" x="394.48" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">253 KB</tspan> · <tspan class="todo">29 KB</tspan></text>
@@ -1487,7 +1487,7 @@
 <rect width="12" height="12" x="300" y="420" class="nonmatching"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="420" class="named"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="420" class="named"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="420" class="named"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="420" class="nonmatching"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="420" class="named"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="420" class="named"><title>0x00490d50 D3DNormalise (114 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="420" class="named"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
@@ -1570,7 +1570,7 @@
 <rect width="12" height="12" x="45" y="450" class="todo"><title>0x004971b0 SW_TriSetupGTLit (2786 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="450" class="todo"><title>0x00497cb0 SW_TriSetupGALit (2079 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="450" class="todo"><title>0x004984e0 SW_TriSetupGTA (1717 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="450" class="todo"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="450" class="nonmatching"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="450" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="450" class="todo"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="450" class="todo"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
@@ -3106,7 +3106,7 @@
 <rect width="2.05" height="2.77" x="711.14" y="426.16" class="nonmatching"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="431.93" class="named"><title>0x00427060 lara_as_null (14 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="437.53" class="nonmatching"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
-<rect width="2.05" height="2.60" x="711.14" y="443.13" class="named"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
+<rect width="2.05" height="2.60" x="711.14" y="443.13" class="nonmatching"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="448.73" class="named"><title>0x00437650 finish_level_effect (13 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="454.15" class="named"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
 <rect width="2.05" height="2.42" x="711.14" y="459.58" class="todo"><title>0x0048f981 SW_WaitLevelLoad (13 bytes)</title></rect>
