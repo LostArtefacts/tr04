@@ -993,119 +993,21 @@ void SW_CopyBuffer(void *dst, void *src, sint32 width)
 
 void SW_Convert32To555(void *dst, void *src, sint32 width)
 {
-    uint32 scale[2];
-    uint32 gmask[2];
-    uint32 rbmask[2];
+    uint32 *s;
+    uint16 *d;
+    uint32 c;
+    sint32 n;
 
-    scale[0] = 0x20000008;
-    scale[1] = 0x20000008;
-    rbmask[0] = 0xF800F8;
-    rbmask[1] = 0xF800F8;
-    gmask[0] = 0xF800;
-    gmask[1] = 0xF800;
-    if (!SW_UseMMX) {
-        __asm {
-            mov edx, width
-            mov esi, src
-            mov edi, dst
-        plain:
-            mov eax, [esi]
-            mov ebx, eax
-            mov ecx, eax
-            and eax, 0xF8
-            and ebx, 0xF800
-            shr eax, 3
-            and ecx, 0xF80000
-            shr ebx, 6
-            shr ecx, 9
-            or eax, ebx
-            or eax, ecx
-            add esi, 4
-            mov [edi], ax
-            add edi, 2
-            dec edx
-            jne plain
-        }
-    } else {
-        __asm {
-            mov eax, width
-            mov ebx, src
-            sub eax, 1
-            mov edx, dst
-            and eax, 0xFFFFFFF8
-            movq mm7, scale
-            movq mm6, gmask
-            movq mm2, [ebx + eax * 4 + 8]
-            movq mm0, [ebx + eax * 4]
-            movq mm3, mm2
-            pand mm3, rbmask
-            movq mm1, mm0
-            pand mm1, rbmask
-            pmaddwd mm3, mm7
-            pmaddwd mm1, mm7
-            pand mm2, mm6
-        mmx:
-            movq mm4, [ebx + eax * 4 + 0x18]
-            pand mm0, mm6
-            movq mm5, [ebx + eax * 4 + 0x10]
-            por mm3, mm2
-            psrld mm3, 6
-            por mm1, mm0
-            movq mm0, mm4
-            psrld mm1, 6
-            pand mm0, rbmask
-            packssdw mm1, mm3
-            movq mm3, mm5
-            pmaddwd mm0, mm7
-            pand mm3, rbmask
-            pand mm4, mm6
-            movq [edx + eax * 2], mm1
-            pmaddwd mm3, mm7
-            sub eax, 8
-            por mm4, mm0
-            pand mm5, mm6
-            psrld mm4, 6
-            movq mm2, [ebx + eax * 4 + 8]
-            por mm5, mm3
-            movq mm0, [ebx + eax * 4]
-            psrld mm5, 6
-            movq mm3, mm2
-            movq mm1, mm0
-            pand mm3, rbmask
-            packssdw mm5, mm4
-            pand mm1, rbmask
-            pand mm2, mm6
-            movq [edx + eax * 2 + 0x18], mm5
-            pmaddwd mm3, mm7
-            pmaddwd mm1, mm7
-            jg mmx
-            movq mm4, [ebx + eax * 4 + 0x18]
-            pand mm0, mm6
-            movq mm5, [ebx + eax * 4 + 0x10]
-            por mm3, mm2
-            psrld mm3, 6
-            por mm1, mm0
-            movq mm0, mm4
-            psrld mm1, 6
-            pand mm0, rbmask
-            packssdw mm1, mm3
-            movq mm3, mm5
-            pmaddwd mm0, mm7
-            pand mm3, rbmask
-            pand mm4, mm6
-            movq [edx + eax * 2], mm1
-            pmaddwd mm3, mm7
-            sub eax, 8
-            por mm4, mm0
-            pand mm5, mm6
-            psrld mm4, 6
-            por mm5, mm3
-            psrld mm5, 6
-            packssdw mm5, mm4
-            movq [edx + eax * 2 + 0x18], mm5
-            emms
-        }
-    }
+    s = src;
+    d = dst;
+    if (!SW_UseMMX)
+        n = width;
+    else
+        n = ((width - 1) & ~7) + 8;
+    do {
+        c = *s++;
+        *d++ = (uint16)(((c & 0xF8) >> 3) | ((c & 0xF800) >> 6) | ((c & 0xF80000) >> 9));
+    } while (--n);
 }
 
 void SW_Convert32To565(void *dst, void *src, sint32 width)
