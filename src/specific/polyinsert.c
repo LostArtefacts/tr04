@@ -11,7 +11,7 @@
 #include "../gameflow.h"
 #include "../newinv.h"
 
-void HWR_DrawSortList(D3DTLBUMPVERTEX *info, sint32 num_verts, sint32 texture, sint32 type)
+static __forceinline void HWR_DrawSortList_inl(D3DTLBUMPVERTEX *info, sint32 num_verts, sint32 texture, sint32 type)
 {
     switch (type) {
     case 0:
@@ -92,6 +92,126 @@ void HWR_DrawSortList(D3DTLBUMPVERTEX *info, sint32 num_verts, sint32 texture, s
         break;
     }
     DrawPrimitiveCnt++;
+}
+
+void HWR_DrawSortList(D3DTLBUMPVERTEX *info, sint32 num_verts, sint32 texture, sint32 type)
+{
+    HWR_DrawSortList_inl(info, num_verts, texture, type);
+}
+
+void DrawSortList(void)
+{
+    D3DTLBUMPVERTEX *vtx;
+    D3DTLBUMPVERTEX *bVtx;
+    D3DTLBUMPVERTEX *bVtxbak;
+    sint32 nVtx, tpage, drawtype;
+    sint32 num, i;
+    SORTLIST *pSort;
+
+    nVtx = 0;
+    if (!SortCount) {
+        return;
+    }
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ALPHATESTENABLE, 1);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_SRCBLEND, D3DBLEND_SRCALPHA);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_DESTBLEND, D3DBLEND_INVSRCALPHA);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ALPHABLENDENABLE, 1);
+    if (App.dx.lpZBuffer) {
+        for (num = 0; num < SortCount; num++) {
+            pSort = SortList[num];
+            if (pSort->drawtype == 1 || pSort->drawtype == 4 || pSort->drawtype == 0) {
+                break;
+            }
+        }
+        bVtxbak = Bucket[0].vtx;
+        bVtx = bVtxbak;
+        tpage = pSort->tpage;
+        drawtype = pSort->drawtype;
+        for (; num < SortCount; num++) {
+            pSort = SortList[num];
+            if (pSort->drawtype == 1 || pSort->drawtype == 4 || pSort->drawtype == 0) {
+                if (pSort->tpage == tpage && pSort->drawtype == drawtype) {
+                    vtx = (D3DTLBUMPVERTEX *)(pSort + 1);
+                    for (i = 0; i < pSort->nVtx; i++, vtx++, bVtx++) {
+                        bVtx->sx = vtx->sx;
+                        bVtx->sy = vtx->sy;
+                        bVtx->sz = vtx->sz;
+                        bVtx->rhw = vtx->rhw;
+                        bVtx->color = vtx->color;
+                        bVtx->specular = vtx->specular;
+                        bVtx->tu = vtx->tu;
+                        bVtx->tv = vtx->tv;
+                        nVtx++;
+                    }
+                } else {
+                    HWR_DrawSortList_inl(bVtxbak, nVtx, tpage, drawtype);
+                    tpage = pSort->tpage;
+                    drawtype = pSort->drawtype;
+                    bVtx = bVtxbak;
+                    nVtx = 0;
+                    num--;
+                }
+            }
+        }
+        if (nVtx) {
+            HWR_DrawSortList(bVtxbak, nVtx, tpage, drawtype);
+        }
+        for (num = SortCount - 1; num >= 0; num--) {
+            pSort = SortList[num];
+            if (pSort->drawtype == 2 || pSort->drawtype == 3 || pSort->drawtype == 6 || pSort->drawtype == 7) {
+                break;
+            }
+        }
+        tpage = pSort->tpage;
+        drawtype = pSort->drawtype;
+        bVtx = bVtxbak;
+        nVtx = 0;
+        for (; num >= 0; num--) {
+            pSort = SortList[num];
+            if (pSort->drawtype == 2 || pSort->drawtype == 3 || pSort->drawtype == 6 || pSort->drawtype == 7) {
+                if (pSort->tpage == tpage && pSort->drawtype == drawtype) {
+                    vtx = (D3DTLBUMPVERTEX *)(pSort + 1);
+                    for (i = 0; i < pSort->nVtx; i++, vtx++, bVtx++) {
+                        bVtx->sx = vtx->sx;
+                        bVtx->sy = vtx->sy;
+                        bVtx->sz = vtx->sz;
+                        bVtx->rhw = vtx->rhw;
+                        bVtx->color = vtx->color;
+                        bVtx->specular = vtx->specular;
+                        bVtx->tu = vtx->tu;
+                        bVtx->tv = vtx->tv;
+                        nVtx++;
+                    }
+                } else {
+                    HWR_DrawSortList(bVtxbak, nVtx, tpage, drawtype);
+                    tpage = pSort->tpage;
+                    nVtx = 0;
+                    drawtype = pSort->drawtype;
+                    bVtx = bVtxbak;
+                    num++;
+                }
+            }
+        }
+        if (nVtx) {
+            HWR_DrawSortList(bVtxbak, nVtx, tpage, drawtype);
+        }
+    } else {
+        for (num = 0; num < SortCount; num++) {
+            pSort = SortList[num];
+            vtx = (D3DTLBUMPVERTEX *)(pSort + 1);
+            if (pSort->polytype == 4) {
+                IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_TEXTUREPERSPECTIVE, 0);
+            }
+            HWR_DrawSortList(vtx, pSort->nVtx, pSort->tpage, pSort->drawtype);
+            if (pSort->polytype == 4) {
+                IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_TEXTUREPERSPECTIVE, 1);
+            }
+        }
+    }
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ZWRITEENABLE, 1);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ALPHATESTENABLE, 0);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_ALPHABLENDENABLE, 0);
+    InitBuckets();
 }
 
 void DoSort(sint32 left, sint32 right, SORTLIST **list)

@@ -1290,7 +1290,7 @@ address,size,name,symbol
 0x00480700,326,DDCopyBitmap,_DDCopyBitmap
 0x00480850,132,_LoadBitmap,__LoadBitmap
 0x004808e0,364,do_boot_screen,_do_boot_screen
-0x00480a50,2132,DrawSortList,_DrawSortList
+0x00480a50,2164,DrawSortList,_DrawSortList
 0x004812a4,,jpt_480BA7,_jpt_480BA7
 0x004812d0,1164,HWR_DrawSortList,_HWR_DrawSortList
 0x00481760,176,DoSort,_DoSort
