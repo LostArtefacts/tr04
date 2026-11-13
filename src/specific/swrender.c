@@ -840,6 +840,43 @@ HRESULT j_SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWOR
     return SW_DrawPrimitives(type, fvf, verts, count, flags);
 }
 
+void SW_SpanGLit(void)
+{
+    SW_SPAN *s;
+    uint32 *row, *p;
+    uint32 d;
+    sint32 db, dg, dr, da;
+    sint32 b, g, r, a, al, n;
+    sint32 cr, cb, cg;
+
+    row = (uint32 *)SW_Surface + (SW_SpanY * SW_SurfacePitch >> 2);
+    da = SW_SpanGrad[3];
+    db = SW_SpanGrad[0];
+    dr = SW_SpanGrad[2];
+    dg = SW_SpanGrad[1];
+    for (s = SW_SpanBuffer; s != SW_SpanEnd; s++) {
+        p = row + s->x;
+        n = s->n;
+        g = s->c[1];
+        r = s->c[2];
+        a = s->c[3];
+        b = s->c[0];
+        for (; n > 0; n--) {
+            d = *p;
+            al = a >> 8;
+            cr = SW_MulTable[255 + (((d >> 16) & 0xFF) << 8) - al] + SW_MulTable[al + (r & 0xFF00)];
+            cb = SW_MulTable[255 + ((d & 0xFF) << 8) - al] + SW_MulTable[al + (b & 0xFF00)];
+            cg = SW_MulTable[255 + (d & 0xFF00) - al] + SW_MulTable[(g & 0xFF00) + al];
+            *p++ = (cr << 16) | cb | (cg << 8);
+            g += dg;
+            a += da;
+            r += dr;
+            b += db;
+        }
+        row += SW_SurfacePitch >> 2;
+    }
+}
+
 void SW_CopyBuffer(void *dst, void *src, sint32 width)
 {
     if (!SW_UseMMX) {

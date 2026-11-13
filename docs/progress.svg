@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="340.28" height="12" x="0" y="0" class="named"><title>1274 · 82.19%</title></rect>
-<rect width="61.43" height="12" x="340.28" y="0" class="nonmatching"><title>230 · 14.84%</title></rect>
-<rect width="12.29" height="12" x="401.71" y="0" class="todo"><title>46 · 2.97%</title></rect>
+<rect width="61.70" height="12" x="340.28" y="0" class="nonmatching"><title>231 · 14.90%</title></rect>
+<rect width="12.02" height="12" x="401.98" y="0" class="todo"><title>45 · 2.90%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">82.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">230</tspan> · <tspan class="todo">46</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">231</tspan> · <tspan class="todo">45</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="227.14" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
-<rect width="166.53" height="12" x="227.14" y="0" class="nonmatching"><title>252 KB · 40.23%</title></rect>
-<rect width="20.33" height="12" x="393.67" y="0" class="todo"><title>31 KB · 4.91%</title></rect>
+<rect width="166.82" height="12" x="227.14" y="0" class="nonmatching"><title>252 KB · 40.29%</title></rect>
+<rect width="20.05" height="12" x="393.95" y="0" class="todo"><title>30 KB · 4.84%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">252 KB</tspan> · <tspan class="todo">31 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">252 KB</tspan> · <tspan class="todo">30 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1594,7 +1594,7 @@
 <rect width="12" height="12" x="405" y="450" class="todo"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="450" class="todo"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="450" class="todo"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="450" class="todo"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="450" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="450" class="todo"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="450" class="todo"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="450" class="todo"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
@@ -2041,7 +2041,7 @@
 <rect width="12.44" height="13.22" x="398.54" y="129.41" class="named"><title>0x0042ff90 FlareControl (429 bytes)</title></rect>
 <rect width="12.44" height="13.22" x="398.54" y="145.63" class="named"><title>0x00480070 S_AnimateTextures (429 bytes)</title></rect>
 <rect width="12.44" height="13.19" x="398.54" y="161.85" class="todo"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
-<rect width="12.44" height="13.16" x="398.54" y="178.04" class="todo"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
+<rect width="12.44" height="13.16" x="398.54" y="178.04" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
 <rect width="12.44" height="13.13" x="398.54" y="194.20" class="nonmatching"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
 <rect width="12.44" height="13.13" x="398.54" y="210.32" class="named"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
 <rect width="12.44" height="13.10" x="398.54" y="226.45" class="named"><title>0x00456910 BurningRopeCollision (425 bytes)</title></rect>
