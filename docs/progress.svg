@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="334.30" height="12" x="0" y="0" class="named"><title>1250 · 80.75%</title></rect>
-<rect width="61.24" height="12" x="334.30" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="18.45" height="12" x="395.55" y="0" class="todo"><title>69 · 4.46%</title></rect>
+<rect width="334.57" height="12" x="0" y="0" class="named"><title>1251 · 80.81%</title></rect>
+<rect width="61.24" height="12" x="334.57" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="18.19" height="12" x="395.81" y="0" class="todo"><title>68 · 4.39%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">80.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1250</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">69</tspan></text>
+<text text-anchor="end" x="594" y="7.50">80.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1251</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">68</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.66" height="12" x="0" y="0" class="named"><title>338 KB · 54.02%</title></rect>
+<rect width="223.66" height="12" x="0" y="0" class="named"><title>338 KB · 54.03%</title></rect>
 <rect width="166.38" height="12" x="223.66" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
 <rect width="23.96" height="12" x="390.04" y="0" class="todo"><title>36 KB · 5.79%</title></rect>
 </g>
@@ -1557,7 +1557,7 @@
 <rect width="12" height="12" x="600" y="435" class="named"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="435" class="named"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="435" class="named"><title>0x00494e80 SW_BeginFrame (13 bytes)</title></rect>
-<rect width="12" height="12" x="645" y="435" class="todo"><title>0x00494e90 Func494e90 (6 bytes)</title></rect>
+<rect width="12" height="12" x="645" y="435" class="named"><title>0x00494e90 SW_EndFrame (6 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="435" class="todo"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="435" class="todo"><title>0x004952a0 Func4952a0 (12 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="435" class="todo"><title>0x004952b0 SW_SetRenderStateFlags (346 bytes)</title></rect>
@@ -3144,7 +3144,7 @@
 <rect width="1.50" height="2.02" x="745.50" y="441.89" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="1.69" height="1.82" x="727.49" y="446.91" class="named"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="1.69" height="1.82" x="727.49" y="451.73" class="named"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
-<rect width="1.69" height="1.35" x="727.49" y="456.54" class="todo"><title>0x00494e90 Func494e90 (6 bytes)</title></rect>
+<rect width="1.69" height="1.35" x="727.49" y="456.54" class="named"><title>0x00494e90 SW_EndFrame (6 bytes)</title></rect>
 <rect width="1.69" height="1.10" x="727.49" y="460.90" class="named"><title>0x0040b050 GunShot (5 bytes)</title></rect>
 <rect width="1.46" height="1.32" x="732.18" y="446.91" class="named"><title>0x00437ce0 reset_hair (5 bytes)</title></rect>
 <rect width="1.46" height="1.32" x="736.63" y="446.91" class="named"><title>0x00437cf0 ClearScarabsPatch (5 bytes)</title></rect>

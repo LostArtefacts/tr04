@@ -134,6 +134,11 @@ sint32 SW_BeginFrame(void)
     return 0;
 }
 
+sint32 SW_EndFrame(void)
+{
+    return 1;
+}
+
 LPVOID DBLog_MapView(HANDLE hMap)
 {
     return MapViewOfFile(hMap, FILE_MAP_READ | FILE_MAP_WRITE, 0, 0, 0x100000);

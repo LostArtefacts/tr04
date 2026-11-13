@@ -1496,7 +1496,7 @@ address,size,name,symbol
 0x00494e50,22,SW_SetSurface,_SW_SetSurface
 0x00494e70,12,SW_SetZLimit,_SW_SetZLimit
 0x00494e80,13,SW_BeginFrame,_SW_BeginFrame
-0x00494e90,6,Func494e90,
+0x00494e90,6,SW_EndFrame,_SW_EndFrame
 0x00494ea0,1015,SW_SelectRasterizer,_SW_SelectRasterizer
 0x004952a0,12,Func4952a0,
 0x004952b0,346,SW_SetRenderStateFlags,_SW_SetRenderStateFlags
