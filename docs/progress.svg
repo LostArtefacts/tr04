@@ -46,16 +46,16 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="338.68" height="12" x="0" y="0" class="named"><title>1268 · 81.81%</title></rect>
-<rect width="64.37" height="12" x="338.68" y="0" class="nonmatching"><title>241 · 15.55%</title></rect>
+<rect width="338.41" height="12" x="0" y="0" class="named"><title>1267 · 81.74%</title></rect>
+<rect width="64.64" height="12" x="338.41" y="0" class="nonmatching"><title>242 · 15.61%</title></rect>
 <rect width="10.95" height="12" x="403.05" y="0" class="todo"><title>41 · 2.65%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1268</tspan> · <tspan class="nonmatching">241</tspan> · <tspan class="todo">41</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1267</tspan> · <tspan class="nonmatching">242</tspan> · <tspan class="todo">41</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="226.93" height="12" x="0" y="0" class="named"><title>343 KB · 54.82%</title></rect>
-<rect width="167.55" height="12" x="226.93" y="0" class="nonmatching"><title>253 KB · 40.47%</title></rect>
+<rect width="226.78" height="12" x="0" y="0" class="named"><title>343 KB · 54.78%</title></rect>
+<rect width="167.70" height="12" x="226.78" y="0" class="nonmatching"><title>253 KB · 40.51%</title></rect>
 <rect width="19.52" height="12" x="394.48" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.8%</text>
@@ -1335,7 +1335,7 @@
 <rect width="12" height="12" x="270" y="375" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="375" class="nonmatching"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="375" class="nonmatching"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="375" class="named"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="375" class="nonmatching"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="375" class="nonmatching"><title>0x0047d900 PrelightVerts (340 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="375" class="nonmatching"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="375" class="nonmatching"><title>0x0047e8b0 phd_PutPolygonsPickup (3437 bytes)</title></rect>
@@ -2287,7 +2287,7 @@
 <rect width="9.51" height="9.23" x="483.38" y="309.43" class="named"><title>0x0043b330 TriggerLightningGlow (229 bytes)</title></rect>
 <rect width="9.51" height="9.23" x="483.38" y="321.66" class="named"><title>0x0048e8d0 ClearSurfaces (229 bytes)</title></rect>
 <rect width="9.51" height="9.19" x="483.38" y="333.89" class="named"><title>0x004706b0 InitDDDevice (228 bytes)</title></rect>
-<rect width="9.51" height="9.15" x="483.38" y="346.08" class="named"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
+<rect width="9.51" height="9.15" x="483.38" y="346.08" class="nonmatching"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
 <rect width="9.51" height="9.03" x="483.38" y="358.23" class="named"><title>0x00425550 lara_col_forwardjump (224 bytes)</title></rect>
 <rect width="9.51" height="8.95" x="483.38" y="370.25" class="named"><title>0x0043b630 DrawWeaponMissile (222 bytes)</title></rect>
 <rect width="9.51" height="8.95" x="483.38" y="382.20" class="nonmatching"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>

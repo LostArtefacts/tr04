@@ -135,9 +135,6 @@ void CalcVertsColorSplitMMX(sint32 nVerts, D3DTLVERTEX *v)
         for (i = 0; i < nVerts; i++, v++) {
             CalcColorSplitMMX(v->color, &v->color);
         }
-        __asm {
-            emms
-        }
     } else {
         for (i = 0; i < nVerts; i++, v++) {
             CalcColorSplit(v->color, &v->color);
