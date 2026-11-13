@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.67" height="12" x="267.10" y="0" class="nonmatching"><title>166 · 10.72%</title></rect>
-<rect width="38.22" height="12" x="303.78" y="0" class="todo"><title>173 · 11.18%</title></rect>
+<rect width="36.90" height="12" x="267.10" y="0" class="nonmatching"><title>167 · 10.79%</title></rect>
+<rect width="38" height="12" x="304" y="0" class="todo"><title>172 · 11.11%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">166</tspan> · <tspan class="todo">173</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">167</tspan> · <tspan class="todo">172</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.36" height="12" x="178.89" y="0" class="nonmatching"><title>214 KB · 34.32%</title></rect>
-<rect width="45.75" height="12" x="296.25" y="0" class="todo"><title>84 KB · 13.38%</title></rect>
+<rect width="117.46" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.34%</title></rect>
+<rect width="45.65" height="12" x="296.35" y="0" class="todo"><title>83 KB · 13.35%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">84 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">215 KB</tspan> · <tspan class="todo">83 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -896,7 +896,7 @@
 <rect width="12" height="12" x="405" y="240" class="named"><title>0x004534e0 InitialiseRaisingBlock (212 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="240" class="named"><title>0x004535c0 InitialiseBurningFloor (34 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="240" class="named"><title>0x004535f0 InitialiseSethBlade (88 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="240" class="todo"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="240" class="nonmatching"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="240" class="named"><title>0x00453710 InitialiseMineHelicopter (45 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="240" class="named"><title>0x00453740 InitialiseSmashObject (141 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="240" class="named"><title>0x004537d0 InitialiseMapper (35 bytes)</title></rect>
@@ -2395,7 +2395,7 @@
 <rect width="8.24" height="8.52" x="507.80" y="362" class="named"><title>0x004229d0 LaraCollideStop (183 bytes)</title></rect>
 <rect width="8.24" height="8.47" x="507.80" y="373.52" class="named"><title>0x0040b060 GunHit (182 bytes)</title></rect>
 <rect width="8.24" height="8.47" x="507.80" y="384.99" class="named"><title>0x00410070 TriggerSethMissile (182 bytes)</title></rect>
-<rect width="8.24" height="8.47" x="507.80" y="396.46" class="todo"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
+<rect width="8.24" height="8.47" x="507.80" y="396.46" class="nonmatching"><title>0x00453650 InitialiseObelisk (182 bytes)</title></rect>
 <rect width="8.24" height="8.47" x="507.80" y="407.93" class="named"><title>0x00456420 AnimateWaterfalls (182 bytes)</title></rect>
 <rect width="8.24" height="8.42" x="507.80" y="419.40" class="named"><title>0x0043e770 do_special_waterskin_combine_bullshit (181 bytes)</title></rect>
 <rect width="8.24" height="8.42" x="507.80" y="430.82" class="named"><title>0x00451180 UpdateSkyLightning (181 bytes)</title></rect>

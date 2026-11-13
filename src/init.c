@@ -230,6 +230,30 @@ void InitialiseSethBlade(sint16 item_number)
     item->item_flags[2] = abs(item->trigger_flags);
 }
 
+void InitialiseObelisk(sint16 item_number)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *item2;
+    sint16 *ifl;
+    sint32 i;
+
+    item = &items[item_number];
+    item->anim_number = objects[item->object_number].anim_index + 3;
+    item->frame_number = anims[item->anim_number].frame_base;
+    AddActiveItem(item_number);
+    item->status = ITEM_ACTIVE;
+    if (item->trigger_flags == 2) {
+        ifl = item->item_flags;
+        item2 = items;
+        for (i = 0; i < level_items; i++, item2++) {
+            if (item2->object_number == OBELISK && i != item_number)
+                *ifl++ = i;
+            if (item2->object_number == ANIMATING3)
+                item->item_flags[2] = i;
+        }
+    }
+}
+
 void InitialiseMineHelicopter(sint16 item_number)
 {
     ITEM_INFO *item;
