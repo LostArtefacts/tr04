@@ -1039,8 +1039,6 @@ void DXClose(void)
 {
     Log(2, "CloseDirectX");
     if (G_dxptr) {
-        if (G_dxptr->lpDD)
-            DXSetCooperativeLevel(G_dxptr->lpDD, 0, DDSCL_NORMAL);
         if (G_dxptr->lpViewport) {
             Log(4, "Released %s @ %x - RefCnt = %d", "Viewport", G_dxptr->lpViewport, IDirect3DViewport3_Release(G_dxptr->lpViewport));
             G_dxptr->lpViewport = 0;
