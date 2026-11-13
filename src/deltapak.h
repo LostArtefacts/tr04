@@ -216,5 +216,6 @@ void CalculateObjectLightingLaraCutSeq(void);
 sint32 Load_and_Init_Cutseq(sint32 num);
 void DrawCutSeqActors(void);
 void handle_cutseq_triggering(sint32 name);
+sint16 DecodeTrack(char *packed, RTDECODE *decode);
 
 #endif

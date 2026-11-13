@@ -1368,6 +1368,30 @@ void ControlSethBlade(sint16 item_number)
     AnimateItem(item);
 }
 
+void ControlLRSquishyBlock(sint16 item_number)
+{
+    ITEM_INFO *item;
+    uint16 ang;
+
+    item = &items[item_number];
+    if (!TriggerActive(item))
+        return;
+    if (item->touch_bits) {
+        ang = (uint16)phd_atan(item->pos.z_pos - lara_item->pos.z_pos, item->pos.x_pos - lara_item->pos.x_pos) - item->pos.y_rot;
+        if (!(item->frame_number - anims[item->anim_number].frame_base) && ang > 0xA000 && ang < 0xE000) {
+            item->item_flags[0] = 9;
+            lara_item->hit_points = 0;
+            lara_item->pos.y_rot = item->pos.y_rot - 0x4000;
+        } else if (item->frame_number - anims[item->anim_number].frame_base == 33 && ang > 0x2000 && ang < 0x6000) {
+            item->item_flags[0] = 42;
+            lara_item->hit_points = 0;
+            lara_item->pos.y_rot = item->pos.y_rot + 0x4000;
+        }
+    }
+    if (!item->item_flags[0] || item->frame_number - anims[item->anim_number].frame_base != item->item_flags[0])
+        AnimateItem(item);
+}
+
 void ControlFallingSquishyBlock(sint16 item_number)
 {
     ITEM_INFO *item;
