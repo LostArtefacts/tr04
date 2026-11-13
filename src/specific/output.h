@@ -6,6 +6,7 @@
 #include <d3d.h>
 
 #include "../types.h"
+#include "../3dglodef.h"
 
 extern sint32 GlobalAlpha;
 extern sint32 GlobalAmbient;
@@ -19,6 +20,8 @@ extern sint16 *clipflags;
 void S_AnimateTextures(sint32 n);
 void S_DrawPickup(sint16 object_number);
 void phd_PutPolygonsPickup(sint16 *objptr, float x, float y, sint32 color);
+void PrelightVerts(sint32 nVerts, D3DTLVERTEX *v, MESH_DATA *mesh);
+void CalcVertsColorSplitMMX(sint32 nVerts, D3DTLVERTEX *v);
 sint32 S_DumpScreen(void);
 void S_InitialisePolyList(void);
 void S_OutputPolyList(void);
