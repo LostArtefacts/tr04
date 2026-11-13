@@ -436,6 +436,33 @@ void find_target_point(ITEM_INFO *item, GAME_VECTOR *target)
     target->room_number = item->room_number;
 }
 
+void AimWeapon(WEAPON_INFO *winfo, LARA_ARM *arm)
+{
+    sint16 speed, x, y;
+
+    speed = winfo->aim_speed;
+    if (arm->lock) {
+        y = lara.target_angles[0];
+        x = lara.target_angles[1];
+    } else {
+        x = 0;
+        y = 0;
+    }
+    if (arm->y_rot >= y - speed && arm->y_rot <= speed + y)
+        arm->y_rot = y;
+    else if (arm->y_rot < y)
+        arm->y_rot += speed;
+    else
+        arm->y_rot -= speed;
+    if (arm->x_rot >= x - speed && arm->x_rot <= speed + x)
+        arm->x_rot = x;
+    else if (arm->x_rot < x)
+        arm->x_rot += speed;
+    else
+        arm->x_rot -= speed;
+    arm->z_rot = 0;
+}
+
 sint32 FireWeapon(sint32 weapon_type, ITEM_INFO *target, ITEM_INFO *src, sint16 *angles)
 {
     SPHERE *sptr;

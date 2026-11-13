@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="38.22" height="12" x="267.10" y="0" class="nonmatching"><title>173 · 11.18%</title></rect>
-<rect width="36.67" height="12" x="305.33" y="0" class="todo"><title>166 · 10.72%</title></rect>
+<rect width="38.44" height="12" x="267.10" y="0" class="nonmatching"><title>174 · 11.24%</title></rect>
+<rect width="36.45" height="12" x="305.55" y="0" class="todo"><title>165 · 10.66%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">173</tspan> · <tspan class="todo">166</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">174</tspan> · <tspan class="todo">165</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="118" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.50%</title></rect>
-<rect width="45.11" height="12" x="296.89" y="0" class="todo"><title>82 KB · 13.19%</title></rect>
+<rect width="118.11" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.54%</title></rect>
+<rect width="45" height="12" x="297" y="0" class="todo"><title>82 KB · 13.16%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">216 KB</tspan> · <tspan class="todo">82 KB</tspan></text>
@@ -483,7 +483,7 @@
 <rect width="12" height="12" x="210" y="120" class="named"><title>0x0042df30 LaraTargetInfo (414 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="120" class="nonmatching"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="120" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="120" class="todo"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="120" class="nonmatching"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="120" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="120" class="named"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="120" class="named"><title>0x0042ea70 WeaponObject (76 bytes)</title></rect>
@@ -2328,7 +2328,7 @@
 <rect width="9.18" height="8.61" x="581.58" y="210.62" class="named"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
 <rect width="9.09" height="8.61" x="593.76" y="210.62" class="todo"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="9.05" height="8.61" x="605.86" y="210.62" class="named"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
-<rect width="9.05" height="8.61" x="617.91" y="210.62" class="todo"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
+<rect width="9.05" height="8.61" x="617.91" y="210.62" class="nonmatching"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="9.05" height="8.61" x="629.96" y="210.62" class="named"><title>0x00454070 InitialiseRope (203 bytes)</title></rect>
 <rect width="9.05" height="8.61" x="642" y="210.62" class="named"><title>0x00467b90 JeepCheckGetOut (203 bytes)</title></rect>
 <rect width="9.05" height="8.61" x="654.05" y="210.62" class="todo"><title>0x00473c10 FindCDDrive (203 bytes)</title></rect>
