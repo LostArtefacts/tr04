@@ -105,6 +105,7 @@ void ProcessMeshData(sint32 num_meshes)
     }
     Log(2, "End ProcessMeshData");
 }
+#include "../draw.h"
 
 void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
 {
@@ -141,6 +142,70 @@ void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
         } else
             clip_distance = -128;
         *clip++ = clip_distance;
+        v++;
+    }
+}
+
+void ProjectWaterVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
+{
+    ROOM_INFO *r;
+    float zv, x, y, z;
+    sint32 i, rndoff;
+    sint32 clip_distance;
+    sint16 col, cR, cG, cB;
+    uint8 rnd;
+    sint16 *c;
+
+    r = &room[current_room];
+    c = clip;
+    for (i = 0; i < nVerts; i++) {
+        clip_distance = 0;
+        x = (r->x + r->verts[i].x) * 0.015625F;
+        y = (r->y + r->verts[i].y) * 0.015625F;
+        z = (r->z + r->verts[i].z) * 0.0078125F;
+        rndoff = (sint32)(y + z + x) & 0xFC;
+        rnd = WaterTable[(uint8)r->MeshEffect][rndoff & 0x3F].random;
+        v->sy += WaterTable[(uint8)r->MeshEffect][((wibble >> 2) + rnd) & 0x3F].choppy;
+        v->tu = v->sx;
+        v->tv = v->sy;
+        if (v->sz >= f_mznear) {
+            zv = f_mpersp / v->sz;
+            if (v->sz > FogEnd) {
+                clip_distance = 256;
+                v->sz = f_zfar;
+            }
+            v->sx = zv * v->sx + f_centerx;
+            v->sy = zv * v->sy + f_centery;
+            v->rhw = f_moneopersp * zv;
+            if (v->sx < clip_left)
+                clip_distance++;
+            else if (v->sx > clip_right)
+                clip_distance += 2;
+            if (v->sy < clip_top)
+                clip_distance += 4;
+            else if (v->sy > clip_bottom)
+                clip_distance += 8;
+            rnd = WaterTable[(uint8)r->MeshEffect][rndoff & 0x3F].random;
+            col = -WaterTable[(uint8)r->MeshEffect][((wibble >> 2) + rnd) & 0x3F].choppy;
+            cR = CLRR(v->color) + col;
+            cG = CLRG(v->color) + col;
+            cB = CLRB(v->color) + col;
+            if (cR > 255)
+                cR = 255;
+            if (cG > 255)
+                cG = 255;
+            if (cB > 255)
+                cB = 255;
+            if (cR < 0)
+                cR = 0;
+            if (cG < 0)
+                cG = 0;
+            if (cB < 0)
+                cB = 0;
+            v->color = RGBA(cR, cG, cB, 0xFF);
+        } else
+            clip_distance = -128;
+        *c++ = clip_distance;
         v++;
     }
 }
