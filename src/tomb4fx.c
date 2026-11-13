@@ -1249,6 +1249,25 @@ void UpdateLightning(void)
     }
 }
 
+sint32 LSpline(sint32 x, sint32 *knots, sint32 nk)
+{
+    sint32 *k;
+    sint32 c1, c2, c3, span;
+    __int64 xx;
+
+    x = (sint32)(((__int64)x * (nk - 3) << 16) >> 16);
+    span = x >> 16;
+    if (span >= nk - 3)
+        span = nk - 4;
+    x -= 65536 * span;
+    k = &knots[3 * span];
+    xx = x;
+    c1 = k[3] + (k[3] >> 1) - (k[6] >> 1) - k[6] + (k[9] >> 1) + (~k[0] >> 1);
+    c2 = (sint32)((c1 * xx) >> 16) + 2 * k[6] - 2 * k[3] - (k[3] >> 1) - (k[9] >> 1) + k[0];
+    c3 = (sint32)((c2 * xx) >> 16) + (k[6] >> 1) + (~k[0] >> 1);
+    return (sint32)((c3 * xx) >> 16) + k[3];
+}
+
 void TriggerLightningGlow(sint32 x, sint32 y, sint32 z, sint32 rgb)
 {
     sint32 dx, dz, size;

@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.45" height="12" x="267.10" y="0" class="nonmatching"><title>165 · 10.66%</title></rect>
-<rect width="38.44" height="12" x="303.56" y="0" class="todo"><title>174 · 11.24%</title></rect>
+<rect width="36.67" height="12" x="267.10" y="0" class="nonmatching"><title>166 · 10.72%</title></rect>
+<rect width="38.22" height="12" x="303.78" y="0" class="todo"><title>173 · 11.18%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">165</tspan> · <tspan class="todo">174</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">166</tspan> · <tspan class="todo">173</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.22" height="12" x="178.89" y="0" class="nonmatching"><title>214 KB · 34.27%</title></rect>
-<rect width="45.89" height="12" x="296.11" y="0" class="todo"><title>84 KB · 13.42%</title></rect>
+<rect width="117.36" height="12" x="178.89" y="0" class="nonmatching"><title>214 KB · 34.32%</title></rect>
+<rect width="45.75" height="12" x="296.25" y="0" class="todo"><title>84 KB · 13.38%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">84 KB</tspan></text>
@@ -658,7 +658,7 @@
 <rect width="12" height="12" x="585" y="165" class="named"><title>0x0043ad10 UpdateShockwaves (312 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="165" class="named"><title>0x0043ae50 TriggerLightning (292 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="165" class="named"><title>0x0043af80 UpdateLightning (80 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="165" class="todo"><title>0x0043afd0 LSpline (254 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="165" class="nonmatching"><title>0x0043afd0 LSpline (254 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="165" class="todo"><title>0x0043b0d0 CalcLightningSpline (597 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="165" class="named"><title>0x0043b330 TriggerLightningGlow (229 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="165" class="todo"><title>0x0043b420 TriggerFlashSmoke (461 bytes)</title></rect>
@@ -2235,7 +2235,7 @@
 <rect width="9.81" height="9.94" x="470.87" y="185.69" class="named"><title>0x00427940 lara_as_pulley (254 bytes)</title></rect>
 <rect width="9.81" height="9.94" x="483.68" y="185.69" class="named"><title>0x00428d40 LookLeftRight (254 bytes)</title></rect>
 <rect width="9.81" height="9.94" x="496.48" y="185.69" class="todo"><title>0x00439f80 UpdateDrips (254 bytes)</title></rect>
-<rect width="9.81" height="9.94" x="509.29" y="185.69" class="todo"><title>0x0043afd0 LSpline (254 bytes)</title></rect>
+<rect width="9.81" height="9.94" x="509.29" y="185.69" class="nonmatching"><title>0x0043afd0 LSpline (254 bytes)</title></rect>
 <rect width="9.81" height="9.94" x="522.10" y="185.69" class="named"><title>0x004547b0 ItemNewRoom (254 bytes)</title></rect>
 <rect width="9.81" height="9.94" x="534.90" y="185.69" class="named"><title>0x0046de50 OpenStreamFile (254 bytes)</title></rect>
 <rect width="9.77" height="9.94" x="547.71" y="185.69" class="nonmatching"><title>0x00417100 ControlSethBlade (253 bytes)</title></rect>
