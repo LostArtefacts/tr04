@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="378.54" height="12" x="0" y="0" class="named"><title>1270 · 81.94%</title></rect>
-<rect width="83.46" height="12" x="378.54" y="0" class="nonmatching"><title>280 · 18.06%</title></rect>
+<rect width="378.84" height="12" x="0" y="0" class="named"><title>1271 · 82%</title></rect>
+<rect width="83.16" height="12" x="378.84" y="0" class="nonmatching"><title>279 · 18%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">81.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1270</tspan> · <tspan class="nonmatching">280</tspan></text>
+<text text-anchor="end" x="642" y="7.50">82.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1271</tspan> · <tspan class="nonmatching">279</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="253.06" height="12" x="0" y="0" class="named"><title>343 KB · 54.78%</title></rect>
-<rect width="208.94" height="12" x="253.06" y="0" class="nonmatching"><title>283 KB · 45.22%</title></rect>
+<rect width="253.25" height="12" x="0" y="0" class="named"><title>343 KB · 54.82%</title></rect>
+<rect width="208.75" height="12" x="253.25" y="0" class="nonmatching"><title>283 KB · 45.18%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">54.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">283 KB</tspan></text>
@@ -1604,7 +1604,7 @@
 <rect width="12" height="12" x="585" y="450" class="named"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="named"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="450" class="named"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="450" class="nonmatching"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="450" class="named"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="450" class="nonmatching"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="450" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="450" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
@@ -2243,7 +2243,7 @@
 <rect width="9.73" height="9.93" x="598.67" y="185.67" class="named"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
 <rect width="9.69" height="9.93" x="611.40" y="185.67" class="named"><title>0x00463080 FullBlockSwitchControl (251 bytes)</title></rect>
 <rect width="9.69" height="9.93" x="624.09" y="185.67" class="named"><title>0x00469770 CanGetOff_jeep (251 bytes)</title></rect>
-<rect width="9.65" height="9.93" x="636.77" y="185.67" class="nonmatching"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
+<rect width="9.65" height="9.93" x="636.77" y="185.67" class="named"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="9.61" height="9.93" x="649.42" y="185.67" class="named"><title>0x00440940 StalkBox (249 bytes)</title></rect>
 <rect width="9.61" height="9.93" x="662.04" y="185.67" class="named"><title>0x00442d70 MoveCreature3DPos (249 bytes)</title></rect>
 <rect width="9.61" height="9.93" x="674.65" y="185.67" class="nonmatching"><title>0x00460320 Spline (249 bytes)</title></rect>
