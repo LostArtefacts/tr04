@@ -474,7 +474,7 @@ void ProjectShoreVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
 void PrelightVertsMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
 {
     sint32 *prelight;
-    sint32 p, c, i;
+    sint32 p, c, cR, cG, cB, cA, i;
 
     if (bWaterEffect && !(r->flags & ROOM_UNDERWATER))
         prelight = r->prelightwater;
@@ -483,23 +483,25 @@ void PrelightVertsMMX(sint32 nVerts, D3DTLVERTEX *v, ROOM_INFO *r)
     for (i = 0; i < r->nWaterVerts; i++) {
         p = r->prelight[i];
         c = v->color;
-        __asm {
-            movd mm0, p
-            movd mm1, c
-            paddusb mm1, mm0
-            mov edx, v
-            add edx, 0x10
-            movd [edx], mm1
-        }
+        cR = CLRR(c) + CLRR(p);
+        cG = CLRG(c) + CLRG(p);
+        cB = CLRB(c) + CLRB(p);
+        cA = ((c >> 24) & 0xFF) + ((p >> 24) & 0xFF);
+        if (cR > 255)
+            cR = 255;
+        if (cG > 255)
+            cG = 255;
+        if (cB > 255)
+            cB = 255;
+        if (cA > 255)
+            cA = 255;
+        v->color = RGBA(cR, cG, cB, cA);
         v->specular &= 0xFF000000;
         v++;
     }
     for (i = r->nWaterVerts; i < r->nVerts; i++) {
         AddPrelitMMX(prelight[i], &v->color);
         v++;
-    }
-    __asm {
-        emms
     }
 }
 
