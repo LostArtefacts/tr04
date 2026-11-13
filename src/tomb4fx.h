@@ -169,7 +169,8 @@ typedef struct bubble_struct {
     sint16 dsize;
     uint8 shade;
     uint8 vel;
-    sint16 pad;
+    uint8 pad;
+    uint8 pad2;
 } BUBBLE_STRUCT;
 
 typedef struct drip_struct {

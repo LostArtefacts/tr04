@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="325.48" height="12" x="0" y="0" class="named"><title>1217 · 78.62%</title></rect>
-<rect width="53.22" height="12" x="325.48" y="0" class="nonmatching"><title>199 · 12.86%</title></rect>
-<rect width="35.30" height="12" x="378.70" y="0" class="todo"><title>132 · 8.53%</title></rect>
+<rect width="53.49" height="12" x="325.48" y="0" class="nonmatching"><title>200 · 12.92%</title></rect>
+<rect width="35.03" height="12" x="378.97" y="0" class="todo"><title>131 · 8.46%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1217</tspan> · <tspan class="nonmatching">199</tspan> · <tspan class="todo">132</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1217</tspan> · <tspan class="nonmatching">200</tspan> · <tspan class="todo">131</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="218.20" height="12" x="0" y="0" class="named"><title>329 KB · 52.71%</title></rect>
-<rect width="147.54" height="12" x="218.20" y="0" class="nonmatching"><title>223 KB · 35.64%</title></rect>
-<rect width="48.26" height="12" x="365.74" y="0" class="todo"><title>73 KB · 11.66%</title></rect>
+<rect width="147.77" height="12" x="218.20" y="0" class="nonmatching"><title>223 KB · 35.69%</title></rect>
+<rect width="48.03" height="12" x="365.97" y="0" class="todo"><title>73 KB · 11.60%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">223 KB</tspan> · <tspan class="todo">73 KB</tspan></text>
@@ -636,7 +636,7 @@
 <rect width="12" height="12" x="285" y="165" class="named"><title>0x00439780 GetFreeBubble (98 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="165" class="named"><title>0x004397f0 CreateBubble (177 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="165" class="named"><title>0x004398b0 LaraBubbles (191 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="165" class="todo"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="165" class="nonmatching"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="165" class="named"><title>0x00439ae0 TriggerGunflash (145 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="165" class="named"><title>0x00439b80 SetGunFlash (116 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="165" class="named"><title>0x00439c00 DrawGunflashes (315 bytes)</title></rect>
@@ -2105,7 +2105,7 @@
 <rect width="11.79" height="11.78" x="459.08" y="144.23" class="named"><title>0x0044e7c0 UnderwaterDoorCollision (362 bytes)</title></rect>
 <rect width="11.79" height="11.78" x="473.88" y="144.23" class="named"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
 <rect width="11.76" height="11.78" x="488.67" y="144.23" class="todo"><title>0x00499c10 Func499c10 (361 bytes)</title></rect>
-<rect width="11.70" height="11.78" x="503.43" y="144.23" class="todo"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>
+<rect width="11.70" height="11.78" x="503.43" y="144.23" class="nonmatching"><title>0x00439970 UpdateBubbles (359 bytes)</title></rect>
 <rect width="11.66" height="11.78" x="518.13" y="144.23" class="todo"><title>0x00499d80 Func499d80 (358 bytes)</title></rect>
 <rect width="11.63" height="11.78" x="532.79" y="144.23" class="named"><title>0x0046ba90 tenth_cutseq_control (357 bytes)</title></rect>
 <rect width="11.60" height="11.78" x="547.42" y="144.23" class="named"><title>0x0046c020 fifteen_control (356 bytes)</title></rect>

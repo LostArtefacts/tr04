@@ -695,6 +695,43 @@ void LaraBubbles(ITEM_INFO *item)
     }
 }
 
+void UpdateBubbles(void)
+{
+    BUBBLE_STRUCT *bubble;
+    FLOOR_INFO *floor;
+    sint32 h, c, i;
+    sint16 room_number;
+
+    bubble = Bubbles;
+    for (i = 40; i > 0; i--, bubble++) {
+        if (!bubble->size)
+            continue;
+        bubble->speed += bubble->vel;
+        bubble->pad += 6;
+        bubble->pos.x += (3 * phd_sin(bubble->pad << 8)) >> W2V_SHIFT;
+        bubble->pos.y -= bubble->speed >> 8;
+        bubble->pos.z += phd_cos(bubble->pad << 8) >> W2V_SHIFT;
+        room_number = bubble->room_number;
+        floor = GetFloor(bubble->pos.x, bubble->pos.y, bubble->pos.z, &room_number);
+        h = GetHeight(floor, bubble->pos.x, bubble->pos.y, bubble->pos.z);
+        if (bubble->pos.y <= h && floor) {
+            if (room[room_number].flags & ROOM_UNDERWATER) {
+                c = GetCeiling(floor, bubble->pos.x, bubble->pos.y, bubble->pos.z);
+                if (c != NO_HEIGHT && bubble->pos.y > c) {
+                    if (bubble->size < bubble->dsize)
+                        bubble->size++;
+                    if (bubble->shade < 144)
+                        bubble->shade += 2;
+                    bubble->room_number = room_number;
+                    continue;
+                }
+            } else
+                SetupRipple(bubble->pos.x, room[bubble->room_number].maxceiling, bubble->pos.z, (GetRandomControl() & 0xF) + 48, 2);
+        }
+        bubble->size = 0;
+    }
+}
+
 void TriggerGunflash(SVECTOR *pos)
 {
     GUNFLASH_STRUCT *flash;
