@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="341.42" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="77.50" height="12" x="341.42" y="0" class="nonmatching"><title>286 · 18.45%</title></rect>
-<rect width="1.08" height="12" x="418.92" y="0" class="todo"><title>4 · 0.26%</title></rect>
+<rect width="77.77" height="12" x="341.42" y="0" class="nonmatching"><title>287 · 18.52%</title></rect>
+<rect width="0.81" height="12" x="419.19" y="0" class="todo"><title>3 · 0.19%</title></rect>
 </g>
 <text text-anchor="end" x="600" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="615" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">286</tspan> · <tspan class="todo">4</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="615" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">287</tspan> · <tspan class="todo">3</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="229.11" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
-<rect width="185.52" height="12" x="229.11" y="0" class="nonmatching"><title>276 KB · 44.17%</title></rect>
-<rect width="5.38" height="12" x="414.62" y="0" class="todo"><title>8 KB · 1.28%</title></rect>
+<rect width="187.13" height="12" x="229.11" y="0" class="nonmatching"><title>279 KB · 44.56%</title></rect>
+<rect width="3.76" height="12" x="416.24" y="0" class="todo"><title>6 KB · 0.90%</title></rect>
 </g>
 <text text-anchor="end" x="600" y="24.50">54.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="615" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">276 KB</tspan> · <tspan class="todo">8 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="615" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">279 KB</tspan> · <tspan class="todo">6 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -675,7 +675,7 @@
 <rect width="12" height="12" x="120" y="180" class="named"><title>0x0043c5a0 insert_object_into_list_v2 (112 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="180" class="named"><title>0x0043c610 construct_object_list (1149 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="180" class="named"><title>0x0043ca90 insert_object_into_list (80 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="180" class="todo"><title>0x0043cae0 draw_current_object_list (2405 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="180" class="nonmatching"><title>0x0043cae0 draw_current_object_list (2405 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="180" class="named"><title>0x0043d450 handle_object_changeover (19 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="180" class="named"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="180" class="nonmatching"><title>0x0043dbf0 setup_ammo_selector (566 bytes)</title></rect>
@@ -1650,7 +1650,7 @@
 <rect width="31.02" height="30.20" x="85.21" y="171.49" class="nonmatching"><title>0x00401e50 BaboonControl (2444 bytes)</title></rect>
 <rect width="31.02" height="29.96" x="85.21" y="204.69" class="nonmatching"><title>0x00404ea0 DemigodControl (2424 bytes)</title></rect>
 <rect width="31.02" height="29.76" x="85.21" y="237.65" class="named"><title>0x00468e00 AnimateJeep (2408 bytes)</title></rect>
-<rect width="31.02" height="29.72" x="85.21" y="270.40" class="todo"><title>0x0043cae0 draw_current_object_list (2405 bytes)</title></rect>
+<rect width="31.02" height="29.72" x="85.21" y="270.40" class="nonmatching"><title>0x0043cae0 draw_current_object_list (2405 bytes)</title></rect>
 <rect width="31.02" height="29.51" x="85.21" y="303.12" class="nonmatching"><title>0x0040d0a0 SasControl (2388 bytes)</title></rect>
 <rect width="31.02" height="29.42" x="85.21" y="335.63" class="named"><title>0x0042eb30 DoProperDetection (2381 bytes)</title></rect>
 <rect width="31.02" height="29.41" x="85.21" y="368.05" class="nonmatching"><title>0x00410c90 SethControl (2380 bytes)</title></rect>

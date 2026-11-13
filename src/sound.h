@@ -29,6 +29,7 @@ enum sfx_options {
 #define SFX_RUMBLE_NEXTDOOR 149
 #define SFX_LARA_RICOCHET 10
 #define SFX_MENU_MEDI 116
+#define SFX_MENU_ROTATE 108
 #define SFX_MENU_SELECT 109
 #define SFX_MENU_CHOOSE 111
 #define SFX_MENU_COMBINE 114

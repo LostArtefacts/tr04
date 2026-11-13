@@ -661,6 +661,241 @@ void insert_object_into_list(sint32 num)
     rings[RING_INVENTORY]->numobjectsinlist++;
 }
 
+void draw_current_object_list(sint32 ringnum)
+{
+    sint32 num, i, obj, n, maxobj, xoff, shade, minobj, objmeup, nummeup, activenum;
+    sint16 ymeup, yrot;
+    char textbufme[128];
+
+    if (rings[ringnum]->numobjectsinlist <= 0)
+        return;
+    if (ringnum == RING_AMMO) {
+        ammo_selector_fade_val = 0;
+        ammo_selector_fade_dir = 0;
+        if (combine_ring_fade_dir == 1) {
+            if (combine_ring_fade_val < 128)
+                combine_ring_fade_val += 32;
+            if (combine_ring_fade_val > 128) {
+                combine_ring_fade_val = 128;
+                combine_ring_fade_dir = 0;
+            }
+        } else if (combine_ring_fade_dir == 2) {
+            if (combine_ring_fade_val > 0)
+                combine_ring_fade_val -= 32;
+            if (combine_ring_fade_val <= 0) {
+                combine_ring_fade_val = 0;
+                combine_ring_fade_dir = 0;
+                if (combine_type_flag)
+                    normal_ring_fade_dir = 2;
+                else {
+                    rings[RING_INVENTORY]->ringactive = 1;
+                    menu_active = 1;
+                    rings[RING_AMMO]->ringactive = 0;
+                    handle_object_changeover(RING_INVENTORY);
+                }
+                rings[RING_AMMO]->ringactive = 0;
+            }
+        }
+    } else if (normal_ring_fade_dir == 1) {
+        if (normal_ring_fade_val < 128)
+            normal_ring_fade_val += 32;
+        if (normal_ring_fade_val > 128) {
+            normal_ring_fade_val = 128;
+            normal_ring_fade_dir = 0;
+            rings[RING_INVENTORY]->ringactive = 1;
+            menu_active = 1;
+        }
+    } else if (normal_ring_fade_dir == 2) {
+        if (normal_ring_fade_val > 0)
+            normal_ring_fade_val -= 32;
+        if (normal_ring_fade_val <= 0) {
+            normal_ring_fade_val = 0;
+            normal_ring_fade_dir = 1;
+            if (combine_type_flag == 1) {
+                combine_type_flag = 0;
+                combine_these_two_objects((sint16)combine_obj1, (sint16)combine_obj2);
+            } else if (combine_type_flag == 2) {
+                combine_type_flag = 0;
+                construct_object_list();
+                setup_objectlist_startposition((sint16)combine_obj1);
+            } else if (seperate_type_flag)
+                seperate_object(rings[RING_INVENTORY]->current_object_list[rings[RING_INVENTORY]->curobjinlist].invitem);
+            handle_object_changeover(RING_INVENTORY);
+        }
+    }
+    minobj = 0;
+    maxobj = 0;
+    xoff = 0;
+    n = 0;
+    if (rings[ringnum]->numobjectsinlist != 1)
+        xoff = (OBJLIST_SPACING * rings[ringnum]->objlistmovement) >> 16;
+    if (rings[ringnum]->numobjectsinlist == 2) {
+        minobj = -1;
+        maxobj = 0;
+        n = rings[ringnum]->curobjinlist - 1;
+    }
+    if (rings[ringnum]->numobjectsinlist == 3) {
+        minobj = -2;
+        maxobj = 1;
+        n = rings[ringnum]->curobjinlist - 2;
+    }
+    if (rings[ringnum]->numobjectsinlist == 4) {
+        minobj = -2;
+        maxobj = 1;
+        n = rings[ringnum]->curobjinlist - 2;
+    }
+    if (rings[ringnum]->numobjectsinlist >= 5) {
+        minobj = -3;
+        maxobj = 2;
+        n = rings[ringnum]->curobjinlist - 3;
+    }
+    if (n < 0)
+        n += rings[ringnum]->numobjectsinlist;
+    if (rings[ringnum]->objlistmovement < 0)
+        maxobj++;
+    for (i = minobj; i <= maxobj; i++) {
+        if (i == minobj) {
+            if (rings[ringnum]->objlistmovement >= 0)
+                shade = (128 * rings[ringnum]->objlistmovement) >> 16;
+            else
+                shade = 0;
+        } else if (i == minobj + 1 && maxobj != minobj + 1) {
+            if (rings[ringnum]->objlistmovement < 0)
+                shade = 128 - ((-128 * rings[ringnum]->objlistmovement) >> 16);
+            else
+                shade = 128;
+        } else if (i == maxobj) {
+            if (rings[ringnum]->objlistmovement >= 0)
+                shade = 128 - ((128 * rings[ringnum]->objlistmovement) >> 16);
+            else
+                shade = (-128 * rings[ringnum]->objlistmovement) >> 16;
+        } else
+            shade = 128;
+        if (!minobj && !maxobj)
+            shade = 128;
+        if (ringnum == RING_AMMO && combine_ring_fade_val < 128 && shade)
+            shade = combine_ring_fade_val;
+        else if (ringnum == RING_INVENTORY && normal_ring_fade_val < 128 && shade)
+            shade = normal_ring_fade_val;
+        if (!i) {
+            num = rings[ringnum]->current_object_list[n].invitem;
+            nummeup = 0;
+            obj = inventry_objects_list[num].object_number;
+            if (obj == BIGMEDI_ITEM)
+                nummeup = lara.num_large_medipack;
+            else if (obj == SMALLMEDI_ITEM)
+                nummeup = lara.num_small_medipack;
+            else if (obj == FLARE_INV_ITEM)
+                nummeup = lara.num_flares;
+            else if (obj >= PUZZLE_ITEM1 && obj <= PUZZLE_ITEM12) {
+                nummeup = lara.puzzleitems[obj - PUZZLE_ITEM1];
+                if (nummeup <= 1)
+                    nummeup = 0;
+            } else if (obj == SHOTGUN_AMMO1_ITEM) {
+                nummeup = lara.num_shotgun_ammo1;
+                if (nummeup != -1)
+                    nummeup /= 6;
+            } else if (obj == SHOTGUN_AMMO2_ITEM) {
+                nummeup = lara.num_shotgun_ammo2;
+                if (nummeup != -1)
+                    nummeup /= 6;
+            } else if (obj == GRENADE_GUN_AMMO1_ITEM)
+                nummeup = lara.num_grenade_ammo1;
+            else if (obj == GRENADE_GUN_AMMO2_ITEM)
+                nummeup = lara.num_grenade_ammo2;
+            else if (obj == GRENADE_GUN_AMMO3_ITEM)
+                nummeup = lara.num_grenade_ammo3;
+            else if (obj == CROSSBOW_AMMO1_ITEM)
+                nummeup = lara.num_crossbow_ammo1;
+            else if (obj == CROSSBOW_AMMO2_ITEM)
+                nummeup = lara.num_crossbow_ammo2;
+            else if (obj == CROSSBOW_AMMO3_ITEM)
+                nummeup = lara.num_crossbow_ammo3;
+            else if (obj == SIXSHOOTER_AMMO_ITEM)
+                nummeup = lara.num_revolver_ammo;
+            else if (obj == UZI_AMMO_ITEM)
+                nummeup = lara.num_uzi_ammo;
+            if (!nummeup)
+                sprintf(textbufme, SCRIPT_TEXT(inventry_objects_list[num].objname));
+            else if (nummeup == -1)
+                sprintf(textbufme, SCRIPT_TEXT(TXT_Unlimited_s), SCRIPT_TEXT(inventry_objects_list[num].objname));
+            else
+                sprintf(textbufme, "%d x %s", nummeup, SCRIPT_TEXT(inventry_objects_list[num].objname));
+            if (ringnum == RING_INVENTORY)
+                objmeup = (sint32)(phd_centery - 3.0F * ((float)(phd_winymax + 1) * (1.0F / 16.0F)));
+            else
+                objmeup = (sint32)(3.0F * ((float)(phd_winymax + 1) * (1.0F / 16.0F)) + phd_centery);
+            PrintString((uint16)phd_centerx, (uint16)objmeup, 8, textbufme, FF_CENTER);
+        }
+        if (!i && !rings[ringnum]->objlistmovement) {
+            if (inventry_objects_list[rings[ringnum]->current_object_list[n].invitem].flags & 2)
+                rings[ringnum]->current_object_list[n].yrot += 1022;
+        } else
+            spinback(&rings[ringnum]->current_object_list[n].yrot);
+        yrot = rings[ringnum]->current_object_list[n].yrot;
+        if (ringnum == RING_INVENTORY)
+            ymeup = 42;
+        else
+            ymeup = 190;
+        if (!rings[ringnum]->objlistmovement)
+            activenum = 0;
+        else
+            activenum = rings[ringnum]->objlistmovement > 0 ? -1 : 1;
+        if (i == activenum) {
+            if (rings[ringnum]->current_object_list[n].bright < 160)
+                rings[ringnum]->current_object_list[n].bright += 16;
+            if (rings[ringnum]->current_object_list[n].bright > 160)
+                rings[ringnum]->current_object_list[n].bright = 160;
+        } else {
+            if (rings[ringnum]->current_object_list[n].bright > 32)
+                rings[ringnum]->current_object_list[n].bright -= 16;
+            if (rings[ringnum]->current_object_list[n].bright < 32)
+                rings[ringnum]->current_object_list[n].bright = 32;
+        }
+        DrawThreeDeeObject2D((sint32)(256.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos) + xoff + i * OBJLIST_SPACING,
+            (sint32)((float)phd_centery * (1.0F / 120.0F) * ymeup + inventry_ypos),
+            rings[ringnum]->current_object_list[n].invitem, shade, 0, yrot, 0, rings[ringnum]->current_object_list[n].bright, 0);
+        n++;
+        if (n >= rings[ringnum]->numobjectsinlist)
+            n = 0;
+    }
+    if (rings[ringnum]->ringactive && rings[ringnum]->numobjectsinlist != 1) {
+        if (ringnum == RING_AMMO && combine_ring_fade_val != 128)
+            return;
+        if (rings[ringnum]->objlistmovement > 0)
+            rings[ringnum]->objlistmovement += 8192;
+        if (rings[ringnum]->objlistmovement < 0)
+            rings[ringnum]->objlistmovement -= 8192;
+        if (go_left && !rings[ringnum]->objlistmovement) {
+            SoundEffect(SFX_MENU_ROTATE, 0, SFX_ALWAYS);
+            rings[ringnum]->objlistmovement += 8192;
+            if (ammo_selector_flag)
+                ammo_selector_fade_dir = 2;
+        }
+        if (go_right && !rings[ringnum]->objlistmovement) {
+            SoundEffect(SFX_MENU_ROTATE, 0, SFX_ALWAYS);
+            rings[ringnum]->objlistmovement -= 8192;
+            if (ammo_selector_flag)
+                ammo_selector_fade_dir = 2;
+        }
+        if (rings[ringnum]->objlistmovement >= 65536) {
+            rings[ringnum]->curobjinlist--;
+            if (rings[ringnum]->curobjinlist < 0)
+                rings[ringnum]->curobjinlist = rings[ringnum]->numobjectsinlist - 1;
+            rings[ringnum]->objlistmovement = 0;
+            if (ringnum == RING_INVENTORY)
+                handle_object_changeover(RING_INVENTORY);
+        } else if (rings[ringnum]->objlistmovement < -65535) {
+            rings[ringnum]->curobjinlist++;
+            if (rings[ringnum]->curobjinlist >= rings[ringnum]->numobjectsinlist)
+                rings[ringnum]->curobjinlist = 0;
+            rings[ringnum]->objlistmovement = 0;
+            if (ringnum == RING_INVENTORY)
+                handle_object_changeover(RING_INVENTORY);
+        }
+    }
+}
+
 void handle_object_changeover(sint32 ringnum)
 {
     current_selected_option = 0;
