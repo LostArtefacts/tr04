@@ -76,7 +76,9 @@ extern uint8 SW_MulTable[65536];
 #pragma data_seg(".text")
 char SW_Kernel32Name[] = "kernel32.dll";
 #pragma data_seg()
-extern char SW_SleepName[];
+#pragma data_seg(".text$s")
+char SW_SleepName[] = "Sleep";
+#pragma data_seg()
 
 void __fastcall SW_WaitUntilInScene(volatile sint32 *flag)
 {

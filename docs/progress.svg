@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="336.27" height="12" x="0" y="0" class="named"><title>1259 · 81.23%</title></rect>
-<rect width="67.04" height="12" x="336.27" y="0" class="nonmatching"><title>251 · 16.19%</title></rect>
-<rect width="10.68" height="12" x="403.32" y="0" class="todo"><title>40 · 2.58%</title></rect>
+<rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
+<rect width="67.04" height="12" x="336.54" y="0" class="nonmatching"><title>251 · 16.19%</title></rect>
+<rect width="10.42" height="12" x="403.58" y="0" class="todo"><title>39 · 2.52%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1259</tspan> · <tspan class="nonmatching">251</tspan> · <tspan class="todo">40</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">251</tspan> · <tspan class="todo">39</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
+<rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.56%</title></rect>
 <rect width="168.63" height="12" x="225.86" y="0" class="nonmatching"><title>255 KB · 40.73%</title></rect>
-<rect width="19.51" height="12" x="394.49" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
+<rect width="19.50" height="12" x="394.50" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">255 KB</tspan> · <tspan class="todo">29 KB</tspan></text>
@@ -1603,7 +1603,7 @@
 <rect width="12" height="12" x="540" y="450" class="todo"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="450" class="todo"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="450" class="todo"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="450" class="todo"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="450" class="named"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="nonmatching"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="450" class="nonmatching"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="450" class="nonmatching"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
@@ -3148,7 +3148,7 @@
 <rect width="1.67" height="1.83" x="726.77" y="446.60" class="nonmatching"><title>0x0048f960 RestoreFPCW (8 bytes)</title></rect>
 <rect width="1.67" height="1.83" x="726.77" y="451.43" class="named"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
 <rect width="1.67" height="1.37" x="726.77" y="456.26" class="named"><title>0x00494e90 SW_EndFrame (6 bytes)</title></rect>
-<rect width="1.67" height="1.37" x="726.77" y="460.63" class="todo"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
+<rect width="1.67" height="1.37" x="726.77" y="460.63" class="named"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
 <rect width="1.18" height="1.60" x="731.44" y="446.60" class="named"><title>0x0040b050 GunShot (5 bytes)</title></rect>
 <rect width="1.18" height="1.60" x="731.44" y="451.20" class="named"><title>0x00437ce0 reset_hair (5 bytes)</title></rect>
 <rect width="1.18" height="1.60" x="731.44" y="455.80" class="named"><title>0x00437cf0 ClearScarabsPatch (5 bytes)</title></rect>
