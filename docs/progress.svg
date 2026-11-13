@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="260.03" height="12" x="0" y="0" class="named"><title>1198 · 77.39%</title></rect>
 <rect width="0.65" height="12" x="260.03" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="34.29" height="12" x="260.68" y="0" class="nonmatching"><title>158 · 10.21%</title></rect>
-<rect width="41.02" height="12" x="294.98" y="0" class="todo"><title>189 · 12.21%</title></rect>
+<rect width="34.51" height="12" x="260.68" y="0" class="nonmatching"><title>159 · 10.27%</title></rect>
+<rect width="40.81" height="12" x="295.19" y="0" class="todo"><title>188 · 12.14%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">158</tspan> · <tspan class="todo">189</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">159</tspan> · <tspan class="todo">188</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="173.45" height="12" x="0" y="0" class="named"><title>323 KB · 51.62%</title></rect>
 <rect width="0.13" height="12" x="173.45" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="106.01" height="12" x="173.58" y="0" class="nonmatching"><title>197 KB · 31.55%</title></rect>
-<rect width="56.41" height="12" x="279.59" y="0" class="todo"><title>105 KB · 16.79%</title></rect>
+<rect width="106.71" height="12" x="173.58" y="0" class="nonmatching"><title>199 KB · 31.76%</title></rect>
+<rect width="55.71" height="12" x="280.29" y="0" class="todo"><title>104 KB · 16.58%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">51.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">197 KB</tspan> · <tspan class="todo">105 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">199 KB</tspan> · <tspan class="todo">104 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1420,7 +1420,7 @@
 <rect width="12" height="12" x="15" y="405" class="nonmatching"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="405" class="nonmatching"><title>0x0048a0c0 DrawBlood (868 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="405" class="nonmatching"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="405" class="todo"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="405" class="nonmatching"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="405" class="nonmatching"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="405" class="todo"><title>0x0048b130 ShowTitle (842 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="405" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
@@ -1720,7 +1720,7 @@
 <rect width="23.23" height="21.77" x="209.47" y="342.09" class="nonmatching"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
 <rect width="23.23" height="21.69" x="209.47" y="366.86" class="nonmatching"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
 <rect width="23.23" height="21.59" x="209.47" y="391.54" class="named"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
-<rect width="23.23" height="21.47" x="209.47" y="416.13" class="todo"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
+<rect width="23.23" height="21.47" x="209.47" y="416.13" class="nonmatching"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
 <rect width="23.23" height="21.40" x="209.47" y="440.60" class="nonmatching"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
 <rect width="21.97" height="22.61" x="235.70" y="0" class="named"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
 <rect width="21.97" height="22.56" x="235.70" y="25.61" class="nonmatching"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>

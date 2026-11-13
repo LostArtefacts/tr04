@@ -1611,6 +1611,131 @@ void DrawDrips(void)
     phd_PopMatrix();
 }
 
+void DoUwEffect(void)
+{
+    WATER_DUST *p;
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[3];
+    TEXTURESTRUCT tex;
+    PHD_VECTOR pos;
+    sint32 *mptr;
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    float perspz, u1, v1, u2, v2;
+    sint32 i, num_alive, rad, ang, x, y, z, size, col, yv;
+    uint8 yvel;
+
+    num_alive = 0;
+    p = uwdust;
+    for (i = 256; i > 0; i--, p++) {
+        if (!p->x && num_alive < 16) {
+            num_alive++;
+            y = (GetRandomDraw() & 0x7FF) - 1024;
+            rad = GetRandomDraw() & 0xFFF;
+            ang = GetRandomDraw() & 0x1FFE;
+            x = (rad * rcossin_tbl[ang]) >> 12;
+            z = (rad * rcossin_tbl[ang + 1]) >> 12;
+            p->x = lara_item->pos.x_pos + x;
+            p->y = lara_item->pos.y_pos + y;
+            p->z = lara_item->pos.z_pos + z;
+            if (IsRoomOutside(p->x, p->y, p->z) < 0 || !(room[IsRoomOutsideNo].flags & ROOM_UNDERWATER)) {
+                p->x = 0;
+                continue;
+            }
+            p->on = 1;
+            p->life = (GetRandomDraw() & 7) + 16;
+            p->xvel = GetRandomDraw() & 3;
+            if (p->xvel == 2)
+                p->xvel = -1;
+            p->yvel = ((GetRandomDraw() & 7) + 8) << 3;
+            p->zvel = GetRandomDraw() & 3;
+            if (p->zvel == 2)
+                p->zvel = -1;
+        }
+        p->x += p->xvel;
+        p->y += p->yvel >> 6;
+        p->z += p->zvel;
+        if (!p->life) {
+            p->x = 0;
+            continue;
+        }
+        p->life--;
+        if ((p->yvel & 7) < 7)
+            p->yvel++;
+    }
+    sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 10];
+    u1 = sprite->x1;
+    u2 = sprite->x2;
+    v1 = sprite->y1;
+    v2 = sprite->y2;
+    XY = (sint16 *)&scratchpad[0];
+    Z = (sint32 *)&scratchpad[256];
+    offsets = (sint16 *)&scratchpad[512];
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    mptr = phd_mxptr;
+    p = uwdust;
+    for (i = 256; i > 0; i--) {
+        if (!p->x) {
+            p++;
+            continue;
+        }
+        offsets[0] = (sint16)(p->x - lara_item->pos.x_pos);
+        offsets[1] = (sint16)(p->y - lara_item->pos.y_pos);
+        offsets[2] = (sint16)(p->z - lara_item->pos.z_pos);
+        pos.x = offsets[0] * mptr[M00] + offsets[1] * mptr[M01] + offsets[2] * mptr[M02] + mptr[M03];
+        pos.y = offsets[0] * mptr[M10] + offsets[1] * mptr[M11] + offsets[2] * mptr[M12] + mptr[M13];
+        pos.z = offsets[0] * mptr[M20] + offsets[1] * mptr[M21] + offsets[2] * mptr[M22] + mptr[M23];
+        perspz = f_persp / (float)pos.z;
+        XY[0] = (sint16)(pos.x * perspz + f_centerx);
+        XY[1] = (sint16)(pos.y * perspz + f_centery);
+        Z[0] = pos.z >> W2V_SHIFT;
+        if (Z[0] >= 32) {
+            if (XY[0] >= phd_winxmin && XY[0] <= phd_winxmax && XY[1] >= phd_winymin && XY[1] <= phd_winymax) {
+                yvel = p->yvel;
+                size = phd_persp * (yvel >> 3) / (Z[0] >> 4);
+                if (size < 1)
+                    size = 6;
+                else if (size > 12)
+                    size = 12;
+                size = (0x5556 * size) >> 16;
+                if (phd_winwidth > 512)
+                    size = (sint32)((float)(phd_winwidth / 512) * size);
+                if ((yvel & 7) < 7) {
+                    yv = (yvel & 7) << 2;
+                    col = (yv | ((yv | ((yv | 0xFFFFFF80) << 8)) << 8)) << 1;
+                } else if (p->life > 18)
+                    col = 0xFF404040;
+                else
+                    col = (p->life | ((p->life | ((p->life | 0xFFFFFFC0) << 8)) << 8)) << 2;
+                setXY3(v, XY[0] + size, XY[1] - (size << 1), XY[0] + size, XY[1] + size, XY[0] - (size << 1), XY[1] + size, Z[0], clipflags);
+                v[0].color = col;
+                v[1].color = col;
+                v[2].color = col;
+                v[0].specular = 0xFF000000;
+                v[1].specular = 0xFF000000;
+                v[2].specular = 0xFF000000;
+                tex.drawtype = 2;
+                tex.flag = 0;
+                tex.tpage = sprite->tpage;
+                tex.u1 = u2;
+                tex.v1 = v1;
+                tex.u2 = u2;
+                tex.v2 = v2;
+                tex.u3 = u1;
+                tex.v3 = v2;
+                AddTriSorted(v, 0, 1, 2, &tex, 0);
+                p++;
+                continue;
+            }
+        } else if (p->life > 16)
+            p->life = 16;
+        p++;
+    }
+    phd_PopMatrix();
+}
+
 void DrawWraithTrail(ITEM_INFO *item)
 {
     WRAITH_STRUCT *wraith;
