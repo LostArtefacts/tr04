@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="329.76" height="12" x="0" y="0" class="named"><title>1233 · 79.65%</title></rect>
-<rect width="60.44" height="12" x="329.76" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
-<rect width="23.80" height="12" x="390.20" y="0" class="todo"><title>89 · 5.75%</title></rect>
+<rect width="330.02" height="12" x="0" y="0" class="named"><title>1234 · 79.72%</title></rect>
+<rect width="60.44" height="12" x="330.02" y="0" class="nonmatching"><title>226 · 14.60%</title></rect>
+<rect width="23.53" height="12" x="390.47" y="0" class="todo"><title>88 · 5.68%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1233</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">89</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1234</tspan> · <tspan class="nonmatching">226</tspan> · <tspan class="todo">88</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="223.37" height="12" x="0" y="0" class="named"><title>337 KB · 53.95%</title></rect>
 <rect width="162.98" height="12" x="223.37" y="0" class="nonmatching"><title>246 KB · 39.37%</title></rect>
-<rect width="27.66" height="12" x="386.34" y="0" class="todo"><title>42 KB · 6.68%</title></rect>
+<rect width="27.65" height="12" x="386.35" y="0" class="todo"><title>42 KB · 6.68%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">337 KB</tspan> · <tspan class="nonmatching">246 KB</tspan> · <tspan class="todo">42 KB</tspan></text>
@@ -1537,7 +1537,7 @@
 <rect width="12" height="12" x="300" y="435" class="todo"><title>0x004945a0 SW_D3D_Release (52 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="435" class="todo"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="435" class="todo"><title>0x004945f0 SW_D3D_GetCurrentViewport (18 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="435" class="todo"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="435" class="named"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="435" class="todo"><title>0x00494620 SW_D3D_SetRenderState (44 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="435" class="todo"><title>0x0049464c SW_D3D_DrawPrimitive (40 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="435" class="todo"><title>0x00494680 SW_D3D_SetTextureStageState (113 bytes)</title></rect>
@@ -3157,7 +3157,7 @@
 <rect width="1.54" height="1.23" x="740.91" y="451.22" class="named"><title>0x0048f990 j_nullsub_12 (5 bytes)</title></rect>
 <rect width="1.54" height="1.23" x="745.46" y="451.22" class="named"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
 <rect width="1.03" height="1.77" x="736.37" y="455.45" class="named"><title>0x00490b10 j_nullsub_14 (5 bytes)</title></rect>
-<rect width="1.03" height="1.77" x="736.37" y="460.23" class="todo"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
+<rect width="1.03" height="1.77" x="736.37" y="460.23" class="named"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="455.45" class="named"><title>0x004357b0 nullsub_1 (1 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="458.63" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.40" y="461" class="named"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>
