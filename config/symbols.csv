@@ -1499,7 +1499,7 @@ address,size,name,symbol
 0x00494e90,6,SW_EndFrame,_SW_EndFrame
 0x00494ea0,1015,SW_SelectRasterizer,_SW_SelectRasterizer
 0x004952a0,12,SW_SetColorOpScale,_SW_SetColorOpScale
-0x004952b0,346,SW_SetRenderStateFlags,_SW_SetRenderStateFlags
+0x004952b0,418,SW_SetRenderStateFlags,_SW_SetRenderStateFlags
 0x00495460,317,SW_DrawPrimitives,_SW_DrawPrimitives
 0x004955c0,953,SW_DrawLineG,_SW_DrawLineG
 0x00495980,34,j_SW_DrawPrimitives,_j_SW_DrawPrimitives
@@ -2697,6 +2697,9 @@ address,size,name,symbol
 0x007e2c6c,4,SW_FrameState,_SW_FrameState
 0x007e2dd0,16384,SW_RecipTable,_SW_RecipTable
 0x007e6dd0,4,SW_SpanBuffer,_SW_SpanBuffer
+0x007e6dd4,4,SW_TextureBits,_SW_TextureBits
+0x007e6dd8,4,SW_RenderFlags,_SW_RenderFlags
+0x007e6ddc,4,SW_FogColor,_SW_FogColor
 0x007e6de4,4,SW_ZLimit,_SW_ZLimit
 0x007e6de8,4,SW_UseMMX,_SW_UseMMX
 0x007e6e00,4,BinkSurfaceType,_BinkSurfaceType

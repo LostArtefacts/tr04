@@ -33,6 +33,9 @@ extern sint32 SW_ColorOpScale;
 extern DDSURFACEDESC2 SW_SurfDesc;
 extern sint32 SW_NumLocked;
 extern sint32 SW_UseMMX;
+extern sint32 SW_RenderFlags;
+extern DWORD SW_TextureBits;
+extern DWORD SW_FogColor;
 extern UINT DBLog_Message;
 extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 extern LPDIRECT3DTEXTURE2 SW_LockedTextures[256];
@@ -449,6 +452,70 @@ __declspec(naked) FARPROC SW_GetSleepProc(void)
         call dword ptr GetProcAddress
         ret
     }
+}
+
+HRESULT SW_SetRenderStateFlags(D3DRENDERSTATETYPE type, DWORD state)
+{
+    switch (type) {
+    case D3DRENDERSTATE_FOGENABLE:
+        if (state) {
+            SW_RenderFlags |= 0x400;
+            return 0;
+        }
+        SW_RenderFlags &= ~0x400;
+        return 0;
+    case D3DRENDERSTATE_FOGCOLOR:
+        SW_FogColor = state;
+        return 0;
+    case D3DRENDERSTATE_TEXTUREMIN:
+        if (state == D3DFILTER_LINEAR || state == D3DFILTER_NEAREST) {
+            SW_RenderFlags &= ~0x40;
+            return 0;
+        }
+        SW_RenderFlags |= 0x40;
+        return 0;
+    case D3DRENDERSTATE_TEXTUREMAG:
+        if (state == D3DFILTER_LINEAR || state == D3DFILTER_MIPLINEAR) {
+            SW_RenderFlags |= 0x1;
+            return 0;
+        }
+        SW_RenderFlags &= ~0x1;
+        return 0;
+    case D3DRENDERSTATE_DESTBLEND:
+        if (state == D3DBLEND_ONE) {
+            SW_RenderFlags = (SW_RenderFlags & ~0x8) | 0x80;
+            return 0;
+        }
+        if (state == D3DBLEND_SRCALPHA || state == D3DBLEND_INVSRCALPHA) {
+            SW_RenderFlags = (SW_RenderFlags & ~0x80) | 0x8;
+            return 0;
+        }
+        SW_RenderFlags &= ~0x88;
+        return 0;
+    case D3DRENDERSTATE_ALPHABLENDENABLE:
+        if (state == 1) {
+            SW_RenderFlags |= 0x2;
+            return 0;
+        }
+        SW_RenderFlags &= ~0x2;
+        return 0;
+    case D3DRENDERSTATE_TEXTUREPERSPECTIVE:
+        if (state) {
+            SW_RenderFlags |= 0x100;
+            return 0;
+        }
+        SW_RenderFlags &= ~0x100;
+        return 0;
+    case D3DRENDERSTATE_TEXTUREHANDLE:
+        SW_TextureBits = state;
+        if (state) {
+            SW_RenderFlags |= 0x200;
+            return 0;
+        }
+        SW_RenderFlags &= ~0x200;
+        return 0;
+    }
+    return 0;
 }
 
 void SW_CopyBuffer(void *dst, void *src, sint32 width)
