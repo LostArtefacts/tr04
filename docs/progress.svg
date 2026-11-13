@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="66.51" height="12" x="336.54" y="0" class="nonmatching"><title>249 · 16.06%</title></rect>
+<rect width="336.27" height="12" x="0" y="0" class="named"><title>1259 · 81.23%</title></rect>
+<rect width="66.77" height="12" x="336.27" y="0" class="nonmatching"><title>250 · 16.13%</title></rect>
 <rect width="10.95" height="12" x="403.05" y="0" class="todo"><title>41 · 2.65%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">249</tspan> · <tspan class="todo">41</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1259</tspan> · <tspan class="nonmatching">250</tspan> · <tspan class="todo">41</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="226.15" height="12" x="0" y="0" class="named"><title>342 KB · 54.63%</title></rect>
-<rect width="168.33" height="12" x="226.15" y="0" class="nonmatching"><title>254 KB · 40.66%</title></rect>
+<rect width="225.98" height="12" x="0" y="0" class="named"><title>341 KB · 54.59%</title></rect>
+<rect width="168.50" height="12" x="225.98" y="0" class="nonmatching"><title>255 KB · 40.70%</title></rect>
 <rect width="19.52" height="12" x="394.48" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">342 KB</tspan> · <tspan class="nonmatching">254 KB</tspan> · <tspan class="todo">29 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">255 KB</tspan> · <tspan class="todo">29 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1606,7 +1606,7 @@
 <rect width="12" height="12" x="585" y="450" class="todo"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="nonmatching"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="450" class="nonmatching"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="450" class="named"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="450" class="nonmatching"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="450" class="named"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="450" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="450" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
@@ -2245,7 +2245,7 @@
 <rect width="9.73" height="9.93" x="598.65" y="185.67" class="named"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
 <rect width="9.69" height="9.93" x="611.38" y="185.67" class="named"><title>0x00463080 FullBlockSwitchControl (251 bytes)</title></rect>
 <rect width="9.69" height="9.93" x="624.07" y="185.67" class="named"><title>0x00469770 CanGetOff_jeep (251 bytes)</title></rect>
-<rect width="9.65" height="9.93" x="636.76" y="185.67" class="named"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
+<rect width="9.65" height="9.93" x="636.76" y="185.67" class="nonmatching"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="9.61" height="9.93" x="649.41" y="185.67" class="named"><title>0x00440940 StalkBox (249 bytes)</title></rect>
 <rect width="9.61" height="9.93" x="662.02" y="185.67" class="named"><title>0x00442d70 MoveCreature3DPos (249 bytes)</title></rect>
 <rect width="9.61" height="9.93" x="674.64" y="185.67" class="nonmatching"><title>0x00460320 Spline (249 bytes)</title></rect>
