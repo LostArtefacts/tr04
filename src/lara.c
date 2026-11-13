@@ -450,6 +450,39 @@ void lara_as_crawlb(ITEM_INFO *item, COLL_INFO *coll)
         item->goal_anim_state = AS_ALL4S;
 }
 
+void lara_col_crawlb(ITEM_INFO *item, COLL_INFO *coll)
+{
+    item->gravity_status = item->fallspeed = 0;
+    coll->radius = 250;
+    coll->bad_pos = STEP_L - 1;
+    coll->bad_neg = -(STEP_L - 1);
+    coll->bad_ceiling = 400;
+    coll->slopes_are_pits = 1;
+    coll->slopes_are_walls = 1;
+    lara.move_angle = item->pos.y_rot + 0x8000;
+    coll->facing = lara.move_angle;
+    GetCollisionInfo(coll, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 400);
+    if (LaraDeflectEdgeDuck(item, coll)) {
+        item->current_anim_state = AS_ALL4S;
+        item->goal_anim_state = AS_ALL4S;
+        if (item->anim_number != ANIM_ALL4S) {
+            item->anim_number = ANIM_ALL4S;
+            item->frame_number = anims[ANIM_ALL4S].frame_base;
+        }
+        return;
+    }
+    if (LaraFallen(item, coll)) {
+        lara.gun_status = LG_NO_ARMS;
+        return;
+    }
+    if (TestLaraSlide(item, coll))
+        return;
+    ShiftItem(item, coll);
+    if (coll->mid_floor != NO_HEIGHT && coll->mid_floor > -STEP_L)
+        item->pos.y_pos += coll->mid_floor;
+    lara.move_angle = item->pos.y_rot;
+}
+
 void lara_col_crawl2hang(ITEM_INFO *item, COLL_INFO *coll)
 {
     sint16 *bounds;
