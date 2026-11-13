@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="326.28" height="12" x="0" y="0" class="named"><title>1220 · 78.81%</title></rect>
-<rect width="55.36" height="12" x="326.28" y="0" class="nonmatching"><title>207 · 13.37%</title></rect>
-<rect width="32.36" height="12" x="381.64" y="0" class="todo"><title>121 · 7.82%</title></rect>
+<rect width="55.63" height="12" x="326.28" y="0" class="nonmatching"><title>208 · 13.44%</title></rect>
+<rect width="32.09" height="12" x="381.91" y="0" class="todo"><title>120 · 7.75%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1220</tspan> · <tspan class="nonmatching">207</tspan> · <tspan class="todo">121</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1220</tspan> · <tspan class="nonmatching">208</tspan> · <tspan class="todo">120</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="219.30" height="12" x="0" y="0" class="named"><title>331 KB · 52.97%</title></rect>
-<rect width="149.94" height="12" x="219.30" y="0" class="nonmatching"><title>226 KB · 36.22%</title></rect>
-<rect width="44.76" height="12" x="369.24" y="0" class="todo"><title>68 KB · 10.81%</title></rect>
+<rect width="150.34" height="12" x="219.30" y="0" class="nonmatching"><title>227 KB · 36.31%</title></rect>
+<rect width="44.36" height="12" x="369.64" y="0" class="todo"><title>67 KB · 10.72%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">331 KB</tspan> · <tspan class="nonmatching">226 KB</tspan> · <tspan class="todo">68 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">331 KB</tspan> · <tspan class="nonmatching">227 KB</tspan> · <tspan class="todo">67 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -614,7 +614,7 @@
 <rect width="12" height="12" x="705" y="150" class="named"><title>0x00437d50 AddFootPrint (270 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="150" class="named"><title>0x00437e60 GetFreeFireSpark (131 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="150" class="named"><title>0x00437ef0 keep_those_fires_burning (34 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="165" class="todo"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="165" class="nonmatching"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="165" class="named"><title>0x00438180 TriggerGlobalFireSmoke (319 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="165" class="named"><title>0x004382c0 TriggerGlobalFireFlame (341 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="165" class="named"><title>0x00438420 TriggerGlobalStaticFlame (201 bytes)</title></rect>
@@ -1903,7 +1903,7 @@
 <rect width="15.13" height="15.27" x="623.76" y="61.54" class="named"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
 <rect width="15.08" height="15.27" x="641.89" y="61.54" class="named"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
 <rect width="15.03" height="15.27" x="659.96" y="61.54" class="nonmatching"><title>0x00409200 ControlBodyPart (598 bytes)</title></rect>
-<rect width="15" height="15.27" x="677.99" y="61.54" class="todo"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
+<rect width="15" height="15.27" x="677.99" y="61.54" class="nonmatching"><title>0x00437f20 UpdateFireSparks (597 bytes)</title></rect>
 <rect width="15" height="15.27" x="695.99" y="61.54" class="named"><title>0x00438940 TriggerGunSmoke (597 bytes)</title></rect>
 <rect width="15" height="15.27" x="714" y="61.54" class="todo"><title>0x0043b0d0 CalcLightningSpline (597 bytes)</title></rect>
 <rect width="15" height="15.27" x="732" y="61.54" class="named"><title>0x00478070 CreateD3DLights (597 bytes)</title></rect>

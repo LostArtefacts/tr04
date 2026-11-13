@@ -61,6 +61,65 @@ void keep_those_fires_burning(void)
     }
 }
 
+void UpdateFireSparks(void)
+{
+    FIRE_SPARKS *sptr;
+    sint32 fade, i;
+
+    keep_those_fires_burning();
+    sptr = fire_spark;
+    for (i = 20; i > 0; i--, sptr++) {
+        if (!sptr->On)
+            continue;
+        sptr->Life--;
+        if (!sptr->Life) {
+            sptr->On = 0;
+            continue;
+        }
+        if (sptr->sLife - sptr->Life < sptr->ColFadeSpeed) {
+            fade = ((sptr->sLife - sptr->Life) << 16) / sptr->ColFadeSpeed;
+            sptr->R = (uint8)(sptr->sR + ((fade * (sptr->dR - sptr->sR)) >> 16));
+            sptr->G = (uint8)(sptr->sG + ((fade * (sptr->dG - sptr->sG)) >> 16));
+            sptr->B = (uint8)(sptr->sB + ((fade * (sptr->dB - sptr->sB)) >> 16));
+        } else if (sptr->Life < sptr->FadeToBlack) {
+            fade = ((sptr->Life - sptr->FadeToBlack) << 16) / sptr->FadeToBlack + 0x10000;
+            sptr->R = (uint8)((fade * sptr->dR) >> 16);
+            sptr->G = (uint8)((fade * sptr->dG) >> 16);
+            sptr->B = (uint8)((fade * sptr->dB) >> 16);
+            if (sptr->R < 8 && sptr->G < 8 && sptr->B < 8) {
+                sptr->On = 0;
+                continue;
+            }
+        } else {
+            sptr->R = sptr->dR;
+            sptr->G = sptr->dG;
+            sptr->B = sptr->dB;
+        }
+        if (sptr->Flags & 0x10)
+            sptr->RotAng = (sptr->RotAng + sptr->RotAdd) & 0xFFF;
+        if (sptr->R < 24 && sptr->G < 24 && sptr->B < 24)
+            sptr->Def = (uint8)(objects[DEFAULT_SPRITES].mesh_index + 2);
+        else if (sptr->R < 80 && sptr->G < 80 && sptr->B < 80)
+            sptr->Def = (uint8)(objects[DEFAULT_SPRITES].mesh_index + 1);
+        else
+            sptr->Def = (uint8)objects[DEFAULT_SPRITES].mesh_index;
+        fade = ((sptr->sLife - sptr->Life) << 16) / sptr->sLife;
+        sptr->Yvel += sptr->Gravity;
+        if (sptr->MaxYvel) {
+            if (sptr->Yvel < 0 && sptr->Yvel < sptr->MaxYvel << 5 || sptr->Yvel > 0 && sptr->Yvel > sptr->MaxYvel << 5)
+                sptr->Yvel = sptr->MaxYvel << 5;
+        }
+        if (sptr->Friction) {
+            sptr->Xvel -= sptr->Xvel >> sptr->Friction;
+            sptr->Zvel -= sptr->Zvel >> sptr->Friction;
+        }
+        sptr->x += sptr->Xvel >> 5;
+        sptr->y += sptr->Yvel >> 5;
+        sptr->z += sptr->Zvel >> 5;
+        sptr->Size = (uint8)(sptr->sSize + ((fade * (sptr->dSize - sptr->sSize)) >> 16));
+    }
+}
+
 void TriggerGlobalFireSmoke(void)
 {
     FIRE_SPARKS *sptr;
