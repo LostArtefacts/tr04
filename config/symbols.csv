@@ -1500,7 +1500,7 @@ address,size,name,symbol
 0x00494ea0,1015,SW_SelectRasterizer,_SW_SelectRasterizer
 0x004952a0,12,SW_SetColorOpScale,_SW_SetColorOpScale
 0x004952b0,418,SW_SetRenderStateFlags,_SW_SetRenderStateFlags
-0x00495460,317,SW_DrawPrimitives,_SW_DrawPrimitives
+0x00495460,340,SW_DrawPrimitives,_SW_DrawPrimitives
 0x004955c0,953,SW_DrawLineG,_SW_DrawLineG
 0x00495980,34,j_SW_DrawPrimitives,_j_SW_DrawPrimitives
 0x004959b0,2524,SW_TriSetupGT,_SW_TriSetupGT

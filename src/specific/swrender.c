@@ -18,6 +18,19 @@ typedef struct sw_device {
     sint32 in_scene;
 } SW_DEVICE;
 
+typedef struct sw_vertex {
+    float sx;
+    float sy;
+    float sz;
+    float rhw;
+    D3DCOLOR color;
+    D3DCOLOR specular;
+    float tu;
+    float tv;
+    float tu2;
+    float tv2;
+} SW_VERTEX;
+
 extern float SW_ZLimit;
 
 HRESULT __stdcall SW_D3D_EndScene(SW_DEVICE *dev);
@@ -41,6 +54,7 @@ extern sint32 (*SW_TriSetupFunc)(void *v0, void *v1, void *v2);
 extern void (*SW_SpanFunc)(void);
 extern void (*SW_SpanFogFunc)(void);
 void nullsub_1();
+sint32 SW_DrawLineG(SW_VERTEX *v0, SW_VERTEX *v1);
 extern UINT DBLog_Message;
 extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 extern LPDIRECT3DTEXTURE2 SW_LockedTextures[256];
@@ -633,6 +647,63 @@ HRESULT SW_SetRenderStateFlags(D3DRENDERSTATETYPE type, DWORD state)
         }
         SW_RenderFlags &= ~0x200;
         return 0;
+    }
+    return 0;
+}
+
+HRESULT SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWORD count, DWORD flags)
+{
+    SW_VERTEX *v;
+    sint32 n, c, saved;
+
+    if (SW_Surface) {
+        switch (type) {
+        case D3DPT_TRIANGLELIST:
+            v = (SW_VERTEX *)verts;
+            n = count;
+            do {
+                saved = SW_RenderFlags;
+                if ((SW_RenderFlags & 0x8) && (v[0].color & v[2].color & v[1].color & 0xFF000000) == 0xFF000000)
+                    SW_RenderFlags = (SW_RenderFlags & ~0x8) | 0x4;
+                if ((SW_RenderFlags & 0x400) && (v[2].specular & v[0].specular & v[1].specular & 0xFE000000) == 0xFE000000)
+                    SW_RenderFlags &= ~0x400;
+                if (SW_RenderFlags & 0x100) {
+                    c = 0;
+                    if (*(sint32 *)&v[0].rhw < *(sint32 *)&SW_ZLimit) {
+                        v[0].rhw = SW_ZLimit;
+                        c = 1;
+                    }
+                    if (*(sint32 *)&v[1].rhw < *(sint32 *)&SW_ZLimit) {
+                        v[1].rhw = SW_ZLimit;
+                        c++;
+                    }
+                    if (*(sint32 *)&v[2].rhw < *(sint32 *)&SW_ZLimit) {
+                        v[2].rhw = SW_ZLimit;
+                        c++;
+                    }
+                    if (c == 3)
+                        SW_RenderFlags &= ~0x100;
+                }
+                SW_SelectRasterizer(&v[0], &v[1], &v[2]);
+                n -= 3;
+                SW_RenderFlags = saved;
+                v += 3;
+            } while (n > 0);
+            break;
+        case D3DPT_LINELIST:
+            v = (SW_VERTEX *)verts;
+            for (count >>= 1; count; count--) {
+                SW_DrawLineG(v, v + 1);
+                v += 2;
+            }
+            break;
+        case D3DPT_LINESTRIP:
+            return 0;
+        case D3DPT_TRIANGLESTRIP:
+            return 0;
+        case D3DPT_TRIANGLEFAN:
+            return 0;
+        }
     }
     return 0;
 }
