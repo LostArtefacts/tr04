@@ -708,6 +708,11 @@ HRESULT SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWORD 
     return 0;
 }
 
+HRESULT j_SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWORD count, DWORD flags)
+{
+    return SW_DrawPrimitives(type, fvf, verts, count, flags);
+}
+
 void SW_CopyBuffer(void *dst, void *src, sint32 width)
 {
     if (!SW_UseMMX) {

@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="340.01" height="12" x="0" y="0" class="named"><title>1273 · 82.13%</title></rect>
-<rect width="61.17" height="12" x="340.01" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
-<rect width="12.82" height="12" x="401.18" y="0" class="todo"><title>48 · 3.10%</title></rect>
+<rect width="340.28" height="12" x="0" y="0" class="named"><title>1274 · 82.19%</title></rect>
+<rect width="61.17" height="12" x="340.28" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
+<rect width="12.55" height="12" x="401.45" y="0" class="todo"><title>47 · 3.03%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">82.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1273</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">48</tspan></text>
+<text text-anchor="end" x="594" y="7.50">82.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">47</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="227.11" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
-<rect width="165.90" height="12" x="227.11" y="0" class="nonmatching"><title>251 KB · 40.07%</title></rect>
-<rect width="20.98" height="12" x="393.02" y="0" class="todo"><title>32 KB · 5.07%</title></rect>
+<rect width="227.14" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
+<rect width="165.90" height="12" x="227.14" y="0" class="nonmatching"><title>251 KB · 40.07%</title></rect>
+<rect width="20.96" height="12" x="393.04" y="0" class="todo"><title>32 KB · 5.06%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">32 KB</tspan></text>
@@ -1563,7 +1563,7 @@
 <rect width="12" height="12" x="690" y="435" class="named"><title>0x004952b0 SW_SetRenderStateFlags (418 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="435" class="named"><title>0x00495460 SW_DrawPrimitives (340 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="435" class="todo"><title>0x004955c0 SW_DrawLineG (953 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="435" class="todo"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="435" class="named"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="450" class="todo"><title>0x004959b0 SW_TriSetupGT (2524 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="450" class="todo"><title>0x004963a0 SW_TriSetupG (1829 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="450" class="todo"><title>0x00496ae0 SW_TriSetupGA (1717 bytes)</title></rect>
@@ -2991,7 +2991,7 @@
 <rect width="3.49" height="3.74" x="669.12" y="458.26" class="named"><title>0x0046c9f0 do_spade_meshswap (34 bytes)</title></rect>
 <rect width="3.96" height="3.28" x="675.61" y="390.59" class="named"><title>0x0046ca20 do_backpack_meshswap (34 bytes)</title></rect>
 <rect width="3.96" height="3.28" x="682.57" y="390.59" class="named"><title>0x0046ca50 do_key_meshswap (34 bytes)</title></rect>
-<rect width="3.96" height="3.28" x="689.52" y="390.59" class="todo"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>
+<rect width="3.96" height="3.28" x="689.52" y="390.59" class="named"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>
 <rect width="3.85" height="3.28" x="696.48" y="390.59" class="named"><title>0x004271e0 lara_as_slide (33 bytes)</title></rect>
 <rect width="3.85" height="3.28" x="703.33" y="390.59" class="named"><title>0x0042d7a0 lara_as_climbend (33 bytes)</title></rect>
 <rect width="3.73" height="3.28" x="710.17" y="390.59" class="named"><title>0x004818a0 ClearFXFogBulbs (32 bytes)</title></rect>
