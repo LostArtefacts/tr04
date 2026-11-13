@@ -238,6 +238,72 @@ HRESULT __stdcall SW_D3D_BeginScene(SW_DEVICE *dev)
     return SW_BeginFrame();
 }
 
+HRESULT __stdcall SW_D3D_EndScene(SW_DEVICE *dev)
+{
+    sint32 i;
+    sint32 r;
+    sint32 y;
+
+    SW_EndFrame();
+    for (i = 0; i < SW_NumLocked; i++) {
+        IDirectDrawSurface4_Unlock(SW_LockedSurfaces[i], 0);
+        IDirectDrawSurface4_Release(SW_LockedSurfaces[i]);
+    }
+    memset(&SW_SurfDesc, 0, sizeof(DDSURFACEDESC2));
+    SW_NumLocked = 0;
+    SW_SurfDesc.dwSize = sizeof(DDSURFACEDESC2);
+    r = DXAttempt(IDirectDrawSurface4_Lock((LPDIRECTDRAWSURFACE4)dev->target, 0, &SW_SurfDesc, DDLOCK_WAIT, 0));
+    if (r) {
+        DXAttempt(IDirectDrawSurface4_Restore(App.dx.lpPrimaryBuffer));
+        DXAttempt(IDirectDrawSurface4_Restore(App.dx.lpBackBuffer));
+        other_log("Can't lock rendertarget!!", r);
+    } else {
+        if (SW_SurfDesc.ddpfPixelFormat.dwRGBBitCount == 16) {
+            uint8 *dst;
+            uint32 *src;
+
+            dst = SW_SurfDesc.lpSurface;
+            src = dev->buffer;
+            if (SW_SurfDesc.ddpfPixelFormat.dwGBitMask == 0x7E0) {
+                for (y = 0; y < (sint32)SW_SurfDesc.dwHeight; y++) {
+                    SW_Convert32To565(dst, src, SW_SurfDesc.dwWidth);
+                    src += dev->width;
+                    dst += SW_SurfDesc.lPitch;
+                }
+            } else {
+                for (y = 0; y < (sint32)SW_SurfDesc.dwHeight; y++) {
+                    SW_Convert32To555(dst, src, SW_SurfDesc.dwWidth);
+                    src += dev->width;
+                    dst += SW_SurfDesc.lPitch;
+                }
+            }
+        } else {
+            uint8 *dst;
+            uint32 *src;
+
+            dst = SW_SurfDesc.lpSurface;
+            src = dev->buffer;
+            if (SW_SurfDesc.ddpfPixelFormat.dwRGBBitCount == 24) {
+                for (y = 0; y < (sint32)SW_SurfDesc.dwHeight; y++) {
+                    SW_Convert32To24(dst, src, SW_SurfDesc.dwWidth);
+                    src += dev->width;
+                    dst += SW_SurfDesc.lPitch;
+                }
+            } else {
+                for (y = 0; y < (sint32)SW_SurfDesc.dwHeight; y++) {
+                    SW_CopyBuffer(dst, src, SW_SurfDesc.dwWidth);
+                    src += dev->width;
+                    dst += SW_SurfDesc.lPitch;
+                }
+            }
+        }
+        IDirectDrawSurface4_Unlock((LPDIRECTDRAWSURFACE4)dev->target, 0);
+    }
+    SW_SetSurface(0, 0);
+    dev->in_scene = 0;
+    return 0;
+}
+
 HRESULT __stdcall SW_D3D_SetRenderTarget(SW_DEVICE *dev, void *target, DWORD flags)
 {
     dev->target = target;
