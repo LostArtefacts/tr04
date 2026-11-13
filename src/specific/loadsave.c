@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <ddraw.h>
+#include <dinput.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -22,6 +23,8 @@
 #include "gamemain.h"
 #include "dxshell.h"
 #include "../sound.h"
+#include "audio.h"
+#include "dxsound.h"
 
 void MemBltSurf(void *dest, sint32 x, sint32 y, sint32 w, sint32 h, sint32 dadd, void *source, sint32 x2, sint32 y2, DDSURFACEDESC2 surface, float xsize, float ysize)
 {
@@ -473,6 +476,398 @@ void CheckKeyConflicts(void)
                 conflict[i] = 1;
                 break;
             }
+        }
+    }
+}
+
+void DoOptions(void)
+{
+    JOYINFOEX joy;
+    char **keyboard_buttons;
+    char *txt;
+    static sint32 menu;
+    static uint32 selection = 1;
+    static uint32 controls_selection;
+    static sint32 music_volume_bar_shade = 0xFF3F3F3F;
+    static sint32 sfx_volume_bar_shade = 0xFF3F3F3F;
+    static sint32 sfx_bak;
+    static sint32 sfx_quality_bak;
+    static sint32 sfx_breath_db = -1;
+    sint32 textY, joystick, joystick_x, joystick_y, index, joyButton, i, num, num2;
+    uint32 j;
+    char quality_text[80];
+    static char sfx_backup_flag;
+    static char waiting_for_key = 0;
+
+    if (!(sfx_backup_flag & 1)) {
+        sfx_backup_flag |= 1;
+        sfx_bak = SFXVolume;
+    }
+    if (!(sfx_backup_flag & 2)) {
+        sfx_backup_flag |= 2;
+        sfx_quality_bak = SoundQuality;
+    }
+    textY = font_height - 4;
+    if (menu) {
+        if (Gameflow->Language == GERMAN) {
+            keyboard_buttons = GermanKeyboard;
+        } else {
+            keyboard_buttons = KeyboardButtons;
+        }
+        small_font = 1;
+        PrintString(phd_centerx >> 2, textY, selection & 1 ? 1 : 2, SCRIPT_TEXT(TXT_Control_Method), 0);
+        PrintString(phd_centerx >> 2, textY + font_height, selection & 2 ? 1 : 2, "\x18", 0);
+        PrintString(phd_centerx >> 2, textY + 2 * font_height, selection & 4 ? 1 : 2, "\x1A", 0);
+        PrintString(phd_centerx >> 2, textY + 3 * font_height, selection & 8 ? 1 : 2, "\x19", 0);
+        PrintString(phd_centerx >> 2, textY + 4 * font_height, selection & 0x10 ? 1 : 2, "\x1B", 0);
+        PrintString(phd_centerx >> 2, textY + 5 * font_height, selection & 0x20 ? 1 : 2, SCRIPT_TEXT(TXT_Duck), 0);
+        PrintString(phd_centerx >> 2, textY + 6 * font_height, selection & 0x40 ? 1 : 2, SCRIPT_TEXT(TXT_Dash), 0);
+        PrintString(phd_centerx >> 2, textY + 7 * font_height, selection & 0x80 ? 1 : 2, SCRIPT_TEXT(TXT_Walk), 0);
+        PrintString(phd_centerx >> 2, textY + 8 * font_height, selection & 0x100 ? 1 : 2, SCRIPT_TEXT(TXT_Jump), 0);
+        PrintString(phd_centerx >> 2, textY + 9 * font_height, selection & 0x200 ? 1 : 2, SCRIPT_TEXT(TXT_Action), 0);
+        PrintString(phd_centerx >> 2, textY + 10 * font_height, selection & 0x400 ? 1 : 2, SCRIPT_TEXT(TXT_Draw_Weapon), 0);
+        PrintString(phd_centerx >> 2, textY + 11 * font_height, selection & 0x800 ? 1 : 2, SCRIPT_TEXT(TXT_Use_Flare), 0);
+        PrintString(phd_centerx >> 2, textY + 12 * font_height, selection & 0x1000 ? 1 : 2, SCRIPT_TEXT(TXT_Look), 0);
+        PrintString(phd_centerx >> 2, textY + 13 * font_height, selection & 0x2000 ? 1 : 2, SCRIPT_TEXT(TXT_Roll), 0);
+        PrintString(phd_centerx >> 2, textY + 14 * font_height, selection & 0x4000 ? 1 : 2, SCRIPT_TEXT(TXT_Inventory), 0);
+        PrintString(phd_centerx >> 2, textY + 15 * font_height, selection & 0x8000 ? 1 : 2, SCRIPT_TEXT(TXT_Step_Left), 0);
+        PrintString(phd_centerx >> 2, textY + 16 * font_height, selection & 0x10000 ? 1 : 2, SCRIPT_TEXT(TXT_Step_Right), 0);
+        switch (ControlMethod) {
+        case 0:
+            PrintString(phd_centerx + (phd_centerx >> 2), textY, controls_selection & 1 ? 1 : 6, SCRIPT_TEXT(TXT_Keyboard), 0);
+            break;
+        case 1:
+            PrintString(phd_centerx + (phd_centerx >> 2), textY, controls_selection & 1 ? 1 : 6, SCRIPT_TEXT(TXT_Joystick), 0);
+            break;
+        case 2:
+            PrintString(phd_centerx + (phd_centerx >> 2), textY, controls_selection & 1 ? 1 : 6, SCRIPT_TEXT(TXT_Reset), 0);
+            break;
+        }
+        if (waiting_for_key && controls_selection & 2) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][0]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + font_height, controls_selection & 2 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 4) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][1]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 2 * font_height, controls_selection & 4 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 8) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][2]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 3 * font_height, controls_selection & 8 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x10) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][3]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 4 * font_height, controls_selection & 0x10 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x20) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][4]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 5 * font_height, controls_selection & 0x20 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x40) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][5]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 6 * font_height, controls_selection & 0x40 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x80) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][6]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 7 * font_height, controls_selection & 0x80 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x100) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][7]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 8 * font_height, controls_selection & 0x100 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x200) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][8]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 9 * font_height, controls_selection & 0x200 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x400) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][9]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 10 * font_height, controls_selection & 0x400 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x800) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][10]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 11 * font_height, controls_selection & 0x800 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x1000) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][11]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 12 * font_height, controls_selection & 0x1000 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x2000) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][12]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 13 * font_height, controls_selection & 0x2000 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x4000) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][13]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 14 * font_height, controls_selection & 0x4000 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x8000) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][14]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 15 * font_height, controls_selection & 0x8000 ? 1 : 6, txt, 0);
+        if (waiting_for_key && controls_selection & 0x10000) {
+            txt = SCRIPT_TEXT(TXT_Waiting);
+        } else {
+            txt = keyboard_buttons[layout[1][15]];
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 16 * font_height, controls_selection & 0x10000 ? 1 : 6, txt, 0);
+        small_font = 0;
+        if (ControlMethod < 2 && !waiting_for_key) {
+            if (dbinput & IN_FORWARD) {
+                SoundEffect(SFX_MENU_CHOOSE, 0, SFX_ALWAYS);
+                selection >>= 1;
+            }
+            if (dbinput & IN_BACK) {
+                SoundEffect(SFX_MENU_CHOOSE, 0, SFX_ALWAYS);
+                selection <<= 1;
+            }
+        }
+        if (waiting_for_key) {
+            num2 = 0;
+            if (keymap[DIK_ESCAPE]) {
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+                controls_selection = 0;
+                dbinput = 0;
+                waiting_for_key = 0;
+                return;
+            }
+            for (i = 0; i < 255; i++) {
+                if (keymap[i] && keyboard_buttons[i]) {
+                    if (i != DIK_RETURN && i != DIK_LEFT && i != DIK_RIGHT && i != DIK_UP && i != DIK_DOWN) {
+                        waiting_for_key = 0;
+                        for (j = controls_selection >> 2; j; num2++) {
+                            j >>= 1;
+                        }
+                        controls_selection = 0;
+                        layout[1][num2] = i;
+                    }
+                    break;
+                }
+            }
+            if (ControlMethod == 1) {
+                joystick = ReadJoystick(&joystick_x, &joystick_y);
+                if (joystick) {
+                    controls_selection >>= 2;
+                    index = 0;
+                    while (controls_selection) {
+                        controls_selection >>= 1;
+                        index++;
+                    }
+                    controls_selection = 0;
+                    joyButton = 0;
+                    while (joystick) {
+                        joystick >>= 1;
+                        joyButton++;
+                    }
+                    layout[1][index] = joyButton + 255;
+                    waiting_for_key = 0;
+                }
+            }
+            CheckKeyConflicts();
+            dbinput = 0;
+        }
+        if (dbinput & IN_SELECT && selection > 1 && ControlMethod < 2) {
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            controls_selection = selection;
+            waiting_for_key = 1;
+            memset(keymap, 0, sizeof(keymap));
+        }
+        if (dbinput & IN_SELECT && ControlMethod == 2) {
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            ControlMethod = 0;
+            memcpy(layout[1], layout, 72);
+        }
+        if (selection & 1) {
+            if (dbinput & IN_LEFT) {
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+                ControlMethod--;
+            }
+            if (dbinput & IN_RIGHT) {
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+                ControlMethod++;
+            }
+            if (ControlMethod > 2) {
+                ControlMethod = 2;
+            }
+            if (ControlMethod < 0) {
+                ControlMethod = 0;
+            }
+            if (ControlMethod == 1) {
+                joy.dwSize = sizeof(JOYINFOEX);
+                if (joyGetPosEx(0, &joy) == JOYERR_UNPLUGGED) {
+                    if (dbinput & IN_LEFT) {
+                        ControlMethod = 0;
+                    }
+                    if (dbinput & IN_RIGHT) {
+                        ControlMethod = 2;
+                    }
+                }
+            }
+        }
+        if (!selection) {
+            selection = 1;
+        }
+        if (selection > (uint32)(1 << (17 - 1))) {
+            selection = 1 << (17 - 1);
+        }
+        if (dbinput & IN_DESELECT) {
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            if (ControlMethod < 2) {
+                menu = 0;
+            }
+            dbinput = 0;
+            selection = 1;
+        }
+    } else {
+        num = 5;
+        textY = 3 * font_height;
+        PrintString(phd_centerx, textY, 6, SCRIPT_TEXT(TXT_Options), FF_CENTER);
+        PrintString(phd_centerx, textY + font_height + (font_height >> 1), selection & 1 ? 1 : 2, SCRIPT_TEXT(TXT_Control_Configuration), FF_CENTER);
+        PrintString(phd_centerx >> 2, textY + 3 * font_height, selection & 2 ? 1 : 2, SCRIPT_TEXT(TXT_Music_Volume), 0);
+        PrintString(phd_centerx >> 2, textY + 4 * font_height, selection & 4 ? 1 : 2, SCRIPT_TEXT(TXT_SFX_Volume), 0);
+        PrintString(phd_centerx >> 2, textY + 5 * font_height, selection & 8 ? 1 : 2, SCRIPT_TEXT(TXT_Sound_Quality), 0);
+        PrintString(phd_centerx >> 2, textY + 6 * font_height, selection & 0x10 ? 1 : 2, SCRIPT_TEXT(TXT_Targeting), 0);
+        DoSlider(400, 3 * font_height - (font_height >> 1) + textY + 4, 200, 16, MusicVolume, 0xFF1F1F1F, 0xFF3F3FFF, music_volume_bar_shade);
+        DoSlider(400, textY + 4 * font_height + 4 - (font_height >> 1), 200, 16, SFXVolume, 0xFF1F1F1F, 0xFF3F3FFF, sfx_volume_bar_shade);
+        switch (SoundQuality) {
+        case 0:
+            strcpy(quality_text, SCRIPT_TEXT(TXT_Low));
+            break;
+        case 1:
+            strcpy(quality_text, SCRIPT_TEXT(TXT_Medium));
+            break;
+        case 2:
+            strcpy(quality_text, SCRIPT_TEXT(TXT_High));
+            break;
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 5 * font_height, selection & 8 ? 1 : 6, quality_text, 0);
+        if (!App.AutoTarget) {
+            strcpy(quality_text, SCRIPT_TEXT(TXT_Manual));
+        } else {
+            strcpy(quality_text, SCRIPT_TEXT(TXT_Automatic));
+        }
+        PrintString(phd_centerx + (phd_centerx >> 2), textY + 6 * font_height, selection & 0x10 ? 1 : 6, quality_text, 0);
+        if (dbinput & IN_FORWARD) {
+            SoundEffect(SFX_MENU_CHOOSE, 0, SFX_ALWAYS);
+            selection >>= 1;
+        }
+        if (dbinput & IN_BACK) {
+            SoundEffect(SFX_MENU_CHOOSE, 0, SFX_ALWAYS);
+            selection <<= 1;
+        }
+        if (dbinput & IN_SELECT && selection & 1) {
+            SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            menu = 1;
+        }
+        if (!selection) {
+            selection = 1;
+        }
+        if (selection > (uint32)(1 << (num - 1))) {
+            selection = 1 << (num - 1);
+        }
+        music_volume_bar_shade = 0xFF3F3F3F;
+        sfx_volume_bar_shade = 0xFF3F3F3F;
+        if (selection & 2) {
+            sfx_bak = SFXVolume;
+            if (linput & IN_LEFT) {
+                MusicVolume--;
+            }
+            if (linput & IN_RIGHT) {
+                MusicVolume++;
+            }
+            if (MusicVolume > 100) {
+                MusicVolume = 100;
+            } else if (MusicVolume < 0) {
+                MusicVolume = 0;
+            }
+            sfx_volume_bar_shade = 0xFF3F3F3F;
+            music_volume_bar_shade = 0xFF7F7F7F;
+            ACMSetVolume();
+        } else if (selection & 4) {
+            if (linput & IN_LEFT) {
+                SFXVolume--;
+            }
+            if (linput & IN_RIGHT) {
+                SFXVolume++;
+            }
+            if (SFXVolume > 100) {
+                SFXVolume = 100;
+            } else if (SFXVolume < 0) {
+                SFXVolume = 0;
+            }
+            if (SFXVolume != sfx_bak) {
+                if (sfx_breath_db == -1 || !DSIsChannelPlaying(0)) {
+                    S_SoundStopAllSamples();
+                    sfx_bak = SFXVolume;
+                    sfx_breath_db = SoundEffect(SFX_LARA_BREATH, 0, SFX_DEFAULT);
+                    DSChangeVolume(0, -100 * ((100 - SFXVolume) >> 1));
+                } else if (sfx_breath_db != -1 && DSIsChannelPlaying(0)) {
+                    DSChangeVolume(0, -100 * ((100 - SFXVolume) >> 1));
+                }
+            }
+            music_volume_bar_shade = 0xFF3F3F3F;
+            sfx_volume_bar_shade = 0xFF7F7F7F;
+        } else if (selection & 8) {
+            sfx_bak = SFXVolume;
+            if (dbinput & IN_LEFT) {
+                SoundQuality--;
+            }
+            if (dbinput & IN_RIGHT) {
+                SoundQuality++;
+            }
+            if (SoundQuality > 2) {
+                SoundQuality = 2;
+            } else if (SoundQuality < 0) {
+                SoundQuality = 0;
+            }
+            if (SoundQuality != sfx_quality_bak) {
+                S_SoundStopAllSamples();
+                DXChangeOutputFormat(sfx_frequencies[SoundQuality], 0);
+                sfx_quality_bak = SoundQuality;
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            }
+        } else if (selection & 16) {
+            if (dbinput & IN_LEFT) {
+                if (App.AutoTarget) {
+                    App.AutoTarget = 0;
+                }
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            }
+            if (dbinput & IN_RIGHT) {
+                if (!App.AutoTarget) {
+                    App.AutoTarget = 1;
+                }
+                SoundEffect(SFX_MENU_SELECT, 0, SFX_ALWAYS);
+            }
+            savegame.AutoTarget = App.AutoTarget;
         }
     }
 }

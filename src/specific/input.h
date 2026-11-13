@@ -48,6 +48,8 @@ sint32 ReadJoystick(sint32 *x, sint32 *y);
 sint32 S_UpdateInput(void);
 
 extern sint16 layout[2][18];
+extern char *KeyboardButtons[272];
+extern char *GermanKeyboard[272];
 extern sint32 conflict[18];
 extern sint32 input;
 extern sint32 linput;
