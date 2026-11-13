@@ -569,8 +569,8 @@ void DoOptions(void)
         sfx_backup_flag |= 2;
         sfx_quality_bak = SoundQuality;
     }
-    textY = font_height - 4;
     if (menu) {
+        textY = font_height - 4;
         if (Gameflow->Language == GERMAN) {
             keyboard_buttons = GermanKeyboard;
         } else {
@@ -737,8 +737,8 @@ void DoOptions(void)
             if (ControlMethod == 1) {
                 joystick = DI_ReadJoystick(&joystick_x, &joystick_y);
                 if (joystick) {
-                    controls_selection >>= 2;
                     index = 0;
+                    controls_selection >>= 2;
                     while (controls_selection) {
                         controls_selection >>= 1;
                         index++;
