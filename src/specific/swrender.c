@@ -1066,6 +1066,55 @@ void SW_SpanGAlpha(void)
     }
 }
 
+void SW_SpanGTAlpha(void)
+{
+    SW_SPAN *s;
+    uint8 *row, *p, *t;
+    uint32 *tex;
+    uint32 u, v, mask;
+    uint16 c0, c1, c2, c3;
+    sint32 n, sh, al, a0, a1;
+
+    s = (SW_SPAN *)SW_SpanBuffer;
+    if (s != SW_SpanEnd) {
+        row = (uint8 *)SW_Surface + SW_SpanY * SW_SurfacePitch;
+        sh = SW_TexShift;
+        mask = (0xFF0000 << sh) & 0xFF0000;
+        al = SW_TriV0->color >> 24;
+        tex = (uint32 *)(SW_TextureBits + SW_MipOffsets[sh]);
+        do {
+            p = row + (s->x << 2);
+            n = s->n;
+            if (n > 0) {
+                u = s->tex[0];
+                v = s->tex[2];
+                c0 = s->c[0];
+                c1 = s->c[1];
+                c2 = s->c[2];
+                c3 = s->c[3];
+                do {
+                    t = (uint8 *)&tex[((v & mask) >> (sh * 2 + 8)) | ((u & mask) >> (sh + 16))];
+                    a0 = (t[0] | t[1]) ? al : 0;
+                    a1 = (t[2] | t[3]) ? al : 0;
+                    p[0] = (((t[0] * (c0 >> 8)) >> 8) * a0 + p[0] * (255 - a0)) >> 8;
+                    p[1] = (((t[1] * (c1 >> 8)) >> 8) * a0 + p[1] * (255 - a0)) >> 8;
+                    p[2] = (((t[2] * (c2 >> 8)) >> 8) * a1 + p[2] * (255 - a1)) >> 8;
+                    p[3] = (((t[3] * (c3 >> 8)) >> 8) * a1 + p[3] * (255 - a1)) >> 8;
+                    u += SW_SpanDU;
+                    v += SW_SpanDV;
+                    c0 += SW_SpanGrad[0];
+                    c1 += SW_SpanGrad[1];
+                    c2 += SW_SpanGrad[2];
+                    c3 += SW_SpanGrad[3];
+                    p += 4;
+                } while (--n);
+            }
+            row += SW_SurfacePitch;
+            s++;
+        } while (s != SW_SpanEnd);
+    }
+}
+
 void SW_SpanGInt(void)
 {
     SW_SPAN *s;
