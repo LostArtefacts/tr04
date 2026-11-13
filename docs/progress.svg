@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="334.57" height="12" x="0" y="0" class="named"><title>1251 · 80.81%</title></rect>
-<rect width="61.24" height="12" x="334.57" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="18.19" height="12" x="395.81" y="0" class="todo"><title>68 · 4.39%</title></rect>
+<rect width="334.84" height="12" x="0" y="0" class="named"><title>1252 · 80.88%</title></rect>
+<rect width="61.24" height="12" x="334.84" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="17.92" height="12" x="396.08" y="0" class="todo"><title>67 · 4.33%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">80.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1251</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">68</tspan></text>
+<text text-anchor="end" x="594" y="7.50">80.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1252</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">67</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.66" height="12" x="0" y="0" class="named"><title>338 KB · 54.03%</title></rect>
-<rect width="166.38" height="12" x="223.66" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="23.96" height="12" x="390.04" y="0" class="todo"><title>36 KB · 5.79%</title></rect>
+<rect width="223.67" height="12" x="0" y="0" class="named"><title>338 KB · 54.03%</title></rect>
+<rect width="166.38" height="12" x="223.67" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="23.95" height="12" x="390.05" y="0" class="todo"><title>36 KB · 5.79%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1559,7 +1559,7 @@
 <rect width="12" height="12" x="630" y="435" class="named"><title>0x00494e80 SW_BeginFrame (13 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="435" class="named"><title>0x00494e90 SW_EndFrame (6 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="435" class="todo"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="435" class="todo"><title>0x004952a0 Func4952a0 (12 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="435" class="named"><title>0x004952a0 SW_SetColorOpScale (12 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="435" class="todo"><title>0x004952b0 SW_SetRenderStateFlags (346 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="435" class="todo"><title>0x00495460 SW_DrawPrimitives (317 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="435" class="todo"><title>0x004955c0 SW_DrawLineG (953 bytes)</title></rect>
@@ -3122,7 +3122,7 @@
 <rect width="2.52" height="1.80" x="744.48" y="431.69" class="named"><title>0x00490310 phd_PushUnitMatrix (12 bytes)</title></rect>
 <rect width="2.47" height="1.84" x="716.87" y="436.49" class="todo"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
 <rect width="2.47" height="1.84" x="716.87" y="441.32" class="named"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
-<rect width="2.47" height="1.84" x="716.87" y="446.16" class="todo"><title>0x004952a0 Func4952a0 (12 bytes)</title></rect>
+<rect width="2.47" height="1.84" x="716.87" y="446.16" class="named"><title>0x004952a0 SW_SetColorOpScale (12 bytes)</title></rect>
 <rect width="2.47" height="1.67" x="716.87" y="451" class="named"><title>0x004328b0 lara_as_waterroll (11 bytes)</title></rect>
 <rect width="2.47" height="1.67" x="716.87" y="455.67" class="named"><title>0x00436040 KillAllCurrentItems (11 bytes)</title></rect>
 <rect width="2.47" height="1.67" x="716.87" y="460.33" class="named"><title>0x00436050 KillEverything (11 bytes)</title></rect>

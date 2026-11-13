@@ -1498,7 +1498,7 @@ address,size,name,symbol
 0x00494e80,13,SW_BeginFrame,_SW_BeginFrame
 0x00494e90,6,SW_EndFrame,_SW_EndFrame
 0x00494ea0,1015,SW_SelectRasterizer,_SW_SelectRasterizer
-0x004952a0,12,Func4952a0,
+0x004952a0,12,SW_SetColorOpScale,_SW_SetColorOpScale
 0x004952b0,346,SW_SetRenderStateFlags,_SW_SetRenderStateFlags
 0x00495460,317,SW_DrawPrimitives,_SW_DrawPrimitives
 0x004955c0,953,SW_DrawLineG,_SW_DrawLineG
@@ -2277,6 +2277,7 @@ address,size,name,symbol
 0x004bcb28,15,Var4bcb28,_Var4bcb28
 0x004bcb38,9,Var4bcb38,_Var4bcb38
 0x004bcb44,13,Var4bcb44,_Var4bcb44
+0x004bcd24,4,SW_ColorOpScale,_SW_ColorOpScale
 0x004bcde8,16,Var4bcde8,_Var4bcde8
 0x004bf2e0,4,next_locust,_next_locust
 0x004bf2e8,12,MovingBlockPos,_MovingBlockPos

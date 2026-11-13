@@ -21,6 +21,7 @@ extern void *SW_SpanBuffer;
 extern void *SW_Surface;
 extern sint32 SW_SurfacePitch;
 extern sint32 SW_FrameState;
+extern sint32 SW_ColorOpScale;
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -137,6 +138,12 @@ sint32 SW_BeginFrame(void)
 sint32 SW_EndFrame(void)
 {
     return 1;
+}
+
+sint32 SW_SetColorOpScale(sint32 scale)
+{
+    SW_ColorOpScale = scale;
+    return 0;
 }
 
 LPVOID DBLog_MapView(HANDLE hMap)
