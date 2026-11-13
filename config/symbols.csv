@@ -35,7 +35,7 @@ address,size,name,symbol
 0x00404e00,151,InitialiseDemigod,_InitialiseDemigod
 0x00404ea0,2424,DemigodControl,_DemigodControl
 0x00405820,130,InitialiseDog,_InitialiseDog
-0x004058b0,1467,DogControl,_DogControl
+0x004058b0,1520,DogControl,_DogControl
 0x00405ea0,12,InitialiseLaraDouble,_InitialiseLaraDouble
 0x00405eb0,104,LaraDoubleControl,_LaraDoubleControl
 0x00405f20,128,InitialiseGuide,_InitialiseGuide
@@ -2001,6 +2001,8 @@ address,size,name,symbol
 0x004ad0b8,16,croc_bite,_croc_bite
 0x004ad0c8,24,DeathSlideBounds,_DeathSlideBounds
 0x004ad0e0,12,DeathSlidePosition,_DeathSlidePosition
+0x004ad0f0,16,dog_bite,_dog_bite
+0x004ad100,4,DeathAnims,_DeathAnims
 0x004ad108,16,guide_hit,_guide_hit
 0x004ad118,16,guide_lighter,_guide_lighter
 0x004ad128,16,hammerhead_bite,_hammerhead_bite
