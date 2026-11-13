@@ -278,6 +278,27 @@ void GhostTrap(ITEM_INFO *item)
     flipeffect = -1;
 }
 
+void KillActiveBaddies(ITEM_INFO *item)
+{
+    ITEM_INFO *target_item;
+    sint16 item_num;
+
+    item_num = next_item_active;
+    while (item_num != NO_ITEM) {
+        target_item = &items[item_num];
+        if (objects[target_item->object_number].intelligent) {
+            target_item->status = ITEM_INVISIBLE;
+            if (item != (ITEM_INFO *)0xABCDEF) {
+                RemoveActiveItem(item_num);
+                DisableBaddieAI(item_num);
+                target_item->flags |= IFL_INVISIBLE;
+            }
+        }
+        item_num = target_item->next_active;
+    }
+    flipeffect = -1;
+}
+
 void lara_hands_free(ITEM_INFO *item)
 {
     lara.gun_status = LG_NO_ARMS;

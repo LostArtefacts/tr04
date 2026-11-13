@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="36.23" height="12" x="267.10" y="0" class="nonmatching"><title>164 · 10.59%</title></rect>
-<rect width="38.66" height="12" x="303.34" y="0" class="todo"><title>175 · 11.30%</title></rect>
+<rect width="36.45" height="12" x="267.10" y="0" class="nonmatching"><title>165 · 10.66%</title></rect>
+<rect width="38.44" height="12" x="303.56" y="0" class="todo"><title>174 · 11.24%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">164</tspan> · <tspan class="todo">175</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">165</tspan> · <tspan class="todo">174</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.13" height="12" x="178.89" y="0" class="nonmatching"><title>214 KB · 34.25%</title></rect>
-<rect width="45.98" height="12" x="296.02" y="0" class="todo"><title>84 KB · 13.45%</title></rect>
+<rect width="117.22" height="12" x="178.89" y="0" class="nonmatching"><title>214 KB · 34.27%</title></rect>
+<rect width="45.89" height="12" x="296.11" y="0" class="todo"><title>84 KB · 13.42%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">214 KB</tspan> · <tspan class="todo">84 KB</tspan></text>
@@ -597,7 +597,7 @@
 <rect width="12" height="12" x="420" y="150" class="named"><title>0x00437850 LaraLocation (36 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="150" class="named"><title>0x00437880 LaraLocationPad (26 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="150" class="named"><title>0x004378a0 GhostTrap (130 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="150" class="todo"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="150" class="nonmatching"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="150" class="named"><title>0x004379e0 lara_hands_free (10 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="150" class="named"><title>0x004379f0 draw_right_gun (67 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="150" class="named"><title>0x00437a40 draw_left_gun (67 bytes)</title></rect>
@@ -2447,7 +2447,7 @@
 <rect width="7.79" height="8.03" x="530.10" y="267.41" class="named"><title>0x00424270 lara_col_rope (163 bytes)</title></rect>
 <rect width="7.79" height="8.03" x="530.10" y="278.44" class="named"><title>0x0042c6c0 lara_as_climbstnc (163 bytes)</title></rect>
 <rect width="7.79" height="8.03" x="530.10" y="289.47" class="named"><title>0x004361a0 TriggerDynamic (163 bytes)</title></rect>
-<rect width="7.79" height="8.03" x="530.10" y="300.50" class="todo"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
+<rect width="7.79" height="8.03" x="530.10" y="300.50" class="nonmatching"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
 <rect width="7.79" height="8.03" x="530.10" y="311.53" class="named"><title>0x00440fd0 BadFloor (163 bytes)</title></rect>
 <rect width="7.79" height="8.03" x="530.10" y="322.56" class="named"><title>0x0045a100 sgInitialiseHub (163 bytes)</title></rect>
 <rect width="7.79" height="8.03" x="530.10" y="333.59" class="named"><title>0x0046bf70 fifteen_init (163 bytes)</title></rect>
