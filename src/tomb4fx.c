@@ -564,6 +564,83 @@ sint32 GetFreeGunshell(void)
     return min_life_num;
 }
 
+void TriggerGunShell(sint16 leftright, sint16 objnum, sint32 weapon)
+{
+    GUNSHELL_STRUCT *shell;
+    PHD_VECTOR pos;
+
+    if (!leftright) {
+        switch (weapon) {
+        case WEAPON_UZI:
+            pos.x = -16;
+            pos.y = 35;
+            pos.z = 48;
+            break;
+
+        case WEAPON_PISTOLS:
+            pos.x = -12;
+            pos.y = 48;
+            pos.z = 40;
+            break;
+        }
+
+        GetLaraJointPos(&pos, 14);
+    } else {
+        switch (weapon) {
+        case WEAPON_SHOTGUN:
+            pos.x = 16;
+            pos.y = 114;
+            pos.z = 32;
+            break;
+
+        case WEAPON_UZI:
+            pos.x = 8;
+            pos.y = 35;
+            pos.z = 48;
+            break;
+
+        case WEAPON_PISTOLS:
+            pos.x = 8;
+            pos.y = 48;
+            pos.z = 40;
+            break;
+        }
+
+        GetLaraJointPos(&pos, 11);
+    }
+
+    if (lara_item->mesh_bits) {
+        if (weapon == WEAPON_SHOTGUN)
+            TriggerGunSmoke(pos.x, pos.y, pos.z, 0, 0, 0, 0, weapon, 24);
+        else
+            TriggerGunSmoke(pos.x, pos.y, pos.z, 0, 0, 0, 0, weapon, 16);
+    }
+
+    shell = &Gunshells[(sint16)GetFreeGunshell()];
+    shell->pos.x_pos = pos.x;
+    shell->pos.y_pos = pos.y;
+    shell->pos.z_pos = pos.z;
+    shell->room_number = lara_item->room_number;
+    shell->pos.y_rot = 0;
+    shell->pos.x_rot = 0;
+    shell->pos.z_rot = (sint16)GetRandomControl();
+    shell->speed = (GetRandomControl() & 0x1f) + 16;
+    shell->fallspeed = -48 - (GetRandomControl() & 7);
+    shell->object_number = objnum;
+    shell->counter = (GetRandomControl() & 0x1f) + 60;
+
+    if (!leftright)
+        shell->DirXrot = (GetRandomControl() & 0xfff) + lara_item->pos.y_rot + lara.left_arm.y_rot - 0x4800;
+    else if (weapon == WEAPON_SHOTGUN) {
+        shell->DirXrot = lara.torso_y_rot + lara_item->pos.y_rot - (GetRandomControl() & 0xfff) + lara.left_arm.y_rot + 0x2800;
+        shell->pos.y_rot += lara.left_arm.y_rot + lara.torso_y_rot + lara_item->pos.y_rot;
+
+        if (shell->speed < 24)
+            shell->speed += 24;
+    } else
+        shell->DirXrot = lara_item->pos.y_rot - (GetRandomControl() & 0xfff) + lara.left_arm.y_rot + 0x4800;
+}
+
 void DrawGunshells(void)
 {
     GUNSHELL_STRUCT *p;
