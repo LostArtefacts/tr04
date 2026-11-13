@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="339.21" height="12" x="0" y="0" class="named"><title>1270 · 81.94%</title></rect>
-<rect width="60.90" height="12" x="339.21" y="0" class="nonmatching"><title>228 · 14.71%</title></rect>
-<rect width="13.89" height="12" x="400.11" y="0" class="todo"><title>52 · 3.35%</title></rect>
+<rect width="61.17" height="12" x="339.21" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
+<rect width="13.62" height="12" x="400.38" y="0" class="todo"><title>51 · 3.29%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1270</tspan> · <tspan class="nonmatching">228</tspan> · <tspan class="todo">52</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1270</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">51</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.97" height="12" x="0" y="0" class="named"><title>341 KB · 54.58%</title></rect>
-<rect width="165.89" height="12" x="225.97" y="0" class="nonmatching"><title>251 KB · 40.07%</title></rect>
-<rect width="22.14" height="12" x="391.86" y="0" class="todo"><title>33 KB · 5.35%</title></rect>
+<rect width="165.93" height="12" x="225.97" y="0" class="nonmatching"><title>251 KB · 40.08%</title></rect>
+<rect width="22.10" height="12" x="391.90" y="0" class="todo"><title>33 KB · 5.34%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">33 KB</tspan></text>
@@ -1612,7 +1612,7 @@
 <rect width="12" height="12" x="675" y="450" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="450" class="named"><title>0x0049c6e0 DBLog_MapView (23 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="450" class="named"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="450" class="todo"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="450" class="nonmatching"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="450" class="todo"><title>0x0049c750 Log (291 bytes)</title></rect>
 </g>
 </g>
@@ -2833,7 +2833,7 @@
 <rect width="5.03" height="4.72" x="632.47" y="347.43" class="named"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="4.95" height="4.72" x="640.50" y="347.43" class="named"><title>0x00413cf0 FallingBlockCeiling (61 bytes)</title></rect>
 <rect width="4.95" height="4.72" x="648.46" y="347.43" class="named"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
-<rect width="4.95" height="4.72" x="656.41" y="347.43" class="todo"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
+<rect width="4.95" height="4.72" x="656.41" y="347.43" class="nonmatching"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
 <rect width="4.87" height="4.72" x="664.37" y="347.43" class="named"><title>0x00427480 lara_as_switchon (60 bytes)</title></rect>
 <rect width="4.87" height="4.72" x="672.24" y="347.43" class="named"><title>0x00453030 AddDisplayPickup (60 bytes)</title></rect>
 <rect width="4.87" height="4.72" x="680.11" y="347.43" class="named"><title>0x0045b040 sgRestoreGame (60 bytes)</title></rect>

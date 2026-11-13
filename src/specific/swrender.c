@@ -752,3 +752,11 @@ HANDLE DBLog_OpenMapping(LPCSTR name)
 {
     return OpenFileMappingA(FILE_MAP_READ | FILE_MAP_WRITE, TRUE, name);
 }
+
+void DBLog_Post(HWND hwnd, LPARAM lparam)
+{
+    while (!PostMessageA(hwnd, DBLog_Message, 0, lparam)) {
+        if (!FindWindowA("DBLogWindowClass", "DBLog Server"))
+            return;
+    }
+}
