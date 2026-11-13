@@ -29,7 +29,7 @@
     extern __imp__ResumeThread@4:dword
     extern __imp__SuspendThread@4:dword
 
-    .code
+WMWPTEXT segment dword public flat 'CODE'
 
 _WinMainWndProc@16 proc public
     push ebx
@@ -107,7 +107,7 @@ L48f4fe:
     mov eax, dword ptr [_App+189]
     test eax, eax
     je short L48f537
-    db 0e8h, 08eh, 004h, 000h, 000h
+    call _SW_WaitWhileDXInScene
     nop
     nop
     nop
@@ -117,7 +117,7 @@ L48f537:
     mov eax, dword ptr [_App+189]
     test eax, eax
     jne short L48f553
-    db 0e8h, 052h, 004h, 000h, 000h
+    call _SW_WaitUntilDXInScene
     nop
     nop
     nop
@@ -250,6 +250,10 @@ L48f68a:
     ret 010h
 _WinMainWndProc@16 endp
 
+WMWPTEXT ends
+
+WUDXTEXT segment dword public flat 'CODE'
+
 _SW_WaitUntilDXInScene proc public
     pusha
     mov ecx, offset _App+189
@@ -258,6 +262,10 @@ _SW_WaitUntilDXInScene proc public
     ret
 _SW_WaitUntilDXInScene endp
 
+WUDXTEXT ends
+
+WWDXTEXT segment dword public flat 'CODE'
+
 _SW_WaitWhileDXInScene proc public
     pusha
     mov ecx, offset _App+189
@@ -265,5 +273,7 @@ _SW_WaitWhileDXInScene proc public
     popa
     ret
 _SW_WaitWhileDXInScene endp
+
+WWDXTEXT ends
 
     end

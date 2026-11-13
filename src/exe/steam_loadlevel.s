@@ -11,7 +11,7 @@
     extern _gfFilenameOffset:byte
     extern _gfFilenameWad:byte
 
-    .code
+LLFTEXT segment dword public flat 'CODE'
 
 _S_LoadLevelFile proc public
     sub esp, 050h
@@ -78,7 +78,7 @@ _S_LoadLevelFile proc public
     pop ebx
     test eax, eax
     je short L47697d
-    db 0e8h, 008h, 090h, 001h, 000h
+    call _SW_WaitLevelLoad
     nop
     nop
     nop
@@ -89,6 +89,10 @@ L47697d:
     ret
 _S_LoadLevelFile endp
 
+LLFTEXT ends
+
+WLLTEXT segment dword public flat 'CODE'
+
 _SW_WaitLevelLoad proc public
     pusha
     mov ecx, offset _LevelLoadingThread
@@ -96,5 +100,7 @@ _SW_WaitLevelLoad proc public
     popa
     ret
 _SW_WaitLevelLoad endp
+
+WLLTEXT ends
 
     end
