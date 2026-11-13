@@ -5585,6 +5585,195 @@ void SW_SpanGTPAddBilinear(void)
 }
 #endif
 
+#ifndef FEAT_C_ASM
+extern uint32 SW_SpanGTAlphaBilinearConst0[2];
+extern uint32 SW_SpanGTAlphaBilinearConst1[2];
+extern uint32 SW_SpanGTAlphaBilinearConst2[2];
+extern uint32 SW_SpanGTAlphaBilinearConst3[2];
+extern uint32 SW_SpanGTAlphaBilinearTmp0;
+extern uint32 SW_SpanGTAlphaBilinearTmp1;
+extern uint32 SW_SpanGTAlphaBilinearTmp2[2];
+void SW_SpanGTAlphaBilinear(void)
+{
+    __asm {
+        mov esi, dword ptr [SW_SpanBuffer]
+        cmp esi, dword ptr [SW_SpanEnd]
+        je Done
+        push ebp
+        mov edi, dword ptr [SW_Surface]
+        mov eax, dword ptr [SW_SpanY]
+        imul eax, dword ptr [SW_SurfacePitch]
+        add edi, eax
+        mov eax, dword ptr [SW_TriV0]
+        mov eax, dword ptr [eax + 0x10]
+        and eax, 0xff000000
+        mov dword ptr [SW_SpanGTAlphaBilinearTmp2 + 4], eax
+        mov ebx, dword ptr [SW_SpanDU]
+        mov eax, dword ptr [SW_SpanDV]
+        mov edx, dword ptr [SW_TextureBits]
+        mov dword ptr [P5 + 2], ebx
+        mov dword ptr [P0 + 2], eax
+        mov dword ptr [P1 + 4], edx
+        add edx, 4
+        mov dword ptr [P2 + 4], edx
+        add edx, 0x3fc
+        mov dword ptr [P3 + 4], edx
+        add edx, 4
+        mov dword ptr [P4 + 4], edx
+        pxor mm5, mm5
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+    L0:
+        mov ebx, dword ptr [esi]
+        mov eax, dword ptr [esi + 4]
+        push edi
+        lea edi, [edi + ebx*4]
+        or eax, eax
+        jle L2
+        mov ebx, dword ptr [esi + 8]
+        mov ecx, dword ptr [esi + 0x10]
+        sub ebx, 0x8000
+        sub ecx, 0x8000
+        movq mm1, qword ptr [SW_SpanGrad]
+        pand mm1, qword ptr [SW_SpanGTAlphaBilinearConst3]
+        movq mm0, qword ptr [esi + 0x18]
+        pand mm0, qword ptr [SW_SpanGTAlphaBilinearConst3]
+        por mm0, qword ptr [SW_SpanGTAlphaBilinearTmp2]
+        mov edx, ecx
+        mov ebp, ebx
+        mov dword ptr [SW_SpanGTAlphaBilinearTmp1], edx
+        mov dword ptr [SW_SpanGTAlphaBilinearTmp0], ebp
+        and edx, 0xff0000
+        and ebp, 0xff0000
+        shr edx, 8
+        shr ebp, 0x10
+        or edx, ebp
+        movd mm2, dword ptr [SW_SpanGTAlphaBilinearTmp0]
+        pand mm2, qword ptr [SW_SpanGTAlphaBilinearConst1]
+        movq mm3, mm2
+        psllq mm3, 0x10
+        por mm2, mm3
+        movq mm3, mm2
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+    L1:
+        psllq mm2, 0x20
+    P0:
+        add ecx, 0x12345678
+        por mm2, mm3
+    P1:
+        movd mm7, dword ptr [edx*4 + 0x12345678]
+        psrlw mm2, 9
+    P2:
+        movd mm4, dword ptr [edx*4 + 0x12345678]
+        punpcklbw mm7, mm5
+    P3:
+        movd mm6, dword ptr [edx*4 + 0x12345678]
+        punpcklbw mm4, mm5
+    P4:
+        movd mm3, dword ptr [edx*4 + 0x12345678]
+        punpcklbw mm6, mm5
+        punpcklbw mm3, mm5
+        psubw mm4, mm7
+        psubw mm3, mm6
+        pmullw mm4, mm2
+        pmullw mm3, mm2
+        movd mm2, dword ptr [SW_SpanGTAlphaBilinearTmp1]
+        pand mm2, qword ptr [SW_SpanGTAlphaBilinearConst1]
+        psraw mm4, 7
+        psrlw mm2, 9
+        psraw mm3, 7
+        paddw mm6, mm3
+        movq mm3, mm2
+        paddw mm7, mm4
+        psllq mm3, 0x10
+        por mm2, mm3
+        psubw mm6, mm7
+        movq mm3, mm2
+    P5:
+        add ebx, 0x12345678
+        psllq mm3, 0x20
+        mov edx, ecx
+        por mm2, mm3
+        mov ebp, ebx
+        pmullw mm6, mm2
+        mov dword ptr [SW_SpanGTAlphaBilinearTmp1], edx
+        mov dword ptr [SW_SpanGTAlphaBilinearTmp0], ebp
+        and edx, 0xff0000
+        shr edx, 8
+        and ebp, 0xff0000
+        shr ebp, 0x10
+        psraw mm6, 7
+        paddw mm7, mm6
+        movq mm6, mm0
+        psrlw mm6, 8
+        pmullw mm7, mm6
+        movq mm6, qword ptr [edi]
+        movq mm2, mm7
+        pand mm2, qword ptr [SW_SpanGTAlphaBilinearConst2]
+        movq mm3, mm2
+        movq mm4, mm2
+        psrlq mm2, 0x18
+        psrlq mm3, 0x28
+        psrlq mm4, 0x38
+        por mm4, mm3
+        punpcklbw mm6, mm5
+        por mm4, mm2
+        psrlw mm7, 8
+        pmullw mm7, mm4
+        pxor mm4, qword ptr [SW_SpanGTAlphaBilinearConst0]
+        movd mm2, dword ptr [SW_SpanGTAlphaBilinearTmp0]
+        pmullw mm6, mm4
+        pand mm2, qword ptr [SW_SpanGTAlphaBilinearConst1]
+        or edx, ebp
+        movq mm3, mm2
+        paddw mm7, mm6
+        psllq mm3, 0x10
+        psrlw mm7, 8
+        packuswb mm7, mm7
+        por mm2, mm3
+        movq mm3, mm2
+        dec eax
+        movd dword ptr [edi], mm7
+        paddw mm0, mm1
+        lea edi, [edi + 4]
+        jne L1
+    L2:
+        add esi, 0x20
+        pop edi
+        add edi, dword ptr [SW_SurfacePitch]
+        cmp dword ptr [SW_SpanEnd], esi
+        jne L0
+        emms
+        pop ebp
+    Done:
+    }
+}
+#else
 void SW_SpanGTAlphaBilinear(void)
 {
     SW_SPAN *s;
@@ -5636,6 +5825,7 @@ void SW_SpanGTAlphaBilinear(void)
         } while (s != SW_SpanEnd);
     }
 }
+#endif
 
 #ifndef FEAT_C_ASM
 extern uint32 SW_SpanGTPAlphaBilinearConst0[2];

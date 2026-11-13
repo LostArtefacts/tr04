@@ -2300,6 +2300,10 @@ address,size,name,symbol
 0x004bcd90,8,SW_SpanGTAddBilinearConst,_SW_SpanGTAddBilinearConst
 0x004bcd98,8,SW_SpanGTPBilinearConst,_SW_SpanGTPBilinearConst
 0x004bcda0,8,SW_SpanGTPAddBilinearConst,_SW_SpanGTPAddBilinearConst
+0x004bcda8,8,SW_SpanGTAlphaBilinearConst0,_SW_SpanGTAlphaBilinearConst0
+0x004bcdb0,8,SW_SpanGTAlphaBilinearConst1,_SW_SpanGTAlphaBilinearConst1
+0x004bcdb8,8,SW_SpanGTAlphaBilinearConst2,_SW_SpanGTAlphaBilinearConst2
+0x004bcdc0,8,SW_SpanGTAlphaBilinearConst3,_SW_SpanGTAlphaBilinearConst3
 0x004bcdc8,8,SW_SpanGTPAlphaBilinearConst0,_SW_SpanGTPAlphaBilinearConst0
 0x004bcdd0,8,SW_SpanGTPAlphaBilinearConst1,_SW_SpanGTPAlphaBilinearConst1
 0x004bcdd8,8,SW_SpanGTPAlphaBilinearConst2,_SW_SpanGTPAlphaBilinearConst2
@@ -2773,6 +2777,7 @@ address,size,name,symbol
 0x00765388,4,SW_TriFogSlopeB,_SW_TriFogSlopeB
 0x0076538c,4,SW_SpanGTIntTmp1,_SW_SpanGTIntTmp1
 0x00765390,4,SW_TriPUDY,_SW_TriPUDY
+0x00765394,4,SW_SpanGTAlphaBilinearTmp0,_SW_SpanGTAlphaBilinearTmp0
 0x00765398,4,SW_TriFogR1,_SW_TriFogR1
 0x0076539c,4,SW_TriPR0,_SW_TriPR0
 0x007653a0,4,SW_TriTFogD01,_SW_TriTFogD01
@@ -2979,6 +2984,7 @@ address,size,name,symbol
 0x007dabbc,4,SW_TriFogDY02,_SW_TriFogDY02
 0x007dabc0,4,SW_TriTG1,_SW_TriTG1
 0x007dabc4,4,SW_SpanGTPBilinearTmp1,_SW_SpanGTPBilinearTmp1
+0x007dabc8,4,SW_SpanGTAlphaBilinearTmp1,_SW_SpanGTAlphaBilinearTmp1
 0x007dabcc,4,SW_TriG2,_SW_TriG2
 0x007dabd4,4,SW_TriPFWDX,_SW_TriPFWDX
 0x007dabdc,4,SW_TriADX,_SW_TriADX
@@ -3086,6 +3092,7 @@ address,size,name,symbol
 0x007e6de0,4,SW_TexShift,_SW_TexShift
 0x007e6de4,4,SW_ZLimit,_SW_ZLimit
 0x007e6de8,4,SW_UseMMX,_SW_UseMMX
+0x007e6df0,8,SW_SpanGTAlphaBilinearTmp2,_SW_SpanGTAlphaBilinearTmp2
 0x007e6df8,8,SW_SpanGTPAlphaBilinearTmp2,_SW_SpanGTPAlphaBilinearTmp2
 0x007e6e00,4,BinkSurfaceType,_BinkSurfaceType
 0x007e6e04,4,BinkSurface,_BinkSurface
