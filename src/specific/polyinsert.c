@@ -1664,40 +1664,57 @@ void CalcColorSplitMMX(D3DCOLOR s, D3DCOLOR *d)
 
 void AddPrelitMMX(sint32 prelight, D3DCOLOR *color)
 {
-    sint32 c;
+    sint32 c, r, g, b, a, sr, sg, sb;
 
     c = color[0];
-    __asm {
-        xor eax, eax
-        movd mm3, rgbmask
-        movd mm4, prelight
-        movd mm0, c
-        paddusb mm0, mm4
-        movd ecx, mm0
-        movd mm1, rgb80h
-        psubusb mm0, mm1
-        movd mm2, eax
-        movd mm5, zero
-        punpcklbw mm5, mm0
-        psrlw mm5, 9
-        packuswb mm0, mm5
-        psrlq mm0, 0x20
-        movd ebx, mm0
-        pcmpgtb mm0, mm2
-        movd eax, mm0
-        pandn mm0, mm3
-        movd mm1, ecx
-        pand mm1, mm0
-        paddusb mm1, mm1
-        movd ecx, mm1
-        mov edx, color
-        or ecx, eax
-        mov [edx], ecx
-        mov ecx, [edx + 4]
-        and ebx, 0xFFFFFF
-        or ecx, ebx
-        mov [edx + 4], ecx
+    r = CLRR(c) + CLRR(prelight);
+    g = CLRG(c) + CLRG(prelight);
+    b = CLRB(c) + CLRB(prelight);
+    a = ((c >> 24) & 0xFF) + ((prelight >> 24) & 0xFF);
+    if (r > 255)
+        r = 255;
+    if (g > 255)
+        g = 255;
+    if (b > 255)
+        b = 255;
+    if (a > 255)
+        a = 255;
+    sr = 0;
+    sg = 0;
+    sb = 0;
+    if (r > 128)
+        sr = (r - 128) >> 1;
+    if (g > 128)
+        sg = (g - 128) >> 1;
+    if (b > 128)
+        sb = (b - 128) >> 1;
+    if (sr)
+        r = 255;
+    else {
+        r <<= 1;
+        if (r > 255)
+            r = 255;
     }
+    if (sg)
+        g = 255;
+    else {
+        g <<= 1;
+        if (g > 255)
+            g = 255;
+    }
+    if (sb)
+        b = 255;
+    else {
+        b <<= 1;
+        if (b > 255)
+            b = 255;
+    }
+    if (a >> 1)
+        a = 255;
+    else
+        a <<= 1;
+    color[0] = RGBA(r, g, b, a);
+    color[1] |= RGBONLY(sr, sg, sb);
 }
 
 void CalcColorSplit(D3DCOLOR s, D3DCOLOR *d)
