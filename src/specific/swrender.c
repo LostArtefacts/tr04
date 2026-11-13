@@ -212,13 +212,9 @@ HRESULT __stdcall SW_D3D_SetTextureStageState(SW_DEVICE *dev, DWORD stage, D3DTE
     return 0;
 }
 
-__declspec(naked) HMODULE SW_GetKernelModule(void)
+HMODULE SW_GetKernelModule(void)
 {
-    __asm {
-        push offset SW_Kernel32Name
-        call dword ptr GetModuleHandleA
-        ret
-    }
+    return GetModuleHandleA(SW_Kernel32Name);
 }
 
 HRESULT __stdcall SW_D3D_SetTexture(SW_DEVICE *dev, DWORD stage, LPDIRECT3DTEXTURE2 tex)
