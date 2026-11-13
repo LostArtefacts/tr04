@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="386.89" height="12" x="0" y="0" class="named"><title>1298 · 83.74%</title></rect>
-<rect width="75.11" height="12" x="386.89" y="0" class="nonmatching"><title>252 · 16.26%</title></rect>
+<rect width="387.19" height="12" x="0" y="0" class="named"><title>1299 · 83.81%</title></rect>
+<rect width="74.81" height="12" x="387.19" y="0" class="nonmatching"><title>251 · 16.19%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">83.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1298</tspan> · <tspan class="nonmatching">252</tspan></text>
+<text text-anchor="end" x="642" y="7.50">83.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1299</tspan> · <tspan class="nonmatching">251</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="260.99" height="12" x="0" y="0" class="named"><title>353 KB · 56.49%</title></rect>
-<rect width="201.01" height="12" x="260.99" y="0" class="nonmatching"><title>272 KB · 43.51%</title></rect>
+<rect width="261.45" height="12" x="0" y="0" class="named"><title>354 KB · 56.59%</title></rect>
+<rect width="200.55" height="12" x="261.45" y="0" class="nonmatching"><title>272 KB · 43.41%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">56.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">353 KB</tspan> · <tspan class="nonmatching">272 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">56.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">354 KB</tspan> · <tspan class="nonmatching">272 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1589,7 +1589,7 @@
 <rect width="12" height="12" x="360" y="450" class="named"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="450" class="named"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="450" class="nonmatching"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="450" class="nonmatching"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="450" class="named"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="450" class="named"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="450" class="named"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="450" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
@@ -1896,7 +1896,7 @@
 <rect width="15.40" height="15.26" x="495.64" y="61.51" class="named"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
 <rect width="15.38" height="15.26" x="514.04" y="61.51" class="named"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
 <rect width="15.35" height="15.26" x="532.41" y="61.51" class="named"><title>0x0043ded0 draw_ammo_selector (611 bytes)</title></rect>
-<rect width="15.35" height="15.26" x="550.77" y="61.51" class="nonmatching"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
+<rect width="15.35" height="15.26" x="550.77" y="61.51" class="named"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="15.25" height="15.26" x="569.12" y="61.51" class="nonmatching"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
 <rect width="15.23" height="15.26" x="587.37" y="61.51" class="named"><title>0x004624c0 TurnSwitchControl (606 bytes)</title></rect>
 <rect width="15.18" height="15.26" x="605.60" y="61.51" class="nonmatching"><title>0x00451510 LoadGameflow (604 bytes)</title></rect>
