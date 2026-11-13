@@ -899,6 +899,49 @@ void SW_SpanGFogAdd(void)
     }
 }
 
+void SW_SpanGFog(void)
+{
+    SW_SPAN *s;
+    uint8 *row, *p;
+    uint16 v0, v1, v2, d0, d1, d2;
+    sint32 n, f, f0, f1, f2, x;
+
+    s = (SW_SPAN *)SW_SpanBuffer;
+    if (s != SW_SpanEnd && SW_FogColor) {
+        row = (uint8 *)SW_Surface + SW_SpanY * SW_SurfacePitch;
+        f0 = (SW_FogColor & 0xFF) << 7;
+        f1 = ((SW_FogColor >> 8) & 0xFF) << 7;
+        f2 = ((SW_FogColor >> 16) & 0xFF) << 7;
+        d0 = ((sint16)SW_SpanFogGrad * f0 >> 16) << 1;
+        d1 = ((sint16)SW_SpanFogGrad * f1 >> 16) << 1;
+        d2 = ((sint16)SW_SpanFogGrad * f2 >> 16) << 1;
+        do {
+            p = row + (s->x << 2);
+            n = s->n;
+            if (n > 0) {
+                f = (~s->tex[1] & 0xFFFF) >> 1;
+                v0 = (f * f0 >> 16) << 2;
+                v1 = (f * f1 >> 16) << 2;
+                v2 = (f * f2 >> 16) << 2;
+                do {
+                    x = p[0] + (v0 >> 8);
+                    p[0] = x > 0xFF ? 0xFF : x;
+                    x = p[1] + (v1 >> 8);
+                    p[1] = x > 0xFF ? 0xFF : x;
+                    x = p[2] + (v2 >> 8);
+                    p[2] = x > 0xFF ? 0xFF : x;
+                    v0 -= d0;
+                    v1 -= d1;
+                    v2 -= d2;
+                    p += 4;
+                } while (--n);
+            }
+            row += SW_SurfacePitch;
+            s++;
+        } while (s != SW_SpanEnd);
+    }
+}
+
 void SW_SpanGAdd(void)
 {
     SW_SPAN *s;
