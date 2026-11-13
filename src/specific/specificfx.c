@@ -2310,6 +2310,126 @@ void DrawBikeSpeedo(sint32 ux, sint32 uy, sint32 vel, sint32 maxVel, sint32 turb
     AddLineSorted(v, &v[1], 6);
 }
 
+void DrawShockwaves(void)
+{
+    SHOCKWAVE_STRUCT *wave;
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX vtx[4];
+    TEXTURESTRUCT tex;
+    PHD_VECTOR p1, p2, p3;
+    sint32 *mptr;
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    float u1, v1, u2, v2;
+    sint32 i, j, k, v, rad, x1, y1, x2, y2, x3, y3, x4, y4, r, g, b, c;
+
+    sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 8];
+    offsets = (sint16 *)&scratchpad[768];
+    wave = ShockWaves;
+    for (i = 16; i > 0; i--, wave++) {
+        if (!wave->life)
+            continue;
+        phd_PushMatrix();
+        phd_TranslateAbs(wave->x, wave->y, wave->z);
+        phd_RotX(wave->XRot);
+        mptr = phd_mxptr;
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[256];
+        offsets[1] = 0;
+        offsets[5] = 0;
+        offsets[9] = 0;
+        rad = wave->OuterRad;
+        for (j = 2; j > 0; j--) {
+            offsets[0] = ((rcossin_tbl[0] << 2) * rad) >> W2V_SHIFT;
+            offsets[2] = ((rcossin_tbl[1] << 2) * rad) >> W2V_SHIFT;
+            offsets[4] = ((rcossin_tbl[0x200] << 2) * rad) >> W2V_SHIFT;
+            offsets[6] = ((rcossin_tbl[0x201] << 2) * rad) >> W2V_SHIFT;
+            offsets[8] = ((rcossin_tbl[0x400] << 2) * rad) >> W2V_SHIFT;
+            offsets[10] = ((rcossin_tbl[0x401] << 2) * rad) >> W2V_SHIFT;
+            for (k = 1; k < 7; k++) {
+                v = k * 0x3000;
+                p1.x = (offsets[0] * mptr[M00] + offsets[1] * mptr[M01] + offsets[2] * mptr[M02] + mptr[M03]) >> W2V_SHIFT;
+                p1.y = (offsets[0] * mptr[M10] + offsets[1] * mptr[M11] + offsets[2] * mptr[M12] + mptr[M13]) >> W2V_SHIFT;
+                p1.z = (offsets[0] * mptr[M20] + offsets[1] * mptr[M21] + offsets[2] * mptr[M22] + mptr[M23]) >> W2V_SHIFT;
+                p2.x = (offsets[4] * mptr[M00] + offsets[5] * mptr[M01] + offsets[6] * mptr[M02] + mptr[M03]) >> W2V_SHIFT;
+                p2.y = (offsets[4] * mptr[M10] + offsets[5] * mptr[M11] + offsets[6] * mptr[M12] + mptr[M13]) >> W2V_SHIFT;
+                p2.z = (offsets[4] * mptr[M20] + offsets[5] * mptr[M21] + offsets[6] * mptr[M22] + mptr[M23]) >> W2V_SHIFT;
+                p3.x = (offsets[8] * mptr[M00] + offsets[9] * mptr[M01] + offsets[10] * mptr[M02] + mptr[M03]) >> W2V_SHIFT;
+                p3.y = (offsets[8] * mptr[M10] + offsets[9] * mptr[M11] + offsets[10] * mptr[M12] + mptr[M13]) >> W2V_SHIFT;
+                p3.z = (offsets[8] * mptr[M20] + offsets[9] * mptr[M21] + offsets[10] * mptr[M22] + mptr[M23]) >> W2V_SHIFT;
+                offsets[0] = ((rcossin_tbl[(v >> 3) & 0x1FFE] << 2) * rad) >> W2V_SHIFT;
+                offsets[2] = ((rcossin_tbl[((v >> 3) & 0x1FFE) + 1] << 2) * rad) >> W2V_SHIFT;
+                offsets[4] = ((rcossin_tbl[((v + 0x1000) >> 3) & 0x1FFE] << 2) * rad) >> W2V_SHIFT;
+                offsets[6] = ((rcossin_tbl[(((v + 0x1000) >> 3) & 0x1FFE) + 1] << 2) * rad) >> W2V_SHIFT;
+                offsets[8] = ((rcossin_tbl[((v + 0x2000) >> 3) & 0x1FFE] << 2) * rad) >> W2V_SHIFT;
+                offsets[10] = ((rcossin_tbl[(((v + 0x2000) >> 3) & 0x1FFE) + 1] << 2) * rad) >> W2V_SHIFT;
+                XY[0] = (sint16)p1.x;
+                XY[1] = (sint16)p1.y;
+                Z[0] = p1.z;
+                XY[2] = (sint16)p2.x;
+                XY[3] = (sint16)p2.y;
+                Z[1] = p2.z;
+                XY[4] = (sint16)p3.x;
+                XY[5] = (sint16)p3.y;
+                Z[2] = p3.z;
+                XY += 6;
+                Z += 3;
+            }
+            rad = wave->InnerRad;
+        }
+        phd_PopMatrix();
+        XY = (sint16 *)&scratchpad[0];
+        Z = (sint32 *)&scratchpad[256];
+        for (j = 16; j > 0; j--) {
+            x1 = XY[0];
+            y1 = XY[1];
+            x2 = XY[2];
+            y2 = XY[3];
+            x3 = XY[36];
+            y3 = XY[37];
+            x4 = XY[38];
+            y4 = XY[39];
+            setXYZ4(vtx, x1, y1, Z[0], x2, y2, Z[1], x4, y4, Z[19], x3, y3, Z[18], clipflags);
+            r = wave->r;
+            g = wave->g;
+            b = wave->b;
+            if (wave->life < 8) {
+                r = (r * wave->life) >> 3;
+                g = (g * wave->life) >> 3;
+                b = (b * wave->life) >> 3;
+            }
+            c = RGBA(b, g, r, 0xFF);
+            vtx[0].color = c;
+            vtx[1].color = c;
+            vtx[2].color = c;
+            vtx[3].color = c;
+            vtx[0].specular = 0xFF000000;
+            vtx[1].specular = 0xFF000000;
+            vtx[2].specular = 0xFF000000;
+            vtx[3].specular = 0xFF000000;
+            u1 = sprite->x1;
+            u2 = sprite->x2;
+            v1 = sprite->y1;
+            v2 = sprite->y2;
+            tex.drawtype = 2;
+            tex.flag = 0;
+            tex.tpage = sprite->tpage;
+            tex.u1 = u1;
+            tex.v1 = v2;
+            tex.u2 = u2;
+            tex.v2 = v2;
+            tex.u3 = u2;
+            tex.v3 = v1;
+            tex.u4 = u1;
+            tex.v4 = v1;
+            AddQuadSorted(vtx, 0, 1, 2, 3, &tex, 1);
+            XY += 2;
+            Z++;
+        }
+    }
+}
+
 void S_DrawDarts(ITEM_INFO *item)
 {
     D3DTLVERTEX v[2];
