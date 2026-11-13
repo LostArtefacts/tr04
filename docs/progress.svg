@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="73.45" height="12" x="336.54" y="0" class="nonmatching"><title>275 · 17.74%</title></rect>
-<rect width="4.01" height="12" x="409.99" y="0" class="todo"><title>15 · 0.97%</title></rect>
+<rect width="73.72" height="12" x="336.54" y="0" class="nonmatching"><title>276 · 17.81%</title></rect>
+<rect width="3.74" height="12" x="410.26" y="0" class="todo"><title>14 · 0.90%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">275</tspan> · <tspan class="todo">15</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">276</tspan> · <tspan class="todo">14</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.56%</title></rect>
-<rect width="174.40" height="12" x="225.86" y="0" class="nonmatching"><title>263 KB · 42.12%</title></rect>
-<rect width="13.74" height="12" x="400.26" y="0" class="todo"><title>21 KB · 3.32%</title></rect>
+<rect width="174.73" height="12" x="225.86" y="0" class="nonmatching"><title>264 KB · 42.21%</title></rect>
+<rect width="13.41" height="12" x="400.59" y="0" class="todo"><title>20 KB · 3.24%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">263 KB</tspan> · <tspan class="todo">21 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">264 KB</tspan> · <tspan class="todo">20 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1588,7 +1588,7 @@
 <rect width="12" height="12" x="315" y="450" class="nonmatching"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="450" class="nonmatching"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="450" class="nonmatching"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="450" class="todo"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="450" class="nonmatching"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="450" class="todo"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="450" class="todo"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="450" class="todo"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
@@ -1977,7 +1977,7 @@
 <rect width="13.88" height="14.06" x="381.66" y="114.34" class="nonmatching"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="13.88" height="14" x="381.66" y="131.40" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="13.88" height="13.95" x="381.66" y="148.40" class="named"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
-<rect width="13.88" height="13.92" x="381.66" y="165.35" class="todo"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
+<rect width="13.88" height="13.92" x="381.66" y="165.35" class="nonmatching"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
 <rect width="13.88" height="13.92" x="381.66" y="182.27" class="nonmatching"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
 <rect width="13.88" height="13.81" x="381.66" y="199.19" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>
 <rect width="13.88" height="13.81" x="381.66" y="216" class="nonmatching"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
