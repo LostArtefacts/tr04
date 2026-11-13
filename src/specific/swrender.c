@@ -18,6 +18,8 @@ extern float SW_ZLimit;
 extern LPDIRECT3DDEVICE3 SW_RealD3DDevice;
 extern HGLOBAL SW_SpanBufferHandle;
 extern void *SW_SpanBuffer;
+extern void *SW_Surface;
+extern sint32 SW_SurfacePitch;
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -110,6 +112,13 @@ void SW_FreeBuffer(void)
 {
     GlobalFree(SW_SpanBufferHandle);
     SW_SpanBuffer = 0;
+}
+
+HRESULT SW_SetSurface(void *surface, sint32 pitch)
+{
+    SW_Surface = surface;
+    SW_SurfacePitch = pitch;
+    return 0;
 }
 
 sint32 SW_SetZLimit(float limit)
