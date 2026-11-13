@@ -1100,9 +1100,9 @@ sint16 *GetBestFrame(ITEM_INFO *item)
 
 void mRotBoundingBoxNoPersp(sint16 *bounds, sint16 *rotatedBounds)
 {
+    sint32 x, y, i, z;
     SVECTOR pos[8];
-    sint32 x, y, z, i;
-    sint16 xMin, xMax, yMin, yMax, zMin, zMax;
+    sint16 xMin, zMax, zMin, xMax, yMin, yMax;
 
     xMin = bounds[0];
     xMax = bounds[1];
@@ -1124,23 +1124,23 @@ void mRotBoundingBoxNoPersp(sint16 *bounds, sint16 *rotatedBounds)
     pos[3].z = zMin;
     pos[4].x = xMin;
     pos[4].y = yMin;
-    pos[4].z = zMax;
     pos[5].x = xMax;
+    pos[4].z = zMax;
     pos[5].y = yMin;
     pos[5].z = zMax;
     pos[6].x = xMax;
     pos[6].y = yMax;
     pos[6].z = zMax;
-    pos[7].x = xMin;
     pos[7].y = yMax;
+    pos[7].x = xMin;
     pos[7].z = zMax;
-    xMin = 0x7FFF;
-    yMin = 0x7FFF;
     zMin = 0x7FFF;
-    xMax = -0x7FFF;
-    yMax = -0x7FFF;
+    yMin = 0x7FFF;
+    xMin = 0x7FFF;
+    i = 0;
     zMax = -0x7FFF;
-    for (i = 0; i < 8; i++) {
+    yMax = -0x7FFF;
+    for (xMax = -0x7FFF; i < 8; i++) {
         x = pos[i].x * phd_mxptr[M00] + pos[i].y * phd_mxptr[M01] + pos[i].z * phd_mxptr[M02] + phd_mxptr[M03];
         y = pos[i].x * phd_mxptr[M10] + pos[i].y * phd_mxptr[M11] + pos[i].z * phd_mxptr[M12] + phd_mxptr[M13];
         z = pos[i].x * phd_mxptr[M20] + pos[i].y * phd_mxptr[M21] + pos[i].z * phd_mxptr[M22] + phd_mxptr[M23];
@@ -1158,9 +1158,9 @@ void mRotBoundingBoxNoPersp(sint16 *bounds, sint16 *rotatedBounds)
             zMax = (sint16)z;
     }
     rotatedBounds[0] = xMin;
-    rotatedBounds[1] = xMax;
-    rotatedBounds[2] = yMin;
     rotatedBounds[3] = yMax;
+    rotatedBounds[2] = yMin;
+    rotatedBounds[1] = xMax;
     rotatedBounds[4] = zMin;
     rotatedBounds[5] = zMax;
 }
