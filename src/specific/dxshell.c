@@ -1225,6 +1225,25 @@ void DXInitKeyboard(HWND hwnd, HINSTANCE hinstance)
     DXUnk7541ac = 0;
 }
 
+void DXReleaseInput(void)
+{
+    if (!G_dxptr)
+        return;
+    DXAttempt(IDirectInputDevice2_Unacquire(G_dxptr->Keyboard));
+    if (G_dxptr->Keyboard) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "Keyboard", G_dxptr->Keyboard, IDirectInputDevice2_Release(G_dxptr->Keyboard));
+        G_dxptr->Keyboard = 0;
+    } else {
+        Log(1, "%s Attempt To Release NULL Ptr", "Keyboard");
+    }
+    if (G_dxptr->lpDirectInput) {
+        Log(4, "Released %s @ %x - RefCnt = %d", "DirectInput", G_dxptr->lpDirectInput, IDirectInput2_Release(G_dxptr->lpDirectInput));
+        G_dxptr->lpDirectInput = 0;
+    } else {
+        Log(1, "%s Attempt To Release NULL Ptr", "DirectInput");
+    }
+}
+
 void DXReadKeyboard(char *KeyMap)
 {
     HRESULT state;

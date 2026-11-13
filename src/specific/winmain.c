@@ -190,7 +190,7 @@ void WinClose(void)
     DXFreeInfo(&App.DXInfo);
     DestroyAcceleratorTable(App.hAccel);
     DXClose();
-    Func494400();
+    DXReleaseInput();
 }
 
 void WinProcMsg(void)

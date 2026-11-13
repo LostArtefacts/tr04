@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="335.91" height="12" x="0" y="0" class="named"><title>1256 · 81.14%</title></rect>
-<rect width="61.24" height="12" x="335.91" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="16.85" height="12" x="397.15" y="0" class="todo"><title>63 · 4.07%</title></rect>
+<rect width="336.17" height="12" x="0" y="0" class="named"><title>1257 · 81.20%</title></rect>
+<rect width="61.24" height="12" x="336.17" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="16.58" height="12" x="397.42" y="0" class="todo"><title>62 · 4.01%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1256</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">63</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1257</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">62</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.91" height="12" x="0" y="0" class="named"><title>338 KB · 54.08%</title></rect>
-<rect width="166.38" height="12" x="223.91" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="23.71" height="12" x="390.29" y="0" class="todo"><title>36 KB · 5.73%</title></rect>
+<rect width="224.04" height="12" x="0" y="0" class="named"><title>338 KB · 54.12%</title></rect>
+<rect width="166.38" height="12" x="224.04" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="23.58" height="12" x="390.42" y="0" class="todo"><title>36 KB · 5.70%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1529,7 +1529,7 @@
 <rect width="12" height="12" x="180" y="435" class="named"><title>0x00494030 DXMove (69 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="435" class="named"><title>0x00494080 DXSaveScreen (488 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="435" class="named"><title>0x00494270 DXInitKeyboard (387 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="435" class="todo"><title>0x00494400 Func494400 (201 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="435" class="named"><title>0x00494400 DXReleaseInput (201 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="435" class="named"><title>0x004944d0 DXReadKeyboard (74 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="435" class="named"><title>0x00494520 SW_D3D_QueryInterface (8 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="435" class="named"><title>0x00494530 SW_D3D_GetCaps (93 bytes)</title></rect>
@@ -2337,7 +2337,7 @@
 <rect width="8.96" height="8.61" x="714.13" y="210.64" class="named"><title>0x004236b0 TestMonkeyLeft (201 bytes)</title></rect>
 <rect width="8.96" height="8.61" x="726.09" y="210.64" class="named"><title>0x00438420 TriggerGlobalStaticFlame (201 bytes)</title></rect>
 <rect width="8.96" height="8.61" x="738.04" y="210.64" class="named"><title>0x00493f60 DXShowFrame (201 bytes)</title></rect>
-<rect width="8.88" height="8.68" x="495.98" y="222.24" class="todo"><title>0x00494400 Func494400 (201 bytes)</title></rect>
+<rect width="8.88" height="8.68" x="495.98" y="222.24" class="named"><title>0x00494400 DXReleaseInput (201 bytes)</title></rect>
 <rect width="8.88" height="8.64" x="495.98" y="233.92" class="named"><title>0x004090b0 JeanYvesControl (200 bytes)</title></rect>
 <rect width="8.88" height="8.64" x="495.98" y="245.56" class="named"><title>0x00415b60 OnTwoBlockPlatform (200 bytes)</title></rect>
 <rect width="8.88" height="8.64" x="495.98" y="257.20" class="named"><title>0x00442e70 InitialiseCamera (200 bytes)</title></rect>
