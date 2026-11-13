@@ -47,16 +47,16 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="340.28" height="12" x="0" y="0" class="named"><title>1274 · 82.19%</title></rect>
-<rect width="61.97" height="12" x="340.28" y="0" class="nonmatching"><title>232 · 14.97%</title></rect>
-<rect width="11.75" height="12" x="402.25" y="0" class="todo"><title>44 · 2.84%</title></rect>
+<rect width="62.23" height="12" x="340.28" y="0" class="nonmatching"><title>233 · 15.03%</title></rect>
+<rect width="11.49" height="12" x="402.51" y="0" class="todo"><title>43 · 2.77%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">82.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">232</tspan> · <tspan class="todo">44</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">233</tspan> · <tspan class="todo">43</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="227.14" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
-<rect width="166.95" height="12" x="227.14" y="0" class="nonmatching"><title>252 KB · 40.33%</title></rect>
-<rect width="19.91" height="12" x="394.09" y="0" class="todo"><title>30 KB · 4.81%</title></rect>
+<rect width="167.11" height="12" x="227.14" y="0" class="nonmatching"><title>252 KB · 40.36%</title></rect>
+<rect width="19.76" height="12" x="394.24" y="0" class="todo"><title>30 KB · 4.77%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">252 KB</tspan> · <tspan class="todo">30 KB</tspan></text>
@@ -1575,7 +1575,7 @@
 <rect width="12" height="12" x="120" y="450" class="todo"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="450" class="todo"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="450" class="todo"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="450" class="todo"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="450" class="nonmatching"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="450" class="todo"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="450" class="todo"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="450" class="todo"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
@@ -2274,7 +2274,7 @@
 <rect width="9.51" height="9.55" x="470.87" y="415.03" class="named"><title>0x0043ef60 have_i_got_object (237 bytes)</title></rect>
 <rect width="9.51" height="9.55" x="470.87" y="427.58" class="nonmatching"><title>0x00480220 ProjectTrainVerts (237 bytes)</title></rect>
 <rect width="9.51" height="9.47" x="470.87" y="440.14" class="named"><title>0x004077b0 TriggerHarpySparks (235 bytes)</title></rect>
-<rect width="9.51" height="9.39" x="470.87" y="452.61" class="todo"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
+<rect width="9.51" height="9.39" x="470.87" y="452.61" class="nonmatching"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
 <rect width="9.51" height="9.35" x="483.38" y="198.60" class="named"><title>0x0044fb10 DrawEffect (232 bytes)</title></rect>
 <rect width="9.51" height="9.35" x="483.38" y="210.95" class="named"><title>0x004818c0 ControlFXBulb (232 bytes)</title></rect>
 <rect width="9.51" height="9.35" x="483.38" y="223.30" class="named"><title>0x00491d60 DXFreeInfo (232 bytes)</title></rect>
