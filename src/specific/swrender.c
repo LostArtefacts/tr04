@@ -2757,6 +2757,472 @@ done:
     return 0;
 }
 
+#ifndef FEAT_C_ASM
+sint32 SW_TriSetupGFog(void *p0, void *p1, void *p2)
+{
+    __asm {
+        push ebp
+        mov ebx, dword ptr [p0]
+        mov ecx, dword ptr [p1]
+        mov edx, dword ptr [p2]
+        mov dword ptr [SW_TriV0], ebx
+        fld dword ptr [ebx]
+        fsub dword ptr [ecx]
+        fld dword ptr [ebx + 4]
+        fsub dword ptr [edx + 4]
+        fxch st(1)
+        fst dword ptr [SW_TriFogDX01]
+        fxch st(1)
+        fst dword ptr [SW_TriFogDY02]
+        fmulp st(1), st
+        fld dword ptr [ebx]
+        fsub dword ptr [edx]
+        fld dword ptr [ebx + 4]
+        fsub dword ptr [ecx + 4]
+        fxch st(1)
+        fst dword ptr [SW_TriFogDX02]
+        fxch st(1)
+        fst dword ptr [SW_TriFogDY01]
+        fmulp st(1), st
+        fsubp st(1), st
+        fst dword ptr [SW_TriFogTemp]
+        fld1
+        test dword ptr [SW_TriFogTemp], 0x80000000
+        je L0
+        mov eax, ecx
+        mov ecx, edx
+        mov edx, eax
+        fchs
+        fld dword ptr [SW_TriFogDX01]
+        fld dword ptr [SW_TriFogDX02]
+        fstp dword ptr [SW_TriFogDX01]
+        fstp dword ptr [SW_TriFogDX02]
+        fld dword ptr [SW_TriFogDY01]
+        fld dword ptr [SW_TriFogDY02]
+        fstp dword ptr [SW_TriFogDY01]
+        fstp dword ptr [SW_TriFogDY02]
+    L0:
+        fdivrp st(1), st
+        mov dword ptr [ebx + 8], ecx
+        mov dword ptr [ecx + 8], edx
+        mov dword ptr [edx + 8], ebx
+        mov dword ptr [ebx + 0x14], edx
+        mov dword ptr [ecx + 0x14], ebx
+        mov dword ptr [edx + 0x14], ecx
+        mov esi, ebx
+        mov eax, dword ptr [ebx + 4]
+        cmp eax, dword ptr [ecx + 4]
+        jb L1
+        mov eax, dword ptr [ecx + 4]
+        mov esi, ecx
+    L1:
+        cmp eax, dword ptr [edx + 4]
+        jb L2
+        mov esi, edx
+    L2:
+        mov dword ptr [SW_TriFogEdgeA], esi
+        mov dword ptr [SW_TriFogEdgeB], esi
+        mov eax, dword ptr [ebx + 0x10]
+        mov dword ptr [SW_TriColor0], eax
+        mov esi, dword ptr [ebx + 0x10]
+        mov ebp, esi
+        mov edi, esi
+        mov eax, esi
+        shl esi, 8
+        and edi, 0xff00
+        shr eax, 8
+        and esi, 0xff00
+        shr ebp, 0x10
+        and eax, 0xff00
+        and ebp, 0xff00
+        add edi, 0x80
+        add esi, 0x80
+        add eax, 0x80
+        add ebp, 0x80
+        mov dword ptr [SW_TriFogG0], edi
+        mov dword ptr [SW_TriFogB0], esi
+        mov dword ptr [SW_TriFogR0], eax
+        mov dword ptr [SW_TriFogA0], ebp
+        mov esi, dword ptr [ecx + 0x10]
+        mov ebp, esi
+        mov edi, esi
+        mov eax, esi
+        shl esi, 8
+        and edi, 0xff00
+        shr eax, 8
+        and esi, 0xff00
+        shr ebp, 0x10
+        and eax, 0xff00
+        and esi, 0xff00
+        add edi, 0x80
+        add esi, 0x80
+        add eax, 0x80
+        add ebp, 0x80
+        mov dword ptr [SW_TriFogG1], edi
+        mov dword ptr [SW_TriFogB1], esi
+        mov dword ptr [SW_TriFogR1], eax
+        mov dword ptr [SW_TriFogA1], ebp
+        mov esi, dword ptr [edx + 0x10]
+        mov ebp, esi
+        mov edi, esi
+        mov eax, esi
+        shl esi, 8
+        and edi, 0xff00
+        shr eax, 8
+        and esi, 0xff00
+        shr ebp, 0x10
+        and eax, 0xff00
+        and esi, 0xff00
+        add edi, 0x80
+        add esi, 0x80
+        add eax, 0x80
+        add ebp, 0x80
+        mov dword ptr [SW_TriFogG2], edi
+        mov dword ptr [SW_TriFogB2], esi
+        mov dword ptr [SW_TriFogR2], eax
+        mov dword ptr [SW_TriFogA2], ebp
+        fild dword ptr [SW_TriFogR0]
+        fild dword ptr [SW_TriFogR1]
+        fild dword ptr [SW_TriFogR2]
+        fxch st(1)
+        fsubr st, st(2)
+        fxch st(2)
+        fsubrp st(1), st
+        fxch st(1)
+        fst dword ptr [SW_TriFogD01]
+        fmul dword ptr [SW_TriFogDY02]
+        fxch st(1)
+        fst dword ptr [SW_TriFogD02]
+        fmul dword ptr [SW_TriFogDY01]
+        fld dword ptr [SW_TriFogD01]
+        fmul dword ptr [SW_TriFogDX02]
+        fxch st(1)
+        fsubp st(2), st
+        fld dword ptr [SW_TriFogD02]
+        fmul dword ptr [SW_TriFogDX01]
+        fxch st(2)
+        fmul st, st(3)
+        fist word ptr [SW_SpanGrad + 4]
+        fxch st(1)
+        fsubp st(2), st
+        fstp dword ptr [SW_TriFogRDX]
+        fmul st, st(1)
+        fld dword ptr [ebx]
+        fmul dword ptr [SW_TriFogRDX]
+        fld dword ptr [ebx + 4]
+        fmul st, st(2)
+        fxch st(2)
+        fstp dword ptr [SW_TriFogRDY]
+        fild dword ptr [SW_TriFogR0]
+        fxch st(1)
+        faddp st(2), st
+        fadd qword ptr [SW_TriMagic23]
+        fsubrp st(1), st
+        fstp qword ptr [SW_TriFogROff]
+        fild dword ptr [SW_TriFogG0]
+        fild dword ptr [SW_TriFogG1]
+        fild dword ptr [SW_TriFogG2]
+        fxch st(1)
+        fsubr st, st(2)
+        fxch st(2)
+        fsubrp st(1), st
+        fxch st(1)
+        fst dword ptr [SW_TriFogD01]
+        fmul dword ptr [SW_TriFogDY02]
+        fxch st(1)
+        fst dword ptr [SW_TriFogD02]
+        fmul dword ptr [SW_TriFogDY01]
+        fld dword ptr [SW_TriFogD01]
+        fmul dword ptr [SW_TriFogDX02]
+        fxch st(1)
+        fsubp st(2), st
+        fld dword ptr [SW_TriFogD02]
+        fmul dword ptr [SW_TriFogDX01]
+        fxch st(2)
+        fmul st, st(3)
+        fist word ptr [SW_SpanGrad + 2]
+        fxch st(1)
+        fsubp st(2), st
+        fstp dword ptr [SW_TriFogGDX]
+        fmul st, st(1)
+        fld dword ptr [ebx]
+        fmul dword ptr [SW_TriFogGDX]
+        fld dword ptr [ebx + 4]
+        fmul st, st(2)
+        fxch st(2)
+        fstp dword ptr [SW_TriFogGDY]
+        fild dword ptr [SW_TriFogG0]
+        fxch st(1)
+        faddp st(2), st
+        fadd qword ptr [SW_TriMagic23]
+        fsubrp st(1), st
+        fstp qword ptr [SW_TriFogGOff]
+        fild dword ptr [SW_TriFogB0]
+        fild dword ptr [SW_TriFogB1]
+        fild dword ptr [SW_TriFogB2]
+        fxch st(1)
+        fsubr st, st(2)
+        fxch st(2)
+        fsubrp st(1), st
+        fxch st(1)
+        fst dword ptr [SW_TriFogD01]
+        fmul dword ptr [SW_TriFogDY02]
+        fxch st(1)
+        fst dword ptr [SW_TriFogD02]
+        fmul dword ptr [SW_TriFogDY01]
+        fld dword ptr [SW_TriFogD01]
+        fmul dword ptr [SW_TriFogDX02]
+        fxch st(1)
+        fsubp st(2), st
+        fld dword ptr [SW_TriFogD02]
+        fmul dword ptr [SW_TriFogDX01]
+        fxch st(2)
+        fmul st, st(3)
+        fist word ptr [SW_SpanGrad]
+        fxch st(1)
+        fsubp st(2), st
+        fstp dword ptr [SW_TriFogBDX]
+        fmul st, st(1)
+        fld dword ptr [ebx]
+        fmul dword ptr [SW_TriFogBDX]
+        fld dword ptr [ebx + 4]
+        fmul st, st(2)
+        fxch st(2)
+        fstp dword ptr [SW_TriFogBDY]
+        fild dword ptr [SW_TriFogB0]
+        fxch st(1)
+        faddp st(2), st
+        fadd qword ptr [SW_TriMagic23]
+        fsubrp st(1), st
+        fstp qword ptr [SW_TriFogBOff]
+        fild dword ptr [SW_TriFogA0]
+        fild dword ptr [SW_TriFogA1]
+        fild dword ptr [SW_TriFogA2]
+        fxch st(1)
+        fsubr st, st(2)
+        fxch st(2)
+        fsubrp st(1), st
+        fxch st(1)
+        fst dword ptr [SW_TriFogD01]
+        fmul dword ptr [SW_TriFogDY02]
+        fxch st(1)
+        fst dword ptr [SW_TriFogD02]
+        fmul dword ptr [SW_TriFogDY01]
+        fld dword ptr [SW_TriFogD01]
+        fmul dword ptr [SW_TriFogDX02]
+        fxch st(1)
+        fsubp st(2), st
+        fld dword ptr [SW_TriFogD02]
+        fmul dword ptr [SW_TriFogDX01]
+        fxch st(2)
+        fmul st, st(3)
+        fist word ptr [SW_SpanGrad + 6]
+        fxch st(1)
+        fsubp st(2), st
+        fstp dword ptr [SW_TriFogADX]
+        fmul st, st(1)
+        fld dword ptr [ebx]
+        fmul dword ptr [SW_TriFogADX]
+        fld dword ptr [ebx + 4]
+        fmul st, st(2)
+        fxch st(2)
+        fstp dword ptr [SW_TriFogADY]
+        fild dword ptr [SW_TriFogA0]
+        fxch st(1)
+        faddp st(2), st
+        fadd qword ptr [SW_TriMagic23]
+        fsubrp st(1), st
+        fstp qword ptr [SW_TriFogAOff]
+        faddp st(0), st
+        mov esi, dword ptr [SW_TriFogEdgeA]
+        mov eax, 3
+        mov dword ptr [SW_TriFogEdges], eax
+        mov edi, dword ptr [SW_SpanBuffer]
+        fld dword ptr [esi + 4]
+        fsub dword ptr [SW_TriYBias]
+        fadd qword ptr [SW_TriMagic52]
+        fstp qword ptr [SW_TriFogY]
+        inc dword ptr [SW_TriFogY]
+        mov eax, dword ptr [SW_TriFogY]
+        xor edx, edx
+        mov dword ptr [SW_SpanY], eax
+        jmp L5
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        mov edi, edi
+    L3:
+        mov eax, dword ptr [edi]
+        push ebx
+        shr ebx, 0x10
+        mov eax, esi
+        shr eax, 0x10
+        mov dword ptr [SW_TriFogTemp], ebx
+        sub eax, ebx
+        fild dword ptr [SW_TriFogY]
+        fild dword ptr [SW_TriFogTemp]
+        fld dword ptr [SW_TriFogADX]
+        fmul st, st(1)
+        fld dword ptr [SW_TriFogADY]
+        fmul st, st(3)
+        faddp st(1), st
+        fadd qword ptr [SW_TriFogAOff]
+        fstp dword ptr [SW_TriFogTemp]
+        mov dword ptr [edi + 4], eax
+        mov dword ptr [edi], ebx
+        fld dword ptr [SW_TriFogBDX]
+        fmul st, st(1)
+        fld dword ptr [SW_TriFogBDY]
+        fmul st, st(3)
+        fld dword ptr [SW_TriFogGDX]
+        fmul st, st(3)
+        fld dword ptr [SW_TriFogGDY]
+        fmul st, st(5)
+        fxch st(2)
+        faddp st(3), st
+        fld dword ptr [SW_TriFogRDX]
+        fmul st, st(4)
+        fld dword ptr [SW_TriFogRDY]
+        fmul st, st(6)
+        fxch st(2)
+        faddp st(3), st
+        fxch st(3)
+        fadd qword ptr [SW_TriFogBOff]
+        fxch st(3)
+        faddp st(1), st
+        fxch st(1)
+        fadd qword ptr [SW_TriFogGOff]
+        fxch st(3)
+        faddp st(0), st
+        fxch st(1)
+        fstp dword ptr [edi + 0x18]
+        fadd qword ptr [SW_TriFogROff]
+        fxch st(1)
+        fstp dword ptr [edi + 0x1a]
+        fxch st(1)
+        faddp st(0), st
+        fstp dword ptr [edi + 0x1c]
+        mov eax, dword ptr [SW_TriFogTemp]
+        mov word ptr [edi + 0x1e], ax
+        mov eax, dword ptr [SW_TriFogY]
+        add edi, 0x20
+        inc eax
+        pop ebx
+        mov dword ptr [SW_TriFogY], eax
+        mov eax, dword ptr [SW_TriFogStepB]
+        add ebx, eax
+        mov eax, dword ptr [SW_TriFogStepA]
+        add esi, eax
+        dec edx
+        dec ecx
+        je L5
+        test edx, edx
+        je L6
+        jmp L3
+    L4:
+        mov dword ptr [SW_SpanEnd], edi
+        call dword ptr [SW_SpanFunc]
+        pop ebp
+        jmp Done
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+    L5:
+        mov esi, dword ptr [SW_TriFogEdgeA]
+        mov eax, dword ptr [SW_TriFogEdges]
+        mov ecx, esi
+        dec eax
+        js L4
+        mov ecx, dword ptr [ecx + 8]
+        mov dword ptr [SW_TriFogEdges], eax
+        mov dword ptr [SW_TriFogEdgeA], ecx
+        fld dword ptr [esi]
+        fsub dword ptr [ecx]
+        fld dword ptr [esi + 4]
+        fsub dword ptr [ecx + 4]
+        fdivp st(1), st
+        fstp dword ptr [SW_TriFogSlopeA]
+        fild dword ptr [SW_TriFogY]
+        fsub dword ptr [esi + 4]
+        fmul dword ptr [SW_TriFogSlopeA]
+        fadd dword ptr [esi]
+        fstp dword ptr [SW_TriFogXA]
+        fld dword ptr [ecx + 4]
+        fsub dword ptr [SW_TriYBias]
+        fadd qword ptr [SW_TriMagic52]
+        fstp qword ptr [SW_TriFogEndY]
+        mov ecx, dword ptr [SW_TriFogEndY]
+        sub ecx, dword ptr [SW_TriFogY]
+        inc ecx
+        je L5
+        fld dword ptr [SW_TriFogSlopeA]
+        fmul dword ptr [SW_TriFloat16]
+        fistp dword ptr [SW_TriFogStepA]
+        fld dword ptr [SW_TriFogXA]
+        fmul dword ptr [SW_TriFloat16]
+        fistp dword ptr [SW_TriFogTemp]
+        mov esi, dword ptr [SW_TriFogTemp]
+        add esi, 0xffff
+        test edx, edx
+        jne L7
+    L6:
+        mov edx, dword ptr [SW_TriFogEdgeB]
+        mov eax, dword ptr [SW_TriFogEdges]
+        mov ebx, edx
+        dec eax
+        js L4
+        mov ebx, dword ptr [ebx + 0x14]
+        mov dword ptr [SW_TriFogEdges], eax
+        mov dword ptr [SW_TriFogEdgeB], ebx
+        fld dword ptr [edx]
+        fsub dword ptr [ebx]
+        fld dword ptr [edx + 4]
+        fsub dword ptr [ebx + 4]
+        fdivp st(1), st
+        fstp dword ptr [SW_TriFogSlopeB]
+        fild dword ptr [SW_TriFogY]
+        fsub dword ptr [edx + 4]
+        fmul dword ptr [SW_TriFogSlopeB]
+        fadd dword ptr [edx]
+        fstp dword ptr [SW_TriFogXB]
+        fld dword ptr [ebx + 4]
+        fsub dword ptr [SW_TriYBias]
+        fadd qword ptr [SW_TriMagic52]
+        fstp qword ptr [SW_TriFogEndY]
+        mov edx, dword ptr [SW_TriFogEndY]
+        sub edx, dword ptr [SW_TriFogY]
+        inc edx
+        je L6
+        fld dword ptr [SW_TriFogSlopeB]
+        fmul dword ptr [SW_TriFloat16]
+        fistp dword ptr [SW_TriFogStepB]
+        fld dword ptr [SW_TriFogXB]
+        fmul dword ptr [SW_TriFloat16]
+        fistp dword ptr [SW_TriFogTemp]
+        mov ebx, dword ptr [SW_TriFogTemp]
+        add ebx, 0xffff
+    L7:
+        jmp L3
+        pop ebp
+    Done:
+    }
+}
+#else
 sint32 SW_TriSetupGFog(void *p0, void *p1, void *p2)
 {
     SW_VERTEX *v0, *v1, *v2, *t, *n;
@@ -2939,6 +3405,7 @@ done:
     SW_SpanFunc();
     return 0;
 }
+#endif
 
 #ifndef FEAT_C_ASM
 void SW_SpanG(void)
