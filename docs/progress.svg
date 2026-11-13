@@ -46,16 +46,16 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="337.08" height="12" x="0" y="0" class="named"><title>1262 · 81.42%</title></rect>
-<rect width="65.97" height="12" x="337.08" y="0" class="nonmatching"><title>247 · 15.94%</title></rect>
+<rect width="336.81" height="12" x="0" y="0" class="named"><title>1261 · 81.35%</title></rect>
+<rect width="66.24" height="12" x="336.81" y="0" class="nonmatching"><title>248 · 16%</title></rect>
 <rect width="10.95" height="12" x="403.05" y="0" class="todo"><title>41 · 2.65%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1262</tspan> · <tspan class="nonmatching">247</tspan> · <tspan class="todo">41</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1261</tspan> · <tspan class="nonmatching">248</tspan> · <tspan class="todo">41</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="226.44" height="12" x="0" y="0" class="named"><title>342 KB · 54.70%</title></rect>
-<rect width="168.04" height="12" x="226.44" y="0" class="nonmatching"><title>254 KB · 40.59%</title></rect>
+<rect width="226.40" height="12" x="0" y="0" class="named"><title>342 KB · 54.69%</title></rect>
+<rect width="168.08" height="12" x="226.40" y="0" class="nonmatching"><title>254 KB · 40.60%</title></rect>
 <rect width="19.52" height="12" x="394.48" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.7%</text>
@@ -1604,7 +1604,7 @@
 <rect width="12" height="12" x="555" y="450" class="todo"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="450" class="todo"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="450" class="todo"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
-<rect width="12" height="12" x="600" y="450" class="named"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
+<rect width="12" height="12" x="600" y="450" class="nonmatching"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="450" class="named"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="450" class="named"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="450" class="named"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
@@ -2830,7 +2830,7 @@
 <rect width="4.72" height="5.04" x="726.85" y="339.40" class="named"><title>0x00450650 phd_TranslateRel_I (62 bytes)</title></rect>
 <rect width="4.72" height="5.04" x="734.57" y="339.40" class="named"><title>0x004506e0 phd_RotYXZ_I (62 bytes)</title></rect>
 <rect width="4.72" height="5.04" x="742.28" y="339.40" class="named"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
-<rect width="5.03" height="4.72" x="632.47" y="347.44" class="named"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
+<rect width="5.03" height="4.72" x="632.47" y="347.44" class="nonmatching"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
 <rect width="4.95" height="4.72" x="640.51" y="347.44" class="named"><title>0x00413cf0 FallingBlockCeiling (61 bytes)</title></rect>
 <rect width="4.95" height="4.72" x="648.46" y="347.44" class="named"><title>0x0043e860 setup_objectlist_startposition2 (61 bytes)</title></rect>
 <rect width="4.95" height="4.72" x="656.41" y="347.44" class="nonmatching"><title>0x0049c710 DBLog_Post (61 bytes)</title></rect>
