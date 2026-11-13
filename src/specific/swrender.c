@@ -73,7 +73,9 @@ extern LPDIRECTDRAWSURFACE4 SW_TexSurface;
 extern sint32 SW_RecipTable[4096];
 extern uint8 SW_MulTable[65536];
 
-extern char SW_Kernel32Name[];
+#pragma data_seg(".text")
+char SW_Kernel32Name[] = "kernel32.dll";
+#pragma data_seg()
 extern char SW_SleepName[];
 
 void __fastcall SW_WaitUntilInScene(volatile sint32 *flag)

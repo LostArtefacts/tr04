@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="336.01" height="12" x="0" y="0" class="named"><title>1258 · 81.16%</title></rect>
-<rect width="67.04" height="12" x="336.01" y="0" class="nonmatching"><title>251 · 16.19%</title></rect>
-<rect width="10.95" height="12" x="403.05" y="0" class="todo"><title>41 · 2.65%</title></rect>
+<rect width="336.27" height="12" x="0" y="0" class="named"><title>1259 · 81.23%</title></rect>
+<rect width="67.04" height="12" x="336.27" y="0" class="nonmatching"><title>251 · 16.19%</title></rect>
+<rect width="10.68" height="12" x="403.32" y="0" class="todo"><title>40 · 2.58%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1258</tspan> · <tspan class="nonmatching">251</tspan> · <tspan class="todo">41</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1259</tspan> · <tspan class="nonmatching">251</tspan> · <tspan class="todo">40</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="225.85" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
-<rect width="168.63" height="12" x="225.85" y="0" class="nonmatching"><title>255 KB · 40.73%</title></rect>
-<rect width="19.52" height="12" x="394.48" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
+<rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
+<rect width="168.63" height="12" x="225.86" y="0" class="nonmatching"><title>255 KB · 40.73%</title></rect>
+<rect width="19.51" height="12" x="394.49" y="0" class="todo"><title>29 KB · 4.71%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">255 KB</tspan> · <tspan class="todo">29 KB</tspan></text>
@@ -1582,7 +1582,7 @@
 <rect width="12" height="12" x="225" y="450" class="todo"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="450" class="todo"><title>0x004997d0 SW_SpanGTAdd (355 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="450" class="todo"><title>0x00499940 SW_SpanGTKey (368 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="450" class="todo"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="450" class="named"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="450" class="todo"><title>0x00499ac0 SW_SpanGTP (336 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="450" class="todo"><title>0x00499c10 SW_SpanGTPKey (361 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="450" class="todo"><title>0x00499d80 SW_SpanGTPAdd (358 bytes)</title></rect>
@@ -3114,7 +3114,7 @@
 <rect width="2.67" height="1.83" x="721.85" y="426.16" class="todo"><title>0x0048f9c1 SW_WaitWhileDXInScene (13 bytes)</title></rect>
 <rect width="2.67" height="1.83" x="727.52" y="426.16" class="named"><title>0x00494e80 SW_BeginFrame (13 bytes)</title></rect>
 <rect width="2.67" height="1.83" x="733.19" y="426.16" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
-<rect width="2.67" height="1.83" x="738.85" y="426.16" class="todo"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
+<rect width="2.67" height="1.83" x="738.85" y="426.16" class="named"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
 <rect width="2.48" height="1.83" x="744.52" y="426.16" class="named"><title>0x00405ea0 InitialiseLaraDouble (12 bytes)</title></rect>
 <rect width="1.83" height="2.48" x="716.18" y="430.99" class="named"><title>0x00437cb0 invisibility_on (12 bytes)</title></rect>
 <rect width="1.83" height="2.48" x="721.02" y="430.99" class="named"><title>0x0046bed0 twelth_cutseq_init (12 bytes)</title></rect>
