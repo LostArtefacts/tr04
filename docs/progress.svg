@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="334.03" height="12" x="0" y="0" class="named"><title>1249 · 80.68%</title></rect>
-<rect width="61.24" height="12" x="334.03" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="18.72" height="12" x="395.28" y="0" class="todo"><title>70 · 4.52%</title></rect>
+<rect width="334.30" height="12" x="0" y="0" class="named"><title>1250 · 80.75%</title></rect>
+<rect width="61.24" height="12" x="334.30" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="18.45" height="12" x="395.55" y="0" class="todo"><title>69 · 4.46%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">80.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1249</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">70</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1250</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">69</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.65" height="12" x="0" y="0" class="named"><title>338 KB · 54.02%</title></rect>
-<rect width="166.38" height="12" x="223.65" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="23.97" height="12" x="390.03" y="0" class="todo"><title>36 KB · 5.79%</title></rect>
+<rect width="223.66" height="12" x="0" y="0" class="named"><title>338 KB · 54.02%</title></rect>
+<rect width="166.38" height="12" x="223.66" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="23.96" height="12" x="390.04" y="0" class="todo"><title>36 KB · 5.79%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1556,7 +1556,7 @@
 <rect width="12" height="12" x="585" y="435" class="named"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="435" class="named"><title>0x00494e50 SW_SetSurface (22 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="435" class="named"><title>0x00494e70 SW_SetZLimit (12 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="435" class="todo"><title>0x00494e80 Func494e80 (13 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="435" class="named"><title>0x00494e80 SW_BeginFrame (13 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="435" class="todo"><title>0x00494e90 Func494e90 (6 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="435" class="todo"><title>0x00494ea0 SW_SelectRasterizer (1015 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="435" class="todo"><title>0x004952a0 Func4952a0 (12 bytes)</title></rect>
@@ -3110,7 +3110,7 @@
 <rect width="2.13" height="2.34" x="711.74" y="459.66" class="todo"><title>0x0048f981 SW_WaitLevelLoad (13 bytes)</title></rect>
 <rect width="2.58" height="1.90" x="716.87" y="426.79" class="todo"><title>0x0048f9a1 SW_WaitUntilDXInScene (13 bytes)</title></rect>
 <rect width="2.58" height="1.90" x="722.46" y="426.79" class="todo"><title>0x0048f9c1 SW_WaitWhileDXInScene (13 bytes)</title></rect>
-<rect width="2.58" height="1.90" x="728.04" y="426.79" class="todo"><title>0x00494e80 Func494e80 (13 bytes)</title></rect>
+<rect width="2.58" height="1.90" x="728.04" y="426.79" class="named"><title>0x00494e80 SW_BeginFrame (13 bytes)</title></rect>
 <rect width="2.58" height="1.90" x="733.62" y="426.79" class="todo"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="2.40" height="1.90" x="739.20" y="426.79" class="named"><title>0x00405ea0 InitialiseLaraDouble (12 bytes)</title></rect>
 <rect width="2.40" height="1.90" x="744.60" y="426.79" class="named"><title>0x00437cb0 invisibility_on (12 bytes)</title></rect>

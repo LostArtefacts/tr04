@@ -20,6 +20,7 @@ extern HGLOBAL SW_SpanBufferHandle;
 extern void *SW_SpanBuffer;
 extern void *SW_Surface;
 extern sint32 SW_SurfacePitch;
+extern sint32 SW_FrameState;
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -124,6 +125,12 @@ HRESULT SW_SetSurface(void *surface, sint32 pitch)
 sint32 SW_SetZLimit(float limit)
 {
     SW_ZLimit = limit;
+    return 0;
+}
+
+sint32 SW_BeginFrame(void)
+{
+    SW_FrameState = 0;
     return 0;
 }
 

@@ -1495,7 +1495,7 @@ address,size,name,symbol
 0x00494e30,23,SW_FreeBuffer,_SW_FreeBuffer
 0x00494e50,22,SW_SetSurface,_SW_SetSurface
 0x00494e70,12,SW_SetZLimit,_SW_SetZLimit
-0x00494e80,13,Func494e80,
+0x00494e80,13,SW_BeginFrame,_SW_BeginFrame
 0x00494e90,6,Func494e90,
 0x00494ea0,1015,SW_SelectRasterizer,_SW_SelectRasterizer
 0x004952a0,12,Func4952a0,
@@ -2681,6 +2681,7 @@ address,size,name,symbol
 0x00755298,4,SW_SurfacePitch,_SW_SurfacePitch
 0x007d94a4,4,SW_Surface,_SW_Surface
 0x007daaec,4,SW_SpanBufferHandle,_SW_SpanBufferHandle
+0x007e2c6c,4,SW_FrameState,_SW_FrameState
 0x007e6dd0,4,SW_SpanBuffer,_SW_SpanBuffer
 0x007e6de4,4,SW_ZLimit,_SW_ZLimit
 0x007e6e00,4,BinkSurfaceType,_BinkSurfaceType
