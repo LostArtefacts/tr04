@@ -1441,6 +1441,78 @@ void SW_SpanGTPKey(void)
     }
 }
 
+void SW_SpanGTPAdd(void)
+{
+    SW_SPAN *s;
+    uint8 *row, *p, *t;
+    uint32 *tex;
+    sint32 *d;
+    uint32 u, v, mask, idx;
+    uint16 c0, c1, c2, c3;
+    uint16 k0, k1, k2, k3;
+    sint32 n, m, sh, v2;
+
+    s = (SW_SPAN *)SW_SpanBuffer;
+    if (s != SW_SpanEnd) {
+        row = (uint8 *)SW_Surface + SW_SpanY * SW_SurfacePitch;
+        sh = SW_TexShift;
+        mask = (0xFF0000 << sh) & 0xFF0000;
+        tex = (uint32 *)(SW_TextureBits + SW_MipOffsets[sh]);
+        do {
+            p = row + (s->x << 2);
+            n = s->n;
+            d = (sint32 *)(s + 1);
+            if (n > 0) {
+                u = s->tex[0];
+                v = s->tex[2];
+                c0 = s->c[0];
+                c1 = s->c[1];
+                c2 = s->c[2];
+                c3 = s->c[3];
+                k0 = c0;
+                k1 = c1;
+                k2 = c2;
+                k3 = c3;
+                idx = ((v & mask) >> (sh * 2 + 8)) | ((u & mask) >> (sh + 16));
+                u += d[0];
+                v += d[1];
+                do {
+                    m = n > 16 ? 16 : n;
+                    do {
+                        t = (uint8 *)&tex[idx];
+                        v2 = p[0] + ((t[0] * (k0 >> 8)) >> 8);
+                        p[0] = v2 > 0xFF ? 0xFF : v2;
+                        v2 = p[1] + ((t[1] * (k1 >> 8)) >> 8);
+                        p[1] = v2 > 0xFF ? 0xFF : v2;
+                        v2 = p[2] + ((t[2] * (k2 >> 8)) >> 8);
+                        p[2] = v2 > 0xFF ? 0xFF : v2;
+                        v2 = p[3] + ((t[3] * (k3 >> 8)) >> 8);
+                        p[3] = v2 > 0xFF ? 0xFF : v2;
+                        idx = ((v & mask) >> (sh * 2 + 8)) | ((u & mask) >> (sh + 16));
+                        u += d[0];
+                        v += d[1];
+                        k0 = c0;
+                        k1 = c1;
+                        k2 = c2;
+                        k3 = c3;
+                        c0 += SW_SpanGrad[0];
+                        c1 += SW_SpanGrad[1];
+                        c2 += SW_SpanGrad[2];
+                        c3 += SW_SpanGrad[3];
+                        p += 4;
+                    } while (--m);
+                    d += 2;
+                    n -= 16;
+                } while (n > 0);
+            } else {
+                d += 2;
+            }
+            row += SW_SurfacePitch;
+            s = (SW_SPAN *)d;
+        } while (s != SW_SpanEnd);
+    }
+}
+
 void SW_SpanGInt(void)
 {
     SW_SPAN *s;
