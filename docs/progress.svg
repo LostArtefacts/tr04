@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="383.61" height="12" x="0" y="0" class="named"><title>1287 · 83.03%</title></rect>
-<rect width="78.39" height="12" x="383.61" y="0" class="nonmatching"><title>263 · 16.97%</title></rect>
+<rect width="383.91" height="12" x="0" y="0" class="named"><title>1288 · 83.10%</title></rect>
+<rect width="78.09" height="12" x="383.91" y="0" class="nonmatching"><title>262 · 16.90%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">83.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1287</tspan> · <tspan class="nonmatching">263</tspan></text>
+<text text-anchor="end" x="642" y="7.50">83.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1288</tspan> · <tspan class="nonmatching">262</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="256.90" height="12" x="0" y="0" class="named"><title>348 KB · 55.61%</title></rect>
-<rect width="205.10" height="12" x="256.90" y="0" class="nonmatching"><title>278 KB · 44.39%</title></rect>
+<rect width="257.22" height="12" x="0" y="0" class="named"><title>348 KB · 55.68%</title></rect>
+<rect width="204.78" height="12" x="257.22" y="0" class="nonmatching"><title>277 KB · 44.32%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">55.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">348 KB</tspan> · <tspan class="nonmatching">278 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">55.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">348 KB</tspan> · <tspan class="nonmatching">277 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1576,7 +1576,7 @@
 <rect width="12" height="12" x="165" y="450" class="named"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="450" class="named"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="450" class="named"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="450" class="nonmatching"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="450" class="named"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="450" class="named"><title>0x00499670 SW_SpanGT (347 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="450" class="named"><title>0x004997d0 SW_SpanGTAdd (355 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="450" class="named"><title>0x00499940 SW_SpanGTKey (369 bytes)</title></rect>
@@ -2030,7 +2030,7 @@
 <rect width="12.90" height="13.04" x="608.14" y="113.37" class="nonmatching"><title>0x004654a0 BikeCheckGetOff (439 bytes)</title></rect>
 <rect width="12.84" height="13.04" x="624.04" y="113.37" class="named"><title>0x00404840 TriggerDemigodMissileFlame (437 bytes)</title></rect>
 <rect width="12.84" height="13.04" x="639.89" y="113.37" class="named"><title>0x00462100 UnderwaterSwitchCollision (437 bytes)</title></rect>
-<rect width="12.84" height="13.04" x="655.73" y="113.37" class="nonmatching"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
+<rect width="12.84" height="13.04" x="655.73" y="113.37" class="named"><title>0x004994b0 SW_SpanGTPAlpha (437 bytes)</title></rect>
 <rect width="12.78" height="13.04" x="671.58" y="113.37" class="named"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
 <rect width="12.70" height="13.04" x="687.36" y="113.37" class="named"><title>0x0044e010 DoorControl (432 bytes)</title></rect>
 <rect width="12.67" height="13.04" x="703.06" y="113.37" class="named"><title>0x00413840 FloorTrapDoorCollision (431 bytes)</title></rect>
