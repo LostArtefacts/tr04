@@ -51,6 +51,7 @@ extern FOGBULB_STRUCT FogBulbs[20];
 extern sint32 NumLevelFogBulbs;
 extern FOGBULB_STRUCT *ActiveFogBulbs[5];
 extern sint32 NumActiveFogBulbs;
+extern sint32 NumFogBulbsInRange;
 extern sint32 rgb80h;
 extern sint32 rgbmask;
 extern sint32 zero;
@@ -90,5 +91,6 @@ void nullsub_10(void);
 void j_nullsub_10(void);
 void OmniEffect(D3DTLVERTEX *v);
 void HWR_DrawSortList(D3DTLBUMPVERTEX *info, sint32 num_verts, sint32 texture, sint32 type);
+void OmniFog(D3DTLVERTEX *v);
 
 #endif

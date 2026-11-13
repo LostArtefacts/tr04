@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.95" height="12" x="0" y="0" class="named"><title>1193 · 77.07%</title></rect>
 <rect width="0.65" height="12" x="258.95" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="29.74" height="12" x="259.60" y="0" class="nonmatching"><title>137 · 8.85%</title></rect>
-<rect width="46.67" height="12" x="289.33" y="0" class="todo"><title>215 · 13.89%</title></rect>
+<rect width="29.95" height="12" x="259.60" y="0" class="nonmatching"><title>138 · 8.91%</title></rect>
+<rect width="46.45" height="12" x="289.55" y="0" class="todo"><title>214 · 13.82%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1193</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">137</tspan> · <tspan class="todo">215</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1193</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">138</tspan> · <tspan class="todo">214</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="169.14" height="12" x="0" y="0" class="named"><title>315 KB · 50.34%</title></rect>
 <rect width="0.13" height="12" x="169.14" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="88.24" height="12" x="169.27" y="0" class="nonmatching"><title>164 KB · 26.26%</title></rect>
-<rect width="78.49" height="12" x="257.51" y="0" class="todo"><title>146 KB · 23.36%</title></rect>
+<rect width="88.62" height="12" x="169.27" y="0" class="nonmatching"><title>165 KB · 26.38%</title></rect>
+<rect width="78.11" height="12" x="257.89" y="0" class="todo"><title>145 KB · 23.25%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">50.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">315 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">164 KB</tspan> · <tspan class="todo">146 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">315 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">165 KB</tspan> · <tspan class="todo">145 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1371,7 +1371,7 @@
 <rect width="12" height="12" x="30" y="390" class="named"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="390" class="named"><title>0x00481df0 InitialiseFogBulbs (109 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="390" class="nonmatching"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="390" class="todo"><title>0x004820c0 OmniFog (706 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="390" class="nonmatching"><title>0x004820c0 OmniFog (706 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="390" class="todo"><title>0x00482390 AddQuadClippedZBuffer (1393 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="390" class="todo"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="390" class="todo"><title>0x00482e40 AddClippedPoly (328 bytes)</title></rect>
@@ -1859,7 +1859,7 @@
 <rect width="16.89" height="16.15" x="573.35" y="42.40" class="named"><title>0x00451240 RenderIt (711 bytes)</title></rect>
 <rect width="16.87" height="16.15" x="593.24" y="42.40" class="named"><title>0x00472c10 DrawBuckets (710 bytes)</title></rect>
 <rect width="16.77" height="16.15" x="613.11" y="42.40" class="named"><title>0x00462db0 CrowbarSwitchCollision (706 bytes)</title></rect>
-<rect width="16.77" height="16.15" x="632.88" y="42.40" class="todo"><title>0x004820c0 OmniFog (706 bytes)</title></rect>
+<rect width="16.77" height="16.15" x="632.88" y="42.40" class="nonmatching"><title>0x004820c0 OmniFog (706 bytes)</title></rect>
 <rect width="16.68" height="16.15" x="652.65" y="42.40" class="named"><title>0x004044b0 ControlDeathSlide (702 bytes)</title></rect>
 <rect width="16.65" height="16.15" x="672.33" y="42.40" class="named"><title>0x004790f0 InitDynamicLighting (701 bytes)</title></rect>
 <rect width="16.37" height="16.15" x="691.99" y="42.40" class="nonmatching"><title>0x004471b0 LaraBaddieCollision (689 bytes)</title></rect>

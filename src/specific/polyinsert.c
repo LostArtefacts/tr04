@@ -8,6 +8,8 @@
 #include "3dmath.h"
 #include "output.h"
 #include "../text.h"
+#include "../gameflow.h"
+#include "../newinv.h"
 
 void HWR_DrawSortList(D3DTLBUMPVERTEX *info, sint32 num_verts, sint32 texture, sint32 type)
 {
@@ -338,6 +340,73 @@ void OmniEffect(D3DTLVERTEX *v)
                         if (b > 255)
                             b = 255;
                         v->specular = b | v->specular & 0xFF000000 | ((g | ((r | (r << 8)) << 8)) << 8);
+                    }
+                }
+            }
+        }
+    }
+}
+
+void OmniFog(D3DTLVERTEX *v)
+{
+    FOGBULB_STRUCT *FogBulb;
+    FVECTOR pos, dP, dV, d;
+    float val, val2, inv;
+    sint32 i, s, r, g, b, lVal;
+
+    if (InventoryActive || nPolyType == 6 || gfLevelFlags & GF_TRAIN)
+        return;
+    s = v->specular >> 24;
+    if (gfCurrentLevel != 5 && gfCurrentLevel != 6 && s != 255) {
+        v->specular |= 0xFF000000;
+        r = (((v->color >> 8) & 0xFF00) * s) >> 16;
+        g = ((v->color >> 8 & 0xFF) * s) >> 8;
+        b = (CLRB(v->color) * s) >> 8;
+        v->color = RGBA(r, g, b, v->color >> 24);
+        if (!(v->color & 0xFFFFFF))
+            return;
+    }
+    OmniEffect(v);
+    if (NumFogBulbsInRange && NumActiveFogBulbs) {
+        inv = 1.0F / v->sz;
+        for (i = 0; i < NumActiveFogBulbs; i++) {
+            FogBulb = ActiveFogBulbs[i];
+            if (FogBulb->inRange) {
+                pos.x = v->tu;
+                pos.y = v->tv;
+                pos.z = v->sz;
+                if (FogBulb->pos.z < pos.z) {
+                    val = FogBulb->dist * inv;
+                    pos.x *= val;
+                    pos.y *= val;
+                    pos.z *= val;
+                }
+                dP.x = pos.x - FogBulb->pos.x;
+                dP.y = pos.y - FogBulb->pos.y;
+                dP.z = pos.z - FogBulb->pos.z;
+                d = dP;
+                dV.x = FogBulb->vec.x - FogBulb->pos.x;
+                dV.y = FogBulb->vec.y - FogBulb->pos.y;
+                dV.z = FogBulb->vec.z - FogBulb->pos.z;
+                val = dV.z * dV.z + dV.y * dV.y + dV.x * dV.x;
+                if (val != 0) {
+                    val2 = (dV.z * d.z + dV.y * d.y + dV.x * d.x) / val;
+                    if (val2 >= -1.0F) {
+                        if (val2 < 0)
+                            val = dP.z * dP.z + dP.y * dP.y + dP.x * dP.x;
+                        else {
+                            dP.x = d.x - val2 * dV.x;
+                            dP.y = d.y - val2 * dV.y;
+                            dP.z = d.z - val2 * dV.z;
+                            val = dP.z * dP.z + dP.y * dP.y + dP.x * dP.x;
+                        }
+                        if (val != 0 && val < FogBulb->sqrad) {
+                            val2 = FogBulb->density * FogBulb->inv_sqrad * val + 12582912.0F;
+                            lVal = (v->specular >> 24) + (*(sint32 *)&val2 & 0x3FFFFF) - FogBulb->density;
+                            if (lVal < 0)
+                                lVal = 0;
+                            v->specular = v->specular & 0xFFFFFF | lVal << 24;
+                        }
                     }
                 }
             }
