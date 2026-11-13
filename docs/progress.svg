@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="386.29" height="12" x="0" y="0" class="named"><title>1296 · 83.61%</title></rect>
-<rect width="75.71" height="12" x="386.29" y="0" class="nonmatching"><title>254 · 16.39%</title></rect>
+<rect width="386.59" height="12" x="0" y="0" class="named"><title>1297 · 83.68%</title></rect>
+<rect width="75.41" height="12" x="386.59" y="0" class="nonmatching"><title>253 · 16.32%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">83.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1296</tspan> · <tspan class="nonmatching">254</tspan></text>
+<text text-anchor="end" x="642" y="7.50">83.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1297</tspan> · <tspan class="nonmatching">253</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="260.20" height="12" x="0" y="0" class="named"><title>352 KB · 56.32%</title></rect>
-<rect width="201.80" height="12" x="260.20" y="0" class="nonmatching"><title>273 KB · 43.68%</title></rect>
+<rect width="260.59" height="12" x="0" y="0" class="named"><title>353 KB · 56.41%</title></rect>
+<rect width="201.41" height="12" x="260.59" y="0" class="nonmatching"><title>273 KB · 43.59%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">56.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">352 KB</tspan> · <tspan class="nonmatching">273 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">56.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">353 KB</tspan> · <tspan class="nonmatching">273 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1596,7 +1596,7 @@
 <rect width="12" height="12" x="465" y="450" class="nonmatching"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="450" class="nonmatching"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="450" class="named"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="450" class="nonmatching"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="450" class="named"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="450" class="named"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="450" class="named"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="450" class="nonmatching"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
@@ -1949,7 +1949,7 @@
 <rect width="14.16" height="14.51" x="681.55" y="79.77" class="named"><title>0x0041c4c0 TriggerWraithEffect (536 bytes)</title></rect>
 <rect width="14.13" height="14.51" x="698.71" y="79.77" class="named"><title>0x0042ca60 LaraTestClimbUpPos (535 bytes)</title></rect>
 <rect width="14.08" height="14.51" x="715.84" y="79.77" class="named"><title>0x004330a0 TriggerDebris (533 bytes)</title></rect>
-<rect width="14.08" height="14.51" x="732.92" y="79.77" class="nonmatching"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
+<rect width="14.08" height="14.51" x="732.92" y="79.77" class="named"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
 <rect width="13.76" height="14.82" x="364.94" y="97.28" class="named"><title>0x00429260 FireShotgun (532 bytes)</title></rect>
 <rect width="13.76" height="14.79" x="364.94" y="115.10" class="named"><title>0x0042a270 FireCrossbow (531 bytes)</title></rect>
 <rect width="13.76" height="14.73" x="364.94" y="132.89" class="named"><title>0x004587e0 SarcophagusCollision (529 bytes)</title></rect>

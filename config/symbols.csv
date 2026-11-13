@@ -2838,6 +2838,7 @@ address,size,name,symbol
 0x007d9500,8,SW_TriPFStepA,_SW_TriPFStepA
 0x007d9508,4,SW_SpanFogFunc,_SW_SpanFogFunc
 0x007d950c,4,SW_TriPTemp,_SW_TriPTemp
+0x007d9510,4,SW_SpanGTAddIntTmp0,_SW_SpanGTAddIntTmp0
 0x007d9514,4,SW_TriPFRDY,_SW_TriPFRDY
 0x007d9518,8,SW_TriTY,_SW_TriTY
 0x007d9520,4,SW_TriB1,_SW_TriB1
@@ -2866,6 +2867,7 @@ address,size,name,symbol
 0x007d9588,8,SW_TriTFogBOff,_SW_TriTFogBOff
 0x007d9590,4,SW_TriTemp,_SW_TriTemp
 0x007d9598,8,SW_SpanGrad,_SW_SpanGrad
+0x007d95a0,4,SW_SpanGTAddIntTmp1,_SW_SpanGTAddIntTmp1
 0x007d95a4,4,SW_TriFogA1,_SW_TriFogA1
 0x007d95a8,4,SW_TriFogStepB,_SW_TriFogStepB
 0x007d95ac,4,SW_TriPFU0,_SW_TriPFU0
@@ -2873,6 +2875,7 @@ address,size,name,symbol
 0x007d95b4,4,SW_TriBDY,_SW_TriBDY
 0x007d95b8,4,SW_TriPFG1,_SW_TriPFG1
 0x007d95bc,4,SW_SpanGTPIntTmp3,_SW_SpanGTPIntTmp3
+0x007d95c0,4,SW_SpanGTAddIntTmp2,_SW_SpanGTAddIntTmp2
 0x007d95c8,8,SW_TriTVOff,_SW_TriTVOff
 0x007d95d4,4,SW_TriEdges,_SW_TriEdges
 0x007d95d8,4,SW_TriTFogFDY,_SW_TriTFogFDY
@@ -2970,6 +2973,8 @@ address,size,name,symbol
 0x007dabcc,4,SW_TriG2,_SW_TriG2
 0x007dabd4,4,SW_TriPFWDX,_SW_TriPFWDX
 0x007dabdc,4,SW_TriADX,_SW_TriADX
+0x007dabe0,4,SW_SpanGTAddIntTmp3,_SW_SpanGTAddIntTmp3
+0x007dabe4,4,SW_SpanGTAddIntTmp4,_SW_SpanGTAddIntTmp4
 0x007dabe8,4,SW_TriFogXA,_SW_TriFogXA
 0x007dabec,4,SW_TriTEdgeB,_SW_TriTEdgeB
 0x007dabf4,4,SW_TriPR2,_SW_TriPR2
@@ -3042,6 +3047,7 @@ address,size,name,symbol
 0x007e2d64,4,SW_TriPFR0,_SW_TriPFR0
 0x007e2d68,4,SW_TriTFogEdgeA,_SW_TriTFogEdgeA
 0x007e2d6c,4,SW_TriTFogRDY,_SW_TriTFogRDY
+0x007e2d70,4,SW_SpanGTAddIntTmp5,_SW_SpanGTAddIntTmp5
 0x007e2d78,8,SW_TriPFFOff,_SW_TriPFFOff
 0x007e2d80,4,SW_TriTFogG2,_SW_TriTFogG2
 0x007e2d84,4,SW_TriTFogRDX,_SW_TriTFogRDX
