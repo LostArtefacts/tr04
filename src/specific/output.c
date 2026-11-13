@@ -20,6 +20,7 @@
 #include "../deltapak.h"
 #include "../draw.h"
 #include "../lara.h"
+#include "../newinv.h"
 
 #define RGB_M(clr, m) (col = (clr), cr = (CLRR(col) * (m)) >> 8, cg = (CLRG(col) * (m)) >> 8, cb = (CLRB(col) * (m)) >> 8, clr = RGBONLY(cr, cg, cb) | (col & 0xFF000000))
 
@@ -586,6 +587,16 @@ void _InsertRoom(ROOM_INFO *r)
 {
     SetD3DViewMatrix();
     InsertRoom(r);
+}
+
+void S_DrawPickup(sint16 object_number)
+{
+    sint32 n;
+
+    phd_LookAt(0, 1024, 0, 0, 0, 0, 0);
+    SetD3DViewMatrix();
+    n = convert_obj_to_invobj(object_number);
+    DrawThreeDeeObject2D((sint32)(448.0F * ((float)phd_winxmax / 512.0F) + PickupX), (sint32)(216.0F * ((float)phd_winymax * (1.0F / 256.0F))), n, 128, 0, (GnFrameCounter & 0x7F) << 9, 0, 0, 1);
 }
 
 void S_OutputPolyList(void)

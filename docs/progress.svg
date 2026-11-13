@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="39.10" height="12" x="267.10" y="0" class="nonmatching"><title>177 · 11.43%</title></rect>
-<rect width="35.79" height="12" x="306.21" y="0" class="todo"><title>162 · 10.47%</title></rect>
+<rect width="39.33" height="12" x="267.10" y="0" class="nonmatching"><title>178 · 11.50%</title></rect>
+<rect width="35.57" height="12" x="306.43" y="0" class="todo"><title>161 · 10.40%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">177</tspan> · <tspan class="todo">162</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">178</tspan> · <tspan class="todo">161</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="118.36" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.61%</title></rect>
-<rect width="44.75" height="12" x="297.25" y="0" class="todo"><title>82 KB · 13.09%</title></rect>
+<rect width="118.44" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.63%</title></rect>
+<rect width="44.67" height="12" x="297.33" y="0" class="todo"><title>82 KB · 13.06%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">216 KB</tspan> · <tspan class="todo">82 KB</tspan></text>
@@ -1343,7 +1343,7 @@
 <rect width="12" height="12" x="360" y="375" class="nonmatching"><title>0x0047e8b0 phd_PutPolygonsPickup (3437 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="375" class="named"><title>0x0047f620 phd_PutPolygonSkyMesh (808 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="375" class="named"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
-<rect width="12" height="12" x="405" y="375" class="todo"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
+<rect width="12" height="12" x="405" y="375" class="nonmatching"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="375" class="named"><title>0x0047fa10 S_OutputPolyList (656 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="375" class="named"><title>0x0047fca0 S_DumpScreen (76 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="375" class="todo"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
@@ -2476,7 +2476,7 @@
 <rect width="7.94" height="7.48" x="662.90" y="245.26" class="named"><title>0x0043e1b0 update_laras_weapons_status (155 bytes)</title></rect>
 <rect width="7.94" height="7.48" x="673.85" y="245.26" class="named"><title>0x00452ea0 DrawAirBar (155 bytes)</title></rect>
 <rect width="7.94" height="7.48" x="684.79" y="245.26" class="named"><title>0x00464850 TriggerBikeBeam (155 bytes)</title></rect>
-<rect width="7.89" height="7.48" x="695.74" y="245.26" class="todo"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
+<rect width="7.89" height="7.48" x="695.74" y="245.26" class="nonmatching"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
 <rect width="7.84" height="7.48" x="706.63" y="245.26" class="named"><title>0x0042b720 draw_pistols (153 bytes)</title></rect>
 <rect width="7.84" height="7.48" x="717.47" y="245.26" class="named"><title>0x004546a0 RemoveDrawnItem (153 bytes)</title></rect>
 <rect width="7.84" height="7.48" x="728.31" y="245.26" class="named"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
