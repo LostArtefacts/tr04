@@ -844,6 +844,62 @@ backup:
     v[v2].color = cb2;
 }
 
+void AddClippedPoly(D3DTLBUMPVERTEX *dest, sint32 nPoints, D3DTLBUMPVERTEX *v, TEXTURESTRUCT *pTex)
+{
+    D3DTLBUMPVERTEX *first;
+    D3DTLBUMPVERTEX *q;
+    float z;
+    sint32 i;
+
+    first = dest;
+    for (i = 0; i < 3; i++, v++, dest++) {
+        dest->sx = v->sx;
+        dest->sy = v->sy;
+        dest->sz = f_a - f_boo * v->rhw;
+        dest->rhw = v->rhw;
+        dest->color = v->color;
+        dest->specular = v->specular;
+        z = 1.0F / v->rhw;
+        dest->tu = z * v->tu;
+        dest->tv = z * v->tv;
+    }
+    nClippedPolys++;
+    v--;
+    for (i = nPoints - 3; i > 0; i--) {
+        v++;
+        dest->sx = first->sx;
+        dest->sy = first->sy;
+        dest->sz = first->sz;
+        dest->rhw = first->rhw;
+        dest->color = first->color;
+        dest->specular = first->specular;
+        dest->tu = first->tu;
+        dest->tv = first->tv;
+        q = dest - 1;
+        dest++;
+        dest->sx = q->sx;
+        dest->sy = q->sy;
+        dest->sz = q->sz;
+        dest->rhw = q->rhw;
+        dest->color = q->color;
+        dest->specular = q->specular;
+        dest->tu = q->tu;
+        dest->tv = q->tv;
+        dest++;
+        dest->sx = v->sx;
+        dest->sy = v->sy;
+        dest->sz = f_a - f_boo * v->rhw;
+        dest->rhw = v->rhw;
+        dest->color = v->color;
+        dest->specular = v->specular;
+        z = 1.0F / v->rhw;
+        dest->tu = z * v->tu;
+        dest->tv = z * v->tv;
+        dest++;
+        nClippedPolys++;
+    }
+}
+
 void SubdivideEdge(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v, sint16 *c, float tu1, float tv1, float tu2, float tv2, float *tu, float *tv)
 {
     float zv;
