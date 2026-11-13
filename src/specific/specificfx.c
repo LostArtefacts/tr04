@@ -253,6 +253,96 @@ void setXYZ4(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 z1, sint32 x2, sint32 
     *clip = clip_distance;
 }
 
+void setXYZ3(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 z1, sint32 x2, sint32 y2, sint32 z2, sint32 x3, sint32 y3, sint32 z3, sint16 *clip)
+{
+    float zv, x, y, z;
+    sint32 clip_distance;
+
+    clip_distance = 0;
+    z = (float)z1;
+    y = (float)y1;
+    x = (float)x1;
+    v->sz = z;
+    v->tu = x;
+    v->tv = y;
+    if (z >= f_mznear) {
+        zv = f_mpersp / z;
+        if (z > FogEnd) {
+            clip_distance = 256;
+            v->sz = f_zfar;
+        }
+        v->sx = zv * x + f_centerx;
+        v->sy = zv * y + f_centery;
+        v->rhw = f_moneopersp * zv;
+        if (phd_winxmin > v->sx)
+            clip_distance++;
+        else if (phd_winxmax < v->sx)
+            clip_distance += 2;
+        if (phd_winymin > v->sy)
+            clip_distance += 4;
+        else if (phd_winymax < v->sy)
+            clip_distance += 8;
+    } else
+        clip_distance = -128;
+    v++;
+    *clip++ = clip_distance;
+    clip_distance = 0;
+    z = (float)z2;
+    y = (float)y2;
+    x = (float)x2;
+    v->sz = z;
+    v->tu = x;
+    v->tv = y;
+    if (z >= f_mznear) {
+        zv = f_mpersp / z;
+        if (z > FogEnd) {
+            clip_distance = 256;
+            v->sz = f_zfar;
+        }
+        v->sx = zv * x + f_centerx;
+        v->sy = zv * y + f_centery;
+        v->rhw = f_moneopersp * zv;
+        if (phd_winxmin > v->sx)
+            clip_distance++;
+        else if (phd_winxmax < v->sx)
+            clip_distance += 2;
+        if (phd_winymin > v->sy)
+            clip_distance += 4;
+        else if (phd_winymax < v->sy)
+            clip_distance += 8;
+    } else
+        clip_distance = -128;
+    v++;
+    *clip++ = clip_distance;
+    clip_distance = 0;
+    z = (float)z3;
+    y = (float)y3;
+    x = (float)x3;
+    v->sz = z;
+    v->tu = x;
+    v->tv = y;
+    if (z >= f_mznear) {
+        zv = f_mpersp / z;
+        if (z > FogEnd) {
+            clip_distance = 256;
+            v->sz = f_zfar;
+        }
+        v->sx = zv * x + f_centerx;
+        v->sy = zv * y + f_centery;
+        v->rhw = f_moneopersp * zv;
+        if (phd_winxmin > v->sx)
+            clip_distance++;
+        else if (phd_winxmax < v->sx)
+            clip_distance += 2;
+        if (phd_winymin > v->sy)
+            clip_distance += 4;
+        else if (phd_winymax < v->sy)
+            clip_distance += 8;
+    } else
+        clip_distance = -128;
+    *clip = clip_distance;
+}
+
 void InitTarget_2(void)
 {
     OBJECT_INFO *obj;
