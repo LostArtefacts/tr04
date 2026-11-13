@@ -49,7 +49,7 @@ address,size,name,symbol
 0x004077b0,235,TriggerHarpySparks,_TriggerHarpySparks
 0x004078a0,387,TriggerHarpyFlame,_TriggerHarpyFlame
 0x00407a30,90,InitialiseHarpy,_InitialiseHarpy
-0x00407a90,1453,HarpyControl,_HarpyControl
+0x00407a90,1508,HarpyControl,_HarpyControl
 0x00408080,96,InitialiseHorseman,_InitialiseHorseman
 0x004080e0,3356,HorsemanControl,_HorsemanControl
 0x00408e00,522,TriggerHorsemanRicochets,_TriggerHorsemanRicochets
@@ -2006,6 +2006,9 @@ address,size,name,symbol
 0x004ad108,16,guide_hit,_guide_hit
 0x004ad118,16,guide_lighter,_guide_lighter
 0x004ad128,16,hammerhead_bite,_hammerhead_bite
+0x004ad138,16,harpy_left_hit,_harpy_left_hit
+0x004ad148,16,harpy_right_hit,_harpy_right_hit
+0x004ad158,16,harpy_tail_hit,_harpy_tail_hit
 0x004ad170,16,horseman_axe,_horseman_axe
 0x004ad180,16,horseman_lfoot,_horseman_lfoot
 0x004ad190,16,horseman_shield,_horseman_shield
