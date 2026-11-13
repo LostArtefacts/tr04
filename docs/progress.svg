@@ -46,20 +46,20 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="341.42" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="78.04" height="12" x="341.42" y="0" class="nonmatching"><title>288 · 18.58%</title></rect>
-<rect width="0.54" height="12" x="419.46" y="0" class="todo"><title>2 · 0.13%</title></rect>
+<rect width="317.03" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
+<rect width="72.72" height="12" x="317.03" y="0" class="nonmatching"><title>289 · 18.65%</title></rect>
+<rect width="0.25" height="12" x="389.75" y="0" class="todo"><title>1 · 0.06%</title></rect>
 </g>
-<text text-anchor="end" x="600" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="615" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">288</tspan> · <tspan class="todo">2</tspan></text>
+<text text-anchor="end" x="570" y="7.50">81.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="585" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">289</tspan> · <tspan class="todo">1</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="229.09" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
-<rect width="188.82" height="12" x="229.09" y="0" class="nonmatching"><title>281 KB · 44.96%</title></rect>
-<rect width="2.08" height="12" x="417.92" y="0" class="todo"><title>3 KB · 0.50%</title></rect>
+<rect width="212.73" height="12" x="0" y="0" class="named"><title>341 KB · 54.55%</title></rect>
+<rect width="177.09" height="12" x="212.73" y="0" class="nonmatching"><title>284 KB · 45.41%</title></rect>
+<rect width="0.18" height="12" x="389.82" y="0" class="todo"><title>291 bytes · 0.05%</title></rect>
 </g>
-<text text-anchor="end" x="600" y="24.50">54.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="615" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">281 KB</tspan> · <tspan class="todo">3 KB</tspan></text>
+<text text-anchor="end" x="570" y="24.50">54.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="585" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">284 KB</tspan> · <tspan class="todo">291 bytes</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1567,7 +1567,7 @@
 <rect width="12" height="12" x="0" y="450" class="nonmatching"><title>0x004959b0 SW_TriSetupGTP (2539 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="450" class="nonmatching"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="450" class="nonmatching"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="450" class="todo"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="450" class="nonmatching"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="450" class="nonmatching"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="450" class="nonmatching"><title>0x004984e0 SW_TriSetupGFog (1741 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="450" class="nonmatching"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
@@ -1638,7 +1638,7 @@
 <rect width="34.49" height="32.02" x="47.74" y="227.26" class="nonmatching"><title>0x0045b230 RestoreLevelData (2881 bytes)</title></rect>
 <rect width="34.49" height="31.92" x="47.74" y="262.28" class="named"><title>0x0041daf0 Rich_CalcLaraMatrices_Normal (2872 bytes)</title></rect>
 <rect width="34.49" height="31.86" x="47.74" y="297.20" class="nonmatching"><title>0x00446170 GetCollisionInfo (2867 bytes)</title></rect>
-<rect width="34.49" height="31.24" x="47.74" y="332.06" class="todo"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
+<rect width="34.49" height="31.24" x="47.74" y="332.06" class="nonmatching"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
 <rect width="34.49" height="30.71" x="47.74" y="366.30" class="nonmatching"><title>0x0044ab50 TestTriggers (2764 bytes)</title></rect>
 <rect width="34.49" height="30.18" x="47.74" y="400.01" class="named"><title>0x00473f20 LoadTextures (2716 bytes)</title></rect>
 <rect width="34.49" height="28.81" x="47.74" y="433.19" class="nonmatching"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
