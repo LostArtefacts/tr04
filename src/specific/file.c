@@ -70,9 +70,9 @@ FILE *FileOpen(const char *name)
     char path_name[80];
 
     memset(path_name, 0, 80);
-    path_name[0] = cd_drive;
-    path_name[1] = ':';
-    path_name[2] = '\\';
+    path_name[0] = 0;
+    path_name[1] = 0;
+    path_name[2] = 0;
     strcat(path_name, name);
     Log(5, "FileOpen - %s", path_name);
     file = fopen(path_name, "rb");
