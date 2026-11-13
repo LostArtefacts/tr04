@@ -18,6 +18,8 @@
 #include "function_stubs.h"
 #include "../rope.h"
 #include "../camera.h"
+#include "../wraith.h"
+#include "../effect2.h"
 
 uint8 TargetGraphColTab[48] = {
     0, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 0,
@@ -445,6 +447,130 @@ void DrawBubbles(void)
         tex.v4 = sprite->y2;
         AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
         bubble++;
+    }
+    phd_PopMatrix();
+}
+
+void S_DrawSmokeSparks(void)
+{
+    SMOKE_SPARKS *sptr;
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    PHD_VECTOR pos;
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    sint32 *mptr;
+    float perspz, u1, v1, u2;
+    sint32 i, is_mirror, size, col, s, c, ss, cs, sm, cm;
+    sint32 dx, dy, dz, x1, y1, x2, y2, x3, y3, x4, y4;
+
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    mptr = phd_mxptr;
+    XY = (sint16 *)&scratchpad[0];
+    Z = (sint32 *)&scratchpad[256];
+    offsets = (sint16 *)&scratchpad[512];
+    sptr = &smoke_spark[0];
+    is_mirror = 0;
+    for (i = 0; i < 32; i++) {
+        if (!sptr->On) {
+            sptr++;
+            continue;
+        }
+        if (sptr->mirror && !is_mirror)
+            is_mirror = 1;
+        else
+            is_mirror = 0;
+        dx = sptr->x - lara_item->pos.x_pos;
+        dy = sptr->y - lara_item->pos.y_pos;
+        dz = sptr->z - lara_item->pos.z_pos;
+        if (is_mirror)
+            dz = 2 * gfMirrorZPlane - lara_item->pos.z_pos - sptr->z;
+        if (dx < -0x5000 || dx > 0x5000 || dy < -0x5000 || dy > 0x5000 || dz < -0x5000 || dz > 0x5000) {
+            if (!is_mirror)
+                sptr++;
+            continue;
+        }
+        offsets[0] = (sint16)dx;
+        offsets[1] = (sint16)dy;
+        offsets[2] = (sint16)dz;
+        pos.x = offsets[0] * mptr[M00] + offsets[1] * mptr[M01] + offsets[2] * mptr[M02] + mptr[M03];
+        pos.y = offsets[0] * mptr[M10] + offsets[1] * mptr[M11] + offsets[2] * mptr[M12] + mptr[M13];
+        pos.z = offsets[0] * mptr[M20] + offsets[1] * mptr[M21] + offsets[2] * mptr[M22] + mptr[M23];
+        perspz = f_persp / (float)pos.z;
+        XY[0] = (sint16)(pos.x * perspz + f_centerx);
+        XY[1] = (sint16)(pos.y * perspz + f_centery);
+        Z[0] = pos.z >> W2V_SHIFT;
+        if (Z[0] <= 0 || Z[0] >= 0x5000) {
+            if (!is_mirror)
+                sptr++;
+            continue;
+        }
+        size = ((phd_persp * sptr->Size) << 2) / Z[0];
+        if (size > (sptr->Size << 2))
+            size = sptr->Size << 2;
+        else if (size < 4)
+            size = 4;
+        if (XY[0] + (size >> 1) < phd_winxmin || XY[0] - (size >> 1) >= phd_winxmax || XY[1] + (size >> 1) < phd_winymin || XY[1] - (size >> 1) >= phd_winymax) {
+            if (!is_mirror)
+                sptr++;
+            continue;
+        }
+        if (sptr->Flags & 0x10) {
+            s = rcossin_tbl[sptr->RotAng << 1];
+            c = rcossin_tbl[(sptr->RotAng << 1) + 1];
+            ss = (s * (size >> 1)) >> (W2V_SHIFT - 2);
+            cs = (c * (size >> 1)) >> (W2V_SHIFT - 2);
+            sm = (s * (-size >> 1)) >> (W2V_SHIFT - 2);
+            cm = (c * (-size >> 1)) >> (W2V_SHIFT - 2);
+            x1 = sm + XY[0] - cm;
+            y1 = sm + XY[1] + cm;
+            x2 = XY[0] - cm + ss;
+            y2 = sm + XY[1] + cs;
+            x3 = ss + XY[0] - cs;
+            y3 = cs + XY[1] + ss;
+            x4 = sm + XY[0] - cs;
+            y4 = ss + XY[1] + cm;
+            setXY4(v, x1, y1, x2, y2, x3, y3, x4, y4, Z[0], clipflags);
+        } else {
+            x1 = XY[0] - (size >> 1);
+            y1 = XY[1] - (size >> 1);
+            x2 = XY[0] + (size >> 1);
+            y2 = XY[1] + (size >> 1);
+            setXY4(v, x1, y1, x2, y1, x2, y2, x1, y2, Z[0], clipflags);
+        }
+        sprite = &spriteinfo[sptr->Def];
+        if (Z[0] > 0x3000)
+            col = ((0x5000 - Z[0]) * sptr->Shade) >> 13;
+        else
+            col = sptr->Shade;
+        v[0].color = RGBA(col, col, col, 0xFF);
+        v[1].color = RGBA(col, col, col, 0xFF);
+        v[2].color = RGBA(col, col, col, 0xFF);
+        v[3].color = RGBA(col, col, col, 0xFF);
+        v[0].specular = 0xFF000000;
+        v[1].specular = 0xFF000000;
+        v[2].specular = 0xFF000000;
+        v[3].specular = 0xFF000000;
+        u1 = sprite->x1;
+        u2 = sprite->x2;
+        v1 = sprite->y1;
+        tex.drawtype = 2;
+        tex.flag = 0;
+        tex.tpage = sprite->tpage;
+        tex.u1 = u1;
+        tex.v1 = v1;
+        tex.u2 = u2;
+        tex.v3 = sprite->y2;
+        tex.v2 = v1;
+        tex.u3 = u2;
+        tex.u4 = u1;
+        tex.v4 = sprite->y2;
+        AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
+        if (!is_mirror)
+            sptr++;
     }
     phd_PopMatrix();
 }
