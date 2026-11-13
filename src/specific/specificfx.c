@@ -1163,7 +1163,7 @@ uint8 ClipLine(sint32 *x1, sint32 *y1, sint32 z1, sint32 *x2, sint32 *y2, sint32
     return 1;
 }
 
-void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip)
+static __forceinline void ClipCheckPoint_inl(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip)
 {
     float perspz;
     sint16 clipdistance;
@@ -1172,14 +1172,14 @@ void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip)
     v->tu = x;
     v->tv = y;
     v->sz = z;
-    if (!(v->sz < f_mznear)) {
-        perspz = f_mpersp / v->sz;
-        if (v->sz > FogEnd) {
+    if (!(z < f_mznear)) {
+        perspz = f_mpersp / z;
+        if (z > FogEnd) {
             v->sz = f_zfar;
             clipdistance = 256;
         }
-        v->sx = perspz * v->tu + f_centerx;
-        v->sy = perspz * v->tv + f_centery;
+        v->sx = perspz * x + f_centerx;
+        v->sy = perspz * y + f_centery;
         v->rhw = perspz * f_moneopersp;
         if (v->sx < phd_winxmin)
             clipdistance++;
@@ -1193,6 +1193,103 @@ void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip)
         clipdistance = -128;
     }
     clip[0] = clipdistance;
+}
+
+void DrawFlatSky(uint32 color, sint32 zpos, sint32 ypos, sint32 drawtype)
+{
+    PHD_VECTOR vec[4];
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT Tex;
+    sint16 *clip;
+    sint32 *mptr;
+    sint32 i, x, y, z;
+
+    phd_PushMatrix();
+    phd_TranslateRel(zpos, ypos, 0);
+    mptr = phd_mxptr;
+    vec[0].x = -5632;
+    vec[0].y = 0;
+    vec[0].z = 4864;
+    vec[1].x = 5632;
+    vec[1].y = 0;
+    vec[1].z = 4864;
+    vec[2].x = 5632;
+    vec[2].y = 0;
+    vec[2].z = -4864;
+    vec[3].x = -5632;
+    vec[3].y = 0;
+    vec[3].z = -4864;
+    for (i = 0; i < 4; i++) {
+        x = vec[i].x;
+        y = vec[i].y;
+        z = vec[i].z;
+        vec[i].x = (mptr[M00] * x + mptr[M01] * y + mptr[M02] * z + mptr[M03]) >> W2V_SHIFT;
+        vec[i].y = (mptr[M10] * x + mptr[M11] * y + mptr[M12] * z + mptr[M13]) >> W2V_SHIFT;
+        vec[i].z = (mptr[M20] * x + mptr[M21] * y + mptr[M22] * z + mptr[M23]) >> W2V_SHIFT;
+        color |= 0xFF000000;
+        v[i].color = color;
+        v[i].specular = 0xFF000000;
+        CalcColorSplit(color, &v[i].color);
+    }
+    clip = clipflags;
+    ClipCheckPoint_inl(&v[0], (float)vec[0].x, (float)vec[0].y, (float)vec[0].z, clip);
+    clip++;
+    ClipCheckPoint_inl(&v[1], (float)vec[1].x, (float)vec[1].y, (float)vec[1].z, clip);
+    clip++;
+    ClipCheckPoint_inl(&v[2], (float)vec[2].x, (float)vec[2].y, (float)vec[2].z, clip);
+    clip++;
+    ClipCheckPoint(&v[3], (float)vec[3].x, (float)vec[3].y, (float)vec[3].z, clip);
+    Tex.drawtype = (uint16)drawtype;
+    Tex.flag = 0;
+    Tex.tpage = (uint16)(nTextures - 1);
+    Tex.u1 = 0;
+    Tex.v1 = 0;
+    Tex.u2 = 1;
+    Tex.v2 = 0;
+    Tex.u3 = 1;
+    Tex.v3 = 1;
+    Tex.u4 = 0;
+    Tex.v4 = 1;
+    AddQuadSorted(v, 3, 2, 1, 0, &Tex, 1);
+    phd_TranslateRel(-11264, 0, 0);
+    vec[0].x = -5632;
+    vec[0].y = 0;
+    vec[0].z = 4864;
+    vec[1].x = 5632;
+    vec[1].y = 0;
+    vec[1].z = 4864;
+    vec[2].x = 5632;
+    vec[2].y = 0;
+    vec[2].z = -4864;
+    vec[3].x = -5632;
+    vec[3].y = 0;
+    vec[3].z = -4864;
+    for (i = 0; i < 4; i++) {
+        x = vec[i].x;
+        y = vec[i].y;
+        z = vec[i].z;
+        vec[i].x = (mptr[M00] * x + mptr[M01] * y + mptr[M02] * z + mptr[M03]) >> W2V_SHIFT;
+        vec[i].y = (mptr[M10] * x + mptr[M11] * y + mptr[M12] * z + mptr[M13]) >> W2V_SHIFT;
+        vec[i].z = (mptr[M20] * x + mptr[M21] * y + mptr[M22] * z + mptr[M23]) >> W2V_SHIFT;
+        v[i].color |= 0xFF000000;
+        v[i].specular = 0xFF000000;
+        CalcColorSplit(color, &v[i].color);
+    }
+    clip = clipflags;
+    ClipCheckPoint_inl(&v[0], (float)vec[0].x, (float)vec[0].y, (float)vec[0].z, clip);
+    clip++;
+    ClipCheckPoint_inl(&v[1], (float)vec[1].x, (float)vec[1].y, (float)vec[1].z, clip);
+    clip++;
+    ClipCheckPoint_inl(&v[2], (float)vec[2].x, (float)vec[2].y, (float)vec[2].z, clip);
+    clip++;
+    ClipCheckPoint(&v[3], (float)vec[3].x, (float)vec[3].y, (float)vec[3].z, clip);
+    AddQuadSorted(v, 3, 2, 1, 0, &Tex, 1);
+    phd_PopMatrix();
+}
+
+void ClipCheckPoint(D3DTLVERTEX *v, float x, float y, float z, sint16 *clip)
+{
+    ClipCheckPoint_inl(v, x, y, z, clip);
 }
 
 void OutputSky(void)
