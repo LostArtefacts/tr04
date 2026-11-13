@@ -70,6 +70,13 @@ HRESULT __stdcall SW_D3D_ViewportStub(void *iface, void *arg)
     return 0;
 }
 
+HRESULT __stdcall SW_D3D_SetRenderState(SW_DEVICE *dev, D3DRENDERSTATETYPE type, DWORD state)
+{
+    if (type == D3DRENDERSTATE_FOGENABLE)
+        IDirect3DDevice3_SetRenderState(SW_RealD3DDevice, D3DRENDERSTATE_FOGENABLE, state);
+    return SW_SetRenderStateFlags(type, state);
+}
+
 HRESULT __stdcall SW_D3D_SetRenderTarget(SW_DEVICE *dev, void *target, DWORD flags)
 {
     dev->target = target;
