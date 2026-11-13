@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="385.70" height="12" x="0" y="0" class="named"><title>1294 · 83.48%</title></rect>
-<rect width="76.30" height="12" x="385.70" y="0" class="nonmatching"><title>256 · 16.52%</title></rect>
+<rect width="385.99" height="12" x="0" y="0" class="named"><title>1295 · 83.55%</title></rect>
+<rect width="76.01" height="12" x="385.99" y="0" class="nonmatching"><title>255 · 16.45%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">83.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1294</tspan> · <tspan class="nonmatching">256</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1295</tspan> · <tspan class="nonmatching">255</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="259.45" height="12" x="0" y="0" class="named"><title>351 KB · 56.16%</title></rect>
-<rect width="202.55" height="12" x="259.45" y="0" class="nonmatching"><title>274 KB · 43.84%</title></rect>
+<rect width="259.82" height="12" x="0" y="0" class="named"><title>352 KB · 56.24%</title></rect>
+<rect width="202.18" height="12" x="259.82" y="0" class="nonmatching"><title>274 KB · 43.76%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">56.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">351 KB</tspan> · <tspan class="nonmatching">274 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">352 KB</tspan> · <tspan class="nonmatching">274 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1598,7 +1598,7 @@
 <rect width="12" height="12" x="495" y="450" class="named"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="450" class="nonmatching"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="450" class="named"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="450" class="nonmatching"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="450" class="named"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="450" class="nonmatching"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="450" class="nonmatching"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="450" class="named"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
@@ -1972,7 +1972,7 @@
 <rect width="13.76" height="14.18" x="364.94" y="430.65" class="named"><title>0x00456580 ControlMapper (509 bytes)</title></rect>
 <rect width="13.76" height="14.18" x="364.94" y="447.82" class="named"><title>0x004622c0 PulleyCollision (509 bytes)</title></rect>
 <rect width="13.88" height="14.06" x="381.70" y="97.28" class="named"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
-<rect width="13.88" height="14.06" x="381.70" y="114.34" class="nonmatching"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
+<rect width="13.88" height="14.06" x="381.70" y="114.34" class="named"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="13.88" height="14" x="381.70" y="131.40" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="13.88" height="13.95" x="381.70" y="148.40" class="named"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
 <rect width="13.88" height="13.92" x="381.70" y="165.35" class="named"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>

@@ -6443,6 +6443,160 @@ void SW_SpanGTKeyInt(void)
 }
 #endif
 
+#ifndef FEAT_C_ASM
+extern uint32 SW_SpanGTPIntTmp0;
+extern uint32 SW_SpanGTPIntTmp1;
+extern uint32 SW_SpanGTPIntTmp2;
+extern uint32 SW_SpanGTPIntTmp3;
+extern uint32 SW_SpanGTPIntTmp4;
+extern uint32 SW_SpanGTPIntTmp5;
+void SW_SpanGTPInt(void)
+{
+    __asm {
+        mov esi, dword ptr [SW_SpanBuffer]
+        cmp esi, dword ptr [SW_SpanEnd]
+        je Done
+        push ebp
+        mov edi, dword ptr [SW_Surface]
+        mov eax, dword ptr [SW_SpanY]
+        imul eax, dword ptr [SW_SurfacePitch]
+        add edi, eax
+        mov ecx, dword ptr [SW_TexShift]
+        mov eax, 0xff0000
+        shl eax, cl
+        and eax, 0xff0000
+        mov dword ptr [SW_SpanGTPIntTmp5], eax
+        mov dword ptr [P0 + 2], eax
+        mov dword ptr [P1 + 2], eax
+        mov al, cl
+        add al, 8
+        add al, cl
+        mov byte ptr [P3 + 2], al
+        mov al, cl
+        add al, 0x10
+        mov byte ptr [P2 + 2], al
+        mov edx, dword ptr [SW_TextureBits]
+        add edx, dword ptr [ecx*4 + SW_MipOffsets]
+        mov dword ptr [P6 + 3], edx
+        inc edx
+        mov dword ptr [P5 + 3], edx
+        inc edx
+        mov dword ptr [P4 + 3], edx
+        movzx ebx, word ptr [SW_SpanGrad]
+        movzx ecx, word ptr [SW_SpanGrad + 2]
+        movzx edx, word ptr [SW_SpanGrad + 4]
+        mov dword ptr [P7 + 2], ebx
+        mov dword ptr [P9 + 2], ecx
+        mov dword ptr [P8 + 2], edx
+        _emit 0x8d
+        _emit 0x9b
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+    L0:
+        mov ebx, dword ptr [esi]
+        mov eax, dword ptr [esi + 4]
+        push edi
+        lea edi, [edi + ebx*4]
+        add esi, 0x20
+        or eax, eax
+        jle L2
+        movzx ebx, word ptr [esi - 8]
+        movzx ecx, word ptr [esi - 6]
+        movzx edx, word ptr [esi - 4]
+        mov dword ptr [SW_SpanGTPIntTmp4], ebx
+        mov dword ptr [SW_SpanGTPIntTmp1], ecx
+        mov dword ptr [SW_SpanGTPIntTmp3], edx
+        mov ebx, dword ptr [esi - 0x18]
+        mov ebp, dword ptr [esi - 0x10]
+        mov dword ptr [SW_SpanGTPIntTmp0], ebx
+        mov dword ptr [SW_SpanGTPIntTmp2], ebp
+        _emit 0x8d
+        _emit 0xa4
+        _emit 0x24
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        _emit 0x00
+        nop
+        _emit 0x8d
+        _emit 0x64
+        _emit 0x24
+        _emit 0x00
+    L1:
+        push eax
+        cmp eax, 0x10
+        jle P0
+        mov eax, 0x10
+        nop
+        _emit 0x8d
+        _emit 0x64
+        _emit 0x24
+        _emit 0x00
+    P0:
+        and ebx, 0xff0000
+    P1:
+        and ebp, 0xff0000
+    P2:
+        shr ebx, 0x10
+        mov edx, dword ptr [SW_SpanGTPIntTmp3]
+    P3:
+        shr ebp, 8
+        and edx, 0xff00
+        or ebp, ebx
+        mov ecx, dword ptr [SW_SpanGTPIntTmp1]
+        and ecx, 0xff00
+        mov ebx, dword ptr [SW_SpanGTPIntTmp4]
+        and ebx, 0xff00
+    P4:
+        mov dl, byte ptr [ebp*4 + 0x12345678]
+    P5:
+        mov cl, byte ptr [ebp*4 + 0x12345678]
+    P6:
+        mov bl, byte ptr [ebp*4 + 0x12345678]
+        mov dh, byte ptr [edx + SW_MulTable]
+        mov ebp, dword ptr [SW_SpanGTPIntTmp4]
+        mov dl, byte ptr [ecx + SW_MulTable]
+    P7:
+        add ebp, 0x12345678
+        shl edx, 8
+        mov dword ptr [SW_SpanGTPIntTmp4], ebp
+        mov dl, byte ptr [ebx + SW_MulTable]
+        mov ebx, dword ptr [SW_SpanGTPIntTmp3]
+        mov ecx, dword ptr [SW_SpanGTPIntTmp1]
+    P8:
+        add ebx, 0x12345678
+    P9:
+        add ecx, 0x12345678
+        mov dword ptr [SW_SpanGTPIntTmp3], ebx
+        mov dword ptr [SW_SpanGTPIntTmp1], ecx
+        mov ebx, dword ptr [SW_SpanGTPIntTmp0]
+        mov ebp, dword ptr [SW_SpanGTPIntTmp2]
+        add ebx, dword ptr [esi]
+        add ebp, dword ptr [esi + 4]
+        mov dword ptr [SW_SpanGTPIntTmp0], ebx
+        mov dword ptr [SW_SpanGTPIntTmp2], ebp
+        mov dword ptr [edi], edx
+        add edi, 4
+        dec eax
+        jne P0
+        pop eax
+        add esi, 8
+        sub eax, 0x10
+        jg L1
+        sub esi, 8
+    L2:
+        add esi, 8
+        pop edi
+        add edi, dword ptr [SW_SurfacePitch]
+        cmp dword ptr [SW_SpanEnd], esi
+        jne L0
+        pop ebp
+    Done:
+    }
+}
+#else
 void SW_SpanGTPInt(void)
 {
     SW_SPAN *s;
@@ -6492,6 +6646,7 @@ void SW_SpanGTPInt(void)
         } while (s != SW_SpanEnd);
     }
 }
+#endif
 
 void SW_SpanGTPAddInt(void)
 {
