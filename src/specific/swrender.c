@@ -3966,6 +3966,34 @@ void SW_SpanGTPKeyInt(void)
     }
 }
 
+#ifndef FEAT_C_ASM
+void SW_CopyBuffer(void *dst, void *src, sint32 width)
+{
+    if (!SW_UseMMX) {
+        __asm {
+            mov esi, src
+            mov edi, dst
+            mov ecx, width
+            rep movsd
+        }
+    } else {
+        __asm {
+            mov esi, src
+            mov edi, dst
+            mov ecx, width
+            shr ecx, 1
+        copy:
+            movq mm0, [esi]
+            add esi, 8
+            movq [edi], mm0
+            add edi, 8
+            dec ecx
+            jne copy
+            emms
+        }
+    }
+}
+#else
 void SW_CopyBuffer(void *dst, void *src, sint32 width)
 {
     if (!SW_UseMMX)
@@ -3973,6 +4001,7 @@ void SW_CopyBuffer(void *dst, void *src, sint32 width)
     else
         memcpy(dst, src, ((uint32)width >> 1) * 8);
 }
+#endif
 
 void SW_Convert32To555(void *dst, void *src, sint32 width)
 {
