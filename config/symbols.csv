@@ -2692,13 +2692,16 @@ address,size,name,symbol
 0x00755260,4,SW_RealD3DDevice,_SW_RealD3DDevice
 0x00755298,4,SW_SurfacePitch,_SW_SurfacePitch
 0x007552a8,65536,SW_MulTable,_SW_MulTable
+0x0076533c,4,SW_SpanEnd,_SW_SpanEnd
 0x00765344,4,SW_TriSetupFunc,_SW_TriSetupFunc
 0x0076d418,4,SW_ActiveFlags,_SW_ActiveFlags
 0x007d94a4,4,SW_Surface,_SW_Surface
 0x007d9508,4,SW_SpanFogFunc,_SW_SpanFogFunc
 0x007d9524,4,SW_SpanFunc,_SW_SpanFunc
+0x007d9598,8,SW_SpanGrad,_SW_SpanGrad
 0x007daaec,4,SW_SpanBufferHandle,_SW_SpanBufferHandle
 0x007e2c6c,4,SW_FrameState,_SW_FrameState
+0x007e2cc0,4,SW_SpanY,_SW_SpanY
 0x007e2dd0,16384,SW_RecipTable,_SW_RecipTable
 0x007e6dd0,4,SW_SpanBuffer,_SW_SpanBuffer
 0x007e6dd4,4,SW_TextureBits,_SW_TextureBits

@@ -31,6 +31,13 @@ typedef struct sw_vertex {
     float tv2;
 } SW_VERTEX;
 
+typedef struct sw_span {
+    sint32 x;
+    sint32 n;
+    sint32 tex[4];
+    uint16 c[4];
+} SW_SPAN;
+
 extern float SW_ZLimit;
 
 HRESULT __stdcall SW_D3D_EndScene(SW_DEVICE *dev);
@@ -38,7 +45,7 @@ extern LPDIRECT3DDEVICE3 SW_RealD3DDevice;
 extern IDirect3DDevice3Vtbl SW_Vtbl;
 extern SW_DEVICE SW_Device;
 extern HGLOBAL SW_SpanBufferHandle;
-extern void *SW_SpanBuffer;
+extern SW_SPAN *SW_SpanBuffer;
 extern void *SW_Surface;
 extern sint32 SW_SurfacePitch;
 extern sint32 SW_FrameState;
@@ -53,8 +60,11 @@ extern sint32 SW_ActiveFlags;
 extern sint32 (*SW_TriSetupFunc)(void *v0, void *v1, void *v2);
 extern void (*SW_SpanFunc)(void);
 extern void (*SW_SpanFogFunc)(void);
+extern SW_SPAN *SW_SpanEnd;
+extern sint32 SW_SpanY;
+extern sint16 SW_SpanGrad[4];
 void nullsub_1();
-sint32 SW_DrawLineG(SW_VERTEX *v0, SW_VERTEX *v1);
+void SW_DrawLineG(SW_VERTEX *v0, SW_VERTEX *v1);
 extern UINT DBLog_Message;
 extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 extern LPDIRECT3DTEXTURE2 SW_LockedTextures[256];
@@ -706,6 +716,123 @@ HRESULT SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWORD 
         }
     }
     return 0;
+}
+
+void SW_DrawLineG(SW_VERTEX *v0, SW_VERTEX *v1)
+{
+    uint32 *p;
+    sint32 x0, y0, dx, dy, nx, ny, xs, ys, pitch, step, frac;
+    sint32 r0, g0, c0, r1, g1, c1;
+    sint32 dr, dg, db, dr2, dg2, db2;
+    sint32 r, g, b;
+    uint32 pix, col0, col1;
+
+    dr2 = dg2 = db2 = 0;
+    dr = dg = db = 0;
+    x0 = (sint32)v0->sx;
+    y0 = (sint32)v0->sy;
+    col0 = v0->color;
+    r0 = ((col0 >> 16) & 0xFF) << 16;
+    g0 = ((col0 >> 8) & 0xFF) << 16;
+    c0 = (col0 & 0xFF) << 16;
+    col1 = v1->color;
+    r1 = ((col1 >> 16) & 0xFF) << 16;
+    g1 = ((col1 >> 8) & 0xFF) << 16;
+    c1 = (col1 & 0xFF) << 16;
+    pitch = SW_SurfacePitch >> 2;
+    p = (uint32 *)SW_Surface + pitch * y0 + x0;
+    dx = (sint32)v1->sx - x0;
+    dy = (sint32)v1->sy - y0;
+    if (!dx && !dy) {
+        pix = *p;
+        r = (pix & 0xFF0000) + (r0 & 0xFFFF0000);
+        g = ((g0 >> 8) & 0xFFFFFF00) + (pix & 0xFF00);
+        b = (pix & 0xFF) + (c0 >> 16);
+        if (r > 0xFF0000)
+            r = 0xFF0000;
+        if (g > 0xFF00)
+            g = 0xFF00;
+        if (b > 0xFF)
+            b = 0xFF;
+        *p = b | g | r;
+        return;
+    }
+    if (dx >= 0) {
+        xs = 1;
+    } else {
+        xs = -1;
+        dx = -dx;
+    }
+    if (dy >= 0) {
+        ys = pitch;
+    } else {
+        ys = -SW_SurfacePitch >> 2;
+        dy = -dy;
+    }
+    nx = dx;
+    ny = dy;
+    nx++;
+    ny++;
+    frac = 0;
+    if (dx < dy) {
+        if (ny) {
+            dr = (r1 - r0) / ny;
+            dg = (g1 - g0) / ny;
+            db = (c1 - c0) / ny;
+        }
+        step = (nx << 16) / ny;
+        for (; ny > 0; ny--) {
+            pix = *p;
+            r = (pix & 0xFF0000) + (r0 & 0xFFFF0000);
+            g = ((g0 >> 8) & 0xFFFFFF00) + (pix & 0xFF00);
+            b = (pix & 0xFF) + (c0 >> 16);
+            if (r > 0xFF0000)
+                r = 0xFF0000;
+            if (g > 0xFF00)
+                g = 0xFF00;
+            if (b > 0xFF)
+                b = 0xFF;
+            *p = b | g | r;
+            p += ys;
+            frac += step;
+            r0 += dr;
+            g0 += dg;
+            c0 += db;
+            if (frac >= 0x10000) {
+                frac -= 0x10000;
+                p += xs;
+            }
+        }
+    } else {
+        step = (ny << 16) / nx;
+        if (nx) {
+            dr2 = (r1 - r0) / nx;
+            dg2 = (g1 - g0) / nx;
+            db2 = (c1 - c0) / nx;
+        }
+        for (; nx > 0; nx--) {
+            pix = *p;
+            r = (pix & 0xFF0000) + (r0 & 0xFFFF0000);
+            g = ((g0 >> 8) & 0xFFFFFF00) + (pix & 0xFF00);
+            b = (pix & 0xFF) + (c0 >> 16);
+            if (r > 0xFF0000)
+                r = 0xFF0000;
+            if (g > 0xFF00)
+                g = 0xFF00;
+            if (b > 0xFF)
+                b = 0xFF;
+            *p = b | g | r;
+            p += xs;
+            frac += step;
+            r0 += dr2;
+            g0 += dg2;
+            c0 += db2;
+            if (frac >= 0x10000) {
+                frac -= 0x10000;
+                p += ys;
+            }
+        }
+    }
 }
 
 HRESULT j_SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWORD count, DWORD flags)

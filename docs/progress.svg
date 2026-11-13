@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="340.28" height="12" x="0" y="0" class="named"><title>1274 · 82.19%</title></rect>
-<rect width="61.17" height="12" x="340.28" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
-<rect width="12.55" height="12" x="401.45" y="0" class="todo"><title>47 · 3.03%</title></rect>
+<rect width="61.43" height="12" x="340.28" y="0" class="nonmatching"><title>230 · 14.84%</title></rect>
+<rect width="12.29" height="12" x="401.71" y="0" class="todo"><title>46 · 2.97%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">82.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">47</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1274</tspan> · <tspan class="nonmatching">230</tspan> · <tspan class="todo">46</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="227.14" height="12" x="0" y="0" class="named"><title>343 KB · 54.86%</title></rect>
-<rect width="165.90" height="12" x="227.14" y="0" class="nonmatching"><title>251 KB · 40.07%</title></rect>
-<rect width="20.96" height="12" x="393.04" y="0" class="todo"><title>32 KB · 5.06%</title></rect>
+<rect width="166.53" height="12" x="227.14" y="0" class="nonmatching"><title>252 KB · 40.23%</title></rect>
+<rect width="20.33" height="12" x="393.67" y="0" class="todo"><title>31 KB · 4.91%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">32 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">252 KB</tspan> · <tspan class="todo">31 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1562,7 +1562,7 @@
 <rect width="12" height="12" x="675" y="435" class="named"><title>0x004952a0 SW_SetColorOpScale (12 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="435" class="named"><title>0x004952b0 SW_SetRenderStateFlags (418 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="435" class="named"><title>0x00495460 SW_DrawPrimitives (340 bytes)</title></rect>
-<rect width="12" height="12" x="720" y="435" class="todo"><title>0x004955c0 SW_DrawLineG (953 bytes)</title></rect>
+<rect width="12" height="12" x="720" y="435" class="nonmatching"><title>0x004955c0 SW_DrawLineG (953 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="435" class="named"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="450" class="todo"><title>0x004959b0 SW_TriSetupGT (2524 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="450" class="todo"><title>0x004963a0 SW_TriSetupG (1829 bytes)</title></rect>
@@ -1785,7 +1785,7 @@
 <rect width="20.01" height="18.41" x="307.67" y="0" class="nonmatching"><title>0x004349f0 TriggerExplosionSparks (961 bytes)</title></rect>
 <rect width="19.97" height="18.41" x="330.69" y="0" class="named"><title>0x00462720 TurnSwitchCollision (959 bytes)</title></rect>
 <rect width="19.85" height="18.41" x="353.66" y="0" class="named"><title>0x00415fd0 ControlScaledSpike (953 bytes)</title></rect>
-<rect width="19.85" height="18.41" x="376.51" y="0" class="todo"><title>0x004955c0 SW_DrawLineG (953 bytes)</title></rect>
+<rect width="19.85" height="18.41" x="376.51" y="0" class="nonmatching"><title>0x004955c0 SW_DrawLineG (953 bytes)</title></rect>
 <rect width="19.74" height="18.41" x="399.36" y="0" class="named"><title>0x00444e00 CameraCollisionBounds (948 bytes)</title></rect>
 <rect width="19.70" height="18.41" x="422.10" y="0" class="nonmatching"><title>0x0042a490 CrossbowHitSwitchType78 (946 bytes)</title></rect>
 <rect width="19.56" height="18.41" x="444.80" y="0" class="named"><title>0x004793b0 InitItemDynamicLighting (939 bytes)</title></rect>
