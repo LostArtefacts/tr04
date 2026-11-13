@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="260.03" height="12" x="0" y="0" class="named"><title>1198 · 77.39%</title></rect>
 <rect width="0.65" height="12" x="260.03" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="33.21" height="12" x="260.68" y="0" class="nonmatching"><title>153 · 9.88%</title></rect>
-<rect width="42.11" height="12" x="293.89" y="0" class="todo"><title>194 · 12.53%</title></rect>
+<rect width="33.43" height="12" x="260.68" y="0" class="nonmatching"><title>154 · 9.95%</title></rect>
+<rect width="41.89" height="12" x="294.11" y="0" class="todo"><title>193 · 12.47%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">153</tspan> · <tspan class="todo">194</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1198</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">154</tspan> · <tspan class="todo">193</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="173.45" height="12" x="0" y="0" class="named"><title>323 KB · 51.62%</title></rect>
 <rect width="0.13" height="12" x="173.45" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="102.52" height="12" x="173.58" y="0" class="nonmatching"><title>191 KB · 30.51%</title></rect>
-<rect width="59.90" height="12" x="276.10" y="0" class="todo"><title>111 KB · 17.83%</title></rect>
+<rect width="103.14" height="12" x="173.58" y="0" class="nonmatching"><title>192 KB · 30.70%</title></rect>
+<rect width="59.27" height="12" x="276.73" y="0" class="todo"><title>110 KB · 17.64%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">51.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">191 KB</tspan> · <tspan class="todo">111 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">323 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">192 KB</tspan> · <tspan class="todo">110 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1403,7 +1403,7 @@
 <rect width="12" height="12" x="510" y="390" class="nonmatching"><title>0x00485d90 setXYZ3 (820 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="390" class="nonmatching"><title>0x004860d0 DrawBubbles (853 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="390" class="todo"><title>0x00486430 S_DrawSplashes (2461 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="390" class="todo"><title>0x00486dd0 S_DrawFireSparks (1166 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="390" class="nonmatching"><title>0x00486dd0 S_DrawFireSparks (1166 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="390" class="nonmatching"><title>0x00487260 S_DrawSmokeSparks (1108 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="390" class="todo"><title>0x004876c0 S_PrintShadow (1169 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="390" class="named"><title>0x00487b60 InitTarget_2 (197 bytes)</title></rect>
@@ -1738,7 +1738,7 @@
 <rect width="21.97" height="20.97" x="235.70" y="324.03" class="named"><title>0x00484cd0 LoadSettings (1201 bytes)</title></rect>
 <rect width="21.97" height="20.74" x="235.70" y="347.99" class="named"><title>0x004096d0 MovableBlock (1188 bytes)</title></rect>
 <rect width="21.97" height="20.41" x="235.70" y="371.74" class="todo"><title>0x004876c0 S_PrintShadow (1169 bytes)</title></rect>
-<rect width="21.97" height="20.36" x="235.70" y="395.14" class="todo"><title>0x00486dd0 S_DrawFireSparks (1166 bytes)</title></rect>
+<rect width="21.97" height="20.36" x="235.70" y="395.14" class="nonmatching"><title>0x00486dd0 S_DrawFireSparks (1166 bytes)</title></rect>
 <rect width="21.97" height="20.32" x="235.70" y="418.50" class="named"><title>0x004812d0 HWR_DrawSortList (1164 bytes)</title></rect>
 <rect width="21.97" height="20.18" x="235.70" y="441.82" class="nonmatching"><title>0x00474e10 LoadObjects (1156 bytes)</title></rect>
 <rect width="20.88" height="21.24" x="260.67" y="0" class="named"><title>0x004752a0 AdjustUV (1156 bytes)</title></rect>

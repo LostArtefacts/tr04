@@ -40,7 +40,7 @@ void DrawTrainStrips(void);
 void S_DrawDarts(struct item_info *item);
 void S_PrintShadow(sint32 size, sint16 *box, struct item_info *item, sint32 unknown);
 
-void S_DrawFireSparks(sint32 size, sint32 life);
+void S_DrawFireSparks(sint16 size, sint32 life);
 void DrawFlatSky(uint32 color, sint32 zpos, sint32 ypos, sint32 drawtype);
 void DoUwEffect(void);
 void S_DrawSmokeSparks(void);

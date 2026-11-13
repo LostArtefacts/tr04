@@ -451,6 +451,118 @@ void DrawBubbles(void)
     phd_PopMatrix();
 }
 
+void S_DrawFireSparks(sint16 size, sint32 life)
+{
+    FIRE_SPARKS *sptr;
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    PHD_VECTOR pos;
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    sint32 *mptr;
+    float perspz, u1, v1, u2;
+    uint32 r, g, b, col;
+    sint32 cr, cg, cb, i, s, c, ss, cs, sm, cm;
+    sint32 dx, dy, dz, x1, y1, x2, y2, x3, y3, x4, y4;
+    sint16 newSize;
+
+    XY = (sint16 *)&scratchpad[0];
+    Z = (sint32 *)&scratchpad[256];
+    offsets = (sint16 *)&scratchpad[512];
+    sptr = &fire_spark[0];
+    mptr = phd_mxptr;
+    for (i = 0; i < 20; i++, sptr++) {
+        if (!sptr->On)
+            continue;
+        dx = sptr->x >> (2 - size);
+        dy = sptr->y >> (2 - size);
+        dz = sptr->z >> (2 - size);
+        if (dx < -0x5000 || dx > 0x5000 || dy < -0x5000 || dy > 0x5000 || dz < -0x5000 || dz > 0x5000)
+            continue;
+        offsets[0] = (sint16)dx;
+        offsets[1] = (sint16)dy;
+        offsets[2] = (sint16)dz;
+        pos.x = offsets[0] * mptr[M00] + offsets[1] * mptr[M01] + offsets[2] * mptr[M02] + mptr[M03];
+        pos.y = offsets[0] * mptr[M10] + offsets[1] * mptr[M11] + offsets[2] * mptr[M12] + mptr[M13];
+        pos.z = offsets[0] * mptr[M20] + offsets[1] * mptr[M21] + offsets[2] * mptr[M22] + mptr[M23];
+        perspz = f_persp / (float)pos.z;
+        XY[0] = (sint16)(pos.x * perspz + f_centerx);
+        XY[1] = (sint16)(pos.y * perspz + f_centery);
+        Z[0] = pos.z >> W2V_SHIFT;
+        if (Z[0] <= 0 || Z[0] >= 0x5000)
+            continue;
+        newSize = ((phd_persp * sptr->Size) << 2) / Z[0];
+        newSize >>= 2 - size;
+        if (newSize > (sptr->Size << 2))
+            newSize = sptr->Size << 2;
+        else if (newSize < 4)
+            newSize = 4;
+        if (XY[0] + (newSize >> 1) < phd_winxmin || XY[0] - (newSize >> 1) >= phd_winxmax || XY[1] + (newSize >> 1) < phd_winymin || XY[1] - (newSize >> 1) >= phd_winymax)
+            continue;
+        if (sptr->Flags & 0x10) {
+            s = rcossin_tbl[sptr->RotAng << 1];
+            c = rcossin_tbl[(sptr->RotAng << 1) + 1];
+            ss = (s * (newSize >> 1)) >> (W2V_SHIFT - 2);
+            cs = (c * (newSize >> 1)) >> (W2V_SHIFT - 2);
+            sm = (s * (-newSize >> 1)) >> (W2V_SHIFT - 2);
+            cm = (c * (-newSize >> 1)) >> (W2V_SHIFT - 2);
+            x1 = sm + XY[0] - cm;
+            y1 = sm + XY[1] + cm;
+            x2 = XY[0] - cm + ss;
+            y2 = sm + XY[1] + cs;
+            x3 = ss + XY[0] - cs;
+            y3 = cs + XY[1] + ss;
+            x4 = sm + XY[0] - cs;
+            y4 = ss + XY[1] + cm;
+            setXY4(v, x1, y1, x2, y2, x3, y3, x4, y4, Z[0], clipflags);
+        } else {
+            x1 = XY[0] - (newSize >> 1);
+            y1 = XY[1] - (newSize >> 1);
+            x2 = XY[0] + (newSize >> 1);
+            y2 = XY[1] + (newSize >> 1);
+            setXY4(v, x1, y1, x2, y1, x2, y2, x1, y2, Z[0], clipflags);
+        }
+        sprite = &spriteinfo[sptr->Def];
+        if (Z[0] > 0x3000) {
+            r = ((0x5000 - Z[0]) * sptr->R) >> 13;
+            g = ((0x5000 - Z[0]) * sptr->G) >> 13;
+            b = ((0x5000 - Z[0]) * sptr->B) >> 13;
+            col = RGBA((r * life) >> 8, (g * life) >> 8, (b * life) >> 8, 0xFF);
+        } else {
+            cr = (sptr->R * life) >> 8;
+            cg = (sptr->G * life) >> 8;
+            cb = (sptr->B * life) >> 8;
+            col = RGBA(cr, cg, cb, 0xFF);
+        }
+        v[0].color = col;
+        v[1].color = col;
+        v[2].color = col;
+        v[3].color = col;
+        v[0].specular = 0xFF000000;
+        v[1].specular = 0xFF000000;
+        v[2].specular = 0xFF000000;
+        v[3].specular = 0xFF000000;
+        u1 = sprite->x1;
+        u2 = sprite->x2;
+        v1 = sprite->y1;
+        tex.drawtype = 2;
+        tex.flag = 0;
+        tex.tpage = sprite->tpage;
+        tex.u1 = u1;
+        tex.v1 = v1;
+        tex.u2 = u2;
+        tex.v3 = sprite->y2;
+        tex.v2 = v1;
+        tex.u3 = u2;
+        tex.u4 = u1;
+        tex.v4 = sprite->y2;
+        AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
+        AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
+    }
+}
+
 void S_DrawSmokeSparks(void)
 {
     SMOKE_SPARKS *sptr;
