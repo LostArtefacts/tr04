@@ -19,6 +19,7 @@
 #include "draw.h"
 #include "camera.h"
 #include "sphere.h"
+#include "newinv.h"
 #include "specific/input.h"
 #include "specific/3dmath.h"
 #include "specific/audio.h"
@@ -105,6 +106,51 @@ void JeepCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
     } else {
         ObjectCollision(item_number, l, coll);
     }
+}
+
+sint32 GetOnJeep(sint16 item_number, COLL_INFO *coll)
+{
+    ITEM_INFO *item;
+    ITEM_INFO *l;
+    FLOOR_INFO *floor;
+    sint32 h;
+    sint16 room_number, ang;
+    uint16 rot;
+
+    item = &items[item_number];
+    l = lara_item;
+    if (input & IN_ACTION || GLOBAL_inventoryitemchosen == PUZZLE_ITEM1) {
+        if (!(sint16)(item->flags & IFL_INVISIBLE) && lara.gun_status == LG_NO_ARMS && l->current_anim_state == AS_STOP && l->anim_number == ANIM_BREATH && !l->gravity_status) {
+            if (ABS(item->pos.y_pos - l->pos.y_pos) < 256 && TestBoundsCollide(item, l, 100)) {
+                room_number = item->room_number;
+                floor = GetFloor(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, &room_number);
+                h = GetHeight(floor, item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
+                if (h >= NO_HEIGHT + 512) {
+                    h = phd_atan(item->pos.z_pos - l->pos.z_pos, item->pos.x_pos - l->pos.x_pos);
+                    ang = (sint16)(h - item->pos.y_rot);
+                    rot = l->pos.y_rot - item->pos.y_rot;
+                    if (ang > -8190 && ang < 24570) {
+                        if (rot <= 8190 || rot >= 24570)
+                            return 0;
+                        if (GLOBAL_inventoryitemchosen == PUZZLE_ITEM1) {
+                            GLOBAL_inventoryitemchosen = NO_ITEM;
+                            return 1;
+                        }
+                    } else {
+                        if (rot <= 40950 || rot >= 57330)
+                            return 0;
+                        if (GLOBAL_inventoryitemchosen == PUZZLE_ITEM1) {
+                            GLOBAL_inventoryitemchosen = NO_ITEM;
+                            return 1;
+                        }
+                    }
+                    if (have_i_got_object(PUZZLE_ITEM1))
+                        GLOBAL_enterinventory = PUZZLE_ITEM1;
+                }
+            }
+        }
+    }
+    return 0;
 }
 
 void DrawJeepExtras(ITEM_INFO *item)
