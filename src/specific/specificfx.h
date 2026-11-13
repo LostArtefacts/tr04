@@ -16,7 +16,8 @@ extern MESH_DATA *targetMeshP;
 extern MESH_DATA *binocsMeshP;
 
 void S_DrawDrawSparks(struct sparks *sptr, sint32 smallest_size, sint16 *xy, sint32 *z);
-void DrawRope(void *rope);
+struct rope_struct;
+void DrawRope(struct rope_struct *rope);
 void DrawPsxTile(sint32 x_y, sint32 height_width, sint32 color, sint32 u0, sint32 u1);
 void SetUpLensFlare(sint32 x, sint32 y, sint32 z, GAME_VECTOR *lfobj);
 void DrawBikeSpeedo(sint32 ux, sint32 uy, sint32 vel, sint32 maxVel, sint32 turboVel, sint32 size, sint32 unk);

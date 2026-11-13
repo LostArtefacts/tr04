@@ -16,6 +16,7 @@
 #include "../text.h"
 #include "../lara.h"
 #include "function_stubs.h"
+#include "../rope.h"
 
 void setXY4(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 x3, sint32 y3, sint32 x4, sint32 y4, sint32 z, sint16 *clip)
 {
@@ -593,6 +594,110 @@ void OutputSky(void)
     MungeFPCW(&FPCW);
     InitBuckets();
     InitialiseSortList();
+}
+
+void DrawRope(ROPE_STRUCT *rope)
+{
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    sint32 dx, dy, d, b, w, spec, i;
+    float u1, v1, u2, v2;
+    sint32 x1, y1, z1, x2, y2, z2, x3, y3, x4, y4;
+
+    ProjectRopePoints(rope);
+    dx = rope->Coords[1][0] - rope->Coords[0][0];
+    dy = rope->Coords[1][1] - rope->Coords[0][1];
+    d = SQUARE(dx) + SQUARE(dy);
+    d = phd_sqrt(ABS(d));
+    dx <<= W2V_SHIFT + 2;
+    dy <<= W2V_SHIFT + 2;
+    d <<= W2V_SHIFT + 2;
+    if (d) {
+        d = ((0x1000000 / (d >> 8)) << 8) >> 8;
+        b = dx;
+        dx = (sint32)(((__int64)-dy * (__int64)d) >> (W2V_SHIFT + 2));
+        dy = (sint32)(((__int64)b * (__int64)d) >> (W2V_SHIFT + 2));
+    }
+    w = 0x60000;
+    if (rope->Coords[0][2]) {
+        w = 0x60000 * phd_persp / rope->Coords[0][2];
+        if (w < 1)
+            w = 1;
+    }
+    w <<= W2V_SHIFT + 2;
+    dx = (sint32)(((__int64)dx * (__int64)w) >> (W2V_SHIFT + 2)) >> (W2V_SHIFT + 2);
+    dy = (sint32)(((__int64)dy * (__int64)w) >> (W2V_SHIFT + 2)) >> (W2V_SHIFT + 2);
+    x1 = rope->Coords[0][0] - dx;
+    y1 = rope->Coords[0][1] - dy;
+    z1 = rope->Coords[0][2] >> W2V_SHIFT;
+    x4 = rope->Coords[0][0] + dx;
+    y4 = rope->Coords[0][1] + dy;
+    for (i = 0; i < 23; i++) {
+        dx = rope->Coords[i + 1][0] - rope->Coords[i][0];
+        dy = rope->Coords[i + 1][1] - rope->Coords[i][1];
+        d = SQUARE(dx) + SQUARE(dy);
+        d = phd_sqrt(ABS(d));
+        dx <<= W2V_SHIFT + 2;
+        dy <<= W2V_SHIFT + 2;
+        d <<= W2V_SHIFT + 2;
+        if (d) {
+            d = ((0x1000000 / (d >> 8)) << 8) >> 8;
+            b = dx;
+            dx = (sint32)(((__int64)-dy * (__int64)d) >> (W2V_SHIFT + 2));
+            dy = (sint32)(((__int64)b * (__int64)d) >> (W2V_SHIFT + 2));
+        }
+        w = 0x60000;
+        if (rope->Coords[i][2]) {
+            w = 0x60000 * phd_persp / rope->Coords[i][2];
+            if (w < 3)
+                w = 3;
+        }
+        w <<= W2V_SHIFT + 2;
+        dx = (sint32)(((__int64)dx * (__int64)w) >> (W2V_SHIFT + 2)) >> (W2V_SHIFT + 2);
+        dy = (sint32)(((__int64)dy * (__int64)w) >> (W2V_SHIFT + 2)) >> (W2V_SHIFT + 2);
+        x2 = rope->Coords[i + 1][0] - dx;
+        y2 = rope->Coords[i + 1][1] - dy;
+        z2 = rope->Coords[i + 1][2] >> W2V_SHIFT;
+        x3 = rope->Coords[i + 1][0] + dx;
+        y3 = rope->Coords[i + 1][1] + dy;
+        if (z1 > f_mznear && z2 > f_mznear) {
+            setXY4(v, x1, y1, x2, y2, x3, y3, x4, y4, z1, clipflags);
+            v[0].color = 0xFF7F7F7F;
+            v[1].color = 0xFF7F7F7F;
+            v[2].color = 0xFF7F7F7F;
+            v[3].color = 0xFF7F7F7F;
+            spec = 255;
+            if (z1 > 0x3000)
+                spec = (255 * (0x5000 - z1)) >> 13;
+            v[0].specular = spec << 24;
+            v[1].specular = spec << 24;
+            v[2].specular = spec << 24;
+            v[3].specular = spec << 24;
+            sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 16];
+            u1 = sprite->x1;
+            u2 = sprite->x2;
+            v1 = sprite->y1;
+            v2 = sprite->y2;
+            tex.drawtype = 1;
+            tex.flag = 0;
+            tex.tpage = sprite->tpage;
+            tex.u1 = u1;
+            tex.v1 = v1;
+            tex.u2 = u1;
+            tex.v2 = v2;
+            tex.u3 = u2;
+            tex.v3 = v2;
+            tex.u4 = u2;
+            tex.v4 = v1;
+            AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
+        }
+        x1 = x2;
+        y1 = y2;
+        z1 = z2;
+        x4 = x3;
+        y4 = y3;
+    }
 }
 
 void DrawBlood(void)
