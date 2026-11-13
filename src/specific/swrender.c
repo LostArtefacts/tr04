@@ -52,6 +52,12 @@ ULONG __stdcall SW_D3D_Release(SW_DEVICE *dev)
     return dev->refcount;
 }
 
+HRESULT __stdcall SW_D3D_SetCurrentViewport(SW_DEVICE *dev, void *viewport)
+{
+    dev->viewport = viewport;
+    return 0;
+}
+
 HRESULT __stdcall SW_D3D_ViewportStub(void *iface, void *arg)
 {
     return 0;

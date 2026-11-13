@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="331.36" height="12" x="0" y="0" class="named"><title>1239 · 80.04%</title></rect>
-<rect width="61.24" height="12" x="331.36" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="21.40" height="12" x="392.60" y="0" class="todo"><title>80 · 5.17%</title></rect>
+<rect width="331.63" height="12" x="0" y="0" class="named"><title>1240 · 80.10%</title></rect>
+<rect width="61.24" height="12" x="331.63" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="21.13" height="12" x="392.87" y="0" class="todo"><title>79 · 5.10%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">80.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1239</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">80</tspan></text>
+<text text-anchor="end" x="594" y="7.50">80.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1240</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">79</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="223.49" height="12" x="0" y="0" class="named"><title>338 KB · 53.98%</title></rect>
-<rect width="166.37" height="12" x="223.49" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="24.14" height="12" x="389.86" y="0" class="todo"><title>36 KB · 5.83%</title></rect>
+<rect width="223.50" height="12" x="0" y="0" class="named"><title>338 KB · 53.99%</title></rect>
+<rect width="166.37" height="12" x="223.50" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="24.12" height="12" x="389.88" y="0" class="todo"><title>36 KB · 5.83%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.0%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">338 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">36 KB</tspan></text>
@@ -1535,7 +1535,7 @@
 <rect width="12" height="12" x="270" y="435" class="named"><title>0x00494530 SW_D3D_GetCaps (93 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="435" class="named"><title>0x00494590 SW_D3D_AddRef (16 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="435" class="named"><title>0x004945a0 SW_D3D_Release (52 bytes)</title></rect>
-<rect width="12" height="12" x="315" y="435" class="todo"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
+<rect width="12" height="12" x="315" y="435" class="named"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="435" class="todo"><title>0x004945f0 SW_D3D_GetCurrentViewport (18 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="435" class="named"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="435" class="todo"><title>0x00494620 SW_D3D_SetRenderState (44 bytes)</title></rect>
@@ -3097,7 +3097,7 @@
 <rect width="2.49" height="2.47" x="711.75" y="421.32" class="named"><title>0x0046d030 init_voncroy_meshbits (16 bytes)</title></rect>
 <rect width="2.49" height="2.47" x="717.23" y="421.32" class="named"><title>0x004761e0 LoadCinematic (16 bytes)</title></rect>
 <rect width="2.49" height="2.47" x="722.72" y="421.32" class="named"><title>0x00494590 SW_D3D_AddRef (16 bytes)</title></rect>
-<rect width="2.49" height="2.47" x="728.21" y="421.32" class="todo"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
+<rect width="2.49" height="2.47" x="728.21" y="421.32" class="named"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
 <rect width="2.49" height="2.47" x="733.69" y="421.32" class="todo"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
 <rect width="2.49" height="2.47" x="739.18" y="421.32" class="named"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
 <rect width="2.33" height="2.47" x="744.67" y="421.32" class="named"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
