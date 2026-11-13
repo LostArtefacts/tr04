@@ -595,6 +595,105 @@ void OutputSky(void)
     InitialiseSortList();
 }
 
+void DrawBlood(void)
+{
+    BLOOD_STRUCT *bptr;
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    PHD_VECTOR pos;
+    sint32 *mptr;
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    float perspz, u1, v1, u2;
+    uint32 r, col;
+    sint32 i, size, s, c, dx, dy, dz, x1, y1, x2, y2, x3, y3, x4, y4;
+
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    mptr = phd_mxptr;
+    sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 15];
+    bptr = blood;
+    XY = (sint16 *)&scratchpad[0];
+    Z = (sint32 *)&scratchpad[256];
+    offsets = (sint16 *)&scratchpad[512];
+    for (i = 32; i > 0; i--) {
+        if (!bptr->On) {
+            bptr++;
+            continue;
+        }
+        dx = bptr->x - lara_item->pos.x_pos;
+        dy = bptr->y - lara_item->pos.y_pos;
+        dz = bptr->z - lara_item->pos.z_pos;
+        if (dx < -0x5000 || dx > 0x5000 || dy < -0x5000 || dy > 0x5000 || dz < -0x5000 || dz > 0x5000) {
+            bptr++;
+            continue;
+        }
+        offsets[0] = (sint16)dx;
+        offsets[1] = (sint16)dy;
+        offsets[2] = (sint16)dz;
+        pos.x = offsets[0] * mptr[M00] + offsets[1] * mptr[M01] + offsets[2] * mptr[M02] + mptr[M03];
+        pos.y = offsets[0] * mptr[M10] + offsets[1] * mptr[M11] + offsets[2] * mptr[M12] + mptr[M13];
+        pos.z = offsets[0] * mptr[M20] + offsets[1] * mptr[M21] + offsets[2] * mptr[M22] + mptr[M23];
+        perspz = f_persp / (float)pos.z;
+        XY[0] = (sint16)(pos.x * perspz + f_centerx);
+        XY[1] = (sint16)(pos.y * perspz + f_centery);
+        Z[0] = pos.z >> W2V_SHIFT;
+        if (Z[0] <= 0 || Z[0] >= 0x5000) {
+            bptr++;
+            continue;
+        }
+        size = ((phd_persp * bptr->Size) << 1) / Z[0];
+        if (size > (bptr->Size << 1))
+            size = bptr->Size << 1;
+        else if (size < 4)
+            size = 4;
+        size <<= 1;
+        s = (size * rcossin_tbl[bptr->RotAng << 1]) >> (W2V_SHIFT - 2);
+        c = (size * rcossin_tbl[(bptr->RotAng << 1) + 1]) >> (W2V_SHIFT - 2);
+        x1 = c + XY[0] - s;
+        y1 = XY[1] - c - s;
+        x2 = s + c + XY[0];
+        y2 = c + XY[1] - s;
+        x3 = s + XY[0] - c;
+        y3 = s + XY[1] + c;
+        x4 = XY[0] - c - s;
+        y4 = XY[1] - c + s;
+        setXY4(v, x1, y1, x2, y2, x3, y3, x4, y4, Z[0], clipflags);
+        if (Z[0] > 0x3000) {
+            r = (((0x5000 - Z[0]) * bptr->Shade) >> 13) << 16;
+            col = r | 0xFF000000;
+        } else
+            col = RGBA(bptr->Shade, 0, 0, 0xFF);
+        v[0].color = col;
+        v[1].color = col;
+        v[2].color = col;
+        v[3].color = col;
+        v[0].specular = 0xFF000000;
+        v[1].specular = 0xFF000000;
+        v[2].specular = 0xFF000000;
+        v[3].specular = 0xFF000000;
+        tex.drawtype = 2;
+        tex.flag = 0;
+        u1 = sprite->x1;
+        u2 = sprite->x2;
+        v1 = sprite->y1;
+        tex.tpage = sprite->tpage;
+        tex.u1 = u1;
+        tex.v1 = v1;
+        tex.u2 = u2;
+        tex.v2 = v1;
+        tex.u3 = u2;
+        tex.v3 = sprite->y2;
+        tex.u4 = u1;
+        tex.v4 = sprite->y2;
+        AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
+        bptr++;
+    }
+    phd_PopMatrix();
+}
+
 void DrawTrainFloorStrip(sint32 x, sint32 z, TEXTURESTRUCT *tex, sint32 y_and_flags)
 {
     SVECTOR *offsets;
