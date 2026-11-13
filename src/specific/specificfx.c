@@ -20,6 +20,12 @@
 #include "../camera.h"
 #include "../wraith.h"
 #include "../effect2.h"
+#include "../delstuff.h"
+
+sint32 ShadowTable[42] = {
+    4, 1, 5, 5, 1, 6, 6, 1, 2, 6, 2, 7, 8, 4, 9, 9, 4, 5, 9, 5, 10, 10, 5, 6, 10, 6, 11, 11, 6, 7,
+    13, 8, 9, 13, 9, 14, 14, 9, 10, 14, 10, 11
+};
 
 uint8 TargetGraphColTab[48] = {
     0, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 0, 0, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 0,
@@ -685,6 +691,125 @@ void S_DrawSmokeSparks(void)
             sptr++;
     }
     phd_PopMatrix();
+}
+
+void S_PrintShadow(sint32 size, sint16 *box, ITEM_INFO *item, sint32 unknown)
+{
+    PHD_VECTOR pos;
+    FLOOR_INFO *floor;
+    sint32 *sXYZ;
+    sint32 *hXZ;
+    sint32 *hY;
+    sint32 sxyz[16 * 3];
+    sint32 triA, triB, triC;
+    sint32 i, j, x, y, z, xSize, zSize, xDist, zDist;
+    sint16 room_number;
+
+    xSize = (sint16)size * (box[1] - box[0]) / 192;
+    zSize = (sint16)size * (box[5] - box[4]) / 192;
+    xDist = xSize / 4;
+    zDist = zSize / 4;
+    {
+        sint32 hxz[16 * 2];
+        sint32 hy[16];
+
+        x = -xDist - (xDist >> 1);
+        z = zDist + (zDist >> 1);
+        sXYZ = sxyz;
+        hXZ = hxz;
+        for (i = 0; i < 4; i++, z -= zDist) {
+            for (j = 0; j < 4; j++, sXYZ += 3, hXZ += 2, x += xDist) {
+                sXYZ[0] = x;
+                sXYZ[2] = z;
+                hXZ[0] = x;
+                hXZ[1] = z;
+            }
+            x = -xDist - (xDist >> 1);
+        }
+        phd_PushUnitMatrix();
+        if (item == lara_item) {
+            pos.x = 0;
+            pos.y = 0;
+            pos.z = 0;
+            GetLaraJointPos(&pos, LM_TORSO);
+            room_number = lara_item->room_number;
+            floor = GetFloor(pos.x, pos.y, pos.z, &room_number);
+        y = GetHeight(floor, pos.x, pos.y, pos.z);
+            if (y == NO_HEIGHT)
+                y = item->floor;
+        } else {
+            pos.x = item->pos.x_pos;
+            y = item->floor;
+            pos.z = item->pos.z_pos;
+        }
+        y += -16;
+        phd_TranslateRel(pos.x, y, pos.z);
+        phd_RotY(item->pos.y_rot);
+        hXZ = hxz;
+        for (i = 0; i < 16; i++, hXZ += 2) {
+            x = hXZ[0];
+            z = hXZ[1];
+            hXZ[0] = (x * phd_mxptr[M00] + z * phd_mxptr[M02] + phd_mxptr[M03]) >> W2V_SHIFT;
+            hXZ[1] = (x * phd_mxptr[M20] + z * phd_mxptr[M22] + phd_mxptr[M23]) >> W2V_SHIFT;
+        }
+        phd_PopMatrix();
+        hXZ = hxz;
+        hY = hy;
+        for (i = 0; i < 16; i++, hXZ += 2, hY++) {
+            room_number = item->room_number;
+            floor = GetFloor(hXZ[0], item->floor, hXZ[1], &room_number);
+            *hY = GetHeight(floor, hXZ[0], item->floor, hXZ[1]);
+            if (abs(*hY - item->floor) > 196)
+                *hY = item->floor;
+        }
+        phd_PushMatrix();
+        phd_TranslateAbs(pos.x, y, pos.z);
+        phd_RotY(item->pos.y_rot);
+        sXYZ = sxyz;
+        hY = hy;
+        for (i = 0; i < 16; i++, sXYZ += 3, hY++) {
+            x = sXYZ[0];
+            y = *hY - item->floor;
+            z = sXYZ[2];
+            sXYZ[0] = (phd_mxptr[M00] * x + phd_mxptr[M01] * y + phd_mxptr[M02] * z + phd_mxptr[M03]) >> W2V_SHIFT;
+            sXYZ[1] = (phd_mxptr[M10] * x + phd_mxptr[M11] * y + phd_mxptr[M12] * z + phd_mxptr[M13]) >> W2V_SHIFT;
+            sXYZ[2] = (phd_mxptr[M20] * x + phd_mxptr[M21] * y + phd_mxptr[M22] * z + phd_mxptr[M23]) >> W2V_SHIFT;
+        }
+        phd_PopMatrix();
+    }
+    sXYZ = sxyz;
+    for (i = 0; i < 14; i++) {
+        TEXTURESTRUCT tex;
+        D3DTLVERTEX v[3];
+
+        triA = 3 * ShadowTable[(i * 3) + 0];
+        triB = 3 * ShadowTable[(i * 3) + 1];
+        triC = 3 * ShadowTable[(i * 3) + 2];
+        setXYZ3(v, sXYZ[triA], sXYZ[triA + 1], sXYZ[triA + 2], sXYZ[triB], sXYZ[triB + 1], sXYZ[triB + 2], sXYZ[triC], sXYZ[triC + 1], sXYZ[triC + 2], clipflags);
+        v[0].color = 0x4F000000;
+        v[1].color = 0x4F000000;
+        v[2].color = 0x4F000000;
+        if (item->after_death) {
+            v[0].color = 0x80000000 - (item->after_death << 24);
+            v[1].color = v[0].color;
+            v[2].color = v[0].color;
+        }
+        v[0].specular = 0xFF000000;
+        v[1].specular = 0xFF000000;
+        v[2].specular = 0xFF000000;
+        tex.flag = 0;
+        tex.tpage = 0;
+        tex.u1 = 0;
+        tex.v1 = 0;
+        tex.u2 = 0;
+        tex.v2 = 0;
+        tex.u3 = 0;
+        tex.v3 = 0;
+        tex.u4 = 0;
+        tex.v4 = 0;
+        tex.drawtype = 3;
+        AddTriSorted(v, 0, 1, 2, &tex, 1);
+    }
 }
 
 void InitTarget_2(void)
