@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="336.54" height="12" x="0" y="0" class="named"><title>1260 · 81.29%</title></rect>
-<rect width="72.12" height="12" x="336.54" y="0" class="nonmatching"><title>270 · 17.42%</title></rect>
-<rect width="5.34" height="12" x="408.66" y="0" class="todo"><title>20 · 1.29%</title></rect>
+<rect width="72.38" height="12" x="336.54" y="0" class="nonmatching"><title>271 · 17.48%</title></rect>
+<rect width="5.07" height="12" x="408.93" y="0" class="todo"><title>19 · 1.23%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">270</tspan> · <tspan class="todo">20</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">271</tspan> · <tspan class="todo">19</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="225.86" height="12" x="0" y="0" class="named"><title>341 KB · 54.56%</title></rect>
-<rect width="172.91" height="12" x="225.86" y="0" class="nonmatching"><title>261 KB · 41.77%</title></rect>
-<rect width="15.23" height="12" x="398.77" y="0" class="todo"><title>23 KB · 3.68%</title></rect>
+<rect width="173.27" height="12" x="225.86" y="0" class="nonmatching"><title>262 KB · 41.85%</title></rect>
+<rect width="14.87" height="12" x="399.13" y="0" class="todo"><title>22 KB · 3.59%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">261 KB</tspan> · <tspan class="todo">23 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">341 KB</tspan> · <tspan class="nonmatching">262 KB</tspan> · <tspan class="todo">22 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1601,7 +1601,7 @@
 <rect width="12" height="12" x="510" y="450" class="nonmatching"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="450" class="nonmatching"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="450" class="nonmatching"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
-<rect width="12" height="12" x="555" y="450" class="todo"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
+<rect width="12" height="12" x="555" y="450" class="nonmatching"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="450" class="todo"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="450" class="named"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="nonmatching"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
@@ -1944,7 +1944,7 @@
 <rect width="14.48" height="14.51" x="560.18" y="79.77" class="named"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>
 <rect width="14.48" height="14.51" x="577.66" y="79.77" class="named"><title>0x004729e0 DrawBucket (548 bytes)</title></rect>
 <rect width="14.42" height="14.51" x="595.14" y="79.77" class="named"><title>0x004094a0 ClearMovableBlockSplitters (546 bytes)</title></rect>
-<rect width="14.32" height="14.51" x="612.56" y="79.77" class="todo"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
+<rect width="14.32" height="14.51" x="612.56" y="79.77" class="nonmatching"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="14.24" height="14.51" x="629.88" y="79.77" class="named"><title>0x00431e90 LaraTestWaterClimbOut (539 bytes)</title></rect>
 <rect width="14.24" height="14.51" x="647.12" y="79.77" class="nonmatching"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
 <rect width="14.19" height="14.51" x="664.36" y="79.77" class="named"><title>0x0044c9c0 IsRoomOutside (537 bytes)</title></rect>
