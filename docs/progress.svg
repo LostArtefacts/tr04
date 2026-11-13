@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="37.56" height="12" x="267.10" y="0" class="nonmatching"><title>170 · 10.98%</title></rect>
-<rect width="37.34" height="12" x="304.66" y="0" class="todo"><title>169 · 10.92%</title></rect>
+<rect width="37.78" height="12" x="267.10" y="0" class="nonmatching"><title>171 · 11.05%</title></rect>
+<rect width="37.12" height="12" x="304.88" y="0" class="todo"><title>168 · 10.85%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">170</tspan> · <tspan class="todo">169</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">171</tspan> · <tspan class="todo">168</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="117.70" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.42%</title></rect>
-<rect width="45.41" height="12" x="296.59" y="0" class="todo"><title>83 KB · 13.28%</title></rect>
+<rect width="117.79" height="12" x="178.89" y="0" class="nonmatching"><title>215 KB · 34.44%</title></rect>
+<rect width="45.32" height="12" x="296.68" y="0" class="todo"><title>83 KB · 13.25%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">215 KB</tspan> · <tspan class="todo">83 KB</tspan></text>
@@ -1335,7 +1335,7 @@
 <rect width="12" height="12" x="240" y="375" class="named"><title>0x0047d5b0 S_InitialisePolyList (217 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="375" class="named"><title>0x0047d690 j_nullsub_9 (5 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="375" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="375" class="todo"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="375" class="nonmatching"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="375" class="todo"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="375" class="todo"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="375" class="todo"><title>0x0047d900 PrelightVerts (340 bytes)</title></rect>
@@ -2434,7 +2434,7 @@
 <rect width="8.06" height="8" x="519.04" y="345.09" class="named"><title>0x00457560 ControlBlinker (168 bytes)</title></rect>
 <rect width="8.06" height="7.95" x="519.04" y="356.08" class="named"><title>0x00452f80 DrawPickups (167 bytes)</title></rect>
 <rect width="8.06" height="7.95" x="519.04" y="367.03" class="named"><title>0x0046a620 JeepStart (167 bytes)</title></rect>
-<rect width="8.06" height="7.95" x="519.04" y="377.98" class="todo"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
+<rect width="8.06" height="7.95" x="519.04" y="377.98" class="nonmatching"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
 <rect width="8.06" height="7.95" x="519.04" y="388.93" class="todo"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
 <rect width="8.06" height="7.95" x="519.04" y="399.88" class="named"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
 <rect width="8.06" height="7.90" x="519.04" y="410.83" class="todo"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
