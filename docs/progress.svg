@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="378.24" height="12" x="0" y="0" class="named"><title>1269 · 81.87%</title></rect>
-<rect width="83.76" height="12" x="378.24" y="0" class="nonmatching"><title>281 · 18.13%</title></rect>
+<rect width="378.54" height="12" x="0" y="0" class="named"><title>1270 · 81.94%</title></rect>
+<rect width="83.46" height="12" x="378.54" y="0" class="nonmatching"><title>280 · 18.06%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">81.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1269</tspan> · <tspan class="nonmatching">281</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1270</tspan> · <tspan class="nonmatching">280</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="252.78" height="12" x="0" y="0" class="named"><title>342 KB · 54.71%</title></rect>
-<rect width="209.22" height="12" x="252.78" y="0" class="nonmatching"><title>283 KB · 45.29%</title></rect>
+<rect width="253.06" height="12" x="0" y="0" class="named"><title>343 KB · 54.78%</title></rect>
+<rect width="208.94" height="12" x="253.06" y="0" class="nonmatching"><title>283 KB · 45.22%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">54.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">342 KB</tspan> · <tspan class="nonmatching">283 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">54.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">343 KB</tspan> · <tspan class="nonmatching">283 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1603,7 +1603,7 @@
 <rect width="12" height="12" x="570" y="450" class="nonmatching"><title>0x0049bdb0 SW_SpanGTPKeyInt (513 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="450" class="named"><title>0x0049bfb1 SW_SleepName (6 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="named"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="450" class="nonmatching"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="450" class="named"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="450" class="nonmatching"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="450" class="nonmatching"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="450" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
@@ -2085,7 +2085,7 @@
 <rect width="12.44" height="11.77" x="476.32" y="129.41" class="named"><title>0x0045fb10 TestCollision (382 bytes)</title></rect>
 <rect width="12.41" height="11.77" x="491.76" y="129.41" class="named"><title>0x0041f390 TriggerTorchFlame (381 bytes)</title></rect>
 <rect width="12.41" height="11.77" x="507.17" y="129.41" class="nonmatching"><title>0x004671b0 GetOnJeep (381 bytes)</title></rect>
-<rect width="12.41" height="11.77" x="522.57" y="129.41" class="nonmatching"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
+<rect width="12.41" height="11.77" x="522.57" y="129.41" class="named"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
 <rect width="12.37" height="11.77" x="537.98" y="129.41" class="nonmatching"><title>0x00415c30 ControlTwoBlockPlatform (380 bytes)</title></rect>
 <rect width="12.37" height="11.77" x="553.35" y="129.41" class="nonmatching"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
 <rect width="12.37" height="11.77" x="568.73" y="129.41" class="nonmatching"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
