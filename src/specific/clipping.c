@@ -388,3 +388,16 @@ sint32 XYUVGClipper(sint32 n, D3DTLBUMPVERTEX *in)
         return 0;
     return nPoints;
 }
+
+
+sint32 visible_zclip(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2)
+{
+    float a, b, c;
+
+    a = (v2->tu * v0->sz - v2->sz * v0->tu) * v1->tv;
+    b = (v2->sz * v0->tv - v2->tv * v0->sz) * v1->tu;
+    c = (v2->tv * v0->tu - v2->tu * v0->tv) * v1->sz;
+    if (a + b + c < 0)
+        return 1;
+    return 0;
+}

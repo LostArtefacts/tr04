@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="38.66" height="12" x="267.10" y="0" class="nonmatching"><title>175 · 11.30%</title></rect>
-<rect width="36.23" height="12" x="305.77" y="0" class="todo"><title>164 · 10.59%</title></rect>
+<rect width="38.88" height="12" x="267.10" y="0" class="nonmatching"><title>176 · 11.37%</title></rect>
+<rect width="36.01" height="12" x="305.99" y="0" class="todo"><title>163 · 10.53%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">175</tspan> · <tspan class="todo">164</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">176</tspan> · <tspan class="todo">163</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="118.22" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.57%</title></rect>
-<rect width="44.89" height="12" x="297.11" y="0" class="todo"><title>82 KB · 13.13%</title></rect>
+<rect width="118.27" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.58%</title></rect>
+<rect width="44.84" height="12" x="297.16" y="0" class="todo"><title>82 KB · 13.11%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">216 KB</tspan> · <tspan class="todo">82 KB</tspan></text>
@@ -1205,7 +1205,7 @@
 <rect width="12" height="12" x="540" y="330" class="named"><title>0x0046e340 ACMHandleNotifications (389 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="330" class="nonmatching"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="330" class="nonmatching"><title>0x0046e8d0 XYUVGClipper (5386 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="330" class="todo"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="330" class="nonmatching"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="330" class="named"><title>0x0046fe40 CLSetup (30 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="330" class="named"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="330" class="named"><title>0x0046fe80 DXSetupDialog (79 bytes)</title></rect>
@@ -2715,7 +2715,7 @@
 <rect width="5.81" height="5.87" x="598.83" y="403.09" class="named"><title>0x00437bc0 swap_meshes_with_meshswap2 (89 bytes)</title></rect>
 <rect width="5.81" height="5.87" x="598.83" y="411.96" class="named"><title>0x00442110 CreatureEffect (89 bytes)</title></rect>
 <rect width="5.81" height="5.87" x="598.83" y="420.83" class="named"><title>0x00442170 CreatureEffectT (89 bytes)</title></rect>
-<rect width="5.81" height="5.87" x="598.83" y="429.71" class="todo"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
+<rect width="5.81" height="5.87" x="598.83" y="429.71" class="nonmatching"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
 <rect width="5.81" height="5.81" x="598.83" y="438.58" class="named"><title>0x00403ed0 InitialiseCrocgod (88 bytes)</title></rect>
 <rect width="5.81" height="5.81" x="598.83" y="447.39" class="named"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
 <rect width="5.81" height="5.81" x="598.83" y="456.19" class="named"><title>0x00421900 lara_as_all4turnl (88 bytes)</title></rect>
