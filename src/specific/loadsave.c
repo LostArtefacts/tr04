@@ -206,6 +206,68 @@ void FreeMonoScreen(void)
     MonoScreenOn = 0;
 }
 
+void S_DrawTile(sint32 x, sint32 y, sint32 w, sint32 h, LPDIRECT3DTEXTURE2 t, sint32 tU, sint32 tV, sint32 tW, sint32 tH, sint32 c0, sint32 c1, sint32 c2, sint32 c3)
+{
+    D3DTLBUMPVERTEX v[4];
+    D3DTLBUMPVERTEX tri[4];
+    float x0, y0, x1, y1, u1, v1, u2, v2;
+
+    x0 = (float)x;
+    y0 = (float)y;
+    x1 = (float)(w + x);
+    y1 = (float)(h + y);
+    u1 = (float)tU / 256.0F;
+    v1 = (float)tV / 256.0F;
+    u2 = (float)(tW + tU) / 256.0F;
+    v2 = (float)(tH + tV) / 256.0F;
+    v[0].sx = x0;
+    v[0].sy = y0;
+    v[0].sz = 0.995F;
+    v[0].tu = u1;
+    v[0].tv = v1;
+    v[0].rhw = 1;
+    v[0].color = c0;
+    v[0].specular = 0xFF000000;
+    v[1].sx = x1;
+    v[1].sy = y0;
+    v[1].sz = 0.995F;
+    v[1].tu = u2;
+    v[1].tv = v1;
+    v[1].rhw = 1;
+    v[1].color = c1;
+    v[1].specular = 0xFF000000;
+    v[2].sx = x1;
+    v[2].sy = y1;
+    v[2].sz = 0.995F;
+    v[2].tu = u2;
+    v[2].tv = v2;
+    v[2].rhw = 1;
+    v[2].color = c3;
+    v[2].specular = 0xFF000000;
+    v[3].sx = x0;
+    v[3].sy = y1;
+    v[3].sz = 0.995F;
+    v[3].tu = u1;
+    v[3].tv = v2;
+    v[3].rhw = 1;
+    v[3].color = c2;
+    v[3].specular = 0xFF000000;
+    IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_MAGFILTER, D3DTFG_POINT);
+    IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_MINFILTER, D3DTFG_POINT);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_TEXTUREPERSPECTIVE, 0);
+    DXAttempt(IDirect3DDevice3_SetTexture(App.dx.lpD3DDevice, 0, t));
+    tri[0] = v[0];
+    tri[1] = v[2];
+    tri[2] = v[3];
+    IDirect3DDevice3_DrawPrimitive(App.dx.lpD3DDevice, D3DPT_TRIANGLELIST, FVF, v, 3, D3DDP_DONOTCLIP | D3DDP_DONOTUPDATEEXTENTS);
+    IDirect3DDevice3_DrawPrimitive(App.dx.lpD3DDevice, D3DPT_TRIANGLELIST, FVF, tri, 3, D3DDP_DONOTCLIP | D3DDP_DONOTUPDATEEXTENTS);
+    IDirect3DDevice3_SetRenderState(App.dx.lpD3DDevice, D3DRENDERSTATE_TEXTUREPERSPECTIVE, 1);
+    if (App.Filtering) {
+        IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_MAGFILTER, D3DTFG_LINEAR);
+        IDirect3DDevice3_SetTextureStageState(App.dx.lpD3DDevice, 0, D3DTSS_MINFILTER, D3DTFG_LINEAR);
+    }
+}
+
 void S_DisplayMonoScreen(void)
 {
     sint32 x[4];

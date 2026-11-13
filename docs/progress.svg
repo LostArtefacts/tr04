@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="328.15" height="12" x="0" y="0" class="named"><title>1227 · 79.26%</title></rect>
-<rect width="59.64" height="12" x="328.15" y="0" class="nonmatching"><title>223 · 14.41%</title></rect>
-<rect width="26.21" height="12" x="387.79" y="0" class="todo"><title>98 · 6.33%</title></rect>
+<rect width="59.91" height="12" x="328.15" y="0" class="nonmatching"><title>224 · 14.47%</title></rect>
+<rect width="25.94" height="12" x="388.06" y="0" class="todo"><title>97 · 6.27%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">79.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1227</tspan> · <tspan class="nonmatching">223</tspan> · <tspan class="todo">98</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1227</tspan> · <tspan class="nonmatching">224</tspan> · <tspan class="todo">97</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="222.02" height="12" x="0" y="0" class="named"><title>335 KB · 53.63%</title></rect>
-<rect width="159.24" height="12" x="222.02" y="0" class="nonmatching"><title>240 KB · 38.46%</title></rect>
-<rect width="32.75" height="12" x="381.25" y="0" class="todo"><title>49 KB · 7.91%</title></rect>
+<rect width="159.72" height="12" x="222.02" y="0" class="nonmatching"><title>241 KB · 38.58%</title></rect>
+<rect width="32.27" height="12" x="381.73" y="0" class="todo"><title>49 KB · 7.79%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">335 KB</tspan> · <tspan class="nonmatching">240 KB</tspan> · <tspan class="todo">49 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">335 KB</tspan> · <tspan class="nonmatching">241 KB</tspan> · <tspan class="todo">49 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1313,7 +1313,7 @@
 <rect width="12" height="12" x="690" y="360" class="named"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="360" class="named"><title>0x00479f20 CreateMonoScreen (20 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="360" class="named"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
-<rect width="12" height="12" x="735" y="360" class="todo"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
+<rect width="12" height="12" x="735" y="360" class="nonmatching"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="375" class="nonmatching"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="375" class="named"><title>0x0047a6f0 GetSaveLoadFiles (398 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="375" class="named"><title>0x0047a880 DoLoadSave (753 bytes)</title></rect>
@@ -1853,7 +1853,7 @@
 <rect width="17.26" height="16.15" x="492.48" y="42.39" class="named"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
 <rect width="17.24" height="16.15" x="512.74" y="42.39" class="named"><title>0x00463650 InitFont (726 bytes)</title></rect>
 <rect width="17.22" height="16.15" x="532.98" y="42.39" class="named"><title>0x0043e8a0 use_current_item (725 bytes)</title></rect>
-<rect width="17.19" height="16.15" x="553.20" y="42.39" class="todo"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
+<rect width="17.19" height="16.15" x="553.20" y="42.39" class="nonmatching"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
 <rect width="16.89" height="16.15" x="573.39" y="42.39" class="named"><title>0x00451240 RenderIt (711 bytes)</title></rect>
 <rect width="16.86" height="16.15" x="593.28" y="42.39" class="named"><title>0x00472c10 DrawBuckets (710 bytes)</title></rect>
 <rect width="16.77" height="16.15" x="613.14" y="42.39" class="named"><title>0x00462db0 CrowbarSwitchCollision (706 bytes)</title></rect>
