@@ -52,6 +52,7 @@ extern sint32 water_color_G;
 extern sint32 water_color_B;
 
 void InsertRoom(ROOM_INFO *r);
+void nullsub_15(void);
 void ProcessMeshData(sint32 num_meshes);
 void ProcessRoomData(ROOM_INFO *r);
 

@@ -17,6 +17,10 @@
 #include "../text.h"
 #include "lighting.h"
 
+void nullsub_15(void)
+{
+}
+
 void ProcessMeshData(sint32 num_meshes)
 {
     MESH_DATA *mesh;
