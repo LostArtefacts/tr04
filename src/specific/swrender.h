@@ -6,12 +6,12 @@
 #include "../types.h"
 
 sint32 SW_SelectRasterizer(void *v0, void *v1, void *v2);
+sint32 SW_TriSetupGTP(void *v0, void *v1, void *v2);
 sint32 SW_TriSetupGT(void *v0, void *v1, void *v2);
 sint32 SW_TriSetupG(void *v0, void *v1, void *v2);
-sint32 SW_TriSetupGA(void *v0, void *v1, void *v2);
-sint32 SW_TriSetupGTLit(void *v0, void *v1, void *v2);
-sint32 SW_TriSetupGALit(void *v0, void *v1, void *v2);
-sint32 SW_TriSetupGTA(void *v0, void *v1, void *v2);
+sint32 SW_TriSetupGTPFog(void *v0, void *v1, void *v2);
+sint32 SW_TriSetupGTFog(void *v0, void *v1, void *v2);
+sint32 SW_TriSetupGFog(void *v0, void *v1, void *v2);
 void SW_SpanG(void);
 void SW_SpanGFogAdd(void);
 void SW_SpanGFog(void);

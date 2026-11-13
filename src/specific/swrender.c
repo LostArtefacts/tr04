@@ -78,6 +78,181 @@ extern sint32 SW_SpanDV;
 extern sint32 SW_MipOffsets[5];
 extern SW_VERTEX *SW_TriV0;
 extern sint32 SW_SpanFogGrad;
+extern float SW_TriDX01;
+extern float SW_TriDY02;
+extern float SW_TriDX02;
+extern float SW_TriDY01;
+extern float SW_TriTemp;
+extern float SW_TriD01;
+extern float SW_TriD02;
+extern float SW_TriRDX;
+extern float SW_TriRDY;
+extern float SW_TriGDX;
+extern float SW_TriGDY;
+extern float SW_TriBDX;
+extern float SW_TriBDY;
+extern float SW_TriADX;
+extern float SW_TriADY;
+extern float SW_TriSlopeA;
+extern float SW_TriXA;
+extern float SW_TriSlopeB;
+extern float SW_TriXB;
+extern double SW_TriROff;
+extern double SW_TriGOff;
+extern double SW_TriBOff;
+extern double SW_TriAOff;
+extern sint32 SW_TriY[2];
+extern sint32 SW_TriEndY[2];
+extern SW_VERTEX *SW_TriEdgeA;
+extern SW_VERTEX *SW_TriEdgeB;
+extern D3DCOLOR SW_TriColor0;
+extern sint32 SW_TriR0;
+extern sint32 SW_TriG0;
+extern sint32 SW_TriB0;
+extern sint32 SW_TriA0;
+extern sint32 SW_TriR1;
+extern sint32 SW_TriG1;
+extern sint32 SW_TriB1;
+extern sint32 SW_TriA1;
+extern sint32 SW_TriR2;
+extern sint32 SW_TriG2;
+extern sint32 SW_TriB2;
+extern sint32 SW_TriA2;
+extern sint32 SW_TriEdges;
+extern sint32 SW_TriStepA;
+extern sint32 SW_TriStepB;
+extern float SW_TriFogDX01;
+extern float SW_TriFogDY02;
+extern float SW_TriFogDX02;
+extern float SW_TriFogDY01;
+extern float SW_TriFogTemp;
+extern float SW_TriFogD01;
+extern float SW_TriFogD02;
+extern float SW_TriFogRDX;
+extern float SW_TriFogRDY;
+extern float SW_TriFogGDX;
+extern float SW_TriFogGDY;
+extern float SW_TriFogBDX;
+extern float SW_TriFogBDY;
+extern float SW_TriFogADX;
+extern float SW_TriFogADY;
+extern float SW_TriFogSlopeA;
+extern float SW_TriFogXA;
+extern float SW_TriFogSlopeB;
+extern float SW_TriFogXB;
+extern double SW_TriFogROff;
+extern double SW_TriFogGOff;
+extern double SW_TriFogBOff;
+extern double SW_TriFogAOff;
+extern sint32 SW_TriFogY[2];
+extern sint32 SW_TriFogEndY[2];
+extern SW_VERTEX *SW_TriFogEdgeA;
+extern SW_VERTEX *SW_TriFogEdgeB;
+extern sint32 SW_TriFogR0;
+extern sint32 SW_TriFogG0;
+extern sint32 SW_TriFogB0;
+extern sint32 SW_TriFogA0;
+extern sint32 SW_TriFogR1;
+extern sint32 SW_TriFogG1;
+extern sint32 SW_TriFogB1;
+extern sint32 SW_TriFogA1;
+extern sint32 SW_TriFogR2;
+extern sint32 SW_TriFogG2;
+extern sint32 SW_TriFogB2;
+extern sint32 SW_TriFogA2;
+extern sint32 SW_TriFogEdges;
+extern sint32 SW_TriFogStepA;
+extern sint32 SW_TriFogStepB;
+extern float SW_TriTDX01;
+extern float SW_TriTDY02;
+extern float SW_TriTDX02;
+extern float SW_TriTDY01;
+extern float SW_TriTTemp;
+extern SW_VERTEX *SW_TriTEdgeA;
+extern SW_VERTEX *SW_TriTEdgeB;
+extern sint32 SW_TriTG0;
+extern sint32 SW_TriTB0;
+extern sint32 SW_TriTR0;
+extern sint32 SW_TriTG1;
+extern sint32 SW_TriTB1;
+extern sint32 SW_TriTR1;
+extern sint32 SW_TriTG2;
+extern sint32 SW_TriTB2;
+extern sint32 SW_TriTR2;
+extern float SW_TriTD01;
+extern float SW_TriTD02;
+extern float SW_TriTRDX;
+extern float SW_TriTRDY;
+extern double SW_TriTROff;
+extern float SW_TriTGDX;
+extern float SW_TriTGDY;
+extern double SW_TriTGOff;
+extern float SW_TriTBDX;
+extern float SW_TriTBDY;
+extern double SW_TriTBOff;
+extern float SW_TriTUDX;
+extern float SW_TriTUDY;
+extern double SW_TriTUOff;
+extern float SW_TriTVDX;
+extern float SW_TriTVDY;
+extern double SW_TriTVOff;
+extern sint32 SW_TriTEdges;
+extern sint32 SW_TriTY[2];
+extern sint32 SW_TriTEndY[2];
+extern float SW_TriTSlopeA;
+extern float SW_TriTXA;
+extern sint32 SW_TriTStepA;
+extern float SW_TriTSlopeB;
+extern float SW_TriTXB;
+extern sint32 SW_TriTStepB;
+extern float SW_TriTFogDX01;
+extern float SW_TriTFogDY02;
+extern float SW_TriTFogDX02;
+extern float SW_TriTFogDY01;
+extern float SW_TriTFogTemp;
+extern SW_VERTEX *SW_TriTFogEdgeA;
+extern SW_VERTEX *SW_TriTFogEdgeB;
+extern sint32 SW_TriTFogG0;
+extern sint32 SW_TriTFogB0;
+extern sint32 SW_TriTFogR0;
+extern sint32 SW_TriTFogG1;
+extern sint32 SW_TriTFogB1;
+extern sint32 SW_TriTFogR1;
+extern sint32 SW_TriTFogG2;
+extern sint32 SW_TriTFogB2;
+extern sint32 SW_TriTFogR2;
+extern float SW_TriTFogD01;
+extern float SW_TriTFogD02;
+extern float SW_TriTFogRDX;
+extern float SW_TriTFogRDY;
+extern double SW_TriTFogROff;
+extern float SW_TriTFogGDX;
+extern float SW_TriTFogGDY;
+extern double SW_TriTFogGOff;
+extern float SW_TriTFogBDX;
+extern float SW_TriTFogBDY;
+extern double SW_TriTFogBOff;
+extern float SW_TriTFogUDX;
+extern float SW_TriTFogUDY;
+extern double SW_TriTFogUOff;
+extern float SW_TriTFogVDX;
+extern float SW_TriTFogVDY;
+extern double SW_TriTFogVOff;
+extern sint32 SW_TriTFogEdges;
+extern sint32 SW_TriTFogY[2];
+extern sint32 SW_TriTFogEndY[2];
+extern float SW_TriTFogSlopeA;
+extern float SW_TriTFogXA;
+extern sint32 SW_TriTFogStepA;
+extern float SW_TriTFogSlopeB;
+extern float SW_TriTFogXB;
+extern sint32 SW_TriTFogStepB;
+extern sint32 SW_TriTFogF0;
+extern sint32 SW_TriTFogF1;
+extern sint32 SW_TriTFogF2;
+extern float SW_TriTFogFDX;
+extern float SW_TriTFogFDY;
+extern double SW_TriTFogFOff;
 
 #pragma data_seg(".text")
 char SW_Kernel32Name[] = "kernel32.dll";
@@ -492,7 +667,7 @@ sint32 SW_SelectRasterizer(void *v0, void *v1, void *v2)
         if (SW_UseMMX) {
             if (f & 0x200) {
                 if (f & 0x100) {
-                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTLit : SW_TriSetupGT;
+                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTPFog : SW_TriSetupGTP;
                     if ((f & 0x80) && (f & 0x2)) {
                         SW_SpanFunc = (f & 0x1) ? SW_SpanGTPAddBilinear : SW_SpanGTPAdd;
                         SW_SpanFogFunc = SW_SpanGFogAdd;
@@ -507,7 +682,7 @@ sint32 SW_SelectRasterizer(void *v0, void *v1, void *v2)
                         SW_SpanFogFunc = SW_SpanGFogAdd;
                     }
                 } else {
-                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGALit : SW_TriSetupG;
+                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTFog : SW_TriSetupGT;
                     if ((f & 0x80) && (f & 0x2)) {
                         SW_SpanFunc = (f & 0x1) ? SW_SpanGTAddBilinear : SW_SpanGTAdd;
                         SW_SpanFogFunc = SW_SpanGFog;
@@ -523,7 +698,7 @@ sint32 SW_SelectRasterizer(void *v0, void *v1, void *v2)
                     }
                 }
             } else {
-                SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTA : SW_TriSetupGA;
+                SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGFog : SW_TriSetupG;
                 if (f & 0x2) {
                     if (f & 0x80) {
                         SW_SpanFunc = SW_SpanGAdd;
@@ -540,7 +715,7 @@ sint32 SW_SelectRasterizer(void *v0, void *v1, void *v2)
         } else {
             if (f & 0x200) {
                 if (f & 0x100) {
-                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTLit : SW_TriSetupGT;
+                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTPFog : SW_TriSetupGTP;
                     if ((f & 0x80) && (f & 0x2)) {
                         SW_SpanFunc = SW_SpanGTPAddInt;
                         SW_SpanFogFunc = nullsub_1;
@@ -555,7 +730,7 @@ sint32 SW_SelectRasterizer(void *v0, void *v1, void *v2)
                         SW_SpanFogFunc = nullsub_1;
                     }
                 } else {
-                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGALit : SW_TriSetupG;
+                    SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTFog : SW_TriSetupGT;
                     if ((f & 0x80) && (f & 0x2)) {
                         SW_SpanFunc = SW_SpanGTAddInt;
                         SW_SpanFogFunc = nullsub_1;
@@ -571,7 +746,7 @@ sint32 SW_SelectRasterizer(void *v0, void *v1, void *v2)
                     }
                 }
             } else {
-                SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGTA : SW_TriSetupGA;
+                SW_TriSetupFunc = (f & 0x400) ? SW_TriSetupGFog : SW_TriSetupG;
                 if (f & 0x2) {
                     if (f & 0x80) {
                         SW_SpanFunc = SW_SpanGAddInt;
@@ -844,6 +1019,28 @@ void SW_DrawLineG(SW_VERTEX *v0, SW_VERTEX *v1)
 HRESULT j_SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWORD count, DWORD flags)
 {
     return SW_DrawPrimitives(type, fvf, verts, count, flags);
+}
+
+sint32 SW_RoundL(double d)
+{
+    double t;
+
+    if (d >= -2147483648.5 && d < 2147483647.5) {
+        t = d + 6755399441055744.0;
+        return *(sint32 *)&t;
+    }
+    return 0x80000000;
+}
+
+sint16 SW_RoundW(double d)
+{
+    double t;
+
+    if (d >= -32768.5 && d < 32767.5) {
+        t = d + 6755399441055744.0;
+        return *(sint16 *)&t;
+    }
+    return -32768;
 }
 
 void SW_SpanG(void)
