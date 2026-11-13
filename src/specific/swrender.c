@@ -2,6 +2,7 @@
 #include <string.h>
 #include "polyinsert.h"
 #include "swrender.h"
+#include "function_stubs.h"
 
 typedef struct sw_device {
     IDirect3DDevice3Vtbl *lpVtbl;
@@ -24,6 +25,7 @@ extern sint32 SW_SurfacePitch;
 extern sint32 SW_FrameState;
 extern sint32 SW_ColorOpScale;
 extern DDSURFACEDESC2 SW_SurfDesc;
+extern sint32 SW_NumLocked;
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -115,6 +117,20 @@ HRESULT __stdcall SW_D3D_SetTextureStageState(SW_DEVICE *dev, DWORD stage, D3DTE
         return 0;
     }
     return 0;
+}
+
+HRESULT __stdcall SW_D3D_BeginScene(SW_DEVICE *dev)
+{
+    if (dev->in_scene) {
+        other_log("D3DFAKE: Allready in scene!!\n");
+        IDirect3DDevice3_EndScene((LPDIRECT3DDEVICE3)dev);
+    }
+    dev->in_scene = 1;
+    if (SW_NumLocked)
+        other_log("D3DFAKE: %i still locked!\n", SW_NumLocked);
+    SW_NumLocked = 0;
+    SW_SetSurface(dev->buffer, dev->width << 2);
+    return SW_BeginFrame();
 }
 
 HRESULT __stdcall SW_D3D_SetRenderTarget(SW_DEVICE *dev, void *target, DWORD flags)
