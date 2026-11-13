@@ -2469,6 +2469,79 @@ done:
     return 0;
 }
 
+#ifndef FEAT_C_ASM
+void SW_SpanG(void)
+{
+    __asm {
+        mov esi, dword ptr [SW_SpanBuffer]
+        cmp esi, dword ptr [SW_SpanEnd]
+        je Done
+        push ebp
+        mov edi, dword ptr [SW_Surface]
+        mov eax, dword ptr [SW_SpanY]
+        imul eax, dword ptr [SW_SurfacePitch]
+        add edi, eax
+    L0:
+        mov ebx, dword ptr [esi]
+        mov eax, dword ptr [esi + 4]
+        shl ebx, 2
+        push edi
+        add edi, ebx
+        or eax, eax
+        jle L4
+        movq mm0, qword ptr [esi + 0x18]
+        movq mm1, qword ptr [SW_SpanGrad]
+        test edi, 7
+        je L1
+        movq mm7, mm0
+        add edi, 4
+        psrlw mm7, 8
+        paddw mm0, mm1
+        packuswb mm7, mm7
+        dec eax
+        movd dword ptr [edi - 4], mm7
+        je L4
+    L1:
+        cmp eax, 2
+        jb L3
+        push eax
+        movq mm2, mm0
+        paddw mm2, mm1
+        shr eax, 1
+        psllw mm1, 1
+    L2:
+        add edi, 8
+        movq mm6, mm0
+        psrlw mm6, 8
+        movq mm7, mm2
+        psrlw mm7, 8
+        packuswb mm6, mm7
+        paddw mm2, mm1
+        paddw mm0, mm1
+        movq qword ptr [edi - 8], mm6
+        dec eax
+        jne L2
+        pop eax
+        and eax, 1
+        je L4
+    L3:
+        movq mm2, qword ptr [SW_SpanGrad]
+        movq mm1, mm0
+        psrlw mm1, 8
+        packuswb mm1, mm1
+        movd dword ptr [edi], mm1
+    L4:
+        pop edi
+        add edi, dword ptr [SW_SurfacePitch]
+        add esi, 0x20
+        cmp dword ptr [SW_SpanEnd], esi
+        jne L0
+        emms
+        pop ebp
+    Done:
+    }
+}
+#else
 void SW_SpanG(void)
 {
     SW_SPAN *s;
@@ -2504,6 +2577,7 @@ void SW_SpanG(void)
         } while (s != SW_SpanEnd);
     }
 }
+#endif
 
 void SW_SpanGFogAdd(void)
 {
