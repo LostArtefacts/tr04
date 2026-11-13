@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="325.48" height="12" x="0" y="0" class="named"><title>1217 · 78.62%</title></rect>
-<rect width="53.76" height="12" x="325.48" y="0" class="nonmatching"><title>201 · 12.98%</title></rect>
-<rect width="34.77" height="12" x="379.23" y="0" class="todo"><title>130 · 8.40%</title></rect>
+<rect width="54.02" height="12" x="325.48" y="0" class="nonmatching"><title>202 · 13.05%</title></rect>
+<rect width="34.50" height="12" x="379.50" y="0" class="todo"><title>129 · 8.33%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1217</tspan> · <tspan class="nonmatching">201</tspan> · <tspan class="todo">130</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1217</tspan> · <tspan class="nonmatching">202</tspan> · <tspan class="todo">129</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="218.20" height="12" x="0" y="0" class="named"><title>329 KB · 52.71%</title></rect>
-<rect width="148.03" height="12" x="218.20" y="0" class="nonmatching"><title>223 KB · 35.76%</title></rect>
-<rect width="47.77" height="12" x="366.23" y="0" class="todo"><title>72 KB · 11.54%</title></rect>
+<rect width="148.36" height="12" x="218.20" y="0" class="nonmatching"><title>224 KB · 35.83%</title></rect>
+<rect width="47.44" height="12" x="366.56" y="0" class="todo"><title>72 KB · 11.46%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">52.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">223 KB</tspan> · <tspan class="todo">72 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">329 KB</tspan> · <tspan class="nonmatching">224 KB</tspan> · <tspan class="todo">72 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1303,7 +1303,7 @@
 <rect width="12" height="12" x="540" y="360" class="nonmatching"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="360" class="nonmatching"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="360" class="todo"><title>0x00478b50 SetupLight (787 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="360" class="todo"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="360" class="nonmatching"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="360" class="named"><title>0x00479080 ClearObjectLighting (108 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="360" class="named"><title>0x004790f0 InitDynamicLighting (701 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="360" class="named"><title>0x004793b0 InitItemDynamicLighting (939 bytes)</title></rect>
@@ -1981,7 +1981,7 @@
 <rect width="13.89" height="13.81" x="381.69" y="216.03" class="todo"><title>0x0049a0e0 Func49a0e0 (500 bytes)</title></rect>
 <rect width="13.89" height="13.81" x="381.69" y="232.84" class="todo"><title>0x0049b370 Func49b370 (500 bytes)</title></rect>
 <rect width="13.89" height="13.78" x="381.69" y="249.64" class="named"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
-<rect width="13.89" height="13.78" x="381.69" y="266.42" class="todo"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
+<rect width="13.89" height="13.78" x="381.69" y="266.42" class="nonmatching"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
 <rect width="13.89" height="13.67" x="381.69" y="283.20" class="todo"><title>0x00499ef0 Func499ef0 (495 bytes)</title></rect>
 <rect width="13.89" height="13.64" x="381.69" y="299.87" class="named"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
 <rect width="13.89" height="13.64" x="381.69" y="316.51" class="nonmatching"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>

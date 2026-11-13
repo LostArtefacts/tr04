@@ -317,6 +317,55 @@ void CreateLightList(ITEM_INFO *item)
     FadeLightList(prev_lights, item->il.nPrevLights);
 }
 
+void InitObjectLighting(ITEM_INFO *item)
+{
+    PCLIGHT *light;
+    sint32 node_ambient, num_active, r, g, b, i, m;
+
+    num_active = 0;
+    node_ambient = item->il.ambient;
+    SetupLight_thing = item->object_number >= GAME_PIECE1;
+    light = (PCLIGHT *)item->il.pCurrentLights;
+    for (i = 0; i < item->il.nCurrentLights; i++, light++) {
+        if (light->Active) {
+            SetupLight(&D3DLights[num_active], light, &node_ambient);
+            num_active++;
+        }
+    }
+    light = (PCLIGHT *)item->il.pPrevLights;
+    for (i = 0; i < item->il.nPrevLights; i++, light++) {
+        if (light->Active) {
+            SetupLight(&D3DLights[num_active], light, &node_ambient);
+            num_active++;
+        }
+    }
+    for (i = num_active; i < MaxRoomLights; i++) {
+        if (D3DLights[i].D3DLightx.dwFlags & D3DLIGHT_ACTIVE) {
+            D3DLights[i].D3DLightx.dwFlags = D3DLIGHT_NO_SPECULAR;
+            D3DLights[i].D3DLightx.dltType = D3DLIGHT_POINT;
+            IDirect3DLight_SetLight(D3DLights[i].D3DLight, (LPD3DLIGHT)&D3DLights[i].D3DLightx);
+        }
+    }
+    InitItemDynamicLighting(item);
+    if (item == lara_item && bLaraInWater) {
+        if (bLaraUnderWater >= 0)
+            node_ambient = LaraNodeAmbient[1];
+        else {
+            node_ambient = LaraNodeAmbient[0];
+            item->il.fcnt = 0;
+            item->il.ambient = node_ambient;
+        }
+    }
+    if (item->object_number == BURNING_FLOOR && item->required_anim_state) {
+        m = (item->required_anim_state + 1) * 2;
+        r = (CLRR(node_ambient) * m) >> 8;
+        g = (CLRG(node_ambient) * m) >> 8;
+        b = (CLRB(node_ambient) * m) >> 8;
+        IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_AMBIENT, RGBA(r, g, b, 0xFF));
+    } else
+        IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_AMBIENT, node_ambient);
+}
+
 void ClearObjectLighting(void)
 {
     sint32 i;
