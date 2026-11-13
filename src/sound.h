@@ -13,6 +13,7 @@ enum sfx_options {
 
 #define SFX_DEFAULT 0
 #define SFX_LARA_FALL 30
+#define SFX_LARA_INJURY 31
 #define SFX_LARA_BREATH 36
 #define SFX_LANDANDWATER 0
 

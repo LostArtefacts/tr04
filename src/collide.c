@@ -12,6 +12,7 @@
 #include "sphere.h"
 #include "effects.h"
 #include "objnums.h"
+#include "sound.h"
 
 void Func488650(void);
 
@@ -356,6 +357,99 @@ void TrapCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
             ObjectCollision(item_number, l, coll);
     } else if (item->status != ITEM_INVISIBLE)
         ObjectCollision(item_number, l, coll);
+}
+
+sint32 ItemPushLara(ITEM_INFO *item, ITEM_INFO *l, COLL_INFO *coll, sint32 spaz, sint32 big_push)
+{
+    sint16 *bounds;
+    sint32 dx, dz, s, c, x, z;
+    sint32 xmin, xmax, zmin, zmax, left, top, right, bottom;
+    sint16 facing;
+
+    dx = l->pos.x_pos - item->pos.x_pos;
+    dz = l->pos.z_pos - item->pos.z_pos;
+    c = phd_cos(item->pos.y_rot);
+    s = phd_sin(item->pos.y_rot);
+    x = (dx * c - dz * s) >> W2V_SHIFT;
+    z = (dx * s + dz * c) >> W2V_SHIFT;
+
+    if (big_push & 2)
+        bounds = GlobalCollisionBounds;
+    else
+        bounds = GetBestFrame(item);
+
+    xmin = bounds[0];
+    xmax = bounds[1];
+    zmin = bounds[4];
+    zmax = bounds[5];
+
+    if (big_push & 1) {
+        xmin -= coll->radius;
+        xmax += coll->radius;
+        zmin -= coll->radius;
+        zmax += coll->radius;
+    }
+
+    if (ABS(dx) > 4608 || ABS(dz) > 4608 || x <= xmin || x >= xmax || z <= zmin || z >= zmax)
+        return 0;
+
+    left = x - xmin;
+    top = zmax - z;
+    right = xmax - x;
+    bottom = z - zmin;
+
+    if (left <= right && left <= top && left <= bottom)
+        x -= left;
+    else if (right <= left && right <= top && right <= bottom)
+        x += right;
+    else if (top <= left && top <= right && top <= bottom)
+        z += top;
+    else
+        z -= bottom;
+
+    l->pos.x_pos = item->pos.x_pos + ((c * x + s * z) >> W2V_SHIFT);
+    l->pos.z_pos = item->pos.z_pos + ((c * z - s * x) >> W2V_SHIFT);
+
+    if (spaz && bounds[3] - bounds[2] > 256 && item->object_number != VON_CROY && item->object_number != GUIDE && item->object_number != ENEMY_JEEP) {
+        x = (bounds[0] + bounds[1]) / 2;
+        z = (bounds[4] + bounds[5]) / 2;
+        dx -= (c * x + s * z) >> W2V_SHIFT;
+        dz -= (c * z - s * x) >> W2V_SHIFT;
+        lara.hit_direction = (uint16)(l->pos.y_rot - phd_atan(dz, dx) - 24576) >> W2V_SHIFT;
+
+        if (!lara.hit_frame)
+            SoundEffect(SFX_LARA_INJURY, &l->pos, SFX_DEFAULT);
+
+        lara.hit_frame++;
+
+        if (lara.hit_frame > 34)
+            lara.hit_frame = 34;
+    }
+
+    coll->bad_pos = -NO_HEIGHT;
+    coll->bad_neg = -384;
+    coll->bad_ceiling = 0;
+    facing = coll->facing;
+    coll->facing = (sint16)phd_atan(l->pos.z_pos - coll->old.z, l->pos.x_pos - coll->old.x);
+    GetCollisionInfo(coll, l->pos.x_pos, l->pos.y_pos, l->pos.z_pos, l->room_number, 762);
+    coll->facing = facing;
+
+    if (coll->coll_type == COLL_NONE) {
+        coll->old.x = l->pos.x_pos;
+        coll->old.y = l->pos.y_pos;
+        coll->old.z = l->pos.z_pos;
+        UpdateLaraRoom(l, -10);
+    } else {
+        l->pos.x_pos = coll->old.x;
+        l->pos.z_pos = coll->old.z;
+    }
+
+    if (lara.IsMoving && lara.MoveCount > 15) {
+        lara.IsMoving = 0;
+        lara.gun_status = LG_NO_ARMS;
+    }
+
+    return 1;
 }
 
 sint32 TestBoundsCollide(ITEM_INFO *item, ITEM_INFO *l, sint32 rad)
