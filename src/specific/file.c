@@ -47,7 +47,7 @@ uint8 FindCDDrive(void)
     while (drives) {
         if (drives & 1) {
             root[0] = cd_drive;
-            if (GetDriveType(root) == DRIVE_CDROM) {
+            if (GetDriveType(root) == DRIVE_FIXED) {
                 path[0] = cd_drive;
                 file = CreateFile(path, GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
                 if (file != INVALID_HANDLE_VALUE) {
