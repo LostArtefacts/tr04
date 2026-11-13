@@ -48,17 +48,17 @@
 <g transform="translate(130 1.50)">
 <rect width="266.44" height="12" x="0" y="0" class="named"><title>1206 · 77.91%</title></rect>
 <rect width="0.66" height="12" x="266.44" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="38.88" height="12" x="267.10" y="0" class="nonmatching"><title>176 · 11.37%</title></rect>
-<rect width="36.01" height="12" x="305.99" y="0" class="todo"><title>163 · 10.53%</title></rect>
+<rect width="39.10" height="12" x="267.10" y="0" class="nonmatching"><title>177 · 11.43%</title></rect>
+<rect width="35.79" height="12" x="306.21" y="0" class="todo"><title>162 · 10.47%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="7.50">78.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">176</tspan> · <tspan class="todo">163</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="7"><tspan class="named">1206</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">177</tspan> · <tspan class="todo">162</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="178.76" height="12" x="0" y="0" class="named"><title>327 KB · 52.27%</title></rect>
 <rect width="0.13" height="12" x="178.76" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="118.27" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.58%</title></rect>
-<rect width="44.84" height="12" x="297.16" y="0" class="todo"><title>82 KB · 13.11%</title></rect>
+<rect width="118.36" height="12" x="178.89" y="0" class="nonmatching"><title>216 KB · 34.61%</title></rect>
+<rect width="44.75" height="12" x="297.25" y="0" class="todo"><title>82 KB · 13.09%</title></rect>
 </g>
 <text text-anchor="end" x="522" y="24.50">52.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="537" y="24"><tspan class="named">327 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">216 KB</tspan> · <tspan class="todo">82 KB</tspan></text>
@@ -1302,7 +1302,7 @@
 <rect width="12" height="12" x="495" y="360" class="named"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="360" class="named"><title>0x00478520 S_CalculateStaticMeshLight (76 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="360" class="todo"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="360" class="todo"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="360" class="nonmatching"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="360" class="nonmatching"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="360" class="todo"><title>0x00478b50 SetupLight (787 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="360" class="todo"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
@@ -2437,7 +2437,7 @@
 <rect width="8.06" height="7.95" x="519.04" y="377.98" class="nonmatching"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
 <rect width="8.06" height="7.95" x="519.04" y="388.93" class="todo"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
 <rect width="8.06" height="7.95" x="519.04" y="399.88" class="named"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
-<rect width="8.06" height="7.90" x="519.04" y="410.83" class="todo"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
+<rect width="8.06" height="7.90" x="519.04" y="410.83" class="nonmatching"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
 <rect width="8.06" height="7.85" x="519.04" y="421.73" class="named"><title>0x00423880 lara_as_monkeyswing (165 bytes)</title></rect>
 <rect width="8.06" height="7.81" x="519.04" y="432.58" class="named"><title>0x00401730 ExplodeAhmet (164 bytes)</title></rect>
 <rect width="8.06" height="7.81" x="519.04" y="443.39" class="named"><title>0x004371f0 DoLotsOfBlood (164 bytes)</title></rect>

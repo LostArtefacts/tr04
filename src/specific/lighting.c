@@ -123,6 +123,28 @@ void S_CalculateStaticMeshLight(sint32 x, sint32 y, sint32 z, sint32 shade, ROOM
     current_item = &StaticMeshLightItem;
 }
 
+void FadeLightList(PCLIGHT *lights, sint32 nLights)
+{
+    sint32 i;
+
+    for (i = nLights; i > 0; i--, lights++) {
+        if (lights->Active && lights->fcnt) {
+            if (lights->Type != LIGHT_SHADOW) {
+                lights->r = lights->rs + lights->r;
+                lights->g = lights->gs + lights->g;
+                lights->b = lights->bs + lights->b;
+            } else
+                lights->shadow += lights->iny;
+            lights->fcnt--;
+            if (lights->Type != LIGHT_SHADOW) {
+                if (lights->r <= 0 && lights->g <= 0 && lights->b <= 0)
+                    lights->Active = 0;
+            } else if (lights->shadow <= 0)
+                lights->Active = 0;
+        }
+    }
+}
+
 void CreateLightList(ITEM_INFO *item)
 {
     ROOM_INFO *r;
