@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="336.71" height="12" x="0" y="0" class="named"><title>1259 · 81.33%</title></rect>
-<rect width="61.24" height="12" x="336.71" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="16.05" height="12" x="397.95" y="0" class="todo"><title>60 · 3.88%</title></rect>
+<rect width="336.98" height="12" x="0" y="0" class="named"><title>1260 · 81.40%</title></rect>
+<rect width="61.24" height="12" x="336.98" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="15.78" height="12" x="398.22" y="0" class="todo"><title>59 · 3.81%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1259</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">60</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1260</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">59</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="224.25" height="12" x="0" y="0" class="named"><title>339 KB · 54.17%</title></rect>
-<rect width="166.38" height="12" x="224.25" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="23.37" height="12" x="390.63" y="0" class="todo"><title>35 KB · 5.65%</title></rect>
+<rect width="224.50" height="12" x="0" y="0" class="named"><title>339 KB · 54.23%</title></rect>
+<rect width="166.38" height="12" x="224.50" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="23.12" height="12" x="390.88" y="0" class="todo"><title>35 KB · 5.58%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">339 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">35 KB</tspan></text>
@@ -1603,7 +1603,7 @@
 <rect width="12" height="12" x="540" y="450" class="todo"><title>0x0049bb90 Func49bb90 (542 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="450" class="todo"><title>0x0049bdb0 Func49bdb0 (513 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="450" class="named"><title>0x0049bfc0 SW_CopyBuffer (62 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="450" class="todo"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="450" class="named"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="450" class="named"><title>0x0049c180 SW_Convert32To565 (250 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="450" class="todo"><title>0x0049c280 SW_Convert32To24 (203 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="450" class="named"><title>0x0049c350 ShowBinkFrame (139 bytes)</title></rect>
@@ -2084,7 +2084,7 @@
 <rect width="12.47" height="11.74" x="460.82" y="129.48" class="named"><title>0x0045fb10 TestCollision (382 bytes)</title></rect>
 <rect width="12.44" height="11.74" x="476.29" y="129.48" class="named"><title>0x0041f390 TriggerTorchFlame (381 bytes)</title></rect>
 <rect width="12.44" height="11.74" x="491.73" y="129.48" class="nonmatching"><title>0x004671b0 GetOnJeep (381 bytes)</title></rect>
-<rect width="12.44" height="11.74" x="507.17" y="129.48" class="todo"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
+<rect width="12.44" height="11.74" x="507.17" y="129.48" class="named"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
 <rect width="12.41" height="11.74" x="522.61" y="129.48" class="nonmatching"><title>0x00415c30 ControlTwoBlockPlatform (380 bytes)</title></rect>
 <rect width="12.41" height="11.74" x="538.02" y="129.48" class="nonmatching"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
 <rect width="12.41" height="11.74" x="553.43" y="129.48" class="todo"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
