@@ -587,6 +587,12 @@ void nullsub_11(void)
 {
 }
 
+#ifdef TR4_EXE
+#pragma data_seg(".CRT$XCU3")
+void (*j_nullsub_11_init)(void) = j_nullsub_11;
+#pragma data_seg()
+#endif
+
 #ifndef TR4_EXE
 void SW_WaitLevelLoad(void)
 {
@@ -603,6 +609,12 @@ void nullsub_12(void)
 {
 }
 
+#ifdef TR4_EXE
+#pragma data_seg(".CRT$XCU3")
+void (*j_nullsub_12_init)(void) = j_nullsub_12;
+#pragma data_seg()
+#endif
+
 #ifndef TR4_EXE
 void SW_WaitUntilDXInScene(void)
 {
@@ -618,6 +630,12 @@ void j_nullsub_13(void)
 void nullsub_13(void)
 {
 }
+
+#ifdef TR4_EXE
+#pragma data_seg(".CRT$XCU3")
+void (*j_nullsub_13_init)(void) = j_nullsub_13;
+#pragma data_seg()
+#endif
 
 #ifndef TR4_EXE
 void SW_WaitWhileDXInScene(void)

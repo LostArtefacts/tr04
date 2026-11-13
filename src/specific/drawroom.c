@@ -17,9 +17,20 @@
 #include "../text.h"
 #include "lighting.h"
 
+void j_nullsub_15(void)
+{
+    nullsub_15();
+}
+
 void nullsub_15(void)
 {
 }
+
+#ifdef TR4_EXE
+#pragma data_seg(".CRT$XCU0")
+void (*j_nullsub_15_init)(void) = j_nullsub_15;
+#pragma data_seg()
+#endif
 
 void ProcessMeshData(sint32 num_meshes)
 {

@@ -279,6 +279,12 @@ void nullsub_10(void)
 {
 }
 
+#ifdef TR4_EXE
+#pragma data_seg(".CRT$XCU2")
+void (*j_nullsub_10_init)(void) = j_nullsub_10;
+#pragma data_seg()
+#endif
+
 void ClearFXFogBulbs(void)
 {
     sint32 i;

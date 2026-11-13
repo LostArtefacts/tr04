@@ -1152,6 +1152,7 @@ address,size,name,symbol
 0x004706b0,228,InitDDDevice,_InitDDDevice
 0x004707a0,136,MapASCIIToANSI,_MapASCIIToANSI
 0x00470830,2030,DXSetupDlgProc,_DXSetupDlgProc@16
+0x00471020,5,j_nullsub_15,_j_nullsub_15
 0x00471030,1,nullsub_15,_nullsub_15
 0x00471040,989,ProcessMeshData,_ProcessMeshData
 0x00471420,2518,ProcessRoomData,_ProcessRoomData

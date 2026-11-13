@@ -58,6 +58,12 @@ void nullsub_9(void)
 {
 }
 
+#ifdef TR4_EXE
+#pragma data_seg(".CRT$XCU1")
+void (*j_nullsub_9_init)(void) = j_nullsub_9;
+#pragma data_seg()
+#endif
+
 void StashSkinVertices(sint32 node)
 {
     D3DTLVERTEX *d;

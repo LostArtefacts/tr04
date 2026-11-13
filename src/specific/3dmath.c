@@ -530,3 +530,9 @@ void j_nullsub_14(void)
 void nullsub_14(void)
 {
 }
+
+#ifdef TR4_EXE
+#pragma data_seg(".CRT$XCU4")
+void (*j_nullsub_14_init)(void) = j_nullsub_14;
+#pragma data_seg()
+#endif
