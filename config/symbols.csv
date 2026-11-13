@@ -1476,7 +1476,7 @@ address,size,name,symbol
 0x004945a0,52,SW_D3D_Release,_SW_D3D_Release@4
 0x004945e0,16,SW_D3D_SetCurrentViewport,_SW_D3D_SetCurrentViewport@8
 0x004945f0,18,SW_D3D_GetCurrentViewport,_SW_D3D_GetCurrentViewport@8
-0x00494610,5,SW_D3D_ViewportStub,_SW_D3D_ViewportStub@8
+0x00494610,5,SW_D3D_AddViewport,_SW_D3D_AddViewport@8 _SW_D3D_DeleteViewport@8
 0x00494620,44,SW_D3D_SetRenderState,_SW_D3D_SetRenderState@12
 0x00494650,36,SW_D3D_DrawPrimitive,_SW_D3D_DrawPrimitive@24
 0x00494680,113,SW_D3D_SetTextureStageState,_SW_D3D_SetTextureStageState@16
@@ -2681,15 +2681,19 @@ address,size,name,symbol
 0x007544f4,4,G_dxptr,_G_dxptr
 0x00754500,1024,SW_LockedBits,_SW_LockedBits
 0x00754900,4,SW_NumLocked,_SW_NumLocked
+0x00754908,168,SW_Vtbl,_SW_Vtbl
+0x007549b8,36,SW_Device,_SW_Device
 0x007549dc,1024,SW_LockedTextures,_SW_LockedTextures
 0x00754ddc,1024,SW_LockedSurfaces,_SW_LockedSurfaces
 0x007551e0,124,SW_SurfDesc,_SW_SurfDesc
 0x0075525c,4,SW_TexSurface,_SW_TexSurface
 0x00755260,4,SW_RealD3DDevice,_SW_RealD3DDevice
 0x00755298,4,SW_SurfacePitch,_SW_SurfacePitch
+0x007552a8,65536,SW_MulTable,_SW_MulTable
 0x007d94a4,4,SW_Surface,_SW_Surface
 0x007daaec,4,SW_SpanBufferHandle,_SW_SpanBufferHandle
 0x007e2c6c,4,SW_FrameState,_SW_FrameState
+0x007e2dd0,16384,SW_RecipTable,_SW_RecipTable
 0x007e6dd0,4,SW_SpanBuffer,_SW_SpanBuffer
 0x007e6de4,4,SW_ZLimit,_SW_ZLimit
 0x007e6de8,4,SW_UseMMX,_SW_UseMMX

@@ -7,6 +7,7 @@
 
 HRESULT SW_SetRenderStateFlags(D3DRENDERSTATETYPE type, DWORD state);
 HRESULT j_SW_DrawPrimitives(D3DPRIMITIVETYPE type, DWORD fvf, LPVOID verts, DWORD count, DWORD flags);
+void SW_D3D_SetupSurface(sint32 w, sint32 h, sint32 mmx);
 void SW_FreeBuffer(void);
 void SW_CopyBuffer(void *dst, void *src, sint32 width);
 void SW_Convert32To555(void *dst, void *src, sint32 width);

@@ -25,7 +25,7 @@ void DXInitKeyboard(HWND hwnd, HINSTANCE hinstance);
 sint32 DXSetCooperativeLevel(LPDIRECTDRAW4 dd, HWND hwnd, sint32 flags);
 BOOL CALLBACK DXEnumDirectDraw(GUID *lpGUID, LPSTR lpDriverDescription, LPSTR lpDriverName, LPVOID lpContext);
 void DXClose(void);
-void SW_D3D_CreateDevice(void);
+HRESULT SW_D3D_CreateDevice(void);
 
 extern uint8 keymap[256];
 extern uint8 keymap2[256];

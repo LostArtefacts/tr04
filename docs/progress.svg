@@ -46,19 +46,19 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="337.51" height="12" x="0" y="0" class="named"><title>1262 · 81.52%</title></rect>
-<rect width="61.24" height="12" x="337.51" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
-<rect width="15.24" height="12" x="398.76" y="0" class="todo"><title>57 · 3.68%</title></rect>
+<rect width="337.78" height="12" x="0" y="0" class="named"><title>1263 · 81.59%</title></rect>
+<rect width="61.24" height="12" x="337.78" y="0" class="nonmatching"><title>229 · 14.79%</title></rect>
+<rect width="14.98" height="12" x="399.02" y="0" class="todo"><title>56 · 3.62%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1262</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">57</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1263</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">56</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="224.83" height="12" x="0" y="0" class="named"><title>340 KB · 54.31%</title></rect>
-<rect width="166.38" height="12" x="224.83" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="22.79" height="12" x="391.21" y="0" class="todo"><title>34 KB · 5.51%</title></rect>
+<rect width="225.13" height="12" x="0" y="0" class="named"><title>340 KB · 54.38%</title></rect>
+<rect width="166.38" height="12" x="225.13" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="22.49" height="12" x="391.51" y="0" class="todo"><title>34 KB · 5.43%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="24.50">54.3%</text>
+<text text-anchor="end" x="594" y="24.50">54.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">340 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">34 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1537,7 +1537,7 @@
 <rect width="12" height="12" x="300" y="435" class="named"><title>0x004945a0 SW_D3D_Release (52 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="435" class="named"><title>0x004945e0 SW_D3D_SetCurrentViewport (16 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="435" class="named"><title>0x004945f0 SW_D3D_GetCurrentViewport (18 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="435" class="named"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="435" class="named"><title>0x00494610 SW_D3D_AddViewport (5 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="435" class="named"><title>0x00494620 SW_D3D_SetRenderState (44 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="435" class="named"><title>0x00494650 SW_D3D_DrawPrimitive (36 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="435" class="named"><title>0x00494680 SW_D3D_SetTextureStageState (113 bytes)</title></rect>
@@ -1550,7 +1550,7 @@
 <rect width="12" height="12" x="495" y="435" class="named"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="435" class="named"><title>0x00494b10 SW_D3D_SetLightState (24 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="435" class="named"><title>0x00494b30 SW_D3D_SetTransform (24 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="435" class="todo"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="435" class="named"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="435" class="named"><title>0x00494d20 SW_ClearBuffer (55 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="435" class="todo"><title>0x00494d60 SW_D3D_SetupSurface (196 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="435" class="named"><title>0x00494e30 SW_FreeBuffer (23 bytes)</title></rect>
@@ -2013,7 +2013,7 @@
 <rect width="13.50" height="13.09" x="684.13" y="97.34" class="nonmatching"><title>0x0043b420 TriggerFlashSmoke (461 bytes)</title></rect>
 <rect width="13.47" height="13.09" x="700.63" y="97.34" class="named"><title>0x004668e0 CanGetOff_bike (460 bytes)</title></rect>
 <rect width="13.45" height="13.09" x="717.11" y="97.34" class="named"><title>0x00435c60 TriggerWaterfallMist (459 bytes)</title></rect>
-<rect width="13.45" height="13.09" x="733.55" y="97.34" class="todo"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
+<rect width="13.45" height="13.09" x="733.55" y="97.34" class="named"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
 <rect width="13.46" height="13.05" x="398.67" y="113.43" class="named"><title>0x00477430 S_SaveGame (458 bytes)</title></rect>
 <rect width="13.28" height="13.05" x="415.12" y="113.43" class="nonmatching"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
 <rect width="13.22" height="13.05" x="431.40" y="113.43" class="named"><title>0x00442380 CreatureKill (450 bytes)</title></rect>
@@ -3157,7 +3157,7 @@
 <rect width="1.54" height="1.23" x="740.91" y="451.22" class="named"><title>0x0048f990 j_nullsub_12 (5 bytes)</title></rect>
 <rect width="1.54" height="1.23" x="745.46" y="451.22" class="named"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
 <rect width="1.03" height="1.77" x="736.37" y="455.45" class="named"><title>0x00490b10 j_nullsub_14 (5 bytes)</title></rect>
-<rect width="1.03" height="1.77" x="736.37" y="460.23" class="named"><title>0x00494610 SW_D3D_ViewportStub (5 bytes)</title></rect>
+<rect width="1.03" height="1.77" x="736.37" y="460.23" class="named"><title>0x00494610 SW_D3D_AddViewport (5 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.39" y="455.45" class="named"><title>0x004357b0 nullsub_1 (1 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.39" y="458.64" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="1.12" height="1" x="740.39" y="461" class="named"><title>0x00481890 nullsub_10 (1 bytes)</title></rect>

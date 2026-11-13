@@ -19,7 +19,11 @@ typedef struct sw_device {
 } SW_DEVICE;
 
 extern float SW_ZLimit;
+
+HRESULT __stdcall SW_D3D_EndScene(SW_DEVICE *dev);
 extern LPDIRECT3DDEVICE3 SW_RealD3DDevice;
+extern IDirect3DDevice3Vtbl SW_Vtbl;
+extern SW_DEVICE SW_Device;
 extern HGLOBAL SW_SpanBufferHandle;
 extern void *SW_SpanBuffer;
 extern void *SW_Surface;
@@ -34,6 +38,8 @@ extern LPDIRECTDRAWSURFACE4 SW_LockedSurfaces[256];
 extern LPDIRECT3DTEXTURE2 SW_LockedTextures[256];
 extern void *SW_LockedBits[256];
 extern LPDIRECTDRAWSURFACE4 SW_TexSurface;
+extern sint32 SW_RecipTable[4096];
+extern uint8 SW_MulTable[65536];
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -83,7 +89,12 @@ HRESULT __stdcall SW_D3D_GetCurrentViewport(SW_DEVICE *dev, void **viewport)
     return 0;
 }
 
-HRESULT __stdcall SW_D3D_ViewportStub(void *iface, void *arg)
+HRESULT __stdcall SW_D3D_AddViewport(void *iface, void *arg)
+{
+    return 0;
+}
+
+HRESULT __stdcall SW_D3D_DeleteViewport(void *iface, void *arg)
 {
     return 0;
 }
@@ -212,6 +223,52 @@ HRESULT __stdcall SW_D3D_SetLightState(SW_DEVICE *dev, D3DLIGHTSTATETYPE type, D
 HRESULT __stdcall SW_D3D_SetTransform(SW_DEVICE *dev, D3DTRANSFORMSTATETYPE type, LPD3DMATRIX matrix)
 {
     return IDirect3DDevice3_SetTransform(SW_RealD3DDevice, type, matrix);
+}
+
+HRESULT SW_D3D_CreateDevice(void)
+{
+    SW_RealD3DDevice = App.dx.lpD3DDevice;
+    SW_Vtbl.GetDirect3D = SW_Vtbl.NextViewport = SW_Vtbl.GetStats = SW_Vtbl.QueryInterface = (void *)SW_D3D_QueryInterface;
+    SW_Vtbl.Release = (void *)SW_D3D_Release;
+    SW_Vtbl.AddRef = (void *)SW_D3D_AddRef;
+    SW_Vtbl.GetCaps = (void *)SW_D3D_GetCaps;
+    SW_Vtbl.AddViewport = (void *)SW_D3D_AddViewport;
+    SW_Vtbl.DeleteViewport = (void *)SW_D3D_DeleteViewport;
+    SW_Vtbl.EnumTextureFormats = (void *)SW_D3D_EnumTextureFormats;
+    SW_Vtbl.BeginScene = (void *)SW_D3D_BeginScene;
+    SW_Vtbl.EndScene = (void *)SW_D3D_EndScene;
+    SW_Vtbl.SetCurrentViewport = (void *)SW_D3D_SetCurrentViewport;
+    SW_Vtbl.GetCurrentViewport = (void *)SW_D3D_GetCurrentViewport;
+    SW_Vtbl.SetRenderTarget = (void *)SW_D3D_SetRenderTarget;
+    SW_Vtbl.GetRenderTarget = (void *)SW_D3D_GetRenderTarget;
+    SW_Vtbl.SetRenderState = (void *)SW_D3D_SetRenderState;
+    SW_Vtbl.SetTexture = (void *)SW_D3D_SetTexture;
+    SW_Vtbl.SetTextureStageState = (void *)SW_D3D_SetTextureStageState;
+    SW_Vtbl.DrawPrimitive = (void *)SW_D3D_DrawPrimitive;
+    SW_Vtbl.SetLightState = (void *)SW_D3D_SetLightState;
+    SW_Vtbl.SetTransform = (void *)SW_D3D_SetTransform;
+    SW_Device.refcount = 1;
+    SW_Device.lpVtbl = &SW_Vtbl;
+    if (App.dx.Flags & 1)
+        SW_Device.target = App.dx.lpPrimaryBuffer;
+    else
+        SW_Device.target = App.dx.lpBackBuffer;
+    SW_Device.in_scene = 0;
+    SW_NumLocked = 0;
+    memset(&SW_SurfDesc, 0, sizeof(DDSURFACEDESC2));
+    App.dx.lpD3DDevice = (LPDIRECT3DDEVICE3)&SW_Device;
+    SW_SurfDesc.dwSize = sizeof(DDSURFACEDESC2);
+    IDirectDrawSurface4_GetSurfaceDesc(App.dx.lpBackBuffer, &SW_SurfDesc);
+    SW_Device.width = SW_SurfDesc.dwWidth;
+    SW_Device.height = SW_SurfDesc.dwHeight;
+    SW_Device.hmem = GlobalAlloc(0, SW_Device.width * SW_Device.height * 4 + 32);
+    SW_Device.buffer = (void *)(((sint32)SW_Device.hmem + 32) & ~0x1F);
+    if (!App.mmx)
+        SW_D3D_SetupSurface(SW_Device.width, SW_Device.height, 0);
+    else
+        SW_D3D_SetupSurface(SW_Device.width, SW_Device.height, 1);
+    SW_SetZLimit(0.6F);
+    return 0;
 }
 
 HRESULT SW_ClearBuffer(SW_DEVICE *dev, DWORD count, D3DRECT *rect, DWORD flags, D3DCOLOR col, D3DVALUE z, DWORD stencil)
