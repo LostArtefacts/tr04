@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="259.60" height="12" x="0" y="0" class="named"><title>1196 · 77.26%</title></rect>
 <rect width="0.65" height="12" x="259.60" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="32.12" height="12" x="260.25" y="0" class="nonmatching"><title>148 · 9.56%</title></rect>
-<rect width="43.63" height="12" x="292.37" y="0" class="todo"><title>201 · 12.98%</title></rect>
+<rect width="32.34" height="12" x="260.25" y="0" class="nonmatching"><title>149 · 9.63%</title></rect>
+<rect width="43.41" height="12" x="292.59" y="0" class="todo"><title>200 · 12.92%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1196</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">148</tspan> · <tspan class="todo">201</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1196</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">149</tspan> · <tspan class="todo">200</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="172.32" height="12" x="0" y="0" class="named"><title>321 KB · 51.29%</title></rect>
 <rect width="0.13" height="12" x="172.32" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="99.53" height="12" x="172.45" y="0" class="nonmatching"><title>185 KB · 29.62%</title></rect>
-<rect width="64.02" height="12" x="271.98" y="0" class="todo"><title>119 KB · 19.05%</title></rect>
+<rect width="100.30" height="12" x="172.45" y="0" class="nonmatching"><title>187 KB · 29.85%</title></rect>
+<rect width="63.25" height="12" x="272.75" y="0" class="todo"><title>118 KB · 18.82%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">51.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">321 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">185 KB</tspan> · <tspan class="todo">119 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">321 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">187 KB</tspan> · <tspan class="todo">118 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1381,7 +1381,7 @@
 <rect width="12" height="12" x="180" y="390" class="named"><title>0x00483a40 AddTriSubdivide (261 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="390" class="named"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="390" class="nonmatching"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="390" class="todo"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="390" class="nonmatching"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="390" class="named"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="390" class="named"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="390" class="named"><title>0x004849a0 AddPrelitMMX (122 bytes)</title></rect>
@@ -1706,7 +1706,7 @@
 <rect width="24.80" height="22.61" x="181.67" y="439.39" class="nonmatching"><title>0x00436340 ControlSmokeEmitter (1462 bytes)</title></rect>
 <rect width="23.23" height="24" x="209.47" y="0" class="todo"><title>0x00407a90 HarpyControl (1453 bytes)</title></rect>
 <rect width="23.23" height="23.93" x="209.47" y="27" class="nonmatching"><title>0x0047ab80 DoSlider (1449 bytes)</title></rect>
-<rect width="23.23" height="23.90" x="209.47" y="53.93" class="todo"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
+<rect width="23.23" height="23.90" x="209.47" y="53.93" class="nonmatching"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
 <rect width="23.23" height="23.85" x="209.47" y="80.84" class="named"><title>0x00464c70 BikeControl (1444 bytes)</title></rect>
 <rect width="23.23" height="23.72" x="209.47" y="107.69" class="nonmatching"><title>0x0040f630 GameStixControl (1436 bytes)</title></rect>
 <rect width="23.23" height="23.57" x="209.47" y="134.41" class="nonmatching"><title>0x00467380 JeepControl (1427 bytes)</title></rect>
