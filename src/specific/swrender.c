@@ -44,6 +44,17 @@ extern uint8 SW_MulTable[65536];
 extern char SW_Kernel32Name[];
 extern char SW_SleepName[];
 
+__declspec(naked) void SW_SleepTick(void)
+{
+    __asm {
+        call SW_GetKernelModule
+        call SW_GetSleepProc
+        push 10
+        call eax
+        ret
+    }
+}
+
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
     return 0x887602C1;

@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="337.88" height="12" x="0" y="0" class="named"><title>1265 · 81.61%</title></rect>
-<rect width="61.17" height="12" x="337.88" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
-<rect width="14.96" height="12" x="399.04" y="0" class="todo"><title>56 · 3.61%</title></rect>
+<rect width="338.14" height="12" x="0" y="0" class="named"><title>1266 · 81.68%</title></rect>
+<rect width="61.17" height="12" x="338.14" y="0" class="nonmatching"><title>229 · 14.77%</title></rect>
+<rect width="14.69" height="12" x="399.31" y="0" class="todo"><title>55 · 3.55%</title></rect>
 </g>
-<text text-anchor="end" x="594" y="7.50">81.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1265</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">56</tspan></text>
+<text text-anchor="end" x="594" y="7.50">81.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1266</tspan> · <tspan class="nonmatching">229</tspan> · <tspan class="todo">55</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="225.14" height="12" x="0" y="0" class="named"><title>340 KB · 54.38%</title></rect>
-<rect width="166.37" height="12" x="225.14" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
-<rect width="22.48" height="12" x="391.52" y="0" class="todo"><title>34 KB · 5.43%</title></rect>
+<rect width="225.15" height="12" x="0" y="0" class="named"><title>340 KB · 54.38%</title></rect>
+<rect width="166.37" height="12" x="225.15" y="0" class="nonmatching"><title>251 KB · 40.19%</title></rect>
+<rect width="22.47" height="12" x="391.53" y="0" class="todo"><title>34 KB · 5.43%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">54.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">340 KB</tspan> · <tspan class="nonmatching">251 KB</tspan> · <tspan class="todo">34 KB</tspan></text>
@@ -1522,7 +1522,7 @@
 <rect width="12" height="12" x="75" y="435" class="named"><title>0x00493130 DXCreate (2214 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="435" class="named"><title>0x004939e0 DXChangeVideoMode (109 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="435" class="named"><title>0x00493a50 DXToggleFullScreen (417 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="435" class="todo"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="435" class="named"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="435" class="nonmatching"><title>0x00493c00 DXClose (621 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="435" class="named"><title>0x00493e70 DXCreateViewport (238 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="435" class="named"><title>0x00493f60 DXShowFrame (201 bytes)</title></rect>
@@ -3103,7 +3103,7 @@
 <rect width="2.57" height="2.38" x="733.43" y="420.77" class="named"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
 <rect width="2.57" height="2.38" x="739.01" y="420.77" class="named"><title>0x0049c700 DBLog_OpenMapping (16 bytes)</title></rect>
 <rect width="2.42" height="2.38" x="744.58" y="420.77" class="named"><title>0x0046b2a0 finish_cutseq (15 bytes)</title></rect>
-<rect width="2.05" height="2.77" x="711.14" y="426.15" class="todo"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
+<rect width="2.05" height="2.77" x="711.14" y="426.15" class="named"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="431.93" class="named"><title>0x00427060 lara_as_null (14 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="437.53" class="todo"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
 <rect width="2.05" height="2.60" x="711.14" y="443.13" class="todo"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
