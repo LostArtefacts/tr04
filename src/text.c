@@ -3,6 +3,10 @@
 
 #include "text.h"
 #include "specific/3dmath.h"
+#include "specific/drawroom.h"
+#include "specific/output.h"
+#include "specific/polyinsert.h"
+#include "specific/specificfx.h"
 
 void CalcColorSplit(D3DCOLOR s, D3DCOLOR *d);
 
@@ -218,3 +222,97 @@ void PrintString(uint16 x, uint16 y, uint8 col, const char *string, uint16 flags
     }
     ScaleFlag = 0;
 }
+
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def);
+ 
+ extern CVECTOR FontShades[10][32];
+ extern CVECTOR ShadeFromTo[10][2];
+
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def);
+ 
+ extern CVECTOR FontShades[10][32];
+ extern CVECTOR ShadeFromTo[10][2];
+
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def);
+ 
+ extern CVECTOR FontShades[10][32];
+ extern CVECTOR ShadeFromTo[10][2];
+
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def);
+ 
+ extern CVECTOR FontShades[10][32];
+ extern CVECTOR ShadeFromTo[10][2];
+
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def);
+ 
+ extern CVECTOR FontShades[10][32];
+ extern CVECTOR ShadeFromTo[10][2];
+
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def);
+ 
+ extern CVECTOR FontShades[10][32];
+ extern CVECTOR ShadeFromTo[10][2];
+
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def);
+ 
+ extern CVECTOR FontShades[10][32];
+ extern CVECTOR ShadeFromTo[10][2];
+
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def)
+{
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    float u1, v1, u2, v2;
+    sint32 x1, y1, x2, y2, x3, y3, x4, y4, z, top, bottom;
+    sint16 sx, sy;
+
+    sy = y + phd_winymin;
+    sx = x + phd_winxmin;
+    z = (sint32)f_mznear;
+    x1 = sx;
+    x2 = x1 + def->w;
+    y1 = sy + def->YOffset;
+    y2 = y1;
+    y3 = def->YOffset + def->h + sy;
+    y4 = def->YOffset + def->h + sy;
+    if (small_font) {
+        y1 = (sint32)((float)y1 * 0.75F);
+        y2 = (sint32)((float)y2 * 0.75F);
+        y4 = (sint32)((float)y4 * 0.75F);
+        y3 = (sint32)((float)y3 * 0.75F);
+    }
+    setXY4(v, x1, y1, x2, y2, x2, y3, x1, y4, z, clipflags);
+    top = *(sint32 *)&FontShades[col][2 * def->TopShade];
+    bottom = *(sint32 *)&FontShades[col][2 * def->BottomShade];
+    v[0].color = top;
+    v[1].color = top;
+    v[2].color = bottom;
+    v[3].color = bottom;
+    top = *(sint32 *)&FontShades[col][2 * def->TopShade + 1];
+    bottom = *(sint32 *)&FontShades[col][2 * def->BottomShade + 1];
+    v[0].specular = top;
+    v[1].specular = top;
+    v[2].specular = bottom;
+    v[3].specular = bottom;
+    u1 = def->u + (1.0F / 512.0F);
+    v1 = def->v + (1.0F / 512.0F);
+    u2 = 512.0F / (float)(phd_winxmax + 1) * def->w * (1.0F / 256.0F) + def->u - (1.0F / 512.0F);
+    v2 = 240.0F / (float)(phd_winymax + 1) * def->h * (1.0F / 256.0F) + def->v - (1.0F / 512.0F);
+    tex.u1 = u1;
+    tex.v1 = v1;
+    tex.u2 = u2;
+    tex.v2 = v1;
+    tex.u3 = u2;
+    tex.v3 = v2;
+    tex.u4 = u1;
+    tex.v4 = v2;
+    tex.drawtype = 1;
+    tex.tpage = (uint16)(nTextures - 2);
+    tex.flag = 0;
+    nPolyType = 4;
+    AddQuadClippedSorted(v, 0, 1, 2, 3, &tex, 0);
+}
+void DrawChar(sint16 x, sint16 y, uint16 col, CHARDEF *def);
+ 
+ extern CVECTOR FontShades[10][32];
+ extern CVECTOR ShadeFromTo[10][2];

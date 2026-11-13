@@ -47,19 +47,19 @@
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
 <rect width="326.28" height="12" x="0" y="0" class="named"><title>1220 · 78.81%</title></rect>
-<rect width="55.63" height="12" x="326.28" y="0" class="nonmatching"><title>208 · 13.44%</title></rect>
-<rect width="32.09" height="12" x="381.91" y="0" class="todo"><title>120 · 7.75%</title></rect>
+<rect width="55.90" height="12" x="326.28" y="0" class="nonmatching"><title>209 · 13.50%</title></rect>
+<rect width="31.83" height="12" x="382.17" y="0" class="todo"><title>119 · 7.69%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="7.50">78.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1220</tspan> · <tspan class="nonmatching">208</tspan> · <tspan class="todo">120</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="7"><tspan class="named">1220</tspan> · <tspan class="nonmatching">209</tspan> · <tspan class="todo">119</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="219.30" height="12" x="0" y="0" class="named"><title>331 KB · 52.97%</title></rect>
-<rect width="150.34" height="12" x="219.30" y="0" class="nonmatching"><title>227 KB · 36.31%</title></rect>
-<rect width="44.36" height="12" x="369.64" y="0" class="todo"><title>67 KB · 10.72%</title></rect>
+<rect width="150.73" height="12" x="219.30" y="0" class="nonmatching"><title>228 KB · 36.41%</title></rect>
+<rect width="43.97" height="12" x="370.03" y="0" class="todo"><title>66 KB · 10.62%</title></rect>
 </g>
 <text text-anchor="end" x="594" y="24.50">53.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">331 KB</tspan> · <tspan class="nonmatching">227 KB</tspan> · <tspan class="todo">67 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="609" y="24"><tspan class="named">331 KB</tspan> · <tspan class="nonmatching">228 KB</tspan> · <tspan class="todo">66 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1047,7 +1047,7 @@
 <rect width="12" height="12" x="450" y="285" class="named"><title>0x00463930 UpdatePulseColour (161 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="285" class="named"><title>0x004639e0 GetStringLength (368 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="285" class="named"><title>0x00463b50 PrintString (655 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="285" class="todo"><title>0x00463de0 DrawChar (591 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="285" class="nonmatching"><title>0x00463de0 DrawChar (591 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="285" class="named"><title>0x00464030 DrawTrainFloor (97 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="285" class="named"><title>0x004640a0 DrawTrainObjects (1032 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="285" class="named"><title>0x004644b0 InitialiseTrainJeep (109 bytes)</title></rect>
@@ -1909,7 +1909,7 @@
 <rect width="15" height="15.27" x="732" y="61.54" class="named"><title>0x00478070 CreateD3DLights (597 bytes)</title></rect>
 <rect width="14.59" height="15.67" x="347.32" y="79.81" class="named"><title>0x00480310 phd_PutPolygons_train (596 bytes)</title></rect>
 <rect width="14.59" height="15.59" x="347.32" y="98.48" class="named"><title>0x00472650 InsertRoom (593 bytes)</title></rect>
-<rect width="14.59" height="15.54" x="347.32" y="117.07" class="todo"><title>0x00463de0 DrawChar (591 bytes)</title></rect>
+<rect width="14.59" height="15.54" x="347.32" y="117.07" class="nonmatching"><title>0x00463de0 DrawChar (591 bytes)</title></rect>
 <rect width="14.59" height="15.54" x="347.32" y="135.61" class="todo"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
 <rect width="14.59" height="15.51" x="347.32" y="154.15" class="nonmatching"><title>0x00447ce0 ItemPushLaraStatic (590 bytes)</title></rect>
 <rect width="14.59" height="15.49" x="347.32" y="172.66" class="nonmatching"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>

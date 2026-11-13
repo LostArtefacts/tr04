@@ -22,8 +22,8 @@ typedef struct chardef {
     sint16 w;
     sint16 h;
     sint16 YOffset;
-    sint8 TopShade;
-    sint8 BottomShade;
+    uint8 TopShade;
+    uint8 BottomShade;
 } CHARDEF;
 
 void InitFont(void);
