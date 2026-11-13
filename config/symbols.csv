@@ -2299,6 +2299,7 @@ address,size,name,symbol
 0x004bcd88,8,SW_SpanGTBilinearConst,_SW_SpanGTBilinearConst
 0x004bcd90,8,SW_SpanGTAddBilinearConst,_SW_SpanGTAddBilinearConst
 0x004bcd98,8,SW_SpanGTPBilinearConst,_SW_SpanGTPBilinearConst
+0x004bcda0,8,SW_SpanGTPAddBilinearConst,_SW_SpanGTPAddBilinearConst
 0x004bcde8,16,Var4bcde8,_Var4bcde8
 0x004bf2e0,4,next_locust,_next_locust
 0x004bf2e8,12,MovingBlockPos,_MovingBlockPos
@@ -2717,6 +2718,7 @@ address,size,name,symbol
 0x00755290,8,SW_TriEndY,_SW_TriEndY
 0x00755298,4,SW_SurfacePitch,_SW_SurfacePitch
 0x0075529c,4,SW_TriPFFDY,_SW_TriPFFDY
+0x007552a4,4,SW_SpanGTPAddBilinearTmp0,_SW_SpanGTPAddBilinearTmp0
 0x007552a8,65536,SW_MulTable,_SW_MulTable
 0x007652ac,4,SW_TriTD02,_SW_TriTD02
 0x007652b0,4,SW_TriPFV,_SW_TriPFV
@@ -2971,6 +2973,7 @@ address,size,name,symbol
 0x007dac10,4,SW_TriFogRDY,_SW_TriFogRDY
 0x007dac18,8,SW_TriTROff,_SW_TriTROff
 0x007dac28,8,SW_TriPStepA,_SW_TriPStepA
+0x007e2c30,4,SW_SpanGTPAddBilinearTmp1,_SW_SpanGTPAddBilinearTmp1
 0x007e2c34,4,SW_TriFogA0,_SW_TriFogA0
 0x007e2c38,4,SW_TriDX01,_SW_TriDX01
 0x007e2c3c,4,SW_TriPDX01,_SW_TriPDX01

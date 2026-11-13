@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="385.40" height="12" x="0" y="0" class="named"><title>1293 · 83.42%</title></rect>
-<rect width="76.60" height="12" x="385.40" y="0" class="nonmatching"><title>257 · 16.58%</title></rect>
+<rect width="385.70" height="12" x="0" y="0" class="named"><title>1294 · 83.48%</title></rect>
+<rect width="76.30" height="12" x="385.70" y="0" class="nonmatching"><title>256 · 16.52%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">83.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1293</tspan> · <tspan class="nonmatching">257</tspan></text>
+<text text-anchor="end" x="642" y="7.50">83.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1294</tspan> · <tspan class="nonmatching">256</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="259.07" height="12" x="0" y="0" class="named"><title>351 KB · 56.08%</title></rect>
-<rect width="202.93" height="12" x="259.07" y="0" class="nonmatching"><title>275 KB · 43.92%</title></rect>
+<rect width="259.45" height="12" x="0" y="0" class="named"><title>351 KB · 56.16%</title></rect>
+<rect width="202.55" height="12" x="259.45" y="0" class="nonmatching"><title>274 KB · 43.84%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">56.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">351 KB</tspan> · <tspan class="nonmatching">275 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">56.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">351 KB</tspan> · <tspan class="nonmatching">274 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1587,7 +1587,7 @@
 <rect width="12" height="12" x="330" y="450" class="named"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="450" class="named"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="450" class="named"><title>0x0049a2e0 SW_SpanGTPBilinear (504 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="450" class="nonmatching"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="450" class="named"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="450" class="nonmatching"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="450" class="nonmatching"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="450" class="named"><title>0x0049abc0 SW_SpanGInt (164 bytes)</title></rect>
@@ -1971,7 +1971,7 @@
 <rect width="13.76" height="14.21" x="364.94" y="413.44" class="named"><title>0x0046ce30 init_cutseq_actors (510 bytes)</title></rect>
 <rect width="13.76" height="14.18" x="364.94" y="430.65" class="named"><title>0x00456580 ControlMapper (509 bytes)</title></rect>
 <rect width="13.76" height="14.18" x="364.94" y="447.82" class="named"><title>0x004622c0 PulleyCollision (509 bytes)</title></rect>
-<rect width="13.88" height="14.06" x="381.70" y="97.28" class="nonmatching"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
+<rect width="13.88" height="14.06" x="381.70" y="97.28" class="named"><title>0x0049a4e0 SW_SpanGTPAddBilinear (509 bytes)</title></rect>
 <rect width="13.88" height="14.06" x="381.70" y="114.34" class="nonmatching"><title>0x0049b990 SW_SpanGTPInt (509 bytes)</title></rect>
 <rect width="13.88" height="14" x="381.70" y="131.40" class="named"><title>0x0043fff0 SearchLOT (507 bytes)</title></rect>
 <rect width="13.88" height="13.95" x="381.70" y="148.40" class="named"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
