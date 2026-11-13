@@ -27,11 +27,11 @@ sint32 ExplodeFX(FX_INFO *fx, sint32 NoXZVel, sint16 Num)
 void ControlBodyPart(sint16 fx_number)
 {
     FX_INFO *fx;
-    FLOOR_INFO *floor;
-    sint32 height, ceiling, ox, oy, oz;
     sint16 room_number;
+    sint32 height, ceiling, ox, oy, oz;
+    FLOOR_INFO *floor;
 
-    fx = &effects[fx_number];
+    fx = effects + fx_number;
     ox = fx->pos.x_pos;
     oz = fx->pos.z_pos;
     oy = fx->pos.y_pos;
@@ -45,9 +45,9 @@ void ControlBodyPart(sint16 fx_number)
     floor = GetFloor(fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos, &room_number);
     ceiling = GetCeiling(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
     if (fx->pos.y_pos < ceiling) {
+        fx->fallspeed = -fx->fallspeed;
         fx->pos.y_pos = ceiling;
         fx->speed -= fx->speed >> 3;
-        fx->fallspeed = -fx->fallspeed;
     }
     height = GetHeight(floor, fx->pos.x_pos, fx->pos.y_pos, fx->pos.z_pos);
     if (fx->pos.y_pos >= height) {
