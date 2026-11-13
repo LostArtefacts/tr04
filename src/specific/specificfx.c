@@ -14,6 +14,7 @@
 #include "drawroom.h"
 #include "../control.h"
 #include "../text.h"
+#include "../lara.h"
 #include "function_stubs.h"
 
 void setXY4(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 x2, sint32 y2, sint32 x3, sint32 y3, sint32 x4, sint32 y4, sint32 z, sint16 *clip)
@@ -341,6 +342,104 @@ void setXYZ3(D3DTLVERTEX *v, sint32 x1, sint32 y1, sint32 z1, sint32 x2, sint32 
     } else
         clip_distance = -128;
     *clip = clip_distance;
+}
+
+void DrawBubbles(void)
+{
+    BUBBLE_STRUCT *bubble;
+    SPRITESTRUCT *sprite;
+    D3DTLVERTEX v[4];
+    TEXTURESTRUCT tex;
+    PHD_VECTOR pos;
+    sint32 *mptr;
+    sint32 *Z;
+    sint16 *XY;
+    sint16 *offsets;
+    float perspz, u1, v1, u2;
+    sint32 shade;
+    sint32 i, dx, dy, dz, size, x1, y1, x2, y2;
+
+    phd_PushMatrix();
+    phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    mptr = phd_mxptr;
+    bubble = Bubbles;
+    XY = (sint16 *)&scratchpad[0];
+    Z = (sint32 *)&scratchpad[256];
+    offsets = (sint16 *)&scratchpad[512];
+    for (i = 40; i > 0; i--) {
+        if (!bubble->size) {
+            bubble++;
+            continue;
+        }
+        dx = bubble->pos.x - lara_item->pos.x_pos;
+        dy = bubble->pos.y - lara_item->pos.y_pos;
+        dz = bubble->pos.z - lara_item->pos.z_pos;
+        if (dx < -0x5000 || dx > 0x5000 || dy < -0x5000 || dy > 0x5000 || dz < -0x5000 || dz > 0x5000) {
+            bubble->size = 0;
+            bubble++;
+            continue;
+        }
+        offsets[0] = (sint16)dx;
+        offsets[1] = (sint16)dy;
+        offsets[2] = (sint16)dz;
+        pos.x = offsets[0] * mptr[M00] + offsets[1] * mptr[M01] + offsets[2] * mptr[M02] + mptr[M03];
+        pos.y = offsets[0] * mptr[M10] + offsets[1] * mptr[M11] + offsets[2] * mptr[M12] + mptr[M13];
+        pos.z = offsets[0] * mptr[M20] + offsets[1] * mptr[M21] + offsets[2] * mptr[M22] + mptr[M23];
+        perspz = f_persp / (float)pos.z;
+        XY[0] = (sint16)(pos.x * perspz + f_centerx);
+        XY[1] = (sint16)(pos.y * perspz + f_centery);
+        Z[0] = pos.z >> W2V_SHIFT;
+        if (Z[0] < 32 || Z[0] >= 0x5000) {
+            if (Z[0] >= 0x5000)
+                bubble->size = 0;
+            bubble++;
+            continue;
+        }
+        size = phd_persp * (bubble->size >> 1) / Z[0];
+        if (size > 128) {
+            bubble->size = 0;
+            continue;
+        }
+        if (size < 4)
+            size = 4;
+        size >>= 1;
+        x1 = XY[0] - size;
+        x2 = XY[0] + size;
+        y1 = XY[1] - size;
+        y2 = XY[1] + size;
+        if (x2 < phd_winxmin || x1 >= phd_winxmax || y2 < phd_winymin || y1 >= phd_winymax) {
+            bubble++;
+            continue;
+        }
+        sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 13];
+        shade = bubble->shade;
+        setXY4(v, x1, y1, x2, y1, x2, y2, x1, y2, Z[0], clipflags);
+        v[0].color = RGBA(shade, shade, shade, 0xFF);
+        v[1].color = RGBA(shade, shade, shade, 0xFF);
+        v[2].color = RGBA(shade, shade, shade, 0xFF);
+        v[3].color = RGBA(shade, shade, shade, 0xFF);
+        v[0].specular = 0xFF000000;
+        v[1].specular = 0xFF000000;
+        v[2].specular = 0xFF000000;
+        v[3].specular = 0xFF000000;
+        u1 = sprite->x1;
+        u2 = sprite->x2;
+        v1 = sprite->y1;
+        tex.drawtype = 2;
+        tex.flag = 0;
+        tex.tpage = sprite->tpage;
+        tex.u1 = u1;
+        tex.v1 = v1;
+        tex.u2 = u2;
+        tex.v3 = sprite->y2;
+        tex.v2 = v1;
+        tex.u3 = u2;
+        tex.u4 = u1;
+        tex.v4 = sprite->y2;
+        AddQuadSorted(v, 0, 1, 2, 3, &tex, 0);
+        bubble++;
+    }
+    phd_PopMatrix();
 }
 
 void InitTarget_2(void)

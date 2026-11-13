@@ -48,20 +48,20 @@
 <g transform="translate(130 1.50)">
 <rect width="258.95" height="12" x="0" y="0" class="named"><title>1193 · 77.07%</title></rect>
 <rect width="0.65" height="12" x="258.95" y="0" class="decompiled"><title>3 · 0.19%</title></rect>
-<rect width="29.95" height="12" x="259.60" y="0" class="nonmatching"><title>138 · 8.91%</title></rect>
-<rect width="46.45" height="12" x="289.55" y="0" class="todo"><title>214 · 13.82%</title></rect>
+<rect width="30.17" height="12" x="259.60" y="0" class="nonmatching"><title>139 · 8.98%</title></rect>
+<rect width="46.23" height="12" x="289.77" y="0" class="todo"><title>213 · 13.76%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="7.50">77.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1193</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">138</tspan> · <tspan class="todo">214</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="7"><tspan class="named">1193</tspan> · <tspan class="decompiled">3</tspan> · <tspan class="nonmatching">139</tspan> · <tspan class="todo">213</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="169.14" height="12" x="0" y="0" class="named"><title>315 KB · 50.34%</title></rect>
 <rect width="0.13" height="12" x="169.14" y="0" class="decompiled"><title>238 bytes · 0.04%</title></rect>
-<rect width="88.62" height="12" x="169.27" y="0" class="nonmatching"><title>165 KB · 26.38%</title></rect>
-<rect width="78.11" height="12" x="257.89" y="0" class="todo"><title>145 KB · 23.25%</title></rect>
+<rect width="89.08" height="12" x="169.27" y="0" class="nonmatching"><title>166 KB · 26.51%</title></rect>
+<rect width="77.65" height="12" x="258.35" y="0" class="todo"><title>144 KB · 23.11%</title></rect>
 </g>
 <text text-anchor="end" x="516" y="24.50">50.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">315 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">165 KB</tspan> · <tspan class="todo">145 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="531" y="24"><tspan class="named">315 KB</tspan> · <tspan class="decompiled">238 bytes</tspan> · <tspan class="nonmatching">166 KB</tspan> · <tspan class="todo">144 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1401,7 +1401,7 @@
 <rect width="12" height="12" x="480" y="390" class="named"><title>0x004857e0 setXY3 (362 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="390" class="nonmatching"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="390" class="nonmatching"><title>0x00485d90 setXYZ3 (820 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="390" class="todo"><title>0x004860d0 DrawBubbles (853 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="390" class="nonmatching"><title>0x004860d0 DrawBubbles (853 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="390" class="todo"><title>0x00486430 S_DrawSplashes (2461 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="390" class="todo"><title>0x00486dd0 S_DrawFireSparks (1166 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="390" class="todo"><title>0x00487260 S_DrawSmokeSparks (1108 bytes)</title></rect>
@@ -1809,7 +1809,7 @@
 <rect width="18.44" height="17.98" x="394.15" y="21.42" class="named"><title>0x0040def0 ScarabControl (864 bytes)</title></rect>
 <rect width="18.40" height="17.98" x="415.59" y="21.42" class="named"><title>0x004831c0 SubdivideTri (862 bytes)</title></rect>
 <rect width="18.38" height="17.98" x="436.98" y="21.42" class="named"><title>0x0044fc00 calc_animating_item_clip_window (861 bytes)</title></rect>
-<rect width="18.21" height="17.98" x="458.36" y="21.42" class="todo"><title>0x004860d0 DrawBubbles (853 bytes)</title></rect>
+<rect width="18.21" height="17.98" x="458.36" y="21.42" class="nonmatching"><title>0x004860d0 DrawBubbles (853 bytes)</title></rect>
 <rect width="18.08" height="17.98" x="479.56" y="21.42" class="named"><title>0x00425130 lara_col_upjump (847 bytes)</title></rect>
 <rect width="17.99" height="17.98" x="500.64" y="21.42" class="todo"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
 <rect width="17.97" height="17.98" x="521.63" y="21.42" class="named"><title>0x0044bfd0 xLOS (842 bytes)</title></rect>
