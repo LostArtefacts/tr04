@@ -2284,10 +2284,14 @@ address,size,name,symbol
 0x004bcb44,13,Var4bcb44,_Var4bcb44
 0x004bcc58,8,SW_TriMagic23,_SW_TriMagic23
 0x004bcc60,8,SW_TriMagic52,_SW_TriMagic52
+0x004bcc68,8,SW_TriMagic36,_SW_TriMagic36
+0x004bcc70,8,SW_TriMagic28,_SW_TriMagic28
 0x004bcc7c,4,SW_TriYBias,_SW_TriYBias
 0x004bcc80,4,SW_TriFloat16,_SW_TriFloat16
+0x004bcc84,4,SW_TriFloat65536,_SW_TriFloat65536
 0x004bcc8c,20,SW_MipOffsets,_SW_MipOffsets
 0x004bcca0,64,SW_TriPRecipTab,_SW_TriPRecipTab
+0x004bcce0,4,SW_TriPFloat16,_SW_TriPFloat16
 0x004bcce4,64,SW_TriPStepTab,_SW_TriPStepTab
 0x004bcd24,4,SW_ColorOpScale,_SW_ColorOpScale
 0x004bcd30,8,SW_SpanGFogAddConst,_SW_SpanGFogAddConst

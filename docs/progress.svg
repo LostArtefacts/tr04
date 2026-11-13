@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="388.08" height="12" x="0" y="0" class="named"><title>1302 · 84%</title></rect>
-<rect width="73.92" height="12" x="388.08" y="0" class="nonmatching"><title>248 · 16%</title></rect>
+<rect width="388.38" height="12" x="0" y="0" class="named"><title>1303 · 84.06%</title></rect>
+<rect width="73.62" height="12" x="388.38" y="0" class="nonmatching"><title>247 · 15.94%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">84.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1302</tspan> · <tspan class="nonmatching">248</tspan></text>
+<text text-anchor="end" x="642" y="7.50">84.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1303</tspan> · <tspan class="nonmatching">247</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="264.47" height="12" x="0" y="0" class="named"><title>358 KB · 57.25%</title></rect>
-<rect width="197.53" height="12" x="264.47" y="0" class="nonmatching"><title>267 KB · 42.75%</title></rect>
+<rect width="266.35" height="12" x="0" y="0" class="named"><title>361 KB · 57.65%</title></rect>
+<rect width="195.65" height="12" x="266.35" y="0" class="nonmatching"><title>265 KB · 42.35%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">57.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">358 KB</tspan> · <tspan class="nonmatching">267 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">57.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">361 KB</tspan> · <tspan class="nonmatching">265 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1562,7 +1562,7 @@
 <rect width="12" height="12" x="705" y="435" class="named"><title>0x00495460 SW_DrawPrimitives (340 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="435" class="nonmatching"><title>0x004955c0 SW_DrawLineG (953 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="435" class="named"><title>0x00495980 j_SW_DrawPrimitives (34 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="450" class="nonmatching"><title>0x004959b0 SW_TriSetupGTP (2539 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="450" class="named"><title>0x004959b0 SW_TriSetupGTP (2539 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="450" class="nonmatching"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="450" class="named"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="450" class="nonmatching"><title>0x004971b0 SW_TriSetupGTPFog (2811 bytes)</title></rect>
@@ -1642,7 +1642,7 @@
 <rect width="34.49" height="28.81" x="47.74" y="433.19" class="nonmatching"><title>0x00441230 CreatureAnimation (2594 bytes)</title></rect>
 <rect width="31.04" height="32.02" x="85.23" y="0" class="named"><title>0x0041fe50 HairControl (2592 bytes)</title></rect>
 <rect width="31.04" height="31.72" x="85.23" y="35.02" class="named"><title>0x00488950 DrawFlatSky (2568 bytes)</title></rect>
-<rect width="31.04" height="31.36" x="85.23" y="69.74" class="nonmatching"><title>0x004959b0 SW_TriSetupGTP (2539 bytes)</title></rect>
+<rect width="31.04" height="31.36" x="85.23" y="69.74" class="named"><title>0x004959b0 SW_TriSetupGTP (2539 bytes)</title></rect>
 <rect width="31.04" height="31.10" x="85.23" y="104.10" class="nonmatching"><title>0x00471420 ProcessRoomData (2518 bytes)</title></rect>
 <rect width="31.04" height="30.40" x="85.23" y="138.21" class="nonmatching"><title>0x00486430 S_DrawSplashes (2461 bytes)</title></rect>
 <rect width="31.04" height="30.19" x="85.23" y="171.61" class="nonmatching"><title>0x00401e50 BaboonControl (2444 bytes)</title></rect>
