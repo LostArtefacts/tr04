@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="202.79" height="12" x="0" y="0" class="named"><title>1345 · 86.66%</title></rect>
-<rect width="31.21" height="12" x="202.79" y="0" class="nonmatching"><title>207 · 13.34%</title></rect>
+<rect width="202.94" height="12" x="0" y="0" class="named"><title>1346 · 86.73%</title></rect>
+<rect width="31.06" height="12" x="202.94" y="0" class="nonmatching"><title>206 · 13.27%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">86.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1345</tspan> · <tspan class="nonmatching">207</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1346</tspan> · <tspan class="nonmatching">206</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="150.24" height="12" x="0" y="0" class="named"><title>402 KB · 64.21%</title></rect>
-<rect width="83.76" height="12" x="150.24" y="0" class="nonmatching"><title>224 KB · 35.79%</title></rect>
+<rect width="150.30" height="12" x="0" y="0" class="named"><title>402 KB · 64.23%</title></rect>
+<rect width="83.70" height="12" x="150.30" y="0" class="nonmatching"><title>224 KB · 35.77%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">64.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">402 KB</tspan> · <tspan class="nonmatching">224 KB</tspan></text>
@@ -621,7 +621,7 @@
 <rect width="12" height="12" x="420" y="150" class="named"><title>0x00437850 LaraLocation (36 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="150" class="named"><title>0x00437880 LaraLocationPad (26 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="150" class="named"><title>0x004378a0 GhostTrap (130 bytes)</title></rect>
-<rect width="12" height="12" x="465" y="150" class="nonmatching"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
+<rect width="12" height="12" x="465" y="150" class="named"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="150" class="named"><title>0x004379e0 lara_hands_free (10 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="150" class="named"><title>0x004379f0 draw_right_gun (67 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="150" class="named"><title>0x00437a40 draw_left_gun (67 bytes)</title></rect>
@@ -2475,7 +2475,7 @@
 <rect width="8.18" height="7.94" x="738.82" y="252.47" class="named"><title>0x00424270 lara_col_rope (163 bytes)</title></rect>
 <rect width="8.21" height="7.91" x="522.81" y="263.40" class="named"><title>0x0042c6c0 lara_as_climbstnc (163 bytes)</title></rect>
 <rect width="8.21" height="7.91" x="522.81" y="274.31" class="named"><title>0x004361a0 TriggerDynamic (163 bytes)</title></rect>
-<rect width="8.21" height="7.91" x="522.81" y="285.21" class="nonmatching"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
+<rect width="8.21" height="7.91" x="522.81" y="285.21" class="named"><title>0x00437930 KillActiveBaddies (163 bytes)</title></rect>
 <rect width="8.21" height="7.91" x="522.81" y="296.12" class="named"><title>0x00440fd0 BadFloor (163 bytes)</title></rect>
 <rect width="8.21" height="7.91" x="522.81" y="307.02" class="named"><title>0x0045a100 sgInitialiseHub (163 bytes)</title></rect>
 <rect width="8.21" height="7.91" x="522.81" y="317.93" class="named"><title>0x0046bf70 fifteen_init (163 bytes)</title></rect>

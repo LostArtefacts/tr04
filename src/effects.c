@@ -282,15 +282,17 @@ void KillActiveBaddies(ITEM_INFO *item)
 {
     ITEM_INFO *target_item;
     sint16 item_num;
+    sint32 index;
 
     item_num = next_item_active;
     while (item_num != NO_ITEM) {
-        target_item = &items[item_num];
+        index = item_num;
+        target_item = &items[index];
         if (objects[target_item->object_number].intelligent) {
             target_item->status = ITEM_INVISIBLE;
             if (item != (ITEM_INFO *)0xABCDEF) {
                 RemoveActiveItem(item_num);
-                DisableBaddieAI(item_num);
+                DisableBaddieAI(index);
                 target_item->flags |= IFL_INVISIBLE;
             }
         }
