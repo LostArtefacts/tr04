@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="199.32" height="12" x="0" y="0" class="named"><title>1322 · 85.18%</title></rect>
-<rect width="34.68" height="12" x="199.32" y="0" class="nonmatching"><title>230 · 14.82%</title></rect>
+<rect width="199.47" height="12" x="0" y="0" class="named"><title>1323 · 85.24%</title></rect>
+<rect width="34.53" height="12" x="199.47" y="0" class="nonmatching"><title>229 · 14.76%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">85.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1322</tspan> · <tspan class="nonmatching">230</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1323</tspan> · <tspan class="nonmatching">229</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="146.13" height="12" x="0" y="0" class="named"><title>391 KB · 62.45%</title></rect>
-<rect width="87.87" height="12" x="146.13" y="0" class="nonmatching"><title>235 KB · 37.55%</title></rect>
+<rect width="146.41" height="12" x="0" y="0" class="named"><title>391 KB · 62.57%</title></rect>
+<rect width="87.59" height="12" x="146.41" y="0" class="nonmatching"><title>234 KB · 37.43%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">62.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">391 KB</tspan> · <tspan class="nonmatching">235 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">62.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">391 KB</tspan> · <tspan class="nonmatching">234 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -1044,7 +1044,7 @@
 <rect width="12" height="12" x="15" y="285" class="named"><title>0x0045faa0 SOUND_Init (42 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="285" class="named"><title>0x0045fad0 SayNo (63 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="285" class="named"><title>0x0045fb10 TestCollision (382 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="285" class="nonmatching"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="285" class="named"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="285" class="nonmatching"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="285" class="named"><title>0x00460270 InitInterpolate2 (52 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="285" class="named"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>
@@ -1876,7 +1876,7 @@
 <rect width="17.58" height="16.79" x="349.25" y="44.51" class="nonmatching"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
 <rect width="17.56" height="16.79" x="369.83" y="44.51" class="nonmatching"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
 <rect width="17.54" height="16.79" x="390.39" y="44.51" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
-<rect width="17.51" height="16.79" x="410.93" y="44.51" class="nonmatching"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
+<rect width="17.51" height="16.79" x="410.93" y="44.51" class="named"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
 <rect width="17.49" height="16.79" x="431.44" y="44.51" class="named"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
 <rect width="17.44" height="16.79" x="451.93" y="44.51" class="named"><title>0x00455800 Draw_Mirror_Lara (735 bytes)</title></rect>
 <rect width="17.28" height="16.79" x="472.37" y="44.51" class="named"><title>0x0043f1e0 do_examine_mode (728 bytes)</title></rect>

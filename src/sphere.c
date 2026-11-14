@@ -54,14 +54,14 @@ sint32 TestCollision(ITEM_INFO *item, ITEM_INFO *l)
 
 sint32 GetSpheres(ITEM_INFO *item, SPHERE *ptr, sint32 WorldSpace)
 {
-    OBJECT_INFO *obj;
     sint16 **meshpp;
-    sint32 *bone;
     sint16 *meshp;
-    sint16 *frame;
     sint16 *rot;
     sint16 *extra_rot;
-    sint32 x, y, z, poppush, i;
+    sint32 i, poppush, x, y, z;
+    sint32 *bone;
+    OBJECT_INFO *obj;
+    sint16 *frame;
 
     if (!item)
         return 0;
@@ -83,13 +83,13 @@ sint32 GetSpheres(ITEM_INFO *item, SPHERE *ptr, sint32 WorldSpace)
     phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
     frame = GetBestFrame(item);
     phd_TranslateRel(frame[6], frame[7], frame[8]);
-    rot = frame + 9;
+    rot = &frame[9];
     gar_RotYXZsuperpack(&rot, 0);
-    obj = &objects[item->object_number];
-    meshpp = &meshes[obj->mesh_index];
+    obj = objects + item->object_number;
+    meshpp = meshes + obj->mesh_index;
     meshp = *meshpp;
-    meshpp += 2;
     bone = obj->bone_index + bones;
+    meshpp = meshpp + 2;
     phd_PushMatrix();
     if (!(WorldSpace & 2))
         phd_TranslateRel(meshp[0], meshp[1], meshp[2]);
@@ -97,10 +97,11 @@ sint32 GetSpheres(ITEM_INFO *item, SPHERE *ptr, sint32 WorldSpace)
     ptr->y = y + (phd_mxptr[M13] >> W2V_SHIFT);
     ptr->z = z + (phd_mxptr[M23] >> W2V_SHIFT);
     ptr->r = meshp[3];
-    ptr++;
+    ptr += 1;
     phd_PopMatrix();
+    i = obj->nmeshes - 1;
     extra_rot = (sint16 *)item->data;
-    for (i = obj->nmeshes - 1; i > 0; i--) {
+    while (i > 0) {
         poppush = *bone++;
         if (poppush & 1)
             phd_PopMatrix();
@@ -128,6 +129,7 @@ sint32 GetSpheres(ITEM_INFO *item, SPHERE *ptr, sint32 WorldSpace)
         phd_PopMatrix();
         bone += 3;
         meshpp += 2;
+        i--;
     }
     phd_PopMatrix();
     return obj->nmeshes;
