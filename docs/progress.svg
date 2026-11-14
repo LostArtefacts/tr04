@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="205.35" height="12" x="0" y="0" class="named"><title>1362 · 87.76%</title></rect>
-<rect width="28.65" height="12" x="205.35" y="0" class="nonmatching"><title>190 · 12.24%</title></rect>
+<rect width="205.50" height="12" x="0" y="0" class="named"><title>1363 · 87.82%</title></rect>
+<rect width="28.50" height="12" x="205.50" y="0" class="nonmatching"><title>189 · 12.18%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">87.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1362</tspan> · <tspan class="nonmatching">190</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1363</tspan> · <tspan class="nonmatching">189</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="155.10" height="12" x="0" y="0" class="named"><title>415 KB · 66.28%</title></rect>
-<rect width="78.90" height="12" x="155.10" y="0" class="nonmatching"><title>211 KB · 33.72%</title></rect>
+<rect width="155.28" height="12" x="0" y="0" class="named"><title>415 KB · 66.36%</title></rect>
+<rect width="78.72" height="12" x="155.28" y="0" class="nonmatching"><title>210 KB · 33.64%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">66.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">415 KB</tspan> · <tspan class="nonmatching">211 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">66.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">415 KB</tspan> · <tspan class="nonmatching">210 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -1572,7 +1572,7 @@
 <rect width="12" height="12" x="435" y="435" class="named"><title>0x004946f1 SW_GetKernelModule (12 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="435" class="named"><title>0x00494700 SW_D3D_SetTexture (291 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="435" class="named"><title>0x00494830 SW_D3D_BeginScene (99 bytes)</title></rect>
-<rect width="12" height="12" x="480" y="435" class="nonmatching"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
+<rect width="12" height="12" x="480" y="435" class="named"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="435" class="named"><title>0x00494a80 SW_D3D_SetRenderTarget (16 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="435" class="named"><title>0x00494a90 SW_D3D_GetRenderTarget (18 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="435" class="named"><title>0x00494ab0 SW_D3D_EnumTextureFormats (93 bytes)</title></rect>
@@ -2024,7 +2024,7 @@
 <rect width="14.10" height="13.64" x="698.70" y="101.26" class="nonmatching"><title>0x00464a30 DrawBikeBeam (483 bytes)</title></rect>
 <rect width="14.10" height="13.64" x="715.80" y="101.26" class="named"><title>0x0046bce0 eleventh_cutseq_control (483 bytes)</title></rect>
 <rect width="14.10" height="13.64" x="732.90" y="101.26" class="nonmatching"><title>0x0048c400 DrawPsxTile (483 bytes)</title></rect>
-<rect width="13.82" height="13.84" x="383.71" y="117.90" class="nonmatching"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
+<rect width="13.82" height="13.84" x="383.71" y="117.90" class="named"><title>0x004948a0 SW_D3D_EndScene (480 bytes)</title></rect>
 <rect width="13.82" height="13.81" x="383.71" y="134.74" class="named"><title>0x0044e480 PushPullKickDoorCollision (479 bytes)</title></rect>
 <rect width="13.82" height="13.75" x="383.71" y="151.55" class="named"><title>0x0042f510 DoFlareLight (477 bytes)</title></rect>
 <rect width="13.82" height="13.72" x="383.71" y="168.30" class="named"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>

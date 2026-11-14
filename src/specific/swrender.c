@@ -577,15 +577,17 @@ HRESULT __stdcall SW_D3D_EndScene(SW_DEVICE *dev)
             uint8 *dst;
             uint32 *src;
 
-            dst = SW_SurfDesc.lpSurface;
-            src = dev->buffer;
             if (SW_SurfDesc.ddpfPixelFormat.dwGBitMask == 0x7E0) {
+                dst = SW_SurfDesc.lpSurface;
+                src = dev->buffer;
                 for (y = 0; y < (sint32)SW_SurfDesc.dwHeight; y++) {
                     SW_Convert32To565(dst, src, SW_SurfDesc.dwWidth);
                     src += dev->width;
                     dst += SW_SurfDesc.lPitch;
                 }
             } else {
+                dst = SW_SurfDesc.lpSurface;
+                src = dev->buffer;
                 for (y = 0; y < (sint32)SW_SurfDesc.dwHeight; y++) {
                     SW_Convert32To555(dst, src, SW_SurfDesc.dwWidth);
                     src += dev->width;
@@ -596,15 +598,17 @@ HRESULT __stdcall SW_D3D_EndScene(SW_DEVICE *dev)
             uint8 *dst;
             uint32 *src;
 
-            dst = SW_SurfDesc.lpSurface;
-            src = dev->buffer;
             if (SW_SurfDesc.ddpfPixelFormat.dwRGBBitCount == 24) {
+                dst = SW_SurfDesc.lpSurface;
+                src = dev->buffer;
                 for (y = 0; y < (sint32)SW_SurfDesc.dwHeight; y++) {
                     SW_Convert32To24(dst, src, SW_SurfDesc.dwWidth);
                     src += dev->width;
                     dst += SW_SurfDesc.lPitch;
                 }
             } else {
+                dst = SW_SurfDesc.lpSurface;
+                src = dev->buffer;
                 for (y = 0; y < (sint32)SW_SurfDesc.dwHeight; y++) {
                     SW_CopyBuffer(dst, src, SW_SurfDesc.dwWidth);
                     src += dev->width;
