@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="203.85" height="12" x="0" y="0" class="named"><title>1352 · 87.11%</title></rect>
-<rect width="30.15" height="12" x="203.85" y="0" class="nonmatching"><title>200 · 12.89%</title></rect>
+<rect width="204" height="12" x="0" y="0" class="named"><title>1353 · 87.18%</title></rect>
+<rect width="30" height="12" x="204" y="0" class="nonmatching"><title>199 · 12.82%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">87.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1352</tspan> · <tspan class="nonmatching">200</tspan></text>
+<text text-anchor="end" x="414" y="7.50">87.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1353</tspan> · <tspan class="nonmatching">199</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="151.63" height="12" x="0" y="0" class="named"><title>405 KB · 64.80%</title></rect>
-<rect width="82.37" height="12" x="151.63" y="0" class="nonmatching"><title>220 KB · 35.20%</title></rect>
+<rect width="152.03" height="12" x="0" y="0" class="named"><title>406 KB · 64.97%</title></rect>
+<rect width="81.97" height="12" x="152.03" y="0" class="nonmatching"><title>219 KB · 35.03%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">64.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">405 KB</tspan> · <tspan class="nonmatching">220 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">65.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">406 KB</tspan> · <tspan class="nonmatching">219 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -581,7 +581,7 @@
 <rect width="12" height="12" x="570" y="135" class="nonmatching"><title>0x004349f0 TriggerExplosionSparks (961 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="135" class="named"><title>0x00434dc0 TriggerExplosionSmokeEnd (469 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="135" class="named"><title>0x00434fa0 TriggerExplosionSmoke (393 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="135" class="nonmatching"><title>0x00435130 TriggerFireFlame (1077 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="135" class="named"><title>0x00435130 TriggerFireFlame (1077 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="135" class="named"><title>0x00435570 TriggerSuperJetFlame (572 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="135" class="named"><title>0x004357b0 nullsub_1 (1 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="135" class="named"><title>0x004357c0 TriggerRocketSmoke (339 bytes)</title></rect>
@@ -1782,7 +1782,7 @@
 <rect width="20.92" height="20.79" x="261.53" y="245.65" class="nonmatching"><title>0x00403f30 CrocgodControl (1092 bytes)</title></rect>
 <rect width="20.92" height="20.64" x="261.53" y="269.45" class="nonmatching"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
 <rect width="20.92" height="20.53" x="261.53" y="293.09" class="named"><title>0x0048eff0 WinProcessCommands (1078 bytes)</title></rect>
-<rect width="20.92" height="20.51" x="261.53" y="316.61" class="nonmatching"><title>0x00435130 TriggerFireFlame (1077 bytes)</title></rect>
+<rect width="20.92" height="20.51" x="261.53" y="316.61" class="named"><title>0x00435130 TriggerFireFlame (1077 bytes)</title></rect>
 <rect width="20.92" height="20.45" x="261.53" y="340.12" class="named"><title>0x00487d00 DrawBinoculars (1074 bytes)</title></rect>
 <rect width="20.92" height="20.41" x="261.53" y="363.57" class="named"><title>0x004664b0 AnimateBike (1072 bytes)</title></rect>
 <rect width="20.92" height="20.39" x="261.53" y="386.98" class="nonmatching"><title>0x00424a60 lara_as_stop (1071 bytes)</title></rect>

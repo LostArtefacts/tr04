@@ -772,16 +772,16 @@ void TriggerFireFlame(sint32 x, sint32 y, sint32 z, sint32 body_part, sint32 typ
         size = (GetRandomControl() & 31) + 32;
     }
     sptr->Size = sptr->sSize = size;
-    if (type != 2) {
+    if (type != 2)
         sptr->dSize = size >> 4;
-        if (type == 7) {
-            sptr->ColFadeSpeed >>= 2;
-            sptr->FadeToBlack >>= 2;
-            sptr->Life >>= 2;
-            sptr->sLife = sptr->Life;
-        }
-    } else
+    else
         sptr->dSize = size >> 2;
+    if (type != 7)
+        return;
+    sptr->ColFadeSpeed >>= 2;
+    sptr->FadeToBlack >>= 2;
+    sptr->Life >>= 2;
+    sptr->sLife = sptr->Life;
 }
 
 void TriggerSuperJetFlame(ITEM_INFO *item, sint32 yvel, sint32 deadly)
