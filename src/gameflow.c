@@ -69,7 +69,7 @@ void LoadGameflow(void)
     gfStringWad = (char *)(gfStringOffset + TXT_NUM_STRINGS);
     memcpy(gfStringOffset + TXT_NUM_STRINGS,
         gfStringOffset + TXT_NUM_STRINGS + (sizeof(STRINGHEADER) / sizeof(uint16)),
-        sh.StringWadLen + (sh.PCStringWadLen + sh.PSXStringWadLen));
+        sh.StringWadLen + (sh.PSXStringWadLen + sh.PCStringWadLen));
     for (i = 0; i < TXT_NUM_STRINGS; i++) {
         s = &gfStringWad[gfStringOffset[i]];
         for (j = 0; s[j]; j++)
@@ -104,9 +104,12 @@ void LoadGameflow(void)
                 s += 5;
                 break;
             case CMD_MIRROR:
-                s += 9;
+                s += 5;
                 break;
             case CMD_LENSFLARE:
+                s += 9;
+                break;
+            case CMD_CAMERA:
                 s += 25;
                 break;
             case CMD_ENDSEQ:

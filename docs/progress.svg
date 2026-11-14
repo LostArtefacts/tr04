@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="203.09" height="12" x="0" y="0" class="named"><title>1347 · 86.79%</title></rect>
-<rect width="30.91" height="12" x="203.09" y="0" class="nonmatching"><title>205 · 13.21%</title></rect>
+<rect width="203.24" height="12" x="0" y="0" class="named"><title>1348 · 86.86%</title></rect>
+<rect width="30.76" height="12" x="203.24" y="0" class="nonmatching"><title>204 · 13.14%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">86.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1347</tspan> · <tspan class="nonmatching">205</tspan></text>
+<text text-anchor="end" x="414" y="7.50">86.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1348</tspan> · <tspan class="nonmatching">204</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="150.59" height="12" x="0" y="0" class="named"><title>403 KB · 64.35%</title></rect>
-<rect width="83.41" height="12" x="150.59" y="0" class="nonmatching"><title>223 KB · 35.65%</title></rect>
+<rect width="150.82" height="12" x="0" y="0" class="named"><title>403 KB · 64.45%</title></rect>
+<rect width="83.18" height="12" x="150.82" y="0" class="nonmatching"><title>222 KB · 35.55%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">64.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">403 KB</tspan> · <tspan class="nonmatching">223 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">64.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">403 KB</tspan> · <tspan class="nonmatching">222 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -896,7 +896,7 @@
 <rect width="12" height="12" x="45" y="240" class="named"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="240" class="named"><title>0x00451180 UpdateSkyLightning (181 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="240" class="named"><title>0x00451240 RenderIt (711 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="240" class="nonmatching"><title>0x00451510 LoadGameflow (604 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="240" class="named"><title>0x00451510 LoadGameflow (604 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="240" class="nonmatching"><title>0x00451770 DoGameflow (1716 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="240" class="named"><title>0x00451e30 DoTitle (2272 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="240" class="nonmatching"><title>0x00452710 DoLevel (1133 bytes)</title></rect>
@@ -1929,7 +1929,7 @@
 <rect width="15.34" height="15.87" x="550.95" y="64.29" class="named"><title>0x0049a950 SW_SpanGTPAlphaBilinear (611 bytes)</title></rect>
 <rect width="15.24" height="15.87" x="569.28" y="64.29" class="nonmatching"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
 <rect width="15.21" height="15.87" x="587.52" y="64.29" class="named"><title>0x004624c0 TurnSwitchControl (606 bytes)</title></rect>
-<rect width="15.16" height="15.87" x="605.73" y="64.29" class="nonmatching"><title>0x00451510 LoadGameflow (604 bytes)</title></rect>
+<rect width="15.16" height="15.87" x="605.73" y="64.29" class="named"><title>0x00451510 LoadGameflow (604 bytes)</title></rect>
 <rect width="15.11" height="15.87" x="623.89" y="64.29" class="named"><title>0x0044e1c0 DoorCollision (602 bytes)</title></rect>
 <rect width="15.06" height="15.87" x="642" y="64.29" class="named"><title>0x00485190 SaveSetup (600 bytes)</title></rect>
 <rect width="15.01" height="15.87" x="660.06" y="64.29" class="named"><title>0x00409200 ControlBodyPart (598 bytes)</title></rect>
