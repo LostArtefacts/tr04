@@ -944,10 +944,13 @@ void S_AnimateTextures(sint32 n)
 
 void ProjectTrainVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip, sint32 x)
 {
+    sint16 *local_clip;
+
     float zv;
     sint32 i;
     sint16 clip_distance;
 
+    local_clip = clip;
     for (i = 0; i < nVerts; i++) {
         clip_distance = 0;
         v->tu = v->sx;
@@ -971,8 +974,8 @@ void ProjectTrainVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip, sint32 x)
                 clip_distance += 8;
         } else
             clip_distance = -128;
-        clip[0] = clip_distance;
-        clip++;
+        local_clip[0] = clip_distance;
+        local_clip++;
         v++;
     }
 }

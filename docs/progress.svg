@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="198.27" height="12" x="0" y="0" class="named"><title>1315 · 84.73%</title></rect>
-<rect width="35.73" height="12" x="198.27" y="0" class="nonmatching"><title>237 · 15.27%</title></rect>
+<rect width="198.42" height="12" x="0" y="0" class="named"><title>1316 · 84.79%</title></rect>
+<rect width="35.58" height="12" x="198.42" y="0" class="nonmatching"><title>236 · 15.21%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">84.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1315</tspan> · <tspan class="nonmatching">237</tspan></text>
+<text text-anchor="end" x="414" y="7.50">84.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1316</tspan> · <tspan class="nonmatching">236</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="145.24" height="12" x="0" y="0" class="named"><title>388 KB · 62.07%</title></rect>
-<rect width="88.76" height="12" x="145.24" y="0" class="nonmatching"><title>237 KB · 37.93%</title></rect>
+<rect width="145.33" height="12" x="0" y="0" class="named"><title>388 KB · 62.11%</title></rect>
+<rect width="88.67" height="12" x="145.33" y="0" class="nonmatching"><title>237 KB · 37.89%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">62.1%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">388 KB</tspan> · <tspan class="nonmatching">237 KB</tspan></text>
@@ -1374,7 +1374,7 @@
 <rect width="12" height="12" x="465" y="375" class="named"><title>0x0047fca0 S_DumpScreen (76 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="375" class="nonmatching"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="375" class="named"><title>0x00480070 S_AnimateTextures (429 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="375" class="nonmatching"><title>0x00480220 ProjectTrainVerts (237 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="375" class="named"><title>0x00480220 ProjectTrainVerts (237 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="375" class="named"><title>0x00480310 phd_PutPolygons_train (596 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="375" class="nonmatching"><title>0x00480570 RenderLoadPic (388 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="375" class="named"><title>0x00480700 DDCopyBitmap (326 bytes)</title></rect>
@@ -2300,7 +2300,7 @@
 <rect width="9.99" height="9.49" x="473.89" y="356.58" class="named"><title>0x00493e70 DXCreateViewPort (238 bytes)</title></rect>
 <rect width="9.99" height="9.45" x="473.89" y="369.06" class="named"><title>0x00413750 OpenTrapDoor (237 bytes)</title></rect>
 <rect width="9.99" height="9.45" x="473.89" y="381.51" class="named"><title>0x0043ef60 have_i_got_object (237 bytes)</title></rect>
-<rect width="9.99" height="9.45" x="473.89" y="393.96" class="nonmatching"><title>0x00480220 ProjectTrainVerts (237 bytes)</title></rect>
+<rect width="9.99" height="9.45" x="473.89" y="393.96" class="named"><title>0x00480220 ProjectTrainVerts (237 bytes)</title></rect>
 <rect width="9.99" height="9.37" x="473.89" y="406.40" class="named"><title>0x004077b0 TriggerHarpySparks (235 bytes)</title></rect>
 <rect width="9.99" height="9.29" x="473.89" y="418.77" class="named"><title>0x00499140 SW_SpanGAdd (233 bytes)</title></rect>
 <rect width="9.99" height="9.25" x="473.89" y="431.06" class="named"><title>0x0044fb10 DrawEffect (232 bytes)</title></rect>
