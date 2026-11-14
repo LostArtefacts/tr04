@@ -1354,6 +1354,7 @@ void ControlHammer(sint16 item_number)
     ITEM_INFO *item;
     ITEM_INFO *item2;
     ROOM_INFO *r;
+    sint32 room_number;
     sint32 hammered, frame, target_item;
 
     item = &items[item_number];
@@ -1381,8 +1382,9 @@ void ControlHammer(sint16 item_number)
                 item->goal_anim_state = 1;
                 *(sint32 *)&item->item_flags[0] = frame < 52 ? 0x7E0 : 0;
                 if (frame == 8) {
-                r = &room[item->room_number];
-                    if (item->trigger_flags != 2) {
+                    room_number = item->room_number;
+                    if (*(volatile sint16 *)&item->trigger_flags != 2) {
+                        r = &room[room_number];
                         for (target_item = r->item_number; target_item != NO_ITEM; target_item = items[target_item].next_item) {
                             item2 = &items[target_item];
                             if (item2->object_number >= PUSHABLE_OBJECT1 && item2->object_number <= PUSHABLE_OBJECT4 && item2->pos.x_pos == item->pos.x_pos && item2->pos.z_pos == item->pos.z_pos) {
@@ -1403,6 +1405,7 @@ void ControlHammer(sint16 item_number)
                             }
                         }
                     } else {
+                        r = &room[room_number];
                         for (target_item = r->item_number; target_item != NO_ITEM; target_item = items[target_item].next_item) {
                             item2 = &items[target_item];
                             if (item2->object_number == OBELISK && item2->pos.y_rot == -0x4000 && items[item2->item_flags[0]].pos.y_rot == 0x4000 && !items[item2->item_flags[1]].pos.y_rot) {
@@ -1415,7 +1418,7 @@ void ControlHammer(sint16 item_number)
                         SoundEffect(SFX_DOOR_GEN_THUD, &item->pos, SFX_DEFAULT);
                         SoundEffect(SFX_EXPLOSION2, &item->pos, SFX_DEFAULT);
                     }
-                } else if (frame > 52 && item->trigger_flags == 2)
+                } else if (frame > 52 && *(volatile sint16 *)&item->trigger_flags == 2)
                     item->flags &= ~IFL_CODEBITS;
             }
         } else

@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="203.69" height="12" x="0" y="0" class="named"><title>1351 · 87.05%</title></rect>
-<rect width="30.31" height="12" x="203.69" y="0" class="nonmatching"><title>201 · 12.95%</title></rect>
+<rect width="203.85" height="12" x="0" y="0" class="named"><title>1352 · 87.11%</title></rect>
+<rect width="30.15" height="12" x="203.85" y="0" class="nonmatching"><title>200 · 12.89%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">87.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1351</tspan> · <tspan class="nonmatching">201</tspan></text>
+<text text-anchor="end" x="414" y="7.50">87.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1352</tspan> · <tspan class="nonmatching">200</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="151.30" height="12" x="0" y="0" class="named"><title>404 KB · 64.66%</title></rect>
-<rect width="82.70" height="12" x="151.30" y="0" class="nonmatching"><title>221 KB · 35.34%</title></rect>
+<rect width="151.63" height="12" x="0" y="0" class="named"><title>405 KB · 64.80%</title></rect>
+<rect width="82.37" height="12" x="151.63" y="0" class="nonmatching"><title>220 KB · 35.20%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">64.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">404 KB</tspan> · <tspan class="nonmatching">221 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">64.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">405 KB</tspan> · <tspan class="nonmatching">220 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -246,7 +246,7 @@
 <rect width="12" height="12" x="45" y="45" class="named"><title>0x004168d0 ControlChain (127 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="45" class="named"><title>0x00416950 ControlPlough (76 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="45" class="named"><title>0x004169a0 ControlStargate (89 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="45" class="nonmatching"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="45" class="named"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="45" class="nonmatching"><title>0x00416d70 ControlSpikeball (201 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="45" class="named"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="45" class="named"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
@@ -1830,7 +1830,7 @@
 <rect width="19.52" height="18.08" x="285.45" y="416.95" class="nonmatching"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
 <rect width="19.52" height="18" x="285.45" y="438.03" class="nonmatching"><title>0x00422480 TestLaraVault (882 bytes)</title></rect>
 <rect width="19.52" height="17.97" x="285.45" y="459.03" class="nonmatching"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
-<rect width="18.72" height="18.68" x="307.98" y="22.83" class="nonmatching"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
+<rect width="18.72" height="18.68" x="307.98" y="22.83" class="named"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
 <rect width="18.68" height="18.68" x="329.70" y="22.83" class="named"><title>0x00425650 lara_col_reach (876 bytes)</title></rect>
 <rect width="18.51" height="18.68" x="351.38" y="22.83" class="named"><title>0x0047c6b0 DoStatScreen (868 bytes)</title></rect>
 <rect width="18.51" height="18.68" x="372.89" y="22.83" class="nonmatching"><title>0x0048a0c0 DrawBlood (868 bytes)</title></rect>
