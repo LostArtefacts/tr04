@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="198.72" height="12" x="0" y="0" class="named"><title>1318 · 84.92%</title></rect>
-<rect width="35.28" height="12" x="198.72" y="0" class="nonmatching"><title>234 · 15.08%</title></rect>
+<rect width="198.87" height="12" x="0" y="0" class="named"><title>1319 · 84.99%</title></rect>
+<rect width="35.13" height="12" x="198.87" y="0" class="nonmatching"><title>233 · 15.01%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">84.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1318</tspan> · <tspan class="nonmatching">234</tspan></text>
+<text text-anchor="end" x="414" y="7.50">85.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1319</tspan> · <tspan class="nonmatching">233</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="145.70" height="12" x="0" y="0" class="named"><title>389 KB · 62.26%</title></rect>
-<rect width="88.30" height="12" x="145.70" y="0" class="nonmatching"><title>236 KB · 37.74%</title></rect>
+<rect width="145.81" height="12" x="0" y="0" class="named"><title>390 KB · 62.31%</title></rect>
+<rect width="88.19" height="12" x="145.81" y="0" class="nonmatching"><title>236 KB · 37.69%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">62.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">389 KB</tspan> · <tspan class="nonmatching">236 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">390 KB</tspan> · <tspan class="nonmatching">236 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -1476,7 +1476,7 @@
 <rect width="12" height="12" x="495" y="405" class="named"><title>0x0048eff0 WinProcessCommands (1078 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="405" class="nonmatching"><title>0x0048f430 WinMainWndProc (622 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="405" class="named"><title>0x0048f6a0 WinRunCheck (87 bytes)</title></rect>
-<rect width="12" height="12" x="540" y="405" class="nonmatching"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
+<rect width="12" height="12" x="540" y="405" class="named"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="405" class="named"><title>0x0048f840 WinFrameRate (127 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="405" class="named"><title>0x0048f8c0 WinDisplayString (73 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="405" class="named"><title>0x0048f910 MungeFPCW (73 bytes)</title></rect>
@@ -2189,7 +2189,7 @@
 <rect width="10.79" height="11.40" x="586.81" y="164.32" class="nonmatching"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
 <rect width="10.76" height="11.40" x="600.60" y="164.32" class="named"><title>0x0042ddf0 InitialiseNewWeapon (308 bytes)</title></rect>
 <rect width="10.72" height="11.40" x="614.36" y="164.32" class="named"><title>0x00452ca0 DrawGameInfo (307 bytes)</title></rect>
-<rect width="10.69" height="11.40" x="628.08" y="164.32" class="nonmatching"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
+<rect width="10.69" height="11.40" x="628.08" y="164.32" class="named"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>
 <rect width="10.62" height="11.40" x="641.77" y="164.32" class="named"><title>0x0041d010 CalcLaraMatrices (304 bytes)</title></rect>
 <rect width="10.55" height="11.40" x="655.38" y="164.32" class="named"><title>0x00401990 ReTriggerAhmet (302 bytes)</title></rect>
 <rect width="10.55" height="11.40" x="668.93" y="164.32" class="named"><title>0x0040f4d0 MakeMove (302 bytes)</title></rect>

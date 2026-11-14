@@ -399,23 +399,23 @@ void WinProcessCommandLine(char *cmd)
     COMMANDLINES *command;
     char *pCommand;
     char *p;
-    uint32 i, j, l, num;
+    uint32 i, j, l, num, word_index;
     char parameter[20];
 
     Log(2, "WinProcessCommandLine");
     num = sizeof(commandlines) / sizeof(commandlines[0]);
-    for (i = 0; i < num; i++) {
-        commandlines[i].code("_INIT");
+    for (command = commandlines; (uint8 *)&command->code < (uint8 *)&commandlines[num].code; command++) {
+        command->code("_INIT");
     }
     for (i = 0; i < strlen(cmd); i++) {
         if (toupper((uint8)cmd[i]))
             cmd[i] = toupper((uint8)cmd[i]);
     }
-    for (i = 0; i < num; i++) {
+    for (command = commandlines; (uint8 *)&command->code < (uint8 *)&commandlines[num].code; command++) {
         memset(parameter, 0, sizeof(parameter));
-        pCommand = strstr(cmd, commandlines[i].command);
+        pCommand = strstr(cmd, command->command);
         if (pCommand) {
-            if (commandlines[i].needs_parameter) {
+            if (command->needs_parameter) {
                 l = strlen(pCommand);
                 for (j = 0; j < l; j++, pCommand++) {
                     if (*pCommand == '=') {
@@ -426,17 +426,17 @@ void WinProcessCommandLine(char *cmd)
                                 break;
                         }
                         l = strlen(p);
-                        for (j = 0; j < l; j++) {
-                            if (j[p] == ' ')
+                        for (word_index = 0; word_index < l; word_index++) {
+                            if (p[word_index] == ' ')
                                 break;
                         }
-                        strncpy(parameter, p, j);
+                        strncpy(parameter, p, word_index);
                         break;
                     }
                 }
-                commandlines[i].code(parameter);
+                command->code(parameter);
             } else {
-                commandlines[i].code(0);
+                command->code(0);
             }
         }
     }
