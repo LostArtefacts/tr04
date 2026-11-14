@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="198.42" height="12" x="0" y="0" class="named"><title>1316 · 84.79%</title></rect>
-<rect width="35.58" height="12" x="198.42" y="0" class="nonmatching"><title>236 · 15.21%</title></rect>
+<rect width="198.57" height="12" x="0" y="0" class="named"><title>1317 · 84.86%</title></rect>
+<rect width="35.43" height="12" x="198.57" y="0" class="nonmatching"><title>235 · 15.14%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">84.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1316</tspan> · <tspan class="nonmatching">236</tspan></text>
+<text text-anchor="end" x="414" y="7.50">84.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1317</tspan> · <tspan class="nonmatching">235</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="145.33" height="12" x="0" y="0" class="named"><title>388 KB · 62.11%</title></rect>
-<rect width="88.67" height="12" x="145.33" y="0" class="nonmatching"><title>237 KB · 37.89%</title></rect>
+<rect width="145.50" height="12" x="0" y="0" class="named"><title>389 KB · 62.18%</title></rect>
+<rect width="88.50" height="12" x="145.50" y="0" class="nonmatching"><title>237 KB · 37.82%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">62.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">388 KB</tspan> · <tspan class="nonmatching">237 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">62.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">389 KB</tspan> · <tspan class="nonmatching">237 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -1393,7 +1393,7 @@
 <rect width="12" height="12" x="0" y="390" class="named"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="390" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="390" class="nonmatching"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="390" class="nonmatching"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="390" class="named"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="390" class="named"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="390" class="named"><title>0x00481df0 InitialiseFogBulbs (109 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="390" class="nonmatching"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
@@ -2045,7 +2045,7 @@
 <rect width="13.82" height="13.23" x="383.71" y="415.30" class="named"><title>0x00435c60 TriggerWaterfallMist (459 bytes)</title></rect>
 <rect width="13.82" height="13.23" x="383.71" y="431.54" class="named"><title>0x00494b50 SW_D3D_CreateDevice (459 bytes)</title></rect>
 <rect width="13.82" height="13.20" x="383.71" y="447.77" class="named"><title>0x00477430 S_SaveGame (458 bytes)</title></rect>
-<rect width="13.82" height="13.03" x="383.71" y="463.97" class="nonmatching"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
+<rect width="13.82" height="13.03" x="383.71" y="463.97" class="named"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
 <rect width="13.21" height="13.57" x="400.52" y="117.90" class="named"><title>0x00442380 CreatureKill (450 bytes)</title></rect>
 <rect width="13.18" height="13.57" x="416.73" y="117.90" class="named"><title>0x0042b430 TriggerUnderwaterExplosion (449 bytes)</title></rect>
 <rect width="13.15" height="13.57" x="432.91" y="117.90" class="named"><title>0x0044f5d0 GetRoomBounds (448 bytes)</title></rect>

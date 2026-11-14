@@ -381,52 +381,55 @@ void mD3DTransform(FVECTOR *vec, D3DMATRIX *mx)
 
 void CreateFogPos(FOGBULB_STRUCT *FogBulb)
 {
+    FOGBULB_STRUCT *local_FogBulb;
+
     FVECTOR d;
     sint32 *mx;
     float dist;
     sint16 bounds[6];
 
+    local_FogBulb = FogBulb;
     if (GlobalFogOff) {
-        FogBulb->inRange = 0;
+        local_FogBulb->inRange = 0;
         return;
     }
-    d.x = FogBulb->WorldPos.x - camera.pos.x;
-    d.y = FogBulb->WorldPos.y - camera.pos.y;
-    d.z = FogBulb->WorldPos.z - camera.pos.z;
+    d.x = local_FogBulb->WorldPos.x - camera.pos.x;
+    d.y = local_FogBulb->WorldPos.y - camera.pos.y;
+    d.z = local_FogBulb->WorldPos.z - camera.pos.z;
     dist = d.x * d.x + d.y * d.y + d.z * d.z;
     if (dist > 0x19000000) {
-        FogBulb->inRange = 0;
+        local_FogBulb->inRange = 0;
         return;
     }
-    FogBulb->inRange = 1;
-    bounds[0] = (sint16)(FogBulb->WorldPos.x - camera.pos.x + FogBulb->rad);
-    bounds[1] = (sint16)(FogBulb->WorldPos.x - camera.pos.x - FogBulb->rad);
-    bounds[2] = (sint16)(FogBulb->WorldPos.y - camera.pos.y + FogBulb->rad);
-    bounds[3] = (sint16)(FogBulb->WorldPos.y - camera.pos.y - FogBulb->rad);
-    bounds[4] = (sint16)(FogBulb->WorldPos.z - camera.pos.z + FogBulb->rad);
-    bounds[5] = (sint16)(FogBulb->WorldPos.z - camera.pos.z - FogBulb->rad);
+    local_FogBulb->inRange = 1;
+    bounds[0] = (sint16)(local_FogBulb->WorldPos.x - camera.pos.x + local_FogBulb->rad);
+    bounds[1] = (sint16)(local_FogBulb->WorldPos.x - camera.pos.x - local_FogBulb->rad);
+    bounds[2] = (sint16)(local_FogBulb->WorldPos.y - camera.pos.y + local_FogBulb->rad);
+    bounds[3] = (sint16)(local_FogBulb->WorldPos.y - camera.pos.y - local_FogBulb->rad);
+    bounds[4] = (sint16)(local_FogBulb->WorldPos.z - camera.pos.z + local_FogBulb->rad);
+    bounds[5] = (sint16)(local_FogBulb->WorldPos.z - camera.pos.z - local_FogBulb->rad);
     mx = phd_mxptr;
     phd_mxptr = w2v_matrix;
     if (!S_GetObjectBounds(bounds)) {
-        FogBulb->inRange = 0;
+        local_FogBulb->inRange = 0;
     } else {
         NumFogBulbsInRange++;
     }
     phd_mxptr = mx;
-    if (FogBulb->inRange) {
-        FogBulb->vec.x = FogBulb->WorldPos.x - camera.pos.x;
-        FogBulb->vec.y = FogBulb->WorldPos.y - camera.pos.y;
-        FogBulb->vec.z = FogBulb->WorldPos.z - camera.pos.z;
+    if (local_FogBulb->inRange) {
+        local_FogBulb->vec.x = local_FogBulb->WorldPos.x - camera.pos.x;
+        local_FogBulb->vec.y = local_FogBulb->WorldPos.y - camera.pos.y;
+        local_FogBulb->vec.z = local_FogBulb->WorldPos.z - camera.pos.z;
         SetD3DMatrix(&D3DMView, w2v_matrix);
-        mD3DTransform(&FogBulb->vec, &D3DMView);
-        FogBulb->pos.x = FogBulb->vec.x;
-        FogBulb->pos.y = FogBulb->vec.y;
-        FogBulb->pos.z = FogBulb->vec.z;
-        D3DNormalise((D3DVECTOR *)&FogBulb->vec);
-        FogBulb->vec.x = FogBulb->pos.x + FogBulb->rad * FogBulb->vec.x;
-        FogBulb->vec.y = FogBulb->pos.y + FogBulb->rad * FogBulb->vec.y;
-        FogBulb->vec.z = FogBulb->pos.z + FogBulb->rad * FogBulb->vec.z;
-        FogBulb->dist = (float)sqrt(FogBulb->pos.x * FogBulb->pos.x + FogBulb->pos.y * FogBulb->pos.y + FogBulb->pos.z * FogBulb->pos.z);
+        mD3DTransform(&local_FogBulb->vec, &D3DMView);
+        local_FogBulb->pos.x = local_FogBulb->vec.x;
+        local_FogBulb->pos.y = local_FogBulb->vec.y;
+        local_FogBulb->pos.z = local_FogBulb->vec.z;
+        D3DNormalise((D3DVECTOR *)&local_FogBulb->vec);
+        local_FogBulb->vec.x = local_FogBulb->pos.x + local_FogBulb->rad * local_FogBulb->vec.x;
+        local_FogBulb->vec.y = local_FogBulb->pos.y + local_FogBulb->rad * local_FogBulb->vec.y;
+        local_FogBulb->vec.z = local_FogBulb->pos.z + local_FogBulb->rad * local_FogBulb->vec.z;
+        local_FogBulb->dist = (float)sqrt(local_FogBulb->pos.x * local_FogBulb->pos.x + local_FogBulb->pos.y * local_FogBulb->pos.y + local_FogBulb->pos.z * local_FogBulb->pos.z);
     }
 }
 
