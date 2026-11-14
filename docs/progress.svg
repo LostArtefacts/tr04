@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="201.73" height="12" x="0" y="0" class="named"><title>1338 · 86.21%</title></rect>
-<rect width="32.27" height="12" x="201.73" y="0" class="nonmatching"><title>214 · 13.79%</title></rect>
+<rect width="201.89" height="12" x="0" y="0" class="named"><title>1339 · 86.28%</title></rect>
+<rect width="32.11" height="12" x="201.89" y="0" class="nonmatching"><title>213 · 13.72%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">86.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1338</tspan> · <tspan class="nonmatching">214</tspan></text>
+<text text-anchor="end" x="414" y="7.50">86.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1339</tspan> · <tspan class="nonmatching">213</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="149.04" height="12" x="0" y="0" class="named"><title>398 KB · 63.69%</title></rect>
-<rect width="84.96" height="12" x="149.04" y="0" class="nonmatching"><title>227 KB · 36.31%</title></rect>
+<rect width="149.10" height="12" x="0" y="0" class="named"><title>399 KB · 63.72%</title></rect>
+<rect width="84.90" height="12" x="149.10" y="0" class="nonmatching"><title>227 KB · 36.28%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">63.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">398 KB</tspan> · <tspan class="nonmatching">227 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">399 KB</tspan> · <tspan class="nonmatching">227 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -1362,7 +1362,7 @@
 <rect width="12" height="12" x="285" y="375" class="named"><title>0x0047d690 j_nullsub_9 (5 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="375" class="named"><title>0x0047d6a0 nullsub_9 (1 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="375" class="named"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
-<rect width="12" height="12" x="330" y="375" class="nonmatching"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
+<rect width="12" height="12" x="330" y="375" class="named"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="375" class="named"><title>0x0047d810 CalcVertsColorSplitMMX (227 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="375" class="nonmatching"><title>0x0047d900 PrelightVerts (340 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="375" class="nonmatching"><title>0x0047da60 phd_PutPolygons (3650 bytes)</title></rect>
@@ -2463,7 +2463,7 @@
 <rect width="8.38" height="7.94" x="603.16" y="252.47" class="named"><title>0x00452f80 DrawPickups (167 bytes)</title></rect>
 <rect width="8.38" height="7.94" x="614.54" y="252.47" class="named"><title>0x0046a620 JeepStart (167 bytes)</title></rect>
 <rect width="8.38" height="7.94" x="625.92" y="252.47" class="named"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
-<rect width="8.38" height="7.94" x="637.30" y="252.47" class="nonmatching"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
+<rect width="8.38" height="7.94" x="637.30" y="252.47" class="named"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
 <rect width="8.38" height="7.94" x="648.68" y="252.47" class="named"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
 <rect width="8.33" height="7.94" x="660.06" y="252.47" class="nonmatching"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
 <rect width="8.28" height="7.94" x="671.39" y="252.47" class="named"><title>0x00423880 lara_as_monkeyswing (165 bytes)</title></rect>

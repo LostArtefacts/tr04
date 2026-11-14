@@ -97,6 +97,7 @@ void StashSkinVertices(sint32 node)
 
 void SkinVerticesToScratch(sint32 node)
 {
+    sint16 *dest_clip;
     D3DTLVERTEX *d;
     D3DTLVERTEX *s;
     char *vns;
@@ -109,6 +110,7 @@ void SkinVerticesToScratch(sint32 node)
     cf = SkinClip[node];
     IDirect3DVertexBuffer_Lock(DestVB, DDLOCK_READONLY, (LPVOID *)&v, 0);
     n = *vns++;
+    dest_clip = clipflags;
     while (n >= 0) {
         s = &v[n];
         s->sx = d->sx;
@@ -119,9 +121,10 @@ void SkinVerticesToScratch(sint32 node)
         s->specular = d->specular;
         s->tu = d->tu;
         s->tv = d->tv;
-        d++;
-        clipflags[n] = *cf++;
+        dest_clip[n] = *cf++;
         n = *vns++;
+        dest_clip = clipflags;
+        d++;
     }
 }
 
