@@ -900,8 +900,7 @@ void SetupSplash(SPLASH_SETUP *setup)
         if (!(splash->flags & 1))
             goto found;
     }
-    SoundEffect(33, (PHD_3DPOS *)setup, 0);
-    return;
+    goto sound;
 found:
     splash->flags = 1;
     splash->x = setup->x;
@@ -921,6 +920,7 @@ found:
     splash->OuterRad = setup->MiddleYVel;
     splash->OuterSize = setup->pad2;
     splash->OuterRadVel = setup->OuterRad;
+sound:
     SoundEffect(33, (PHD_3DPOS *)setup, 0);
 }
 
