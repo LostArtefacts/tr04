@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="203.24" height="12" x="0" y="0" class="named"><title>1348 · 86.86%</title></rect>
-<rect width="30.76" height="12" x="203.24" y="0" class="nonmatching"><title>204 · 13.14%</title></rect>
+<rect width="203.39" height="12" x="0" y="0" class="named"><title>1349 · 86.92%</title></rect>
+<rect width="30.61" height="12" x="203.39" y="0" class="nonmatching"><title>203 · 13.08%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">86.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1348</tspan> · <tspan class="nonmatching">204</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1349</tspan> · <tspan class="nonmatching">203</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="150.82" height="12" x="0" y="0" class="named"><title>403 KB · 64.45%</title></rect>
-<rect width="83.18" height="12" x="150.82" y="0" class="nonmatching"><title>222 KB · 35.55%</title></rect>
+<rect width="150.91" height="12" x="0" y="0" class="named"><title>403 KB · 64.49%</title></rect>
+<rect width="83.09" height="12" x="150.91" y="0" class="nonmatching"><title>222 KB · 35.51%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">64.5%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">403 KB</tspan> · <tspan class="nonmatching">222 KB</tspan></text>
@@ -154,7 +154,7 @@
 <rect width="12" height="12" x="165" y="15" class="named"><title>0x00409b80 TestBlockPush (416 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="15" class="nonmatching"><title>0x00409d20 TestBlockPull (792 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="15" class="nonmatching"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="15" class="nonmatching"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="15" class="named"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="15" class="named"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="15" class="named"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="15" class="named"><title>0x0040a930 InitialiseMummy (147 bytes)</title></rect>
@@ -2285,7 +2285,7 @@
 <rect width="10" height="9.80" x="711.04" y="192.49" class="named"><title>0x004173a0 FallingSquishyBlockCollision (246 bytes)</title></rect>
 <rect width="10" height="9.80" x="724.04" y="192.49" class="named"><title>0x00459640 ModelRigidRope (246 bytes)</title></rect>
 <rect width="9.96" height="9.80" x="737.04" y="192.49" class="named"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
-<rect width="9.99" height="9.73" x="473.89" y="205.29" class="nonmatching"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
+<rect width="9.99" height="9.73" x="473.89" y="205.29" class="named"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
 <rect width="9.99" height="9.73" x="473.89" y="218.02" class="named"><title>0x00447be0 TestBoundsCollideStatic (244 bytes)</title></rect>
 <rect width="9.99" height="9.69" x="473.89" y="230.75" class="named"><title>0x004321b0 LaraTestWaterStepOut (243 bytes)</title></rect>
 <rect width="9.99" height="9.69" x="473.89" y="243.43" class="named"><title>0x00490110 phd_LookAt (243 bytes)</title></rect>

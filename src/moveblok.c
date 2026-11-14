@@ -428,14 +428,14 @@ void InitialisePlanetEffect(sint16 item_number)
         }
     }
     if (item->trigger_flags == 1) {
+        pifl = (char *)&item->item_flags[2];
         item2 = items;
         for (i = 0, j = 0; i < level_items; i++, item2++) {
-            if (item2->object_number == PLANET_EFFECT && item_number != i) {
+            if (item2->object_number == PLANET_EFFECT && i != item_number) {
                 others[j] = i;
                 j++;
             }
         }
-        pifl = (char *)&item->item_flags[2];
         for (i = 0; i < 4; i++) {
             for (j = 0; j < 4; j++) {
                 item2 = &items[others[j]];
