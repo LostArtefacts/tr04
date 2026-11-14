@@ -322,6 +322,9 @@ void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
     float zv, x;
     sint32 i;
     sint16 clip_distance;
+    sint16 *c;
+
+    c = clip;
 
     for (i = 0; i < nVerts; i++) {
         v->tu = v->sx;
@@ -351,7 +354,7 @@ void ProjectVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
                 clip_distance += 8;
         } else
             clip_distance = -128;
-        *clip++ = clip_distance;
+        *c++ = clip_distance;
         v++;
     }
 }
