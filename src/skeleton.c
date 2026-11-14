@@ -160,6 +160,7 @@ void SkeletonControl(sint16 item_number)
         item->frame_number = anims[item->anim_number].frame_base;
         skelly->LOT.is_jumping = 1;
         item->hit_points = 25;
+        CreatureAnimation(item_number, angle, 0);
     } else {
         if (skelly->enemy == lara_item) {
             larainfo.distance = info.distance;
@@ -478,6 +479,6 @@ void SkeletonControl(sint16 item_number)
                 TriggerRiseEffect(item);
             break;
         }
+        CreatureAnimation(item_number, angle, 0);
     }
-    CreatureAnimation(item_number, angle, 0);
 }
