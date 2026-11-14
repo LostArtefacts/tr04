@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="203.54" height="12" x="0" y="0" class="named"><title>1350 · 86.98%</title></rect>
-<rect width="30.46" height="12" x="203.54" y="0" class="nonmatching"><title>202 · 13.02%</title></rect>
+<rect width="203.69" height="12" x="0" y="0" class="named"><title>1351 · 87.05%</title></rect>
+<rect width="30.31" height="12" x="203.69" y="0" class="nonmatching"><title>201 · 12.95%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">87.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1350</tspan> · <tspan class="nonmatching">202</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1351</tspan> · <tspan class="nonmatching">201</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="151.22" height="12" x="0" y="0" class="named"><title>404 KB · 64.62%</title></rect>
-<rect width="82.78" height="12" x="151.22" y="0" class="nonmatching"><title>221 KB · 35.38%</title></rect>
+<rect width="151.30" height="12" x="0" y="0" class="named"><title>404 KB · 64.66%</title></rect>
+<rect width="82.70" height="12" x="151.30" y="0" class="nonmatching"><title>221 KB · 35.34%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">64.6%</text>
+<text text-anchor="end" x="414" y="24.50">64.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">404 KB</tspan> · <tspan class="nonmatching">221 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
@@ -507,7 +507,7 @@
 <rect width="12" height="12" x="210" y="120" class="named"><title>0x0042df30 LaraTargetInfo (414 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="120" class="nonmatching"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="120" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="120" class="nonmatching"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="120" class="named"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="120" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="120" class="named"><title>0x0042e920 HitTarget (336 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="120" class="named"><title>0x0042ea70 WeaponObject (76 bytes)</title></rect>
@@ -2356,7 +2356,7 @@
 <rect width="9.08" height="9.04" x="535.66" y="217.64" class="named"><title>0x0046c630 twentythree_control (206 bytes)</title></rect>
 <rect width="8.99" height="9.04" x="547.74" y="217.64" class="named"><title>0x00499230 SW_SpanGAlpha (204 bytes)</title></rect>
 <rect width="8.95" height="9.04" x="559.74" y="217.64" class="named"><title>0x00404770 TriggerDemigodMissile (203 bytes)</title></rect>
-<rect width="8.95" height="9.04" x="571.69" y="217.64" class="nonmatching"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
+<rect width="8.95" height="9.04" x="571.69" y="217.64" class="named"><title>0x0042e560 AimWeapon (203 bytes)</title></rect>
 <rect width="8.95" height="9.04" x="583.64" y="217.64" class="named"><title>0x00454070 InitialiseRope (203 bytes)</title></rect>
 <rect width="8.95" height="9.04" x="595.58" y="217.64" class="named"><title>0x00467b90 JeepCheckGetOut (203 bytes)</title></rect>
 <rect width="8.95" height="9.04" x="607.53" y="217.64" class="nonmatching"><title>0x00473c10 FindCDDrive (203 bytes)</title></rect>

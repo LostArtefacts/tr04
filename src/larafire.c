@@ -438,6 +438,7 @@ void find_target_point(ITEM_INFO *item, GAME_VECTOR *target)
 
 void AimWeapon(WEAPON_INFO *winfo, LARA_ARM *arm)
 {
+    sint16 y_rotation;
     sint16 speed, x, y;
 
     speed = winfo->aim_speed;
@@ -448,12 +449,14 @@ void AimWeapon(WEAPON_INFO *winfo, LARA_ARM *arm)
         x = 0;
         y = 0;
     }
-    if (arm->y_rot >= y - speed && arm->y_rot <= speed + y)
-        arm->y_rot = y;
-    else if (arm->y_rot < y)
-        arm->y_rot += speed;
+    y_rotation = arm->y_rot;
+    if (y_rotation >= y - speed && y_rotation <= speed + y)
+        y_rotation = y;
+    else if (y_rotation < y)
+        y_rotation += speed;
     else
-        arm->y_rot -= speed;
+        y_rotation -= speed;
+    arm->y_rot = y_rotation;
     if (arm->x_rot >= x - speed && arm->x_rot <= speed + x)
         arm->x_rot = x;
     else if (arm->x_rot < x)
