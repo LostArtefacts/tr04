@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="200.38" height="12" x="0" y="0" class="named"><title>1329 · 85.63%</title></rect>
-<rect width="33.62" height="12" x="200.38" y="0" class="nonmatching"><title>223 · 14.37%</title></rect>
+<rect width="200.53" height="12" x="0" y="0" class="named"><title>1330 · 85.70%</title></rect>
+<rect width="33.47" height="12" x="200.53" y="0" class="nonmatching"><title>222 · 14.30%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">85.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1329</tspan> · <tspan class="nonmatching">223</tspan></text>
+<text text-anchor="end" x="414" y="7.50">85.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1330</tspan> · <tspan class="nonmatching">222</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="147.77" height="12" x="0" y="0" class="named"><title>395 KB · 63.15%</title></rect>
-<rect width="86.23" height="12" x="147.77" y="0" class="nonmatching"><title>230 KB · 36.85%</title></rect>
+<rect width="147.84" height="12" x="0" y="0" class="named"><title>395 KB · 63.18%</title></rect>
+<rect width="86.16" height="12" x="147.84" y="0" class="nonmatching"><title>230 KB · 36.82%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">63.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">395 KB</tspan> · <tspan class="nonmatching">230 KB</tspan></text>
@@ -248,7 +248,7 @@
 <rect width="12" height="12" x="75" y="45" class="named"><title>0x004169a0 ControlStargate (89 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="45" class="nonmatching"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="45" class="nonmatching"><title>0x00416d70 ControlSpikeball (201 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="45" class="nonmatching"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="45" class="named"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="45" class="named"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="45" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="45" class="named"><title>0x00417020 ControlMovingBlade (83 bytes)</title></rect>
@@ -2399,7 +2399,7 @@
 <rect width="9.03" height="8.47" x="559.42" y="229.68" class="nonmatching"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
 <rect width="8.98" height="8.47" x="571.44" y="229.68" class="named"><title>0x00427ef0 lara_col_turn_r (191 bytes)</title></rect>
 <rect width="8.98" height="8.47" x="583.42" y="229.68" class="named"><title>0x004398b0 LaraBubbles (191 bytes)</title></rect>
-<rect width="8.93" height="8.47" x="595.40" y="229.68" class="nonmatching"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
+<rect width="8.93" height="8.47" x="595.40" y="229.68" class="named"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
 <rect width="8.93" height="8.47" x="607.33" y="229.68" class="named"><title>0x00421a10 lara_as_crawlb (190 bytes)</title></rect>
 <rect width="8.93" height="8.47" x="619.26" y="229.68" class="named"><title>0x00422810 LaraTestClimbStance (190 bytes)</title></rect>
 <rect width="8.93" height="8.47" x="631.20" y="229.68" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
