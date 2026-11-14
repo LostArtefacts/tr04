@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="202.34" height="12" x="0" y="0" class="named"><title>1342 · 86.47%</title></rect>
-<rect width="31.66" height="12" x="202.34" y="0" class="nonmatching"><title>210 · 13.53%</title></rect>
+<rect width="202.49" height="12" x="0" y="0" class="named"><title>1343 · 86.53%</title></rect>
+<rect width="31.51" height="12" x="202.49" y="0" class="nonmatching"><title>209 · 13.47%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">86.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1342</tspan> · <tspan class="nonmatching">210</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1343</tspan> · <tspan class="nonmatching">209</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="149.76" height="12" x="0" y="0" class="named"><title>400 KB · 64%</title></rect>
-<rect width="84.24" height="12" x="149.76" y="0" class="nonmatching"><title>225 KB · 36%</title></rect>
+<rect width="149.94" height="12" x="0" y="0" class="named"><title>401 KB · 64.08%</title></rect>
+<rect width="84.06" height="12" x="149.94" y="0" class="nonmatching"><title>225 KB · 35.92%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">64.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">400 KB</tspan> · <tspan class="nonmatching">225 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">64.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">401 KB</tspan> · <tspan class="nonmatching">225 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -1342,7 +1342,7 @@
 <rect width="12" height="12" x="735" y="360" class="named"><title>0x00479f20 CreateMonoScreen (20 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="375" class="named"><title>0x00479f40 FreeMonoScreen (727 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="375" class="nonmatching"><title>0x0047a220 S_DrawTile (724 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="375" class="nonmatching"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="375" class="named"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="375" class="named"><title>0x0047a6f0 GetSaveLoadFiles (398 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="375" class="named"><title>0x0047a880 DoLoadSave (753 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="375" class="nonmatching"><title>0x0047ab80 DoSlider (1449 bytes)</title></rect>
@@ -2014,7 +2014,7 @@
 <rect width="14.57" height="13.64" x="525.02" y="101.26" class="nonmatching"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
 <rect width="14.45" height="13.64" x="542.58" y="101.26" class="named"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="14.42" height="13.64" x="560.03" y="101.26" class="named"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
-<rect width="14.42" height="13.64" x="577.45" y="101.26" class="nonmatching"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
+<rect width="14.42" height="13.64" x="577.45" y="101.26" class="named"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
 <rect width="14.39" height="13.64" x="594.87" y="101.26" class="named"><title>0x00421bf0 lara_col_crawl2hang (493 bytes)</title></rect>
 <rect width="14.39" height="13.64" x="612.26" y="101.26" class="named"><title>0x0044a1a0 GetFloor (493 bytes)</title></rect>
 <rect width="14.30" height="13.64" x="629.66" y="101.26" class="named"><title>0x00427a40 lara_col_walk (490 bytes)</title></rect>

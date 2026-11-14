@@ -274,12 +274,17 @@ void S_DisplayMonoScreen(void)
     sint32 y[4];
     uint32 col;
     sint32 i;
+    sint32 phd_winwidth_value;
+    sint32 phd_winheight_value;
 
+
+    phd_winwidth_value = phd_winwidth;
+    phd_winheight_value = phd_winheight;
     for (i = 0; i < 3; i++) {
-        x[i] = phd_winxmin + phd_winwidth * MonoScreenX[i] / 640;
-        y[i] = phd_winymin + phd_winheight * MonoScreenY[i] / 480;
+        x[i] = phd_winxmin + phd_winwidth_value * MonoScreenX[i] / 640;
+        y[i] = phd_winymin + phd_winheight_value * MonoScreenY[i] / 480;
     }
-    x[3] = phd_winxmin + phd_winwidth * MonoScreenX[3] / 640;
+    x[3] = phd_winxmin + phd_winwidth_value * MonoScreenX[3] / 640;
     RestoreFPCW(FPCW);
     col = 0xFFFFFFFF;
     S_DrawTile(x[0], y[0], x[1] - x[0], y[1] - y[0], MonoScreen[0].tex, 0, 0, 256, 256, col, col, col, col);
