@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="202.19" height="12" x="0" y="0" class="named"><title>1341 · 86.40%</title></rect>
-<rect width="31.81" height="12" x="202.19" y="0" class="nonmatching"><title>211 · 13.60%</title></rect>
+<rect width="202.34" height="12" x="0" y="0" class="named"><title>1342 · 86.47%</title></rect>
+<rect width="31.66" height="12" x="202.34" y="0" class="nonmatching"><title>210 · 13.53%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">86.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1341</tspan> · <tspan class="nonmatching">211</tspan></text>
+<text text-anchor="end" x="414" y="7.50">86.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1342</tspan> · <tspan class="nonmatching">210</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="149.36" height="12" x="0" y="0" class="named"><title>399 KB · 63.83%</title></rect>
-<rect width="84.64" height="12" x="149.36" y="0" class="nonmatching"><title>226 KB · 36.17%</title></rect>
+<rect width="149.76" height="12" x="0" y="0" class="named"><title>400 KB · 64%</title></rect>
+<rect width="84.24" height="12" x="149.76" y="0" class="nonmatching"><title>225 KB · 36%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">63.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">399 KB</tspan> · <tspan class="nonmatching">226 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">64.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">400 KB</tspan> · <tspan class="nonmatching">225 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -1235,7 +1235,7 @@
 <rect width="12" height="12" x="630" y="330" class="named"><title>0x0046fe80 DXSetupDialog (79 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="330" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="330" class="nonmatching"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="330" class="nonmatching"><title>0x004701c0 InitResolution (1057 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="330" class="named"><title>0x004701c0 InitResolution (1057 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="330" class="named"><title>0x004705f0 InitD3DDevice (186 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="330" class="named"><title>0x004706b0 InitDDDevice (228 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="330" class="named"><title>0x004707a0 MapASCIIToANSI (136 bytes)</title></rect>
@@ -1788,7 +1788,7 @@
 <rect width="20.92" height="20.39" x="261.53" y="386.98" class="nonmatching"><title>0x00424a60 lara_as_stop (1071 bytes)</title></rect>
 <rect width="20.92" height="20.32" x="261.53" y="410.37" class="nonmatching"><title>0x0048d580 DrawJeepSpeedo (1067 bytes)</title></rect>
 <rect width="20.92" height="20.18" x="261.53" y="433.69" class="named"><title>0x00449b90 AnimateItem (1060 bytes)</title></rect>
-<rect width="20.92" height="20.13" x="261.53" y="456.87" class="nonmatching"><title>0x004701c0 InitResolution (1057 bytes)</title></rect>
+<rect width="20.92" height="20.13" x="261.53" y="456.87" class="named"><title>0x004701c0 InitResolution (1057 bytes)</title></rect>
 <rect width="21.16" height="19.83" x="285.45" y="0" class="named"><title>0x004797c0 MemBltSurf (1053 bytes)</title></rect>
 <rect width="21.06" height="19.83" x="309.61" y="0" class="named"><title>0x00456cd0 ControlLightningConductor (1048 bytes)</title></rect>
 <rect width="20.86" height="19.83" x="333.67" y="0" class="nonmatching"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>

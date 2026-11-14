@@ -168,7 +168,7 @@ void InitResolution(HWND dlg, HWND hwnd, uint8 resetvms)
     } else {
         EnableWindow(GetDlgItem(dlg, 1014), 1);
     }
-    SendMessage(GetDlgItem(dlg, 1014), BM_SETCHECK, TextLow, 0);
+    SendMessage(GetDlgItem(dlg, 1014), BM_SETCHECK, (*(uint32 *)&TextLow & 0xFF), 0);
     if (TextLow) {
         SendMessage(GetDlgItem(dlg, 1015), BM_SETCHECK, 1, 0);
         EnableWindow(GetDlgItem(dlg, 1015), 0);
