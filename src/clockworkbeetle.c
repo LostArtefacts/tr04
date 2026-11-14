@@ -72,7 +72,6 @@ void ControlClockworkBeetle(sint16 item_number)
 {
     ITEM_INFO *item, *item2;
     FLOOR_INFO *floor;
-    PHD_VECTOR pos;
     sint32 bounce, h, x, z, cx, cz, dx, dy, dz, frame, base, rotY;
     uint16 angle;
     sint32 next;
@@ -88,13 +87,15 @@ void ControlClockworkBeetle(sint16 item_number)
             return;
         }
         if (frame < base + 104) {
+            PHD_VECTOR pos;
+
             pos.x = 0;
             pos.y = 0;
             pos.z = -32;
             GetLaraJointPos(&pos, 11);
-            item->pos.z_pos = pos.z;
             item->pos.x_pos = pos.x;
             item->pos.y_pos = pos.y;
+            item->pos.z_pos = pos.z;
             item->pos.y_rot = lara_item->pos.y_rot;
             item->pos.z_rot = -12740;
             item->status = ITEM_ACTIVE;

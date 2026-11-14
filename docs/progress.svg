@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="200.23" height="12" x="0" y="0" class="named"><title>1328 · 85.57%</title></rect>
-<rect width="33.77" height="12" x="200.23" y="0" class="nonmatching"><title>224 · 14.43%</title></rect>
+<rect width="200.38" height="12" x="0" y="0" class="named"><title>1329 · 85.63%</title></rect>
+<rect width="33.62" height="12" x="200.38" y="0" class="nonmatching"><title>223 · 14.37%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">85.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1328</tspan> · <tspan class="nonmatching">224</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1329</tspan> · <tspan class="nonmatching">223</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="147.14" height="12" x="0" y="0" class="named"><title>393 KB · 62.88%</title></rect>
-<rect width="86.86" height="12" x="147.14" y="0" class="nonmatching"><title>232 KB · 37.12%</title></rect>
+<rect width="147.77" height="12" x="0" y="0" class="named"><title>395 KB · 63.15%</title></rect>
+<rect width="86.23" height="12" x="147.77" y="0" class="nonmatching"><title>230 KB · 36.85%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">62.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">393 KB</tspan> · <tspan class="nonmatching">232 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">63.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">395 KB</tspan> · <tspan class="nonmatching">230 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -796,7 +796,7 @@
 <rect width="12" height="12" x="45" y="210" class="nonmatching"><title>0x00445310 BinocularCamera (1407 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="210" class="named"><title>0x00445890 LaraTorch (90 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="210" class="named"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="210" class="nonmatching"><title>0x00445ad0 ControlClockworkBeetle (1688 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="210" class="named"><title>0x00445ad0 ControlClockworkBeetle (1688 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="210" class="nonmatching"><title>0x00446170 GetCollisionInfo (2867 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="210" class="named"><title>0x00446cf0 FindGridShift (47 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="210" class="named"><title>0x00446d20 CollideStaticObjects (585 bytes)</title></rect>
@@ -1718,7 +1718,7 @@
 <rect width="24.94" height="27.40" x="182.31" y="0" class="nonmatching"><title>0x00451770 DoGameflow (1716 bytes)</title></rect>
 <rect width="24.94" height="27.40" x="182.31" y="30.40" class="nonmatching"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
 <rect width="24.94" height="27.28" x="182.31" y="60.81" class="named"><title>0x00401080 AhmetControl (1708 bytes)</title></rect>
-<rect width="24.94" height="26.96" x="182.31" y="91.08" class="nonmatching"><title>0x00445ad0 ControlClockworkBeetle (1688 bytes)</title></rect>
+<rect width="24.94" height="26.96" x="182.31" y="91.08" class="named"><title>0x00445ad0 ControlClockworkBeetle (1688 bytes)</title></rect>
 <rect width="24.94" height="26.94" x="182.31" y="121.04" class="nonmatching"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
 <rect width="24.94" height="26.88" x="182.31" y="150.98" class="nonmatching"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
 <rect width="24.94" height="25.08" x="182.31" y="180.86" class="named"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
