@@ -1558,9 +1558,9 @@ void ControlSethBlade(sint16 item_number)
     } else {
         frame = item->frame_number - anims[item->anim_number].frame_base;
         if (frame && frame <= 6)
-            *(sint32 *)&item->item_flags[0] = -1;
+            *(volatile sint32 *)&item->item_flags[0] = -1;
         else if (frame >= 7 && frame <= 15)
-            *(sint32 *)&item->item_flags[0] = 448;
+            *(volatile sint32 *)&item->item_flags[0] = 448;
         else
             *(sint32 *)&item->item_flags[0] = 0;
         item->item_flags[3] = 1000;

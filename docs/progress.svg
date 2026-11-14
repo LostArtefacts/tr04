@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="201.43" height="12" x="0" y="0" class="named"><title>1336 · 86.08%</title></rect>
-<rect width="32.57" height="12" x="201.43" y="0" class="nonmatching"><title>216 · 13.92%</title></rect>
+<rect width="201.58" height="12" x="0" y="0" class="named"><title>1337 · 86.15%</title></rect>
+<rect width="32.42" height="12" x="201.58" y="0" class="nonmatching"><title>215 · 13.85%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">86.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1336</tspan> · <tspan class="nonmatching">216</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1337</tspan> · <tspan class="nonmatching">215</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="148.88" height="12" x="0" y="0" class="named"><title>398 KB · 63.62%</title></rect>
-<rect width="85.12" height="12" x="148.88" y="0" class="nonmatching"><title>228 KB · 36.38%</title></rect>
+<rect width="148.98" height="12" x="0" y="0" class="named"><title>398 KB · 63.67%</title></rect>
+<rect width="85.02" height="12" x="148.98" y="0" class="nonmatching"><title>227 KB · 36.33%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">63.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">398 KB</tspan> · <tspan class="nonmatching">228 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">63.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">398 KB</tspan> · <tspan class="nonmatching">227 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -253,7 +253,7 @@
 <rect width="12" height="12" x="150" y="45" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="45" class="named"><title>0x00417020 ControlMovingBlade (83 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="45" class="named"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="45" class="nonmatching"><title>0x00417100 ControlSethBlade (253 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="45" class="named"><title>0x00417100 ControlSethBlade (253 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="45" class="named"><title>0x00417200 ControlLRSquishyBlock (266 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="45" class="named"><title>0x00417310 ControlFallingSquishyBlock (136 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="45" class="named"><title>0x004173a0 FallingSquishyBlockCollision (246 bytes)</title></rect>
@@ -2266,7 +2266,7 @@
 <rect width="10.32" height="9.80" x="460.57" y="467.20" class="nonmatching"><title>0x0043afd0 LSpline (254 bytes)</title></rect>
 <rect width="10.33" height="9.80" x="473.89" y="192.49" class="named"><title>0x004547b0 ItemNewRoom (254 bytes)</title></rect>
 <rect width="10.33" height="9.80" x="487.21" y="192.49" class="named"><title>0x0046de50 OpenStreamFile (254 bytes)</title></rect>
-<rect width="10.29" height="9.80" x="500.54" y="192.49" class="nonmatching"><title>0x00417100 ControlSethBlade (253 bytes)</title></rect>
+<rect width="10.29" height="9.80" x="500.54" y="192.49" class="named"><title>0x00417100 ControlSethBlade (253 bytes)</title></rect>
 <rect width="10.24" height="9.80" x="513.82" y="192.49" class="named"><title>0x004228d0 TestWall (252 bytes)</title></rect>
 <rect width="10.24" height="9.80" x="527.07" y="192.49" class="named"><title>0x00428c40 LookUpDown (252 bytes)</title></rect>
 <rect width="10.24" height="9.80" x="540.31" y="192.49" class="named"><title>0x0043f050 remove_inventory_item (252 bytes)</title></rect>
