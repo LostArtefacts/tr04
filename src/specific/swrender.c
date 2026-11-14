@@ -11418,9 +11418,12 @@ HANDLE DBLog_OpenMapping(LPCSTR name)
 
 void DBLog_Post(HWND hwnd, LPARAM lparam)
 {
-    while (!PostMessageA(hwnd, DBLog_Message, 0, lparam)) {
-        if (!FindWindowA("DBLogWindowClass", "DBLog Server"))
-            return;
+    while (1) {
+        if (!PostMessageA(hwnd, DBLog_Message, 0, lparam)) {
+            if (!FindWindowA("DBLogWindowClass", "DBLog Server"))
+                break;
+        } else
+            break;
     }
 }
 
