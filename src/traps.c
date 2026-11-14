@@ -1570,12 +1570,19 @@ void ControlLRSquishyBlock(sint16 item_number)
 {
     ITEM_INFO *item;
     uint16 ang;
+    sint32 ix, iz, lx, lz;
 
     item = &items[item_number];
     if (!TriggerActive(item))
         return;
     if (item->touch_bits) {
-        ang = (uint16)phd_atan(item->pos.z_pos - lara_item->pos.z_pos, item->pos.x_pos - lara_item->pos.x_pos) - item->pos.y_rot;
+        ix = item->pos.x_pos;
+        iz = item->pos.z_pos;
+        lx = lara_item->pos.x_pos;
+        lz = lara_item->pos.z_pos;
+        ix -= lx;
+        iz -= lz;
+        ang = (uint16)phd_atan(iz, ix) - item->pos.y_rot;
         if (!(item->frame_number - anims[item->anim_number].frame_base) && ang > 0xA000 && ang < 0xE000) {
             item->item_flags[0] = 9;
             lara_item->hit_points = 0;
