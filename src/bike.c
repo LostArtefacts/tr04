@@ -489,8 +489,8 @@ sint32 TestHeight(ITEM_INFO *item, sint32 z, sint32 x, PHD_VECTOR *pos)
     sint32 sx, sz, sy, cy, c, h;
     sint16 room_number;
 
-    sz = z * phd_sin(item->pos.x_rot) >> W2V_SHIFT;
-    sx = x * phd_sin(item->pos.z_rot) >> W2V_SHIFT;
+    sz = (rcossin_tbl[(item->pos.x_rot >> 3) & 0x1FFE] << 2) * z >> W2V_SHIFT;
+    sx = (rcossin_tbl[(item->pos.z_rot >> 3) & 0x1FFE] << 2) * x >> W2V_SHIFT;
     pos->y = item->pos.y_pos + sx - sz;
     cy = phd_cos(item->pos.y_rot);
     sy = phd_sin(item->pos.y_rot);
