@@ -376,7 +376,9 @@ void mD3DTransform(FVECTOR *vec, D3DMATRIX *mx)
     t.x = mx->_11 * vec->x + mx->_21 * vec->y + mx->_31 * vec->z + mx->_41;
     t.y = mx->_22 * vec->y + (mx->_12 * vec->x + mx->_32 * vec->z) + mx->_42;
     t.z = mx->_23 * vec->y + (mx->_13 * vec->x + mx->_33 * vec->z) + mx->_43;
-    *vec = t;
+    vec->x = t.x;
+    vec->y = t.y;
+    vec->z = t.z;
 }
 
 void CreateFogPos(FOGBULB_STRUCT *FogBulb)

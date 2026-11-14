@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="199.17" height="12" x="0" y="0" class="named"><title>1321 · 85.12%</title></rect>
-<rect width="34.83" height="12" x="199.17" y="0" class="nonmatching"><title>231 · 14.88%</title></rect>
+<rect width="199.32" height="12" x="0" y="0" class="named"><title>1322 · 85.18%</title></rect>
+<rect width="34.68" height="12" x="199.32" y="0" class="nonmatching"><title>230 · 14.82%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">85.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1321</tspan> · <tspan class="nonmatching">231</tspan></text>
+<text text-anchor="end" x="414" y="7.50">85.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1322</tspan> · <tspan class="nonmatching">230</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="146.09" height="12" x="0" y="0" class="named"><title>391 KB · 62.43%</title></rect>
-<rect width="87.91" height="12" x="146.09" y="0" class="nonmatching"><title>235 KB · 37.57%</title></rect>
+<rect width="146.13" height="12" x="0" y="0" class="named"><title>391 KB · 62.45%</title></rect>
+<rect width="87.87" height="12" x="146.13" y="0" class="nonmatching"><title>235 KB · 37.55%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">62.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">391 KB</tspan> · <tspan class="nonmatching">235 KB</tspan></text>
@@ -1392,7 +1392,7 @@
 <rect width="12" height="12" x="735" y="375" class="named"><title>0x004819b0 CreateFXBulbs (62 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="390" class="named"><title>0x004819f0 TriggerFXFogBulb (216 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="390" class="named"><title>0x00481ad0 IsVolumetric (8 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="390" class="nonmatching"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="390" class="named"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="390" class="named"><title>0x00481b50 CreateFogPos (452 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="390" class="named"><title>0x00481d20 DistCompare (199 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="390" class="named"><title>0x00481df0 InitialiseFogBulbs (109 bytes)</title></rect>
@@ -2641,7 +2641,7 @@
 <rect width="6.70" height="6.54" x="672.63" y="295.21" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
 <rect width="6.70" height="6.54" x="682.33" y="295.21" class="named"><title>0x00454900 CreateEffect (110 bytes)</title></rect>
 <rect width="6.70" height="6.54" x="692.03" y="295.21" class="named"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>
-<rect width="6.70" height="6.54" x="701.74" y="295.21" class="nonmatching"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
+<rect width="6.70" height="6.54" x="701.74" y="295.21" class="named"><title>0x00481ae0 mD3DTransform (110 bytes)</title></rect>
 <rect width="6.64" height="6.54" x="711.44" y="295.21" class="named"><title>0x00428ea0 ready_shotgun (109 bytes)</title></rect>
 <rect width="6.64" height="6.54" x="721.08" y="295.21" class="named"><title>0x0042bab0 ready_pistols (109 bytes)</title></rect>
 <rect width="6.64" height="6.54" x="730.72" y="295.21" class="named"><title>0x0043aa90 TriggerShockwave (109 bytes)</title></rect>
