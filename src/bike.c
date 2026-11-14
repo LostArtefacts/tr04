@@ -436,7 +436,6 @@ sint32 BikeCheckGetOff(void)
     ITEM_INFO *item;
     ITEM_INFO *l;
     BIKEINFO *bike;
-    PHD_VECTOR pos;
     sint16 state;
 
     item = &items[lara.vehicle];
@@ -456,12 +455,11 @@ sint32 BikeCheckGetOff(void)
     } else if (l->frame_number == anims[l->anim_number].frame_end) {
         bike = (BIKEINFO *)item->data;
         if (state == 20) {
+            PHD_VECTOR pos = {0, 0, 0};
+
             l->anim_number = ANIM_FASTFALL;
             l->frame_number = anims[ANIM_FASTFALL].frame_base;
             l->current_anim_state = AS_FASTFALL;
-            pos.x = 0;
-            pos.y = 0;
-            pos.z = 0;
             GetLaraJointPos(&pos, LM_HIPS);
             l->pos.x_pos = pos.x;
             l->pos.y_pos = pos.y;
