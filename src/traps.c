@@ -27,18 +27,18 @@ void CloseTrapDoor(ITEM_INFO *item)
     ROOM_INFO *r;
     FLOOR_INFO *floor;
     uint16 pitsky;
+    uint16 pit;
 
+    pitsky = 0;
     r = &room[item->room_number];
     floor = &r->floor[((item->pos.z_pos - r->z) >> WALL_SHIFT) + r->x_size * ((item->pos.x_pos - r->x) >> WALL_SHIFT)];
     if (item->pos.y_pos == r->minfloor) {
-        pitsky = floor->pit_room;
+        pit = floor->pit_room;
         floor->pit_room = NO_ROOM;
-        r = &room[pitsky];
+        r = &room[pit];
         floor = &r->floor[((item->pos.z_pos - r->z) >> WALL_SHIFT) + r->x_size * ((item->pos.x_pos - r->x) >> WALL_SHIFT)];
-        pitsky |= floor->sky_room << 8;
+        pitsky = pit | (floor->sky_room << 8);
         floor->sky_room = NO_ROOM;
-        item->item_flags[2] = 1;
-        item->item_flags[3] = pitsky;
     } else if (item->pos.y_pos == r->maxceiling) {
         pitsky = floor->sky_room;
         floor->sky_room = NO_ROOM;
@@ -47,12 +47,9 @@ void CloseTrapDoor(ITEM_INFO *item)
         pitsky <<= 8;
         pitsky |= floor->pit_room;
         floor->pit_room = NO_ROOM;
-        item->item_flags[2] = 1;
-        item->item_flags[3] = pitsky;
-    } else {
-        item->item_flags[2] = 1;
-        item->item_flags[3] = 0;
     }
+    item->item_flags[2] = 1;
+    item->item_flags[3] = pitsky;
 }
 
 void TrapDoorControl(sint16 item_number)
