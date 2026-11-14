@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="200.53" height="12" x="0" y="0" class="named"><title>1330 · 85.70%</title></rect>
-<rect width="33.47" height="12" x="200.53" y="0" class="nonmatching"><title>222 · 14.30%</title></rect>
+<rect width="200.68" height="12" x="0" y="0" class="named"><title>1331 · 85.76%</title></rect>
+<rect width="33.32" height="12" x="200.68" y="0" class="nonmatching"><title>221 · 14.24%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">85.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1330</tspan> · <tspan class="nonmatching">222</tspan></text>
+<text text-anchor="end" x="414" y="7.50">85.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1331</tspan> · <tspan class="nonmatching">221</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="147.84" height="12" x="0" y="0" class="named"><title>395 KB · 63.18%</title></rect>
-<rect width="86.16" height="12" x="147.84" y="0" class="nonmatching"><title>230 KB · 36.82%</title></rect>
+<rect width="148.39" height="12" x="0" y="0" class="named"><title>397 KB · 63.41%</title></rect>
+<rect width="85.61" height="12" x="148.39" y="0" class="nonmatching"><title>229 KB · 36.59%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">63.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">395 KB</tspan> · <tspan class="nonmatching">230 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">63.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">397 KB</tspan> · <tspan class="nonmatching">229 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -854,7 +854,7 @@
 <rect width="12" height="12" x="165" y="225" class="nonmatching"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="225" class="named"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="225" class="named"><title>0x0044d820 FireCrossBowFromLaserSight (110 bytes)</title></rect>
-<rect width="12" height="12" x="210" y="225" class="nonmatching"><title>0x0044d890 GetTargetOnLOS (1464 bytes)</title></rect>
+<rect width="12" height="12" x="210" y="225" class="named"><title>0x0044d890 GetTargetOnLOS (1464 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="225" class="named"><title>0x0044de50 ExplodeItemNode (259 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="225" class="named"><title>0x0044df60 ShutThatDoor (94 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="225" class="named"><title>0x0044dfc0 OpenThatDoor (78 bytes)</title></rect>
@@ -1731,7 +1731,7 @@
 <rect width="24.94" height="24.01" x="182.31" y="373.51" class="nonmatching"><title>0x0045dc10 TrapObjects (1503 bytes)</title></rect>
 <rect width="24.94" height="23.62" x="182.31" y="400.52" class="nonmatching"><title>0x0047ce10 DoBar (1479 bytes)</title></rect>
 <rect width="24.94" height="23.48" x="182.31" y="427.14" class="nonmatching"><title>0x0044ff60 DrawAnimatingItem (1470 bytes)</title></rect>
-<rect width="24.94" height="23.38" x="182.31" y="453.62" class="nonmatching"><title>0x0044d890 GetTargetOnLOS (1464 bytes)</title></rect>
+<rect width="24.94" height="23.38" x="182.31" y="453.62" class="named"><title>0x0044d890 GetTargetOnLOS (1464 bytes)</title></rect>
 <rect width="23.28" height="25.02" x="210.25" y="0" class="nonmatching"><title>0x00436340 ControlSmokeEmitter (1462 bytes)</title></rect>
 <rect width="23.28" height="24.80" x="210.25" y="28.02" class="nonmatching"><title>0x0047ab80 DoSlider (1449 bytes)</title></rect>
 <rect width="23.28" height="24.76" x="210.25" y="55.82" class="nonmatching"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>

@@ -2055,7 +2055,7 @@ sint32 GetTargetOnLOS(GAME_VECTOR *src, GAME_VECTOR *dest, sint32 DrawTarget, si
     FLOOR_INFO *floor;
     GAME_VECTOR target;
     PHD_VECTOR v;
-    sint16 item_no, hit, ricochet, room_number, TriggerItems[8], NumTrigs;
+    sint16 item_no, hit, ricochet, TriggerItems[8], NumTrigs;
     sint16 i;
 
     hit = 0;
@@ -2081,7 +2081,7 @@ sint32 GetTargetOnLOS(GAME_VECTOR *src, GAME_VECTOR *dest, sint32 DrawTarget, si
                         SmashedMeshRoom[SmashedMeshCount] = target.room_number;
                         SmashedMesh[SmashedMeshCount++] = Mesh;
                         Mesh->Flags &= ~1;
-                        SoundEffect(SFX_HIT_ROCK, (PHD_3DPOS *)Mesh, SFX_DEFAULT);
+                        SoundEffect(SFX_HIT_ROCK, (PHD_3DPOS *)&target, SFX_DEFAULT);
                     }
                     TriggerRicochetSpark(&target, lara_item->pos.y_rot, 3, 0);
                     TriggerRicochetSpark(&target, lara_item->pos.y_rot, 3, 0);
@@ -2111,6 +2111,8 @@ sint32 GetTargetOnLOS(GAME_VECTOR *src, GAME_VECTOR *dest, sint32 DrawTarget, si
                             if (shotitem->object_number == SWITCH_TYPE7)
                                 ExplodeItemNode(shotitem, objects[shotitem->object_number].nmeshes - 1, 0, 64);
                             if (shotitem->flags & IFL_CODEBITS && (shotitem->flags & IFL_CODEBITS) != IFL_CODEBITS) {
+                                sint16 room_number;
+
                                 room_number = shotitem->room_number;
                                 floor = GetFloor(shotitem->pos.x_pos, shotitem->pos.y_pos - 256, shotitem->pos.z_pos, &room_number);
                                 GetHeight(floor, shotitem->pos.x_pos, shotitem->pos.y_pos - 256, shotitem->pos.z_pos);
