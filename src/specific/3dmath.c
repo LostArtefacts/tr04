@@ -13,7 +13,7 @@ void AlterFOV(sint16 fov)
 {
     CurrentFov = fov;
     fov /= 2;
-    phd_persp = ((phd_winwidth / 2) * phd_cos(fov)) / phd_sin(fov);
+    phd_persp = ((phd_winwidth / 2) * (rcossin_tbl[(((fov) >> 3) & 0x1FFE) + 1] << 2)) / phd_sin(fov);
     f_persp = (float)phd_persp;
     f_oneopersp = one / f_persp;
     f_perspoznear = f_persp / f_znear;

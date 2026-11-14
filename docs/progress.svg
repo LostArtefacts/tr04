@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="200.83" height="12" x="0" y="0" class="named"><title>1332 · 85.82%</title></rect>
-<rect width="33.17" height="12" x="200.83" y="0" class="nonmatching"><title>220 · 14.18%</title></rect>
+<rect width="200.98" height="12" x="0" y="0" class="named"><title>1333 · 85.89%</title></rect>
+<rect width="33.02" height="12" x="200.98" y="0" class="nonmatching"><title>219 · 14.11%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">85.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1332</tspan> · <tspan class="nonmatching">220</tspan></text>
+<text text-anchor="end" x="414" y="7.50">85.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1333</tspan> · <tspan class="nonmatching">219</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="148.49" height="12" x="0" y="0" class="named"><title>397 KB · 63.46%</title></rect>
-<rect width="85.51" height="12" x="148.49" y="0" class="nonmatching"><title>229 KB · 36.54%</title></rect>
+<rect width="148.56" height="12" x="0" y="0" class="named"><title>397 KB · 63.49%</title></rect>
+<rect width="85.44" height="12" x="148.56" y="0" class="nonmatching"><title>228 KB · 36.51%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">63.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">397 KB</tspan> · <tspan class="nonmatching">229 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">397 KB</tspan> · <tspan class="nonmatching">228 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -1490,7 +1490,7 @@
 <rect width="12" height="12" x="705" y="405" class="named"><title>0x0048f9b0 j_nullsub_13 (5 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="405" class="named"><title>0x0048f9c0 nullsub_13 (1 bytes)</title></rect>
 <rect width="12" height="12" x="735" y="405" class="nonmatching"><title>0x0048f9c1 SW_WaitWhileDXInScene (13 bytes)</title></rect>
-<rect width="12" height="12" x="0" y="420" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
+<rect width="12" height="12" x="0" y="420" class="named"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="420" class="named"><title>0x0048fa90 SetupZRange (200 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="420" class="named"><title>0x0048fb60 ScaleCurrentMatrix (171 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="420" class="named"><title>0x0048fc10 InitWindow (299 bytes)</title></rect>
@@ -2405,7 +2405,7 @@
 <rect width="8.93" height="8.47" x="631.20" y="229.68" class="named"><title>0x0042e4a0 find_target_point (190 bytes)</title></rect>
 <rect width="8.93" height="8.47" x="643.13" y="229.68" class="nonmatching"><title>0x00435920 SetupSplash (190 bytes)</title></rect>
 <rect width="8.93" height="8.47" x="655.06" y="229.68" class="named"><title>0x00453170 InitialiseFlameEmitter2 (190 bytes)</title></rect>
-<rect width="8.93" height="8.47" x="666.99" y="229.68" class="nonmatching"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
+<rect width="8.93" height="8.47" x="666.99" y="229.68" class="named"><title>0x0048f9d0 AlterFOV (190 bytes)</title></rect>
 <rect width="8.89" height="8.47" x="678.92" y="229.68" class="named"><title>0x00413dc0 ControlSmashableBikeWall (189 bytes)</title></rect>
 <rect width="8.89" height="8.47" x="690.81" y="229.68" class="named"><title>0x004597d0 SetPendulumVelocity (189 bytes)</title></rect>
 <rect width="8.89" height="8.47" x="702.69" y="229.68" class="named"><title>0x004770c0 GameClose (189 bytes)</title></rect>
