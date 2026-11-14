@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="204.60" height="12" x="0" y="0" class="named"><title>1357 · 87.44%</title></rect>
-<rect width="29.40" height="12" x="204.60" y="0" class="nonmatching"><title>195 · 12.56%</title></rect>
+<rect width="204.75" height="12" x="0" y="0" class="named"><title>1358 · 87.50%</title></rect>
+<rect width="29.25" height="12" x="204.75" y="0" class="nonmatching"><title>194 · 12.50%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">87.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1357</tspan> · <tspan class="nonmatching">195</tspan></text>
+<text text-anchor="end" x="414" y="7.50">87.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1358</tspan> · <tspan class="nonmatching">194</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="152.75" height="12" x="0" y="0" class="named"><title>408 KB · 65.28%</title></rect>
-<rect width="81.25" height="12" x="152.75" y="0" class="nonmatching"><title>217 KB · 34.72%</title></rect>
+<rect width="153.12" height="12" x="0" y="0" class="named"><title>409 KB · 65.44%</title></rect>
+<rect width="80.88" height="12" x="153.12" y="0" class="nonmatching"><title>216 KB · 34.56%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">65.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">408 KB</tspan> · <tspan class="nonmatching">217 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">65.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">409 KB</tspan> · <tspan class="nonmatching">216 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -1242,7 +1242,7 @@
 <rect width="12" height="12" x="735" y="330" class="nonmatching"><title>0x00470830 DXSetupDlgProc (2030 bytes)</title></rect>
 <rect width="12" height="12" x="0" y="345" class="named"><title>0x00471020 j_nullsub_15 (5 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="345" class="named"><title>0x00471030 nullsub_15 (1 bytes)</title></rect>
-<rect width="12" height="12" x="30" y="345" class="nonmatching"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
+<rect width="12" height="12" x="30" y="345" class="named"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="345" class="nonmatching"><title>0x00471420 ProcessRoomData (2518 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="345" class="named"><title>0x00471e00 ProjectVerts (313 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="345" class="nonmatching"><title>0x00471f40 ProjectWaterVerts (588 bytes)</title></rect>
@@ -1802,7 +1802,7 @@
 <rect width="20.09" height="19.83" x="522.13" y="0" class="named"><title>0x004582a0 PuzzleHoleCollision (1000 bytes)</title></rect>
 <rect width="19.95" height="19.83" x="545.23" y="0" class="named"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
 <rect width="19.91" height="19.83" x="568.18" y="0" class="named"><title>0x0043a690 ExplodingDeath2 (991 bytes)</title></rect>
-<rect width="19.87" height="19.83" x="591.09" y="0" class="nonmatching"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
+<rect width="19.87" height="19.83" x="591.09" y="0" class="named"><title>0x00471040 ProcessMeshData (989 bytes)</title></rect>
 <rect width="19.83" height="19.83" x="613.97" y="0" class="named"><title>0x0043eb80 DEL_picked_up_object (987 bytes)</title></rect>
 <rect width="19.71" height="19.83" x="636.80" y="0" class="nonmatching"><title>0x0048c6c0 DrawBikeSpeedo (981 bytes)</title></rect>
 <rect width="19.69" height="19.83" x="659.51" y="0" class="nonmatching"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>

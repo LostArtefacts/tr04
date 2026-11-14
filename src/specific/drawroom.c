@@ -95,16 +95,16 @@ void ProcessMeshData(sint32 num_meshes)
                         ((D3DVECTOR *)mesh->Normals)[j].z = vtx[j].nz;
                     }
                     mesh->prelight = 0;
-                    IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
                 } else {
                     mesh->Normals = 0;
                     mesh->prelight = (sint32 *)game_malloc(4 * mesh->nVerts, 0);
                     for (j = 0; j < mesh->nVerts; j++) {
-                        c = 255 - (*mesh_ptr++ >> 5);
+                        c = *mesh_ptr++ >> 5;
+                        c = 255 - c;
                         mesh->prelight[j] = RGBONLY(c, c, c);
                     }
-                    IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
                 }
+                IDirect3DVertexBuffer_Unlock((LPDIRECT3DVERTEXBUFFER)mesh->SourceVB);
             } else
                 mesh_ptr += 6 * lp + 1;
             mesh->ngt4 = *mesh_ptr++;
