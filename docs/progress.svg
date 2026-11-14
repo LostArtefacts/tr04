@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="204.30" height="12" x="0" y="0" class="named"><title>1355 · 87.31%</title></rect>
-<rect width="29.70" height="12" x="204.30" y="0" class="nonmatching"><title>197 · 12.69%</title></rect>
+<rect width="204.45" height="12" x="0" y="0" class="named"><title>1356 · 87.37%</title></rect>
+<rect width="29.55" height="12" x="204.45" y="0" class="nonmatching"><title>196 · 12.63%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">87.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1355</tspan> · <tspan class="nonmatching">197</tspan></text>
+<text text-anchor="end" x="414" y="7.50">87.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1356</tspan> · <tspan class="nonmatching">196</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="152.49" height="12" x="0" y="0" class="named"><title>408 KB · 65.17%</title></rect>
-<rect width="81.51" height="12" x="152.49" y="0" class="nonmatching"><title>218 KB · 34.83%</title></rect>
+<rect width="152.69" height="12" x="0" y="0" class="named"><title>408 KB · 65.25%</title></rect>
+<rect width="81.31" height="12" x="152.69" y="0" class="nonmatching"><title>217 KB · 34.75%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">65.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">408 KB</tspan> · <tspan class="nonmatching">218 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">65.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">408 KB</tspan> · <tspan class="nonmatching">217 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -259,7 +259,7 @@
 <rect width="12" height="12" x="240" y="45" class="named"><title>0x004173a0 FallingSquishyBlockCollision (246 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="45" class="nonmatching"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="45" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="45" class="nonmatching"><title>0x00417db0 ControlMineHelicopter (524 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="45" class="named"><title>0x00417db0 ControlMineHelicopter (524 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="45" class="named"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="45" class="named"><title>0x004183b0 InitialiseTroop (120 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="45" class="nonmatching"><title>0x00418430 TroopControl (2248 bytes)</title></rect>
@@ -1987,7 +1987,7 @@
 <rect width="14.56" height="14.45" x="366.15" y="153.75" class="named"><title>0x00435e30 TriggerDartSmoke (528 bytes)</title></rect>
 <rect width="14.56" height="14.42" x="366.15" y="171.20" class="named"><title>0x004853f0 SaveSettings (527 bytes)</title></rect>
 <rect width="14.56" height="14.37" x="366.15" y="188.62" class="named"><title>0x0046b2b0 DrawCutSeqActors (525 bytes)</title></rect>
-<rect width="14.56" height="14.34" x="366.15" y="205.99" class="nonmatching"><title>0x00417db0 ControlMineHelicopter (524 bytes)</title></rect>
+<rect width="14.56" height="14.34" x="366.15" y="205.99" class="named"><title>0x00417db0 ControlMineHelicopter (524 bytes)</title></rect>
 <rect width="14.56" height="14.34" x="366.15" y="223.33" class="named"><title>0x00455ae0 EarthQuake (524 bytes)</title></rect>
 <rect width="14.56" height="14.31" x="366.15" y="240.67" class="named"><title>0x00466fa0 JeepCollision (523 bytes)</title></rect>
 <rect width="14.56" height="14.29" x="366.15" y="257.99" class="named"><title>0x00408e00 TriggerHorsemanRicochets (522 bytes)</title></rect>
