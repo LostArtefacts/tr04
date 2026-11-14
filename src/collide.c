@@ -1077,11 +1077,14 @@ void GenericDeadlyBoundingBoxCollision(sint16 item_number, ITEM_INFO *l, COLL_IN
 sint32 TestBoundsCollide2(ITEM_INFO *item, ITEM_INFO *l, sint32 rad)
 {
     sint16 *bounds;
+    sint32 iy, ly;
     sint32 s, c, dx, dz, x, z;
 
     bounds = GetBestFrame(l);
-    if (item->pos.y_pos + GlobalCollisionBounds[3] <= l->pos.y_pos + bounds[2] ||
-        item->pos.y_pos + GlobalCollisionBounds[2] >= l->pos.y_pos + bounds[3])
+    iy = item->pos.y_pos;
+    ly = l->pos.y_pos;
+    if (iy + GlobalCollisionBounds[3] <= ly + bounds[2] ||
+        iy + GlobalCollisionBounds[2] >= ly + bounds[3])
         return 0;
     c = phd_cos(item->pos.y_rot);
     s = phd_sin(item->pos.y_rot);
