@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="204.90" height="12" x="0" y="0" class="named"><title>1359 · 87.56%</title></rect>
-<rect width="29.10" height="12" x="204.90" y="0" class="nonmatching"><title>193 · 12.44%</title></rect>
+<rect width="205.05" height="12" x="0" y="0" class="named"><title>1360 · 87.63%</title></rect>
+<rect width="28.95" height="12" x="205.05" y="0" class="nonmatching"><title>192 · 12.37%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">87.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1359</tspan> · <tspan class="nonmatching">193</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1360</tspan> · <tspan class="nonmatching">192</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="153.83" height="12" x="0" y="0" class="named"><title>411 KB · 65.74%</title></rect>
-<rect width="80.17" height="12" x="153.83" y="0" class="nonmatching"><title>214 KB · 34.26%</title></rect>
+<rect width="154.35" height="12" x="0" y="0" class="named"><title>413 KB · 65.96%</title></rect>
+<rect width="79.65" height="12" x="154.35" y="0" class="nonmatching"><title>213 KB · 34.04%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">65.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">411 KB</tspan> · <tspan class="nonmatching">214 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">66.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">413 KB</tspan> · <tspan class="nonmatching">213 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -793,7 +793,7 @@
 <rect width="12" height="12" x="0" y="210" class="nonmatching"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="210" class="named"><title>0x00444e00 CameraCollisionBounds (948 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="210" class="named"><title>0x004451c0 mgLOS (327 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="210" class="nonmatching"><title>0x00445310 BinocularCamera (1407 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="210" class="named"><title>0x00445310 BinocularCamera (1407 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="210" class="named"><title>0x00445890 LaraTorch (90 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="210" class="named"><title>0x004458f0 TriggerClockworkBeetle (476 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="210" class="named"><title>0x00445ad0 ControlClockworkBeetle (1688 bytes)</title></rect>
@@ -1740,7 +1740,7 @@
 <rect width="23.28" height="24.42" x="210.25" y="138.86" class="nonmatching"><title>0x00467380 JeepControl (1427 bytes)</title></rect>
 <rect width="23.28" height="24.10" x="210.25" y="166.29" class="named"><title>0x0042d840 LaraGun (1408 bytes)</title></rect>
 <rect width="23.28" height="24.08" x="210.25" y="193.38" class="named"><title>0x0042be40 AnimatePistols (1407 bytes)</title></rect>
-<rect width="23.28" height="24.08" x="210.25" y="220.46" class="nonmatching"><title>0x00445310 BinocularCamera (1407 bytes)</title></rect>
+<rect width="23.28" height="24.08" x="210.25" y="220.46" class="named"><title>0x00445310 BinocularCamera (1407 bytes)</title></rect>
 <rect width="23.28" height="23.84" x="210.25" y="247.54" class="nonmatching"><title>0x00482390 AddQuadClippedZBuffer (1393 bytes)</title></rect>
 <rect width="23.28" height="23.77" x="210.25" y="274.38" class="nonmatching"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
 <rect width="23.28" height="23.34" x="210.25" y="301.16" class="nonmatching"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>

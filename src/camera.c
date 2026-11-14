@@ -992,10 +992,9 @@ void BinocularCamera(ITEM_INFO *item)
             camera.bounce = 0;
         } else {
             rndval = -camera.bounce;
-            shake = rndval >> 1;
-            camera.target.x += GetRandomControl() % rndval - shake;
-            camera.target.y += GetRandomControl() % rndval - shake;
-            camera.target.z += GetRandomControl() % rndval - shake;
+            camera.target.x += GetRandomControl() % rndval - (rndval >> 1);
+            camera.target.y += GetRandomControl() % rndval - (rndval >> 1);
+            camera.target.z += GetRandomControl() % rndval - (rndval >> 1);
             camera.bounce += 5;
         }
     }
