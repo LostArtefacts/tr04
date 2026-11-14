@@ -392,12 +392,17 @@ sint32 XYUVGClipper(sint32 n, D3DTLBUMPVERTEX *in)
 
 sint32 visible_zclip(D3DTLVERTEX *v0, D3DTLVERTEX *v1, D3DTLVERTEX *v2)
 {
-    float a, b, c;
+    float x, y, z;
+    float a, b, c, e, f, g;
 
-    a = (v2->tu * v0->sz - v2->sz * v0->tu) * v1->tv;
-    b = (v2->sz * v0->tv - v2->tv * v0->sz) * v1->tu;
-    c = (v2->tv * v0->tu - v2->tu * v0->tv) * v1->sz;
-    if (a + b + c < 0)
-        return 1;
-    return 0;
+    a = v2->tu * v0->sz;
+    b = v2->sz * v0->tu;
+    c = v2->sz * v0->tv;
+    e = v2->tv * v0->sz;
+    f = v2->tv * v0->tu;
+    g = v2->tu * v0->tv;
+    x = (a - b) * v1->tv;
+    y = (c - e) * v1->tu;
+    z = (f - g) * v1->sz;
+    return (x + y + z) < 0;
 }

@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="199.02" height="12" x="0" y="0" class="named"><title>1320 · 85.05%</title></rect>
-<rect width="34.98" height="12" x="199.02" y="0" class="nonmatching"><title>232 · 14.95%</title></rect>
+<rect width="199.17" height="12" x="0" y="0" class="named"><title>1321 · 85.12%</title></rect>
+<rect width="34.83" height="12" x="199.17" y="0" class="nonmatching"><title>231 · 14.88%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">85.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1320</tspan> · <tspan class="nonmatching">232</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1321</tspan> · <tspan class="nonmatching">231</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="146.06" height="12" x="0" y="0" class="named"><title>390 KB · 62.42%</title></rect>
-<rect width="87.94" height="12" x="146.06" y="0" class="nonmatching"><title>235 KB · 37.58%</title></rect>
+<rect width="146.09" height="12" x="0" y="0" class="named"><title>391 KB · 62.43%</title></rect>
+<rect width="87.91" height="12" x="146.09" y="0" class="nonmatching"><title>235 KB · 37.57%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">62.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">390 KB</tspan> · <tspan class="nonmatching">235 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">391 KB</tspan> · <tspan class="nonmatching">235 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -1229,7 +1229,7 @@
 <rect width="12" height="12" x="540" y="330" class="named"><title>0x0046e340 ACMHandleNotifications (389 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="330" class="nonmatching"><title>0x0046e4d0 ZClipper (1009 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="330" class="nonmatching"><title>0x0046e8d0 XYUVGClipper (5386 bytes)</title></rect>
-<rect width="12" height="12" x="585" y="330" class="nonmatching"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
+<rect width="12" height="12" x="585" y="330" class="named"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="330" class="named"><title>0x0046fe40 CLSetup (30 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="330" class="named"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="330" class="named"><title>0x0046fe80 DXSetupDialog (79 bytes)</title></rect>
@@ -2743,7 +2743,7 @@
 <rect width="6.22" height="5.70" x="593.52" y="384.78" class="named"><title>0x00437bc0 swap_meshes_with_meshswap2 (89 bytes)</title></rect>
 <rect width="6.22" height="5.70" x="593.52" y="393.47" class="named"><title>0x00442110 CreatureEffect (89 bytes)</title></rect>
 <rect width="6.22" height="5.70" x="593.52" y="402.17" class="named"><title>0x00442170 CreatureEffectT (89 bytes)</title></rect>
-<rect width="6.22" height="5.70" x="593.52" y="410.87" class="nonmatching"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
+<rect width="6.22" height="5.70" x="593.52" y="410.87" class="named"><title>0x0046fde0 visible_zclip (89 bytes)</title></rect>
 <rect width="6.22" height="5.63" x="593.52" y="419.57" class="named"><title>0x00403ed0 InitialiseCrocgod (88 bytes)</title></rect>
 <rect width="6.22" height="5.63" x="593.52" y="428.20" class="named"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
 <rect width="6.22" height="5.63" x="593.52" y="436.83" class="named"><title>0x00421900 lara_as_all4turnl (88 bytes)</title></rect>
