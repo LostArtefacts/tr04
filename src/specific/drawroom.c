@@ -36,7 +36,6 @@ void ProcessMeshData(sint32 num_meshes)
 {
     MESH_DATA *mesh;
     D3DVERTEX *vtx;
-    D3DVERTEXBUFFERDESC buf;
     sint16 *mesh_ptr;
     sint16 *last_mesh_ptr;
     sint32 lp, i, j;
@@ -47,7 +46,6 @@ void ProcessMeshData(sint32 num_meshes)
     mesh_vtxbuf = (MESH_DATA **)game_malloc(4 * num_meshes, 0);
     mesh_base = (sint16 *)malloc_ptr;
     last_mesh_ptr = 0;
-    mesh = (MESH_DATA *)num_meshes;
     for (i = 0; i < num_meshes; i++) {
         mesh_ptr = meshes[i];
         if (last_mesh_ptr == mesh_ptr) {
@@ -69,6 +67,7 @@ void ProcessMeshData(sint32 num_meshes)
                 lp = *mesh_ptr >> 8;
             mesh_ptr++;
             if (mesh->nVerts) {
+                D3DVERTEXBUFFERDESC buf;
                 memset(&buf, 0, sizeof(buf));
                 buf.dwNumVertices = mesh->nVerts;
                 buf.dwSize = sizeof(D3DVERTEXBUFFERDESC);
