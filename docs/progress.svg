@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="204.45" height="12" x="0" y="0" class="named"><title>1356 · 87.37%</title></rect>
-<rect width="29.55" height="12" x="204.45" y="0" class="nonmatching"><title>196 · 12.63%</title></rect>
+<rect width="204.60" height="12" x="0" y="0" class="named"><title>1357 · 87.44%</title></rect>
+<rect width="29.40" height="12" x="204.60" y="0" class="nonmatching"><title>195 · 12.56%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">87.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1356</tspan> · <tspan class="nonmatching">196</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1357</tspan> · <tspan class="nonmatching">195</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="152.69" height="12" x="0" y="0" class="named"><title>408 KB · 65.25%</title></rect>
-<rect width="81.31" height="12" x="152.69" y="0" class="nonmatching"><title>217 KB · 34.75%</title></rect>
+<rect width="152.75" height="12" x="0" y="0" class="named"><title>408 KB · 65.28%</title></rect>
+<rect width="81.25" height="12" x="152.75" y="0" class="nonmatching"><title>217 KB · 34.72%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">65.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">408 KB</tspan> · <tspan class="nonmatching">217 KB</tspan></text>
@@ -1328,7 +1328,7 @@
 <rect width="12" height="12" x="525" y="360" class="named"><title>0x004784b0 ApplyTransposeMatrix (105 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="360" class="named"><title>0x00478520 S_CalculateStaticMeshLight (76 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="360" class="nonmatching"><title>0x00478570 CalcAmbientLight (301 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="360" class="nonmatching"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="360" class="named"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="360" class="nonmatching"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="360" class="named"><title>0x00478b50 SetupLight (804 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="360" class="nonmatching"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
@@ -2465,7 +2465,7 @@
 <rect width="8.38" height="7.94" x="625.92" y="252.47" class="named"><title>0x0047d6b0 StashSkinVertices (167 bytes)</title></rect>
 <rect width="8.38" height="7.94" x="637.30" y="252.47" class="named"><title>0x0047d760 SkinVerticesToScratch (167 bytes)</title></rect>
 <rect width="8.38" height="7.94" x="648.68" y="252.47" class="named"><title>0x00490350 phd_TranslateRel (167 bytes)</title></rect>
-<rect width="8.33" height="7.94" x="660.06" y="252.47" class="nonmatching"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
+<rect width="8.33" height="7.94" x="660.06" y="252.47" class="named"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
 <rect width="8.28" height="7.94" x="671.39" y="252.47" class="named"><title>0x00423880 lara_as_monkeyswing (165 bytes)</title></rect>
 <rect width="8.23" height="7.94" x="682.67" y="252.47" class="named"><title>0x00401730 ExplodeAhmet (164 bytes)</title></rect>
 <rect width="8.23" height="7.94" x="693.90" y="252.47" class="named"><title>0x004371f0 DoLotsOfBlood (164 bytes)</title></rect>

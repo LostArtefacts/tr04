@@ -162,16 +162,18 @@ void CalcAmbientLight(ITEM_INFO *item)
 void FadeLightList(PCLIGHT *lights, sint32 nLights)
 {
     sint32 i;
+    sint32 *fade_count;
 
     for (i = nLights; i > 0; i--, lights++) {
-        if (lights->Active && lights->fcnt) {
+        fade_count = &lights->fcnt;
+        if (lights->Active && *fade_count) {
             if (lights->Type != LIGHT_SHADOW) {
                 lights->r = lights->rs + lights->r;
                 lights->g = lights->gs + lights->g;
                 lights->b = lights->bs + lights->b;
             } else
                 lights->shadow += lights->iny;
-            lights->fcnt--;
+            *fade_count = *(volatile sint32 *)fade_count - 1;
             if (lights->Type != LIGHT_SHADOW) {
                 if (lights->r <= 0 && lights->g <= 0 && lights->b <= 0)
                     lights->Active = 0;
