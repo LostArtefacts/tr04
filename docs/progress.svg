@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="202.49" height="12" x="0" y="0" class="named"><title>1343 · 86.53%</title></rect>
-<rect width="31.51" height="12" x="202.49" y="0" class="nonmatching"><title>209 · 13.47%</title></rect>
+<rect width="202.64" height="12" x="0" y="0" class="named"><title>1344 · 86.60%</title></rect>
+<rect width="31.36" height="12" x="202.64" y="0" class="nonmatching"><title>208 · 13.40%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">86.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1343</tspan> · <tspan class="nonmatching">209</tspan></text>
+<text text-anchor="end" x="414" y="7.50">86.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1344</tspan> · <tspan class="nonmatching">208</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="149.94" height="12" x="0" y="0" class="named"><title>401 KB · 64.08%</title></rect>
-<rect width="84.06" height="12" x="149.94" y="0" class="nonmatching"><title>225 KB · 35.92%</title></rect>
+<rect width="150.13" height="12" x="0" y="0" class="named"><title>401 KB · 64.16%</title></rect>
+<rect width="83.87" height="12" x="150.13" y="0" class="nonmatching"><title>224 KB · 35.84%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">64.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">401 KB</tspan> · <tspan class="nonmatching">225 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">64.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">401 KB</tspan> · <tspan class="nonmatching">224 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -263,7 +263,7 @@
 <rect width="12" height="12" x="300" y="45" class="named"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="45" class="named"><title>0x004183b0 InitialiseTroop (120 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="45" class="nonmatching"><title>0x00418430 TroopControl (2248 bytes)</title></rect>
-<rect width="12" height="12" x="345" y="45" class="nonmatching"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
+<rect width="12" height="12" x="345" y="45" class="named"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="45" class="named"><title>0x00418f10 ClearCutSceneCamera (130 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="45" class="named"><title>0x00418fa0 GetAIEnemy (199 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="45" class="named"><title>0x00419070 DoVonCroyCutscene (1262 bytes)</title></rect>
@@ -1993,7 +1993,7 @@
 <rect width="14.56" height="14.29" x="366.15" y="257.99" class="named"><title>0x00408e00 TriggerHorsemanRicochets (522 bytes)</title></rect>
 <rect width="14.56" height="14.26" x="366.15" y="275.28" class="named"><title>0x00456ac0 ControlBurningRope (521 bytes)</title></rect>
 <rect width="14.56" height="14.23" x="366.15" y="292.53" class="named"><title>0x0043ab00 TriggerShockwaveHitEffect (520 bytes)</title></rect>
-<rect width="14.56" height="14.20" x="366.15" y="309.77" class="nonmatching"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
+<rect width="14.56" height="14.20" x="366.15" y="309.77" class="named"><title>0x00418d00 SetCutSceneCamera (519 bytes)</title></rect>
 <rect width="14.56" height="14.20" x="366.15" y="326.97" class="named"><title>0x0042c770 lara_col_climbstnc (519 bytes)</title></rect>
 <rect width="14.56" height="14.07" x="366.15" y="344.18" class="named"><title>0x00490610 phd_RotYXZpack (514 bytes)</title></rect>
 <rect width="14.56" height="14.04" x="366.15" y="361.24" class="named"><title>0x0044cbe0 ObjectOnLOS2 (513 bytes)</title></rect>

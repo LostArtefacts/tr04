@@ -25,21 +25,26 @@ void SetCutSceneCamera(ITEM_INFO *item)
 {
     VONCROY_CUT_DATA *cut;
     sint32 flags;
+    PHD_VECTOR pos_copy;
 
     bVoncroyCutScene = 1;
     camera.old_type = FIXED_CAMERA;
     camera.type = CHASE_CAMERA;
     camera.speed = 1;
     CalculateCamera();
+    pos_copy.x = camera.pos.x;
+    pos_copy.y = camera.pos.y;
+    pos_copy.z = camera.pos.z;
+
     actualCameraTarget.x = camera.target.x;
     actualCameraTarget.y = camera.target.y;
     actualCameraTarget.z = camera.target.z;
     actualFOV = CurrentFov;
     actualRoomNumber = camera.pos.room_number;
     camera.underwater = 0;
-    actualCameraPos.x = camera.pos.x;
-    actualCameraPos.y = camera.pos.y;
-    actualCameraPos.z = camera.pos.z;
+    actualCameraPos.x = pos_copy.x;
+    actualCameraPos.y = pos_copy.y;
+    actualCameraPos.z = pos_copy.z;
     cut = &VonCroyCutscenes[VonCroyCutIndices[lara.locationPad]];
     flags = cut->FOV;
     if (flags & 0xFFFF)
