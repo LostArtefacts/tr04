@@ -392,17 +392,17 @@ void finish_cutseq(void)
 
 void DrawCutSeqActors(void)
 {
-    OBJECT_INFO *obj;
     sint16 **mesh;
     sint32 *bone, i, j;
-    sint16 *rot;
     sint32 n, bits, swap, flags;
+    OBJECT_INFO *obj;
+    sint16 *rot;
 
     phd_PushMatrix();
     for (i = 1; i < GLOBAL_cutme->numactors; i++) {
+        n = 1;
         bits = cutseq_meshbits[i];
         swap = cutseq_meshswapbits[i];
-        n = 1;
         phd_PushMatrix();
         if (!(bits & 0x80000000)) {
             phd_PopMatrix();
@@ -414,7 +414,7 @@ void DrawCutSeqActors(void)
             phd_TranslateAbs(GLOBAL_cutme->orgx, GLOBAL_cutme->orgy, GLOBAL_cutme->orgz);
             CalcActorLighting(&duff_item[i - 1], obj, temp_rotation_buffer);
             mesh = &meshes[obj->mesh_index];
-            bone = &bones[obj->bone_index];
+            bone = bones + obj->bone_index;
             phd_TranslateRel(temp_rotation_buffer[6], temp_rotation_buffer[7], temp_rotation_buffer[8]);
             rot = &temp_rotation_buffer[9];
             gar_RotYXZsuperpack(&rot, 0);
