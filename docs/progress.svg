@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="205.05" height="12" x="0" y="0" class="named"><title>1360 · 87.63%</title></rect>
-<rect width="28.95" height="12" x="205.05" y="0" class="nonmatching"><title>192 · 12.37%</title></rect>
+<rect width="205.20" height="12" x="0" y="0" class="named"><title>1361 · 87.69%</title></rect>
+<rect width="28.80" height="12" x="205.20" y="0" class="nonmatching"><title>191 · 12.31%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">87.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1360</tspan> · <tspan class="nonmatching">192</tspan></text>
+<text text-anchor="end" x="414" y="7.50">87.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1361</tspan> · <tspan class="nonmatching">191</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="154.35" height="12" x="0" y="0" class="named"><title>413 KB · 65.96%</title></rect>
-<rect width="79.65" height="12" x="154.35" y="0" class="nonmatching"><title>213 KB · 34.04%</title></rect>
+<rect width="155.03" height="12" x="0" y="0" class="named"><title>414 KB · 66.25%</title></rect>
+<rect width="78.97" height="12" x="155.03" y="0" class="nonmatching"><title>211 KB · 33.75%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">66.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">413 KB</tspan> · <tspan class="nonmatching">213 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">66.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">414 KB</tspan> · <tspan class="nonmatching">211 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -257,7 +257,7 @@
 <rect width="12" height="12" x="210" y="45" class="named"><title>0x00417200 ControlLRSquishyBlock (266 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="45" class="named"><title>0x00417310 ControlFallingSquishyBlock (136 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="45" class="named"><title>0x004173a0 FallingSquishyBlockCollision (246 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="45" class="nonmatching"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="45" class="named"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="45" class="named"><title>0x00417bb0 MineCollision (500 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="45" class="named"><title>0x00417db0 ControlMineHelicopter (524 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="45" class="named"><title>0x00417fc0 ControlSprinkler (993 bytes)</title></rect>
@@ -1708,7 +1708,7 @@
 <rect width="27.06" height="27.31" x="152.25" y="186.95" class="nonmatching"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
 <rect width="27.06" height="27.19" x="152.25" y="217.25" class="named"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>
 <rect width="27.06" height="26.98" x="152.25" y="247.44" class="nonmatching"><title>0x00460420 InitialiseSpotCam (1833 bytes)</title></rect>
-<rect width="27.06" height="26.56" x="152.25" y="277.43" class="nonmatching"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
+<rect width="27.06" height="26.56" x="152.25" y="277.43" class="named"><title>0x004174a0 ControlObelisk (1804 bytes)</title></rect>
 <rect width="27.06" height="26.38" x="152.25" y="306.98" class="nonmatching"><title>0x00459890 CalculateRope (1792 bytes)</title></rect>
 <rect width="27.06" height="26.20" x="152.25" y="336.36" class="named"><title>0x00410530 DoSethEffects (1780 bytes)</title></rect>
 <rect width="27.06" height="25.80" x="152.25" y="365.56" class="nonmatching"><title>0x00414fa0 ControlRollingBall (1753 bytes)</title></rect>

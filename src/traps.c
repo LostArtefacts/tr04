@@ -1650,6 +1650,7 @@ void ControlObelisk(sint16 item_number)
     PHD_VECTOR s;
     PHD_VECTOR d;
     sint32 stop, i;
+    sint32 color_tmp;
     sint16 r, g, b, rad;
 
     item = &items[item_number];
@@ -1704,8 +1705,9 @@ void ControlObelisk(sint16 item_number)
             return;
 
         item->item_flags[3]++;
-        r = (GetRandomControl() & 0x1F) + 224;
-        g = r - (GetRandomControl() & 0x1F) - 32;
+        color_tmp = (GetRandomControl() & 0x1F) + 224;
+        g = color_tmp - (GetRandomControl() & 0x1F) - 32;
+        r = color_tmp;
         b = g - (GetRandomControl() & 0x1F) - 128;
 
         if (!(GlobalCounter & 1)) {
