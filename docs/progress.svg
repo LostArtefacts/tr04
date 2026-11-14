@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="205.81" height="12" x="0" y="0" class="named"><title>1365 · 87.95%</title></rect>
-<rect width="28.19" height="12" x="205.81" y="0" class="nonmatching"><title>187 · 12.05%</title></rect>
+<rect width="205.96" height="12" x="0" y="0" class="named"><title>1366 · 88.02%</title></rect>
+<rect width="28.04" height="12" x="205.96" y="0" class="nonmatching"><title>186 · 11.98%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">88.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1365</tspan> · <tspan class="nonmatching">187</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1366</tspan> · <tspan class="nonmatching">186</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="155.74" height="12" x="0" y="0" class="named"><title>416 KB · 66.55%</title></rect>
-<rect width="78.26" height="12" x="155.74" y="0" class="nonmatching"><title>209 KB · 33.45%</title></rect>
+<rect width="155.98" height="12" x="0" y="0" class="named"><title>417 KB · 66.66%</title></rect>
+<rect width="78.02" height="12" x="155.98" y="0" class="nonmatching"><title>209 KB · 33.34%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">66.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">416 KB</tspan> · <tspan class="nonmatching">209 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">66.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">417 KB</tspan> · <tspan class="nonmatching">209 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -814,7 +814,7 @@
 <rect width="12" height="12" x="315" y="210" class="named"><title>0x00447ce0 ItemPushLaraStatic (590 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="210" class="named"><title>0x00447f30 TestLaraPosition (311 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="210" class="named"><title>0x00448070 AlignLaraPosition (208 bytes)</title></rect>
-<rect width="12" height="12" x="360" y="210" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
+<rect width="12" height="12" x="360" y="210" class="named"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="210" class="nonmatching"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="210" class="named"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="named"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
@@ -1896,7 +1896,7 @@
 <rect width="16.14" height="16.85" x="328.57" y="64.29" class="named"><title>0x0041f510 FireCollision (683 bytes)</title></rect>
 <rect width="16.14" height="16.85" x="328.57" y="84.15" class="named"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>
 <rect width="16.14" height="16.58" x="328.57" y="104" class="named"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
-<rect width="16.14" height="16.39" x="328.57" y="123.58" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
+<rect width="16.14" height="16.39" x="328.57" y="123.58" class="named"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
 <rect width="16.14" height="16.31" x="328.57" y="142.97" class="named"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="16.14" height="16.19" x="328.57" y="162.28" class="named"><title>0x0047fa10 S_OutputPolyList (656 bytes)</title></rect>
 <rect width="16.14" height="16.16" x="328.57" y="181.47" class="named"><title>0x00463b50 PrintString (655 bytes)</title></rect>

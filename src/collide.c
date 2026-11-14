@@ -898,29 +898,29 @@ sint32 Move3DPosTo3DPos(PHD_3DPOS *pos, PHD_3DPOS *dest, sint32 speed, PHD_ANGLE
             case 0:
                 lara_item->anim_number = 65;
                 lara_item->frame_number = anims[65].frame_base;
-                lara_item->current_anim_state = AS_STEPLEFT;
                 lara_item->goal_anim_state = AS_STEPLEFT;
+                lara_item->current_anim_state = AS_STEPLEFT;
                 break;
 
             case 1:
                 lara_item->anim_number = 1;
                 lara_item->frame_number = anims[1].frame_base;
-                lara_item->current_anim_state = AS_WALK;
                 lara_item->goal_anim_state = AS_WALK;
+                lara_item->current_anim_state = AS_WALK;
                 break;
 
             case 2:
                 lara_item->anim_number = 67;
                 lara_item->frame_number = anims[67].frame_base;
-                lara_item->current_anim_state = AS_STEPRIGHT;
                 lara_item->goal_anim_state = AS_STEPRIGHT;
+                lara_item->current_anim_state = AS_STEPRIGHT;
                 break;
 
             default:
                 lara_item->anim_number = 40;
                 lara_item->frame_number = anims[40].frame_base;
-                lara_item->current_anim_state = AS_BACK;
                 lara_item->goal_anim_state = AS_BACK;
+                lara_item->current_anim_state = AS_BACK;
                 break;
             }
 
@@ -958,7 +958,9 @@ sint32 Move3DPosTo3DPos(PHD_3DPOS *pos, PHD_3DPOS *dest, sint32 speed, PHD_ANGLE
     else
         pos->z_rot = dest->z_rot;
 
-    return pos->x_pos == dest->x_pos && pos->y_pos == dest->y_pos && pos->z_pos == dest->z_pos && pos->x_rot == dest->x_rot && pos->y_rot == dest->y_rot && pos->z_rot == dest->z_rot;
+    if (pos->x_pos == dest->x_pos && pos->y_pos == dest->y_pos && pos->z_pos == dest->z_pos && pos->x_rot == dest->x_rot && pos->y_rot == dest->y_rot && pos->z_rot == dest->z_rot)
+        return 1;
+    return 0;
 }
 
 sint32 MoveLaraPosition(PHD_VECTOR *v, ITEM_INFO *item, ITEM_INFO *l)
