@@ -23,6 +23,7 @@
 #include "../newinv.h"
 
 #define RGB_M(clr, m) (col = (clr), cr = (CLRR(col) * (m)) >> 8, cg = (CLRG(col) * (m)) >> 8, cb = (CLRB(col) * (m)) >> 8, clr = RGBONLY(cr, cg, cb) | (col & 0xFF000000))
+#define RGB_M_INLINE(clr, m) (col = (clr), (clr) = (col & 0xFF000000) | RGBONLY(((CLRR(col) * (m)) >> 8), ((CLRG(col) * (m)) >> 8), ((CLRB(col) * (m)) >> 8)))
 
 void S_InitialisePolyList(void)
 {
@@ -335,14 +336,14 @@ void phd_PutPolygons(sint16 *objptr, sint32 clip)
                     s2 = v[quad[2]].specular;
                     s3 = v[quad[3]].specular;
                     m = num * 8;
-                    RGB_M(v[quad[0]].color, m);
-                    RGB_M(v[quad[1]].color, m);
-                    RGB_M(v[quad[2]].color, m);
-                    RGB_M(v[quad[3]].color, m);
-                    RGB_M(v[quad[0]].specular, m);
-                    RGB_M(v[quad[1]].specular, m);
-                    RGB_M(v[quad[2]].specular, m);
-                    RGB_M(v[quad[3]].specular, m);
+                    RGB_M_INLINE(v[quad[0]].color, m);
+                    RGB_M_INLINE(v[quad[1]].color, m);
+                    RGB_M_INLINE(v[quad[2]].color, m);
+                    RGB_M_INLINE(v[quad[3]].color, m);
+                    RGB_M_INLINE(v[quad[0]].specular, m);
+                    RGB_M_INLINE(v[quad[1]].specular, m);
+                    RGB_M_INLINE(v[quad[2]].specular, m);
+                    RGB_M_INLINE(v[quad[3]].specular, m);
                     AddQuadSorted(v, quad[0], quad[1], quad[2], quad[3], &envmap_texture, 0);
                     v[quad[0]].color = c0;
                     v[quad[1]].color = c1;
@@ -418,12 +419,12 @@ void phd_PutPolygons(sint16 *objptr, sint32 clip)
                     s1 = v[tri[1]].specular;
                     s2 = v[tri[2]].specular;
                     m = num * 8;
-                    RGB_M(v[tri[0]].color, m);
-                    RGB_M(v[tri[1]].color, m);
-                    RGB_M(v[tri[2]].color, m);
-                    RGB_M(v[tri[0]].specular, m);
-                    RGB_M(v[tri[1]].specular, m);
-                    RGB_M(v[tri[2]].specular, m);
+                    RGB_M_INLINE(v[tri[0]].color, m);
+                    RGB_M_INLINE(v[tri[1]].color, m);
+                    RGB_M_INLINE(v[tri[2]].color, m);
+                    RGB_M_INLINE(v[tri[0]].specular, m);
+                    RGB_M_INLINE(v[tri[1]].specular, m);
+                    RGB_M_INLINE(v[tri[2]].specular, m);
                     AddTriSorted(v, tri[0], tri[1], tri[2], &envmap_texture, 0);
                     v[tri[0]].color = c0;
                     v[tri[1]].color = c1;
