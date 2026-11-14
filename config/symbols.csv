@@ -1578,7 +1578,7 @@ address,size,name,symbol
 0x0049ee60,12,zcfree,_zcfree
 0x0049ee70,57,inflate_codes_new,_inflate_codes_new
 0x0049eeb0,1919,inflate_codes,_inflate_codes
-0x0049f660,20,inflate_trees_free,_inflate_trees_free
+0x0049f660,20,inflate_codes_free,_inflate_codes_free
 0x0049f680,163,inflate_trees_bits,_inflate_trees_bits
 0x0049f730,1225,huft_build,_huft_build
 0x0049fc00,393,inflate_trees_dynamic,_inflate_trees_dynamic
@@ -1842,7 +1842,7 @@ address,size,name,symbol
 0x004a8861,41,__set_exp,__set_exp
 0x004a888a,193,__decomp,__decomp
 0x004a894b,97,__setmode_lk,__setmode_lk
-0x004a89ac,6,RtlUnwind,_RtlUnwind
+0x004a89ac,6,RtlUnwind,_RtlUnwind@16
 0x004a9000,4,RegCloseKey,__imp__RegCloseKey@4
 0x004a9004,4,RegSetValueExA,__imp__RegSetValueExA@24
 0x004a9008,4,RegQueryValueExA,__imp__RegQueryValueExA@24
