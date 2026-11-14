@@ -228,10 +228,10 @@ void FlameTorchControl(sint16 item_number)
     }
     xv = (rcossin_tbl[(item->pos.y_rot >> 3) & 0x1FFE] << 2) * item->speed >> W2V_SHIFT;
     x = item->pos.x_pos;
-    item->pos.x_pos += xv;
     y = item->pos.y_pos;
-    zv = (rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * item->speed >> W2V_SHIFT;
     z = item->pos.z_pos;
+    item->pos.x_pos += xv;
+    zv = (rcossin_tbl[((item->pos.y_rot >> 3) & 0x1FFE) + 1] << 2) * item->speed >> W2V_SHIFT;
     item->pos.z_pos += zv;
     if (room[item->room_number].flags & ROOM_UNDERWATER) {
         item->fallspeed += (5 - item->fallspeed) / 2;
