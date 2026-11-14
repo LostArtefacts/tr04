@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="203.39" height="12" x="0" y="0" class="named"><title>1349 · 86.92%</title></rect>
-<rect width="30.61" height="12" x="203.39" y="0" class="nonmatching"><title>203 · 13.08%</title></rect>
+<rect width="203.54" height="12" x="0" y="0" class="named"><title>1350 · 86.98%</title></rect>
+<rect width="30.46" height="12" x="203.54" y="0" class="nonmatching"><title>202 · 13.02%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">86.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1349</tspan> · <tspan class="nonmatching">203</tspan></text>
+<text text-anchor="end" x="414" y="7.50">87.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1350</tspan> · <tspan class="nonmatching">202</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="150.91" height="12" x="0" y="0" class="named"><title>403 KB · 64.49%</title></rect>
-<rect width="83.09" height="12" x="150.91" y="0" class="nonmatching"><title>222 KB · 35.51%</title></rect>
+<rect width="151.22" height="12" x="0" y="0" class="named"><title>404 KB · 64.62%</title></rect>
+<rect width="82.78" height="12" x="151.22" y="0" class="nonmatching"><title>221 KB · 35.38%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">64.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">403 KB</tspan> · <tspan class="nonmatching">222 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">64.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">404 KB</tspan> · <tspan class="nonmatching">221 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -750,7 +750,7 @@
 <rect width="12" height="12" x="105" y="195" class="named"><title>0x0043f4c0 dels_give_lara_items_cheat (252 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="195" class="named"><title>0x0043f5c0 TriggerAutogunFlamethrower (473 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="195" class="named"><title>0x0043f7a0 InitialiseAutogun (59 bytes)</title></rect>
-<rect width="12" height="12" x="150" y="195" class="nonmatching"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
+<rect width="12" height="12" x="150" y="195" class="named"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="195" class="named"><title>0x0043fb30 InitialiseCreature (52 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="195" class="named"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="195" class="nonmatching"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
@@ -1839,7 +1839,7 @@
 <rect width="18.36" height="18.68" x="437.21" y="22.83" class="named"><title>0x0044fc00 calc_animating_item_clip_window (861 bytes)</title></rect>
 <rect width="18.19" height="18.68" x="458.57" y="22.83" class="nonmatching"><title>0x004860d0 DrawBubbles (853 bytes)</title></rect>
 <rect width="18.06" height="18.68" x="479.76" y="22.83" class="named"><title>0x00425130 lara_col_upjump (847 bytes)</title></rect>
-<rect width="17.98" height="18.68" x="500.83" y="22.83" class="nonmatching"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
+<rect width="17.98" height="18.68" x="500.83" y="22.83" class="named"><title>0x0043f7e0 AutogunControl (843 bytes)</title></rect>
 <rect width="17.96" height="18.68" x="521.80" y="22.83" class="named"><title>0x0044bfd0 xLOS (842 bytes)</title></rect>
 <rect width="17.96" height="18.68" x="542.76" y="22.83" class="nonmatching"><title>0x0048b130 ShowTitle (842 bytes)</title></rect>
 <rect width="17.93" height="18.68" x="563.71" y="22.83" class="named"><title>0x0044bc80 zLOS (841 bytes)</title></rect>

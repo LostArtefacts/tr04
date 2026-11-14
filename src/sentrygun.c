@@ -86,6 +86,7 @@ void AutogunControl(sint16 item_number)
     AI_INFO info;
     PHD_VECTOR pos;
     sint32 i;
+    sint16 pitch;
     sint16 ang, ahead;
 
     ang = 0;
@@ -143,13 +144,14 @@ void AutogunControl(sint16 item_number)
                         ang = (4 * rcossin_tbl[(2048 * (GlobalCounter & 0x1F)) >> 3]) >> 2;
                     }
                 }
+                pitch = -info.x_angle;
                 ahead = info.angle - autogun->joint_rotation[0] + ang;
                 if (ahead > 1820)
                     ahead = 1820;
                 else if (ahead < -1820)
                     ahead = -1820;
                 autogun->joint_rotation[0] += ahead;
-                CreatureJoint(item, 1, -info.x_angle);
+                CreatureJoint(item, 1, pitch);
             }
             item->item_flags[2] -= 32;
             if (item->item_flags[2] < 0)
