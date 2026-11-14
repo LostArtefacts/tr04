@@ -23,9 +23,9 @@ void UpdateDebris(void)
             if (dptr->Yvel > 4096)
                 dptr->Yvel = 4096;
             dptr->Speed -= dptr->Speed >> 4;
-            dptr->x += phd_sin(dptr->Dir) * dptr->Speed >> W2V_SHIFT;
+            dptr->x += (rcossin_tbl[((dptr->Dir) >> 3) & 0x1FFE] << 2) * dptr->Speed >> W2V_SHIFT;
             dptr->y += dptr->Yvel >> 4;
-            dptr->z += phd_cos(dptr->Dir) * dptr->Speed >> W2V_SHIFT;
+            dptr->z += (rcossin_tbl[(((dptr->Dir) >> 3) & 0x1FFE) + 1] << 2) * dptr->Speed >> W2V_SHIFT;
             floor = GetFloor(dptr->x, dptr->y, dptr->z, &dptr->RoomNumber);
             height = GetHeight(floor, dptr->x, dptr->y, dptr->z);
             ceiling = GetCeiling(floor, dptr->x, dptr->y, dptr->z);
