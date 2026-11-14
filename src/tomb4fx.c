@@ -1199,6 +1199,7 @@ void TriggerLaraDrips(void)
 
 void S_DrawSparks(void)
 {
+    double fg2_tmp;
     SPARKS *sptr;
     FX_INFO *fx;
     ITEM_INFO *item;
@@ -1289,7 +1290,8 @@ void S_DrawSparks(void)
         v.y = mptr[M10] * offsets[0] + mptr[M11] * offsets[1] + mptr[M12] * offsets[2] + mptr[M13];
         v.z = mptr[M20] * offsets[0] + mptr[M21] * offsets[1] + mptr[M22] * offsets[2] + mptr[M23];
         perspz = f_persp / (float)v.z;
-        XY[0] = (sint16)(v.x * perspz + f_centerx);
+        fg2_tmp = (v.x * perspz + f_centerx);
+        XY[0] = (sint16)fg2_tmp;
         XY[1] = (sint16)(v.y * perspz + f_centery);
         Z[0] = v.z >> W2V_SHIFT;
         if (!(sptr->Flags & 8)) {
