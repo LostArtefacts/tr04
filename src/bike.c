@@ -1110,10 +1110,12 @@ sint32 UserControl_bike(ITEM_INFO *item, sint32 height, sint32 *pitch)
         if (vel < 0)
             vel >>= 1;
         bike->pitch1 += (abs(vel) - 0x2000 - bike->pitch1) >> 3;
-    } else if (bike->pitch1 < 0xFFFF) {
-        bike->pitch1 += (0xFFFF - bike->pitch1) >> 3;
+        *pitch = bike->pitch1;
+    } else {
+        if (bike->pitch1 < 0xFFFF)
+            bike->pitch1 += (0xFFFF - bike->pitch1) >> 3;
+        *pitch = bike->pitch1;
     }
-    *pitch = bike->pitch1;
     return 0;
 }
 
