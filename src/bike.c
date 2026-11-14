@@ -528,8 +528,7 @@ sint32 DoDynamics_bike(sint32 height, sint32 fallspeed, sint32 *y, sint32 zero)
             fallspeed += (kick - fallspeed) >> 4;
             if (*y > height)
                 *y = height;
-        } else
-            return fallspeed;
+        }
     }
     return fallspeed;
 }
