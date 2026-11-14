@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="205.96" height="12" x="0" y="0" class="named"><title>1366 · 88.02%</title></rect>
-<rect width="28.04" height="12" x="205.96" y="0" class="nonmatching"><title>186 · 11.98%</title></rect>
+<rect width="206.11" height="12" x="0" y="0" class="named"><title>1367 · 88.08%</title></rect>
+<rect width="27.89" height="12" x="206.11" y="0" class="nonmatching"><title>185 · 11.92%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">88.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1366</tspan> · <tspan class="nonmatching">186</tspan></text>
+<text text-anchor="end" x="414" y="7.50">88.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1367</tspan> · <tspan class="nonmatching">185</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="155.98" height="12" x="0" y="0" class="named"><title>417 KB · 66.66%</title></rect>
-<rect width="78.02" height="12" x="155.98" y="0" class="nonmatching"><title>209 KB · 33.34%</title></rect>
+<rect width="156.22" height="12" x="0" y="0" class="named"><title>418 KB · 66.76%</title></rect>
+<rect width="77.78" height="12" x="156.22" y="0" class="nonmatching"><title>208 KB · 33.24%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">66.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">417 KB</tspan> · <tspan class="nonmatching">209 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">66.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">418 KB</tspan> · <tspan class="nonmatching">208 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -568,7 +568,7 @@
 <rect width="12" height="12" x="375" y="135" class="named"><title>0x00432b70 lara_col_uwdeath (91 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="135" class="named"><title>0x00432bd0 lara_col_waterroll (19 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="135" class="named"><title>0x00432bf0 GetWaterDepth (422 bytes)</title></rect>
-<rect width="12" height="12" x="420" y="135" class="nonmatching"><title>0x00432da0 LaraWaterCurrent (631 bytes)</title></rect>
+<rect width="12" height="12" x="420" y="135" class="named"><title>0x00432da0 LaraWaterCurrent (631 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="135" class="named"><title>0x00433020 GetFreeDebris (113 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="135" class="named"><title>0x004330a0 TriggerDebris (533 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="135" class="named"><title>0x004332c0 UpdateDebris (323 bytes)</title></rect>
@@ -1907,7 +1907,7 @@
 <rect width="16.14" height="15.65" x="328.57" y="276.56" class="named"><title>0x00468b80 DoShift (634 bytes)</title></rect>
 <rect width="16.14" height="15.62" x="328.57" y="295.20" class="named"><title>0x00491fc0 DXEnumDirectDraw (633 bytes)</title></rect>
 <rect width="16.14" height="15.57" x="328.57" y="313.82" class="named"><title>0x0042cee0 LaraClimbLeftCornerTest (631 bytes)</title></rect>
-<rect width="16.14" height="15.57" x="328.57" y="332.39" class="nonmatching"><title>0x00432da0 LaraWaterCurrent (631 bytes)</title></rect>
+<rect width="16.14" height="15.57" x="328.57" y="332.39" class="named"><title>0x00432da0 LaraWaterCurrent (631 bytes)</title></rect>
 <rect width="16.14" height="15.52" x="328.57" y="350.96" class="named"><title>0x004323a0 LaraUnderWater (629 bytes)</title></rect>
 <rect width="16.14" height="15.50" x="328.57" y="369.49" class="named"><title>0x00441c60 CreatureTurn (628 bytes)</title></rect>
 <rect width="16.14" height="15.47" x="328.57" y="387.98" class="named"><title>0x0042f880 CreateFlare (627 bytes)</title></rect>

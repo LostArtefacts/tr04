@@ -392,7 +392,7 @@ void LaraWaterCurrent(COLL_INFO *coll)
         x = camera.fixed[sinkval].x;
         y = camera.fixed[sinkval].y;
         z = camera.fixed[sinkval].z;
-        angle = (((sint32)mGetAngle(x, z, item->pos.x_pos, item->pos.z_pos) - 0x4000) >> 4) & 0xFFF;
+        angle = (((sint32)mGetAngle(x, z, lara_item->pos.x_pos, lara_item->pos.z_pos) - 0x4000) >> 4) & 0xFFF;
         speed = camera.fixed[sinkval].data;
         lara.current_xvel += (sint16)((((speed * rcossin_tbl[2 * angle]) >> 2) - lara.current_xvel) >> 4);
         lara.current_zvel += (sint16)((((speed * rcossin_tbl[2 * angle + 1]) >> 2) - lara.current_zvel) >> 4);
