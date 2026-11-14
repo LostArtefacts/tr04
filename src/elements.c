@@ -45,17 +45,15 @@ void ElementPuzzleCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
                 if (!item->trigger_flags) {
                     item->mesh_bits = 48;
                     TestTriggersAtXYZ(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 1, item->flags & IFL_CODEBITS);
-                    item->item_flags[0] = 1;
                 } else if (item->trigger_flags == 1) {
                     item->mesh_bits = 3;
                     lara.pickupitems &= ~2u;
-                    item->item_flags[0] = 1;
                 } else {
                     item->mesh_bits = 12;
                     TestTriggersAtXYZ(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 1, item->flags & IFL_CODEBITS);
                     lara.pickupitems &= ~1u;
-                    item->item_flags[0] = 1;
                 }
+                item->item_flags[0] = 1;
             }
         }
         item->pos.y_rot = rotY;
@@ -80,9 +78,9 @@ void ElementPuzzleCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
     } else if (l->anim_number == ANIM_LIGHT_TORCH3 && l->frame_number == anims[ANIM_LIGHT_TORCH3].frame_base + 16 && item->item_flags[0] == 2) {
         TestTriggersAtXYZ(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, item->room_number, 1, item->flags & IFL_CODEBITS);
         AddActiveItem(item_number);
-        item->flags |= IFL_CODEBITS;
         item->item_flags[0] = 3;
         item->status = ITEM_ACTIVE;
+        item->flags |= IFL_CODEBITS;
     } else
         ObjectCollisionNoBigPush(item_number, l, coll);
 }
