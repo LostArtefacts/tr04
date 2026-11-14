@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="199.77" height="12" x="0" y="0" class="named"><title>1325 · 85.37%</title></rect>
-<rect width="34.23" height="12" x="199.77" y="0" class="nonmatching"><title>227 · 14.63%</title></rect>
+<rect width="199.93" height="12" x="0" y="0" class="named"><title>1326 · 85.44%</title></rect>
+<rect width="34.07" height="12" x="199.93" y="0" class="nonmatching"><title>226 · 14.56%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">85.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1325</tspan> · <tspan class="nonmatching">227</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1326</tspan> · <tspan class="nonmatching">226</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="146.71" height="12" x="0" y="0" class="named"><title>392 KB · 62.70%</title></rect>
-<rect width="87.29" height="12" x="146.71" y="0" class="nonmatching"><title>233 KB · 37.30%</title></rect>
+<rect width="146.92" height="12" x="0" y="0" class="named"><title>393 KB · 62.79%</title></rect>
+<rect width="87.08" height="12" x="146.92" y="0" class="nonmatching"><title>233 KB · 37.21%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">62.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">392 KB</tspan> · <tspan class="nonmatching">233 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">62.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">393 KB</tspan> · <tspan class="nonmatching">233 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -225,7 +225,7 @@
 <rect width="12" height="12" x="480" y="30" class="named"><title>0x00413f90 DartEmitterControl (443 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="30" class="named"><title>0x00414150 DartsControl (414 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="30" class="nonmatching"><title>0x004142f0 FlameEmitterControl (891 bytes)</title></rect>
-<rect width="12" height="12" x="525" y="30" class="nonmatching"><title>0x00414670 FlameEmitter2Control (573 bytes)</title></rect>
+<rect width="12" height="12" x="525" y="30" class="named"><title>0x00414670 FlameEmitter2Control (573 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="30" class="nonmatching"><title>0x004148b0 FlameEmitter3Control (1226 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="30" class="nonmatching"><title>0x00414d80 FlameControl (340 bytes)</title></rect>
 <rect width="12" height="12" x="570" y="30" class="named"><title>0x00414ee0 LaraBurn (69 bytes)</title></rect>
@@ -1953,7 +1953,7 @@
 <rect width="15.44" height="15.07" x="347.71" y="319.84" class="nonmatching"><title>0x0041fb80 FlameTorchControl (584 bytes)</title></rect>
 <rect width="15.44" height="14.86" x="347.71" y="337.92" class="named"><title>0x004403e0 GetCreatureMood (576 bytes)</title></rect>
 <rect width="15.44" height="14.86" x="347.71" y="355.78" class="named"><title>0x0047ca20 S_DisplayPauseMenu (576 bytes)</title></rect>
-<rect width="15.44" height="14.79" x="347.71" y="373.64" class="nonmatching"><title>0x00414670 FlameEmitter2Control (573 bytes)</title></rect>
+<rect width="15.44" height="14.79" x="347.71" y="373.64" class="named"><title>0x00414670 FlameEmitter2Control (573 bytes)</title></rect>
 <rect width="15.44" height="14.76" x="347.71" y="391.43" class="named"><title>0x00435570 TriggerSuperJetFlame (572 bytes)</title></rect>
 <rect width="15.44" height="14.76" x="347.71" y="409.19" class="named"><title>0x00475730 LoadSprites (572 bytes)</title></rect>
 <rect width="15.44" height="14.73" x="347.71" y="426.95" class="named"><title>0x00420b10 LaraAboveWater (571 bytes)</title></rect>

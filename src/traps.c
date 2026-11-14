@@ -469,7 +469,6 @@ void FlameEmitter2Control(sint16 item_number)
     ITEM_INFO *item;
     FLOOR_INFO *floor;
     sint32 r, g;
-    sint16 room_number;
 
     item = &items[item_number];
     if (!TriggerActive(item))
@@ -491,6 +490,8 @@ void FlameEmitter2Control(sint16 item_number)
             TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, 10, r, g, 0);
         }
         if (item->trigger_flags == 2) {
+            sint16 room_number;
+
             item->pos.x_pos += phd_sin(item->pos.y_rot + 0x8000) >> 11;
             item->pos.z_pos += phd_cos(item->pos.y_rot + 0x8000) >> 11;
             room_number = item->room_number;
