@@ -41,18 +41,21 @@ Visual C++ 6.0 SP3, run under Wine. Component versions matter:
 | Compiler driver (`cl.exe`) | 12.00.8168 |
 | C frontend (`c1.dll`) | 12.00.8472 |
 | C++ frontend (`c1xx.dll`) | 12.00.8472 |
-| Optimizer (`c2.dll`) | 12.00.8168 |
+| Optimizer (`c2.dll`) | 12.00.8447 |
 | Resource converter (`cvtres.exe`) | 5.00.1736.1 |
 | Original assembly (Rich record) | MASM 6.13.7299 |
 | Linker (`link.exe`) | 6.00.8447 |
 
 The original has linker version 6.00. Its Rich header contains compiler
-build 8447 (VC6 SP3: 93 C and 26 C++ objects), plus build 8168 (VC6 RTM:
-117 C and 2 C++ objects). This suggests SP3 game modules linked with older
-library objects; it does not identify the compiler of each function.
+build 8447 (93 C and 26 C++ objects), plus build 8168 (VC6 RTM: 117 C and
+2 C++ objects, the size of the runtime library's share).
 
-The Microsoft SP3 disc updates the frontends and linker while retaining
-the RTM optimizer. The Rich compiler build is not the optimizer file version.
+The optimizer writes an object's compiler record from its own build, so
+the game's modules came from a `c2.dll` of build 8447. The Microsoft SP3
+disc updates the frontends and linker but ships no optimizer; the 8447
+`c2.dll` (SHA-256 `a0cc45f8…`, in `config/toolchain.sha256`) replaces the
+RTM one in the SP3 installation. For this code it generates the same
+instructions as RTM's 12.00.8168 in all but a few functions.
 
 The header evidence does not establish an exact original linker build.
 The versions above identify the selected build tools; their file hashes
@@ -83,7 +86,8 @@ Place the reference checkouts at the `refs/` paths above. Directories or
 local symlinks work; game files, references, `.wine/` and `build/` are
 ignored by Git. Initialize the prefix with
 `WINEPREFIX="$PWD/.wine" wineboot -i`, and supply the compiler's `bin`,
-`include` and `lib` directories under `.wine/drive_c/msvc6sp3`.
+`include` and `lib` directories under `.wine/drive_c/msvc6sp3`, with the
+12.00.8447 `c2.dll` in `bin`.
 Install the DirectX 6.1 SDK (`dx61sdkimage.exe`) with
 `just dxsdk dx61sdkimage.exe 'C:\dx6'`.
 Supply MASM 6.13 under `.wine/drive_c/masm613/bin`: MASM 6.11's
