@@ -107,7 +107,9 @@ void SkeletonControl(sint16 item_number)
     AI_INFO info, larainfo;
     PHD_VECTOR pos;
     sint32 x, y, z, rot, Xoffset, Zoffset, nearheight, midheight, farheight;
-    sint32 dx, dz, h1, h2, h, i;
+    sint32 dx, dz, h1, h2, h;
+    sint16 i;
+    sint32 turn_limit;
     sint16 angle, room_number, jump_ahead, long_jump_ahead, jump_left, jump_right;
 
     if (!CreatureActive(item_number))
@@ -284,10 +286,8 @@ void SkeletonControl(sint16 item_number)
         case 15:
             skelly->LOT.is_jumping = 0;
             skelly->flags = 0;
-            if (skelly->mood == BORED_MOOD)
-                skelly->maximum_turn = 364;
-            else
-                skelly->maximum_turn = 1092;
+            turn_limit = skelly->mood == BORED_MOOD ? 364 : 1092;
+            skelly->maximum_turn = turn_limit;
             if (item->ai_bits & PATROL1) {
                 item->goal_anim_state = 15;
             } else if (item->hit_status) {
@@ -296,7 +296,7 @@ void SkeletonControl(sint16 item_number)
                     item->required_anim_state = 5;
                 else
                     item->required_anim_state = 6;
-            } else if (jump_left || jump_right) {
+            } else if (jump_right || jump_left) {
                 item->goal_anim_state = 2;
             } else if (skelly->mood == ESCAPE_MOOD) {
                 item->goal_anim_state = 16;
