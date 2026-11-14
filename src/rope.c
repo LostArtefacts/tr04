@@ -161,7 +161,7 @@ void RopeCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll)
         bounds = GetBoundsAccurate(l);
         x = l->pos.x_pos;
         y = l->pos.y_pos + bounds[2] + 512;
-        z = l->pos.z_pos + (bounds[5] * phd_cos(l->pos.y_rot) >> 14);
+        z = l->pos.z_pos + (bounds[5] * (rcossin_tbl[(((l->pos.y_rot) >> 3) & 0x1FFE) + 1] << 2) >> 14);
         i = RopeNodeCollision(rope, x, y, z, rad);
         if (i >= 0) {
             if (l->current_anim_state == AS_REACH) {
