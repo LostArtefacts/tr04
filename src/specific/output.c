@@ -66,6 +66,7 @@ void (*j_nullsub_9_init)(void) = j_nullsub_9;
 
 void StashSkinVertices(sint32 node)
 {
+    sint16 *source_clip;
     D3DTLVERTEX *d;
     char *vns;
     char n;
@@ -73,10 +74,11 @@ void StashSkinVertices(sint32 node)
     D3DTLVERTEX *v;
 
     d = SkinVerts[node];
-    vns = SkinVertNums[node];
     cf = SkinClip[node];
+    vns = SkinVertNums[node];
     IDirect3DVertexBuffer_Lock(DestVB, DDLOCK_READONLY, (LPVOID *)&v, 0);
     n = *vns++;
+    source_clip = clipflags;
     while (n >= 0) {
         d->sx = v[n].sx;
         d->sy = v[n].sy;
@@ -86,9 +88,10 @@ void StashSkinVertices(sint32 node)
         d->specular = v[n].specular;
         d->tu = v[n].tu;
         d->tv = v[n].tv;
-        d++;
-        *cf++ = clipflags[n];
+        *cf++ = source_clip[n];
         n = *vns++;
+        source_clip = clipflags;
+        d++;
     }
 }
 
