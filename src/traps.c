@@ -1491,7 +1491,7 @@ void ControlBirdBlade(sint16 item_number)
             *(sint32 *)&item->item_flags[0] = 6;
         AnimateItem(item);
     } else {
-        item->frame_number = anims[item->anim_number].frame_base;
+        *(volatile sint16 *)&item->frame_number = anims[item->anim_number].frame_base;
         *(sint32 *)&item->item_flags[0] = 0;
     }
 }

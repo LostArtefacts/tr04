@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="199.93" height="12" x="0" y="0" class="named"><title>1326 · 85.44%</title></rect>
-<rect width="34.07" height="12" x="199.93" y="0" class="nonmatching"><title>226 · 14.56%</title></rect>
+<rect width="200.08" height="12" x="0" y="0" class="named"><title>1327 · 85.50%</title></rect>
+<rect width="33.92" height="12" x="200.08" y="0" class="nonmatching"><title>225 · 14.50%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">85.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1326</tspan> · <tspan class="nonmatching">226</tspan></text>
+<text text-anchor="end" x="414" y="7.50">85.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1327</tspan> · <tspan class="nonmatching">225</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="146.92" height="12" x="0" y="0" class="named"><title>393 KB · 62.79%</title></rect>
-<rect width="87.08" height="12" x="146.92" y="0" class="nonmatching"><title>233 KB · 37.21%</title></rect>
+<rect width="146.98" height="12" x="0" y="0" class="named"><title>393 KB · 62.81%</title></rect>
+<rect width="87.02" height="12" x="146.98" y="0" class="nonmatching"><title>233 KB · 37.19%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">62.8%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">393 KB</tspan> · <tspan class="nonmatching">233 KB</tspan></text>
@@ -249,7 +249,7 @@
 <rect width="12" height="12" x="90" y="45" class="nonmatching"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="45" class="nonmatching"><title>0x00416d70 ControlSpikeball (201 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="45" class="nonmatching"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="45" class="nonmatching"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="45" class="named"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="45" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="45" class="named"><title>0x00417020 ControlMovingBlade (83 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="45" class="named"><title>0x00417080 ControlPlinthBlade (117 bytes)</title></rect>
@@ -2553,7 +2553,7 @@
 <rect width="7.09" height="7.69" x="729.82" y="274.32" class="named"><title>0x004136c0 TrapDoorControl (137 bytes)</title></rect>
 <rect width="7.09" height="7.69" x="739.91" y="274.32" class="named"><title>0x00416f90 ControlCatwalkBlade (137 bytes)</title></rect>
 <rect width="7.34" height="7.44" x="544.59" y="285.01" class="named"><title>0x0046cab0 trigger_weapon_dynamics (137 bytes)</title></rect>
-<rect width="7.34" height="7.39" x="544.59" y="295.45" class="nonmatching"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
+<rect width="7.34" height="7.39" x="544.59" y="295.45" class="named"><title>0x00416f00 ControlBirdBlade (136 bytes)</title></rect>
 <rect width="7.34" height="7.39" x="544.59" y="305.84" class="named"><title>0x00417310 ControlFallingSquishyBlock (136 bytes)</title></rect>
 <rect width="7.34" height="7.39" x="544.59" y="316.22" class="named"><title>0x004707a0 MapASCIIToANSI (136 bytes)</title></rect>
 <rect width="7.34" height="7.39" x="544.59" y="326.61" class="named"><title>0x004923a0 BPPToDDBD (136 bytes)</title></rect>
