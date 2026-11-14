@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="202.94" height="12" x="0" y="0" class="named"><title>1346 · 86.73%</title></rect>
-<rect width="31.06" height="12" x="202.94" y="0" class="nonmatching"><title>206 · 13.27%</title></rect>
+<rect width="203.09" height="12" x="0" y="0" class="named"><title>1347 · 86.79%</title></rect>
+<rect width="30.91" height="12" x="203.09" y="0" class="nonmatching"><title>205 · 13.21%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">86.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1346</tspan> · <tspan class="nonmatching">206</tspan></text>
+<text text-anchor="end" x="414" y="7.50">86.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1347</tspan> · <tspan class="nonmatching">205</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="150.30" height="12" x="0" y="0" class="named"><title>402 KB · 64.23%</title></rect>
-<rect width="83.70" height="12" x="150.30" y="0" class="nonmatching"><title>224 KB · 35.77%</title></rect>
+<rect width="150.59" height="12" x="0" y="0" class="named"><title>403 KB · 64.35%</title></rect>
+<rect width="83.41" height="12" x="150.59" y="0" class="nonmatching"><title>223 KB · 35.65%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">64.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">402 KB</tspan> · <tspan class="nonmatching">224 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">64.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">403 KB</tspan> · <tspan class="nonmatching">223 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -1294,7 +1294,7 @@
 <rect width="12" height="12" x="15" y="360" class="named"><title>0x00475ac0 LoadBoxes (430 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="360" class="named"><title>0x00475c70 LoadAnimatedTextures (109 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="360" class="named"><title>0x00475ce0 LoadTextureInfos (505 bytes)</title></rect>
-<rect width="12" height="12" x="60" y="360" class="nonmatching"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
+<rect width="12" height="12" x="60" y="360" class="named"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="360" class="named"><title>0x004761e0 LoadCinematic (16 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="360" class="named"><title>0x004761f0 LoadAIInfo (97 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="360" class="named"><title>0x00476260 LoadSamples (418 bytes)</title></rect>
@@ -1866,7 +1866,7 @@
 <rect width="17.60" height="17.66" x="307.98" y="297.18" class="named"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
 <rect width="17.60" height="17.55" x="307.98" y="317.84" class="named"><title>0x00479c10 ConvertSurfaceToTextures (775 bytes)</title></rect>
 <rect width="17.60" height="17.45" x="307.98" y="338.38" class="named"><title>0x00465f80 BikeCollideStaticObjects (771 bytes)</title></rect>
-<rect width="17.60" height="17.36" x="307.98" y="358.84" class="nonmatching"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
+<rect width="17.60" height="17.36" x="307.98" y="358.84" class="named"><title>0x00475ee0 LoadItems (767 bytes)</title></rect>
 <rect width="17.60" height="17.32" x="307.98" y="379.20" class="named"><title>0x00424320 UpdateRopeSwing (765 bytes)</title></rect>
 <rect width="17.60" height="17.21" x="307.98" y="399.52" class="nonmatching"><title>0x004317a0 OptomiseSkinningData (760 bytes)</title></rect>
 <rect width="17.60" height="17.16" x="307.98" y="419.72" class="nonmatching"><title>0x0049c3e0 PlayFmvNow (758 bytes)</title></rect>

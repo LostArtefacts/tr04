@@ -894,7 +894,7 @@ uint8 LoadItems(void)
                         || !static_objects[mesh->static_number].z_maxc || !static_objects[mesh->static_number].z_minc
                         || (static_objects[mesh->static_number].x_maxc ^ static_objects[mesh->static_number].x_minc) & 0x8000
                         && (static_objects[mesh->static_number].z_maxc ^ static_objects[mesh->static_number].z_minc) & 0x8000)
-                        floor->stopper = 1;
+                        ((uint8 *)floor)[3] |= 0x80;
                 }
             }
         }
