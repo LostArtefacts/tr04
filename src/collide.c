@@ -769,8 +769,8 @@ sint32 ItemPushLaraStatic(ITEM_INFO *l, sint16 *bounds, PHD_3DPOS *pos, COLL_INF
 
     dx = l->pos.x_pos - pos->x_pos;
     dz = l->pos.z_pos - pos->z_pos;
-    s = phd_sin(pos->y_rot);
     c = phd_cos(pos->y_rot);
+    s = phd_sin(pos->y_rot);
     x = (dx * c - dz * s) >> W2V_SHIFT;
     z = (dx * s + dz * c) >> W2V_SHIFT;
     xmin = bounds[0] - coll->radius;
@@ -782,8 +782,8 @@ sint32 ItemPushLaraStatic(ITEM_INFO *l, sint16 *bounds, PHD_3DPOS *pos, COLL_INF
         return 0;
 
     left = x - xmin;
-    top = zmax - z;
     right = xmax - x;
+    top = zmax - z;
     bottom = z - zmin;
 
     if (left <= right && left <= top && left <= bottom)
@@ -805,14 +805,14 @@ sint32 ItemPushLaraStatic(ITEM_INFO *l, sint16 *bounds, PHD_3DPOS *pos, COLL_INF
     GetCollisionInfo(coll, l->pos.x_pos, l->pos.y_pos, l->pos.z_pos, l->room_number, 762);
     coll->facing = facing;
 
-    if (coll->coll_type == COLL_NONE) {
+    if (coll->coll_type != COLL_NONE) {
+        l->pos.x_pos = coll->old.x;
+        l->pos.z_pos = coll->old.z;
+    } else {
         coll->old.x = l->pos.x_pos;
         coll->old.y = l->pos.y_pos;
         coll->old.z = l->pos.z_pos;
         UpdateLaraRoom(l, -10);
-    } else {
-        l->pos.x_pos = coll->old.x;
-        l->pos.z_pos = coll->old.z;
     }
 
     if (l == lara_item && lara.IsMoving && lara.MoveCount > 15) {
