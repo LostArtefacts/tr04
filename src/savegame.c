@@ -524,7 +524,7 @@ void RestoreLevelData(sint32 FullSave)
     sint32 i, j, k, flare_age, uroom_number, room_number, req, goal;
     uint16 word, packed, uword;
     sint16 sword, item_number;
-    uint8 byte, anim, lflags, lf;
+    uint8 byte, anim, lf;
 
     ReadSG(&FmvSceneTriggered, sizeof(sint32));
     ReadSG(&GLOBAL_lastinvitem, sizeof(sint32));
@@ -665,6 +665,7 @@ void RestoreLevelData(sint32 FullSave)
                     EnableBaddieAI(i, 1);
                     creature = (CREATURE_INFO *)item->data;
                     if (creature) {
+                        uint8 lflags;
                         ReadSG(creature, 22);
                         ((CREATURE_INFO *)item->data)->enemy = (ITEM_INFO *)((sint32)((CREATURE_INFO *)item->data)->enemy + (sint32)malloc_buffer);
                         if ((sint32)creature->enemy < 0)
