@@ -229,11 +229,12 @@ void ScalesControl(sint16 item_number)
     sint32 flags;
     sint16 numTriggers;
     sint16 itemNos[8];
-    sint16 room_number;
 
     item = &items[item_number];
     if (item->frame_number == anims[item->anim_number].frame_end) {
         if (item->current_anim_state != 1 && !item->item_flags[1]) {
+            sint16 room_number;
+
             if (item->current_anim_state == 2) {
                 flags = -512;
                 RemoveActiveItem(item_number);

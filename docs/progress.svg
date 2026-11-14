@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="199.47" height="12" x="0" y="0" class="named"><title>1323 · 85.24%</title></rect>
-<rect width="34.53" height="12" x="199.47" y="0" class="nonmatching"><title>229 · 14.76%</title></rect>
+<rect width="199.62" height="12" x="0" y="0" class="named"><title>1324 · 85.31%</title></rect>
+<rect width="34.38" height="12" x="199.62" y="0" class="nonmatching"><title>228 · 14.69%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">85.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1323</tspan> · <tspan class="nonmatching">229</tspan></text>
+<text text-anchor="end" x="414" y="7.50">85.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1324</tspan> · <tspan class="nonmatching">228</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="146.41" height="12" x="0" y="0" class="named"><title>391 KB · 62.57%</title></rect>
-<rect width="87.59" height="12" x="146.41" y="0" class="nonmatching"><title>234 KB · 37.43%</title></rect>
+<rect width="146.57" height="12" x="0" y="0" class="named"><title>392 KB · 62.64%</title></rect>
+<rect width="87.43" height="12" x="146.57" y="0" class="nonmatching"><title>234 KB · 37.36%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">62.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">391 KB</tspan> · <tspan class="nonmatching">234 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">392 KB</tspan> · <tspan class="nonmatching">234 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -93,7 +93,7 @@
 <rect width="12" height="12" x="0" y="0" class="named"><title>0x00401000 InitialiseAhmet (118 bytes)</title></rect>
 <rect width="12" height="12" x="15" y="0" class="named"><title>0x00401080 AhmetControl (1708 bytes)</title></rect>
 <rect width="12" height="12" x="30" y="0" class="named"><title>0x00401730 ExplodeAhmet (164 bytes)</title></rect>
-<rect width="12" height="12" x="45" y="0" class="nonmatching"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
+<rect width="12" height="12" x="45" y="0" class="named"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="0" class="named"><title>0x00401990 ReTriggerAhmet (302 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="0" class="named"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="0" class="named"><title>0x00401db0 InitialiseBaboon (146 bytes)</title></rect>
@@ -2070,7 +2070,7 @@
 <rect width="12.59" height="13.57" x="734.41" y="117.90" class="named"><title>0x00480070 S_AnimateTextures (429 bytes)</title></rect>
 <rect width="13.14" height="12.98" x="400.52" y="134.47" class="named"><title>0x00499300 SW_SpanGTAlpha (428 bytes)</title></rect>
 <rect width="13.14" height="12.95" x="400.52" y="150.45" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
-<rect width="13.14" height="12.92" x="400.52" y="166.40" class="nonmatching"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
+<rect width="13.14" height="12.92" x="400.52" y="166.40" class="named"><title>0x004017e0 ScalesControl (426 bytes)</title></rect>
 <rect width="13.14" height="12.92" x="400.52" y="182.32" class="named"><title>0x00492920 DXEnumTextureFormats (426 bytes)</title></rect>
 <rect width="13.14" height="12.89" x="400.52" y="198.23" class="named"><title>0x00456910 BurningRopeCollision (425 bytes)</title></rect>
 <rect width="13.14" height="12.89" x="400.52" y="214.12" class="named"><title>0x0048d3d0 Draw2DSprite (425 bytes)</title></rect>
