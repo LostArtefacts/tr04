@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="198.87" height="12" x="0" y="0" class="named"><title>1319 · 84.99%</title></rect>
-<rect width="35.13" height="12" x="198.87" y="0" class="nonmatching"><title>233 · 15.01%</title></rect>
+<rect width="199.02" height="12" x="0" y="0" class="named"><title>1320 · 85.05%</title></rect>
+<rect width="34.98" height="12" x="199.02" y="0" class="nonmatching"><title>232 · 14.95%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">85.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1319</tspan> · <tspan class="nonmatching">233</tspan></text>
+<text text-anchor="end" x="414" y="7.50">85.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1320</tspan> · <tspan class="nonmatching">232</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="145.81" height="12" x="0" y="0" class="named"><title>390 KB · 62.31%</title></rect>
-<rect width="88.19" height="12" x="145.81" y="0" class="nonmatching"><title>236 KB · 37.69%</title></rect>
+<rect width="146.06" height="12" x="0" y="0" class="named"><title>390 KB · 62.42%</title></rect>
+<rect width="87.94" height="12" x="146.06" y="0" class="nonmatching"><title>235 KB · 37.58%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">62.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">390 KB</tspan> · <tspan class="nonmatching">236 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">62.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">390 KB</tspan> · <tspan class="nonmatching">235 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.59" height="12" x="0" y="0" class="named"><title>43 KB · 99.82%</title></rect>
@@ -816,7 +816,7 @@
 <rect width="12" height="12" x="345" y="210" class="named"><title>0x00448070 AlignLaraPosition (208 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="210" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
 <rect width="12" height="12" x="375" y="210" class="nonmatching"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
-<rect width="12" height="12" x="390" y="210" class="nonmatching"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
+<rect width="12" height="12" x="390" y="210" class="named"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="named"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="210" class="named"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="210" class="named"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
@@ -1897,7 +1897,7 @@
 <rect width="16.14" height="16.85" x="328.57" y="84.15" class="named"><title>0x0042fc60 undraw_flare (683 bytes)</title></rect>
 <rect width="16.14" height="16.58" x="328.57" y="104" class="named"><title>0x0044f330 PrintObjects (672 bytes)</title></rect>
 <rect width="16.14" height="16.39" x="328.57" y="123.58" class="nonmatching"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
-<rect width="16.14" height="16.31" x="328.57" y="142.97" class="nonmatching"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
+<rect width="16.14" height="16.31" x="328.57" y="142.97" class="named"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="16.14" height="16.19" x="328.57" y="162.28" class="named"><title>0x0047fa10 S_OutputPolyList (656 bytes)</title></rect>
 <rect width="16.14" height="16.16" x="328.57" y="181.47" class="named"><title>0x00463b50 PrintString (655 bytes)</title></rect>
 <rect width="16.14" height="16.14" x="328.57" y="200.64" class="named"><title>0x00429480 FireGrenade (654 bytes)</title></rect>

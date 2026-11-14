@@ -1016,7 +1016,11 @@ void GenericSphereBoxCollision(sint16 item_number, ITEM_INFO *l, COLL_INFO *coll
                 sptr = Slist;
                 do {
                     if (TouchBits & 0x1) {
-                        GlobalCollisionBounds[0] = (sint16)(sptr->x - item->pos.x_pos - sptr->r);
+                        {
+                            uint16 x_pos;
+                            x_pos = item->pos.x_pos;
+                            GlobalCollisionBounds[0] = (sint16)(sptr->x - x_pos - sptr->r);
+                        }
                         GlobalCollisionBounds[2] = (sint16)(sptr->y - item->pos.y_pos - sptr->r);
                         GlobalCollisionBounds[4] = (sint16)(sptr->z - item->pos.z_pos - sptr->r);
                         GlobalCollisionBounds[1] = (sint16)(sptr->x - item->pos.x_pos + sptr->r);
