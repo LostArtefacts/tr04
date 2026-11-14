@@ -2583,7 +2583,7 @@ address,size,name,symbol
 0x005358be,1,flare_no_db,_flare_no_db
 0x005358c0,4,LookCnt,_LookCnt
 0x005358c4,4,med_hotkey_timer,_med_hotkey_timer
-0x005358c8,4,cheat_code,_cheat_code
+0x005358c8,4,cheat_code,_?cheat_code@?1??S_UpdateInput@@9@9
 0x005358d0,12,LaraTorchEnd,_LaraTorchEnd
 0x005358f0,5622,StaticMeshLightItem,_StaticMeshLightItem
 0x00536ee8,4,LaraTorchIntensity,_LaraTorchIntensity

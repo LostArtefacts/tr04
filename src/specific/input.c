@@ -86,6 +86,7 @@ sint32 DI_ReadJoystick(sint32 *x, sint32 *y)
 
 sint32 S_UpdateInput(void)
 {
+    static sint32 cheat_code;
     sint16 state;
     uint8 debounce;
 

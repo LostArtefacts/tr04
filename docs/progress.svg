@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="204.75" height="12" x="0" y="0" class="named"><title>1358 · 87.50%</title></rect>
-<rect width="29.25" height="12" x="204.75" y="0" class="nonmatching"><title>194 · 12.50%</title></rect>
+<rect width="204.90" height="12" x="0" y="0" class="named"><title>1359 · 87.56%</title></rect>
+<rect width="29.10" height="12" x="204.90" y="0" class="nonmatching"><title>193 · 12.44%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">87.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1358</tspan> · <tspan class="nonmatching">194</tspan></text>
+<text text-anchor="end" x="414" y="7.50">87.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1359</tspan> · <tspan class="nonmatching">193</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="153.12" height="12" x="0" y="0" class="named"><title>409 KB · 65.44%</title></rect>
-<rect width="80.88" height="12" x="153.12" y="0" class="nonmatching"><title>216 KB · 34.56%</title></rect>
+<rect width="153.83" height="12" x="0" y="0" class="named"><title>411 KB · 65.74%</title></rect>
+<rect width="80.17" height="12" x="153.83" y="0" class="nonmatching"><title>214 KB · 34.26%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">65.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">409 KB</tspan> · <tspan class="nonmatching">216 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">65.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">411 KB</tspan> · <tspan class="nonmatching">214 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -78,7 +78,7 @@
 <rect width="23.06" height="12" x="210.94" y="0" class="todo"><title>9 KB · 9.86%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="75.50">90.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="75"><tspan class="named">82 KB</tspan> · <tspan class="todo">9 KB</tspan> · 1559/1567 globals placed · 25 unmapped</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="75"><tspan class="named">82 KB</tspan> · <tspan class="todo">9 KB</tspan> · 1558/1566 globals placed · 26 unmapped</text>
 <text text-anchor="start" x="0" y="92.50">Executable file</text>
 <g transform="translate(130 86.50)">
 <rect width="186.67" height="12" x="0" y="0" class="named"><title>631 KB · 79.77%</title></rect>
@@ -1320,7 +1320,7 @@
 <rect width="12" height="12" x="405" y="360" class="named"><title>0x00477600 S_LoadGame (184 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="360" class="named"><title>0x004776c0 Key (284 bytes)</title></rect>
 <rect width="12" height="12" x="435" y="360" class="named"><title>0x004777e0 DI_ReadJoystick (208 bytes)</title></rect>
-<rect width="12" height="12" x="450" y="360" class="nonmatching"><title>0x004778b0 S_UpdateInput (1888 bytes)</title></rect>
+<rect width="12" height="12" x="450" y="360" class="named"><title>0x004778b0 S_UpdateInput (1888 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="360" class="named"><title>0x00478010 MallocD3DLights (91 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="360" class="named"><title>0x00478070 CreateD3DLights (597 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="360" class="named"><title>0x004782d0 FreeD3DLights (354 bytes)</title></rect>
@@ -1703,7 +1703,7 @@
 <rect width="27.06" height="28.56" x="152.25" y="31.73" class="nonmatching"><title>0x004657e0 BikeDynamics (1940 bytes)</title></rect>
 <rect width="27.06" height="28.15" x="152.25" y="63.29" class="named"><title>0x0043d470 handle_inventry_menu (1912 bytes)</title></rect>
 <rect width="27.06" height="28.10" x="152.25" y="94.44" class="named"><title>0x00449410 ControlPhase (1909 bytes)</title></rect>
-<rect width="27.06" height="27.79" x="152.25" y="125.54" class="nonmatching"><title>0x004778b0 S_UpdateInput (1888 bytes)</title></rect>
+<rect width="27.06" height="27.79" x="152.25" y="125.54" class="named"><title>0x004778b0 S_UpdateInput (1888 bytes)</title></rect>
 <rect width="27.06" height="27.62" x="152.25" y="156.33" class="nonmatching"><title>0x00430250 LaraControl (1876 bytes)</title></rect>
 <rect width="27.06" height="27.31" x="152.25" y="186.95" class="nonmatching"><title>0x0044cdf0 DoRayBox (1855 bytes)</title></rect>
 <rect width="27.06" height="27.19" x="152.25" y="217.25" class="named"><title>0x004963a0 SW_TriSetupGT (1847 bytes)</title></rect>

@@ -58,7 +58,6 @@ extern sint32 inputBusy;
 extern uint8 flare_no_db;
 extern sint32 LookCnt;
 extern sint32 med_hotkey_timer;
-extern sint32 cheat_code;
 extern sint32 joy_x;
 extern sint32 joy_y;
 extern sint32 joy_fire;
