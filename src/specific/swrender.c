@@ -406,12 +406,28 @@ void __fastcall SW_WaitUntilInScene(volatile sint32 *flag)
 }
 #endif
 
+#ifndef FEAT_C_ASM
+__declspec(naked) void __fastcall SW_WaitWhileInScene(volatile sint32 *flag)
+{
+    __asm {
+    wait_again:
+        push ecx
+        call SW_SleepTick
+        pop ecx
+        mov eax, [ecx]
+        test eax, eax
+        jnz wait_again
+        ret
+    }
+}
+#else
 void __fastcall SW_WaitWhileInScene(volatile sint32 *flag)
 {
     do {
         SW_SleepTick();
     } while (*flag);
 }
+#endif
 
 void SW_SleepTick(void)
 {

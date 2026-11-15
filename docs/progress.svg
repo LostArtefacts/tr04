@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="207.61" height="12" x="0" y="0" class="named"><title>1377 · 88.72%</title></rect>
-<rect width="26.39" height="12" x="207.61" y="0" class="nonmatching"><title>175 · 11.28%</title></rect>
+<rect width="207.77" height="12" x="0" y="0" class="named"><title>1378 · 88.79%</title></rect>
+<rect width="26.23" height="12" x="207.77" y="0" class="nonmatching"><title>174 · 11.21%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">88.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1377</tspan> · <tspan class="nonmatching">175</tspan></text>
+<text text-anchor="end" x="414" y="7.50">88.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1378</tspan> · <tspan class="nonmatching">174</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
 <rect width="158.77" height="12" x="0" y="0" class="named"><title>424 KB · 67.85%</title></rect>
 <rect width="75.23" height="12" x="158.77" y="0" class="nonmatching"><title>201 KB · 32.15%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">67.8%</text>
+<text text-anchor="end" x="414" y="24.50">67.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">424 KB</tspan> · <tspan class="nonmatching">201 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
@@ -1515,7 +1515,7 @@
 <rect width="12" height="12" x="330" y="420" class="named"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="420" class="named"><title>0x00490b30 SetD3DViewMatrix (245 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="420" class="named"><title>0x00490c30 SetD3DMatrix (177 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="420" class="nonmatching"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="420" class="named"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="420" class="named"><title>0x00490cf0 S_InitD3DMatrix (86 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="420" class="named"><title>0x00490d50 D3DNormalise (114 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="420" class="named"><title>0x00490dd0 D3DIdentityMatrix (59 bytes)</title></rect>
@@ -3134,7 +3134,7 @@
 <rect width="2.79" height="2.12" x="744.21" y="437.82" class="nonmatching"><title>0x00493bf1 SW_SleepTick (15 bytes)</title></rect>
 <rect width="2.33" height="2.39" x="708.59" y="442.94" class="named"><title>0x00427060 lara_as_null (14 bytes)</title></rect>
 <rect width="2.33" height="2.39" x="708.59" y="448.33" class="named"><title>0x00490b21 SW_WaitUntilInScene (14 bytes)</title></rect>
-<rect width="2.33" height="2.39" x="708.59" y="453.72" class="nonmatching"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
+<rect width="2.33" height="2.39" x="708.59" y="453.72" class="named"><title>0x00490ce1 SW_WaitWhileInScene (14 bytes)</title></rect>
 <rect width="2.33" height="2.22" x="708.59" y="459.12" class="named"><title>0x00437650 finish_level_effect (13 bytes)</title></rect>
 <rect width="2.33" height="2.22" x="708.59" y="464.34" class="named"><title>0x00484b30 REG_CloseKey (13 bytes)</title></rect>
 <rect width="2.33" height="2.22" x="708.59" y="469.56" class="named"><title>0x0048f981 SW_WaitLevelLoad (13 bytes)</title></rect>
