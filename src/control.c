@@ -849,10 +849,11 @@ void TestTriggers(sint16 *data, sint32 heavy, sint32 HeavyFlags)
             return;
         data++;
     }
-    if ((*data & DATA_TYPE) == CLIMB_TYPE) {
+    trigger = *data;
+    if ((trigger & DATA_TYPE) == CLIMB_TYPE) {
         if (!heavy) {
             quad = (uint16)(lara_item->pos.y_rot + 0x2000) >> 14;
-            if ((1 << (quad + 8)) & *data)
+            if ((1 << (quad + 8)) & trigger)
                 lara.climb_status = 1;
         }
         if (*data & END_BIT)
