@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="207.77" height="12" x="0" y="0" class="named"><title>1378 · 88.79%</title></rect>
-<rect width="26.23" height="12" x="207.77" y="0" class="nonmatching"><title>174 · 11.21%</title></rect>
+<rect width="207.92" height="12" x="0" y="0" class="named"><title>1379 · 88.85%</title></rect>
+<rect width="26.08" height="12" x="207.92" y="0" class="nonmatching"><title>173 · 11.15%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">88.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1378</tspan> · <tspan class="nonmatching">174</tspan></text>
+<text text-anchor="end" x="414" y="7.50">88.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1379</tspan> · <tspan class="nonmatching">173</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="158.77" height="12" x="0" y="0" class="named"><title>424 KB · 67.85%</title></rect>
-<rect width="75.23" height="12" x="158.77" y="0" class="nonmatching"><title>201 KB · 32.15%</title></rect>
+<rect width="158.78" height="12" x="0" y="0" class="named"><title>424 KB · 67.85%</title></rect>
+<rect width="75.22" height="12" x="158.78" y="0" class="nonmatching"><title>201 KB · 32.15%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">67.9%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">424 KB</tspan> · <tspan class="nonmatching">201 KB</tspan></text>
@@ -1599,7 +1599,7 @@
 <rect width="12" height="12" x="90" y="450" class="named"><title>0x00497cb0 SW_TriSetupGTFog (2087 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="450" class="named"><title>0x004984e0 SW_TriSetupGFog (1741 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="450" class="named"><title>0x00498bb0 SW_SpanG (209 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="450" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="450" class="named"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="450" class="named"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="450" class="named"><title>0x00498e10 SW_SpanGFog (365 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="450" class="named"><title>0x00498f80 SW_SpanGFogAlpha (435 bytes)</title></rect>
@@ -3141,7 +3141,7 @@
 <rect width="2.33" height="2.22" x="708.59" y="474.78" class="named"><title>0x0048f9a1 SW_WaitUntilDXInScene (13 bytes)</title></rect>
 <rect width="2.23" height="2.32" x="713.92" y="442.94" class="named"><title>0x0048f9c1 SW_WaitWhileDXInScene (13 bytes)</title></rect>
 <rect width="2.23" height="2.32" x="719.15" y="442.94" class="named"><title>0x00494e80 SW_BeginFrame (13 bytes)</title></rect>
-<rect width="2.23" height="2.32" x="724.38" y="442.94" class="nonmatching"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
+<rect width="2.23" height="2.32" x="724.38" y="442.94" class="named"><title>0x00498c81 SW_GetSleepProc (13 bytes)</title></rect>
 <rect width="2.23" height="2.32" x="729.61" y="442.94" class="named"><title>0x00499ab1 SW_Kernel32Name (13 bytes)</title></rect>
 <rect width="2.05" height="2.32" x="734.84" y="442.94" class="named"><title>0x00405ea0 InitialiseLaraDouble (12 bytes)</title></rect>
 <rect width="2.05" height="2.32" x="739.89" y="442.94" class="named"><title>0x00437cb0 invisibility_on (12 bytes)</title></rect>

@@ -429,10 +429,17 @@ void __fastcall SW_WaitWhileInScene(volatile sint32 *flag)
 }
 #endif
 
+#ifndef FEAT_C_ASM
+void SW_SleepTick(void)
+{
+    ((void (WINAPI *)(DWORD))GetProcAddress(SW_GetKernelModule(), SW_SleepName))(10);
+}
+#else
 void SW_SleepTick(void)
 {
     ((void (WINAPI *)(DWORD))SW_GetSleepProc(SW_GetKernelModule()))(10);
 }
+#endif
 
 HRESULT __stdcall SW_D3D_QueryInterface(SW_DEVICE *dev)
 {
@@ -950,10 +957,22 @@ sint32 SW_SetColorOpScale(sint32 scale)
     return 0;
 }
 
+#ifndef FEAT_C_ASM
+__declspec(naked) FARPROC SW_GetSleepProc(void)
+{
+    __asm {
+        push offset SW_SleepName
+        push eax
+        call dword ptr [GetProcAddress]
+        ret
+    }
+}
+#else
 FARPROC SW_GetSleepProc(HMODULE module)
 {
     return GetProcAddress(module, SW_SleepName);
 }
+#endif
 
 HRESULT SW_SetRenderStateFlags(D3DRENDERSTATETYPE type, DWORD state)
 {
