@@ -458,10 +458,10 @@ sint32 CalculateTarget(PHD_VECTOR *target, ITEM_INFO *item, LOT_INFO *LOT)
         box_top = box->top << WALL_SHIFT;
         box_bottom = (box->bottom << WALL_SHIFT) - 1;
         if (item->pos.z_pos >= box_left && item->pos.z_pos <= box_right && item->pos.x_pos >= box_top && item->pos.x_pos <= box_bottom) {
-            left = box->left << WALL_SHIFT;
-            right = (box->right << WALL_SHIFT) - 1;
-            top = box->top << WALL_SHIFT;
-            bottom = (box->bottom << WALL_SHIFT) - 1;
+            left = box_left;
+            right = box_right;
+            top = box_top;
+            bottom = box_bottom;
         } else {
             if (item->pos.z_pos < box_left && prime_free != 2) {
                 if ((prime_free & 1) && item->pos.x_pos >= box_top && item->pos.x_pos <= box_bottom) {
