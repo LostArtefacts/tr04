@@ -722,11 +722,13 @@ void _InsertRoom(ROOM_INFO *r)
 void S_DrawPickup(sint16 object_number)
 {
     sint32 n;
+    float horizontal_scale;
 
     phd_LookAt(0, 1024, 0, 0, 0, 0, 0);
     SetD3DViewMatrix();
     n = convert_obj_to_invobj(object_number);
-    DrawThreeDeeObject2D((sint32)(448.0F * ((float)phd_winxmax / 512.0F) + PickupX), (sint32)(216.0F * ((float)phd_winymax * (1.0F / 256.0F))), n, 128, 0, (GnFrameCounter & 0x7F) << 9, 0, 0, 1);
+    horizontal_scale = 448.0F * ((float)phd_winxmax / 512.0F);
+    DrawThreeDeeObject2D((sint32)(horizontal_scale + PickupX), (sint32)(216.0F * ((float)phd_winymax * (1.0F / 256.0F))), n, 128, 0, (GnFrameCounter & 0x7F) << 9, 0, 0, 1);
 }
 
 void S_OutputPolyList(void)

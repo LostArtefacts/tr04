@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="206.71" height="12" x="0" y="0" class="named"><title>1371 · 88.34%</title></rect>
-<rect width="27.29" height="12" x="206.71" y="0" class="nonmatching"><title>181 · 11.66%</title></rect>
+<rect width="206.86" height="12" x="0" y="0" class="named"><title>1372 · 88.40%</title></rect>
+<rect width="27.14" height="12" x="206.86" y="0" class="nonmatching"><title>180 · 11.60%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">88.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1371</tspan> · <tspan class="nonmatching">181</tspan></text>
+<text text-anchor="end" x="414" y="7.50">88.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1372</tspan> · <tspan class="nonmatching">180</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="158.26" height="12" x="0" y="0" class="named"><title>423 KB · 67.63%</title></rect>
-<rect width="75.74" height="12" x="158.26" y="0" class="nonmatching"><title>202 KB · 32.37%</title></rect>
+<rect width="158.31" height="12" x="0" y="0" class="named"><title>423 KB · 67.66%</title></rect>
+<rect width="75.69" height="12" x="158.31" y="0" class="nonmatching"><title>202 KB · 32.34%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">67.6%</text>
+<text text-anchor="end" x="414" y="24.50">67.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">423 KB</tspan> · <tspan class="nonmatching">202 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
@@ -1369,7 +1369,7 @@
 <rect width="12" height="12" x="390" y="375" class="nonmatching"><title>0x0047e8b0 phd_PutPolygonsPickup (3437 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="375" class="named"><title>0x0047f620 phd_PutPolygonSkyMesh (808 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="375" class="named"><title>0x0047f950 _InsertRoom (17 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="375" class="nonmatching"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="375" class="named"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="375" class="named"><title>0x0047fa10 S_OutputPolyList (656 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="375" class="named"><title>0x0047fca0 S_DumpScreen (76 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="375" class="nonmatching"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
@@ -2504,7 +2504,7 @@
 <rect width="7.80" height="7.92" x="621.42" y="263.40" class="named"><title>0x0043e1b0 update_laras_weapons_status (155 bytes)</title></rect>
 <rect width="7.80" height="7.92" x="632.22" y="263.40" class="named"><title>0x00452ea0 DrawAirBar (155 bytes)</title></rect>
 <rect width="7.80" height="7.92" x="643.02" y="263.40" class="named"><title>0x00464850 TriggerBikeBeam (155 bytes)</title></rect>
-<rect width="7.75" height="7.92" x="653.82" y="263.40" class="nonmatching"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
+<rect width="7.75" height="7.92" x="653.82" y="263.40" class="named"><title>0x0047f970 S_DrawPickup (154 bytes)</title></rect>
 <rect width="7.70" height="7.92" x="664.57" y="263.40" class="named"><title>0x0042b720 draw_pistols (153 bytes)</title></rect>
 <rect width="7.70" height="7.92" x="675.26" y="263.40" class="named"><title>0x004546a0 RemoveDrawnItem (153 bytes)</title></rect>
 <rect width="7.70" height="7.92" x="685.96" y="263.40" class="named"><title>0x00468ae0 GetCollisionAnim (153 bytes)</title></rect>
