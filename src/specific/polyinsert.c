@@ -1239,6 +1239,7 @@ void AddTriClippedSorted(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTUR
     D3DTLVERTEX *pV;
     SORTLIST *sl;
     TEXTURESTRUCT tex2;
+    TEXTURESTRUCT *backface;
     float z;
     sint32 cb0, cb1, cb2;
     sint32 sb0, sb1, sb2;
@@ -1257,35 +1258,38 @@ void AddTriClippedSorted(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTUR
             v1 ^= v2;
             if (!visible_zclip(&v[v0], &v[v1], &v[v2]))
                 return;
-            tex2.drawtype = tex->drawtype;
-            tex2.flag = tex->flag;
-            tex2.tpage = tex->tpage;
-            tex2.u1 = tex->u1;
-            tex2.v1 = tex->v1;
-            tex2.u2 = tex->u3;
-            tex2.v2 = tex->v3;
-            tex2.u3 = tex->u2;
-            tex2.v3 = tex->v2;
+            backface = &tex2;
+            backface->drawtype = tex->drawtype;
+            backface->flag = tex->flag;
+            backface->tpage = tex->tpage;
+            backface->u1 = tex->u1;
+            backface->v1 = tex->v1;
+            backface->u2 = tex->u3;
+            backface->v2 = tex->v3;
+            backface->u3 = tex->u2;
+            backface->v3 = tex->v2;
             tex = &tex2;
         }
         clipZ = 1;
         p = zClipperBuffer;
-    } else {
+    }
+    if (!clipZ) {
         if (IsVisible(&v[v0], &v[v1], &v[v2])) {
             if (!double_sided)
                 return;
             v1 ^= v2;
             v2 ^= v1;
             v1 ^= v2;
-            tex2.drawtype = tex->drawtype;
-            tex2.flag = tex->flag;
-            tex2.tpage = tex->tpage;
-            tex2.u1 = tex->u1;
-            tex2.v1 = tex->v1;
-            tex2.u2 = tex->u3;
-            tex2.v2 = tex->v3;
-            tex2.u3 = tex->u2;
-            tex2.v3 = tex->v2;
+            backface = &tex2;
+            backface->drawtype = tex->drawtype;
+            backface->flag = tex->flag;
+            backface->tpage = tex->tpage;
+            backface->u1 = tex->u1;
+            backface->v1 = tex->v1;
+            backface->u2 = tex->u3;
+            backface->v2 = tex->v3;
+            backface->u3 = tex->u2;
+            backface->v3 = tex->v2;
             tex = &tex2;
         }
         if (!(clipflags[v0] | clipflags[v1] | clipflags[v2])) {

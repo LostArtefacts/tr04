@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="208.97" height="12" x="0" y="0" class="named"><title>1386 · 89.30%</title></rect>
-<rect width="25.03" height="12" x="208.97" y="0" class="nonmatching"><title>166 · 10.70%</title></rect>
+<rect width="209.12" height="12" x="0" y="0" class="named"><title>1387 · 89.37%</title></rect>
+<rect width="24.88" height="12" x="209.12" y="0" class="nonmatching"><title>165 · 10.63%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">89.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1386</tspan> · <tspan class="nonmatching">166</tspan></text>
+<text text-anchor="end" x="414" y="7.50">89.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1387</tspan> · <tspan class="nonmatching">165</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="160.62" height="12" x="0" y="0" class="named"><title>429 KB · 68.64%</title></rect>
-<rect width="73.38" height="12" x="160.62" y="0" class="nonmatching"><title>196 KB · 31.36%</title></rect>
+<rect width="161.20" height="12" x="0" y="0" class="named"><title>431 KB · 68.89%</title></rect>
+<rect width="72.80" height="12" x="161.20" y="0" class="nonmatching"><title>195 KB · 31.11%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">68.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">429 KB</tspan> · <tspan class="nonmatching">196 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">68.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">431 KB</tspan> · <tspan class="nonmatching">195 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -1406,7 +1406,7 @@
 <rect width="12" height="12" x="195" y="390" class="named"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="390" class="named"><title>0x00483a40 AddTriSubdivide (261 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="390" class="named"><title>0x00483b50 AddQuadSubdivide (299 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="390" class="nonmatching"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="390" class="named"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="390" class="nonmatching"><title>0x004842a0 AddQuadClippedSorted (1447 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="390" class="named"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="390" class="named"><title>0x00484920 CalcColorSplitMMX (126 bytes)</title></rect>
@@ -1722,7 +1722,7 @@
 <rect width="24.94" height="26.94" x="182.31" y="121.04" class="nonmatching"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
 <rect width="24.94" height="26.88" x="182.31" y="150.98" class="nonmatching"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
 <rect width="24.94" height="25.08" x="182.31" y="180.86" class="named"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
-<rect width="24.94" height="24.85" x="182.31" y="208.94" class="nonmatching"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
+<rect width="24.94" height="24.85" x="182.31" y="208.94" class="named"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>
 <rect width="24.94" height="24.68" x="182.31" y="236.79" class="nonmatching"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
 <rect width="24.94" height="24.34" x="182.31" y="264.47" class="named"><title>0x0042a850 ControlCrossbow (1524 bytes)</title></rect>
 <rect width="24.94" height="24.34" x="182.31" y="291.81" class="named"><title>0x0045f1f0 SoundEffect (1524 bytes)</title></rect>
