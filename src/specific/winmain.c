@@ -594,10 +594,23 @@ void (*j_nullsub_11_init)(void) = j_nullsub_11;
 #endif
 
 #ifndef TR4_EXE
+#ifndef FEAT_C_ASM
+__declspec(naked) void SW_WaitLevelLoad(void)
+{
+    __asm {
+        pushad
+        mov ecx, offset LevelLoadingThread.active
+        call SW_WaitWhileInScene
+        popad
+        ret
+    }
+}
+#else
 void SW_WaitLevelLoad(void)
 {
     SW_WaitWhileInScene(&LevelLoadingThread.active);
 }
+#endif
 #endif
 
 void j_nullsub_12(void)
