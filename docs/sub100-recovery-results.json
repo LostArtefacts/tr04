@@ -332,6 +332,24 @@
       "unused_local_generator_diagnostics": 2,
       "evidence": "build/existing-expression-reuse/HANDOFF.md; build/existing-expression-reuse/audit.json",
       "finding": "Exact positive control reproduces all four CalculateTarget substitutions. No new exacts. Eleven unknown-mask increases rejected. All artifacts accounted for."
+    },
+    {
+      "name": "Scoped address-taken output owners",
+      "attempts": 14140,
+      "valid_compiles": 14081,
+      "meaningful_valid_compiles_including_controls": 13527,
+      "new_matches": [],
+      "primary_targets": 97,
+      "extended_targets": 102,
+      "changed_targets": 56,
+      "compiler_failures": 59,
+      "compiled_lifetime_diagnostics": 554,
+      "positive_calibrations": [
+        "ScalesControl",
+        "ControlTwoBlockPlatform"
+      ],
+      "evidence": "build/scoped-output-owners/FINAL.json; build/scoped-output-owners/HANDOFF.md; build/scope-recovery-plan/GameStixControl-oracle/proof.json",
+      "finding": "Both calibration restorations reproduce entire TU records. Independent oracle/native parity proves room scope removes two memory dependency edges in GameStixControl; no exact source match. Selected artifacts local; complete remote artifacts stat-audited."
     }
   ],
   "comparison_tool_fix": {
