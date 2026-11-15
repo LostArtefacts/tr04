@@ -8,6 +8,7 @@
 #include "effects.h"
 #include "gameflow.h"
 #include "lara.h"
+#include "lot.h"
 #include "objnums.h"
 #include "room.h"
 #include "specific/3dmath.h"
