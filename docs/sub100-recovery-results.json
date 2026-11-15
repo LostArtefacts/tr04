@@ -170,6 +170,26 @@
       "new_matches": [],
       "evidence": "build/genuine-basins/HANDOFF.md; build/genuine-basins/final-summary.json",
       "finding": "Four genuinely different starts received expression/control-flow sweeps. No exact matches; three partial improvements preserve existing greens and one is rejected for a lost green."
+    },
+    {
+      "name": "historical debug, size and precompiled-header contexts",
+      "translation_units": 64,
+      "red_functions": 171,
+      "existing_green_functions": 1064,
+      "final_stage_compiler_attempts": 1156,
+      "successful_final_stage_compiles": 1152,
+      "native_objects_verified": 1024,
+      "proved_automatic_PCH_reuses": 128,
+      "new_matches": [],
+      "evidence": "build/historical-context/HANDOFF.md; build/historical-context/reuse-summary.json",
+      "finding": "Debug and actual PCH contexts are byte-flat. Size profiles lose 908 greens; historical browse-info flags change two reds, both worse."
     }
-  ]
+  ],
+  "comparison_tool_fix": {
+    "commit": "bd250d1",
+    "change": "Ignore COFF debug block/function markers when finding emitted function boundaries. Preserve switch tables and subsequent real code symbols.",
+    "regression_tests": 3,
+    "normal_function_records_unchanged": 1553,
+    "native_context_objects_independently_verified": 1024
+  }
 }
