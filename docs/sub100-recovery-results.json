@@ -320,6 +320,18 @@
       ],
       "evidence": "build/core-archive-recovery/audit.json; build/core-archive-recovery/normal/linked-proof.json",
       "finding": "Two genuine C matches; 30 targets emitted changed code. All trial artifacts accounted for."
+    },
+    {
+      "name": "Existing expression ownership and inverse reuse",
+      "attempts": 11520,
+      "valid_compiles": 10934,
+      "meaningful_valid_compiles_including_controls": 10932,
+      "changed_targets": 92,
+      "new_matches": [],
+      "invalid_macro_span_inputs": 586,
+      "unused_local_generator_diagnostics": 2,
+      "evidence": "build/existing-expression-reuse/HANDOFF.md; build/existing-expression-reuse/audit.json",
+      "finding": "Exact positive control reproduces all four CalculateTarget substitutions. No new exacts. Eleven unknown-mask increases rejected. All artifacts accounted for."
     }
   ],
   "comparison_tool_fix": {
@@ -337,5 +349,17 @@
     "normal_function_records_unchanged": 1553,
     "tests": 15,
     "native_smokes": "ExactDraw exits0; redProjectWaterVerts exits1; unsupported modes reject before build."
+  },
+  "scheduler_window_diagnosis": {
+    "tools_commit": "e51eabc",
+    "function": "AddQuadClippedZBuffer",
+    "retail_bytes": 1393,
+    "baseline_window_tuple_limit": 81,
+    "diagnostic_window_tuple_limit": 82,
+    "diagnostic_raw_exact": true,
+    "diagnostic_sibling_green_losses": 3,
+    "retained_source_match": false,
+    "evidence": "build/scope-recovery-plan/window82-result.json; build/scope-recovery-plan/window82-intervention.json",
+    "finding": "Single private compiler byte change proves scheduling-window boundary cause. Unmodified oracle object equals normal object. Normal-compiler source probes have not matched; no compiler modification retained."
   }
 }
