@@ -790,7 +790,8 @@ void AddTriClippedZBuffer(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, TEXTU
         }
         clipZ = 1;
         p = zClipperBuffer;
-    } else {
+    }
+    if (!clipZ) {
         if (IsVisible(&v[v0], &v[v1], &v[v2])) {
             if (!double_sided)
                 return;

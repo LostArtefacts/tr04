@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="208.82" height="12" x="0" y="0" class="named"><title>1385 · 89.24%</title></rect>
-<rect width="25.18" height="12" x="208.82" y="0" class="nonmatching"><title>167 · 10.76%</title></rect>
+<rect width="208.97" height="12" x="0" y="0" class="named"><title>1386 · 89.30%</title></rect>
+<rect width="25.03" height="12" x="208.97" y="0" class="nonmatching"><title>166 · 10.70%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="7.50">89.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1385</tspan> · <tspan class="nonmatching">167</tspan></text>
+<text text-anchor="end" x="414" y="7.50">89.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1386</tspan> · <tspan class="nonmatching">166</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="160.13" height="12" x="0" y="0" class="named"><title>428 KB · 68.43%</title></rect>
-<rect width="73.87" height="12" x="160.13" y="0" class="nonmatching"><title>197 KB · 31.57%</title></rect>
+<rect width="160.62" height="12" x="0" y="0" class="named"><title>429 KB · 68.64%</title></rect>
+<rect width="73.38" height="12" x="160.62" y="0" class="nonmatching"><title>196 KB · 31.36%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">68.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">428 KB</tspan> · <tspan class="nonmatching">197 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">68.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">429 KB</tspan> · <tspan class="nonmatching">196 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -1399,7 +1399,7 @@
 <rect width="12" height="12" x="90" y="390" class="nonmatching"><title>0x00481e60 OmniEffect (607 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="390" class="nonmatching"><title>0x004820c0 OmniFog (706 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="390" class="nonmatching"><title>0x00482390 AddQuadClippedZBuffer (1393 bytes)</title></rect>
-<rect width="12" height="12" x="135" y="390" class="nonmatching"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
+<rect width="12" height="12" x="135" y="390" class="named"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="390" class="named"><title>0x00482e40 AddClippedPoly (328 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="390" class="named"><title>0x00482f90 SubdivideEdge (550 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="390" class="named"><title>0x004831c0 SubdivideTri (862 bytes)</title></rect>
@@ -1746,7 +1746,7 @@
 <rect width="23.28" height="23.34" x="210.25" y="301.16" class="nonmatching"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>
 <rect width="23.28" height="22.68" x="210.25" y="327.50" class="nonmatching"><title>0x00448da0 GetCollidedObjects (1325 bytes)</title></rect>
 <rect width="23.28" height="22.56" x="210.25" y="353.18" class="nonmatching"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
-<rect width="23.28" height="22.47" x="210.25" y="378.73" class="nonmatching"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
+<rect width="23.28" height="22.47" x="210.25" y="378.73" class="named"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
 <rect width="23.28" height="22.37" x="210.25" y="404.20" class="named"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
 <rect width="23.28" height="22.25" x="210.25" y="429.57" class="nonmatching"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
 <rect width="23.28" height="22.18" x="210.25" y="454.82" class="nonmatching"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
