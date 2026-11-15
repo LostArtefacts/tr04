@@ -1491,10 +1491,10 @@ void JeepFireGrenade(ITEM_INFO *item)
         grenade->room_number = item->room_number;
         InitialiseItem(item_number);
         grenade->pos.x_rot = item->pos.x_rot;
-        ang = item->pos.y_rot + 0x8000;
+        grenade->pos.y_rot = item->pos.y_rot + 0x8000;
         grenade->pos.z_rot = 0;
+        ang = grenade->pos.y_rot;
         grenade->pos.x_pos = item->pos.x_pos + ((1024 * phd_sin(ang)) >> W2V_SHIFT);
-        grenade->pos.y_rot = ang;
         grenade->pos.y_pos = item->pos.y_pos - 768;
         grenade->pos.z_pos = item->pos.z_pos + ((1024 * phd_cos(ang)) >> W2V_SHIFT);
         SmokeCountL = 32;
