@@ -430,9 +430,17 @@ void __fastcall SW_WaitWhileInScene(volatile sint32 *flag)
 #endif
 
 #ifndef FEAT_C_ASM
-void SW_SleepTick(void)
+FARPROC SW_GetSleepProc(void);
+
+__declspec(naked) void SW_SleepTick(void)
 {
-    ((void (WINAPI *)(DWORD))GetProcAddress(SW_GetKernelModule(), SW_SleepName))(10);
+    __asm {
+        call SW_GetKernelModule
+        call SW_GetSleepProc
+        push 10
+        call eax
+        ret
+    }
 }
 #else
 void SW_SleepTick(void)
