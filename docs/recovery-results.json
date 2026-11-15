@@ -5,9 +5,9 @@
     "matching_bytes": 420349
   },
   "after": {
-    "green": 1373,
-    "red": 180,
-    "matching_bytes": 423182
+    "green": 1374,
+    "red": 179,
+    "matching_bytes": 424338
   },
   "lost_greens": [],
   "new_matches": [
@@ -50,6 +50,18 @@
       "normal_match": true,
       "linked_at_original_address": true,
       "linked_raw_match": true
+    },
+    {
+      "symbol": "_LoadObjects",
+      "commit": "b56a449",
+      "bytes": 1156,
+      "existing_mask_bytes": 4,
+      "data_differences": 0,
+      "normal_match": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": false,
+      "linked_difference": "One call to relocated InitialiseObjects; target verified against link map. All other bytes equal retail.",
+      "checkout": "main"
     }
   ],
   "standalone_build": "passed",
@@ -57,5 +69,6 @@
   "source_policy": "Ordinary C; no assembly, compiler flag changes, unused padding, or retained partial candidates in this recovery pass.",
   "partial_branch_findings": [
     "WinMain retry-loop reconstruction matches target except JNE versus unconditional JMP after FindCDDrive. Kept unapplied to preserve existing no-CD runtime behavior."
-  ]
+  ],
+  "continuation": "Merged fix/reds-chain through508ae68 into main, imported matchingtools commits and continued directly onmain. LoadObjects recovered thereafter; all1373postmergegreens preserved."
 }

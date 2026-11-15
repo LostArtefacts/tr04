@@ -9,7 +9,6 @@ _LookCamera,src/camera.c,0x443ed0,2321,2321,0,44,register-stack-operands-only,Tr
 _DecodeTrack,src/deltapak.c,0x46afa0,295,295,0,6,same-mnemonic-multiset,True,False,0,0
 _SwitchTrigger,src/switch.c,0x461b10,192,192,0,4,same-size-instruction-change,True,False,0,0
 _InitialiseJeep,src/jeep.c,0x466f40,94,94,0,2,instruction-order-only,True,False,0,0
-_LoadObjects,src/specific/file.c,0x474e10,1156,1156,0,26,same-mnemonic-sequence,True,False,4,0
 _AddQuadClippedSorted,src/specific/polyinsert.c,0x4842a0,1447,1447,0,33,same-size-instruction-change,True,True,8,0
 _GameStixControl,src/senet.c,0x40f630,1436,1436,0,34,same-size-instruction-change,True,False,0,0
 _BikeDynamics,src/bike.c,0x4657e0,1940,1940,0,46,same-size-instruction-change,True,False,0,0
