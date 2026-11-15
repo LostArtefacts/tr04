@@ -1443,6 +1443,7 @@ void AddQuadClippedSorted(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint1
     SORTLIST *sl;
     TEXTURESTRUCT tex2;
     float z;
+    sint32 polytype;
     sint32 cb0, cb1, cb2, cb3;
     sint32 sb0, sb1, sb2, sb3;
 
@@ -1587,11 +1588,12 @@ void AddQuadClippedSorted(D3DTLVERTEX *v, sint16 v0, sint16 v1, sint16 v2, sint1
     p->specular = pV->specular;
     p->tu = tex->u4;
     p->tv = tex->v4;
+    polytype = nPolyType;
     if (nPolyType)
         z += pV->sz;
     else if (pV->sz > z)
         z = pV->sz;
-    if (nPolyType)
+    if (polytype)
         z *= 0.25F;
     sl->zVal = z;
     nPolys += 2;
