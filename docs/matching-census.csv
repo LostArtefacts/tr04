@@ -47,6 +47,7 @@ _CreateSkinningData,src/laraskin.c,0x430f70,2027,2032,5,149,small-size-structura
 _S_CallInventory2,src/newinv.c,0x43b760,589,589,0,44,same-size-instruction-change,True,False,0,0
 _SW_GetSleepProc,src/specific/swrender.c,0x498c81,13,17,4,1,small-size-structural-change,True,False,0,0
 _WildboarControl,src/wildboar.c,0x41bf60,888,888,0,70,same-size-instruction-change,True,False,0,0
+_ScorpionControl,src/scorpion.c,0x40e800,1996,1996,0,159,same-size-instruction-change,False,False,0,0
 _RefreshCamera,src/control.c,0x44aa20,295,295,0,24,same-mnemonic-multiset,True,False,0,0
 _CreateVertexNormals,src/specific/drawroom.c,0x472f50,911,912,1,80,same-mnemonic-multiset,True,True,0,0
 _DrawAnimatingItem,src/draw.c,0x44ff60,1470,1470,0,131,same-size-instruction-change,True,False,0,0
@@ -80,7 +81,6 @@ _DemigodControl,src/demigod.c,0x404ea0,2424,2424,0,350,same-size-instruction-cha
 _CheckSenetWinner,src/senet.c,0x40f320,138,138,0,20,same-mnemonic-multiset,True,False,0,0
 _S_PrintShadow,src/specific/specificfx.c,0x4876c0,1169,1168,-1,170,small-size-structural-change,True,False,0,0
 _SethControl,src/seth.c,0x410c90,2380,2368,-12,349,small-size-structural-change,True,True,0,0
-_ScorpionControl,src/scorpion.c,0x40e800,1996,2000,4,293,small-size-structural-change,False,True,0,0
 _setup_ammo_selector,src/newinv.c,0x43dbf0,566,673,107,84,larger-structural-change,True,False,0,0
 _MoveLaraPosition,src/collide.c,0x4483e0,444,444,0,66,same-mnemonic-multiset,True,False,0,0
 _EnemyJeepControl,src/jeep.c,0x469c20,2212,2216,4,333,small-size-structural-change,False,False,0,0

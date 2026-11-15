@@ -101,8 +101,8 @@
       ]
     },
     "same-size-instruction-change": {
-      "count": 59,
-      "bytes": 53381,
+      "count": 60,
+      "bytes": 55377,
       "names": [
         "_SwitchTrigger",
         "_AddQuadClippedSorted",
@@ -121,6 +121,7 @@
         "_JeepFireGrenade",
         "_S_CallInventory2",
         "_WildboarControl",
+        "_ScorpionControl",
         "_DrawAnimatingItem",
         "_SkeletonControl",
         "_InitialiseSpotCam",
@@ -166,8 +167,8 @@
       ]
     },
     "small-size-structural-change": {
-      "count": 61,
-      "bytes": 71542,
+      "count": 60,
+      "bytes": 69546,
       "names": [
         "_UserControl_bike",
         "_TriggerExplosionSparks",
@@ -186,7 +187,6 @@
         "_CalculateRope",
         "_S_PrintShadow",
         "_SethControl",
-        "_ScorpionControl",
         "_EnemyJeepControl",
         "_HorsemanControl",
         "_TestLaraSlide",
@@ -2302,6 +2302,37 @@
       }
     },
     {
+      "name": "_ScorpionControl",
+      "source": "src/scorpion.c",
+      "address": "0x40e800",
+      "retail_size": 1996,
+      "compiled_size": 1996,
+      "size_delta": 0,
+      "canonical_score": 159,
+      "instruction_count": 603,
+      "instruction_distance_capstone": 115,
+      "distance_fraction": 0.09528,
+      "category": "same-size-instruction-change",
+      "decoded_bytes_ours": 1994,
+      "decoded_bytes_retail": 1994,
+      "full_instruction_coverage": false,
+      "linear_decode_data_bytes": 4,
+      "has_x87": false,
+      "mask_bytes": 0,
+      "referenced_data_differences": 0,
+      "first_difference": {
+        "operation": "replace",
+        "ours_offset": 115,
+        "retail_offset": 115,
+        "ours": [
+          "lea ebp, [edx + ecx*4]"
+        ],
+        "retail": [
+          "lea ebx, [edx + ecx*4]"
+        ]
+      }
+    },
+    {
       "name": "_RefreshCamera",
       "source": "src/control.c",
       "address": "0x44aa20",
@@ -3328,37 +3359,6 @@
         ],
         "retail": [
           "je 0x411598"
-        ]
-      }
-    },
-    {
-      "name": "_ScorpionControl",
-      "source": "src/scorpion.c",
-      "address": "0x40e800",
-      "retail_size": 1996,
-      "compiled_size": 2000,
-      "size_delta": 4,
-      "canonical_score": 293,
-      "instruction_count": 603,
-      "instruction_distance_capstone": 249,
-      "distance_fraction": 0.20664,
-      "category": "small-size-structural-change",
-      "decoded_bytes_ours": 1997,
-      "decoded_bytes_retail": 1994,
-      "full_instruction_coverage": false,
-      "linear_decode_data_bytes": 5,
-      "has_x87": true,
-      "mask_bytes": 0,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "replace",
-        "ours_offset": 22,
-        "retail_offset": 22,
-        "ours": [
-          "je 0x40efa6"
-        ],
-        "retail": [
-          "je 0x40efa3"
         ]
       }
     },
@@ -6603,7 +6603,7 @@
       "build/obj/sas.obj": "2ab8d3a3276cb5e1ba1086ede9724eda2f85f7c1d3ea0cbe8c9bc8d840969c39",
       "build/obj/savegame.obj": "353c5a5f4aceeb71ca9481e3d3d6edafe0c11afbdc80ca93cf9e8fbfed85a8ed",
       "build/obj/scarab.obj": "877bd1233d403ed816eb09298ece25b84b383ef28b6008f399a6ea0e875dfbc3",
-      "build/obj/scorpion.obj": "34d0583553cf01f9fdf077d80d1905e8aa9e17d98f018ca83c213496f9e7148a",
+      "build/obj/scorpion.obj": "0a90f01933c939093dfe2ceecdade6e6579869f6d7aff561c52bae2918a13181",
       "build/obj/senet.obj": "ce92bb541759df45a31bbddbd17b60cd6bfa78df69f32041d948a7e84b8db147",
       "build/obj/sentrygun.obj": "a265f9cc710399cbf89b398211084463c7af47a19aeec28f24e72e9cac296f94",
       "build/obj/seth.obj": "3f674689ae6170524586206ad9b232f82fa76cb9de725fd17937572a4fb4608d",
@@ -6648,7 +6648,7 @@
       "build/obj/wildboar.obj": "80374c2a430ad33769a20110bb5957d28dc670bdd899c0e1fe8eaa7a2ba59684",
       "build/obj/wraith.obj": "9f0623e742b119016b389a788efcd16626e044075716466bc7714bbb266fc078"
     },
-    "revision": "34c7a9abff02d3dfa4eb7c31a7031f05b75b0043",
+    "revision": "e3f0ec68a0bcde1dc2c388387aa6ce158ba5a2ea",
     "source_sha256": {
       "src/ahmet.c": "fd38a4f673043e881eacf12631f41b276501eb61fa46080eeb8f5e17f1c77990",
       "src/baboon.c": "3b888e15363ca4f8a4cbea0d340fcc51d6f6902442ac09a0a24071ab42c39ea4",
@@ -6711,7 +6711,7 @@
       "src/sas.c": "5d372253c9b7bc209e51d4e632f3d229c5191e0f0352fbc3a4d3d5b11ff67864",
       "src/savegame.c": "9d1292a62a6dba41f1abf9945c14509e2d83c532d718a98a271d165792f601a0",
       "src/scarab.c": "1c45ecc9aa982467d6185a546fcc56d70304878561b24323ed4437dc077f1799",
-      "src/scorpion.c": "3b1da4f43d8d4a0060c8d31f5a38b7da1a45bbc22bcde31882bf27c4c3ca0b79",
+      "src/scorpion.c": "484779ded638c642c2e9d2cc43d51086e7f40bb027bec8aa9902ec3bb1820a48",
       "src/senet.c": "d535d42743794b90d5b6a5964db34d8510761cdd003a446307dad60c2bb5df31",
       "src/sentrygun.c": "6bc56fd5e3716608c5aef6c15204e13554d92a19b3575dd25c140b34ad2804f4",
       "src/seth.c": "64aae564fa3cf6b021d61221a7264748f0f05bc6fcf72e848d37cdc93957fdbe",
