@@ -234,6 +234,7 @@ void InitialiseObelisk(sint16 item_number)
 {
     ITEM_INFO *item;
     ITEM_INFO *item2;
+    sint16 *object_number;
     sint16 *ifl;
     sint32 i;
 
@@ -243,13 +244,19 @@ void InitialiseObelisk(sint16 item_number)
     AddActiveItem(item_number);
     item->status = ITEM_ACTIVE;
     if (item->trigger_flags == 2) {
-        ifl = item->item_flags;
         item2 = items;
-        for (i = 0; i < level_items; i++, item2++) {
-            if (item2->object_number == OBELISK && i != item_number)
-                *ifl++ = i;
-            if (item2->object_number == ANIMATING3)
-                item->item_flags[2] = i;
+        i = 0;
+        if (level_items > 0) {
+            object_number = &item2->object_number;
+            ifl = item->item_flags;
+            do {
+                if (*object_number == OBELISK && i != item_number)
+                    *ifl++ = i;
+                if (*object_number == ANIMATING3)
+                    item->item_flags[2] = i;
+                i++;
+                item2++;
+            } while (i < level_items && (object_number = &item2->object_number, 1));
         }
     }
 }
