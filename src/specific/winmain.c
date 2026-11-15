@@ -664,8 +664,21 @@ void (*j_nullsub_13_init)(void) = j_nullsub_13;
 #endif
 
 #ifndef TR4_EXE
+#ifndef FEAT_C_ASM
+__declspec(naked) void SW_WaitWhileDXInScene(void)
+{
+    __asm {
+        pushad
+        mov ecx, offset App.dx.InScene
+        call SW_WaitWhileInScene
+        popad
+        ret
+    }
+}
+#else
 void SW_WaitWhileDXInScene(void)
 {
     SW_WaitWhileInScene(&App.dx.InScene);
 }
+#endif
 #endif
