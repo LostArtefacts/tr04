@@ -663,8 +663,9 @@ void insert_object_into_list(sint32 num)
 
 void draw_current_object_list(sint32 ringnum)
 {
-    sint32 num, i, obj, n, maxobj, xoff, shade, minobj, objmeup, nummeup, activenum;
+    sint32 num, i, obj, n, maxobj, xoff, shade, minobj, nummeup, activenum;
     sint16 ymeup, yrot;
+    float vertical_scale;
     char textbufme[128];
 
     if (rings[ringnum]->numobjectsinlist <= 0)
@@ -822,10 +823,9 @@ void draw_current_object_list(sint32 ringnum)
             else
                 sprintf(textbufme, "%d x %s", nummeup, SCRIPT_TEXT(inventry_objects_list[num].objname));
             if (ringnum == RING_INVENTORY)
-                objmeup = (sint32)(phd_centery - 3.0F * ((float)(phd_winymax + 1) * (1.0F / 16.0F)));
+                PrintString((uint16)phd_centerx, (uint16)(sint32)(phd_centery - 3.0F * ((float)(phd_winymax + 1) * (1.0F / 16.0F))), 8, textbufme, FF_CENTER);
             else
-                objmeup = (sint32)(3.0F * ((float)(phd_winymax + 1) * (1.0F / 16.0F)) + phd_centery);
-            PrintString((uint16)phd_centerx, (uint16)objmeup, 8, textbufme, FF_CENTER);
+                PrintString((uint16)phd_centerx, (uint16)(sint32)(3.0F * ((float)(phd_winymax + 1) * (1.0F / 16.0F)) + phd_centery), 8, textbufme, FF_CENTER);
         }
         if (!i && !rings[ringnum]->objlistmovement) {
             if (inventry_objects_list[rings[ringnum]->current_object_list[n].invitem].flags & 2)
@@ -852,8 +852,9 @@ void draw_current_object_list(sint32 ringnum)
             if (rings[ringnum]->current_object_list[n].bright < 32)
                 rings[ringnum]->current_object_list[n].bright = 32;
         }
+        vertical_scale = (float)phd_centery * (1.0F / 120.0F);
         DrawThreeDeeObject2D((sint32)(256.0F * ((float)phd_centerx * (1.0F / 256.0F)) + inventry_xpos) + xoff + i * OBJLIST_SPACING,
-            (sint32)((float)phd_centery * (1.0F / 120.0F) * ymeup + inventry_ypos),
+            (sint32)(vertical_scale * ymeup + inventry_ypos),
             rings[ringnum]->current_object_list[n].invitem, shade, 0, yrot, 0, rings[ringnum]->current_object_list[n].bright, 0);
         n++;
         if (n >= rings[ringnum]->numobjectsinlist)
