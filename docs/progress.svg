@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="208.67" height="12" x="0" y="0" class="named"><title>1384 · 89.18%</title></rect>
-<rect width="25.33" height="12" x="208.67" y="0" class="nonmatching"><title>168 · 10.82%</title></rect>
+<rect width="208.82" height="12" x="0" y="0" class="named"><title>1385 · 89.24%</title></rect>
+<rect width="25.18" height="12" x="208.82" y="0" class="nonmatching"><title>167 · 10.76%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">89.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1384</tspan> · <tspan class="nonmatching">168</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1385</tspan> · <tspan class="nonmatching">167</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="160.09" height="12" x="0" y="0" class="named"><title>428 KB · 68.41%</title></rect>
-<rect width="73.91" height="12" x="160.09" y="0" class="nonmatching"><title>198 KB · 31.59%</title></rect>
+<rect width="160.13" height="12" x="0" y="0" class="named"><title>428 KB · 68.43%</title></rect>
+<rect width="73.87" height="12" x="160.13" y="0" class="nonmatching"><title>197 KB · 31.57%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="24.50">68.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">428 KB</tspan> · <tspan class="nonmatching">198 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">428 KB</tspan> · <tspan class="nonmatching">197 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -1123,7 +1123,7 @@
 <rect width="12" height="12" x="450" y="300" class="nonmatching"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="300" class="nonmatching"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="300" class="nonmatching"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="300" class="nonmatching"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="300" class="named"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="300" class="named"><title>0x0046b140 frigup_lara (218 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="300" class="named"><title>0x0046b220 updateAnimFrame (112 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="300" class="named"><title>0x0046b290 cutseq_malloc (16 bytes)</title></rect>
@@ -2662,7 +2662,7 @@
 <rect width="6.67" height="6.39" x="701.70" y="304.75" class="named"><title>0x00432620 lara_as_swim (107 bytes)</title></rect>
 <rect width="6.67" height="6.39" x="711.37" y="304.75" class="named"><title>0x00438690 GetFreeSmokeSpark (107 bytes)</title></rect>
 <rect width="6.67" height="6.39" x="721.04" y="304.75" class="named"><title>0x0043fb70 CreatureActive (107 bytes)</title></rect>
-<rect width="6.67" height="6.39" x="730.72" y="304.75" class="nonmatching"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
+<rect width="6.67" height="6.39" x="730.72" y="304.75" class="named"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="6.61" height="6.39" x="740.39" y="304.75" class="named"><title>0x0040da00 InitialiseInjuredSas (106 bytes)</title></rect>
 <rect width="6.68" height="6.32" x="574.77" y="314.13" class="named"><title>0x00422de0 lara_as_hang2 (106 bytes)</title></rect>
 <rect width="6.68" height="6.32" x="574.77" y="323.45" class="nonmatching"><title>0x00464610 InitialiseBike (106 bytes)</title></rect>

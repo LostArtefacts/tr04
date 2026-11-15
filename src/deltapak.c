@@ -337,7 +337,7 @@ sint16 GetTrackWord(sint32 off, sint8 *packed, sint32 packmethod)
     p = (uint8 *)packed + (offset >> 3);
     ret = ((uint32)((((p[3] << 8) | p[2]) << 8 | p[1]) << 8 | p[0]) >> (offset & 7)) & ((1 << packmethod) - 1);
     if (ret & (1 << (packmethod - 1)))
-        return (sint16)(~((1 << packmethod) - 1) | ret);
+        return (sint16)((sint16)~((1 << packmethod) - 1) | ret);
     return (sint16)ret;
 }
 
