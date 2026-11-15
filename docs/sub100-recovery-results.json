@@ -139,5 +139,37 @@
     "software renderer ordinary C helper/bit-representation candidates",
     "texture/clipping copy helpers",
     "local value-type and field-cache candidates except JeepFireGrenade"
+  ],
+  "completed_cohorts": [
+    {
+      "name": "local value caches and field ownership",
+      "attempts": 1553,
+      "valid_compiles": 1544,
+      "new_matches": [
+        "JeepFireGrenade"
+      ],
+      "evidence": "build/local-types/HANDOFF.md; build/local-types/ledger.csv"
+    },
+    {
+      "name": "narrow API and header declarations",
+      "candidate_rows": 225,
+      "caller_translation_units": 22,
+      "additional_narrow_apis": 14,
+      "new_matches": [],
+      "evidence": "build/header-api/HANDOFF.md",
+      "finding": "Retail CreatureTurn returns only AX; widening its return loses the existing match. Omitting its prototype gains nothing and loses six existing caller matches."
+    },
+    {
+      "name": "genuine reference source basins",
+      "attempted_targets": 117,
+      "valid_target_bodies": 86,
+      "invalid_target_bodies": 31,
+      "valid_reference_contexts": 112,
+      "follow_up_candidates": 400,
+      "valid_follow_up_compiles": 361,
+      "new_matches": [],
+      "evidence": "build/genuine-basins/HANDOFF.md; build/genuine-basins/final-summary.json",
+      "finding": "Four genuinely different starts received expression/control-flow sweeps. No exact matches; three partial improvements preserve existing greens and one is rejected for a lost green."
+    }
   ]
 }
