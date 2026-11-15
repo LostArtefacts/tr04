@@ -38,81 +38,100 @@ sint32 LaraTestClimbPos(ITEM_INFO *item, sint32 front, sint32 right, sint32 orig
     return LaraTestClimb(x, origin + item->pos.y_pos, z, xfront, zfront, height, item->room_number, shift);
 }
 
-sint32 LaraTestClimb(sint32 x, sint32 y, sint32 z, sint32 xfront, sint32 zfront, sint32 item_height, sint16 item_room, sint32 *shift)
+sint32 LaraTestClimb(sint32 x, sint32 y, sint32 z, sint32 xfront, sint32 zfront, sint32 item_height, sint16 item_room,
+                     sint32 *shift)
 {
-    FLOOR_INFO *floor;
     sint16 room_number;
-    sint32 hang, h, c;
+    sint32 h, c;
+    sint32 hang = 1;
+    FLOOR_INFO *floor;
 
     *shift = 0;
-    hang = 1;
     if (!lara.climb_status)
         return 0;
     room_number = item_room;
-    floor = GetFloor(x, y - 128, z, &room_number);
+    floor = GetFloor(x, y - STEP_L / 2, z, &room_number);
     h = GetHeight(floor, x, y, z);
     if (h == NO_HEIGHT)
         return 0;
-    h -= 128 + y + item_height;
+    h -= y + item_height + STEP_L / 2;
     if (h < -70)
         return 0;
-    if (h < 0)
+    else if (h < 0)
         *shift = h;
     c = GetCeiling(floor, x, y, z) - y;
     if (c > 70)
         return 0;
-    if (c > 0) {
+    else if (c > 0) {
         if (*shift)
             return 0;
         *shift = c;
     }
     if (item_height + h < 900)
         hang = 0;
-    floor = GetFloor(xfront + x, y, zfront + z, &room_number);
-    h = GetHeight(floor, xfront + x, y, zfront + z);
+    floor = GetFloor(x + xfront, y, z + zfront, &room_number);
+    h = GetHeight(floor, x + xfront, y, z + zfront);
     if (h != NO_HEIGHT)
         h -= y;
     if (h > 70) {
-        c = GetCeiling(floor, xfront + x, y, zfront + z) - y;
-        if (c >= 512)
-            goto done;
-        if (c > 442)
-            goto shift_up;
-        if (c > 0)
-            goto hang_out;
-        if (c <= -70 || !hang || *shift > 0)
+        c = GetCeiling(floor, x + xfront, y, z + zfront) - y;
+        if (c >= STEP_L * 2)
+            return 1;
+        else if (c > STEP_L * 2 - 70) {
+            if (*shift > 0) {
+                if (hang)
+                    return -1;
+                else
+                    return 0;
+            }
+            *shift = c - STEP_L * 2;
+            return 1;
+        } else if (c > 0) {
+            if (hang)
+                return -1;
+            else
+                return 0;
+        } else if (c > -70) {
+            if (hang && *shift <= 0) {
+                if (*shift > c)
+                    *shift = c;
+                return -1;
+            } else
+                return 0;
+        } else
             return 0;
-        if (*shift > c)
-            *shift = c;
-        return -1;
-    }
-    if (h > 0) {
+    } else if (h > 0) {
         if (*shift < 0)
             return 0;
         if (h > *shift)
             *shift = h;
     }
     room_number = item_room;
-    GetFloor(x, y + item_height, z, &room_number);
-    floor = GetFloor(xfront + x, y + item_height, zfront + z, &room_number);
-    c = GetCeiling(floor, xfront + x, y + item_height, zfront + z);
+    floor = GetFloor(x, y + item_height, z, &room_number);
+    floor = GetFloor(x + xfront, y + item_height, z + zfront, &room_number);
+    c = GetCeiling(floor, x + xfront, y + item_height, z + zfront);
     if (c == NO_HEIGHT)
         return 1;
     c -= y;
     if (c <= h)
         return 1;
-    if (c >= 512)
+    if (c >= STEP_L * 2)
         return 1;
-    if (c <= 442)
-        goto hang_out;
-shift_up:
-    if (*shift <= 0) {
-        *shift = c - 512;
-done:
+    else if (c > STEP_L * 2 - 70) {
+        if (*shift > 0) {
+            if (hang)
+                return -1;
+            else
+                return 0;
+        }
+        *shift = c - STEP_L * 2;
         return 1;
+    } else {
+        if (hang)
+            return -1;
+        else
+            return 0;
     }
-hang_out:
-    return hang ? -1 : 0;
 }
 
 void lara_as_climbstnc(ITEM_INFO *item, COLL_INFO *coll)
