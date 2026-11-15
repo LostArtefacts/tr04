@@ -7,14 +7,12 @@ _DrawSprite,src/specific/specificfx.c,0x48bab0,380,380,0,4,register-stack-operan
 _AddTriClippedZBuffer,src/specific/polyinsert.c,0x482910,1313,1313,0,16,instruction-order-only,True,True,0,0
 _LookCamera,src/camera.c,0x443ed0,2321,2321,0,44,register-stack-operands-only,True,False,0,0
 _DecodeTrack,src/deltapak.c,0x46afa0,295,295,0,6,same-mnemonic-multiset,True,False,0,0
-_draw_current_object_list,src/newinv.c,0x43cae0,2405,2405,0,50,same-mnemonic-multiset,True,True,32,0
 _SwitchTrigger,src/switch.c,0x461b10,192,192,0,4,same-size-instruction-change,True,False,0,0
 _InitialiseJeep,src/jeep.c,0x466f40,94,94,0,2,instruction-order-only,True,False,0,0
 _LoadObjects,src/specific/file.c,0x474e10,1156,1156,0,26,same-mnemonic-sequence,True,False,4,0
 _AddQuadClippedSorted,src/specific/polyinsert.c,0x4842a0,1447,1447,0,33,same-size-instruction-change,True,True,8,0
 _GameStixControl,src/senet.c,0x40f630,1436,1436,0,34,same-size-instruction-change,True,False,0,0
 _BikeDynamics,src/bike.c,0x4657e0,1940,1940,0,46,same-size-instruction-change,True,False,0,0
-_S_DrawPickup,src/specific/output.c,0x47f970,154,154,0,4,same-mnemonic-multiset,True,True,16,0
 _TestLaraVault,src/lara.c,0x422480,882,900,18,23,larger-structural-change,False,False,0,0
 _ControlSpikeball,src/traps.c,0x416d70,201,201,0,6,instruction-order-only,True,False,0,0
 _BuildOutsideTable,src/setup.c,0x45ed30,791,791,0,24,register-stack-operands-only,True,False,8,0
@@ -54,7 +52,6 @@ _DrawAnimatingItem,src/draw.c,0x44ff60,1470,1470,0,131,same-size-instruction-cha
 _WinMain@16,src/specific/winmain.c,0x48e9c0,1154,1120,-34,107,larger-structural-change,True,False,36,0
 _SkeletonControl,src/skeleton.c,0x4118d0,4490,4490,0,434,same-size-instruction-change,False,False,0,0
 _TemplarControl,src/templar.c,0x413090,1296,1296,0,128,same-mnemonic-multiset,True,False,0,0
-_InitialiseObelisk,src/init.c,0x453650,182,182,0,18,same-mnemonic-multiset,True,False,0,0
 _DrawBikeSpeedo,src/specific/specificfx.c,0x48c6c0,981,976,-5,100,small-size-structural-change,True,True,32,0
 _InitialiseSpotCam,src/spotcam.c,0x460420,1833,1833,0,191,same-size-instruction-change,True,False,0,0
 _DrawLaserSightSprite,src/specific/specificfx.c,0x489950,565,565,0,61,same-size-instruction-change,True,True,0,0
@@ -172,7 +169,6 @@ _CrossbowHitSwitchType78,src/lara1gun.c,0x42a490,946,957,11,375,small-size-struc
 _DoCredits,src/gameflow.c,0x452b80,230,230,0,92,same-size-instruction-change,True,False,0,0
 _SW_SleepTick,src/specific/swrender.c,0x493bf1,15,19,4,6,small-size-structural-change,True,False,0,0
 _S_DrawHealthBar,src/specific/loadsave.c,0x47d460,68,70,2,28,same-mnemonic-multiset,True,False,0,0
-_mCrossProduct,src/rope.c,0x458a70,92,92,0,38,same-mnemonic-multiset,True,False,0,0
 _DecodeAnim,src/deltapak.c,0x46ae80,277,272,-5,120,small-size-structural-change,True,False,0,0
 _S_DrawDrawSparks,src/specific/specificfx.c,0x488140,1292,1248,-44,589,larger-structural-change,True,True,0,0
 _LSpline,src/tomb4fx.c,0x43afd0,254,240,-14,130,small-size-structural-change,True,False,0,0

@@ -1,8 +1,8 @@
 {
   "baseline": {
-    "green": 1369,
-    "red": 184,
-    "red_bytes": 205142
+    "green": 1373,
+    "red": 180,
+    "red_bytes": 202309
   },
   "method": "Linear disassembly includes embedded jump-table/data bytes; .byte denotes undecodable data and structural categories are broad observations only. All current normal COFF functions via compare.results; known relocations resolved, unknown mask bytes replaced with retail only for disassembly. Categories are observed instruction shapes, NOT proven compiler causes. Canonical score uses local objdump per permuter; register-shape classifier merges integer registers and stack-slot offsets only. Actual masks/data mismatches retained separately.",
   "categories": {
@@ -61,14 +61,12 @@
       ]
     },
     "same-mnemonic-multiset": {
-      "count": 26,
-      "bytes": 23681,
+      "count": 22,
+      "bytes": 20848,
       "names": [
         "_AddTriClippedSorted",
         "_ProjectWaterVerts",
         "_DecodeTrack",
-        "_draw_current_object_list",
-        "_S_DrawPickup",
         "_S_DrawSparks",
         "_S_LoadLevelFile",
         "_MoveCamera",
@@ -79,7 +77,6 @@
         "_RefreshCamera",
         "_CreateVertexNormals",
         "_TemplarControl",
-        "_InitialiseObelisk",
         "_S_DrawTile",
         "_WinMainWndProc@16",
         "_CheckSenetWinner",
@@ -88,8 +85,7 @@
         "_Log",
         "_DrawWraithTrail",
         "_XYUVGClipper",
-        "_S_DrawHealthBar",
-        "_mCrossProduct"
+        "_S_DrawHealthBar"
       ]
     },
     "same-mnemonic-sequence": {
@@ -374,13 +370,6 @@
         "_HorsemanControl"
       ]
     },
-    "src/init.c": {
-      "count": 1,
-      "bytes": 182,
-      "names": [
-        "_InitialiseObelisk"
-      ]
-    },
     "src/jeep.c": {
       "count": 6,
       "bytes": 6457,
@@ -456,22 +445,20 @@
       ]
     },
     "src/newinv.c": {
-      "count": 4,
-      "bytes": 3953,
+      "count": 3,
+      "bytes": 1548,
       "names": [
-        "_draw_current_object_list",
         "_DrawThreeDeeObject2D",
         "_S_CallInventory2",
         "_setup_ammo_selector"
       ]
     },
     "src/rope.c": {
-      "count": 3,
-      "bytes": 3113,
+      "count": 2,
+      "bytes": 3021,
       "names": [
         "_AlignLaraToRope",
-        "_CalculateRope",
-        "_mCrossProduct"
+        "_CalculateRope"
       ]
     },
     "src/sas.c": {
@@ -620,10 +607,9 @@
       ]
     },
     "src/specific/output.c": {
-      "count": 6,
-      "bytes": 8855,
+      "count": 5,
+      "bytes": 8701,
       "names": [
-        "_S_DrawPickup",
         "_S_GetObjectBounds",
         "_phd_PutPolygons",
         "_RenderLoadPic",
@@ -1051,36 +1037,6 @@
       }
     },
     {
-      "name": "_draw_current_object_list",
-      "source": "src/newinv.c",
-      "address": "0x43cae0",
-      "retail_size": 2405,
-      "compiled_size": 2405,
-      "size_delta": 0,
-      "canonical_score": 50,
-      "instruction_count": 621,
-      "instruction_distance_capstone": 48,
-      "distance_fraction": 0.03865,
-      "category": "same-mnemonic-multiset",
-      "decoded_bytes_ours": 2405,
-      "decoded_bytes_retail": 2405,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": true,
-      "mask_bytes": 32,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "insert",
-        "ours_offset": 1426,
-        "retail_offset": 1426,
-        "ours": [],
-        "retail": [
-          "lea edx, [esp + 0x28]",
-          "push 0x8000"
-        ]
-      }
-    },
-    {
       "name": "_SwitchTrigger",
       "source": "src/switch.c",
       "address": "0x461b10",
@@ -1266,35 +1222,6 @@
         ],
         "retail": [
           "sub eax, 0x18"
-        ]
-      }
-    },
-    {
-      "name": "_S_DrawPickup",
-      "source": "src/specific/output.c",
-      "address": "0x47f970",
-      "retail_size": 154,
-      "compiled_size": 154,
-      "size_delta": 0,
-      "canonical_score": 4,
-      "instruction_count": 42,
-      "instruction_distance_capstone": 4,
-      "distance_fraction": 0.04762,
-      "category": "same-mnemonic-multiset",
-      "decoded_bytes_ours": 154,
-      "decoded_bytes_retail": 154,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": true,
-      "mask_bytes": 16,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "insert",
-        "ours_offset": 104,
-        "retail_offset": 104,
-        "ours": [],
-        "retail": [
-          "movsx ecx, word ptr [0x7fd20e]"
         ]
       }
     },
@@ -2515,35 +2442,6 @@
           "mov ecx, dword ptr [0x80e13c]",
           "mov eax, dword ptr [ebx + 0x12]"
         ]
-      }
-    },
-    {
-      "name": "_InitialiseObelisk",
-      "source": "src/init.c",
-      "address": "0x453650",
-      "retail_size": 182,
-      "compiled_size": 182,
-      "size_delta": 0,
-      "canonical_score": 18,
-      "instruction_count": 56,
-      "instruction_distance_capstone": 16,
-      "distance_fraction": 0.14286,
-      "category": "same-mnemonic-multiset",
-      "decoded_bytes_ours": 182,
-      "decoded_bytes_retail": 182,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": false,
-      "mask_bytes": 0,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "delete",
-        "ours_offset": 4,
-        "retail_offset": 4,
-        "ours": [
-          "push ebx"
-        ],
-        "retail": []
       }
     },
     {
@@ -6206,35 +6104,6 @@
       }
     },
     {
-      "name": "_mCrossProduct",
-      "source": "src/rope.c",
-      "address": "0x458a70",
-      "retail_size": 92,
-      "compiled_size": 92,
-      "size_delta": 0,
-      "canonical_score": 38,
-      "instruction_count": 38,
-      "instruction_distance_capstone": 38,
-      "distance_fraction": 0.5,
-      "category": "same-mnemonic-multiset",
-      "decoded_bytes_ours": 92,
-      "decoded_bytes_retail": 92,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": false,
-      "mask_bytes": 0,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "insert",
-        "ours_offset": 0,
-        "retail_offset": 0,
-        "ours": [],
-        "retail": [
-          "mov edx, dword ptr [esp + 8]"
-        ]
-      }
-    },
-    {
       "name": "_DecodeAnim",
       "source": "src/deltapak.c",
       "address": "0x46ae80",
@@ -6573,7 +6442,7 @@
       "build/obj/harpy.obj": "d4cd36c5580b4c47b13400bb5fd4bf537b5ceebbc65a34b1874c0e2e04b54f95",
       "build/obj/health.obj": "02d9fe9306b42bc49dac06435821aacd12ce6d2e0976353dc4360ad2d09c853e",
       "build/obj/horse.obj": "8e04a47098bdef01639e5e662be835def48bd463e833f963c031d853db649b88",
-      "build/obj/init.obj": "8a2b2de275a9b1e090c91e8f000a3e7548cd2525344d16dfec7a365377b63026",
+      "build/obj/init.obj": "317fc1024ed21724dc75b4c8d7adcfeea3b930e6b31224383e037496c3b46024",
       "build/obj/items.obj": "51e7bc970f04f0e3fd0e61c3582c3d4eb9456bd4afa136b7e4ee8abc5168e1f8",
       "build/obj/jean.obj": "f3da63368db051d0d2f182551edf201ce9297849944d53dda8959fed9e19c88c",
       "build/obj/jeep.obj": "4f5ba0d9680962de47cd2a90bba833b6bdb6c94f104dc014e52bcc000461b6f1",
@@ -6593,13 +6462,13 @@
       "build/obj/missile.obj": "b45269838ce54afd7fc1b2fd2e25770f38200c469291f184f6941403234b9267",
       "build/obj/moveblok.obj": "6070941aefc03a8a86847f884bbe86123f1aa4cb4e5ab745373866f3c5db624f",
       "build/obj/mummy.obj": "5e0ccffc31a1630b739f0b5178936c22bab5e8a11627114748ff25e0178fa62f",
-      "build/obj/newinv.obj": "8a373d7ad4968bb18bca87cfc8c1a6fd998db40a8ad2e23741cf3df0f8503abf",
+      "build/obj/newinv.obj": "c0de43cd0690b83ea23e5eb276b6492b99a97d31f08a04841affd634f9d5c4a8",
       "build/obj/objects.obj": "bd3f4fcf01ec3d418437d2178b822c652b1635f2a99c4fdc3c191a93b510dea2",
       "build/obj/objlight.obj": "702484a80badc0f56d0269942fadbf6879d10ffcce917a3610de58e39b37b2dc",
       "build/obj/people.obj": "4a2b66b9df0ffbfcf7d0167e0ceb1ca548c502371b45d605cd06c491172e4dd7",
       "build/obj/pickup.obj": "ad2764e881f658c93b1cce8f49431d1afaecb9500d6af5f3dcd5cb0ba2e4262c",
       "build/obj/raghead.obj": "4301aa54395910778023749c07a88cecd4a73b5e6f7c07c0f748f4e188c67ec0",
-      "build/obj/rope.obj": "0fa14b0282ba1856afae356b69bb2d4ba13565d40f9f2e281a387103123cc9c4",
+      "build/obj/rope.obj": "27ec1a498ea1513b14a708141b550150348eebf5f4fadc05ee4a0be51b2bfe2e",
       "build/obj/sas.obj": "2ab8d3a3276cb5e1ba1086ede9724eda2f85f7c1d3ea0cbe8c9bc8d840969c39",
       "build/obj/savegame.obj": "353c5a5f4aceeb71ca9481e3d3d6edafe0c11afbdc80ca93cf9e8fbfed85a8ed",
       "build/obj/scarab.obj": "877bd1233d403ed816eb09298ece25b84b383ef28b6008f399a6ea0e875dfbc3",
@@ -6626,7 +6495,7 @@
       "build/obj/specific_input.obj": "a8115676734de7d7835768bd0cec6c6d78bd6be1419812885006f05cf5fbf345",
       "build/obj/specific_lighting.obj": "c432d163ba5b275376b6adcb6ca958c30942947e3257e38522d66a1c34e4aaf8",
       "build/obj/specific_loadsave.obj": "cb3621762d7bc2afe2aee532a55e68b436f68bb094e46da3ca8f78f9dc9cc16a",
-      "build/obj/specific_output.obj": "48043bddfe4f12dbf84998c15f3bc74283cf43f8a0af53291d23824088bceebf",
+      "build/obj/specific_output.obj": "b19b78d1825811d468e4f411baa357beb6e3c492cebd0ff109593d71d6a51bc3",
       "build/obj/specific_polyinsert.obj": "a2e55b34976fe9cc93bc3a9642ede1c3bd0f53fea4a8f75ce7cc0c7ca24d901f",
       "build/obj/specific_registry.obj": "75a2dc8856c7ddca877cfdb6abac692eb44dd3958bb7c8b6f8b80b64bd681763",
       "build/obj/specific_specificfx.obj": "c0580491d2727c4944ff7181a59395bfdecff79610c4d664a3d3479fafe1d406",
@@ -6648,7 +6517,7 @@
       "build/obj/wildboar.obj": "80374c2a430ad33769a20110bb5957d28dc670bdd899c0e1fe8eaa7a2ba59684",
       "build/obj/wraith.obj": "9f0623e742b119016b389a788efcd16626e044075716466bc7714bbb266fc078"
     },
-    "revision": "e3f0ec68a0bcde1dc2c388387aa6ce158ba5a2ea",
+    "revision": "7bf2909dcc2e428d3906103f88fcf4f2d97358cd",
     "source_sha256": {
       "src/ahmet.c": "fd38a4f673043e881eacf12631f41b276501eb61fa46080eeb8f5e17f1c77990",
       "src/baboon.c": "3b888e15363ca4f8a4cbea0d340fcc51d6f6902442ac09a0a24071ab42c39ea4",
@@ -6681,7 +6550,7 @@
       "src/harpy.c": "2f3039eeded41e4a295a050c03d5c104885d4b9b08d3d5fd550e6d36769120f0",
       "src/health.c": "3900dc8be31c4a6c5f7ccad16a2213aacd65185c341b653b06ab9224c1f1d627",
       "src/horse.c": "331a4c442e611bf734a1987ebe813b43c14e5355c041f51a29a1689df3d454f2",
-      "src/init.c": "e7ce81f9cfd3bfa89f73d2f5af595e8e1619bd9c6b81ae9e43175e4050aceb24",
+      "src/init.c": "72249002afca922ff854e82244e2d0761aeeb52b31b036b654233083fb90f967",
       "src/items.c": "269e4af4d5506ebb01612f010257df788a573a8f6a33ab0d1c54bfd88bed877c",
       "src/jean.c": "e97a15506bf223a479aef5904488233601532a9150919dfddacfb0990dc34419",
       "src/jeep.c": "0770a713183560c1ecfc937e6434be0af8968b7b3375d300f5a2feea6cffcc61",
@@ -6701,13 +6570,13 @@
       "src/missile.c": "964d089d11633bc765c14c4e5c22653b221552a5d5cd55062cf871e3b451e603",
       "src/moveblok.c": "b0d8ec1593db0ec1b954bf4f3d26d4da6a4332fa18c79c2af25176677b54b347",
       "src/mummy.c": "3325c9e931c92829a57fbdc60cfd301188909c27e3acdf594212045a6ea3a447",
-      "src/newinv.c": "0b8a27c06739179067529314c6833c67a23a328abfd5bbbde182bdf839664ebd",
+      "src/newinv.c": "950ee27f729fb485f41ce5a0d73e9a5bfe88d53730772fcff43c2067454b4b9a",
       "src/objects.c": "ccbd7569f7eda4c449633d5a8f3d0896827e9104c0f04f096e161fa676bd95f2",
       "src/objlight.c": "7bd7a991ec3201a3bdbffbb9a56663664dbb220fca95e293df9de637daffba73",
       "src/people.c": "72658800ce48b39edfb0926b2e5c92236a2f5e999e5ac630b01fb54acc984e37",
       "src/pickup.c": "95b67ad55ba65cab3770c64809f07810c833796e35321ffe53708e5f8b03dea9",
       "src/raghead.c": "4a61216f5e8ded0e115050e3a444204f45cd31bb6b2f7bd938e2c7a67b9c90d8",
-      "src/rope.c": "f3dabb10ec90920c4f42a69922bc39a4fc28dd1d8cb3396c508e84bc7e60483e",
+      "src/rope.c": "d7511f07c68175510b5b799487ffde04628d92f4e91a63a5764e5dda5f2e3bc3",
       "src/sas.c": "5d372253c9b7bc209e51d4e632f3d229c5191e0f0352fbc3a4d3d5b11ff67864",
       "src/savegame.c": "9d1292a62a6dba41f1abf9945c14509e2d83c532d718a98a271d165792f601a0",
       "src/scarab.c": "1c45ecc9aa982467d6185a546fcc56d70304878561b24323ed4437dc077f1799",
@@ -6734,7 +6603,7 @@
       "src/specific/input.c": "ce22a1dac1de7297b92b51e1623a0582616b27cc93610419e90f298281b1349c",
       "src/specific/lighting.c": "cd1985d7f788c5b11e7e89d2715111fe03dae056c636a49a659b7cf2096dc52c",
       "src/specific/loadsave.c": "3837a64bd722538d66baa254cdeb9d53640bf1e8c8a8430e9df5b36d7ebd3787",
-      "src/specific/output.c": "3559ed189b37d808f33ed4c120a3c50b4d7d412ee8500cc77a2e71f10d04b17d",
+      "src/specific/output.c": "651e655ff1c91e96ee27eb660b038ffcfc63a760232b9ce3cba3b6deeb23d5ba",
       "src/specific/polyinsert.c": "d5dd16c59a9fb34a99a794cef8fc47a68321d634f517ae6770b6231f41ac5a37",
       "src/specific/registry.c": "c6afadecd3f18c9672f46dbba6b0aaa95157d9f3dd8f483dc9269f71ac84664f",
       "src/specific/specificfx.c": "19d6914be793c4cc11d697c02d2573deebff0a0e53b988facf091cda2fb58896",

@@ -1,0 +1,61 @@
+{
+  "before": {
+    "green": 1369,
+    "red": 184,
+    "matching_bytes": 420349
+  },
+  "after": {
+    "green": 1373,
+    "red": 180,
+    "matching_bytes": 423182
+  },
+  "lost_greens": [],
+  "new_matches": [
+    {
+      "symbol": "_InitialiseObelisk",
+      "commit": "a0b8252",
+      "bytes": 182,
+      "existing_mask_bytes": 0,
+      "data_differences": 0,
+      "normal_match": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
+    },
+    {
+      "symbol": "_draw_current_object_list",
+      "commit": "ea6a27a",
+      "bytes": 2405,
+      "existing_mask_bytes": 32,
+      "data_differences": 0,
+      "normal_match": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": false
+    },
+    {
+      "symbol": "_mCrossProduct",
+      "commit": "5cc31a5",
+      "bytes": 92,
+      "existing_mask_bytes": 0,
+      "data_differences": 0,
+      "normal_match": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
+    },
+    {
+      "symbol": "_S_DrawPickup",
+      "commit": "7bf2909",
+      "bytes": 154,
+      "existing_mask_bytes": 16,
+      "data_differences": 0,
+      "normal_match": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
+    }
+  ],
+  "standalone_build": "passed",
+  "inventory_linked_differences": "Only three calls to relocated combine_these_two_objects, seperate_object and spinback; each target independently verified against link map. All other bytes equal retail.",
+  "source_policy": "Ordinary C; no assembly, compiler flag changes, unused padding, or retained partial candidates in this recovery pass.",
+  "partial_branch_findings": [
+    "WinMain retry-loop reconstruction matches target except JNE versus unconditional JMP after FindCDDrive. Kept unapplied to preserve existing no-CD runtime behavior."
+  ]
+}
