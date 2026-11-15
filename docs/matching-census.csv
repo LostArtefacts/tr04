@@ -16,7 +16,6 @@ _TestLaraVault,src/lara.c,0x422480,882,900,18,23,larger-structural-change,False,
 _ControlSpikeball,src/traps.c,0x416d70,201,201,0,6,instruction-order-only,True,False,0,0
 _BuildOutsideTable,src/setup.c,0x45ed30,791,791,0,24,register-stack-operands-only,True,False,8,0
 _S_DrawSparks,src/tomb4fx.c,0x43a1b0,1240,1240,0,40,same-mnemonic-multiset,True,True,0,0
-_LaraTestClimb,src/laraclmb.c,0x42c470,588,588,0,20,register-stack-operands-only,True,False,0,0
 _DoSlider,src/specific/loadsave.c,0x47ab80,1449,1449,0,52,register-stack-operands-only,True,True,64,0
 _DXSetupDlgProc@16,src/specific/cmdline.c,0x470830,2030,2030,0,74,same-size-instruction-change,False,False,4,0
 _InitialiseBike,src/bike.c,0x464610,106,106,0,4,instruction-order-only,True,False,0,0
@@ -146,7 +145,6 @@ _DrawTrainFloorStrip,src/specific/specificfx.c,0x48b480,1283,1264,-19,395,larger
 _CrocgodControl,src/croc.c,0x403f30,1092,1072,-20,338,larger-structural-change,False,False,0,0
 _S_DrawDarts,src/specific/specificfx.c,0x48d160,622,623,1,193,small-size-structural-change,True,True,0,0
 _VoncroyRaceControl,src/voncroy.c,0x41af00,4092,3888,-204,1300,larger-structural-change,False,False,0,0
-_CalculateTarget,src/box.c,0x440a40,1102,1088,-14,351,small-size-structural-change,True,False,8,0
 _UpdateBubbles,src/tomb4fx.c,0x439970,359,359,0,115,same-size-instruction-change,True,False,0,0
 _SasControl,src/sas.c,0x40d0a0,2388,2396,8,817,small-size-structural-change,True,True,0,0
 _ShatterObject,src/debris.c,0x433410,2143,2128,-15,742,small-size-structural-change,True,True,0,0

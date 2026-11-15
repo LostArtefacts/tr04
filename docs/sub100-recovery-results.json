@@ -6,9 +6,9 @@
     "matching_bytes": 424338
   },
   "after": {
-    "green": 1383,
-    "red": 170,
-    "matching_bytes": 426236
+    "green": 1385,
+    "red": 168,
+    "matching_bytes": 427926
   },
   "lost_greens": [],
   "new_matches": [
@@ -139,6 +139,36 @@
       "linked_at_original_address": true,
       "linked_raw_match": true,
       "recovery": "Use ternary rotation-data fallback and restore clipping globals in left/right/bottom/top order."
+    },
+    {
+      "name": "CalculateTarget",
+      "symbol": "_CalculateTarget",
+      "bytes": 1102,
+      "mask_bytes": 8,
+      "data_differences": 0,
+      "commit": "a6de17e",
+      "greens": 1384,
+      "reds": 169,
+      "implementation": "ordinary C",
+      "raw_exact": false,
+      "linked_at_original_address": true,
+      "linked_raw_match": true,
+      "recovery": "Reuse previously computed box bounds instead of recomputing shifted fields."
+    },
+    {
+      "name": "LaraTestClimb",
+      "symbol": "_LaraTestClimb",
+      "bytes": 588,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "c5a2fc2",
+      "greens": 1385,
+      "reds": 168,
+      "implementation": "ordinary C",
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true,
+      "recovery": "Restore original Core author source control flow and initializer order."
     }
   ],
   "validation": {
@@ -147,7 +177,8 @@
     "c_asm_equivalence": "All 85 swrender and 17 winmain normalized symbols unchanged from before helper recovery",
     "c_asm_limitation": "Optional C build reports a data-layout warning; compile/link success is not runtime validation.",
     "standalone_after_JeepFireGrenade": "passed; all eight new functions at original addresses and raw byte identical",
-    "standalone_after_DrawAnimatingItem": "passed; DrawAnimatingItem at original0x0044ff60, all1470 bytes identical"
+    "standalone_after_DrawAnimatingItem": "passed; DrawAnimatingItem at original0x0044ff60, all1470 bytes identical",
+    "standalone_after_core_archive": "passed; CalculateTarget1102 and LaraTestClimb588 bytes raw identical at original addresses. CalculateTarget existing private loops counter references both resolve to0x007fe9ac; no additional masks."
   },
   "unretained_cohorts": [
     "specificfx and tomb4fx frontend/SDK constructor contexts",
@@ -278,6 +309,17 @@
       "new_matches": [],
       "evidence": "build/relocation-fitness/REPORT.txt; build/relocation-fitness/FINAL.json",
       "finding": "Six saved-object winners change after correcting positional relocation noise;17 search targets improve without reaching exact."
+    },
+    {
+      "name": "Original Core archive source and meaningful crossovers",
+      "attempts": 15558,
+      "valid_compiles": 8075,
+      "new_matches": [
+        "CalculateTarget",
+        "LaraTestClimb"
+      ],
+      "evidence": "build/core-archive-recovery/audit.json; build/core-archive-recovery/normal/linked-proof.json",
+      "finding": "Two genuine C matches; 30 targets emitted changed code. All trial artifacts accounted for."
     }
   ],
   "comparison_tool_fix": {

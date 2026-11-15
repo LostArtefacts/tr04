@@ -1,8 +1,8 @@
 {
   "baseline": {
-    "green": 1383,
-    "red": 170,
-    "red_bytes": 199255
+    "green": 1385,
+    "red": 168,
+    "red_bytes": 197565
   },
   "method": "Linear disassembly includes embedded jump-table/data bytes; .byte denotes undecodable data and structural categories are broad observations only. All current normal COFF functions via compare.results; known relocations resolved, unknown mask bytes replaced with retail only for disassembly. Categories are observed instruction shapes, NOT proven compiler causes. Canonical score uses local objdump per permuter; register-shape classifier merges integer registers and stack-slot offsets only. Actual masks/data mismatches retained separately.",
   "categories": {
@@ -49,13 +49,12 @@
       ]
     },
     "register-stack-operands-only": {
-      "count": 6,
-      "bytes": 6012,
+      "count": 5,
+      "bytes": 5424,
       "names": [
         "_DrawSprite",
         "_LookCamera",
         "_BuildOutsideTable",
-        "_LaraTestClimb",
         "_DoSlider",
         "_DrawPsxTile"
       ]
@@ -157,8 +156,8 @@
       ]
     },
     "small-size-structural-change": {
-      "count": 56,
-      "bytes": 69490,
+      "count": 55,
+      "bytes": 68388,
       "names": [
         "_UserControl_bike",
         "_TriggerExplosionSparks",
@@ -206,7 +205,6 @@
         "_LaraHangTest",
         "_WraithControl",
         "_S_DrawDarts",
-        "_CalculateTarget",
         "_SasControl",
         "_ShatterObject",
         "_CalcLightningSpline",
@@ -238,12 +236,11 @@
       ]
     },
     "src/box.c": {
-      "count": 3,
-      "bytes": 4596,
+      "count": 2,
+      "bytes": 3494,
       "names": [
         "_CreatureAnimation",
-        "_CreatureAIInfo",
-        "_CalculateTarget"
+        "_CreatureAIInfo"
       ]
     },
     "src/camera.c": {
@@ -380,13 +377,6 @@
       "bytes": 946,
       "names": [
         "_CrossbowHitSwitchType78"
-      ]
-    },
-    "src/laraclmb.c": {
-      "count": 1,
-      "bytes": 588,
-      "names": [
-        "_LaraTestClimb"
       ]
     },
     "src/larafire.c": {
@@ -1289,37 +1279,6 @@
         ],
         "retail": [
           "mov eax, dword ptr [eax + 0x7ff048]"
-        ]
-      }
-    },
-    {
-      "name": "_LaraTestClimb",
-      "source": "src/laraclmb.c",
-      "address": "0x42c470",
-      "retail_size": 588,
-      "compiled_size": 588,
-      "size_delta": 0,
-      "canonical_score": 20,
-      "instruction_count": 247,
-      "instruction_distance_capstone": 20,
-      "distance_fraction": 0.04049,
-      "category": "register-stack-operands-only",
-      "decoded_bytes_ours": 588,
-      "decoded_bytes_retail": 588,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": false,
-      "mask_bytes": 0,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "replace",
-        "ours_offset": 25,
-        "retail_offset": 25,
-        "ours": [
-          "mov dword ptr [esp + 0x14], 1"
-        ],
-        "retail": [
-          "mov dword ptr [esp + 0x10], 1"
         ]
       }
     },
@@ -5358,37 +5317,6 @@
       }
     },
     {
-      "name": "_CalculateTarget",
-      "source": "src/box.c",
-      "address": "0x440a40",
-      "retail_size": 1102,
-      "compiled_size": 1088,
-      "size_delta": -14,
-      "canonical_score": 351,
-      "instruction_count": 358,
-      "instruction_distance_capstone": 351,
-      "distance_fraction": 0.49091,
-      "category": "small-size-structural-change",
-      "decoded_bytes_ours": 1088,
-      "decoded_bytes_retail": 1102,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": false,
-      "mask_bytes": 8,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "replace",
-        "ours_offset": 62,
-        "retail_offset": 62,
-        "ours": [
-          "je 0x440e71"
-        ],
-        "retail": [
-          "je 0x440e84"
-        ]
-      }
-    },
-    {
       "name": "_UpdateBubbles",
       "source": "src/tomb4fx.c",
       "address": "0x439970",
@@ -6086,7 +6014,7 @@
       "build/obj/baboon.obj": "d50d6e781912d859e16ed607c21fad7f64684819a4a840f250aac1ab3c0cc2d4",
       "build/obj/bat.obj": "9404ea1eb647282acc16eda49d92e6ae73cef34c4e03356b3a8f0dffc196c758",
       "build/obj/bike.obj": "0aa6ae3196ac3b893d3eefd7bd931242206bd02c7ba521f105481d9c2458619b",
-      "build/obj/box.obj": "9a4b91787322ce5faa07520e122b01d279538e582ef2617adab3f9fe0fc40a3b",
+      "build/obj/box.obj": "cfad8b63e778c918a32d7aa7115788b62fe3b40c596356656f9744cb0a3261e7",
       "build/obj/camera.obj": "c21db043cf4f0204ac7dd01d8f8e98614511fc4fdd8b673ff2eefe5dfe9311c6",
       "build/obj/clockworkbeetle.obj": "f1607d817b4789af70e8eb05504b11ee558f291ca857ee42479b544015030f4a",
       "build/obj/collide.obj": "49f59287f213c21f3cfc65f9c60052d83527b2d45a009963e390076f9fb6f1f4",
@@ -6120,7 +6048,7 @@
       "build/obj/lara.obj": "8992143b2d12524fe375e1c5c79326fec41b18e8eb348eefbfc494d1e51ebeae",
       "build/obj/lara1gun.obj": "fc707ef77b1e7cfbd135744d9d5467d61ecac6290727e19dde06edba9c814ff4",
       "build/obj/lara2gun.obj": "27ed25fe26048e429fd2bab3809ac83569577c6ed38dbc771bb5539b4bf58c45",
-      "build/obj/laraclmb.obj": "1bc8298c908ec4043403cb66d4cbae94bf7f905aae1641f0f40e706c27e7aca5",
+      "build/obj/laraclmb.obj": "f0b9dd7a44a4f14db63c9d3087c30ddd0d104100b91a6c59dae722fb51892cd3",
       "build/obj/laradouble.obj": "c984639d3e0cb5f1582335a90a70099f503c94d24473680f217bfbbd6283bb85",
       "build/obj/larafire.obj": "9ce2fa9eeb7d551c5fb906f5ef81c1c765cac271ca1b38c4e2ba7493f2696194",
       "build/obj/laraflar.obj": "50056b45bc6097ee0ab5a0f7d2582519c4b23f91ca04384bf661b3867d62d222",
@@ -6188,13 +6116,13 @@
       "build/obj/wildboar.obj": "c26de8a0d4021fc9e38efede2134f33fe14bb119c88a16b3b68a66f7db1d15d9",
       "build/obj/wraith.obj": "0bed86a3ebc051ed960644ed5bcc76c1f7f8da37672651d924da2c704dd5dfd3"
     },
-    "revision": "97bb26f8a36bdfb001c8c1230b12ee9aa39d0e61",
+    "revision": "c5a2fc2d288c34215c31b8f717480080cfe75397",
     "source_sha256": {
       "src/ahmet.c": "fd38a4f673043e881eacf12631f41b276501eb61fa46080eeb8f5e17f1c77990",
       "src/baboon.c": "3b888e15363ca4f8a4cbea0d340fcc51d6f6902442ac09a0a24071ab42c39ea4",
       "src/bat.c": "7e3e295e96a0dc077d139dfc2abe2758efe5f86be232df50aa4b45ff4ee2ef4a",
       "src/bike.c": "8f4d996c433e625c4e67e5bec2e2f7fb47000f6bfe5cf80300097f8113e1f4a4",
-      "src/box.c": "cc47aac2ad3512b8c51edfeadeabe91baf647559582c17ce95a7deace6784179",
+      "src/box.c": "d974110826c0c5c259a64a58527ec6076544021f0bf4afe5c62b4e4f13ca845c",
       "src/camera.c": "dc5af42add3c295d8fa8a50c40042861548589b27ed58438bf2c0a8557870965",
       "src/clockworkbeetle.c": "8df2c610a0789219d91be557311269da845b39e13d4d202bef0b8a1f5cd22cb9",
       "src/collide.c": "bfc104883d98c30c611e77008120a7729161ba5e4aca37204e8678bf684ce255",
@@ -6228,7 +6156,7 @@
       "src/lara.c": "8bf2ca2b7c0bfcdcbafc7494c6bc6670502cb0e1a14ed75474b8db14a817ae1b",
       "src/lara1gun.c": "99067a42d721e40b0a6b599e08fbf03fee64a36d52bfae39b71eac89742fd825",
       "src/lara2gun.c": "ec35f1308bce422ba94c43b80075891f62d10169ac0553f1a9ded22d50780a06",
-      "src/laraclmb.c": "d606620a1b679073a77943d140c6ee1f175cb2b68a540588098cfd8fcaefde6a",
+      "src/laraclmb.c": "89e3b6dcbe655ff4e11a97b9c60cb80c9d904dbcb91ec9bb31b531e35d9e4293",
       "src/laradouble.c": "70e9c20aa70893c06f13832a71deb1c297ec6f3ce547ff11f8ee9047667e681d",
       "src/larafire.c": "9367730ec03e93ce49c1006cb83e6d14d1cad4b7102f36d5ef5aa2a734be5d34",
       "src/laraflar.c": "470df94cbac4a3ce0508a80760759034f64e7b0835ceed4846fb8bd5cf4e3277",
