@@ -6,9 +6,9 @@
     "matching_bytes": 424338
   },
   "after": {
-    "green": 1382,
-    "red": 171,
-    "matching_bytes": 424766
+    "green": 1383,
+    "red": 170,
+    "matching_bytes": 426236
   },
   "lost_greens": [],
   "new_matches": [
@@ -124,6 +124,21 @@
       "recovery": "Initialize rotation fields together, then cache the stored y rotation before position calculations.",
       "linked_at_original_address": true,
       "linked_raw_match": true
+    },
+    {
+      "name": "DrawAnimatingItem",
+      "symbol": "_DrawAnimatingItem",
+      "bytes": 1470,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "97bb26f",
+      "greens": 1383,
+      "reds": 170,
+      "implementation": "ordinary C",
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true,
+      "recovery": "Use ternary rotation-data fallback and restore clipping globals in left/right/bottom/top order."
     }
   ],
   "validation": {
@@ -131,7 +146,8 @@
     "original_helper_standalone": "default and FEAT=c_asm compile and link passed",
     "c_asm_equivalence": "All 85 swrender and 17 winmain normalized symbols unchanged from before helper recovery",
     "c_asm_limitation": "Optional C build reports a data-layout warning; compile/link success is not runtime validation.",
-    "standalone_after_JeepFireGrenade": "passed; all eight new functions at original addresses and raw byte identical"
+    "standalone_after_JeepFireGrenade": "passed; all eight new functions at original addresses and raw byte identical",
+    "standalone_after_DrawAnimatingItem": "passed; DrawAnimatingItem at original0x0044ff60, all1470 bytes identical"
   },
   "unretained_cohorts": [
     "specificfx and tomb4fx frontend/SDK constructor contexts",
@@ -223,7 +239,7 @@
       "limits": "321 mask-inflated diagnostic trials rejected; incoherent Bike and Water reference genes and patched wait loss excluded."
     },
     {
-      "name": "CFG-proved source value webs and useful early caches",
+      "name": "CFG-checked source value webs and useful early caches",
       "targets": 116,
       "native_attempts": 13674,
       "successful_compiles": 13674,
@@ -232,6 +248,17 @@
       "new_matches": [],
       "evidence": "build/c3-source-webs/HANDOFF.md",
       "limits": "Unescaped same-type locals; actual CFG liveness/reaching definitions, full-expression and scope audits. All previous TU greens preserved."
+    },
+    {
+      "name": "previously invalid genuine reference contexts",
+      "reference_targets": 31,
+      "meaningful_valid_reference_starts": 31,
+      "bounded_search_compiles": 11622,
+      "new_matches": [
+        "DrawAnimatingItem"
+      ],
+      "evidence": "build/reference-contexts/final-summary.json; build/reference-contexts/PROOFS.md",
+      "limits": "Real record/call-arity/enum mappings validated; old positional-mask scores are diagnostic only."
     }
   ],
   "comparison_tool_fix": {

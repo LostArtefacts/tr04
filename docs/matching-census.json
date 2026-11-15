@@ -1,8 +1,8 @@
 {
   "baseline": {
-    "green": 1382,
-    "red": 171,
-    "red_bytes": 200725
+    "green": 1383,
+    "red": 170,
+    "red_bytes": 199255
   },
   "method": "Linear disassembly includes embedded jump-table/data bytes; .byte denotes undecodable data and structural categories are broad observations only. All current normal COFF functions via compare.results; known relocations resolved, unknown mask bytes replaced with retail only for disassembly. Categories are observed instruction shapes, NOT proven compiler causes. Canonical score uses local objdump per permuter; register-shape classifier merges integer registers and stack-slot offsets only. Actual masks/data mismatches retained separately.",
   "categories": {
@@ -96,8 +96,8 @@
       ]
     },
     "same-size-instruction-change": {
-      "count": 56,
-      "bytes": 55005,
+      "count": 55,
+      "bytes": 53535,
       "names": [
         "_SwitchTrigger",
         "_AddQuadClippedSorted",
@@ -116,7 +116,6 @@
         "_S_CallInventory2",
         "_WildboarControl",
         "_ScorpionControl",
-        "_DrawAnimatingItem",
         "_SkeletonControl",
         "_InitialiseSpotCam",
         "_DrawLaserSightSprite",
@@ -306,13 +305,6 @@
       "bytes": 2424,
       "names": [
         "_DemigodControl"
-      ]
-    },
-    "src/draw.c": {
-      "count": 1,
-      "bytes": 1470,
-      "names": [
-        "_DrawAnimatingItem"
       ]
     },
     "src/effect2.c": {
@@ -2205,37 +2197,6 @@
         "ours": [],
         "retail": [
           "movsx ecx, word ptr [esi + 2]"
-        ]
-      }
-    },
-    {
-      "name": "_DrawAnimatingItem",
-      "source": "src/draw.c",
-      "address": "0x44ff60",
-      "retail_size": 1470,
-      "compiled_size": 1470,
-      "size_delta": 0,
-      "canonical_score": 131,
-      "instruction_count": 457,
-      "instruction_distance_capstone": 98,
-      "distance_fraction": 0.10699,
-      "category": "same-size-instruction-change",
-      "decoded_bytes_ours": 1470,
-      "decoded_bytes_retail": 1470,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": false,
-      "mask_bytes": 0,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "replace",
-        "ours_offset": 252,
-        "retail_offset": 252,
-        "ours": [
-          "je 0x4504e3"
-        ],
-        "retail": [
-          "je 0x4504e5"
         ]
       }
     },
@@ -6139,7 +6100,7 @@
       "build/obj/dll_dllmain.obj": "fff7b6cec8b4a3a3dab09220b25ee0367040686f933bbcfd8e6b02b50abee121",
       "build/obj/dog.obj": "17b6c21866b9508349c63a3eec7fe436c38f47d2776e65e4518e9aa6139c9b01",
       "build/obj/door.obj": "3815e6050a3c827a857eba6ecfa8e856a5a717809eb8ae6d5b6e3d5380e7a432",
-      "build/obj/draw.obj": "c32f5416fd8c678007e2d4d4a9da5716de4257f488821208322980e0b66b7aad",
+      "build/obj/draw.obj": "32dbf9493eb2abd9e076acd67ffb5d5b48eb4259b717bfd5e04dba7a2fe37611",
       "build/obj/effect2.obj": "b6d1fe709f3f57889212f7ae2d9c3be224f7587520eb79337797053ce9a33bdf",
       "build/obj/effects.obj": "3c9cca0b5e087f625a6133d2e34761609172178df1707e4e028114597900eaed",
       "build/obj/elements.obj": "dcfefb125b67a5b88d4db8f071d0528dfb5174c3f1493d94a9ddef5437a64670",
@@ -6227,7 +6188,7 @@
       "build/obj/wildboar.obj": "c26de8a0d4021fc9e38efede2134f33fe14bb119c88a16b3b68a66f7db1d15d9",
       "build/obj/wraith.obj": "0bed86a3ebc051ed960644ed5bcc76c1f7f8da37672651d924da2c704dd5dfd3"
     },
-    "revision": "d0c246f3b59cfb45d00e02e8d269198ea74aed65",
+    "revision": "97bb26f8a36bdfb001c8c1230b12ee9aa39d0e61",
     "source_sha256": {
       "src/ahmet.c": "fd38a4f673043e881eacf12631f41b276501eb61fa46080eeb8f5e17f1c77990",
       "src/baboon.c": "3b888e15363ca4f8a4cbea0d340fcc51d6f6902442ac09a0a24071ab42c39ea4",
@@ -6247,7 +6208,7 @@
       "src/dll/dllmain.c": "e4408a3fbbf675bbbb3a9e7173022761d6a4ea99e27a5b924a62267409a3d0e4",
       "src/dog.c": "e60c655bde47ba99afca04954d3d2c81ba7ca4f7f6029a42e4aca0a3570fcfd1",
       "src/door.c": "352e936c38507479214ff15d1d1f6e73f7e74b41e7bf905000b87f0e243edb90",
-      "src/draw.c": "74dc4271b5729f1bf1b1a1e9dd3aecb6c99554dd03545bac32d1553e69b2c183",
+      "src/draw.c": "b8252dada0768c625af7c1d7199dac806786e1c86de3feaee704bb9f653a9eed",
       "src/effect2.c": "2763a9094d0df9b3147fd9e23bf9f323d36244aa1c013244b597107d92744d0a",
       "src/effects.c": "33e25e62b58265ab38ba3f79c11c0eb53cabb12d1b24631cb79db32fe4e34c8c",
       "src/elements.c": "a8581b796d11b9fd73c15f44f217871936b312fa91a95e5cc253f6b24125e180",

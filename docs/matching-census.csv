@@ -45,7 +45,6 @@ _WildboarControl,src/wildboar.c,0x41bf60,888,888,0,70,same-size-instruction-chan
 _ScorpionControl,src/scorpion.c,0x40e800,1996,1996,0,159,same-size-instruction-change,False,False,0,0
 _RefreshCamera,src/control.c,0x44aa20,295,295,0,24,same-mnemonic-multiset,True,False,0,0
 _CreateVertexNormals,src/specific/drawroom.c,0x472f50,911,912,1,80,same-mnemonic-multiset,True,True,0,0
-_DrawAnimatingItem,src/draw.c,0x44ff60,1470,1470,0,131,same-size-instruction-change,True,False,0,0
 _WinMain@16,src/specific/winmain.c,0x48e9c0,1154,1120,-34,107,larger-structural-change,True,False,36,0
 _SkeletonControl,src/skeleton.c,0x4118d0,4490,4490,0,434,same-size-instruction-change,False,False,0,0
 _TemplarControl,src/templar.c,0x413090,1296,1296,0,128,same-mnemonic-multiset,True,False,0,0
