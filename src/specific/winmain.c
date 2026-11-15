@@ -629,10 +629,23 @@ void (*j_nullsub_12_init)(void) = j_nullsub_12;
 #endif
 
 #ifndef TR4_EXE
+#ifndef FEAT_C_ASM
+__declspec(naked) void SW_WaitUntilDXInScene(void)
+{
+    __asm {
+        pushad
+        mov ecx, offset App.dx.InScene
+        call SW_WaitUntilInScene
+        popad
+        ret
+    }
+}
+#else
 void SW_WaitUntilDXInScene(void)
 {
     SW_WaitUntilInScene(&App.dx.InScene);
 }
+#endif
 #endif
 
 void j_nullsub_13(void)
