@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="208.22" height="12" x="0" y="0" class="named"><title>1381 · 88.98%</title></rect>
-<rect width="25.78" height="12" x="208.22" y="0" class="nonmatching"><title>171 · 11.02%</title></rect>
+<rect width="208.37" height="12" x="0" y="0" class="named"><title>1382 · 89.05%</title></rect>
+<rect width="25.63" height="12" x="208.37" y="0" class="nonmatching"><title>170 · 10.95%</title></rect>
 </g>
 <text text-anchor="end" x="414" y="7.50">89.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1381</tspan> · <tspan class="nonmatching">171</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="7"><tspan class="named">1382</tspan> · <tspan class="nonmatching">170</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="158.91" height="12" x="0" y="0" class="named"><title>425 KB · 67.91%</title></rect>
-<rect width="75.09" height="12" x="158.91" y="0" class="nonmatching"><title>201 KB · 32.09%</title></rect>
+<rect width="159.46" height="12" x="0" y="0" class="named"><title>426 KB · 68.14%</title></rect>
+<rect width="74.54" height="12" x="159.46" y="0" class="nonmatching"><title>199 KB · 31.86%</title></rect>
 </g>
-<text text-anchor="end" x="414" y="24.50">67.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">425 KB</tspan> · <tspan class="nonmatching">201 KB</tspan></text>
+<text text-anchor="end" x="414" y="24.50">68.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="429" y="24"><tspan class="named">426 KB</tspan> · <tspan class="nonmatching">199 KB</tspan></text>
 <text text-anchor="start" x="0" y="41.50">Library code</text>
 <g transform="translate(130 35.50)">
 <rect width="233.79" height="12" x="0" y="0" class="named"><title>43 KB · 99.91%</title></rect>
@@ -873,7 +873,7 @@
 <rect width="12" height="12" x="450" y="225" class="named"><title>0x0044f790 SetRoomBounds (886 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="225" class="named"><title>0x0044fb10 DrawEffect (232 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="225" class="named"><title>0x0044fc00 calc_animating_item_clip_window (861 bytes)</title></rect>
-<rect width="12" height="12" x="495" y="225" class="nonmatching"><title>0x0044ff60 DrawAnimatingItem (1470 bytes)</title></rect>
+<rect width="12" height="12" x="495" y="225" class="named"><title>0x0044ff60 DrawAnimatingItem (1470 bytes)</title></rect>
 <rect width="12" height="12" x="510" y="225" class="named"><title>0x00450520 InitInterpolate (52 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="225" class="named"><title>0x00450560 phd_PopMatrix_I (34 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="225" class="named"><title>0x00450590 phd_PushMatrix_I (39 bytes)</title></rect>
@@ -1730,7 +1730,7 @@
 <rect width="24.94" height="24.09" x="182.31" y="346.43" class="nonmatching"><title>0x00407a90 HarpyControl (1508 bytes)</title></rect>
 <rect width="24.94" height="24.01" x="182.31" y="373.51" class="nonmatching"><title>0x0045dc10 TrapObjects (1503 bytes)</title></rect>
 <rect width="24.94" height="23.62" x="182.31" y="400.52" class="nonmatching"><title>0x0047ce10 DoBar (1479 bytes)</title></rect>
-<rect width="24.94" height="23.48" x="182.31" y="427.14" class="nonmatching"><title>0x0044ff60 DrawAnimatingItem (1470 bytes)</title></rect>
+<rect width="24.94" height="23.48" x="182.31" y="427.14" class="named"><title>0x0044ff60 DrawAnimatingItem (1470 bytes)</title></rect>
 <rect width="24.94" height="23.38" x="182.31" y="453.62" class="named"><title>0x0044d890 GetTargetOnLOS (1464 bytes)</title></rect>
 <rect width="23.28" height="25.02" x="210.25" y="0" class="nonmatching"><title>0x00436340 ControlSmokeEmitter (1462 bytes)</title></rect>
 <rect width="23.28" height="24.80" x="210.25" y="28.02" class="nonmatching"><title>0x0047ab80 DoSlider (1449 bytes)</title></rect>

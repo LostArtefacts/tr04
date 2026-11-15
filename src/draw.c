@@ -654,9 +654,7 @@ void DrawAnimatingItem(ITEM_INFO *item)
     clip = S_GetObjectBounds(frm[0]);
     if (clip) {
         CalculateObjectLighting(item, frm[0]);
-        data = (sint16 *)item->data;
-        if (!data)
-            data = no_rotation;
+        data = item->data ? (sint16 *)item->data : no_rotation;
         bit = 1;
         meshpp = &meshes[obj->mesh_index];
         bone = &bones[obj->bone_index];
@@ -757,9 +755,9 @@ void DrawAnimatingItem(ITEM_INFO *item)
         }
     }
     phd_left = 0;
-    phd_top = 0;
     phd_right = phd_winwidth;
     phd_bottom = phd_winheight;
+    phd_top = 0;
     phd_PopMatrix();
 }
 
