@@ -1,15 +1,12 @@
 name,source,address,retail_size,compiled_size,size_delta,canonical_score,category,full_instruction_coverage,has_x87,mask_bytes,referenced_data_differences
 _AddQuadClippedZBuffer,src/specific/polyinsert.c,0x482390,1393,1393,0,2,instruction-order-only,True,True,0,0
-_AddTriClippedSorted,src/specific/polyinsert.c,0x483c80,1556,1556,0,8,same-mnemonic-multiset,True,True,12,0
 _UserControl_bike,src/bike.c,0x466ab0,980,982,2,9,small-size-structural-change,True,False,0,0
 _ProjectWaterVerts,src/specific/drawroom.c,0x471f40,588,588,0,6,same-mnemonic-multiset,True,True,12,0
 _DrawSprite,src/specific/specificfx.c,0x48bab0,380,380,0,4,register-stack-operands-only,True,True,4,0
-_AddTriClippedZBuffer,src/specific/polyinsert.c,0x482910,1313,1313,0,16,instruction-order-only,True,True,0,0
 _LookCamera,src/camera.c,0x443ed0,2321,2321,0,44,register-stack-operands-only,True,False,0,0
 _DecodeTrack,src/deltapak.c,0x46afa0,295,295,0,6,same-mnemonic-multiset,True,False,0,0
 _SwitchTrigger,src/switch.c,0x461b10,192,192,0,4,same-size-instruction-change,True,False,0,0
 _InitialiseJeep,src/jeep.c,0x466f40,94,94,0,2,instruction-order-only,True,False,0,0
-_AddQuadClippedSorted,src/specific/polyinsert.c,0x4842a0,1447,1447,0,33,same-size-instruction-change,True,True,8,0
 _GameStixControl,src/senet.c,0x40f630,1436,1436,0,34,same-size-instruction-change,True,False,0,0
 _BikeDynamics,src/bike.c,0x4657e0,1940,1940,0,46,same-size-instruction-change,True,False,0,0
 _TestLaraVault,src/lara.c,0x422480,882,900,18,23,larger-structural-change,False,False,0,0
@@ -166,4 +163,3 @@ _DecodeAnim,src/deltapak.c,0x46ae80,277,272,-5,120,small-size-structural-change,
 _S_DrawDrawSparks,src/specific/specificfx.c,0x488140,1292,1248,-44,589,larger-structural-change,True,True,0,0
 _LSpline,src/tomb4fx.c,0x43afd0,254,240,-14,130,small-size-structural-change,True,False,0,0
 _PrelightVerts,src/specific/output.c,0x47d900,340,320,-20,176,larger-structural-change,True,False,0,0
-_GetTrackWord,src/deltapak.c,0x46b0d0,107,107,0,60,same-size-instruction-change,True,False,0,0

@@ -6,9 +6,9 @@
     "matching_bytes": 424338
   },
   "after": {
-    "green": 1385,
-    "red": 168,
-    "matching_bytes": 427926
+    "green": 1389,
+    "red": 164,
+    "matching_bytes": 432349
   },
   "lost_greens": [],
   "new_matches": [
@@ -169,6 +169,86 @@
       "linked_at_original_address": true,
       "linked_raw_match": true,
       "recovery": "Restore original Core author source control flow and initializer order."
+    },
+    {
+      "name": "GetTrackWord",
+      "symbol": "_GetTrackWord",
+      "bytes": 107,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "613acdb",
+      "greens": 1386,
+      "reds": 167,
+      "implementation": "ordinary C",
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true,
+      "linked_displaced_callees": [],
+      "all_other_linked_bytes_identical": true,
+      "linked_literal_data_verified": null,
+      "recovery": "Narrow the consumed complement mask before OR while preserving the signed16 return."
+    },
+    {
+      "name": "AddTriClippedZBuffer",
+      "symbol": "_AddTriClippedZBuffer",
+      "bytes": 1313,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "dea3303",
+      "greens": 1387,
+      "reds": 166,
+      "implementation": "ordinary C",
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": false,
+      "linked_displaced_callees": [
+        "OmniFog",
+        "visible_zclip"
+      ],
+      "all_other_linked_bytes_identical": true,
+      "linked_literal_data_verified": null,
+      "recovery": "Use existing initialized clipZ value to own the second clipping path."
+    },
+    {
+      "name": "AddTriClippedSorted",
+      "symbol": "_AddTriClippedSorted",
+      "bytes": 1556,
+      "mask_bytes": 12,
+      "data_differences": 0,
+      "commit": "9fdaf41",
+      "greens": 1388,
+      "reds": 165,
+      "implementation": "ordinary C",
+      "raw_exact": false,
+      "linked_at_original_address": true,
+      "linked_raw_match": false,
+      "linked_displaced_callees": [
+        "OmniFog",
+        "visible_zclip"
+      ],
+      "all_other_linked_bytes_identical": true,
+      "linked_literal_data_verified": true,
+      "recovery": "Use clipZ-owned path plus actual backface texture destination owner."
+    },
+    {
+      "name": "AddQuadClippedSorted",
+      "symbol": "_AddQuadClippedSorted",
+      "bytes": 1447,
+      "mask_bytes": 8,
+      "data_differences": 0,
+      "commit": "82ec761",
+      "greens": 1389,
+      "reds": 164,
+      "implementation": "ordinary C",
+      "raw_exact": false,
+      "linked_at_original_address": true,
+      "linked_raw_match": false,
+      "linked_displaced_callees": [
+        "OmniFog"
+      ],
+      "all_other_linked_bytes_identical": true,
+      "linked_literal_data_verified": true,
+      "recovery": "Snapshot nPolyType before the final vertex depth guard; use the value for the following averaging guard."
     }
   ],
   "validation": {
@@ -178,7 +258,8 @@
     "c_asm_limitation": "Optional C build reports a data-layout warning; compile/link success is not runtime validation.",
     "standalone_after_JeepFireGrenade": "passed; all eight new functions at original addresses and raw byte identical",
     "standalone_after_DrawAnimatingItem": "passed; DrawAnimatingItem at original0x0044ff60, all1470 bytes identical",
-    "standalone_after_core_archive": "passed; CalculateTarget1102 and LaraTestClimb588 bytes raw identical at original addresses. CalculateTarget existing private loops counter references both resolve to0x007fe9ac; no additional masks."
+    "standalone_after_core_archive": "passed; CalculateTarget1102 and LaraTestClimb588 bytes raw identical at original addresses. CalculateTarget existing private loops counter references both resolve to0x007fe9ac; no additional masks.",
+    "standalone_after_clipping": "Build passed. Twelve of fifteen goal matches raw identical at original addresses. Three new renderer functions differ only in verified calls to visible_zclip (linked entry+6) and OmniFog (+4); every other byte and the new renderer literal data match retail. No new masks or comparison exceptions."
   },
   "unretained_cohorts": [
     "specificfx and tomb4fx frontend/SDK constructor contexts",
@@ -350,6 +431,40 @@
       ],
       "evidence": "build/scoped-output-owners/FINAL.json; build/scoped-output-owners/HANDOFF.md; build/scope-recovery-plan/GameStixControl-oracle/proof.json",
       "finding": "Both calibration restorations reproduce entire TU records. Independent oracle/native parity proves room scope removes two memory dependency edges in GameStixControl; no exact source match. Selected artifacts local; complete remote artifacts stat-audited."
+    },
+    {
+      "name": "Causal narrow bitwise result ownership",
+      "local_compiles": 8,
+      "new_matches": [
+        "GetTrackWord"
+      ],
+      "evidence": "build/track-return-narrowing/summary.json; build/track-return-narrowing/verified.json; build/track-return-narrowing/oracle/normalized.diff",
+      "finding": "Operand narrowing preserves low16 return bits and removes shared EBP mask range; both oracle whole-TU comparisons reproduce actual compiled cases."
+    },
+    {
+      "name": "Causal clipping source recovery",
+      "native_compiler_invocations": 129,
+      "source_interventions": 101,
+      "controls": 28,
+      "new_matches": [
+        "AddTriClippedZBuffer",
+        "AddTriClippedSorted",
+        "AddQuadClippedSorted"
+      ],
+      "evidence": "build/clipping-causal-recovery/HANDOFF.md; build/clipping-causal-recovery/linked-proof.json",
+      "finding": "Existing clipZ state changes real points-to/dependency edges; actual destination owner and consumed condition cache recover two more big functions."
+    },
+    {
+      "name": "Condition and value owner transfer",
+      "native_compiles": 67,
+      "valid_compiles": 67,
+      "source_interventions": 41,
+      "selected_targets": 9,
+      "causal_contexts": 15,
+      "new_matches": [],
+      "positive_controls": 8,
+      "evidence": "build/condition-value-owners/HANDOFF.md",
+      "finding": "Both original clipping positive controls restore complete TU equality. Four new targets change code; no additional exacts. No masks or old greens lost."
     }
   ],
   "comparison_tool_fix": {
@@ -379,5 +494,15 @@
     "retained_source_match": false,
     "evidence": "build/scope-recovery-plan/window82-result.json; build/scope-recovery-plan/window82-intervention.json",
     "finding": "Single private compiler byte change proves scheduling-window boundary cause. Unmodified oracle object equals normal object. Normal-compiler source probes have not matched; no compiler modification retained."
+  },
+  "typed_bitwise_cse_diagnosis": {
+    "tools_commit": "ba3910c",
+    "recovery_commit": "613acdb",
+    "function": "GetTrackWord",
+    "bytes": 107,
+    "mask_bytes": 0,
+    "data_differences": 0,
+    "whole_TU_oracle_parity": true,
+    "evidence": "build/track-return-narrowing/oracle"
   }
 }

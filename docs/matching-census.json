@@ -1,17 +1,16 @@
 {
   "baseline": {
-    "green": 1385,
-    "red": 168,
-    "red_bytes": 197565
+    "green": 1389,
+    "red": 164,
+    "red_bytes": 193142
   },
   "method": "Linear disassembly includes embedded jump-table/data bytes; .byte denotes undecodable data and structural categories are broad observations only. All current normal COFF functions via compare.results; known relocations resolved, unknown mask bytes replaced with retail only for disassembly. Categories are observed instruction shapes, NOT proven compiler causes. Canonical score uses local objdump per permuter; register-shape classifier merges integer registers and stack-slot offsets only. Actual masks/data mismatches retained separately.",
   "categories": {
     "instruction-order-only": {
-      "count": 5,
-      "bytes": 3107,
+      "count": 4,
+      "bytes": 1794,
       "names": [
         "_AddQuadClippedZBuffer",
-        "_AddTriClippedZBuffer",
         "_InitialiseJeep",
         "_ControlSpikeball",
         "_InitialiseBike"
@@ -60,10 +59,9 @@
       ]
     },
     "same-mnemonic-multiset": {
-      "count": 22,
-      "bytes": 20848,
+      "count": 21,
+      "bytes": 19292,
       "names": [
-        "_AddTriClippedSorted",
         "_ProjectWaterVerts",
         "_DecodeTrack",
         "_S_DrawSparks",
@@ -95,11 +93,10 @@
       ]
     },
     "same-size-instruction-change": {
-      "count": 55,
-      "bytes": 53535,
+      "count": 53,
+      "bytes": 51981,
       "names": [
         "_SwitchTrigger",
-        "_AddQuadClippedSorted",
         "_GameStixControl",
         "_BikeDynamics",
         "_DXSetupDlgProc@16",
@@ -151,8 +148,7 @@
         "_SW_SpanGLit",
         "_UpdateFireSparks",
         "_ItemPushLara",
-        "_DoCredits",
-        "_GetTrackWord"
+        "_DoCredits"
       ]
     },
     "small-size-structural-change": {
@@ -287,14 +283,13 @@
       ]
     },
     "src/deltapak.c": {
-      "count": 5,
-      "bytes": 1331,
+      "count": 4,
+      "bytes": 1224,
       "names": [
         "_DecodeTrack",
         "_do_new_cutscene_camera",
         "_InitPackNodes",
-        "_DecodeAnim",
-        "_GetTrackWord"
+        "_DecodeAnim"
       ]
     },
     "src/demigod.c": {
@@ -589,13 +584,10 @@
       ]
     },
     "src/specific/polyinsert.c": {
-      "count": 6,
-      "bytes": 7022,
+      "count": 3,
+      "bytes": 2706,
       "names": [
         "_AddQuadClippedZBuffer",
-        "_AddTriClippedSorted",
-        "_AddTriClippedZBuffer",
-        "_AddQuadClippedSorted",
         "_OmniFog",
         "_OmniEffect"
       ]
@@ -790,35 +782,6 @@
       }
     },
     {
-      "name": "_AddTriClippedSorted",
-      "source": "src/specific/polyinsert.c",
-      "address": "0x483c80",
-      "retail_size": 1556,
-      "compiled_size": 1556,
-      "size_delta": 0,
-      "canonical_score": 8,
-      "instruction_count": 467,
-      "instruction_distance_capstone": 8,
-      "distance_fraction": 0.00857,
-      "category": "same-mnemonic-multiset",
-      "decoded_bytes_ours": 1556,
-      "decoded_bytes_retail": 1556,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": true,
-      "mask_bytes": 12,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "insert",
-        "ours_offset": 411,
-        "retail_offset": 411,
-        "ours": [],
-        "retail": [
-          "mov dword ptr [esp + 0x42], edx"
-        ]
-      }
-    },
-    {
       "name": "_UserControl_bike",
       "source": "src/bike.c",
       "address": "0x466ab0",
@@ -908,35 +871,6 @@
         "retail": [
           "lea ebx, [edi + eax]",
           "lea ebp, [esi + eax]"
-        ]
-      }
-    },
-    {
-      "name": "_AddTriClippedZBuffer",
-      "source": "src/specific/polyinsert.c",
-      "address": "0x482910",
-      "retail_size": 1313,
-      "compiled_size": 1313,
-      "size_delta": 0,
-      "canonical_score": 16,
-      "instruction_count": 394,
-      "instruction_distance_capstone": 16,
-      "distance_fraction": 0.0203,
-      "category": "instruction-order-only",
-      "decoded_bytes_ours": 1313,
-      "decoded_bytes_retail": 1313,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": true,
-      "mask_bytes": 0,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "insert",
-        "ours_offset": 392,
-        "retail_offset": 392,
-        "ours": [],
-        "retail": [
-          "mov word ptr [esp + 0x24], cx"
         ]
       }
     },
@@ -1059,37 +993,6 @@
           "add esp, 4"
         ],
         "retail": []
-      }
-    },
-    {
-      "name": "_AddQuadClippedSorted",
-      "source": "src/specific/polyinsert.c",
-      "address": "0x4842a0",
-      "retail_size": 1447,
-      "compiled_size": 1447,
-      "size_delta": 0,
-      "canonical_score": 33,
-      "instruction_count": 443,
-      "instruction_distance_capstone": 33,
-      "distance_fraction": 0.03712,
-      "category": "same-size-instruction-change",
-      "decoded_bytes_ours": 1447,
-      "decoded_bytes_retail": 1447,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": true,
-      "mask_bytes": 8,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "replace",
-        "ours_offset": 102,
-        "retail_offset": 102,
-        "ours": [
-          "jne 0x484829"
-        ],
-        "retail": [
-          "jne 0x48483f"
-        ]
       }
     },
     {
@@ -5977,35 +5880,6 @@
           "sub esp, 0x10"
         ]
       }
-    },
-    {
-      "name": "_GetTrackWord",
-      "source": "src/deltapak.c",
-      "address": "0x46b0d0",
-      "retail_size": 107,
-      "compiled_size": 107,
-      "size_delta": 0,
-      "canonical_score": 60,
-      "instruction_count": 46,
-      "instruction_distance_capstone": 60,
-      "distance_fraction": 0.6383,
-      "category": "same-size-instruction-change",
-      "decoded_bytes_ours": 107,
-      "decoded_bytes_retail": 107,
-      "full_instruction_coverage": true,
-      "linear_decode_data_bytes": 0,
-      "has_x87": false,
-      "mask_bytes": 0,
-      "referenced_data_differences": 0,
-      "first_difference": {
-        "operation": "delete",
-        "ours_offset": 0,
-        "retail_offset": 0,
-        "ours": [
-          "push ebp"
-        ],
-        "retail": []
-      }
     }
   ],
   "provenance": {
@@ -6023,7 +5897,7 @@
       "build/obj/deathsld.obj": "fc5a4650eba5e0a3c3fca7fc0ea467080bf43b40f10100997e6a3769125bc45b",
       "build/obj/debris.obj": "631c5a30137e0fb03a5b1aad93e5ca90ba2c7f39909695daf242f28ee438a41a",
       "build/obj/delstuff.obj": "cbb690e6cd6cc9b2d80e796ef6a4c15793619305ec03fa74416a521aa12ed468",
-      "build/obj/deltapak.obj": "5bc281698ae8663184e4b858932b2ae972653f2aec2929100035ecf2d46b8f1d",
+      "build/obj/deltapak.obj": "e6586c10931449d76eeb57bf492cb38153f2865192e3cf03f8cbbb8608b1ed83",
       "build/obj/demigod.obj": "c4e00eb6706ad149a3e511c9913459570aeadd7ab0c01f7dc710072800812b0f",
       "build/obj/dll_dllmain.obj": "fff7b6cec8b4a3a3dab09220b25ee0367040686f933bbcfd8e6b02b50abee121",
       "build/obj/dog.obj": "17b6c21866b9508349c63a3eec7fe436c38f47d2776e65e4518e9aa6139c9b01",
@@ -6095,7 +5969,7 @@
       "build/obj/specific_lighting.obj": "ab45f9b66c7e705f08f3d9b6ac7d7ce1d89ade2d70f48df33cf0c90e8455f2b1",
       "build/obj/specific_loadsave.obj": "d44c403e27f09484be838e1e8b8c3b157fc39d646a89c2e7683d79b200a2fda4",
       "build/obj/specific_output.obj": "5cbc4cd8288d7f780a27f2d4dba6040b7c5dd5fecf3ae28fac5ed90e31278a52",
-      "build/obj/specific_polyinsert.obj": "cdafbeb5e6019d2ccede9aa6c25f30a8016a5dac637b4647979409c6c134ef33",
+      "build/obj/specific_polyinsert.obj": "75cdc8a63877b176638462f2c2a894e2110218060c3f502427df2e8bae40c713",
       "build/obj/specific_registry.obj": "8e7175204a755b72ec43849253f0175a84d3e0a2a51f547fba64fb56ba397c9d",
       "build/obj/specific_specificfx.obj": "cbf80f2d4875a7441e54074e0f20113cac994a1261bf49484478328bc8b9be45",
       "build/obj/specific_swrender.obj": "a696d504266b5d4d1593242e017aa49281c618f7effebe427cbf13ceab61aeea",
@@ -6116,7 +5990,7 @@
       "build/obj/wildboar.obj": "c26de8a0d4021fc9e38efede2134f33fe14bb119c88a16b3b68a66f7db1d15d9",
       "build/obj/wraith.obj": "0bed86a3ebc051ed960644ed5bcc76c1f7f8da37672651d924da2c704dd5dfd3"
     },
-    "revision": "c5a2fc2d288c34215c31b8f717480080cfe75397",
+    "revision": "82ec761b425668cedfdd855a707ee05f9af0872e",
     "source_sha256": {
       "src/ahmet.c": "fd38a4f673043e881eacf12631f41b276501eb61fa46080eeb8f5e17f1c77990",
       "src/baboon.c": "3b888e15363ca4f8a4cbea0d340fcc51d6f6902442ac09a0a24071ab42c39ea4",
@@ -6131,7 +6005,7 @@
       "src/deathsld.c": "f9f9a50bccaccfe3f91ff336c37f7bc4eda660fc8935ca937e435db8638622a3",
       "src/debris.c": "9f9d190f452a9f89b97cf7e20e6847344a1946f8c23051c8fcbfac9e8dcdc7ae",
       "src/delstuff.c": "f84c1720bc54cae5bc80ff4b79bf6e7224c1f7b54f7c7a217e3e15a438d4de44",
-      "src/deltapak.c": "ded544ae52083497acf4f0ef1a8e43d9c64fad254325638cff79b1962eaf65d1",
+      "src/deltapak.c": "b7dab277335a43663d1971294157906b1a24e0ba82e10931971f8c99c719041d",
       "src/demigod.c": "c86e5e8aee5e5d8d0f76d0ecfdf2f3764eb0fd76d907a8088d209bb117dc6180",
       "src/dll/dllmain.c": "e4408a3fbbf675bbbb3a9e7173022761d6a4ea99e27a5b924a62267409a3d0e4",
       "src/dog.c": "e60c655bde47ba99afca04954d3d2c81ba7ca4f7f6029a42e4aca0a3570fcfd1",
@@ -6203,7 +6077,7 @@
       "src/specific/lighting.c": "cd1985d7f788c5b11e7e89d2715111fe03dae056c636a49a659b7cf2096dc52c",
       "src/specific/loadsave.c": "3837a64bd722538d66baa254cdeb9d53640bf1e8c8a8430e9df5b36d7ebd3787",
       "src/specific/output.c": "651e655ff1c91e96ee27eb660b038ffcfc63a760232b9ce3cba3b6deeb23d5ba",
-      "src/specific/polyinsert.c": "d5dd16c59a9fb34a99a794cef8fc47a68321d634f517ae6770b6231f41ac5a37",
+      "src/specific/polyinsert.c": "5d287a9870333f677a6791ec6f405ecf1e1980548f1026032b219ae01e718586",
       "src/specific/registry.c": "c6afadecd3f18c9672f46dbba6b0aaa95157d9f3dd8f483dc9269f71ac84664f",
       "src/specific/specificfx.c": "19d6914be793c4cc11d697c02d2573deebff0a0e53b988facf091cda2fb58896",
       "src/specific/swrender.c": "3cca30041ecd940a2f510541833be42cb0d69eebdb73c37ebac898284e6fa2dd",
