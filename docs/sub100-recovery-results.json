@@ -183,6 +183,55 @@
       "new_matches": [],
       "evidence": "build/historical-context/HANDOFF.md; build/historical-context/reuse-summary.json",
       "finding": "Debug and actual PCH contexts are byte-flat. Size profiles lose 908 greens; historical browse-info flags change two reds, both worse."
+    },
+    {
+      "name": "parameter/cache and inline trig boundaries",
+      "apis": 38,
+      "signature_variants": 70,
+      "native_compiles": 662,
+      "caller_TU_contexts": 491,
+      "new_matches": [],
+      "evidence": "build/parameter-boundary/HANDOFF.md"
+    },
+    {
+      "name": "record cursors and induction ownership",
+      "red_targets": 92,
+      "native_attempts": 615,
+      "successful_compiles": 577,
+      "new_matches": [],
+      "evidence": "build/record-induction/HANDOFF.md",
+      "limits": "Three invalid preliminary pointer aliases rejected; failed generator contexts were corrected and audited."
+    },
+    {
+      "name": "coherent record declarations and field accesses",
+      "native_attempts": 77,
+      "successful_compiles": 54,
+      "new_matches": [],
+      "evidence": "build/coherent-records/HANDOFF.md",
+      "limits": "Invalid C++ contexts excluded. Real Bike word/byte, Water encoding, bool and signed member alternatives measured; no global header retained."
+    },
+    {
+      "name": "genuine partial-source crossovers",
+      "targets": 115,
+      "frontend_pairs": 139,
+      "native_attempts": 19541,
+      "successful_compiles": 12092,
+      "partial_genotype_attempts": 18846,
+      "distinct_target_code_outcomes": 5533,
+      "new_matches": [],
+      "evidence": "build/source-crossover/HANDOFF.md",
+      "limits": "321 mask-inflated diagnostic trials rejected; incoherent Bike and Water reference genes and patched wait loss excluded."
+    },
+    {
+      "name": "CFG-proved source value webs and useful early caches",
+      "targets": 116,
+      "native_attempts": 13674,
+      "successful_compiles": 13674,
+      "controls": 486,
+      "changed_target_code_candidates": 5423,
+      "new_matches": [],
+      "evidence": "build/c3-source-webs/HANDOFF.md",
+      "limits": "Unescaped same-type locals; actual CFG liveness/reaching definitions, full-expression and scope audits. All previous TU greens preserved."
     }
   ],
   "comparison_tool_fix": {
