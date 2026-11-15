@@ -1,0 +1,5815 @@
+{
+  "schema_version": 1,
+  "source_revision": "34c7a9a",
+  "tools_revision_at_remote_sync": "75bead1",
+  "optimizer_sha256": "a0cc45f83fd0ed009aa4f43df5598105a1049ad9675de0b1089be7cce7d3c153",
+  "baseline": {
+    "green": 1369,
+    "red": 184,
+    "red_bytes": 205142
+  },
+  "scope": {
+    "red_translation_units": 65,
+    "translation_units_with_new_context_trials": 62,
+    "previously_flat_translation_units_repeat_control_only": 3,
+    "independent_baseline_compilations": 65,
+    "variants": 1179,
+    "total_compilations": 1244,
+    "normal_local_function_hashes_checked": 1261,
+    "normal_local_hash_conflicts": [],
+    "alternate_filename_repeat_controls_passed": 65,
+    "unchanged_noninclude_body_checks_passed": 1179
+  },
+  "outcomes": {
+    "unchanged": 1144,
+    "changed-reds-only": 25,
+    "green-loss": 10,
+    "new-green": 0,
+    "invalid": 0
+  },
+  "observed_header_sensitive_reds": 10,
+  "reds_unchanged_under_tested_contexts": 174,
+  "observed_header_sensitive_greens": 3,
+  "method": "Known relocations resolved through compare.results. Actual per-function normalized code plus masks hashed; green status also checks referenced data. Each remote baseline agrees with normal local COFF. All source variants retain every noninclude, nonblank source line exactly, but include definitions/macros can change preprocessed body or ABI: this check is not a preprocessed-equivalence or semantics proof. Context labels describe hypotheses, not proven original include sets. Prior-flat polyinsert/specificfx/bike get current baseline/repeat controls only; their older detailed matrix is build/include-audit. Scores use actual captured objects under local objdump; positional byte errors are not used to rank source parity. No production source edits, flags, compiler binaries, or header changes retained.",
+  "sensitive_functions": [
+    {
+      "name": "_BaboonControl",
+      "was_green": false,
+      "baseline_canonical_score": 618,
+      "best_changed_canonical_score": 620,
+      "best_source": "src/baboon.c",
+      "best_label": "legacy-reference-order",
+      "changed_variants": 1,
+      "retail_bytes": 2444
+    },
+    {
+      "name": "_CalculateSpotCams",
+      "was_green": false,
+      "baseline_canonical_score": 443,
+      "best_changed_canonical_score": 412,
+      "best_source": "src/spotcam.c",
+      "best_label": "prefix-setjmp.h",
+      "changed_variants": 3,
+      "retail_bytes": 3744
+    },
+    {
+      "name": "_CrossbowHitSwitchType78",
+      "was_green": false,
+      "baseline_canonical_score": 375,
+      "best_changed_canonical_score": 373,
+      "best_source": "src/lara1gun.c",
+      "best_label": "legacy-reference-order",
+      "changed_variants": 6,
+      "retail_bytes": 946
+    },
+    {
+      "name": "_DoRayBox",
+      "was_green": false,
+      "baseline_canonical_score": 557,
+      "best_changed_canonical_score": 554,
+      "best_source": "src/control.c",
+      "best_label": "prefix-math.h",
+      "changed_variants": 1,
+      "retail_bytes": 1855
+    },
+    {
+      "name": "_EnemyJeepControl",
+      "was_green": false,
+      "baseline_canonical_score": 333,
+      "best_changed_canonical_score": 335,
+      "best_source": "src/jeep.c",
+      "best_label": "legacy-reference-order",
+      "changed_variants": 1,
+      "retail_bytes": 2212
+    },
+    {
+      "name": "_FireWeapon",
+      "was_green": true,
+      "baseline_canonical_score": 0,
+      "best_changed_canonical_score": 2,
+      "best_source": "src/larafire.c",
+      "best_label": "prefix-ctype.h",
+      "changed_variants": 8,
+      "retail_bytes": null
+    },
+    {
+      "name": "_HorsemanControl",
+      "was_green": false,
+      "baseline_canonical_score": 515,
+      "best_changed_canonical_score": 558,
+      "best_source": "src/horse.c",
+      "best_label": "Core1998-SDK-context",
+      "changed_variants": 4,
+      "retail_bytes": 3356
+    },
+    {
+      "name": "_ItemPushLara",
+      "was_green": false,
+      "baseline_canonical_score": 360,
+      "best_changed_canonical_score": 360,
+      "best_source": "src/collide.c",
+      "best_label": "Core1998-SDK-context",
+      "changed_variants": 5,
+      "retail_bytes": 934
+    },
+    {
+      "name": "_ReTriggerBaboon",
+      "was_green": true,
+      "baseline_canonical_score": 0,
+      "best_changed_canonical_score": 70,
+      "best_source": "src/baboon.c",
+      "best_label": "legacy-reference-order",
+      "changed_variants": 1,
+      "retail_bytes": null
+    },
+    {
+      "name": "_SasControl",
+      "was_green": false,
+      "baseline_canonical_score": 817,
+      "best_changed_canonical_score": 816,
+      "best_source": "src/sas.c",
+      "best_label": "legacy-reference-order",
+      "changed_variants": 3,
+      "retail_bytes": 2388
+    },
+    {
+      "name": "_ScorpionControl",
+      "was_green": false,
+      "baseline_canonical_score": 293,
+      "best_changed_canonical_score": 159,
+      "best_source": "src/scorpion.c",
+      "best_label": "legacy-reference-order",
+      "changed_variants": 1,
+      "retail_bytes": 1996
+    },
+    {
+      "name": "_SphinxControl",
+      "was_green": false,
+      "baseline_canonical_score": 156,
+      "best_changed_canonical_score": 158,
+      "best_source": "src/sphinx.c",
+      "best_label": "legacy-reference-order",
+      "changed_variants": 1,
+      "retail_bytes": 1364
+    },
+    {
+      "name": "_init_cutseq_actors",
+      "was_green": true,
+      "baseline_canonical_score": 0,
+      "best_changed_canonical_score": 31,
+      "best_source": "src/deltapak.c",
+      "best_label": "prefix-io.h",
+      "changed_variants": 1,
+      "retail_bytes": null
+    }
+  ],
+  "translation_units": [
+    {
+      "source": "src/baboon.c",
+      "source_sha256": "3b888e15363ca4f8a4cbea0d340fcc51d6f6902442ac09a0a24071ab42c39ea4",
+      "noninclude_nonblank_sha256": "f530ac1a172a824f2fdc9c17874276c954d546f539650485b07c55cf84e4d066",
+      "baseline_code_digest": "cbf96d1b1f2a8f3a6fb748ab4513d5f5813ce585a01f680626cc44a1fb9a34fb",
+      "baseline_function_count": 5,
+      "baseline_green_count": 4,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_BaboonControl",
+            "_ReTriggerBaboon"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_ReTriggerBaboon"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "src/bike.c",
+      "source_sha256": "8f4d996c433e625c4e67e5bec2e2f7fb47000f6bfe5cf80300097f8113e1f4a4",
+      "noninclude_nonblank_sha256": "6e75ad11d4f613c15d1cd42ae1cebd51ff038f4648f40a091caaa9cbfd33c0e7",
+      "baseline_code_digest": "2ca16bfb859884cfed955e482110e0cc942687c83fc265e0c0424f51f66dbbc4",
+      "baseline_function_count": 19,
+      "baseline_green_count": 15,
+      "known_flat_prior_matrix_only": true,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/box.c",
+      "source_sha256": "cc47aac2ad3512b8c51edfeadeabe91baf647559582c17ce95a7deace6784179",
+      "noninclude_nonblank_sha256": "8f46f490fc944105dd1f8391e990303bece600b475411ede9a097afc6d392c0e",
+      "baseline_code_digest": "75a2a43a4fdbba07df4770aab01f0dc35246a2c1ab07a39f4bb96eef5548c71a",
+      "baseline_function_count": 33,
+      "baseline_green_count": 30,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/camera.c",
+      "source_sha256": "dc5af42add3c295d8fa8a50c40042861548589b27ed58438bf2c0a8557870965",
+      "noninclude_nonblank_sha256": "952a59f593a4fb9fb9e7e21774ecdc59c89d1207b3183065020388ddb59db2b7",
+      "baseline_code_digest": "54b4813499176df77d563d90f1b736584750e1bda26d97341347c68553629f85",
+      "baseline_function_count": 11,
+      "baseline_green_count": 8,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/collide.c",
+      "source_sha256": "bfc104883d98c30c611e77008120a7729161ba5e4aca37204e8678bf684ce255",
+      "noninclude_nonblank_sha256": "5c1bb5ce518007db248ab88b704af03caa486705d33e959f74bfb5ee318b1e38",
+      "baseline_code_digest": "9c4d445d1579b938f9db6eaf2b8c2f97c1b984604f78522e0710ca5a24953161",
+      "baseline_function_count": 25,
+      "baseline_green_count": 20,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_ItemPushLara"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_ItemPushLara"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_ItemPushLara"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_ItemPushLara"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_ItemPushLara"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/control.c",
+      "source_sha256": "f4d2866600d2166471fbcf8a5309c9bdacf68bf7017db990fb0d1d377e66a9e0",
+      "noninclude_nonblank_sha256": "d69c2e5618ff1de5b5f8f63d2540e007fe2bd38034a99747d73dc7a1e6ecccef",
+      "baseline_code_digest": "5daffd5a5b575ad2b154827b653da3d1727a82f1de3e92608a9c5626bb2558a2",
+      "baseline_function_count": 34,
+      "baseline_green_count": 32,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_DoRayBox"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/croc.c",
+      "source_sha256": "c27f6ce98a10e513c27dd451b55c550bae9b135b9ac21765c48dfee7525edec0",
+      "noninclude_nonblank_sha256": "c0457dd597c73c8cdf2ef7afc6136960e715e6aeddd062bf9e71831ec58fe681",
+      "baseline_code_digest": "afd20a080fce694442aca2d06440274ffaac3066e988f2d18be26cdede06562d",
+      "baseline_function_count": 13,
+      "baseline_green_count": 11,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/debris.c",
+      "source_sha256": "9f9d190f452a9f89b97cf7e20e6847344a1946f8c23051c8fcbfac9e8dcdc7ae",
+      "noninclude_nonblank_sha256": "48847315f95a15ab555838ff4824240e472ddd4d3409b0b57a00dfceb8d5da15",
+      "baseline_code_digest": "0a146772121fe8d47176b8e6e9a3e70ca32d39a928ef5b2da271fcd39dd900ea",
+      "baseline_function_count": 4,
+      "baseline_green_count": 3,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/deltapak.c",
+      "source_sha256": "ded544ae52083497acf4f0ef1a8e43d9c64fad254325638cff79b1962eaf65d1",
+      "noninclude_nonblank_sha256": "cf238854fb3c9befbd557004b6bc30390ea8ec7a3e422d935e48542544e6d5ac",
+      "baseline_code_digest": "ebe4e7cbc6f6eb5714a6a5f9afafabc1ad2c6956613f835669deb192883b3c06",
+      "baseline_function_count": 96,
+      "baseline_green_count": 91,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_init_cutseq_actors"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_init_cutseq_actors"
+          ]
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/demigod.c",
+      "source_sha256": "c86e5e8aee5e5d8d0f76d0ecfdf2f3764eb0fd76d907a8088d209bb117dc6180",
+      "noninclude_nonblank_sha256": "43444c68185786a8e5bd7443564c06b9b00351115052d9ec5a2bad19cebc51f7",
+      "baseline_code_digest": "8c66595908583c738b5a32b5c6c7070898bd5960bdb55920a5953b22ad7ddc2b",
+      "baseline_function_count": 6,
+      "baseline_green_count": 5,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/draw.c",
+      "source_sha256": "74dc4271b5729f1bf1b1a1e9dd3aecb6c99554dd03545bac32d1553e69b2c183",
+      "noninclude_nonblank_sha256": "7f894cd55335f415a48a1c6513e8993787829128f8df3521f2a427ae005585e5",
+      "baseline_code_digest": "4732a4499c9f5b3ad5f6929fa3255ec8b243b8f0a3e809e44372ecfc3ba8e1f2",
+      "baseline_function_count": 31,
+      "baseline_green_count": 30,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/effect2.c",
+      "source_sha256": "2763a9094d0df9b3147fd9e23bf9f323d36244aa1c013244b597107d92744d0a",
+      "noninclude_nonblank_sha256": "5886cedb9f0042a6a7a58830fa3ba5e3ac697b9d648020db55ddaa1ceb0fc7ab",
+      "baseline_code_digest": "63154255bd572462a649b8e8ff6716b92d12f4b52d318fd7c3ab9f0b59695b09",
+      "baseline_function_count": 27,
+      "baseline_green_count": 24,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/gameflow.c",
+      "source_sha256": "0c0400010b7f8f48f8401aa58b73ef78fd8a86dc5164f0f9a4550bd7b5921e71",
+      "noninclude_nonblank_sha256": "1c9de6a94e7c37ece0545ad5a16c665235a47eda24aee61612fe15c1db59c8f4",
+      "baseline_code_digest": "73e891e3956adcb1035203d34b7d236efea326198478ae48bd405da4722f344d",
+      "baseline_function_count": 5,
+      "baseline_green_count": 2,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/guide.c",
+      "source_sha256": "3240b6798135a1c48000d85a3a33be523306a378749989da28b6f68326fc2c7c",
+      "noninclude_nonblank_sha256": "4933fc80a3a03ea9a4a11d6002e400aac5073839c68104cf640f4bfa2910e559",
+      "baseline_code_digest": "c9162ff7c17066bad181783e34d48ff3d2b77dbe657797c9b84643ff8357fe50",
+      "baseline_function_count": 2,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/hammerhead.c",
+      "source_sha256": "68ef7c0d358e982141dca4a51c62bd1cbc86f3f2a1e42c35d1b8274b78597f46",
+      "noninclude_nonblank_sha256": "180cc55a6c5c2e3ffc49533006da88077121d45af84a0664930fb0f9af196d4f",
+      "baseline_code_digest": "05fa48e3c1496fa04f04d8addb49f15e97d974626667e00edd3c912160011ce8",
+      "baseline_function_count": 2,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/harpy.c",
+      "source_sha256": "2f3039eeded41e4a295a050c03d5c104885d4b9b08d3d5fd550e6d36769120f0",
+      "noninclude_nonblank_sha256": "f3df6bdfa94f3f8f2623fb14cf718ac6af4374106a2503c7b965627144140f58",
+      "baseline_code_digest": "3bcd34d6fd27906858cf1b215408d7a5551dd206fb986c97d43820dd3cfe3a40",
+      "baseline_function_count": 7,
+      "baseline_green_count": 6,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/horse.c",
+      "source_sha256": "331a4c442e611bf734a1987ebe813b43c14e5355c041f51a29a1689df3d454f2",
+      "noninclude_nonblank_sha256": "ef4c98fbf365a5384856e6f265e36aafb6bb0263b5814c02cd5bc7ba4cbbcc57",
+      "baseline_code_digest": "7c9b96e5721b79a9a9ccd637c43301f27f078a541ab3248276768e8190844703",
+      "baseline_function_count": 4,
+      "baseline_green_count": 3,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_HorsemanControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_HorsemanControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_HorsemanControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_HorsemanControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/init.c",
+      "source_sha256": "e7ce81f9cfd3bfa89f73d2f5af595e8e1619bd9c6b81ae9e43175e4050aceb24",
+      "noninclude_nonblank_sha256": "dc793de757f27f219ce20ee377f0ac9fc8bb6a87b23bba8831546b3953337548",
+      "baseline_code_digest": "6a6d203e2abd1ee78de14133fb908f1f611602e59df75437e429bb1d3c4e3aa1",
+      "baseline_function_count": 26,
+      "baseline_green_count": 25,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/jeep.c",
+      "source_sha256": "0770a713183560c1ecfc937e6434be0af8968b7b3375d300f5a2feea6cffcc61",
+      "noninclude_nonblank_sha256": "f61db5f456843b1c60b09407bd3258bfa853f0243d681e51563196152b9e6244",
+      "baseline_code_digest": "ec79ee7469892dad3109c94f49e173e60f404ded13163f0afed2b5049f217bdf",
+      "baseline_function_count": 21,
+      "baseline_green_count": 15,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_EnemyJeepControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        }
+      ]
+    },
+    {
+      "source": "src/lara.c",
+      "source_sha256": "8bf2ca2b7c0bfcdcbafc7494c6bc6670502cb0e1a14ed75474b8db14a817ae1b",
+      "noninclude_nonblank_sha256": "35190266bf903a302aec357fcc67723481d1d95bd7a721c6102c1cb25a7922d8",
+      "baseline_code_digest": "432e1aa7304604792e218ca179d1eba8e87cefeb8b022369c5f668f0258517a8",
+      "baseline_function_count": 167,
+      "baseline_green_count": 162,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/lara1gun.c",
+      "source_sha256": "99067a42d721e40b0a6b599e08fbf03fee64a36d52bfae39b71eac89742fd825",
+      "noninclude_nonblank_sha256": "b7439c930fd96ef0524c073dd3b985be97b7d19e66a3cd095852b969cbab1592",
+      "baseline_code_digest": "583ab03cf92114d0dc401efcdfadaeba499c3f3e7df0f8d35234438d45c8ba9e",
+      "baseline_function_count": 15,
+      "baseline_green_count": 14,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_CrossbowHitSwitchType78"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_CrossbowHitSwitchType78"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_CrossbowHitSwitchType78"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_CrossbowHitSwitchType78"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_CrossbowHitSwitchType78"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_CrossbowHitSwitchType78"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        }
+      ]
+    },
+    {
+      "source": "src/laraclmb.c",
+      "source_sha256": "d606620a1b679073a77943d140c6ee1f175cb2b68a540588098cfd8fcaefde6a",
+      "noninclude_nonblank_sha256": "5c1ff44ba3baf6a6fa3ded7c5482e3899ba09d0f5ba37ba0b5daaf54892d9afe",
+      "baseline_code_digest": "011c22711bba9187a96e9fd2c351dd298d6af8541686a4509c571211d04d8480",
+      "baseline_function_count": 19,
+      "baseline_green_count": 18,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/larafire.c",
+      "source_sha256": "9367730ec03e93ce49c1006cb83e6d14d1cad4b7102f36d5ef5aa2a734be5d34",
+      "noninclude_nonblank_sha256": "7ab5bb5e9f4f769e9702cebc988d0d0f63c57a1d495a91aac4881f083b2e81fb",
+      "baseline_code_digest": "3cebe53c68aa2e2234d2b35675ef02d5e606845ad857c66c462f7271a288fe27",
+      "baseline_function_count": 13,
+      "baseline_green_count": 12,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_FireWeapon"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_FireWeapon"
+          ]
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_FireWeapon"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_FireWeapon"
+          ]
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_FireWeapon"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_FireWeapon"
+          ]
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_FireWeapon"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_FireWeapon"
+          ]
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_FireWeapon"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_FireWeapon"
+          ]
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_FireWeapon"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_FireWeapon"
+          ]
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_FireWeapon"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_FireWeapon"
+          ]
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "green-loss",
+          "changed_functions": [
+            "_FireWeapon"
+          ],
+          "new_greens": [],
+          "lost_greens": [
+            "_FireWeapon"
+          ]
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/laramisc.c",
+      "source_sha256": "de527c59df417373c5af961828fe5ebfa735db60f68e50a3f1042fbe3e87eb2f",
+      "noninclude_nonblank_sha256": "d68fb1cb64669a9ea455201bed2ef7f5fe8c0012da853c211ac385176fb05120",
+      "baseline_code_digest": "0d44117c5f3710b229b6d41fd9ea6221e9d6d529a8321f33c9b9d2ec4cefb5d3",
+      "baseline_function_count": 8,
+      "baseline_green_count": 7,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/laraskin.c",
+      "source_sha256": "db8bd35357a121922c325712809420f5e0426765687dc202515a0d7a1eb56d2e",
+      "noninclude_nonblank_sha256": "b07ab7c5898c05622179f517b15e7e6933f2a9f3830b4558ff50b98d2fa34d87",
+      "baseline_code_digest": "9c7f253a58031b17bfc8c7700c4cc421caf42a2c4eff986162979c5ebc555c3f",
+      "baseline_function_count": 4,
+      "baseline_green_count": 2,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/moveblok.c",
+      "source_sha256": "b0d8ec1593db0ec1b954bf4f3d26d4da6a4332fa18c79c2af25176677b54b347",
+      "noninclude_nonblank_sha256": "c2b8e9730d7792c2d215db9abc893f90826d3f5b256c567c0f2f4dcfb5fa2577",
+      "baseline_code_digest": "37ea1b1c8c54642b9cfd7cd84388ee32741ddd9f9c65298df5d64f9b26b4828f",
+      "baseline_function_count": 9,
+      "baseline_green_count": 7,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/mummy.c",
+      "source_sha256": "3325c9e931c92829a57fbdc60cfd301188909c27e3acdf594212045a6ea3a447",
+      "noninclude_nonblank_sha256": "ae13fdb2462117aa4ff31c9a938a0a3af501ff576c4886a25832befb5d61f125",
+      "baseline_code_digest": "536729581028a4c623f31ccdf014851f2c596f7f20dac14ccda47200091749f2",
+      "baseline_function_count": 2,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/newinv.c",
+      "source_sha256": "0b8a27c06739179067529314c6833c67a23a328abfd5bbbde182bdf839664ebd",
+      "noninclude_nonblank_sha256": "5a0919be847424da29788d8293a328df80eaaf7b9a11f0ea91e8ace2efea8a7f",
+      "baseline_code_digest": "f2e12318e2a80759e43efcab607c5961a612e0a9936e1eb35b18b718b97654fe",
+      "baseline_function_count": 60,
+      "baseline_green_count": 56,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/rope.c",
+      "source_sha256": "f3dabb10ec90920c4f42a69922bc39a4fc28dd1d8cb3396c508e84bc7e60483e",
+      "noninclude_nonblank_sha256": "705ffa10c02a1c137d1b4c820c8870673a6e52f0eb55d7facf11ac6ab5a35e55",
+      "baseline_code_digest": "814b4594640e348cc25cf7f51f6e082a374ff568843c267a95349ac3b6156aae",
+      "baseline_function_count": 17,
+      "baseline_green_count": 14,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/sas.c",
+      "source_sha256": "5d372253c9b7bc209e51d4e632f3d229c5191e0f0352fbc3a4d3d5b11ff67864",
+      "noninclude_nonblank_sha256": "5edde5063ad65df803c46562c25981040b5833aec0771d5a95191b1e112fbf22",
+      "baseline_code_digest": "7116f1b2e91e36c5f0543e1ad72a362e22b41d4d575147d878d8ec69dacf270a",
+      "baseline_function_count": 6,
+      "baseline_green_count": 5,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_SasControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_SasControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_SasControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        }
+      ]
+    },
+    {
+      "source": "src/savegame.c",
+      "source_sha256": "9d1292a62a6dba41f1abf9945c14509e2d83c532d718a98a271d165792f601a0",
+      "noninclude_nonblank_sha256": "451b189537f3e3bf77b4d438f5a93028bbba2bc7cfdb91cb33539a28e4d87c6b",
+      "baseline_code_digest": "d805221e9eef4e30191d88ea2b39aeb63c3af77359ad7d4bffefc4162201123d",
+      "baseline_function_count": 15,
+      "baseline_green_count": 13,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/scorpion.c",
+      "source_sha256": "3b1da4f43d8d4a0060c8d31f5a38b7da1a45bbc22bcde31882bf27c4c3ca0b79",
+      "noninclude_nonblank_sha256": "5d348474ea13abfef0fedc35bac98b20f5e5aea8f6173735c5a16498dbf62fd3",
+      "baseline_code_digest": "3f58b0ed6db2e06ffa59b19fb1b42ea381d1dd3a650ce0331bb4102b73e79a14",
+      "baseline_function_count": 4,
+      "baseline_green_count": 2,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_ScorpionControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        }
+      ]
+    },
+    {
+      "source": "src/senet.c",
+      "source_sha256": "d535d42743794b90d5b6a5964db34d8510761cdd003a446307dad60c2bb5df31",
+      "noninclude_nonblank_sha256": "ef9d608510f9230e02a0d7a79700a1163a334653f2aaf0b17ff815364d07797e",
+      "baseline_code_digest": "3ba56180ecfdcac56246d2ffbcaa4cf64a3e8c17b69d244c66ab1ec96ec8a142",
+      "baseline_function_count": 11,
+      "baseline_green_count": 9,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/seth.c",
+      "source_sha256": "64aae564fa3cf6b021d61221a7264748f0f05bc6fcf72e848d37cdc93957fdbe",
+      "noninclude_nonblank_sha256": "db7314bf1d96f7864fa0c9d2dca3da70017e3142dc0c7b2c5c708276e45a508c",
+      "baseline_code_digest": "44006af77b334185523518552c8ac686576f2ea63ea273feb557b27afb4c599e",
+      "baseline_function_count": 7,
+      "baseline_green_count": 6,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/setup.c",
+      "source_sha256": "4568156fc6c63abc0b345ec26f30b773e9dff73b16eeb9a82078014ce03aa124",
+      "noninclude_nonblank_sha256": "30c722eb73c71ddce5e296623e469c24207d4e28fa5b8e50068a3599c7bafd98",
+      "baseline_code_digest": "294d736c18574003db5294498728838dc5ef848146a6bd7e62d6639f8314064b",
+      "baseline_function_count": 13,
+      "baseline_green_count": 11,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/skeleton.c",
+      "source_sha256": "66df0d9a947ed45381295e360eafdf25bcdfd9b21a201d8aa150ad45262acc40",
+      "noninclude_nonblank_sha256": "b4e0a54d6563407c68b93c963225cbaada07b0f30afa550a526d350d1124c4a7",
+      "baseline_code_digest": "045483395a96c7d63fc04d33f5ac8394de1a28122c2692e1f79835d33058e05a",
+      "baseline_function_count": 3,
+      "baseline_green_count": 2,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/audio.c",
+      "source_sha256": "58fe9b16093ad5261580d60a0f221c2644c73d1b9a5933ffde0d4cad4245fe9a",
+      "noninclude_nonblank_sha256": "4ac7e9d3a410ba74afcd70798608b01be2a4039de3bdf4a7f718601924b73801",
+      "baseline_code_digest": "eca1fe1198acc2fe8ddb85ad234a7932125de6f8f55eac36ded4d95c4e2ba97e",
+      "baseline_function_count": 13,
+      "baseline_green_count": 12,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/clipping.c",
+      "source_sha256": "a8f9b4349eea0db195a21b5559886ff90e85142f7c879dd6bf80d6ad51c886cd",
+      "noninclude_nonblank_sha256": "4c8613403377bbe4a029394f09c2724a0cf6bdd0f2d4aab3b951cdc6e22342c6",
+      "baseline_code_digest": "6c7a1eac344d3e95feeeee2b0ed09516c0b16ce55be495b7fdf9b59feeee8a7a",
+      "baseline_function_count": 3,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/cmdline.c",
+      "source_sha256": "73df680d175fe8887bf0f6601b09b7b3921ffc8d54880051abb2e6373c478df6",
+      "noninclude_nonblank_sha256": "a1ab270c157b776e5b92fdbb1d5b1871f40b9b81b8c9368e5d62c0fb7ed8a2ca",
+      "baseline_code_digest": "f32ebb85755287e42539f86762d4dd4a357531651947d4fc491ff4a056de809b",
+      "baseline_function_count": 10,
+      "baseline_green_count": 8,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/d3dmatrix.c",
+      "source_sha256": "ead5fbb3e706deda00fe7c57acb65df2ecb6c828f4b2fc4de05995b773e59a02",
+      "noninclude_nonblank_sha256": "c6a7517292a3eff05e6ee1e1ee9263711854d1616d13aa7fc02f2932ddef1f8a",
+      "baseline_code_digest": "3329495949136c22c9072e7fd54ba80eff2cc9e6278d2e876f870dc6fd21c294",
+      "baseline_function_count": 6,
+      "baseline_green_count": 5,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/drawroom.c",
+      "source_sha256": "5707f9fc2536a9e231295454c300a6555f8b45c8f194d2a8d6828240bd6973b0",
+      "noninclude_nonblank_sha256": "f70933f8fec7a63fabec38e3784d7b960b9580ecb39c03179eb573c9afbde278",
+      "baseline_code_digest": "44706208045f1f4b0bd3db5592270dd0958bc87e7e82cee7aadaea0ae89e6871",
+      "baseline_function_count": 16,
+      "baseline_green_count": 12,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/dxshell.c",
+      "source_sha256": "194acc0fdf9d16b2ebe4108076c858f19a8c71bddff30b860157a01c9a036796",
+      "noninclude_nonblank_sha256": "e3a7b3d043a937243b270e58348ef024c2bb472debc93abacd86f507910e2a75",
+      "baseline_code_digest": "a93c57a4ea7ea676e277eca5632a5f80412f5e2ce8e92885603f889bd03b573d",
+      "baseline_function_count": 30,
+      "baseline_green_count": 28,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/dxsound.c",
+      "source_sha256": "3ac256f2ef2e7c6ab6df2691cece5392d83afa6f5ea2e70fb8aae77d7d9c4a16",
+      "noninclude_nonblank_sha256": "376307fd4cf9fe0357593d6e404ead01ba9201df1afe98d794c1879ab6aa4d72",
+      "baseline_code_digest": "609685d4dd44856f8ea1372ac2141b89dc39818bf6a1399dcc04f4314a80ae1d",
+      "baseline_function_count": 22,
+      "baseline_green_count": 21,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/file.c",
+      "source_sha256": "f73ff6a32dd2461dd5ab85c2329b93dff476b5bf9fd6cc158951546c0a69de49",
+      "noninclude_nonblank_sha256": "caadcdaa99eef8241fe50eed85307356483bfc2386680a7a8a55744171a347cd",
+      "baseline_code_digest": "29a50a27f2815d029c6554ae50587b45bc676c3fd4131e2a8240b4a44d699163",
+      "baseline_function_count": 24,
+      "baseline_green_count": 19,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/fmv.c",
+      "source_sha256": "102730b541decf3e0a3b8fac0aea34cba7e929eb766895cba13b8ae98bb90e54",
+      "noninclude_nonblank_sha256": "89af9b5941119d981c6dfc9b33f945d01f20d7481d640289e6422fba9f5fba3c",
+      "baseline_code_digest": "372cef63d116fab92daaffa6cfd9dd797b6ca6b88fc9ac803ebcf0e59af2ff37",
+      "baseline_function_count": 2,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/lighting.c",
+      "source_sha256": "cd1985d7f788c5b11e7e89d2715111fe03dae056c636a49a659b7cf2096dc52c",
+      "noninclude_nonblank_sha256": "c7784568ea91bef64c83c9621dc61867d87caa21222d556e90e4e7e0d8ca5b49",
+      "baseline_code_digest": "83bda45d662a5069da4a010805c5994ae5baa57b0e4aee0ee7f65ad8f2146c21",
+      "baseline_function_count": 15,
+      "baseline_green_count": 12,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/loadsave.c",
+      "source_sha256": "3837a64bd722538d66baa254cdeb9d53640bf1e8c8a8430e9df5b36d7ebd3787",
+      "noninclude_nonblank_sha256": "123c836710653a3840bc6c43a0df2ac6ca2e27d006b2bb43322229dbd99ef709",
+      "baseline_code_digest": "42c1cf61f917b46b6b48d4eaa36b37995bafeed3115bdb07a9c7b4dc896b94c1",
+      "baseline_function_count": 22,
+      "baseline_green_count": 18,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/output.c",
+      "source_sha256": "3559ed189b37d808f33ed4c120a3c50b4d7d412ee8500cc77a2e71f10d04b17d",
+      "noninclude_nonblank_sha256": "ba1f9aecf784e489adfa28971148afd6024f6f80e558e58f663f11383bb5e325",
+      "baseline_code_digest": "89ccd55da6807e865adba18c1d38124bec34769f8106e4d00f38791bf4db7698",
+      "baseline_function_count": 22,
+      "baseline_green_count": 16,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/polyinsert.c",
+      "source_sha256": "d5dd16c59a9fb34a99a794cef8fc47a68321d634f517ae6770b6231f41ac5a37",
+      "noninclude_nonblank_sha256": "5351165f4a5de5505b0d9bccae3752f30fd57a22d72e1b89bd7dcbb8b65e1442",
+      "baseline_code_digest": "0e8df647b5e2b5602a7358af53aa38846efddad2a9de29b1db8a76fc7ff3bb0c",
+      "baseline_function_count": 32,
+      "baseline_green_count": 26,
+      "known_flat_prior_matrix_only": true,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/specificfx.c",
+      "source_sha256": "19d6914be793c4cc11d697c02d2573deebff0a0e53b988facf091cda2fb58896",
+      "noninclude_nonblank_sha256": "1322bd820d25aedd8801fba9a807b605fde6293923d1b87520b12442fb7d246e",
+      "baseline_code_digest": "7870f5d9c256723dfe1ec667deb64c5a1236d021262f1198a2b409907e92efdb",
+      "baseline_function_count": 40,
+      "baseline_green_count": 16,
+      "known_flat_prior_matrix_only": true,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/swrender.c",
+      "source_sha256": "1b703e25d64ce85c0578c5e1bf92c20a185f4f2e1bbcfd4e7502179707f7a425",
+      "noninclude_nonblank_sha256": "204dfe2549a1c4b56691318a5937b60d4c5f6d21bb0113b690c1ac3db347fcd8",
+      "baseline_code_digest": "86319ac82cca02c425b58408f6c5ff0c3a2460e083973549de84cfdf5035736a",
+      "baseline_function_count": 85,
+      "baseline_green_count": 75,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/texture.c",
+      "source_sha256": "6c85b5c50df0678684a0a281d12a6be8725edeb78950c08b12c670588bf304ca",
+      "noninclude_nonblank_sha256": "68afcd6f6c1bd1cc978b9dd48501f28784f782d676d5c0e2a0cb4c1815c1abd5",
+      "baseline_code_digest": "8fb1ade8eeda83c13826d13d207e937a05ccd0e973f647f11272b39cc45dafd4",
+      "baseline_function_count": 2,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/specific/winmain.c",
+      "source_sha256": "00e6429672e11e99c04df5c0a2412c8b22e621cf0ba97232dc10b355eca1a4a3",
+      "noninclude_nonblank_sha256": "92420bb04dfcfff49f5a35acc13b3260715ec0c5a4c98cb3e1151daa1787d02a",
+      "baseline_code_digest": "25d91989b4f118fc1e5b497fa22f0929541e087558c4c6fd431a291497086c0f",
+      "baseline_function_count": 22,
+      "baseline_green_count": 17,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/sphere.c",
+      "source_sha256": "5ec5672939ca6ab03002b8afbb3da18f9123c80a113b32e205ad1a7b77ffa64c",
+      "noninclude_nonblank_sha256": "7f5c8f16abb3cc810e857c9ea2059c4e4f5554ae26e41056e6032e3c7f252c7d",
+      "baseline_code_digest": "2e970e54bd8df24e100024caea2c7b496772823fb362a790cadddc8b004cf9d4",
+      "baseline_function_count": 4,
+      "baseline_green_count": 3,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/sphinx.c",
+      "source_sha256": "9e11c3c0c202cf97f46b48abfd211994654294dc84ddef796725c0d578af5742",
+      "noninclude_nonblank_sha256": "d214c0329d24206fbeb4d41cf9bd0531263d797c9a8842f00a265f8f4e80018b",
+      "baseline_code_digest": "52a742309958d71a357b7dbaa944dad93d275b100fb9a71492bf146f56c49054",
+      "baseline_function_count": 2,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_SphinxControl"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        }
+      ]
+    },
+    {
+      "source": "src/spotcam.c",
+      "source_sha256": "07d762df180b20c104ce659a56832101227ec5d42615128abe03a9c6057f2ece",
+      "noninclude_nonblank_sha256": "072444297905e152877fa47c1a9e824b2509a5a0a2c4ece50dca0b03b30b9f3d",
+      "baseline_code_digest": "c7f5a2b310565989fd90200f6822d183a7037b7f139676976ffb0b381890df2e",
+      "baseline_function_count": 5,
+      "baseline_green_count": 2,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_CalculateSpotCams"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_CalculateSpotCams"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "changed-reds-only",
+          "changed_functions": [
+            "_CalculateSpotCams"
+          ],
+          "new_greens": [],
+          "lost_greens": []
+        }
+      ]
+    },
+    {
+      "source": "src/switch.c",
+      "source_sha256": "fc12c9ceae1657db5fabfcf064b5fd78e5ffb9ded017fe997b5cf61c6ae69f59",
+      "noninclude_nonblank_sha256": "b4fa44531a84f557182921776f2c58c9b58ff89aa6fb2722ddd43eee312748df",
+      "baseline_code_digest": "9116c57322e754a5b30f73878c6e759df0664d06f01146efebf95fac1af11b30",
+      "baseline_function_count": 17,
+      "baseline_green_count": 16,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/templar.c",
+      "source_sha256": "ccd0a0b6521d66df56e0d0b97935ee89140265c742a622f12800e5cce52c1024",
+      "noninclude_nonblank_sha256": "09f6da30267f7f753b1a782a42467d0d23c4eab59512fe3eb9e06f50d97079a6",
+      "baseline_code_digest": "32f75bceee8350a20f4a6e8291003a328f8abc36bb63e8650654bb2f22d5772f",
+      "baseline_function_count": 2,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/text.c",
+      "source_sha256": "b3bd6202c499ad888ffafcb2eadcdeb42db78bd41596924f866be3cd215aa19f",
+      "noninclude_nonblank_sha256": "6d5cfbef30a0af273443d84d1e65db135d95d3b94669423182e275add556bd5c",
+      "baseline_code_digest": "e853ce8d511a1612273a64eecf4ea8a709b4b7b1c35c5ab494d9c62847603f82",
+      "baseline_function_count": 5,
+      "baseline_green_count": 4,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/tomb4fx.c",
+      "source_sha256": "341437392c2d96390e1b9838b6b6596be25f691edaba87b0333e1e63fe1d8894",
+      "noninclude_nonblank_sha256": "835180a520027cf0ef0de20d3a17914758af2dd01e0872d0644acaf99d888e96",
+      "baseline_code_digest": "500b5a2d8620badbf2a1fa4d98eb4d53fd550942f9cecb4aaf37d613314faf8a",
+      "baseline_function_count": 50,
+      "baseline_green_count": 39,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/traps.c",
+      "source_sha256": "c2d517e181a6372dbe90bf2ebb161fa78c21212d0a8c0fd4097bc9fcaca56940",
+      "noninclude_nonblank_sha256": "df9f9a52b847a1b8f1a1b2f2a304813cd3f663dda9159d7955911f07acc1c949",
+      "baseline_code_digest": "1f5da63ff06a5d95ed6416b71f2f4669220f91f90d9d916ddf3d0124420e6ee5",
+      "baseline_function_count": 51,
+      "baseline_green_count": 45,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/troops.c",
+      "source_sha256": "ed6415536681d3efe7a7714f3d5cf322ecafcb71f3f562fa83197eadc534f23a",
+      "noninclude_nonblank_sha256": "09f5ec816fe47214df89b91072c68a45f79f8d73ccf00bfe20b359c045946265",
+      "baseline_code_digest": "7af39367099101ac7ce99e38602e19af6757a5beccd10ab51afdd6f1b46b0a8f",
+      "baseline_function_count": 2,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/voncroy.c",
+      "source_sha256": "6e2c156a7615a2ed547174a61916f6c3851d701200a9e7ed99f02b76ff2284ab",
+      "noninclude_nonblank_sha256": "e7add7e96613654bf9b302ba70f0ceeade01bb4801f2d0e99a64dcb6c9f25d73",
+      "baseline_code_digest": "d039433bbaa9607029e361f85c8650516c380e3b7dc3fa5e352db9e441893935",
+      "baseline_function_count": 7,
+      "baseline_green_count": 6,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/wildboar.c",
+      "source_sha256": "8e5782252da8ebcd2988ea0cdd9f64425e0ea842624709bd21ee7e306f5ba645",
+      "noninclude_nonblank_sha256": "d488f694c1ce6ef2ca4756305251473b79dcd53875062a23e910756162f59b9f",
+      "baseline_code_digest": "6feb595aa9439551c337937a159dbb6468167350b0187ea914fc63700953f19b",
+      "baseline_function_count": 2,
+      "baseline_green_count": 1,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    },
+    {
+      "source": "src/wraith.c",
+      "source_sha256": "3ea22094569c46e127117250876cfd1b86efb8f82f9d44e50f8692dd8e72db9d",
+      "noninclude_nonblank_sha256": "6d0973cafbb78a2d4b4daae037da30d6d1d7e779a4793272ddc16d37c646756d",
+      "baseline_code_digest": "0744c02a96d9d451111836177df81a40d6ba34a52707e2a8d88fcf39017f86ee",
+      "baseline_function_count": 4,
+      "baseline_green_count": 3,
+      "known_flat_prior_matrix_only": false,
+      "variants": [
+        {
+          "label": "baseline-repeat",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-math.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-float.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-process.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-io.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-stdlib.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-string.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-time.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-malloc.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-ctype.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-limits.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-errno.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-conio.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "prefix-setjmp.h",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "CRT-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "Core1998-SDK-context",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "reverse-includes",
+          "outcome": "unchanged"
+        },
+        {
+          "label": "legacy-reference-order",
+          "outcome": "unchanged"
+        }
+      ]
+    }
+  ],
+  "frozen_source_observation": "Header context demonstrably affects a bounded subset under these tested contexts, but no tested context fixes a red. All eleven pure order/register-stack census candidates remain unchanged. Therefore blanket include rearrangement or CRT flags are not justified. Use source retained-web/stack-identity analysis on that cohort, and keep the ten sensitive reds as a separate finite cohort. These tests do not establish that untested header contexts, C++ mode, type definitions or compiler flags cannot matter.",
+  "systemic_conclusion": "These measurements are conditional on the currently tuned source bodies. They establish which tested contexts change those fixed bodies, not which context is a better starting point for recovering original code. A context flat on current source can interact with an earlier or alternative source form. No inference that 174 reds are globally header-independent is justified. Joint multi-start source/context search must compare earlier real source forms, optimize within each context, track sibling regressions separately from raw target score, and require existing greens only for retained final changes.",
+  "next_experiment": {
+    "method": "Cross current and historical pre-tuning bodies with genuine header contexts, then run the same bounded source operators within each context. Permit intermediate green regressions; retain only fully validated final candidates.",
+    "historical_start_targets": [
+      "LookCamera",
+      "MoveCamera",
+      "S_DrawSparks",
+      "SkeletonControl",
+      "UserControl_bike",
+      "phd_PutPolygons"
+    ],
+    "controls": [
+      "baseline context",
+      "current source",
+      "alternate filename repeat",
+      "whole-TU green set"
+    ],
+    "question": "Does a context change the source-search outcome even when its frozen current-body score is flat or worse?"
+  }
+}
