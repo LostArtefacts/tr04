@@ -22,7 +22,9 @@
       "greens": 1375,
       "reds": 178,
       "implementation": "original handwritten x86 helper",
-      "raw_exact": true
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
     },
     {
       "name": "SW_WaitUntilDXInScene",
@@ -34,7 +36,9 @@
       "greens": 1376,
       "reds": 177,
       "implementation": "original handwritten x86 helper",
-      "raw_exact": true
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
     },
     {
       "name": "SW_WaitWhileDXInScene",
@@ -46,7 +50,9 @@
       "greens": 1377,
       "reds": 176,
       "implementation": "original handwritten x86 helper",
-      "raw_exact": true
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
     },
     {
       "name": "SW_WaitUntilInScene",
@@ -58,7 +64,9 @@
       "greens": 1378,
       "reds": 175,
       "implementation": "original handwritten x86 helper",
-      "raw_exact": true
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
     },
     {
       "name": "SW_WaitWhileInScene",
@@ -70,7 +78,9 @@
       "greens": 1379,
       "reds": 174,
       "implementation": "original handwritten x86 helper",
-      "raw_exact": true
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
     },
     {
       "name": "SW_GetSleepProc",
@@ -82,7 +92,9 @@
       "greens": 1380,
       "reds": 173,
       "implementation": "original handwritten x86 helper",
-      "raw_exact": true
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
     },
     {
       "name": "SW_SleepTick",
@@ -94,7 +106,9 @@
       "greens": 1381,
       "reds": 172,
       "implementation": "original handwritten x86 helper",
-      "raw_exact": true
+      "raw_exact": true,
+      "linked_at_original_address": true,
+      "linked_raw_match": true
     },
     {
       "name": "JeepFireGrenade",
@@ -107,14 +121,17 @@
       "reds": 171,
       "implementation": "ordinary C",
       "raw_exact": true,
-      "recovery": "Initialize rotation fields together, then cache the stored y rotation before position calculations."
+      "recovery": "Initialize rotation fields together, then cache the stored y rotation before position calculations.",
+      "linked_at_original_address": true,
+      "linked_raw_match": true
     }
   ],
   "validation": {
     "normal_build": "passed for each retained match; full previous green set preserved",
     "original_helper_standalone": "default and FEAT=c_asm compile and link passed",
     "c_asm_equivalence": "All 85 swrender and 17 winmain normalized symbols unchanged from before helper recovery",
-    "c_asm_limitation": "Optional C build reports a data-layout warning; compile/link success is not runtime validation."
+    "c_asm_limitation": "Optional C build reports a data-layout warning; compile/link success is not runtime validation.",
+    "standalone_after_JeepFireGrenade": "passed; all eight new functions at original addresses and raw byte identical"
   },
   "unretained_cohorts": [
     "specificfx and tomb4fx frontend/SDK constructor contexts",
