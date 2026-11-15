@@ -1,0 +1,41 @@
+{
+  "compiler_build": 8447,
+  "target": "_FireWeapon",
+  "retail_bytes": 739,
+  "source_revision": "628fbc7",
+  "method": "Prepend N unique unused extern int declarations before all includes in temporary larafire.c copies; trace read-only --ranges and verify actual object bytes. This is a diagnostic of the C1 FEID&63 address-candidate bucket route. A diagnostic hit must be recovered in genuine source/include context for retention. Other compiler passes and nonuniform header changes are outside this finite model.",
+  "results": [
+    {
+      "extern_count": 0,
+      "Slist_frontend_id": "0xe7c",
+      "bucket": 60,
+      "retail_match": true,
+      "code_sha256": "98d44780b92f06b0ccc9574ae5fca47f9edcc4fc9bdb6142237b3b6abaa58e3b",
+      "mask_bytes": 0
+    },
+    {
+      "extern_count": 1,
+      "Slist_frontend_id": "0xe7d",
+      "bucket": 61,
+      "retail_match": true,
+      "code_sha256": "98d44780b92f06b0ccc9574ae5fca47f9edcc4fc9bdb6142237b3b6abaa58e3b",
+      "mask_bytes": 0
+    },
+    {
+      "extern_count": 5,
+      "Slist_frontend_id": "0xe81",
+      "bucket": 1,
+      "retail_match": false,
+      "code_sha256": "a970fc67c7ddbb9bf2cc85bd879d18b251faecfa13ad2103096d51f64122c490",
+      "mask_bytes": 0
+    },
+    {
+      "extern_count": 64,
+      "Slist_frontend_id": "0xebc",
+      "bucket": 60,
+      "retail_match": true,
+      "code_sha256": "98d44780b92f06b0ccc9574ae5fca47f9edcc4fc9bdb6142237b3b6abaa58e3b",
+      "mask_bytes": 0
+    }
+  ]
+}
