@@ -1,0 +1,126 @@
+{
+  "target_reds_maximum": 99,
+  "before": {
+    "green": 1374,
+    "red": 179,
+    "matching_bytes": 424338
+  },
+  "after": {
+    "green": 1382,
+    "red": 171,
+    "matching_bytes": 424766
+  },
+  "lost_greens": [],
+  "new_matches": [
+    {
+      "name": "SW_WaitLevelLoad",
+      "symbol": "_SW_WaitLevelLoad",
+      "bytes": 13,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "001785e",
+      "greens": 1375,
+      "reds": 178,
+      "implementation": "original handwritten x86 helper",
+      "raw_exact": true
+    },
+    {
+      "name": "SW_WaitUntilDXInScene",
+      "symbol": "_SW_WaitUntilDXInScene",
+      "bytes": 13,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "5ea16b1",
+      "greens": 1376,
+      "reds": 177,
+      "implementation": "original handwritten x86 helper",
+      "raw_exact": true
+    },
+    {
+      "name": "SW_WaitWhileDXInScene",
+      "symbol": "_SW_WaitWhileDXInScene",
+      "bytes": 13,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "b8aaee9",
+      "greens": 1377,
+      "reds": 176,
+      "implementation": "original handwritten x86 helper",
+      "raw_exact": true
+    },
+    {
+      "name": "SW_WaitUntilInScene",
+      "symbol": "@SW_WaitUntilInScene@4",
+      "bytes": 14,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "abf8f26",
+      "greens": 1378,
+      "reds": 175,
+      "implementation": "original handwritten x86 helper",
+      "raw_exact": true
+    },
+    {
+      "name": "SW_WaitWhileInScene",
+      "symbol": "@SW_WaitWhileInScene@4",
+      "bytes": 14,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "fae7abf",
+      "greens": 1379,
+      "reds": 174,
+      "implementation": "original handwritten x86 helper",
+      "raw_exact": true
+    },
+    {
+      "name": "SW_GetSleepProc",
+      "symbol": "_SW_GetSleepProc",
+      "bytes": 13,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "8ba5c3c",
+      "greens": 1380,
+      "reds": 173,
+      "implementation": "original handwritten x86 helper",
+      "raw_exact": true
+    },
+    {
+      "name": "SW_SleepTick",
+      "symbol": "_SW_SleepTick",
+      "bytes": 15,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "f4f36ca",
+      "greens": 1381,
+      "reds": 172,
+      "implementation": "original handwritten x86 helper",
+      "raw_exact": true
+    },
+    {
+      "name": "JeepFireGrenade",
+      "symbol": "_JeepFireGrenade",
+      "bytes": 333,
+      "mask_bytes": 0,
+      "data_differences": 0,
+      "commit": "d0c246f",
+      "greens": 1382,
+      "reds": 171,
+      "implementation": "ordinary C",
+      "raw_exact": true,
+      "recovery": "Initialize rotation fields together, then cache the stored y rotation before position calculations."
+    }
+  ],
+  "validation": {
+    "normal_build": "passed for each retained match; full previous green set preserved",
+    "original_helper_standalone": "default and FEAT=c_asm compile and link passed",
+    "c_asm_equivalence": "All 85 swrender and 17 winmain normalized symbols unchanged from before helper recovery",
+    "c_asm_limitation": "Optional C build reports a data-layout warning; compile/link success is not runtime validation."
+  },
+  "unretained_cohorts": [
+    "specificfx and tomb4fx frontend/SDK constructor contexts",
+    "896 whole-TU compiler-option controls",
+    "software renderer ordinary C helper/bit-representation candidates",
+    "texture/clipping copy helpers",
+    "local value-type and field-cache candidates except JeepFireGrenade"
+  ]
+}

@@ -120,6 +120,13 @@ code before the patch, built for the DLL and listed in
 `hooks.allow_diff`, and `src/exe/` holds the patched bytes as MASM from
 `tools/asmgen.py` for the standalone executable.
 
+The injected polling helpers retain their original x86 register contracts
+in naked assembly. `SW_GetSleepProc` receives its module in EAX and is
+called only from assembly; its ordinary C prototype is enabled only for
+`FEAT_C_ASM`. The shared sleep and flag helpers retain C alternatives for
+`FEAT=c_asm`. The standalone register-saving wrappers remain in their
+existing MASM files.
+
 Use one newly recovered function per commit, with a subject such as
 `Decompile NAME (0xADDRESS)`. The hooks keep byte parity and the
 progress chart current on every commit; intentional differences are

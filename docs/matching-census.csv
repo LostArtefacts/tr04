@@ -39,10 +39,8 @@ _MovableBlockCollision,src/moveblok.c,0x40a040,881,883,2,56,same-mnemonic-multis
 _FindCDDrive,src/specific/file.c,0x473c10,203,203,0,13,same-size-instruction-change,True,False,20,0
 _setXYZ3,src/specific/specificfx.c,0x485d90,820,816,-4,53,small-size-structural-change,True,True,0,0
 _UpdateLocusts,src/croc.c,0x403870,922,922,0,61,same-size-instruction-change,True,False,0,0
-_JeepFireGrenade,src/jeep.c,0x46a4d0,333,333,0,23,same-size-instruction-change,True,False,0,0
 _CreateSkinningData,src/laraskin.c,0x430f70,2027,2032,5,149,small-size-structural-change,True,False,0,0
 _S_CallInventory2,src/newinv.c,0x43b760,589,589,0,44,same-size-instruction-change,True,False,0,0
-_SW_GetSleepProc,src/specific/swrender.c,0x498c81,13,17,4,1,small-size-structural-change,True,False,0,0
 _WildboarControl,src/wildboar.c,0x41bf60,888,888,0,70,same-size-instruction-change,True,False,0,0
 _ScorpionControl,src/scorpion.c,0x40e800,1996,1996,0,159,same-size-instruction-change,False,False,0,0
 _RefreshCamera,src/control.c,0x44aa20,295,295,0,24,same-mnemonic-multiset,True,False,0,0
@@ -166,15 +164,9 @@ _UpdateGunShells,src/tomb4fx.c,0x439340,615,631,16,240,small-size-structural-cha
 _Spline,src/spotcam.c,0x460320,249,286,37,98,larger-structural-change,True,False,0,0
 _CrossbowHitSwitchType78,src/lara1gun.c,0x42a490,946,957,11,375,small-size-structural-change,True,False,0,0
 _DoCredits,src/gameflow.c,0x452b80,230,230,0,92,same-size-instruction-change,True,False,0,0
-_SW_SleepTick,src/specific/swrender.c,0x493bf1,15,19,4,6,small-size-structural-change,True,False,0,0
 _S_DrawHealthBar,src/specific/loadsave.c,0x47d460,68,70,2,28,same-mnemonic-multiset,True,False,0,0
 _DecodeAnim,src/deltapak.c,0x46ae80,277,272,-5,120,small-size-structural-change,True,False,0,0
 _S_DrawDrawSparks,src/specific/specificfx.c,0x488140,1292,1248,-44,589,larger-structural-change,True,True,0,0
 _LSpline,src/tomb4fx.c,0x43afd0,254,240,-14,130,small-size-structural-change,True,False,0,0
 _PrelightVerts,src/specific/output.c,0x47d900,340,320,-20,176,larger-structural-change,True,False,0,0
 _GetTrackWord,src/deltapak.c,0x46b0d0,107,107,0,60,same-size-instruction-change,True,False,0,0
-_SW_WaitLevelLoad,src/specific/winmain.c,0x48f981,13,13,0,8,same-size-instruction-change,True,False,0,0
-_SW_WaitUntilDXInScene,src/specific/winmain.c,0x48f9a1,13,13,0,8,same-size-instruction-change,True,False,0,0
-_SW_WaitWhileDXInScene,src/specific/winmain.c,0x48f9c1,13,13,0,8,same-size-instruction-change,True,False,0,0
-@SW_WaitUntilInScene@4,src/specific/swrender.c,0x490b21,14,15,1,12,small-size-structural-change,True,False,0,0
-@SW_WaitWhileInScene@4,src/specific/swrender.c,0x490ce1,14,15,1,12,small-size-structural-change,True,False,0,0
