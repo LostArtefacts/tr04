@@ -259,6 +259,25 @@
       ],
       "evidence": "build/reference-contexts/final-summary.json; build/reference-contexts/PROOFS.md",
       "limits": "Real record/call-arity/enum mappings validated; old positional-mask scores are diagnostic only."
+    },
+    {
+      "name": "isolated original frontend versions",
+      "native_compiles": 274,
+      "matrix_compiles": 270,
+      "current_red_translation_units": 63,
+      "red_functions": 170,
+      "new_matches": [],
+      "evidence": "build/frontend-versions/HANDOFF.md; build/frontend-versions/native-proof.json",
+      "finding": "Loaded C1/C1xx8168 and8472 paths/hashes proved with the same C28447. All135 inputs have identical code, masks, data and verdicts."
+    },
+    {
+      "name": "relocation-aware instruction fitness",
+      "saved_objects_reranked": 3942,
+      "red_search_targets": 27,
+      "new_mutation_compiles": 8673,
+      "new_matches": [],
+      "evidence": "build/relocation-fitness/REPORT.txt; build/relocation-fitness/FINAL.json",
+      "finding": "Six saved-object winners change after correcting positional relocation noise;17 search targets improve without reaching exact."
     }
   ],
   "comparison_tool_fix": {
@@ -267,5 +286,14 @@
     "regression_tests": 3,
     "normal_function_records_unchanged": 1553,
     "native_context_objects_independently_verified": 1024
+  },
+  "relocation_fitness": {
+    "tools_commit": "36712ff",
+    "mode": "--fitness relocations",
+    "default_mode": "raw, unchanged",
+    "acceptance": "Only authoritative comparison exacts plus retention/mask/data gates return zero. Semantic distance alone never returns zero.",
+    "normal_function_records_unchanged": 1553,
+    "tests": 15,
+    "native_smokes": "ExactDraw exits0; redProjectWaterVerts exits1; unsupported modes reject before build."
   }
 }
