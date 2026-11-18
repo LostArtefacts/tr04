@@ -613,9 +613,8 @@ void FlameControl(sint16 fx_number)
     sint32 r, g, wh;
 
     fx = &effects[fx_number];
-    i = 14;
-    if (!(wibble & 0xC)) {
-        for (; i >= 0; i--) {
+    for (i = 14; i >= 0; i--) {
+        if (!(wibble & 0xC)) {
             fx->pos.x_pos = 0;
             fx->pos.y_pos = 0;
             fx->pos.z_pos = 0;
@@ -628,7 +627,8 @@ void FlameControl(sint16 fx_number)
         TriggerDynamic(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos, 13, GetRandomControl() & 0x3F, g, (GetRandomControl() & 0x1F) + 96);
     } else {
         r = (GetRandomControl() & 0x3F) + 192;
-        TriggerDynamic(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos, 13, r, (GetRandomControl() & 0x1F) + 96, 0);
+        g = (GetRandomControl() & 0x1F) + 96;
+        TriggerDynamic(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos, 13, r, g, 0);
     }
     if (lara_item->room_number != fx->room_number)
         EffectNewRoom(fx_number, lara_item->room_number);

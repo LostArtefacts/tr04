@@ -268,13 +268,6 @@ match = ["0-30", "32-68", "70", "72", "7E", "88", "8A", "9E-9F", "A1", "A7", "B9
     "F5-F6", "101", "12B", "12D", "176", "1B1-22D", "270", "282", "284-335", "337-34A", "387",
     "38A-38C", "3E3", "3E5-3E6", "3E8", "3EA-3F0", "3F9", "412", "42A", "431"]
 
-[frontier.FlameControl]
-address = 0x00414d80
-size = 340
-compiled = 340
-matching = 306
-match = ["0-F", "18", "1B-1D", "24-25", "27-60", "62-9A", "A2-A3", "AD-153"]
-
 [frontier.ControlRollingBall]
 address = 0x00414fa0
 size = 1753
