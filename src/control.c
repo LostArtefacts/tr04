@@ -796,14 +796,16 @@ void RefreshCamera(sint16 type, sint16 *data)
             data++;
             if (value == camera.last) {
                 camera.number = value;
-                if (camera.timer >= 0 && (camera.type != LOOK_CAMERA && camera.type != COMBAT_CAMERA || camera.fixed[camera.number].flags & 1)) {
-                    camera.type = FIXED_CAMERA;
-                    target_ok = 1;
+                if (camera.timer < 0 || (camera.type == LOOK_CAMERA || camera.type == COMBAT_CAMERA) && !(camera.fixed[camera.number].flags & 1)) {
+                    camera.timer = -1;
+                    target_ok = 0;
                     break;
                 }
-                camera.timer = -1;
+                camera.type = FIXED_CAMERA;
+                target_ok = 1;
+            } else {
+                target_ok = 0;
             }
-            target_ok = 0;
             break;
         case 6:
             if (camera.type != LOOK_CAMERA && camera.type != COMBAT_CAMERA || camera.number == NO_ITEM || camera.fixed[camera.number].flags & 1)

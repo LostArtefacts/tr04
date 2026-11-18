@@ -3,7 +3,6 @@
 # `just frontier`. Written by tools/frontier.py --update or --rebaseline,
 # not by hand.
 
-
 [frontier.BaboonControl]
 address = 0x00401e50
 size = 2444
@@ -712,14 +711,6 @@ match = ["0-9", "90", "9B-9D", "A3", "D5", "DF", "EE-EF", "10D-10E", "119-11A", 
     "378", "37E", "384", "38A", "390", "3B6", "3C7-3D9", "3DB-3E8", "3EA-3EC", "404", "406", "411",
     "413-414", "416", "418-427", "42D-431", "443", "445-479", "47B-47E", "480-4C1", "4C3-4E9",
     "4EB-4F0", "4F2-4F8", "4FA-506", "508-509", "50B-52C"]
-
-[frontier.RefreshCamera]
-address = 0x0044aa20
-size = 295
-compiled = 295
-matching = 272
-match = ["0-7", "15-3B", "3D-40", "42-9D", "9F-A2", "A4-B3", "B5-B9", "BB-BF", "C1-CC", "CE-E1",
-    "E3-E6", "E8-126"]
 
 [frontier.DoRayBox]
 address = 0x0044cdf0
