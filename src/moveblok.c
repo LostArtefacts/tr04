@@ -348,9 +348,11 @@ void MovableBlockCollision(sint16 item_number, ITEM_INFO *laraitem, COLL_INFO *c
     if (input & IN_ACTION && laraitem->current_anim_state == AS_STOP && laraitem->anim_number == ANIM_BREATH &&
         !laraitem->gravity_status && lara.gun_status == LG_NO_ARMS && item->status == ITEM_INACTIVE &&
         item->trigger_flags >= 0 || (lara.IsMoving && lara.GeneralPtr == (void *)item_number)) {
-        room_number = laraitem->room_number;
-        GetFloor(item->pos.x_pos, item->pos.y_pos - 256, item->pos.z_pos, &room_number);
-        if (room_number == item->room_number) {
+        sint16 room_num;
+
+        room_num = laraitem->room_number;
+        GetFloor(item->pos.x_pos, item->pos.y_pos - 256, item->pos.z_pos, &room_num);
+        if (room_num == item->room_number) {
             bounds = GetBoundsAccurate(item);
             MovingBlockBounds[0] = bounds[0] - 100;
             MovingBlockBounds[1] = bounds[1] + 100;
@@ -395,12 +397,12 @@ void MovableBlockCollision(sint16 item_number, ITEM_INFO *laraitem, COLL_INFO *c
             laraitem->goal_anim_state = AS_PULLBLOCK;
         } else
             return;
-        AddActiveItem(item_number);
         item->status = ITEM_ACTIVE;
-        lara.head_x_rot = 0;
+        AddActiveItem(item_number);
         lara.head_y_rot = 0;
-        lara.torso_x_rot = 0;
+        lara.head_x_rot = 0;
         lara.torso_y_rot = 0;
+        lara.torso_x_rot = 0;
         GetLaraJointPos(&pos, 14);
         *(sint32 *)&laraitem->item_flags[0] = pos.x;
         *(sint32 *)&laraitem->item_flags[2] = pos.z;

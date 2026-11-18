@@ -124,14 +124,6 @@ match = ["0-F", "11-13", "15-25", "27-58", "66", "69", "6B-6C", "6E-6F", "71-7F"
     "174-175", "19C", "19E", "28A-28B", "291", "2AE", "2B4-2B5", "2DC-2DD", "2DF-2E0", "309-30B",
     "30D-30F", "311-313"]
 
-[frontier.MovableBlockCollision]
-address = 0x0040a040
-size = 881
-compiled = 883
-matching = 716
-match = ["0-D9", "E0", "F2-FD", "FF-107", "109-164", "166-17C", "17E-1D1", "1D3-212", "214-24C",
-    "24E-260", "262-27C", "27E-288", "28A-2BC", "2BE-2CD", "2CF-2E4", "2E6-2EF"]
-
 [frontier.MummyControl]
 address = 0x0040a9d0
 size = 1244

@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="415.26" height="12" x="0" y="0" class="named"><title>1395 · 89.88%</title></rect>
-<rect width="46.74" height="12" x="415.26" y="0" class="nonmatching"><title>157 · 10.12%</title></rect>
+<rect width="415.56" height="12" x="0" y="0" class="named"><title>1396 · 89.95%</title></rect>
+<rect width="46.44" height="12" x="415.56" y="0" class="nonmatching"><title>156 · 10.05%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">89.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1395</tspan> · <tspan class="nonmatching">157</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1396</tspan> · <tspan class="nonmatching">156</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="321.20" height="12" x="0" y="0" class="named"><title>435 KB · 69.52%</title></rect>
-<rect width="140.80" height="12" x="321.20" y="0" class="nonmatching"><title>191 KB · 30.48%</title></rect>
+<rect width="321.85" height="12" x="0" y="0" class="named"><title>436 KB · 69.66%</title></rect>
+<rect width="140.15" height="12" x="321.85" y="0" class="nonmatching"><title>190 KB · 30.34%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">69.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">435 KB</tspan> · <tspan class="nonmatching">191 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">69.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">436 KB</tspan> · <tspan class="nonmatching">190 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -125,7 +125,7 @@
 <rect width="12" height="12" x="150" y="15" class="named"><title>0x004096d0 MovableBlock (1188 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="15" class="named"><title>0x00409b80 TestBlockPush (416 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="15" class="nonmatching"><title>0x00409d20 TestBlockPull (792 bytes)</title></rect>
-<rect width="12" height="12" x="195" y="15" class="nonmatching"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
+<rect width="12" height="12" x="195" y="15" class="named"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="15" class="named"><title>0x0040a3c0 InitialisePlanetEffect (244 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="15" class="named"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="15" class="named"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
@@ -1801,7 +1801,7 @@
 <rect width="19.52" height="18.08" x="285.45" y="395.88" class="named"><title>0x0044f790 SetRoomBounds (886 bytes)</title></rect>
 <rect width="19.52" height="18.08" x="285.45" y="416.95" class="nonmatching"><title>0x0047fcf0 S_GetObjectBounds (886 bytes)</title></rect>
 <rect width="19.52" height="18" x="285.45" y="438.03" class="nonmatching"><title>0x00422480 TestLaraVault (882 bytes)</title></rect>
-<rect width="19.52" height="17.97" x="285.45" y="459.03" class="nonmatching"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
+<rect width="19.52" height="17.97" x="285.45" y="459.03" class="named"><title>0x0040a040 MovableBlockCollision (881 bytes)</title></rect>
 <rect width="18.72" height="18.68" x="307.98" y="22.83" class="named"><title>0x00416a00 ControlHammer (878 bytes)</title></rect>
 <rect width="18.68" height="18.68" x="329.70" y="22.83" class="named"><title>0x00425650 lara_col_reach (876 bytes)</title></rect>
 <rect width="18.51" height="18.68" x="351.38" y="22.83" class="named"><title>0x0047c6b0 DoStatScreen (868 bytes)</title></rect>
