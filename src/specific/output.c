@@ -1060,8 +1060,8 @@ void RenderLoadPic(sint32 unused)
 {
     sint32 poisoned;
 
-    camera.pos.y = load_cam.y;
     camera.pos.x = load_cam.x;
+    camera.pos.y = load_cam.y;
     camera.pos.z = load_cam.z;
     lara_item->pos.x_pos = camera.pos.x;
     lara_item->pos.y_pos = camera.pos.y;

@@ -1273,13 +1273,6 @@ match = ["0-18", "6F", "73", "7D", "7F", "83", "8F", "93-94", "96-97", "9B", "9F
     "16A", "17F", "1BD-1C0", "1CC-1CF", "1D2-1D5", "256", "2B4-2B7", "2C9-2CC", "2D8-2EF",
     "2FF-300", "303"]
 
-[frontier.RenderLoadPic]
-address = 0x00480570
-size = 388
-compiled = 388
-matching = 8
-match = ["8-C", "10", "B8", "14D"]
-
 [frontier.OmniEffect]
 address = 0x00481e60
 size = 607
