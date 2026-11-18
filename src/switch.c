@@ -35,7 +35,10 @@ sint32 SwitchTrigger(sint16 item_number, sint16 timer)
     }
     if (item->status == ITEM_INACTIVE)
         return 0;
-    return (uint32)(item->flags & IFL_INVISIBLE) >> 8;
+    if (item->flags & IFL_INVISIBLE)
+        return 1;
+    else
+        return 0;
 }
 
 sint32 GetSwitchTrigger(ITEM_INFO *item, sint16 *ItemNos, sint32 AttatchedToSwitch)

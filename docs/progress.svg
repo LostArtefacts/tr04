@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="413.48" height="12" x="0" y="0" class="named"><title>1389 · 89.50%</title></rect>
-<rect width="48.52" height="12" x="413.48" y="0" class="nonmatching"><title>163 · 10.50%</title></rect>
+<rect width="413.78" height="12" x="0" y="0" class="named"><title>1390 · 89.56%</title></rect>
+<rect width="48.22" height="12" x="413.78" y="0" class="nonmatching"><title>162 · 10.44%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">89.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1389</tspan> · <tspan class="nonmatching">163</tspan></text>
+<text text-anchor="end" x="642" y="7.50">89.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1390</tspan> · <tspan class="nonmatching">162</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="319.92" height="12" x="0" y="0" class="named"><title>433 KB · 69.25%</title></rect>
-<rect width="142.08" height="12" x="319.92" y="0" class="nonmatching"><title>192 KB · 30.75%</title></rect>
+<rect width="320.07" height="12" x="0" y="0" class="named"><title>433 KB · 69.28%</title></rect>
+<rect width="141.93" height="12" x="320.07" y="0" class="nonmatching"><title>192 KB · 30.72%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">69.2%</text>
+<text text-anchor="end" x="642" y="24.50">69.3%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">433 KB</tspan> · <tspan class="nonmatching">192 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -1024,7 +1024,7 @@
 <rect width="12" height="12" x="135" y="285" class="nonmatching"><title>0x00460420 InitialiseSpotCam (1833 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="285" class="named"><title>0x00460b50 SetSplineData (285 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="285" class="nonmatching"><title>0x00460c70 CalculateSpotCams (3744 bytes)</title></rect>
-<rect width="12" height="12" x="180" y="285" class="nonmatching"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
+<rect width="12" height="12" x="180" y="285" class="named"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="285" class="named"><title>0x00461bd0 GetSwitchTrigger (195 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="285" class="named"><title>0x00461ca0 TestTriggersAtXYZ (67 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="285" class="named"><title>0x00461cf0 SwitchControl (111 bytes)</title></rect>
@@ -2368,7 +2368,7 @@
 <rect width="9.07" height="8.47" x="523.20" y="229.68" class="named"><title>0x00415680 RollingBallCollision (193 bytes)</title></rect>
 <rect width="9.07" height="8.47" x="535.27" y="229.68" class="named"><title>0x0044a0d0 AlterFloorHeight (193 bytes)</title></rect>
 <rect width="9.07" height="8.47" x="547.35" y="229.68" class="named"><title>0x00484850 AddLineClippedSorted (193 bytes)</title></rect>
-<rect width="9.03" height="8.47" x="559.42" y="229.68" class="nonmatching"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
+<rect width="9.03" height="8.47" x="559.42" y="229.68" class="named"><title>0x00461b10 SwitchTrigger (192 bytes)</title></rect>
 <rect width="8.98" height="8.47" x="571.44" y="229.68" class="named"><title>0x00427ef0 lara_col_turn_r (191 bytes)</title></rect>
 <rect width="8.98" height="8.47" x="583.42" y="229.68" class="named"><title>0x004398b0 LaraBubbles (191 bytes)</title></rect>
 <rect width="8.93" height="8.47" x="595.40" y="229.68" class="named"><title>0x00416e40 Control4xFloorRoofBlade (190 bytes)</title></rect>

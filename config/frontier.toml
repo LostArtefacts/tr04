@@ -870,13 +870,6 @@ match = ["0-A", "5C", "DF", "F8", "10E", "123", "144", "15C", "178", "189", "194
     "D60-D61", "D9E", "DD2", "DEE", "DF3-DF5", "DF7-DF9", "E06-E07", "E0B", "E37-E39", "E3E-E41",
     "E43-E46", "E48-E4B", "E4D-E51", "E53-E55", "E66-E67"]
 
-[frontier.SwitchTrigger]
-address = 0x00461b10
-size = 192
-compiled = 192
-matching = 185
-match = ["0-B1", "B4-B5", "BA", "BC-BF"]
-
 [frontier.DrawChar]
 address = 0x00463de0
 size = 591
