@@ -967,7 +967,7 @@ sint32 MoveLaraPosition(PHD_VECTOR *v, ITEM_INFO *item, ITEM_INFO *l)
 {
     PHD_3DPOS pos;
     FLOOR_INFO *floor;
-    sint32 height;
+    sint32 dist, x, *mptr, height, y, z;
     sint16 room_number;
 
     pos.x_rot = item->pos.x_rot;
@@ -975,9 +975,10 @@ sint32 MoveLaraPosition(PHD_VECTOR *v, ITEM_INFO *item, ITEM_INFO *l)
     pos.z_rot = item->pos.z_rot;
     phd_PushUnitMatrix();
     ((void (*)(sint32, sint32, sint32))phd_RotYXZ)(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
-    pos.x_pos = item->pos.x_pos + ((phd_mxptr[M00] * v->x + phd_mxptr[M01] * v->y + phd_mxptr[M02] * v->z) >> W2V_SHIFT);
-    pos.y_pos = item->pos.y_pos + ((phd_mxptr[M10] * v->x + phd_mxptr[M11] * v->y + phd_mxptr[M12] * v->z) >> W2V_SHIFT);
-    pos.z_pos = item->pos.z_pos + ((phd_mxptr[M20] * v->x + phd_mxptr[M21] * v->y + phd_mxptr[M22] * v->z) >> W2V_SHIFT);
+    mptr = phd_mxptr;
+    pos.x_pos = item->pos.x_pos + ((mptr[M00] * v->x + mptr[M01] * v->y + mptr[M02] * v->z) >> W2V_SHIFT);
+    pos.y_pos = item->pos.y_pos + ((mptr[M10] * v->x + mptr[M11] * v->y + mptr[M12] * v->z) >> W2V_SHIFT);
+    pos.z_pos = item->pos.z_pos + ((mptr[M20] * v->x + mptr[M21] * v->y + mptr[M22] * v->z) >> W2V_SHIFT);
     phd_PopMatrix();
     if (item->object_number == FLARE_ITEM || item->object_number == BURNING_TORCH_ITEM || item->object_number == CLOCKWORK_BEETLE) {
         room_number = l->room_number;
@@ -990,7 +991,11 @@ sint32 MoveLaraPosition(PHD_VECTOR *v, ITEM_INFO *item, ITEM_INFO *l)
             }
             return 0;
         }
-        if (phd_sqrt(SQUARE(pos.x_pos - l->pos.x_pos) + SQUARE(pos.y_pos - l->pos.y_pos) + SQUARE(pos.z_pos - l->pos.z_pos)) < 128)
+        x = pos.x_pos - l->pos.x_pos;
+        y = pos.y_pos - l->pos.y_pos;
+        z = pos.z_pos - l->pos.z_pos;
+        dist = phd_sqrt(x * x + y * y + z * z);
+        if (dist < 128)
             return 1;
     }
     return Move3DPosTo3DPos(&l->pos, &pos, 12, 364);

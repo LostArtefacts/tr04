@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="414.67" height="12" x="0" y="0" class="named"><title>1393 · 89.76%</title></rect>
-<rect width="47.33" height="12" x="414.67" y="0" class="nonmatching"><title>159 · 10.24%</title></rect>
+<rect width="414.97" height="12" x="0" y="0" class="named"><title>1394 · 89.82%</title></rect>
+<rect width="47.03" height="12" x="414.97" y="0" class="nonmatching"><title>158 · 10.18%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">89.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1393</tspan> · <tspan class="nonmatching">159</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1394</tspan> · <tspan class="nonmatching">158</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="320.62" height="12" x="0" y="0" class="named"><title>434 KB · 69.40%</title></rect>
-<rect width="141.38" height="12" x="320.62" y="0" class="nonmatching"><title>191 KB · 30.60%</title></rect>
+<rect width="320.95" height="12" x="0" y="0" class="named"><title>435 KB · 69.47%</title></rect>
+<rect width="141.05" height="12" x="320.95" y="0" class="nonmatching"><title>191 KB · 30.53%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">69.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">434 KB</tspan> · <tspan class="nonmatching">191 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">69.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">435 KB</tspan> · <tspan class="nonmatching">191 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -787,7 +787,7 @@
 <rect width="12" height="12" x="330" y="210" class="named"><title>0x00447f30 TestLaraPosition (311 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="210" class="named"><title>0x00448070 AlignLaraPosition (208 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="210" class="named"><title>0x00448140 Move3DPosTo3DPos (664 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="210" class="nonmatching"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="210" class="named"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="210" class="named"><title>0x004485a0 GenericSphereBoxCollision (661 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="210" class="named"><title>0x00448840 GenericDeadlyBoundingBoxCollision (352 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="210" class="named"><title>0x004489a0 TestBoundsCollide2 (222 bytes)</title></rect>
@@ -2024,7 +2024,7 @@
 <rect width="13.12" height="13.57" x="449.06" y="117.90" class="named"><title>0x00416390 ControlRaisingBlock (447 bytes)</title></rect>
 <rect width="13.12" height="13.57" x="465.18" y="117.90" class="named"><title>0x004552b0 EnableBaddieAI (447 bytes)</title></rect>
 <rect width="13.09" height="13.57" x="481.30" y="117.90" class="named"><title>0x0042cd20 LaraDoClimbLeftRight (446 bytes)</title></rect>
-<rect width="13.03" height="13.57" x="497.39" y="117.90" class="nonmatching"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
+<rect width="13.03" height="13.57" x="497.39" y="117.90" class="named"><title>0x004483e0 MoveLaraPosition (444 bytes)</title></rect>
 <rect width="13" height="13.57" x="513.42" y="117.90" class="named"><title>0x00413f90 DartEmitterControl (443 bytes)</title></rect>
 <rect width="12.91" height="13.57" x="529.42" y="117.90" class="named"><title>0x0045bdf0 sgRestoreLevel (440 bytes)</title></rect>
 <rect width="12.91" height="13.57" x="545.34" y="117.90" class="named"><title>0x0046e180 ACMEmulateCDPlay (440 bytes)</title></rect>
