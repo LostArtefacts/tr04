@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="414.37" height="12" x="0" y="0" class="named"><title>1392 · 89.69%</title></rect>
-<rect width="47.63" height="12" x="414.37" y="0" class="nonmatching"><title>160 · 10.31%</title></rect>
+<rect width="414.67" height="12" x="0" y="0" class="named"><title>1393 · 89.76%</title></rect>
+<rect width="47.33" height="12" x="414.67" y="0" class="nonmatching"><title>159 · 10.24%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">89.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1392</tspan> · <tspan class="nonmatching">160</tspan></text>
+<text text-anchor="end" x="642" y="7.50">89.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1393</tspan> · <tspan class="nonmatching">159</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="320.57" height="12" x="0" y="0" class="named"><title>434 KB · 69.39%</title></rect>
-<rect width="141.43" height="12" x="320.57" y="0" class="nonmatching"><title>191 KB · 30.61%</title></rect>
+<rect width="320.62" height="12" x="0" y="0" class="named"><title>434 KB · 69.40%</title></rect>
+<rect width="141.38" height="12" x="320.62" y="0" class="nonmatching"><title>191 KB · 30.60%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">69.4%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">434 KB</tspan> · <tspan class="nonmatching">191 KB</tspan></text>
@@ -1327,7 +1327,7 @@
 <rect width="12" height="12" x="180" y="375" class="nonmatching"><title>0x0047ce10 DoBar (1479 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="375" class="named"><title>0x0047d3e0 S_DrawDashBar (57 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="375" class="named"><title>0x0047d420 S_DrawAirBar (63 bytes)</title></rect>
-<rect width="12" height="12" x="225" y="375" class="nonmatching"><title>0x0047d460 S_DrawHealthBar (68 bytes)</title></rect>
+<rect width="12" height="12" x="225" y="375" class="named"><title>0x0047d460 S_DrawHealthBar (68 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="375" class="named"><title>0x0047d4b0 S_InitLoadBar (20 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="375" class="named"><title>0x0047d4d0 S_LoadBar (212 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="375" class="named"><title>0x0047d5b0 S_InitialisePolyList (217 bytes)</title></rect>
@@ -2804,7 +2804,7 @@
 <rect width="5.38" height="5.04" x="619.57" y="463.93" class="named"><title>0x00450690 phd_TranslateRel_ID (68 bytes)</title></rect>
 <rect width="5.38" height="5.04" x="619.57" y="471.96" class="named"><title>0x00454360 CreateItem (68 bytes)</title></rect>
 <rect width="5.24" height="5.16" x="627.95" y="349.70" class="named"><title>0x00455f30 BridgeTilt1Floor (68 bytes)</title></rect>
-<rect width="5.24" height="5.16" x="636.19" y="349.70" class="nonmatching"><title>0x0047d460 S_DrawHealthBar (68 bytes)</title></rect>
+<rect width="5.24" height="5.16" x="636.19" y="349.70" class="named"><title>0x0047d460 S_DrawHealthBar (68 bytes)</title></rect>
 <rect width="5.24" height="5.16" x="644.44" y="349.70" class="named"><title>0x0048ef20 WinClose (68 bytes)</title></rect>
 <rect width="5.17" height="5.16" x="652.68" y="349.70" class="named"><title>0x004379f0 draw_right_gun (67 bytes)</title></rect>
 <rect width="5.17" height="5.16" x="660.85" y="349.70" class="named"><title>0x00437a40 draw_left_gun (67 bytes)</title></rect>

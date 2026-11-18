@@ -1198,13 +1198,6 @@ match = ["0-D", "F-6F", "71-73", "75-7D", "7F-82", "84", "BC-BF", "133-134", "14
     "525", "532-535", "55A-55E", "560", "562-565", "567", "569-56B", "56E", "586", "58A", "58E",
     "59D", "5A8", "5AB"]
 
-[frontier.S_DrawHealthBar]
-address = 0x0047d460
-size = 68
-compiled = 70
-matching = 13
-match = ["0-7", "F-10", "14", "2A", "38"]
-
 [frontier.PrelightVerts]
 address = 0x0047d900
 size = 340
