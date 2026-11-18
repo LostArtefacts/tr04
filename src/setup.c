@@ -1623,8 +1623,8 @@ void GetAIPickups(void)
 void BuildOutsideTable(void)
 {
     ROOM_INFO *r;
-    uint8 *pTable, *oTable, *cTable;
-    sint32 max_slots, roomx, roomy, cont, offset, z, z2;
+    uint8 *oTable, *cTable;
+    sint32 max_slots, roomx, roomy, offset, z, z2;
     sint32 i, x, y, rx, ry, j;
     char flipped[256];
 
@@ -1647,17 +1647,17 @@ void BuildOutsideTable(void)
                 if (!flipped[i]) {
                     roomx = (r->z >> 10) + 1;
                     roomy = (r->x >> 10) + 1;
-                    cont = 0;
+                    j = 0;
                     for (ry = 0; ry < 4; ry++) {
                         for (rx = 0; rx < 4; rx++) {
                             if (x + rx >= roomx && x + rx < roomx + r->x_size - 2 && y + ry >= roomy && y + ry < roomy + r->y_size - 2) {
-                                cont = 1;
+                                j = 1;
                                 break;
                             }
                         }
                     }
-                    if (cont) {
-                        pTable = &OutsideRoomTable[64 * ((x >> 2) + 27 * (y >> 2))];
+                    if (j) {
+                        uint8 *pTable = &OutsideRoomTable[64 * ((x >> 2) + 27 * (y >> 2))];
                         for (j = 0; j < 64; j++) {
                             if (pTable[j] == 0xFF) {
                                 pTable[j] = i;
@@ -1674,6 +1674,8 @@ void BuildOutsideTable(void)
     oTable = OutsideRoomTable;
     for (y = 0; y < 27; y++) {
         for (x = 0; x < 27; x++) {
+            uint8 *pTable;
+
             z = 0;
             offset = x + y * 27;
             pTable = &OutsideRoomTable[64 * (x + 27 * y)];
@@ -1697,10 +1699,8 @@ void BuildOutsideTable(void)
                 }
                 if (cTable >= oTable) {
                     OutsideRoomOffsets[offset] = (sint16)((sint32)oTable - (sint32)OutsideRoomTable);
-                    do {
+                    for (; z; z--)
                         *oTable++ = *pTable++;
-                        z--;
-                    } while (z);
                     *oTable++ = 0xFF;
                 }
             }
