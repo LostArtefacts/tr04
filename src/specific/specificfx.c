@@ -1739,6 +1739,7 @@ void DrawLaserSightSprite(void)
     sint32 *Z;
     sint16 *XY;
     sint16 *pos;
+    sint32 *mptr;
     float perspz, u1, v1, u2;
 
     XY = (sint16 *)&scratchpad[0];
@@ -1746,12 +1747,13 @@ void DrawLaserSightSprite(void)
     pos = (sint16 *)&scratchpad[512];
     phd_PushMatrix();
     phd_TranslateAbs(lara_item->pos.x_pos, lara_item->pos.y_pos, lara_item->pos.z_pos);
+    mptr = phd_mxptr;
     pos[0] = (sint16)(LaserSightX - lara_item->pos.x_pos);
     pos[1] = (sint16)(LaserSightY - lara_item->pos.y_pos);
     pos[2] = (sint16)(LaserSightZ - lara_item->pos.z_pos);
-    vec.x = phd_mxptr[M00] * pos[0] + phd_mxptr[M01] * pos[1] + phd_mxptr[M02] * pos[2] + phd_mxptr[M03];
-    vec.y = phd_mxptr[M10] * pos[0] + phd_mxptr[M11] * pos[1] + phd_mxptr[M12] * pos[2] + phd_mxptr[M13];
-    vec.z = phd_mxptr[M20] * pos[0] + phd_mxptr[M21] * pos[1] + phd_mxptr[M22] * pos[2] + phd_mxptr[M23];
+    vec.x = mptr[M00] * pos[0] + mptr[M01] * pos[1] + mptr[M02] * pos[2] + mptr[M03];
+    vec.y = mptr[M10] * pos[0] + mptr[M11] * pos[1] + mptr[M12] * pos[2] + mptr[M13];
+    vec.z = mptr[M20] * pos[0] + mptr[M21] * pos[1] + mptr[M22] * pos[2] + mptr[M23];
     perspz = f_persp / (float)vec.z;
     XY[0] = (sint16)(float)(vec.x * perspz + f_centerx);
     XY[1] = (sint16)(float)(vec.y * perspz + f_centery);
