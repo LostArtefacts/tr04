@@ -446,13 +446,6 @@ compiled = 359
 matching = 16
 match = ["0-2", "10-11", "5F-61", "6F", "96", "C1", "D3", "F3", "F5", "13A", "15E"]
 
-[frontier.UpdateDrips]
-address = 0x00439f80
-size = 254
-compiled = 254
-matching = 54
-match = ["0-4", "6-8", "D", "1F", "63", "7B", "AA-CC", "CE-CF", "D1-D2", "D4-D5", "F6"]
-
 [frontier.S_DrawSparks]
 address = 0x0043a1b0
 size = 1240

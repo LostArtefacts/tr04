@@ -1138,12 +1138,15 @@ void UpdateDrips(void)
     sint32 h, i;
 
     drip = Drips;
-    for (i = 0; i < 32; i++, drip++) {
-        if (!drip->On)
+    for (i = 0; i < 32; i++) {
+        if (!drip->On) {
+            drip++;
             continue;
+        }
         drip->Life--;
         if (!drip->Life) {
             drip->On = 0;
+            drip++;
             continue;
         }
         if (drip->Life < 16) {
@@ -1163,6 +1166,7 @@ void UpdateDrips(void)
         h = GetHeight(floor, drip->x, drip->y, drip->z);
         if (drip->y > h)
             drip->On = 0;
+        drip++;
     }
 }
 
