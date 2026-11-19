@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="422.11" height="12" x="0" y="0" class="named"><title>1418 · 91.37%</title></rect>
-<rect width="39.89" height="12" x="422.11" y="0" class="nonmatching"><title>134 · 8.63%</title></rect>
+<rect width="422.41" height="12" x="0" y="0" class="named"><title>1419 · 91.43%</title></rect>
+<rect width="39.59" height="12" x="422.41" y="0" class="nonmatching"><title>133 · 8.57%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">91.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1418</tspan> · <tspan class="nonmatching">134</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1419</tspan> · <tspan class="nonmatching">133</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="334.70" height="12" x="0" y="0" class="named"><title>453 KB · 72.45%</title></rect>
-<rect width="127.30" height="12" x="334.70" y="0" class="nonmatching"><title>172 KB · 27.55%</title></rect>
+<rect width="335.10" height="12" x="0" y="0" class="named"><title>454 KB · 72.53%</title></rect>
+<rect width="126.90" height="12" x="335.10" y="0" class="nonmatching"><title>172 KB · 27.47%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">72.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">453 KB</tspan> · <tspan class="nonmatching">172 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">72.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">454 KB</tspan> · <tspan class="nonmatching">172 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1206,7 +1206,7 @@
 <rect width="12" height="12" x="615" y="330" class="named"><title>0x0046fe60 CLNoFMV (30 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="330" class="named"><title>0x0046fe80 DXSetupDialog (79 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="330" class="named"><title>0x0046fed0 InitDSDevice (195 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="330" class="nonmatching"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="330" class="named"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="330" class="named"><title>0x004701c0 InitResolution (1057 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="330" class="named"><title>0x004705f0 InitD3DDevice (186 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="330" class="named"><title>0x004706b0 InitDDDevice (228 bytes)</title></rect>
@@ -1946,7 +1946,7 @@
 <rect width="14.41" height="15.09" x="578.26" y="83.16" class="named"><title>0x004094a0 ClearMovableBlockSplitters (546 bytes)</title></rect>
 <rect width="14.30" height="15.09" x="595.66" y="83.16" class="named"><title>0x0049bb90 SW_SpanGTPAddInt (542 bytes)</title></rect>
 <rect width="14.22" height="15.09" x="612.97" y="83.16" class="named"><title>0x00431e90 LaraTestWaterClimbOut (539 bytes)</title></rect>
-<rect width="14.22" height="15.09" x="630.19" y="83.16" class="nonmatching"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
+<rect width="14.22" height="15.09" x="630.19" y="83.16" class="named"><title>0x0046ffa0 InitTFormats (539 bytes)</title></rect>
 <rect width="14.17" height="15.09" x="647.41" y="83.16" class="named"><title>0x0044c9c0 IsRoomOutside (537 bytes)</title></rect>
 <rect width="14.14" height="15.09" x="664.58" y="83.16" class="named"><title>0x0041c4c0 TriggerWraithEffect (536 bytes)</title></rect>
 <rect width="14.12" height="15.09" x="681.72" y="83.16" class="named"><title>0x0042ca60 LaraTestClimbUpPos (535 bytes)</title></rect>

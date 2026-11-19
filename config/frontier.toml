@@ -850,14 +850,6 @@ match = ["0-2C", "2E-35", "37-3F", "41-43", "45-47", "49-4B", "4D-51", "53-58", 
     "1438", "143A", "143E-1441", "1461", "146A", "1473-1476", "14A9-14AA", "14AC-14AD",
     "14AF-14B0", "14B2-14B3", "14B5-14B6", "14B8-14B9", "14BB-14BC", "14CD", "1507"]
 
-[frontier.InitTFormats]
-address = 0x0046ffa0
-size = 539
-compiled = 539
-matching = 506
-match = ["0-94", "96-9A", "9C-9E", "A0", "A2", "A4-A6", "A8-A9", "AB-B2", "B4", "B6", "B8", "C5",
-    "D0", "D2-21A"]
-
 [frontier.DXSetupDlgProc]
 address = 0x00470830
 size = 2030

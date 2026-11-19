@@ -58,26 +58,25 @@ void InitDSDevice(HWND dlg, HWND hwnd)
 
 void InitTFormats(HWND dlg, HWND hwnd)
 {
-    DXTEXTUREINFO *tex;
-    sint32 i;
-    sint32 bpp;
-    sint32 r;
-    sint32 g;
     sint32 b;
-    sint32 a;
-    char buffer[40];
+    sint32 r;
+    sint32 i;
     uint8 software;
+    sint32 bpp;
+    sint32 g;
+    char buffer[40];
 
     SendMessage(hwnd, CB_RESETCONTENT, 0, 0);
     EnableWindow(GetDlgItem(dlg, 1006), 1);
     software = SendMessage(GetDlgItem(dlg, 1011), BM_GETCHECK, 0, 0) != 0;
     for (i = 0; i < App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].nTextureInfos; i++) {
-        tex = &App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].TextureInfos[i];
-        r = tex->rbpp;
-        a = tex->abpp;
-        bpp = tex->bpp;
-        b = tex->bbpp;
-        g = tex->gbpp;
+        sint32 a;
+
+        r = App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].TextureInfos[i].rbpp;
+        bpp = App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].TextureInfos[i].bpp;
+        b = App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].TextureInfos[i].bbpp;
+        g = App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].TextureInfos[i].gbpp;
+        a = App.DXInfo.DDInfo[nDDDevice].D3DDevices[nD3DDevice].TextureInfos[i].abpp;
         wsprintf(buffer, "%d %s RGBA %d%d%d%d", bpp, SCRIPT_TEXT(TXT_Bit), r, g, b, a);
         SendMessage(hwnd, CB_ADDSTRING, 0, (LPARAM)buffer);
         if (software) {
