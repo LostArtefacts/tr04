@@ -710,14 +710,16 @@ void UpdateGunShells(void)
     sint32 ox, oy, oz, c, h, i, oroom;
 
     shell = Gunshells;
-    for (i = 24; i > 0; i--, shell++) {
-        if (!shell->counter)
+    for (i = 24; i > 0; i--) {
+        if (!shell->counter) {
+            shell++;
             continue;
+        }
+        shell->counter--;
         ox = shell->pos.x_pos;
         oy = shell->pos.y_pos;
         oz = shell->pos.z_pos;
         oroom = shell->room_number;
-        shell->counter--;
         if (room[oroom].flags & ROOM_UNDERWATER) {
             shell->fallspeed++;
             if (shell->fallspeed > 8)
@@ -730,14 +732,15 @@ void UpdateGunShells(void)
         shell->pos.z_rot += 4186;
         shell->pos.y_rot += 182 * shell->speed;
         shell->pos.x_rot += 182 * ((shell->speed >> 1) + 7);
+        shell->pos.z_pos += (rcossin_tbl[((shell->DirXrot >> 3) & 0x1FFE) + 1] << 2) * shell->speed >> (W2V_SHIFT + 1);
         shell->pos.x_pos += (rcossin_tbl[(shell->DirXrot >> 3) & 0x1FFE] << 2) * shell->speed >> (W2V_SHIFT + 1);
         shell->pos.y_pos += shell->fallspeed;
-        shell->pos.z_pos += (rcossin_tbl[((shell->DirXrot >> 3) & 0x1FFE) + 1] << 2) * shell->speed >> (W2V_SHIFT + 1);
         floor = GetFloor(shell->pos.x_pos, shell->pos.y_pos, shell->pos.z_pos, &shell->room_number);
         if (room[shell->room_number].flags & ROOM_UNDERWATER && !(room[oroom].flags & ROOM_UNDERWATER)) {
             TriggerSmallSplash(shell->pos.x_pos, room[shell->room_number].maxceiling, shell->pos.z_pos, 8);
             SetupRipple(shell->pos.x_pos, room[shell->room_number].maxceiling, shell->pos.z_pos, (GetRandomControl() & 3) + 8, 2);
             shell->fallspeed >>= 5;
+            shell++;
             continue;
         }
         c = GetCeiling(floor, shell->pos.x_pos, shell->pos.y_pos, shell->pos.z_pos);
@@ -746,6 +749,7 @@ void UpdateGunShells(void)
             shell->speed -= 4;
             if (shell->speed < 8) {
                 shell->counter = 0;
+                shell++;
                 continue;
             }
             shell->pos.y_pos = c;
@@ -757,6 +761,7 @@ void UpdateGunShells(void)
             shell->speed -= 8;
             if (shell->speed < 8) {
                 shell->counter = 0;
+                shell++;
                 continue;
             }
             if (oy > h) {
@@ -767,6 +772,7 @@ void UpdateGunShells(void)
                 shell->fallspeed = -shell->fallspeed >> 1;
             shell->pos.y_pos = oy;
         }
+        shell++;
     }
 }
 

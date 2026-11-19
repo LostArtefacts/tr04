@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="420.32" height="12" x="0" y="0" class="named"><title>1412 · 90.98%</title></rect>
-<rect width="41.68" height="12" x="420.32" y="0" class="nonmatching"><title>140 · 9.02%</title></rect>
+<rect width="420.62" height="12" x="0" y="0" class="named"><title>1413 · 91.04%</title></rect>
+<rect width="41.38" height="12" x="420.62" y="0" class="nonmatching"><title>139 · 8.96%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">91.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1412</tspan> · <tspan class="nonmatching">140</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1413</tspan> · <tspan class="nonmatching">139</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="331.81" height="12" x="0" y="0" class="named"><title>449 KB · 71.82%</title></rect>
-<rect width="130.19" height="12" x="331.81" y="0" class="nonmatching"><title>176 KB · 28.18%</title></rect>
+<rect width="332.26" height="12" x="0" y="0" class="named"><title>450 KB · 71.92%</title></rect>
+<rect width="129.74" height="12" x="332.26" y="0" class="nonmatching"><title>176 KB · 28.08%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">71.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">449 KB</tspan> · <tspan class="nonmatching">176 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">71.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">450 KB</tspan> · <tspan class="nonmatching">176 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -628,7 +628,7 @@
 <rect width="12" height="12" x="195" y="165" class="named"><title>0x00438f00 TriggerBlood (350 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="165" class="named"><title>0x00439060 GetFreeGunshell (131 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="165" class="named"><title>0x004390f0 TriggerGunShell (588 bytes)</title></rect>
-<rect width="12" height="12" x="240" y="165" class="nonmatching"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
+<rect width="12" height="12" x="240" y="165" class="named"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="165" class="named"><title>0x004395b0 DrawGunshells (162 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="165" class="named"><title>0x00439660 TriggerSmallSplash (274 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="165" class="named"><title>0x00439780 GetFreeBubble (98 bytes)</title></rect>
@@ -1893,7 +1893,7 @@
 <rect width="15.51" height="15.87" x="403.49" y="64.29" class="named"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>
 <rect width="15.51" height="15.87" x="422" y="64.29" class="nonmatching"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
 <rect width="15.51" height="15.87" x="440.51" y="64.29" class="named"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
-<rect width="15.44" height="15.87" x="459.02" y="64.29" class="nonmatching"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
+<rect width="15.44" height="15.87" x="459.02" y="64.29" class="named"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
 <rect width="15.41" height="15.87" x="477.46" y="64.29" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>
 <rect width="15.39" height="15.87" x="495.87" y="64.29" class="named"><title>0x00450f10 mRotBoundingBoxNoPersp (613 bytes)</title></rect>
 <rect width="15.36" height="15.87" x="514.26" y="64.29" class="named"><title>0x0040e3c0 UpdateScarabs (612 bytes)</title></rect>
