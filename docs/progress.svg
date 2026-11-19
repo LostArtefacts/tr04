@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="419.13" height="12" x="0" y="0" class="named"><title>1408 · 90.72%</title></rect>
-<rect width="42.87" height="12" x="419.13" y="0" class="nonmatching"><title>144 · 9.28%</title></rect>
+<rect width="419.43" height="12" x="0" y="0" class="named"><title>1409 · 90.79%</title></rect>
+<rect width="42.57" height="12" x="419.43" y="0" class="nonmatching"><title>143 · 9.21%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">90.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1408</tspan> · <tspan class="nonmatching">144</tspan></text>
+<text text-anchor="end" x="642" y="7.50">90.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1409</tspan> · <tspan class="nonmatching">143</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="330.28" height="12" x="0" y="0" class="named"><title>447 KB · 71.49%</title></rect>
-<rect width="131.72" height="12" x="330.28" y="0" class="nonmatching"><title>178 KB · 28.51%</title></rect>
+<rect width="331.09" height="12" x="0" y="0" class="named"><title>448 KB · 71.66%</title></rect>
+<rect width="130.91" height="12" x="331.09" y="0" class="nonmatching"><title>177 KB · 28.34%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">71.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">447 KB</tspan> · <tspan class="nonmatching">178 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">71.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">448 KB</tspan> · <tspan class="nonmatching">177 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -87,7 +87,7 @@
 <rect width="12" height="12" x="330" y="0" class="named"><title>0x00403c90 TriggerCrocgodMissile (159 bytes)</title></rect>
 <rect width="12" height="12" x="345" y="0" class="named"><title>0x00403d30 TriggerCrocgodMissileFlame (405 bytes)</title></rect>
 <rect width="12" height="12" x="360" y="0" class="named"><title>0x00403ed0 InitialiseCrocgod (88 bytes)</title></rect>
-<rect width="12" height="12" x="375" y="0" class="nonmatching"><title>0x00403f30 CrocgodControl (1092 bytes)</title></rect>
+<rect width="12" height="12" x="375" y="0" class="named"><title>0x00403f30 CrocgodControl (1092 bytes)</title></rect>
 <rect width="12" height="12" x="390" y="0" class="named"><title>0x00404380 InitialiseDeathSlide (70 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="0" class="named"><title>0x004043d0 DeathSlideCollision (209 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="0" class="named"><title>0x004044b0 ControlDeathSlide (702 bytes)</title></rect>
@@ -1751,7 +1751,7 @@
 <rect width="20.92" height="21.10" x="261.53" y="173.65" class="nonmatching"><title>0x00487260 S_DrawSmokeSparks (1108 bytes)</title></rect>
 <rect width="20.92" height="20.98" x="261.53" y="197.74" class="named"><title>0x00440a40 CalculateTarget (1102 bytes)</title></rect>
 <rect width="20.92" height="20.93" x="261.53" y="221.73" class="nonmatching"><title>0x004749c0 LoadRooms (1099 bytes)</title></rect>
-<rect width="20.92" height="20.79" x="261.53" y="245.65" class="nonmatching"><title>0x00403f30 CrocgodControl (1092 bytes)</title></rect>
+<rect width="20.92" height="20.79" x="261.53" y="245.65" class="named"><title>0x00403f30 CrocgodControl (1092 bytes)</title></rect>
 <rect width="20.92" height="20.64" x="261.53" y="269.45" class="nonmatching"><title>0x00485950 setXYZ4 (1084 bytes)</title></rect>
 <rect width="20.92" height="20.53" x="261.53" y="293.09" class="named"><title>0x0048eff0 WinProcessCommands (1078 bytes)</title></rect>
 <rect width="20.92" height="20.51" x="261.53" y="316.61" class="named"><title>0x00435130 TriggerFireFlame (1077 bytes)</title></rect>

@@ -27,14 +27,6 @@ matching = 648
 match = ["0-171", "1B2-1B3", "1B9-1BA", "1C5-1C6", "1E4-1E5", "1F3", "1F5", "211", "225", "227",
     "235", "292-399"]
 
-[frontier.CrocgodControl]
-address = 0x00403f30
-size = 1092
-compiled = 1072
-matching = 42
-match = ["0-1", "3-6", "8-14", "17-1C", "80", "8C", "9D", "AF", "116", "157-158", "169-16A", "20A",
-    "22C", "318", "399", "3A0", "3F0", "403", "41B"]
-
 [frontier.DemigodControl]
 address = 0x00404ea0
 size = 2424

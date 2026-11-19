@@ -529,10 +529,8 @@ void CrocgodControl(sint16 item_number)
 {
     ITEM_INFO *item;
     CREATURE_INFO *crocgod;
-    AI_INFO info;
-    PHD_3DPOS mPos;
-    PHD_VECTOR pos;
-    PHD_VECTOR pos2;
+    AI_INFO info, larainfo;
+    sint32 dx, dz;
     sint32 frame;
     sint16 angles[2];
     sint16 angle, torso, neck;
@@ -554,8 +552,20 @@ void CrocgodControl(sint16 item_number)
         item->pos.y_pos -= 768;
         CreatureAIInfo(item, &info);
         item->pos.y_pos += 768;
-        if (crocgod->enemy != lara_item)
-            phd_atan(lara_item->pos.z_pos - item->pos.z_pos, lara_item->pos.x_pos - item->pos.x_pos);
+        if (crocgod->enemy == lara_item) {
+            larainfo.angle = info.angle;
+            larainfo.ahead = info.ahead;
+            larainfo.distance = info.distance;
+        } else {
+            dz = lara_item->pos.z_pos - item->pos.z_pos;
+            dx = lara_item->pos.x_pos - item->pos.x_pos;
+            larainfo.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+            if (larainfo.angle > -0x4000 && larainfo.angle < 0x4000)
+                larainfo.ahead = 1;
+            else
+                larainfo.ahead = 0;
+            larainfo.distance = SQUARE(dx) + SQUARE(dz);
+        }
         GetCreatureMood(item, &info, 1);
         CreatureMood(item, &info, 1);
         crocgod->maximum_turn = 0;
@@ -582,6 +592,9 @@ void CrocgodControl(sint16 item_number)
         case 3:
             frame = item->frame_number - anims[item->anim_number].frame_base;
             if (frame >= 94 && frame <= 96) {
+                PHD_3DPOS mPos;
+                PHD_VECTOR pos, pos2;
+
                 pos.x = 0;
                 pos.y = -96;
                 pos.z = 144;
@@ -590,9 +603,9 @@ void CrocgodControl(sint16 item_number)
                 pos2.y = -128;
                 pos2.z = 288;
                 GetJointAbsPosition(item, &pos2, 9);
-                mPos.z_pos = pos2.z;
-                mPos.y_pos = pos2.y;
                 mPos.x_pos = pos2.x;
+                mPos.y_pos = pos2.y;
+                mPos.z_pos = pos2.z;
                 phd_GetVectorAngles(pos2.x - pos.x, pos2.y - pos.y, pos2.z - pos.z, angles);
                 mPos.y_rot = angles[0];
                 mPos.x_rot = angles[1];
@@ -610,6 +623,9 @@ void CrocgodControl(sint16 item_number)
         case 5:
             frame = item->frame_number - anims[item->anim_number].frame_base;
             if (frame == 45 || frame == 60 || frame == 75) {
+                PHD_3DPOS mPos;
+                PHD_VECTOR pos, pos2;
+
                 pos2.x = 0;
                 pos2.y = -96;
                 pos2.z = 144;
@@ -618,9 +634,9 @@ void CrocgodControl(sint16 item_number)
                 pos.y = -128;
                 pos.z = 288;
                 GetJointAbsPosition(item, &pos, 9);
-                mPos.z_pos = pos.z;
-                mPos.y_pos = pos.y;
                 mPos.x_pos = pos.x;
+                mPos.y_pos = pos.y;
+                mPos.z_pos = pos.z;
                 phd_GetVectorAngles(pos.x - pos2.x, pos.y - pos2.y, pos.z - pos2.z, angles);
                 mPos.y_rot = angles[0];
                 mPos.x_rot = angles[1];
