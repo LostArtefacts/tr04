@@ -35,7 +35,8 @@ void TemplarControl(sint16 item_number)
     MESH_INFO *mesh;
     FLOOR_INFO *floor;
     PHD_VECTOR pos;
-    AI_INFO info;
+    AI_INFO info, larainfo;
+    sint32 dx, dz;
     sint32 anim;
     sint16 i, head, torso_x, torso_y, angle;
 
@@ -61,14 +62,26 @@ void TemplarControl(sint16 item_number)
     else if (knight->hurt_by_lara)
         knight->enemy = lara_item;
     CreatureAIInfo(item, &info);
-    if (knight->enemy != lara_item)
-        phd_atan(lara_item->pos.z_pos - item->pos.z_pos, lara_item->pos.x_pos - item->pos.x_pos);
+    if (knight->enemy == lara_item) {
+        larainfo.angle = info.angle;
+        larainfo.ahead = info.ahead;
+        larainfo.distance = info.distance;
+    } else {
+        dz = lara_item->pos.z_pos - item->pos.z_pos;
+        dx = lara_item->pos.x_pos - item->pos.x_pos;
+        larainfo.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+        if (larainfo.angle > -0x4000 && larainfo.angle < 0x4000)
+            larainfo.ahead = 1;
+        else
+            larainfo.ahead = 0;
+        larainfo.distance = SQUARE(dx) + SQUARE(dz);
+    }
     GetCreatureMood(item, &info, 1);
     CreatureMood(item, &info, 1);
     angle = CreatureTurn(item, knight->maximum_turn);
     if (info.ahead) {
-        head = info.angle >> 1;
         torso_y = info.angle >> 1;
+        head = info.angle >> 1;
         torso_x = info.x_angle;
     }
     switch (item->current_anim_state) {

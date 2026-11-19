@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="417.65" height="12" x="0" y="0" class="named"><title>1403 · 90.40%</title></rect>
-<rect width="44.35" height="12" x="417.65" y="0" class="nonmatching"><title>149 · 9.60%</title></rect>
+<rect width="417.94" height="12" x="0" y="0" class="named"><title>1404 · 90.46%</title></rect>
+<rect width="44.06" height="12" x="417.94" y="0" class="nonmatching"><title>148 · 9.54%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">90.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1403</tspan> · <tspan class="nonmatching">149</tspan></text>
+<text text-anchor="end" x="642" y="7.50">90.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1404</tspan> · <tspan class="nonmatching">148</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="326.45" height="12" x="0" y="0" class="named"><title>442 KB · 70.66%</title></rect>
-<rect width="135.55" height="12" x="326.45" y="0" class="nonmatching"><title>184 KB · 29.34%</title></rect>
+<rect width="327.40" height="12" x="0" y="0" class="named"><title>443 KB · 70.87%</title></rect>
+<rect width="134.60" height="12" x="327.40" y="0" class="nonmatching"><title>182 KB · 29.13%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">70.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">442 KB</tspan> · <tspan class="nonmatching">184 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">70.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">443 KB</tspan> · <tspan class="nonmatching">182 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -181,7 +181,7 @@
 <rect width="12" height="12" x="240" y="30" class="named"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="30" class="nonmatching"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="30" class="named"><title>0x00413020 InitialiseTemplar (99 bytes)</title></rect>
-<rect width="12" height="12" x="285" y="30" class="nonmatching"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
+<rect width="12" height="12" x="285" y="30" class="named"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="30" class="named"><title>0x004135a0 CloseTrapDoor (285 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="30" class="named"><title>0x004136c0 TrapDoorControl (137 bytes)</title></rect>
 <rect width="12" height="12" x="330" y="30" class="named"><title>0x00413750 OpenTrapDoor (237 bytes)</title></rect>
@@ -1721,7 +1721,7 @@
 <rect width="23.28" height="22.47" x="210.25" y="378.73" class="named"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
 <rect width="23.28" height="22.37" x="210.25" y="404.20" class="named"><title>0x00483520 SubdivideQuad (1307 bytes)</title></rect>
 <rect width="23.28" height="22.25" x="210.25" y="429.57" class="nonmatching"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
-<rect width="23.28" height="22.18" x="210.25" y="454.82" class="nonmatching"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
+<rect width="23.28" height="22.18" x="210.25" y="454.82" class="named"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
 <rect width="22.01" height="23.44" x="236.52" y="0" class="named"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
 <rect width="22.01" height="23.39" x="236.52" y="26.44" class="nonmatching"><title>0x00488140 S_DrawDrawSparks (1292 bytes)</title></rect>
 <rect width="22.01" height="23.22" x="236.52" y="52.83" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
