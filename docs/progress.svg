@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="422.71" height="12" x="0" y="0" class="named"><title>1420 · 91.49%</title></rect>
-<rect width="39.29" height="12" x="422.71" y="0" class="nonmatching"><title>132 · 8.51%</title></rect>
+<rect width="423" height="12" x="0" y="0" class="named"><title>1421 · 91.56%</title></rect>
+<rect width="39" height="12" x="423" y="0" class="nonmatching"><title>131 · 8.44%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">91.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1420</tspan> · <tspan class="nonmatching">132</tspan></text>
+<text text-anchor="end" x="642" y="7.50">91.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1421</tspan> · <tspan class="nonmatching">131</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="335.38" height="12" x="0" y="0" class="named"><title>454 KB · 72.59%</title></rect>
-<rect width="126.62" height="12" x="335.38" y="0" class="nonmatching"><title>171 KB · 27.41%</title></rect>
+<rect width="335.84" height="12" x="0" y="0" class="named"><title>455 KB · 72.69%</title></rect>
+<rect width="126.16" height="12" x="335.84" y="0" class="nonmatching"><title>171 KB · 27.31%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">72.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">454 KB</tspan> · <tspan class="nonmatching">171 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">72.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">455 KB</tspan> · <tspan class="nonmatching">171 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1218,7 +1218,7 @@
 <rect width="12" height="12" x="45" y="345" class="nonmatching"><title>0x00471420 ProcessRoomData (2518 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="345" class="named"><title>0x00471e00 ProjectVerts (313 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="345" class="nonmatching"><title>0x00471f40 ProjectWaterVerts (588 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="345" class="nonmatching"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="345" class="named"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="345" class="named"><title>0x00472400 PrelightVertsMMX (186 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="345" class="named"><title>0x004724c0 PrelightVertsNonMMX (396 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="345" class="named"><title>0x00472650 InsertRoom (593 bytes)</title></rect>
@@ -1891,7 +1891,7 @@
 <rect width="15.59" height="15.87" x="366.34" y="64.29" class="nonmatching"><title>0x00493c00 DXClose (621 bytes)</title></rect>
 <rect width="15.56" height="15.87" x="384.92" y="64.29" class="named"><title>0x00477180 init_water_table (620 bytes)</title></rect>
 <rect width="15.51" height="15.87" x="403.49" y="64.29" class="named"><title>0x0042d160 LaraClimbRightCornerTest (618 bytes)</title></rect>
-<rect width="15.51" height="15.87" x="422" y="64.29" class="nonmatching"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
+<rect width="15.51" height="15.87" x="422" y="64.29" class="named"><title>0x00472190 ProjectShoreVerts (618 bytes)</title></rect>
 <rect width="15.51" height="15.87" x="440.51" y="64.29" class="named"><title>0x0049a6e0 SW_SpanGTAlphaBilinear (618 bytes)</title></rect>
 <rect width="15.44" height="15.87" x="459.02" y="64.29" class="named"><title>0x00439340 UpdateGunShells (615 bytes)</title></rect>
 <rect width="15.41" height="15.87" x="477.46" y="64.29" class="named"><title>0x0042b840 undraw_pistols (614 bytes)</title></rect>

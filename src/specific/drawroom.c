@@ -424,20 +424,21 @@ void ProjectWaterVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
 
 void ProjectShoreVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
 {
-    ROOM_INFO *r;
-    float zv, x, y, z;
-    sint32 i, rndoff;
-    sint16 clip_distance, col, cR, cG, cB;
+    sint32 i;
     sint16 *c;
-    uint8 rnd;
+    ROOM_INFO *r;
+    sint16 cB, col, cG, clip_distance, cR;
+    float zv, x, z;
 
-    r = &room[current_room];
+    r = room + current_room;
     c = clip;
-    for (i = 0; i < nVerts; i++) {
+    i = 0;
+    while (i < nVerts) {
+        sint32 rndoff;
+
         x = (r->x + r->verts[i].x) * 0.015625F;
-        y = (r->y + r->verts[i].y) * 0.015625F;
         z = (r->z + r->verts[i].z) * 0.0078125F;
-        rndoff = (sint32)(y + z + x) & 0xFC;
+        rndoff = (sint32)(((r->y + r->verts[i].y) * 0.015625F) + z + x) & 0xFC;
         v->tu = v->sx;
         v->tv = v->sy;
         clip_distance = 0;
@@ -450,27 +451,26 @@ void ProjectShoreVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
             v->sx = zv * v->sx + f_centerx;
             v->sy = zv * v->sy + f_centery;
             v->rhw = f_moneopersp * zv;
-            if (bWaterEffect) {
+            if (bWaterEffect != 0) {
                 x = v->sx;
                 v->sx += vert_wibble_table[((wibble + (sint32)v->sy) >> 3) & 0x1F];
-                v->sy += vert_wibble_table[((wibble + (sint32)x) >> 3) & 0x1F];
+                v->sy = v->sy + vert_wibble_table[((wibble + (sint32)x) >> 3) & 0x1F];
             }
             if (v->sx < clip_left)
-                clip_distance++;
+                clip_distance += 1;
             else if (v->sx > clip_right)
                 clip_distance += 2;
             if (v->sy < clip_top)
                 clip_distance += 4;
             else if (v->sy > clip_bottom)
                 clip_distance += 8;
-            rnd = WaterTable[(uint8)r->MeshEffect][rndoff & 0x3F].random;
-            col = (WaterTable[(uint8)r->MeshEffect][((wibble >> 2) + rnd) & 0x3F].abs + WaterTable[(uint8)r->MeshEffect][((wibble >> 2) + rnd) & 0x3F].shimmer) << 3;
+            col = (WaterTable[(uint8)r->MeshEffect][((wibble >> 2) + WaterTable[(uint8)r->MeshEffect][rndoff & 0x3F].random) & 0x3F].abs + WaterTable[(uint8)r->MeshEffect][((wibble >> 2) + WaterTable[(uint8)r->MeshEffect][rndoff & 0x3F].random) & 0x3F].shimmer) << 3;
             cR = CLRR(v->color) + col;
             cG = CLRG(v->color) + col;
             cB = CLRB(v->color) + col;
             if (cR > 255)
                 cR = 255;
-            if (cG > 255)
+            if (255 < cG)
                 cG = 255;
             if (cB > 255)
                 cB = 255;
@@ -483,8 +483,8 @@ void ProjectShoreVerts(sint32 nVerts, D3DTLVERTEX *v, sint16 *clip)
             v->color = RGBA(cR, cG, cB, 0xFF);
         } else
             clip_distance = -128;
+        i++, v++;
         *c++ = clip_distance;
-        v++;
     }
 }
 

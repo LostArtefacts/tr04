@@ -884,14 +884,6 @@ compiled = 588
 matching = 572
 match = ["0-21E", "22C", "22F-238", "23A-24B"]
 
-[frontier.ProjectShoreVerts]
-address = 0x00472190
-size = 618
-compiled = 618
-matching = 398
-match = ["0-24", "26-98", "9A-17D", "1B7", "1C6", "1DB", "1E2", "1E6-1E7", "1EE", "1F9", "201-202",
-    "204-206", "208-209", "20B-20D"]
-
 [frontier.CreateVertexNormals]
 address = 0x00472f50
 size = 911
