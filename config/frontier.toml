@@ -424,13 +424,6 @@ matching = 111
 match = ["0-B", "D-1B", "1D-23", "58", "76", "F8", "106", "108-109", "11A", "11C", "129", "132",
     "145", "179", "17B", "1A8", "1DB", "1F1-1FC", "1FE-1FF", "201-204", "206-219", "21B-232"]
 
-[frontier.UpdateBlood]
-address = 0x00438d90
-size = 362
-compiled = 362
-matching = 30
-match = ["0-4", "6-11", "13-14", "16-19", "1C", "20", "97", "B1", "E1", "F5", "104"]
-
 [frontier.UpdateGunShells]
 address = 0x00439340
 size = 615

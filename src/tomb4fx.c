@@ -514,11 +514,12 @@ void UpdateBlood(void)
     sint32 fade, i;
 
     bptr = blood;
-    for (i = 0; i < 32; i++, bptr++) {
+    for (i = 0; i < 32; i++) {
         if (bptr->On) {
             bptr->Life--;
             if (bptr->Life <= 0) {
                 bptr->On = 0;
+                bptr++;
                 continue;
             }
             if (bptr->sLife - bptr->Life < bptr->ColFadeSpeed) {
@@ -530,14 +531,15 @@ void UpdateBlood(void)
                     bptr->Shade = (uint8)((bptr->dShade * fade) >> 16);
                     if (bptr->Shade < 8) {
                         bptr->On = 0;
+                        bptr++;
                         continue;
                     }
                 } else
                     bptr->Shade = bptr->dShade;
             }
             bptr->RotAng = (bptr->RotAng + bptr->RotAdd) & 0xFFF;
-            bptr->Yvel += bptr->Gravity;
             fade = ((bptr->sLife - bptr->Life) << 16) / bptr->sLife;
+            bptr->Yvel += bptr->Gravity;
             if (bptr->Friction & 0xF) {
                 bptr->Xvel -= bptr->Xvel >> (bptr->Friction & 0xF);
                 bptr->Zvel -= bptr->Zvel >> (bptr->Friction & 0xF);
@@ -547,6 +549,7 @@ void UpdateBlood(void)
             bptr->z += bptr->Zvel >> 5;
             bptr->Size = (uint8)(bptr->sSize + ((fade * (bptr->dSize - bptr->sSize)) >> 16));
         }
+        bptr++;
     }
 }
 
