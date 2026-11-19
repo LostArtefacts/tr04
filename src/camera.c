@@ -473,12 +473,12 @@ void LookCamera(ITEM_INFO *item)
     pos3.y = 0;
     pos3.z = 2048;
     GetLaraJointPos(&pos3, 8);
-    wy = pos1.y;
-    wx = pos1.x;
-    wz = pos1.z;
     dx = (pos2.x - pos1.x) >> 3;
     dy = (pos2.y - pos1.y) >> 3;
     dz = (pos2.z - pos1.z) >> 3;
+    wx = pos1.x;
+    wy = pos1.y;
+    wz = pos1.z;
     room_number2 = lara_item->room_number;
     for (lp = 0; lp < 8; lp++) {
         room_number = room_number2;
@@ -559,40 +559,57 @@ void LookCamera(ITEM_INFO *item)
         }
     }
     GetFloor(camera.pos.x, camera.pos.y, camera.pos.z, &camera.pos.room_number);
-    wx = camera.pos.x;
-    wy = camera.pos.y;
-    wz = camera.pos.z;
-    room_number = camera.pos.room_number;
-    floor = GetFloor(wx, wy, wz, &room_number);
-    h = GetHeight(floor, wx, wy, wz);
-    c = GetCeiling(floor, wx, wy, wz);
-    if (wy - 255 < c && wy + 255 > h && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
-        camera.pos.y = (h + c) >> 1;
-    else if (wy + 255 > h && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
-        camera.pos.y = h - 255;
-    else if (wy - 255 < c && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
-        camera.pos.y = c + 255;
-    wx = camera.pos.x;
-    wy = camera.pos.y;
-    wz = camera.pos.z;
-    room_number = camera.pos.room_number;
-    floor = GetFloor(wx, wy, wz, &room_number);
-    h = GetHeight(floor, wx, wy, wz);
-    c = GetCeiling(floor, wx, wy, wz);
-    if (wy < c || wy > h || c >= h || h == NO_HEIGHT || c == NO_HEIGHT)
-        mgLOS(&camera.target, &camera.pos, 0);
-    wx = camera.pos.x;
-    wy = camera.pos.y;
-    wz = camera.pos.z;
-    room_number = camera.pos.room_number;
-    floor = GetFloor(wx, wy, wz, &room_number);
-    h = GetHeight(floor, wx, wy, wz);
-    c = GetCeiling(floor, wx, wy, wz);
-    if (wy < c || wy > h || c >= h || h == NO_HEIGHT || c == NO_HEIGHT) {
-        camera.pos.x = pos1.x;
-        camera.pos.y = pos1.y;
-        camera.pos.z = pos1.z;
-        camera.pos.room_number = lara_item->room_number;
+    {
+        sint16 room_number;
+        sint32 wx, wy, wz;
+
+        wx = camera.pos.x;
+        wy = camera.pos.y;
+        wz = camera.pos.z;
+        room_number = camera.pos.room_number;
+        floor = GetFloor(wx, wy, wz, &room_number);
+        h = GetHeight(floor, wx, wy, wz);
+        c = GetCeiling(floor, wx, wy, wz);
+        if (wy - 255 < c && wy + 255 > h && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
+            camera.pos.y = (h + c) >> 1;
+        else if (wy + 255 > h && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
+            camera.pos.y = h - 255;
+        else if (wy - 255 < c && c < h && c != NO_HEIGHT && h != NO_HEIGHT)
+            camera.pos.y = c + 255;
+    }
+
+    {
+        sint16 room_number;
+        sint32 wx, wy, wz;
+
+        wx = camera.pos.x;
+        wy = camera.pos.y;
+        wz = camera.pos.z;
+        room_number = camera.pos.room_number;
+        floor = GetFloor(wx, wy, wz, &room_number);
+        h = GetHeight(floor, wx, wy, wz);
+        c = GetCeiling(floor, wx, wy, wz);
+        if (wy < c || wy > h || c >= h || h == NO_HEIGHT || c == NO_HEIGHT)
+            mgLOS(&camera.target, &camera.pos, 0);
+    }
+
+    {
+        sint16 room_number;
+        sint32 wx, wy, wz;
+
+        wx = camera.pos.x;
+        wy = camera.pos.y;
+        wz = camera.pos.z;
+        room_number = camera.pos.room_number;
+        floor = GetFloor(wx, wy, wz, &room_number);
+        h = GetHeight(floor, wx, wy, wz);
+        c = GetCeiling(floor, wx, wy, wz);
+        if (wy < c || wy > h || c >= h || h == NO_HEIGHT || c == NO_HEIGHT) {
+            camera.pos.x = pos1.x;
+            camera.pos.y = pos1.y;
+            camera.pos.z = pos1.z;
+            camera.pos.room_number = lara_item->room_number;
+        }
     }
     GetFloor(camera.pos.x, camera.pos.y, camera.pos.z, &camera.pos.room_number);
     phd_LookAt(camera.pos.x, camera.pos.y, camera.pos.z, camera.target.x, camera.target.y, camera.target.z, 0);
