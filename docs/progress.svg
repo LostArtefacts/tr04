@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="422.41" height="12" x="0" y="0" class="named"><title>1419 · 91.43%</title></rect>
-<rect width="39.59" height="12" x="422.41" y="0" class="nonmatching"><title>133 · 8.57%</title></rect>
+<rect width="422.71" height="12" x="0" y="0" class="named"><title>1420 · 91.49%</title></rect>
+<rect width="39.29" height="12" x="422.71" y="0" class="nonmatching"><title>132 · 8.51%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">91.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1419</tspan> · <tspan class="nonmatching">133</tspan></text>
+<text text-anchor="end" x="642" y="7.50">91.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1420</tspan> · <tspan class="nonmatching">132</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="335.10" height="12" x="0" y="0" class="named"><title>454 KB · 72.53%</title></rect>
-<rect width="126.90" height="12" x="335.10" y="0" class="nonmatching"><title>172 KB · 27.47%</title></rect>
+<rect width="335.38" height="12" x="0" y="0" class="named"><title>454 KB · 72.59%</title></rect>
+<rect width="126.62" height="12" x="335.38" y="0" class="nonmatching"><title>171 KB · 27.41%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">72.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">454 KB</tspan> · <tspan class="nonmatching">172 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">72.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">454 KB</tspan> · <tspan class="nonmatching">171 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1091,7 +1091,7 @@
 <rect width="12" height="12" x="390" y="300" class="named"><title>0x0046a4d0 JeepFireGrenade (333 bytes)</title></rect>
 <rect width="12" height="12" x="405" y="300" class="named"><title>0x0046a620 JeepStart (167 bytes)</title></rect>
 <rect width="12" height="12" x="420" y="300" class="named"><title>0x0046a6d0 handle_cutseq_triggering (1295 bytes)</title></rect>
-<rect width="12" height="12" x="435" y="300" class="nonmatching"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
+<rect width="12" height="12" x="435" y="300" class="named"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
 <rect width="12" height="12" x="450" y="300" class="nonmatching"><title>0x0046ad70 InitPackNodes (263 bytes)</title></rect>
 <rect width="12" height="12" x="465" y="300" class="nonmatching"><title>0x0046ae80 DecodeAnim (277 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="300" class="nonmatching"><title>0x0046afa0 DecodeTrack (295 bytes)</title></rect>
@@ -2079,7 +2079,7 @@
 <rect width="12.66" height="12.24" x="640.48" y="134.47" class="named"><title>0x00410220 TriggerSethFlame (389 bytes)</title></rect>
 <rect width="12.66" height="12.24" x="656.14" y="134.47" class="named"><title>0x004139f0 CeilingTrapDoorCollision (389 bytes)</title></rect>
 <rect width="12.66" height="12.24" x="671.80" y="134.47" class="named"><title>0x00415750 ControlJobySpike (389 bytes)</title></rect>
-<rect width="12.66" height="12.24" x="687.46" y="134.47" class="nonmatching"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
+<rect width="12.66" height="12.24" x="687.46" y="134.47" class="named"><title>0x0046abe0 do_new_cutscene_camera (389 bytes)</title></rect>
 <rect width="12.66" height="12.24" x="703.12" y="134.47" class="named"><title>0x0046e340 ACMHandleNotifications (389 bytes)</title></rect>
 <rect width="12.63" height="12.24" x="718.78" y="134.47" class="named"><title>0x00480570 RenderLoadPic (388 bytes)</title></rect>
 <rect width="12.60" height="12.24" x="734.40" y="134.47" class="named"><title>0x004078a0 TriggerHarpyFlame (387 bytes)</title></rect>

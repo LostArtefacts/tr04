@@ -191,16 +191,18 @@ void handle_cutseq_triggering(sint32 name)
 void do_new_cutscene_camera(void)
 {
     sint32 i;
+    PACKNODE *p;
 
-    if (cutseq_control_routines[cutseq_num].control_func)
+    if (cutseq_control_routines[cutseq_num].control_func != 0)
         cutseq_control_routines[cutseq_num].control_func();
     DecodeAnim(camera_pnodes, 2, GLOBAL_cutseq_frame, 0xFFFF);
+    p = 1 + camera_pnodes;
     camera.target.x = GLOBAL_cutme->orgx + 2 * camera_pnodes->xrot_run;
     camera.target.y = GLOBAL_cutme->orgy + 2 * camera_pnodes->yrot_run;
     camera.target.z = GLOBAL_cutme->orgz + 2 * camera_pnodes->zrot_run;
-    camera.pos.x = GLOBAL_cutme->orgx + 2 * camera_pnodes[1].xrot_run;
-    camera.pos.y = GLOBAL_cutme->orgy + 2 * camera_pnodes[1].yrot_run;
-    camera.pos.z = GLOBAL_cutme->orgz + 2 * camera_pnodes[1].zrot_run;
+    camera.pos.x = GLOBAL_cutme->orgx + 2 * p->xrot_run;
+    camera.pos.y = GLOBAL_cutme->orgy + 2 * p->yrot_run;
+    camera.pos.z = GLOBAL_cutme->orgz + 2 * p->zrot_run;
     IsRoomOutsideNo = -1;
     IsRoomOutside(camera.pos.x, camera.pos.y, camera.pos.z);
     if (IsRoomOutsideNo != -1)
@@ -209,8 +211,8 @@ void do_new_cutscene_camera(void)
     DecodeAnim(actor_pnodes[0], 16, GLOBAL_cutseq_frame, 1023);
     for (i = 1; i < GLOBAL_cutme->numactors; i++)
         DecodeAnim(actor_pnodes[i], GLOBAL_cutme->actor_data[i].nodes + 1, GLOBAL_cutseq_frame, 1023);
-    GLOBAL_cutseq_frame++;
-    if (GLOBAL_cutseq_frame > GLOBAL_numcutseq_frames - 8 && cutseq_trig == 2)
+    GLOBAL_cutseq_frame = GLOBAL_cutseq_frame + 1;
+    if (GLOBAL_cutseq_frame > GLOBAL_numcutseq_frames - 8 && 2 == cutseq_trig)
         cutseq_trig = 3;
     if (GLOBAL_cutseq_frame > GLOBAL_numcutseq_frames)
         GLOBAL_cutseq_frame = GLOBAL_numcutseq_frames;
