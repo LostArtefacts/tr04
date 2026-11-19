@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="418.84" height="12" x="0" y="0" class="named"><title>1407 · 90.66%</title></rect>
-<rect width="43.16" height="12" x="418.84" y="0" class="nonmatching"><title>145 · 9.34%</title></rect>
+<rect width="419.13" height="12" x="0" y="0" class="named"><title>1408 · 90.72%</title></rect>
+<rect width="42.87" height="12" x="419.13" y="0" class="nonmatching"><title>144 · 9.28%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">90.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1407</tspan> · <tspan class="nonmatching">145</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1408</tspan> · <tspan class="nonmatching">144</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="329.88" height="12" x="0" y="0" class="named"><title>447 KB · 71.40%</title></rect>
-<rect width="132.12" height="12" x="329.88" y="0" class="nonmatching"><title>179 KB · 28.60%</title></rect>
+<rect width="330.28" height="12" x="0" y="0" class="named"><title>447 KB · 71.49%</title></rect>
+<rect width="131.72" height="12" x="330.28" y="0" class="nonmatching"><title>178 KB · 28.51%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">71.4%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">447 KB</tspan> · <tspan class="nonmatching">179 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">71.5%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">447 KB</tspan> · <tspan class="nonmatching">178 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -104,7 +104,7 @@
 <rect width="12" height="12" x="585" y="0" class="named"><title>0x00405f20 InitialiseGuide (128 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="0" class="nonmatching"><title>0x00405fa0 GuideControl (4191 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="0" class="named"><title>0x00407000 InitialiseHammerhead (87 bytes)</title></rect>
-<rect width="12" height="12" x="630" y="0" class="nonmatching"><title>0x00407060 HammerheadControl (552 bytes)</title></rect>
+<rect width="12" height="12" x="630" y="0" class="named"><title>0x00407060 HammerheadControl (552 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="0" class="named"><title>0x00407290 TriggerHarpyMissileFlame (351 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="0" class="named"><title>0x004073f0 DoHarpyEffects (780 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="0" class="named"><title>0x00407700 TriggerHarpyMissile (162 bytes)</title></rect>
@@ -1938,7 +1938,7 @@
 <rect width="14.80" height="15.09" x="437.54" y="83.16" class="named"><title>0x004543b0 InitialiseItem (561 bytes)</title></rect>
 <rect width="14.75" height="15.09" x="455.34" y="83.16" class="named"><title>0x00422eb0 lara_col_hang2 (559 bytes)</title></rect>
 <rect width="14.67" height="15.09" x="473.09" y="83.16" class="named"><title>0x00455470 InitialiseSlot (556 bytes)</title></rect>
-<rect width="14.57" height="15.09" x="490.77" y="83.16" class="nonmatching"><title>0x00407060 HammerheadControl (552 bytes)</title></rect>
+<rect width="14.57" height="15.09" x="490.77" y="83.16" class="named"><title>0x00407060 HammerheadControl (552 bytes)</title></rect>
 <rect width="14.51" height="15.09" x="508.33" y="83.16" class="named"><title>0x00482f90 SubdivideEdge (550 bytes)</title></rect>
 <rect width="14.49" height="15.09" x="525.85" y="83.16" class="nonmatching"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
 <rect width="14.46" height="15.09" x="543.33" y="83.16" class="named"><title>0x00404bd0 DoDemigodEffects (548 bytes)</title></rect>

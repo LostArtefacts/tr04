@@ -20,8 +20,9 @@ void HammerheadControl(sint16 item_number)
 {
     ITEM_INFO *item;
     CREATURE_INFO *shark;
-    AI_INFO info;
-    sint16 angle;
+    AI_INFO info, larainfo;
+    sint32 dx, dz;
+    sint16 angle, joint;
 
     if (!CreatureActive(item_number))
         return;
@@ -41,11 +42,24 @@ void HammerheadControl(sint16 item_number)
         else if (shark->hurt_by_lara)
             shark->enemy = lara_item;
         CreatureAIInfo(item, &info);
-        if (shark->enemy != lara_item)
-            phd_atan(lara_item->pos.z_pos - item->pos.z_pos, lara_item->pos.x_pos - item->pos.x_pos);
+        if (shark->enemy == lara_item) {
+            larainfo.angle = info.angle;
+            larainfo.ahead = info.ahead;
+            larainfo.distance = info.distance;
+        } else {
+            dz = lara_item->pos.z_pos - item->pos.z_pos;
+            dx = lara_item->pos.x_pos - item->pos.x_pos;
+            larainfo.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+            if (larainfo.angle > -0x4000 && larainfo.angle < 0x4000)
+                larainfo.ahead = 1;
+            else
+                larainfo.ahead = 0;
+            larainfo.distance = SQUARE(dx) + SQUARE(dz);
+        }
         GetCreatureMood(item, &info, 1);
         CreatureMood(item, &info, 1);
         angle = CreatureTurn(item, shark->maximum_turn);
+        joint = angle << 1;
         switch (item->current_anim_state) {
         case 0:
             item->goal_anim_state = 1;
@@ -72,10 +86,10 @@ void HammerheadControl(sint16 item_number)
             break;
         }
         CreatureTilt(item, 0);
-        CreatureJoint(item, 0, -2 * angle);
-        CreatureJoint(item, 1, -2 * angle);
-        CreatureJoint(item, 2, -2 * angle);
-        CreatureJoint(item, 3, 2 * angle);
+        CreatureJoint(item, 0, -joint);
+        CreatureJoint(item, 1, -joint);
+        CreatureJoint(item, 2, -joint);
+        CreatureJoint(item, 3, joint);
         if (item->current_anim_state != 6) {
             CreatureAnimation(item_number, angle, 0);
             CreatureUnderwater(item, 341);
