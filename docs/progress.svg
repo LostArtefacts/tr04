@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="423.60" height="12" x="0" y="0" class="named"><title>1423 · 91.69%</title></rect>
-<rect width="38.40" height="12" x="423.60" y="0" class="nonmatching"><title>129 · 8.31%</title></rect>
+<rect width="423.90" height="12" x="0" y="0" class="named"><title>1424 · 91.75%</title></rect>
+<rect width="38.10" height="12" x="423.90" y="0" class="nonmatching"><title>128 · 8.25%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">91.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1423</tspan> · <tspan class="nonmatching">129</tspan></text>
+<text text-anchor="end" x="642" y="7.50">91.8%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1424</tspan> · <tspan class="nonmatching">128</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="337.54" height="12" x="0" y="0" class="named"><title>457 KB · 73.06%</title></rect>
-<rect width="124.46" height="12" x="337.54" y="0" class="nonmatching"><title>169 KB · 26.94%</title></rect>
+<rect width="338.25" height="12" x="0" y="0" class="named"><title>458 KB · 73.22%</title></rect>
+<rect width="123.75" height="12" x="338.25" y="0" class="nonmatching"><title>168 KB · 26.78%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">73.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">457 KB</tspan> · <tspan class="nonmatching">169 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">73.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">458 KB</tspan> · <tspan class="nonmatching">168 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1419,7 +1419,7 @@
 <rect width="12" height="12" x="60" y="405" class="nonmatching"><title>0x0048a0c0 DrawBlood (868 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="405" class="nonmatching"><title>0x0048a430 DrawDrips (1038 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="405" class="nonmatching"><title>0x0048a840 DoUwEffect (1300 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="405" class="nonmatching"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="405" class="named"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="405" class="nonmatching"><title>0x0048b130 ShowTitle (842 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="405" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="405" class="named"><title>0x0048b990 DrawTrainStrips (280 bytes)</title></rect>
@@ -1781,7 +1781,7 @@
 <rect width="19.61" height="19.82" x="682.20" y="0" class="named"><title>0x00426230 LaraHangRightCornerTest (976 bytes)</title></rect>
 <rect width="19.61" height="19.82" x="704.82" y="0" class="named"><title>0x004266e0 LaraHangLeftCornerTest (976 bytes)</title></rect>
 <rect width="19.57" height="19.82" x="727.43" y="0" class="nonmatching"><title>0x0042e0d0 LaraGetNewTarget (974 bytes)</title></rect>
-<rect width="19.54" height="19.61" x="285.45" y="22.82" class="nonmatching"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
+<rect width="19.54" height="19.61" x="285.45" y="22.82" class="named"><title>0x0048ad60 DrawWraithTrail (962 bytes)</title></rect>
 <rect width="19.54" height="19.59" x="285.45" y="45.44" class="nonmatching"><title>0x004349f0 TriggerExplosionSparks (961 bytes)</title></rect>
 <rect width="19.54" height="19.55" x="285.45" y="68.03" class="named"><title>0x00462720 TurnSwitchCollision (959 bytes)</title></rect>
 <rect width="19.54" height="19.43" x="285.45" y="90.58" class="named"><title>0x00415fd0 ControlScaledSpike (953 bytes)</title></rect>

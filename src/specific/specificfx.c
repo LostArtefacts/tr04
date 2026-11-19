@@ -2209,15 +2209,12 @@ void DoUwEffect(void)
 
 void DrawWraithTrail(ITEM_INFO *item)
 {
-    WRAITH_STRUCT *wraith;
     PHD_VECTOR pos;
-    D3DTLVERTEX v[2];
+    D3DTLVERTEX v[2], *d, *d1;
     sint32 *Z;
-    sint16 *XY;
     sint16 *offsets;
     sint32 *mptr;
-    float perspz, zf0, zf1;
-    sint32 i, j, c0, c1, x0, y0, z0, x1, y1, z1;
+    sint32 i, j, c0, c1;
 
     phd_PushMatrix();
     phd_TranslateAbs(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos);
@@ -2231,60 +2228,72 @@ void DrawWraithTrail(ITEM_INFO *item)
             phd_RotZ(-1092);
         else if (i == 4)
             phd_RotZ(1092);
-        XY = (sint16 *)&scratchpad[0];
         Z = (sint32 *)&scratchpad[256];
-        offsets = (sint16 *)&scratchpad[512];
-        wraith = (WRAITH_STRUCT *)item->data;
-        for (j = 0; j < 8; XY += 2, Z += 2, wraith++, j++) {
-            offsets[0] = (sint16)(wraith->pos.x - item->pos.x_pos);
-            offsets[1] = (sint16)(wraith->pos.y - item->pos.y_pos);
-            offsets[2] = (sint16)(wraith->pos.z - item->pos.z_pos);
-            pos.x = offsets[0] * mptr[M00] + offsets[1] * mptr[M01] + offsets[2] * mptr[M02] + mptr[M03];
-            pos.y = offsets[0] * mptr[M10] + offsets[1] * mptr[M11] + offsets[2] * mptr[M12] + mptr[M13];
-            pos.z = offsets[0] * mptr[M20] + offsets[1] * mptr[M21] + offsets[2] * mptr[M22] + mptr[M23];
-            perspz = f_persp / (float)pos.z;
-            XY[0] = (sint16)(pos.x * perspz + f_centerx);
-            XY[1] = (sint16)(pos.y * perspz + f_centery);
-            Z[0] = pos.z >> W2V_SHIFT;
-            if (!j || j == 7)
-                Z[1] = 0;
-            else
-                Z[1] = RGBONLY(wraith->r, wraith->g, wraith->b);
-        }
-        XY = (sint16 *)&scratchpad[0];
-        Z = (sint32 *)&scratchpad[256];
-        for (j = 7; j > 0; j--, XY += 2, Z += 2) {
-            if (Z[0] <= f_mznear || Z[0] >= 20480)
-                continue;
-            if (Z[0] > 12288) {
-                c0 = RGBA(((Z[1] & 0xFF) * (20480 - Z[0])) >> 13, (((Z[1] >> 8) & 0xFF) * (20480 - Z[0])) >> 13, (((Z[1] >> 16) & 0xFF) * (20480 - Z[0])) >> 13, 0xFF);
-                c1 = RGBA(((Z[3] & 0xFF) * (20480 - Z[0])) >> 13, (((Z[3] >> 8) & 0xFF) * (20480 - Z[0])) >> 13, (((Z[3] >> 16) & 0xFF) * (20480 - Z[0])) >> 13, 0xFF);
-            } else {
-                c0 = Z[1];
-                c1 = Z[3];
+        {
+            WRAITH_STRUCT *wraith;
+            sint16 *XY;
+
+            XY = (sint16 *)&scratchpad[0];
+            offsets = (sint16 *)&scratchpad[512];
+            wraith = (WRAITH_STRUCT *)item->data;
+            for (j = 0; j < 8; XY += 2, Z += 2, wraith++, j++) {
+                offsets[0] = (sint16)(wraith->pos.x - item->pos.x_pos);
+                offsets[1] = (sint16)(wraith->pos.y - item->pos.y_pos);
+                offsets[2] = (sint16)(wraith->pos.z - item->pos.z_pos);
+                pos.x = offsets[0] * mptr[M00] + offsets[1] * mptr[M01] + offsets[2] * mptr[M02] + mptr[M03];
+                pos.y = offsets[0] * mptr[M10] + offsets[1] * mptr[M11] + offsets[2] * mptr[M12] + mptr[M13];
+                pos.z = offsets[0] * mptr[M20] + offsets[1] * mptr[M21] + offsets[2] * mptr[M22] + mptr[M23];
+                XY[0] = (sint16)(pos.x * (f_persp / (float)pos.z) + f_centerx);
+                XY[1] = (sint16)(pos.y * (f_persp / (float)pos.z) + f_centery);
+                Z[0] = pos.z >> W2V_SHIFT;
+                if (!j || j == 7)
+                    Z[1] = 0;
+                else
+                    Z[1] = RGBONLY(wraith->r, wraith->g, wraith->b);
             }
-            x0 = XY[0];
-            y0 = XY[1];
-            z0 = Z[0];
-            x1 = XY[2];
-            y1 = XY[3];
-            z1 = Z[2];
-            if (ClipLine(&x0, &y0, z0, &x1, &y1, z1, phd_winxmin, phd_winymin, phd_winxmax, phd_winymax)) {
-                v[0].specular = 0xFF000000;
-                v[1].specular = 0xFF000000;
-                v[0].sx = (float)x0;
-                v[0].sy = (float)y0;
-                v[0].color = c0;
-                v[1].color = c1;
-                v[1].sx = (float)x1;
-                v[1].sy = (float)y1;
-                zf0 = (float)Z[0];
-                v[0].sz = zf0;
-                zf1 = (float)Z[2];
-                v[1].sz = zf1;
-                v[0].rhw = f_mpersp / zf0 * f_moneopersp;
-                v[1].rhw = f_mpersp / zf1 * f_moneopersp;
-                AddLineSorted(v, &v[1], 6);
+        }
+        {
+            sint16 *XY;
+
+            XY = (sint16 *)&scratchpad[0];
+            Z = (sint32 *)&scratchpad[256];
+            for (j = 7; j > 0; j--, Z += 2, XY += 2) {
+                sint32 x0, y0, z0, x1, y1;
+
+                if (Z[0] <= f_mznear || Z[0] >= 20480)
+                    continue;
+                if (Z[0] > 12288) {
+                    c0 = RGBA(((Z[1] & 0xFF) * (20480 - Z[0])) >> 13, (((Z[1] >> 8) & 0xFF) * (20480 - Z[0])) >> 13, (((Z[1] >> 16) & 0xFF) * (20480 - Z[0])) >> 13, 0xFF);
+                    c1 = RGBA(((Z[3] & 0xFF) * (20480 - Z[0])) >> 13, (((Z[3] >> 8) & 0xFF) * (20480 - Z[0])) >> 13, (((Z[3] >> 16) & 0xFF) * (20480 - Z[0])) >> 13, 0xFF);
+                } else {
+                    c0 = Z[1];
+                    c1 = Z[3];
+                }
+                x0 = XY[0];
+                y0 = XY[1];
+                z0 = Z[0];
+                x1 = XY[2];
+                y1 = XY[3];
+                if (ClipLine(&x0, &y0, z0, &x1, &y1, Z[2], phd_winxmin, phd_winymin, phd_winxmax, phd_winymax)) {
+                    float zf0;
+
+                    d = &v[0];
+                    d->specular = 0xFF000000;
+                    d1 = &v[1];
+                    d1->specular = 0xFF000000;
+                    d->sx = (float)x0;
+                    d->sy = (float)y0;
+                    d->color = c0;
+                    d1->color = c1;
+                    d1->sx = (float)x1;
+                    d1->sy = (float)y1;
+                    zf0 = (float)Z[0];
+                    d->sz = zf0;
+                    d1->sz = (float)Z[2];
+                    d->rhw = f_mpersp / zf0 * f_moneopersp;
+                    d1->rhw = f_mpersp / (float)Z[2] * f_moneopersp;
+                    AddLineSorted(v, d1, 6);
+                }
             }
         }
     }
