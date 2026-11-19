@@ -68,12 +68,15 @@ void UpdateFireSparks(void)
 
     keep_those_fires_burning();
     sptr = fire_spark;
-    for (i = 20; i > 0; i--, sptr++) {
-        if (!sptr->On)
+    for (i = 20; i > 0; i--) {
+        if (!sptr->On) {
+            sptr++;
             continue;
+        }
         sptr->Life--;
         if (!sptr->Life) {
             sptr->On = 0;
+            sptr++;
             continue;
         }
         if (sptr->sLife - sptr->Life < sptr->ColFadeSpeed) {
@@ -88,6 +91,7 @@ void UpdateFireSparks(void)
             sptr->B = (uint8)((fade * sptr->dB) >> 16);
             if (sptr->R < 8 && sptr->G < 8 && sptr->B < 8) {
                 sptr->On = 0;
+                sptr++;
                 continue;
             }
         } else {
@@ -117,6 +121,7 @@ void UpdateFireSparks(void)
         sptr->y += sptr->Yvel >> 5;
         sptr->z += sptr->Zvel >> 5;
         sptr->Size = (uint8)(sptr->sSize + ((fade * (sptr->dSize - sptr->sSize)) >> 16));
+        sptr++;
     }
 }
 
