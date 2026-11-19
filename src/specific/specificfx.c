@@ -2096,7 +2096,7 @@ void DoUwEffect(void)
 
     num_alive = 0;
     p = uwdust;
-    for (i = 256; i > 0; i--, p++) {
+    for (i = 256; i > 0; i--) {
         if (!p->x && num_alive < 16) {
             num_alive++;
             y = (GetRandomDraw() & 0x7FF) - 1024;
@@ -2109,6 +2109,7 @@ void DoUwEffect(void)
             p->z = lara_item->pos.z_pos + z;
             if (IsRoomOutside(p->x, p->y, p->z) < 0 || !(room[IsRoomOutsideNo].flags & ROOM_UNDERWATER)) {
                 p->x = 0;
+                p++;
                 continue;
             }
             p->on = 1;
@@ -2126,11 +2127,13 @@ void DoUwEffect(void)
         p->z += p->zvel;
         if (!p->life) {
             p->x = 0;
+            p++;
             continue;
         }
         p->life--;
         if ((p->yvel & 7) < 7)
             p->yvel++;
+        p++;
     }
     sprite = &spriteinfo[objects[DEFAULT_SPRITES].mesh_index + 10];
     u1 = sprite->x1;
