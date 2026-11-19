@@ -232,7 +232,7 @@ address,size,name,symbol
 0x00422350,50,GetLaraCollisionInfo,_GetLaraCollisionInfo
 0x00422390,112,LaraHitCeiling,_LaraHitCeiling
 0x00422400,128,LaraDeflectEdge,_LaraDeflectEdge
-0x00422480,882,TestLaraVault,_TestLaraVault
+0x00422480,900,TestLaraVault,_TestLaraVault
 0x00422810,190,LaraTestClimbStance,_LaraTestClimbStance
 0x004228d0,252,TestWall,_TestWall
 0x004229d0,183,LaraCollideStop,_LaraCollideStop

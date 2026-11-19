@@ -351,13 +351,6 @@ matching = 27
 match = ["0-4", "8", "B-C", "21-22", "33-36", "4B", "52", "6D", "AB-AC", "CE", "E4-E5", "107",
     "115", "12D", "131-132"]
 
-[frontier.TestLaraVault]
-address = 0x00422480
-size = 882
-compiled = 900
-matching = 858
-match = ["0-1A6", "1B6", "1B8-1BA", "1BD", "1C3", "1C5-371"]
-
 [frontier.LaraHangTest]
 address = 0x004230e0
 size = 1224
