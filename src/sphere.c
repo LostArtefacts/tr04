@@ -137,18 +137,16 @@ sint32 GetSpheres(ITEM_INFO *item, SPHERE *ptr, sint32 WorldSpace)
 
 void GetJointAbsPosition(ITEM_INFO *item, PHD_VECTOR *pos, sint32 joint)
 {
+    sint32 i, poppush;
     OBJECT_INFO *obj;
-    sint32 *mx;
-    sint32 *imx;
     sint32 *bone;
-    sint16 *frm[2];
+    sint16 *rot, *rot2;
     sint16 *extra_rotation;
-    sint16 *rot;
-    sint16 *rot2;
-    sint32 frac, rate, poppush;
+    sint16 *frm[2];
+    sint32 rate, frac;
+    sint32 *mx = phd_mxptr;
+    sint32 *imx = IMptr;
 
-    mx = phd_mxptr;
-    imx = IMptr;
     obj = &objects[item->object_number];
     frac = GetFrames(item, frm, &rate);
     phd_PushUnitMatrix();
@@ -156,15 +154,16 @@ void GetJointAbsPosition(ITEM_INFO *item, PHD_VECTOR *pos, sint32 joint)
     phd_mxptr[M13] = 0;
     phd_mxptr[M23] = 0;
     phd_RotYXZ(item->pos.y_rot, item->pos.x_rot, item->pos.z_rot);
-    extra_rotation = (sint16 *)item->data;
-    if (!extra_rotation)
+    if (item->data)
+        extra_rotation = (sint16 *)item->data;
+    else
         extra_rotation = no_rotation;
     bone = &bones[obj->bone_index];
     if (!frac) {
         phd_TranslateRel(frm[0][6], frm[0][7], frm[0][8]);
         rot = frm[0] + 9;
         gar_RotYXZsuperpack(&rot, 0);
-        for (; joint > 0; joint--) {
+        for (i = 0; i < joint; i++, bone += 4) {
             poppush = *bone;
             if (poppush & 1)
                 phd_PopMatrix();
@@ -180,16 +179,18 @@ void GetJointAbsPosition(ITEM_INFO *item, PHD_VECTOR *pos, sint32 joint)
                 if (poppush & 0x10)
                     phd_RotZ(*extra_rotation++);
             }
-            bone += 4;
         }
         phd_TranslateRel(pos->x, pos->y, pos->z);
+        pos->x = item->pos.x_pos + (phd_mxptr[M03] >> W2V_SHIFT);
+        pos->y = item->pos.y_pos + (phd_mxptr[M13] >> W2V_SHIFT);
+        pos->z = item->pos.z_pos + (phd_mxptr[M23] >> W2V_SHIFT);
     } else {
         InitInterpolate2(frac, rate);
         rot = frm[0] + 9;
         rot2 = frm[1] + 9;
         phd_TranslateRel_ID(frm[0][6], frm[0][7], frm[0][8], frm[1][6], frm[1][7], frm[1][8]);
         gar_RotYXZsuperpack_I(&rot, &rot2, 0);
-        for (; joint > 0; joint--) {
+        for (i = 0; i < joint; i++, bone += 4) {
             poppush = *bone;
             if (poppush & 1)
                 phd_PopMatrix_I();
@@ -205,14 +206,13 @@ void GetJointAbsPosition(ITEM_INFO *item, PHD_VECTOR *pos, sint32 joint)
                 if (poppush & 0x10)
                     phd_RotZ_I(*extra_rotation++);
             }
-            bone += 4;
         }
         phd_TranslateRel_I(pos->x, pos->y, pos->z);
         InterpolateMatrix();
+        pos->x = item->pos.x_pos + (phd_mxptr[M03] >> W2V_SHIFT);
+        pos->y = item->pos.y_pos + (phd_mxptr[M13] >> W2V_SHIFT);
+        pos->z = item->pos.z_pos + (phd_mxptr[M23] >> W2V_SHIFT);
     }
-    pos->x = item->pos.x_pos + (phd_mxptr[M03] >> W2V_SHIFT);
-    pos->y = item->pos.y_pos + (phd_mxptr[M13] >> W2V_SHIFT);
-    pos->z = item->pos.z_pos + (phd_mxptr[M23] >> W2V_SHIFT);
     phd_mxptr = mx;
     IMptr = imx;
 }

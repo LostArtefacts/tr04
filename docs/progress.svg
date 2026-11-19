@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="421.81" height="12" x="0" y="0" class="named"><title>1417 · 91.30%</title></rect>
-<rect width="40.19" height="12" x="421.81" y="0" class="nonmatching"><title>135 · 8.70%</title></rect>
+<rect width="422.11" height="12" x="0" y="0" class="named"><title>1418 · 91.37%</title></rect>
+<rect width="39.89" height="12" x="422.11" y="0" class="nonmatching"><title>134 · 8.63%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">91.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1417</tspan> · <tspan class="nonmatching">135</tspan></text>
+<text text-anchor="end" x="642" y="7.50">91.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1418</tspan> · <tspan class="nonmatching">134</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="334.15" height="12" x="0" y="0" class="named"><title>452 KB · 72.33%</title></rect>
-<rect width="127.85" height="12" x="334.15" y="0" class="nonmatching"><title>173 KB · 27.67%</title></rect>
+<rect width="334.70" height="12" x="0" y="0" class="named"><title>453 KB · 72.45%</title></rect>
+<rect width="127.30" height="12" x="334.70" y="0" class="nonmatching"><title>172 KB · 27.55%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">72.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">452 KB</tspan> · <tspan class="nonmatching">173 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">72.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">453 KB</tspan> · <tspan class="nonmatching">172 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1017,7 +1017,7 @@
 <rect width="12" height="12" x="30" y="285" class="named"><title>0x0045fad0 SayNo (63 bytes)</title></rect>
 <rect width="12" height="12" x="45" y="285" class="named"><title>0x0045fb10 TestCollision (382 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="285" class="named"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
-<rect width="12" height="12" x="75" y="285" class="nonmatching"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
+<rect width="12" height="12" x="75" y="285" class="named"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="285" class="named"><title>0x00460270 InitInterpolate2 (52 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="285" class="named"><title>0x004602b0 InitSpotCamSequences (110 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="285" class="nonmatching"><title>0x00460320 Spline (249 bytes)</title></rect>
@@ -1845,7 +1845,7 @@
 <rect width="17.60" height="17.07" x="307.99" y="439.88" class="named"><title>0x004687e0 JeepBaddieCollision (754 bytes)</title></rect>
 <rect width="17.60" height="17.05" x="307.99" y="459.95" class="named"><title>0x0047a880 DoLoadSave (753 bytes)</title></rect>
 <rect width="17.68" height="16.79" x="328.58" y="44.50" class="named"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
-<rect width="17.58" height="16.79" x="349.26" y="44.50" class="nonmatching"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
+<rect width="17.58" height="16.79" x="349.26" y="44.50" class="named"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
 <rect width="17.56" height="16.79" x="369.84" y="44.50" class="named"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
 <rect width="17.54" height="16.79" x="390.40" y="44.50" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
 <rect width="17.51" height="16.79" x="410.94" y="44.50" class="named"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
