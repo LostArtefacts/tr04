@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="416.75" height="12" x="0" y="0" class="named"><title>1400 · 90.21%</title></rect>
-<rect width="45.25" height="12" x="416.75" y="0" class="nonmatching"><title>152 · 9.79%</title></rect>
+<rect width="417.05" height="12" x="0" y="0" class="named"><title>1401 · 90.27%</title></rect>
+<rect width="44.95" height="12" x="417.05" y="0" class="nonmatching"><title>151 · 9.73%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">90.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1400</tspan> · <tspan class="nonmatching">152</tspan></text>
+<text text-anchor="end" x="642" y="7.50">90.3%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1401</tspan> · <tspan class="nonmatching">151</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="323.26" height="12" x="0" y="0" class="named"><title>438 KB · 69.97%</title></rect>
-<rect width="138.74" height="12" x="323.26" y="0" class="nonmatching"><title>188 KB · 30.03%</title></rect>
+<rect width="324.50" height="12" x="0" y="0" class="named"><title>439 KB · 70.24%</title></rect>
+<rect width="137.50" height="12" x="324.50" y="0" class="nonmatching"><title>186 KB · 29.76%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">70.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">438 KB</tspan> · <tspan class="nonmatching">188 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">70.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">439 KB</tspan> · <tspan class="nonmatching">186 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -757,7 +757,7 @@
 <rect width="12" height="12" x="630" y="195" class="named"><title>0x00442d30 CreatureYRot (54 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="195" class="named"><title>0x00442d70 MoveCreature3DPos (249 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="195" class="named"><title>0x00442e70 InitialiseCamera (200 bytes)</title></rect>
-<rect width="12" height="12" x="675" y="195" class="nonmatching"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
+<rect width="12" height="12" x="675" y="195" class="named"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="195" class="named"><title>0x004435e0 ChaseCamera (1127 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="195" class="named"><title>0x00443a50 CombatCamera (1145 bytes)</title></rect>
 <rect width="12" height="12" x="720" y="195" class="nonmatching"><title>0x00443ed0 LookCamera (2321 bytes)</title></rect>
@@ -1691,7 +1691,7 @@
 <rect width="24.94" height="27.40" x="182.31" y="30.40" class="nonmatching"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
 <rect width="24.94" height="27.28" x="182.31" y="60.81" class="named"><title>0x00401080 AhmetControl (1708 bytes)</title></rect>
 <rect width="24.94" height="26.96" x="182.31" y="91.08" class="named"><title>0x00445ad0 ControlClockworkBeetle (1688 bytes)</title></rect>
-<rect width="24.94" height="26.94" x="182.31" y="121.04" class="nonmatching"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
+<rect width="24.94" height="26.94" x="182.31" y="121.04" class="named"><title>0x00442f40 MoveCamera (1687 bytes)</title></rect>
 <rect width="24.94" height="26.88" x="182.31" y="150.98" class="nonmatching"><title>0x004369b0 ControlEnemyMissile (1683 bytes)</title></rect>
 <rect width="24.94" height="25.08" x="182.31" y="180.86" class="named"><title>0x00433e10 UpdateSparks (1570 bytes)</title></rect>
 <rect width="24.94" height="24.85" x="182.31" y="208.94" class="named"><title>0x00483c80 AddTriClippedSorted (1556 bytes)</title></rect>

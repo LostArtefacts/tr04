@@ -40,9 +40,7 @@ void InitialiseCamera(void)
 void MoveCamera(GAME_VECTOR *ideal, sint32 speed)
 {
     FLOOR_INFO *floor;
-    GAME_VECTOR temp1, temp2;
-    sint32 height, ceiling, shake, rndval, wx, wy, wz, dx, dy, dz;
-    sint16 room_number;
+    sint32 height, ceiling, shake, rndval;
 
     if (BinocularOn < 0) {
         speed = 1;
@@ -105,61 +103,73 @@ void MoveCamera(GAME_VECTOR *ideal, sint32 speed)
         }
     }
 
-    wz = camera.pos.z;
-    wy = camera.pos.y;
-    wx = camera.pos.x;
-    room_number = camera.pos.room_number;
-    floor = GetFloor(wx, wy, wz, &room_number);
-    height = GetHeight(floor, wx, wy, wz);
-    ceiling = GetCeiling(floor, wx, wy, wz);
+    {
+        sint16 room_number;
+        sint32 wx, wy, wz;
 
-    if (wy < ceiling || wy > height) {
-        mgLOS(&camera.target, &camera.pos, 0);
-        dx = abs(camera.pos.x - ideal->x);
-        dy = abs(camera.pos.y - ideal->y);
-        dz = abs(camera.pos.z - ideal->z);
-        if (dx < 768 && dy < 768 && dz < 768) {
-            temp1.x = camera.pos.x;
-            temp1.y = camera.pos.y;
-            temp1.z = camera.pos.z;
-            temp1.room_number = camera.pos.room_number;
-            temp2.x = ideal->x;
-            temp2.y = ideal->y;
-            temp2.z = ideal->z;
-            temp2.room_number = ideal->room_number;
-            if (!mgLOS(&temp2, &temp1, 0)) {
-                camerasnaps++;
-                if (camerasnaps >= 8) {
-                    camera.pos.x = ideal->x;
-                    camera.pos.y = ideal->y;
-                    camera.pos.z = ideal->z;
-                    camera.pos.room_number = ideal->room_number;
-                    camerasnaps = 0;
+        wx = camera.pos.x;
+        wy = camera.pos.y;
+        wz = camera.pos.z;
+        room_number = camera.pos.room_number;
+        floor = GetFloor(wx, wy, wz, &room_number);
+        height = GetHeight(floor, wx, wy, wz);
+        ceiling = GetCeiling(floor, wx, wy, wz);
+
+        if (wy < ceiling || wy > height) {
+            sint32 dx, dy, dz;
+            GAME_VECTOR temp1, temp2;
+
+            mgLOS(&camera.target, &camera.pos, 0);
+            dx = abs(camera.pos.x - ideal->x);
+            dy = abs(camera.pos.y - ideal->y);
+            dz = abs(camera.pos.z - ideal->z);
+            if (dx < 768 && dy < 768 && dz < 768) {
+                temp1.x = camera.pos.x;
+                temp1.y = camera.pos.y;
+                temp1.z = camera.pos.z;
+                temp1.room_number = camera.pos.room_number;
+                temp2.x = ideal->x;
+                temp2.y = ideal->y;
+                temp2.z = ideal->z;
+                temp2.room_number = ideal->room_number;
+                if (!mgLOS(&temp2, &temp1, 0)) {
+                    camerasnaps++;
+                    if (camerasnaps >= 8) {
+                        camera.pos.x = ideal->x;
+                        camera.pos.y = ideal->y;
+                        camera.pos.z = ideal->z;
+                        camera.pos.room_number = ideal->room_number;
+                        camerasnaps = 0;
+                    }
                 }
             }
         }
     }
+    {
+        sint16 room_number;
+        sint32 wx, wy, wz;
 
-    wz = camera.pos.z;
-    wy = camera.pos.y;
-    wx = camera.pos.x;
-    room_number = camera.pos.room_number;
-    floor = GetFloor(wx, wy, wz, &room_number);
-    height = GetHeight(floor, wx, wy, wz);
-    ceiling = GetCeiling(floor, wx, wy, wz);
+        wx = camera.pos.x;
+        wy = camera.pos.y;
+        wz = camera.pos.z;
+        room_number = camera.pos.room_number;
+        floor = GetFloor(wx, wy, wz, &room_number);
+        height = GetHeight(floor, wx, wy, wz);
+        ceiling = GetCeiling(floor, wx, wy, wz);
 
-    if (wy - 255 < ceiling && wy + 255 > height && ceiling < height && ceiling != NO_HEIGHT
-        && height != NO_HEIGHT)
-        camera.pos.y = (height + ceiling) >> 1;
-    else if (wy + 255 > height && ceiling < height && ceiling != NO_HEIGHT && height != NO_HEIGHT)
-        camera.pos.y = height - 255;
-    else if (wy - 255 < ceiling && ceiling < height && ceiling != NO_HEIGHT && height != NO_HEIGHT)
-        camera.pos.y = ceiling + 255;
-    else if (ceiling >= height || height == NO_HEIGHT || ceiling == NO_HEIGHT) {
-        camera.pos.x = ideal->x;
-        camera.pos.y = ideal->y;
-        camera.pos.z = ideal->z;
-        camera.pos.room_number = ideal->room_number;
+        if (wy - 255 < ceiling && wy + 255 > height && ceiling < height && ceiling != NO_HEIGHT
+            && height != NO_HEIGHT)
+            camera.pos.y = (height + ceiling) >> 1;
+        else if (wy + 255 > height && ceiling < height && ceiling != NO_HEIGHT && height != NO_HEIGHT)
+            camera.pos.y = height - 255;
+        else if (wy - 255 < ceiling && ceiling < height && ceiling != NO_HEIGHT && height != NO_HEIGHT)
+            camera.pos.y = ceiling + 255;
+        else if (ceiling >= height || height == NO_HEIGHT || ceiling == NO_HEIGHT) {
+            camera.pos.x = ideal->x;
+            camera.pos.y = ideal->y;
+            camera.pos.z = ideal->z;
+            camera.pos.room_number = ideal->room_number;
+        }
     }
 
     GetFloor(camera.pos.x, camera.pos.y, camera.pos.z, &camera.pos.room_number);
