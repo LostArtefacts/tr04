@@ -1386,14 +1386,6 @@ compiled = 549
 matching = 49
 match = ["0-3", "7-10", "14-1D", "1F-2E", "65", "8B", "95", "98", "C5", "157", "15C", "1EA", "1F0"]
 
-[frontier.SW_SpanGTLitPersp]
-address = 0x0049b120
-size = 591
-compiled = 591
-matching = 27
-match = ["0-2", "3B", "45-46", "48-4A", "58", "7F", "C0", "D7-D8", "E2", "104-105", "119", "15B",
-    "161-162", "19F", "1FD", "211", "217", "23F", "245"]
-
 [frontier.PlayFmvNow]
 address = 0x0049c3e0
 size = 758

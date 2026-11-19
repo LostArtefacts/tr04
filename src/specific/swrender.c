@@ -6067,8 +6067,8 @@ void SW_SpanG(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGFogAddConst[2];
 extern uint32 SW_SpanGFogAddTmp[2];
+extern uint32 SW_SpanGFogAddConst[2];
 void SW_SpanGFogAdd(void)
 {
     __asm {
@@ -6388,9 +6388,9 @@ void SW_SpanGFog(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGFogAlphaConst0[2];
 extern uint32 SW_SpanGFogAlphaConst1[2];
 extern uint32 SW_SpanGFogAlphaMask;
+extern uint32 SW_SpanGFogAlphaConst0[2];
 void SW_SpanGFogAlpha(void)
 {
     __asm {
@@ -6980,8 +6980,8 @@ void SW_SpanGTAlpha(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGTPAlphaConst0[2];
 extern uint32 SW_SpanGTPAlphaConst1[2];
+extern uint32 SW_SpanGTPAlphaConst0[2];
 extern uint32 SW_SpanGTPAlphaTmp0;
 extern uint16 SW_SpanGTPAlphaTmp1[4];
 void SW_SpanGTPAlpha(void)
@@ -7538,8 +7538,8 @@ void SW_SpanGTAdd(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGTKeyConst[2];
 extern uint32 SW_SpanGTKeyMask;
+extern uint32 SW_SpanGTKeyConst[2];
 void SW_SpanGTKey(void)
 {
     __asm {
@@ -7886,8 +7886,8 @@ void SW_SpanGTP(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGTPKeyConst[2];
 extern uint32 SW_SpanGTPKeyMask;
+extern uint32 SW_SpanGTPKeyConst[2];
 void SW_SpanGTPKey(void)
 {
     __asm {
@@ -8468,9 +8468,9 @@ void SW_SpanGTBilinear(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGTAddBilinearConst[2];
-extern uint32 SW_SpanGTAddBilinearTmp0;
 extern uint32 SW_SpanGTAddBilinearTmp1;
+extern uint32 SW_SpanGTAddBilinearTmp0;
+extern uint32 SW_SpanGTAddBilinearConst[2];
 void SW_SpanGTAddBilinear(void)
 {
     __asm {
@@ -8656,8 +8656,8 @@ void SW_SpanGTAddBilinear(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGTPBilinearConst[2];
 extern uint32 SW_SpanGTPBilinearTmp0;
+extern uint32 SW_SpanGTPBilinearConst[2];
 extern uint32 SW_SpanGTPBilinearTmp1;
 void SW_SpanGTPBilinear(void)
 {
@@ -8863,8 +8863,8 @@ void SW_SpanGTPBilinear(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGTPAddBilinearConst[2];
 extern uint32 SW_SpanGTPAddBilinearTmp0;
+extern uint32 SW_SpanGTPAddBilinearConst[2];
 extern uint32 SW_SpanGTPAddBilinearTmp1;
 void SW_SpanGTPAddBilinear(void)
 {
@@ -9073,10 +9073,10 @@ void SW_SpanGTPAddBilinear(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGTAlphaBilinearConst0[2];
 extern uint32 SW_SpanGTAlphaBilinearConst1[2];
-extern uint32 SW_SpanGTAlphaBilinearConst2[2];
+extern uint32 SW_SpanGTAlphaBilinearConst0[2];
 extern uint32 SW_SpanGTAlphaBilinearConst3[2];
+extern uint32 SW_SpanGTAlphaBilinearConst2[2];
 extern uint32 SW_SpanGTAlphaBilinearTmp0;
 extern uint32 SW_SpanGTAlphaBilinearTmp1;
 extern uint32 SW_SpanGTAlphaBilinearTmp2[2];
@@ -9840,15 +9840,15 @@ void SW_SpanGTLit(void)
 
 void SW_SpanGTLitPersp(void)
 {
+    uint32 c2, dc2, dc0, dc1;
     SW_SPAN *s;
+    sint32 m, a, ia;
     uint32 *row, *p;
-    uint32 u, v, texel, d, du, dv;
-    uint32 c0, c1, c2, dc0, dc1, dc2;
-    sint32 n, m, a, ia;
+    uint32 dv;
 
+    s = SW_SpanBuffer;
     row = (uint32 *)SW_Surface + (SW_SpanY * SW_SurfacePitch >> 2);
     a = SW_TriV0->color >> 24;
-    s = SW_SpanBuffer;
     dc2 = (uint16)SW_SpanGrad[2];
     dc1 = (uint16)SW_SpanGrad[1];
     dc0 = (uint16)SW_SpanGrad[0];
@@ -9856,40 +9856,47 @@ void SW_SpanGTLitPersp(void)
     a <<= 8;
     if (s != SW_SpanEnd) {
         do {
+            uint32 c0, c1, u, v;
+            sint32 n;
+
+            p = s->x + row;
+            n = s->n;
             c2 = s->c[2];
             c1 = s->c[1];
-            n = s->n;
-            p = row + s->x;
             c0 = s->c[0];
             u = s->tex[0];
             v = s->tex[2];
             if (n > 0) {
                 do {
-                    du = ((sint32 *)(s + 1))[0];
+                    uint32 du;
+
+                    du = ((sint32 *)(1 + s))[0];
                     dv = ((sint32 *)(s + 1))[1];
-                    for (m = n > 16 ? 16 : n; m > 0; m--) {
-                        texel = ((uint32 *)SW_TextureBits)[(uint8)(u >> 16) | ((v >> 8) & 0xFF00)];
-                        if (texel) {
+                    for (m = n > 16 ? 16 : n; m > 0; ) {
+                        if ((((uint32 *)SW_TextureBits)[(uint8)(u >> 16) | ((v >> 8) & 0xFF00)]) != 0) {
+                            uint32 d;
+
                             d = *p;
-                            *p = ((SW_MulTable[SW_MulTable[(c2 & 0xFF00) | ((texel >> 16) & 0xFF)] + a] + SW_MulTable[((d >> 8) & 0xFF00) + ia]) << 16)
-                                | ((SW_MulTable[SW_MulTable[(c1 & 0xFF00) | ((texel >> 8) & 0xFF)] + a] + SW_MulTable[(d & 0xFF00) + ia]) << 8)
-                                | (SW_MulTable[SW_MulTable[(c0 & 0xFF00) | (texel & 0xFF)] + a] + SW_MulTable[((d & 0xFF) << 8) + ia]);
+                            *p = ((SW_MulTable[SW_MulTable[(c2 & 0xFF00) | (((((uint32 *)SW_TextureBits)[(uint8)(u >> 16) | ((v >> 8) & 0xFF00)]) >> 16) & 0xFF)] + a] + SW_MulTable[((d >> 8) & 0xFF00) + ia]) << 16)
+                                | ((SW_MulTable[SW_MulTable[(0xFF00 & c1) | (((((uint32 *)SW_TextureBits)[(uint8)(u >> 16) | ((v >> 8) & 0xFF00)]) >> 8) & 0xFF)] + a] + SW_MulTable[(0xFF00 & d) + ia]) << 8)
+                                | (SW_MulTable[SW_MulTable[(c0 & 0xFF00) | ((((uint32 *)SW_TextureBits)[(uint8)(u >> 16) | ((v >> 8) & 0xFF00)]) & 0xFF)] + a] + SW_MulTable[((0xFF & d) << 8) + ia]);
                         }
                         p++;
                         c2 += dc2;
                         c1 += dc1;
                         c0 += dc0;
                         u += du;
-                        v += dv;
+                        v = v + dv;
+                        m--;
                     }
-                    n -= 16;
                     s = (SW_SPAN *)((sint32 *)s + 2);
+                    n = n - 16;
                 } while (n > 0);
             } else {
                 s = (SW_SPAN *)((sint32 *)s + 2);
             }
+            s += 1;
             row += SW_SurfacePitch >> 2;
-            s++;
         } while (s != SW_SpanEnd);
     }
 }
@@ -9897,10 +9904,10 @@ void SW_SpanGTLitPersp(void)
 #ifndef FEAT_C_ASM
 extern uint32 SW_SpanGTIntTmp0;
 extern uint32 SW_SpanGTIntTmp1;
-extern uint32 SW_SpanGTIntTmp2;
-extern uint32 SW_SpanGTIntTmp3;
-extern uint32 SW_SpanGTIntTmp4;
 extern uint32 SW_SpanGTIntTmp5;
+extern uint32 SW_SpanGTIntTmp3;
+extern uint32 SW_SpanGTIntTmp2;
+extern uint32 SW_SpanGTIntTmp4;
 void SW_SpanGTInt(void)
 {
     __asm {
@@ -10077,10 +10084,10 @@ void SW_SpanGTInt(void)
 #endif
 
 #ifndef FEAT_C_ASM
+extern uint32 SW_SpanGTAddIntTmp3;
 extern uint32 SW_SpanGTAddIntTmp0;
 extern uint32 SW_SpanGTAddIntTmp1;
 extern uint32 SW_SpanGTAddIntTmp2;
-extern uint32 SW_SpanGTAddIntTmp3;
 extern uint32 SW_SpanGTAddIntTmp4;
 extern uint32 SW_SpanGTAddIntTmp5;
 void SW_SpanGTAddInt(void)
@@ -10273,11 +10280,11 @@ void SW_SpanGTAddInt(void)
 
 #ifndef FEAT_C_ASM
 extern uint32 SW_SpanGTKeyIntTmp0;
-extern uint32 SW_SpanGTKeyIntTmp1;
 extern uint32 SW_SpanGTKeyIntTmp2;
-extern uint32 SW_SpanGTKeyIntTmp3;
-extern uint32 SW_SpanGTKeyIntTmp4;
+extern uint32 SW_SpanGTKeyIntTmp1;
 extern uint32 SW_SpanGTKeyIntTmp5;
+extern uint32 SW_SpanGTKeyIntTmp4;
+extern uint32 SW_SpanGTKeyIntTmp3;
 void SW_SpanGTKeyInt(void)
 {
     __asm {
@@ -10463,9 +10470,9 @@ void SW_SpanGTKeyInt(void)
 extern uint32 SW_SpanGTPIntTmp0;
 extern uint32 SW_SpanGTPIntTmp1;
 extern uint32 SW_SpanGTPIntTmp2;
+extern uint32 SW_SpanGTPIntTmp5;
 extern uint32 SW_SpanGTPIntTmp3;
 extern uint32 SW_SpanGTPIntTmp4;
-extern uint32 SW_SpanGTPIntTmp5;
 void SW_SpanGTPInt(void)
 {
     __asm {
@@ -10665,12 +10672,12 @@ void SW_SpanGTPInt(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGTPAddIntTmp0;
 extern uint32 SW_SpanGTPAddIntTmp1;
-extern uint32 SW_SpanGTPAddIntTmp2;
 extern uint32 SW_SpanGTPAddIntTmp3;
+extern uint32 SW_SpanGTPAddIntTmp2;
 extern uint32 SW_SpanGTPAddIntTmp4;
 extern uint32 SW_SpanGTPAddIntTmp5;
+extern uint32 SW_SpanGTPAddIntTmp0;
 void SW_SpanGTPAddInt(void)
 {
     __asm {
@@ -10882,12 +10889,12 @@ void SW_SpanGTPAddInt(void)
 #endif
 
 #ifndef FEAT_C_ASM
-extern uint32 SW_SpanGTPKeyIntTmp0;
 extern uint32 SW_SpanGTPKeyIntTmp1;
 extern uint32 SW_SpanGTPKeyIntTmp2;
+extern uint32 SW_SpanGTPKeyIntTmp5;
+extern uint32 SW_SpanGTPKeyIntTmp0;
 extern uint32 SW_SpanGTPKeyIntTmp3;
 extern uint32 SW_SpanGTPKeyIntTmp4;
-extern uint32 SW_SpanGTPKeyIntTmp5;
 void SW_SpanGTPKeyInt(void)
 {
     __asm {

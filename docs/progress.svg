@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="423.30" height="12" x="0" y="0" class="named"><title>1422 · 91.62%</title></rect>
-<rect width="38.70" height="12" x="423.30" y="0" class="nonmatching"><title>130 · 8.38%</title></rect>
+<rect width="423.60" height="12" x="0" y="0" class="named"><title>1423 · 91.69%</title></rect>
+<rect width="38.40" height="12" x="423.60" y="0" class="nonmatching"><title>129 · 8.31%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">91.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1422</tspan> · <tspan class="nonmatching">130</tspan></text>
+<text text-anchor="end" x="642" y="7.50">91.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1423</tspan> · <tspan class="nonmatching">129</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="337.11" height="12" x="0" y="0" class="named"><title>456 KB · 72.97%</title></rect>
-<rect width="124.89" height="12" x="337.11" y="0" class="nonmatching"><title>169 KB · 27.03%</title></rect>
+<rect width="337.54" height="12" x="0" y="0" class="named"><title>457 KB · 73.06%</title></rect>
+<rect width="124.46" height="12" x="337.54" y="0" class="nonmatching"><title>169 KB · 26.94%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">73.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">456 KB</tspan> · <tspan class="nonmatching">169 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">73.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">457 KB</tspan> · <tspan class="nonmatching">169 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1596,7 +1596,7 @@
 <rect width="12" height="12" x="465" y="450" class="named"><title>0x0049ac70 SW_SpanGAddInt (196 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="450" class="nonmatching"><title>0x0049ad40 SW_SpanGLit (427 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="450" class="nonmatching"><title>0x0049aef0 SW_SpanGTLit (549 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="450" class="nonmatching"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="450" class="named"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="450" class="named"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="450" class="named"><title>0x0049b570 SW_SpanGTAddInt (533 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="450" class="named"><title>0x0049b790 SW_SpanGTKeyInt (504 bytes)</title></rect>
@@ -1912,7 +1912,7 @@
 <rect width="15.44" height="15.38" x="347.72" y="83.16" class="named"><title>0x00480310 phd_PutPolygons_train (596 bytes)</title></rect>
 <rect width="15.44" height="15.30" x="347.72" y="101.54" class="named"><title>0x00472650 InsertRoom (593 bytes)</title></rect>
 <rect width="15.44" height="15.25" x="347.72" y="119.85" class="nonmatching"><title>0x00463de0 DrawChar (591 bytes)</title></rect>
-<rect width="15.44" height="15.25" x="347.72" y="138.10" class="nonmatching"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
+<rect width="15.44" height="15.25" x="347.72" y="138.10" class="named"><title>0x0049b120 SW_SpanGTLitPersp (591 bytes)</title></rect>
 <rect width="15.44" height="15.23" x="347.72" y="156.35" class="named"><title>0x00447ce0 ItemPushLaraStatic (590 bytes)</title></rect>
 <rect width="15.44" height="15.20" x="347.72" y="174.58" class="nonmatching"><title>0x0043b760 S_CallInventory2 (589 bytes)</title></rect>
 <rect width="15.44" height="15.17" x="347.72" y="192.78" class="named"><title>0x0042bbf0 PistolHandler (588 bytes)</title></rect>
