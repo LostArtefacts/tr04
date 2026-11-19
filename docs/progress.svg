@@ -46,17 +46,17 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="417.35" height="12" x="0" y="0" class="named"><title>1402 · 90.34%</title></rect>
-<rect width="44.65" height="12" x="417.35" y="0" class="nonmatching"><title>150 · 9.66%</title></rect>
+<rect width="417.65" height="12" x="0" y="0" class="named"><title>1403 · 90.40%</title></rect>
+<rect width="44.35" height="12" x="417.65" y="0" class="nonmatching"><title>149 · 9.60%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">90.3%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1402</tspan> · <tspan class="nonmatching">150</tspan></text>
+<text text-anchor="end" x="642" y="7.50">90.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1403</tspan> · <tspan class="nonmatching">149</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="326.22" height="12" x="0" y="0" class="named"><title>442 KB · 70.61%</title></rect>
-<rect width="135.78" height="12" x="326.22" y="0" class="nonmatching"><title>184 KB · 29.39%</title></rect>
+<rect width="326.45" height="12" x="0" y="0" class="named"><title>442 KB · 70.66%</title></rect>
+<rect width="135.55" height="12" x="326.45" y="0" class="nonmatching"><title>184 KB · 29.34%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">70.6%</text>
+<text text-anchor="end" x="642" y="24.50">70.7%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">442 KB</tspan> · <tspan class="nonmatching">184 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
@@ -268,7 +268,7 @@
 <rect width="12" height="12" x="45" y="60" class="named"><title>0x00420d50 lara_as_duckl (41 bytes)</title></rect>
 <rect width="12" height="12" x="60" y="60" class="named"><title>0x00420d80 lara_as_duckr (41 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="60" class="named"><title>0x00420db0 lara_col_ducklr (230 bytes)</title></rect>
-<rect width="12" height="12" x="90" y="60" class="nonmatching"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
+<rect width="12" height="12" x="90" y="60" class="named"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="60" class="named"><title>0x00420fe0 LaraFallen (92 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="60" class="named"><title>0x00421040 lara_as_duck (175 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="60" class="named"><title>0x004210f0 lara_col_duck (287 bytes)</title></rect>
@@ -2158,7 +2158,7 @@
 <rect width="10.90" height="11.40" x="545.22" y="164.32" class="named"><title>0x0043ad10 UpdateShockwaves (312 bytes)</title></rect>
 <rect width="10.86" height="11.40" x="559.12" y="164.32" class="named"><title>0x00447f30 TestLaraPosition (311 bytes)</title></rect>
 <rect width="10.83" height="11.40" x="572.98" y="164.32" class="named"><title>0x00440e90 CreatureCreature (310 bytes)</title></rect>
-<rect width="10.79" height="11.40" x="586.81" y="164.32" class="nonmatching"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
+<rect width="10.79" height="11.40" x="586.81" y="164.32" class="named"><title>0x00420ea0 TestLaraSlide (309 bytes)</title></rect>
 <rect width="10.76" height="11.40" x="600.60" y="164.32" class="named"><title>0x0042ddf0 InitialiseNewWeapon (308 bytes)</title></rect>
 <rect width="10.72" height="11.40" x="614.36" y="164.32" class="named"><title>0x00452ca0 DrawGameInfo (307 bytes)</title></rect>
 <rect width="10.69" height="11.40" x="628.08" y="164.32" class="named"><title>0x0048f700 WinProcessCommandLine (306 bytes)</title></rect>

@@ -162,9 +162,9 @@ sint32 TestLaraSlide(ITEM_INFO *item, COLL_INFO *coll)
     static sint16 old_ang = 1;
     sint16 ang_diff, ang;
 
+    ang = 0;
     if (ABS(coll->tilt_x) <= 2 && ABS(coll->tilt_z) <= 2)
         return 0;
-    ang = 0;
     if (coll->tilt_x > 2)
         ang = -0x4000;
     else if (coll->tilt_x < -2)
@@ -176,24 +176,26 @@ sint32 TestLaraSlide(ITEM_INFO *item, COLL_INFO *coll)
     ang_diff = ang - item->pos.y_rot;
     ShiftItem(item, coll);
     if (ang_diff >= -0x4000 && ang_diff <= 0x4000) {
-        if (item->current_anim_state == AS_SLIDE && old_ang == ang)
-            return 1;
-        item->anim_number = ANIM_SLIDE;
-        item->frame_number = anims[ANIM_SLIDE].frame_base;
-        item->goal_anim_state = AS_SLIDE;
-        item->current_anim_state = AS_SLIDE;
-        item->pos.y_rot = ang;
+        if (item->current_anim_state != AS_SLIDE || old_ang != ang) {
+            item->anim_number = ANIM_SLIDE;
+            item->frame_number = anims[ANIM_SLIDE].frame_base;
+            item->goal_anim_state = AS_SLIDE;
+            item->current_anim_state = AS_SLIDE;
+            item->pos.y_rot = ang;
+            lara.move_angle = ang;
+            old_ang = ang;
+        }
     } else {
-        if (item->current_anim_state == AS_SLIDEBACK && old_ang == ang)
-            return 1;
-        item->anim_number = ANIM_SLIDEBACK;
-        item->frame_number = anims[ANIM_SLIDEBACK].frame_base;
-        item->goal_anim_state = AS_SLIDEBACK;
-        item->current_anim_state = AS_SLIDEBACK;
-        item->pos.y_rot = ang - 0x8000;
+        if (item->current_anim_state != AS_SLIDEBACK || old_ang != ang) {
+            item->anim_number = ANIM_SLIDEBACK;
+            item->frame_number = anims[ANIM_SLIDEBACK].frame_base;
+            item->goal_anim_state = AS_SLIDEBACK;
+            item->current_anim_state = AS_SLIDEBACK;
+            item->pos.y_rot = ang - 0x8000;
+            lara.move_angle = ang;
+            old_ang = ang;
+        }
     }
-    lara.move_angle = ang;
-    old_ang = ang;
     return 1;
 }
 

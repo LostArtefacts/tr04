@@ -336,14 +336,6 @@ match = ["0-6B", "6D-73", "75-7E", "82", "B4", "BE", "C6", "100", "108", "130", 
     "714", "770", "773", "77E-77F", "781", "783", "822", "830-831", "833", "870", "8AC", "8AE",
     "8B5", "8DE-8DF"]
 
-[frontier.TestLaraSlide]
-address = 0x00420ea0
-size = 309
-compiled = 310
-matching = 27
-match = ["0-4", "8", "B-C", "21-22", "33-36", "4B", "52", "6D", "AB-AC", "CE", "E4-E5", "107",
-    "115", "12D", "131-132"]
-
 [frontier.LaraHangTest]
 address = 0x004230e0
 size = 1224
