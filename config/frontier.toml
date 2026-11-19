@@ -416,14 +416,6 @@ compiled = 294
 matching = 24
 match = ["0-2", "4-B", "14", "23", "32-33", "CB", "D6", "F6", "10A-10C", "114-116"]
 
-[frontier.UpdateSmokeSparks]
-address = 0x00438700
-size = 563
-compiled = 563
-matching = 111
-match = ["0-B", "D-1B", "1D-23", "58", "76", "F8", "106", "108-109", "11A", "11C", "129", "132",
-    "145", "179", "17B", "1A8", "1DB", "1F1-1FC", "1FE-1FF", "201-204", "206-219", "21B-232"]
-
 [frontier.S_DrawSparks]
 address = 0x0043a1b0
 size = 1240

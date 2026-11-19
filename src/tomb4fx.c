@@ -330,12 +330,15 @@ void UpdateSmokeSparks(void)
     sint32 fade, i;
 
     sptr = smoke_spark;
-    for (i = 32; i > 0; i--, sptr++) {
-        if (!sptr->On)
+    for (i = 32; i > 0; i--) {
+        if (!sptr->On) {
+            sptr++;
             continue;
+        }
         sptr->Life -= 2;
         if (sptr->Life <= 0) {
             sptr->On = 0;
+            sptr++;
             continue;
         }
         if (sptr->sLife - sptr->Life < sptr->ColFadeSpeed) {
@@ -346,6 +349,7 @@ void UpdateSmokeSparks(void)
             sptr->Shade = (uint8)((sptr->dShade * fade) >> 16);
             if (sptr->Shade < 8) {
                 sptr->On = 0;
+                sptr++;
                 continue;
             }
         } else
@@ -378,6 +382,7 @@ void UpdateSmokeSparks(void)
             sptr->z += SmokeWindZ >> 1;
         }
         sptr->Size = (uint8)(sptr->sSize + ((fade * (sptr->dSize - sptr->sSize)) >> 16));
+        sptr++;
     }
 }
 

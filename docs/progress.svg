@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="420.62" height="12" x="0" y="0" class="named"><title>1413 · 91.04%</title></rect>
-<rect width="41.38" height="12" x="420.62" y="0" class="nonmatching"><title>139 · 8.96%</title></rect>
+<rect width="420.92" height="12" x="0" y="0" class="named"><title>1414 · 91.11%</title></rect>
+<rect width="41.08" height="12" x="420.92" y="0" class="nonmatching"><title>138 · 8.89%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">91.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1413</tspan> · <tspan class="nonmatching">139</tspan></text>
+<text text-anchor="end" x="642" y="7.50">91.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1414</tspan> · <tspan class="nonmatching">138</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="332.26" height="12" x="0" y="0" class="named"><title>450 KB · 71.92%</title></rect>
-<rect width="129.74" height="12" x="332.26" y="0" class="nonmatching"><title>176 KB · 28.08%</title></rect>
+<rect width="332.68" height="12" x="0" y="0" class="named"><title>450 KB · 72.01%</title></rect>
+<rect width="129.32" height="12" x="332.68" y="0" class="nonmatching"><title>175 KB · 27.99%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">71.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">450 KB</tspan> · <tspan class="nonmatching">176 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">72.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">450 KB</tspan> · <tspan class="nonmatching">175 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -620,7 +620,7 @@
 <rect width="12" height="12" x="75" y="165" class="named"><title>0x00438510 AddFire (80 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="165" class="nonmatching"><title>0x00438560 S_DrawFires (294 bytes)</title></rect>
 <rect width="12" height="12" x="105" y="165" class="named"><title>0x00438690 GetFreeSmokeSpark (107 bytes)</title></rect>
-<rect width="12" height="12" x="120" y="165" class="nonmatching"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
+<rect width="12" height="12" x="120" y="165" class="named"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="165" class="named"><title>0x00438940 TriggerGunSmoke (597 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="165" class="named"><title>0x00438ba0 TriggerShatterSmoke (369 bytes)</title></rect>
 <rect width="12" height="12" x="165" y="165" class="named"><title>0x00438d20 GetFreeBlood (103 bytes)</title></rect>
@@ -1932,7 +1932,7 @@
 <rect width="15.44" height="14.71" x="347.72" y="444.69" class="named"><title>0x00456120 PoleCollision (570 bytes)</title></rect>
 <rect width="15.44" height="14.61" x="347.72" y="462.39" class="nonmatching"><title>0x0043dbf0 setup_ammo_selector (566 bytes)</title></rect>
 <rect width="14.91" height="15.09" x="366.16" y="83.16" class="nonmatching"><title>0x00489950 DrawLaserSightSprite (565 bytes)</title></rect>
-<rect width="14.86" height="15.09" x="384.07" y="83.16" class="nonmatching"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
+<rect width="14.86" height="15.09" x="384.07" y="83.16" class="named"><title>0x00438700 UpdateSmokeSparks (563 bytes)</title></rect>
 <rect width="14.80" height="15.09" x="401.93" y="83.16" class="named"><title>0x0040b3c0 InitialiseRaghead (561 bytes)</title></rect>
 <rect width="14.80" height="15.09" x="419.73" y="83.16" class="named"><title>0x00448a80 StargateCollision (561 bytes)</title></rect>
 <rect width="14.80" height="15.09" x="437.54" y="83.16" class="named"><title>0x004543b0 InitialiseItem (561 bytes)</title></rect>
