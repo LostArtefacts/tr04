@@ -2494,13 +2494,12 @@ void DrawSprite(sint32 x, sint32 y, sint32 slot, sint32 col, sint32 size, sint32
     SPRITESTRUCT *sprite;
     D3DTLVERTEX v[4];
     TEXTURESTRUCT tex;
-    sint32 s;
 
-    s = (sint32)((float)(phd_winwidth / 640.0F) * (size << 1));
+    size = (sint32)((float)(phd_winwidth / 640.0F) * (size << 1));
     if (z)
-        setXY4(v, x - s, y - s, s + x, y - s, x - s, s + y, s + x, s + y, (sint32)(z + f_mznear), clipflags);
+        setXY4(v, x - size, y - size, x + size, y - size, x - size, y + size, x + size, y + size, (sint32)(z + f_mznear), clipflags);
     else
-        setXY4(v, x - s, y - s, s + x, y - s, x - s, s + y, s + x, s + y, (sint32)f_mzfar, clipflags);
+        setXY4(v, x - size, y - size, x + size, y - size, x - size, y + size, x + size, y + size, (sint32)f_mzfar, clipflags);
     sprite = &spriteinfo[slot + objects[DEFAULT_SPRITES].mesh_index];
     v[0].specular = 0xFF000000;
     v[3].specular = 0xFF000000;

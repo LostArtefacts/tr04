@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="416.16" height="12" x="0" y="0" class="named"><title>1398 · 90.08%</title></rect>
-<rect width="45.84" height="12" x="416.16" y="0" class="nonmatching"><title>154 · 9.92%</title></rect>
+<rect width="416.45" height="12" x="0" y="0" class="named"><title>1399 · 90.14%</title></rect>
+<rect width="45.55" height="12" x="416.45" y="0" class="nonmatching"><title>153 · 9.86%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">90.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1398</tspan> · <tspan class="nonmatching">154</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1399</tspan> · <tspan class="nonmatching">153</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="322.88" height="12" x="0" y="0" class="named"><title>437 KB · 69.89%</title></rect>
-<rect width="139.12" height="12" x="322.88" y="0" class="nonmatching"><title>188 KB · 30.11%</title></rect>
+<rect width="323.16" height="12" x="0" y="0" class="named"><title>438 KB · 69.95%</title></rect>
+<rect width="138.84" height="12" x="323.16" y="0" class="nonmatching"><title>188 KB · 30.05%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">69.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">437 KB</tspan> · <tspan class="nonmatching">188 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">438 KB</tspan> · <tspan class="nonmatching">188 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1423,7 +1423,7 @@
 <rect width="12" height="12" x="120" y="405" class="nonmatching"><title>0x0048b130 ShowTitle (842 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="405" class="nonmatching"><title>0x0048b480 DrawTrainFloorStrip (1283 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="405" class="named"><title>0x0048b990 DrawTrainStrips (280 bytes)</title></rect>
-<rect width="12" height="12" x="165" y="405" class="nonmatching"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
+<rect width="12" height="12" x="165" y="405" class="named"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
 <rect width="12" height="12" x="180" y="405" class="nonmatching"><title>0x0048bc30 SetUpLensFlare (1545 bytes)</title></rect>
 <rect width="12" height="12" x="195" y="405" class="named"><title>0x0048c240 SetFade (53 bytes)</title></rect>
 <rect width="12" height="12" x="210" y="405" class="named"><title>0x0048c280 DoScreenFade (379 bytes)</title></rect>
@@ -2089,7 +2089,7 @@
 <rect width="12.39" height="12.25" x="416.67" y="195.68" class="nonmatching"><title>0x004671b0 GetOnJeep (381 bytes)</title></rect>
 <rect width="12.39" height="12.25" x="416.67" y="210.92" class="named"><title>0x0049c000 SW_Convert32To555 (381 bytes)</title></rect>
 <rect width="12.39" height="12.21" x="416.67" y="226.17" class="named"><title>0x00415c30 ControlTwoBlockPlatform (380 bytes)</title></rect>
-<rect width="12.39" height="12.21" x="416.67" y="241.38" class="nonmatching"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
+<rect width="12.39" height="12.21" x="416.67" y="241.38" class="named"><title>0x0048bab0 DrawSprite (380 bytes)</title></rect>
 <rect width="12.39" height="12.21" x="416.67" y="256.60" class="named"><title>0x00498c90 SW_SpanGFogAdd (380 bytes)</title></rect>
 <rect width="12.39" height="12.18" x="416.67" y="271.81" class="named"><title>0x0048c280 DoScreenFade (379 bytes)</title></rect>
 <rect width="12.39" height="12.12" x="416.67" y="286.99" class="named"><title>0x00447470 CreatureCollision (377 bytes)</title></rect>
