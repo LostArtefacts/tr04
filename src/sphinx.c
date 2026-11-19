@@ -30,7 +30,8 @@ void SphinxControl(sint16 item_number)
     FLOOR_INFO *floor;
     ROOM_INFO *r;
     MESH_INFO *mesh;
-    AI_INFO info;
+    AI_INFO info, larainfo;
+    sint32 dx, dz;
     sint32 s, c, x, y, z, h1, h2;
     sint16 i, room_number, angle;
 
@@ -69,8 +70,20 @@ void SphinxControl(sint16 item_number)
     else
         sphinx->enemy = lara_item;
     CreatureAIInfo(item, &info);
-    if (sphinx->enemy != lara_item)
-        phd_atan(lara_item->pos.z_pos - item->pos.z_pos, lara_item->pos.x_pos - item->pos.x_pos);
+    if (sphinx->enemy == lara_item) {
+        larainfo.angle = info.angle;
+        larainfo.ahead = info.ahead;
+        larainfo.distance = info.distance;
+    } else {
+        dz = lara_item->pos.z_pos - item->pos.z_pos;
+        dx = lara_item->pos.x_pos - item->pos.x_pos;
+        larainfo.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+        if (larainfo.angle > -0x4000 && larainfo.angle < 0x4000)
+            larainfo.ahead = 1;
+        else
+            larainfo.ahead = 0;
+        larainfo.distance = SQUARE(dx) + SQUARE(dz);
+    }
     GetCreatureMood(item, &info, 1);
     CreatureMood(item, &info, 1);
     angle = CreatureTurn(item, sphinx->maximum_turn);

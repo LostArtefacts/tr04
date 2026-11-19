@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="417.94" height="12" x="0" y="0" class="named"><title>1404 · 90.46%</title></rect>
-<rect width="44.06" height="12" x="417.94" y="0" class="nonmatching"><title>148 · 9.54%</title></rect>
+<rect width="418.24" height="12" x="0" y="0" class="named"><title>1405 · 90.53%</title></rect>
+<rect width="43.76" height="12" x="418.24" y="0" class="nonmatching"><title>147 · 9.47%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">90.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1404</tspan> · <tspan class="nonmatching">148</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1405</tspan> · <tspan class="nonmatching">147</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="327.40" height="12" x="0" y="0" class="named"><title>443 KB · 70.87%</title></rect>
-<rect width="134.60" height="12" x="327.40" y="0" class="nonmatching"><title>182 KB · 29.13%</title></rect>
+<rect width="328.41" height="12" x="0" y="0" class="named"><title>445 KB · 71.08%</title></rect>
+<rect width="133.59" height="12" x="328.41" y="0" class="nonmatching"><title>181 KB · 28.92%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">70.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">443 KB</tspan> · <tspan class="nonmatching">182 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">71.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">445 KB</tspan> · <tspan class="nonmatching">181 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -179,7 +179,7 @@
 <rect width="12" height="12" x="210" y="30" class="named"><title>0x004117e0 InitialiseSkeleton (231 bytes)</title></rect>
 <rect width="12" height="12" x="225" y="30" class="nonmatching"><title>0x004118d0 SkeletonControl (4490 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="30" class="named"><title>0x00412a60 InitialiseSphinx (88 bytes)</title></rect>
-<rect width="12" height="12" x="255" y="30" class="nonmatching"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>
+<rect width="12" height="12" x="255" y="30" class="named"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>
 <rect width="12" height="12" x="270" y="30" class="named"><title>0x00413020 InitialiseTemplar (99 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="30" class="named"><title>0x00413090 TemplarControl (1296 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="30" class="named"><title>0x004135a0 CloseTrapDoor (285 bytes)</title></rect>
@@ -1715,7 +1715,7 @@
 <rect width="23.28" height="24.08" x="210.25" y="220.46" class="named"><title>0x00445310 BinocularCamera (1407 bytes)</title></rect>
 <rect width="23.28" height="23.84" x="210.25" y="247.54" class="nonmatching"><title>0x00482390 AddQuadClippedZBuffer (1393 bytes)</title></rect>
 <rect width="23.28" height="23.77" x="210.25" y="274.38" class="nonmatching"><title>0x00444890 CalculateCamera (1389 bytes)</title></rect>
-<rect width="23.28" height="23.34" x="210.25" y="301.16" class="nonmatching"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>
+<rect width="23.28" height="23.34" x="210.25" y="301.16" class="named"><title>0x00412ac0 SphinxControl (1364 bytes)</title></rect>
 <rect width="23.28" height="22.68" x="210.25" y="327.50" class="nonmatching"><title>0x00448da0 GetCollidedObjects (1325 bytes)</title></rect>
 <rect width="23.28" height="22.56" x="210.25" y="353.18" class="nonmatching"><title>0x00489b90 DrawDebris (1318 bytes)</title></rect>
 <rect width="23.28" height="22.47" x="210.25" y="378.73" class="named"><title>0x00482910 AddTriClippedZBuffer (1313 bytes)</title></rect>
