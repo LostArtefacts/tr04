@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="423" height="12" x="0" y="0" class="named"><title>1421 · 91.56%</title></rect>
-<rect width="39" height="12" x="423" y="0" class="nonmatching"><title>131 · 8.44%</title></rect>
+<rect width="423.30" height="12" x="0" y="0" class="named"><title>1422 · 91.62%</title></rect>
+<rect width="38.70" height="12" x="423.30" y="0" class="nonmatching"><title>130 · 8.38%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">91.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1421</tspan> · <tspan class="nonmatching">131</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1422</tspan> · <tspan class="nonmatching">130</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="335.84" height="12" x="0" y="0" class="named"><title>455 KB · 72.69%</title></rect>
-<rect width="126.16" height="12" x="335.84" y="0" class="nonmatching"><title>171 KB · 27.31%</title></rect>
+<rect width="337.11" height="12" x="0" y="0" class="named"><title>456 KB · 72.97%</title></rect>
+<rect width="124.89" height="12" x="337.11" y="0" class="nonmatching"><title>169 KB · 27.03%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">72.7%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">455 KB</tspan> · <tspan class="nonmatching">171 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">73.0%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">456 KB</tspan> · <tspan class="nonmatching">169 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -869,7 +869,7 @@
 <rect width="12" height="12" x="60" y="240" class="named"><title>0x00451180 UpdateSkyLightning (181 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="240" class="named"><title>0x00451240 RenderIt (711 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="240" class="named"><title>0x00451510 LoadGameflow (604 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="240" class="nonmatching"><title>0x00451770 DoGameflow (1716 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="240" class="named"><title>0x00451770 DoGameflow (1716 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="240" class="named"><title>0x00451e30 DoTitle (2272 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="240" class="nonmatching"><title>0x00452710 DoLevel (1133 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="240" class="nonmatching"><title>0x00452b80 DoCredits (230 bytes)</title></rect>
@@ -1687,7 +1687,7 @@
 <rect width="27.06" height="25.63" x="152.24" y="394.37" class="named"><title>0x00496ae0 SW_TriSetupG (1741 bytes)</title></rect>
 <rect width="27.06" height="25.63" x="152.24" y="423" class="named"><title>0x004984e0 SW_TriSetupGFog (1741 bytes)</title></rect>
 <rect width="27.06" height="25.38" x="152.24" y="451.62" class="named"><title>0x0044ec10 DrawRooms (1724 bytes)</title></rect>
-<rect width="24.94" height="27.40" x="182.31" y="0" class="nonmatching"><title>0x00451770 DoGameflow (1716 bytes)</title></rect>
+<rect width="24.94" height="27.40" x="182.31" y="0" class="named"><title>0x00451770 DoGameflow (1716 bytes)</title></rect>
 <rect width="24.94" height="27.40" x="182.31" y="30.40" class="nonmatching"><title>0x0048caa0 DrawShockwaves (1716 bytes)</title></rect>
 <rect width="24.94" height="27.28" x="182.31" y="60.81" class="named"><title>0x00401080 AhmetControl (1708 bytes)</title></rect>
 <rect width="24.94" height="26.96" x="182.31" y="91.08" class="named"><title>0x00445ad0 ControlClockworkBeetle (1688 bytes)</title></rect>

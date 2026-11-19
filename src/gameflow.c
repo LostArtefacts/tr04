@@ -125,8 +125,8 @@ void LoadGameflow(void)
 
 void DoGameflow(void)
 {
-    uint8 *gf;
     uint8 n;
+    uint8 *gf;
 
     PlayFmvNow(0);
     do_boot_screen(Gameflow->Language);
@@ -213,7 +213,7 @@ void DoGameflow(void)
             gfLevelFlags = gf[1] | (gf[2] << 8);
             if (gfLevelFlags & GF_NOLEVEL) {
                 gfStatus = 999;
-                gfCurrentLevel++;
+                gfCurrentLevel += 1;
             } else
                 DoLevel(gf[3], gf[4]);
             gfLegendTime = 0;
@@ -229,8 +229,8 @@ void DoGameflow(void)
             gfFog.a = 0;
             switch (gfStatus) {
             case 1:
-                gfInitialiseGame = 1;
                 gfCurrentLevel = Gameflow->TitleEnabled ? 0 : 1;
+                gfInitialiseGame = 1;
                 break;
             case 3:
                 if ((gfLevelFlags & GF_RESETHUB && gfLevelComplete == gfResetHubDest) || skipped_level) {
@@ -246,8 +246,8 @@ void DoGameflow(void)
                     gfCurrentLevel = gfLevelComplete;
                 break;
             case 2:
-                gfGameMode = 4;
                 gfCurrentLevel = savegame.CurrentLevel & 0x7F;
+                gfGameMode = 4;
                 break;
             case 4:
                 return;
@@ -263,8 +263,8 @@ void DoGameflow(void)
             gfMirrorRoom = 255;
             switch (gfStatus) {
             case 2:
-                gfGameMode = 4;
                 gfCurrentLevel = savegame.CurrentLevel & 0x7F;
+                gfGameMode = 4;
                 break;
             case 3:
                 gfGameMode = 0;
@@ -280,15 +280,15 @@ void DoGameflow(void)
             break;
         default:
             if (n >= 0x93 && n <= 0x9E)
-                n -= 82;
-            else if (n >= 0x9F && n <= 0xAA)
+                n = n - 82;
+            else if (0x9F <= n && 0xAA >= n)
                 n -= 122;
             else if (n >= 0xAB && n <= 0xAE)
                 n -= 78;
-            else if (n >= 0xAF && n <= 0xB1)
-                n -= 59;
+            else if (0xAF <= n && n <= 0xB1)
+                n = n - 59;
             else if (n >= 0xB2 && n <= 0xC1)
-                n -= 101;
+                n = n - 101;
             else if (n >= 0xC2 && n <= 0xD1)
                 n += 111;
             else if (n >= 0xD2 && n <= 0xD9)
