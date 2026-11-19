@@ -28,7 +28,8 @@ void MummyControl(sint16 item_number)
 {
     ITEM_INFO *item;
     CREATURE_INFO *mummy;
-    AI_INFO info;
+    AI_INFO info, larainfo;
+    sint32 dx, dz;
     sint32 stop;
     sint16 angle, head, torso_x, torso_y;
 
@@ -69,14 +70,25 @@ void MummyControl(sint16 item_number)
         }
     }
     if (!stop) {
-        if (mummy->enemy != lara_item)
-            phd_atan(lara_item->pos.z_pos - item->pos.z_pos, lara_item->pos.x_pos - item->pos.x_pos);
+        if (mummy->enemy == lara_item) {
+            larainfo.angle = info.angle;
+            larainfo.ahead = info.ahead;
+            larainfo.distance = info.distance;
+        } else {
+            dz = lara_item->pos.z_pos - item->pos.z_pos;
+            dx = lara_item->pos.x_pos - item->pos.x_pos;
+            larainfo.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+            if (larainfo.angle > -0x4000 && larainfo.angle < 0x4000)
+                larainfo.ahead = 1;
+            else
+                larainfo.ahead = 0;
+            larainfo.distance = SQUARE(dx) + SQUARE(dz);
+        }
         GetCreatureMood(item, &info, 1);
         CreatureMood(item, &info, 1);
         angle = CreatureTurn(item, mummy->maximum_turn);
         if (info.ahead) {
-            head = info.angle >> 1;
-            torso_y = info.angle >> 1;
+            head = torso_y = info.angle >> 1;
             torso_x = info.x_angle;
         }
         switch (item->current_anim_state) {
@@ -88,10 +100,10 @@ void MummyControl(sint16 item_number)
             } else if (info.distance < 0x40000) {
                 item->goal_anim_state = 10;
             } else {
+                item->goal_anim_state = 1;
                 head = 0;
                 torso_x = 0;
                 torso_y = 0;
-                item->goal_anim_state = 1;
                 if (item->trigger_flags > -100 && item->trigger_flags < 0)
                     item->trigger_flags++;
             }
@@ -127,9 +139,10 @@ void MummyControl(sint16 item_number)
                 item->goal_anim_state = 2;
             break;
         case 8:
-            head = 0;
-            torso_x = 0;
             torso_y = 0;
+            torso_x = 0;
+            head = 0;
+
             mummy->maximum_turn = 0;
             item->hit_points = 0;
             if (info.distance < 0x100000 || !(GetRandomControl() & 0x7F)) {

@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="418.54" height="12" x="0" y="0" class="named"><title>1406 · 90.59%</title></rect>
-<rect width="43.46" height="12" x="418.54" y="0" class="nonmatching"><title>146 · 9.41%</title></rect>
+<rect width="418.84" height="12" x="0" y="0" class="named"><title>1407 · 90.66%</title></rect>
+<rect width="43.16" height="12" x="418.84" y="0" class="nonmatching"><title>145 · 9.34%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">90.6%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1406</tspan> · <tspan class="nonmatching">146</tspan></text>
+<text text-anchor="end" x="642" y="7.50">90.7%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1407</tspan> · <tspan class="nonmatching">145</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="328.96" height="12" x="0" y="0" class="named"><title>445 KB · 71.20%</title></rect>
-<rect width="133.04" height="12" x="328.96" y="0" class="nonmatching"><title>180 KB · 28.80%</title></rect>
+<rect width="329.88" height="12" x="0" y="0" class="named"><title>447 KB · 71.40%</title></rect>
+<rect width="132.12" height="12" x="329.88" y="0" class="nonmatching"><title>179 KB · 28.60%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">71.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">445 KB</tspan> · <tspan class="nonmatching">180 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">71.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">447 KB</tspan> · <tspan class="nonmatching">179 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -130,7 +130,7 @@
 <rect width="12" height="12" x="225" y="15" class="named"><title>0x0040a4c0 ControlPlanetEffect (814 bytes)</title></rect>
 <rect width="12" height="12" x="240" y="15" class="named"><title>0x0040a7f0 DrawPlanetEffect (314 bytes)</title></rect>
 <rect width="12" height="12" x="255" y="15" class="named"><title>0x0040a930 InitialiseMummy (147 bytes)</title></rect>
-<rect width="12" height="12" x="270" y="15" class="nonmatching"><title>0x0040a9d0 MummyControl (1244 bytes)</title></rect>
+<rect width="12" height="12" x="270" y="15" class="named"><title>0x0040a9d0 MummyControl (1244 bytes)</title></rect>
 <rect width="12" height="12" x="285" y="15" class="named"><title>0x0040aeb0 TargetVisible (193 bytes)</title></rect>
 <rect width="12" height="12" x="300" y="15" class="named"><title>0x0040af80 Targetable (207 bytes)</title></rect>
 <rect width="12" height="12" x="315" y="15" class="named"><title>0x0040b050 GunShot (5 bytes)</title></rect>
@@ -1730,7 +1730,7 @@
 <rect width="22.01" height="22.83" x="236.52" y="130.74" class="named"><title>0x0044a530 GetHeight (1261 bytes)</title></rect>
 <rect width="22.01" height="22.70" x="236.52" y="156.56" class="named"><title>0x00492be0 DXSetCooperativeLevel (1254 bytes)</title></rect>
 <rect width="22.01" height="22.66" x="236.52" y="182.26" class="named"><title>0x0043bf10 DrawInventoryItemMe (1252 bytes)</title></rect>
-<rect width="22.01" height="22.52" x="236.52" y="207.93" class="nonmatching"><title>0x0040a9d0 MummyControl (1244 bytes)</title></rect>
+<rect width="22.01" height="22.52" x="236.52" y="207.93" class="named"><title>0x0040a9d0 MummyControl (1244 bytes)</title></rect>
 <rect width="22.01" height="22.45" x="236.52" y="233.45" class="nonmatching"><title>0x0043a1b0 S_DrawSparks (1240 bytes)</title></rect>
 <rect width="22.01" height="22.25" x="236.52" y="258.89" class="nonmatching"><title>0x00458b90 AlignLaraToRope (1229 bytes)</title></rect>
 <rect width="22.01" height="22.19" x="236.52" y="284.14" class="nonmatching"><title>0x004148b0 FlameEmitter3Control (1226 bytes)</title></rect>
