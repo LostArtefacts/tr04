@@ -398,10 +398,10 @@ uint8 LoadRooms(void)
         FileData += sizeof(sint16);
         r->y_size = *(sint16 *)FileData;
         FileData += sizeof(sint16);
-        size = r->x_size * r->y_size * sizeof(FLOOR_INFO);
-        r->floor = (FLOOR_INFO *)game_malloc(size, 0);
-        memcpy(r->floor, FileData, size);
-        FileData += size;
+        size = r->x_size * r->y_size;
+        r->floor = (FLOOR_INFO *)game_malloc(size * sizeof(FLOOR_INFO), 0);
+        memcpy(r->floor, FileData, size * sizeof(FLOOR_INFO));
+        FileData += size * sizeof(FLOOR_INFO);
         r->ambient = *(sint32 *)FileData;
         FileData += sizeof(sint32);
         r->num_lights = *(sint16 *)FileData;
