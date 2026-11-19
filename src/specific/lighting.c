@@ -427,16 +427,16 @@ void InitObjectLighting(ITEM_INFO *item)
     node_ambient = item->il.ambient;
     SetupLight_thing = item->object_number >= GAME_PIECE1;
     light = (PCLIGHT *)item->il.pCurrentLights;
-    for (i = 0; i < item->il.nCurrentLights; i++, light++) {
-        if (light->Active) {
-            SetupLight(&D3DLights[num_active], light, &node_ambient);
+    for (i = 0; i < item->il.nCurrentLights; i++) {
+        if (light[i].Active) {
+            SetupLight(&D3DLights[num_active], &light[i], &node_ambient);
             num_active++;
         }
     }
     light = (PCLIGHT *)item->il.pPrevLights;
-    for (i = 0; i < item->il.nPrevLights; i++, light++) {
-        if (light->Active) {
-            SetupLight(&D3DLights[num_active], light, &node_ambient);
+    for (i = 0; i < item->il.nPrevLights; i++) {
+        if (light[i].Active) {
+            SetupLight(&D3DLights[num_active], &light[i], &node_ambient);
             num_active++;
         }
     }
@@ -458,10 +458,10 @@ void InitObjectLighting(ITEM_INFO *item)
         }
     }
     if (item->object_number == BURNING_FLOOR && item->required_anim_state) {
-        m = (item->required_anim_state + 1) * 2;
-        r = (CLRR(node_ambient) * m) >> 8;
-        g = (CLRG(node_ambient) * m) >> 8;
-        b = (CLRB(node_ambient) * m) >> 8;
+        m = item->required_anim_state + 1;
+        r = (CLRR(node_ambient) * (m << 1)) >> 8;
+        g = (CLRG(node_ambient) * (m << 1)) >> 8;
+        b = (CLRB(node_ambient) * (m << 1)) >> 8;
         IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_AMBIENT, RGBA(r, g, b, 0xFF));
     } else
         IDirect3DDevice3_SetLightState(App.dx.lpD3DDevice, D3DLIGHTSTATE_AMBIENT, node_ambient);

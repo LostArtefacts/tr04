@@ -1126,15 +1126,6 @@ match = ["0-7", "A-D", "1E", "22", "2A", "30", "32", "36", "3C", "42", "48", "4E
     "258-259", "25E-25F", "26F-271", "2BF", "2C2", "2CB", "2D5", "2E4-2E5", "2F2-2F5", "2FE-301",
     "30A-30D", "324", "37F-382", "38B-38E", "397-39A", "3BF-3C0"]
 
-[frontier.InitObjectLighting]
-address = 0x00478e80
-size = 499
-compiled = 499
-matching = 442
-match = ["0-79", "7B-8B", "8D-92", "94", "97", "99-9A", "9C-AA", "AC-AD", "AF-B9", "BB-C7",
-    "C9-192", "19B", "1B2", "1B5", "1BC", "1BE-1BF", "1C1-1C5", "1C7", "1C9", "1CB-1CF", "1D2-1D5",
-    "1D7-1F2"]
-
 [frontier.S_DrawTile]
 address = 0x0047a220
 size = 724

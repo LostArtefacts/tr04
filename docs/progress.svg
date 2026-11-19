@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="415.86" height="12" x="0" y="0" class="named"><title>1397 · 90.01%</title></rect>
-<rect width="46.14" height="12" x="415.86" y="0" class="nonmatching"><title>155 · 9.99%</title></rect>
+<rect width="416.16" height="12" x="0" y="0" class="named"><title>1398 · 90.08%</title></rect>
+<rect width="45.84" height="12" x="416.16" y="0" class="nonmatching"><title>154 · 9.92%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">90.0%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1397</tspan> · <tspan class="nonmatching">155</tspan></text>
+<text text-anchor="end" x="642" y="7.50">90.1%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1398</tspan> · <tspan class="nonmatching">154</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="322.51" height="12" x="0" y="0" class="named"><title>437 KB · 69.81%</title></rect>
-<rect width="139.49" height="12" x="322.51" y="0" class="nonmatching"><title>189 KB · 30.19%</title></rect>
+<rect width="322.88" height="12" x="0" y="0" class="named"><title>437 KB · 69.89%</title></rect>
+<rect width="139.12" height="12" x="322.88" y="0" class="nonmatching"><title>188 KB · 30.11%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">69.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">437 KB</tspan> · <tspan class="nonmatching">189 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">69.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">437 KB</tspan> · <tspan class="nonmatching">188 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1303,7 +1303,7 @@
 <rect width="12" height="12" x="570" y="360" class="named"><title>0x004786a0 FadeLightList (166 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="360" class="nonmatching"><title>0x00478750 CreateLightList (1020 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="360" class="named"><title>0x00478b50 SetupLight (804 bytes)</title></rect>
-<rect width="12" height="12" x="615" y="360" class="nonmatching"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
+<rect width="12" height="12" x="615" y="360" class="named"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="360" class="named"><title>0x00479080 ClearObjectLighting (108 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="360" class="named"><title>0x004790f0 InitDynamicLighting (701 bytes)</title></rect>
 <rect width="12" height="12" x="660" y="360" class="named"><title>0x004793b0 InitItemDynamicLighting (939 bytes)</title></rect>
@@ -1983,7 +1983,7 @@
 <rect width="14.59" height="13.64" x="472.27" y="101.26" class="named"><title>0x0049a0e0 SW_SpanGTAddBilinear (500 bytes)</title></rect>
 <rect width="14.59" height="13.64" x="489.86" y="101.26" class="named"><title>0x0049b370 SW_SpanGTInt (500 bytes)</title></rect>
 <rect width="14.57" height="13.64" x="507.46" y="101.26" class="named"><title>0x004115e0 TriggerRiseEffect (499 bytes)</title></rect>
-<rect width="14.57" height="13.64" x="525.02" y="101.26" class="nonmatching"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
+<rect width="14.57" height="13.64" x="525.02" y="101.26" class="named"><title>0x00478e80 InitObjectLighting (499 bytes)</title></rect>
 <rect width="14.45" height="13.64" x="542.59" y="101.26" class="named"><title>0x00499ef0 SW_SpanGTBilinear (495 bytes)</title></rect>
 <rect width="14.42" height="13.64" x="560.04" y="101.26" class="named"><title>0x004158e0 DrawScaledSpike (494 bytes)</title></rect>
 <rect width="14.42" height="13.64" x="577.46" y="101.26" class="named"><title>0x0047a500 S_DisplayMonoScreen (494 bytes)</title></rect>
