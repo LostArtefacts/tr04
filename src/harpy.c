@@ -247,7 +247,7 @@ void HarpyControl(sint16 item_number)
     ITEM_INFO *enemy;
     CREATURE_INFO *harpy;
     CREATURE_INFO *baddie;
-    AI_INFO info;
+    AI_INFO info, larainfo;
     sint32 dx, dy, dz, dist, max_dist, i;
     sint16 angle, head, torso_x, torso_y;
 
@@ -256,9 +256,9 @@ void HarpyControl(sint16 item_number)
     item = &items[item_number];
     harpy = (CREATURE_INFO *)item->data;
     angle = 0;
-    head = 0;
-    torso_x = 0;
     torso_y = 0;
+    torso_x = 0;
+    head = 0;
     if (item->hit_points <= 0) {
         item->hit_points = 0;
         switch (item->current_anim_state) {
@@ -308,8 +308,20 @@ void HarpyControl(sint16 item_number)
         }
         CreatureAIInfo(item, &info);
         enemy = harpy->enemy;
-        if (enemy != lara_item)
-            phd_atan(lara_item->pos.z_pos - item->pos.z_pos, lara_item->pos.x_pos - item->pos.x_pos);
+        if (enemy == lara_item) {
+            larainfo.angle = info.angle;
+            larainfo.ahead = info.ahead;
+            larainfo.distance = info.distance;
+        } else {
+            dz = lara_item->pos.z_pos - item->pos.z_pos;
+            dx = lara_item->pos.x_pos - item->pos.x_pos;
+            larainfo.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+            if (larainfo.angle > -0x4000 && larainfo.angle < 0x4000)
+                larainfo.ahead = 1;
+            else
+                larainfo.ahead = 0;
+            larainfo.distance = SQUARE(dx) + SQUARE(dz);
+        }
         GetCreatureMood(item, &info, 1);
         CreatureMood(item, &info, 1);
         angle = CreatureTurn(item, harpy->maximum_turn);
@@ -330,12 +342,11 @@ void HarpyControl(sint16 item_number)
                 }
             }
             if (info.ahead) {
-                dy = abs(enemy->pos.y_pos - item->pos.y_pos);
-                if (dy <= 1024 && info.distance < 0x1C639) {
+                if (abs(enemy->pos.y_pos - item->pos.y_pos) <= 1024 && info.distance < 0x1C639) {
                     item->goal_anim_state = 6;
                     break;
                 }
-                if (dy <= 1024 && info.distance < 0x400000) {
+                if (abs(enemy->pos.y_pos - item->pos.y_pos) <= 1024 && info.distance < 0x400000) {
                     item->goal_anim_state = 4;
                     break;
                 }
@@ -358,9 +369,7 @@ void HarpyControl(sint16 item_number)
                 item->goal_anim_state = 7;
             } else if (info.ahead && info.distance < 0x1C639) {
                 item->goal_anim_state = 6;
-            } else if (!info.ahead || info.distance < 0x400000) {
-                item->goal_anim_state = 4;
-            } else if (info.distance <= 0xC40000 || !(GetRandomControl() & 1)) {
+            } else if (!info.ahead || info.distance < 0x400000 || info.distance <= 0xC40000 || !(GetRandomControl() & 1)) {
                 item->goal_anim_state = 4;
             } else {
                 item->goal_anim_state = 8;
@@ -411,8 +420,7 @@ void HarpyControl(sint16 item_number)
             item->goal_anim_state = 2;
             break;
         case 3:
-            dy = item->pos.y_pos + 2048;
-            if (!enemy || enemy->pos.y_pos < dy || item->floor < dy)
+            if (!enemy || enemy->pos.y_pos < item->pos.y_pos + 2048 || item->floor < item->pos.y_pos + 2048)
                 item->goal_anim_state = 1;
             break;
         case 8:
@@ -422,7 +430,7 @@ void HarpyControl(sint16 item_number)
     }
     CreatureTilt(item, 0);
     CreatureJoint(item, 0, head);
-    CreatureJoint(item, 1, torso_y);
-    CreatureJoint(item, 2, torso_x);
+    CreatureJoint(item, 1, torso_x);
+    CreatureJoint(item, 2, torso_y);
     CreatureAnimation(item_number, angle, 0);
 }
