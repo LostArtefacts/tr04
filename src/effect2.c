@@ -441,9 +441,8 @@ void TriggerExplosionSparks(sint32 x, sint32 y, sint32 z, sint32 extras, sint32 
             sptr->dB = 0;
             sptr->ColFadeSpeed = 7;
             sptr->FadeToBlack = 8;
+            sptr->sLife = sptr->Life = (GetRandomControl() & 7) + 16;
             sptr->TransType = 2;
-            sptr->Life = (GetRandomControl() & 7) + 16;
-            sptr->sLife = sptr->Life;
             sptr->RoomNumber = (uint8)room_number;
         } else {
             sptr->sG = (GetRandomControl() & 0xF) + 32;
@@ -453,15 +452,14 @@ void TriggerExplosionSparks(sint32 x, sint32 y, sint32 z, sint32 extras, sint32 
             sptr->dB = 32;
             sptr->ColFadeSpeed = 8;
             sptr->FadeToBlack = 16;
+            sptr->sLife = sptr->Life = (GetRandomControl() & 7) + 24;
             sptr->TransType = 2;
-            sptr->Life = (GetRandomControl() & 7) + 24;
-            sptr->sLife = sptr->Life;
         }
         sptr->extras = (uint8)(extras | ((extras_table[extras] + (GetRandomControl() & 7) + 28) << 3));
         sptr->Dynamic = (sint8)dynamic;
         if (dynamic == -2) {
             pDL = spark_dynamics;
-            for (i = 0; i < 8; i++, pDL++) {
+            for (i = 0; i < 8; i++) {
                 if (!pDL->On) {
                     pDL->On = 1;
                     pDL->Falloff = 4;
@@ -472,6 +470,7 @@ void TriggerExplosionSparks(sint32 x, sint32 y, sint32 z, sint32 extras, sint32 
                     sptr->Dynamic = (sint8)i;
                     break;
                 }
+                pDL++;
             }
             if (i == 8)
                 sptr->Dynamic = -1;
