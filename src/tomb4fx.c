@@ -261,7 +261,6 @@ void AddFire(sint32 x, sint32 y, sint32 z, sint32 size, sint16 room_number, sint
 void S_DrawFires(void)
 {
     FIRE_LIST *fire;
-    ROOM_INFO *r;
     sint16 *bounds;
     sint16 size;
     sint32 i;
@@ -277,11 +276,10 @@ void S_DrawFires(void)
             bounds[3] = size;
             bounds[4] = -size;
             bounds[5] = size;
-            r = &room[fire->room_number];
-            phd_left = r->left;
-            phd_right = r->right;
-            phd_top = r->top;
-            phd_bottom = r->bottom;
+            phd_left = room[fire->room_number].left;
+            phd_right = room[fire->room_number].right;
+            phd_top = room[fire->room_number].top;
+            phd_bottom = room[fire->room_number].bottom;
             phd_PushMatrix();
             phd_TranslateAbs(fire->x, fire->y, fire->z);
             if (S_GetObjectBounds(bounds)) {
