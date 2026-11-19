@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="418.24" height="12" x="0" y="0" class="named"><title>1405 · 90.53%</title></rect>
-<rect width="43.76" height="12" x="418.24" y="0" class="nonmatching"><title>147 · 9.47%</title></rect>
+<rect width="418.54" height="12" x="0" y="0" class="named"><title>1406 · 90.59%</title></rect>
+<rect width="43.46" height="12" x="418.54" y="0" class="nonmatching"><title>146 · 9.41%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">90.5%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1405</tspan> · <tspan class="nonmatching">147</tspan></text>
+<text text-anchor="end" x="642" y="7.50">90.6%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1406</tspan> · <tspan class="nonmatching">146</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="328.41" height="12" x="0" y="0" class="named"><title>445 KB · 71.08%</title></rect>
-<rect width="133.59" height="12" x="328.41" y="0" class="nonmatching"><title>181 KB · 28.92%</title></rect>
+<rect width="328.96" height="12" x="0" y="0" class="named"><title>445 KB · 71.20%</title></rect>
+<rect width="133.04" height="12" x="328.96" y="0" class="nonmatching"><title>180 KB · 28.80%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">71.1%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">445 KB</tspan> · <tspan class="nonmatching">181 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">71.2%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">445 KB</tspan> · <tspan class="nonmatching">180 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -156,7 +156,7 @@
 <rect width="12" height="12" x="615" y="15" class="named"><title>0x0040e780 InitialiseScorpion (120 bytes)</title></rect>
 <rect width="12" height="12" x="630" y="15" class="nonmatching"><title>0x0040e800 ScorpionControl (1996 bytes)</title></rect>
 <rect width="12" height="12" x="645" y="15" class="named"><title>0x0040efd0 InitialiseSmlscorp (90 bytes)</title></rect>
-<rect width="12" height="12" x="660" y="15" class="nonmatching"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
+<rect width="12" height="12" x="660" y="15" class="named"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
 <rect width="12" height="12" x="675" y="15" class="named"><title>0x0040f320 CheckSenetWinner (138 bytes)</title></rect>
 <rect width="12" height="12" x="690" y="15" class="named"><title>0x0040f3b0 InitialiseSenet (199 bytes)</title></rect>
 <rect width="12" height="12" x="705" y="15" class="named"><title>0x0040f480 SenetControl (80 bytes)</title></rect>
@@ -1846,7 +1846,7 @@
 <rect width="17.60" height="17.05" x="307.99" y="459.95" class="named"><title>0x0047a880 DoLoadSave (753 bytes)</title></rect>
 <rect width="17.68" height="16.79" x="328.58" y="44.50" class="named"><title>0x0044d530 RayBoxIntersect (745 bytes)</title></rect>
 <rect width="17.58" height="16.79" x="349.26" y="44.50" class="nonmatching"><title>0x0045ff80 GetJointAbsPosition (741 bytes)</title></rect>
-<rect width="17.56" height="16.79" x="369.84" y="44.50" class="nonmatching"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
+<rect width="17.56" height="16.79" x="369.84" y="44.50" class="named"><title>0x0040f030 SmlscorpControl (740 bytes)</title></rect>
 <rect width="17.54" height="16.79" x="390.40" y="44.50" class="named"><title>0x0042e630 FireWeapon (739 bytes)</title></rect>
 <rect width="17.51" height="16.79" x="410.94" y="44.50" class="named"><title>0x0045fc90 GetSpheres (738 bytes)</title></rect>
 <rect width="17.49" height="16.79" x="431.45" y="44.50" class="named"><title>0x00401ac0 ScalesCollision (737 bytes)</title></rect>

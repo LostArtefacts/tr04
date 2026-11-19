@@ -241,7 +241,8 @@ void SmlscorpControl(sint16 item_number)
     ITEM_INFO *item;
     ITEM_INFO *enemy;
     CREATURE_INFO *scorpion;
-    AI_INFO info;
+    AI_INFO info, larainfo;
+    sint32 dx, dz;
     sint16 angle;
 
     if (!CreatureActive(item_number))
@@ -263,8 +264,20 @@ void SmlscorpControl(sint16 item_number)
             scorpion->enemy = lara_item;
         CreatureAIInfo(item, &info);
         enemy = scorpion->enemy;
-        if (enemy != lara_item)
-            phd_atan(lara_item->pos.z_pos - item->pos.z_pos, lara_item->pos.x_pos - item->pos.x_pos);
+        if (enemy == lara_item) {
+            larainfo.angle = info.angle;
+            larainfo.ahead = info.ahead;
+            larainfo.distance = info.distance;
+        } else {
+            dz = lara_item->pos.z_pos - item->pos.z_pos;
+            dx = lara_item->pos.x_pos - item->pos.x_pos;
+            larainfo.angle = (sint16)(phd_atan(dz, dx) - item->pos.y_rot);
+            if (larainfo.angle > -0x4000 && larainfo.angle < 0x4000)
+                larainfo.ahead = 1;
+            else
+                larainfo.ahead = 0;
+            larainfo.distance = SQUARE(dx) + SQUARE(dz);
+        }
         GetCreatureMood(item, &info, 1);
         CreatureMood(item, &info, 1);
         angle = CreatureTurn(item, scorpion->maximum_turn);
