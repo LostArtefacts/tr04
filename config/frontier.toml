@@ -675,13 +675,6 @@ match = ["0-C", "1B", "2A", "38", "3A-3C", "41-42", "48-49", "4F", "78-7B", "89-
     "177", "196-199", "19E-1A1", "1B1", "1B8-1BB", "1C2-1C5", "1CB-1CE", "1D5-1D7", "1E3", "1E7",
     "1EB", "1ED", "206-207", "20E", "216", "21C", "21F", "22A", "231", "23A"]
 
-[frontier.InitialiseBike]
-address = 0x00464610
-size = 106
-compiled = 106
-matching = 77
-match = ["0-2F", "37-40", "51", "58-69"]
-
 [frontier.DrawBikeBeam]
 address = 0x00464a30
 size = 483

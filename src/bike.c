@@ -37,15 +37,14 @@ void InitialiseBike(sint16 item_number)
     item->data = bike;
     bike->velocity = 0;
     bike->bike_turn = 0;
-    bike->pitch2 = 0;
     bike->move_angle = item->pos.y_rot;
+    bike->pitch2 = 0;
     bike->rot_thing = 0;
     bike->extra_rotation = 0;
     bike->flags2 &= 0xFE;
     bike->light_intensity = 0;
     bike->flags = 0;
-    *(sint32 *)&bike->right_front_wheelrot = 0;
-    bike->left_wheelrot = 0;
+    memset(bike, 0, 8);
     item->mesh_bits = 1015;
     GlobalBikeItem = item;
 }

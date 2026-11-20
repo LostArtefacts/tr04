@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="423.90" height="12" x="0" y="0" class="named"><title>1424 · 91.75%</title></rect>
-<rect width="38.10" height="12" x="423.90" y="0" class="nonmatching"><title>128 · 8.25%</title></rect>
+<rect width="424.19" height="12" x="0" y="0" class="named"><title>1425 · 91.82%</title></rect>
+<rect width="37.81" height="12" x="424.19" y="0" class="nonmatching"><title>127 · 8.18%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">91.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1424</tspan> · <tspan class="nonmatching">128</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1425</tspan> · <tspan class="nonmatching">127</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="338.25" height="12" x="0" y="0" class="named"><title>458 KB · 73.22%</title></rect>
-<rect width="123.75" height="12" x="338.25" y="0" class="nonmatching"><title>168 KB · 26.78%</title></rect>
+<rect width="338.33" height="12" x="0" y="0" class="named"><title>458 KB · 73.23%</title></rect>
+<rect width="123.67" height="12" x="338.33" y="0" class="nonmatching"><title>167 KB · 26.77%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">73.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">458 KB</tspan> · <tspan class="nonmatching">168 KB</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">458 KB</tspan> · <tspan class="nonmatching">167 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -1050,7 +1050,7 @@
 <rect width="12" height="12" x="525" y="285" class="named"><title>0x004640a0 DrawTrainObjects (1032 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="285" class="named"><title>0x004644b0 InitialiseTrainJeep (109 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="285" class="named"><title>0x00464520 TrainJeepControl (238 bytes)</title></rect>
-<rect width="12" height="12" x="570" y="285" class="nonmatching"><title>0x00464610 InitialiseBike (106 bytes)</title></rect>
+<rect width="12" height="12" x="570" y="285" class="named"><title>0x00464610 InitialiseBike (106 bytes)</title></rect>
 <rect width="12" height="12" x="585" y="285" class="named"><title>0x00464680 BikeCollision (463 bytes)</title></rect>
 <rect width="12" height="12" x="600" y="285" class="named"><title>0x00464850 TriggerBikeBeam (155 bytes)</title></rect>
 <rect width="12" height="12" x="615" y="285" class="named"><title>0x004648f0 GetOnBike (313 bytes)</title></rect>
@@ -2637,7 +2637,7 @@
 <rect width="6.67" height="6.39" x="730.72" y="304.75" class="named"><title>0x0046b0d0 GetTrackWord (107 bytes)</title></rect>
 <rect width="6.61" height="6.39" x="740.39" y="304.75" class="named"><title>0x0040da00 InitialiseInjuredSas (106 bytes)</title></rect>
 <rect width="6.68" height="6.32" x="574.77" y="314.13" class="named"><title>0x00422de0 lara_as_hang2 (106 bytes)</title></rect>
-<rect width="6.68" height="6.32" x="574.77" y="323.45" class="nonmatching"><title>0x00464610 InitialiseBike (106 bytes)</title></rect>
+<rect width="6.68" height="6.32" x="574.77" y="323.45" class="named"><title>0x00464610 InitialiseBike (106 bytes)</title></rect>
 <rect width="6.68" height="6.26" x="574.77" y="332.77" class="named"><title>0x004278d0 lara_col_turnswitch (105 bytes)</title></rect>
 <rect width="6.68" height="6.26" x="574.77" y="342.03" class="named"><title>0x004280f0 lara_col_splat (105 bytes)</title></rect>
 <rect width="6.68" height="6.26" x="574.77" y="351.29" class="named"><title>0x0043e140 spinback (105 bytes)</title></rect>
