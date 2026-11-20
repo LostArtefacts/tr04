@@ -389,11 +389,12 @@ void DartsControl(sint16 item_number)
 void FlameEmitterControl(sint16 item_number)
 {
     ITEM_INFO *item;
-    uint32 distance;
-    sint32 x, z, r, g;
 
     item = &items[item_number];
     if (TriggerActive(item)) {
+        uint32 distance;
+        sint32 r, g, x, z;
+
         if (item->trigger_flags < 0) {
             if ((-item->trigger_flags & 7) == 2 || (-item->trigger_flags & 7) == 7) {
                 SoundEffect(SFX_FLAME_EMITTER, &item->pos, 0);
@@ -434,7 +435,8 @@ void FlameEmitterControl(sint16 item_number)
                         TriggerSuperJetFlame(item, -256 - (3072 * GlobalCounter & 0x1C00), GlobalCounter & 1);
                     r = (GetRandomControl() & 0x3F) + 192;
                     g = (GetRandomControl() & 0x1F) + 96;
-                    TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, (-item->item_flags[1] >> 10) - (GetRandomControl() & 1) + 16, r, g, 0);
+                    x = -item->item_flags[1] >> 10;
+                    TriggerDynamic(item->pos.x_pos, item->pos.y_pos, item->pos.z_pos, x - (GetRandomControl() & 1) + 16, r, g, 0);
                 } else {
                     r = (GetRandomControl() & 0x3F) + 192;
                     g = (GetRandomControl() & 0x1F) + 96;

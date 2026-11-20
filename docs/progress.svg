@@ -46,18 +46,18 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="424.49" height="12" x="0" y="0" class="named"><title>1426 · 91.88%</title></rect>
-<rect width="37.51" height="12" x="424.49" y="0" class="nonmatching"><title>126 · 8.12%</title></rect>
+<rect width="424.79" height="12" x="0" y="0" class="named"><title>1427 · 91.95%</title></rect>
+<rect width="37.21" height="12" x="424.79" y="0" class="nonmatching"><title>125 · 8.05%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="7.50">91.9%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1426</tspan> · <tspan class="nonmatching">126</tspan></text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1427</tspan> · <tspan class="nonmatching">125</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="338.40" height="12" x="0" y="0" class="named"><title>458 KB · 73.25%</title></rect>
-<rect width="123.60" height="12" x="338.40" y="0" class="nonmatching"><title>167 KB · 26.75%</title></rect>
+<rect width="339.06" height="12" x="0" y="0" class="named"><title>459 KB · 73.39%</title></rect>
+<rect width="122.94" height="12" x="339.06" y="0" class="nonmatching"><title>166 KB · 26.61%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="24.50">73.2%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">458 KB</tspan> · <tspan class="nonmatching">167 KB</tspan></text>
+<text text-anchor="end" x="642" y="24.50">73.4%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">459 KB</tspan> · <tspan class="nonmatching">166 KB</tspan></text>
 </g>
 <g transform="translate(0 77)">
 <text text-anchor="start" x="0" y="7.50">By function order</text>
@@ -196,7 +196,7 @@
 <rect width="12" height="12" x="465" y="30" class="named"><title>0x00413e80 FallingCeiling (257 bytes)</title></rect>
 <rect width="12" height="12" x="480" y="30" class="named"><title>0x00413f90 DartEmitterControl (443 bytes)</title></rect>
 <rect width="12" height="12" x="495" y="30" class="named"><title>0x00414150 DartsControl (414 bytes)</title></rect>
-<rect width="12" height="12" x="510" y="30" class="nonmatching"><title>0x004142f0 FlameEmitterControl (891 bytes)</title></rect>
+<rect width="12" height="12" x="510" y="30" class="named"><title>0x004142f0 FlameEmitterControl (891 bytes)</title></rect>
 <rect width="12" height="12" x="525" y="30" class="named"><title>0x00414670 FlameEmitter2Control (573 bytes)</title></rect>
 <rect width="12" height="12" x="540" y="30" class="nonmatching"><title>0x004148b0 FlameEmitter3Control (1226 bytes)</title></rect>
 <rect width="12" height="12" x="555" y="30" class="named"><title>0x00414d80 FlameControl (340 bytes)</title></rect>
@@ -1796,7 +1796,7 @@
 <rect width="19.54" height="18.51" x="285.45" y="289.29" class="named"><title>0x00454b60 ElementPuzzleCollision (908 bytes)</title></rect>
 <rect width="19.54" height="18.35" x="285.45" y="310.80" class="named"><title>0x00422480 TestLaraVault (900 bytes)</title></rect>
 <rect width="19.54" height="18.35" x="285.45" y="332.15" class="nonmatching"><title>0x0043fbe0 CreatureAIInfo (900 bytes)</title></rect>
-<rect width="19.54" height="18.16" x="285.45" y="353.49" class="nonmatching"><title>0x004142f0 FlameEmitterControl (891 bytes)</title></rect>
+<rect width="19.54" height="18.16" x="285.45" y="353.49" class="named"><title>0x004142f0 FlameEmitterControl (891 bytes)</title></rect>
 <rect width="19.54" height="18.16" x="285.45" y="374.66" class="nonmatching"><title>0x00416550 ControlBurningFloor (891 bytes)</title></rect>
 <rect width="19.54" height="18.10" x="285.45" y="395.82" class="nonmatching"><title>0x0041bf60 WildboarControl (888 bytes)</title></rect>
 <rect width="19.54" height="18.06" x="285.45" y="416.92" class="named"><title>0x0044f790 SetRoomBounds (886 bytes)</title></rect>
