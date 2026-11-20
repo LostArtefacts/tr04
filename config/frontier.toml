@@ -697,13 +697,6 @@ compiled = 982
 matching = 907
 match = ["0-C0", "C2-389", "38B", "38F"]
 
-[frontier.InitialiseJeep]
-address = 0x00466f40
-size = 94
-compiled = 94
-matching = 72
-match = ["0-39", "42", "4D", "52-5D"]
-
 [frontier.GetOnJeep]
 address = 0x004671b0
 size = 381

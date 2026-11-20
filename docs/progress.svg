@@ -46,15 +46,15 @@
 <g transform="translate(0 30)">
 <text text-anchor="start" x="0" y="7.50">Game functions</text>
 <g transform="translate(130 1.50)">
-<rect width="424.19" height="12" x="0" y="0" class="named"><title>1425 · 91.82%</title></rect>
-<rect width="37.81" height="12" x="424.19" y="0" class="nonmatching"><title>127 · 8.18%</title></rect>
+<rect width="424.49" height="12" x="0" y="0" class="named"><title>1426 · 91.88%</title></rect>
+<rect width="37.51" height="12" x="424.49" y="0" class="nonmatching"><title>126 · 8.12%</title></rect>
 </g>
-<text text-anchor="end" x="642" y="7.50">91.8%</text>
-<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1425</tspan> · <tspan class="nonmatching">127</tspan></text>
+<text text-anchor="end" x="642" y="7.50">91.9%</text>
+<text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="7"><tspan class="named">1426</tspan> · <tspan class="nonmatching">126</tspan></text>
 <text text-anchor="start" x="0" y="24.50">Game code</text>
 <g transform="translate(130 18.50)">
-<rect width="338.33" height="12" x="0" y="0" class="named"><title>458 KB · 73.23%</title></rect>
-<rect width="123.67" height="12" x="338.33" y="0" class="nonmatching"><title>167 KB · 26.77%</title></rect>
+<rect width="338.40" height="12" x="0" y="0" class="named"><title>458 KB · 73.25%</title></rect>
+<rect width="123.60" height="12" x="338.40" y="0" class="nonmatching"><title>167 KB · 26.75%</title></rect>
 </g>
 <text text-anchor="end" x="642" y="24.50">73.2%</text>
 <text class="todo" style="font-size: 12px; " text-anchor="start" x="657" y="24"><tspan class="named">458 KB</tspan> · <tspan class="nonmatching">167 KB</tspan></text>
@@ -1069,7 +1069,7 @@
 <rect width="12" height="12" x="60" y="300" class="named"><title>0x004668e0 CanGetOff_bike (460 bytes)</title></rect>
 <rect width="12" height="12" x="75" y="300" class="nonmatching"><title>0x00466ab0 UserControl_bike (980 bytes)</title></rect>
 <rect width="12" height="12" x="90" y="300" class="named"><title>0x00466e90 BikeStart (176 bytes)</title></rect>
-<rect width="12" height="12" x="105" y="300" class="nonmatching"><title>0x00466f40 InitialiseJeep (94 bytes)</title></rect>
+<rect width="12" height="12" x="105" y="300" class="named"><title>0x00466f40 InitialiseJeep (94 bytes)</title></rect>
 <rect width="12" height="12" x="120" y="300" class="named"><title>0x00466fa0 JeepCollision (523 bytes)</title></rect>
 <rect width="12" height="12" x="135" y="300" class="nonmatching"><title>0x004671b0 GetOnJeep (381 bytes)</title></rect>
 <rect width="12" height="12" x="150" y="300" class="named"><title>0x00467330 DrawJeepExtras (66 bytes)</title></rect>
@@ -2682,7 +2682,7 @@
 <rect width="6.07" height="6.17" x="584.45" y="388.48" class="named"><title>0x00431c80 lara_as_surfback (94 bytes)</title></rect>
 <rect width="6.07" height="6.17" x="584.45" y="397.65" class="named"><title>0x00446fb0 UpdateLaraRoom (94 bytes)</title></rect>
 <rect width="6.07" height="6.17" x="584.45" y="406.82" class="named"><title>0x0044df60 ShutThatDoor (94 bytes)</title></rect>
-<rect width="6.07" height="6.17" x="584.45" y="415.99" class="nonmatching"><title>0x00466f40 InitialiseJeep (94 bytes)</title></rect>
+<rect width="6.07" height="6.17" x="584.45" y="415.99" class="named"><title>0x00466f40 InitialiseJeep (94 bytes)</title></rect>
 <rect width="6.07" height="6.17" x="584.45" y="425.16" class="named"><title>0x00484b90 REG_ReadLong (94 bytes)</title></rect>
 <rect width="6.07" height="6.17" x="584.45" y="434.34" class="named"><title>0x00491c60 DXGetInfo (94 bytes)</title></rect>
 <rect width="6.07" height="6.17" x="584.45" y="443.51" class="named"><title>0x004930d0 DXCreateD3DDevice (94 bytes)</title></rect>
